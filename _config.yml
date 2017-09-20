@@ -3,3 +3,12 @@ sass:
 
 plugins:
   - jekyll-octicons
+
+# Files to not include when building.
+exclude:
+ - scripts
+ - .gitignore
+ - Gemfile
+ - Gemfile.lock
+ - Makefile
+ - README.md
