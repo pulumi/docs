@@ -1,0 +1,88 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+/*
+This is a hint to Jekyll to SASS compile the file.
+https://jekyllrb.com/docs/assets/
+*/
+
+/**
+ * Pulumi CSS Styles
+ *
+ * We start with including the full Tachyons framework (http://tachyons.io).
+ * This works well for definining components. To see how this would work for
+ * a large website, see the Heroku's Purple3 (https://purple3.herokuapp.com).
+ */
+
+/**
+ * Fonts
+ */
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+ 
+.oxygen      { font-family: 'Oxygen', sans-serif; }
+.open-sans   { font-family: 'Open Sans', sans-serif; }
+.oxygen-mono { font-family: 'Oxygen Mono', monospace; }
+ 
+/**
+ * Colors
+ */
+// Define custom CSS styles for Pūlumi webpages. This allow us to make dramatic
+// changes to the color scheme without much churn.
+$pulumi-brand: #3f0e44;    // Mardi Gras
+$pulumi-brand2: #711A7A;
+$pulumi-brand3: #9E50A7;
+$accent1: #a463f2;
+$accent2: #d5008f;
+
+// Generate via:
+// https://gist.github.com/chrsmith/692ea3833f2b48f121ad5515aff174ad
+.brand                 {            color: $pulumi-brand; }
+.bg-brand              { background-color: $pulumi-brand; }
+.hover-brand:hover     {            color: $pulumi-brand; }
+.hover-bg-brand:hover  { background-color: $pulumi-brand; }
+
+.brand2                {            color: $pulumi-brand2; }
+.bg-brand2             { background-color: $pulumi-brand2; }
+.hover-brand2:hover    {            color: $pulumi-brand2; }
+.hover-bg-brand2:hover { background-color: $pulumi-brand2; }
+
+.brand3                {            color: $pulumi-brand3; }
+.bg-brand3             { background-color: $pulumi-brand3; }
+.hover-brand3:hover    {            color: $pulumi-brand3; }
+.hover-bg-brand3:hover { background-color: $pulumi-brand3; }
+
+.accent1                {            color: $accent1; }
+.bg-accent1             { background-color: $accent1; }
+.hover-accent1:hover    {            color: $accent1; }
+.hover-bg-accent1:hover { background-color: $accent1; }
+
+.accent2                {            color: $accent2; }
+.bg-accent2             { background-color: $accent2; }
+.hover-accent2:hover    {            color: $accent2; }
+.hover-bg-accent2:hover { background-color: $accent2; }
+
+/**
+ * Elements
+ */
+
+// Apply Pulumi fonts to regular elements to make semantic markup easier.
+h1, h2, h3, h4, h5, h6 { font-family: 'Oxygen', sans-serif; }
+button, input { font-family: 'Oxygen', sans-serif; }
+
+a, p, span, small, label, legend, li { font-family: 'Open Sans', sans-serif; }
+
+code, pre {
+  background-color: #EEEEEE;  // .light-gray
+  color: $pulumi-brand;
+}
+
+/**
+ * Reminders that HTML and CSS are terrible things that nobody should like.
+ */
+// https://theksmith.com/software/safari-bug-text-suddenly-appears-bold-after-css-animation/
+html {
+  -webkit-font-smoothing: antialiased;
+}
