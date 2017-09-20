@@ -33,6 +33,7 @@ Missing P0s:
 
 Things to do eventually:
 
+- Pylint for scripts?
 - Google Analytics?
 - Sitemap
 - 404 page
