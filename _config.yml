@@ -6,9 +6,15 @@ plugins:
 
 # Files to not include when building.
 exclude:
- - scripts
- - .gitignore
- - Gemfile
- - Gemfile.lock
- - Makefile
- - README.md
+  - scripts
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - README.md
+
+# Totally lame workaround until typedoc emits files withouty a leading
+# underscore or we have our own TypeScript documentation generation stack.
+# https://github.com/TypeStrong/typedoc/issues/149
+include:
+  - _*

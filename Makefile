@@ -23,4 +23,5 @@ generate:
 .PHONY: build
 build: 
 	@echo -e "\033[0;32mBUILD:\033[0m"
+	bundle install
 	bundler exec jekyll build
