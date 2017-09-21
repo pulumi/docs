@@ -6,17 +6,16 @@ plugins:
 
 # Files to not include when building.
 exclude:
- - scripts
- - .gitignore
- - Gemfile
- - Gemfile.lock
- - Makefile
- - README.md
+  - scripts
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - README.md
 
-# Jekyll collections. This is how we specify our TypeScript docs, allowing us
-# to do filtering at generation-time.
-collections:
-  typescript_docs:
-    output: true
-    permalink: /typescript/:path/
-
+# Totally lame workaround until typedoc emits files withouty a leading
+# underscore or we have our own TypeScript documentation generation stack.
+# https://github.com/TypeStrong/typedoc/issues/149
+include:
+  - _*
+  

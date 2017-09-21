@@ -1,8 +1,8 @@
 .PHONY: default
-default: banner build
+default: banner generate build
 
 .PHONY: all
-all: banner build
+all: banner generate build
 
 .PHONY: banner
 banner: 
@@ -15,7 +15,13 @@ serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
 	bundler exec jekyll serve
 
+.PHONY: generate
+generate:
+	@echo -e "\033[0;32mGENERATE:\033[0m"
+	./scripts/run_typedoc.sh
+
 .PHONY: build
 build: 
 	@echo -e "\033[0;32mBUILD:\033[0m"
+	bundle install
 	bundler exec jekyll build
