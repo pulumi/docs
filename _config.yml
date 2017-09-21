@@ -12,3 +12,11 @@ exclude:
  - Gemfile.lock
  - Makefile
  - README.md
+
+# Jekyll collections. This is how we specify our TypeScript docs, allowing us
+# to do filtering at generation-time.
+collections:
+  typescript_docs:
+    output: true
+    permalink: /typescript/:path/
+
