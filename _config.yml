@@ -18,3 +18,4 @@ exclude:
 # https://github.com/TypeStrong/typedoc/issues/149
 include:
   - _*
+  
