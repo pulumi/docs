@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="ma3">
+    <h2>TypeScript reference for {{ page.repo }}</h2>
+
+    <h2>In Same Repo</h2>
+    {% assign docs_in_repo = site.typescript_docs | where: "repo", page.repo %}
+    
+    <ul>
+    {% for doc in docs_in_repo %}
+        <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    {{ content }}
+</div>

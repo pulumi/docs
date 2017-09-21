@@ -30,6 +30,16 @@ def GenerateReferenceDocs(repo_folder, output_folder):
         return
     os.makedirs(output_folder)
 
+    # Emit a placeholder for the repo.
+    dest_root_index = path.join(output_folder, "index.html")
+    content = """---
+layout: typescript-repo
+repo: %s
+---
+""" % (repo_name)
+    with open(dest_root_index, 'w') as new:
+        new.write(content)
+
     dts_files = GetDTSFiles(repo_folder)
     print "%s: Found %d .d.ts files." % (repo_name, len(dts_files))
     for file in dts_files:
