@@ -5,29 +5,33 @@ nav_section: "quickstart"
 
 # Getting Started
 
-Welcome to Pulumi, a new way to program the cloud.
+Welcome to Pulumi, a new way to program the cloud! ☁️
 
 In this guide, we'll introduce the core concepts, tools and frameworks for
 building and deploying Pulumi cloud applications.
 
 With Pulumi, you write __programs__ that describe your cloud infrastructure and
 application behaviour.  These programs have access to __packages__ which provide
-cloud primitives you can use to create your application.  You can also build
-your own packages with new components and reuse those components across your
-cloud programs.  With the `pulumi` __command-line tool__, you can manage the
+cloud primitives you can use to build your application.  You can also build new
+custom packages with new components and reuse those components across your cloud
+programs.  With the `pulumi` __command-line tool__, you can manage the
 deployment of these applications into your cloud provider.
 
 In the current release, Pulumi programs can be authored in JavaScript or
 TypeScript (we recommend TypeScript to get the most benefits from the tools and
-frameworks).  We expect to introduce additional languages in future releases.
+frameworks).  
+
+> _Note_: We expect to introduce additional languages in future releases.
 
 The current release include three packages to use as building blocks for your
-Pulumi programs.  We expect to introduce additional cloud providers and
-additional higher-level cloud components in future releases:
+Pulumi programs.  
 * [`pulumi`](/libraries/pulumi/index.html) - Core primitives for interacting with the Pulumi runtime
 * [`@pulumi/aws`](/libraries/pulumi-aws/index.html) - A library of the full suite of AWS resources (265 resources)
 * [`@pulumi/cloud`](/libraries/pulumi-cloud/index.html) - A highly-productive, cloud-neutral library for rapid cloud
   application development
+
+> _Note_: We expect to introduce additional cloud providers and cloud components
+> in future releases:
 
 ## Setup and Installation
 
@@ -348,7 +352,7 @@ info: 1 change planned:
 Having verified that these changes are expected, run `pulumi deploy` to update our infrastructure.
 
 ```
-$ lumi deploy
+$ pulumi deploy
 Deploying changes:
 + aws:ec2/instance:Instance: (create)
       [urn=urn:lumi:testing::webserver::aws:ec2/instance:Instance::web-server-api]
@@ -403,7 +407,7 @@ Deployment duration: 34.714820388s
 We can see the resources currently in our environment by running `pulumi env`.
 
 ```
-$ lumi env
+$ pulumi env
 Current environment is testing
     (use `lumi env select` to change environments; `lumi env ls` lists known ones)
 Last deployment at 2017-09-22 12:23:31.2362587 -0700 PDT
@@ -423,7 +427,7 @@ To cleanup after ourselves, just run `pulumi destroy` and answer the
 confirmation question at the prompt:
 
 ```
-$ lumi destroy
+$ pulumi destroy
 This will permanently destroy all resources in the 'testing' environment!
 Please confirm that this is what you'd like to do by typing ("testing"): testing
 Deploying changes:
@@ -471,7 +475,7 @@ info: 3 changes deployed:
 Deployment duration: 2m13.232697769s
 ```
 
-> __Note__: Pulumi currently runs all infrastructure updates sequentially to
+> _Note_: Pulumi currently runs all infrastructure updates sequentially to
 > provide the greatest assurance of repeatable results.  Parallel execution of
 > infrastructure updates is available with an experimental `--parallel N` flag
 > is available, and this will likely become the default in the future.
@@ -479,9 +483,9 @@ Deployment duration: 2m13.232697769s
 That's it.  In the next section, we'll take a look at building a higher level
 Pulumi Program using the `@pulumi/cloud` framework.
 
-> __Lifecycle of a Pulumi Application__
+> __Aside: Lifecycle of a Pulumi Application__
 >
->Note that when we re-deployed the application, we did not need to recreate all
+>Ahen we re-deployed the application, we did not need to recreate all
 >of the infrastructure.  Instead, Pulumi analyses the current state of the
 >infrastructure and the requested new state represented by interpreting your
 >Pulumi application.  From these, it computes the minimal delta needed to adjust
@@ -498,6 +502,8 @@ Pulumi Program using the `@pulumi/cloud` framework.
 
 ## Pulumi Cloud Application - URL shortener
 
+The `@pulumi/cloud` package can be used just like any other Pulumi package, but offers several unique 
+
 _TODO:
 * `@pulumi/cloud`
 * `HttpEndpoint`
@@ -506,9 +512,73 @@ _TODO:
 
 ## Using TypeScript
 
-_TODO_:
-* `typescript` devDependency
-* `tsconfig.json`
-* `tsc`
-* VS Code
+You can write Pulumi programs in TypeScript to get additional verification and tooling benefits.  To use TypeScript, apply the following thress steps to an existing progrect:
+
+First, update your `package.json` to look like the following:
+
+```json
+{
+    "name": "webserver",
+    "version": "0.1",
+    "main": "bin/index.js",
+    "typings": "bin/index.d.ts",
+    "scripts": {
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "typescript": "^2.1.4"
+    },
+    "peerDependencies": {
+        "@pulumi/aws": "*",
+        "@pulumi/pulumi-fabric": "*"
+    },
+    "dependencies": {
+        "@types/node": "^8.0.26"
+    }
+}
+```
+
+Then run `yarn install` to install the new dependencies.
+
+Next, create a `tsconfig.json` file with the following:
+
+```json
+{
+    "compilerOptions": {
+        "outDir": "bin",
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "declaration": true,
+        "sourceMap": true,
+        "stripInternal": true,
+        "experimentalDecorators": true,
+        "pretty": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "forceConsistentCasingInFileNames": true,
+        "strictNullChecks": true
+    },
+    "files": [
+        "index.ts"
+    ]
+}
+```
+
+And finally, run `yarn build` any time you want to update yoru program prior to
+running `lumi plan` or `lumi deploy`.
+
+You can now use tools like VS Code to get completion lists, live error reporting
+and inline documentation help.
+
+![Pulumi TypeScript in VS Code](./vscode.png)
+
+## Further Reading
+
+Check out the [examples](/examples) and [package](/libraries) documentation for
+more details on the kinds of programs you can build with Pulumi.
+
+If you have questions of feedback on anything related to Pulumi, feel free to
+reach out to us at inquiries@pulumi.com.
 
