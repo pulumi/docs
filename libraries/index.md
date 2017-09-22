@@ -4,6 +4,6 @@ layout: default
 
 # Pulumi Libraries
 
-- [pulumi-framework](/libraries/pulumi-framework)
+- [pulumi](/libraries/pulumi)
 - [pulumi-aws](/libraries/pulumi-aws)
-- [pulumi-fabric](/libraries/pulumi-fabric)
+- [pulumi-cloud](/libraries/pulumi-cloud)
