@@ -123,14 +123,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Volume<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/_ebs_volume_.volumeargs.html" class="tsd-signature-type">VolumeArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_ebs_volume_.volume.html" class="tsd-signature-type">Volume</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Volume<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/_ebs_volume_.volumeargs.html" class="tsd-signature-type">VolumeArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_ebs_volume_.volume.html" class="tsd-signature-type">Volume</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ebs/volume.ts#L41">ebs/volume.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/ebs/volume.ts#L41">ebs/volume.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -158,7 +158,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>A optional array of additional resources this intance depends on</p>
@@ -176,10 +176,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="availabilityzone" class="tsd-anchor"></a>
 					<h3>availability<wbr>Zone</h3>
-					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ebs/volume.ts#L13">ebs/volume.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/ebs/volume.ts#L13">ebs/volume.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -191,10 +191,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="encrypted" class="tsd-anchor"></a>
 					<h3>encrypted</h3>
-					<div class="tsd-signature tsd-kind-icon">encrypted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">encrypted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ebs/volume.ts#L17">ebs/volume.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/ebs/volume.ts#L17">ebs/volume.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -210,17 +210,23 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.id</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi-fabric/resource.d.ts:5</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:15</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>id is the provider-assigned unique ID for this resource.  It is set during deployments and may be missing
+							(undefined) during planning phases.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="iops" class="tsd-anchor"></a>
 					<h3>iops</h3>
-					<div class="tsd-signature tsd-kind-icon">iops<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">iops<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ebs/volume.ts#L21">ebs/volume.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/ebs/volume.ts#L21">ebs/volume.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -232,10 +238,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="kmskeyid" class="tsd-anchor"></a>
 					<h3>kms<wbr>Key<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ebs/volume.ts#L25">ebs/volume.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/ebs/volume.ts#L25">ebs/volume.ts:25</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -247,10 +253,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="size" class="tsd-anchor"></a>
 					<h3>size</h3>
-					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ebs/volume.ts#L29">ebs/volume.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/ebs/volume.ts#L29">ebs/volume.ts:29</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -262,10 +268,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="snapshotid" class="tsd-anchor"></a>
 					<h3>snapshot<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ebs/volume.ts#L33">ebs/volume.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/ebs/volume.ts#L33">ebs/volume.ts:33</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -277,10 +283,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tags" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
-					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ebs/volume.ts#L37">ebs/volume.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/ebs/volume.ts#L37">ebs/volume.ts:37</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -292,10 +298,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ebs/volume.ts#L41">ebs/volume.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/ebs/volume.ts#L41">ebs/volume.ts:41</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -311,9 +317,14 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.urn</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi-fabric/resource.d.ts:4</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:10</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>urn is the stable logical URN used to distinctly address a resource, both before and after deployments.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>

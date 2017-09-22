@@ -117,9 +117,14 @@
 					<div class="tsd-signature tsd-kind-icon">Handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/serverless/function.ts#L25">serverless/function.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/serverless/function.ts#L29">serverless/function.ts:29</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Handler is the signature for a serverless function.</p>
+						</div>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -176,13 +181,13 @@
 					<a name="createjavascriptlambda" class="tsd-anchor"></a>
 					<h3>create<wbr>Java<wbr>Script<wbr>Lambda</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Java<wbr>Script<wbr>Lambda<span class="tsd-signature-symbol">(</span>functionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, role<span class="tsd-signature-symbol">: </span><a href="../classes/_iam_role_.role.html" class="tsd-signature-type">Role</a>, closure<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.runtime.Closure</span><span class="tsd-signature-symbol">&gt;</span>, opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_serverless_function_.functionoptions.html" class="tsd-signature-type">FunctionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">lambda.Function</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Java<wbr>Script<wbr>Lambda<span class="tsd-signature-symbol">(</span>functionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, role<span class="tsd-signature-symbol">: </span><a href="../classes/_iam_role_.role.html" class="tsd-signature-type">Role</a>, closure<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.runtime.Closure</span><span class="tsd-signature-symbol">&gt;</span>, opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_serverless_function_.functionoptions.html" class="tsd-signature-type">FunctionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">lambda.Function</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/serverless/function.ts#L179">serverless/function.ts:179</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/serverless/function.ts#L190">serverless/function.ts:190</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -194,7 +199,7 @@
 									<h5>role: <a href="../classes/_iam_role_.role.html" class="tsd-signature-type">Role</a></h5>
 								</li>
 								<li>
-									<h5>closure: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.runtime.Closure</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>closure: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.runtime.Closure</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
 									<h5>opts: <a href="../interfaces/_serverless_function_.functionoptions.html" class="tsd-signature-type">FunctionOptions</a></h5>
@@ -214,7 +219,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/serverless/function.ts#L139">serverless/function.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/serverless/function.ts#L150">serverless/function.ts:150</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -237,13 +242,23 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/serverless/function.ts#L118">serverless/function.ts:118</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/serverless/function.ts#L129">serverless/function.ts:129</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Converts an environment object into a string which can be embedded into a serialized function body.  Note that this
+										is not JSON serialization, as we may have proeprty values which are variable references to other global functions.
+									In other words, there can be free variables in the resulting object literal.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>envObj: <span class="tsd-signature-type">object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The environment object to convert to a string.</p>
+									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-index-signature">
 											<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span></h5>
@@ -259,22 +274,22 @@
 					<a name="serializeclosuretext" class="tsd-anchor"></a>
 					<h3>serialize<wbr>Closure<wbr>Text</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">serialize<wbr>Closure<wbr>Text<span class="tsd-signature-symbol">(</span>closure<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.runtime.Closure</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">fabric.asset.StringAsset</span></li>
+						<li class="tsd-signature tsd-kind-icon">serialize<wbr>Closure<wbr>Text<span class="tsd-signature-symbol">(</span>closure<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.runtime.Closure</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">pulumi.asset.StringAsset</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/serverless/function.ts#L152">serverless/function.ts:152</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/serverless/function.ts#L163">serverless/function.ts:163</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>closure: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.runtime.Closure</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>closure: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.runtime.Closure</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">fabric.asset.StringAsset</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">pulumi.asset.StringAsset</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -287,7 +302,7 @@
 					<div class="tsd-signature tsd-kind-icon">policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/serverless/function.ts#L27">serverless/function.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/serverless/function.ts#L31">serverless/function.ts:31</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -296,7 +311,7 @@
 						<div class="tsd-signature tsd-kind-icon">Statement<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[{&quot;Action&quot;: &quot;sts:AssumeRole&quot;,&quot;Principal&quot;: {&quot;Service&quot;: &quot;lambda.amazonaws.com&quot;,},&quot;Effect&quot;: &quot;Allow&quot;,&quot;Sid&quot;: &quot;&quot;,},]</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/serverless/function.ts#L29">serverless/function.ts:29</a></li>
+								<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/serverless/function.ts#L33">serverless/function.ts:33</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -306,7 +321,7 @@
 						<div class="tsd-signature tsd-kind-icon">Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;2012-10-17&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/serverless/function.ts#L28">serverless/function.ts:28</a></li>
+								<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/serverless/function.ts#L32">serverless/function.ts:32</a></li>
 							</ul>
 						</aside>
 					</section>

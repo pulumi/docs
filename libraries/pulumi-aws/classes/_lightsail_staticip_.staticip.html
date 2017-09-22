@@ -120,14 +120,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Static<wbr>Ip<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_lightsail_staticip_.staticipargs.html" class="tsd-signature-type">StaticIpArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lightsail_staticip_.staticip.html" class="tsd-signature-type">StaticIp</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Static<wbr>Ip<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_lightsail_staticip_.staticipargs.html" class="tsd-signature-type">StaticIpArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lightsail_staticip_.staticip.html" class="tsd-signature-type">StaticIp</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/lightsail/staticIp.ts#L27">lightsail/staticIp.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/lightsail/staticIp.ts#L27">lightsail/staticIp.ts:27</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -155,7 +155,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>A optional array of additional resources this intance depends on</p>
@@ -173,10 +173,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="arn" class="tsd-anchor"></a>
 					<h3>arn</h3>
-					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/lightsail/staticIp.ts#L15">lightsail/staticIp.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/lightsail/staticIp.ts#L15">lightsail/staticIp.ts:15</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -192,17 +192,23 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.id</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi-fabric/resource.d.ts:5</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:15</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>id is the provider-assigned unique ID for this resource.  It is set during deployments and may be missing
+							(undefined) during planning phases.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ipaddress" class="tsd-anchor"></a>
 					<h3>ip<wbr>Address</h3>
-					<div class="tsd-signature tsd-kind-icon">ip<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">ip<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/lightsail/staticIp.ts#L19">lightsail/staticIp.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/lightsail/staticIp.ts#L19">lightsail/staticIp.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -214,10 +220,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="name" class="tsd-anchor"></a>
 					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/lightsail/staticIp.ts#L23">lightsail/staticIp.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/lightsail/staticIp.ts#L23">lightsail/staticIp.ts:23</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -229,10 +235,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="supportcode" class="tsd-anchor"></a>
 					<h3>support<wbr>Code</h3>
-					<div class="tsd-signature tsd-kind-icon">support<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">support<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/lightsail/staticIp.ts#L27">lightsail/staticIp.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/lightsail/staticIp.ts#L27">lightsail/staticIp.ts:27</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -248,9 +254,14 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.urn</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi-fabric/resource.d.ts:4</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:10</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>urn is the stable logical URN used to distinctly address a resource, both before and after deployments.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>

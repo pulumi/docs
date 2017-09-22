@@ -126,14 +126,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Integration<wbr>Response<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/_apigateway_integrationresponse_.integrationresponseargs.html" class="tsd-signature-type">IntegrationResponseArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_apigateway_integrationresponse_.integrationresponse.html" class="tsd-signature-type">IntegrationResponse</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Integration<wbr>Response<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/_apigateway_integrationresponse_.integrationresponseargs.html" class="tsd-signature-type">IntegrationResponseArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_apigateway_integrationresponse_.integrationresponse.html" class="tsd-signature-type">IntegrationResponse</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/integrationResponse.ts#L54">apigateway/integrationResponse.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/apigateway/integrationResponse.ts#L54">apigateway/integrationResponse.ts:54</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -161,7 +161,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>A optional array of additional resources this intance depends on</p>
@@ -179,10 +179,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="contenthandling" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> content<wbr>Handling</h3>
-					<div class="tsd-signature tsd-kind-icon">content<wbr>Handling<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">content<wbr>Handling<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/integrationResponse.ts#L18">apigateway/integrationResponse.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/apigateway/integrationResponse.ts#L18">apigateway/integrationResponse.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -194,10 +194,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="httpmethod" class="tsd-anchor"></a>
 					<h3>http<wbr>Method</h3>
-					<div class="tsd-signature tsd-kind-icon">http<wbr>Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">http<wbr>Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/integrationResponse.ts#L22">apigateway/integrationResponse.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/apigateway/integrationResponse.ts#L22">apigateway/integrationResponse.ts:22</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -213,17 +213,23 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.id</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi-fabric/resource.d.ts:5</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:15</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>id is the provider-assigned unique ID for this resource.  It is set during deployments and may be missing
+							(undefined) during planning phases.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="resourceid" class="tsd-anchor"></a>
 					<h3>resource<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">resource<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">resource<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/integrationResponse.ts#L26">apigateway/integrationResponse.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/apigateway/integrationResponse.ts#L26">apigateway/integrationResponse.ts:26</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -235,10 +241,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="responseparameters" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> response<wbr>Parameters</h3>
-					<div class="tsd-signature tsd-kind-icon">response<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">response<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/integrationResponse.ts#L31">apigateway/integrationResponse.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/apigateway/integrationResponse.ts#L31">apigateway/integrationResponse.ts:31</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -251,10 +257,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="responseparametersinjson" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> response<wbr>Parameters<wbr>InJson</h3>
-					<div class="tsd-signature tsd-kind-icon">response<wbr>Parameters<wbr>InJson<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">response<wbr>Parameters<wbr>InJson<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/integrationResponse.ts#L35">apigateway/integrationResponse.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/apigateway/integrationResponse.ts#L35">apigateway/integrationResponse.ts:35</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -266,10 +272,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="responsetemplates" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> response<wbr>Templates</h3>
-					<div class="tsd-signature tsd-kind-icon">response<wbr>Templates<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">response<wbr>Templates<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/integrationResponse.ts#L39">apigateway/integrationResponse.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/apigateway/integrationResponse.ts#L39">apigateway/integrationResponse.ts:39</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -281,10 +287,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="restapi" class="tsd-anchor"></a>
 					<h3>rest<wbr>Api</h3>
-					<div class="tsd-signature tsd-kind-icon">rest<wbr>Api<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><a href="_apigateway_restapi_.restapi.html" class="tsd-signature-type">RestApi</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">rest<wbr>Api<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><a href="_apigateway_restapi_.restapi.html" class="tsd-signature-type">RestApi</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/integrationResponse.ts#L43">apigateway/integrationResponse.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/apigateway/integrationResponse.ts#L43">apigateway/integrationResponse.ts:43</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -296,10 +302,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="selectionpattern" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> selection<wbr>Pattern</h3>
-					<div class="tsd-signature tsd-kind-icon">selection<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">selection<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/integrationResponse.ts#L50">apigateway/integrationResponse.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/apigateway/integrationResponse.ts#L50">apigateway/integrationResponse.ts:50</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -314,10 +320,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="statuscode" class="tsd-anchor"></a>
 					<h3>status<wbr>Code</h3>
-					<div class="tsd-signature tsd-kind-icon">status<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">status<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/integrationResponse.ts#L54">apigateway/integrationResponse.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/apigateway/integrationResponse.ts#L54">apigateway/integrationResponse.ts:54</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -333,9 +339,14 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.urn</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi-fabric/resource.d.ts:4</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:10</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>urn is the stable logical URN used to distinctly address a resource, both before and after deployments.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>

@@ -124,14 +124,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Schedule<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/_autoscaling_schedule_.scheduleargs.html" class="tsd-signature-type">ScheduleArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_autoscaling_schedule_.schedule.html" class="tsd-signature-type">Schedule</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Schedule<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/_autoscaling_schedule_.scheduleargs.html" class="tsd-signature-type">ScheduleArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_autoscaling_schedule_.schedule.html" class="tsd-signature-type">Schedule</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/schedule.ts#L49">autoscaling/schedule.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/autoscaling/schedule.ts#L49">autoscaling/schedule.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -159,7 +159,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>A optional array of additional resources this intance depends on</p>
@@ -177,10 +177,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="arn" class="tsd-anchor"></a>
 					<h3>arn</h3>
-					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/schedule.ts#L13">autoscaling/schedule.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/autoscaling/schedule.ts#L13">autoscaling/schedule.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -192,10 +192,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="autoscalinggroupname" class="tsd-anchor"></a>
 					<h3>autoscaling<wbr>Group<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/schedule.ts#L17">autoscaling/schedule.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/autoscaling/schedule.ts#L17">autoscaling/schedule.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -207,10 +207,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="desiredcapacity" class="tsd-anchor"></a>
 					<h3>desired<wbr>Capacity</h3>
-					<div class="tsd-signature tsd-kind-icon">desired<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">desired<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/schedule.ts#L21">autoscaling/schedule.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/autoscaling/schedule.ts#L21">autoscaling/schedule.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -222,10 +222,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="endtime" class="tsd-anchor"></a>
 					<h3>end<wbr>Time</h3>
-					<div class="tsd-signature tsd-kind-icon">end<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">end<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/schedule.ts#L26">autoscaling/schedule.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/autoscaling/schedule.ts#L26">autoscaling/schedule.ts:26</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -242,17 +242,23 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.id</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi-fabric/resource.d.ts:5</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:15</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>id is the provider-assigned unique ID for this resource.  It is set during deployments and may be missing
+							(undefined) during planning phases.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="maxsize" class="tsd-anchor"></a>
 					<h3>max<wbr>Size</h3>
-					<div class="tsd-signature tsd-kind-icon">max<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/schedule.ts#L31">autoscaling/schedule.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/autoscaling/schedule.ts#L31">autoscaling/schedule.ts:31</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -267,10 +273,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="minsize" class="tsd-anchor"></a>
 					<h3>min<wbr>Size</h3>
-					<div class="tsd-signature tsd-kind-icon">min<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">min<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/schedule.ts#L36">autoscaling/schedule.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/autoscaling/schedule.ts#L36">autoscaling/schedule.ts:36</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -285,10 +291,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="recurrence" class="tsd-anchor"></a>
 					<h3>recurrence</h3>
-					<div class="tsd-signature tsd-kind-icon">recurrence<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">recurrence<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/schedule.ts#L40">autoscaling/schedule.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/autoscaling/schedule.ts#L40">autoscaling/schedule.ts:40</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -300,10 +306,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="scheduledactionname" class="tsd-anchor"></a>
 					<h3>scheduled<wbr>Action<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">scheduled<wbr>Action<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">scheduled<wbr>Action<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/schedule.ts#L44">autoscaling/schedule.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/autoscaling/schedule.ts#L44">autoscaling/schedule.ts:44</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -315,10 +321,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="starttime" class="tsd-anchor"></a>
 					<h3>start<wbr>Time</h3>
-					<div class="tsd-signature tsd-kind-icon">start<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">start<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/schedule.ts#L49">autoscaling/schedule.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/autoscaling/schedule.ts#L49">autoscaling/schedule.ts:49</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -335,9 +341,14 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.urn</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi-fabric/resource.d.ts:4</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:10</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>urn is the stable logical URN used to distinctly address a resource, both before and after deployments.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>

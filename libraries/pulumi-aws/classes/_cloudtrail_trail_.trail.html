@@ -129,14 +129,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Trail<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/_cloudtrail_trail_.trailargs.html" class="tsd-signature-type">TrailArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_cloudtrail_trail_.trail.html" class="tsd-signature-type">Trail</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Trail<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/_cloudtrail_trail_.trailargs.html" class="tsd-signature-type">TrailArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_cloudtrail_trail_.trail.html" class="tsd-signature-type">Trail</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L73">cloudtrail/trail.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L73">cloudtrail/trail.ts:73</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -164,7 +164,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>A optional array of additional resources this intance depends on</p>
@@ -182,10 +182,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="arn" class="tsd-anchor"></a>
 					<h3>arn</h3>
-					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L13">cloudtrail/trail.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L13">cloudtrail/trail.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -197,10 +197,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="cloudwatchlogsgrouparn" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cloud<wbr>Watch<wbr>Logs<wbr>Group<wbr>Arn</h3>
-					<div class="tsd-signature tsd-kind-icon">cloud<wbr>Watch<wbr>Logs<wbr>Group<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cloud<wbr>Watch<wbr>Logs<wbr>Group<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L18">cloudtrail/trail.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L18">cloudtrail/trail.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -213,10 +213,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="cloudwatchlogsrolearn" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cloud<wbr>Watch<wbr>Logs<wbr>Role<wbr>Arn</h3>
-					<div class="tsd-signature tsd-kind-icon">cloud<wbr>Watch<wbr>Logs<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cloud<wbr>Watch<wbr>Logs<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L23">cloudtrail/trail.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L23">cloudtrail/trail.ts:23</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -229,10 +229,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="enablelogfilevalidation" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enable<wbr>Log<wbr>File<wbr>Validation</h3>
-					<div class="tsd-signature tsd-kind-icon">enable<wbr>Log<wbr>File<wbr>Validation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">enable<wbr>Log<wbr>File<wbr>Validation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L28">cloudtrail/trail.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L28">cloudtrail/trail.ts:28</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -245,10 +245,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="enablelogging" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enable<wbr>Logging</h3>
-					<div class="tsd-signature tsd-kind-icon">enable<wbr>Logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">enable<wbr>Logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L33">cloudtrail/trail.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L33">cloudtrail/trail.ts:33</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -261,10 +261,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="homeregion" class="tsd-anchor"></a>
 					<h3>home<wbr>Region</h3>
-					<div class="tsd-signature tsd-kind-icon">home<wbr>Region<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">home<wbr>Region<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L37">cloudtrail/trail.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L37">cloudtrail/trail.ts:37</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -280,17 +280,23 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.id</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi-fabric/resource.d.ts:5</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:15</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>id is the provider-assigned unique ID for this resource.  It is set during deployments and may be missing
+							(undefined) during planning phases.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="includeglobalserviceevents" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> include<wbr>Global<wbr>Service<wbr>Events</h3>
-					<div class="tsd-signature tsd-kind-icon">include<wbr>Global<wbr>Service<wbr>Events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">include<wbr>Global<wbr>Service<wbr>Events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L42">cloudtrail/trail.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L42">cloudtrail/trail.ts:42</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -303,10 +309,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ismultiregiontrail" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Multi<wbr>Region<wbr>Trail</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Multi<wbr>Region<wbr>Trail<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Multi<wbr>Region<wbr>Trail<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L47">cloudtrail/trail.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L47">cloudtrail/trail.ts:47</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -319,10 +325,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="kmskeyid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> kms<wbr>Key<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L51">cloudtrail/trail.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L51">cloudtrail/trail.ts:51</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -334,10 +340,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="name" class="tsd-anchor"></a>
 					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L55">cloudtrail/trail.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L55">cloudtrail/trail.ts:55</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -349,10 +355,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="s3bucketname" class="tsd-anchor"></a>
 					<h3>s3<wbr>Bucket<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">s3<wbr>Bucket<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">s3<wbr>Bucket<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L59">cloudtrail/trail.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L59">cloudtrail/trail.ts:59</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -364,10 +370,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="s3keyprefix" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> s3<wbr>Key<wbr>Prefix</h3>
-					<div class="tsd-signature tsd-kind-icon">s3<wbr>Key<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">s3<wbr>Key<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L64">cloudtrail/trail.ts:64</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L64">cloudtrail/trail.ts:64</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -380,10 +386,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="snstopicname" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> sns<wbr>Topic<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">sns<wbr>Topic<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">sns<wbr>Topic<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L69">cloudtrail/trail.ts:69</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L69">cloudtrail/trail.ts:69</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -396,10 +402,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tags" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
-					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudtrail/trail.ts#L73">cloudtrail/trail.ts:73</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/152bb69/pack/cloudtrail/trail.ts#L73">cloudtrail/trail.ts:73</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -415,9 +421,14 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.urn</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi-fabric/resource.d.ts:4</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:10</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>urn is the stable logical URN used to distinctly address a resource, both before and after deployments.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
