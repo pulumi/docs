@@ -2,21 +2,32 @@
 
 "Because knowing is half the battle."
 
-## Stack
+## Toolchain
 
-- Jekyll
+The website is statically built using [Jekyll](https://jekyllrb.com). So we have basic templating
+for generating HTML and the ability to write most files in Markdown.
+
+TypeScript documentation is generated directly from source using [TYPEDOC](http://typedoc.org/). We
+just check the resulting files directly into the repo under `./libraries/`.
 
 ## Development
 
-```bash
-gem install jekyll bundler
+Run `make configure` to get the required Gem dependencies. (Assuming you have a recent Ruby
+installation on your system.
 
-jekyll serve --strict_front_matter --force_polling
-```
+`make serve` will build the website and serve it to http://localhost:4000.
+
+`make generate` will regenerate the TypeScript documentation if needed. Requires you have the
+other Pulumi repos (pulumi, pulumi-cloud, plumi-aws) as peers of the docs repo and in a good
+working state.
+
+`make build` will generate the website (published to _site).
 
 ## Design Reference
 
-Good documentation websites:
+Web design is hard. Documentation is hard. Good web design for documentation is harder.
+
+Examples of other sites and their docs as inspiration:
 
 - https://kubernetes.github.io/
 - https://devcenter.heroku.com/
@@ -24,17 +35,3 @@ Good documentation websites:
 - http://developer.mailchimp.com/documentation/mailchimp/
 - http://ionicframework.com/docs/
 - https://www.twilio.com/docs/
-
-## Backlog
-
-Missing P0s:
-
-- Hook up the Downloads button to an actual zip file.
-
-Things to do eventually:
-
-- Pylint for scripts?
-- Google Analytics?
-- Sitemap
-- 404 page
-- robots.txt
