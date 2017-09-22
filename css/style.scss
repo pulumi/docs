@@ -69,11 +69,16 @@ $accent2: #d5008f;
 h1, h2, h3, h4, h5, h6 { font-family: 'Oxygen', sans-serif; }
 button, input { font-family: 'Oxygen', sans-serif; }
 
-a, p, span, small, label, legend, li { font-family: 'Open Sans', sans-serif; }
+a, p, small, label, legend, li { font-family: 'Open Sans', sans-serif; }
 
-code, pre {
+code {
   background-color: #EEEEEE;  // .light-gray
-  color: $pulumi-brand;
+}
+
+pre {
+  background-color: #EEEEEE;  // .light-gray
+  font-size: 0.8em;
+  padding: 16px;
 }
 
 /**
