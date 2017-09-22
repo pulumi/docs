@@ -15,10 +15,10 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item {% if page.nav_section == "quickstart" %}active{% endif %}">
                 <a class="nav-link" href="/quickstart">Quickstart</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if page.nav_section == "libraries" %}active{% endif %}">
                 <a class="nav-link" href="/libraries">Libraries</a>
             </li>
         </ul>

@@ -1,5 +1,6 @@
 ---
 layout: default
+nav_section: "libraries"
 ---
 
 # Pulumi Libraries
