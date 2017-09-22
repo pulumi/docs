@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ec2_securitygrouprule_.html">&quot;ec2/securityGroupRule&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a SecurityGroupRule resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -107,9 +114,14 @@
 					<div class="tsd-signature tsd-kind-icon">cidr<wbr>Blocks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/securityGroupRule.ts#L50">ec2/securityGroupRule.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/securityGroupRule.ts#L109">ec2/securityGroupRule.ts:109</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of CIDR blocks. Cannot be specified with <code>source_security_group_id</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="fromport" class="tsd-anchor"></a>
@@ -117,9 +129,14 @@
 					<div class="tsd-signature tsd-kind-icon">from<wbr>Port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/securityGroupRule.ts#L51">ec2/securityGroupRule.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/securityGroupRule.ts#L113">ec2/securityGroupRule.ts:113</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The start port (or ICMP type number if protocol is &quot;icmp&quot;).</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="ipv6cidrblocks" class="tsd-anchor"></a>
@@ -127,9 +144,14 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Cidr<wbr>Blocks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/securityGroupRule.ts#L52">ec2/securityGroupRule.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/securityGroupRule.ts#L117">ec2/securityGroupRule.ts:117</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of IPv6 CIDR blocks.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="prefixlistids" class="tsd-anchor"></a>
@@ -137,9 +159,15 @@
 					<div class="tsd-signature tsd-kind-icon">prefix<wbr>List<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/securityGroupRule.ts#L53">ec2/securityGroupRule.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/securityGroupRule.ts#L122">ec2/securityGroupRule.ts:122</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of prefix list IDs (for allowing access to VPC endpoints).
+							Only valid with <code>egress</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="protocol" class="tsd-anchor"></a>
@@ -147,9 +175,14 @@
 					<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/securityGroupRule.ts#L54">ec2/securityGroupRule.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/securityGroupRule.ts#L126">ec2/securityGroupRule.ts:126</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The protocol. If not icmp, tcp, udp, or all use the <a href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="securitygroupid" class="tsd-anchor"></a>
@@ -157,9 +190,14 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/securityGroupRule.ts#L55">ec2/securityGroupRule.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/securityGroupRule.ts#L130">ec2/securityGroupRule.ts:130</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The security group to apply this rule to.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="self" class="tsd-anchor"></a>
@@ -167,9 +205,15 @@
 					<div class="tsd-signature tsd-kind-icon">self<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/securityGroupRule.ts#L56">ec2/securityGroupRule.ts:56</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/securityGroupRule.ts#L135">ec2/securityGroupRule.ts:135</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, the security group itself will be added as
+							a source to this ingress rule.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="sourcesecuritygroupid" class="tsd-anchor"></a>
@@ -177,9 +221,15 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Security<wbr>Group<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/securityGroupRule.ts#L57">ec2/securityGroupRule.ts:57</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/securityGroupRule.ts#L140">ec2/securityGroupRule.ts:140</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The security group id to allow access to/from,
+							depending on the <code>type</code>. Cannot be specified with <code>cidr_blocks</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="toport" class="tsd-anchor"></a>
@@ -187,9 +237,14 @@
 					<div class="tsd-signature tsd-kind-icon">to<wbr>Port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/securityGroupRule.ts#L58">ec2/securityGroupRule.ts:58</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/securityGroupRule.ts#L144">ec2/securityGroupRule.ts:144</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The end port (or ICMP code if protocol is &quot;icmp&quot;).</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="type" class="tsd-anchor"></a>
@@ -197,9 +252,15 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/securityGroupRule.ts#L60">ec2/securityGroupRule.ts:60</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/securityGroupRule.ts#L149">ec2/securityGroupRule.ts:149</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The type of rule being created. Valid options are <code>ingress</code> (inbound)
+							or <code>egress</code> (outbound).</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -207,7 +268,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ec2_securitygrouprule_.html">"ec2/security<wbr>Group<wbr>Rule"</a>

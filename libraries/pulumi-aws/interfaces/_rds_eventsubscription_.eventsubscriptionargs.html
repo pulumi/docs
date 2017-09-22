@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_rds_eventsubscription_.html">&quot;rds/eventSubscription&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a EventSubscription resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -104,9 +111,14 @@
 					<div class="tsd-signature tsd-kind-icon">enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/eventSubscription.ts#L34">rds/eventSubscription.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/eventSubscription.ts#L72">rds/eventSubscription.ts:72</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A boolean flag to enable/disable the subscription. Defaults to true.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="eventcategories" class="tsd-anchor"></a>
@@ -114,9 +126,14 @@
 					<div class="tsd-signature tsd-kind-icon">event<wbr>Categories<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/eventSubscription.ts#L35">rds/eventSubscription.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/eventSubscription.ts#L76">rds/eventSubscription.ts:76</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of event categories for a SourceType that you want to subscribe to. See <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide//USER_Events.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide//USER_Events.html</a></p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
@@ -124,9 +141,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/eventSubscription.ts#L36">rds/eventSubscription.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/eventSubscription.ts#L80">rds/eventSubscription.ts:80</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the DB event subscription.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="snstopic" class="tsd-anchor"></a>
@@ -134,9 +156,14 @@
 					<div class="tsd-signature tsd-kind-icon">sns<wbr>Topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/eventSubscription.ts#L37">rds/eventSubscription.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/eventSubscription.ts#L84">rds/eventSubscription.ts:84</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The SNS topic to send events to.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="sourceids" class="tsd-anchor"></a>
@@ -144,9 +171,14 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/eventSubscription.ts#L38">rds/eventSubscription.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/eventSubscription.ts#L88">rds/eventSubscription.ts:88</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="sourcetype" class="tsd-anchor"></a>
@@ -154,9 +186,14 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/eventSubscription.ts#L39">rds/eventSubscription.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/eventSubscription.ts#L92">rds/eventSubscription.ts:92</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The type of source that will be generating the events.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
@@ -164,9 +201,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/eventSubscription.ts#L40">rds/eventSubscription.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/eventSubscription.ts#L96">rds/eventSubscription.ts:96</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -174,7 +216,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_rds_eventsubscription_.html">"rds/event<wbr>Subscription"</a>

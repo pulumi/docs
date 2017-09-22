@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_codebuild_project_.html">&quot;codebuild/project&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a Project resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -106,9 +113,14 @@
 					<div class="tsd-signature tsd-kind-icon">artifacts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/codebuild/project.ts#L42">codebuild/project.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/codebuild/project.ts#L86">codebuild/project.ts:86</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Information about the project&#39;s build output artifacts. Artifact blocks are documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="buildtimeout" class="tsd-anchor"></a>
@@ -116,9 +128,14 @@
 					<div class="tsd-signature tsd-kind-icon">build<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/codebuild/project.ts#L43">codebuild/project.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/codebuild/project.ts#L90">codebuild/project.ts:90</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="description" class="tsd-anchor"></a>
@@ -126,9 +143,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/codebuild/project.ts#L44">codebuild/project.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/codebuild/project.ts#L94">codebuild/project.ts:94</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A short description of the project.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="encryptionkey" class="tsd-anchor"></a>
@@ -136,9 +158,14 @@
 					<div class="tsd-signature tsd-kind-icon">encryption<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/codebuild/project.ts#L45">codebuild/project.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/codebuild/project.ts#L98">codebuild/project.ts:98</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project&#39;s build output artifacts.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="environment" class="tsd-anchor"></a>
@@ -146,9 +173,14 @@
 					<div class="tsd-signature tsd-kind-icon">environment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/codebuild/project.ts#L46">codebuild/project.ts:46</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/codebuild/project.ts#L102">codebuild/project.ts:102</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Information about the project&#39;s build environment. Environment blocks are documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
@@ -156,9 +188,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/codebuild/project.ts#L47">codebuild/project.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/codebuild/project.ts#L106">codebuild/project.ts:106</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The environment variable&#39;s name or key.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="servicerole" class="tsd-anchor"></a>
@@ -166,9 +203,14 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/codebuild/project.ts#L48">codebuild/project.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/codebuild/project.ts#L110">codebuild/project.ts:110</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="source" class="tsd-anchor"></a>
@@ -176,9 +218,14 @@
 					<div class="tsd-signature tsd-kind-icon">source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/codebuild/project.ts#L49">codebuild/project.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/codebuild/project.ts#L114">codebuild/project.ts:114</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Information about the project&#39;s input source code. Source blocks are documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
@@ -186,9 +233,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/codebuild/project.ts#L50">codebuild/project.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/codebuild/project.ts#L118">codebuild/project.ts:118</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -196,7 +248,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_codebuild_project_.html">"codebuild/project"</a>

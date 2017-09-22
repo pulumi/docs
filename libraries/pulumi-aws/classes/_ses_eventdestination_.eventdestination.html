@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ses_eventdestination_.html">&quot;ses/eventDestination&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides an SES event destination</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -121,19 +128,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ses/eventDestination.ts#L12">ses/eventDestination.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ses/eventDestination.ts#L33">ses/eventDestination.ts:33</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a EventDestination resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this EventDestination instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_ses_eventdestination_.eventdestinationargs.html" class="tsd-signature-type">EventDestinationArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this EventDestination intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_ses_eventdestination_.eventdestination.html" class="tsd-signature-type">EventDestination</a></h4>
@@ -149,9 +177,14 @@
 					<div class="tsd-signature tsd-kind-icon">cloudwatch<wbr>Destination<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ses/eventDestination.ts#L7">ses/eventDestination.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ses/eventDestination.ts#L13">ses/eventDestination.ts:13</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>CloudWatch destination for the events</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="configurationsetname" class="tsd-anchor"></a>
@@ -159,9 +192,14 @@
 					<div class="tsd-signature tsd-kind-icon">configuration<wbr>Set<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ses/eventDestination.ts#L8">ses/eventDestination.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ses/eventDestination.ts#L17">ses/eventDestination.ts:17</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the configuration set</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="enabled" class="tsd-anchor"></a>
@@ -169,9 +207,14 @@
 					<div class="tsd-signature tsd-kind-icon">enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ses/eventDestination.ts#L9">ses/eventDestination.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ses/eventDestination.ts#L21">ses/eventDestination.ts:21</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, the event destination will be enabled</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -190,9 +233,14 @@
 					<div class="tsd-signature tsd-kind-icon">kinesis<wbr>Destination<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ses/eventDestination.ts#L10">ses/eventDestination.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ses/eventDestination.ts#L25">ses/eventDestination.ts:25</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Send the events to a kinesis firehose destination</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="matchingtypes" class="tsd-anchor"></a>
@@ -200,9 +248,14 @@
 					<div class="tsd-signature tsd-kind-icon">matching<wbr>Types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ses/eventDestination.ts#L11">ses/eventDestination.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ses/eventDestination.ts#L29">ses/eventDestination.ts:29</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of matching types. May be any of <code>&quot;send&quot;</code>, <code>&quot;reject&quot;</code>, <code>&quot;bounce&quot;</code>, <code>&quot;complaint&quot;</code>, or <code>&quot;delivery&quot;</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="name" class="tsd-anchor"></a>
@@ -210,9 +263,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ses/eventDestination.ts#L12">ses/eventDestination.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ses/eventDestination.ts#L33">ses/eventDestination.ts:33</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the event destination</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -231,7 +289,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ses_eventdestination_.html">"ses/event<wbr>Destination"</a>

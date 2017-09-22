@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_elasticloadbalancingv2_targetgroup_.html">&quot;elasticloadbalancingv2/targetGroup&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a TargetGroup resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -106,9 +113,14 @@
 					<div class="tsd-signature tsd-kind-icon">deregistration<wbr>Delay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticloadbalancingv2/targetGroup.ts#L46">elasticloadbalancingv2/targetGroup.ts:46</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticloadbalancingv2/targetGroup.ts#L97">elasticloadbalancingv2/targetGroup.ts:97</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="healthchecks" class="tsd-anchor"></a>
@@ -116,9 +128,14 @@
 					<div class="tsd-signature tsd-kind-icon">health<wbr>Checks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticloadbalancingv2/targetGroup.ts#L47">elasticloadbalancingv2/targetGroup.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticloadbalancingv2/targetGroup.ts#L101">elasticloadbalancingv2/targetGroup.ts:101</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A Health Check block. Health Check blocks are documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
@@ -126,9 +143,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticloadbalancingv2/targetGroup.ts#L48">elasticloadbalancingv2/targetGroup.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticloadbalancingv2/targetGroup.ts#L105">elasticloadbalancingv2/targetGroup.ts:105</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the target group. If omitted, Terraform will assign a random, unique name.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="nameprefix" class="tsd-anchor"></a>
@@ -136,9 +158,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticloadbalancingv2/targetGroup.ts#L49">elasticloadbalancingv2/targetGroup.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticloadbalancingv2/targetGroup.ts#L109">elasticloadbalancingv2/targetGroup.ts:109</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Creates a unique name beginning with the specified prefix. Conflicts with <code>name</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="port" class="tsd-anchor"></a>
@@ -146,9 +173,14 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticloadbalancingv2/targetGroup.ts#L50">elasticloadbalancingv2/targetGroup.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticloadbalancingv2/targetGroup.ts#L113">elasticloadbalancingv2/targetGroup.ts:113</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The port to use to connect with the target. Valid values are either ports 1-65536, or <code>traffic-port</code>. Defaults to <code>traffic-port</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="protocol" class="tsd-anchor"></a>
@@ -156,9 +188,14 @@
 					<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticloadbalancingv2/targetGroup.ts#L51">elasticloadbalancingv2/targetGroup.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticloadbalancingv2/targetGroup.ts#L117">elasticloadbalancingv2/targetGroup.ts:117</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The protocol to use to connect with the target. Defaults to <code>HTTP</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="stickiness" class="tsd-anchor"></a>
@@ -166,9 +203,14 @@
 					<div class="tsd-signature tsd-kind-icon">stickiness<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticloadbalancingv2/targetGroup.ts#L52">elasticloadbalancingv2/targetGroup.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticloadbalancingv2/targetGroup.ts#L121">elasticloadbalancingv2/targetGroup.ts:121</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A Stickiness block. Stickiness blocks are documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
@@ -176,9 +218,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticloadbalancingv2/targetGroup.ts#L53">elasticloadbalancingv2/targetGroup.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticloadbalancingv2/targetGroup.ts#L125">elasticloadbalancingv2/targetGroup.ts:125</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="vpcid" class="tsd-anchor"></a>
@@ -186,9 +233,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticloadbalancingv2/targetGroup.ts#L54">elasticloadbalancingv2/targetGroup.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticloadbalancingv2/targetGroup.ts#L129">elasticloadbalancingv2/targetGroup.ts:129</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The identifier of the VPC in which to create the target group.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -196,7 +248,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_elasticloadbalancingv2_targetgroup_.html">"elasticloadbalancingv2/target<wbr>Group"</a>

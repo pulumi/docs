@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_autoscaling_policy_.html">&quot;autoscaling/policy&quot;</a>
@@ -69,6 +69,18 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides an AutoScaling Scaling Policy resource.</p>
+					</div>
+					<p>~&gt; <strong>NOTE:</strong> You may want to omit <code>desired_capacity</code> attribute from attached <code>aws_autoscaling_group</code>
+						when using autoscaling policies. It&#39;s good practice to pick either
+						<a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-manual-scaling.html">manual</a>
+						or <a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">dynamic</a>
+					(policy-based) scaling.</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -127,19 +139,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L18">autoscaling/policy.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L59">autoscaling/policy.ts:59</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a Policy resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this Policy instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_autoscaling_policy_.policyargs.html" class="tsd-signature-type">PolicyArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this Policy intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_autoscaling_policy_.policy.html" class="tsd-signature-type">Policy</a></h4>
@@ -155,9 +188,14 @@
 					<div class="tsd-signature tsd-kind-icon">adjustment<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L7">autoscaling/policy.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L19">autoscaling/policy.ts:19</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and <code>PercentChangeInCapacity</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="arn" class="tsd-anchor"></a>
@@ -165,9 +203,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L8">autoscaling/policy.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L23">autoscaling/policy.ts:23</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN assigned by AWS to the scaling policy.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="autoscalinggroupname" class="tsd-anchor"></a>
@@ -175,9 +218,14 @@
 					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L9">autoscaling/policy.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L27">autoscaling/policy.ts:27</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the autoscaling group.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="cooldown" class="tsd-anchor"></a>
@@ -185,9 +233,14 @@
 					<div class="tsd-signature tsd-kind-icon">cooldown<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L10">autoscaling/policy.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L31">autoscaling/policy.ts:31</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="estimatedinstancewarmup" class="tsd-anchor"></a>
@@ -195,9 +248,14 @@
 					<div class="tsd-signature tsd-kind-icon">estimated<wbr>Instance<wbr>Warmup<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L11">autoscaling/policy.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L35">autoscaling/policy.ts:35</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group&#39;s specified cooldown period.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -216,9 +274,14 @@
 					<div class="tsd-signature tsd-kind-icon">metric<wbr>Aggregation<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L12">autoscaling/policy.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L39">autoscaling/policy.ts:39</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The aggregation type for the policy&#39;s metrics. Valid values are &quot;Minimum&quot;, &quot;Maximum&quot;, and &quot;Average&quot;. Without a value, AWS will treat the aggregation type as &quot;Average&quot;.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="minadjustmentmagnitude" class="tsd-anchor"></a>
@@ -226,7 +289,7 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Adjustment<wbr>Magnitude<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L13">autoscaling/policy.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L40">autoscaling/policy.ts:40</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -236,9 +299,14 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Adjustment<wbr>Step<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L14">autoscaling/policy.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L44">autoscaling/policy.ts:44</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Use <code>min_adjustment_magnitude</code> instead.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="name" class="tsd-anchor"></a>
@@ -246,9 +314,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L15">autoscaling/policy.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L48">autoscaling/policy.ts:48</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the policy.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="policytype" class="tsd-anchor"></a>
@@ -256,9 +329,14 @@
 					<div class="tsd-signature tsd-kind-icon">policy<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L16">autoscaling/policy.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L52">autoscaling/policy.ts:52</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The policy type, either &quot;SimpleScaling&quot; or &quot;StepScaling&quot;. If this value isn&#39;t provided, AWS will default to &quot;SimpleScaling.&quot;</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="scalingadjustment" class="tsd-anchor"></a>
@@ -266,9 +344,16 @@
 					<div class="tsd-signature tsd-kind-icon">scaling<wbr>Adjustment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L17">autoscaling/policy.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L58">autoscaling/policy.ts:58</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The number of members by which to
+								scale, when the adjustment bounds are breached. A positive value scales
+							up. A negative value scales down.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="stepadjustment" class="tsd-anchor"></a>
@@ -276,7 +361,7 @@
 					<div class="tsd-signature tsd-kind-icon">step<wbr>Adjustment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/policy.ts#L18">autoscaling/policy.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/policy.ts#L59">autoscaling/policy.ts:59</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -297,7 +382,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_autoscaling_policy_.html">"autoscaling/policy"</a>

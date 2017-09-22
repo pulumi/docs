@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_apigateway_domainname_.html">&quot;apigateway/domainName&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a DomainName resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -103,9 +110,14 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/apigateway/domainName.ts#L36">apigateway/domainName.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/domainName.ts#L102">apigateway/domainName.ts:102</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN for an AWS-managed certificate. Conflicts with <code>certificate_name</code>, <code>certificate_body</code>, <code>certificate_chain</code> and <code>certificate_private_key</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="certificatebody" class="tsd-anchor"></a>
@@ -113,9 +125,15 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/apigateway/domainName.ts#L37">apigateway/domainName.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/domainName.ts#L107">apigateway/domainName.ts:107</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The certificate issued for the domain name
+							being registered, in PEM format. Conflicts with <code>certificate_arn</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="certificatechain" class="tsd-anchor"></a>
@@ -123,9 +141,16 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Chain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/apigateway/domainName.ts#L38">apigateway/domainName.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/domainName.ts#L113">apigateway/domainName.ts:113</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The certificate for the CA that issued the
+								certificate, along with any intermediate CA certificates required to
+							create an unbroken chain to a certificate trusted by the intended API clients. Conflicts with <code>certificate_arn</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="certificatename" class="tsd-anchor"></a>
@@ -133,9 +158,15 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/apigateway/domainName.ts#L39">apigateway/domainName.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/domainName.ts#L118">apigateway/domainName.ts:118</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The unique name to use when registering this
+							cert as an IAM server certificate. Conflicts with <code>certificate_arn</code>. Required if <code>certificate_arn</code> is not set.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="certificateprivatekey" class="tsd-anchor"></a>
@@ -143,9 +174,15 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Private<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/apigateway/domainName.ts#L40">apigateway/domainName.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/domainName.ts#L123">apigateway/domainName.ts:123</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The private key associated with the
+							domain certificate given in <code>certificate_body</code>. Conflicts with <code>certificate_arn</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="domainname" class="tsd-anchor"></a>
@@ -153,9 +190,14 @@
 					<div class="tsd-signature tsd-kind-icon">domain<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/apigateway/domainName.ts#L41">apigateway/domainName.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/apigateway/domainName.ts#L127">apigateway/domainName.ts:127</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The fully-qualified domain name to register</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -163,7 +205,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_apigateway_domainname_.html">"apigateway/domain<wbr>Name"</a>

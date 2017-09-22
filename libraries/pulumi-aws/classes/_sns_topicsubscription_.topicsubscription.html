@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_sns_topicsubscription_.html">&quot;sns/topicSubscription&quot;</a>
@@ -69,6 +69,20 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>  Provides a resource for subscribing to SNS topics. Requires that an SNS topic exist for the subscription to attach to.
+							This resource allows you to automatically place messages sent to SNS topics in SQS queues, send them as HTTP(S) POST requests
+							to a given endpoint, send SMS messages, or notify devices / applications. The most likely use case for Terraform users will
+						probably be SQS queues.</p>
+					</div>
+					<p>~&gt; <strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS regions it is important to place the &quot;aws_sns_topic_subscription&quot; into the terraform configuration of the region with the SQS queue. If &quot;aws_sns_topic_subscription&quot; is placed in the terraform configuration of the region with the SNS topic terraform will fail to create the subscription.</p>
+					<p>~&gt; <strong>NOTE:</strong> Setup of cross-account subscriptions from SNS topics to SQS queues requires Terraform to have access to BOTH accounts.</p>
+					<p>~&gt; <strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts but the same region it is important to place the &quot;aws_sns_topic_subscription&quot; into the terraform configuration of the account with the SQS queue. If &quot;aws_sns_topic_subscription&quot; is placed in the terraform configuration of the account with the SNS topic terraform creates the subscriptions but does not keep state and tries to re-create the subscription at every apply.</p>
+					<p>~&gt; <strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts and different AWS regions it is important to recognize that the subscription needs to be initiated from the account with the SQS queue but in the region of the SNS topic.</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -123,19 +137,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/sns/topicSubscription.ts#L16">sns/topicSubscription.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/sns/topicSubscription.ts#L51">sns/topicSubscription.ts:51</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a TopicSubscription resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this TopicSubscription instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_sns_topicsubscription_.topicsubscriptionargs.html" class="tsd-signature-type">TopicSubscriptionArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this TopicSubscription intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_sns_topicsubscription_.topicsubscription.html" class="tsd-signature-type">TopicSubscription</a></h4>
@@ -151,9 +186,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/sns/topicSubscription.ts#L9">sns/topicSubscription.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/sns/topicSubscription.ts#L26">sns/topicSubscription.ts:26</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN of the subscription stored as a more user-friendly property</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="confirmationtimeoutinminutes" class="tsd-anchor"></a>
@@ -161,9 +201,14 @@
 					<div class="tsd-signature tsd-kind-icon">confirmation<wbr>Timeout<wbr>InMinutes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/sns/topicSubscription.ts#L10">sns/topicSubscription.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/sns/topicSubscription.ts#L30">sns/topicSubscription.ts:30</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Integer indicating number of minutes to wait in retying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols (default is 1 minute).</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="deliverypolicy" class="tsd-anchor"></a>
@@ -171,7 +216,7 @@
 					<div class="tsd-signature tsd-kind-icon">delivery<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/sns/topicSubscription.ts#L11">sns/topicSubscription.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/sns/topicSubscription.ts#L31">sns/topicSubscription.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -181,9 +226,14 @@
 					<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/sns/topicSubscription.ts#L12">sns/topicSubscription.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/sns/topicSubscription.ts#L35">sns/topicSubscription.ts:35</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The endpoint to send data to, the contents will vary with the protocol. (see below for more information)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="endpointautoconfirms" class="tsd-anchor"></a>
@@ -191,9 +241,14 @@
 					<div class="tsd-signature tsd-kind-icon">endpoint<wbr>Auto<wbr>Confirms<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/sns/topicSubscription.ts#L13">sns/topicSubscription.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/sns/topicSubscription.ts#L39">sns/topicSubscription.ts:39</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Boolean indicating whether the end point is capable of <a href="http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare">auto confirming subscription</a> e.g., PagerDuty (default is false)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -212,9 +267,14 @@
 					<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/sns/topicSubscription.ts#L14">sns/topicSubscription.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/sns/topicSubscription.ts#L43">sns/topicSubscription.ts:43</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The protocol to use. The possible values for this are: <code>sqs</code>,  <code>lambda</code>, <code>application</code>. (<code>http</code> or <code>https</code> are partially supported, see below) (<code>email</code>, <code>sms</code>, are options but unsupported, see below).</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="rawmessagedelivery" class="tsd-anchor"></a>
@@ -222,9 +282,14 @@
 					<div class="tsd-signature tsd-kind-icon">raw<wbr>Message<wbr>Delivery<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/sns/topicSubscription.ts#L15">sns/topicSubscription.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/sns/topicSubscription.ts#L47">sns/topicSubscription.ts:47</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Boolean indicating whether or not to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property).</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="topic" class="tsd-anchor"></a>
@@ -232,9 +297,14 @@
 					<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><a href="_sns_topic_.topic.html" class="tsd-signature-type">Topic</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/sns/topicSubscription.ts#L16">sns/topicSubscription.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/sns/topicSubscription.ts#L51">sns/topicSubscription.ts:51</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN of the SNS topic to subscribe to</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -253,7 +323,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_sns_topicsubscription_.html">"sns/topic<wbr>Subscription"</a>

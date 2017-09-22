@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_elasticache_replicationgroup_.html">&quot;elasticache/replicationGroup&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides an ElastiCache Replication Group resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -140,19 +147,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L31">elasticache/replicationGroup.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L112">elasticache/replicationGroup.ts:112</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a ReplicationGroup resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this ReplicationGroup instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_elasticache_replicationgroup_.replicationgroupargs.html" class="tsd-signature-type">ReplicationGroupArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this ReplicationGroup intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_elasticache_replicationgroup_.replicationgroup.html" class="tsd-signature-type">ReplicationGroup</a></h4>
@@ -168,9 +196,14 @@
 					<div class="tsd-signature tsd-kind-icon">apply<wbr>Immediately<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L7">elasticache/replicationGroup.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L13">elasticache/replicationGroup.ts:13</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is <code>false</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="autominorversionupgrade" class="tsd-anchor"></a>
@@ -178,9 +211,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Minor<wbr>Version<wbr>Upgrade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L8">elasticache/replicationGroup.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L17">elasticache/replicationGroup.ts:17</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to <code>true</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="automaticfailoverenabled" class="tsd-anchor"></a>
@@ -188,9 +226,14 @@
 					<div class="tsd-signature tsd-kind-icon">automatic<wbr>Failover<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L9">elasticache/replicationGroup.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L21">elasticache/replicationGroup.ts:21</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. Defaults to <code>false</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="availabilityzones" class="tsd-anchor"></a>
@@ -198,9 +241,14 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zones<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L10">elasticache/replicationGroup.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L25">elasticache/replicationGroup.ts:25</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="clustermode" class="tsd-anchor"></a>
@@ -208,9 +256,14 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L11">elasticache/replicationGroup.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L29">elasticache/replicationGroup.ts:29</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Create a native redis cluster. <code>automatic_failover_enabled</code> must be set to true. Cluster Mode documented below. Only 1 <code>cluster_mode</code> block is allowed.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="configurationendpointaddress" class="tsd-anchor"></a>
@@ -218,9 +271,14 @@
 					<div class="tsd-signature tsd-kind-icon">configuration<wbr>Endpoint<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L12">elasticache/replicationGroup.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L33">elasticache/replicationGroup.ts:33</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The address of the endpoint for the primary node in the replication group. If Redis, only present when cluster mode is disabled.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="engine" class="tsd-anchor"></a>
@@ -228,7 +286,7 @@
 					<div class="tsd-signature tsd-kind-icon">engine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L13">elasticache/replicationGroup.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L34">elasticache/replicationGroup.ts:34</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -238,9 +296,14 @@
 					<div class="tsd-signature tsd-kind-icon">engine<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L14">elasticache/replicationGroup.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L38">elasticache/replicationGroup.ts:38</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The version number of the cache engine to be used for the cache clusters in this replication group.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -259,7 +322,7 @@
 					<div class="tsd-signature tsd-kind-icon">maintenance<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L15">elasticache/replicationGroup.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L39">elasticache/replicationGroup.ts:39</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -269,9 +332,14 @@
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L16">elasticache/replicationGroup.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L43">elasticache/replicationGroup.ts:43</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The compute and memory capacity of the nodes in the node group.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="notificationtopicarn" class="tsd-anchor"></a>
@@ -279,7 +347,7 @@
 					<div class="tsd-signature tsd-kind-icon">notification<wbr>Topic<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L17">elasticache/replicationGroup.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L44">elasticache/replicationGroup.ts:44</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -289,9 +357,15 @@
 					<div class="tsd-signature tsd-kind-icon">number<wbr>Cache<wbr>Clusters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L18">elasticache/replicationGroup.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L49">elasticache/replicationGroup.ts:49</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The number of cache clusters this replication group will have.
+							If Multi-AZ is enabled , the value of this parameter must be at least 2. Changing this number will force a new resource</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="parametergroupname" class="tsd-anchor"></a>
@@ -299,9 +373,14 @@
 					<div class="tsd-signature tsd-kind-icon">parameter<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L19">elasticache/replicationGroup.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L53">elasticache/replicationGroup.ts:53</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="port" class="tsd-anchor"></a>
@@ -309,9 +388,14 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L20">elasticache/replicationGroup.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L57">elasticache/replicationGroup.ts:57</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="primaryendpointaddress" class="tsd-anchor"></a>
@@ -319,9 +403,14 @@
 					<div class="tsd-signature tsd-kind-icon">primary<wbr>Endpoint<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L21">elasticache/replicationGroup.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L61">elasticache/replicationGroup.ts:61</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>(Redis only) The address of the replication group configuration endpoint when cluster mode is enabled.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="replicationgroupdescription" class="tsd-anchor"></a>
@@ -329,9 +418,14 @@
 					<div class="tsd-signature tsd-kind-icon">replication<wbr>Group<wbr>Description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L22">elasticache/replicationGroup.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L65">elasticache/replicationGroup.ts:65</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A user-created description for the replication group.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="replicationgroupid" class="tsd-anchor"></a>
@@ -339,9 +433,14 @@
 					<div class="tsd-signature tsd-kind-icon">replication<wbr>Group<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L23">elasticache/replicationGroup.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L69">elasticache/replicationGroup.ts:69</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The replication group identifier. This parameter is stored as a lowercase string.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="securitygroupids" class="tsd-anchor"></a>
@@ -349,9 +448,19 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L24">elasticache/replicationGroup.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L76">elasticache/replicationGroup.ts:76</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud</p>
+							<ul>
+								<li><code>snapshot_arns</code> – (Optional) A single-element string list containing an
+									Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
+								Example: <code>arn:aws:s3:::my_bucket/snapshot1.rdb</code></li>
+							</ul>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="securitygroupnames" class="tsd-anchor"></a>
@@ -359,9 +468,14 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L25">elasticache/replicationGroup.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L80">elasticache/replicationGroup.ts:80</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of cache security group names to associate with this replication group.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="snapshotarns" class="tsd-anchor"></a>
@@ -369,7 +483,7 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Arns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L26">elasticache/replicationGroup.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L81">elasticache/replicationGroup.ts:81</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -379,9 +493,22 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L27">elasticache/replicationGroup.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L91">elasticache/replicationGroup.ts:91</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of a snapshot from which to restore data into the new node group. Changing the <code>snapshot_name</code> forces a new resource.</p>
+							<ul>
+								<li><code>maintenance_window</code> – (Optional) Specifies the weekly time range for when maintenance
+									on the cache cluster is performed. The format is <code>ddd:hh24:mi-ddd:hh24:mi</code> (24H Clock UTC).
+								The minimum maintenance window is a 60 minute period. Example: <code>sun:05:00-sun:09:00</code></li>
+								<li><code>notification_topic_arn</code> – (Optional) An Amazon Resource Name (ARN) of an
+									SNS topic to send ElastiCache notifications to. Example:
+								<code>arn:aws:sns:us-east-1:012345678999:my_sns_topic</code></li>
+							</ul>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="snapshotretentionlimit" class="tsd-anchor"></a>
@@ -389,9 +516,18 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Retention<wbr>Limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L28">elasticache/replicationGroup.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L99">elasticache/replicationGroup.ts:99</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The number of days for which ElastiCache will
+								retain automatic cache cluster snapshots before deleting them. For example, if you set
+								SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
+								before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
+							Please note that setting a <code>snapshot_retention_limit</code> is not supported on cache.t1.micro or cache.t2.* cache nodes</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="snapshotwindow" class="tsd-anchor"></a>
@@ -399,9 +535,15 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L29">elasticache/replicationGroup.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L104">elasticache/replicationGroup.ts:104</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The daily time range (in UTC) during which ElastiCache will
+							begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="subnetgroupname" class="tsd-anchor"></a>
@@ -409,9 +551,14 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L30">elasticache/replicationGroup.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L108">elasticache/replicationGroup.ts:108</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the cache subnet group to be used for the replication group.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tags" class="tsd-anchor"></a>
@@ -419,9 +566,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/elasticache/replicationGroup.ts#L31">elasticache/replicationGroup.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/elasticache/replicationGroup.ts#L112">elasticache/replicationGroup.ts:112</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -440,7 +592,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_elasticache_replicationgroup_.html">"elasticache/replication<wbr>Group"</a>

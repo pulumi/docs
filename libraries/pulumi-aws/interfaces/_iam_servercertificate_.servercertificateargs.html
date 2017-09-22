@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_iam_servercertificate_.html">&quot;iam/serverCertificate&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a ServerCertificate resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -104,7 +111,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/iam/serverCertificate.ts#L35">iam/serverCertificate.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/iam/serverCertificate.ts#L84">iam/serverCertificate.ts:84</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -114,7 +121,7 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/iam/serverCertificate.ts#L36">iam/serverCertificate.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/iam/serverCertificate.ts#L85">iam/serverCertificate.ts:85</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -124,7 +131,7 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Chain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/iam/serverCertificate.ts#L37">iam/serverCertificate.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/iam/serverCertificate.ts#L86">iam/serverCertificate.ts:86</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -134,9 +141,15 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/iam/serverCertificate.ts#L38">iam/serverCertificate.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/iam/serverCertificate.ts#L91">iam/serverCertificate.ts:91</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the Server Certificate. Do not include the
+							path in this value. If omitted, Terraform will assign a random, unique name.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="nameprefix" class="tsd-anchor"></a>
@@ -144,9 +157,23 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/iam/serverCertificate.ts#L39">iam/serverCertificate.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/iam/serverCertificate.ts#L102">iam/serverCertificate.ts:102</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Creates a unique name beginning with the specified
+							prefix. Conflicts with <code>name</code>.</p>
+							<ul>
+								<li><code>certificate_body</code> – (Required) The contents of the public key certificate in
+								PEM-encoded format.</li>
+								<li><code>certificate_chain</code> – (Optional) The contents of the certificate chain.
+									This is typically a concatenation of the PEM-encoded public key certificates
+								of the chain.</li>
+								<li><code>private_key</code> – (Required) The contents of the private key in PEM-encoded format.</li>
+							</ul>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="path" class="tsd-anchor"></a>
@@ -154,9 +181,17 @@
 					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/iam/serverCertificate.ts#L40">iam/serverCertificate.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/iam/serverCertificate.ts#L109">iam/serverCertificate.ts:109</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The IAM path for the server certificate.  If it is not
+								included, it defaults to a slash (/). If this certificate is for use with
+								AWS CloudFront, the path must be in format <code>/cloudfront/your_path_here</code>.
+							See [IAM Identifiers][1] for more details on IAM Paths.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="privatekey" class="tsd-anchor"></a>
@@ -164,7 +199,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/iam/serverCertificate.ts#L41">iam/serverCertificate.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/iam/serverCertificate.ts#L110">iam/serverCertificate.ts:110</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -174,7 +209,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_iam_servercertificate_.html">"iam/server<wbr>Certificate"</a>

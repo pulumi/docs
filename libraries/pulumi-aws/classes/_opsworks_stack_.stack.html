@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_opsworks_stack_.html">&quot;opsworks/stack&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides an OpsWorks stack resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -96,6 +103,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#agentversion" class="tsd-kind-icon">agent<wbr>Version</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#arn" class="tsd-kind-icon">arn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#berkshelfversion" class="tsd-kind-icon">berkshelf<wbr>Version</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#color" class="tsd-kind-icon">color</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#configurationmanagername" class="tsd-kind-icon">configuration<wbr>Manager<wbr>Name</a></li>
@@ -116,6 +124,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#servicerolearn" class="tsd-kind-icon">service<wbr>Role<wbr>Arn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#stackendpoint" class="tsd-kind-icon">stack<wbr>Endpoint</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#stackid" class="tsd-kind-icon">stack<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_opsworks_stack_.stack.html#urn" class="tsd-kind-icon">urn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#usecustomcookbooks" class="tsd-kind-icon">use<wbr>Custom<wbr>Cookbooks</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#useopsworkssecuritygroups" class="tsd-kind-icon">use<wbr>Opsworks<wbr>Security<wbr>Groups</a></li>
@@ -138,19 +147,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L29">opsworks/stack.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L110">opsworks/stack.ts:110</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a Stack resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this Stack instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_opsworks_stack_.stackargs.html" class="tsd-signature-type">StackArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this Stack intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_opsworks_stack_.stack.html" class="tsd-signature-type">Stack</a></h4>
@@ -166,7 +196,22 @@
 					<div class="tsd-signature tsd-kind-icon">agent<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L7">opsworks/stack.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L13">opsworks/stack.ts:13</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set to <code>&quot;LATEST&quot;</code>, OpsWorks will automatically install the latest version.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="arn" class="tsd-anchor"></a>
+					<h3>arn</h3>
+					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L14">opsworks/stack.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -176,9 +221,14 @@
 					<div class="tsd-signature tsd-kind-icon">berkshelf<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L8">opsworks/stack.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L18">opsworks/stack.ts:18</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If <code>manage_berkshelf</code> is enabled, the version of Berkshelf to use.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="color" class="tsd-anchor"></a>
@@ -186,9 +236,14 @@
 					<div class="tsd-signature tsd-kind-icon">color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L9">opsworks/stack.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L22">opsworks/stack.ts:22</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Color to paint next to the stack&#39;s resources in the OpsWorks console.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="configurationmanagername" class="tsd-anchor"></a>
@@ -196,9 +251,14 @@
 					<div class="tsd-signature tsd-kind-icon">configuration<wbr>Manager<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L10">opsworks/stack.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L26">opsworks/stack.ts:26</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of the configuration manager to use. Defaults to &quot;Chef&quot;.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="configurationmanagerversion" class="tsd-anchor"></a>
@@ -206,9 +266,14 @@
 					<div class="tsd-signature tsd-kind-icon">configuration<wbr>Manager<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L11">opsworks/stack.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L30">opsworks/stack.ts:30</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Version of the configuration manager to use. Defaults to &quot;11.4&quot;.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="customcookbookssource" class="tsd-anchor"></a>
@@ -216,9 +281,15 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Cookbooks<wbr>Source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L12">opsworks/stack.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L35">opsworks/stack.ts:35</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>When <code>use_custom_cookbooks</code> is set, provide this sub-object as
+							described below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="customjson" class="tsd-anchor"></a>
@@ -226,9 +297,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L13">opsworks/stack.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L39">opsworks/stack.ts:39</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Custom JSON attributes to apply to the entire stack.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="defaultavailabilityzone" class="tsd-anchor"></a>
@@ -236,9 +312,15 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L14">opsworks/stack.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L44">opsworks/stack.ts:44</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of the availability zone where instances will be created
+							by default. This is required unless you set <code>vpc_id</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="defaultinstanceprofilearn" class="tsd-anchor"></a>
@@ -246,9 +328,15 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Instance<wbr>Profile<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L15">opsworks/stack.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L49">opsworks/stack.ts:49</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN of an IAM Instance Profile that created instances
+							will have by default.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="defaultos" class="tsd-anchor"></a>
@@ -256,9 +344,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Os<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L16">opsworks/stack.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L53">opsworks/stack.ts:53</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of OS that will be installed on instances by default.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="defaultrootdevicetype" class="tsd-anchor"></a>
@@ -266,9 +359,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Root<wbr>Device<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L17">opsworks/stack.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L57">opsworks/stack.ts:57</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of the type of root device instances will have by default.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="defaultsshkeyname" class="tsd-anchor"></a>
@@ -276,9 +374,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Ssh<wbr>Key<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L18">opsworks/stack.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L61">opsworks/stack.ts:61</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of the SSH keypair that instances will have by default.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="defaultsubnetid" class="tsd-anchor"></a>
@@ -286,9 +389,15 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Subnet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L19">opsworks/stack.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L66">opsworks/stack.ts:66</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Id of the subnet in which instances will be created by default. Mandatory
+							if <code>vpc_id</code> is set, and forbidden if it isn&#39;t.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="hostnametheme" class="tsd-anchor"></a>
@@ -296,9 +405,15 @@
 					<div class="tsd-signature tsd-kind-icon">hostname<wbr>Theme<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L20">opsworks/stack.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L71">opsworks/stack.ts:71</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Keyword representing the naming scheme that will be used for instance hostnames
+							within this stack.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -317,9 +432,14 @@
 					<div class="tsd-signature tsd-kind-icon">manage<wbr>Berkshelf<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L22">opsworks/stack.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L79">opsworks/stack.ts:79</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Boolean value controlling whether Opsworks will run Berkshelf for this stack.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="name" class="tsd-anchor"></a>
@@ -327,9 +447,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L23">opsworks/stack.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L83">opsworks/stack.ts:83</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the stack.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="region" class="tsd-anchor"></a>
@@ -337,9 +462,14 @@
 					<div class="tsd-signature tsd-kind-icon">region<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L24">opsworks/stack.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L87">opsworks/stack.ts:87</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the region where the stack will exist.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="servicerolearn" class="tsd-anchor"></a>
@@ -347,9 +477,14 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L25">opsworks/stack.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L91">opsworks/stack.ts:91</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN of an IAM role that the OpsWorks service will act as.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="stackendpoint" class="tsd-anchor"></a>
@@ -357,7 +492,7 @@
 					<div class="tsd-signature tsd-kind-icon">stack<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L26">opsworks/stack.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L92">opsworks/stack.ts:92</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -367,9 +502,29 @@
 					<div class="tsd-signature tsd-kind-icon">stack<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L21">opsworks/stack.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L75">opsworks/stack.ts:75</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The id of the stack.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="tags" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L96">opsworks/stack.ts:96</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -388,9 +543,15 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Custom<wbr>Cookbooks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L27">opsworks/stack.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L101">opsworks/stack.ts:101</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Boolean value controlling whether the custom cookbook settings are
+							enabled.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="useopsworkssecuritygroups" class="tsd-anchor"></a>
@@ -398,9 +559,15 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Opsworks<wbr>Security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L28">opsworks/stack.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L106">opsworks/stack.ts:106</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Boolean value controlling whether the standard OpsWorks
+							security groups apply to created instances.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="vpcid" class="tsd-anchor"></a>
@@ -408,9 +575,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/stack.ts#L29">opsworks/stack.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/stack.ts#L110">opsworks/stack.ts:110</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The id of the VPC that this stack belongs to.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -418,7 +590,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_opsworks_stack_.html">"opsworks/stack"</a>
@@ -437,6 +609,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_opsworks_stack_.stack.html#agentversion" class="tsd-kind-icon">agent<wbr>Version</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_opsworks_stack_.stack.html#arn" class="tsd-kind-icon">arn</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_opsworks_stack_.stack.html#berkshelfversion" class="tsd-kind-icon">berkshelf<wbr>Version</a>
@@ -497,6 +672,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_opsworks_stack_.stack.html#stackid" class="tsd-kind-icon">stack<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_opsworks_stack_.stack.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_opsworks_stack_.stack.html#urn" class="tsd-kind-icon">urn</a>

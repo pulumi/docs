@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="_config_vars_.html">&quot;config/vars&quot;</a>
@@ -107,7 +107,7 @@
 					<div class="tsd-signature tsd-kind-icon">_config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Config</span><span class="tsd-signature-symbol"> =&nbsp;new fabric.Config(&quot;aws:config&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L8">config/vars.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L8">config/vars.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -117,9 +117,14 @@
 					<div class="tsd-signature tsd-kind-icon">access<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;accessKey&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L12">config/vars.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L13">config/vars.ts:13</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The access key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="allowedaccountids" class="tsd-anchor"></a>
@@ -127,7 +132,7 @@
 					<div class="tsd-signature tsd-kind-icon">allowed<wbr>Account<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;string[] | undefined&gt;(&quot;allowedAccountIds&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L13">config/vars.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L14">config/vars.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -137,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">assume<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;{ externalId?: string, policy?: string, roleArn?: string, sessionName?: string }[] | undefined&gt;(&quot;assumeRole&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L14">config/vars.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L15">config/vars.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -147,9 +152,15 @@
 					<div class="tsd-signature tsd-kind-icon">dynamodb<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;dynamodbEndpoint&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L17">config/vars.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L20">config/vars.ts:20</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Use this to override the default endpoint URL constructed from the <code>region</code>. It&#39;s typically used to connect to
+							dynamodb-local.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="endpoints" class="tsd-anchor"></a>
@@ -157,7 +168,7 @@
 					<div class="tsd-signature tsd-kind-icon">endpoints<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;{ cloudformation?: string, cloudwatch?: string, cloudwatchevents?: string, cloudwatchlogs?: string, devicefarm?: string, dynamodb?: string, ec2?: string, elb?: string, iam?: string, kinesis?: string, kms?: string, rds?: string, s3?: string, sns?: string, sqs?: string }[] | undefined&gt;(&quot;endpoints&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L18">config/vars.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L21">config/vars.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -167,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">forbidden<wbr>Account<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;string[] | undefined&gt;(&quot;forbiddenAccountIds&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L19">config/vars.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L22">config/vars.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -177,9 +188,14 @@
 					<div class="tsd-signature tsd-kind-icon">insecure<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;insecure&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L21">config/vars.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L26">config/vars.ts:26</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Explicitly allow the provider to perform &quot;insecure&quot; SSL requests. If omitted,default value is <code>false</code></p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="kinesisendpoint" class="tsd-anchor"></a>
@@ -187,9 +203,15 @@
 					<div class="tsd-signature tsd-kind-icon">kinesis<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;kinesisEndpoint&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L24">config/vars.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L31">config/vars.ts:31</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Use this to override the default endpoint URL constructed from the <code>region</code>. It&#39;s typically used to connect to
+							kinesalite.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="maxretries" class="tsd-anchor"></a>
@@ -197,9 +219,14 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Retries<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;number | undefined&gt;(&quot;maxRetries&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L26">config/vars.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L35">config/vars.ts:35</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The maximum number of times an AWS API request is being executed. If the API request still fails, an error is thrown.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="profile" class="tsd-anchor"></a>
@@ -207,9 +234,14 @@
 					<div class="tsd-signature tsd-kind-icon">profile<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;profile&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L28">config/vars.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L39">config/vars.ts:39</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The profile for API operations. If not set, the default profile created with <code>aws configure</code> will be used.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="region" class="tsd-anchor"></a>
@@ -217,9 +249,14 @@
 					<div class="tsd-signature tsd-kind-icon">region<span class="tsd-signature-symbol">:</span> <a href="_region_.html#region" class="tsd-signature-type">Region</a><span class="tsd-signature-symbol"> =&nbsp;&lt;any&gt;_config.require(&quot;region&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L30">config/vars.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L43">config/vars.ts:43</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="s3forcepathstyle" class="tsd-anchor"></a>
@@ -227,9 +264,16 @@
 					<div class="tsd-signature tsd-kind-icon">s3<wbr>Force<wbr>Path<wbr>Style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;s3ForcePathStyle&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L34">config/vars.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L49">config/vars.ts:49</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Set this to true to force the request to use path-style addressing, i.e., <a href="http://s3.amazonaws.com/BUCKET/KEY">http://s3.amazonaws.com/BUCKET/KEY</a>. By
+								default, the S3 client will use virtual hosted bucket addressing when possible (<a href="http://BUCKET.s3.amazonaws.com/KEY">http://BUCKET.s3.amazonaws.com/KEY</a>).
+							Specific to the Amazon S3 service.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="secretkey" class="tsd-anchor"></a>
@@ -237,9 +281,14 @@
 					<div class="tsd-signature tsd-kind-icon">secret<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;secretKey&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L37">config/vars.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L53">config/vars.ts:53</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The secret key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="sharedcredentialsfile" class="tsd-anchor"></a>
@@ -247,9 +296,14 @@
 					<div class="tsd-signature tsd-kind-icon">shared<wbr>Credentials<wbr>File<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;sharedCredentialsFile&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L39">config/vars.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L57">config/vars.ts:57</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="skipcredentialsvalidation" class="tsd-anchor"></a>
@@ -257,9 +311,15 @@
 					<div class="tsd-signature tsd-kind-icon">skip<wbr>Credentials<wbr>Validation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;skipCredentialsValidation&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L42">config/vars.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L62">config/vars.ts:62</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Skip the credentials validation via STS API. Used for AWS API implementations that do not have STS
+							available/implemented.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="skipgetec2platforms" class="tsd-anchor"></a>
@@ -267,9 +327,14 @@
 					<div class="tsd-signature tsd-kind-icon">skip<wbr>Get<wbr>Ec2<wbr>Platforms<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;skipGetEc2Platforms&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L44">config/vars.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L66">config/vars.ts:66</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Skip getting the supported EC2 platforms. Used by users that don&#39;t have ec2:DescribeAccountAttributes permissions.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="skipmetadataapicheck" class="tsd-anchor"></a>
@@ -277,7 +342,7 @@
 					<div class="tsd-signature tsd-kind-icon">skip<wbr>Metadata<wbr>Api<wbr>Check<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;skipMetadataApiCheck&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L45">config/vars.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L67">config/vars.ts:67</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -287,9 +352,15 @@
 					<div class="tsd-signature tsd-kind-icon">skip<wbr>Region<wbr>Validation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;skipRegionValidation&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L48">config/vars.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L72">config/vars.ts:72</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Skip static validation of region name. Used by users of alternative AWS-like APIs or users w/ access to regions that are
+							not public (yet).</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="skiprequestingaccountid" class="tsd-anchor"></a>
@@ -297,9 +368,14 @@
 					<div class="tsd-signature tsd-kind-icon">skip<wbr>Requesting<wbr>Account<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;skipRequestingAccountId&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L50">config/vars.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L76">config/vars.ts:76</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="token" class="tsd-anchor"></a>
@@ -307,9 +383,14 @@
 					<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;token&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/config/vars.ts#L52">config/vars.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/config/vars.ts#L80">config/vars.ts:80</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>session token. A session token is only required if you are using temporary security credentials.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -317,7 +398,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="_config_vars_.html">"config/vars"</a>

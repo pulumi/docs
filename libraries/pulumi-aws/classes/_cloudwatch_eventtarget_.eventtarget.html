@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_cloudwatch_eventtarget_.html">&quot;cloudwatch/eventTarget&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides a CloudWatch Event Target resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -100,6 +107,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_cloudwatch_eventtarget_.eventtarget.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_eventtarget_.eventtarget.html#input" class="tsd-kind-icon">input</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_eventtarget_.eventtarget.html#inputpath" class="tsd-kind-icon">input<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_eventtarget_.eventtarget.html#inputtransformer" class="tsd-kind-icon">input<wbr>Transformer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_eventtarget_.eventtarget.html#rolearn" class="tsd-kind-icon">role<wbr>Arn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_eventtarget_.eventtarget.html#rule" class="tsd-kind-icon">rule</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_eventtarget_.eventtarget.html#runcommandtargets" class="tsd-kind-icon">run<wbr>Command<wbr>Targets</a></li>
@@ -123,19 +131,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudwatch/eventTarget.ts#L14">cloudwatch/eventTarget.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/eventTarget.ts#L46">cloudwatch/eventTarget.ts:46</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a EventTarget resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this EventTarget instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_cloudwatch_eventtarget_.eventtargetargs.html" class="tsd-signature-type">EventTargetArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this EventTarget intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_cloudwatch_eventtarget_.eventtarget.html" class="tsd-signature-type">EventTarget</a></h4>
@@ -151,9 +180,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudwatch/eventTarget.ts#L7">cloudwatch/eventTarget.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/eventTarget.ts#L13">cloudwatch/eventTarget.ts:13</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Amazon Resource Name (ARN) associated of the target.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ecstarget" class="tsd-anchor"></a>
@@ -161,9 +195,14 @@
 					<div class="tsd-signature tsd-kind-icon">ecs<wbr>Target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudwatch/eventTarget.ts#L8">cloudwatch/eventTarget.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/eventTarget.ts#L17">cloudwatch/eventTarget.ts:17</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -182,9 +221,14 @@
 					<div class="tsd-signature tsd-kind-icon">input<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudwatch/eventTarget.ts#L9">cloudwatch/eventTarget.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/eventTarget.ts#L21">cloudwatch/eventTarget.ts:21</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Valid JSON text passed to the target.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="inputpath" class="tsd-anchor"></a>
@@ -192,9 +236,30 @@
 					<div class="tsd-signature tsd-kind-icon">input<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudwatch/eventTarget.ts#L10">cloudwatch/eventTarget.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/eventTarget.ts#L26">cloudwatch/eventTarget.ts:26</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The value of the <a href="http://goessner.net/articles/JsonPath/">JSONPath</a>
+							that is used for extracting part of the matched event when passing it to the target.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="inputtransformer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> input<wbr>Transformer</h3>
+					<div class="tsd-signature tsd-kind-icon">input<wbr>Transformer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/eventTarget.ts#L30">cloudwatch/eventTarget.ts:30</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Parameters used when you are providing a custom input to a target based on certain event data.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="rolearn" class="tsd-anchor"></a>
@@ -202,9 +267,14 @@
 					<div class="tsd-signature tsd-kind-icon">role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudwatch/eventTarget.ts#L11">cloudwatch/eventTarget.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/eventTarget.ts#L34">cloudwatch/eventTarget.ts:34</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if <code>ecs_target</code> is used.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="rule" class="tsd-anchor"></a>
@@ -212,9 +282,14 @@
 					<div class="tsd-signature tsd-kind-icon">rule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudwatch/eventTarget.ts#L12">cloudwatch/eventTarget.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/eventTarget.ts#L38">cloudwatch/eventTarget.ts:38</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the rule you want to add targets to.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="runcommandtargets" class="tsd-anchor"></a>
@@ -222,9 +297,14 @@
 					<div class="tsd-signature tsd-kind-icon">run<wbr>Command<wbr>Targets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudwatch/eventTarget.ts#L13">cloudwatch/eventTarget.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/eventTarget.ts#L42">cloudwatch/eventTarget.ts:42</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="targetid" class="tsd-anchor"></a>
@@ -232,9 +312,14 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudwatch/eventTarget.ts#L14">cloudwatch/eventTarget.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/eventTarget.ts#L46">cloudwatch/eventTarget.ts:46</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The unique target assignment ID.  If missing, will generate a random, unique id.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -253,7 +338,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_cloudwatch_eventtarget_.html">"cloudwatch/event<wbr>Target"</a>
@@ -284,6 +369,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_cloudwatch_eventtarget_.eventtarget.html#inputpath" class="tsd-kind-icon">input<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_cloudwatch_eventtarget_.eventtarget.html#inputtransformer" class="tsd-kind-icon">input<wbr>Transformer</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_cloudwatch_eventtarget_.eventtarget.html#rolearn" class="tsd-kind-icon">role<wbr>Arn</a>

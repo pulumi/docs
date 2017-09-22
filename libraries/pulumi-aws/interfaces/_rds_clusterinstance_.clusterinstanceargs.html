@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_rds_clusterinstance_.html">&quot;rds/clusterInstance&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a ClusterInstance resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -89,6 +96,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_clusterinstance_.clusterinstanceargs.html#clusteridentifier" class="tsd-kind-icon">cluster<wbr>Identifier</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_clusterinstance_.clusterinstanceargs.html#dbparametergroupname" class="tsd-kind-icon">db<wbr>Parameter<wbr>Group<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_clusterinstance_.clusterinstanceargs.html#dbsubnetgroupname" class="tsd-kind-icon">db<wbr>Subnet<wbr>Group<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_clusterinstance_.clusterinstanceargs.html#engine" class="tsd-kind-icon">engine</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_clusterinstance_.clusterinstanceargs.html#engineversion" class="tsd-kind-icon">engine<wbr>Version</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_clusterinstance_.clusterinstanceargs.html#identifier" class="tsd-kind-icon">identifier</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_clusterinstance_.clusterinstanceargs.html#identifierprefix" class="tsd-kind-icon">identifier<wbr>Prefix</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_clusterinstance_.clusterinstanceargs.html#instanceclass" class="tsd-kind-icon">instance<wbr>Class</a></li>
@@ -112,9 +121,15 @@
 					<div class="tsd-signature tsd-kind-icon">apply<wbr>Immediately<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L63">rds/clusterInstance.ts:63</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L183">rds/clusterInstance.ts:183</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specifies whether any database modifications
+							are applied immediately, or during the next maintenance window. Default is<code>false</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="autominorversionupgrade" class="tsd-anchor"></a>
@@ -122,9 +137,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Minor<wbr>Version<wbr>Upgrade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L64">rds/clusterInstance.ts:64</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L187">rds/clusterInstance.ts:187</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <code>true</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="clusteridentifier" class="tsd-anchor"></a>
@@ -132,9 +152,14 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L65">rds/clusterInstance.ts:65</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L191">rds/clusterInstance.ts:191</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The identifier of the <a href="/docs/providers/aws/r/rds_cluster.html"><code>aws_rds_cluster</code></a> in which to launch this instance.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="dbparametergroupname" class="tsd-anchor"></a>
@@ -142,9 +167,14 @@
 					<div class="tsd-signature tsd-kind-icon">db<wbr>Parameter<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L66">rds/clusterInstance.ts:66</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L195">rds/clusterInstance.ts:195</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the DB parameter group to associate with this instance.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="dbsubnetgroupname" class="tsd-anchor"></a>
@@ -152,9 +182,44 @@
 					<div class="tsd-signature tsd-kind-icon">db<wbr>Subnet<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L67">rds/clusterInstance.ts:67</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L199">rds/clusterInstance.ts:199</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <code>db_subnet_group_name</code> of the attached <a href="/docs/providers/aws/r/rds_cluster.html"><code>aws_rds_cluster</code></a>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="engine" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> engine</h3>
+					<div class="tsd-signature tsd-kind-icon">engine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L203">rds/clusterInstance.ts:203</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the database engine to be used for the RDS instance. Defaults to <code>aurora</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="engineversion" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> engine<wbr>Version</h3>
+					<div class="tsd-signature tsd-kind-icon">engine<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L207">rds/clusterInstance.ts:207</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The database engine version.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="identifier" class="tsd-anchor"></a>
@@ -162,9 +227,14 @@
 					<div class="tsd-signature tsd-kind-icon">identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L68">rds/clusterInstance.ts:68</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L211">rds/clusterInstance.ts:211</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The indentifier for the RDS instance, if omitted, Terraform will assign a random, unique identifier.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="identifierprefix" class="tsd-anchor"></a>
@@ -172,9 +242,14 @@
 					<div class="tsd-signature tsd-kind-icon">identifier<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L69">rds/clusterInstance.ts:69</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L215">rds/clusterInstance.ts:215</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Creates a unique identifier beginning with the specified prefix. Conflicts with <code>identifer</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="instanceclass" class="tsd-anchor"></a>
@@ -182,9 +257,25 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Class<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L70">rds/clusterInstance.ts:70</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L228">rds/clusterInstance.ts:228</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The instance class to use. For details on CPU
+								and memory, see [Scaling Aurora DB Instances][4]. Aurora currently
+							supports the below instance classes.</p>
+							<ul>
+								<li>db.t2.small</li>
+								<li>db.t2.medium</li>
+								<li>db.r3.large</li>
+								<li>db.r3.xlarge</li>
+								<li>db.r3.2xlarge</li>
+								<li>db.r3.4xlarge</li>
+								<li>db.r3.8xlarge</li>
+							</ul>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="monitoringinterval" class="tsd-anchor"></a>
@@ -192,9 +283,14 @@
 					<div class="tsd-signature tsd-kind-icon">monitoring<wbr>Interval<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L71">rds/clusterInstance.ts:71</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L232">rds/clusterInstance.ts:232</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="monitoringrolearn" class="tsd-anchor"></a>
@@ -202,9 +298,16 @@
 					<div class="tsd-signature tsd-kind-icon">monitoring<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L72">rds/clusterInstance.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L238">rds/clusterInstance.ts:238</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN for the IAM role that permits RDS to send
+								enhanced monitoring metrics to CloudWatch Logs. You can find more information on the <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">AWS Documentation</a>
+							what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="preferredbackupwindow" class="tsd-anchor"></a>
@@ -212,9 +315,15 @@
 					<div class="tsd-signature tsd-kind-icon">preferred<wbr>Backup<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L73">rds/clusterInstance.ts:73</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L243">rds/clusterInstance.ts:243</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The daily time range during which automated backups are created if automated backups are enabled.
+							Eg: &quot;04:00-09:00&quot;</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="preferredmaintenancewindow" class="tsd-anchor"></a>
@@ -222,9 +331,15 @@
 					<div class="tsd-signature tsd-kind-icon">preferred<wbr>Maintenance<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L74">rds/clusterInstance.ts:74</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L248">rds/clusterInstance.ts:248</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The window to perform maintenance in.
+							Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="promotiontier" class="tsd-anchor"></a>
@@ -232,9 +347,14 @@
 					<div class="tsd-signature tsd-kind-icon">promotion<wbr>Tier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L75">rds/clusterInstance.ts:75</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L252">rds/clusterInstance.ts:252</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="publiclyaccessible" class="tsd-anchor"></a>
@@ -242,9 +362,16 @@
 					<div class="tsd-signature tsd-kind-icon">publicly<wbr>Accessible<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L76">rds/clusterInstance.ts:76</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L258">rds/clusterInstance.ts:258</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Bool to control if instance is publicly accessible.
+								Default <code>false</code>. See the documentation on [Creating DB Instances][6] for more
+							details on controlling this property.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
@@ -252,9 +379,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/rds/clusterInstance.ts#L77">rds/clusterInstance.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/rds/clusterInstance.ts#L262">rds/clusterInstance.ts:262</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the instance.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -262,7 +394,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_rds_clusterinstance_.html">"rds/cluster<wbr>Instance"</a>
@@ -293,6 +425,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_rds_clusterinstance_.clusterinstanceargs.html#dbsubnetgroupname" class="tsd-kind-icon">db<wbr>Subnet<wbr>Group<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rds_clusterinstance_.clusterinstanceargs.html#engine" class="tsd-kind-icon">engine</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_rds_clusterinstance_.clusterinstanceargs.html#engineversion" class="tsd-kind-icon">engine<wbr>Version</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_rds_clusterinstance_.clusterinstanceargs.html#identifier" class="tsd-kind-icon">identifier</a>

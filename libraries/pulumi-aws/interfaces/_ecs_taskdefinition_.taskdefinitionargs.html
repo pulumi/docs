@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ecs_taskdefinition_.html">&quot;ecs/taskDefinition&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a TaskDefinition resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -103,9 +110,19 @@
 					<div class="tsd-signature tsd-kind-icon">container<wbr>Definitions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ecs/taskDefinition.ts#L37">ecs/taskDefinition.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ecs/taskDefinition.ts#L88">ecs/taskDefinition.ts:88</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of valid [container definitions]
+								(<a href="http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html">http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html</a>) provided as a
+								single valid JSON document. Please note that you should only provide values that are part of the container
+								definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
+								(<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html</a>) section from the
+							official <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide">Developer Guide</a>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="family" class="tsd-anchor"></a>
@@ -113,9 +130,14 @@
 					<div class="tsd-signature tsd-kind-icon">family<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ecs/taskDefinition.ts#L38">ecs/taskDefinition.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ecs/taskDefinition.ts#L92">ecs/taskDefinition.ts:92</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A unique name for your task definition.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="networkmode" class="tsd-anchor"></a>
@@ -123,9 +145,14 @@
 					<div class="tsd-signature tsd-kind-icon">network<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ecs/taskDefinition.ts#L39">ecs/taskDefinition.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ecs/taskDefinition.ts#L96">ecs/taskDefinition.ts:96</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Docker networking mode to use for the containers in the task. The valid values are <code>none</code>, <code>bridge</code>, and <code>host</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="placementconstraints" class="tsd-anchor"></a>
@@ -133,9 +160,14 @@
 					<div class="tsd-signature tsd-kind-icon">placement<wbr>Constraints<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ecs/taskDefinition.ts#L40">ecs/taskDefinition.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ecs/taskDefinition.ts#L100">ecs/taskDefinition.ts:100</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A set of <a href="#placement-constraints-arguments">placement constraints</a> rules that are taken into consideration during task placement. Maximum number of <code>placement_constraints</code> is <code>10</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="taskrolearn" class="tsd-anchor"></a>
@@ -143,9 +175,14 @@
 					<div class="tsd-signature tsd-kind-icon">task<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ecs/taskDefinition.ts#L41">ecs/taskDefinition.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ecs/taskDefinition.ts#L104">ecs/taskDefinition.ts:104</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="volume" class="tsd-anchor"></a>
@@ -153,9 +190,14 @@
 					<div class="tsd-signature tsd-kind-icon">volume<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ecs/taskDefinition.ts#L42">ecs/taskDefinition.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ecs/taskDefinition.ts#L108">ecs/taskDefinition.ts:108</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A set of <a href="#volume-block-arguments">volume blocks</a> that containers in your task may use.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -163,7 +205,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ecs_taskdefinition_.html">"ecs/task<wbr>Definition"</a>

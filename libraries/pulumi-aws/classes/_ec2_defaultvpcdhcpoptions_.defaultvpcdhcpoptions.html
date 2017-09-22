@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ec2_defaultvpcdhcpoptions_.html">&quot;ec2/defaultVpcDhcpOptions&quot;</a>
@@ -69,6 +69,20 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides a resource to manage the <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html#AmazonDNS">default AWS DHCP Options Set</a>
+						in the current region.</p>
+					</div>
+					<p>Each AWS region comes with a default set of DHCP options.
+						<strong>This is an advanced resource</strong>, and has special caveats to be aware of when
+					using it. Please read this document in its entirety before using this resource.</p>
+					<p>The <code>aws_default_vpc_dhcp_options</code> behaves differently from normal resources, in that
+						Terraform does not <em>create</em> this resource, but instead &quot;adopts&quot; it
+					into management.</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -121,19 +135,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultVpcDhcpOptions.ts#L12">ec2/defaultVpcDhcpOptions.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultVpcDhcpOptions.ts#L33">ec2/defaultVpcDhcpOptions.ts:33</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a DefaultVpcDhcpOptions resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this DefaultVpcDhcpOptions instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <a href="../interfaces/_ec2_defaultvpcdhcpoptions_.defaultvpcdhcpoptionsargs.html" class="tsd-signature-type">DefaultVpcDhcpOptionsArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this DefaultVpcDhcpOptions intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_ec2_defaultvpcdhcpoptions_.defaultvpcdhcpoptions.html" class="tsd-signature-type">DefaultVpcDhcpOptions</a></h4>
@@ -149,7 +184,7 @@
 					<div class="tsd-signature tsd-kind-icon">domain<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultVpcDhcpOptions.ts#L7">ec2/defaultVpcDhcpOptions.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultVpcDhcpOptions.ts#L19">ec2/defaultVpcDhcpOptions.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -159,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">domain<wbr>Name<wbr>Servers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultVpcDhcpOptions.ts#L8">ec2/defaultVpcDhcpOptions.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultVpcDhcpOptions.ts#L20">ec2/defaultVpcDhcpOptions.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -180,9 +215,14 @@
 					<div class="tsd-signature tsd-kind-icon">netbios<wbr>Name<wbr>Servers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultVpcDhcpOptions.ts#L9">ec2/defaultVpcDhcpOptions.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultVpcDhcpOptions.ts#L24">ec2/defaultVpcDhcpOptions.ts:24</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of NETBIOS name servers.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="netbiosnodetype" class="tsd-anchor"></a>
@@ -190,9 +230,14 @@
 					<div class="tsd-signature tsd-kind-icon">netbios<wbr>Node<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultVpcDhcpOptions.ts#L10">ec2/defaultVpcDhcpOptions.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultVpcDhcpOptions.ts#L28">ec2/defaultVpcDhcpOptions.ts:28</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ntpservers" class="tsd-anchor"></a>
@@ -200,7 +245,7 @@
 					<div class="tsd-signature tsd-kind-icon">ntp<wbr>Servers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultVpcDhcpOptions.ts#L11">ec2/defaultVpcDhcpOptions.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultVpcDhcpOptions.ts#L29">ec2/defaultVpcDhcpOptions.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -210,9 +255,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultVpcDhcpOptions.ts#L12">ec2/defaultVpcDhcpOptions.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultVpcDhcpOptions.ts#L33">ec2/defaultVpcDhcpOptions.ts:33</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -231,7 +281,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ec2_defaultvpcdhcpoptions_.html">"ec2/default<wbr>Vpc<wbr>Dhcp<wbr>Options"</a>

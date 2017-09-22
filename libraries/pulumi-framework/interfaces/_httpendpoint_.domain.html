@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Request | @pulumi/pulumi</title>
+	<title>Domain | @pulumi/pulumi</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -53,16 +53,16 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_api_.html">&quot;api&quot;</a>
+					<a href="../modules/_httpendpoint_.html">&quot;httpEndpoint&quot;</a>
 				</li>
 				<li>
-					<a href="_api_.request.html">Request</a>
+					<a href="_httpendpoint_.domain.html">Domain</a>
 				</li>
 			</ul>
-			<h1>Interface Request</h1>
+			<h1>Interface Domain</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Request represents an HttpAPI request.</p>
+						<p>Domain includes the domain name and certificate data to enable hosting an HttpEndpoint on a custom domain.</p>
 					</div>
 				</div>
 			</section>
@@ -80,7 +80,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Request</span>
+						<span class="target">Domain</span>
 					</li>
 				</ul>
 			</section>
@@ -91,12 +91,10 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_api_.request.html#body" class="tsd-kind-icon">body</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_api_.request.html#headers" class="tsd-kind-icon">headers</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_api_.request.html#method" class="tsd-kind-icon">method</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_api_.request.html#params" class="tsd-kind-icon">params</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_api_.request.html#path" class="tsd-kind-icon">path</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_api_.request.html#query" class="tsd-kind-icon">query</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.domain.html#certificatebody" class="tsd-kind-icon">certificate<wbr>Body</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.domain.html#certificatechain" class="tsd-kind-icon">certificate<wbr>Chain</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.domain.html#certificateprivatekey" class="tsd-kind-icon">certificate<wbr>Private<wbr>Key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.domain.html#domainname" class="tsd-kind-icon">domain<wbr>Name</a></li>
 							</ul>
 						</section>
 					</div>
@@ -105,118 +103,63 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="body" class="tsd-anchor"></a>
-					<h3>body</h3>
-					<div class="tsd-signature tsd-kind-icon">body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Buffer</span></div>
+					<a name="certificatebody" class="tsd-anchor"></a>
+					<h3>certificate<wbr>Body</h3>
+					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L12">api.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L193">httpEndpoint.ts:193</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The body of the HTTP request.</p>
+							<p>An SSL/TLS certficicate issued for this domain (<code>cert.pem</code>).</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="headers" class="tsd-anchor"></a>
-					<h3>headers</h3>
-					<div class="tsd-signature tsd-kind-icon">headers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="certificatechain" class="tsd-anchor"></a>
+					<h3>certificate<wbr>Chain</h3>
+					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Chain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L25">api.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L201">httpEndpoint.ts:201</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The headers of the HTTP request.</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>header: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="method" class="tsd-anchor"></a>
-					<h3>method</h3>
-					<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L16">api.ts:16</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The method of the HTTP request.</p>
+							<p>The certificate chain for the SSL/TLS certificate provided for this domain (<code>chain.pem</code>).</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="params" class="tsd-anchor"></a>
-					<h3>params</h3>
-					<div class="tsd-signature tsd-kind-icon">params<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="certificateprivatekey" class="tsd-anchor"></a>
+					<h3>certificate<wbr>Private<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Private<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L21">api.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L197">httpEndpoint.ts:197</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The path parameters of the HTTP request. Each <code>{param}</code> in the matched route is available as a
-							property of this oject.</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>param: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="path" class="tsd-anchor"></a>
-					<h3>path</h3>
-					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L33">api.ts:33</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The raw path from the HTTP request.</p>
+							<p>An SSL/TLS private key issued for thie domain (<code>privkey.pem</code>).</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="query" class="tsd-anchor"></a>
-					<h3>query</h3>
-					<div class="tsd-signature tsd-kind-icon">query<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="domainname" class="tsd-anchor"></a>
+					<h3>domain<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">domain<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L29">api.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L189">httpEndpoint.ts:189</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The query parameters parsed from the query string of the request URL.</p>
+							<p>The domain name to associate with the HttpEndpoint.</p>
 						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>query: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
 					</div>
 				</section>
 			</section>
@@ -225,7 +168,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="label tsd-is-external">
 						<span>Internals</span>
@@ -240,7 +183,7 @@
 						<span>Externals</span>
 					</li>
 					<li class="current tsd-kind-external-module tsd-is-external">
-						<a href="../modules/_api_.html">"api"</a>
+						<a href="../modules/_httpendpoint_.html">"http<wbr>Endpoint"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/_table_.html">"table"</a>
@@ -258,47 +201,41 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_api_.domain.html" class="tsd-kind-icon">Domain</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_api_.httpapi.html" class="tsd-kind-icon">HttpAPI</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_api_.httpapiconstructor.html" class="tsd-kind-icon">HttpAPIConstructor</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_api_.request.html" class="tsd-kind-icon">Request</a>
+						<a href="_httpendpoint_.domain.html" class="tsd-kind-icon">Domain</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.request.html#body" class="tsd-kind-icon">body</a>
+								<a href="_httpendpoint_.domain.html#certificatebody" class="tsd-kind-icon">certificate<wbr>Body</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.request.html#headers" class="tsd-kind-icon">headers</a>
+								<a href="_httpendpoint_.domain.html#certificatechain" class="tsd-kind-icon">certificate<wbr>Chain</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.request.html#method" class="tsd-kind-icon">method</a>
+								<a href="_httpendpoint_.domain.html#certificateprivatekey" class="tsd-kind-icon">certificate<wbr>Private<wbr>Key</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.request.html#params" class="tsd-kind-icon">params</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.request.html#path" class="tsd-kind-icon">path</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.request.html#query" class="tsd-kind-icon">query</a>
+								<a href="_httpendpoint_.domain.html#domainname" class="tsd-kind-icon">domain<wbr>Name</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_api_.response.html" class="tsd-kind-icon">Response</a>
+						<a href="_httpendpoint_.httpendpoint.html" class="tsd-kind-icon">Http<wbr>Endpoint</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="_httpendpoint_.httpendpointconstructor.html" class="tsd-kind-icon">Http<wbr>Endpoint<wbr>Constructor</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="_httpendpoint_.request.html" class="tsd-kind-icon">Request</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="_httpendpoint_.response.html" class="tsd-kind-icon">Response</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
-						<a href="../modules/_api_.html#routehandler" class="tsd-kind-icon">Route<wbr>Handler</a>
+						<a href="../modules/_httpendpoint_.html#routehandler" class="tsd-kind-icon">Route<wbr>Handler</a>
 					</li>
 				</ul>
 			</nav>

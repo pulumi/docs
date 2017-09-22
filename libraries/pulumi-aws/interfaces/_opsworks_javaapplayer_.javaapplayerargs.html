@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_opsworks_javaapplayer_.html">&quot;opsworks/javaAppLayer&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a JavaAppLayer resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -122,9 +129,14 @@
 					<div class="tsd-signature tsd-kind-icon">app<wbr>Server<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L70">opsworks/javaAppLayer.ts:70</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L150">opsworks/javaAppLayer.ts:150</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Keyword for the application container to use. Defaults to &quot;tomcat&quot;.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="appserverversion" class="tsd-anchor"></a>
@@ -132,9 +144,14 @@
 					<div class="tsd-signature tsd-kind-icon">app<wbr>Server<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L71">opsworks/javaAppLayer.ts:71</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L154">opsworks/javaAppLayer.ts:154</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Version of the selected application container to use. Defaults to &quot;7&quot;.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="autoassignelasticips" class="tsd-anchor"></a>
@@ -142,9 +159,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Assign<wbr>Elastic<wbr>Ips<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L72">opsworks/javaAppLayer.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L158">opsworks/javaAppLayer.ts:158</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether to automatically assign an elastic IP address to the layer&#39;s instances.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="autoassignpublicips" class="tsd-anchor"></a>
@@ -152,9 +174,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Assign<wbr>Public<wbr>Ips<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L73">opsworks/javaAppLayer.ts:73</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L162">opsworks/javaAppLayer.ts:162</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="autohealing" class="tsd-anchor"></a>
@@ -162,9 +189,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Healing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L74">opsworks/javaAppLayer.ts:74</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L166">opsworks/javaAppLayer.ts:166</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether to enable auto-healing for the layer.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="customconfigurerecipes" class="tsd-anchor"></a>
@@ -172,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Configure<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L75">opsworks/javaAppLayer.ts:75</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L167">opsworks/javaAppLayer.ts:167</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -182,7 +214,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Deploy<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L76">opsworks/javaAppLayer.ts:76</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L168">opsworks/javaAppLayer.ts:168</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -192,9 +224,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Instance<wbr>Profile<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L77">opsworks/javaAppLayer.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L172">opsworks/javaAppLayer.ts:172</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN of an IAM profile that will be used for the layer&#39;s instances.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="customjson" class="tsd-anchor"></a>
@@ -202,9 +239,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L78">opsworks/javaAppLayer.ts:78</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L176">opsworks/javaAppLayer.ts:176</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Custom JSON attributes to apply to the layer.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="customsecuritygroupids" class="tsd-anchor"></a>
@@ -212,9 +254,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L79">opsworks/javaAppLayer.ts:79</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L180">opsworks/javaAppLayer.ts:180</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Ids for a set of security groups to apply to the layer&#39;s instances.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="customsetuprecipes" class="tsd-anchor"></a>
@@ -222,7 +269,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Setup<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L80">opsworks/javaAppLayer.ts:80</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L181">opsworks/javaAppLayer.ts:181</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -232,7 +279,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Shutdown<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L81">opsworks/javaAppLayer.ts:81</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L182">opsworks/javaAppLayer.ts:182</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -242,7 +289,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Undeploy<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L82">opsworks/javaAppLayer.ts:82</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L183">opsworks/javaAppLayer.ts:183</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -252,9 +299,14 @@
 					<div class="tsd-signature tsd-kind-icon">drain<wbr>Elb<wbr>OnShutdown<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L83">opsworks/javaAppLayer.ts:83</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L187">opsworks/javaAppLayer.ts:187</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether to enable Elastic Load Balancing connection draining.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="ebsvolume" class="tsd-anchor"></a>
@@ -262,9 +314,14 @@
 					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Volume<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L84">opsworks/javaAppLayer.ts:84</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L191">opsworks/javaAppLayer.ts:191</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><code>ebs_volume</code> blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="elasticloadbalancer" class="tsd-anchor"></a>
@@ -272,9 +329,14 @@
 					<div class="tsd-signature tsd-kind-icon">elastic<wbr>Load<wbr>Balancer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L85">opsworks/javaAppLayer.ts:85</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L195">opsworks/javaAppLayer.ts:195</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Name of an Elastic Load Balancer to attach to this layer</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="installupdatesonboot" class="tsd-anchor"></a>
@@ -282,9 +344,14 @@
 					<div class="tsd-signature tsd-kind-icon">install<wbr>Updates<wbr>OnBoot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L86">opsworks/javaAppLayer.ts:86</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L199">opsworks/javaAppLayer.ts:199</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether to install OS and package updates on each instance when it boots.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="instanceshutdowntimeout" class="tsd-anchor"></a>
@@ -292,9 +359,14 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Shutdown<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L87">opsworks/javaAppLayer.ts:87</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L203">opsworks/javaAppLayer.ts:203</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="jvmoptions" class="tsd-anchor"></a>
@@ -302,9 +374,14 @@
 					<div class="tsd-signature tsd-kind-icon">jvm<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L88">opsworks/javaAppLayer.ts:88</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L207">opsworks/javaAppLayer.ts:207</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Options to set for the JVM.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="jvmtype" class="tsd-anchor"></a>
@@ -312,9 +389,14 @@
 					<div class="tsd-signature tsd-kind-icon">jvm<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L89">opsworks/javaAppLayer.ts:89</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L211">opsworks/javaAppLayer.ts:211</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Keyword for the type of JVM to use. Defaults to <code>openjdk</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="jvmversion" class="tsd-anchor"></a>
@@ -322,9 +404,14 @@
 					<div class="tsd-signature tsd-kind-icon">jvm<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L90">opsworks/javaAppLayer.ts:90</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L215">opsworks/javaAppLayer.ts:215</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Version of JVM to use. Defaults to &quot;7&quot;.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
@@ -332,9 +419,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L91">opsworks/javaAppLayer.ts:91</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L219">opsworks/javaAppLayer.ts:219</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A human-readable name for the layer.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="stackid" class="tsd-anchor"></a>
@@ -342,9 +434,14 @@
 					<div class="tsd-signature tsd-kind-icon">stack<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L92">opsworks/javaAppLayer.ts:92</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L223">opsworks/javaAppLayer.ts:223</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The id of the stack the layer will belong to.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="systempackages" class="tsd-anchor"></a>
@@ -352,9 +449,14 @@
 					<div class="tsd-signature tsd-kind-icon">system<wbr>Packages<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L93">opsworks/javaAppLayer.ts:93</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L227">opsworks/javaAppLayer.ts:227</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Names of a set of system packages to install on the layer&#39;s instances.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="useebsoptimizedinstances" class="tsd-anchor"></a>
@@ -362,9 +464,14 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Ebs<wbr>Optimized<wbr>Instances<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/opsworks/javaAppLayer.ts#L94">opsworks/javaAppLayer.ts:94</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/opsworks/javaAppLayer.ts#L231">opsworks/javaAppLayer.ts:231</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether to use EBS-optimized instances.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -372,7 +479,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_opsworks_javaapplayer_.html">"opsworks/java<wbr>App<wbr>Layer"</a>

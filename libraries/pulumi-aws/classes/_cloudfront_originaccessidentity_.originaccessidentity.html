@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_cloudfront_originaccessidentity_.html">&quot;cloudfront/originAccessIdentity&quot;</a>
@@ -69,6 +69,17 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Creates an Amazon CloudFront origin access identity.</p>
+					</div>
+					<p>For information about CloudFront distributions, see the
+						[Amazon CloudFront Developer Guide][1]. For more information on generating
+						origin access identities, see
+					[Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -121,19 +132,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudfront/originAccessIdentity.ts#L12">cloudfront/originAccessIdentity.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudfront/originAccessIdentity.ts#L45">cloudfront/originAccessIdentity.ts:45</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a OriginAccessIdentity resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this OriginAccessIdentity instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <a href="../interfaces/_cloudfront_originaccessidentity_.originaccessidentityargs.html" class="tsd-signature-type">OriginAccessIdentityArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this OriginAccessIdentity intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_cloudfront_originaccessidentity_.originaccessidentity.html" class="tsd-signature-type">OriginAccessIdentity</a></h4>
@@ -149,9 +181,15 @@
 					<div class="tsd-signature tsd-kind-icon">caller<wbr>Reference<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudfront/originAccessIdentity.ts#L7">cloudfront/originAccessIdentity.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudfront/originAccessIdentity.ts#L19">cloudfront/originAccessIdentity.ts:19</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Internal value used by CloudFront to allow future
+							updates to the origin access identity.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="cloudfrontaccessidentitypath" class="tsd-anchor"></a>
@@ -159,9 +197,15 @@
 					<div class="tsd-signature tsd-kind-icon">cloudfront<wbr>Access<wbr>Identity<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudfront/originAccessIdentity.ts#L8">cloudfront/originAccessIdentity.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudfront/originAccessIdentity.ts#L24">cloudfront/originAccessIdentity.ts:24</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A shortcut to the full path for the
+							origin access identity to use in CloudFront, see below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="comment" class="tsd-anchor"></a>
@@ -169,9 +213,14 @@
 					<div class="tsd-signature tsd-kind-icon">comment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudfront/originAccessIdentity.ts#L9">cloudfront/originAccessIdentity.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudfront/originAccessIdentity.ts#L28">cloudfront/originAccessIdentity.ts:28</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An optional comment for the origin access identity.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="etag" class="tsd-anchor"></a>
@@ -179,9 +228,15 @@
 					<div class="tsd-signature tsd-kind-icon">etag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudfront/originAccessIdentity.ts#L10">cloudfront/originAccessIdentity.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudfront/originAccessIdentity.ts#L33">cloudfront/originAccessIdentity.ts:33</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The current version of the origin access identity&#39;s information.
+							For example: <code>E2QWRUHAPOMQZL</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="iamarn" class="tsd-anchor"></a>
@@ -189,9 +244,16 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudfront/originAccessIdentity.ts#L11">cloudfront/originAccessIdentity.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudfront/originAccessIdentity.ts#L39">cloudfront/originAccessIdentity.ts:39</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A pre-generated ARN for use in S3 bucket policies (see below).
+								Example: <code>arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
+E2QWRUHAPOMQZL</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -210,9 +272,16 @@
 					<div class="tsd-signature tsd-kind-icon">s3<wbr>Canonical<wbr>User<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/cloudfront/originAccessIdentity.ts#L12">cloudfront/originAccessIdentity.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudfront/originAccessIdentity.ts#L45">cloudfront/originAccessIdentity.ts:45</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Amazon S3 canonical user ID for the origin
+								access identity, which you use when giving the origin access identity read
+							permission to an object in Amazon S3.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -231,7 +300,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_cloudfront_originaccessidentity_.html">"cloudfront/origin<wbr>Access<wbr>Identity"</a>

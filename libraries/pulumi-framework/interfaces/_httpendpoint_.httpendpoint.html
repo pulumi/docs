@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HttpAPI | @pulumi/pulumi</title>
+	<title>HttpEndpoint | @pulumi/pulumi</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -53,16 +53,16 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_api_.html">&quot;api&quot;</a>
+					<a href="../modules/_httpendpoint_.html">&quot;httpEndpoint&quot;</a>
 				</li>
 				<li>
-					<a href="_api_.httpapi.html">HttpAPI</a>
+					<a href="_httpendpoint_.httpendpoint.html">HttpEndpoint</a>
 				</li>
 			</ul>
-			<h1>Interface HttpAPI</h1>
+			<h1>Interface HttpEndpoint</h1>
 		</div>
 	</div>
 </header>
@@ -72,9 +72,9 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>HttpAPI publishes an internet-facing HTTP API, for serving web applications or REST APIs.</p>
+						<p>HttpEndpoint publishes an internet-facing HTTP API, for serving web applications or REST APIs.</p>
 					</div>
-					<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> api = <span class="hljs-keyword">new</span> HttpAPI(<span class="hljs-string">"myapi"</span>)
+					<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> api = <span class="hljs-keyword">new</span> HttpEndpoint(<span class="hljs-string">"myapi"</span>)
 api.get(<span class="hljs-string">"/"</span>, (req, res) =&gt; res.json({<span class="hljs-attr">hello</span>: <span class="hljs-string">"world"</span>}));
 api.publish();
 api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span> =&gt;</span>
@@ -92,7 +92,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">HttpAPI</span>
+						<span class="target">HttpEndpoint</span>
 					</li>
 				</ul>
 			</section>
@@ -103,22 +103,22 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#url" class="tsd-kind-icon">url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#url" class="tsd-kind-icon">url</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#all" class="tsd-kind-icon">all</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#attachcustomdomain" class="tsd-kind-icon">attach<wbr>Custom<wbr>Domain</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#delete" class="tsd-kind-icon">delete</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#get" class="tsd-kind-icon">get</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#options" class="tsd-kind-icon">options</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#post" class="tsd-kind-icon">post</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#publish" class="tsd-kind-icon">publish</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#put" class="tsd-kind-icon">put</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#route" class="tsd-kind-icon">route</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_api_.httpapi.html#staticfile" class="tsd-kind-icon">static<wbr>File</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#all" class="tsd-kind-icon">all</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#attachcustomdomain" class="tsd-kind-icon">attach<wbr>Custom<wbr>Domain</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#delete" class="tsd-kind-icon">delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#options" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#post" class="tsd-kind-icon">post</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#publish" class="tsd-kind-icon">publish</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#put" class="tsd-kind-icon">put</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#route" class="tsd-kind-icon">route</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#staticfile" class="tsd-kind-icon">static<wbr>File</a></li>
 							</ul>
 						</section>
 					</div>
@@ -132,12 +132,12 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L99">api.ts:99</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L99">httpEndpoint.ts:99</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The url that the HttpAPI is being served at. Set only after a succesful call to <code>publish</code>.</p>
+							<p>The url that the HttpEndpoint is being served at. Set only after a succesful call to <code>publish</code>.</p>
 						</div>
 					</div>
 				</section>
@@ -148,13 +148,13 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<a name="all" class="tsd-anchor"></a>
 					<h3>all</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">all<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">all<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L158">api.ts:158</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L158">httpEndpoint.ts:158</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -171,7 +171,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>One or more handlers to apply to requests.</p>
 									</div>
@@ -185,18 +185,18 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<a name="attachcustomdomain" class="tsd-anchor"></a>
 					<h3>attach<wbr>Custom<wbr>Domain</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">attach<wbr>Custom<wbr>Domain<span class="tsd-signature-symbol">(</span>domain<span class="tsd-signature-symbol">: </span><a href="_api_.domain.html" class="tsd-signature-type">Domain</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">attach<wbr>Custom<wbr>Domain<span class="tsd-signature-symbol">(</span>domain<span class="tsd-signature-symbol">: </span><a href="_httpendpoint_.domain.html" class="tsd-signature-type">Domain</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L179">api.ts:179</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L179">httpEndpoint.ts:179</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Attach a custom domain to this HttpAPI.</p>
+									<p>Attach a custom domain to this HttpEndpoint.</p>
 								</div>
 								<p>Provide a domain name you own, along with SSL certificates from a certificate authority (e.g. LetsEncrypt).
 								The return value is a domain name that you must map your custom domain to using a DNS A record.</p>
@@ -205,7 +205,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>domain: <a href="_api_.domain.html" class="tsd-signature-type">Domain</a></h5>
+									<h5>domain: <a href="_httpendpoint_.domain.html" class="tsd-signature-type">Domain</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -217,13 +217,13 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<a name="delete" class="tsd-anchor"></a>
 					<h3>delete</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L144">api.ts:144</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L144">httpEndpoint.ts:144</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -240,7 +240,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>One or more handlers to apply to requests.</p>
 									</div>
@@ -254,13 +254,13 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<a name="get" class="tsd-anchor"></a>
 					<h3>get</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L123">api.ts:123</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L123">httpEndpoint.ts:123</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -277,7 +277,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>One or more handlers to apply to requests.</p>
 									</div>
@@ -291,13 +291,13 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<a name="options" class="tsd-anchor"></a>
 					<h3>options</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L151">api.ts:151</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L151">httpEndpoint.ts:151</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -314,7 +314,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>One or more handlers to apply to requests.</p>
 									</div>
@@ -328,13 +328,13 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<a name="post" class="tsd-anchor"></a>
 					<h3>post</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">post<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">post<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L137">api.ts:137</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L137">httpEndpoint.ts:137</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -351,7 +351,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>One or more handlers to apply to requests.</p>
 									</div>
@@ -371,17 +371,17 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L167">api.ts:167</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L167">httpEndpoint.ts:167</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Publishes an HttpAPI to be internet accessible.</p>
+									<p>Publishes an HttpEndpoint to be internet accessible.</p>
 								</div>
 								<p>This should be called after describing desired routes.</p>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>A computed string representing the URL at which the HttpAPI is available to the internet.</p>
+							<p>A computed string representing the URL at which the HttpEndpoint is available to the internet.</p>
 						</li>
 					</ul>
 				</section>
@@ -389,13 +389,13 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<a name="put" class="tsd-anchor"></a>
 					<h3>put</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">put<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">put<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L130">api.ts:130</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L130">httpEndpoint.ts:130</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -412,7 +412,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>One or more handlers to apply to requests.</p>
 									</div>
@@ -426,13 +426,13 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<a name="route" class="tsd-anchor"></a>
 					<h3>route</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">route<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">route<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>handlers<span class="tsd-signature-symbol">: </span><a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L116">api.ts:116</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L116">httpEndpoint.ts:116</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -455,7 +455,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_api_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>handlers: <a href="../modules/_httpendpoint_.html#routehandler" class="tsd-signature-type">RouteHandler</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>One or more handlers to apply to requests.</p>
 									</div>
@@ -475,7 +475,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/e963a86/api/api.ts#L108">api.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-framework/blob/21482d3/api/httpEndpoint.ts#L108">httpEndpoint.ts:108</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -514,7 +514,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="label tsd-is-external">
 						<span>Internals</span>
@@ -529,7 +529,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<span>Externals</span>
 					</li>
 					<li class="current tsd-kind-external-module tsd-is-external">
-						<a href="../modules/_api_.html">"api"</a>
+						<a href="../modules/_httpendpoint_.html">"http<wbr>Endpoint"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/_table_.html">"table"</a>
@@ -548,61 +548,61 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_api_.domain.html" class="tsd-kind-icon">Domain</a>
+						<a href="_httpendpoint_.domain.html" class="tsd-kind-icon">Domain</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_api_.httpapi.html" class="tsd-kind-icon">HttpAPI</a>
+						<a href="_httpendpoint_.httpendpoint.html" class="tsd-kind-icon">Http<wbr>Endpoint</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#url" class="tsd-kind-icon">url</a>
+								<a href="_httpendpoint_.httpendpoint.html#url" class="tsd-kind-icon">url</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#all" class="tsd-kind-icon">all</a>
+								<a href="_httpendpoint_.httpendpoint.html#all" class="tsd-kind-icon">all</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#attachcustomdomain" class="tsd-kind-icon">attach<wbr>Custom<wbr>Domain</a>
+								<a href="_httpendpoint_.httpendpoint.html#attachcustomdomain" class="tsd-kind-icon">attach<wbr>Custom<wbr>Domain</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#delete" class="tsd-kind-icon">delete</a>
+								<a href="_httpendpoint_.httpendpoint.html#delete" class="tsd-kind-icon">delete</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#get" class="tsd-kind-icon">get</a>
+								<a href="_httpendpoint_.httpendpoint.html#get" class="tsd-kind-icon">get</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#options" class="tsd-kind-icon">options</a>
+								<a href="_httpendpoint_.httpendpoint.html#options" class="tsd-kind-icon">options</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#post" class="tsd-kind-icon">post</a>
+								<a href="_httpendpoint_.httpendpoint.html#post" class="tsd-kind-icon">post</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#publish" class="tsd-kind-icon">publish</a>
+								<a href="_httpendpoint_.httpendpoint.html#publish" class="tsd-kind-icon">publish</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#put" class="tsd-kind-icon">put</a>
+								<a href="_httpendpoint_.httpendpoint.html#put" class="tsd-kind-icon">put</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#route" class="tsd-kind-icon">route</a>
+								<a href="_httpendpoint_.httpendpoint.html#route" class="tsd-kind-icon">route</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_api_.httpapi.html#staticfile" class="tsd-kind-icon">static<wbr>File</a>
+								<a href="_httpendpoint_.httpendpoint.html#staticfile" class="tsd-kind-icon">static<wbr>File</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_api_.httpapiconstructor.html" class="tsd-kind-icon">HttpAPIConstructor</a>
+						<a href="_httpendpoint_.httpendpointconstructor.html" class="tsd-kind-icon">Http<wbr>Endpoint<wbr>Constructor</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_api_.request.html" class="tsd-kind-icon">Request</a>
+						<a href="_httpendpoint_.request.html" class="tsd-kind-icon">Request</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_api_.response.html" class="tsd-kind-icon">Response</a>
+						<a href="_httpendpoint_.response.html" class="tsd-kind-icon">Response</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
-						<a href="../modules/_api_.html#routehandler" class="tsd-kind-icon">Route<wbr>Handler</a>
+						<a href="../modules/_httpendpoint_.html#routehandler" class="tsd-kind-icon">Route<wbr>Handler</a>
 					</li>
 				</ul>
 			</nav>

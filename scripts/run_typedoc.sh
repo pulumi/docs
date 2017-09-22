@@ -13,18 +13,22 @@ PULUMI_FRAMEWORK_DOCS=`mktemp -d -t "typedoc-framework"`
 echo -e "\033[0;95mrunning typedoc on pulumi-aws\033[0m"
 pushd .
 cd ../pulumi-aws/pack
-typedoc . --out $PULUMI_AWS_DOCS
+typedoc . --mode modules --readme none --out $PULUMI_AWS_DOCS
 popd
 
 # pulumi-fabric
-# TBD: Where are these TypeScript files?
+echo -e "\033[0;95mrunning typedoc on pulumi-fabric\033[0m"
+pushd .
+cd ../pulumi-fabric/sdk/nodejs
+typedoc . --mode modules --readme none --out $PULUMI_FABRIC_DOCS
+popd
+
 
 # pulumi-framework
 echo -e "\033[0;95mrunning typedoc on pulumi-framework\033[0m"
 pushd .
-cd ../pulumi-framework/
-cd ./api/
-typedoc . --out $PULUMI_FRAMEWORK_DOCS
+cd ../pulumi-framework/api
+typedoc . --mode modules --readme none --out $PULUMI_FRAMEWORK_DOCS
 popd
 
 echo "Finished running typedoc. Copying into /libraries."

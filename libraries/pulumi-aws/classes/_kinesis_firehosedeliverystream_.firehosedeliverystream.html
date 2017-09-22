@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_kinesis_firehosedeliverystream_.html">&quot;kinesis/firehoseDeliveryStream&quot;</a>
@@ -69,6 +69,14 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.</p>
+					</div>
+					<p>For more details, see the [Amazon Kinesis Firehose Documentation][1].</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -99,6 +107,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#destination" class="tsd-kind-icon">destination</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#destinationid" class="tsd-kind-icon">destination<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#elasticsearchconfiguration" class="tsd-kind-icon">elasticsearch<wbr>Configuration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#extendeds3configuration" class="tsd-kind-icon">extended<wbr>S3Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#redshiftconfiguration" class="tsd-kind-icon">redshift<wbr>Configuration</a></li>
@@ -123,19 +132,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/kinesis/firehoseDeliveryStream.ts#L14">kinesis/firehoseDeliveryStream.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/kinesis/firehoseDeliveryStream.ts#L42">kinesis/firehoseDeliveryStream.ts:42</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a FirehoseDeliveryStream resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this FirehoseDeliveryStream instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html" class="tsd-signature-type">FirehoseDeliveryStreamArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this FirehoseDeliveryStream intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html" class="tsd-signature-type">FirehoseDeliveryStream</a></h4>
@@ -151,9 +181,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/kinesis/firehoseDeliveryStream.ts#L7">kinesis/firehoseDeliveryStream.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/kinesis/firehoseDeliveryStream.ts#L15">kinesis/firehoseDeliveryStream.ts:15</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Amazon Resource Name (ARN) specifying the Stream</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="destination" class="tsd-anchor"></a>
@@ -161,9 +196,14 @@
 					<div class="tsd-signature tsd-kind-icon">destination<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/kinesis/firehoseDeliveryStream.ts#L8">kinesis/firehoseDeliveryStream.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/kinesis/firehoseDeliveryStream.ts#L19">kinesis/firehoseDeliveryStream.ts:19</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This is the destination to where the data is delivered. The only options are <code>s3</code> (Deprecated, use <code>extended_s3</code> instead), <code>extended_s3</code>, <code>redshift</code>, and <code>elasticsearch</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="destinationid" class="tsd-anchor"></a>
@@ -171,7 +211,7 @@
 					<div class="tsd-signature tsd-kind-icon">destination<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/kinesis/firehoseDeliveryStream.ts#L9">kinesis/firehoseDeliveryStream.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/kinesis/firehoseDeliveryStream.ts#L20">kinesis/firehoseDeliveryStream.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -181,9 +221,24 @@
 					<div class="tsd-signature tsd-kind-icon">elasticsearch<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/kinesis/firehoseDeliveryStream.ts#L10">kinesis/firehoseDeliveryStream.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/kinesis/firehoseDeliveryStream.ts#L21">kinesis/firehoseDeliveryStream.ts:21</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="extendeds3configuration" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> extended<wbr>S3Configuration</h3>
+					<div class="tsd-signature tsd-kind-icon">extended<wbr>S3Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/kinesis/firehoseDeliveryStream.ts#L25">kinesis/firehoseDeliveryStream.ts:25</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Enhanced configuration options for the s3 destination. More details are given below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -202,9 +257,15 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/kinesis/firehoseDeliveryStream.ts#L11">kinesis/firehoseDeliveryStream.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/kinesis/firehoseDeliveryStream.ts#L30">kinesis/firehoseDeliveryStream.ts:30</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A name to identify the stream. This is unique to the
+							AWS account and region the Stream is created in.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="redshiftconfiguration" class="tsd-anchor"></a>
@@ -212,19 +273,32 @@
 					<div class="tsd-signature tsd-kind-icon">redshift<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/kinesis/firehoseDeliveryStream.ts#L12">kinesis/firehoseDeliveryStream.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/kinesis/firehoseDeliveryStream.ts#L36">kinesis/firehoseDeliveryStream.ts:36</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Configuration options if redshift is the destination.
+								Using <code>redshift_configuration</code> requires the user to also specify a
+							<code>s3_configuration</code> block. More details are given below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="s3configuration" class="tsd-anchor"></a>
-					<h3>s3<wbr>Configuration</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> s3<wbr>Configuration</h3>
 					<div class="tsd-signature tsd-kind-icon">s3<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/kinesis/firehoseDeliveryStream.ts#L13">kinesis/firehoseDeliveryStream.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/kinesis/firehoseDeliveryStream.ts#L41">kinesis/firehoseDeliveryStream.ts:41</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Configuration options for the s3 destination (or the intermediate bucket if the destination
+							is redshift). More details are given below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -243,7 +317,7 @@
 					<div class="tsd-signature tsd-kind-icon">version<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/kinesis/firehoseDeliveryStream.ts#L14">kinesis/firehoseDeliveryStream.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/kinesis/firehoseDeliveryStream.ts#L42">kinesis/firehoseDeliveryStream.ts:42</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -253,7 +327,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_kinesis_firehosedeliverystream_.html">"kinesis/firehose<wbr>Delivery<wbr>Stream"</a>
@@ -281,6 +355,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#elasticsearchconfiguration" class="tsd-kind-icon">elasticsearch<wbr>Configuration</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#extendeds3configuration" class="tsd-kind-icon">extended<wbr>S3Configuration</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#id" class="tsd-kind-icon">id</a>

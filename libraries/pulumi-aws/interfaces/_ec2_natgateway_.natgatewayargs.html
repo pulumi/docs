@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ec2_natgateway_.html">&quot;ec2/natGateway&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a NatGateway resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -89,6 +96,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_natgateway_.natgatewayargs.html#privateip" class="tsd-kind-icon">private<wbr>Ip</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_natgateway_.natgatewayargs.html#publicip" class="tsd-kind-icon">public<wbr>Ip</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_natgateway_.natgatewayargs.html#subnetid" class="tsd-kind-icon">subnet<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_natgateway_.natgatewayargs.html#tags" class="tsd-kind-icon">tags</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,9 +110,14 @@
 					<div class="tsd-signature tsd-kind-icon">allocation<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/natGateway.ts#L31">ec2/natGateway.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/natGateway.ts#L68">ec2/natGateway.ts:68</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Allocation ID of the Elastic IP address for the gateway.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="networkinterfaceid" class="tsd-anchor"></a>
@@ -112,7 +125,7 @@
 					<div class="tsd-signature tsd-kind-icon">network<wbr>Interface<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/natGateway.ts#L32">ec2/natGateway.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/natGateway.ts#L69">ec2/natGateway.ts:69</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -122,7 +135,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/natGateway.ts#L33">ec2/natGateway.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/natGateway.ts#L70">ec2/natGateway.ts:70</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -132,7 +145,7 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/natGateway.ts#L34">ec2/natGateway.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/natGateway.ts#L71">ec2/natGateway.ts:71</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -142,9 +155,29 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/natGateway.ts#L35">ec2/natGateway.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/natGateway.ts#L75">ec2/natGateway.ts:75</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Subnet ID of the subnet in which to place the gateway.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="tags" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/natGateway.ts#L79">ec2/natGateway.ts:79</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -152,7 +185,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ec2_natgateway_.html">"ec2/nat<wbr>Gateway"</a>
@@ -183,6 +216,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_natgateway_.natgatewayargs.html#subnetid" class="tsd-kind-icon">subnet<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_natgateway_.natgatewayargs.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
 						</ul>
 					</li>

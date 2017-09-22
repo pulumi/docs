@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ec2_defaultroutetable_.html">&quot;ec2/defaultRouteTable&quot;</a>
@@ -69,6 +69,36 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides a resource to manage a Default VPC Routing Table.</p>
+					</div>
+					<p>Each VPC created in AWS comes with a Default Route Table that can be managed, but not
+						destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
+						of when using it. Please read this document in its entirety before using this
+						resource. It is recommended you <strong>do not</strong> use both <code>aws_default_route_table</code> to
+						manage the default route table <strong>and</strong> use the <code>aws_main_route_table_association</code>,
+					due to possible conflict in routes.</p>
+					<p>The <code>aws_default_route_table</code> behaves differently from normal resources, in that
+						Terraform does not <em>create</em> this resource, but instead attempts to &quot;adopt&quot; it
+						into management. We can do this because each VPC created has a Default Route
+					Table that cannot be destroyed, and is created with a single route.</p>
+					<p>When Terraform first adopts the Default Route Table, it <strong>immediately removes all
+						defined routes</strong>. It then proceeds to create any routes specified in the
+						configuration. This step is required so that only the routes specified in the
+					configuration present in the Default Route Table.</p>
+					<p>For more information about Route Tables, see the AWS Documentation on
+					[Route Tables][aws-route-tables].</p>
+					<p>For more information about managing normal Route Tables in Terraform, see our
+					documentation on [aws_route_table][tf-route-tables].</p>
+					<p>~&gt; <strong>NOTE on Route Tables and Routes:</strong> Terraform currently
+						provides both a standalone <a href="route.html">Route resource</a> and a Route Table resource with routes
+						defined in-line. At this time you cannot use a Route Table with in-line routes
+						in conjunction with any Route resources. Doing so will cause
+					a conflict of rule settings and will overwrite routes.</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -120,19 +150,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultRouteTable.ts#L11">ec2/defaultRouteTable.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultRouteTable.ts#L56">ec2/defaultRouteTable.ts:56</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a DefaultRouteTable resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this DefaultRouteTable instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_ec2_defaultroutetable_.defaultroutetableargs.html" class="tsd-signature-type">DefaultRouteTableArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this DefaultRouteTable intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_ec2_defaultroutetable_.defaultroutetable.html" class="tsd-signature-type">DefaultRouteTable</a></h4>
@@ -148,9 +199,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Route<wbr>Table<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultRouteTable.ts#L7">ec2/defaultRouteTable.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultRouteTable.ts#L43">ec2/defaultRouteTable.ts:43</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ID of the Default Routing Table.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -169,9 +225,14 @@
 					<div class="tsd-signature tsd-kind-icon">propagating<wbr>Vgws<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultRouteTable.ts#L8">ec2/defaultRouteTable.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultRouteTable.ts#L47">ec2/defaultRouteTable.ts:47</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of virtual gateways for propagation.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="route" class="tsd-anchor"></a>
@@ -179,9 +240,14 @@
 					<div class="tsd-signature tsd-kind-icon">route<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultRouteTable.ts#L9">ec2/defaultRouteTable.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultRouteTable.ts#L51">ec2/defaultRouteTable.ts:51</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of route objects. Their keys are documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tags" class="tsd-anchor"></a>
@@ -189,9 +255,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultRouteTable.ts#L10">ec2/defaultRouteTable.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultRouteTable.ts#L55">ec2/defaultRouteTable.ts:55</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -210,7 +281,7 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultRouteTable.ts#L11">ec2/defaultRouteTable.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultRouteTable.ts#L56">ec2/defaultRouteTable.ts:56</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -220,7 +291,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ec2_defaultroutetable_.html">"ec2/default<wbr>Route<wbr>Table"</a>

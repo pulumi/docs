@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ec2_defaultsecuritygroup_.html">&quot;ec2/defaultSecurityGroup&quot;</a>
@@ -69,6 +69,32 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides a resource to manage the default AWS Security Group.</p>
+					</div>
+					<p>For EC2 Classic accounts, each region comes with a Default Security Group.
+						Additionally, each VPC created in AWS comes with a Default Security Group that can be managed, but not
+						destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
+						of when using it. Please read this document in its entirety before using this
+					resource.</p>
+					<p>The <code>aws_default_security_group</code> behaves differently from normal resources, in that
+						Terraform does not <em>create</em> this resource, but instead &quot;adopts&quot; it
+						into management. We can do this because these default security groups cannot be
+					destroyed, and are created with a known set of default ingress/egress rules.</p>
+					<p>When Terraform first adopts the Default Security Group, it <strong>immediately removes all
+						ingress and egress rules in the Security Group</strong>. It then proceeds to create any rules specified in the
+						configuration. This step is required so that only the rules specified in the
+					configuration are created.</p>
+					<p>This resource treats it&#39;s inline rules as absolute; only the rules defined
+						inline are created, and any additions/removals external to this resource will
+						result in diff shown. For these reasons, this resource is incompatible with the
+					<code>aws_security_group_rule</code> resource.</p>
+					<p>For more information about Default Security Groups, see the AWS Documentation on
+					[Default Security Groups][aws-default-security-groups].</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -121,19 +147,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultSecurityGroup.ts#L12">ec2/defaultSecurityGroup.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultSecurityGroup.ts#L61">ec2/defaultSecurityGroup.ts:61</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a DefaultSecurityGroup resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this DefaultSecurityGroup instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <a href="../interfaces/_ec2_defaultsecuritygroup_.defaultsecuritygroupargs.html" class="tsd-signature-type">DefaultSecurityGroupArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this DefaultSecurityGroup intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_ec2_defaultsecuritygroup_.defaultsecuritygroup.html" class="tsd-signature-type">DefaultSecurityGroup</a></h4>
@@ -149,9 +196,15 @@
 					<div class="tsd-signature tsd-kind-icon">egress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultSecurityGroup.ts#L7">ec2/defaultSecurityGroup.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultSecurityGroup.ts#L38">ec2/defaultSecurityGroup.ts:38</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Can be specified multiple times for each
+							egress rule. Each egress block supports fields documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -170,9 +223,15 @@
 					<div class="tsd-signature tsd-kind-icon">ingress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultSecurityGroup.ts#L8">ec2/defaultSecurityGroup.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultSecurityGroup.ts#L43">ec2/defaultSecurityGroup.ts:43</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Can be specified multiple times for each
+							ingress rule. Each ingress block supports fields documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="name" class="tsd-anchor"></a>
@@ -180,9 +239,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultSecurityGroup.ts#L9">ec2/defaultSecurityGroup.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultSecurityGroup.ts#L47">ec2/defaultSecurityGroup.ts:47</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the security group</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ownerid" class="tsd-anchor"></a>
@@ -190,9 +254,14 @@
 					<div class="tsd-signature tsd-kind-icon">owner<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultSecurityGroup.ts#L10">ec2/defaultSecurityGroup.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultSecurityGroup.ts#L51">ec2/defaultSecurityGroup.ts:51</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The owner ID.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tags" class="tsd-anchor"></a>
@@ -200,9 +269,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultSecurityGroup.ts#L11">ec2/defaultSecurityGroup.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultSecurityGroup.ts#L55">ec2/defaultSecurityGroup.ts:55</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -221,9 +295,16 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/defaultSecurityGroup.ts#L12">ec2/defaultSecurityGroup.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/defaultSecurityGroup.ts#L61">ec2/defaultSecurityGroup.ts:61</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The VPC ID. <strong>Note that changing
+									the <code>vpc_id</code> will <em>not</em> restore any default security group rules that were
+							modified, added, or removed.</strong> It will be left in it&#39;s current state</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -231,7 +312,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ec2_defaultsecuritygroup_.html">"ec2/default<wbr>Security<wbr>Group"</a>

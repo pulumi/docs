@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ec2_spotinstancerequest_.html">&quot;ec2/spotInstanceRequest&quot;</a>
@@ -69,6 +69,27 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides an EC2 Spot Instance Request resource. This allows instances to be
+						requested on the spot market.</p>
+					</div>
+					<p>Terraform always creates Spot Instance Requests with a <code>persistent</code> type, which
+						means that for the duration of their lifetime, AWS will launch an instance
+						with the configured details if and when the spot market will accept the
+					requested price.</p>
+					<p>On destruction, Terraform will make an attempt to terminate the associated Spot
+					Instance if there is one present.</p>
+					<p>~&gt; <strong>NOTE:</strong> Because their behavior depends on the live status of the spot
+						market, Spot Instance Requests have a unique lifecycle that makes them behave
+						differently than other Terraform resources. Most importantly: there is <strong>no
+						guarantee</strong> that a Spot Instance exists to fulfill the request at any given
+						point in time. See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html">AWS Spot Instance
+						documentation</a>
+					for more information.</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -134,6 +155,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_spotinstancerequest_.spotinstancerequest.html#tenancy" class="tsd-kind-icon">tenancy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_ec2_spotinstancerequest_.spotinstancerequest.html#urn" class="tsd-kind-icon">urn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_spotinstancerequest_.spotinstancerequest.html#userdata" class="tsd-kind-icon">user<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_spotinstancerequest_.spotinstancerequest.html#userdatabase64" class="tsd-kind-icon">user<wbr>Data<wbr>Base64</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_spotinstancerequest_.spotinstancerequest.html#volumetags" class="tsd-kind-icon">volume<wbr>Tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_spotinstancerequest_.spotinstancerequest.html#vpcsecuritygroupids" class="tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_spotinstancerequest_.spotinstancerequest.html#waitforfulfillment" class="tsd-kind-icon">wait<wbr>For<wbr>Fulfillment</a></li>
@@ -155,19 +177,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L46">ec2/spotInstanceRequest.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L208">ec2/spotInstanceRequest.ts:208</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a SpotInstanceRequest resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this SpotInstanceRequest instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_ec2_spotinstancerequest_.spotinstancerequestargs.html" class="tsd-signature-type">SpotInstanceRequestArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this SpotInstanceRequest intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_ec2_spotinstancerequest_.spotinstancerequest.html" class="tsd-signature-type">SpotInstanceRequest</a></h4>
@@ -183,9 +226,14 @@
 					<div class="tsd-signature tsd-kind-icon">ami<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L7">ec2/spotInstanceRequest.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L31">ec2/spotInstanceRequest.ts:31</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The AMI to use for the instance.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="associatepublicipaddress" class="tsd-anchor"></a>
@@ -193,9 +241,14 @@
 					<div class="tsd-signature tsd-kind-icon">associate<wbr>Public<wbr>IpAddress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L8">ec2/spotInstanceRequest.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L35">ec2/spotInstanceRequest.ts:35</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Associate a public ip address with an instance in a VPC.  Boolean value.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="availabilityzone" class="tsd-anchor"></a>
@@ -203,9 +256,14 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L9">ec2/spotInstanceRequest.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L39">ec2/spotInstanceRequest.ts:39</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The AZ to start the instance in.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="blockdurationminutes" class="tsd-anchor"></a>
@@ -213,9 +271,16 @@
 					<div class="tsd-signature tsd-kind-icon">block<wbr>Duration<wbr>Minutes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L10">ec2/spotInstanceRequest.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L45">ec2/spotInstanceRequest.ts:45</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
+								The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
+							Note that you can&#39;t specify an Availability Zone group or a launch group if you specify a duration.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="disableapitermination" class="tsd-anchor"></a>
@@ -223,9 +288,15 @@
 					<div class="tsd-signature tsd-kind-icon">disable<wbr>Api<wbr>Termination<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L11">ec2/spotInstanceRequest.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L50">ec2/spotInstanceRequest.ts:50</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, enables <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
+							Termination Protection</a></p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ebsblockdevice" class="tsd-anchor"></a>
@@ -233,9 +304,15 @@
 					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L12">ec2/spotInstanceRequest.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L55">ec2/spotInstanceRequest.ts:55</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Additional EBS block devices to attach to the
+							instance.  See <a href="#block-devices">Block Devices</a> below for details.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ebsoptimized" class="tsd-anchor"></a>
@@ -243,9 +320,15 @@
 					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Optimized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L13">ec2/spotInstanceRequest.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L60">ec2/spotInstanceRequest.ts:60</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, the launched EC2 instance will be
+							EBS-optimized.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ephemeralblockdevice" class="tsd-anchor"></a>
@@ -253,9 +336,15 @@
 					<div class="tsd-signature tsd-kind-icon">ephemeral<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L14">ec2/spotInstanceRequest.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L65">ec2/spotInstanceRequest.ts:65</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Customize Ephemeral (also known as
+							&quot;Instance Store&quot;) volumes on the instance. See <a href="#block-devices">Block Devices</a> below for details.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="iaminstanceprofile" class="tsd-anchor"></a>
@@ -263,9 +352,18 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Instance<wbr>Profile<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L15">ec2/spotInstanceRequest.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L71">ec2/spotInstanceRequest.ts:71</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The IAM Instance Profile to
+							launch the instance with. Specified as the name of the Instance Profile.</p>
+							<ul>
+								<li><code>ipv6_address_count</code>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</li>
+							</ul>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -284,9 +382,17 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L16">ec2/spotInstanceRequest.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L78">ec2/spotInstanceRequest.ts:78</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Shutdown behavior for the
+								instance. Amazon defaults this to <code>stop</code> for EBS-backed instances and
+								<code>terminate</code> for instance-store instances. Cannot be set on instance-store
+							instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">Shutdown Behavior</a> for more information.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="instancestate" class="tsd-anchor"></a>
@@ -294,7 +400,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L17">ec2/spotInstanceRequest.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L79">ec2/spotInstanceRequest.ts:79</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -304,9 +410,14 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L18">ec2/spotInstanceRequest.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L83">ec2/spotInstanceRequest.ts:83</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The type of instance to start</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ipv6addresscount" class="tsd-anchor"></a>
@@ -314,7 +425,7 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Address<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L19">ec2/spotInstanceRequest.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L84">ec2/spotInstanceRequest.ts:84</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -324,9 +435,14 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Addresses<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L20">ec2/spotInstanceRequest.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L88">ec2/spotInstanceRequest.ts:88</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="keyname" class="tsd-anchor"></a>
@@ -334,9 +450,14 @@
 					<div class="tsd-signature tsd-kind-icon">key<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L21">ec2/spotInstanceRequest.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L92">ec2/spotInstanceRequest.ts:92</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The key name to use for the instance.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="launchgroup" class="tsd-anchor"></a>
@@ -344,9 +465,15 @@
 					<div class="tsd-signature tsd-kind-icon">launch<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L22">ec2/spotInstanceRequest.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L97">ec2/spotInstanceRequest.ts:97</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A launch group is a group of spot instances that launch together and terminate together.
+							If left empty instances are launched and terminated individually.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="monitoring" class="tsd-anchor"></a>
@@ -354,9 +481,14 @@
 					<div class="tsd-signature tsd-kind-icon">monitoring<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L23">ec2/spotInstanceRequest.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L101">ec2/spotInstanceRequest.ts:101</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="networkinterface" class="tsd-anchor"></a>
@@ -364,9 +496,14 @@
 					<div class="tsd-signature tsd-kind-icon">network<wbr>Interface<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L24">ec2/spotInstanceRequest.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L105">ec2/spotInstanceRequest.ts:105</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Customize network interfaces to be attached at instance boot time. See <a href="#network-interfaces">Network Interfaces</a> below for more details.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="networkinterfaceid" class="tsd-anchor"></a>
@@ -374,9 +511,14 @@
 					<div class="tsd-signature tsd-kind-icon">network<wbr>Interface<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L25">ec2/spotInstanceRequest.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L109">ec2/spotInstanceRequest.ts:109</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ID of the network interface to attach.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="placementgroup" class="tsd-anchor"></a>
@@ -384,9 +526,14 @@
 					<div class="tsd-signature tsd-kind-icon">placement<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L26">ec2/spotInstanceRequest.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L113">ec2/spotInstanceRequest.ts:113</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Placement Group to start the instance in.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="primarynetworkinterfaceid" class="tsd-anchor"></a>
@@ -394,7 +541,7 @@
 					<div class="tsd-signature tsd-kind-icon">primary<wbr>Network<wbr>Interface<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L27">ec2/spotInstanceRequest.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L114">ec2/spotInstanceRequest.ts:114</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -404,9 +551,16 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Dns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L28">ec2/spotInstanceRequest.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L120">ec2/spotInstanceRequest.ts:120</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The private DNS name assigned to the instance. Can only be
+								used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
+							for your VPC</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="privateip" class="tsd-anchor"></a>
@@ -414,9 +568,15 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L29">ec2/spotInstanceRequest.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L125">ec2/spotInstanceRequest.ts:125</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Private IP address to associate with the
+							instance in a VPC.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="publicdns" class="tsd-anchor"></a>
@@ -424,9 +584,15 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>Dns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L30">ec2/spotInstanceRequest.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L130">ec2/spotInstanceRequest.ts:130</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The public DNS name assigned to the instance. For EC2-VPC, this
+							is only available if you&#39;ve enabled DNS hostnames for your VPC</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="publicip" class="tsd-anchor"></a>
@@ -434,9 +600,14 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L31">ec2/spotInstanceRequest.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L134">ec2/spotInstanceRequest.ts:134</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The public IP address assigned to the instance, if applicable.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="rootblockdevice" class="tsd-anchor"></a>
@@ -444,9 +615,15 @@
 					<div class="tsd-signature tsd-kind-icon">root<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L32">ec2/spotInstanceRequest.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L139">ec2/spotInstanceRequest.ts:139</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Customize details about the root block
+							device of the instance. See <a href="#block-devices">Block Devices</a> below for details.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="securitygroups" class="tsd-anchor"></a>
@@ -454,9 +631,15 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L33">ec2/spotInstanceRequest.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L144">ec2/spotInstanceRequest.ts:144</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of security group names to associate with.
+							If you are creating Instances in a VPC, use <code>vpc_security_group_ids</code> instead.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="sourcedestcheck" class="tsd-anchor"></a>
@@ -464,9 +647,15 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Dest<wbr>Check<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L34">ec2/spotInstanceRequest.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L149">ec2/spotInstanceRequest.ts:149</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Controls if traffic is routed to the instance when
+							the destination address does not match the instance. Used for NAT or VPNs. Defaults true.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="spotbidstatus" class="tsd-anchor"></a>
@@ -474,9 +663,21 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Bid<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L35">ec2/spotInstanceRequest.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L158">ec2/spotInstanceRequest.ts:158</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The current <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">bid
+								status</a>
+							of the Spot Instance Request.</p>
+							<ul>
+								<li><code>spot_request_state</code> The current <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#creating-spot-request-status">request
+									state</a>
+								of the Spot Instance Request.</li>
+							</ul>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="spotinstanceid" class="tsd-anchor"></a>
@@ -484,9 +685,15 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Instance<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L36">ec2/spotInstanceRequest.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L163">ec2/spotInstanceRequest.ts:163</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Instance ID (if any) that is currently fulfilling
+							the Spot Instance request.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="spotprice" class="tsd-anchor"></a>
@@ -494,9 +701,14 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Price<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L37">ec2/spotInstanceRequest.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L167">ec2/spotInstanceRequest.ts:167</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The price to request on the spot market.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="spotrequeststate" class="tsd-anchor"></a>
@@ -504,7 +716,7 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Request<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L38">ec2/spotInstanceRequest.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L168">ec2/spotInstanceRequest.ts:168</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -514,9 +726,16 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L39">ec2/spotInstanceRequest.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L174">ec2/spotInstanceRequest.ts:174</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set to &quot;one-time&quot;, after
+								the instance is terminated, the spot request will be closed. Also, Terraform
+							can&#39;t manage one-time spot requests, just launch them.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="subnetid" class="tsd-anchor"></a>
@@ -524,9 +743,14 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L40">ec2/spotInstanceRequest.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L178">ec2/spotInstanceRequest.ts:178</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The VPC Subnet ID to launch in.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tags" class="tsd-anchor"></a>
@@ -534,9 +758,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L41">ec2/spotInstanceRequest.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L182">ec2/spotInstanceRequest.ts:182</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tenancy" class="tsd-anchor"></a>
@@ -544,9 +773,14 @@
 					<div class="tsd-signature tsd-kind-icon">tenancy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L42">ec2/spotInstanceRequest.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L186">ec2/spotInstanceRequest.ts:186</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -565,9 +799,29 @@
 					<div class="tsd-signature tsd-kind-icon">user<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L43">ec2/spotInstanceRequest.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L190">ec2/spotInstanceRequest.ts:190</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code>user_data_base64</code> instead.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="userdatabase64" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> user<wbr>Data<wbr>Base64</h3>
+					<div class="tsd-signature tsd-kind-icon">user<wbr>Data<wbr>Base64<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L194">ec2/spotInstanceRequest.ts:194</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Can be used instead of <code>user_data</code> to pass base64-encoded binary data directly. Use this instead of <code>user_data</code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="volumetags" class="tsd-anchor"></a>
@@ -575,9 +829,14 @@
 					<div class="tsd-signature tsd-kind-icon">volume<wbr>Tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L44">ec2/spotInstanceRequest.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L198">ec2/spotInstanceRequest.ts:198</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the devices created by the instance at launch time.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="vpcsecuritygroupids" class="tsd-anchor"></a>
@@ -585,9 +844,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L45">ec2/spotInstanceRequest.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L202">ec2/spotInstanceRequest.ts:202</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of security group IDs to associate with.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="waitforfulfillment" class="tsd-anchor"></a>
@@ -595,9 +859,16 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Fulfillment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotInstanceRequest.ts#L46">ec2/spotInstanceRequest.ts:46</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotInstanceRequest.ts#L208">ec2/spotInstanceRequest.ts:208</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set, Terraform will
+								wait for the Spot Request to be fulfilled, and will throw an error if the
+							timeout of 10m is reached.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -605,7 +876,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ec2_spotinstancerequest_.html">"ec2/spot<wbr>Instance<wbr>Request"</a>
@@ -738,6 +1009,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_spotinstancerequest_.spotinstancerequest.html#userdata" class="tsd-kind-icon">user<wbr>Data</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_spotinstancerequest_.spotinstancerequest.html#userdatabase64" class="tsd-kind-icon">user<wbr>Data<wbr>Base64</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_spotinstancerequest_.spotinstancerequest.html#volumetags" class="tsd-kind-icon">volume<wbr>Tags</a>

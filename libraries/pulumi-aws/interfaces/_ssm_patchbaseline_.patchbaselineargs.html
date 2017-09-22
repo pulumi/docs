@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ssm_patchbaseline_.html">&quot;ssm/patchBaseline&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a PatchBaseline resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -86,9 +93,11 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ssm_patchbaseline_.patchbaselineargs.html#approvalrule" class="tsd-kind-icon">approval<wbr>Rule</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ssm_patchbaseline_.patchbaselineargs.html#approvedpatches" class="tsd-kind-icon">approved<wbr>Patches</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ssm_patchbaseline_.patchbaselineargs.html#approvedpatchescompliancelevel" class="tsd-kind-icon">approved<wbr>Patches<wbr>Compliance<wbr>Level</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ssm_patchbaseline_.patchbaselineargs.html#description" class="tsd-kind-icon">description</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ssm_patchbaseline_.patchbaselineargs.html#globalfilter" class="tsd-kind-icon">global<wbr>Filter</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ssm_patchbaseline_.patchbaselineargs.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ssm_patchbaseline_.patchbaselineargs.html#operatingsystem" class="tsd-kind-icon">operating<wbr>System</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ssm_patchbaseline_.patchbaselineargs.html#rejectedpatches" class="tsd-kind-icon">rejected<wbr>Patches</a></li>
 							</ul>
 						</section>
@@ -103,9 +112,14 @@
 					<div class="tsd-signature tsd-kind-icon">approval<wbr>Rule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ssm/patchBaseline.ts#L27">ssm/patchBaseline.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ssm/patchBaseline.ts#L76">ssm/patchBaseline.ts:76</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="approvedpatches" class="tsd-anchor"></a>
@@ -113,9 +127,29 @@
 					<div class="tsd-signature tsd-kind-icon">approved<wbr>Patches<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ssm/patchBaseline.ts#L28">ssm/patchBaseline.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ssm/patchBaseline.ts#L80">ssm/patchBaseline.ts:80</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of explicitly approved patches for the baseline.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="approvedpatchescompliancelevel" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> approved<wbr>Patches<wbr>Compliance<wbr>Level</h3>
+					<div class="tsd-signature tsd-kind-icon">approved<wbr>Patches<wbr>Compliance<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ssm/patchBaseline.ts#L84">ssm/patchBaseline.ts:84</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: <code>CRITICAL</code>, <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code>, <code>INFORMATIONAL</code>, <code>UNSPECIFIED</code>. The default value is <code>UNSPECIFIED</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="description" class="tsd-anchor"></a>
@@ -123,9 +157,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ssm/patchBaseline.ts#L29">ssm/patchBaseline.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ssm/patchBaseline.ts#L88">ssm/patchBaseline.ts:88</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The description of the patch baseline.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="globalfilter" class="tsd-anchor"></a>
@@ -133,9 +172,14 @@
 					<div class="tsd-signature tsd-kind-icon">global<wbr>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ssm/patchBaseline.ts#L30">ssm/patchBaseline.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ssm/patchBaseline.ts#L92">ssm/patchBaseline.ts:92</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are <code>PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
@@ -143,9 +187,29 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ssm/patchBaseline.ts#L31">ssm/patchBaseline.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ssm/patchBaseline.ts#L96">ssm/patchBaseline.ts:96</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the patch baseline.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="operatingsystem" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> operating<wbr>System</h3>
+					<div class="tsd-signature tsd-kind-icon">operating<wbr>System<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ssm/patchBaseline.ts#L100">ssm/patchBaseline.ts:100</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Defines the operating system the patch baseline applies to. Supported operating systems include <code>WINDOWS</code>, <code>AMAZON_LINUX</code>, <code>UBUNTU</code> and <code>REDHAT_ENTERPRISE_LINUX</code>. The Default value is <code>WINDOWS</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="rejectedpatches" class="tsd-anchor"></a>
@@ -153,9 +217,14 @@
 					<div class="tsd-signature tsd-kind-icon">rejected<wbr>Patches<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ssm/patchBaseline.ts#L32">ssm/patchBaseline.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ssm/patchBaseline.ts#L104">ssm/patchBaseline.ts:104</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of rejected patches.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -163,7 +232,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ssm_patchbaseline_.html">"ssm/patch<wbr>Baseline"</a>
@@ -187,6 +256,9 @@
 								<a href="_ssm_patchbaseline_.patchbaselineargs.html#approvedpatches" class="tsd-kind-icon">approved<wbr>Patches</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ssm_patchbaseline_.patchbaselineargs.html#approvedpatchescompliancelevel" class="tsd-kind-icon">approved<wbr>Patches<wbr>Compliance<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ssm_patchbaseline_.patchbaselineargs.html#description" class="tsd-kind-icon">description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -194,6 +266,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ssm_patchbaseline_.patchbaselineargs.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ssm_patchbaseline_.patchbaselineargs.html#operatingsystem" class="tsd-kind-icon">operating<wbr>System</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ssm_patchbaseline_.patchbaselineargs.html#rejectedpatches" class="tsd-kind-icon">rejected<wbr>Patches</a>

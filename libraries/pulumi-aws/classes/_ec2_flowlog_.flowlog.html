@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ec2_flowlog_.html">&quot;ec2/flowLog&quot;</a>
@@ -69,6 +69,69 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network
+						interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group.</p>
+					</div>
+					<pre><code>resource <span class="hljs-string">"aws_flow_log"</span> <span class="hljs-string">"test_flow_log"</span> {
+  log_group_name = <span class="hljs-string">"<span class="hljs-variable">${aws_cloudwatch_log_group.test_log_group.name}</span>"</span>
+  iam_role_arn   = <span class="hljs-string">"<span class="hljs-variable">${aws_iam_role.test_role.arn}</span>"</span>
+  vpc_id         = <span class="hljs-string">"<span class="hljs-variable">${aws_vpc.default.id}</span>"</span>
+  traffic_type   = <span class="hljs-string">"ALL"</span>
+}
+<span class="hljs-built_in">
+resource </span><span class="hljs-string">"aws_cloudwatch_log_group"</span> <span class="hljs-string">"test_log_group"</span> {
+  name = <span class="hljs-string">"test_log_group"</span>
+}
+<span class="hljs-built_in">
+resource </span><span class="hljs-string">"aws_iam_role"</span> <span class="hljs-string">"test_role"</span> {
+  name = <span class="hljs-string">"test_role"</span>
+
+  assume_role_policy = &lt;&lt;EOF
+{
+  <span class="hljs-string">"Version"</span>: <span class="hljs-string">"2012-10-17"</span>,
+  <span class="hljs-string">"Statement"</span>: [
+    {
+      <span class="hljs-string">"Sid"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-string">"Effect"</span>: <span class="hljs-string">"Allow"</span>,
+      <span class="hljs-string">"Principal"</span>: {
+        <span class="hljs-string">"Service"</span>: <span class="hljs-string">"vpc-flow-logs.amazonaws.com"</span>
+      },
+      <span class="hljs-string">"Action"</span>: <span class="hljs-string">"sts:AssumeRole"</span>
+    }
+  ]
+}
+EOF
+}
+<span class="hljs-built_in">
+resource </span><span class="hljs-string">"aws_iam_role_policy"</span> <span class="hljs-string">"test_policy"</span> {
+  name = <span class="hljs-string">"test_policy"</span>
+  role = <span class="hljs-string">"<span class="hljs-variable">${aws_iam_role.test_role.id}</span>"</span>
+
+ <span class="hljs-built_in"> policy </span>= &lt;&lt;EOF
+{
+  <span class="hljs-string">"Version"</span>: <span class="hljs-string">"2012-10-17"</span>,
+  <span class="hljs-string">"Statement"</span>: [
+    {
+      <span class="hljs-string">"Action"</span>: [
+        <span class="hljs-string">"logs:CreateLogGroup"</span>,
+        <span class="hljs-string">"logs:CreateLogStream"</span>,
+        <span class="hljs-string">"logs:PutLogEvents"</span>,
+        <span class="hljs-string">"logs:DescribeLogGroups"</span>,
+        <span class="hljs-string">"logs:DescribeLogStreams"</span>
+      ],
+      <span class="hljs-string">"Effect"</span>: <span class="hljs-string">"Allow"</span>,
+      <span class="hljs-string">"Resource"</span>: <span class="hljs-string">"*"</span>
+    }
+  ]
+}
+EOF
+}
+</code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -121,19 +184,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/flowLog.ts#L12">ec2/flowLog.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/flowLog.ts#L93">ec2/flowLog.ts:93</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a FlowLog resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this FlowLog instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_ec2_flowlog_.flowlogargs.html" class="tsd-signature-type">FlowLogArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this FlowLog intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_ec2_flowlog_.flowlog.html" class="tsd-signature-type">FlowLog</a></h4>
@@ -149,9 +233,14 @@
 					<div class="tsd-signature tsd-kind-icon">eni<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/flowLog.ts#L7">ec2/flowLog.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/flowLog.ts#L71">ec2/flowLog.ts:71</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Elastic Network Interface ID to attach to</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="iamrolearn" class="tsd-anchor"></a>
@@ -159,9 +248,15 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/flowLog.ts#L8">ec2/flowLog.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/flowLog.ts#L76">ec2/flowLog.ts:76</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN for the IAM role that&#39;s used to post flow
+							logs to a CloudWatch Logs log group</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -180,9 +275,14 @@
 					<div class="tsd-signature tsd-kind-icon">log<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/flowLog.ts#L9">ec2/flowLog.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/flowLog.ts#L80">ec2/flowLog.ts:80</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the CloudWatch log group</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="subnetid" class="tsd-anchor"></a>
@@ -190,9 +290,14 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/flowLog.ts#L10">ec2/flowLog.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/flowLog.ts#L84">ec2/flowLog.ts:84</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Subnet ID to attach to</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="traffictype" class="tsd-anchor"></a>
@@ -200,9 +305,15 @@
 					<div class="tsd-signature tsd-kind-icon">traffic<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/flowLog.ts#L11">ec2/flowLog.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/flowLog.ts#L89">ec2/flowLog.ts:89</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The type of traffic to capture. Valid values:
+							<code>ACCEPT</code>,<code>REJECT</code>, <code>ALL</code></p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -221,9 +332,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/flowLog.ts#L12">ec2/flowLog.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/flowLog.ts#L93">ec2/flowLog.ts:93</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>VPC ID to attach to</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -231,7 +347,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ec2_flowlog_.html">"ec2/flow<wbr>Log"</a>

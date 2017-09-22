@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ec2_vpcpeeringconnectionaccepter_.html">&quot;ec2/vpcPeeringConnectionAccepter&quot;</a>
@@ -69,6 +69,18 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides a resource to manage the accepter&#39;s side of a cross-account VPC Peering Connection.</p>
+					</div>
+					<p>When a cross-account (requester&#39;s AWS account differs from the accepter&#39;s AWS account) VPC Peering Connection
+						is created, a VPC Peering Connection resource is automatically created in the accepter&#39;s account.
+						The requester can use the <code>aws_vpc_peering_connection</code> resource to manage its side of the connection
+						and the accepter can use the <code>aws_vpc_peering_connection_accepter</code> resource to &quot;adopt&quot; its side of the
+					connection into management.</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -124,19 +136,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/vpcPeeringConnectionAccepter.ts#L15">ec2/vpcPeeringConnectionAccepter.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/vpcPeeringConnectionAccepter.ts#L53">ec2/vpcPeeringConnectionAccepter.ts:53</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a VpcPeeringConnectionAccepter resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this VpcPeeringConnectionAccepter instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_ec2_vpcpeeringconnectionaccepter_.vpcpeeringconnectionaccepterargs.html" class="tsd-signature-type">VpcPeeringConnectionAccepterArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this VpcPeeringConnectionAccepter intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_ec2_vpcpeeringconnectionaccepter_.vpcpeeringconnectionaccepter.html" class="tsd-signature-type">VpcPeeringConnectionAccepter</a></h4>
@@ -152,9 +185,14 @@
 					<div class="tsd-signature tsd-kind-icon">accept<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/vpcPeeringConnectionAccepter.ts#L7">ec2/vpcPeeringConnectionAccepter.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/vpcPeeringConnectionAccepter.ts#L19">ec2/vpcPeeringConnectionAccepter.ts:19</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The status of the VPC Peering Connection request.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="accepter" class="tsd-anchor"></a>
@@ -162,9 +200,15 @@
 					<div class="tsd-signature tsd-kind-icon">accepter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/vpcPeeringConnectionAccepter.ts#L8">ec2/vpcPeeringConnectionAccepter.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/vpcPeeringConnectionAccepter.ts#L24">ec2/vpcPeeringConnectionAccepter.ts:24</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A configuration block that describes [VPC Peering Connection]
+							(<a href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the accepter VPC.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="autoaccept" class="tsd-anchor"></a>
@@ -172,9 +216,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Accept<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/vpcPeeringConnectionAccepter.ts#L9">ec2/vpcPeeringConnectionAccepter.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/vpcPeeringConnectionAccepter.ts#L28">ec2/vpcPeeringConnectionAccepter.ts:28</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether or not to accept the peering request. Defaults to <code>false</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -193,9 +242,14 @@
 					<div class="tsd-signature tsd-kind-icon">peer<wbr>Owner<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/vpcPeeringConnectionAccepter.ts#L10">ec2/vpcPeeringConnectionAccepter.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/vpcPeeringConnectionAccepter.ts#L32">ec2/vpcPeeringConnectionAccepter.ts:32</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The AWS account ID of the owner of the requester VPC.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="peervpcid" class="tsd-anchor"></a>
@@ -203,9 +257,14 @@
 					<div class="tsd-signature tsd-kind-icon">peer<wbr>Vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/vpcPeeringConnectionAccepter.ts#L11">ec2/vpcPeeringConnectionAccepter.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/vpcPeeringConnectionAccepter.ts#L36">ec2/vpcPeeringConnectionAccepter.ts:36</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ID of the requester VPC.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="requester" class="tsd-anchor"></a>
@@ -213,9 +272,15 @@
 					<div class="tsd-signature tsd-kind-icon">requester<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/vpcPeeringConnectionAccepter.ts#L12">ec2/vpcPeeringConnectionAccepter.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/vpcPeeringConnectionAccepter.ts#L41">ec2/vpcPeeringConnectionAccepter.ts:41</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A configuration block that describes [VPC Peering Connection]
+							(<a href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the requester VPC.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="tags" class="tsd-anchor"></a>
@@ -223,9 +288,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/vpcPeeringConnectionAccepter.ts#L13">ec2/vpcPeeringConnectionAccepter.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/vpcPeeringConnectionAccepter.ts#L45">ec2/vpcPeeringConnectionAccepter.ts:45</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -244,9 +314,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/vpcPeeringConnectionAccepter.ts#L14">ec2/vpcPeeringConnectionAccepter.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/vpcPeeringConnectionAccepter.ts#L49">ec2/vpcPeeringConnectionAccepter.ts:49</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ID of the accepter VPC.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="vpcpeeringconnectionid" class="tsd-anchor"></a>
@@ -254,9 +329,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Peering<wbr>Connection<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/vpcPeeringConnectionAccepter.ts#L15">ec2/vpcPeeringConnectionAccepter.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/vpcPeeringConnectionAccepter.ts#L53">ec2/vpcPeeringConnectionAccepter.ts:53</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The VPC Peering Connection ID to manage.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -264,7 +344,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ec2_vpcpeeringconnectionaccepter_.html">"ec2/vpc<wbr>Peering<wbr>Connection<wbr>Accepter"</a>

@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_ec2_spotfleetrequest_.html">&quot;ec2/spotFleetRequest&quot;</a>
@@ -69,6 +69,14 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
+						instances to be requested on the Spot market.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -109,6 +117,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_ec2_spotfleetrequest_.spotfleetrequest.html#urn" class="tsd-kind-icon">urn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_spotfleetrequest_.spotfleetrequest.html#validfrom" class="tsd-kind-icon">valid<wbr>From</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_spotfleetrequest_.spotfleetrequest.html#validuntil" class="tsd-kind-icon">valid<wbr>Until</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_spotfleetrequest_.spotfleetrequest.html#waitforfulfillment" class="tsd-kind-icon">wait<wbr>For<wbr>Fulfillment</a></li>
 							</ul>
 						</section>
 					</div>
@@ -127,19 +136,40 @@
 							<aside class="tsd-sources">
 								<p>Overrides Resource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L18">ec2/spotFleetRequest.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L72">ec2/spotFleetRequest.ts:72</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a SpotFleetRequest resource with the given unique name, arguments and optional additional
+									resource dependencies.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A <em>unique</em> name for this SpotFleetRequest instance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>args: <a href="../interfaces/_ec2_spotfleetrequest_.spotfleetrequestargs.html" class="tsd-signature-type">SpotFleetRequestArgs</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A collection of arguments for creating this SpotFleetRequest intance</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">fabric.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A optional array of additional resources this intance depends on</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_ec2_spotfleetrequest_.spotfleetrequest.html" class="tsd-signature-type">SpotFleetRequest</a></h4>
@@ -155,9 +185,16 @@
 					<div class="tsd-signature tsd-kind-icon">allocation<wbr>Strategy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L7">ec2/spotFleetRequest.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L16">ec2/spotFleetRequest.ts:16</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Indicates how to allocate the target capacity across
+								the Spot pools specified by the Spot fleet request. The default is
+							lowestPrice.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="clienttoken" class="tsd-anchor"></a>
@@ -165,7 +202,7 @@
 					<div class="tsd-signature tsd-kind-icon">client<wbr>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L8">ec2/spotFleetRequest.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L17">ec2/spotFleetRequest.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -175,9 +212,16 @@
 					<div class="tsd-signature tsd-kind-icon">excess<wbr>Capacity<wbr>Termination<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L9">ec2/spotFleetRequest.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L23">ec2/spotFleetRequest.ts:23</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Indicates whether running Spot
+								instances should be terminated if the target capacity of the Spot fleet
+							request is decreased below the current size of the Spot fleet.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="iamfleetrole" class="tsd-anchor"></a>
@@ -185,9 +229,17 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Fleet<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L10">ec2/spotFleetRequest.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L30">ec2/spotFleetRequest.ts:30</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Grants the Spot fleet permission to terminate
+								Spot instances on your behalf when you cancel its Spot fleet request using
+								CancelSpotFleetRequests or when the Spot fleet request expires, if you set
+							terminateInstancesWithExpiration.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
@@ -206,9 +258,16 @@
 					<div class="tsd-signature tsd-kind-icon">launch<wbr>Specification<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L11">ec2/spotFleetRequest.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L36">ec2/spotFleetRequest.ts:36</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Used to define the launch configuration of the
+								spot-fleet request. Can be specified multiple times to define different bids
+							across different markets and instance types.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="replaceunhealthyinstances" class="tsd-anchor"></a>
@@ -216,9 +275,14 @@
 					<div class="tsd-signature tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L12">ec2/spotFleetRequest.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L40">ec2/spotFleetRequest.ts:40</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Indicates whether Spot fleet should replace unhealthy instances. Default <code>false</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="spotprice" class="tsd-anchor"></a>
@@ -226,9 +290,14 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Price<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L13">ec2/spotFleetRequest.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L44">ec2/spotFleetRequest.ts:44</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The bid price per unit hour.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="spotrequeststate" class="tsd-anchor"></a>
@@ -236,9 +305,14 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Request<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L14">ec2/spotFleetRequest.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L48">ec2/spotFleetRequest.ts:48</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The state of the Spot fleet request.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="targetcapacity" class="tsd-anchor"></a>
@@ -246,9 +320,16 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L15">ec2/spotFleetRequest.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L54">ec2/spotFleetRequest.ts:54</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The number of units to request. You can choose to set the
+								target capacity in terms of instances or a performance characteristic that is
+							important to your application workload, such as vCPUs, memory, or I/O.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="terminateinstanceswithexpiration" class="tsd-anchor"></a>
@@ -256,9 +337,15 @@
 					<div class="tsd-signature tsd-kind-icon">terminate<wbr>Instances<wbr>With<wbr>Expiration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L16">ec2/spotFleetRequest.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L59">ec2/spotFleetRequest.ts:59</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Indicates whether running Spot
+							instances should be terminated when the Spot fleet request expires.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -277,7 +364,7 @@
 					<div class="tsd-signature tsd-kind-icon">valid<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L17">ec2/spotFleetRequest.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L60">ec2/spotFleetRequest.ts:60</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -287,9 +374,33 @@
 					<div class="tsd-signature tsd-kind-icon">valid<wbr>Until<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/ec2/spotFleetRequest.ts#L18">ec2/spotFleetRequest.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L66">ec2/spotFleetRequest.ts:66</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The end date and time of the request, in UTC ISO8601 format
+								(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance
+							requests are placed or enabled to fulfill the request. Defaults to 24 hours.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="waitforfulfillment" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> wait<wbr>For<wbr>Fulfillment</h3>
+					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Fulfillment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/ec2/spotFleetRequest.ts#L72">ec2/spotFleetRequest.ts:72</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set, Terraform will
+								wait for the Spot Request to be fulfilled, and will throw an error if the
+							timeout of 10m is reached.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -297,7 +408,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_ec2_spotfleetrequest_.html">"ec2/spot<wbr>Fleet<wbr>Request"</a>
@@ -355,6 +466,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_spotfleetrequest_.spotfleetrequest.html#validuntil" class="tsd-kind-icon">valid<wbr>Until</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_spotfleetrequest_.spotfleetrequest.html#waitforfulfillment" class="tsd-kind-icon">wait<wbr>For<wbr>Fulfillment</a>
 							</li>
 						</ul>
 					</li>

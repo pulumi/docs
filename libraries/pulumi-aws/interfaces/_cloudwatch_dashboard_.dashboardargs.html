@@ -3,17 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@pulumi/pulumi</title>
+	<title>DashboardArgs | @pulumi/aws</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@pulumi/pulumi</a>
+					<a href="../index.html" class="title">@pulumi/aws</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,32 +53,81 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_cloudwatch_dashboard_.html">&quot;cloudwatch/dashboard&quot;</a>
+				</li>
+				<li>
+					<a href="_cloudwatch_dashboard_.dashboardargs.html">DashboardArgs</a>
 				</li>
 			</ul>
-			<h1> @pulumi/pulumi</h1>
+			<h1>Interface DashboardArgs</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a Dashboard resource.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">DashboardArgs</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>External modules</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-external-module tsd-is-external"><a href="modules/_api_.html" class="tsd-kind-icon">"api"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_index_.html" class="tsd-kind-icon">"index"</a></li>
-								<li class="tsd-kind-external-module tsd-is-external"><a href="modules/_table_.html" class="tsd-kind-icon">"table"</a></li>
-								<li class="tsd-kind-external-module tsd-is-external"><a href="modules/_timer_.html" class="tsd-kind-icon">"timer"</a></li>
-								<li class="tsd-kind-external-module tsd-is-external"><a href="modules/_topic_.html" class="tsd-kind-icon">"topic"</a></li>
-								<li class="tsd-kind-external-module"><a href="modules/_types_.html" class="tsd-kind-icon">"types"</a></li>
-								<li class="tsd-kind-external-module tsd-is-external"><a href="modules/_unhandlederror_.html" class="tsd-kind-icon">"unhandled<wbr>Error"</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudwatch_dashboard_.dashboardargs.html#dashboardbody" class="tsd-kind-icon">dashboard<wbr>Body</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudwatch_dashboard_.dashboardargs.html#dashboardname" class="tsd-kind-icon">dashboard<wbr>Name</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="dashboardbody" class="tsd-anchor"></a>
+					<h3>dashboard<wbr>Body</h3>
+					<div class="tsd-signature tsd-kind-icon">dashboard<wbr>Body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/dashboard.ts#L53">cloudwatch/dashboard.ts:53</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html">documentation</a>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="dashboardname" class="tsd-anchor"></a>
+					<h3>dashboard<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">dashboard<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/cloudwatch/dashboard.ts#L57">cloudwatch/dashboard.ts:57</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the dashboard.</p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -86,40 +135,34 @@
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals current ">
-						<a href="globals.html"><em>Globals</em></a>
+					<li class="globals  ">
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
-					<li class="label tsd-is-external">
-						<span>Internals</span>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_types_.html">"types"</a>
-					</li>
-					<li class="label tsd-is-external">
-						<span>Externals</span>
-					</li>
-					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="modules/_api_.html">"api"</a>
-					</li>
-					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="modules/_table_.html">"table"</a>
-					</li>
-					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="modules/_timer_.html">"timer"</a>
-					</li>
-					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="modules/_topic_.html">"topic"</a>
-					</li>
-					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="modules/_unhandlederror_.html">"unhandled<wbr>Error"</a>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_cloudwatch_dashboard_.html">"cloudwatch/dashboard"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="../classes/_cloudwatch_dashboard_.dashboard.html" class="tsd-kind-icon">Dashboard</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_cloudwatch_dashboard_.dashboardargs.html" class="tsd-kind-icon">Dashboard<wbr>Args</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_cloudwatch_dashboard_.dashboardargs.html#dashboardbody" class="tsd-kind-icon">dashboard<wbr>Body</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_cloudwatch_dashboard_.dashboardargs.html#dashboardname" class="tsd-kind-icon">dashboard<wbr>Name</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>
@@ -188,7 +231,7 @@
 	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

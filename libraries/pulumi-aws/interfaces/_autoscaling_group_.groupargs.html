@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_autoscaling_group_.html">&quot;autoscaling/group&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a Group resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -123,9 +130,15 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zones<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L78">autoscaling/group.ts:78</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L206">autoscaling/group.ts:206</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of AZs to launch resources in.
+							Required only if you do not specify any <code>vpc_zone_identifier</code></p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="defaultcooldown" class="tsd-anchor"></a>
@@ -133,9 +146,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Cooldown<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L79">autoscaling/group.ts:79</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L210">autoscaling/group.ts:210</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="desiredcapacity" class="tsd-anchor"></a>
@@ -143,9 +161,16 @@
 					<div class="tsd-signature tsd-kind-icon">desired<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L80">autoscaling/group.ts:80</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L216">autoscaling/group.ts:216</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The number of Amazon EC2 instances that
+								should be running in the group. (See also <a href="#waiting-for-capacity">Waiting for
+							Capacity</a> below.)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="enabledmetrics" class="tsd-anchor"></a>
@@ -153,9 +178,21 @@
 					<div class="tsd-signature tsd-kind-icon">enabled<wbr>Metrics<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L81">autoscaling/group.ts:81</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L225">autoscaling/group.ts:225</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of metrics to collect. The allowed values are <code>GroupMinSize</code>, <code>GroupMaxSize</code>, <code>GroupDesiredCapacity</code>, <code>GroupInServiceInstances</code>, <code>GroupPendingInstances</code>, <code>GroupStandbyInstances</code>, <code>GroupTerminatingInstances</code>, <code>GroupTotalInstances</code>.</p>
+							<ul>
+								<li><code>wait_for_capacity_timeout</code> (Default: &quot;10m&quot;) A maximum
+									<a href="https://golang.org/pkg/time/#ParseDuration">duration</a> that Terraform should
+									wait for ASG instances to be healthy before timing out.  (See also <a href="#waiting-for-capacity">Waiting
+									for Capacity</a> below.) Setting this to &quot;0&quot; causes
+								Terraform to skip all Capacity Waiting behavior.</li>
+							</ul>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="forcedelete" class="tsd-anchor"></a>
@@ -163,9 +200,18 @@
 					<div class="tsd-signature tsd-kind-icon">force<wbr>Delete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L82">autoscaling/group.ts:82</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L233">autoscaling/group.ts:233</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Allows deleting the autoscaling group without waiting
+								for all instances in the pool to terminate.  You can force an autoscaling group to delete
+								even if it&#39;s in the process of scaling a resource. Normally, Terraform
+								drains all the instances before deleting the group.  This bypasses that
+							behavior and potentially leaves resources dangling.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="healthcheckgraceperiod" class="tsd-anchor"></a>
@@ -173,9 +219,14 @@
 					<div class="tsd-signature tsd-kind-icon">health<wbr>Check<wbr>Grace<wbr>Period<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L83">autoscaling/group.ts:83</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L237">autoscaling/group.ts:237</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Time (in seconds) after instance comes into service before checking health.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="healthchecktype" class="tsd-anchor"></a>
@@ -183,9 +234,14 @@
 					<div class="tsd-signature tsd-kind-icon">health<wbr>Check<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L84">autoscaling/group.ts:84</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L241">autoscaling/group.ts:241</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>&quot;EC2&quot; or &quot;ELB&quot;. Controls how health checking is done.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="initiallifecyclehook" class="tsd-anchor"></a>
@@ -193,9 +249,20 @@
 					<div class="tsd-signature tsd-kind-icon">initial<wbr>Lifecycle<wbr>Hook<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L85">autoscaling/group.ts:85</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L251">autoscaling/group.ts:251</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>One or more
+								<a href="http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html">Lifecycle Hooks</a>
+								to attach to the autoscaling group <strong>before</strong> instances are launched. The
+								syntax is exactly the same as the separate
+								<a href="/docs/providers/aws/r/autoscaling_lifecycle_hooks.html"><code>aws_autoscaling_lifecycle_hook</code></a>
+								resource, without the <code>autoscaling_group_name</code> attribute. Please note that this will only work when creating
+							a new autoscaling group. For all other use-cases, please use <code>aws_autoscaling_lifecycle_hook</code> resource.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="launchconfiguration" class="tsd-anchor"></a>
@@ -203,9 +270,14 @@
 					<div class="tsd-signature tsd-kind-icon">launch<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L86">autoscaling/group.ts:86</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L255">autoscaling/group.ts:255</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the launch configuration to use.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="loadbalancers" class="tsd-anchor"></a>
@@ -213,9 +285,15 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L87">autoscaling/group.ts:87</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L260">autoscaling/group.ts:260</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of elastic load balancer names to add to the autoscaling
+							group names.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="maxsize" class="tsd-anchor"></a>
@@ -223,9 +301,14 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L88">autoscaling/group.ts:88</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L264">autoscaling/group.ts:264</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The maximum size of the auto scale group.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="metricsgranularity" class="tsd-anchor"></a>
@@ -233,9 +316,14 @@
 					<div class="tsd-signature tsd-kind-icon">metrics<wbr>Granularity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L89">autoscaling/group.ts:89</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L268">autoscaling/group.ts:268</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The granularity to associate with the metrics to collect. The only valid value is <code>1Minute</code>. Default is <code>1Minute</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="minelbcapacity" class="tsd-anchor"></a>
@@ -243,9 +331,17 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Elb<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L90">autoscaling/group.ts:90</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L275">autoscaling/group.ts:275</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Setting this causes Terraform to wait for
+								this number of instances to show up healthy in the ELB only on creation.
+								Updates will not wait on ELB instance number changes.
+							(See also <a href="#waiting-for-capacity">Waiting for Capacity</a> below.)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="minsize" class="tsd-anchor"></a>
@@ -253,9 +349,15 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L91">autoscaling/group.ts:91</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L280">autoscaling/group.ts:280</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The minimum size of the auto scale group.
+							(See also <a href="#waiting-for-capacity">Waiting for Capacity</a> below.)</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
@@ -263,9 +365,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L92">autoscaling/group.ts:92</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L284">autoscaling/group.ts:284</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the auto scaling group. By default generated by Terraform.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="nameprefix" class="tsd-anchor"></a>
@@ -273,9 +380,15 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L93">autoscaling/group.ts:93</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L289">autoscaling/group.ts:289</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Creates a unique name beginning with the specified
+							prefix. Conflicts with <code>name</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="placementgroup" class="tsd-anchor"></a>
@@ -283,9 +396,14 @@
 					<div class="tsd-signature tsd-kind-icon">placement<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L94">autoscaling/group.ts:94</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L293">autoscaling/group.ts:293</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the placement group into which you&#39;ll launch your instances, if any.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="protectfromscalein" class="tsd-anchor"></a>
@@ -293,9 +411,16 @@
 					<div class="tsd-signature tsd-kind-icon">protect<wbr>From<wbr>Scale<wbr>In<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L95">autoscaling/group.ts:95</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L299">autoscaling/group.ts:299</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Allows setting instance protection. The
+								autoscaling group will not select instances with this setting for terminination
+							during scale in events.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="suspendedprocesses" class="tsd-anchor"></a>
@@ -303,9 +428,15 @@
 					<div class="tsd-signature tsd-kind-icon">suspended<wbr>Processes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L96">autoscaling/group.ts:96</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L304">autoscaling/group.ts:304</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of processes to suspend for the AutoScaling Group. The allowed values are <code>Launch</code>, <code>Terminate</code>, <code>HealthCheck</code>, <code>ReplaceUnhealthy</code>, <code>AZRebalance</code>, <code>AlarmNotification</code>, <code>ScheduledActions</code>, <code>AddToLoadBalancer</code>.
+							Note that if you suspend either the <code>Launch</code> or <code>Terminate</code> process types, it can prevent your autoscaling group from functioning properly.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tag" class="tsd-anchor"></a>
@@ -313,9 +444,14 @@
 					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L97">autoscaling/group.ts:97</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L308">autoscaling/group.ts:308</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of tag blocks. Tags documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
@@ -323,9 +459,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L98">autoscaling/group.ts:98</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L312">autoscaling/group.ts:312</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of tag blocks (maps). Tags documented below.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="targetgrouparns" class="tsd-anchor"></a>
@@ -333,9 +474,15 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Group<wbr>Arns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L99">autoscaling/group.ts:99</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L317">autoscaling/group.ts:317</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of <code>aws_alb_target_group</code> ARNs, for use with
+							Application Load Balancing</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="terminationpolicies" class="tsd-anchor"></a>
@@ -343,9 +490,14 @@
 					<div class="tsd-signature tsd-kind-icon">termination<wbr>Policies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L100">autoscaling/group.ts:100</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L321">autoscaling/group.ts:321</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code>OldestInstance</code>, <code>NewestInstance</code>, <code>OldestLaunchConfiguration</code>, <code>ClosestToNextInstanceHour</code>, <code>Default</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="vpczoneidentifier" class="tsd-anchor"></a>
@@ -353,9 +505,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Zone<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L101">autoscaling/group.ts:101</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L325">autoscaling/group.ts:325</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of subnet IDs to launch resources in.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="waitforcapacitytimeout" class="tsd-anchor"></a>
@@ -363,7 +520,7 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Capacity<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L102">autoscaling/group.ts:102</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L326">autoscaling/group.ts:326</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -373,9 +530,18 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Elb<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/autoscaling/group.ts#L103">autoscaling/group.ts:103</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/autoscaling/group.ts#L334">autoscaling/group.ts:334</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Setting this will cause Terraform to wait
+								for exactly this number of healthy instances in all attached load balancers
+								on both create and update operations. (Takes precedence over
+								<code>min_elb_capacity</code> behavior.)
+							(See also <a href="#waiting-for-capacity">Waiting for Capacity</a> below.)</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -383,7 +549,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_autoscaling_group_.html">"autoscaling/group"</a>

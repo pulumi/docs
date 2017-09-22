@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
 					<a href="../modules/_appautoscaling_target_.html">&quot;appautoscaling/target&quot;</a>
@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The set of arguments for constructing a Target resource.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -103,9 +110,14 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/appautoscaling/target.ts#L45">appautoscaling/target.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/appautoscaling/target.ts#L88">appautoscaling/target.ts:88</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The max capacity of the scalable target.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="mincapacity" class="tsd-anchor"></a>
@@ -113,9 +125,14 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/appautoscaling/target.ts#L46">appautoscaling/target.ts:46</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/appautoscaling/target.ts#L92">appautoscaling/target.ts:92</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The min capacity of the scalable target.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="resourceid" class="tsd-anchor"></a>
@@ -123,9 +140,17 @@
 					<div class="tsd-signature tsd-kind-icon">resource<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/appautoscaling/target.ts#L47">appautoscaling/target.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/appautoscaling/target.ts#L99">appautoscaling/target.ts:99</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The resource type and unique identifier string for the resource associated with the scalable target.
+								For Amazon ECS services, this value is the resource type, followed by the cluster name and service name, for example, <code>service/default/sample-webapp</code>.
+								For Amazon EC2 Spot fleet requests, the resource type is <code>spot-fleet-request</code>, and the identifier is the Spot fleet request ID; for example, <code>spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE</code>.
+							For Amazon EMR Cluster Instance Groups, the resource type is <code>instancegroup</code>, the identifier is the Cluster Id and the Instance Group Id; for example, <code>instancegroup/j-2EEZNYKUA1NTV/ig-1791Y4E1L8YI0</code>.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="rolearn" class="tsd-anchor"></a>
@@ -133,9 +158,15 @@
 					<div class="tsd-signature tsd-kind-icon">role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/appautoscaling/target.ts#L48">appautoscaling/target.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/appautoscaling/target.ts#L104">appautoscaling/target.ts:104</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN of the IAM role that allows Application
+							AutoScaling to modify your scalable target on your behalf.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="scalabledimension" class="tsd-anchor"></a>
@@ -143,9 +174,17 @@
 					<div class="tsd-signature tsd-kind-icon">scalable<wbr>Dimension<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/appautoscaling/target.ts#L49">appautoscaling/target.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/appautoscaling/target.ts#L111">appautoscaling/target.ts:111</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The scalable dimension of the scalable target. The scalable dimension contains the service namespace, resource
+								type, and scaling property, such as <code>ecs:service:DesiredCount</code> for the desired task count of an Amazon ECS service,
+								<code>ec2:spot-fleet-request:TargetCapacity</code> for the target capacity of an Amazon EC2 Spot fleet request or
+							<code>elasticmapreduce:instancegroup:InstanceCount</code> for the Instance count of an EMR Cluster Instance Group.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="servicenamespace" class="tsd-anchor"></a>
@@ -153,9 +192,15 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Namespace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">fabric.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/429831d/pack/appautoscaling/target.ts#L50">appautoscaling/target.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/3878475/pack/appautoscaling/target.ts#L116">appautoscaling/target.ts:116</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The AWS service namespace of the scalable target.
+							Valid values are <code>ecs</code> for Amazon ECS services, <code>ec2</code> Amazon EC2 Spot fleet requests and <code>elasticmapreduce</code> for Amazon EMR Clusters.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -163,7 +208,7 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_appautoscaling_target_.html">"appautoscaling/target"</a>
