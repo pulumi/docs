@@ -4,7 +4,16 @@ sass:
 plugins:
   - jekyll-octicons
 
-# Files to not include when building.
+# Totally lame workaround until typedoc emits files withouty a leading
+# underscore or we have our own TypeScript documentation generation stack.
+# See: https://github.com/TypeStrong/typedoc/issues/149
+# TODO(pulumi/docs#3): Improving our typedoc story should obviate this.
+include:
+  - _*
+
+# Files to not include when building. Note that we need to explicitly filter
+# out unwanted files/directories prefixed with "_" because of our liberal
+# include list.
 exclude:
   - scripts
   - .gitignore
@@ -12,10 +21,5 @@ exclude:
   - Gemfile.lock
   - Makefile
   - README.md
-
-# Totally lame workaround until typedoc emits files withouty a leading
-# underscore or we have our own TypeScript documentation generation stack.
-# https://github.com/TypeStrong/typedoc/issues/149
-include:
-  - _*
-  
+  - _includes
+  - _layouts
