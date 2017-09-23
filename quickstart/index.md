@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default 
 nav_section: "quickstart"
 ---
 
@@ -9,6 +9,12 @@ Welcome to Pulumi, a new way to program the cloud! ☁️
 
 In this guide, we'll introduce the core concepts, tools and frameworks for
 building and deploying Pulumi cloud applications.
+
+* [Setup and Installation](#setup-and-installation)
+* [Programming AWS](#programming-aws)
+* [Programming the Cloud](#programming-the-cloud)
+* [Further Reading](#further-reading)
+* [Wrapping Up](#wrapping-up)
 
 With Pulumi, you write __programs__ that describe your cloud infrastructure and
 application behaviour.  These programs have access to __packages__ which provide
@@ -25,10 +31,12 @@ frameworks).
 
 The current release include three packages to use as building blocks for your
 Pulumi programs.  
-* [`pulumi`](/libraries/pulumi/index.html) - Core primitives for interacting with the Pulumi runtime
-* [`@pulumi/aws`](/libraries/pulumi-aws/index.html) - A library of the full suite of AWS resources (265 resources)
-* [`@pulumi/cloud`](/libraries/pulumi-cloud/index.html) - A highly-productive, cloud-neutral library for rapid cloud
-  application development
+* [`pulumi`](/libraries/pulumi/index.html) - Core primitives for interacting
+  with the Pulumi runtime
+* [`@pulumi/aws`](/libraries/pulumi-aws/index.html) - A library of the full
+  suite of AWS resources (265 resources)
+* [`@pulumi/cloud`](/libraries/pulumi-cloud/index.html) - A highly-productive,
+  cloud-neutral library for rapid cloud application development
 
 > _Note_: We expect to introduce additional cloud providers and cloud components
 > in future releases:
@@ -41,7 +49,6 @@ the tools installed, run `pulumi version`.
 ```bash
 $ pulumi version
 Pulumi version 0.0.1
-
 ```
 
 You will also need to have the AWS CLI installed locally so that you can deploy
@@ -63,7 +70,13 @@ Finally, you will need to install Yarn. Follow the [installation
 instructions](https://yarnpkg.com/lang/en/docs/install/) and run `yarn
 --version` to ensure it is set up correctly.
 
-## Your First Program - AWS EC2 Instance
+Now that we've got Pulumi installed, in the next section we'll use Pulumi to to
+write our first program using the AWS package.
+
+## Programming AWS
+
+With the `@pulumi/aws` you can use Pulumi to create and manage AWS resources for 
+### A Simple Application
 
 For our first application, we'll create an AWS [EC2
 Instance](/libraries/pulumi-aws/classes/_ec2_instance_.instance.html) and
@@ -139,7 +152,7 @@ $ ls
 Pulumi.yaml	index.js	node_modules	package.json
 ```
 
-## Environments, Plans and Deployments
+### Environments, Plans and Deployments
 
 Now that we have the code for our first program, let's deploy it!
 
@@ -349,7 +362,8 @@ info: 1 change planned:
       2 resources unchanged
 ```
 
-Having verified that these changes are expected, run `pulumi deploy` to update our infrastructure.
+Having verified that these changes are expected, run `pulumi deploy` to update
+our infrastructure.
 
 ```
 $ pulumi deploy
@@ -485,8 +499,8 @@ Pulumi Program using the `@pulumi/cloud` framework.
 
 > __Aside: Lifecycle of a Pulumi Application__
 >
->Ahen we re-deployed the application, we did not need to recreate all
->of the infrastructure.  Instead, Pulumi analyses the current state of the
+>When we re-deployed the application, we did not need to recreate all of the
+>infrastructure.  Instead, Pulumi analyses the current state of the
 >infrastructure and the requested new state represented by interpreting your
 >Pulumi application.  From these, it computes the minimal delta needed to adjust
 >the state of the running environment to match the new request.  For some
@@ -495,24 +509,150 @@ Pulumi Program using the `@pulumi/cloud` framework.
 >will create the new resource first, then update any other resources dependent
 >on this, before finally removing the no longer needed original resource.
 > 
->Today, Pulumi tracks the state of the infrastrucutre in a __checkpoint__ file,
+>Today, Pulumi tracks the state of the infrastructure in a __checkpoint__ file,
 >stored inside the `.lumi` folder.  This checkpoint file file is needed to make
 >updates to the infrastructure.  In future releases, Pulumi will support
 >additional methods for managing infrastructure state across deployments. 
 
 ## Pulumi Cloud Application - URL shortener
 
-The `@pulumi/cloud` package can be used just like any other Pulumi package, but offers several unique 
+The `@pulumi/cloud` package lets you program both infrastructure and application
+logic using simple, high-level cloud building blocks.  This package has three
+key defining attributes:
 
-_TODO:
-* `@pulumi/cloud`
-* `HttpEndpoint`
-* `Table`
-* Getting logs from Cloudwatch
+* __Easy Cloud Development__: The `@pulumi/cloud` library makes it simple to
+  build robust and scalable cloud applications with just a few lines of code.  
+* __Cloud Agnostic__: The `@pulumi/cloud` library doesn't tie you to using any
+  one particular cloud (AWS, Azure, Kubernetes). Applications built using the
+  high-level `@pulumi/cloud` components like [Table](/libraries/pulumi-cloud/interfaces/_table_.table.html), [Topic](/libraries/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html) and
+  [HttpEndpoint](/libraries/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html) can be deployed to a variety of cloud platforms.
+* __Serverless__: The `@pulumi/cloud` makes it easy to build applications with
+  minimal fixed infrastructure, event-driven application logic, and using
+  resources that are charged only based on actual consumption.
 
-## Using TypeScript
+As our first example, we'll build a simple URL shortener.
 
-You can write Pulumi programs in TypeScript to get additional verification and tooling benefits.  To use TypeScript, apply the following thress steps to an existing progrect:
+We start with just an `index.ts` file importing `@pulumi/cloud`.  (See
+the secction on [Using TypeScript](#using-typescript) for additional details on
+using TypeScript for your Pulumi program).
+
+```
+import * as cloud from "@pulumi/cloud";
+```
+
+We can use the HttpEndpoint class to create a publicly accessible HTTP endpoint.
+
+```typescript
+import * as cloud from "@pulumi/cloud";
+
+let app = new cloud.HttpEndpoint("urlshortener");
+
+app.get("/", (req,res) => {
+    res.json({hello: "world"});
+});
+
+app.publish();
+```
+
+Note that the signature of the get method is similar to Node.js/Express with
+request/response parameters and familiar res.json APIs.
+
+We run `pulumi deploy` to deploy this code:
+
+```
+$ pulumi push
+Updated deploymnet eb7feaf7-4bb8-4b1f-98e1-d2cdeed6c5fc to version debdbca0-bf78-4d5c-b0b3-d6989425eb5c.
+```
+
+After a few seconds, we can see the deployed application with pulumi ls.
+
+```bash
+$ pulumi ls
+eb7feaf7-4bb8-4b1f-98e1-d2cdeed6c5fc (running) - 12 resource(s)
+        Endpoint: myapi_stage - https://nll65xvygl.execute-api.eu-west-1.amazonaws.com/stage
+```
+
+And we can curl that endpoint to see our message:
+
+```bash
+$ curl https://nll65xvygl.execute-api.eu-west-1.amazonaws.com/stage
+{"hello":"world"}
+```
+
+We can turn this into a robust hosted URL shortener service in just a few steps.  First, we add a /shorten route:
+
+```typescript
+api.post("/shorten", {}, (req, res) => {
+    let url = req.query["url"];
+    let name = req.query["name"];
+    console.log(`POST /shorten ${url} ${name}`);
+    res.json({shortenedURLName: name});
+});
+```
+
+Again, we see we can use Express-like APIs to define a simple service.
+
+But we also need to persist the mapping between short name and url.  So we can define the data store to use for this mapping directly within our application:
+
+```typescript
+let urls = new platform.Table("urls", "name", "S", {});
+```
+
+And then modify our /shorten handler to insert into this table.
+
+```typescript
+api.post("/shorten", {}, async (req, res) => {
+    let url = req.query["url"];
+    let name = req.query["name"];
+    console.log(`POST /shorten ${url} ${name}`);
+    await urls.insert({name, url});
+    res.json({shortenedURLName: name});
+});
+```
+
+Note that we introduced async and await to wait for the insert to complete before responding to the REST API request.
+
+We can now push this updated code, which will provision the data store, update the hosted REST API, and wire up the route handlers to the new code.  We can then hit the new API endpoint and finally check the logs from the Pulumi application to see what happened during execution:
+
+```
+$ pulumi push
+Updated deploymnet eb7feaf7-4bb8-4b1f-98e1-d2cdeed6c5fc to version 7d0f21a0-ce88-4d62-9c73-cc8ef8f410e2.
+$ curl -X POST "https://nll65xvygl.execute-api.eu-west-1.amazonaws.com/stage/shorten?name=g&url=http://www.google.com"
+{"shortenedURL":"g"}
+$ pulumi logs --tail
+[Jul 16 17:43:07.759] POST /shorten g http://google.com
+```
+
+And finally, we can implement the GET handlers for any registered short name to return a 301 response with Location header to redirect.
+
+```
+api.get("/{name}", {}, async (req, res) => {
+    let name = req.params["name"];
+    let data = await urls.get({name});
+    console.log(`GET /${name} => ${data.url}`)
+    res.setHeader("Location", data.url);
+    res.status(301);
+    res.end("");
+});
+```
+
+And invoke it:
+
+```
+$ pulumi push
+Updated deploymnet eb7feaf7-4bb8-4b1f-98e1-d2cdeed6c5fc to version e0bc8161-b1f1-47e2-b071-2883426b854a.
+$ curl https://nll65xvygl.execute-api.eu-west-1.amazonaws.com/stage/g
+<!doctype html>...contents of google.com ...
+...
+```
+
+## Further Reading
+
+### Using TypeScript
+
+You can write Pulumi programs in TypeScript to get additional verification and
+tooling benefits.  To use TypeScript, apply the following thress steps to an
+existing progrect:
 
 First, update your `package.json` to look like the following:
 
@@ -574,7 +714,7 @@ and inline documentation help.
 
 ![Pulumi TypeScript in VS Code](./vscode.png)
 
-## Further Reading
+## Wrapping Up
 
 Check out the [examples](/examples) and [package](/libraries) documentation for
 more details on the kinds of programs you can build with Pulumi.
