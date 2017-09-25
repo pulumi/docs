@@ -8,12 +8,14 @@ nav_section: "quickstart"
 Welcome to Pulumi, a new way to program the cloud! ☁️
 
 In this guide, we'll introduce the core concepts, tools and frameworks for
-building and deploying Pulumi cloud applications.
+building and running Pulumi cloud applications.
 
 * [Setup and Installation](#setup-and-installation)
 * [Programming AWS](#programming-aws)
 * [Programming the Cloud](#programming-the-cloud)
 * [Further Reading](#further-reading)
+    * [Pulumi CLI](#pulumi-cli)
+    * [Using Typescript](#using-typescript)
 * [Wrapping Up](#wrapping-up)
 
 With Pulumi, you write __programs__ that describe your cloud infrastructure and
@@ -113,7 +115,7 @@ which will be created in that security group using the appropriate Amazon
 Machine Image (AMI) for the region where you deploy the program.
 
 > Note that each resource expects a name as the first parameter - this name is
-used by Pulumi to track the resources across deployments, and should be a unique
+used by Pulumi to track the resources across updates, and should be a unique
 name among all resources of that type in your program.
 
 We also need a `Pulumi.yaml` file to describe the Pulumi application - create
@@ -152,7 +154,7 @@ $ ls
 Pulumi.yaml	index.js	node_modules	package.json
 ```
 
-### Environments, Plans and Deployments
+### Environments, Updates and Previews
 
 Now that we have the code for our first program, let's deploy it!
 
@@ -161,32 +163,32 @@ environment called `testing`, run the following command:
 
 ```
 $ pulumi env init testing
-Environment 'testing' initialized; see `pulumi deploy` to deploy into it
+Environment 'testing' initialized; see `pulumi update` to deploy into it
 ```
 
 You can now run `pulumi env ls` to see the newly created environment:
 
 ```
 $ pulumi env ls
-NAME                 LAST DEPLOYMENT                                  RESOURCE COUNT
+NAME                 LAST UPDATE                                      RESOURCE COUNT
 testing*             n/a                                              n/a
 ```
 
 We can get a preview of what will happen during a deployment by running `pulumi
-plan`. Running that command we get an error `Error: Missing required
+preview`. Running that command we get an error `Error: Missing required
 configuration variable 'aws:config:region'`.  As the error states, before we can
-plan or deploy our application, we need to configure the AWS region we will be
+preview or update our application, we need to configure the AWS region we will be
 targetting.
 
 ```
 $ pulumi config aws:config:region us-west-2
 ```
 
-We can now run `pulumi plan`.
+We can now run `pulumi preview`.
 
 ```
-$ pulumi plan
-Planning changes:
+$ pulumi preview
+Previewing changes:
 + aws:ec2/securityGroup:SecurityGroup: (create)
       [urn=urn:lumi:testing::webserver::aws:ec2/securityGroup:SecurityGroup::web-secgrp]
       description: "Enable HTTP access"
@@ -212,17 +214,17 @@ Planning changes:
       tags           : {
           name: "pulumi"
       }
-info: 2 changes planned:
+info: 2 changes previewed:
     + 2 resources to create
 ```
 
-As expected, we see that deploying this program will create two resources.  So
-let's go ahead and deploy.  This will take ~30 seconds while the EC2 instance
+As expected, we see that updating this program will create two resources.  So
+let's go ahead and deploy the update.  This will take ~30 seconds while the EC2 instance
 spins up.
 
 ```
-$ pulumi deploy
-Deploying changes:
+$ pulumi update
+Performing changes:
 + aws:ec2/securityGroup:SecurityGroup: (create)
       [urn=urn:lumi:testing::webserver::aws:ec2/securityGroup:SecurityGroup::web-secgrp]
       description: "Enable HTTP access"
@@ -301,9 +303,9 @@ Deploying changes:
       tenancy                  : "default"
       volumeTags               : {}
       vpcSecurityGroupIds      : []
-info: 2 changes deployed:
+info: 2 changes performed:
     + 2 resources created
-Deployment duration: 25.518253662s
+Update duration: 25.518253662s
 ```
 
 We now have a running EC2 instance.  We can run `aws ec2 describe-instances
@@ -339,13 +341,13 @@ let www = createInstance("t2.micro", "web-server-www");
 let api = createInstance("t2.nano", "web-server-api");
 ```
 
-We can run `pulumi plan` to see what changes this will make to our
+We can run `pulumi preview` to see what changes this will make to our
 infrastructure.  Note that only one new resource is created - the security group
 and www instance are unchanged and so do not need to be updated or replaced.
 
 ```
-$ pulumi plan
-Planning changes:
+$ pulumi preview
+Previewing changes:
 + aws:ec2/instance:Instance: (create)
       [urn=urn:lumi:testing::webserver::aws:ec2/instance:Instance::web-server-api]
       ami            : "ami-7172b611"
@@ -357,17 +359,17 @@ Planning changes:
       tags           : {
           name: "pulumi"
       }
-info: 1 change planned:
+info: 1 change previewed:
     + 1 resource to create
       2 resources unchanged
 ```
 
-Having verified that these changes are expected, run `pulumi deploy` to update
+Having verified that these changes are expected, run `pulumi update` to update
 our infrastructure.
 
 ```
-$ pulumi deploy
-Deploying changes:
+$ pulumi update
+Performing changes:
 + aws:ec2/instance:Instance: (create)
       [urn=urn:lumi:testing::webserver::aws:ec2/instance:Instance::web-server-api]
       ami            : "ami-7172b611"
@@ -412,7 +414,7 @@ Deploying changes:
       tenancy                  : "default"
       volumeTags               : {}
       vpcSecurityGroupIds      : []
-info: 1 change deployed:
+info: 1 change performed:
     + 1 resource created
       2 resources unchanged
 Deployment duration: 34.714820388s
@@ -424,7 +426,7 @@ We can see the resources currently in our environment by running `pulumi env`.
 $ pulumi env
 Current environment is testing
     (use `lumi env select` to change environments; `lumi env ls` lists known ones)
-Last deployment at 2017-09-22 12:23:31.2362587 -0700 PDT
+Last update at 2017-09-22 12:23:31.2362587 -0700 PDT
 1 configuration variables set (see `lumi config` for details)
 3 resources currently in this environment:
 
@@ -444,7 +446,7 @@ confirmation question at the prompt:
 $ pulumi destroy
 This will permanently destroy all resources in the 'testing' environment!
 Please confirm that this is what you'd like to do by typing ("testing"): testing
-Deploying changes:
+Performing changes:
 - aws:ec2/instance:Instance: (delete)
       [id=i-01ea9554bb9d44ca8]
       [urn=urn:lumi:testing::webserver::aws:ec2/instance:Instance::web-server-api]
@@ -486,7 +488,7 @@ Deploying changes:
       name       : "web-secgrp-cea08d71378cb4fe"
 info: 3 changes deployed:
     - 3 resources deleted
-Deployment duration: 2m13.232697769s
+Update duration: 2m13.232697769s
 ```
 
 > _Note_: Pulumi currently runs all infrastructure updates sequentially to
@@ -499,7 +501,7 @@ Pulumi Program using the `@pulumi/cloud` framework.
 
 > __Aside: Lifecycle of a Pulumi Application__
 >
->When we re-deployed the application, we did not need to recreate all of the
+>When we updated the application, we did not need to recreate all of the
 >infrastructure.  Instead, Pulumi analyses the current state of the
 >infrastructure and the requested new state represented by interpreting your
 >Pulumi application.  From these, it computes the minimal delta needed to adjust
@@ -512,7 +514,7 @@ Pulumi Program using the `@pulumi/cloud` framework.
 >Today, Pulumi tracks the state of the infrastructure in a __checkpoint__ file,
 >stored inside the `.lumi` folder.  This checkpoint file file is needed to make
 >updates to the infrastructure.  In future releases, Pulumi will support
->additional methods for managing infrastructure state across deployments. 
+>additional methods for managing infrastructure state across updates. 
 
 ## Pulumi Cloud Application - URL shortener
 
@@ -524,23 +526,22 @@ key defining attributes:
   build robust and scalable cloud applications with just a few lines of code.  
 * __Cloud Agnostic__: The `@pulumi/cloud` library doesn't tie you to using any
   one particular cloud (AWS, Azure, Kubernetes). Applications built using the
-  high-level `@pulumi/cloud` components like [Table](/libraries/pulumi-cloud/interfaces/_table_.table.html), [Topic](/libraries/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html) and
-  [HttpEndpoint](/libraries/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html) can be deployed to a variety of cloud platforms.
+  high-level `@pulumi/cloud` components like
+  [Table](/libraries/pulumi-cloud/interfaces/_table_.table.html),
+  [Topic](/libraries/pulumi-cloud/interfaces/_topic_.topic.html)
+  and
+  [HttpEndpoint](/libraries/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html)
+  can be deployed to a variety of cloud platforms.
 * __Serverless__: The `@pulumi/cloud` makes it easy to build applications with
   minimal fixed infrastructure, event-driven application logic, and using
   resources that are charged only based on actual consumption.
 
 As our first example, we'll build a simple URL shortener.
 
-We start with just an `index.ts` file importing `@pulumi/cloud`.  (See
-the secction on [Using TypeScript](#using-typescript) for additional details on
-using TypeScript for your Pulumi program).
-
-```
-import * as cloud from "@pulumi/cloud";
-```
-
-We can use the HttpEndpoint class to create a publicly accessible HTTP endpoint.
+We start with just an `index.ts` file importing `@pulumi/cloud`.  (See the
+secction on [Using TypeScript](#using-typescript) for additional details on
+using TypeScript for your Pulumi program).  We can use the `HttpEndpoint` class
+to create a publicly accessible HTTP endpoint.
 
 ```typescript
 import * as cloud from "@pulumi/cloud";
@@ -551,38 +552,38 @@ app.get("/", (req,res) => {
     res.json({hello: "world"});
 });
 
-app.publish();
+app.publish().then(url => console.log(`Serving at: ${url}`));
 ```
 
-Note that the signature of the get method is similar to Node.js/Express with
+Note that the signature of the `get` method is similar to Node.js/Express with
 request/response parameters and familiar res.json APIs.
 
-We run `pulumi deploy` to deploy this code:
+We run `pulumi config aws:config:region us-west-2` to set the AWS region to
+deploy this application into.  Then run `pulumi update` to deploy this code. 
 
 ```
-$ pulumi push
-Updated deploymnet eb7feaf7-4bb8-4b1f-98e1-d2cdeed6c5fc to version debdbca0-bf78-4d5c-b0b3-d6989425eb5c.
-```
-
-After a few seconds, we can see the deployed application with pulumi ls.
-
-```bash
-$ pulumi ls
-eb7feaf7-4bb8-4b1f-98e1-d2cdeed6c5fc (running) - 12 resource(s)
-        Endpoint: myapi_stage - https://nll65xvygl.execute-api.eu-west-1.amazonaws.com/stage
+$ pulumi update
+...
+<snip>
+...
+info: Serving at: https://hskuj2l449.execute-api.us-west-2.amazonaws.com/stage/
+info: 14 changes performed:
+    + 14 resources created
+Update duration: 38.783839863s
 ```
 
 And we can curl that endpoint to see our message:
 
 ```bash
-$ curl https://nll65xvygl.execute-api.eu-west-1.amazonaws.com/stage
+$ curl https://hskuj2l449.execute-api.us-west-2.amazonaws.com/stage/
 {"hello":"world"}
 ```
 
-We can turn this into a robust hosted URL shortener service in just a few steps.  First, we add a /shorten route:
+We can turn this into a robust hosted URL shortener service in just a few steps.
+First, we add a `/shorten` route:
 
 ```typescript
-api.post("/shorten", {}, (req, res) => {
+app.post("/shorten", (req, res) => {
     let url = req.query["url"];
     let name = req.query["name"];
     console.log(`POST /shorten ${url} ${name}`);
@@ -592,16 +593,17 @@ api.post("/shorten", {}, (req, res) => {
 
 Again, we see we can use Express-like APIs to define a simple service.
 
-But we also need to persist the mapping between short name and url.  So we can define the data store to use for this mapping directly within our application:
+But we also need to persist the mapping between short name and url.  So we can
+define the data store to use for this mapping directly within our application:
 
 ```typescript
-let urls = new platform.Table("urls", "name", "S", {});
+let urls = new cloud.Table("urls", "name");
 ```
 
-And then modify our /shorten handler to insert into this table.
+And then modify our `/shorten` handler to insert into this table.
 
 ```typescript
-api.post("/shorten", {}, async (req, res) => {
+app.post("/shorten", async (req, res) => {
     let url = req.query["url"];
     let name = req.query["name"];
     console.log(`POST /shorten ${url} ${name}`);
@@ -610,23 +612,25 @@ api.post("/shorten", {}, async (req, res) => {
 });
 ```
 
-Note that we introduced async and await to wait for the insert to complete before responding to the REST API request.
+Note that we introduced `async` and `await` to wait for the insert to complete
+before responding to the REST API request.
 
-We can now push this updated code, which will provision the data store, update the hosted REST API, and wire up the route handlers to the new code.  We can then hit the new API endpoint and finally check the logs from the Pulumi application to see what happened during execution:
+We can now push this updated code, which will provision the data store, update
+the hosted REST API, and wire up the route handlers to the new code.  We can
+then hit the new API endpoint to shorten a URL:
 
 ```
-$ pulumi push
-Updated deploymnet eb7feaf7-4bb8-4b1f-98e1-d2cdeed6c5fc to version 7d0f21a0-ce88-4d62-9c73-cc8ef8f410e2.
-$ curl -X POST "https://nll65xvygl.execute-api.eu-west-1.amazonaws.com/stage/shorten?name=g&url=http://www.google.com"
+$ pulumi update
+...
+$ curl -X POST "https://hskuj2l449.execute-api.us-west-2.amazonaws.com/stage/shorten?name=g&url=http://www.google.com"
 {"shortenedURL":"g"}
-$ pulumi logs --tail
-[Jul 16 17:43:07.759] POST /shorten g http://google.com
 ```
 
-And finally, we can implement the GET handlers for any registered short name to return a 301 response with Location header to redirect.
+And finally, we can implement the `GET `handlers for any registered short name
+to return a 301 response with Location header to redirect.
 
 ```
-api.get("/{name}", {}, async (req, res) => {
+app.get("/{name}", async (req, res) => {
     let name = req.params["name"];
     let data = await urls.get({name});
     console.log(`GET /${name} => ${data.url}`)
@@ -639,14 +643,185 @@ api.get("/{name}", {}, async (req, res) => {
 And invoke it:
 
 ```
-$ pulumi push
-Updated deploymnet eb7feaf7-4bb8-4b1f-98e1-d2cdeed6c5fc to version e0bc8161-b1f1-47e2-b071-2883426b854a.
-$ curl https://nll65xvygl.execute-api.eu-west-1.amazonaws.com/stage/g
+$ pulumi update
+...
+$ curl https://hskuj2l449.execute-api.us-west-2.amazonaws.com/stage/g
 <!doctype html>...contents of google.com ...
 ...
 ```
 
+We have a working URL shortener with persistent storage and robust and scalable compute!
+
+That's a quick tour of the `@pulumi/cloud` framework, check out the [documentation](/libraries/pulumi-cloud/) for more details.
+
 ## Further Reading
+
+### Pulumi CLI
+
+The `pulumi` CLI supports creating, configuring and updating Pulumi program
+environments.  
+
+An __environment__ represents a running Pulumi program.  `pulumi env init`
+creates a new Pulumi environment for the program in the working directory.
+Multiple environments can be managed in a single program directory, and you can
+see all environments with `pulumi env ls`.  
+
+Each environment has an associated set of __config__.  The config is a set of
+key value pairs which are available to your Pulumi program.
+
+The running application can be __updated__, combining the current config with
+the current version of the program in the working directory and dploying those
+updates into the running application - updating any necessary infrastructure and
+deploying any new code or resources into the application.
+
+An update can be __previewed__, displaying a summary of the expected changes
+that will be made during an update operation based on the current state of the
+program and config.  This preview is a convervative summary - it will include
+updates which may not need to be made depending on the results of applying some
+of the changes to the target infrastructure.  
+
+```
+Usage:
+  pulumi [command]
+
+Available Commands:
+  config      Query, set, replace, or unset configuration values
+  destroy     Destroy an existing environment and its resources
+  env         Manage target environments
+  help        Help about any command
+  preview     Show a preview of updates to an environment's resources
+  update      Update the resources in an environment
+  version     Print Pulumi's version number
+
+Flags:
+  -h, --help          help for pulumi
+      --logflow       Flow log settings to child processes (like plugins)
+      --logtostderr   Log to stderr instead of to files
+  -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+
+Use "pulumi [command] --help" for more information about a command.
+```
+
+__pulumi env__
+
+```
+Manage target environments
+
+An environment is a named update target, and a single project may have many of them.
+Each environment has a configuration and update history associated with it, stored in
+the workspace, in addition to a full checkpoint of the last known good update.
+
+Usage:
+  pulumi env [flags]
+  pulumi env [command]
+
+Available Commands:
+  init        Create an empty environment with the given name, ready for updates
+  ls          List all known environments
+  rm          Remove an environment and its configuration
+  select      Switch the current workspace to the given environment
+
+Flags:
+  -h, --help        help for env
+  -i, --show-ids    Display each resource's provider-assigned unique ID
+  -u, --show-urns   Display each resource's Pulumi-assigned globally unique URN
+
+Global Flags:
+      --logflow       Flow log settings to child processes (like plugins)
+      --logtostderr   Log to stderr instead of to files
+  -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+
+Use "pulumi env [command] --help" for more information about a command.
+```
+
+__pulumi config__ 
+
+```
+Query, set, replace, or unset configuration values
+
+Usage:
+  pulumi config [<key> [value]] [flags]
+
+Flags:
+  -e, --env string   Choose an environment other than the currently selected one
+  -h, --help         help for config
+      --unset        Unset a configuration value
+
+Global Flags:
+      --logflow       Flow log settings to child processes (like plugins)
+      --logtostderr   Log to stderr instead of to files
+  -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+```
+
+__pulumi update__
+
+```
+Update the resources in an environment
+
+This command updates an existing environment whose state is represented by the
+existing snapshot file. The new desired state is computed by compiling and evaluating an
+executable package, and extracting all resource allocations from its resulting object graph.
+These allocations are then compared against the existing state to determine what operations
+must take place to achieve the desired state. This command results in a full snapshot of the
+environment's new resource state, so that it may be updated incrementally again later.
+
+By default, the package to execute is loaded from the current directory. Optionally, an
+explicit path can be provided using the [package] argument.
+
+Usage:
+  pulumi update [<package>] [-- [<args>]] [flags]
+
+Flags:
+      --analyzer stringSlice     Run one or more analyzers as part of this update
+  -d, --debug                    Print detailed debugging output during resource operations
+  -e, --env string               Choose an environment other than the currently selected one
+  -h, --help                     help for update
+  -p, --parallel int             Allow P resource operations to run in parallel at once (<=1 for no parallelism)
+      --show-config              Show configuration keys and variables
+      --show-replacement-steps   Show detailed resource replacement creates and deletes instead of a single step (default true)
+      --show-sames               Show resources that needn't be updated because they haven't changed, alongside those that do
+  -s, --summary                  Only display summarization of resources and operations
+
+Global Flags:
+      --logflow       Flow log settings to child processes (like plugins)
+      --logtostderr   Log to stderr instead of to files
+  -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+```
+
+__pulumi preview__
+
+```
+Show a preview of updates an environment's resources
+
+This command displays a preview of the updates to an existing environment whose state is
+represented by an existing snapshot file. The new desired state is computed by compiling
+and evaluating an executable package, and extracting all resource allocations from its
+resulting object graph. These allocations are then compared against the existing state to
+determine what operations must take place to achieve the desired state. No changes to the
+environment will actually take place.
+
+By default, the package to execute is loaded from the current directory. Optionally, an
+explicit path can be provided using the [package] argument.
+
+Usage:
+  pulumi preview [<package>] [-- [<args>]] [flags]
+
+Flags:
+      --analyzer stringSlice     Run one or more analyzers as part of this preview
+  -d, --debug                    Print detailed debugging output during resource operations
+  -e, --env string               Choose an environment other than the currently selected one
+  -h, --help                     help for preview
+  -p, --parallel int             Allow P resource operations to run in parallel at once (<=1 for no parallelism)
+      --show-config              Show configuration keys and variables
+      --show-replacement-steps   Show detailed resource replacement creates and deletes instead of a single step
+      --show-sames               Show resources that needn't be updated because they haven't changed, alongside those that do
+  -s, --summary                  Only display summarization of resources and operations
+
+Global Flags:
+      --logflow       Flow log settings to child processes (like plugins)
+      --logtostderr   Log to stderr instead of to files
+  -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+```
 
 ### Using TypeScript
 
@@ -707,7 +882,7 @@ Next, create a `tsconfig.json` file with the following:
 ```
 
 And finally, run `yarn build` any time you want to update yoru program prior to
-running `lumi plan` or `lumi deploy`.
+running `pulumi preview` or `pulumi update`.
 
 You can now use tools like VS Code to get completion lists, live error reporting
 and inline documentation help.
