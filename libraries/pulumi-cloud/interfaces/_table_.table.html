@@ -78,12 +78,12 @@
 <span class="hljs-keyword">await</span> table.insert({<span class="hljs-attr">id</span>: <span class="hljs-string">"kuibai"</span>, <span class="hljs-attr">data</span>: <span class="hljs-number">42</span>});
 <span class="hljs-keyword">let</span> item = <span class="hljs-keyword">await</span> table.get({<span class="hljs-attr">id</span>: <span class="hljs-string">"kuibai"</span>});
 </code></pre>
-					<p>Tables support a single primary key with a user-defined name and type.  All other document
-						properties are schemaless.  If not specified, a primary key named <code>id</code> with type <code>string</code> is
-					used.</p>
-					<p>All queries provide a subset of properties to filter on, and only filters on value equality
-						are supported.  The <code>get</code>, <code>update</code> and <code>delete</code> operations expect the query to contain only the
-					value for the primary key.</p>
+					<p>Tables support a single primary key with a user-defined name and type.  All
+						other document properties are schemaless.  If not specified, a primary key
+					named <code>id</code> with type <code>string</code> is used.</p>
+					<p>All queries provide a subset of properties to filter on, and only filters on
+						value equality are supported.  The <code>get</code>, <code>update</code> and <code>delete</code> operations
+					expect the query to contain only the value for the primary key.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -127,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">primary<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/23dcf42/api/table.ts#L41">table.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L42">table.ts:42</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -142,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">primary<wbr>Key<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/23dcf42/api/table.ts#L45">table.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L46">table.ts:46</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,7 +157,7 @@
 					<div class="tsd-signature tsd-kind-icon">table<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/23dcf42/api/table.ts#L37">table.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L38">table.ts:38</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -179,7 +179,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/23dcf42/api/table.ts#L74">table.ts:74</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L79">table.ts:79</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -192,7 +192,8 @@
 								<li>
 									<h5>query: <span class="tsd-signature-type">Object</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>An object with the primary key (&quot;id&quot; by default) assigned the value to lookup.</p>
+										<p>An object with the primary key (&quot;id&quot; by default) assigned
+										the value to lookup.</p>
 									</div>
 								</li>
 							</ul>
@@ -211,7 +212,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/23dcf42/api/table.ts#L53">table.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L56">table.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -224,12 +225,14 @@
 								<li>
 									<h5>query: <span class="tsd-signature-type">Object</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>An object with the primary key (&quot;id&quot; by default) assigned the value to lookup.</p>
+										<p>An object with the primary key (&quot;id&quot; by default) assigned
+										the value to lookup.</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>A promise for the resulting document, or a failed promise if the lookup fails.</p>
+							<p>A promise for the resulting document, or a failed promise if the
+							lookup fails.</p>
 						</li>
 					</ul>
 				</section>
@@ -243,7 +246,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/23dcf42/api/table.ts#L61">table.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L64">table.ts:64</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -256,8 +259,8 @@
 								<li>
 									<h5>item: <span class="tsd-signature-type">Object</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>An object representing the full document to insert. Must include a property for
-										the primary key (&quot;id&quot; by default).</p>
+										<p>An object representing the full document to insert. Must
+										include a property for the primary key (&quot;id&quot; by default).</p>
 									</div>
 								</li>
 							</ul>
@@ -276,7 +279,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/23dcf42/api/table.ts#L67">table.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L71">table.ts:71</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -285,7 +288,8 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>A promise for the resulting documents, or a failed promise if the lookup fails.</p>
+							<p>A promise for the resulting documents, or a failed promise if
+							the lookup fails.</p>
 						</li>
 					</ul>
 				</section>
@@ -299,7 +303,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/23dcf42/api/table.ts#L82">table.ts:82</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L89">table.ts:89</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -312,13 +316,15 @@
 								<li>
 									<h5>query: <span class="tsd-signature-type">Object</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>An object with the primary key (&quot;id&quot; by default) assigned the value to lookup.</p>
+										<p>An object with the primary key (&quot;id&quot; by default) assigned
+										the value to lookup.</p>
 									</div>
 								</li>
 								<li>
 									<h5>updates: <span class="tsd-signature-type">Object</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>An object with all document properties that should be updated.</p>
+										<p>An object with all document properties that should be
+										updated.</p>
 									</div>
 								</li>
 							</ul>

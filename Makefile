@@ -14,6 +14,7 @@ banner:
 configure:
 	@echo -e "\033[0;32mCONFIGURE:\033[0m"
 	gem install jekyll bundler
+	yarn install
 
 .PHONY: serve
 serve: 
