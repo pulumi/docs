@@ -106,3 +106,8 @@ body {
 svg {
   fill: currentColor;
 }
+
+// Make octicons on the homepage look better.
+a.btn > svg {
+  padding-top: 8px;
+}
