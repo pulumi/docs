@@ -77,7 +77,9 @@ write our first program using the AWS package.
 
 ## Programming AWS
 
-With the `@pulumi/aws` you can use Pulumi to create and manage AWS resources for 
+With the `@pulumi/aws` package you can use Pulumi to create and manage AWS
+resources.
+
 ### A Simple Application
 
 For our first application, we'll create an AWS [EC2
@@ -516,7 +518,7 @@ Pulumi Program using the `@pulumi/cloud` framework.
 >updates to the infrastructure.  In future releases, Pulumi will support
 >additional methods for managing infrastructure state across updates. 
 
-## Pulumi Cloud Application - URL shortener
+## Programming the Cloud
 
 The `@pulumi/cloud` package lets you program both infrastructure and application
 logic using simple, high-level cloud building blocks.  This package has three
@@ -895,5 +897,5 @@ Check out the [examples](/examples) and [package](/libraries) documentation for
 more details on the kinds of programs you can build with Pulumi.
 
 If you have questions of feedback on anything related to Pulumi, feel free to
-reach out to us at inquiries@pulumi.com.
+reach out to us at [inquiries@pulumi.com](mailto:inquiries@pulumi.com).
 
