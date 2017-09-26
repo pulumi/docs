@@ -5,7 +5,7 @@ nav_section: "quickstart"
 
 <p><a href="/quickstart">Quickstart</a> &gt; <b>Further Reading</b></p>
 
-<h1 class="title f1">Further Reading</h1>
+# Further Reading
 
 This section contains some additional further reading on the following topics:
 
@@ -13,7 +13,7 @@ This section contains some additional further reading on the following topics:
 * [Using Typescript](#using-typescript)
 * [Next Steps](#next-steps)
 
-### Pulumi CLI
+## Pulumi CLI
 
 The `pulumi` CLI supports creating, configuring and updating Pulumi program environments.  
 
@@ -176,7 +176,7 @@ Global Flags:
   -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
 ```
 
-### Using TypeScript
+## Using TypeScript
 
 You can write Pulumi programs in TypeScript to get additional verification and tooling benefits.  To use TypeScript,
 apply the following four steps to an existing project.
@@ -249,7 +249,7 @@ You can now use tools like VS Code to get completion lists, live error reporting
 
 ![Pulumi TypeScript in VS Code](./vscode.png)
 
-### Upcoming Features
+## Upcoming Features
 
 Some major features we are hard at work on at Pulumi include the following:
 
@@ -262,7 +262,7 @@ Some major features we are hard at work on at Pulumi include the following:
 
 If you'd like to request specific features or have questions about any of this, please [let us know](/contact)!
 
-### Next Steps
+## Next Steps
 
 Check out the [package](/packages) documentation for more details on the kinds of programs you can build with Pulumi.
 

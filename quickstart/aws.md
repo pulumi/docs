@@ -5,7 +5,7 @@ nav_section: "quickstart"
 
 <p><a href="/quickstart">Quickstart</a> &gt; <b>Programming AWS</b></p>
 
-<h1 class="title f1">Programming AWS</h1>
+# Programming AWS
 
 The `@pulumi/aws` package lets you use Pulumi to create and manage AWS resources.
 
@@ -17,7 +17,7 @@ A few examples:
 * DynamoDB tables, `aws.dynamodb.Table`
 * Lambda functions, `aws.lambda.Function`
 
-### A Simple Application
+## A Simple Application
 
 For our first application, we'll create an AWS [EC2 Instance](/packages/pulumi-aws/classes/_ec2_instance_.instance.html)
 and associated [Security Group](/packages/pulumi-aws/classes/_ec2_securitygroup_.securitygroup.html) using Pulumi.
@@ -95,7 +95,7 @@ $ ls
 Pulumi.yaml	index.js	node_modules	package.json
 ```
 
-### Environments, Updates and Previews
+## Environments, Updates and Previews
 
 Now that we have the code for our first program, let's deploy it!
 
@@ -435,5 +435,5 @@ Update duration: 2m13.232697769s
 That's it.  In the next section, we'll take a look at building a higher level Pulumi Program using the
 `@pulumi/cloud` framework.
 
-<h2 class="h2" style="font-weight: bold" markdown="1">Next Up: [Programming the Cloud](./cloud.html)</h2>
+## Next Up: [Programming the Cloud](./cloud.html)
 

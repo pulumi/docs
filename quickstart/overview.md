@@ -5,7 +5,7 @@ nav_section: "quickstart"
 
 <p><a href="/quickstart">Quickstart</a> &gt; <b>Overview</b></p>
 
-<h1 class="title f1">Overview</h1>
+# Overview
 
 With Pulumi, you write **programs** in your favorite language, with your favorite tools, that describe your cloud
 application and its infrastructure needs.  We just call these **Cloud Applications**.  You'll quickly notice that with
@@ -24,7 +24,7 @@ Cloud Applications are not ordinary programs.  Instead of running them directly,
 command-line tool** (CLI).  This tool deploys them to the cloud and updates them anytime you make a change.  The CLI
 understands how to do all of this for you, so that you're not manually editing configuration or touching cloud consoles.
 
-<h2 class="title f2">Languages</h2>
+## Languages
 
 In the current release, Cloud Applications can be authored in [JavaScript](
 https://developer.mozilla.org/en-US/docs/Web/JavaScript) or [TypeScript](https://www.typescriptlang.org/), run in
@@ -35,7 +35,7 @@ https://code.visualstudio.com/), but this is by no means a requirement.
 We will support additional languages in the future, and would [love to hear from you](/contact) if you have a special
 request!
 
-<h2 class="title f2">Packages</h2>
+## Packages
 
 Pulumi's current Cloud SDK includes three packages to use as building blocks for your Cloud Applications.
 
@@ -52,7 +52,7 @@ For example, to get ready for a Pulumi Cloud Application to use the AWS and Pulu
 Except for the core runtime package, `pulumi`, packages are scoped underneath the `@pulumi` namespace.  Anytime you
 see a `@pulumi/...` package, you can expect some reusable cloud goodness that only Pulumi can deliver!
 
-<h3 class="title f3">pulumi</h3>
+### pulumi
 
 [Documentation](/packages/pulumi)
 
@@ -60,7 +60,7 @@ The `pulumi` package contains the core primitives for interacting with the Pulum
 Applications can ignore this package altogether, although for some advanced scenarios it may be necessary.  For the most
 part, this is there only to support building the other packages you will soon encounter below.
 
-<h3 class="title f3">@pulumi/aws</h3>
+### @pulumi/aws
 
 [Documentation](/packages/pulumi-aws)
 
@@ -68,7 +68,7 @@ The `@pulumi/aws` package contains the full suite of over 250 AWS resources.  An
 the AWS console or CloudFormation, along with its full set of properties, is available using this library.  Using this
 library, you can provision and connect low level infrastructure, VMs, databases, containers, and more.
 
-<h3 class="title f3">@pulumi/cloud</h3>
+### @pulumi/cloud
 
 [Documentation](/packages/pulumi-cloud)
 
@@ -79,7 +79,7 @@ ease of use in mind.  Using this library is the easiest way to program the cloud
 
 *Note*: We expect to introduce additional cloud providers and cloud components in future releases.
 
-<h2 class="title f2">How Pulumi Works</h2>
+## How Pulumi Works
 
 To see how Pulumi works, let's look at a very simple Pulumi Cloud Application:
 
@@ -143,7 +143,7 @@ Pulumi tracks the state of the infrastructure in a *checkpoint* file, stored ins
 checkpoint file file is needed to make updates to the infrastructure.  In future releases, Pulumi will support
 additional methods for managing infrastructure state across updates, including a reliable deployment service.
 
-<h2 class="h2" style="font-weight: bold" markdown="1">Next Up</h2>
+## Next Up
 
 If you would like to program AWS resources directly, see [Programming AWS](./aws.html).
 

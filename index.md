@@ -6,7 +6,7 @@ nav_section: "home"
 <div class="pulumi-jumbotron">
     <div class="container">
         <img src="images/logo/transparent-black-text-large.png" alt="Pulumi" style="display: block; margin: auto">
-        <h1 class="display-3" style="text-align: center">Cloud SDK Documentation</h1>
+        <h1 class="display-3 title" style="text-align: center">Cloud SDK Documentation</h1>
     </div>
 </div>
 

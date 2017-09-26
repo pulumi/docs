@@ -3,7 +3,7 @@ layout: default
 nav_section: "quickstart"
 ---
 
-<h1 class="title f1">Quickstart Tutorial</h1>
+# Quickstart Tutorial
 
 Welcome to Pulumi, a new way to program the cloud. ☁️
 

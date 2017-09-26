@@ -3,7 +3,7 @@ layout: default
 nav_section: "contact"
 ---
 
-<h1 class="title f1">Contact Us</h1>
+# Contact Us
 
 Please feel free to contact us anytime with any questions or comments you may have.
 

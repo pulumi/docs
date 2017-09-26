@@ -5,7 +5,7 @@ nav_section: "quickstart"
 
 <p><a href="/quickstart">Quickstart</a> &gt; <b>Programming the Cloud</b></p>
 
-<h1 class="title f1">Programming the Cloud</h1>
+# Programming the Cloud
 
 The `@pulumi/cloud` package lets you program infrastructure and application logic, side by side in harmony, using
 simple, high-level cloud building blocks.  This package has three key defining attributes:
@@ -20,7 +20,7 @@ simple, high-level cloud building blocks.  This package has three key defining a
 * __Serverless__: The `@pulumi/cloud` makes it easy to build applications with minimal fixed infrastructure,
   event-driven application logic, and using resources that are charged only based on actual consumption.
 
-### A Simple Application
+## A Simple Application
 
 As our first example, we'll build a simple URL shortener.
 
@@ -144,5 +144,5 @@ That's a quick tour of the `@pulumi/cloud` framework.  There is a lot you can do
 framework, and we are excited to see what the community builds on top of it.  Many more examples will be coming
 soon; however, in the meantime, please check out the [API documentation](/packages/pulumi-cloud/) for more details.
 
-<h2 class="h2" style="font-weight: bold" markdown="1">Next Up: [Further Reading](./reading.html)</h2>
+## Next Up: [Further Reading](./reading.html)
 

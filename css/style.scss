@@ -104,28 +104,32 @@ body {
   margin-bottom: 70px;
 }
 
-h1.title {
+h1:not(.title) {
+  font-size: 3rem;
   font-weight: bold;
   border-bottom: 1px solid rgba(0,0,0,.1);
   padding-bottom: 8px;
   margin-bottom: 24px;
 }
 
-h2.title {
+h2:not(.title) {
+  font-size: 2.25rem;
   font-weight: bold;
   border-bottom: 1px solid rgba(0,0,0,.1);
   padding-bottom: 8px;
   margin-bottom: 16px;
 }
 
-h3.title {
+h3:not(.title) {
+  font-size: 1.5rem;
   font-weight: bold;
   border-bottom: 1px solid rgba(0,0,0,.1);
   padding-bottom: 4px;
   margin-bottom: 12px;
 }
 
-h4.title {
+h4:not(.title) {
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
