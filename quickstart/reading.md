@@ -21,19 +21,17 @@ An __environment__ represents a running Pulumi program.  `pulumi env init` creat
 program in the working directory. Multiple environments can be managed in a single program directory, and you can
 see all environments with `pulumi env ls`.  
 
-Each environment has an associated set of __config__.  The config is a set of
-key value pairs which are available to your Pulumi program.
+Each environment has an associated set of __config__.  The config is a set of key value pairs which are available to
+your Pulumi program.
 
-The running application can be __updated__, combining the current config with
-the current version of the program in the working directory and dploying those
-updates into the running application - updating any necessary infrastructure and
+The running application can be __updated__, combining the current config with the current version of the program in the
+working directory and deploying those updates into the running application - updating any necessary infrastructure and
 deploying any new code or resources into the application.
 
-An update can be __previewed__, displaying a summary of the expected changes
-that will be made during an update operation based on the current state of the
-program and config.  This preview is a convervative summary - it will include
-updates which may not need to be made depending on the results of applying some
-of the changes to the target infrastructure.  
+An update can be __previewed__, displaying a summary of the expected changes that will be made during an update
+operation based on the current state of the program and config.  This preview is a conservative summary - it will
+include updates which may not need to be made depending on the results of applying some of the changes to the target
+infrastructure.
 
 ```
 Usage:
@@ -180,11 +178,11 @@ Global Flags:
 
 ### Using TypeScript
 
-You can write Pulumi programs in TypeScript to get additional verification and
-tooling benefits.  To use TypeScript, apply the following thress steps to an
-existing progrect:
+You can write Pulumi programs in TypeScript to get additional verification and tooling benefits.  To use TypeScript,
+apply the following four steps to an existing project.
 
-First, update your `package.json` to look like the following:
+First, update your `package.json` to look like the following (with your own values for `name`, `version`, etc.).  This
+is what tells Node.js and NPM what packages you depend on, where to find your code's entrypoints, and so on:
 
 ```json
 {
@@ -208,9 +206,13 @@ First, update your `package.json` to look like the following:
 }
 ```
 
-Then run `yarn install` to install the new dependencies.
+Feel free to customize this in any way you please, such as adding test scripts, dependencies on any NPM packages you'd
+like to use in your Cloud Application, and so on.  For more information on `package.json`, please refer to [the NPM
+documentation](https://docs.npmjs.com/files/package.json).
 
-Next, create a `tsconfig.json` file with the following:
+Second, run `yarn install` to install the dependencies to your `node_modules` directory.
+
+Third, create a `tsconfig.json` file with the TypeScript compiler settings and a list of your program files:
 
 ```json
 {
@@ -236,18 +238,33 @@ Next, create a `tsconfig.json` file with the following:
 }
 ```
 
-And finally, run `yarn build` any time you want to update yoru program prior to
-running `pulumi preview` or `pulumi update`.
+Please feel free to customize this however you'd like, including the TypeScript settings that work for you.  For
+additional information on what settings you can use, please refer to [the TypeScript documentation for `tsconfig.json`](
+https://www.typescriptlang.org/docs/handbook/tsconfig-json.html.
 
-You can now use tools like VS Code to get completion lists, live error reporting
-and inline documentation help.
+And finally, run `yarn build` any time you want to update your program prior to running `pulumi preview` or
+`pulumi update` (this is just a shortcut for invoking the TypeScript compiler, `tsc`, so feel free to do that instead).
+
+You can now use tools like VS Code to get completion lists, live error reporting and inline documentation help.
 
 ![Pulumi TypeScript in VS Code](./vscode.png)
 
+### Upcoming Features
+
+Some major features we are hard at work on at Pulumi include the following:
+
+* More cloud abstractions
+    - Containers
+    - SQL databases
+    - Redis-style caches
+* Additional programming languages
+* Robust deployments and cluster management
+
+If you'd like to request specific features or have questions about any of this, please [let us know](/contact)!
+
 ### Next Steps
 
-Check out the [package](/packages) documentation for more details on the kinds of programs
-you can build with Pulumi.
+Check out the [package](/packages) documentation for more details on the kinds of programs you can build with Pulumi.
 
 If you have questions of feedback on anything related to Pulumi, please don't hesitate to [contact us](/contact)).
 

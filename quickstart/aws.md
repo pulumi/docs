@@ -435,5 +435,5 @@ Update duration: 2m13.232697769s
 That's it.  In the next section, we'll take a look at building a higher level Pulumi Program using the
 `@pulumi/cloud` framework.
 
-<h2 class="h2" style="font-weight: bold" markdown="1">Next Up: [Programming the Cloud](./cloud)</h2>
+<h2 class="h2" style="font-weight: bold" markdown="1">Next Up: [Programming the Cloud](./cloud.html)</h2>
 

@@ -25,8 +25,8 @@ simple, high-level cloud building blocks.  This package has three key defining a
 As our first example, we'll build a simple URL shortener.
 
 We start with just an `index.ts` file importing `@pulumi/cloud`.  (See the secction on
-[Using TypeScript](./reading#using-typescript) for additional details on using TypeScript for your Pulumi program).  We
-can use the `HttpEndpoint` class to create a publicly accessible HTTP endpoint:
+[Using TypeScript](./reading.html#using-typescript) for additional details on using TypeScript for your Pulumi program).
+We can use the `HttpEndpoint` class to create a publicly accessible HTTP endpoint:
 
 ```typescript
 import * as cloud from "@pulumi/cloud";
@@ -144,5 +144,5 @@ That's a quick tour of the `@pulumi/cloud` framework.  There is a lot you can do
 framework, and we are excited to see what the community builds on top of it.  Many more examples will be coming
 soon; however, in the meantime, please check out the [API documentation](/packages/pulumi-cloud/) for more details.
 
-<h2 class="h2" style="font-weight: bold" markdown="1">Next Up: [Further Reading](./reading)</h2>
+<h2 class="h2" style="font-weight: bold" markdown="1">Next Up: [Further Reading](./reading.html)</h2>
 

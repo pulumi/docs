@@ -79,19 +79,75 @@ ease of use in mind.  Using this library is the easiest way to program the cloud
 
 *Note*: We expect to introduce additional cloud providers and cloud components in future releases.
 
-<h2 class="title f2">Lifecycle of a Pulumi Application</h2>
+<h2 class="title f2">How Pulumi Works</h2>
 
-When we update an application, Pulumi does not need to recreate all of the infrastructure.  Instead, Pulumi understands
-the minimal set of changes it needs to make by diffing the current state with a new desired state.
+To see how Pulumi works, let's look at a very simple Pulumi Cloud Application:
 
-For some resources, changes can be made directly in place with no interruption to your infrastructure.  For
-others, a resource may need to be replaced, and Pulumi will create the new resource first, then update any other
-resources dependent on this, before finally removing the no longer needed original resource.  This is handled by
-Pulumi automatically and this behavior is dependent on the kind of resource being updated.
+```typescript
+import * as cloud from "@pulumi/cloud";
 
-Pulumi tracks the state of the infrastructure in a __checkpoint__ file, stored inside the `.pulumi` folder.  This
+let votes = new cloud.Table("votes");
+
+let app = new cloud.HttpEndpoint("api");
+app.get("/", async (req, res) => {
+    res.json(await votes.get());
+})
+app.post("/{vote}", async (req, res) => {
+    await votes.insert({ vote: req.vote });
+    res.end();
+});
+
+app.publish();
+```
+
+This simple program does several important and powerful things:
+
+* It imports the cloud package, `@pulumi/cloud`, which gives us a simple and lovable cloud programming model.
+* It creates a `votes` table, which is a hosted NoSQL cloud database table that auto-scales to meet demand.
+* It creates a new `api` cloud endpoint, which is a hosted API Gateway that is secure and handles infinite scale.
+* It registers a serverless HTTP `GET` route at `/` which dumps the contents of `votes` as JSON.
+* It registers a serverless HTTP `POST` route at `/{vote}` which records each vote for `{vote}` in `votes`.
+* It calls `publish` to listen for incoming requests at these new endpoints.  At this point, the API is live.
+
+Notice that there is absolutely no `XML`, `JSON`, or `YAML` configuration code that must be written.  *This is the
+entire Cloud Application!*  This is the power of what Pulumi offers and a major reason why it's so easy to use.
+
+To understand how this works, however, we must return to a point made above: Pulumi programs are not run like
+ordinary programs.  You don't simply run the program on your machine.  Instead, you give the program to Pulumi, and it
+analyzes it to determine how to activate the program in your target cloud environment.  It then makes it so.
+
+A Pulumi Cloud Application is essentially an eternal program runs continuously in your cloud environment, is updated
+incrementally from time to time, but logically never exits.  This is a subtle distinction, and a new and innovative
+concept that is key to Pulumi's magic.  Understanding this is essentially to really leveraging Pulumi to its fullest.
+
+To explore this further, let's just look at a single line from that program:
+
+```typescript
+let votes = new cloud.Table("votes");
+```
+
+It wouldn't make sense to recreate the `votes` NoSQL database table over and over again.  Instead, we want a single
+instance of this table to get created for each unique instance of our Cloud Application -- say, dev, stage, and prod --
+and, as we update our code, we don't want to perturb that table.  This is precisely what Pulumi does.  It will create
+that table once, when we first create an instance, and then incrementally update the pieces around it as needed.
+
+In fact, Pulumi understands the minimal set of changes it needs to make by diffing the current state with a new desired
+state.  When we update an application, Pulumi does not need to recreate all of the infrastructure.
+
+For some resources, changes can be made directly in place with no interruption to your Cloud Application's availability.
+For others, a resource may need to be replaced, and Pulumi will create the new resource first, then update any other
+resources dependent on this, before finally removing the no longer needed original resource.  Although the behavior
+depends on the kind of resource being updated, Pulumi handles this automatically to minimize application downtime.
+
+Pulumi tracks the state of the infrastructure in a *checkpoint* file, stored inside the `.pulumi` folder.  This
 checkpoint file file is needed to make updates to the infrastructure.  In future releases, Pulumi will support
 additional methods for managing infrastructure state across updates, including a reliable deployment service.
 
-<h2 class="h2" style="font-weight: bold" markdown="1">Next Up: [Programming AWS](./aws)</h2>
+<h2 class="h2" style="font-weight: bold" markdown="1">Next Up</h2>
+
+If you would like to program AWS resources directly, see [Programming AWS](./aws.html).
+
+If you would prefer to program against Pulumi's Cloud Framework, see [Programming the Cloud](./cloud.html).
+
+Please note that you can even mix both styles in the same application.
 
