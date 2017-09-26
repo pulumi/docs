@@ -34,7 +34,7 @@ to [contact us](/contact) with any questions or comments that you might have.  W
     - [Programming the Cloud](/quickstart/cloud.html)
     - [Further Reading](/quickstart/reading.html)
         - [Pulumi CLI](/quickstart/reading.html#pulumi-cli)
-        - [Using Typescript](/quickstart/reading.html#using-typescript)
+        - [Using TypeScript](/quickstart/reading.html#using-typescript)
         - [Next Steps](/quickstart/reading.html#next-steps)
 * [Library Packages](/packages)
     - [pulumi](/packages/pulumi)
