@@ -10,6 +10,12 @@ for generating HTML and the ability to write most files in Markdown.
 TypeScript documentation is generated directly from source using [TYPEDOC](http://typedoc.org/). We
 just check the resulting files directly into the repo under `./libraries/`.
 
+## Git LFS
+
+We use Git LFS to manage release binaries that are checked in.  Please ensure that you've [installed Git LFS](
+https://help.github.com/articles/installing-git-large-file-storage/) before cloning the repo.  See [this tutorial](
+https://help.github.com/articles/configuring-git-large-file-storage/) for more information on using Git LFS with GitHub.
+
 ## Development
 
 Run `make configure` to get the required Gem dependencies. (Assuming you have a recent Ruby

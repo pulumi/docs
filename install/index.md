@@ -24,17 +24,17 @@ The current version of Pulumi's SDK is <b>0.6.1</b> (pre-release) and is availab
         <p>
             <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
                     style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="#" role="button">
+                    href="/releases/pulumi-v0.6.1-darwin-x64.tar.gz" role="button">
                 {% octicon cloud-download height:24 %} macOS x64
             </a>
             <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
                     style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="#" role="button">
+                    href="/releases/pulumi-v0.6.1-windows-x64.zip" role="button">
                 {% octicon cloud-download height:24 %} Windows x64
             </a>
             <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
                     style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="#" role="button">
+                    href="/releases/pulumi-v0.6.1-linux-x64.tar.gz" role="button">
                 {% octicon cloud-download height:24 %} Linux x64
             </a>
         </p>
