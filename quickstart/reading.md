@@ -246,7 +246,7 @@ and inline documentation help.
 
 ### Next Steps
 
-Check out the [examples](/examples) and [package](/packages) documentation for more details on the kinds of programs
+Check out the [package](/packages) documentation for more details on the kinds of programs
 you can build with Pulumi.
 
 If you have questions of feedback on anything related to Pulumi, please don't hesitate to [contact us](/contact)).

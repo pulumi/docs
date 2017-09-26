@@ -13,8 +13,8 @@ nav_section: "home"
 **Pulumi is an open-source platform that makes programming the cloud easy, fun, and collaborative.**
 
 **Bring Your Own Language.**  Pulumi lets you write portable Cloud Applications in your favorite languages, using your
-favorite IDEs and tools, and runs them on the cloud of your choice (or just leave it to us).  The result is truly
-cloud native.
+favorite IDEs and tools, and runs them on the cloud of your choice (or just leave it to us).  The result is a truly
+cloud native application.
 
 **The Modern Cloud, Now Easy to Use.**  Pulumi delivers the latest innovations in cloud computing to your fingertips,
 letting you focus on code, instead of infrastructure, operations, and configuration.  No more strange markup and
