@@ -259,6 +259,7 @@ Some major features we are hard at work on at Pulumi include the following:
     - Redis-style caches
 * Additional programming languages
 * Robust deployments and cluster management
+* A local cloud emulator for quick inner loop development
 
 If you'd like to request specific features or have questions about any of this, please [let us know](/contact)!
 
