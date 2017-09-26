@@ -3,6 +3,11 @@ sass:
 
 plugins:
   - jekyll-octicons
+  - kramdown
+
+markdown: kramdown
+kramdown:
+  parse_block_html: false
 
 # Totally lame workaround until typedoc emits files withouty a leading
 # underscore or we have our own TypeScript documentation generation stack.
@@ -23,3 +28,4 @@ exclude:
   - README.md
   - _includes
   - _layouts
+

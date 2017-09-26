@@ -71,13 +71,22 @@ button, input { font-family: 'Oxygen', sans-serif; }
 
 a, p, small, label, legend, li { font-family: 'Open Sans', sans-serif; }
 
+a {
+    font-weight: bold;
+}
+a:hover {
+    cursor: pointer;
+}
+
 code {
   background-color: #EEEEEE;  // .light-gray
+  font-family: 'Oxygen Mono', monospace;
+  font-size: 14px;
 }
 
 pre {
   background-color: #EEEEEE;  // .light-gray
-  font-size: 0.8em;
+  // font-size: 0.8em;
   padding: 16px;
 }
 
@@ -95,11 +104,44 @@ body {
   margin-bottom: 70px;
 }
 
+h1.title {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+h2.title {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+h3.title {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+h4.title {
+  font-weight: bold;
+}
+
 // Remove the background color from Bootstrap's Jumptron class.
 .pulumi-jumbotron {
-  margin-bottom: 2rem;
+  background-color: #f2e6ff;
+  margin-bottom: 1rem;
   border-radius: .3rem;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
+}
+
+.little-jumbotron {
+  background-color: #f2e6ff;
+  margin: 8px;
+  border-radius: .3rem;
+  padding: 8px;
 }
 
 // Don't have SVG icons default to black. Just use current text color.
@@ -111,3 +153,4 @@ svg {
 a.btn > svg {
   padding-top: 8px;
 }
+

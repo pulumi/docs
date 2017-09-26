@@ -55,6 +55,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.5.2)
   jekyll-octicons
+  kramdown
 
 BUNDLED WITH
    1.15.4
