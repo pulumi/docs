@@ -12,7 +12,7 @@ application and its infrastructure needs.  We just call these **Cloud Applicatio
 Pulumi there is less of a striking distinction between infrastructure and application code.  In fact, we like to blur
 this line and think of these simply as distributed programs.
 
-Cloud Applications are built out of **package**, just like your favorite language, and some of these packages provide
+Cloud Applications are built out of **packages**, just like your favorite languages, and some of these packages provide
 cloud primitives that are responsible for creating and managing infrastructure on your behalf.  You can also build new
 custom packages and share and reuse them with other Cloud Applications in your team or with the open source community.
 
