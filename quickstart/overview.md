@@ -44,10 +44,12 @@ remember to run `npm link <package>` or `yarn link <package>` in the consuming C
 
 For example, to get ready for a Pulumi Cloud Application to use the AWS and Pulumi Cloud packages, run this:
 
-    $ cd myapp
-    $ yarn link pulumi
-    $ yarn link @pulumi/pulumi-cloud
-    $ pulumi preview
+```bash
+$ cd myapp
+$ yarn link pulumi
+$ yarn link @pulumi/pulumi-cloud
+$ pulumi preview
+```
 
 Except for the core runtime package, `pulumi`, packages are scoped underneath the `@pulumi` namespace.  Anytime you
 see a `@pulumi/...` package, you can expect some reusable cloud goodness that only Pulumi can deliver!
