@@ -15,6 +15,6 @@ Applications.
 * [Programming the Cloud](./cloud.html)
 * [Further Reading](./reading.html)
     - [Pulumi CLI](./reading.html#pulumi-cli)
-    - [Using Typescript](./reading.html#using-typescript)
+    - [Using TypeScript](./reading.html#using-typescript)
     - [Next Steps](./reading.html#next-steps)
 
