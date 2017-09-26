@@ -7,8 +7,9 @@ nav_section: "contact"
 
 Please feel free to contact us anytime with any questions or comments you may have.
 
-Until we launch the company publicly, our GitHub and Slack channels may or may not be accessible.  They are the
-easiest way to share code and ideas, however, so please use them if you have access to them.
+Until we launch the company publicly, our [GitHub](https://github.com/pulumi) and [Slack](https://pulumi.slack.com)
+channels may or may not be accessible.  They are the easiest way to share code and ideas, however, so please use them
+if you have access to them.
 
 Our email address is [support@pulumi.com](mailto:support@pulumi.com) which you are always welcome to use.
 
