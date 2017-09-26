@@ -24,7 +24,7 @@ templating DSLs to learn and maintain.  You just write familiar and lovable code
 are ready to scale to meet demand by default, without any added complexity.  By leveraging serverless computing and
 containers, you only pay for what you use, rather than provisioning and parking expensive and needless VMs.
 
-We are thrilled that you are interested in Pulumi.  Below are some links to help get started, but please don't hesitate
+We are so happy that you are interested in Pulumi.  Below are some links to help get started, but please don't hesitate
 to [contact us](/contact) with any questions or comments that you might have.  We look forward to seeing what you build!
 
 * [Installation and Setup](/install)
