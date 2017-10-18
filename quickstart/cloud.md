@@ -32,11 +32,15 @@ Even in this simple example, there is much more involved than just defining the 
 
 Pulumi simplifies this process by enabling developers to define resources directly in code. You don't need to learn a new language to provision your resources. Adding a new resource is done directly in code and the Pulumi tools ensure that a resource is defined before it is used. The Pulumi CLI will then provision any new resources (and delete any removed resources) before deploying the new application code. 
 
-Because code and infrastructure are defined together, it makes it easier for multiple developers to work together on a codebase. Developers don't have to inspect a different file in a different language to understand the end-to-end flow of an application. This makes Pulumi applications easier to author and maintain. 
+Because code and infrastructure are defined together, Pulumi is a more productive experience for a development team. Code and infrastructure can be versioned together and application developers reason about their application as a whole, instead of considering just infrastructure or just application code.
 
-<!-- TODO: add something about how it's deployed to just a standard cloud -->
+Pulumi is not itself a cloud hosting environment; Pulumi applications can be deployed to one or more public or private clouds. Although this walkthrough targets AWS, Pulumi provides a high-level, cloud-neutral programming model that can be deployed to AWS, Azure, Google Cloud Platform, or an on-premises datacenter. 
+
+In this example, we'll show how a Pulumi application is deployed to AWS managed services, the same services you would use if you had authored the application manually. Pulumi does not reinvent the infrastructure, but rather offers an easier way to author and evolve your application.
 
 ### Creating a simple Hello World application in Pulumi
+
+#### Set up the project
 
 1. Create a new directory:
 
@@ -85,22 +89,6 @@ Because code and infrastructure are defined together, it makes it easier for mul
 
 1. Run `yarn install` to install the dependencies to your `node_modules` directory.
 
-1. Save the following as `index.ts`:
-
-    ```typescript
-    import * as cloud from "@pulumi/cloud";
-
-    let app = new cloud.HttpEndpoint("urlshortener");
-
-    app.get("/", (req,res) => {
-        res.json({hello: "world"});
-    });
-
-    app.publish().then(url => console.log(`Serving at: ${url}`));
-    ```
-
-    Here, we used the `HttpEndpoint` class to create a publicly accessible HTTP endpoint.  Note that the signature of the `get` method is similar to popular JavaScript web routing frameworks, like Express.js, and uses standard request/response parameters and familiar `res.json` APIs.  Under the covers, however, this program will use a true API Gateway that supports infinite scale out, DDOS protection, SSL, and more.
-
 1. Create a `tsconfig.json` file with the TypeScript compiler settings and a list of your program files:
 
     ```json
@@ -126,6 +114,26 @@ Because code and infrastructure are defined together, it makes it easier for mul
         ]
     }
     ```
+
+#### Define application code
+
+Now let's get to the application logic and infrastruture definition, which are defined at the same time in TypeScript.
+
+1. Save the following as `index.ts`:
+
+    ```typescript
+    import * as cloud from "@pulumi/cloud";
+
+    let app = new cloud.HttpEndpoint("urlshortener");
+
+    app.get("/", (req,res) => {
+        res.json({hello: "world"});
+    });
+
+    app.publish().then(url => console.log(`Serving at: ${url}`));
+    ```
+
+    Here, we used the `HttpEndpoint` class to create a publicly accessible HTTP endpoint.  Note that the signature of the `get` method is similar to popular JavaScript web routing frameworks, like Express.js, and uses standard request/response parameters and familiar `res.json` APIs.  Under the covers, however, this program will use a true AWS API Gateway that supports infinite scale out, DDOS protection, SSL, and more.
 
 1.  Run `yarn build`. This is just a shortcut for invoking the TypeScript compiler, `tsc`, so you may use that instead.
 
@@ -173,7 +181,7 @@ We can turn this into a robust hosted URL shortener service in just a few steps.
     let urls = new cloud.Table("urls", "name");
     ```
 
-    This one line tells `pulumi update` that it should provision a new Dynamo DB resource. We can then simply use this resource within our code; there is no need to set up access rules or perform any other configuration. 
+    This one line tells `pulumi update` that it should provision a new Dynamo DB resource. We can then simply use this infrastructure resource within our code; there is no need to set up access rules or perform any other configuration. 
 
 1. Add a `/shorten` route to `index.ts`, using the `urls` table:
 
@@ -189,7 +197,7 @@ We can turn this into a robust hosted URL shortener service in just a few steps.
 
     Note that we continue to use Express.js-like syntax to define the route. The function simply captures a reference to the `urls` object and calls runtime APIs on it.  Pulumi automatically handles all of the configuration and wiring necessary to make this happen: there is no need to manually configure URLs or set environment variables. 
 
-    Also, we can use asynchronous code via `async` and `await`, so that the code waits for the table insert to complete before returning the HTTP response.
+    We can use standard JavaScript/TypeScript asynchronous code via `async` and `await`, so that the code waits for the table insert to complete before returning the HTTP response. 
 
 1. To push this updated code, provision the data store, update the hosted REST API, and wire up the
 route handlers to the new code, simply call `pulumi update`. Pulumi determine what resources have changed and makes the minimal required resource modifications.
