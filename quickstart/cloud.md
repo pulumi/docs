@@ -28,13 +28,13 @@ If we were to build this application directly on AWS, we would create several re
 
 ![AWS architecture of URL shortener](url-shortener-diagram.png)
 
-Even in this simple example, there is much more involved than just defining the application code. To automate the provisioning of resources, using CloudFormation or a similar tool, we must define at least 12 resources. For instance, each of the arrows in the diagram requires several IAM rules to set up access control. If we later want to add a new resource, such as a cache of the most recently used URLs, we need to update both Lambda implementations as well as the CloudFormation templates that provision the cache. In modern cloud applications, this is a common problem: as applications use more and more managed resources, code becomes more tightly coupled with infrastructure requirements. 
+Even in this simple example, there is much more involved than just defining the application code. To automate the provisioning of resources using CloudFormation or a similar tool, we must define at least 12 resources. For example, fine-grain access control through IAM is essential for ensuring a least-privilege policy, but this necessarily requires a lot of setup. In this example, each of the arrows in the diagram requires several IAM rules to set up access control. If we later want to add a new resource, such as a cache of the most recently used URLs, we need to update both Lambda implementations as well as the CloudFormation templates that provision the cache. In modern cloud applications, this is a common problem: as applications use more and more managed resources, code becomes more tightly coupled with infrastructure requirements. 
 
-Pulumi simplifies this process by enabling developers to define resources directly in code. You don't need to learn a new language to provision your resources. Adding a new resource is done directly in code and the Pulumi tools ensure that a resource is defined before it is used. The Pulumi CLI will then provision any new resources (and delete any removed resources) before deploying the new application code. 
+Pulumi simplifies this process by enabling developers to define resources directly in your favorite programming language. You don't need to learn a new language to provision your resources. Adding a new resource is done directly in code and the Pulumi tools ensure that a resource is defined before it is used. The Pulumi CLI will then provision any new resources (and delete any removed resources) before deploying the new application code. 
 
 Because code and infrastructure are defined together, Pulumi is a more productive experience for a development team. Code and infrastructure can be versioned together and application developers reason about their application as a whole, instead of considering just infrastructure or just application code.
 
-Pulumi is not itself a cloud hosting environment; Pulumi applications can be deployed to one or more public or private clouds. Although this walkthrough targets AWS, Pulumi provides a high-level, cloud-neutral programming model that can be deployed to AWS, Azure, Google Cloud Platform, or an on-premises datacenter. 
+Pulumi applications can be deployed to one or more public or private clouds. Pulumi doesn't physically run the servers running your applications, it helps manage the lifecycle and usage of those resources. This walkthrough targets AWS, but Pulumi's high-level, cloud-neutral programming model can be deployed to AWS, Azure, Google Cloud Platform, or an on-premises datacenter. 
 
 In this example, we'll show how a Pulumi application is deployed to AWS managed services, the same services you would use if you had authored the application manually. Pulumi does not reinvent the infrastructure, but rather offers an easier way to author and evolve your application.
 
@@ -89,7 +89,7 @@ In this example, we'll show how a Pulumi application is deployed to AWS managed 
 
 1. Run `yarn install` to install the dependencies to your `node_modules` directory.
 
-1. Create a `tsconfig.json` file with the TypeScript compiler settings and a list of your program files:
+1. Since this example uses TypeScript, create a `tsconfig.json` file with the TypeScript compiler settings and a list of your program files:
 
     ```json
     {
@@ -142,6 +142,13 @@ Now let's get to the application logic and infrastruture definition, which are d
     ```bash
     Pulumi.yaml    bin/           index.ts       node_modules/  package.json   tsconfig.json  yarn.lock
     ```
+
+1. Create a new Pulumi environment:
+
+    ```bash
+    $ pulumi env init testing
+	Environment 'testing' initialized; see `pulumi update` to deploy into it
+	```
 
 1. Set the AWS region to deploy the application into:
 
