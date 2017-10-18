@@ -22,125 +22,229 @@ simple, high-level cloud building blocks.  This package has three key defining a
 
 ## A Simple Application
 
-As our first example, we'll build a simple URL shortener.
+As our first example, we'll build a simple URL shortener REST API. The API will have two routes, `GET /{name}` to navigate to a URL by its short name and `POST /shorten?name={name}&url={url}` to create a new shortcut.
 
-We start with just an `index.ts` file importing `@pulumi/cloud`.  (See the secction on
-[Using TypeScript](./reading.html#using-typescript) for additional details on using TypeScript for your Pulumi program).
-We can use the `HttpEndpoint` class to create a publicly accessible HTTP endpoint:
+If we were to build this application directly on AWS, we would create several resources: two Lambdas (for each of the two operations), an API Gateway configured with the two routes, and a Dynamo DB instance for storing the shortname to URL mapping. (Of course, there are many ways to build this application, but this is a common serverless architecture.) The following diagram illustrates this architecture.
 
-```typescript
-import * as cloud from "@pulumi/cloud";
+![AWS architecture of URL shortener](url-shortener-diagram.png)
 
-let app = new cloud.HttpEndpoint("urlshortener");
+Even in this simple example, there is much more involved than just defining the application code. To automate the provisioning of resources, using CloudFormation or a similar tool, we must define at least 12 resources. For instance, each of the arrows in the diagram requires several IAM rules to set up access control. If we later want to add a new resource, such as a cache of the most recently used URLs, we need to update both Lambda implementations as well as the CloudFormation templates that provision the cache. In modern cloud applications, this is a common problem: as applications use more and more managed resources, code becomes more tightly coupled with infrastructure requirements. 
 
-app.get("/", (req,res) => {
-    res.json({hello: "world"});
-});
+Pulumi simplifies this process by enabling developers to define resources directly in code. You don't need to learn a new language to provision your resources. Adding a new resource is done directly in code and the Pulumi tools ensure that a resource is defined before it is used. The Pulumi CLI will then provision any new resources (and delete any removed resources) before deploying the new application code. 
 
-app.publish().then(url => console.log(`Serving at: ${url}`));
-```
+Because code and infrastructure are defined together, it makes it easier for multiple developers to work together on a codebase. Developers don't have to inspect a different file in a different language to understand the end-to-end flow of an application. This makes Pulumi applications easier to author and maintain. 
 
-Note that the signature of the `get` method is similar to popular JavaScript web routing frameworks, like Express.js,
-and uses standard request/response parameters and familiar `res.json` APIs.  Underneath the covers, however, this
-program will use a true API Gateway that supports infinite scale out, DDOS protection, SSL, and more.
+<!-- TODO: add something about how it's deployed to just a standard cloud -->
 
-We run `pulumi config aws:config:region us-west-2` to set the AWS region to deploy this application into.  Then
-we run `pulumi update` to deploy this code and activate our HTTPS endpoint:
+### Creating a simple Hello World application in Pulumi
 
-```bash
-$ pulumi update
-...
-<snip>
-...
-info: Serving at: https://hskuj2l449.execute-api.us-west-2.amazonaws.com/stage/
-info: 14 changes performed:
-    + 14 resources created
-Update duration: 38.783839863s
-```
+1. Create a new directory:
 
-After that, we can curl our newly created HTTPS endpoint to see our message:
+    ```bash
+    $ mkdir urlshortener
+    $ cd urlshortener
+    ```
 
-```bash
-$ curl https://hskuj2l449.execute-api.us-west-2.amazonaws.com/stage/
-{"hello":"world"}
-```
+1. In that folder, create a `Pulumi.yaml` file to describe the Pulumi application:
 
-*Note that in the future we will support branded application URLs rather than the raw AWS URL shown above.*
+    ```yaml
+    name: url-shortener
+    description: Basic example of an AWS web server accessible over HTTP.
+    runtime: nodejs
+    ```
 
-We can turn this into a robust hosted URL shortener service in just a few steps.  First, we add a `/shorten` route:
+1. Since this example uses TypeScript, create `package.json` in the project folder:
 
-```typescript
-app.post("/shorten", (req, res) => {
-    let url = req.query["url"];
-    let name = req.query["name"];
-    console.log(`POST /shorten ${url} ${name}`);
-    res.json({shortenedURLName: name});
-});
-```
+    ```json
+    {
+        "name": "url-shortener",
+        "version": "1.0.0",
+        "license": "MIT",
+        "main": "bin/index.js",
+        "typings": "bin/index.d.ts",
+        "scripts": {
+            "build": "tsc"
+        },
+        "devDependencies": {
+            "typescript": "^2.1.4"
+        },
+        "peerDependencies": {
+            "@pulumi/cloud": "*"
+        },
+        "dependencies": {
+            "@types/node": "^8.0.26"
+        }  
+    }
+    ```
 
-Again, we see we can use Express-like APIs to define a simple service.  But now we also need to persist the mapping
-between short `name` and `url`.  So we can create a data store to use for this mapping directly within our application:
+1. Link with the Pulumi SDK packages so that your `require`s will find the right thing:
 
-```typescript
-let urls = new cloud.Table("urls", "name");
-```
+    ```bash
+    $ yarn link pulumi @pulumi/cloud
+    ```
 
-And then we simply modify our `/shorten` handler to insert into this table:
+1. Run `yarn install` to install the dependencies to your `node_modules` directory.
 
-```typescript
-app.post("/shorten", async (req, res) => {
-    let url = req.query["url"];
-    let name = req.query["name"];
-    console.log(`POST /shorten ${url} ${name}`);
-    await urls.insert({name, url});
-    res.json({shortenedURLName: name});
-});
-```
+1. Save the following as `index.ts`:
 
-Notice that we simply captured a reference to the `urls` object, and called runtime APIs on it.  Pulumi handles
-all of the configuration and wiring necessary to make this happen, something that would usually entail messy manually
-configured URLs, environment variables, and the like.  Also notice that we can use asynchronous code via `async` and
-`await`, so that we wait for the insert to complete before responding to the REST API request.
+    ```typescript
+    import * as cloud from "@pulumi/cloud";
 
-We can now push this updated code, which will provision the data store, update the hosted REST API, and wire up the
-route handlers to the new code.  We can then hit the new API endpoint to shorten a URL:
+    let app = new cloud.HttpEndpoint("urlshortener");
 
-```bash
-$ pulumi update
-...
-$ curl -X POST "https://hskuj2l449.execute-api.us-west-2.amazonaws.com/stage/shorten?name=g&url=http://www.google.com"
-{"shortenedURL":"g"}
-```
+    app.get("/", (req,res) => {
+        res.json({hello: "world"});
+    });
 
-Pulumi figures out what has changed, and makes the minimal edits required to make the changes take effect.
+    app.publish().then(url => console.log(`Serving at: ${url}`));
+    ```
 
-And finally, we can implement the `GET `handlers for any registered short name to return a 301 response with
+    Here, we used the `HttpEndpoint` class to create a publicly accessible HTTP endpoint.  Note that the signature of the `get` method is similar to popular JavaScript web routing frameworks, like Express.js, and uses standard request/response parameters and familiar `res.json` APIs.  Under the covers, however, this program will use a true API Gateway that supports infinite scale out, DDOS protection, SSL, and more.
+
+1. Create a `tsconfig.json` file with the TypeScript compiler settings and a list of your program files:
+
+    ```json
+    {
+        "compilerOptions": {
+            "outDir": "bin",
+            "target": "es6",
+            "module": "commonjs",
+            "moduleResolution": "node",
+            "declaration": true,
+            "sourceMap": true,
+            "stripInternal": true,
+            "experimentalDecorators": true,
+            "pretty": true,
+            "noFallthroughCasesInSwitch": true,
+            "noImplicitAny": true,
+            "noImplicitReturns": true,
+            "forceConsistentCasingInFileNames": true,
+            "strictNullChecks": true
+        },
+        "files": [
+            "index.ts"
+        ]
+    }
+    ```
+
+1.  Run `yarn build`. This is just a shortcut for invoking the TypeScript compiler, `tsc`, so you may use that instead.
+
+    You should now have the following files in your `urlshortener` folder:
+
+    ```bash
+    Pulumi.yaml    bin/           index.ts       node_modules/  package.json   tsconfig.json  yarn.lock
+    ```
+
+1. Set the AWS region to deploy the application into:
+
+    ```bash
+    $ pulumi config aws:config:region us-west-2
+    ```
+
+1. Run `pulumi update` to deploy this code and activate our HTTPS endpoint:
+
+    ```bash
+    $ pulumi update
+    ...
+    <snip>
+    ...
+    info: Serving at: https://yoururl.execute-api.us-west-2.amazonaws.com/stage/
+    info: 14 changes performed:
+        + 14 resources created
+    Update duration: 38.783839863s
+    ```
+
+    After that, we can curl our newly created HTTPS endpoint to see our message. Replace `yoururl` with the URL shown in the output of `pulumi update`:
+
+    ```bash
+    $ curl https://yoururl.execute-api.us-west-2.amazonaws.com/stage/
+    {"hello":"world"}
+    ```
+
+    *Note: In the future we will support custom domains for APIs rather than the auto-generated AWS URL shown above.*
+
+### From Hello World to URL shortener
+
+We can turn this into a robust hosted URL shortener service in just a few steps.  
+
+1. To persist the mapping between short `name` and `url`, we create a data store directly within the application:
+
+    ```typescript
+    let urls = new cloud.Table("urls", "name");
+    ```
+
+    This one line tells `pulumi update` that it should provision a new Dynamo DB resource. We can then simply use this resource within our code; there is no need to set up access rules or perform any other configuration. 
+
+1. Add a `/shorten` route to `index.ts`, using the `urls` table:
+
+    ```typescript
+    app.post("/shorten", async (req, res) => {
+        let url = req.query["url"];
+        let name = req.query["name"];
+        console.log(`POST /shorten ${url} ${name}`);
+        await urls.insert({name, url});
+        res.json({shortenedURLName: name});
+    });
+    ```
+
+    Note that we continue to use Express.js-like syntax to define the route. The function simply captures a reference to the `urls` object and calls runtime APIs on it.  Pulumi automatically handles all of the configuration and wiring necessary to make this happen: there is no need to manually configure URLs or set environment variables. 
+
+    Also, we can use asynchronous code via `async` and `await`, so that the code waits for the table insert to complete before returning the HTTP response.
+
+1. To push this updated code, provision the data store, update the hosted REST API, and wire up the
+route handlers to the new code, simply call `pulumi update`. Pulumi determine what resources have changed and makes the minimal required resource modifications.
+
+    ```bash
+    $ pulumi update
+
+    ...
+    <snip>
+    ...
+    info: Serving at: https://yoururl.execute-api.us-west-2.amazonaws.com/stage/
+    ...
+    ```
+
+1. Now, call the API to create a short URL: 
+
+    ```bash
+    $ curl -X POST "https://yoururl.execute-api.us-west-2.amazonaws.com/stage/shorten?name=g&url=http://www.google.com"
+    {"shortenedURL":"g"}
+    ```
+
+1. Finally, we'll implement the `GET `handlers for any registered short name, returning a 301 response with
 `Location` header to redirect:
 
-```typescript
-app.get("/{name}", async (req, res) => {
-    let name = req.params["name"];
-    let data = await urls.get({name});
-    console.log(`GET /${name} => ${data.url}`)
-    res.setHeader("Location", data.url);
-    res.status(301);
-    res.end("");
-});
-```
+    ```typescript 
+    app.get("/{name}", async (req, res) => {        
+        let name = req.params["name"];
+        let data = await urls.get({name});
 
-And then we deploy and invoke it:
+        if (data) {
+            console.log(`GET /${name} => ${data.url}`)
+            res.setHeader("Location", data.url);
+            res.status(301);
+            res.end("");
+        }
+        else {
+            res.status(404);
+            res.end("");
+        }
+    });
+    ```
 
-```bash
-$ pulumi update
-...
-$ curl https://hskuj2l449.execute-api.us-west-2.amazonaws.com/stage/g
-<!doctype html>...contents of google.com ...
-...
-```
+1. Re-deploy and invoke the API:
 
-We have a working URL shortener with persistent storage and robust and scalable compute!
+    ```bash
+    $ pulumi update
+    ...
+    $ curl https://yoururl.execute-api.us-west-2.amazonaws.com/stage/g
+    <!doctype html>...contents of google.com ...
+    ...
+    ```
 
-That's a quick tour of the `@pulumi/cloud` framework.  There is a lot you can do with this powerful cloud programming
+And just like that, we have created a URL shorter with persistent storage, hosted on robust and scalable compute! 
+
+That's a quick tour of the `@pulumi/cloud` framework.  There is a lot you can do with this powerful cloud programming 
 framework, and we are excited to see what the community builds on top of it.  Many more examples will be coming
 soon; however, in the meantime, please check out the [API documentation](/packages/pulumi-cloud/) for more details.
 
