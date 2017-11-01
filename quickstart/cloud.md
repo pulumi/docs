@@ -81,14 +81,6 @@ In this example, we'll show how a Pulumi application is deployed to AWS managed 
     }
     ```
 
-1. Link with the Pulumi SDK packages so that your `require`s will find the right thing:
-
-    ```bash
-    $ yarn link pulumi @pulumi/cloud
-    ```
-
-1. Run `yarn install` to install the dependencies to your `node_modules` directory.
-
 1. Since this example uses TypeScript, create a `tsconfig.json` file with the TypeScript compiler settings and a list of your program files:
 
     ```json
@@ -115,9 +107,17 @@ In this example, we'll show how a Pulumi application is deployed to AWS managed 
     }
     ```
 
+1. Run `yarn install` to install the dependencies to your `node_modules` directory.
+
+1. Link with the Pulumi SDK packages so that your `require`s will find the right thing:
+
+    ```bash
+    $ yarn link pulumi @pulumi/cloud
+    ```
+
 #### Define application code
 
-Now let's get to the application logic and infrastruture definition, which are defined at the same time in TypeScript.
+Now let's get to the application logic and infrastructure definition, which are defined at the same time in TypeScript.
 
 1. Save the following as `index.ts`:
 
@@ -130,7 +130,7 @@ Now let's get to the application logic and infrastruture definition, which are d
         res.json({hello: "world"});
     });
 
-    app.publish().then(url => console.log(`Serving at: ${url}`));
+    app.publish().url.then(url => console.log(`Serving at: ${url}`));
     ```
 
     Here, we used the `HttpEndpoint` class to create a publicly accessible HTTP endpoint.  Note that the signature of the `get` method is similar to popular JavaScript web routing frameworks, like Express.js, and uses standard request/response parameters and familiar `res.json` APIs.  Under the covers, however, this program will use a true AWS API Gateway that supports infinite scale out, DDOS protection, SSL, and more.
@@ -143,17 +143,31 @@ Now let's get to the application logic and infrastruture definition, which are d
     Pulumi.yaml    bin/           index.ts       node_modules/  package.json   tsconfig.json  yarn.lock
     ```
 
-1. Create a new Pulumi environment:
+1. Create a Pulumi repository. A repository is a collection of Pulumi projects:
 
     ```bash
-    $ pulumi env init testing
-	Environment 'testing' initialized; see `pulumi update` to deploy into it
+    $ pulumi init
+    Initialized Pulumi repository in /Users/donnam/src/hello-world/.pulumi
+    ```
+
+1. Create a stack called `testing`:
+
+    ```bash
+    $ pulumi stack init testing
 	```
+
+    You can now run `pulumi stack ls` to see the newly created stack:
+
+    ```bash
+    $ pulumi stack ls
+    NAME                 LAST UPDATE                                      RESOURCE COUNT
+    testing*             n/a                                              n/a
+    ```
 
 1. Set the AWS region to deploy the application into:
 
     ```bash
-    $ pulumi config aws:config:region us-west-2
+    $ pulumi config text aws:config:region us-west-2
     ```
 
 1. Run `pulumi update` to deploy this code and activate our HTTPS endpoint:
@@ -255,6 +269,19 @@ route handlers to the new code, simply call `pulumi update`. Pulumi determine wh
     $ curl https://yoururl.execute-api.us-west-2.amazonaws.com/stage/g
     <!doctype html>...contents of google.com ...
     ...
+    ```
+
+1. To clean up after ourselves, run `pulumi destroy` and answer the confirmation question at the prompt.
+
+    ```bash
+    $ pulumi destroy
+    This will permanently destroy all resources in the 'testing' stack!
+    Please confirm that this is what you'd like to do by typing ("testing"): testing
+    Performing changes:
+    <snip>
+    info: 19 changes performed:
+        - 19 resources deleted
+    Update duration: 8.367411609s
     ```
 
 And just like that, we have created a URL shorter with persistent storage, hosted on robust and scalable compute! 
