@@ -16,12 +16,12 @@ comment3: prototypical Jekyll/Liquid template file.
  * Fonts
  */
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
-@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
  
 .oxygen      { font-family: 'Oxygen', sans-serif; }
-.open-sans   { font-family: 'Open Sans', sans-serif; }
-.oxygen-mono { font-family: 'Oxygen Mono', monospace; }
+.roboto      { font-family: 'Roboto', sans-serif; }
+.roboto-mono { font-family: 'Roboto Mono', monospace; }
  
 /**
  * Colors
@@ -69,7 +69,7 @@ $accent2: #d5008f;
 h1, h2, h3, h4, h5, h6 { font-family: 'Oxygen', sans-serif; }
 button, input { font-family: 'Oxygen', sans-serif; }
 
-a, p, small, label, legend, li { font-family: 'Open Sans', sans-serif; }
+a, p, small, label, legend, li { font-family: 'Roboto', sans-serif; }
 
 a {
     font-weight: bold;
@@ -80,7 +80,7 @@ a:hover {
 
 code {
   background-color: #EEEEEE;  // .light-gray
-  font-family: 'Oxygen Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 14px;
 }
 
@@ -107,7 +107,6 @@ body {
 h1:not(.title) {
   font-size: 3rem;
   font-weight: bold;
-  border-bottom: 1px solid rgba(0,0,0,.1);
   padding-bottom: 8px;
   margin-bottom: 24px;
 }
@@ -115,7 +114,7 @@ h1:not(.title) {
 h2:not(.title) {
   font-size: 2.25rem;
   font-weight: bold;
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding-top: 4px;
   padding-bottom: 8px;
   margin-bottom: 16px;
 }
@@ -123,7 +122,7 @@ h2:not(.title) {
 h3:not(.title) {
   font-size: 1.5rem;
   font-weight: bold;
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding-top: 6px;
   padding-bottom: 4px;
   margin-bottom: 12px;
 }
@@ -131,6 +130,7 @@ h3:not(.title) {
 h4:not(.title) {
   font-size: 1.25rem;
   font-weight: bold;
+  padding-bottom: 4px;
 }
 
 // Remove the background color from Bootstrap's Jumptron class.
