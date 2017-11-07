@@ -96,9 +96,11 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#idletimeout" class="tsd-kind-icon">idle<wbr>Timeout</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#internal" class="tsd-kind-icon">internal</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#ipaddresstype" class="tsd-kind-icon">ip<wbr>Address<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#loadbalancertype" class="tsd-kind-icon">load<wbr>Balancer<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#nameprefix" class="tsd-kind-icon">name<wbr>Prefix</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#securitygroups" class="tsd-kind-icon">security<wbr>Groups</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#subnetmapping" class="tsd-kind-icon">subnet<wbr>Mapping</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#subnets" class="tsd-kind-icon">subnets</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#tags" class="tsd-kind-icon">tags</a></li>
 							</ul>
@@ -114,7 +116,7 @@
 					<div class="tsd-signature tsd-kind-icon">access<wbr>Logs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/elasticloadbalancingv2/loadBalancer.ts#L114">elasticloadbalancingv2/loadBalancer.ts:114</a></li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:120</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -129,7 +131,7 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Deletion<wbr>Protection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/elasticloadbalancingv2/loadBalancer.ts#L119">elasticloadbalancingv2/loadBalancer.ts:119</a></li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:125</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -145,7 +147,7 @@
 					<div class="tsd-signature tsd-kind-icon">idle<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/elasticloadbalancingv2/loadBalancer.ts#L123">elasticloadbalancingv2/loadBalancer.ts:123</a></li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:129</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -160,12 +162,12 @@
 					<div class="tsd-signature tsd-kind-icon">internal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/elasticloadbalancingv2/loadBalancer.ts#L127">elasticloadbalancingv2/loadBalancer.ts:127</a></li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:133</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>If true, the ALB will be internal.</p>
+							<p>If true, the LB will be internal.</p>
 						</div>
 					</div>
 				</section>
@@ -175,7 +177,7 @@
 					<div class="tsd-signature tsd-kind-icon">ip<wbr>Address<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/elasticloadbalancingv2/loadBalancer.ts#L131">elasticloadbalancingv2/loadBalancer.ts:131</a></li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:137</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -185,17 +187,32 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="loadbalancertype" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> load<wbr>Balancer<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:141</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The type of load balancer to create. Possible values are <code>application</code> or <code>network</code>. The default value is <code>application</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/elasticloadbalancingv2/loadBalancer.ts#L137">elasticloadbalancingv2/loadBalancer.ts:137</a></li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:147</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The name of the ALB. This name must be unique within your AWS account, can have a maximum of 32 characters,
+							<p>The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 								must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
 							Terraform will autogenerate a name beginning with <code>tf-lb</code>.</p>
 						</div>
@@ -207,7 +224,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/elasticloadbalancingv2/loadBalancer.ts#L141">elasticloadbalancingv2/loadBalancer.ts:141</a></li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:151</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -222,27 +239,42 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/elasticloadbalancingv2/loadBalancer.ts#L145">elasticloadbalancingv2/loadBalancer.ts:145</a></li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:155</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A list of security group IDs to assign to the ALB.</p>
+							<p>A list of security group IDs to assign to the LB.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="subnetmapping" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> subnet<wbr>Mapping</h3>
+					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Mapping<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:159</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A subnet mapping block as documented below.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="subnets" class="tsd-anchor"></a>
-					<h3>subnets</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> subnets</h3>
 					<div class="tsd-signature tsd-kind-icon">subnets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/elasticloadbalancingv2/loadBalancer.ts#L149">elasticloadbalancingv2/loadBalancer.ts:149</a></li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:163</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A list of subnet IDs to attach to the ALB.</p>
+							<p>A list of subnet IDs to attach to the LB.</p>
 						</div>
 					</div>
 				</section>
@@ -252,7 +284,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/elasticloadbalancingv2/loadBalancer.ts#L153">elasticloadbalancingv2/loadBalancer.ts:153</a></li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:167</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -300,6 +332,9 @@
 								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#ipaddresstype" class="tsd-kind-icon">ip<wbr>Address<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#loadbalancertype" class="tsd-kind-icon">load<wbr>Balancer<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -307,6 +342,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#securitygroups" class="tsd-kind-icon">security<wbr>Groups</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#subnetmapping" class="tsd-kind-icon">subnet<wbr>Mapping</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#subnets" class="tsd-kind-icon">subnets</a>
