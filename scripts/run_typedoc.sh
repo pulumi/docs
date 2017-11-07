@@ -33,22 +33,22 @@ cd ../pulumi-cloud/api
 typedoc . $TYPEDOC_OPTS --out $PULUMI_CLOUD_DOCS
 popd
 
-echo "Finished running typedoc. Copying into /libraries."
-mkdir -p ./libraries/
+echo "Finished running typedoc. Copying into /packages."
+mkdir -p ./packages/
 
 # Purge existing
-rm -rf ./libraries/pulumi-aws/
-rm -rf ./libraries/pulumi/
-rm -rf ./libraries/pulumi-cloud/
+rm -rf ./packages/pulumi-aws/
+rm -rf ./packages/pulumi/
+rm -rf ./packages/pulumi-cloud/
 
-mkdir ./libraries/pulumi-aws/
-mkdir ./libraries/pulumi/
-mkdir ./libraries/pulumi-cloud/
+mkdir ./packages/pulumi-aws/
+mkdir ./packages/pulumi/
+mkdir ./packages/pulumi-cloud/
 
 # Copy updated
-cp -R $PULUMI_AWS_DOCS/   ./libraries/pulumi-aws/
-cp -R $PULUMI_DOCS/       ./libraries/pulumi/
-cp -R $PULUMI_CLOUD_DOCS/ ./libraries/pulumi-cloud/
+cp -R $PULUMI_AWS_DOCS/   ./packages/pulumi-aws/
+cp -R $PULUMI_DOCS/       ./packages/pulumi/
+cp -R $PULUMI_CLOUD_DOCS/ ./packages/pulumi-cloud/
 
 # Cleanup
 rm -rf $PULUMI_AWS_DOCS
