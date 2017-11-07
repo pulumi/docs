@@ -88,6 +88,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#memorysize" class="tsd-kind-icon">memory<wbr>Size</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#policies" class="tsd-kind-icon">policies</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#timeout" class="tsd-kind-icon">timeout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#vpcconfig" class="tsd-kind-icon">vpc<wbr>Config</a></li>
 							</ul>
 						</section>
 					</div>
@@ -101,7 +102,7 @@
 					<div class="tsd-signature tsd-kind-icon">dead<wbr>Letter<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/serverless/function.ts#L211">serverless/function.ts:211</a></li>
+							<li>Defined in serverless/function.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -119,7 +120,7 @@
 					<div class="tsd-signature tsd-kind-icon">memory<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/serverless/function.ts#L210">serverless/function.ts:210</a></li>
+							<li>Defined in serverless/function.ts:67</li>
 						</ul>
 					</aside>
 				</section>
@@ -129,7 +130,7 @@
 					<div class="tsd-signature tsd-kind-icon">policies<span class="tsd-signature-symbol">:</span> <a href="../modules/_arn_.html#arn" class="tsd-signature-type">ARN</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/serverless/function.ts#L208">serverless/function.ts:208</a></li>
+							<li>Defined in serverless/function.ts:65</li>
 						</ul>
 					</aside>
 				</section>
@@ -139,9 +140,30 @@
 					<div class="tsd-signature tsd-kind-icon">timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/serverless/function.ts#L209">serverless/function.ts:209</a></li>
+							<li>Defined in serverless/function.ts:66</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="vpcconfig" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> vpc<wbr>Config</h3>
+					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in serverless/function.ts:69</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>subnet<wbr>Ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -158,17 +180,11 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../classes/_serverless_function_.funcsforclosure.html" class="tsd-kind-icon">Funcs<wbr>For<wbr>Closure</a>
-					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/_serverless_function_.function.html" class="tsd-kind-icon">Function</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="_serverless_function_.context.html" class="tsd-kind-icon">Context</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_serverless_function_.funcenv.html" class="tsd-kind-icon">Func<wbr>Env</a>
 					</li>
 				</ul>
 				<ul class="current">
@@ -187,6 +203,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_serverless_function_.functionoptions.html#timeout" class="tsd-kind-icon">timeout</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_serverless_function_.functionoptions.html#vpcconfig" class="tsd-kind-icon">vpc<wbr>Config</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -196,15 +215,6 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_serverless_function_.html#createjavascriptlambda" class="tsd-kind-icon">create<wbr>Java<wbr>Script<wbr>Lambda</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_serverless_function_.html#envarrtostring" class="tsd-kind-icon">env<wbr>Arr<wbr>ToString</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_serverless_function_.html#envobjtostring" class="tsd-kind-icon">env<wbr>Obj<wbr>ToString</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_serverless_function_.html#serializeclosuretext" class="tsd-kind-icon">serialize<wbr>Closure<wbr>Text</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_serverless_function_.html#policy" class="tsd-kind-icon">policy</a>

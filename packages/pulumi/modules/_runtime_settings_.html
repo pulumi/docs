@@ -76,10 +76,11 @@
 								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_runtime_settings_.options.html" class="tsd-kind-icon">Options</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_settings_.html#configured" class="tsd-kind-icon">configured</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_runtime_settings_.html#excessivedebugoutput" class="tsd-kind-icon">excessive<wbr>Debug<wbr>Output</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_settings_.html#rpcdone" class="tsd-kind-icon">rpc<wbr>Done</a></li>
 							</ul>
 						</section>
@@ -88,6 +89,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#configure" class="tsd-kind-icon">configure</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#disconnect" class="tsd-kind-icon">disconnect</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#disconnectsync" class="tsd-kind-icon">disconnect<wbr>Sync</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#getengine" class="tsd-kind-icon">get<wbr>Engine</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#getmonitor" class="tsd-kind-icon">get<wbr>Monitor</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#hasmonitor" class="tsd-kind-icon">has<wbr>Monitor</a></li>
@@ -104,7 +106,7 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="configured" class="tsd-anchor"></a>
@@ -112,12 +114,27 @@
 					<div class="tsd-signature tsd-kind-icon">configured<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L27">runtime/settings.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L34">runtime/settings.ts:34</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>configured is set to true once configuration has been set.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="excessivedebugoutput" class="tsd-anchor"></a>
+					<h3>excessive<wbr>Debug<wbr>Output</h3>
+					<div class="tsd-signature tsd-kind-icon">excessive<wbr>Debug<wbr>Output<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L8">runtime/settings.ts:8</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>excessiveDebugOutput enables, well, pretty excessive debug output pertaining to resources and properties.</p>
 						</div>
 					</div>
 				</section>
@@ -127,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">rpc<wbr>Done<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;Promise.resolve()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L100">runtime/settings.ts:100</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L122">runtime/settings.ts:122</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -149,7 +166,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L65">runtime/settings.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L72">runtime/settings.ts:72</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -178,13 +195,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L77">runtime/settings.ts:77</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L84">runtime/settings.ts:84</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>disconnect permanently disconnects from the server, closing the connections.  It waits for the existing RPC
 									queue to drain.  If any RPCs come in afterwards, however, they will crash the process.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="disconnectsync" class="tsd-anchor"></a>
+					<h3>disconnect<wbr>Sync</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">disconnect<wbr>Sync<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L102">runtime/settings.ts:102</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>disconnectSync permanently disconnects from the server, closing the connections. Unlike <code>disconnect</code>. it does not
+									wait for the existing RPC queue to drain. Any RPCs that come in after this call will crash the process.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -201,7 +241,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L50">runtime/settings.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L57">runtime/settings.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -226,7 +266,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L39">runtime/settings.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L46">runtime/settings.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -251,7 +291,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L32">runtime/settings.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L39">runtime/settings.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -273,7 +313,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L106">runtime/settings.ts:106</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L128">runtime/settings.ts:128</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -308,7 +348,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L57">runtime/settings.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L64">runtime/settings.ts:64</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -329,7 +369,7 @@
 					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L19">runtime/settings.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L26">runtime/settings.ts:26</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -343,17 +383,17 @@
 						<div class="tsd-signature tsd-kind-icon">dry<wbr>Run<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L20">runtime/settings.ts:20</a></li>
+								<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L27">runtime/settings.ts:27</a></li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="options-1.includestacks" class="tsd-anchor"></a>
-						<h3>include<wbr>Stacks</h3>
-						<div class="tsd-signature tsd-kind-icon">include<wbr>Stacks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></div>
+						<a name="options-1.includestacktraces" class="tsd-anchor"></a>
+						<h3>include<wbr>Stack<wbr>Traces</h3>
+						<div class="tsd-signature tsd-kind-icon">include<wbr>Stack<wbr>Traces<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L21">runtime/settings.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L28">runtime/settings.ts:28</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -366,71 +406,8 @@
 					<li class="globals  ">
 						<a href="../index.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_asset_archive_.html">"asset/archive"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_asset_asset_.html">"asset/asset"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_asset_index_.html">"asset/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_cmd_langhost_index_.html">"cmd/langhost/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_cmd_run_index_.html">"cmd/run/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_config_.html">"config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_errors_.html">"errors"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_resource_.html">"resource"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_closure_.html">"runtime/closure"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_config_.html">"runtime/config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_debuggable_.html">"runtime/debuggable"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_index_.html">"runtime/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_langhost_.html">"runtime/langhost"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_log_.html">"runtime/log"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_resource_.html">"runtime/resource"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="_runtime_settings_.html">"runtime/settings"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tests_config_spec_.html">"tests/config.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tests_init_spec_.html">"tests/init.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tests_runtime_closure_spec_.html">"tests/runtime/closure.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tests_runtime_langhost_run_spec_.html">"tests/runtime/langhost/run.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tests_util_.html">"tests/util"</a>
 					</li>
 				</ul>
 			</nav>
@@ -442,6 +419,9 @@
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_runtime_settings_.html#configured" class="tsd-kind-icon">configured</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_runtime_settings_.html#excessivedebugoutput" class="tsd-kind-icon">excessive<wbr>Debug<wbr>Output</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_runtime_settings_.html#rpcdone" class="tsd-kind-icon">rpc<wbr>Done</a>
 					</li>
@@ -450,6 +430,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_runtime_settings_.html#disconnect" class="tsd-kind-icon">disconnect</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_runtime_settings_.html#disconnectsync" class="tsd-kind-icon">disconnect<wbr>Sync</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_runtime_settings_.html#getengine" class="tsd-kind-icon">get<wbr>Engine</a>

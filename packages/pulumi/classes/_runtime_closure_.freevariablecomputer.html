@@ -96,19 +96,19 @@
 					<a name="compute" class="tsd-anchor"></a>
 					<h3>compute</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">compute<span class="tsd-signature-symbol">(</span>program<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">estree.Program</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">compute<span class="tsd-signature-symbol">(</span>program<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SourceFile</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure.ts#L251">runtime/closure.ts:251</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure.ts#L302">runtime/closure.ts:302</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>program: <span class="tsd-signature-type">estree.Program</span></h5>
+									<h5>program: <span class="tsd-signature-type">SourceFile</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -123,71 +123,8 @@
 					<li class="globals  ">
 						<a href="../index.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_asset_archive_.html">"asset/archive"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_asset_asset_.html">"asset/asset"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_asset_index_.html">"asset/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_cmd_langhost_index_.html">"cmd/langhost/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_cmd_run_index_.html">"cmd/run/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_config_.html">"config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_errors_.html">"errors"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_resource_.html">"resource"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_runtime_closure_.html">"runtime/closure"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_config_.html">"runtime/config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_debuggable_.html">"runtime/debuggable"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_index_.html">"runtime/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_langhost_.html">"runtime/langhost"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_log_.html">"runtime/log"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_resource_.html">"runtime/resource"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_settings_.html">"runtime/settings"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_config_spec_.html">"tests/config.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_init_spec_.html">"tests/init.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_runtime_closure_spec_.html">"tests/runtime/closure.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_runtime_langhost_run_spec_.html">"tests/runtime/langhost/run.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_util_.html">"tests/util"</a>
 					</li>
 				</ul>
 			</nav>
@@ -205,6 +142,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_runtime_closure_.funcsforclosure.html" class="tsd-kind-icon">Funcs<wbr>For<wbr>Closure</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/_runtime_closure_.asyncclosure.html" class="tsd-kind-icon">Async<wbr>Closure</a>
 					</li>
@@ -217,6 +157,9 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/_runtime_closure_.environmententry.html" class="tsd-kind-icon">Environment<wbr>Entry</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_runtime_closure_.funcenv.html" class="tsd-kind-icon">Func<wbr>Env</a>
+					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="../modules/_runtime_closure_.html#asyncenvironment" class="tsd-kind-icon">Async<wbr>Environment</a>
 					</li>
@@ -227,7 +170,10 @@
 						<a href="../modules/_runtime_closure_.html#walkcallback" class="tsd-kind-icon">walk<wbr>Callback</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_runtime_closure_.html#acornwalk" class="tsd-kind-icon">acornwalk</a>
+						<a href="../modules/_runtime_closure_.html#builtinmodulenames" class="tsd-kind-icon">built<wbr>InModule<wbr>Names</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_runtime_closure_.html#builtinmodules" class="tsd-kind-icon">built<wbr>InModules</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_runtime_closure_.html#entrycache" class="tsd-kind-icon">entry<wbr>Cache</a>
@@ -239,6 +185,15 @@
 						<a href="../modules/_runtime_closure_.html#computefreevariables" class="tsd-kind-icon">compute<wbr>Free<wbr>Variables</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_runtime_closure_.html#envarrtostring" class="tsd-kind-icon">env<wbr>Arr<wbr>ToString</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_runtime_closure_.html#envobjtostring" class="tsd-kind-icon">env<wbr>Obj<wbr>ToString</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_runtime_closure_.html#findrequirablemodulename" class="tsd-kind-icon">find<wbr>Requirable<wbr>Module<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_runtime_closure_.html#flattenclosure" class="tsd-kind-icon">flatten<wbr>Closure</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
@@ -246,6 +201,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_runtime_closure_.html#flattenenvironmententry" class="tsd-kind-icon">flatten<wbr>Environment<wbr>Entry</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_runtime_closure_.html#getclosurehash_fortestingpurposes" class="tsd-kind-icon">get<wbr>Closure<wbr>Hash_<wbr>for<wbr>Testing<wbr>Purposes</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_runtime_closure_.html#serializecapturedobject" class="tsd-kind-icon">serialize<wbr>Captured<wbr>Object</a>
@@ -258,6 +216,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_runtime_closure_.html#serializeclosureasync" class="tsd-kind-icon">serialize<wbr>Closure<wbr>Async</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_runtime_closure_.html#serializejavascripttext" class="tsd-kind-icon">serialize<wbr>Java<wbr>Script<wbr>Text</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_runtime_closure_.html#nodemoduleglobals" class="tsd-kind-icon">node<wbr>Module<wbr>Globals</a>

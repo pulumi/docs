@@ -80,7 +80,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">Resource</span>
+						<span class="tsd-signature-type">CustomResource</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">MetricAlarm</span>
@@ -105,6 +105,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_metricalarm_.metricalarm.html#actionsenabled" class="tsd-kind-icon">actions<wbr>Enabled</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_metricalarm_.metricalarm.html#alarmactions" class="tsd-kind-icon">alarm<wbr>Actions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_metricalarm_.metricalarm.html#alarmdescription" class="tsd-kind-icon">alarm<wbr>Description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_cloudwatch_metricalarm_.metricalarm.html#children" class="tsd-kind-icon">children</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_metricalarm_.metricalarm.html#comparisonoperator" class="tsd-kind-icon">comparison<wbr>Operator</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_metricalarm_.metricalarm.html#dimensions" class="tsd-kind-icon">dimensions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudwatch_metricalarm_.metricalarm.html#evaluatelowsamplecountpercentiles" class="tsd-kind-icon">evaluate<wbr>Low<wbr>Sample<wbr>Count<wbr>Percentiles</a></li>
@@ -124,6 +125,15 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_cloudwatch_metricalarm_.metricalarm.html#urn" class="tsd-kind-icon">urn</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_cloudwatch_metricalarm_.metricalarm.html#adopt" class="tsd-kind-icon">adopt</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_cloudwatch_metricalarm_.metricalarm.html#register" class="tsd-kind-icon">register</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="_cloudwatch_metricalarm_.metricalarm.html#runinparentscope" class="tsd-kind-icon">run<wbr>InParent<wbr>Scope</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="_cloudwatch_metricalarm_.metricalarm.html#runinparentlessscope" class="tsd-kind-icon">run<wbr>InParentless<wbr>Scope</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -138,14 +148,14 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides Resource.__constructor</p>
+								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L91">cloudwatch/metricAlarm.ts:91</a></li>
+									<li>Defined in cloudwatch/metricAlarm.ts:91</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Create a MetricAlarm resource with the given unique name, arguments and optional additional
+									<p>Create a MetricAlarm resource with the given unique name, arguments, and optional additional
 									resource dependencies.</p>
 								</div>
 							</div>
@@ -163,7 +173,7 @@
 									<h5>args: <a href="../interfaces/_cloudwatch_metricalarm_.metricalarmargs.html" class="tsd-signature-type">MetricAlarmArgs</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>A collection of arguments for creating this MetricAlarm intance</p>
+											<p>A collection of arguments for creating this MetricAlarm instance</p>
 										</div>
 									</div>
 								</li>
@@ -171,7 +181,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>A optional array of additional resources this intance depends on</p>
+											<p>A optional array of additional resources this instance depends on</p>
 										</div>
 									</div>
 								</li>
@@ -189,7 +199,7 @@
 					<div class="tsd-signature tsd-kind-icon">actions<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L15">cloudwatch/metricAlarm.ts:15</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:15</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -204,7 +214,7 @@
 					<div class="tsd-signature tsd-kind-icon">alarm<wbr>Actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><a href="_sns_topic_.topic.html" class="tsd-signature-type">Topic</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L19">cloudwatch/metricAlarm.ts:19</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:19</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -219,12 +229,29 @@
 					<div class="tsd-signature tsd-kind-icon">alarm<wbr>Description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L23">cloudwatch/metricAlarm.ts:23</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The description for the alarm.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="children" class="tsd-anchor"></a>
+					<h3>children</h3>
+					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from Resource.children</p>
+						<ul>
+							<li>Defined in node_modules/pulumi/resource.d.ts:19</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>children tracks those resources that are created as a result of this one.  It may be appended to using
+							the adopt API, but the list is frozen as soon as the resource&#39;s final state has been computed.</p>
 						</div>
 					</div>
 				</section>
@@ -234,7 +261,7 @@
 					<div class="tsd-signature tsd-kind-icon">comparison<wbr>Operator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L31">cloudwatch/metricAlarm.ts:31</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -249,7 +276,7 @@
 					<div class="tsd-signature tsd-kind-icon">dimensions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L35">cloudwatch/metricAlarm.ts:35</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -264,7 +291,7 @@
 					<div class="tsd-signature tsd-kind-icon">evaluate<wbr>Low<wbr>Sample<wbr>Count<wbr>Percentiles<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L44">cloudwatch/metricAlarm.ts:44</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -284,7 +311,7 @@
 					<div class="tsd-signature tsd-kind-icon">evaluation<wbr>Periods<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L48">cloudwatch/metricAlarm.ts:48</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -299,7 +326,7 @@
 					<div class="tsd-signature tsd-kind-icon">extended<wbr>Statistic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L52">cloudwatch/metricAlarm.ts:52</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -313,15 +340,15 @@
 					<h3>id</h3>
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ID</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Resource.id</p>
+						<p>Inherited from CustomResource.id</p>
 						<ul>
-							<li>Defined in node_modules/pulumi/resource.d.ts:15</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>id is the provider-assigned unique ID for this resource.  It is set during deployments and may be missing
-							(undefined) during planning phases.</p>
+							<p>id is the provider-assigned unique ID for this managed resource.  It is set during deployments and may be
+							missing (undefined) during planning phases.</p>
 						</div>
 					</div>
 				</section>
@@ -331,7 +358,7 @@
 					<div class="tsd-signature tsd-kind-icon">insufficient<wbr>Data<wbr>Actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><a href="_sns_topic_.topic.html" class="tsd-signature-type">Topic</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L56">cloudwatch/metricAlarm.ts:56</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -346,7 +373,7 @@
 					<div class="tsd-signature tsd-kind-icon">metric<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L61">cloudwatch/metricAlarm.ts:61</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -362,7 +389,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L27">cloudwatch/metricAlarm.ts:27</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -377,7 +404,7 @@
 					<div class="tsd-signature tsd-kind-icon">namespace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L66">cloudwatch/metricAlarm.ts:66</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:66</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -393,7 +420,7 @@
 					<div class="tsd-signature tsd-kind-icon">ok<wbr>Actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><a href="_sns_topic_.topic.html" class="tsd-signature-type">Topic</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L70">cloudwatch/metricAlarm.ts:70</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:70</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -408,7 +435,7 @@
 					<div class="tsd-signature tsd-kind-icon">period<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L74">cloudwatch/metricAlarm.ts:74</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:74</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -423,7 +450,7 @@
 					<div class="tsd-signature tsd-kind-icon">statistic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L79">cloudwatch/metricAlarm.ts:79</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:79</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -439,7 +466,7 @@
 					<div class="tsd-signature tsd-kind-icon">threshold<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L83">cloudwatch/metricAlarm.ts:83</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:83</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -454,7 +481,7 @@
 					<div class="tsd-signature tsd-kind-icon">treat<wbr>Missing<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L87">cloudwatch/metricAlarm.ts:87</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:87</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -469,7 +496,7 @@
 					<div class="tsd-signature tsd-kind-icon">unit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/cloudwatch/metricAlarm.ts#L91">cloudwatch/metricAlarm.ts:91</a></li>
+							<li>Defined in cloudwatch/metricAlarm.ts:91</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -485,7 +512,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.urn</p>
 						<ul>
-							<li>Defined in node_modules/pulumi/resource.d.ts:10</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:14</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -493,6 +520,195 @@
 							<p>urn is the stable logical URN used to distinctly address a resource, both before and after deployments.</p>
 						</div>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="adopt" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> adopt</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">adopt<span class="tsd-signature-symbol">(</span>child<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Resource.adopt</p>
+								<ul>
+									<li>Defined in node_modules/pulumi/resource.d.ts:41</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Marks another resource as a child of this one.  This automatically tags resources that
+									are related to one another, for purposes of presentation, filtering, and so on.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>child: <span class="tsd-signature-type">Resource</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="register" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> register</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">register<span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, custom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, props<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ComputedValues</span>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Resource.register</p>
+								<ul>
+									<li>Defined in node_modules/pulumi/resource.d.ts:53</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates and registers a new resource object.  t is the fully qualified type token and name is the &quot;name&quot; part
+										to use in creating a stable and globally unique URN for the object.  dependsOn is an optional list of other
+									resources that this resource depends on, controlling the order in which we perform resource operations.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>t: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of the resource.</p>
+									</div>
+								</li>
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <em>unqiue</em> name of the resource.</p>
+									</div>
+								</li>
+								<li>
+									<h5>custom: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>True to indicate that this is a custom resource, managed by a plugin.</p>
+									</div>
+								</li>
+								<li>
+									<h5>props: <span class="tsd-signature-type">ComputedValues</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The arguments to use to populate the new resource.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional additional explicit dependencies on other resources.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+					<a name="runinparentscope" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> run<wbr>InParent<wbr>Scope</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">run<wbr>InParent<wbr>Scope&lt;T&gt;<span class="tsd-signature-symbol">(</span>parent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Resource</span>, body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Resource.runInParentScope</p>
+								<ul>
+									<li>Defined in node_modules/pulumi/resource.d.ts:23</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>runInParentScope executes a callback, body, and any resources allocated within become parent&#39;s children.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parent: <span class="tsd-signature-type">Resource</span></h5>
+								</li>
+								<li>
+									<h5>body: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+					<a name="runinparentlessscope" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> run<wbr>InParentless<wbr>Scope</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">run<wbr>InParentless<wbr>Scope&lt;T&gt;<span class="tsd-signature-symbol">(</span>body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Resource.runInParentlessScope</p>
+								<ul>
+									<li>Defined in node_modules/pulumi/resource.d.ts:28</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>runInParentlessScope executes a callback, body, in a scope where no parent is active.  This can be useful
+									if there&#39;s an active parent but you want to run some code that allocates &quot;anonymous&quot; resources.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>body: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -525,6 +741,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_cloudwatch_metricalarm_.metricalarm.html#alarmdescription" class="tsd-kind-icon">alarm<wbr>Description</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_cloudwatch_metricalarm_.metricalarm.html#children" class="tsd-kind-icon">children</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_cloudwatch_metricalarm_.metricalarm.html#comparisonoperator" class="tsd-kind-icon">comparison<wbr>Operator</a>
@@ -576,6 +795,18 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_cloudwatch_metricalarm_.metricalarm.html#urn" class="tsd-kind-icon">urn</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_cloudwatch_metricalarm_.metricalarm.html#adopt" class="tsd-kind-icon">adopt</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_cloudwatch_metricalarm_.metricalarm.html#register" class="tsd-kind-icon">register</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+								<a href="_cloudwatch_metricalarm_.metricalarm.html#runinparentscope" class="tsd-kind-icon">run<wbr>InParent<wbr>Scope</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+								<a href="_cloudwatch_metricalarm_.metricalarm.html#runinparentlessscope" class="tsd-kind-icon">run<wbr>InParentless<wbr>Scope</a>
 							</li>
 						</ul>
 					</li>

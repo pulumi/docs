@@ -146,17 +146,41 @@
 					<a name="createmockresourcemonitor" class="tsd-anchor"></a>
 					<h3>create<wbr>Mock<wbr>Resource<wbr>Monitor</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Mock<wbr>Resource<wbr>Monitor<span class="tsd-signature-symbol">(</span>newResourceCallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Mock<wbr>Resource<wbr>Monitor<span class="tsd-signature-symbol">(</span>invokeCallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, newResourceCallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L355">tests/runtime/langhost/run.spec.ts:355</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L416">tests/runtime/langhost/run.spec.ts:416</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>invokeCallback: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>call<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>call: <span class="tsd-signature-type">any</span></h5>
+														</li>
+														<li>
+															<h5>request: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
 								<li>
 									<h5>newResourceCallback: <span class="tsd-signature-type">function</span></h5>
 									<ul class="tsd-parameters">
@@ -204,7 +228,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L324">tests/runtime/langhost/run.spec.ts:324</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L379">tests/runtime/langhost/run.spec.ts:379</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -233,7 +257,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L365">tests/runtime/langhost/run.spec.ts:365</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L430">tests/runtime/langhost/run.spec.ts:430</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -264,7 +288,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L390">tests/runtime/langhost/run.spec.ts:390</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L455">tests/runtime/langhost/run.spec.ts:455</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -285,71 +309,8 @@
 					<li class="globals  ">
 						<a href="../index.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_asset_archive_.html">"asset/archive"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_asset_asset_.html">"asset/asset"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_asset_index_.html">"asset/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_cmd_langhost_index_.html">"cmd/langhost/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_cmd_run_index_.html">"cmd/run/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_config_.html">"config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_errors_.html">"errors"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_resource_.html">"resource"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_closure_.html">"runtime/closure"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_config_.html">"runtime/config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_debuggable_.html">"runtime/debuggable"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_index_.html">"runtime/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_langhost_.html">"runtime/langhost"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_log_.html">"runtime/log"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_resource_.html">"runtime/resource"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_runtime_settings_.html">"runtime/settings"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tests_config_spec_.html">"tests/config.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tests_init_spec_.html">"tests/init.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tests_runtime_closure_spec_.html">"tests/runtime/closure.spec"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="_tests_runtime_langhost_run_spec_.html">"tests/runtime/langhost/run.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tests_util_.html">"tests/util"</a>
 					</li>
 				</ul>
 			</nav>
