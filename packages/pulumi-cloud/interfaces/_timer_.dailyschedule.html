@@ -72,8 +72,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>DailySchedule describes a time of day (<a href="_timer_.dailyschedule.html#hourutc">hourUTC</a> and <a href="_timer_.dailyschedule.html#minuteutc">minuteUTC</a>) at
-						which a timer should fire.</p>
+						<p>DailySchedule describes a time of day (<a href="_timer_.dailyschedule.html#hourutc">hourUTC</a> and <a href="_timer_.dailyschedule.html#minuteutc">minuteUTC</a>) at which a daily timer should fire.</p>
 					</div>
 				</div>
 			</section>
@@ -107,12 +106,12 @@
 					<div class="tsd-signature tsd-kind-icon">hourUTC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L32">timer.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L36">timer.ts:36</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The hour, in UTC, that the time should fire.</p>
+							<p>The hour, in UTC, that the timer should fire.</p>
 						</div>
 					</div>
 				</section>
@@ -122,12 +121,12 @@
 					<div class="tsd-signature tsd-kind-icon">minuteUTC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L36">timer.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L40">timer.ts:40</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The minute, in UTC, that the time should fire.</p>
+							<p>The minute, in UTC, that the timer should fire.</p>
 						</div>
 					</div>
 				</section>
@@ -153,6 +152,9 @@
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/_httpendpoint_.html">"http<wbr>Endpoint"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/_service_.html">"service"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/_table_.html">"table"</a>
@@ -186,15 +188,24 @@
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="_timer_.hourlyschedule.html" class="tsd-kind-icon">Hourly<wbr>Schedule</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="_timer_.intervalrate.html" class="tsd-kind-icon">Interval<wbr>Rate</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
+						<a href="../modules/_timer_.html#action" class="tsd-kind-icon">Action</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/_timer_.html#cron" class="tsd-kind-icon">cron</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/_timer_.html#daily" class="tsd-kind-icon">daily</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
+						<a href="../modules/_timer_.html#hourly" class="tsd-kind-icon">hourly</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/_timer_.html#interval" class="tsd-kind-icon">interval</a>
 					</li>
 				</ul>

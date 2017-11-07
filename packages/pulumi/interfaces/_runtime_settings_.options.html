@@ -93,9 +93,11 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_runtime_settings_.options.html#dryrun" class="tsd-kind-icon">dry<wbr>Run</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_runtime_settings_.options.html#engine" class="tsd-kind-icon">engine</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_runtime_settings_.options.html#includestacks" class="tsd-kind-icon">include<wbr>Stacks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_runtime_settings_.options.html#includestacktraces" class="tsd-kind-icon">include<wbr>Stack<wbr>Traces</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_runtime_settings_.options.html#monitor" class="tsd-kind-icon">monitor</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_runtime_settings_.options.html#parallel" class="tsd-kind-icon">parallel</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_runtime_settings_.options.html#project" class="tsd-kind-icon">project</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_runtime_settings_.options.html#stack" class="tsd-kind-icon">stack</a></li>
 							</ul>
 						</section>
 					</div>
@@ -109,7 +111,7 @@
 					<div class="tsd-signature tsd-kind-icon">dry<wbr>Run<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L12">runtime/settings.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L19">runtime/settings.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -119,17 +121,17 @@
 					<div class="tsd-signature tsd-kind-icon">engine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L9">runtime/settings.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L16">runtime/settings.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="includestacks" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> include<wbr>Stacks</h3>
-					<div class="tsd-signature tsd-kind-icon">include<wbr>Stacks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span></div>
+					<a name="includestacktraces" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> include<wbr>Stack<wbr>Traces</h3>
+					<div class="tsd-signature tsd-kind-icon">include<wbr>Stack<wbr>Traces<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L13">runtime/settings.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L20">runtime/settings.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -139,7 +141,7 @@
 					<div class="tsd-signature tsd-kind-icon">monitor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L10">runtime/settings.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L17">runtime/settings.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -149,7 +151,27 @@
 					<div class="tsd-signature tsd-kind-icon">parallel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L11">runtime/settings.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L18">runtime/settings.ts:18</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="project" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> project</h3>
+					<div class="tsd-signature tsd-kind-icon">project<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L14">runtime/settings.ts:14</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="stack" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> stack</h3>
+					<div class="tsd-signature tsd-kind-icon">stack<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L15">runtime/settings.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -161,71 +183,8 @@
 					<li class="globals  ">
 						<a href="../index.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_asset_archive_.html">"asset/archive"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_asset_asset_.html">"asset/asset"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_asset_index_.html">"asset/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_cmd_langhost_index_.html">"cmd/langhost/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_cmd_run_index_.html">"cmd/run/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_config_.html">"config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_errors_.html">"errors"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_resource_.html">"resource"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_closure_.html">"runtime/closure"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_config_.html">"runtime/config"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_debuggable_.html">"runtime/debuggable"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_index_.html">"runtime/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_langhost_.html">"runtime/langhost"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_log_.html">"runtime/log"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_runtime_resource_.html">"runtime/resource"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_runtime_settings_.html">"runtime/settings"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_config_spec_.html">"tests/config.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_init_spec_.html">"tests/init.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_runtime_closure_spec_.html">"tests/runtime/closure.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_runtime_langhost_run_spec_.html">"tests/runtime/langhost/run.spec"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tests_util_.html">"tests/util"</a>
 					</li>
 				</ul>
 			</nav>
@@ -243,7 +202,7 @@
 								<a href="_runtime_settings_.options.html#engine" class="tsd-kind-icon">engine</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_runtime_settings_.options.html#includestacks" class="tsd-kind-icon">include<wbr>Stacks</a>
+								<a href="_runtime_settings_.options.html#includestacktraces" class="tsd-kind-icon">include<wbr>Stack<wbr>Traces</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_runtime_settings_.options.html#monitor" class="tsd-kind-icon">monitor</a>
@@ -251,12 +210,21 @@
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_runtime_settings_.options.html#parallel" class="tsd-kind-icon">parallel</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_runtime_settings_.options.html#project" class="tsd-kind-icon">project</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_runtime_settings_.options.html#stack" class="tsd-kind-icon">stack</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_runtime_settings_.html#configured" class="tsd-kind-icon">configured</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="../modules/_runtime_settings_.html#excessivedebugoutput" class="tsd-kind-icon">excessive<wbr>Debug<wbr>Output</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_runtime_settings_.html#rpcdone" class="tsd-kind-icon">rpc<wbr>Done</a>
@@ -266,6 +234,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="../modules/_runtime_settings_.html#disconnect" class="tsd-kind-icon">disconnect</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_runtime_settings_.html#disconnectsync" class="tsd-kind-icon">disconnect<wbr>Sync</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="../modules/_runtime_settings_.html#getengine" class="tsd-kind-icon">get<wbr>Engine</a>

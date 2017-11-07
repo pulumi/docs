@@ -104,12 +104,6 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#url" class="tsd-kind-icon">url</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#all" class="tsd-kind-icon">all</a></li>
@@ -121,28 +115,9 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#publish" class="tsd-kind-icon">publish</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#put" class="tsd-kind-icon">put</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#route" class="tsd-kind-icon">route</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#staticfile" class="tsd-kind-icon">static<wbr>File</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.httpendpoint.html#static" class="tsd-kind-icon">static</a></li>
 							</ul>
 						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-external">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="url" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> url</h3>
-					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L121">httpEndpoint.ts:121</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The url that the HttpEndpoint is being served at. Set only after a
-							succesful call to <code>publish</code>.</p>
-						</div>
 					</div>
 				</section>
 			</section>
@@ -158,7 +133,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L183">httpEndpoint.ts:183</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L189">httpEndpoint.ts:189</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -189,13 +164,13 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<a name="attachcustomdomain" class="tsd-anchor"></a>
 					<h3>attach<wbr>Custom<wbr>Domain</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">attach<wbr>Custom<wbr>Domain<span class="tsd-signature-symbol">(</span>domain<span class="tsd-signature-symbol">: </span><a href="_httpendpoint_.domain.html" class="tsd-signature-type">Domain</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">attach<wbr>Custom<wbr>Domain<span class="tsd-signature-symbol">(</span>domain<span class="tsd-signature-symbol">: </span><a href="_httpendpoint_.domain.html" class="tsd-signature-type">Domain</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L208">httpEndpoint.ts:208</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L202">httpEndpoint.ts:202</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -203,8 +178,8 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 									<p>Attach a custom domain to this HttpEndpoint.</p>
 								</div>
 								<p>Provide a domain name you own, along with SSL certificates from a
-									certificate authority (e.g. LetsEncrypt). The return value is a domain
-								name that you must map your custom domain to using a DNS A record.</p>
+								certificate authority (e.g. LetsEncrypt).</p>
+								<p>Must be called prior to [publish]ing the API.</p>
 								<p><em>Note</em>: It is strongly encouraged to store certificates in config
 								variables and not in source code.</p>
 							</div>
@@ -214,9 +189,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 									<h5>domain: <a href="_httpendpoint_.domain.html" class="tsd-signature-type">Domain</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>The domain name that you must map your custom domain to using a
-							DNS A record.</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -230,7 +203,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L169">httpEndpoint.ts:169</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L175">httpEndpoint.ts:175</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -267,7 +240,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L148">httpEndpoint.ts:148</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L154">httpEndpoint.ts:154</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -304,7 +277,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L176">httpEndpoint.ts:176</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L182">httpEndpoint.ts:182</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -341,7 +314,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L162">httpEndpoint.ts:162</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L168">httpEndpoint.ts:168</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -372,24 +345,24 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<a name="publish" class="tsd-anchor"></a>
 					<h3>publish</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">publish<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">publish<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_httpendpoint_.httpdeployment.html" class="tsd-signature-type">HttpDeployment</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L193">httpEndpoint.ts:193</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L212">httpEndpoint.ts:212</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Publishes an HttpEndpoint to be internet accessible.</p>
 								</div>
-								<p>This should be called after describing desired routes.</p>
+								<p>This should be called after describing desired routes and domains.
+								Throws an error if called multiple times on the same endpoint.</p>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>A computed string representing the URL at which the HttpEndpoint
-							is available to the internet.</p>
+							<h4 class="tsd-returns-title">Returns <a href="_httpendpoint_.httpdeployment.html" class="tsd-signature-type">HttpDeployment</a></h4>
+							<p>An HttpDeployment object representing the live HttpEndpoint.</p>
 						</li>
 					</ul>
 				</section>
@@ -403,7 +376,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L155">httpEndpoint.ts:155</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L161">httpEndpoint.ts:161</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -440,7 +413,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L141">httpEndpoint.ts:141</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L147">httpEndpoint.ts:147</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -475,22 +448,21 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-					<a name="staticfile" class="tsd-anchor"></a>
-					<h3>static<wbr>File</h3>
+					<a name="static" class="tsd-anchor"></a>
+					<h3>static</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">static<wbr>File<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, filePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, contentType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">static<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, localPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="_httpendpoint_.servestaticoptions.html" class="tsd-signature-type">ServeStaticOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L132">httpEndpoint.ts:132</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L138">httpEndpoint.ts:138</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>staticFile serves a static file from within the source folder at the
-									requested path.</p>
+									<p>static serves a file or directory from within the source folder at the requested path.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -502,16 +474,16 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 									</div>
 								</li>
 								<li>
-									<h5>filePath: <span class="tsd-signature-type">string</span></h5>
+									<h5>localPath: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The local file path relative to the Pulumi program
-										folder.</p>
+										<p>The local path.  If not absolute, it is considered relative to the Pulumi
+										program folder.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> contentType: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="_httpendpoint_.servestaticoptions.html" class="tsd-signature-type">ServeStaticOptions</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The <code>content-type</code> to serve the file as.</p>
+										<p>Optional options that can be provided to customize the serving behavior.</p>
 									</div>
 								</li>
 							</ul>
@@ -543,6 +515,9 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 						<a href="../modules/_httpendpoint_.html">"http<wbr>Endpoint"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/_service_.html">"service"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/_table_.html">"table"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
@@ -561,14 +536,14 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="_httpendpoint_.domain.html" class="tsd-kind-icon">Domain</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="_httpendpoint_.httpdeployment.html" class="tsd-kind-icon">Http<wbr>Deployment</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="_httpendpoint_.httpendpoint.html" class="tsd-kind-icon">Http<wbr>Endpoint</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="_httpendpoint_.httpendpoint.html#url" class="tsd-kind-icon">url</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 								<a href="_httpendpoint_.httpendpoint.html#all" class="tsd-kind-icon">all</a>
 							</li>
@@ -597,7 +572,7 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 								<a href="_httpendpoint_.httpendpoint.html#route" class="tsd-kind-icon">route</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-								<a href="_httpendpoint_.httpendpoint.html#staticfile" class="tsd-kind-icon">static<wbr>File</a>
+								<a href="_httpendpoint_.httpendpoint.html#static" class="tsd-kind-icon">static</a>
 							</li>
 						</ul>
 					</li>
@@ -611,6 +586,9 @@ api.url.mapValue(<span class="hljs-function"><span class="hljs-params">url</span
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="_httpendpoint_.response.html" class="tsd-kind-icon">Response</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="_httpendpoint_.servestaticoptions.html" class="tsd-kind-icon">Serve<wbr>Static<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-external">
 						<a href="../modules/_httpendpoint_.html#routehandler" class="tsd-kind-icon">Route<wbr>Handler</a>

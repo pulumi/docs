@@ -82,7 +82,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">Resource</span>
+						<span class="tsd-signature-type">CustomResource</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">Cluster</span>
@@ -108,6 +108,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_redshift_cluster_.cluster.html#automatedsnapshotretentionperiod" class="tsd-kind-icon">automated<wbr>Snapshot<wbr>Retention<wbr>Period</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_redshift_cluster_.cluster.html#availabilityzone" class="tsd-kind-icon">availability<wbr>Zone</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_redshift_cluster_.cluster.html#bucketname" class="tsd-kind-icon">bucket<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_redshift_cluster_.cluster.html#children" class="tsd-kind-icon">children</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_redshift_cluster_.cluster.html#clusteridentifier" class="tsd-kind-icon">cluster<wbr>Identifier</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_redshift_cluster_.cluster.html#clusterparametergroupname" class="tsd-kind-icon">cluster<wbr>Parameter<wbr>Group<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_redshift_cluster_.cluster.html#clusterpublickey" class="tsd-kind-icon">cluster<wbr>Public<wbr>Key</a></li>
@@ -143,6 +144,15 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_redshift_cluster_.cluster.html#vpcsecuritygroupids" class="tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section tsd-is-inherited">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_redshift_cluster_.cluster.html#adopt" class="tsd-kind-icon">adopt</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_redshift_cluster_.cluster.html#register" class="tsd-kind-icon">register</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="_redshift_cluster_.cluster.html#runinparentscope" class="tsd-kind-icon">run<wbr>InParent<wbr>Scope</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="_redshift_cluster_.cluster.html#runinparentlessscope" class="tsd-kind-icon">run<wbr>InParentless<wbr>Scope</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -157,14 +167,14 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides Resource.__constructor</p>
+								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L160">redshift/cluster.ts:160</a></li>
+									<li>Defined in redshift/cluster.ts:160</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Create a Cluster resource with the given unique name, arguments and optional additional
+									<p>Create a Cluster resource with the given unique name, arguments, and optional additional
 									resource dependencies.</p>
 								</div>
 							</div>
@@ -182,7 +192,7 @@
 									<h5>args: <a href="../interfaces/_redshift_cluster_.clusterargs.html" class="tsd-signature-type">ClusterArgs</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>A collection of arguments for creating this Cluster intance</p>
+											<p>A collection of arguments for creating this Cluster instance</p>
 										</div>
 									</div>
 								</li>
@@ -190,7 +200,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>A optional array of additional resources this intance depends on</p>
+											<p>A optional array of additional resources this instance depends on</p>
 										</div>
 									</div>
 								</li>
@@ -208,7 +218,7 @@
 					<div class="tsd-signature tsd-kind-icon">allow<wbr>Version<wbr>Upgrade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L16">redshift/cluster.ts:16</a></li>
+							<li>Defined in redshift/cluster.ts:16</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -223,7 +233,7 @@
 					<div class="tsd-signature tsd-kind-icon">automated<wbr>Snapshot<wbr>Retention<wbr>Period<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L20">redshift/cluster.ts:20</a></li>
+							<li>Defined in redshift/cluster.ts:20</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -238,7 +248,7 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L24">redshift/cluster.ts:24</a></li>
+							<li>Defined in redshift/cluster.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -253,7 +263,7 @@
 					<div class="tsd-signature tsd-kind-icon">bucket<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L29">redshift/cluster.ts:29</a></li>
+							<li>Defined in redshift/cluster.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -263,13 +273,30 @@
 						</div>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="children" class="tsd-anchor"></a>
+					<h3>children</h3>
+					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from Resource.children</p>
+						<ul>
+							<li>Defined in node_modules/pulumi/resource.d.ts:19</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>children tracks those resources that are created as a result of this one.  It may be appended to using
+							the adopt API, but the list is frozen as soon as the resource&#39;s final state has been computed.</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="clusteridentifier" class="tsd-anchor"></a>
 					<h3>cluster<wbr>Identifier</h3>
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L34">redshift/cluster.ts:34</a></li>
+							<li>Defined in redshift/cluster.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -285,7 +312,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Parameter<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L38">redshift/cluster.ts:38</a></li>
+							<li>Defined in redshift/cluster.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -300,7 +327,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Public<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L42">redshift/cluster.ts:42</a></li>
+							<li>Defined in redshift/cluster.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -315,7 +342,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Revision<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L46">redshift/cluster.ts:46</a></li>
+							<li>Defined in redshift/cluster.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -330,7 +357,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L50">redshift/cluster.ts:50</a></li>
+							<li>Defined in redshift/cluster.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -345,7 +372,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Subnet<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L54">redshift/cluster.ts:54</a></li>
+							<li>Defined in redshift/cluster.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -360,7 +387,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L58">redshift/cluster.ts:58</a></li>
+							<li>Defined in redshift/cluster.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -375,7 +402,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L63">redshift/cluster.ts:63</a></li>
+							<li>Defined in redshift/cluster.ts:63</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -391,7 +418,7 @@
 					<div class="tsd-signature tsd-kind-icon">database<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L68">redshift/cluster.ts:68</a></li>
+							<li>Defined in redshift/cluster.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -407,7 +434,7 @@
 					<div class="tsd-signature tsd-kind-icon">elastic<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L72">redshift/cluster.ts:72</a></li>
+							<li>Defined in redshift/cluster.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -422,7 +449,7 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L76">redshift/cluster.ts:76</a></li>
+							<li>Defined in redshift/cluster.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -437,7 +464,7 @@
 					<div class="tsd-signature tsd-kind-icon">encrypted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L80">redshift/cluster.ts:80</a></li>
+							<li>Defined in redshift/cluster.ts:80</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -452,7 +479,7 @@
 					<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L84">redshift/cluster.ts:84</a></li>
+							<li>Defined in redshift/cluster.ts:84</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -467,7 +494,7 @@
 					<div class="tsd-signature tsd-kind-icon">enhanced<wbr>Vpc<wbr>Routing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L88">redshift/cluster.ts:88</a></li>
+							<li>Defined in redshift/cluster.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -482,7 +509,7 @@
 					<div class="tsd-signature tsd-kind-icon">final<wbr>Snapshot<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L92">redshift/cluster.ts:92</a></li>
+							<li>Defined in redshift/cluster.ts:92</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -497,7 +524,7 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Roles<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L96">redshift/cluster.ts:96</a></li>
+							<li>Defined in redshift/cluster.ts:96</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -511,15 +538,15 @@
 					<h3>id</h3>
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ID</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Resource.id</p>
+						<p>Inherited from CustomResource.id</p>
 						<ul>
-							<li>Defined in node_modules/pulumi/resource.d.ts:15</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>id is the provider-assigned unique ID for this resource.  It is set during deployments and may be missing
-							(undefined) during planning phases.</p>
+							<p>id is the provider-assigned unique ID for this managed resource.  It is set during deployments and may be
+							missing (undefined) during planning phases.</p>
 						</div>
 					</div>
 				</section>
@@ -529,7 +556,7 @@
 					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L100">redshift/cluster.ts:100</a></li>
+							<li>Defined in redshift/cluster.ts:100</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -544,7 +571,7 @@
 					<div class="tsd-signature tsd-kind-icon">master<wbr>Password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L106">redshift/cluster.ts:106</a></li>
+							<li>Defined in redshift/cluster.ts:106</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -561,7 +588,7 @@
 					<div class="tsd-signature tsd-kind-icon">master<wbr>Username<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L110">redshift/cluster.ts:110</a></li>
+							<li>Defined in redshift/cluster.ts:110</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -576,7 +603,7 @@
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L114">redshift/cluster.ts:114</a></li>
+							<li>Defined in redshift/cluster.ts:114</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -591,7 +618,7 @@
 					<div class="tsd-signature tsd-kind-icon">number<wbr>OfNodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L118">redshift/cluster.ts:118</a></li>
+							<li>Defined in redshift/cluster.ts:118</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -606,7 +633,7 @@
 					<div class="tsd-signature tsd-kind-icon">owner<wbr>Account<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L122">redshift/cluster.ts:122</a></li>
+							<li>Defined in redshift/cluster.ts:122</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -621,7 +648,7 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L127">redshift/cluster.ts:127</a></li>
+							<li>Defined in redshift/cluster.ts:127</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -637,7 +664,7 @@
 					<div class="tsd-signature tsd-kind-icon">preferred<wbr>Maintenance<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L132">redshift/cluster.ts:132</a></li>
+							<li>Defined in redshift/cluster.ts:132</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -653,7 +680,7 @@
 					<div class="tsd-signature tsd-kind-icon">publicly<wbr>Accessible<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L136">redshift/cluster.ts:136</a></li>
+							<li>Defined in redshift/cluster.ts:136</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -668,7 +695,7 @@
 					<div class="tsd-signature tsd-kind-icon">s3<wbr>Key<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L140">redshift/cluster.ts:140</a></li>
+							<li>Defined in redshift/cluster.ts:140</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -683,7 +710,7 @@
 					<div class="tsd-signature tsd-kind-icon">skip<wbr>Final<wbr>Snapshot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L144">redshift/cluster.ts:144</a></li>
+							<li>Defined in redshift/cluster.ts:144</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -698,7 +725,7 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Cluster<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L148">redshift/cluster.ts:148</a></li>
+							<li>Defined in redshift/cluster.ts:148</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -713,7 +740,7 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L152">redshift/cluster.ts:152</a></li>
+							<li>Defined in redshift/cluster.ts:152</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -728,7 +755,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L156">redshift/cluster.ts:156</a></li>
+							<li>Defined in redshift/cluster.ts:156</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -744,7 +771,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.urn</p>
 						<ul>
-							<li>Defined in node_modules/pulumi/resource.d.ts:10</li>
+							<li>Defined in node_modules/pulumi/resource.d.ts:14</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -759,7 +786,7 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-aws/blob/master/pack/redshift/cluster.ts#L160">redshift/cluster.ts:160</a></li>
+							<li>Defined in redshift/cluster.ts:160</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -767,6 +794,195 @@
 							<p>A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.</p>
 						</div>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="adopt" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> adopt</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">adopt<span class="tsd-signature-symbol">(</span>child<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Resource.adopt</p>
+								<ul>
+									<li>Defined in node_modules/pulumi/resource.d.ts:41</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Marks another resource as a child of this one.  This automatically tags resources that
+									are related to one another, for purposes of presentation, filtering, and so on.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>child: <span class="tsd-signature-type">Resource</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="register" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> register</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">register<span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, custom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, props<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ComputedValues</span>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Resource.register</p>
+								<ul>
+									<li>Defined in node_modules/pulumi/resource.d.ts:53</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates and registers a new resource object.  t is the fully qualified type token and name is the &quot;name&quot; part
+										to use in creating a stable and globally unique URN for the object.  dependsOn is an optional list of other
+									resources that this resource depends on, controlling the order in which we perform resource operations.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>t: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The type of the resource.</p>
+									</div>
+								</li>
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <em>unqiue</em> name of the resource.</p>
+									</div>
+								</li>
+								<li>
+									<h5>custom: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>True to indicate that this is a custom resource, managed by a plugin.</p>
+									</div>
+								</li>
+								<li>
+									<h5>props: <span class="tsd-signature-type">ComputedValues</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The arguments to use to populate the new resource.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional additional explicit dependencies on other resources.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+					<a name="runinparentscope" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> run<wbr>InParent<wbr>Scope</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">run<wbr>InParent<wbr>Scope&lt;T&gt;<span class="tsd-signature-symbol">(</span>parent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Resource</span>, body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Resource.runInParentScope</p>
+								<ul>
+									<li>Defined in node_modules/pulumi/resource.d.ts:23</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>runInParentScope executes a callback, body, and any resources allocated within become parent&#39;s children.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parent: <span class="tsd-signature-type">Resource</span></h5>
+								</li>
+								<li>
+									<h5>body: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+					<a name="runinparentlessscope" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> run<wbr>InParentless<wbr>Scope</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">run<wbr>InParentless<wbr>Scope&lt;T&gt;<span class="tsd-signature-symbol">(</span>body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Resource.runInParentlessScope</p>
+								<ul>
+									<li>Defined in node_modules/pulumi/resource.d.ts:28</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>runInParentlessScope executes a callback, body, in a scope where no parent is active.  This can be useful
+									if there&#39;s an active parent but you want to run some code that allocates &quot;anonymous&quot; resources.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>body: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -802,6 +1018,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_redshift_cluster_.cluster.html#bucketname" class="tsd-kind-icon">bucket<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_redshift_cluster_.cluster.html#children" class="tsd-kind-icon">children</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_redshift_cluster_.cluster.html#clusteridentifier" class="tsd-kind-icon">cluster<wbr>Identifier</a>
@@ -901,6 +1120,18 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_redshift_cluster_.cluster.html#vpcsecuritygroupids" class="tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_redshift_cluster_.cluster.html#adopt" class="tsd-kind-icon">adopt</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="_redshift_cluster_.cluster.html#register" class="tsd-kind-icon">register</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+								<a href="_redshift_cluster_.cluster.html#runinparentscope" class="tsd-kind-icon">run<wbr>InParent<wbr>Scope</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
+								<a href="_redshift_cluster_.cluster.html#runinparentlessscope" class="tsd-kind-icon">run<wbr>InParentless<wbr>Scope</a>
 							</li>
 						</ul>
 					</li>

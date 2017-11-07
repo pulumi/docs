@@ -129,14 +129,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/topic.ts#L51">topic.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/topic.ts#L55">topic.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Subscribe to items published to this stream.</p>
 								</div>
-								<p>Each subscription receives all items published to the stream.</p>
+								<p>Each subscription receives all items published to the stream. If a
+									subscription handler returns a failed promise, the subscription handler
+									may be retried some number of times.  If no retry is successful, the item
+									will be sent to the global error handler.  Note that as a result,
+								subscription handlers must ensure they can safely be retried.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -197,6 +201,9 @@
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/_httpendpoint_.html">"http<wbr>Endpoint"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/_service_.html">"service"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/_table_.html">"table"</a>
