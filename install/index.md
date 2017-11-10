@@ -16,7 +16,7 @@ The first step is to download a binary release suitable for your system.
 
 ### Featured Downloads
 
-The current version of Pulumi's SDK is <b>0.8.1</b> (pre-release) and is available for these systems:
+The current version of Pulumi's SDK is <b>0.8.2</b> (pre-release) and is available for these systems:
 
 <div class="little-jumbotron">
     <div class="container">
@@ -24,17 +24,17 @@ The current version of Pulumi's SDK is <b>0.8.1</b> (pre-release) and is availab
         <p>
             <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
                     style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="/releases/pulumi-v0.8.1-darwin.x64.tar.gz" role="button">
+                    href="/releases/pulumi-v0.8.2-darwin.x64.tar.gz" role="button">
                 {% octicon cloud-download height:24 %} macOS x64
             </a>
             <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
                     style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="/releases/pulumi-v0.8.1-windows.x64.zip" role="button">
+                    href="/releases/pulumi-v0.8.2-windows.x64.zip" role="button">
                 {% octicon cloud-download height:24 %} Windows x64
             </a>
             <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
                     style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="/releases/pulumi-v0.8.1-linux.x64.tar.gz" role="button">
+                    href="/releases/pulumi-v0.8.2-linux.x64.tar.gz" role="button">
                 {% octicon cloud-download height:24 %} Linux x64
             </a>
         </p>
@@ -107,7 +107,7 @@ First download the Pulumi SDK release for your operating system per the above in
 
 Next, choose an installation location and extract the release into it:
 
-* On macOS and Linux, extract the `pulumi-v0.8.1-darwin-x64.tar.gz` or `pulumi-v0.8.1-linux-x64.tar.gz` tarball to the
+* On macOS and Linux, extract the `pulumi-v0.8.2-darwin-x64.tar.gz` or `pulumi-v0.8.2-linux-x64.tar.gz` tarball to the
   installation target and run `install.sh`.  We recommend `/opt/pulumi`.  For example:
 
 ```bash
@@ -115,7 +115,7 @@ $ tar -C /opt/pulumi -xzf pulumi-$VERSION-$OS-$ARCH.tar.gz
 $ /opt/pulumi/install.sh
 ```
 
-* On Windows, extract `pulumi-v0.8.1-windows-x64.zip` to the installation target and run  `install.cmd` from either a
+* On Windows, extract `pulumi-v0.8.2-windows-x64.zip` to the installation target and run  `install.cmd` from either a
   CMD or PowerShell shell.  We recommend `%SystemRoot%\Program Files\Pulumi`.
 
 Afterwards, you'll need to add the installation's `bin` directory to you `PATH`.  This makes running `pulumi` CLI easy
@@ -129,7 +129,7 @@ you have the tools installed and available on your `PATH`, try running `pulumi v
 
 ```bash
 $ pulumi version
-Pulumi version v0.8.1
+Pulumi version v0.8.2
 ```
 
 We're almost done, but not quite: Pulumi still needs to be told exactly how to talk with your favorite cloud provider.
