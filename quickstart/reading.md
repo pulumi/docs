@@ -1,5 +1,5 @@
 ---
-layout: default 
+layout: default
 nav_section: "quickstart"
 ---
 
@@ -15,11 +15,11 @@ This section contains some additional further reading on the following topics:
 
 ## Pulumi CLI
 
-The `pulumi` CLI supports creating, configuring and updating Pulumi program environments.  
+The `pulumi` CLI supports creating, configuring and updating Pulumi stacks.
 
-An __environment__ represents a running Pulumi program.  `pulumi env init` creates a new Pulumi environment for the
-program in the working directory. Multiple environments can be managed in a single program directory, and you can
-see all environments with `pulumi env ls`.  
+An __stack__ represents a running Pulumi program.  `pulumi stack init` creates a new Pulumi stack for the
+program in the working directory. Multiple stacks can be managed in a single program directory, and you can
+see all environments with `pulumi stack ls`.
 
 Each environment has an associated set of __config__.  The config is a set of key value pairs which are available to
 your Pulumi program.
@@ -38,142 +38,172 @@ Usage:
   pulumi [command]
 
 Available Commands:
-  config      Query, set, replace, or unset configuration values
-  destroy     Destroy an existing environment and its resources
-  env         Manage target environments
+  config      Manage configuration
+  destroy     Destroy an existing stack and its resources
   help        Help about any command
-  preview     Show a preview of updates to an environment's resources
-  update      Update the resources in an environment
+  init        Initialize a new Pulumi repository
+  login       Log into the Pulumi Cloud Console
+  logout      Log out of the Pulumi CLI
+  logs        Show aggregated logs for a project
+  preview     Show a preview of updates to an stack's resources
+  stack       Manage stacks
+  update      Update the resources in an stack
   version     Print Pulumi's version number
 
 Flags:
-  -h, --help          help for pulumi
-      --logflow       Flow log settings to child processes (like plugins)
-      --logtostderr   Log to stderr instead of to files
-  -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+  -C, --cwd string       Run pulumi as if it had been started in another directory
+  -h, --help             help for pulumi
+      --logflow          Flow log settings to child processes (like plugins)
+      --logtostderr      Log to stderr instead of to files
+      --tracing string   Emit tracing to a Zipkin-compatible tracing endpoint
+  -v, --verbose int      Enable verbose logging (e.g., v=3); anything >3 is very verbose
 
 Use "pulumi [command] --help" for more information about a command.
 ```
 
-__pulumi env__
+__pulumi stack__
 
 ```
-Manage target environments
+Manage stacks
 
-An environment is a named update target, and a single project may have many of them.
-Each environment has a configuration and update history associated with it, stored in
+An stack is a named update target, and a single project may have many of them.
+Each stack has a configuration and update history associated with it, stored in
 the workspace, in addition to a full checkpoint of the last known good update.
 
 Usage:
-  pulumi env [flags]
-  pulumi env [command]
+  pulumi stack [flags]
+  pulumi stack [command]
 
 Available Commands:
-  init        Create an empty environment with the given name, ready for updates
-  ls          List all known environments
-  rm          Remove an environment and its configuration
-  select      Switch the current workspace to the given environment
+  init        Create an empty stack with the given name, ready for updates
+  ls          List all known stacks
+  rm          Remove an stack and its configuration
+  select      Switch the current workspace to the given stack
 
 Flags:
-  -h, --help        help for env
+  -h, --help        help for stack
   -i, --show-ids    Display each resource's provider-assigned unique ID
   -u, --show-urns   Display each resource's Pulumi-assigned globally unique URN
 
 Global Flags:
-      --logflow       Flow log settings to child processes (like plugins)
-      --logtostderr   Log to stderr instead of to files
-  -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+  -C, --cwd string       Run pulumi as if it had been started in another directory
+      --logflow          Flow log settings to child processes (like plugins)
+      --logtostderr      Log to stderr instead of to files
+      --tracing string   Emit tracing to a Zipkin-compatible tracing endpoint
+  -v, --verbose int      Enable verbose logging (e.g., v=3); anything >3 is very verbose
 
-Use "pulumi env [command] --help" for more information about a command.
+Use "pulumi stack [command] --help" for more information about a command.
 ```
 
-__pulumi config__ 
+__pulumi config__
 
 ```
-Query, set, replace, or unset configuration values
+Lists all configuration values for a specific stack. To add a new configuration value, run
+'pulumi config set', to remove and existing value run 'pulumi config rm'. To get the value of
+for a specific configuration key, use 'pulumi config get <key-name>'.
 
 Usage:
-  pulumi config [<key> [value]] [flags]
+  pulumi config [flags]
+  pulumi config [command]
+
+Available Commands:
+  get         Get a single configuration value
+  rm          Remove configuration value
+  set         Set configuration value
 
 Flags:
-  -e, --env string   Choose an environment other than the currently selected one
-  -h, --help         help for config
-      --unset        Unset a configuration value
+  -h, --help           help for config
+      --show-secrets   Show secret values when listing config instead of displaying blinded values
+  -s, --stack string   Operate on a different stack than the currently selected stack
 
 Global Flags:
-      --logflow       Flow log settings to child processes (like plugins)
-      --logtostderr   Log to stderr instead of to files
-  -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+  -C, --cwd string       Run pulumi as if it had been started in another directory
+      --logflow          Flow log settings to child processes (like plugins)
+      --logtostderr      Log to stderr instead of to files
+      --tracing string   Emit tracing to a Zipkin-compatible tracing endpoint
+  -v, --verbose int      Enable verbose logging (e.g., v=3); anything >3 is very verbose
+
+Use "pulumi config [command] --help" for more information about a command.
 ```
 
 __pulumi update__
 
 ```
-Update the resources in an environment
+Update the resources in an stack
 
-This command updates an existing environment whose state is represented by the
+This command updates an existing stack whose state is represented by the
 existing snapshot file. The new desired state is computed by compiling and evaluating an
 executable package, and extracting all resource allocations from its resulting object graph.
 These allocations are then compared against the existing state to determine what operations
 must take place to achieve the desired state. This command results in a full snapshot of the
-environment's new resource state, so that it may be updated incrementally again later.
+stack's new resource state, so that it may be updated incrementally again later.
 
-By default, the package to execute is loaded from the current directory. Optionally, an
-explicit path can be provided using the [package] argument.
+The package to execute is loaded from the current directory. Use the `-C` or `--cwd` flag to
+use a different directory.
 
 Usage:
-  pulumi update [<package>] [-- [<args>]] [flags]
+  pulumi update [flags]
+
+Aliases:
+  update, up
 
 Flags:
       --analyzer stringSlice     Run one or more analyzers as part of this update
   -d, --debug                    Print detailed debugging output during resource operations
-  -e, --env string               Choose an environment other than the currently selected one
   -h, --help                     help for update
   -p, --parallel int             Allow P resource operations to run in parallel at once (<=1 for no parallelism)
       --show-config              Show configuration keys and variables
       --show-replacement-steps   Show detailed resource replacement creates and deletes instead of a single step (default true)
       --show-sames               Show resources that needn't be updated because they haven't changed, alongside those that do
-  -s, --summary                  Only display summarization of resources and operations
+  -s, --stack string             Choose an stack other than the currently selected one
+      --summary                  Only display summarization of resources and operations
 
 Global Flags:
-      --logflow       Flow log settings to child processes (like plugins)
-      --logtostderr   Log to stderr instead of to files
-  -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+  -C, --cwd string       Run pulumi as if it had been started in another directory
+      --logflow          Flow log settings to child processes (like plugins)
+      --logtostderr      Log to stderr instead of to files
+      --tracing string   Emit tracing to a Zipkin-compatible tracing endpoint
+  -v, --verbose int      Enable verbose logging (e.g., v=3); anything >3 is very verbose
 ```
 
 __pulumi preview__
 
 ```
-Show a preview of updates an environment's resources
+Show a preview of updates an stack's resources
 
-This command displays a preview of the updates to an existing environment whose state is
+This command displays a preview of the updates to an existing stack whose state is
 represented by an existing snapshot file. The new desired state is computed by compiling
 and evaluating an executable package, and extracting all resource allocations from its
 resulting object graph. These allocations are then compared against the existing state to
 determine what operations must take place to achieve the desired state. No changes to the
-environment will actually take place.
+stack will actually take place.
 
-By default, the package to execute is loaded from the current directory. Optionally, an
-explicit path can be provided using the [package] argument.
+The package to execute is loaded from the current directory. Use the `-C` or `--cwd` flag to
+use a different directory.
 
 Usage:
-  pulumi preview [<package>] [-- [<args>]] [flags]
+  pulumi preview [flags]
+
+Aliases:
+  preview, pre
 
 Flags:
       --analyzer stringSlice     Run one or more analyzers as part of this preview
   -d, --debug                    Print detailed debugging output during resource operations
-  -e, --env string               Choose an environment other than the currently selected one
   -h, --help                     help for preview
   -p, --parallel int             Allow P resource operations to run in parallel at once (<=1 for no parallelism)
       --show-config              Show configuration keys and variables
       --show-replacement-steps   Show detailed resource replacement creates and deletes instead of a single step
       --show-sames               Show resources that needn't be updated because they haven't changed, alongside those that do
-  -s, --summary                  Only display summarization of resources and operations
+  -s, --stack string             Choose an stack other than the currently selected one
+      --summary                  Only display summarization of resources and operations
 
 Global Flags:
-      --logflow       Flow log settings to child processes (like plugins)
-      --logtostderr   Log to stderr instead of to files
-  -v, --verbose int   Enable verbose logging (e.g., v=3); anything >3 is very verbose
+  -C, --cwd string       Run pulumi as if it had been started in another directory
+      --logflow          Flow log settings to child processes (like plugins)
+      --logtostderr      Log to stderr instead of to files
+      --tracing string   Emit tracing to a Zipkin-compatible tracing endpoint
+  -v, --verbose int      Enable verbose logging (e.g., v=3); anything >3 is very verbose
 ```
 
 ## Using TypeScript
@@ -268,4 +298,3 @@ If you'd like to request specific features or have questions about any of this, 
 Check out the [package](/packages) documentation for more details on the kinds of programs you can build with Pulumi.
 
 If you have questions of feedback on anything related to Pulumi, please don't hesitate to [contact us](/contact)).
-
