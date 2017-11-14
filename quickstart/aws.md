@@ -129,7 +129,7 @@ production.
 1. We can get a preview of what will happen during a deployment by running `pulumi preview`.  Running that command we get an error `Error: Missing required configuration variable 'aws:config:region'`.  As the error states, before we can preview or update our application, we need to configure the AWS region we will be targeting.
 
     ```bash
-    $ pulumi config text aws:config:region us-west-2
+    $ pulumi config set aws:config:region us-west-2
     ```
 
 1. We can now successfully run `pulumi preview` to see the complete set of resources that will be created:

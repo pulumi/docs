@@ -167,7 +167,7 @@ Now let's get to the application logic and infrastructure definition, which are 
 1. Set the AWS region to deploy the application into:
 
     ```bash
-    $ pulumi config text aws:config:region us-west-2
+    $ pulumi config set aws:config:region us-west-2
     ```
 
 1. Run `pulumi update` to deploy this code and activate our HTTPS endpoint:
