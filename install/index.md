@@ -105,23 +105,34 @@ Next, install an NPM client.  Either NPM itself or Yarn are fine choices, and yo
 
 First download the Pulumi SDK release for your operating system per the above instructions.
 
-Next, choose an installation location and extract the release into it:
+Now run the installer, the process depends on if you are on macOS/Linux vs Windows:
 
-* On macOS and Linux, extract the `pulumi-v0.8.2-darwin-x64.tar.gz` or `pulumi-v0.8.2-linux-x64.tar.gz` tarball to the
-  installation target and run `install.sh`.  We recommend `/opt/pulumi`.  For example:
+* On macOS and Linux, extract the `pulumi-v0.8.2-darwin-x64.tar.gz` or `pulumi-v0.8.2-linux-x64.tar.gz` tarball to any
+  directory, then run the `install.sh` script inside the pulumi folder that was extracted.
 
+On macOS run:
 ```bash
-$ tar -C /opt/pulumi -xzf pulumi-$VERSION-$OS-$ARCH.tar.gz
-$ /opt/pulumi/install.sh
+$ tar -xzf pulumi-v0.8.2-darwin-x64.tar.gz
+$ ./pulumi/install.sh
 ```
 
+On Linux run:
+```bash
+$ tar -xzf pulumi-v0.8.2-linux-x64.tar.gz
+$ ./pulumi/install.sh
+```
+
+This script will install Pulumi into `/usr/local/pulumi`. Depending on your system, the process may ask for your password
+so it can create a subfolder of `/usr/local` and so it can run `npm link`. The script will tell you if this is going to
+happen.  After the installer has run, you may delete the `pulumi` folder that was created by untaring the tarball.
+
 * On Windows, extract `pulumi-v0.8.2-windows-x64.zip` to the installation target and run  `install.cmd` from either a
-  CMD or PowerShell shell.  We recommend `%SystemRoot%\Program Files\Pulumi`.
+  CMD or PowerShell shell.  We recommend `%SystemRoot%\Program Files`.
 
 Afterwards, you'll need to add the installation's `bin` directory to you `PATH`.  This makes running `pulumi` CLI easy
 and also ensures that dynamically loaded language and resource providers can be found:
 
-* On macOS and Linux, add a line to your profile: `echo "export PATH=\$PATH:/opt/pulumi/bin" >> ~/.profile`.
+* On macOS and Linux, add a line to your profile: `echo "export PATH=\$PATH:/usr/local/pulumi/bin" >> ~/.profile`.
 * On Windows, add `%SystemRoot%\Program Files\Pulumi` to your `PATH` environment variable underneath system settings.
 
 After doing this, the `pulumi` CLI will be available for creating, configuring, and deploying applications.  To verify
