@@ -14,277 +14,120 @@ simple, high-level cloud building blocks.  This package has three key defining a
   applications with just a few lines of code.
 * __Cloud Agnostic__: The `@pulumi/cloud` library doesn't tie you to using any one particular cloud (AWS, Azure,
   Google Cloud, Kubernetes, and various on-premises clouds).  Applications built using the high-level `@pulumi/cloud`
-  components like [Table](/packages/pulumi-cloud/interfaces/_table_.table.html), [Topic](
+  components like [Service](/packages/pulumi-cloud/interfaces/_service_.service.html), [Table](/packages/pulumi-cloud/interfaces/_table_.table.html), [Topic](
   /packages/pulumi-cloud/interfaces/_topic_.topic.html) and [HttpEndpoint](
-  /packages/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html) can be deployed to a variety of cloud platforms.
+  /packages/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html) can be deployed to a variety of cloud platforms. (Currently, only support for AWS is implemented, but we plan to support all major providers.)
 * __Serverless__: The `@pulumi/cloud` makes it easy to build applications with minimal fixed infrastructure,
   event-driven application logic, and using resources that are charged only based on actual consumption.
 
-## A Simple Application
+## A voting app with two containers
 
-As our first example, we'll build a simple URL shortener REST API. The API will have two routes, `GET /{name}` to navigate to a URL by its short name and `POST /shorten?name={name}&url={url}` to create a new shortcut.
+In this example, we'll show how a Pulumi application is deployed to AWS managed services, the same services you would use if you had authored the application manually. Pulumi does not reinvent the infrastructure, but makes it dramatically easier to author and evolve your application.
 
-If we were to build this application directly on AWS, we would create several resources: two Lambdas (for each of the two operations), an API Gateway configured with the two routes, and a Dynamo DB instance for storing the shortname to URL mapping. (Of course, there are many ways to build this application, but this is a common serverless architecture.) The following diagram illustrates this architecture.
+To solve the never-ending debate of "tabs vs. spaces" once and for all, we'll create a voting app. The app has two containers: Redis for the data store, and a Python Flask app for the frontend. In future tutorials, we'll add a database hosted in a container, then show how easy it is to move to a managed database and cache service (such as AWS RDS and ElastiCache).
 
-![AWS architecture of URL shortener](url-shortener-diagram.png)
+Even in this simple example, it would be tedious and error prone to define this infrastructure with CloudFormation and similar tools. In AWS terms, the application needs an ECS cluster, a load balancer, an AWS Container Registry (ECR) instance, IAM roles, and so forth. If we were to do this manually, we'd provision around 38 resources. Pulumi hands this automatically!
 
-Even in this simple example, there is much more involved than just defining the application code. To automate the provisioning of resources using CloudFormation or a similar tool, we must define at least 12 resources. For example, fine-grain access control through IAM is essential for ensuring a least-privilege policy, but this necessarily requires a lot of setup. In this example, each of the arrows in the diagram requires several IAM rules to set up access control. If we later want to add a new resource, such as a cache of the most recently used URLs, we need to update both Lambda implementations as well as the CloudFormation templates that provision the cache. In modern cloud applications, this is a common problem: as applications use more and more managed resources, code becomes more tightly coupled with infrastructure requirements. 
+### Set up the project
 
-Pulumi simplifies this process by enabling developers to define resources directly in your favorite programming language. You don't need to learn a new language to provision your resources. Adding a new resource is done directly in code and the Pulumi tools ensure that a resource is defined before it is used. The Pulumi CLI will then provision any new resources (and delete any removed resources) before deploying the new application code. 
+1. Clone or download the `examples` repo at the [tutorial-initial branch](https://github.com/pulumi/examples/tree/tutorial-initial). This has the project setup and Flask app, but not the Pulumi program itself.
 
-Because code and infrastructure are defined together, Pulumi is a more productive experience for a development team. Code and infrastructure can be versioned together and application developers reason about their application as a whole, instead of considering just infrastructure or just application code.
+1. In the `voting-app` folder, add the following file as `index.ts`:
 
-Pulumi applications can be deployed to one or more public or private clouds. Pulumi doesn't physically run the servers running your applications, it helps manage the lifecycle and usage of those resources. This walkthrough targets AWS, but Pulumi's high-level, cloud-neutral programming model can be deployed to AWS, Azure, Google Cloud Platform, or an on-premises datacenter. 
-
-In this example, we'll show how a Pulumi application is deployed to AWS managed services, the same services you would use if you had authored the application manually. Pulumi does not reinvent the infrastructure, but rather offers an easier way to author and evolve your application.
-
-### Creating a simple Hello World application in Pulumi
-
-#### Set up the project
-
-1. Create a new directory:
-
-    ```bash
-    $ mkdir urlshortener
-    $ cd urlshortener
-    ```
-
-1. In that folder, create a `Pulumi.yaml` file to describe the Pulumi application:
-
-    ```yaml
-    name: url-shortener
-    description: Basic example of an AWS web server accessible over HTTP.
-    runtime: nodejs
-    ```
-
-1. Since this example uses TypeScript, create `package.json` in the project folder:
-
-    ```json
-    {
-        "name": "url-shortener",
-        "version": "1.0.0",
-        "license": "MIT",
-        "main": "bin/index.js",
-        "typings": "bin/index.d.ts",
-        "scripts": {
-            "build": "tsc"
-        },
-        "devDependencies": {
-            "typescript": "^2.1.4"
-        },
-        "peerDependencies": {
-            "@pulumi/cloud": "*"
-        },
-        "dependencies": {
-            "@types/node": "^8.0.26"
-        }  
-    }
-    ```
-
-1. Since this example uses TypeScript, create a `tsconfig.json` file with the TypeScript compiler settings and a list of your program files:
-
-    ```json
-    {
-        "compilerOptions": {
-            "outDir": "bin",
-            "target": "es6",
-            "module": "commonjs",
-            "moduleResolution": "node",
-            "declaration": true,
-            "sourceMap": true,
-            "stripInternal": true,
-            "experimentalDecorators": true,
-            "pretty": true,
-            "noFallthroughCasesInSwitch": true,
-            "noImplicitAny": true,
-            "noImplicitReturns": true,
-            "forceConsistentCasingInFileNames": true,
-            "strictNullChecks": true
-        },
-        "files": [
-            "index.ts"
-        ]
-    }
-    ```
-
-1. Run `yarn install` to install the dependencies to your `node_modules` directory.
-
-1. Link with the Pulumi SDK packages so that your `require`s will find the right thing:
-
-    ```bash
-    $ yarn link pulumi @pulumi/cloud
-    ```
-
-#### Define application code
-
-Now let's get to the application logic and infrastructure definition, which are defined at the same time in TypeScript.
-
-1. Save the following as `index.ts`:
-
-    ```typescript
+   ```typescript
     import * as cloud from "@pulumi/cloud";
 
-    let app = new cloud.HttpEndpoint("urlshortener");
+    // To simplify this example, we have defined the password directly in code
+    // In a real app, would add the secret via `pulumi config secret <key> <value>` and
+    // access via pulumi.Config APIs
+    let redisPassword = "SECRETPASSWORD"; 
 
-    app.get("/", (req,res) => {
-        res.json({hello: "world"});
+    let redisPort = 6379;
+
+    let redisCache = new cloud.Service("voting-app-cache", {
+        containers: {
+            redis: {
+                image: "redis:alpine",
+                memory: 128,
+                ports: [{ port: redisPort }],
+                command: ["redis-server", "--requirepass", redisPassword],
+            },
+        },
     });
 
-    app.publish().url.then(url => console.log(`Serving at: ${url}`));
-    ```
+    let frontend = new cloud.Service("voting-app-frontend", {
+        containers: {
+            votingAppFrontend: {
+                build: "./frontend",
+                memory: 128,
+                ports: [{ port: 80 }],            
+                environment: { 
+                    // pass in the created container info in environment variables
+                    // the awkward nested promises will be improved soon; see pulumi/pulumi #331
+                    "REDIS": redisCache.getEndpoint("redis", redisPort).then(e => e.hostname),
+                    "REDIS_PORT": redisCache.getEndpoint("redis", redisPort).then(e => e.port).then(port => port.toString()),
+                    "REDIS_PWD": redisPassword
+                }
+            },
+        },
+    });
 
-    Here, we used the `HttpEndpoint` class to create a publicly accessible HTTP endpoint.  Note that the signature of the `get` method is similar to popular JavaScript web routing frameworks, like Express.js, and uses standard request/response parameters and familiar `res.json` APIs.  Under the covers, however, this program will use a true AWS API Gateway that supports infinite scale out, DDOS protection, SSL, and more.
+    frontend.getEndpoint().then(e => console.log(`http://${e.hostname}:${e.port}`));
+   ```
 
-1.  Run `yarn build`. This is just a shortcut for invoking the TypeScript compiler, `tsc`, so you may use that instead.
+#### Understanding the code
 
-    You should now have the following files in your `urlshortener` folder:
+Even though this Pulumi program is just over 36 lines long, it does quite a bit:
 
-    ```bash
-    Pulumi.yaml    bin/           index.ts       node_modules/  package.json   tsconfig.json  yarn.lock
-    ```
+- It creates two containers, a Redis cache with container port 6379 and a custom Docker container for the app frontend.
+- Stores the port in the variable `redisPort`, since the frontend app needs to connect to the Redis container.
+- Creates a container `redisCache`. This is a Redis cache that uses the `redis` image with tag `alpine` from DockerHub. Since it's a built image, you just have to specify the port and startup command.
+- Creates a second container `frontend`, which is more interesting. If you look at `frontend/app/main.py` in the `voting-app` folder, you'll see that the app expects the Redis connection information to be provided in environment variables:
 
-1. Create a Pulumi repository. A repository is a collection of Pulumi projects:
+   ```python
+   redis_server =   os.environ['REDIS']
+   redis_port =     os.environ['REDIS_PORT']
+   redis_password = os.environ['REDIS_PWD']
+   ```
+
+   We can use Pulumi APIs to statically lookup the server name and port for the container `redisCache`. So, it is very easy to connect containers to each other.
+
+### Build, preview, and update
+
+Now, lets deploy this elegant program to AWS.
+
+1. Compile the code via `yarn build`.
+
+1. Create a new Pulumi repository and stack:
 
     ```bash
     $ pulumi init
-    Initialized Pulumi repository in /Users/donnam/src/hello-world/.pulumi
-    ```
-
-1. Create a stack called `testing`:
-
-    ```bash
     $ pulumi stack init testing
-	```
-
-    You can now run `pulumi stack ls` to see the newly created stack:
-
-    ```bash
-    $ pulumi stack ls
-    NAME                 LAST UPDATE                                      RESOURCE COUNT
-    testing*             n/a                                              n/a
     ```
 
-1. Set the AWS region to deploy the application into:
+1. Set your AWS region via `pulumi config set aws:config:region us-west-2` (or whichever region you prefer).
 
-    ```bash
-    $ pulumi config set aws:config:region us-west-2
-    ```
+1. The `cloud.Service` component can either create a new ECS cluster or deploy into an existing one. Let's use the "autocluster" functionality:
 
-1. Run `pulumi update` to deploy this code and activate our HTTPS endpoint:
+   ```bash
+   $ pulumi config set cloud-aws:config:ecsAutoCluster true
+   ```
 
-    ```bash
-    $ pulumi update
-    ...
-    <snip>
-    ...
-    info: Serving at: https://yoururl.execute-api.us-west-2.amazonaws.com/stage/
-    info: 14 changes performed:
-        + 14 resources created
-    Update duration: 38.783839863s
-    ```
+1. Preview changes via `pulumi preview`. This step will create the Docker container but will not provision resources.
 
-    After that, we can curl our newly created HTTPS endpoint to see our message. Replace `yoururl` with the URL shown in the output of `pulumi update`:
+1. Deploy the changes with `pulumi update`. This is when the resources are provisioned and will take 20-30 minutes. In the future, Pulumi will parallelize resource creations so that the experience is smoother.
+   
+   The frontend URL can get lost amid the output (this will be improved, see [\#454](https://github.com/pulumi/pulumi/issues/454)). As a workaround, once the deployment is complete, run `pulumi update` again. 
 
-    ```bash
-    $ curl https://yoururl.execute-api.us-west-2.amazonaws.com/stage/
-    {"hello":"world"}
-    ```
+1. In a browser, navigate to the URL. You should see the voting app webpage. Feel free to vote for anything, as long as it's spaces. 😉
 
-    *Note: In the future we will support custom domains for APIs rather than the auto-generated AWS URL shown above.*
+   ![Voting app screenshot](./voting-app-webpage.png)
 
-### From Hello World to URL shortener
+### Cleanup resources
 
-We can turn this into a robust hosted URL shortener service in just a few steps.  
+Clean up your resources with `pulumi destroy`. This will take a few minutes, as deletes for some AWS resources can take some time.
 
-1. To persist the mapping between short `name` and `url`, we create a data store directly within the application:
-
-    ```typescript
-    let urls = new cloud.Table("urls", "name");
-    ```
-
-    This one line tells `pulumi update` that it should provision a new Dynamo DB resource. We can then simply use this infrastructure resource within our code; there is no need to set up access rules or perform any other configuration. 
-
-1. Add a `/shorten` route to `index.ts`, using the `urls` table:
-
-    ```typescript
-    app.post("/shorten", async (req, res) => {
-        let url = req.query["url"];
-        let name = req.query["name"];
-        console.log(`POST /shorten ${url} ${name}`);
-        await urls.insert({name, url});
-        res.json({shortenedURLName: name});
-    });
-    ```
-
-    Note that we continue to use Express.js-like syntax to define the route. The function simply captures a reference to the `urls` object and calls runtime APIs on it.  Pulumi automatically handles all of the configuration and wiring necessary to make this happen: there is no need to manually configure URLs or set environment variables. 
-
-    We can use standard JavaScript/TypeScript asynchronous code via `async` and `await`, so that the code waits for the table insert to complete before returning the HTTP response. 
-
-1. To push this updated code, provision the data store, update the hosted REST API, and wire up the
-route handlers to the new code, simply call `pulumi update`. Pulumi determine what resources have changed and makes the minimal required resource modifications.
-
-    ```bash
-    $ pulumi update
-
-    ...
-    <snip>
-    ...
-    info: Serving at: https://yoururl.execute-api.us-west-2.amazonaws.com/stage/
-    ...
-    ```
-
-1. Now, call the API to create a short URL: 
-
-    ```bash
-    $ curl -X POST "https://yoururl.execute-api.us-west-2.amazonaws.com/stage/shorten?name=g&url=http://www.google.com"
-    {"shortenedURL":"g"}
-    ```
-
-1. Finally, we'll implement the `GET `handlers for any registered short name, returning a 301 response with
-`Location` header to redirect:
-
-    ```typescript 
-    app.get("/{name}", async (req, res) => {        
-        let name = req.params["name"];
-        let data = await urls.get({name});
-
-        if (data) {
-            console.log(`GET /${name} => ${data.url}`)
-            res.setHeader("Location", data.url);
-            res.status(301);
-            res.end("");
-        }
-        else {
-            res.status(404);
-            res.end("");
-        }
-    });
-    ```
-
-1. Re-deploy and invoke the API:
-
-    ```bash
-    $ pulumi update
-    ...
-    $ curl https://yoururl.execute-api.us-west-2.amazonaws.com/stage/g
-    <!doctype html>...contents of google.com ...
-    ...
-    ```
-
-1. To clean up after ourselves, run `pulumi destroy` and answer the confirmation question at the prompt.
-
-    ```bash
-    $ pulumi destroy
-    This will permanently destroy all resources in the 'testing' stack!
-    Please confirm that this is what you'd like to do by typing ("testing"): testing
-    Performing changes:
-    <snip>
-    info: 19 changes performed:
-        - 19 resources deleted
-    Update duration: 8.367411609s
-    ```
-
-And just like that, we have created a URL shorter with persistent storage, hosted on robust and scalable compute! 
+## Summary
 
 That's a quick tour of the `@pulumi/cloud` framework.  There is a lot you can do with this powerful cloud programming 
 framework, and we are excited to see what the community builds on top of it.  Many more examples will be coming

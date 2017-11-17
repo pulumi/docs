@@ -24,7 +24,7 @@ installation on your system.
 `make build` will generate the website (published to _site).
 
 `make generate` will regenerate the TypeScript documentation if needed. Requires you have the
-other Pulumi repos (pulumi, pulumi-cloud, plumi-aws) as peers of the docs repo and in a good
+other Pulumi repos (pulumi, pulumi-cloud, pulumi-aws) as peers of the docs repo and in a good
 working state.
 
 `make serve` will build the website and serve it to http://localhost:4000.
