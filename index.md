@@ -29,6 +29,7 @@ to [contact us](/contact) with any questions or comments that you might have.  W
 
 * [Installation and Setup](/install)
 * [Quickstart Tutorial](/quickstart)
+    - [Pulumi Concepts](/quickstart/concepts.html)
     - [Overview](/quickstart/overview.html)
     - [Programming AWS](/quickstart/aws.html)
     - [Programming the Cloud](/quickstart/cloud.html)
