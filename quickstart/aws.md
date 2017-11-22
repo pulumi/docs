@@ -80,6 +80,14 @@ and associated [Security Group](/packages/pulumi-aws/classes/_ec2_securitygroup_
     }
     ```
 
+1. Create `Pulumi.yaml` with the following contents:
+
+   ```yaml
+   name: webserver
+   runtime: nodejs
+   description: Basic example of an AWS web server accessible over HTTP.
+   ```
+
 1. Run `yarn install` or `npm install` to install the dependencies to your `node_modules` directory.
 
 1. Link with the Pulumi SDK packages so that your `require`s will find the right thing, using either `yarn` or `npm`:
@@ -95,7 +103,8 @@ Create a new file `index.ts` with the following contents:
 ```typescript
 import * as aws from "@pulumi/aws";
 
-export let size: aws.ec2.InstanceType = "t2.micro"; // the type InstanceType contains friendly names for AWS instance sizes
+// the type InstanceType contains friendly names for AWS instance sizes
+export let size: aws.ec2.InstanceType = "t2.micro"; 
 
 // create a new security group for port 80
 let group = new aws.ec2.SecurityGroup("web-secgrp", { 
@@ -114,7 +123,8 @@ async function getLinuxAmi() {
     return result.imageId;
 }
 
-// create a simple web server using the startup script for the instance
+// Create a simple web server using the startup script for the instance
+// Use the AWS metadata service to get the availability zone for the instance
 let userData = 
     `#!/bin/bash
     echo "Hello, World!\nInstance metadata:" > index.html
@@ -146,7 +156,7 @@ This example shows the power of Pulumi:
 
 Now that we have the code for our first program, let's deploy it!
 
-Every Pulumi program is deployed to an __stack__.  An stack is an isolated, independently configurable
+Every Pulumi program is deployed to a __stack__.  A stack is an isolated, independently configurable
 target in which programs will run.  It's reasonable to have many stacks: often you'll have different development,
 staging, and production stacks. In fact, you may have multiple of each kind, such as east coast and west coast
 production.
