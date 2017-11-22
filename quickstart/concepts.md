@@ -11,11 +11,11 @@ nav_section: "quickstart"
 I suggest coming up with a distinct term. I think this warrants category creation. -Donna
  -->
 
-As a cloud developer, you want to be agile, so you provision and manage your own infrastructure. Frustratingly, you then have to use infrastructure tools that are designed for non-developers! To ensure automated and repeatable deployments, you end up writing markup in ill-suited "languages" with awkward formula syntax. What if you could do all this in a real programming language?  
+As a cloud developer, you want to be agile, so you provision and manage your own infrastructure. Frustratingly, you then have to use infrastructure tools that are designed for non-developers! To ensure automated and repeatable deployments, you end up writing markup in ill-suited "languages" with awkward formula syntax. What if you could do all this in a regular programming language?  
 
 Even better, what if you could then combine your app logic and infrastructure requirements into *one* program?
 
-With Pulumi, you use your favorite tools to write **programs** in JavaScript or TypeScript; more languages will be supported in the future. With ordinary JavaScript syntax, your program defines *both* app logic and the infrastructure it needs. We simply call this a **Pulumi Cloud Application**. You'll soon notice that there's no longer a striking distinction between infrastructure and application code. In fact, we like to blur this line and simply think of Pulumi applications as distributed programs.
+With Pulumi, you use your favorite tools to write **programs** in JavaScript or TypeScript. (Python is on its way, followed by more of your favorite languages in the future.) With ordinary JavaScript syntax, your program defines *both* app logic and the infrastructure it needs. We simply call this a **Pulumi Cloud Application**. You'll soon notice that there's no longer a striking distinction between infrastructure and application code. In fact, we like to blur this line and simply think of Pulumi applications as distributed programs.
 
 Here's the amazing thing that happens when you combine code and infrastructure: you can bring software engineering practices to cloud programming! You can create and share reusable components that define code alongside the infrastructure it depends on. 
 
