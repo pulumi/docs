@@ -21,7 +21,7 @@ We will support additional languages in the future. [Let us know](/contact) what
 
 Pulumi's current Cloud SDK includes three packages to use as building blocks for your Cloud Applications.
 
-The following three packages are included in the Pulumi Cloud SDK by default. To use them, run `npm link <package>` or `yarn link <package>` in the consuming Cloud Application's root directory. The quickstart tutorials will walk through these.
+The following three packages are included in the Pulumi Cloud SDK by default. To use them, run `npm link <package>` or `yarn link <package>` in the consuming Cloud Application's root directory. The quickstart tutorials will walk through these. The use of `link` is temporary, and will not be required once these packages have been published to npm.
 
 Except for the core runtime package, `pulumi`, packages are scoped underneath the `@pulumi` namespace.  Anytime you
 see a `@pulumi/...` package, you can expect some reusable cloud goodness that only Pulumi can deliver!
