@@ -26,7 +26,11 @@ In this example, we'll show how a Pulumi application is deployed to AWS managed 
 
 To solve the never-ending debate of "tabs vs. spaces" once and for all, we'll create a voting app. The app has two containers: Redis for the data store, and a Python Flask app for the frontend. In future tutorials, we'll add a database hosted in a container, then show how easy it is to move to a managed database and cache service (such as AWS RDS and ElastiCache).
 
-Even in this simple example, it would be tedious and error prone to define this infrastructure with CloudFormation and similar tools. In AWS terms, the application needs an ECS cluster, a load balancer, an AWS Container Registry (ECR) instance, IAM roles, and so forth. If we were to do this manually, we'd provision around 38 resources. Pulumi hands this automatically!
+Even in this simple example, it would be tedious and error prone to define this infrastructure with CloudFormation and similar tools. In AWS terms, the application needs an ECS cluster, a load balancer, an AWS Container Registry (ECR) instance, IAM roles, and so forth. If we were to do this manually, we'd provision around 38 resources. Pulumi handles this automatically!
+
+### Prerequisites
+
+Since this example builds a custom container, you should first have [Docker](https://docs.docker.com/engine/installation/) installed. 
 
 ### Set up the project
 
@@ -96,6 +100,14 @@ Even though this Pulumi program is just over 36 lines long, it does quite a bit:
 
 Now, lets deploy this elegant program to AWS.
 
+1. Run `yarn install` or `npm install` to install the dependencies to your `node_modules` directory.
+
+1. Link with the Pulumi SDK packages so that your `require`s will find the right thing, using either `yarn` or `npm`:
+
+    ```bash
+    $ yarn link pulumi @pulumi/cloud
+    ```
+
 1. Compile the code via `yarn build`.
 
 1. Create a new Pulumi repository and stack:
@@ -119,7 +131,7 @@ Now, lets deploy this elegant program to AWS.
    
    The frontend URL can get lost amid the output (this will be improved, see [\#454](https://github.com/pulumi/pulumi/issues/454)). As a workaround, once the deployment is complete, run `pulumi update` again. 
 
-1. In a browser, navigate to the URL. You should see the voting app webpage. Feel free to vote for anything, as long as it's spaces. 😉
+1. In a browser, navigate to the URL. You should see the voting app webpage. 
 
    ![Voting app screenshot](./voting-app-webpage.png)
 
