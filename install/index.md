@@ -107,18 +107,18 @@ First download the Pulumi SDK release for your operating system per the above in
 
 Now run the installer, the process depends on if you are on macOS/Linux vs Windows:
 
-* On macOS and Linux, extract the `pulumi-v0.8.3-darwin-x64.tar.gz` or `pulumi-v0.8.3-linux-x64.tar.gz` tarball to any
+* On macOS and Linux, extract the `pulumi-v0.8.3-darwin.x64.tar.gz` or `pulumi-v0.8.3-linux.x64.tar.gz` tarball to any
   directory, then run the `install.sh` script inside the pulumi folder that was extracted.
 
 On macOS run:
 ```bash
-$ tar -xzf pulumi-v0.8.3-darwin-x64.tar.gz
+$ tar -xzf pulumi-v0.8.3-darwin.x64.tar.gz
 $ ./pulumi/install.sh
 ```
 
 On Linux run:
 ```bash
-$ tar -xzf pulumi-v0.8.3-linux-x64.tar.gz
+$ tar -xzf pulumi-v0.8.3-linux.x64.tar.gz
 $ ./pulumi/install.sh
 ```
 
@@ -126,7 +126,7 @@ This script will install Pulumi into `/usr/local/pulumi`. Depending on your syst
 so it can create a subfolder of `/usr/local` and so it can run `npm link`. The script will tell you if this is going to
 happen.  After the installer has run, you may delete the `pulumi` folder that was created by untaring the tarball.
 
-* On Windows, extract `pulumi-v0.8.3-windows-x64.zip` to the installation target and run  `install.cmd` from either a
+* On Windows, extract `pulumi-v0.8.3-windows.x64.zip` to the installation target and run  `install.cmd` from either a
   CMD or PowerShell shell.  We recommend `%SystemRoot%\Program Files`.
 
 Afterwards, you'll need to add the installation's `bin` directory to you `PATH`.  This makes running `pulumi` CLI easy
