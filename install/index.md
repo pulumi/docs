@@ -16,7 +16,8 @@ The first step is to download a binary release suitable for your system.
 
 ### Featured Downloads
 
-The current version of Pulumi's SDK is <b>0.9.0</b> (pre-release) and is available for these systems:
+The current version of Pulumi's SDK is <b><span id="version-label">CURRENT_VERSION</span></b> and is
+available for these systems:
 
 <div class="little-jumbotron">
     <div class="container">
@@ -48,23 +49,30 @@ The current version of Pulumi's SDK is <b>0.9.0</b> (pre-release) and is availab
 </div>
 
 <script>
-const currentVersion = "v0.9.1";
+const currentVersion = "v0.9.2";
 
-function setDownloadUrl(id) {
+function setCurrentVersion(id, attr) {
     let anchor = document.getElementById(id);
     if (!anchor) {
         console.log("ERROR: Couldn't find anchor with id: ", id);
         return;
     }
 
-    url = anchor.getAttribute("href");
-    url = url.replace("CURRENT_VERSION", currentVersion);
-    anchor.setAttribute("href", url);
+    v = attr ? anchor.getAttribute(attr) : anchor.innerHTML;
+    v = v.replace("CURRENT_VERSION", currentVersion);
+
+    if (attr) {
+        anchor.setAttribute(attr, v);
+    }
+    else {
+        anchor.innerHTML = currentVersion;
+    }
 }
 
-setDownloadUrl("macos-download-link");
-setDownloadUrl("windows-download-link");
-setDownloadUrl("linux-download-link");
+setCurrentVersion("version-label");
+setCurrentVersion("macos-download-link", "href");
+setCurrentVersion("windows-download-link", "href");
+setCurrentVersion("linux-download-link", "href");
 </script>
 
 We currently only provide pre-built binaries for x64 architectures on the following OS versions:
