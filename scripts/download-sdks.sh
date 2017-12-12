@@ -13,5 +13,5 @@ for OS in linux windows darwin; do
         EXT="tar.gz"
     fi
 
-    aws s3 cp s3://eng.pulumi.com/releases/sdk/pulumi-$1-${OS}.x64.${EXT} "$DIR/../releases/"
+    aws s3 cp s3://rel.pulumi.com/releases/sdk/pulumi-$1-${OS}.x64.${EXT} "$DIR/../releases/"
 done
