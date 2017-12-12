@@ -22,24 +22,50 @@ The current version of Pulumi's SDK is <b>0.9.0</b> (pre-release) and is availab
     <div class="container">
         <h4 class="f4 title">Pulumi Cloud SDK</h4>
         <p>
-            <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
+            <a
+                    id="macos-download-link"
+                    class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
                     style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="/releases/pulumi-v0.9.0-darwin.x64.tar.gz" role="button">
+                    href="/releases/pulumi-CURRENT_VERSION-darwin.x64.tar.gz" role="button">
                 {% octicon cloud-download height:24 %} macOS x64
             </a>
-            <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
+            <a
+                    id="windows-download-link"
+                    class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
                     style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="/releases/pulumi-v0.9.0-windows.x64.zip" role="button">
+                    href="/releases/pulumi-CURRENT_VERSION-windows.x64.zip" role="button">
                 {% octicon cloud-download height:24 %} Windows x64
             </a>
-            <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
+            <a
+                    id="linux-download-link"
+                    class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
                     style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="/releases/pulumi-v0.9.0-linux.x64.tar.gz" role="button">
+                    href="/releases/pulumi-CURRENT_VERSION-linux.x64.tar.gz" role="button">
                 {% octicon cloud-download height:24 %} Linux x64
             </a>
         </p>
     </div>
 </div>
+
+<script>
+const currentVersion = "v0.9.1";
+
+function setDownloadUrl(id) {
+    let anchor = document.getElementById(id);
+    if (!anchor) {
+        console.log("ERROR: Couldn't find anchor with id: ", id);
+        return;
+    }
+
+    url = anchor.getAttribute("href");
+    url = url.replace("CURRENT_VERSION", currentVersion);
+    anchor.setAttribute("href", url);
+}
+
+setDownloadUrl("macos-download-link");
+setDownloadUrl("windows-download-link");
+setDownloadUrl("linux-download-link");
+</script>
 
 We currently only provide pre-built binaries for x64 architectures on the following OS versions:
 
