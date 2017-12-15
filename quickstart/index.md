@@ -14,8 +14,8 @@ Applications.
 * [Overview](./overview.html)
 * [Programming AWS](./aws.html)
 * [Programming the Cloud](./cloud.html)
+* [Pulumi Cloud Console](./console.html)
 * [Further Reading](./reading.html)
-    - [Pulumi CLI](./reading.html#pulumi-cli)
-    - [Using TypeScript](./reading.html#using-typescript)
-    - [Next Steps](./reading.html#next-steps)
-
+  * [Pulumi CLI](./reading.html#pulumi-cli)
+  * [Using TypeScript](./reading.html#using-typescript)
+  * [Next Steps](./reading.html#next-steps)
