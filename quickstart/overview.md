@@ -113,7 +113,7 @@ additional methods for managing infrastructure state across updates, including a
 
 Since this is a simple example, it might seem that using AWS CloudFormation would not be too onerous. Unfortunately, because CloudFormation lacks high-level programming language constructs, even a simple infrastructure definition is very verbose. And, because CloudFormation uses embedded formulas and strings to reference objects, it's quite error-prone. With Pulumi, you don't need special tools to analyze your infrastructure definition, you just use regular code.
 
-In particular, it takes *90 lines* of CloudFormation to define the infrastructure for this simple example. Pulumi programs tend to be 10x smaller than the CloudFormation they replace. 
+In particular, it takes *90 lines* of CloudFormation JSON to define the infrastructure for this simple example. (YAML is more verbose but easier to read). Pulumi programs tend to be 10x smaller than the CloudFormation JSON they replace. 
 
 The elided CloudFormation definition is below. Notice the use of strings to connect objects and the custom syntax of `Fn::` and `Ref`. Wouldn't you rather just use JavaScript?
 
@@ -122,17 +122,17 @@ The elided CloudFormation definition is below. Notice the use of strings to conn
   "AWSTemplateFormatVersion" : "2010-09-09",
   "Parameters" : {
     "InstanceType" : {
-        "7 lines elided": ""
+        // 7 lines elided
     }
   },
   "Mappings" : {
     "AWSInstanceType2Arch" : {
-      "t1.micro"    : { "Arch" : "PV64"   },
-      "35 additional lines elided": ""
+      "t1.micro"    : { "Arch" : "PV64"   }
+      // 35 additional lines elided
     },
     "AWSRegionArch2AMI" : {
-      "us-east-1"      : { "PV64" : "ami-50842d38", "HVM64" : "ami-08842d60", "HVMG2" : "ami-3a329952"  },
-      "9 additional line elided": ""
+      "us-east-1"      : { "PV64" : "ami-50842d38", "HVM64" : "ami-08842d60", "HVMG2" : "ami-3a329952"  }
+      // 9 additional lines elided
     }
   },
   "Resources" : {
