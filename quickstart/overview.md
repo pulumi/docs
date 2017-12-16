@@ -3,7 +3,7 @@ layout: default
 nav_section: "quickstart"
 ---
 
-<p><a href="/quickstart">Quickstart</a> &gt; <b>Overview</b></p>
+<p><a href="/quickstart">Getting Started</a> &gt; <b>Overview</b></p>
 
 # Pulumi Overview
 
