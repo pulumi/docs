@@ -3,7 +3,7 @@ layout: default
 nav_section: "packages"
 ---
 
-<h1 class="title f1">Pulumi Library Packages</h1>
+# Pulumi Library Packages
 
 All Pulumi packages are available in your favorite package manager.  For now, this means NPM, since Pulumi only
 supports JavaScript and TypeScript to start (although more languages are on their way).

@@ -3,7 +3,7 @@ layout: default
 nav_section: "quickstart"
 ---
 
-<p><a href="/quickstart">Quickstart</a> &gt; <b>Programming the Cloud</b></p>
+<p><a href="/quickstart">Getting Started</a> &gt; <b>Programming the Cloud</b></p>
 
 # Programming the Cloud
 
@@ -34,9 +34,11 @@ Since this example builds a custom container, you should first have [Docker](htt
 
 ### Set up the project
 
-1. Clone or download the `examples` repo at the [tutorial-initial branch](https://github.com/pulumi/examples/tree/tutorial-initial). This has the project setup and Flask app, but not the Pulumi program itself.
+1. Download and unzip the file [pulumi-voting-app-example.zip](/examples/pulumi-voting-app-example.zip). 
 
-1. In the `voting-app` folder, add the following file as `index.ts`:
+1. In your favorite editor, open the directory you just unzipped. You'll see a Python Flask app in the `frontend` folder and a Pulumi program in `index.ts`. You may ignore the details of the Python app. 
+
+1. Open the file `index.ts`, which has the contents below.
 
    ```typescript
    import * as cloud from "@pulumi/cloud";
@@ -44,6 +46,7 @@ Since this example builds a custom container, you should first have [Docker](htt
    // To simplify this example, we have defined the password directly in code
    // In a real app, would add the secret via `pulumi config secret <key> <value>` and
    // access via pulumi.Config APIs
+   // A future tutorial will show how to configure secrets.
    let redisPassword = "SECRETPASSWORD"; 
 
    // The data layer for the application
@@ -87,17 +90,24 @@ Since this example builds a custom container, you should first have [Docker](htt
 
 Even though this Pulumi program is just over 36 lines long, it does quite a bit:
 
-- Creates a container `redisCache`. This is a Redis cache that just uses the `redis` image with tag `alpine` from Docker Hub. Since it's a built image, you just have to specify the port and startup command.
-- Creates a custom container `frontend`:
-  - Uses the `build` property to point to a folder with a Dockerfile. Pulumi automatically invokes `docker build` for you and pushes the container to ECR.
-  - Exports the output `frontendURL`, via the line `export let frontEndUrl = ...`. This creates an output property that can be used by other parts of your program and is displayed during `pulumi update`.
-  - Uses Pulumi APIs to statically lookup the server name and port for the container `redisCache` and set environment variables. This makes it easy to connect containers to each other. The Flask app uses these environment variables to connect to the Redis cache container. See these definitions in `frontend/app/main.py` in the `voting-app` folder:
+**`redisCache` container**
 
-    ```python
-    redis_server =   os.environ['REDIS']
-    redis_port =     os.environ['REDIS_PORT']
-    redis_password = os.environ['REDIS_PWD']
-    ```
+- A Redis cache that simply uses the Docker Hub `redis` image with tag `alpine`. Since it's a built image, you just have to specify the port and startup command.
+
+**`frontend` custom container**
+
+- Uses the `build` property to point to a folder with a Dockerfile. Pulumi automatically invokes `docker build` for you and pushes the container to ECR.
+- Uses Pulumi APIs, to set environment variables by statically looking up the server name and port for the container `redisCache`. This makes it easy to connect containers to each other. The Flask app uses these environment variables to connect to the Redis cache container. See the usage in `voting-app/frontend/app/main.py`:
+
+  ```python
+  redis_server =   os.environ['REDIS']
+  redis_port =     os.environ['REDIS_PORT']
+  redis_password = os.environ['REDIS_PWD']
+  ```
+
+#### Output properties
+
+The code exports the output `frontendURL`, via the declaration `export let frontEndUrl`. You can view the last deployed value for the output property using `pulumi stack output varName` and use it as part of a shell script.
 
 ### Build, preview, and update
 
@@ -248,7 +258,14 @@ Now, lets deploy this elegant program to AWS.
    frontendURL: "http://pulumi-vo-ne2-d7f97ef-7c5e2c22a22ec44a.elb.us-west-2.amazonaws.com:34567"
    ```
 
-1. In a browser, navigate to the URL specified for `frontendURL`. You should see the voting app webpage. 
+1. In your terminal, view the stack output property:
+
+   ```bash
+   $ pulumi stack output frontendURL
+   http://pulumi-vo-ne2-d7f97ef-7c5e2c22a22ec44a.elb.us-west-2.amazonaws.com:34567
+   ```
+
+1. In a browser, navigate to the URL from the previous step. You should see the voting app webpage.
 
    ![Voting app screenshot](./voting-app-webpage.png)
 
