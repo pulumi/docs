@@ -7,4 +7,6 @@ nav_section: "how-to"
 
 - [Using the Pulumi CLI](./cli-commands.html)
 - [Using TypeScript](./typescript.html)
-- [Known issues](./known-issues.html)
+
+<!-- COMMENTED UNTIL KNOWN ISSUES GETS SOME CONTENT -->
+<!-- - [Known issues](./known-issues.html) -->

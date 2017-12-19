@@ -12,7 +12,7 @@ nav_section: "home"
 
 **Pulumi is the easiest way to build, connect, and run modern cloud applications.**
 
-**Bring Your Own Language.**  Pulumi lets you write portable Cloud Applications in your a regular programming  language, using your favorite IDEs and tools, and runs them on the cloud of your choice.  The result is a truly
+**Bring Your Own Language.**  Pulumi lets you write portable Cloud Applications in a regular programming  language, using your favorite IDEs and tools, and runs them on the cloud of your choice.  The result is a truly
 cloud native application.
 
 **The Modern Cloud, Now Easy to Use.**  Pulumi delivers the latest innovations in cloud computing to your fingertips,
