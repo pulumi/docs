@@ -277,7 +277,5 @@ Clean up your resources with `pulumi destroy`. This will take a few minutes, as 
 
 That's a quick tour of the `@pulumi/cloud` framework.  There is a lot you can do with this powerful cloud programming 
 framework, and we are excited to see what the community builds on top of it.  Many more examples will be coming
-soon; however, in the meantime, please check out the [API documentation](/packages/pulumi-cloud/) for more details.
-
-## Next Up: [Further Reading](./reading.html)
+soon. In the meantime, please check out the [API documentation](/packages/pulumi-cloud/) for more details.
 
