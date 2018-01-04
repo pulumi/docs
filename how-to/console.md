@@ -8,15 +8,6 @@ type: reference
 
 # Using the Pulumi Cloud Console
 
-<!-- 
-
-So far in the quickstart we have been running Pulumi programs on your local machine. While the
-Pulumi tool handled creating cloud resources based on the programs you wrote, all of the
-information is still on your hard drive.
-
-This means it is difficult to collaborate with other developers, and even worse means you are one
-harddrive failure away from a very bad day. -->
-
 The Pulumi Cloud Management Console is a hosted version of Pulumi. You write and run programs in
 the same way, except rather than executing them on your local machine, the Pulumi Cloud Console
 handles the deployment for you.

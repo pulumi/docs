@@ -7,7 +7,14 @@ nav_section: "how-to"
 
 # Create and manage Cloud Stacks
 
-This tutorial shows how you can create and manage Pulumi Cloud Stacks in both the Pulumi CLI and Cloud Console.
+This tutorial shows how you can create and manage Pulumi Cloud Stacks in both the Pulumi CLI and Cloud Console. This involves the following:
+
+- Login to the Pulumi Console and get your access token
+- Login to the Pulumi Cloud from the CLI, using `pulumi login` and the access token
+- Set values for your AWS credentials as part of your Pulumi program
+- Run the `preview` and `update` commands
+
+Then, you can view information about your stack in the Pulumi Cloud Console, as well as the output of the last `pulumi update`.
 
 ## Configure the sample project
 
@@ -21,11 +28,9 @@ This tutorial shows how you can create and manage Pulumi Cloud Stacks in both th
    $ npm link pulumi @pulumi/cloud
    ```
 
-1. Compile the code via `tsc` or `yarn build`.
+1. Compile the code via `npm build`.
 
 ## Create a Cloud Stack
-
-The following sections describe how to create a Cloud Stack. You login to the Pulumi Console, set values for your AWS credentials, then run `pulumi preview` and `pulumi update` as usual. You can then view the output of the last `pulumi update` in the Pulumi Cloud Console, as well as information about your stack.
 
 ### Login and set your region
 
@@ -81,6 +86,8 @@ If you try to run `pulumi preview`, you'll see an error because the config value
    warning: saved config key 'aws:config:accessKey' value '4w54cc355k3y' as plaintext; re-run with --secret to encrypt the value instead
    ```
 
+   Use the `--secret` flag for `aws:config:secretKey`:
+
    ```bash
    $ pulumi config set aws:config:secretKey 53cr37k3yd0n7l34k170rb4d7h1n65w1llh4pp3n --secret
    Enter your passphrase to protect config/secrets: 
@@ -93,7 +100,7 @@ If you try to run `pulumi preview`, you'll see an error because the config value
 
    > You can set the environment variable `PULUMI_CONFIG_PASSPHRASE` to avoid the interactive prompt.
 
-1. View your configured values via `pulumi config`. To view the values of secrets, pass the `--show-secrets` flag.
+1. View your configured values via `pulumi config`. To view the values of any secrets, pass the `--show-secrets` flag.
    
    ```bash
    $ pulumi config
@@ -147,174 +154,7 @@ Performing changes:
     + aws:iam/role:Role: (create)
         [urn=urn:pulumi:donna-testing::url-shortener::aws:iam/role:Role::urlshortener4c238266]
         ...
-    + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-        [urn=urn:pulumi:donna-testing::url-shortener::aws:iam/rolePolicyAttachment:RolePolicyAttachment::urlshortener4c238266]
-        ...
-    + aws:s3/bucketObject:BucketObject: (create)
-        [urn=urn:pulumi:donna-testing::url-shortener::aws:s3/bucketObject:BucketObject::urlshortener4c238266/bootstrap.min.css]
-        ...
-    + aws:s3/bucketObject:BucketObject: (create)
-        [urn=urn:pulumi:donna-testing::url-shortener::aws:s3/bucketObject:BucketObject::urlshortener4c238266/favicon.png]
-        ...
-    + aws:s3/bucketObject:BucketObject: (create)
-        [urn=urn:pulumi:donna-testing::url-shortener::aws:s3/bucketObject:BucketObject::urlshortener4c238266/index.html]
-        ...
-        + cloud:function:Function: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function::urlshortener0f7d8d8d]
-    + cloud:global:infrastructure: (create)
-        [urn=urn:pulumi:donna-testing::url-shortener::cloud:global:infrastructure::global-infrastructure]
-        + aws:sns/topic:Topic: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:global:infrastructure$aws:sns/topic:Topic::pulumi-d-unhandled-error]
-            name: "pulumi-d-unhandled-error-f3beab2"
-            ---outputs:---
-            ...
-            + aws:serverless:Function: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function::urlshortener0f7d8d8d]
-                ...
-                + aws:iam/role:Role: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:iam/role:Role::urlshortener0f7d8d8d]
-                    ...
-                + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:iam/rolePolicyAttachment:RolePolicyAttachment::urlshortener0f7d8d8d-32be53a2]
-                    policyArn: "arn:aws:iam::aws:policy/AWSLambdaFullAccess"
-                    role     : "urlshortener0f7d8d8d-07a591a"
-                    ---outputs:---
-                    id       : "urlshortener0f7d8d8d-07a591a-20171221031918666800000002"
-                + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:iam/rolePolicyAttachment:RolePolicyAttachment::urlshortener0f7d8d8d-fd1a00e5]
-                    policyArn: "arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess"
-                    role     : "urlshortener0f7d8d8d-07a591a"
-                    ---outputs:---
-                    id       : "urlshortener0f7d8d8d-07a591a-20171221031919838900000003"
-                + aws:lambda/function:Function: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:lambda/function:Function::urlshortener0f7d8d8d]
-                    ...
-            + aws:cloudwatch/logGroup:LogGroup: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:cloudwatch/logGroup:LogGroup::urlshortener0f7d8d8d]
-                name           : "/aws/lambda/urlshortener0f7d8d8d-c30bd17"
-                retentionInDays: 1
-                ---outputs:---
-                arn            : "arn:aws:logs:us-west-2:153052954103:log-group:/aws/lambda/urlshortener0f7d8d8d-c30bd17:*"
-                id             : "/aws/lambda/urlshortener0f7d8d8d-c30bd17"
-                retentionInDays: "1"
-    + cloud:logCollector:LogCollector: (create)
-        [urn=urn:pulumi:donna-testing::url-shortener::cloud:logCollector:LogCollector::pulumi-donna-testing]
-        + aws:serverless:Function: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:logCollector:LogCollector$aws:serverless:Function::pulumi-donna-testing]
-            ...
-            + aws:iam/role:Role: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:logCollector:LogCollector$aws:serverless:Function$aws:iam/role:Role::pulumi-donna-testing]
-                ...
-            + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:logCollector:LogCollector$aws:serverless:Function$aws:iam/rolePolicyAttachment:RolePolicyAttachment::pulumi-donna-testing-32be53a2]
-                policyArn: "arn:aws:iam::aws:policy/AWSLambdaFullAccess"
-                role     : "pulumi-donna-testing-be5a01f"
-                ---outputs:---
-                id       : "pulumi-donna-testing-be5a01f-20171221031938826900000004"
-            + aws:lambda/function:Function: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:logCollector:LogCollector$aws:serverless:Function$aws:lambda/function:Function::pulumi-donna-testing]
-                ...
-        + aws:lambda/permission:Permission: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:logCollector:LogCollector$aws:lambda/permission:Permission::pulumi-donna-testing]
-            action     : "lambda:invokeFunction"
-            function   : "pulumi-donna-testing-d70370c"
-            principal  : "logs.us-west-2.amazonaws.com"
-            statementId: "pulumi-donna-testing-2a2eab5"
-            ---outputs:---
-            id         : "pulumi-donna-testing-2a2eab5"
-            + aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter::urlshortener0f7d8d8d]
-                destinationArn: "arn:aws:lambda:us-west-2:153052954103:function:pulumi-donna-testing-d70370c"
-                logGroup      : "/aws/lambda/urlshortener0f7d8d8d-c30bd17"
-                name          : "urlshortener0f7d8d8d-02fa07c"
-                ---outputs:---
-                id            : "cwlsf-175410676"
-        + cloud:function:Function: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function::urlshortenerd9505e4a]
-            + aws:serverless:Function: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function::urlshortenerd9505e4a]
-                ...                
-                + aws:iam/role:Role: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:iam/role:Role::urlshortenerd9505e4a]
-                    ...                                    
-                + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:iam/rolePolicyAttachment:RolePolicyAttachment::urlshortenerd9505e4a-32be53a2]
-                    policyArn: "arn:aws:iam::aws:policy/AWSLambdaFullAccess"
-                    role     : "urlshortenerd9505e4a-5b0786e"
-                    ---outputs:---
-                    id       : "urlshortenerd9505e4a-5b0786e-20171221031957624600000005"
-                + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:iam/rolePolicyAttachment:RolePolicyAttachment::urlshortenerd9505e4a-fd1a00e5]
-                    policyArn: "arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess"
-                    role     : "urlshortenerd9505e4a-5b0786e"
-                    ---outputs:---
-                    id       : "urlshortenerd9505e4a-5b0786e-20171221031958708200000006"
-                + aws:lambda/function:Function: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:lambda/function:Function::urlshortenerd9505e4a]
-                    ...                
-            + aws:cloudwatch/logGroup:LogGroup: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:cloudwatch/logGroup:LogGroup::urlshortenerd9505e4a]
-                name           : "/aws/lambda/urlshortenerd9505e4a-e66a77d"
-                retentionInDays: 1
-                ---outputs:---
-                arn            : "arn:aws:logs:us-west-2:153052954103:log-group:/aws/lambda/urlshortenerd9505e4a-e66a77d:*"
-                id             : "/aws/lambda/urlshortenerd9505e4a-e66a77d"
-                retentionInDays: "1"
-            + aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter::urlshortenerd9505e4a]
-                destinationArn: "arn:aws:lambda:us-west-2:153052954103:function:pulumi-donna-testing-d70370c"
-                logGroup      : "/aws/lambda/urlshortenerd9505e4a-e66a77d"
-                name          : "urlshortenerd9505e4a-1c94204"
-                ---outputs:---
-                id            : "cwlsf-2588808429"
-        + cloud:function:Function: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function::urlshortenereeb67ce9]
-            + aws:serverless:Function: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function::urlshortenereeb67ce9]
-                ...                
-                + aws:iam/role:Role: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:iam/role:Role::urlshortenereeb67ce9]
-                    ...                
-                + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:iam/rolePolicyAttachment:RolePolicyAttachment::urlshortenereeb67ce9-32be53a2]
-                    ...                
-
-                + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:iam/rolePolicyAttachment:RolePolicyAttachment::urlshortenereeb67ce9-fd1a00e5]
-                    ...
-                + aws:lambda/function:Function: (create)
-                    [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:serverless:Function$aws:lambda/function:Function::urlshortenereeb67ce9]
-                    ...
-            + aws:cloudwatch/logGroup:LogGroup: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:cloudwatch/logGroup:LogGroup::urlshortenereeb67ce9]
-                ...                
-
-            + aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter: (create)
-                [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$cloud:function:Function$aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter::urlshortenereeb67ce9]
-                destinationArn: "arn:aws:lambda:us-west-2:153052954103:function:pulumi-donna-testing-d70370c"
-                logGroup      : "/aws/lambda/urlshortenereeb67ce9-f49e4f5"
-                name          : "urlshortenereeb67ce9-c6f93f4"
-                ---outputs:---
-                id            : "cwlsf-3270915532"
-        + aws:apigateway/restApi:RestApi: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$aws:apigateway/restApi:RestApi::urlshortener]
-            ...                
-
-        + aws:apigateway/deployment:Deployment: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$aws:apigateway/deployment:Deployment::urlshortener-e79b5b01]
-            ...
-        + aws:apigateway/stage:Stage: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$aws:apigateway/stage:Stage::urlshortener]
-            ...
-        + aws:lambda/permission:Permission: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$aws:lambda/permission:Permission::urlshortener-0f7d8d8d]
-            ...                
-        + aws:lambda/permission:Permission: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$aws:lambda/permission:Permission::urlshortener-eeb67ce9]
-            ...
-        + aws:lambda/permission:Permission: (create)
-            [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint$aws:lambda/permission:Permission::urlshortener-d9505e4a]
-            ...
+    <more resources elided>
     ---outputs:---
     endpointUrl: "https://3tyk3ogkgc.execute-api.us-west-2.amazonaws.com/stage/"
 info: 48 changes performed:
@@ -338,7 +178,7 @@ From the stack details page, you can also view the latest update logs, which wil
 
 ### Clean up
 
-To clean up your deployed resources, use the `pulumi destroy` command.
+To clean up your deployed resources, use the `pulumi destroy` command. This will delete the cloud resources allocated by your Pulumi program, and the operation cannot be undone. 
 
 ## Next steps
 

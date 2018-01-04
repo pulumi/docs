@@ -54,7 +54,7 @@ esac
 
 
 # TODO: Build any prerequisites for your Pulumi program
-# TODO: and CD into the Pulumi program's directory.
+#       and CD into the Pulumi program's directory.
 # $ make build
 # $ cd tool/pulumi
 
@@ -87,15 +87,6 @@ You can add your Pulumi access token to your Travis job's settings. Since this s
 ![adding-travis-setting](/images/tutorial-travis/01-add-travis-envvar.png)
 
 ### Pulumi init and stack select
-
-<!-- 
-The combination of _organization_, _repository_, _project name_, and _stack_ collectively define an specific Cloud Stack. 
-
-The sample script above sets these values as follows:
-- _Organization_ and _repository_ are defined when the local Pulumi workspace is initialized via `pulumi init`.
-- _Project name_ is defined in `Pulumi.yaml`
-- _Stack_ is selected via `pulumi stack select` 
--->
 
 The same script does the following:
 - Runs `pulumi init` to initialize the local Pulumi workspace.
