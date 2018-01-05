@@ -3,26 +3,28 @@ layout: default
 nav_section: "how-to"
 ---
 
-<p><a href="/how-to">How-to Guides</a> &gt; <b>Create and manage Cloud Stacks</b></p>
+<p><a href="/how-to">How-to Guides</a> &gt; <b>Work with managed stacks in Pulumi</b></p>
 
-# Create and manage Cloud Stacks
+# Create and work with managed stacks
 
-This tutorial shows how you can create and manage Pulumi Cloud Stacks in both the Pulumi CLI and Cloud Console. This involves the following:
+When using a managed stack, preview and update operations are performed by the Pulumi service. Managed stacks are more robust, as deployment history and current state are all managed for you. This makes it safe to run deployments in a team or continuous deployment workflow.
 
-- Login to the Pulumi Console and get your access token
-- Login to the Pulumi Cloud from the CLI, using `pulumi login` and the access token
-- Set values for your AWS credentials as part of your Pulumi program
-- Run the `preview` and `update` commands
+This tutorial shows how to create and work with managed stacks using the CLI and Pulumi Console, with the following steps:
 
-Then, you can view information about your stack in the Pulumi Cloud Console, as well as the output of the last `pulumi update`.
+- Log in to the Pulumi Console and get your access token
+- Log in to Pulumi from the CLI, using `pulumi login` and the access token
+- Set values for your AWS credentials as part of your Pulumi program configuration
+- Run the `preview` and `update` CLI commands
+
+Then, you can view information about your stack in the console, as well as the output of the last `pulumi update`.
 
 ## Configure the sample project
 
 1. Download and unzip the sample project [pulumi-url-shortener-example](/examples/pulumi-url-shortener-example.zip). 
 
-1. In the `pulumi-url-shortener-example` folder, run `npm install` to install the dependencies to your `node_modules` directory.
+1. In the root of the unzipped folder, run `npm install` to install the dependencies to your `node_modules` directory.
 
-1. Link with the Pulumi Cloud SDK package.
+1. Link with the Pulumi SDK packages:
 
    ```bash
    $ npm link pulumi @pulumi/cloud
@@ -30,17 +32,19 @@ Then, you can view information about your stack in the Pulumi Cloud Console, as 
 
 1. Compile the code via `npm build`.
 
-## Create a Cloud Stack
+1. Create a new repository via `pulumi init`.
 
-### Login and set your region
+## Create a managed stack
 
-1. Create a new Pulumi repository via `pulumi init`.
+### Log in to Pulumi 
 
-1. Log in to Pulumi Cloud Console. See [Logging in](./console.html#login-to-console).
+1. Log in to the Pulumi Console. See [Logging in](./console.html#login-to-console).
 
-1. Copy your access token from Console account page. See documentation on the [Pulumi access token](./console.html#access-token).
+1. Copy your access token from console **Account** page. For more information, see [Pulumi account](./console.html#account-page).
 
-1. Run `pulumi login`. At the prompt, paste the access token that you copied in the previous step.
+1. Run `pulumi login`. At the prompt, paste the access token that you copied in the previous step. 
+
+   > Note: the Pulumi access token is a secret and should be kept secure.
 
    ```bash
    $ pulumi login
@@ -48,7 +52,7 @@ Then, you can view information about your stack in the Pulumi Cloud Console, as 
    Enter your Pulumi access token: w3lc0m370pulum1cl0ud=
    ```
 
-1. To see that you are logged in, run the `pulumi` command. The status text at the bottom will show that you are logged in to the Pulumi Cloud.
+1. To see that you are logged in, run the `pulumi` command and note the status text at the bottom.
 
    ```bash
    $ pulumi
@@ -59,12 +63,20 @@ Then, you can view information about your stack in the Pulumi Cloud Console, as 
       https://api.pulumi.com*
    ```
 
-1. Create a Cloud Stack via `stack init`:
+1. Create a managed stack via `stack init`:
 
    ```bash
    $ pulumi stack init donna-testing
    Created stack 'donna-testing' hosted in Pulumi Cloud PPC default
    ```   
+
+### Configure AWS credentials
+
+The sample program creates AWS resources in an account you specify via `pulumi config`. 
+
+Any program that configures AWS resources requires three configuration variables: `aws:config:accessKey`, `aws:config:secretKey` and `aws:config:region`. If you omit any of these values, `pulumi preview` and `pulumi update` will tell you which settings are missing.
+
+The value for `aws:config:secretKey` is a sensitive secret. To ensure it is not stored or transmitted in plain text, it should be stored in Pulumi config using the `--secret` flag.
 
 1. Set your AWS region to `us-west-2`, or whichever region you prefer. The config value will be saved to `Pulumi.yaml` for the current stack.
 
@@ -73,32 +85,26 @@ Then, you can view information about your stack in the Pulumi Cloud Console, as 
    warning: saved config key 'aws:config:region' value 'us-west-2' as plaintext; re-run with --secret to encrypt the value instead
    ```
 
-### Configure AWS credentials
-
-Since your AWS credentials are not stored in the Pulumi Service itself, you need to pass them in as configuration as part of your program. This means that the Service cannot directly view your credentials; it only uses them to deploy your program. 
-
-If you try to run `pulumi preview`, you'll see an error because the config value for `aws:config:accessKey` is not set. 
-
-1. Set values for `aws:config:accessKey` and `aws:config:secretKey`. While `accessKey` is not a secret,  `secretKey` is a secret (as the name implies). Always use the `--secret` flag to encrypt sensitive values.
+1. Set the value for `aws:config:accessKey`. This is not a secret and can be stored as plaintext. 
 
    ```bash
    $ pulumi config set aws:config:accessKey 4w54cc355k3y
    warning: saved config key 'aws:config:accessKey' value '4w54cc355k3y' as plaintext; re-run with --secret to encrypt the value instead
    ```
 
-   Use the `--secret` flag for `aws:config:secretKey`:
+1. Since `secretKey` is a secret (as the name implies), use the `--secret` flag:
 
    ```bash
-   $ pulumi config set aws:config:secretKey 53cr37k3yd0n7l34k170rb4d7h1n65w1llh4pp3n --secret
+   $ pulumi config set --secret aws:config:secretKey 53cr37k3yd0n7l34k170rb4d7h1n65w1llh4pp3n 
    Enter your passphrase to protect config/secrets: 
    Re-enter your passphrase to confirm: 
    ```
 
-   A value for `encryptionsalt` will be stored in `Pulumi.yaml`. This value is based on your passphrase, but is not itself a secret and can be stored safely in source control. 
+   A value for `encryptionsalt` will be stored in `Pulumi.yaml`. This value is based on your passphrase, but is not itself a secret; it can be stored safely in source control. 
    
-   > NOTE: If you wish to change your passphrase, delete the config value for `encryptionsalt` and delete your existing secure values.
+   > If you wish to change your passphrase, delete the config value for `encryptionsalt` and delete your existing secure values.
 
-   > You can set the environment variable `PULUMI_CONFIG_PASSPHRASE` to avoid the interactive prompt.
+   > Set the environment variable `PULUMI_CONFIG_PASSPHRASE` to avoid the interactive prompt.
 
 1. View your configured values via `pulumi config`. To view the values of any secrets, pass the `--show-secrets` flag.
    
@@ -112,9 +118,7 @@ If you try to run `pulumi preview`, you'll see an error because the config value
 
 ### Preview and deploy your program
 
-Previewing and deploying your program is similar to the local stack case, except the preview and update are performed by the Pulumi Cloud Service. This means that you can have more robust deployments and the last known state of the deployment is stored by the Service. This makes it safe to run deployments in a team or continuous deployment scenario.
-
-When you do a preview or update, your program will be uploaded to the Pulumi Cloud, which will then run the preview operation for you.
+When you do a CLI preview or update operation, your program is uploaded to Pulumi, which then runs the operation on your behalf.
 
 ```bash
 $ pulumi preview
@@ -142,19 +146,7 @@ Uploading program:  411.04 KiB / 411.04 KiB [===============] 100.00% 2s
 Performing changes:
 + pulumi:pulumi:Stack: (create)
     [urn=urn:pulumi:donna-testing::url-shortener::pulumi:pulumi:Stack::url-shortener-donna-testing]
-    + cloud:table:Table: (create)
-        [urn=urn:pulumi:donna-testing::url-shortener::cloud:table:Table::urls]
-        ...
-    + cloud:http:HttpEndpoint: (create)
-        [urn=urn:pulumi:donna-testing::url-shortener::cloud:http:HttpEndpoint::urlshortener]
-        ...
-    + aws:s3/bucket:Bucket: (create)
-        [urn=urn:pulumi:donna-testing::url-shortener::aws:s3/bucket:Bucket::urlshortener]
-        ...
-    + aws:iam/role:Role: (create)
-        [urn=urn:pulumi:donna-testing::url-shortener::aws:iam/role:Role::urlshortener4c238266]
-        ...
-    <more resources elided>
+    ** more resources elided **
     ---outputs:---
     endpointUrl: "https://3tyk3ogkgc.execute-api.us-west-2.amazonaws.com/stage/"
 info: 48 changes performed:
@@ -162,28 +154,59 @@ info: 48 changes performed:
 Update duration: 1m48.031104748s
 ```
 
-### View resources and update logs 
+### View deployed resources 
 
-You can see the resources that are currently deployed in your Cloud Stack via the Pulumi Cloud Console.
+You can view the currently deployed resources in your managed stack using either the Pulumi Console or the CLI.
 
-To view your stack, navigate via the organization, repo, project and stack. From the stack details page, you can view the stack outputs and view the logs from the latest update.
+#### Using the console
+
+Using the console, you can view deployed resources and the log output of the last update.
+
+**Stack.** To view your stack, navigate via the organization, repo, project and stack. From the stack details page, you can view the stack outputs and view the logs from the latest update.
 
 For instance, the value of `endpointUrl` is displayed in the stack details page.
 
-![stack-details](/images/docs-console/06-stack-details.png)
+![stack-details](/images/docs-console/06-stack-details.png){:width="700px"}
 
-From the stack details page, you can also view the latest update logs, which will show the same logs that you previously saw in your terminal.
+**Update logs.** To view the  update logs, select **Latest Update Logs**. This will show the same logs that you previously saw in the terminal.
 
-![stack-update-log](/images/docs-console/07-stack-update-log.png)
+![stack-update-log](/images/docs-console/07-stack-update-log.png){:width="700px"}
+
+#### Using the CLI
+
+To view the resources in your managed stack, run `pulumi stack`:
+
+```bash
+$ pulumi stack
+Current stack is donna-testing:
+    Managed by https://api.pulumi.com ☁️
+    Organization pulumi
+    <snip>
+
+Current stack resources (48):
+    TYPE                           NAME
+    pulumi:pulumi:Stack            url-shortener-donna-testing
+    ** additional resources elided **
+
+Current stack outputs (1):
+    OUTPUT                         VALUE
+    endpointUrl                    https://3tyk3ogkgc.execute-api.us-west-2.amazonaws.com/stage/
+
+Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
+```
 
 ### Clean up
 
-To clean up your deployed resources, use the `pulumi destroy` command. This will delete the cloud resources allocated by your Pulumi program, and the operation cannot be undone. 
+1. To clean up your deployed resources, use the `pulumi destroy` command. This will delete the AWS resources allocated by your Pulumi program. This operation cannot be undone. 
 
-## Next steps
+1. Delete the stack via `pulumi stack rm`.
 
-To learn more about using Pulumi cloud stacks, see the following:
+1. Logout of Pulumi via `pulumi logout`.
 
-- [Using the Pulumi Cloud Console](./console.html)
+## Learn more
+
+To learn more about using managed stacks, see the following:
+
+- [Using the Pulumi Console](./console.html)
 - [Use Travis to continuously deploy Pulumi programs](./cicd-with-travis.html)
 - [Pulumi CLI reference](./cli-commands.html)

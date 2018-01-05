@@ -4,29 +4,23 @@ nav_section: "how-to"
 type: reference
 ---
 
-<p><a href="/how-to">How-to Guides</a> &gt; <b>Pulumi Cloud Console</b></p>
+<p><a href="/how-to">How-to Guides</a> &gt; <b>Pulumi Console</b></p>
 
-# Using the Pulumi Cloud Console
+# Using the Pulumi Console
 
-The Pulumi Cloud Management Console is a hosted version of Pulumi. You write and run programs in
-the same way, except rather than executing them on your local machine, the Pulumi Cloud Console
-handles the deployment for you.
+The Pulumi Console provides a web-based management experience for Pulumi. Visit [https://beta.pulumi.com](https://beta.pulumi.com).
 
-To access the Pulumi Cloud Console, visit [https://beta.pulumi.com](https://beta.pulumi.com).
-
-> NOTE: The Pulumi Cloud Console is a work in progress. We will be adding many new features over
-> the coming weeks. Your feedback is an important part of making it the Pulumi console the
-> most friendly, intuitive, and useful management tool you've ever used. We want to hear from you!
+> The Pulumi Console is a work in progress. We will be adding many new features over the coming weeks. Your feedback is an important part of making it the console the most friendly, intuitive, and useful management tool you've ever used. We want to hear from you!
 
 ## Logging in {#login-to-console}
 
-Pulumi uses GitHub for authentication, so you must login with a GitHub account. Also, you must a member of an organization that has been enrolled in the Pulumi Console private beta.
+Pulumi uses GitHub for authentication, so you must login with a GitHub account. You must also be a member of an organization that is enrolled in the Pulumi Console private beta.
 
 ### OAuth scopes
 
-The Pulumi Cloud Management Console requests several GitHub OAuth scopes, as illustrate in the following screenshot. 
+Pulumi requests several GitHub OAuth scopes, as illustrated in the following screenshot. 
 
-![oauth-scopes](/images/docs-console/02-oauth.png)
+![oauth-scopes](/images/docs-console/02-oauth.png){:width="500px"}
 
 Here's what we ask for and why:
 
@@ -40,48 +34,48 @@ We only use your email address for important service-related communication. We d
 > - Public and private
 > - This application will be able to read and write all public and private repository data.
 
-We use your GitHub repository information to associate updates to Pulumi programs with the relevant
-source code. Showing Travis build results, git tags, etc.
+We use your GitHub repository information to link Pulumi program updates back to your GitHub repository. This allows the console to display Travis build results, git tags, and so on.
 
-Unfortunately, GitHub does not offer [a read-only scope for repository access](https://developer.github.com/apps/building-integrations/setting-up-and-registering-oauth-apps/about-scopes-for-oauth-apps/). But, the Pulumi Service **never** writes data to GitHub.
+The Pulumi service **never** writes data to GitHub, but unfortunately, GitHub does not offer [a read-only scope for repository access](https://developer.github.com/apps/building-integrations/setting-up-and-registering-oauth-apps/about-scopes-for-oauth-apps/). 
 
 > Organizations and teams
 > - Read-only access
 > - This application will be able to read your organization and team membership.
 
-This read-only permission just means that Pulumi can query to see which organizations you are a member of. Pulumi uses your organization membership to determine which Cloud Stacks are displayed to you. 
+This read-only permission means that Pulumi can see which organizations you are a member of. Your organization membership is only used to determine which stacks you have access to.
 
 ### Pulumi account {#account-page}
 
 After you have logged in, you can access your Pulumi Account by clicking the avatar photo on the
 top right.
 
-![accounts-page](/images/docs-console/03-account-page.png)
+![accounts-page](/images/docs-console/03-account-page.png){:width="700px"}
 
-The Pulumi Service picks up profile information (name, photo, etc.) from GitHub. If you've changed any information on GitHub, click **sync profile with GitHub** to have that information reflected in the Pulumi Console.
+Pulumi picks up profile information from GitHub, such as name and profile photo. If you've changed any information on GitHub, click **sync profile with GitHub** to have that information reflected in the Pulumi Console.
 
-There are two key things to notice on this page: the Pulumi Access token and the organization list.
+There are two key elements on this page: the Pulumi access token and the organization list.
 
-#### Pulumi Access Token {#access-token}
+#### Pulumi access token {#access-token}
 
-To authenticate with the Pulumi Service from the `pulumi` command-line tool, you'll need to use
-your _Pulumi Access Token_. This is the value you enter when running `pulumi login`.
+To authenticate with Pulumi from the `pulumi` CLI, use your _Pulumi access token_. Enter it at the prompt to `pulumi login`. Keep this secret like you would any other access token.
 
-Keep this secret like you would any other access token.
+```bash
+$ pulumi login
+Logging into Pulumi Cloud: https://api.pulumi.com
+Enter your Pulumi access token: w3lc0m370pulum1cl0ud=
+```
 
-The access token is associated with your GitHub username and is the same across all of the organizations you have access to.
+> The Pulumi access token is associated with your GitHub username and is the same across all your organizations.
 
-#### Organizations list
+#### Organization list
 
-Below the access token is your organizations list. These are mirrored from GitHub just like your
-profile. Select **Review or add** to review the list of organizations that have been
-authorized by GitHub, and potentially grant the Pulumi Service access. If make any changes, click **sync profile with GitHub**.
+The organization list is mirrored from GitHub, just like your profile information. The link **Review or add** will take you to the GitHub Applications page for your connection to Pulumi, where you can review the organizations that have been authorized by GitHub. If make any changes, select **sync profile with GitHub**.
 
 ## Organizations
 
-The Pulumi Cloud Management Console organizes Pulumi programs by *organizations*. An organization is either a GitHub user account or a GitHub organization. Currently, there no way to create an organization that is not tied to a GitHub organization.
+The Pulumi Console organizes stacks by *organizations*. An organization is either a GitHub user account or a GitHub organization. Currently, Pulumi organizations always map directly to GitHub organizations.
 
-![organizations-page](/images/docs-console/04-orgs-list.png)
+![organizations-page](/images/docs-console/04-orgs-list.png){:width="700px"}
 
 ### Repositories, projects, and stacks
 
@@ -115,10 +109,10 @@ can override this behavior by using the `--owner` and `--name` parameters.
 pulumi init --owner <account> --name <repository name>
 ```
 
-The project name is set within the `Pulumi.yaml` file. And the stack name is set when you run
+The project name is set within the `Pulumi.yaml` file. The stack name is set when you run
 `pulumi stack init`.
 
-#### Uniqueness Requirement
+#### Uniqueness requirement
 
 In the Pulumi Service, within an organization, the name of a repository, project, and stack must be
 unique.
@@ -126,11 +120,11 @@ unique.
 There is no way to rename things within the Pulumi Service once created. However, if a stack has no
 resources associated with it you can delete it by using `pulumi stack rm <stack name>`.
 
-### Pulumi Private Clouds
+### Pulumi deployment agents
 
-An Organization may have several _Pulumi Private Clouds_ (PPCs) associated with them. These can only be managed by Pulumi Console administrator. If you have questions or require that something be updated, contact [support@pulumi.com](mailto:support@pulumi.com).
+An Organization may have several deployment agents associated with them, also known as _Pulumi Private Clouds_ (PPCs). These can only be managed by Pulumi Console administrator. If you have questions or require that something be updated, contact [support@pulumi.com](mailto:support@pulumi.com).
 
-Once a Pulumi Private Cloud is chosen during `pulumi stack init`, it cannot be changed. However, you can create new stacks that are tied to different clouds.
+Once a deployment agent is chosen during `pulumi stack init`, it cannot be changed. However, you can create new stacks that use different deployment agents.
 
 ## Stacks
 
@@ -138,11 +132,11 @@ You can drill into stacks to view the last deployed resources, AWS ARNs, output 
 
 > NOTE: The stacks page is under active improvement! Expect more functionality and bug fixes during the private beta.
 
-![stack-details](/images/docs-console/06-stack-details.png)
+![stack-details](/images/docs-console/06-stack-details.png){:width="700px"}
 
-### Update Logs
+### Update logs
 
 The Update Logs page shows the latest update logs for the application. It will contain the same
 data that was streamed to your command-line when you deployed the application.
 
-![stack-update-log](/images/docs-console/07-stack-update-log.png)
+![stack-update-log](/images/docs-console/07-stack-update-log.png){:width="700px"}

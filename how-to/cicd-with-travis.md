@@ -8,7 +8,7 @@ type: tutorial
 
 # Use Travis to continuously deploy Pulumi programs
 
-This tutorial describes how to configure a Pulumi program to be continuously built and deployed using Pulumi Cloud Management Console and [Travis CI](https://travis-ci.com/).
+This tutorial describes how to configure a Pulumi program to be continuously built and deployed using the Pulumi service and [Travis CI](https://travis-ci.com/).
 
 ## Requirements
 
@@ -16,13 +16,15 @@ To begin, you'll need the following:
 
 1. An existing Travis job. If you aren't already a Travis user, check out the 
    [Travis getting started guide](https://docs.travis-ci.com/user/getting-started/).
+
 1. Your _Pulumi Access Token_. It is listed on your [account page](https://beta.pulumi.com/account)
-   on the Pulumi Cloud Management Console. See [Using the Pulumi Cloud Console](./console.html).
-1. A Pulumi program that has already been deployed to a Cloud Stack. For more information, see [Using the Pulumi CLI to create and manage Cloud Stacks](./cloud-stack.html).
+   on the Pulumi Console. See documentation on the [Pulumi access token](./console.html#access-token).
+
+1. A Pulumi program that has already been deployed to a managed stack. For more information, see [Create and work with managed stacks](./cloud-stack.html).
 
 ## Creating a Travis script
 
-To perform continuously delivery with Travis, start with the follow bash script. This script updates the Pulumi `testing-stack` Cloud Stack whenever there is a push to the `master` Git branch. Similarly, a push to the `production` branch performs an update to the `production-stack` Cloud Stack.
+To perform continuously delivery with Travis, start with the follow bash script. This script updates the Pulumi `testing-stack` stack whenever there is a push to the `master` Git branch. Similarly, a push to the `production` branch performs an update to the `production-stack` stack.
 
 If you're using different stack or branch names, simply change those values in the script. The sections below describe how to further customize the script.
 
@@ -61,7 +63,10 @@ esac
 set -e
 pulumi login
 
+# Initialize the Pulumi workspace
 pulumi init
+
+# Select the Pulumi managed stack
 pulumi stack select $PULUMI_STACK_NAME
 
 echo "Running pulumi preview:"
@@ -80,7 +85,7 @@ branches we wish to associate with a Pulumi program.
 
 ### Pulumi login
 
-To access the Pulumi Service, the script above performs `pulumi login`. For security, the `login` command does not accept the Pulumi access token as a command-line flag. Instead, use the environment variable  `PULUMI_ACCESS_TOKEN`.
+The script first logs in to Pulumi via `pulumi login`. For security, the `login` command does not accept the Pulumi access token as a command-line flag. Instead, you must use the environment variable `PULUMI_ACCESS_TOKEN`.
 
 You can add your Pulumi access token to your Travis job's settings. Since this secret should be protected, *never* display its value in the build log.
 
@@ -88,16 +93,16 @@ You can add your Pulumi access token to your Travis job's settings. Since this s
 
 ### Pulumi init and stack select
 
-The same script does the following:
+The script also does the following:
 - Runs `pulumi init` to initialize the local Pulumi workspace.
-- Runs `pulumi stack` to select the desired Cloud Stack.
+- Runs `pulumi stack` to select the desired managed stack.
 
 ### Pulumi preview and update
 
 To update your program, all you need to do is run `pulumi update`. However for production
 environments, it is recommended you run `pulumi preview` first.
 
-`pulumi preview` executes the Pulumi program but doesn't modify any cloud resources. By running
+The command `pulumi preview` executes the Pulumi program but doesn't modify any cloud resources. By running
 `pulumi preview` before updating, you can safely check for certain classes of runtime error.
 
 That's it! The next time Travis starts a "push" job for the "master" or "production" branch,
