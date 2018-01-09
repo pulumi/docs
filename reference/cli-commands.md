@@ -1,9 +1,9 @@
 ---
 layout: default
-nav_section: "how-to"
+nav_section: "reference"
 ---
 
-<p><a href="/how-to">How-to Guides</a> &gt; <b>Pulumi CLI reference</b></p>
+<p><a href="/reference">Reference</a> &gt; <b>Pulumi CLI reference</b></p>
 
 # Pulumi CLI
 
