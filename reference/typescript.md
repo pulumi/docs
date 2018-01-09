@@ -1,9 +1,9 @@
 ---
 layout: default
-nav_section: "how-to"
+nav_section: "reference"
 ---
 
-<p><a href="/how-to">How-to Guides</a> &gt; <b>Using TypeScript</b></p>
+<p><a href="/reference">Reference</a> &gt; <b>Using TypeScript</b></p>
 
 # Using TypeScript
 
@@ -18,7 +18,7 @@ is what tells Node.js and NPM what packages you depend on, where to find your co
 ```json
 {
     "name": "my-package",
-    "version": "0.1",
+    "version": "1.0.0",
     "main": "bin/index.js",
     "typings": "bin/index.d.ts",
     "scripts": {
@@ -81,4 +81,4 @@ Before running `pulumi preview` or `pulumi update`, you should run `tsc` or `yar
 
 Tools like VS Code will give you completion lists, live error reporting and inline documentation help.
 
-![Pulumi TypeScript in VS Code](./vscode.png)
+![Pulumi TypeScript in VS Code](../images/reference/vscode.png){:width="700px"}
