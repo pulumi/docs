@@ -4,20 +4,28 @@ nav_section: "install"
 installer_version: "0.9.8"
 ---
 
-<!-- To update this page with a new binary release, update `installer_version` in the YAML front matter above. -->
+<!-- 
+NOTE: To update this page with a new binary release, do the following:
+- Update `installer_version` in the YAML front matter above. 
+- Update release-notes.md with the latest fixes in the release
+-->
 
-# Installation and Setup
+# Installation and setup
 
 Follow these instructions to install the Pulumi Cloud SDK on your development or build machine.
 
 For detailed instructions on using Pulumi, please refer to the <a href="/quickstart">Quickstart</a>.  For any
 feedback or questions, please do not hesitate to [contact us](/contact)---we'd love to hear from you!
 
+## Release notes
+
+The latest version of the Pulumi SDK is **{{ page.installer_version }}**. See the [release notes](./release-notes.html) to learn what's new.
+
 ## Download the SDK
 
 The first step is to download a binary release suitable for your system.
 
-### Featured Downloads
+### Featured downloads
 
 **NOTE**: if you don't have access to the downloads below, you should have received a link to the binaries. If not, please [contact us](/contact).
 
@@ -64,7 +72,7 @@ We currently only provide pre-built binaries for x64 architectures on the follow
 The binaries are likely to work on alternative versions and we are happy to provide builds for alternative
 architectures (like x86) or OS versions as necessary.  Please [contact us for details](/contact).
 
-## Installation and Setup
+## Installation and setup
 
 ### Prerequisites
 
@@ -113,7 +121,7 @@ Next, install an NPM client.  Either NPM itself or Yarn are fine choices, and yo
 * To install Yarn, a slightly faster client thanks to improved caching, follow the [installation instructions](
   https://yarnpkg.com/lang/en/docs/install/) and run `yarn --version` afterwards to ensure that it worked.
 
-### Install the Pulumi Tools
+### Install the Pulumi tools
 
 First download the Pulumi SDK release for your operating system per the above instructions.
 
@@ -157,7 +165,7 @@ v{{page.installer_version}}
 
 We're almost done, but not quite: Pulumi still needs to be told exactly how to talk with your favorite cloud provider.
 
-### Configure AWS Credentials
+### Configure AWS credentials
 
 Pulumi currently only supports AWS as a deployment target.  As a result, you will need to configure your system
 so that Pulumi can communicate with AWS.  Pulumi does not store this information anywhere, and these credentials
@@ -175,7 +183,7 @@ $ export AWS_SECRET_ACCESS_KEY=7n******************************6eLEKd8G
 Of course the `**` strings should be replaced with your own credentials.
 
 Alternatively, you can install the [AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) and use
-it to configure yyour IAM credentials locally on your machine.  These will be stored and cached in your home directory:
+it to configure your IAM credentials locally on your machine.  These will be stored and cached in your home directory:
 
 ```bash
 $ aws configure
@@ -188,8 +196,6 @@ Default output format [None]:
 In general, you can use any of the other configuration options documented on the [AWS SDK website](
 http://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html).
 
-### We're Done
+### Next steps
 
-And that's it -- you're done!
-
-Now that we're finished installing, head on over to the [Quickstart](/quickstart) to to write our first Pulumi program!
+Now that you've finished installing, head over to the [Quickstart](/quickstart) to to write your first Pulumi program!
