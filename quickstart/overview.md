@@ -55,7 +55,7 @@ inherently capable of running on any cloud, or even on-premises! The APIs are de
 
 ### Programming AWS
 
-To see how Pulumi works, let's look a simple Pulumi Cloud Application that uses `@pulumi/aws`:
+To see how Pulumi works, let's look at a simple Pulumi Cloud Application that uses `@pulumi/aws`:
 
 ```typescript
 import * as aws from "@pulumi/aws";
@@ -78,7 +78,7 @@ This simple program does several important and powerful things:
 
 * Imports the cloud package, `@pulumi/aws`, which gives us the ability to write real code, rather than markup, to define infrastructure.
 * Defines a security group as a first-class JavaScript object. You can then use the object `group` anywhere in your code. Pulumi will automatically turn the object reference into a resource reference.
-* Uses the Pulumi helper function `aws.ec2.getLinuxAMI` to get the correct AWS Linux image for the current region, since the AMI varies based on region. (You'll learn more about setting a region for a Pulumi application in [Programming AWS](./aws.html)).
+* Uses the Pulumi helper function `aws.ec2.getLinuxAMI` to get the correct AWS Linux image for the current region, since the Amazon Machine Image (AMI) varies based on region. (You'll learn more about setting a region for a Pulumi application in [Programming AWS](./aws.html)).
 
 Notice that there is absolutely no `XML`, `JSON`, or `YAML` configuration code that must be written.  *This is the
 entire Cloud Application!*. This simple example demonstrates Pulumi's power and ease of use.
@@ -86,7 +86,7 @@ entire Cloud Application!*. This simple example demonstrates Pulumi's power and 
 To understand how this works, however, we must return to a point made in the [Concepts](./concepts.html) article: Pulumi programs are not run like ordinary programs.  You don't simply run the program on your machine.  Instead, you give the program to Pulumi, and it analyzes it to determine how to activate the program in your target cloud environment. It then "makes it so."
 
 <!-- TODO: flesh this out. It didn't really resonate with me, as is. -Donna -->
-A Pulumi Cloud Application is essentially an eternal program runs continuously in your cloud environment, is updated
+A Pulumi Cloud Application is essentially an eternal program that runs continuously in your cloud environment, is updated
 incrementally from time to time, but logically never exits. This is a subtle distinction, and a new and innovative
 concept that is key to Pulumi's magic. Once you embrace this concept, you can truly leverage Pulumi to its fullest.
 
@@ -176,7 +176,6 @@ To provision an NGINX service scaled out over two containers, you create a `clou
 
 ```javascript
 import * as cloud from "@pulumi/cloud";
-import fetch from "node-fetch";
 
 // A simple NGINX service, scaled out over two containers.
 let nginx = new cloud.Service("base-nginx", {
