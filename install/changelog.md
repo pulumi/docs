@@ -5,7 +5,7 @@ nav_section: "install"
 
 # Pulumi Change Log
 
-## 0.9.11
+## [0.9.11] - 2018/01/22
 
 ### Added
 
@@ -17,12 +17,17 @@ nav_section: "install"
    - When the Pulumi CLI is run in interactive mode, it displays an animated ASCII spinner
    - When run in non-interactive mode, CLI prints a message that it is still working. For CI systems that kill jobs when there is no CLI output (such as TravisCI), this eliminates the need to create shell scripts that periodically print output. 
 
+- [@pulumi/cloud] Support for ACM certificates on HttpEndpoint. The AWS implementation of `HttpEndpoint#attachCustomDomain` accepts an ACM cert in place of raw certificate material, making it much easier to use `HttpEndpoint` with custom domains.
+
+- [@pulumi/cloud] Added `HttpEndpoint#proxy` function to provide routes on an HTTP endpoint which redirect to a URL or `cloud.Endpoint`.
+
+- [@pulumi/cloud] Added `Response#getHeader` function.
+
+- [@pulumi/cloud-aws] Many new config settings have been added to enable overriding defaults for Network and Cluster configuration - both for auto clusters and for externally provided networks and clusters.
+
 ### Changed
 
-- To encrypt secrets for local stacks, the `pulumi` CLI uses a separate encryption key for each stack,  rather than one shared for all stacks. This means you can use a different passphrase for two different stacks. 
-   - The top level `encryptionsalt` member of the `Pulumi.yaml` is removed and salts are stored per stack in `Pulumi.yaml`.
-   - Pulumi will automatically re-use the existing key for any local stacks in the Pulumi.yaml file which have encrypted, but future stacks will have new keys generated. 
-   - There is no impact to managed stacks deployed using the Pulumi Cloud.
+- To make the behavior of local and managed stacks consistent, the Pulumi CLI uses a separate encryption key for each stack, rather than one shared for all stacks. You can now use a different passphrase for different stacks. Similar to managed stacks, you cannot copy and paste an encrypted value from one stack to another in `Pulumi.yaml`. Instead you must manage the value via `pulumi config`.
 
 - `pulumi destroy --preview` is now `pulumi destroy --dry-run` 
 
@@ -30,10 +35,19 @@ nav_section: "install"
 
 - The command `pulumi logs` now defaults to returning one hour of logs and outputs the start time that is  used.
 
+- [pulumi-aws] Auto-name ElasticSearch domain name, following the naming restrictions documented in [Amazon Elasticsearch documentation for DomainName](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-datatypes-domainname).
+
+- [pulumi-cloud] Header names are now normalized (using toLowerCase) for HttpEndpoint.
+
+- [pulumi-cloud] For `cloud.Service`, the default permissions for cluster EC2 instances have been reduced.
+
+- [pulumi-cloud] Pulumi now adds a `Name` tag onto instances launched into the ECS cluster.
+
+- [pulumi-cloud] Expose additional AWS resources in `@pulumi/cloud-aws`: Topic, Timer, Table and HttpEndpoint.
+
 ### Fixed
 
 - When a stack is removed, `pulumi` now deletes any configuration it had saved in either the `Pulumi.yaml` file or the workspace.
-
 
 ## 0.9.8 
 
