@@ -29,8 +29,6 @@ nav_section: "install"
 
 - To make the behavior of local and managed stacks consistent, the Pulumi CLI uses a separate encryption key for each stack, rather than one shared for all stacks. You can now use a different passphrase for different stacks. Similar to managed stacks, you cannot copy and paste an encrypted value from one stack to another in `Pulumi.yaml`. Instead you must manage the value via `pulumi config`.
 
-- `pulumi destroy --preview` is now `pulumi destroy --dry-run` 
-
 - The default behavior for `--color` is now `always`. To change this, specify `--color always` or `--color never`. Previously, the value was based on the presence of the flag `--debug`.
 
 - The command `pulumi logs` now defaults to returning one hour of logs and outputs the start time that is  used.
