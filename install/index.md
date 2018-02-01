@@ -1,7 +1,7 @@
 ---
 layout: default
 nav_section: "install"
-installer_version: "0.9.8"
+installer_version: "0.9.11"
 ---
 
 <!-- 
@@ -17,9 +17,9 @@ Follow these instructions to install the Pulumi Cloud SDK on your development or
 For detailed instructions on using Pulumi, please refer to the <a href="/quickstart">Quickstart</a>.  For any
 feedback or questions, please do not hesitate to [contact us](/contact)---we'd love to hear from you!
 
-## Release notes
+## Change log
 
-The latest version of the Pulumi SDK is **{{ page.installer_version }}**. See the [release notes](./release-notes.html) to learn what's new.
+The latest version of the Pulumi SDK is **{{ page.installer_version }}**. See the [change log](./changelog.html) to learn what's new.
 
 ## Download the SDK
 
