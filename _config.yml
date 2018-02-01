@@ -28,4 +28,11 @@ exclude:
   - README.md
   - _includes
   - _layouts
+  - _data
 
+# defaults:
+#   -
+#     scope:
+#       path: "content"
+#     values:
+#       layout: left-nav

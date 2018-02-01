@@ -1,9 +1,8 @@
 ---
 layout: default 
-nav_section: "quickstart"
+nav_section: Quickstart
+title: Quickstart tutorials
 ---
-
-# Getting Started Tutorials
 
 Welcome to Pulumi, a new way to program the cloud. ☁️
 

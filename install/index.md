@@ -12,10 +12,7 @@ NOTE: To update this page with a new binary release, do the following:
 
 # Installation and setup
 
-Follow these instructions to install the Pulumi Cloud SDK on your development or build machine.
-
-For detailed instructions on using Pulumi, please refer to the <a href="/quickstart">Quickstart</a>.  For any
-feedback or questions, please do not hesitate to [contact us](/contact)---we'd love to hear from you!
+Follow these instructions to install the Pulumi SDK on your development or build machine.
 
 ## Change log
 
@@ -23,11 +20,7 @@ The latest version of the Pulumi SDK is **{{ page.installer_version }}**. See th
 
 ## Download the SDK
 
-The first step is to download a binary release suitable for your system.
-
 ### Featured downloads
-
-**NOTE**: if you don't have access to the downloads below, you should have received a link to the binaries. If not, please [contact us](/contact).
 
 The current version of Pulumi's SDK is **{{ page.installer_version }}** and is
 available for these systems:

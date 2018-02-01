@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-brand">
     <div class="container center" style="max-width: 64rem; left-padding: 16px; right-padding: 16px;">
-        <a class="navbar-brand" href="/">
-            <img src="/images/logo/transparent-white-text-80x32.png" alt="Small Pulumi Logo">
+        <a class="navbar-brand" href="http://www.pulumi.com">
+            <img src="/images/logo/logo_white_nobg_100.png" alt="Small Pulumi Logo">
         </a>
         <button
                 class="navbar-toggler"
@@ -16,23 +16,20 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item {% if page.nav_section == "home" %}active{% endif %}">
-                    <a class="nav-link" href="/">Home</a>
+                <li class="nav-item {% if page.nav_section == "docs" %}active{% endif %}">
+                    <a class="nav-link" href="/">Docs</a>
                 </li>
                 <li class="nav-item {% if page.nav_section == "install" %}active{% endif %}">
                     <a class="nav-link" href="/install">Install</a>
                 </li>
                 <li class="nav-item {% if page.nav_section == "quickstart" %}active{% endif %}">
-                    <a class="nav-link" href="/quickstart">Getting Started</a>
+                    <a class="nav-link" href="/quickstart">Quickstart</a>
                 </li>
-                <li class="nav-item {% if page.nav_section == "how-to" %}active{% endif %}">
-                    <a class="nav-link" href="/how-to">How-to Guides</a>
+                <li class="nav-item {% if page.nav_section == "concepts" %}active{% endif %}">
+                    <a class="nav-link" href="/concepts">Concepts</a>
                 </li>
                 <li class="nav-item {% if page.nav_section == "reference" %}active{% endif %}">
                     <a class="nav-link" href="/reference">Reference</a>
-                </li>
-                <li class="nav-item {% if page.nav_section == "contact" %}active{% endif %}">
-                    <a class="nav-link" href="/contact">Contact Us</a>
                 </li>
             </ul>
         </div>

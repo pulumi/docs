@@ -1,11 +1,8 @@
 ---
 layout: default 
-nav_section: "quickstart"
+nav_section: Quickstart
+title: Pulumi Concepts
 ---
-
-<p><a href="/quickstart">Getting Started</a> &gt; <b>Pulumi Concepts</b></p>
-
-# Pulumi Concepts
 
 <!-- TODO: need to be consistent between usage of "Cloud Application" and "program"
 I suggest coming up with a distinct term. I think this warrants category creation. -Donna

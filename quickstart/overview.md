@@ -1,11 +1,8 @@
 ---
 layout: default 
-nav_section: "quickstart"
+nav_section: Quickstart
+title: Pulumi overview
 ---
-
-<p><a href="/quickstart">Getting Started</a> &gt; <b>Overview</b></p>
-
-# Pulumi Overview
 
 Now that you've learned [what Pulumi can do for you](./concepts.html), let's learn how to create awesome cloud programs.
 

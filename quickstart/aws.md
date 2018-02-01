@@ -1,11 +1,8 @@
 ---
 layout: default 
-nav_section: "quickstart"
+nav_section: Quickstart
+title: Programming AWS
 ---
-
-<p><a href="/quickstart">Getting Started</a> &gt; <b>Programming AWS</b></p>
-
-# Programming AWS
 
 The `@pulumi/aws` package allows you use Pulumi to create and manage AWS resources using JavaScript or TypeScript. You can use regular programming language constructs, such as objects, functions, and control flow. Resource definitions are declarative: they describe the desired end state of your infrastructure. Pulumi will automatically make resource changes based on the current state of what has already been provisioned.
 
