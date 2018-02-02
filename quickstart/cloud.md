@@ -1,6 +1,4 @@
 ---
-layout: default 
-nav_section: Quickstart
 title: Programming the cloud
 ---
 

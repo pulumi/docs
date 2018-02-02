@@ -1,0 +1,8 @@
+nav_section: "Quickstart"
+toc: 
+- quickstart/index.md
+
+- title: Quickstart
+  section:
+  - quickstart/aws.md
+  - quickstart/cloud.md

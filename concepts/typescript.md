@@ -1,11 +1,6 @@
 ---
-layout: default
-nav_section: "reference"
+title: "(indent) TypeScript"
 ---
-
-<p><a href="/reference">Reference</a> &gt; <b>Using TypeScript</b></p>
-
-# Using TypeScript
 
 You can write Pulumi programs in TypeScript to get additional verification and tooling benefits.  To use TypeScript,
 apply the following four steps to an existing project.

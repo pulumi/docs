@@ -1,12 +1,6 @@
 ---
-layout: default 
-nav_section: "how-to"
-type: reference
+title: "Using the Pulumi Console"
 ---
-
-<p><a href="/how-to">How-to Guides</a> &gt; <b>Pulumi Console</b></p>
-
-# Using the Pulumi Console
 
 The Pulumi Console provides a web-based management experience for Pulumi. Visit [https://beta.pulumi.com](https://beta.pulumi.com).
 

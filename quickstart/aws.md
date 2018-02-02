@@ -1,6 +1,4 @@
 ---
-layout: default 
-nav_section: Quickstart
 title: Programming AWS
 ---
 
@@ -506,5 +504,7 @@ The `pulumi preview` command shows what changes will be made to your infrastruct
 In the next section, we'll take a look at building a higher level Pulumi Program using the
 `@pulumi/cloud` framework.
 
-## Next Up: [Programming the Cloud](./cloud.html)
+## Next Steps
+
+To learn how to use Pulumi's high-level programming model, see [Programming the cloud](./cloud.html)
 

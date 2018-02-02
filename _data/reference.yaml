@@ -1,0 +1,9 @@
+nav_section: "Reference"
+toc: 
+- reference/index.md
+
+- title: Reference
+  section:
+  - reference/cli-commands.md
+  - reference/packages.md
+  - reference/known-issues.md

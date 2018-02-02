@@ -166,8 +166,7 @@ blockquote {
   padding: 0.5em 10px;
 }
 
-// hacky solution for TOC so that it actually shows up
-// #docsToc {
-//   height: 64px;
-//   background-color: red;
-// }
+// hacky background for TOC so that it's clearly marked
+#docsToc {
+  background-color: #f2e6ff;
+}

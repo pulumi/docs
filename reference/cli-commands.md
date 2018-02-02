@@ -1,11 +1,6 @@
 ---
-layout: default
-nav_section: "reference"
+title: "Pulumi CLI reference"
 ---
-
-<p><a href="/reference">Reference</a> &gt; <b>Pulumi CLI reference</b></p>
-
-# Pulumi CLI
 
 The `pulumi` CLI supports creating, configuring and updating Pulumi stacks.
 

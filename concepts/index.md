@@ -1,12 +1,8 @@
 ---
-layout: default 
-nav_section: Quickstart
-title: Pulumi Concepts
+title: Why Pulumi?
 ---
 
-<!-- TODO: need to be consistent between usage of "Cloud Application" and "program"
-I suggest coming up with a distinct term. I think this warrants category creation. -Donna
- -->
+<!-- TODO: need to be consistent between usage of "Cloud Application" and "program" -->
 
 As a cloud developer, you want to be agile, so you provision and manage your own infrastructure. Frustratingly, you then have to use infrastructure tools that are designed for non-developers! To ensure automated and repeatable deployments, you end up writing markup in ill-suited "languages" with awkward formula syntax. What if you could do all this in a regular programming language?  
 
@@ -24,9 +20,4 @@ As an analogy, think of installing software on your machine. You could be given 
 
 One interesting aspect of Pulumi infrastructure definitions is that they are a mix of a declarative and imperative model. You write imperative code to define the resources you need, but Pulumi turns this into a *declarative* plan of infrastructure changes to make to your cloud environment. So, Pulumi programs are repeatable: it is incredibly easy to stand up a new stack---perhaps in a new region---that is identical to the original stack!
 
-<!-- TODO: how are CLIs usually introduced? Name of CLI or name of product?  -->
 Pulumi Cloud Applications use regular languages, but are run in a special way. Instead of running the application directly, you use the **`pulumi` command**. This CLI transforms your imperative code to a declarative plan and updates your application (including infrastructure!) when you've made a change. The Pulumi CLI does all this automatically, without you having to manually edit configuration or use a cloud console.
-
-## Next Up
-
-To get started with Pulumi, check out the [Pulumi Overview](./overview.html).

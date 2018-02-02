@@ -1,0 +1,9 @@
+nav_section: "Pulumi Managed Cloud"
+toc: 
+- managed-cloud/index.md
+
+- title: Pulumi Managed Cloud
+  section:
+  - managed-cloud/cloud-stack.md
+  - managed-cloud/console.md
+  - managed-cloud/cicd-with-travis.md

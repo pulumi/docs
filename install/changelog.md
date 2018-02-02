@@ -1,5 +1,5 @@
 ---
-layout: withtoc
+title: "Pulumi change log"
 ---
 
 # Pulumi Change Log
