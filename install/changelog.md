@@ -1,6 +1,5 @@
 ---
-layout: default
-nav_section: "install"
+layout: withtoc
 ---
 
 # Pulumi Change Log

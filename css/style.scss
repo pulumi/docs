@@ -105,14 +105,14 @@ body {
 }
 
 h1:not(.title) {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   padding-bottom: 8px;
   margin-bottom: 24px;
 }
 
 h2:not(.title) {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: bold;
   padding-top: 4px;
   padding-bottom: 8px;
@@ -165,3 +165,9 @@ blockquote {
   margin: 1.5em 10px;
   padding: 0.5em 10px;
 }
+
+// hacky solution for TOC so that it actually shows up
+// #docsToc {
+//   height: 64px;
+//   background-color: red;
+// }

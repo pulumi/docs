@@ -30,9 +30,11 @@ exclude:
   - _layouts
   - _data
 
-# defaults:
-#   -
-#     scope:
-#       path: "content"
-#     values:
-#       layout: left-nav
+# Tables of contents, stored in the _data folder, that control the sidebar nav
+tocs:
+  - install
+
+defaults:
+  -
+    values:
+      layout: withtoc

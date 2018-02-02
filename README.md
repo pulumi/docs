@@ -23,6 +23,16 @@ working state.
 
 `make serve` will build the website and serve it to http://localhost:4000.
 
+## Site structure
+
+- There is a folder for each heading in the top navigation, such as `Install`, `Quickstart`, etc.
+
+- The mapping from documentation page to section and table-of-contents (TOC) is stored in yaml files in `_data`. 
+
+- To rename a section, rename both the value of `nav_section` in the toc yaml file (e.g., `_data\install.yaml`) and update the layout in `_includes\header.html`.
+
+- To add a new article and add it to the table-of-contents for that section, create a new file in the right section and add an entry in the corresponding file in `_data\top-level-section.yaml`.
+
 ## Design Reference
 
 Web design is hard. Documentation is hard. Good web design for documentation is harder.

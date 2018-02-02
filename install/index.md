@@ -10,8 +10,6 @@ NOTE: To update this page with a new binary release, do the following:
 - Update release-notes.md with the latest fixes in the release
 -->
 
-# Installation and setup
-
 Follow these instructions to install the Pulumi SDK on your development or build machine.
 
 ## Change log

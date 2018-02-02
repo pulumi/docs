@@ -1,0 +1,8 @@
+nav_section: "Install"
+toc: 
+- install/index.md
+
+- title: Install
+  section:
+  - install/index.md
+  - install/release-notes.md
