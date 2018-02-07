@@ -6,10 +6,16 @@ nav_section: "install"
 # Pulumi Change Log
 
 <!-- TODO: update the date below with 0.10 release date -->
-<!-- TODO: add info about how to use the npmjs proxy -->
-<!-- TODO: add VERY detailed info about changes to promises programming model -->
+<!-- TODO: Add documentation on the new programming model -->
+<!-- TODO: Add documentation on how to use the npm proxy -->
 
 ## [0.10] - 2018/02/TBD
+
+### Breaking
+
+- Pulumi packages are now available on NPM, accessible through an NPM proxy. For more information, see [changed](#v10-changed) section below.
+
+- The programming model around **resources** and **resource properties** has changed significantly. See the [changed](#v0.10-changed) section below.
 
 ### Added
 
@@ -36,9 +42,9 @@ nav_section: "install"
 -  GitHub resource provider ([pulumi-github#3](https://github.com/pulumi/pulumi-github/issues/3))
 -  Prototype Kubernetes resource provider ([pulumi-kubernetes#1](https://github.com/pulumi/pulumi-kubernetes/issues/1))
 
-### Changed
+### Changed {#v10-changed}
 
-#### Pulumi CLI and SDK
+#### Pulumi CLI and SDK 
 
 -  Use `npm install` instead of `npm link` to reference Pulumi SDK ([home#11](https://github.com/pulumi/home/issues/11))
 
@@ -52,11 +58,12 @@ nav_section: "install"
     }
     ```
 
--  Resource arguments should take `Promise` instead of `Promise[]` ([pulumi-terraform#47](https://github.com/pulumi/pulumi-terraform/issues/47))
+   Versions of Pulumi packages prior to `0.10.0` are only supported via the previous `npm link` workflow. 
 
-   Wherever resource arguments took in an promise array (`Promise[]`), they now take a `Promise`. Prior to this fix, it could be challenging for Pulumi code to pass in an array of of promises with the right number of elements, as the number of promises can be dependent on previous resources. 
-   
-- TODO: add info about changes to async
+   For more information, see documentation **TODO**.
+
+- The programming model around **resources** and **resource properties** has changed significantly. When a **resource** is created, all of its output properties are instances of a new type `pulumi.Output<T>`. This type contains the actual value of the resource property, along with additional information that allows dependencies between **resources** to be accurately tracked. All inputs to a **resource** have been tweaked to now also accept an `Output<T>` resource property on top of accepting a `T` or `Promise<T>`. For more information, see documentation **TODO**.
+
 
 #### Cloud Console
 
