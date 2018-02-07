@@ -2,7 +2,7 @@
   {% if item.section %}
     <div class="item" data-title="{{ item.title }}">
       <div class="container">
-        {% include tree.html tree=item.section %}
+        {% include_cached tree.html tree=item.section %}
       </div>
     </div>
   {% else %}

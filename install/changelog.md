@@ -1,5 +1,5 @@
 ---
-title: "Pulumi change log"
+title: "Change Log"
 ---
 
 # Pulumi Change Log

@@ -1,3 +1,3 @@
 ---
-title: "(indent) Pulumi and Azure"
+title: "Azure package"
 ---

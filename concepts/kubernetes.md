@@ -1,3 +1,3 @@
 ---
-title: "(indent) Kubernetes"
+title: "Kubernetes"
 ---

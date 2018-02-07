@@ -1,9 +1,9 @@
 nav_section: "Reference"
-toc: 
-- reference/index.md
+toc: # No landing page
+-
 
 - title: Reference
   section:
-  - reference/cli-commands.md
+  - reference/index.md
   - reference/packages.md
   - reference/known-issues.md

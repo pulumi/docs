@@ -1,3 +1,3 @@
 ---
-title: "(indent) Python"
+title: "Python"
 ---

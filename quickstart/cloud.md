@@ -1,5 +1,5 @@
 ---
-title: Programming the cloud
+title: Programming containers
 ---
 
 The `@pulumi/cloud` package lets you program infrastructure and application logic, side by side in harmony, using

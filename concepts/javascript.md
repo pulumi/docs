@@ -1,3 +1,3 @@
 ---
-title: "(indent) JavaScript"
+title: "JavaScript"
 ---

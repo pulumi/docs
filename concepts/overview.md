@@ -1,5 +1,5 @@
 ---
-title: An introduction to Pulumi
+title: "Overview"
 ---
 
 ## Languages

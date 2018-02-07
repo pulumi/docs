@@ -1,5 +1,5 @@
 ---
-title: "(indent) TypeScript"
+title: "TypeScript"
 ---
 
 You can write Pulumi programs in TypeScript to get additional verification and tooling benefits.  To use TypeScript,
