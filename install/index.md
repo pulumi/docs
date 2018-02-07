@@ -1,7 +1,7 @@
 ---
 layout: default
 nav_section: "install"
-installer_version: "0.9.11"
+installer_version: "0.9.13"
 ---
 
 <!-- 
