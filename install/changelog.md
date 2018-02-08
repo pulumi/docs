@@ -1,8 +1,6 @@
 ---
-title: "Change Log"
+title: "Change log"
 ---
-
-# Pulumi Change Log
 
 ## [0.9.13] - 2018/02/07
 

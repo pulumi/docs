@@ -1,6 +1,5 @@
 ---
-layout: default
-nav_section: "install"
+title: "Installation and setup"
 installer_version: "0.9.13"
 ---
 
