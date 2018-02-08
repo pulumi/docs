@@ -13,87 +13,61 @@ nav_section: "install"
 
 ### Breaking
 
-- Pulumi packages are now available on NPM, accessible through an NPM proxy. For more information, see [changed](#v10-changed) section below.
+-  Pulumi packages are now available on NPM and can be accessed using your Pulumi access token. For more information, see [changed](#v10-changed) section below.
 
-- The programming model around **resources** and **resource properties** has changed significantly. See the [changed](#v0.10-changed) section below.
+-  The programming model around **resources** and **resource properties** has changed significantly. See the [changed](#v10-changed) section below.
 
 ### Added
 
 #### Pulumi CLI and SDK
 
--  Support "force" option when deleting a managed stack ([pulumi-service#196](https://github.com/pulumi/pulumi-service/issues/196))
+-  Support "force" option when deleting a managed stack.
 
--  [@pulumi/cloud] Allow providing config so that EFS is not added to Cluster ([pulumi-cloud#175](https://github.com/pulumi/pulumi-cloud/issues/175))
+-  In `@pulumi/cloud`, support for creating a `Cluster` without EFS using the `cloud-aws:config:ecsAutoClusterUseEFS` config setting ([pulumi-cloud#175](https://github.com/pulumi/pulumi-cloud/issues/175))
 
--  Add a `pulumi history` command ([pulumi#636](https://github.com/pulumi/pulumi/issues/636))
+-  Add a `pulumi history` command ([pulumi#636](https://github.com/pulumi/pulumi/issues/636)). For a managed stack, use the `pulumi history` to view deployments of that stack's resources.
 
-   For a managed stack, use the `pulumi history` to view deployments of that stack's resources.
+#### Pulumi Console
 
-#### Cloud Console
+-  Show deployment history for a stack in Pulumi Console.
 
--  Show deployment history for a stack in Cloud Console ([pulumi-service#305](https://github.com/pulumi/pulumi-service/issues/305))
-
--  Display AWS console links in the Cloud Console ([pulumi-service#684](https://github.com/pulumi/pulumi-service/issues/684))
-
+-  Display AWS console links in the Pulumi Console.
    Deep links to the AWS console are now displayed for the following types of resources: API Gateway, CloudWatch (event targets, log groups, and log subscription filter), Dynamo DB tables, IAM roles and role policy attachments, Lambda functions, S3 buckets, and SNS topics and subscriptions.
-
-#### Additional
-
--  GitHub resource provider ([pulumi-github#3](https://github.com/pulumi/pulumi-github/issues/3))
--  Prototype Kubernetes resource provider ([pulumi-kubernetes#1](https://github.com/pulumi/pulumi-kubernetes/issues/1))
 
 ### Changed {#v10-changed}
 
 #### Pulumi CLI and SDK 
 
--  Use `npm install` instead of `npm link` to reference Pulumi SDK ([home#11](https://github.com/pulumi/home/issues/11))
+- The SDK packages `@pulumi/*` are now are now hosted on npmjs. However, because they are private packages, you must login to the Pulumi's npm proxy. For more information, see **TODO**.
 
-   To use the Pulumi SDK, use the following in your `package.json` file:
+-  Use `npm install` instead of `npm link` to reference the Pulumi SDK `@pulumi/aws`, `@pulumi/cloud`, `@pulumi/cloud-aws`. The package `pulumi` is still a special case, and should be specified in `peerDependencies` and installed via `npm link`. In the next release, `pulumi` will also move to the same npm package workflow. For more information, see documentation **TODO**. 
 
-   ```json
-       "peerDependencies": {
-        "pulumi": "^0.10",
-        "@pulumi/cloud": "^0.10",
-        "@pulumi/aws": "^0.10"
-    }
-    ```
+   > NOTE: versions of Pulumi packages prior to `0.10.0` are only supported via the previous `npm link` workflow. 
 
-   Versions of Pulumi packages prior to `0.10.0` are only supported via the previous `npm link` workflow. 
+-  Explicitly track resource dependencies via `Input` and `Output` types. This enables future improvements to the Pulumi development experience, such as parallel resource creation and enhanced dependency visualization. When a resource is created, all of its output properties are instances of a new type `pulumi.Output<T>` [**TODO LINK to reference doc**]. `Output<T>` contains both the value of the resource property and metadata that tracks resource dependencies. Inputs to a resource now accept `Output<T>` in addition to `T` and `Promise<T>`.  For more information, see documentation **TODO**.
 
-   For more information, see documentation **TODO**.
+#### Pulumi Console
 
-- The programming model around **resources** and **resource properties** has changed significantly. When a **resource** is created, all of its output properties are instances of a new type `pulumi.Output<T>`. This type contains the actual value of the resource property, along with additional information that allows dependencies between **resources** to be accurately tracked. All inputs to a **resource** have been tweaked to now also accept an `Output<T>` resource property on top of accepting a `T` or `Promise<T>`. For more information, see documentation **TODO**.
+-  Show parent/child relationships for resource components in the UI.
 
-
-#### Cloud Console
-
--  Show parent/child relationships for resource components in the UI ([pulumi-service#297](https://github.com/pulumi/pulumi-service/issues/297))
-
--  Cloud Console is stack-oriented, not repo-oriented ([pulumi-service#418](https://github.com/pulumi/pulumi-service/issues/418))
-
-   The Cloud Console now displays a view of all stacks in a table, rather than displaying a hierarchy of organization, repo, project, and stack.
+-  Pulumi Console is stack-oriented, not repo-oriented. The Pulumi Console now displays a view of all stacks in a table, rather than displaying a hierarchy of organization, repo, project, and stack.
 
 ### Fixed
+
+#### beta.pulumi.com service
+
+-  Support for zero-downtime updates of the **beta.pulumi.com** service. Within a tenant, deployments are further isolated from each other so that concurrent deployments do not share compute resources. Requests to get stack logs, update logs, and stack history are now always responsive, regardless of whether are are active deployments.
 
 #### Pulumi CLI and SDK
 
 -  Make change detection more accurate for complex values ([pulumi-terraform#99](https://github.com/pulumi/pulumi-terraform/issues/99)). 
--  [@pulumi/cloud] Possible to fail to create a new Deployment when an API changes ([pulumi-cloud#360](https://github.com/pulumi/pulumi-cloud/issues/360))
--  [@pulumi/cloud] Task.run does not throw an error when running the task fails ([pulumi-cloud#368](https://github.com/pulumi/pulumi-cloud/issues/368))
--  @pulumi/cloud When creating Cluster, sporadic failure to create requested number of EC2 instances ([pulumi-cloud#195](https://github.com/pulumi/pulumi-cloud/issues/195))
+-  In `@pulumi/cloud`, ensure `Deployment` is recreated on all changes to API body. ([pulumi-cloud#360](https://github.com/pulumi/pulumi-cloud/issues/360))
+-  In `@pulumi/cloud`, `Task.run` does not throw an error when running the task fails ([pulumi-cloud#368](https://github.com/pulumi/pulumi-cloud/issues/368))
+-  In `@pulumi/cloud`, when creating `Cluster`, sporadic failure to create requested number of EC2 instances ([pulumi-cloud#195](https://github.com/pulumi/pulumi-cloud/issues/195))
 -  When using managed stacks, get an HTTP 500 error if you try to remove a non-empty stack ([pulumi-ppc#111](https://github.com/pulumi/pulumi-ppc/issues/111))
 -  Managed stacks sometimes return a 500 error when requesting logs ([pulumi-service#662](https://github.com/pulumi/pulumi-service/issues/662))
 -  Error when using `float64` attributes using SDK v0.9.9 ([pulumi-terraform#95](https://github.com/pulumi/pulumi-terraform/issues/95))
 -  `pulumi logs` entries only return first line ([pulumi#857](https://github.com/pulumi/pulumi/issues/857))
-
-#### Pulumi Managed Cloud
-
--  Make managed cloud more robust ([pulumi-ppc#75](https://github.com/pulumi/pulumi-ppc/issues/75))
-
-   With this change, Pulumi engineers can update the service without any downtime. Within a tenant, deployments are further isolated from each other so that concurrent deployments no not share compute resources. Requests to get stack logs, update logs, and stack history are now always responsive, regardless of whether are are active deployments.
-
--  Improve network communication between managed stacks and deployment agent ([pulumi-service#424](https://github.com/pulumi/pulumi-service/issues/424))         
-
 
 ## [0.9.13] - 2018/02/07
 
