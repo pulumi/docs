@@ -1,13 +1,6 @@
 ---
-layout: default 
-nav_section: "quickstart"
+title: "Overview"
 ---
-
-<p><a href="/quickstart">Getting Started</a> &gt; <b>Overview</b></p>
-
-# Pulumi Overview
-
-Now that you've learned [what Pulumi can do for you](./concepts.html), let's learn how to create awesome cloud programs.
 
 ## Languages
 
@@ -30,10 +23,7 @@ see a `@pulumi/...` package, you can expect some reusable cloud goodness that on
 
 [Documentation](/packages/pulumi)
 
-The `pulumi` package contains the core primitives for interacting with the Pulumi Fabric and Cloud Runtime. Aside from the class `pulumi.Config`, which allows you to retrieve settings that are set by the Pulumi CLI, most Cloud Applications can ignore this package altogether. The packages below use the `pulumi` package.
-
-<!-- I removed this line, since Config is in pulumi. -Donna>
-<!-- although for some advanced scenarios it may be necessary. -->
+The `pulumi` package contains the core primitives for interacting with the Pulumi Fabric and Cloud Runtime. Aside from the class `pulumi.Config`, which allows you to retrieve settings that are set by the Pulumi CLI, most Cloud Applications can ignore this package altogether. Each packages below depends on the `pulumi` package.
 
 ### @pulumi/aws
 
@@ -241,13 +231,4 @@ let customWebServer = new cloud.Service("inline-container-definition", {
 ```
 
 This example uses `getEndpoint()` call to retrieve the internet-addressable URL of `nginx` container in the `builtService` container service. (In this example, since we only defined one container and exposed one port, we could also have used `getEndpoint()` without arguments.
-
-## Next Up
-
-This is just an overview of what you can do with Pulumi. To try it out yourself, check out one of the following tutorials: 
-
-- To program AWS resources directly, see [Programming AWS](./aws.html).
-- To program against Pulumi's Cloud Framework, see [Programming the Cloud](./cloud.html).
-
-You can even mix both styles in the same application!
 

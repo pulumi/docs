@@ -1,13 +1,9 @@
 ---
-layout: default
-nav_section: "install"
+title: "Change log"
 ---
 
-# Pulumi Change Log
-
 <!-- TODO: update the date below with 0.10 release date -->
-<!-- TODO: Add documentation on the new programming model -->
-<!-- TODO: Add documentation on how to use the npm proxy -->
+<!-- TODO: Add documentation on how to use the npm proxy and which package versions to use -->
 
 ## [0.10] - 2018/02/TBD
 
@@ -44,7 +40,7 @@ nav_section: "install"
 
    > NOTE: versions of Pulumi packages prior to `0.10.0` are only supported via the previous `npm link` workflow. 
 
--  Explicitly track resource dependencies via `Input` and `Output` types. This enables future improvements to the Pulumi development experience, such as parallel resource creation and enhanced dependency visualization. When a resource is created, all of its output properties are instances of a new type `pulumi.Output<T>` [**TODO LINK to reference doc**]. `Output<T>` contains both the value of the resource property and metadata that tracks resource dependencies. Inputs to a resource now accept `Output<T>` in addition to `T` and `Promise<T>`.  For more information, see documentation **TODO**.
+-  Explicitly track resource dependencies via `Input` and `Output` types. This enables future improvements to the Pulumi development experience, such as parallel resource creation and enhanced dependency visualization. When a resource is created, all of its output properties are instances of a new type `pulumi.Output<T>` [**TODO LINK to reference doc**]. `Output<T>` contains both the value of the resource property and metadata that tracks resource dependencies. Inputs to a resource now accept `Output<T>` in addition to `T` and `Promise<T>`.  
 
 #### Pulumi Console
 
