@@ -4,4 +4,5 @@ gem "jekyll", "3.6.2"
 # https://github.com/primer/jekyll-octicons
 gem "jekyll-octicons"
 gem "kramdown"
+gem "jekyll-include-cache", "~> 0.1"
 

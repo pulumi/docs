@@ -10,12 +10,6 @@ for generating HTML and the ability to write most files in Markdown.
 TypeScript documentation is generated directly from source using [TYPEDOC](http://typedoc.org/). We
 just check the resulting files directly into the repo under `./libraries/`.
 
-## Git LFS
-
-We use Git LFS to manage release binaries that are checked in.  Please ensure that you've [installed Git LFS](
-https://help.github.com/articles/installing-git-large-file-storage/) before cloning the repo.  See [this tutorial](
-https://help.github.com/articles/configuring-git-large-file-storage/) for more information on using Git LFS with GitHub.
-
 ## Development
 
 Run `make configure` to get the required Gem dependencies. (Assuming you have a recent Ruby
@@ -28,6 +22,16 @@ other Pulumi repos (pulumi, pulumi-cloud, pulumi-aws) as peers of the docs repo 
 working state.
 
 `make serve` will build the website and serve it to http://localhost:4000.
+
+## Site structure
+
+- There is a folder for each heading in the top navigation, such as `Install`, `Quickstart`, etc.
+
+- The mapping from documentation page to section and table-of-contents (TOC) is stored in yaml files in `_data`. 
+
+- To rename a section, rename both the value of `nav_section` in the toc yaml file (e.g., `_data\install.yaml`) and update the layout in `_includes\header.html`.
+
+- To add a new article and add it to the table-of-contents for that section, create a new file in the right section and add an entry in the corresponding file in `_data\top-level-section.yaml`.
 
 ## Design Reference
 
