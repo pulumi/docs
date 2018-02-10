@@ -5,6 +5,8 @@ title: "Change log"
 <!-- TODO: update the date below with 0.10 release date -->
 <!-- TODO: Add documentation on how to use the npm proxy and which package versions to use -->
 
+See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
 ## [0.10] - 2018/02/TBD
 
 ### Breaking
