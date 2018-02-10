@@ -22,6 +22,7 @@ toc: # No landing page
   # - concepts/pulumi-files.md
   # - concepts/programming-model.md
   # - concepts/javascript.md
+  - concepts/npm-packages.md
   - concepts/typescript.md
   # - concepts/python.md
 

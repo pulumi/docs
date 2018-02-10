@@ -3,7 +3,6 @@ title: "Change log"
 ---
 
 <!-- TODO: update the date below with 0.10 release date -->
-<!-- TODO: Add documentation on how to use the npm proxy and which package versions to use -->
 
 See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
@@ -36,11 +35,7 @@ See [known issues](../reference/known-issues.html) for currently known issues an
 
 #### Pulumi CLI and SDK 
 
-- The SDK packages `@pulumi/*` are now are now hosted on npmjs. However, because they are private packages, you must login to the Pulumi's npm proxy. For more information, see **TODO**.
-
--  Use `npm install` instead of `npm link` to reference the Pulumi SDK `@pulumi/aws`, `@pulumi/cloud`, `@pulumi/cloud-aws`. The package `pulumi` is still a special case, and should be specified in `peerDependencies` and installed via `npm link`. In the next release, `pulumi` will also move to the same npm package workflow. For more information, see documentation **TODO**. 
-
-   > NOTE: versions of Pulumi packages prior to `0.10.0` are only supported via the previous `npm link` workflow. 
+-  Use `npm install` instead of `npm link` to reference the Pulumi SDK `@pulumi/aws`, `@pulumi/cloud`, `@pulumi/cloud-aws`. For more information, see [Pulumi npm packages](../concepts/npm-packages.html).
 
 -  Explicitly track resource dependencies via `Input` and `Output` types. This enables future improvements to the Pulumi development experience, such as parallel resource creation and enhanced dependency visualization. When a resource is created, all of its output properties are instances of a new type `pulumi.Output<T>` [**TODO LINK to reference doc**]. `Output<T>` contains both the value of the resource property and metadata that tracks resource dependencies. Inputs to a resource now accept `Output<T>` in addition to `T` and `Promise<T>`.  
 
