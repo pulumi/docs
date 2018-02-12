@@ -1,14 +1,14 @@
 ---
-title: "Pulumi npm packages"
+title: "Pulumi NPM packages"
 ---
 
 ## Referencing packages from your Pulumi program
 
-As of release `0.10`, packages in the `@pulumi` namespace have been moved to an npmjs registry, accessible through an NPM proxy. The package `pulumi` still uses the `npm link` workflow. 
+As of release `0.10`, packages in the `@pulumi` namespace have been moved to an NPMJS registry, accessible through an NPM proxy. The package `pulumi` still uses the `npm link` workflow. 
 
-The packages `@pulumi/aws`, `@pulumi/cloud` and `@pulumi/cloud-aws` are regular npm packages and should be specified in the `dependencies` section of `package.json`. As a best practice, Pulumi programs should only list the packages they strictly depend on.
+The packages `@pulumi/aws`, `@pulumi/cloud` and `@pulumi/cloud-aws` are regular NPM packages and should be specified in the `dependencies` section of `package.json`. As a best practice, Pulumi programs should only list the packages they strictly depend on.
 
-> NOTE: In the next major release, the `pulumi` package will be moved to the same npm workflow as the other packages.
+> NOTE: In the next major release, the `pulumi` package will be moved to the same NPM workflow as the other packages.
 
 For example, if a program used **all** the `@pulumi/*` packages, it would have the following `package.json`. 
 
