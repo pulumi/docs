@@ -3,9 +3,10 @@ title: "Change log"
 ---
 
 <!-- TODO: update the date below with 0.10 release date -->
-<!-- TODO: Add documentation on how to use the npm proxy and which package versions to use -->
 
-## [0.10] - 2018/02/TBD
+See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## [0.10] - 2018/02/TBD {#v10}
 
 ### Breaking
 
@@ -34,11 +35,7 @@ title: "Change log"
 
 #### Pulumi CLI and SDK 
 
-- The SDK packages `@pulumi/*` are now are now hosted on npmjs. However, because they are private packages, you must login to the Pulumi's npm proxy. For more information, see **TODO**.
-
--  Use `npm install` instead of `npm link` to reference the Pulumi SDK `@pulumi/aws`, `@pulumi/cloud`, `@pulumi/cloud-aws`. The package `pulumi` is still a special case, and should be specified in `peerDependencies` and installed via `npm link`. In the next release, `pulumi` will also move to the same npm package workflow. For more information, see documentation **TODO**. 
-
-   > NOTE: versions of Pulumi packages prior to `0.10.0` are only supported via the previous `npm link` workflow. 
+-  Use `npm install` instead of `npm link` to reference the Pulumi SDK `@pulumi/aws`, `@pulumi/cloud`, `@pulumi/cloud-aws`. For more information, see [Pulumi npm packages](../concepts/npm-packages.html).
 
 -  Explicitly track resource dependencies via `Input` and `Output` types. This enables future improvements to the Pulumi development experience, such as parallel resource creation and enhanced dependency visualization. When a resource is created, all of its output properties are instances of a new type `pulumi.Output<T>` [**TODO LINK to reference doc**]. `Output<T>` contains both the value of the resource property and metadata that tracks resource dependencies. Inputs to a resource now accept `Output<T>` in addition to `T` and `Promise<T>`.  
 
@@ -65,7 +62,7 @@ title: "Change log"
 -  Error when using `float64` attributes using SDK v0.9.9 ([pulumi-terraform#95](https://github.com/pulumi/pulumi-terraform/issues/95))
 -  `pulumi logs` entries only return first line ([pulumi#857](https://github.com/pulumi/pulumi/issues/857))
 
-## [0.9.13] - 2018/02/07
+## [0.9.13] - 2018/02/07 {#v913}
 
 ### Added
 
@@ -73,7 +70,7 @@ title: "Change log"
 
 - Added additional configuration for docker builds for a container. The `build` property of a container may now either be a string (which is treated as a path to the folder to do a `docker build` in) or an object with properties `context`, `dockerfile` and `args`, which are passed to `docker build`. If unset, `context` defaults to the current working directory, `dockerfile` defaults to `Dockerfile` and `args` default to no arguments.
 
-## [0.9.11] - 2018/01/22
+## [0.9.11] - 2018/01/22 {#v911}
 
 ### Added
 

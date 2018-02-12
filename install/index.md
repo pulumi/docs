@@ -49,6 +49,14 @@ available for these systems:
     </div>
 </div>
 
+### All available versions
+
+| Version                                     | Date        | Downloads |
+| -------                                     | ----------- | --------- |
+| [0.10.0](./changelog.html#v10)   | 2018/02/TBD | {% include sdk-links.md version='0.10.0' %} |
+| [0.9.13](./changelog.html#v913)  | 2018/02/07  | {% include sdk-links.md version='0.9.13' %} |
+| [0.9.11](./changelog.html#v911)  | 2018/01/22  | {% include sdk-links.md version='0.9.11' %} |
+
 We currently only provide pre-built binaries for x64 architectures on the following OS versions:
 
 <ul>

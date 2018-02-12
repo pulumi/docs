@@ -6,7 +6,7 @@ You should be aware of the following known issues and product limitations. The e
 
 If you encounter an problem that's not on this list, please file a [GitHub issue](https://github.com/pulumi/pulumi/issues/new). <!-- validate the link once public -->
 
-1.  When using AWS CloudFront resources with Pulumi, you can run into errors if you update the CloudFront resource directly through AWS, such as the AWS CLI or console. The CLI will show an error such as the following:
+1.  **Errors after bypassing Pulumi for CloudFront resources.** When using AWS CloudFront resources with Pulumi, you can run into errors if you update the CloudFront resource directly through AWS, such as the AWS CLI or console. The CLI will show an error such as the following:
 
     ```
     rpc error: code 
@@ -17,7 +17,7 @@ If you encounter an problem that's not on this list, please file a [GitHub issue
 
     This is because any CloudFront update operation (such as registering a new domain via Route53) rolls forward the [ETag](https://en.wikipedia.org/wiki/HTTP_ETag). Any future management operations must supply the latest ETag, or they will fail. Because Pulumi stores the last ETag in your stack checkpoint file, you must manually update the ETag value if you have managed CloudFront resources outside of Pulumi.
 
-    This can be done using the stack `import` and `export` operations:
+    You can update the ETag using the stack `import` and `export` operations:
 
     1.  Export the current stack checkpoint and copy to a new file:
 
