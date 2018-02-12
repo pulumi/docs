@@ -6,7 +6,7 @@ title: "Change log"
 
 See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
-## [0.10] - 2018/02/TBD
+## [0.10] - 2018/02/TBD {#v10}
 
 ### Breaking
 
@@ -62,7 +62,7 @@ See [known issues](../reference/known-issues.html) for currently known issues an
 -  Error when using `float64` attributes using SDK v0.9.9 ([pulumi-terraform#95](https://github.com/pulumi/pulumi-terraform/issues/95))
 -  `pulumi logs` entries only return first line ([pulumi#857](https://github.com/pulumi/pulumi/issues/857))
 
-## [0.9.13] - 2018/02/07
+## [0.9.13] - 2018/02/07 {#v913}
 
 ### Added
 
@@ -70,7 +70,7 @@ See [known issues](../reference/known-issues.html) for currently known issues an
 
 - Added additional configuration for docker builds for a container. The `build` property of a container may now either be a string (which is treated as a path to the folder to do a `docker build` in) or an object with properties `context`, `dockerfile` and `args`, which are passed to `docker build`. If unset, `context` defaults to the current working directory, `dockerfile` defaults to `Dockerfile` and `args` default to no arguments.
 
-## [0.9.11] - 2018/01/22
+## [0.9.11] - 2018/01/22 {#v911}
 
 ### Added
 
