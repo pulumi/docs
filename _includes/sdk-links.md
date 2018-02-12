@@ -1,1 +1,0 @@
-[macOS](/releases/pulumi-v{{include.version}}-darwin.x64.tar.gz) [Windows](/releases/pulumi-v{{include.version}}-windows.x64.tar.gz) [Linux](/releases/pulumi-v{{include.version}}-linux.x64.tar.gz)

@@ -51,22 +51,37 @@ available for these systems:
 
 ### All available versions
 
-| Version                                     | Date        | Downloads |
-| -------                                     | ----------- | --------- |
-| [0.10.0](./changelog.html#v10)   | 2018/02/TBD | {% include sdk-links.md version='0.10.0' %} |
-| [0.9.13](./changelog.html#v913)  | 2018/02/07  | {% include sdk-links.md version='0.9.13' %} |
-| [0.9.11](./changelog.html#v911)  | 2018/01/22  | {% include sdk-links.md version='0.9.11' %} |
+We provide pre-built binaries for x64 architectures on the following OS versions:
+-  macOS: Sierra or later
+-  Windows: 8 and 10
+-  Linux: Ubuntu Trusty 14.04 LTS
 
-We currently only provide pre-built binaries for x64 architectures on the following OS versions:
-
-<ul>
-    <li>macOS (f.k.a. OS X): Sierra</li>
-    <li>Windows: 8 and 10</li>
-    <li>Linux: Ubuntu Trusty 14.04 LTS</li>
-</ul>
-
-The binaries are likely to work on alternative versions and we are happy to provide builds for alternative
-architectures (like x86) or OS versions as necessary.  Please [contact us for details](/contact).
+<table class="table table-sm table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Version</th>
+      <th scope="col">Date</th>
+      <th scope="col">Downloads</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="./changelog.html#v10">0.10.0</a></th>
+      <td>2018/02/TBD</td>
+      <td>{% include sdk-links.html version='0.10.0' %}</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="./changelog.html#v913">0.9.13</a></th>
+      <td>2018/02/07</td>
+      <td>{% include sdk-links.html version='0.9.13' %}</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="./changelog.html#v911">0.9.11</a></th>
+      <td>2018/01/22</td>
+      <td>{% include sdk-links.html version='0.9.11' %}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Installation and setup
 
