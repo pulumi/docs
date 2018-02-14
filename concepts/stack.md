@@ -2,12 +2,12 @@
 title: "Stacks, previews, and updates"
 ---
 
-Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently configurable
+Every Placeholder program is deployed to a **stack**.  A stack is an isolated, independently configurable
 target in which programs will run. Stacks are commonly used to denote different phases of development (such as **development**, **staging** and **production**) or feature branches (such as **feature-x-dev**, **jane-feature-x-dev**).
 
 A stack may define stack-specific configuration. To learn more, see [Defining stack settings](./config.html#config-stack).
 
-A stack is created via `pulumi stack init`. A Pulumi program is then deployed to the stack via `pulumi preview` and `pulumi update`, which are described in the following sections.
+A stack is created via `pulumi stack init`. A Placeholder program is then deployed to the stack via `pulumi preview` and `pulumi update`, which are described in the following sections.
 
 ## Create a stack
 
@@ -32,7 +32,7 @@ To view resources currently deployed to a stack, run `pulumi stack` with no argu
 Options:
 
 -  `-i, --show-ids`. Display each resource's provider-assigned unique ID. For instance, with AWS, this displays [Amazon Resource Names](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html). 
--  `-u, --show-urns`. Display each resource's Pulumi-assigned globally unique URN
+-  `-u, --show-urns`. Display each resource's Placeholder-assigned globally unique URN
    
 **Example**
 
@@ -44,7 +44,7 @@ To list all known stacks, run `pulumi stack ls`. When using local stacks, this s
 
 ## View stack outputs
 
-When you use [output properties](./programming-model.html#output-properties) in your Pulumi program, they become stack outputs. Stack outputs can be viewed via `stack output`.
+When you use [output properties](./programming-model.html#output-properties) in your Placeholder program, they become stack outputs. Stack outputs can be viewed via `stack output`.
 
 **Example**
 
@@ -71,13 +71,13 @@ TODO: document `--force` and document whether other locations of stack settings 
 
 Before updating your running stack, it is recommended that you first view a preview of your the changes via `pulumi preview`. A stack must first be selected via `pulumi stack init` or `pulumi stack select`.
 
-Since the Pulumi CLI runs your program in order to determine which infrastructure changes to apply, `pulumi preview` always provides a pessimistic set of resource changes. Once the program is actually deployed through `pulumi update`, the actual changes may be much smaller.
+Since the Placeholder CLI runs your program in order to determine which infrastructure changes to apply, `pulumi preview` always provides a pessimistic set of resource changes. Once the program is actually deployed through `pulumi update`, the actual changes may be much smaller.
 
-For more information, see [the Pulumi programming model](./programming-model.html).
+For more information, see [the Placeholder programming model](./programming-model.html).
 
-### Update and deploy a Pulumi program
+### Update and deploy a Placeholder program
 
-To deploy a Pulumi program to a stack for the first time, or to apply program changes to a running stack, use the `pulumi update` command. A stack must first be selected via `pulumi stack init` or `pulumi stack select`.
+To deploy a Placeholder program to a stack for the first time, or to apply program changes to a running stack, use the `pulumi update` command. A stack must first be selected via `pulumi stack init` or `pulumi stack select`.
 
 TODO: add command, output, and flags
 
@@ -87,6 +87,6 @@ To delete all resources in the selected stack, use the `pulumi destroy` command.
 
 ## Local and managed stacks
 
-There are two kinds of stacks, *local* and *managed*. With local stacks, the [checkpoint file](./checkpoint.html) is stored on your local machine. With managed stacks, the checkpoint is managed by pulumi.com.
+There are two kinds of stacks, *local* and *managed*. With local stacks, the [checkpoint file](./checkpoint.html) is stored on your local machine. With managed stacks, the checkpoint is managed by Pulumi Enterprise.
 
 TODO document how you create a local vs managed stack.

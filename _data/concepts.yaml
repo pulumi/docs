@@ -5,7 +5,7 @@ toc: # No landing page
 - title: Concepts
   section:
   - concepts/index.md # landing page
-  - concepts/overview.md
+  - concepts/why-placeholder.md
   # - concepts/stack.md
   # - concepts/resource.md
   # - concepts/providers.md
