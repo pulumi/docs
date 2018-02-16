@@ -2,6 +2,17 @@
 title: "Overview"
 ---
 
+<!-- Convention for the Concepts section: 
+Since the name of the OSS project is not yet defined, use "Placeholder" (with capital P) where currently the word "Pulumi" would be used.
+
+To find-and-replace later:
+- Replace lowercase "pulumi" with new CLI name
+- Replace Placeholder with new product name
+- Replace Pulumi.yaml with new filename
+
+The term "Pulumi Enterprise" is used for the Service+PPC, currently hosted at beta.pulumi.com
+-->
+
 ## What is Placeholder?
 
 Short, high-level summary of Placeholder.

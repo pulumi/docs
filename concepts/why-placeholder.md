@@ -2,17 +2,6 @@
 title: Why Placeholder?
 ---
 
-<!-- Convention for the Concepts section: 
-Since the name of the OSS project is not yet defined, use "Placeholder" (with capital P) where currently the word "Pulumi" would be used.
-
-To find-and-replace later:
-- Replace lowercase "pulumi" with new CLI name
-- Replace Placeholder with new product name
-- Replace Pulumi.yaml with new filename
-
-The term "Pulumi Enterprise" is used for the Service+PPC, currently hosted at beta.pulumi.com
--->
-
 As a cloud developer, you want to be agile, so you provision and manage your own infrastructure. Frustratingly, you then have to use infrastructure tools that were designed in an era when there were organizational silos between developers and operations teams. This creates extra friction; there are additional toolchains to learn, understand, and automate.
 
 With Placeholder, you use your favorite tools to write **programs** in JavaScript or Python, with more languages on the way. (TODO: LINK to GitHub issue tracking language requests.) With ordinary JavaScript or Python syntax, your program defines *both* its application logic and the infrastructure it needs. You'll notice that in a Placeholder program, there's no longer a striking distinction between infrastructure and application code. In fact, we like to blur this line and simply think of Placeholder applications as distributed programs.
