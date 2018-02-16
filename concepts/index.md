@@ -1,23 +1,47 @@
 ---
-title: Why Pulumi?
+title: "Overview"
 ---
 
-<!-- TODO: need to be consistent between usage of "Cloud Application" and "program" -->
+<!-- Convention for the Concepts section: 
+Since the name of the OSS project is not yet defined, use "Placeholder" (with capital P) where currently the word "Pulumi" would be used.
 
-As a cloud developer, you want to be agile, so you provision and manage your own infrastructure. Frustratingly, you then have to use infrastructure tools that are designed for non-developers! To ensure automated and repeatable deployments, you end up writing markup in ill-suited "languages" with awkward formula syntax. What if you could do all this in a regular programming language?  
+To find-and-replace later:
+- Replace lowercase "pulumi" with new CLI name
+- Replace Placeholder with new product name
+- Replace Pulumi.yaml with new filename
 
-Even better, what if you could then combine your app logic and infrastructure requirements into *one* program?
+The term "Pulumi Enterprise" is used for the Service+PPC, currently hosted at beta.pulumi.com
+-->
 
-With Pulumi, you use your favorite tools to write **programs** in JavaScript or TypeScript. (Python is on its way, followed by more of your favorite languages in the future.) With ordinary JavaScript syntax, your program defines *both* app logic and the infrastructure it needs. We simply call this a **Pulumi Cloud Application**. You'll soon notice that there's no longer a striking distinction between infrastructure and application code. In fact, we like to blur this line and simply think of Pulumi applications as distributed programs.
+## What is Placeholder?
 
-Here's the amazing thing that happens when you combine code and infrastructure: you can bring software engineering practices to cloud programming! You can create and share reusable components that define code alongside the infrastructure it depends on. 
+Short, high-level summary of Placeholder.
 
-For instance, suppose you want to create a component that provides a live leaderboard, backed by a managed Redis cache such as AWS ElastiCache:
-- **Before Pulumi**, this "component" would actually just be a leaderboard *library*. The author would provide configuration instructions on how to provision the cache and connect it to the library. It's on you to create a repeatable deployment for the cache and set up the correct environment variables.
-- **With Pulumi**, the author can create a **Cloud Component** that defines both the leaderboard logic and the infrastructure requirements. When you use this component in your code, Pulumi will automatically provision the cache for you. This is possible because we are using a real programming language where infrastructure requirements are an intimate part of your code---from source control, to build, and to deployment.
+## Programs and config
 
-As an analogy, think of installing software on your machine. You could be given a zipfile along with detailed instructions on how to install it on your machine, or a macOS-like self-contained application package that you simply copy to the "Applications" folder. Pulumi Cloud Components are like an application package.
+A Placeholder program is authored in JavaScript/TypeScript or Python, with more languages supported in the future. The configuration is defined in `Pulumi.yaml`, 
 
-One interesting aspect of Pulumi infrastructure definitions is that they are a mix of a declarative and imperative model. You write imperative code to define the resources you need, but Pulumi turns this into a *declarative* plan of infrastructure changes to make to your cloud environment. So, Pulumi programs are repeatable: it is incredibly easy to stand up a new stack---perhaps in a new region---that is identical to the original stack!
+- Tiny AWS+Javascript example
 
-Pulumi Cloud Applications use regular languages, but are run in a special way. Instead of running the application directly, you use the **`pulumi` command**. This CLI transforms your imperative code to a declarative plan and updates your application (including infrastructure!) when you've made a change. The Pulumi CLI does all this automatically, without you having to manually edit configuration or use a cloud console.
+- Link to AWS, Azure, Kubernetes.
+
+A placeholder program has configuration, defined in `Pulumi.yaml`, which can be accessed within your code. Link to config.
+
+## Stacks, deployments, and resources
+
+A Placeholder program is **deployed** to a **stack**. A stack is a target in which programs will run and typically denotes an environment (such as "staging" or "production"). A program becomes a running application by **deploying** it through `pulumi update` [LINK]. A deployment may be previewed before it is executed, via `pulumi preview` [LINK].
+
+A deployment results in the creation, update, or deletion of one or more **resources**. A resource is typically an infrastructure component, such as a virtual machine, network security group, or AWS IAM role. Essentially, a Placeholder program "runs" through these interconnected cloud resources. 
+
+A Placeholder program can also define application runtime code in addition to deployment-time code, when it uses the  higher-level `@pulumi/cloud` programming model (LINK). This means that there is a mixing of *phases*, part of the program runs at deployment time, and part at runtime.
+
+It is helpful to consider the lifetimes of the concepts just described. A stack exists for a particular duration, during which time it can have a number of deployments. Deployments create and delete resources, generally with an overlap between creation of a new resource and creation of a new one. The final line in the diagram illustrates the running "application code," which is part of the Placeholder program, but not the program itself. Application code is either deployed through a mechanism outside of Placeholder (such as creating a custom Amazon Machine Image) or using  `@pulumi/cloud` components such as `cloud.Service` and `cloud.HttpEndpoint`. 
+
+In particular, a resource like `cloud.HttpEndpoint` is implemented as serverless functions (such as AWS Lambda). So, an individual execution could just be a part of the underlying resource lifetime, such as the Lambda function definition itself.
+
+![Object Lifetimes](../images/concepts/object-lifetimes-diagram.png){:width="500px"}
+
+## Placeholder components
+
+Describe "Engine/CLI" 
+

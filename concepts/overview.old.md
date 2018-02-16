@@ -2,6 +2,8 @@
 title: "Overview"
 ---
 
+<!-- Keeping this file around to copy-paste text easily -->
+
 ## Languages
 
 In the current release, Cloud Applications can be authored in [JavaScript](
