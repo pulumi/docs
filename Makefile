@@ -35,3 +35,16 @@ build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
 	bundle install
 	bundler exec jekyll build
+
+.PHONY: deploy
+deploy:
+	@echo -e "\033[0;32mDEPLOY:\033[0m"
+ifeq ($(TRAVIS_BRANCH),master)
+	./scripts/deploy.sh staging
+endif
+ifeq ($(TRAVIS_BRANCH),production)
+	./scripts/deploy.sh production
+endif
+
+.PHONY: travis_push
+travis_push:: banner ensure build deploy

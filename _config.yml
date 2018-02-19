@@ -21,16 +21,22 @@ include:
 # out unwanted files/directories prefixed with "_" because of our liberal
 # include list.
 exclude:
-  - scripts
+  - _data
+  - _drafts
+  - _includes
+  - _layouts
+  - _site
+  - _config.yml
+  - .gitattributes
   - .gitignore
+  - .travis.yml
   - Gemfile
   - Gemfile.lock
   - Makefile
+  - package.json
+  - scripts
   - README.md
-  - _includes
-  - _layouts
-  - _data
-  - _config.yml
+  - yarn.lock
 
 # Tables of contents, stored in the _data folder, that control the sidebar nav
 # To add a new entry to the table of contents, create a new doc in the appropriate folder,
