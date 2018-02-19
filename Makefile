@@ -17,7 +17,7 @@ configure:
 	yarn install
 
 .PHONY: ensure
-configure:
+ensure:
 	bundle install
 
 .PHONY: serve
