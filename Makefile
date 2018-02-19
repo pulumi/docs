@@ -48,3 +48,12 @@ endif
 
 .PHONY: travis_push
 travis_push:: banner ensure build deploy
+
+.PHONY: travis_pull_request
+travis_pull_request:: banner ensure build
+
+.PHONY: travis_cron
+travis_cron:: banner ensure build
+
+.PHONY: travis_api
+travis_api:: banner ensure build
