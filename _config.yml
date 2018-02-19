@@ -34,8 +34,9 @@ exclude:
   - Gemfile.lock
   - Makefile
   - package.json
-  - scripts
   - README.md
+  - scripts
+  - vendor
   - yarn.lock
 
 # Tables of contents, stored in the _data folder, that control the sidebar nav
