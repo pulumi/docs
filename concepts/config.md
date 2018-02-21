@@ -6,12 +6,13 @@ Often, your Placeholder program will need configuration values that change indep
 
 Settings that are specific to a stack are defined in `Pulumi.yaml` and are set via the `pulumi config` verbs. 
 
-
-
 ## Defining stack settings {#config-stack}
+
+To add a new stack setting in plaintext, 
 
 ## Additional
 
 Features to document
-- Read config from stdin (useful for secrets and public keys). See https://github.com/pulumi/pulumi/issues/670#issuecomment-364835504
+- Any environment variables that are set locally will be passed to the running program
+- Read config from stdin (useful for secrets and public keys). See https://github.com/pulumi/pulumi/issues/670#issuecomment-364835504. See https://github.com/pulumi/pulumi/issues/822 for a example of how you might use it with a public key.
 - 
