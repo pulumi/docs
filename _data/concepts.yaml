@@ -6,13 +6,13 @@ toc: # No landing page
   section:
   - concepts/index.md # landing page
   - concepts/why-colada.md
-  # - concepts/stack.md
+  - concepts/stack.md
   # - concepts/resource.md
   # - concepts/providers.md
-  # - concepts/config.md
-  # - concepts/checkpoint.md
+  - concepts/config.md
+  - concepts/checkpoint.md
   # - concepts/resource-graph.md
-  # - concepts/resource-names.md
+  - concepts/resource-names.md
   # - concepts/colada-cli.md
   # - concepts/logging.md
   # - concepts/packages.md

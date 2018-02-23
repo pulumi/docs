@@ -48,7 +48,7 @@ While Pulumi is in private preview, `@pulumi` packages are only available throug
 
 1.  To authenticate against this proxy, set the environment variable `PULUMI_ACCESS_TOKEN` to your [Pulumi access token](../managed-cloud/console.html#account-page).
 
-1.  To configure your npm client, add the following to `~/.npmrc`. Note that the ${PULUMI_ACCESS_TOKEN} syntax is valid and will be auto-expanded by the NPM client.
+1.  To configure your NPM client, add the following to `~/.npmrc`. Note that the ${PULUMI_ACCESS_TOKEN} syntax is valid and will be auto-expanded by the NPM client.
 
     ```
     @pulumi:registry=https://npmjs.pulumi.com/

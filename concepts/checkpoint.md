@@ -10,16 +10,10 @@ During an `update` operation, Colada [runs your program](./programming-model.htm
 
 You may be wondering why this mapping is stored at all; why not query the cloud provider to determine the current state of resources? TODO finish.
 
-<!-- 
 
-Raw notes
+## Raw notes
 
-provider creates the resource with a target identity. Pulumi doesn't care about the physical identity, the provider is what does.
-
-id property is what the terraform provider has decided (up to individual resource) what is the ID. e.g., it can be ARN, but can't always
-
-this is all opaque to pulumi
-
-checkpoint file is mapping from pulumi names to resource provider understood IDs
-
- -->
+- provider creates the resource with a target identity. Pulumi doesn't care about the physical identity, the provider is what does.
+- id property is what the terraform provider has decided (up to individual resource) what is the ID. e.g., it can be ARN, but can't always be assumed to be such
+- this is all opaque to pulumi
+- checkpoint file maps from pulumi names to resource provider understood IDs
