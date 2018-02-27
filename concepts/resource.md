@@ -1,0 +1,6 @@
+---
+title: "Resources"
+---
+
+- ComponentResource
+- CustomResource

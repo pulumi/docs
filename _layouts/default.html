@@ -1,12 +1,25 @@
+{% for current_toc in site.tocs %}
+  {% if found_toc %}
+    {% break %}
+  {% else %}
+    {% assign toc=site.data[current_toc] %}
+    {% include tocsearch.html tree=toc.toc toc=toc %}
+  {% endif %}
+{% endfor %}
+
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
 <body>
-    {% include header.html %}
-    <div class="pa3 mw8 center">
+  {% include header.html %}
+
+  <div class="pa3 mw8 center">  
+    <h1>{{page.title}}</h1>
     {{ content }}
-    </div>
-    {% include footer.html %}
+  </div>
+
+  {% include footer.html %}
+  
 </body>
 </html>
 

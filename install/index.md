@@ -1,7 +1,6 @@
 ---
-layout: default
-nav_section: "install"
-installer_version: "0.9.13"
+title: "Installation and setup"
+installer_version: "0.10.0"
 ---
 
 <!-- 
@@ -10,24 +9,13 @@ NOTE: To update this page with a new binary release, do the following:
 - Update release-notes.md with the latest fixes in the release
 -->
 
-# Installation and setup
-
-Follow these instructions to install the Pulumi Cloud SDK on your development or build machine.
-
-For detailed instructions on using Pulumi, please refer to the <a href="/quickstart">Quickstart</a>.  For any
-feedback or questions, please do not hesitate to [contact us](/contact)---we'd love to hear from you!
-
-## Change log
+Follow these instructions to install the Pulumi SDK on your development or build machine.
 
 The latest version of the Pulumi SDK is **{{ page.installer_version }}**. See the [change log](./changelog.html) to learn what's new.
 
 ## Download the SDK
 
-The first step is to download a binary release suitable for your system.
-
 ### Featured downloads
-
-**NOTE**: if you don't have access to the downloads below, you should have received a link to the binaries. If not, please [contact us](/contact).
 
 The current version of Pulumi's SDK is **{{ page.installer_version }}** and is
 available for these systems:
@@ -61,16 +49,39 @@ available for these systems:
     </div>
 </div>
 
-We currently only provide pre-built binaries for x64 architectures on the following OS versions:
+### All available versions
 
-<ul>
-    <li>macOS (f.k.a. OS X): Sierra</li>
-    <li>Windows: 8 and 10</li>
-    <li>Linux: Ubuntu Trusty 14.04 LTS</li>
-</ul>
+We provide pre-built binaries for x64 architectures on the following OS versions:
+-  macOS: Sierra or later
+-  Windows: 8 and 10
+-  Linux: Ubuntu Trusty 14.04 LTS
 
-The binaries are likely to work on alternative versions and we are happy to provide builds for alternative
-architectures (like x86) or OS versions as necessary.  Please [contact us for details](/contact).
+<table class="table table-sm table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Version</th>
+      <th scope="col">Date</th>
+      <th scope="col">Downloads</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="./changelog.html#v10">0.10.0</a></th>
+      <td>2018/02/27</td>
+      <td>{% include sdk-links.html version='0.10.0' %}</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="./changelog.html#v913">0.9.13</a></th>
+      <td>2018/02/07</td>
+      <td>{% include sdk-links.html version='0.9.13' %}</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="./changelog.html#v911">0.9.11</a></th>
+      <td>2018/01/22</td>
+      <td>{% include sdk-links.html version='0.9.11' %}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Installation and setup
 
@@ -109,7 +120,7 @@ https://github.com/creationix/nvm).  Links are included below for convenience.
 
 **Please note**: Pulumi *requires* Node.js 6.10.2 (LTS).  This ensures the environment that you are using locally
 matches the version of the Node.js runtime used by AWS Lambda.  In the future, Pulumi intends to support additional
-Node.js versions.  Please [let us know](/contact) if you need a specific version for your applications.
+Node.js versions.  
 
 #### NPM or Yarn
 
@@ -163,39 +174,7 @@ $ pulumi version
 v{{page.installer_version}}
 ```
 
-We're almost done, but not quite: Pulumi still needs to be told exactly how to talk with your favorite cloud provider.
+## Configure provider credentials
 
-### Configure AWS credentials
+Next, configure the AWS CLI and set up your credentials. See [Configuring Pulumi for AWS](./aws-config.html).
 
-Pulumi currently only supports AWS as a deployment target.  As a result, you will need to configure your system
-so that Pulumi can communicate with AWS.  Pulumi does not store this information anywhere, and these credentials
-must include sufficient IAM rights to deploy and manage resources in your AWS account.
-
-The easiest way to configure your AWS credentials is to simply set the `AWS_ACCESS_KEY_ID` and
-`AWS_SECRET_ACCESS_KEY` environment variables to the values given to you in the IAM console.  For example,
-on macOS or Linux:
-
-```bash
-$ export AWS_ACCESS_KEY_ID=AK**************WORA
-$ export AWS_SECRET_ACCESS_KEY=7n******************************6eLEKd8G
-```
-
-Of course the `**` strings should be replaced with your own credentials.
-
-Alternatively, you can install the [AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) and use
-it to configure your IAM credentials locally on your machine.  These will be stored and cached in your home directory:
-
-```bash
-$ aws configure
-AWS Access Key ID [AK**************WORA]:
-AWS Secret Access Key [7n******************************6eLEKd8G]:
-Default region name [us-west-2]:
-Default output format [None]:
-```
-
-In general, you can use any of the other configuration options documented on the [AWS SDK website](
-http://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html).
-
-### Next steps
-
-Now that you've finished installing, head over to the [Quickstart](/quickstart) to to write your first Pulumi program!

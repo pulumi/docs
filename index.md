@@ -1,16 +1,10 @@
 ---
 layout: default
-nav_section: "home"
 ---
 
-<div class="pulumi-jumbotron">
-    <div class="container">
-        <img src="images/logo/transparent-black-text-large.png" alt="Pulumi" style="display: block; margin: auto" width="400">
-        <h1 class="display-3 title" style="text-align: center">Documentation</h1>
-    </div>
-</div>
+<img src="images/logo/logo_black_nobg_600.png" alt="Pulumi" style="margin: auto" width="400">
 
-**Pulumi is the easiest way to build, connect, and run modern cloud applications.**
+# Infrastructure as software
 
 **Bring Your Own Language.**  Pulumi lets you write portable Cloud Applications in a regular programming  language, using your favorite IDEs and tools, and runs them on the cloud of your choice.  The result is a truly
 cloud native application.

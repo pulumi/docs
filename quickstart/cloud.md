@@ -1,11 +1,6 @@
 ---
-layout: default 
-nav_section: "quickstart"
+title: Programming containers
 ---
-
-<p><a href="/quickstart">Getting Started</a> &gt; <b>Programming the Cloud</b></p>
-
-# Programming the Cloud
 
 The `@pulumi/cloud` package lets you program infrastructure and application logic, side by side in harmony, using
 simple, high-level cloud building blocks.  This package has three key defining attributes:

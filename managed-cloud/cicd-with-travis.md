@@ -1,12 +1,6 @@
 ---
-layout: default 
-nav_section: "how-to"
-type: tutorial
+title: "Continuously deploy Pulumi programs"
 ---
-
-<p><a href="/how-to">How-to Guides</a> &gt; <b>Use Travis to continuously deploy</b></p>
-
-# Use Travis to continuously deploy Pulumi programs
 
 This tutorial describes how to configure a Pulumi program to be continuously built and deployed using the Pulumi service and [Travis CI](https://travis-ci.com/).
 

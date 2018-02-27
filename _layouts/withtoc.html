@@ -1,0 +1,33 @@
+{% for current_toc in site.tocs %}
+  {% if found_toc %}
+    {% break %}
+  {% else %}
+    {% assign toc=site.data[current_toc] %}
+    {% include tocsearch.html tree=toc.toc toc=toc %}
+  {% endif %}
+{% endfor %}
+
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+  {% include header.html %}
+
+  <div class="pa3 mw8 center">
+    <div class="column docsToc">
+      {% include_cached tree.html tree=toc.toc %}
+    </div> <!-- /docsToc -->
+      
+    <!-- breadcrumb -->
+    <!-- <p><a href="/{{toc.nav_section}}">{{toc.nav_section}}</a> &gt; <b>{{page.title}}</b></p> -->
+
+    <div class="column docsContent"> 
+      <h1>{{page.title}}</h1>
+      {{ content }}
+    </div> 
+    
+  </div>
+
+  {% include footer.html %}
+</body>
+</html>

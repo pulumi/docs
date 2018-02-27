@@ -16,6 +16,10 @@ configure:
 	gem install jekyll bundler
 	yarn install
 
+.PHONY: ensure
+configure:
+	bundle install
+
 .PHONY: serve
 serve: 
 	@echo -e "\033[0;32mSERVE:\033[0m"
