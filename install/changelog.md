@@ -1,11 +1,68 @@
 ---
-layout: default
-nav_section: "install"
+title: "Change log"
 ---
 
-# Pulumi Change Log
+<!-- TODO: update the date below with 0.10 release date -->
 
-## [0.9.13] - 2018/02/07
+See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## [0.10] - 2018/02/27 {#v10}
+
+### Breaking
+
+-  Pulumi packages are now available on NPM and can be accessed using your Pulumi access token. For more information, see [changed](#v10-changed) section below.
+
+-  The programming model around **resources** and **resource properties** has changed significantly. See the [changed](#v10-changed) section below.
+
+### Added
+
+#### Pulumi CLI and SDK
+
+-  Support "force" option when deleting a managed stack.
+
+-  In `@pulumi/cloud`, support for creating a `Cluster` without EFS using the `cloud-aws:config:ecsAutoClusterUseEFS` config setting ([pulumi-cloud#175](https://github.com/pulumi/pulumi-cloud/issues/175))
+
+-  Add a `pulumi history` command ([pulumi#636](https://github.com/pulumi/pulumi/issues/636)). For a managed stack, use the `pulumi history` to view deployments of that stack's resources.
+
+#### Pulumi Console
+
+-  Show deployment history for a stack in Pulumi Console.
+
+-  Display AWS console links in the Pulumi Console.
+   Deep links to the AWS console are now displayed for the following types of resources: API Gateway, CloudWatch (event targets, log groups, and log subscription filter), Dynamo DB tables, IAM roles and role policy attachments, Lambda functions, S3 buckets, and SNS topics and subscriptions.
+
+### Changed {#v10-changed}
+
+#### Pulumi CLI and SDK 
+
+-  Use `npm install` instead of `npm link` to reference the Pulumi SDK `@pulumi/aws`, `@pulumi/cloud`, `@pulumi/cloud-aws`. For more information, see [Pulumi npm packages](../concepts/npm-packages.html).
+
+-  Explicitly track resource dependencies via `Input` and `Output` types. This enables future improvements to the Pulumi development experience, such as parallel resource creation and enhanced dependency visualization. When a resource is created, all of its output properties are instances of a new type `pulumi.Output<T>` [**TODO LINK to reference doc**]. `Output<T>` contains both the value of the resource property and metadata that tracks resource dependencies. Inputs to a resource now accept `Output<T>` in addition to `T` and `Promise<T>`.  
+
+#### Pulumi Console
+
+-  Show parent/child relationships for resource components in the UI.
+
+-  Pulumi Console is stack-oriented, not repo-oriented. The Pulumi Console now displays a view of all stacks in a table, rather than displaying a hierarchy of organization, repo, project, and stack.
+
+### Fixed
+
+#### beta.pulumi.com service
+
+-  Support for zero-downtime updates of the **beta.pulumi.com** service. Within a tenant, deployments are further isolated from each other so that concurrent deployments do not share compute resources. Requests to get stack logs, update logs, and stack history are now always responsive, regardless of whether are are active deployments.
+
+#### Pulumi CLI and SDK
+
+-  Make change detection more accurate for complex values ([pulumi-terraform#99](https://github.com/pulumi/pulumi-terraform/issues/99)). 
+-  In `@pulumi/cloud`, ensure `Deployment` is recreated on all changes to API body. ([pulumi-cloud#360](https://github.com/pulumi/pulumi-cloud/issues/360))
+-  In `@pulumi/cloud`, `Task.run` does not throw an error when running the task fails ([pulumi-cloud#368](https://github.com/pulumi/pulumi-cloud/issues/368))
+-  In `@pulumi/cloud`, when creating `Cluster`, sporadic failure to create requested number of EC2 instances ([pulumi-cloud#195](https://github.com/pulumi/pulumi-cloud/issues/195))
+-  When using managed stacks, get an HTTP 500 error if you try to remove a non-empty stack ([pulumi-ppc#111](https://github.com/pulumi/pulumi-ppc/issues/111))
+-  Managed stacks sometimes return a 500 error when requesting logs ([pulumi-service#662](https://github.com/pulumi/pulumi-service/issues/662))
+-  Error when using `float64` attributes using SDK v0.9.9 ([pulumi-terraform#95](https://github.com/pulumi/pulumi-terraform/issues/95))
+-  `pulumi logs` entries only return first line ([pulumi#857](https://github.com/pulumi/pulumi/issues/857))
+
+## [0.9.13] - 2018/02/07 {#v913}
 
 ### Added
 
@@ -13,7 +70,7 @@ nav_section: "install"
 
 - Added additional configuration for docker builds for a container. The `build` property of a container may now either be a string (which is treated as a path to the folder to do a `docker build` in) or an object with properties `context`, `dockerfile` and `args`, which are passed to `docker build`. If unset, `context` defaults to the current working directory, `dockerfile` defaults to `Dockerfile` and `args` default to no arguments.
 
-## [0.9.11] - 2018/01/22
+## [0.9.11] - 2018/01/22 {#v911}
 
 ### Added
 
