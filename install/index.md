@@ -1,6 +1,6 @@
 ---
 title: "Installation and setup"
-installer_version: "0.9.13"
+installer_version: "0.10.0"
 ---
 
 <!-- 
@@ -67,7 +67,7 @@ We provide pre-built binaries for x64 architectures on the following OS versions
   <tbody>
     <tr>
       <th scope="row"><a href="./changelog.html#v10">0.10.0</a></th>
-      <td>2018/02/TBD</td>
+      <td>2018/02/27</td>
       <td>{% include sdk-links.html version='0.10.0' %}</td>
     </tr>
     <tr>
@@ -120,7 +120,7 @@ https://github.com/creationix/nvm).  Links are included below for convenience.
 
 **Please note**: Pulumi *requires* Node.js 6.10.2 (LTS).  This ensures the environment that you are using locally
 matches the version of the Node.js runtime used by AWS Lambda.  In the future, Pulumi intends to support additional
-Node.js versions.  Please [let us know](/contact) if you need a specific version for your applications.
+Node.js versions.  
 
 #### NPM or Yarn
 

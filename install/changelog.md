@@ -6,7 +6,7 @@ title: "Change log"
 
 See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
-## [0.10] - 2018/02/TBD {#v10}
+## [0.10] - 2018/02/27 {#v10}
 
 ### Breaking
 
