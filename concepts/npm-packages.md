@@ -28,7 +28,7 @@ To install NPM dependencies, do the following:
 
 ### Adding a new dependency
 
-To add a new package from the `@pulumi` namespace, run `npm install @pulumi/package-name`. The following packages are available. 
+To add a new package from the `@pulumi` namespace, run `npm install --save @pulumi/package-name`. The following packages are available. 
 
 - `@pulumi/aws`
 - `@pulumi/cloud`
