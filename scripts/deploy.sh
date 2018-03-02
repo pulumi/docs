@@ -17,7 +17,7 @@ echo "Assuming the role of UploadPulumiReleases, uploading ${CURRENT_COMMIT:0:6}
 CREDS_JSON=$(aws sts assume-role \
     --role-arn "arn:aws:iam::058607598222:role/UploadPulumiReleases" \
     --role-session-name "docs-release_${CURRENT_COMMIT:0:6}" \
-    --external-id "upload-docs-release") > /dev/null  # Avoid temp cred info showing up in logs.
+    --external-id "upload-docs-release")
 
 export AWS_ACCESS_KEY_ID=$(echo ${CREDS_JSON}     | jq ".Credentials.AccessKeyId" --raw-output)
 export AWS_SECRET_ACCESS_KEY=$(echo ${CREDS_JSON} | jq ".Credentials.SecretAccessKey" --raw-output)
