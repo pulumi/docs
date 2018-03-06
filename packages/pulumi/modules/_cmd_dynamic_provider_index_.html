@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;cmd/dynamic-provider/index&quot; | pulumi</title>
+	<title>&quot;cmd/dynamic-provider/index&quot; | @pulumi/pulumi</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">pulumi</a>
+					<a href="../index.html" class="title">@pulumi/pulumi</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -75,6 +75,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#emptyproto" class="tsd-kind-icon">emptyproto</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#grpc" class="tsd-kind-icon">grpc</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#plugproto" class="tsd-kind-icon">plugproto</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#providerkey" class="tsd-kind-icon">provider<wbr>Key</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#provproto" class="tsd-kind-icon">provproto</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#provrpc" class="tsd-kind-icon">provrpc</a></li>
@@ -90,6 +91,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#createrpc" class="tsd-kind-icon">createRPC</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#deleterpc" class="tsd-kind-icon">deleteRPC</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#diffrpc" class="tsd-kind-icon">diffRPC</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#getplugininforpc" class="tsd-kind-icon">get<wbr>Plugin<wbr>InfoRPC</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#getprovider" class="tsd-kind-icon">get<wbr>Provider</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_dynamic_provider_index_.html#invokerpc" class="tsd-kind-icon">invokeRPC</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_cmd_dynamic_provider_index_.html#main" class="tsd-kind-icon">main</a></li>
@@ -107,7 +109,7 @@
 					<div class="tsd-signature tsd-kind-icon">emptyproto<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;google-protobuf/google/protobuf/empty_pb.js&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L11">cmd/dynamic-provider/index.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L12">cmd/dynamic-provider/index.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -117,7 +119,17 @@
 					<div class="tsd-signature tsd-kind-icon">grpc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;grpc&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L10">cmd/dynamic-provider/index.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L11">cmd/dynamic-provider/index.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="plugproto" class="tsd-anchor"></a>
+					<h3>plugproto</h3>
+					<div class="tsd-signature tsd-kind-icon">plugproto<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;../../proto/plugin_pb.js&quot;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L16">cmd/dynamic-provider/index.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -127,7 +139,7 @@
 					<div class="tsd-signature tsd-kind-icon">provider<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;__provider&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L16">cmd/dynamic-provider/index.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L18">cmd/dynamic-provider/index.ts:18</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -137,7 +149,7 @@
 					<div class="tsd-signature tsd-kind-icon">provproto<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;../../proto/provider_pb.js&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L13">cmd/dynamic-provider/index.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L14">cmd/dynamic-provider/index.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -147,7 +159,7 @@
 					<div class="tsd-signature tsd-kind-icon">provrpc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;../../proto/provider_grpc_pb.js&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L14">cmd/dynamic-provider/index.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L15">cmd/dynamic-provider/index.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -157,7 +169,7 @@
 					<div class="tsd-signature tsd-kind-icon">require<wbr>From<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;require-from-string&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L9">cmd/dynamic-provider/index.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L10">cmd/dynamic-provider/index.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -167,7 +179,7 @@
 					<div class="tsd-signature tsd-kind-icon">structproto<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;google-protobuf/google/protobuf/struct_pb.js&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L12">cmd/dynamic-provider/index.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L13">cmd/dynamic-provider/index.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -184,7 +196,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L45">cmd/dynamic-provider/index.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L47">cmd/dynamic-provider/index.ts:47</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -210,7 +222,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L34">cmd/dynamic-provider/index.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L36">cmd/dynamic-provider/index.ts:36</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -236,7 +248,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L104">cmd/dynamic-provider/index.ts:104</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L121">cmd/dynamic-provider/index.ts:121</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -262,7 +274,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L149">cmd/dynamic-provider/index.ts:149</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L168">cmd/dynamic-provider/index.ts:168</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -288,7 +300,33 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L76">cmd/dynamic-provider/index.ts:76</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L89">cmd/dynamic-provider/index.ts:89</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>call: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="getplugininforpc" class="tsd-anchor"></a>
+					<h3>get<wbr>Plugin<wbr>InfoRPC</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<wbr>InfoRPC<span class="tsd-signature-symbol">(</span>call<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L183">cmd/dynamic-provider/index.ts:183</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -314,7 +352,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L18">cmd/dynamic-provider/index.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L20">cmd/dynamic-provider/index.ts:20</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -337,7 +375,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L38">cmd/dynamic-provider/index.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L40">cmd/dynamic-provider/index.ts:40</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -363,7 +401,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L161">cmd/dynamic-provider/index.ts:161</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L189">cmd/dynamic-provider/index.ts:189</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -386,7 +424,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L125">cmd/dynamic-provider/index.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L142">cmd/dynamic-provider/index.ts:142</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -424,6 +462,9 @@
 						<a href="_cmd_dynamic_provider_index_.html#grpc" class="tsd-kind-icon">grpc</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_cmd_dynamic_provider_index_.html#plugproto" class="tsd-kind-icon">plugproto</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_cmd_dynamic_provider_index_.html#providerkey" class="tsd-kind-icon">provider<wbr>Key</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
@@ -452,6 +493,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_cmd_dynamic_provider_index_.html#diffrpc" class="tsd-kind-icon">diffRPC</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_cmd_dynamic_provider_index_.html#getplugininforpc" class="tsd-kind-icon">get<wbr>Plugin<wbr>InfoRPC</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_cmd_dynamic_provider_index_.html#getprovider" class="tsd-kind-icon">get<wbr>Provider</a>

@@ -94,6 +94,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#allocationstrategy" class="tsd-kind-icon">allocation<wbr>Strategy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#excesscapacityterminationpolicy" class="tsd-kind-icon">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#iamfleetrole" class="tsd-kind-icon">iam<wbr>Fleet<wbr>Role</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#instanceinterruptionbehaviour" class="tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#launchspecification" class="tsd-kind-icon">launch<wbr>Specification</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#replaceunhealthyinstances" class="tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#spotprice" class="tsd-kind-icon">spot<wbr>Price</a></li>
@@ -112,10 +113,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="allocationstrategy" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> allocation<wbr>Strategy</h3>
-					<div class="tsd-signature tsd-kind-icon">allocation<wbr>Strategy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">allocation<wbr>Strategy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:122</li>
+							<li>Defined in ec2/spotFleetRequest.ts:123</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -129,10 +130,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="excesscapacityterminationpolicy" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> excess<wbr>Capacity<wbr>Termination<wbr>Policy</h3>
-					<div class="tsd-signature tsd-kind-icon">excess<wbr>Capacity<wbr>Termination<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">excess<wbr>Capacity<wbr>Termination<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:128</li>
+							<li>Defined in ec2/spotFleetRequest.ts:129</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -146,10 +147,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="iamfleetrole" class="tsd-anchor"></a>
 					<h3>iam<wbr>Fleet<wbr>Role</h3>
-					<div class="tsd-signature tsd-kind-icon">iam<wbr>Fleet<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">iam<wbr>Fleet<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:135</li>
+							<li>Defined in ec2/spotFleetRequest.ts:136</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -162,12 +163,22 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="launchspecification" class="tsd-anchor"></a>
-					<h3>launch<wbr>Specification</h3>
-					<div class="tsd-signature tsd-kind-icon">launch<wbr>Specification<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="instanceinterruptionbehaviour" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> instance<wbr>Interruption<wbr>Behaviour</h3>
+					<div class="tsd-signature tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:141</li>
+							<li>Defined in ec2/spotFleetRequest.ts:137</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="launchspecification" class="tsd-anchor"></a>
+					<h3>launch<wbr>Specification</h3>
+					<div class="tsd-signature tsd-kind-icon">launch<wbr>Specification<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/spotFleetRequest.ts:143</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -181,10 +192,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="replaceunhealthyinstances" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> replace<wbr>Unhealthy<wbr>Instances</h3>
-					<div class="tsd-signature tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:145</li>
+							<li>Defined in ec2/spotFleetRequest.ts:147</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -196,10 +207,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="spotprice" class="tsd-anchor"></a>
 					<h3>spot<wbr>Price</h3>
-					<div class="tsd-signature tsd-kind-icon">spot<wbr>Price<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">spot<wbr>Price<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:149</li>
+							<li>Defined in ec2/spotFleetRequest.ts:151</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -211,10 +222,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="targetcapacity" class="tsd-anchor"></a>
 					<h3>target<wbr>Capacity</h3>
-					<div class="tsd-signature tsd-kind-icon">target<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">target<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:155</li>
+							<li>Defined in ec2/spotFleetRequest.ts:157</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -228,10 +239,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="terminateinstanceswithexpiration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> terminate<wbr>Instances<wbr>With<wbr>Expiration</h3>
-					<div class="tsd-signature tsd-kind-icon">terminate<wbr>Instances<wbr>With<wbr>Expiration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">terminate<wbr>Instances<wbr>With<wbr>Expiration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:160</li>
+							<li>Defined in ec2/spotFleetRequest.ts:162</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -244,20 +255,20 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="validfrom" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> valid<wbr>From</h3>
-					<div class="tsd-signature tsd-kind-icon">valid<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">valid<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:161</li>
+							<li>Defined in ec2/spotFleetRequest.ts:163</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="validuntil" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> valid<wbr>Until</h3>
-					<div class="tsd-signature tsd-kind-icon">valid<wbr>Until<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">valid<wbr>Until<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:167</li>
+							<li>Defined in ec2/spotFleetRequest.ts:169</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -271,10 +282,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="waitforfulfillment" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> wait<wbr>For<wbr>Fulfillment</h3>
-					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Fulfillment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Fulfillment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:173</li>
+							<li>Defined in ec2/spotFleetRequest.ts:175</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -316,6 +327,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#iamfleetrole" class="tsd-kind-icon">iam<wbr>Fleet<wbr>Role</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#instanceinterruptionbehaviour" class="tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#launchspecification" class="tsd-kind-icon">launch<wbr>Specification</a>

@@ -93,6 +93,7 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_service_.service.html#endpoints" class="tsd-kind-icon">endpoints</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_service_.service.html#name" class="tsd-kind-icon">name</a></li>
 							</ul>
 						</section>
@@ -108,12 +109,28 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="endpoints" class="tsd-anchor"></a>
+					<h3>endpoints</h3>
+					<div class="tsd-signature tsd-kind-icon">endpoints<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L224">service.ts:224</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The exposed hostname and port for connecting to the given containerName
+							on the given containerPort.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="name" class="tsd-anchor"></a>
 					<h3>name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L190">service.ts:190</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L216">service.ts:216</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -130,7 +147,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L200">service.ts:200</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L234">service.ts:234</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -140,6 +157,7 @@
 										container in the service is used.  If containerPort is not provided, the
 									first exposed port is used.</p>
 								</div>
+								<p>Only usable on the inside.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -200,6 +218,9 @@
 						<a href="_service_.container.html" class="tsd-kind-icon">Container</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
+						<a href="_service_.containerbuild.html" class="tsd-kind-icon">Container<wbr>Build</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="_service_.containerport.html" class="tsd-kind-icon">Container<wbr>Port</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
@@ -225,6 +246,9 @@
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="_service_.service.html" class="tsd-kind-icon">Service</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="_service_.service.html#endpoints" class="tsd-kind-icon">endpoints</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="_service_.service.html#name" class="tsd-kind-icon">name</a>
 							</li>
