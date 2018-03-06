@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>RunCase | pulumi</title>
+	<title>RunCase | @pulumi/pulumi</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">pulumi</a>
+					<a href="../index.html" class="title">@pulumi/pulumi</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -86,13 +86,14 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#args" class="tsd-kind-icon">args</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#config" class="tsd-kind-icon">config</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#createresource" class="tsd-kind-icon">create<wbr>Resource</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#expecterror" class="tsd-kind-icon">expect<wbr>Error</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#expectresourcecount" class="tsd-kind-icon">expect<wbr>Resource<wbr>Count</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#invoke" class="tsd-kind-icon">invoke</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#program" class="tsd-kind-icon">program</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#project" class="tsd-kind-icon">project</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#pwd" class="tsd-kind-icon">pwd</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#registerresource" class="tsd-kind-icon">register<wbr>Resource</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#registerresourceoutputs" class="tsd-kind-icon">register<wbr>Resource<wbr>Outputs</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_tests_runtime_langhost_run_spec_.runcase.html#stack" class="tsd-kind-icon">stack</a></li>
 							</ul>
 						</section>
@@ -107,7 +108,7 @@
 					<div class="tsd-signature tsd-kind-icon">args<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L20">tests/runtime/langhost/run.spec.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L23">tests/runtime/langhost/run.spec.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -117,17 +118,7 @@
 					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L21">tests/runtime/langhost/run.spec.ts:21</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="createresource" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> create<wbr>Resource</h3>
-					<div class="tsd-signature tsd-kind-icon">create<wbr>Resource<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L25">tests/runtime/langhost/run.spec.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L24">tests/runtime/langhost/run.spec.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -137,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">expect<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L22">tests/runtime/langhost/run.spec.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L25">tests/runtime/langhost/run.spec.ts:25</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -147,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">expect<wbr>Resource<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L23">tests/runtime/langhost/run.spec.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L26">tests/runtime/langhost/run.spec.ts:26</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -157,7 +148,7 @@
 					<div class="tsd-signature tsd-kind-icon">invoke<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L24">tests/runtime/langhost/run.spec.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L27">tests/runtime/langhost/run.spec.ts:27</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -167,7 +158,7 @@
 					<div class="tsd-signature tsd-kind-icon">program<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L19">tests/runtime/langhost/run.spec.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L22">tests/runtime/langhost/run.spec.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -177,7 +168,7 @@
 					<div class="tsd-signature tsd-kind-icon">project<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L16">tests/runtime/langhost/run.spec.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L19">tests/runtime/langhost/run.spec.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -187,7 +178,27 @@
 					<div class="tsd-signature tsd-kind-icon">pwd<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L18">tests/runtime/langhost/run.spec.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L21">tests/runtime/langhost/run.spec.ts:21</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="registerresource" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> register<wbr>Resource</h3>
+					<div class="tsd-signature tsd-kind-icon">register<wbr>Resource<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L28">tests/runtime/langhost/run.spec.ts:28</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a name="registerresourceoutputs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> register<wbr>Resource<wbr>Outputs</h3>
+					<div class="tsd-signature tsd-kind-icon">register<wbr>Resource<wbr>Outputs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L30">tests/runtime/langhost/run.spec.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -197,7 +208,7 @@
 					<div class="tsd-signature tsd-kind-icon">stack<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L17">tests/runtime/langhost/run.spec.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L20">tests/runtime/langhost/run.spec.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -228,9 +239,6 @@
 								<a href="_tests_runtime_langhost_run_spec_.runcase.html#config" class="tsd-kind-icon">config</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_tests_runtime_langhost_run_spec_.runcase.html#createresource" class="tsd-kind-icon">create<wbr>Resource</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_tests_runtime_langhost_run_spec_.runcase.html#expecterror" class="tsd-kind-icon">expect<wbr>Error</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
@@ -249,12 +257,21 @@
 								<a href="_tests_runtime_langhost_run_spec_.runcase.html#pwd" class="tsd-kind-icon">pwd</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_tests_runtime_langhost_run_spec_.runcase.html#registerresource" class="tsd-kind-icon">register<wbr>Resource</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+								<a href="_tests_runtime_langhost_run_spec_.runcase.html#registerresourceoutputs" class="tsd-kind-icon">register<wbr>Resource<wbr>Outputs</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 								<a href="_tests_runtime_langhost_run_spec_.runcase.html#stack" class="tsd-kind-icon">stack</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_tests_runtime_langhost_run_spec_.html#gempty" class="tsd-kind-icon">gempty</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_tests_runtime_langhost_run_spec_.html#grpc" class="tsd-kind-icon">grpc</a>
 					</li>
@@ -267,8 +284,17 @@
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_tests_runtime_langhost_run_spec_.html#langrpc" class="tsd-kind-icon">langrpc</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_tests_runtime_langhost_run_spec_.html#resproto" class="tsd-kind-icon">resproto</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_tests_runtime_langhost_run_spec_.html#resrpc" class="tsd-kind-icon">resrpc</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_tests_runtime_langhost_run_spec_.html#createmockresourcemonitor" class="tsd-kind-icon">create<wbr>Mock<wbr>Resource<wbr>Monitor</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_tests_runtime_langhost_run_spec_.html#makeurn" class="tsd-kind-icon">make<wbr>Urn</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_tests_runtime_langhost_run_spec_.html#mockrun" class="tsd-kind-icon">mock<wbr>Run</a>

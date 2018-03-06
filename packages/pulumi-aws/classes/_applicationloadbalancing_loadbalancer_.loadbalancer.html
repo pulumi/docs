@@ -69,6 +69,14 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Provides a Load Balancer resource.</p>
+					</div>
+					<p>~&gt; <strong>Note:</strong> <code>aws_alb</code> is known as <code>aws_lb</code>. The functionality is identical.</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -98,7 +106,6 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#accesslogs" class="tsd-kind-icon">access<wbr>Logs</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#arn" class="tsd-kind-icon">arn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#arnsuffix" class="tsd-kind-icon">arn<wbr>Suffix</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#children" class="tsd-kind-icon">children</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#dnsname" class="tsd-kind-icon">dns<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#enabledeletionprotection" class="tsd-kind-icon">enable<wbr>Deletion<wbr>Protection</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#id" class="tsd-kind-icon">id</a></li>
@@ -117,15 +124,6 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#zoneid" class="tsd-kind-icon">zone<wbr>Id</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#adopt" class="tsd-kind-icon">adopt</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#register" class="tsd-kind-icon">register</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#runinparentscope" class="tsd-kind-icon">run<wbr>InParent<wbr>Scope</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static"><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#runinparentlessscope" class="tsd-kind-icon">run<wbr>InParentless<wbr>Scope</a></li>
-							</ul>
-						</section>
 					</div>
 				</section>
 			</section>
@@ -135,29 +133,28 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Load<wbr>Balancer<span class="tsd-signature-symbol">(</span>urnName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_applicationloadbalancing_loadbalancer_.loadbalancerargs.html" class="tsd-signature-type">LoadBalancerArgs</a>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html" class="tsd-signature-type">LoadBalancer</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Load<wbr>Balancer<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_applicationloadbalancing_loadbalancer_.loadbalancerargs.html" class="tsd-signature-type">LoadBalancerArgs</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html" class="tsd-signature-type">LoadBalancer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in applicationloadbalancing/loadBalancer.ts:23</li>
+									<li>Defined in applicationloadbalancing/loadBalancer.ts:81</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Create a LoadBalancer resource with the given unique name, arguments, and optional additional
-									resource dependencies.</p>
+									<p>Create a LoadBalancer resource with the given unique name, arguments, and options.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>urnName: <span class="tsd-signature-type">string</span></h5>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>A <em>unique</em> name for this LoadBalancer instance</p>
+											<p>The <em>unique</em> name of the resource.</p>
 										</div>
 									</div>
 								</li>
@@ -165,15 +162,15 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <a href="../interfaces/_applicationloadbalancing_loadbalancer_.loadbalancerargs.html" class="tsd-signature-type">LoadBalancerArgs</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>A collection of arguments for creating this LoadBalancer instance</p>
+											<p>The arguments to use to populate this resource.</p>
 										</div>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">pulumi.Resource</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <span class="tsd-signature-type">pulumi.ResourceOptions</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>A optional array of additional resources this instance depends on</p>
+											<p>A bag of options that control this resource&#39;s behavior.</p>
 										</div>
 									</div>
 								</li>
@@ -188,411 +185,291 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="accesslogs" class="tsd-anchor"></a>
 					<h3>access<wbr>Logs</h3>
-					<div class="tsd-signature tsd-kind-icon">access<wbr>Logs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">access<wbr>Logs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:7</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="arn" class="tsd-anchor"></a>
-					<h3>arn</h3>
-					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:8</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="arnsuffix" class="tsd-anchor"></a>
-					<h3>arn<wbr>Suffix</h3>
-					<div class="tsd-signature tsd-kind-icon">arn<wbr>Suffix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:9</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="children" class="tsd-anchor"></a>
-					<h3>children</h3>
-					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from Resource.children</p>
-						<ul>
-							<li>Defined in node_modules/pulumi/resource.d.ts:19</li>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:15</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>children tracks those resources that are created as a result of this one.  It may be appended to using
-							the adopt API, but the list is frozen as soon as the resource&#39;s final state has been computed.</p>
+							<p>An Access Logs block. Access Logs documented below.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="arn" class="tsd-anchor"></a>
+					<h3>arn</h3>
+					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:19</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN of the load balancer (matches <code>id</code>).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="arnsuffix" class="tsd-anchor"></a>
+					<h3>arn<wbr>Suffix</h3>
+					<div class="tsd-signature tsd-kind-icon">arn<wbr>Suffix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:23</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN suffix for use with CloudWatch Metrics.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="dnsname" class="tsd-anchor"></a>
 					<h3>dns<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">dns<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">dns<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:10</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="enabledeletionprotection" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enable<wbr>Deletion<wbr>Protection</h3>
-					<div class="tsd-signature tsd-kind-icon">enable<wbr>Deletion<wbr>Protection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:11</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="id" class="tsd-anchor"></a>
-					<h3>id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ID</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from CustomResource.id</p>
-						<ul>
-							<li>Defined in node_modules/pulumi/resource.d.ts:65</li>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>id is the provider-assigned unique ID for this managed resource.  It is set during deployments and may be
-							missing (undefined) during planning phases.</p>
+							<p>The DNS name of the load balancer.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="enabledeletionprotection" class="tsd-anchor"></a>
+					<h3>enable<wbr>Deletion<wbr>Protection</h3>
+					<div class="tsd-signature tsd-kind-icon">enable<wbr>Deletion<wbr>Protection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:32</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, deletion of the load balancer will be disabled via
+							the AWS API. This will prevent Terraform from deleting the load balancer. Defaults to <code>false</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ID</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from CustomResource.id</p>
+						<ul>
+							<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:54</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>id is the provider-assigned unique ID for this managed resource.  It is set during
+							deployments and may be missing (undefined) during planning phases.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="idletimeout" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> idle<wbr>Timeout</h3>
-					<div class="tsd-signature tsd-kind-icon">idle<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<h3>idle<wbr>Timeout</h3>
+					<div class="tsd-signature tsd-kind-icon">idle<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:12</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="internal" class="tsd-anchor"></a>
-					<h3>internal</h3>
-					<div class="tsd-signature tsd-kind-icon">internal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:13</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ipaddresstype" class="tsd-anchor"></a>
-					<h3>ip<wbr>Address<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">ip<wbr>Address<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:14</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="loadbalancertype" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> load<wbr>Balancer<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:15</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:16</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="nameprefix" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name<wbr>Prefix</h3>
-					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:17</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="securitygroups" class="tsd-anchor"></a>
-					<h3>security<wbr>Groups</h3>
-					<div class="tsd-signature tsd-kind-icon">security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:18</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="subnetmapping" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> subnet<wbr>Mapping</h3>
-					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Mapping<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:19</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="subnets" class="tsd-anchor"></a>
-					<h3>subnets</h3>
-					<div class="tsd-signature tsd-kind-icon">subnets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:20</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="tags" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
-					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:21</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="urn" class="tsd-anchor"></a>
-					<h3>urn</h3>
-					<div class="tsd-signature tsd-kind-icon">urn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">URN</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from Resource.urn</p>
-						<ul>
-							<li>Defined in node_modules/pulumi/resource.d.ts:14</li>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>urn is the stable logical URN used to distinctly address a resource, both before and after deployments.</p>
+							<p>The time in seconds that the connection is allowed to be idle. Default: 60.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="internal" class="tsd-anchor"></a>
+					<h3>internal</h3>
+					<div class="tsd-signature tsd-kind-icon">internal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:40</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, the LB will be internal.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="ipaddresstype" class="tsd-anchor"></a>
+					<h3>ip<wbr>Address<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">ip<wbr>Address<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:44</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The type of IP addresses used by the subnets for your load balancer. The possible values are <code>ipv4</code> and <code>dualstack</code></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="loadbalancertype" class="tsd-anchor"></a>
+					<h3>load<wbr>Balancer<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:48</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The type of load balancer to create. Possible values are <code>application</code> or <code>network</code>. The default value is <code>application</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:54</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
+								must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
+							Terraform will autogenerate a name beginning with <code>tf-lb</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="nameprefix" class="tsd-anchor"></a>
+					<h3>name<wbr>Prefix</h3>
+					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:58</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Creates a unique name beginning with the specified prefix. Conflicts with <code>name</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="securitygroups" class="tsd-anchor"></a>
+					<h3>security<wbr>Groups</h3>
+					<div class="tsd-signature tsd-kind-icon">security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:62</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of security group IDs to assign to the LB. Only valid for Load Balancers of type <code>application</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="subnetmapping" class="tsd-anchor"></a>
+					<h3>subnet<wbr>Mapping</h3>
+					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Mapping<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:66</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A subnet mapping block as documented below.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="subnets" class="tsd-anchor"></a>
+					<h3>subnets</h3>
+					<div class="tsd-signature tsd-kind-icon">subnets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:72</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of subnet IDs to attach to the LB. Subnets
+								cannot be updated for Load Balancers of type <code>network</code>. Changing this value
+							will for load balancers of type <code>network</code> will force a recreation of the resource.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="tags" class="tsd-anchor"></a>
+					<h3>tags</h3>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:76</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="urn" class="tsd-anchor"></a>
+					<h3>urn</h3>
+					<div class="tsd-signature tsd-kind-icon">urn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">URN</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from Resource.urn</p>
+						<ul>
+							<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:11</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>urn is the stable logical URN used to distinctly address a resource, both before and after
+							deployments.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="vpcid" class="tsd-anchor"></a>
 					<h3>vpc<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:22</li>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:77</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="zoneid" class="tsd-anchor"></a>
 					<h3>zone<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">zone<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Computed</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">zone<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/loadBalancer.ts:23</li>
+							<li>Defined in applicationloadbalancing/loadBalancer.ts:81</li>
 						</ul>
 					</aside>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-					<a name="adopt" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> adopt</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">adopt<span class="tsd-signature-symbol">(</span>child<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from Resource.adopt</p>
-								<ul>
-									<li>Defined in node_modules/pulumi/resource.d.ts:41</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Marks another resource as a child of this one.  This automatically tags resources that
-									are related to one another, for purposes of presentation, filtering, and so on.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>child: <span class="tsd-signature-type">Resource</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-					<a name="register" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> register</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">register<span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, custom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, props<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ComputedValues</span>, dependsOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from Resource.register</p>
-								<ul>
-									<li>Defined in node_modules/pulumi/resource.d.ts:53</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Creates and registers a new resource object.  t is the fully qualified type token and name is the &quot;name&quot; part
-										to use in creating a stable and globally unique URN for the object.  dependsOn is an optional list of other
-									resources that this resource depends on, controlling the order in which we perform resource operations.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>t: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The type of the resource.</p>
-									</div>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The <em>unqiue</em> name of the resource.</p>
-									</div>
-								</li>
-								<li>
-									<h5>custom: <span class="tsd-signature-type">boolean</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>True to indicate that this is a custom resource, managed by a plugin.</p>
-									</div>
-								</li>
-								<li>
-									<h5>props: <span class="tsd-signature-type">ComputedValues</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The arguments to use to populate the new resource.</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dependsOn: <span class="tsd-signature-type">Resource</span><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Optional additional explicit dependencies on other resources.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
-					<a name="runinparentscope" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> run<wbr>InParent<wbr>Scope</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>InParent<wbr>Scope&lt;T&gt;<span class="tsd-signature-symbol">(</span>parent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Resource</span>, body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from Resource.runInParentScope</p>
-								<ul>
-									<li>Defined in node_modules/pulumi/resource.d.ts:23</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>runInParentScope executes a callback, body, and any resources allocated within become parent&#39;s children.</p>
-								</div>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T</h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>parent: <span class="tsd-signature-type">Resource</span></h5>
-								</li>
-								<li>
-									<h5>body: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
-					<a name="runinparentlessscope" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> run<wbr>InParentless<wbr>Scope</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>InParentless<wbr>Scope&lt;T&gt;<span class="tsd-signature-symbol">(</span>body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from Resource.runInParentlessScope</p>
-								<ul>
-									<li>Defined in node_modules/pulumi/resource.d.ts:28</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>runInParentlessScope executes a callback, body, in a scope where no parent is active.  This can be useful
-									if there&#39;s an active parent but you want to run some code that allocates &quot;anonymous&quot; resources.</p>
-								</div>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T</h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>body: <span class="tsd-signature-type">function</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description">
-													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-						</li>
-					</ul>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -625,9 +502,6 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#arnsuffix" class="tsd-kind-icon">arn<wbr>Suffix</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#children" class="tsd-kind-icon">children</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#dnsname" class="tsd-kind-icon">dns<wbr>Name</a>
@@ -676,18 +550,6 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#zoneid" class="tsd-kind-icon">zone<wbr>Id</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#adopt" class="tsd-kind-icon">adopt</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#register" class="tsd-kind-icon">register</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
-								<a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#runinparentscope" class="tsd-kind-icon">run<wbr>InParent<wbr>Scope</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-static">
-								<a href="_applicationloadbalancing_loadbalancer_.loadbalancer.html#runinparentlessscope" class="tsd-kind-icon">run<wbr>InParentless<wbr>Scope</a>
 							</li>
 						</ul>
 					</li>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;runtime/settings&quot; | pulumi</title>
+	<title>&quot;runtime/settings&quot; | @pulumi/pulumi</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">pulumi</a>
+					<a href="../index.html" class="title">@pulumi/pulumi</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -81,6 +81,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_settings_.html#configured" class="tsd-kind-icon">configured</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_runtime_settings_.html#excessivedebugoutput" class="tsd-kind-icon">excessive<wbr>Debug<wbr>Output</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_runtime_settings_.html#options-1" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_settings_.html#rootresource" class="tsd-kind-icon">root<wbr>Resource</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_settings_.html#rpcdone" class="tsd-kind-icon">rpc<wbr>Done</a></li>
 							</ul>
 						</section>
@@ -92,15 +94,11 @@
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#disconnectsync" class="tsd-kind-icon">disconnect<wbr>Sync</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#getengine" class="tsd-kind-icon">get<wbr>Engine</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#getmonitor" class="tsd-kind-icon">get<wbr>Monitor</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#getrootresource" class="tsd-kind-icon">get<wbr>Root<wbr>Resource</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#hasmonitor" class="tsd-kind-icon">has<wbr>Monitor</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#rpckeepalive" class="tsd-kind-icon">rpc<wbr>Keep<wbr>Alive</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#serialize" class="tsd-kind-icon">serialize</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Object literals</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_runtime_settings_.html#options-1" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_settings_.html#setrootresource" class="tsd-kind-icon">set<wbr>Root<wbr>Resource</a></li>
 							</ul>
 						</section>
 					</div>
@@ -114,7 +112,7 @@
 					<div class="tsd-signature tsd-kind-icon">configured<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L34">runtime/settings.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L69">runtime/settings.ts:69</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -129,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">excessive<wbr>Debug<wbr>Output<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L8">runtime/settings.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L10">runtime/settings.ts:10</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -138,13 +136,38 @@
 						</div>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="options-1" class="tsd-anchor"></a>
+					<h3>options</h3>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_runtime_settings_.options.html" class="tsd-signature-type">Options</a><span class="tsd-signature-symbol"> =&nbsp;&lt;any&gt;{dryRun: false,includeStackTraces: true,}</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L28">runtime/settings.ts:28</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>options are the current deployment options being used for this entire session.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="rootresource" class="tsd-anchor"></a>
+					<h3>root<wbr>Resource</h3>
+					<div class="tsd-signature tsd-kind-icon">root<wbr>Resource<span class="tsd-signature-symbol">:</span> <a href="../classes/_resource_.resource.html" class="tsd-signature-type">Resource</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L138">runtime/settings.ts:138</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="rpcdone" class="tsd-anchor"></a>
 					<h3>rpc<wbr>Done</h3>
 					<div class="tsd-signature tsd-kind-icon">rpc<wbr>Done<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;Promise.resolve()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L122">runtime/settings.ts:122</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L125">runtime/settings.ts:125</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -166,7 +189,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L72">runtime/settings.ts:72</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L75">runtime/settings.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -195,7 +218,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L84">runtime/settings.ts:84</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L87">runtime/settings.ts:87</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -218,7 +241,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L102">runtime/settings.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L105">runtime/settings.ts:105</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -241,7 +264,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L57">runtime/settings.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L55">runtime/settings.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -260,13 +283,13 @@
 					<a name="getmonitor" class="tsd-anchor"></a>
 					<h3>get<wbr>Monitor</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Monitor<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Monitor<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L46">runtime/settings.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L43">runtime/settings.ts:43</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -274,7 +297,30 @@
 									<p>getMonitor returns the current resource monitoring service client for RPC communications.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Object</span>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Object</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="getrootresource" class="tsd-anchor"></a>
+					<h3>get<wbr>Root<wbr>Resource</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Root<wbr>Resource<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.resource.html" class="tsd-signature-type">Resource</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L144">runtime/settings.ts:144</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>getRootResource returns a root resource that will automatically become the default parent of all resources.  This
+									can be used to ensure that all resources without explicit parents are parented to a common parent resource.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.resource.html" class="tsd-signature-type">Resource</a>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">undefined</span>
 							</h4>
@@ -291,7 +337,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L39">runtime/settings.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L36">runtime/settings.ts:36</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -313,7 +359,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L128">runtime/settings.ts:128</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L131">runtime/settings.ts:131</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -348,7 +394,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L64">runtime/settings.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L62">runtime/settings.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -360,43 +406,33 @@
 						</li>
 					</ul>
 				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Object literals</h2>
-				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
-					<a name="options-1" class="tsd-anchor"></a>
-					<h3>options</h3>
-					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L26">runtime/settings.ts:26</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>options are the current deployment options being used for this entire session.</p>
-						</div>
-					</div>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="options-1.dryrun" class="tsd-anchor"></a>
-						<h3>dry<wbr>Run</h3>
-						<div class="tsd-signature tsd-kind-icon">dry<wbr>Run<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L27">runtime/settings.ts:27</a></li>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="setrootresource" class="tsd-anchor"></a>
+					<h3>set<wbr>Root<wbr>Resource</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Root<wbr>Resource<span class="tsd-signature-symbol">(</span>res<span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.resource.html" class="tsd-signature-type">Resource</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L151">runtime/settings.ts:151</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>setRootResource registers a resource that will become the default parent for all resources without explicit parents.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>res: <a href="../classes/_resource_.resource.html" class="tsd-signature-type">Resource</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
 							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="options-1.includestacktraces" class="tsd-anchor"></a>
-						<h3>include<wbr>Stack<wbr>Traces</h3>
-						<div class="tsd-signature tsd-kind-icon">include<wbr>Stack<wbr>Traces<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L28">runtime/settings.ts:28</a></li>
-							</ul>
-						</aside>
-					</section>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -422,6 +458,12 @@
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
 						<a href="_runtime_settings_.html#excessivedebugoutput" class="tsd-kind-icon">excessive<wbr>Debug<wbr>Output</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_runtime_settings_.html#options-1" class="tsd-kind-icon">options</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_runtime_settings_.html#rootresource" class="tsd-kind-icon">root<wbr>Resource</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_runtime_settings_.html#rpcdone" class="tsd-kind-icon">rpc<wbr>Done</a>
 					</li>
@@ -441,6 +483,9 @@
 						<a href="_runtime_settings_.html#getmonitor" class="tsd-kind-icon">get<wbr>Monitor</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_runtime_settings_.html#getrootresource" class="tsd-kind-icon">get<wbr>Root<wbr>Resource</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_runtime_settings_.html#hasmonitor" class="tsd-kind-icon">has<wbr>Monitor</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
@@ -449,8 +494,8 @@
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_runtime_settings_.html#serialize" class="tsd-kind-icon">serialize</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
-						<a href="_runtime_settings_.html#options-1" class="tsd-kind-icon">options</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_runtime_settings_.html#setrootresource" class="tsd-kind-icon">set<wbr>Root<wbr>Resource</a>
 					</li>
 				</ul>
 			</nav>

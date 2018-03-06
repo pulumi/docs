@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;resource&quot; | pulumi</title>
+	<title>&quot;resource&quot; | @pulumi/pulumi</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">pulumi</a>
+					<a href="../index.html" class="title">@pulumi/pulumi</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -75,17 +75,30 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_resource_.componentresource.html" class="tsd-kind-icon">Component<wbr>Resource</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_resource_.customresource.html" class="tsd-kind-icon">Custom<wbr>Resource</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter"><a href="../classes/_resource_.output.html" class="tsd-kind-icon">Output</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_resource_.resource.html" class="tsd-kind-icon">Resource</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_resource_.resourceoptions.html" class="tsd-kind-icon">Resource<wbr>Options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_resource_.html#computed" class="tsd-kind-icon">Computed</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_resource_.html#computedvalue" class="tsd-kind-icon">Computed<wbr>Value</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_resource_.html#computedvalues" class="tsd-kind-icon">Computed<wbr>Values</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_resource_.html#id" class="tsd-kind-icon">ID</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_resource_.html#input" class="tsd-kind-icon">Input</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_resource_.html#inputs" class="tsd-kind-icon">Inputs</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_resource_.html#urn" class="tsd-kind-icon">URN</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_resource_.html#all" class="tsd-kind-icon">all</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_resource_.html#output-1" class="tsd-kind-icon">output</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,68 +107,46 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="computed" class="tsd-anchor"></a>
-					<h3>Computed</h3>
-					<div class="tsd-signature tsd-kind-icon">Computed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L176">resource.ts:176</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Computed is a property output for a resource.  It is just a promise that also permits undefined values.  The
-							undefined values are used during planning, when the actual final value of a resource may not yet be known.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="computedvalue" class="tsd-anchor"></a>
-					<h3>Computed<wbr>Value</h3>
-					<div class="tsd-signature tsd-kind-icon">Computed<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L181">resource.ts:181</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>ComputedValue is a property input for a resource.  It may be a promptly available T or a promise for one.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="computedvalues" class="tsd-anchor"></a>
-					<h3>Computed<wbr>Values</h3>
-					<div class="tsd-signature tsd-kind-icon">Computed<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L186">resource.ts:186</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>ComputedValues is a map of property name to optional property input, one for each resource property value.</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="_resource_.html#computedvalue" class="tsd-signature-type">ComputedValue</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
 					<a name="id" class="tsd-anchor"></a>
 					<h3>ID</h3>
 					<div class="tsd-signature tsd-kind-icon">ID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L5">resource.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L7">resource.ts:7</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="input" class="tsd-anchor"></a>
+					<h3>Input</h3>
+					<div class="tsd-signature tsd-kind-icon">Input<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L294">resource.ts:294</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Input is a property input for a resource.  It may be a promptly available T, a promise
+							for one, or the output from a existing Resource.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="inputs" class="tsd-anchor"></a>
+					<h3>Inputs</h3>
+					<div class="tsd-signature tsd-kind-icon">Inputs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L300">resource.ts:300</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Inputs is a map of property name to property input, one for each resource
+							property value.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
 					<a name="urn" class="tsd-anchor"></a>
@@ -163,9 +154,362 @@
 					<div class="tsd-signature tsd-kind-icon">URN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L6">resource.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L8">resource.ts:8</a></li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="all" class="tsd-anchor"></a>
+					<h3>all</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">all&lt;T&gt;<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">all&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T7</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T8</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T7</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T8</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">all&lt;T1, T2, T3, T4, T5, T6, T7&gt;<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T7</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T7</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">all&lt;T1, T2, T3, T4, T5, T6&gt;<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">all&lt;T1, T2, T3, T4, T5&gt;<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">all&lt;T1, T2, T3, T4&gt;<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">all&lt;T1, T2, T3&gt;<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">all&lt;T1, T2&gt;<span class="tsd-signature-symbol">(</span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">all&lt;T&gt;<span class="tsd-signature-symbol">(</span>ds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L258">resource.ts:258</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Allows for multiple Output objects to be combined into a single Output object.  The single Output
+									will depend on the union of Resources that the individual dependencies depend on.</p>
+								</div>
+								<p>This can be used in the following manner:</p>
+								<pre><code class="lang-ts"><span class="hljs-keyword">var</span> d1: Output&lt;<span class="hljs-built_in">string</span>&gt;;
+<span class="hljs-keyword">var</span> d2: Output&lt;<span class="hljs-built_in">number</span>&gt;;
+
+<span class="hljs-keyword">var</span> d3: Output&lt;ResultType&gt; = Output.all([d1, d2]).apply(<span class="hljs-function">(<span class="hljs-params">[s, n]</span>) =&gt;</span> ...);
+</code></pre>
+								<p>In this example, taking a dependency on d3 means a resource will depend on all the resources of
+								d1 and d2.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>val: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-index-signature">
+											<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L259">resource.ts:259</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T1</h4>
+								</li>
+								<li>
+									<h4>T2</h4>
+								</li>
+								<li>
+									<h4>T3</h4>
+								</li>
+								<li>
+									<h4>T4</h4>
+								</li>
+								<li>
+									<h4>T5</h4>
+								</li>
+								<li>
+									<h4>T6</h4>
+								</li>
+								<li>
+									<h4>T7</h4>
+								</li>
+								<li>
+									<h4>T8</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>values: <span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T7</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T8</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T7</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T8</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L260">resource.ts:260</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T1</h4>
+								</li>
+								<li>
+									<h4>T2</h4>
+								</li>
+								<li>
+									<h4>T3</h4>
+								</li>
+								<li>
+									<h4>T4</h4>
+								</li>
+								<li>
+									<h4>T5</h4>
+								</li>
+								<li>
+									<h4>T6</h4>
+								</li>
+								<li>
+									<h4>T7</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>values: <span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T7</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T7</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L261">resource.ts:261</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T1</h4>
+								</li>
+								<li>
+									<h4>T2</h4>
+								</li>
+								<li>
+									<h4>T3</h4>
+								</li>
+								<li>
+									<h4>T4</h4>
+								</li>
+								<li>
+									<h4>T5</h4>
+								</li>
+								<li>
+									<h4>T6</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>values: <span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T6</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L262">resource.ts:262</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T1</h4>
+								</li>
+								<li>
+									<h4>T2</h4>
+								</li>
+								<li>
+									<h4>T3</h4>
+								</li>
+								<li>
+									<h4>T4</h4>
+								</li>
+								<li>
+									<h4>T5</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>values: <span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T5</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L263">resource.ts:263</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T1</h4>
+								</li>
+								<li>
+									<h4>T2</h4>
+								</li>
+								<li>
+									<h4>T3</h4>
+								</li>
+								<li>
+									<h4>T4</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>values: <span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T4</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L264">resource.ts:264</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T1</h4>
+								</li>
+								<li>
+									<h4>T2</h4>
+								</li>
+								<li>
+									<h4>T3</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>values: <span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T3</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L265">resource.ts:265</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T1</h4>
+								</li>
+								<li>
+									<h4>T2</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>values: <span class="tsd-signature-symbol">[</span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T2</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L266">resource.ts:266</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ds: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="output-1" class="tsd-anchor"></a>
+					<h3>output</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">output&lt;T&gt;<span class="tsd-signature-symbol">(</span>cv<span class="tsd-signature-symbol">: </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">output&lt;T&gt;<span class="tsd-signature-symbol">(</span>cv<span class="tsd-signature-symbol">: </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L232">resource.ts:232</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cv: <a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L233">resource.ts:233</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cv: <a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -188,23 +532,32 @@
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/_resource_.customresource.html" class="tsd-kind-icon">Custom<wbr>Resource</a>
 					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../classes/_resource_.output.html" class="tsd-kind-icon">Output</a>
+					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-external-module">
 						<a href="../classes/_resource_.resource.html" class="tsd-kind-icon">Resource</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_resource_.html#computed" class="tsd-kind-icon">Computed</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_resource_.html#computedvalue" class="tsd-kind-icon">Computed<wbr>Value</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_resource_.html#computedvalues" class="tsd-kind-icon">Computed<wbr>Values</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_resource_.resourceoptions.html" class="tsd-kind-icon">Resource<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="_resource_.html#id" class="tsd-kind-icon">ID</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_resource_.html#input" class="tsd-kind-icon">Input</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_resource_.html#inputs" class="tsd-kind-icon">Inputs</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="_resource_.html#urn" class="tsd-kind-icon">URN</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_resource_.html#all" class="tsd-kind-icon">all</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_resource_.html#output-1" class="tsd-kind-icon">output</a>
 					</li>
 				</ul>
 			</nav>

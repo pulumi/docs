@@ -89,15 +89,42 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.response.html#locals" class="tsd-kind-icon">locals</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.response.html#end" class="tsd-kind-icon">end</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.response.html#getheader" class="tsd-kind-icon">get<wbr>Header</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.response.html#json" class="tsd-kind-icon">json</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.response.html#redirect" class="tsd-kind-icon">redirect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.response.html#setheader" class="tsd-kind-icon">set<wbr>Header</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.response.html#status" class="tsd-kind-icon">status</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="_httpendpoint_.response.html#write" class="tsd-kind-icon">write</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="locals" class="tsd-anchor"></a>
+					<h3>locals</h3>
+					<div class="tsd-signature tsd-kind-icon">locals<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L61">httpEndpoint.ts:61</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Object containing local variables scoped to a single request. Useful for
+							exposing request-level information such as user settings.</p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -113,7 +140,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L71">httpEndpoint.ts:71</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L85">httpEndpoint.ts:85</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -136,6 +163,34 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="getheader" class="tsd-anchor"></a>
+					<h3>get<wbr>Header</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Header<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L70">httpEndpoint.ts:70</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the Headers for the Response</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 					<a name="json" class="tsd-anchor"></a>
 					<h3>json</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
@@ -145,7 +200,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L76">httpEndpoint.ts:76</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L90">httpEndpoint.ts:90</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -165,6 +220,53 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="redirect" class="tsd-anchor"></a>
+					<h3>redirect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">redirect<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">redirect<span class="tsd-signature-symbol">(</span>status<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L95">httpEndpoint.ts:95</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Mark the response to redirect the client to the provided URL with
+									the optional status code, defaulting to 302.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L96">httpEndpoint.ts:96</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>status: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 					<a name="setheader" class="tsd-anchor"></a>
 					<h3>set<wbr>Header</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
@@ -174,7 +276,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L61">httpEndpoint.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L75">httpEndpoint.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -206,7 +308,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L56">httpEndpoint.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L66">httpEndpoint.ts:66</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -235,7 +337,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L66">httpEndpoint.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpEndpoint.ts#L80">httpEndpoint.ts:80</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -319,11 +421,20 @@
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
 						<a href="_httpendpoint_.response.html" class="tsd-kind-icon">Response</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="_httpendpoint_.response.html#locals" class="tsd-kind-icon">locals</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 								<a href="_httpendpoint_.response.html#end" class="tsd-kind-icon">end</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="_httpendpoint_.response.html#getheader" class="tsd-kind-icon">get<wbr>Header</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 								<a href="_httpendpoint_.response.html#json" class="tsd-kind-icon">json</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="_httpendpoint_.response.html#redirect" class="tsd-kind-icon">redirect</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
 								<a href="_httpendpoint_.response.html#setheader" class="tsd-kind-icon">set<wbr>Header</a>

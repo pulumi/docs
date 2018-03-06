@@ -112,6 +112,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#finalsnapshotidentifier" class="tsd-kind-icon">final<wbr>Snapshot<wbr>Identifier</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#iamroles" class="tsd-kind-icon">iam<wbr>Roles</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#kmskeyid" class="tsd-kind-icon">kms<wbr>Key<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#logging" class="tsd-kind-icon">logging</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#masterpassword" class="tsd-kind-icon">master<wbr>Password</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#masterusername" class="tsd-kind-icon">master<wbr>Username</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#nodetype" class="tsd-kind-icon">node<wbr>Type</a></li>
@@ -123,6 +124,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#s3keyprefix" class="tsd-kind-icon">s3<wbr>Key<wbr>Prefix</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#skipfinalsnapshot" class="tsd-kind-icon">skip<wbr>Final<wbr>Snapshot</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#snapshotclusteridentifier" class="tsd-kind-icon">snapshot<wbr>Cluster<wbr>Identifier</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#snapshotcopy" class="tsd-kind-icon">snapshot<wbr>Copy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#snapshotidentifier" class="tsd-kind-icon">snapshot<wbr>Identifier</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_redshift_cluster_.clusterargs.html#vpcsecuritygroupids" class="tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids</a></li>
@@ -136,10 +138,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="allowversionupgrade" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> allow<wbr>Version<wbr>Upgrade</h3>
-					<div class="tsd-signature tsd-kind-icon">allow<wbr>Version<wbr>Upgrade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">allow<wbr>Version<wbr>Upgrade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:224</li>
+							<li>Defined in redshift/cluster.ts:230</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -151,10 +153,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="automatedsnapshotretentionperiod" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> automated<wbr>Snapshot<wbr>Retention<wbr>Period</h3>
-					<div class="tsd-signature tsd-kind-icon">automated<wbr>Snapshot<wbr>Retention<wbr>Period<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">automated<wbr>Snapshot<wbr>Retention<wbr>Period<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:228</li>
+							<li>Defined in redshift/cluster.ts:234</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -166,10 +168,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="availabilityzone" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> availability<wbr>Zone</h3>
-					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:232</li>
+							<li>Defined in redshift/cluster.ts:238</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -181,10 +183,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="bucketname" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> bucket<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">bucket<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">bucket<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:237</li>
+							<li>Defined in redshift/cluster.ts:243</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -197,10 +199,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="clusteridentifier" class="tsd-anchor"></a>
 					<h3>cluster<wbr>Identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:242</li>
+							<li>Defined in redshift/cluster.ts:248</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -213,10 +215,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="clusterparametergroupname" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cluster<wbr>Parameter<wbr>Group<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Parameter<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Parameter<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:246</li>
+							<li>Defined in redshift/cluster.ts:252</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -228,30 +230,40 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="clusterpublickey" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cluster<wbr>Public<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Public<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Public<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:247</li>
+							<li>Defined in redshift/cluster.ts:256</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The public key for the cluster</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="clusterrevisionnumber" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cluster<wbr>Revision<wbr>Number</h3>
-					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Revision<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Revision<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:248</li>
+							<li>Defined in redshift/cluster.ts:260</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The specific revision number of the database in the cluster</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="clustersecuritygroups" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cluster<wbr>Security<wbr>Groups</h3>
-					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:252</li>
+							<li>Defined in redshift/cluster.ts:264</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -263,10 +275,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="clustersubnetgroupname" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cluster<wbr>Subnet<wbr>Group<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Subnet<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Subnet<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:256</li>
+							<li>Defined in redshift/cluster.ts:268</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -278,10 +290,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="clustertype" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cluster<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:260</li>
+							<li>Defined in redshift/cluster.ts:272</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -293,10 +305,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="clusterversion" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cluster<wbr>Version</h3>
-					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:265</li>
+							<li>Defined in redshift/cluster.ts:277</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -309,10 +321,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="databasename" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> database<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">database<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">database<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:270</li>
+							<li>Defined in redshift/cluster.ts:282</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -325,10 +337,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="elasticip" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> elastic<wbr>Ip</h3>
-					<div class="tsd-signature tsd-kind-icon">elastic<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">elastic<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:274</li>
+							<li>Defined in redshift/cluster.ts:286</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -340,25 +352,20 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="enablelogging" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enable<wbr>Logging</h3>
-					<div class="tsd-signature tsd-kind-icon">enable<wbr>Logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">enable<wbr>Logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:278</li>
+							<li>Defined in redshift/cluster.ts:287</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster. Defaults to <code>false</code>.</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="encrypted" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> encrypted</h3>
-					<div class="tsd-signature tsd-kind-icon">encrypted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">encrypted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:282</li>
+							<li>Defined in redshift/cluster.ts:291</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -370,20 +377,25 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="endpoint" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> endpoint</h3>
-					<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:283</li>
+							<li>Defined in redshift/cluster.ts:295</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The connection endpoint</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="enhancedvpcrouting" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enhanced<wbr>Vpc<wbr>Routing</h3>
-					<div class="tsd-signature tsd-kind-icon">enhanced<wbr>Vpc<wbr>Routing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">enhanced<wbr>Vpc<wbr>Routing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:287</li>
+							<li>Defined in redshift/cluster.ts:299</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -395,10 +407,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="finalsnapshotidentifier" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> final<wbr>Snapshot<wbr>Identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">final<wbr>Snapshot<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">final<wbr>Snapshot<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:291</li>
+							<li>Defined in redshift/cluster.ts:303</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -410,10 +422,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="iamroles" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> iam<wbr>Roles</h3>
-					<div class="tsd-signature tsd-kind-icon">iam<wbr>Roles<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">iam<wbr>Roles<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:295</li>
+							<li>Defined in redshift/cluster.ts:307</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -425,10 +437,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="kmskeyid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> kms<wbr>Key<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:299</li>
+							<li>Defined in redshift/cluster.ts:311</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -438,12 +450,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="masterpassword" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> master<wbr>Password</h3>
-					<div class="tsd-signature tsd-kind-icon">master<wbr>Password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="logging" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> logging</h3>
+					<div class="tsd-signature tsd-kind-icon">logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:305</li>
+							<li>Defined in redshift/cluster.ts:315</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Logging, documented below.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="masterpassword" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> master<wbr>Password</h3>
+					<div class="tsd-signature tsd-kind-icon">master<wbr>Password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in redshift/cluster.ts:321</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -457,10 +484,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="masterusername" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> master<wbr>Username</h3>
-					<div class="tsd-signature tsd-kind-icon">master<wbr>Username<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">master<wbr>Username<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:309</li>
+							<li>Defined in redshift/cluster.ts:325</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -472,10 +499,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="nodetype" class="tsd-anchor"></a>
 					<h3>node<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">node<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">node<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:313</li>
+							<li>Defined in redshift/cluster.ts:329</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -487,10 +514,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="numberofnodes" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> number<wbr>OfNodes</h3>
-					<div class="tsd-signature tsd-kind-icon">number<wbr>OfNodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">number<wbr>OfNodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:317</li>
+							<li>Defined in redshift/cluster.ts:333</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -502,10 +529,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="owneraccount" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> owner<wbr>Account</h3>
-					<div class="tsd-signature tsd-kind-icon">owner<wbr>Account<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">owner<wbr>Account<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:321</li>
+							<li>Defined in redshift/cluster.ts:337</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -517,10 +544,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="port" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> port</h3>
-					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:326</li>
+							<li>Defined in redshift/cluster.ts:342</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -533,10 +560,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="preferredmaintenancewindow" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> preferred<wbr>Maintenance<wbr>Window</h3>
-					<div class="tsd-signature tsd-kind-icon">preferred<wbr>Maintenance<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">preferred<wbr>Maintenance<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:331</li>
+							<li>Defined in redshift/cluster.ts:347</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -549,10 +576,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="publiclyaccessible" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> publicly<wbr>Accessible</h3>
-					<div class="tsd-signature tsd-kind-icon">publicly<wbr>Accessible<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">publicly<wbr>Accessible<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:335</li>
+							<li>Defined in redshift/cluster.ts:351</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -564,10 +591,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="s3keyprefix" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> s3<wbr>Key<wbr>Prefix</h3>
-					<div class="tsd-signature tsd-kind-icon">s3<wbr>Key<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">s3<wbr>Key<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:339</li>
+							<li>Defined in redshift/cluster.ts:355</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -579,10 +606,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="skipfinalsnapshot" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> skip<wbr>Final<wbr>Snapshot</h3>
-					<div class="tsd-signature tsd-kind-icon">skip<wbr>Final<wbr>Snapshot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">skip<wbr>Final<wbr>Snapshot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:343</li>
+							<li>Defined in redshift/cluster.ts:359</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -594,10 +621,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="snapshotclusteridentifier" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> snapshot<wbr>Cluster<wbr>Identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Cluster<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Cluster<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:347</li>
+							<li>Defined in redshift/cluster.ts:363</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -607,12 +634,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="snapshotidentifier" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> snapshot<wbr>Identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="snapshotcopy" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> snapshot<wbr>Copy</h3>
+					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Copy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:351</li>
+							<li>Defined in redshift/cluster.ts:367</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Configuration of automatic copy of snapshots from one region to another. Documented below.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="snapshotidentifier" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> snapshot<wbr>Identifier</h3>
+					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in redshift/cluster.ts:371</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -624,10 +666,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
-					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:355</li>
+							<li>Defined in redshift/cluster.ts:375</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -639,10 +681,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="vpcsecuritygroupids" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> vpc<wbr>Security<wbr>Group<wbr>Ids</h3>
-					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:359</li>
+							<li>Defined in redshift/cluster.ts:379</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -738,6 +780,9 @@
 								<a href="_redshift_cluster_.clusterargs.html#kmskeyid" class="tsd-kind-icon">kms<wbr>Key<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_redshift_cluster_.clusterargs.html#logging" class="tsd-kind-icon">logging</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_redshift_cluster_.clusterargs.html#masterpassword" class="tsd-kind-icon">master<wbr>Password</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -769,6 +814,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_redshift_cluster_.clusterargs.html#snapshotclusteridentifier" class="tsd-kind-icon">snapshot<wbr>Cluster<wbr>Identifier</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_redshift_cluster_.clusterargs.html#snapshotcopy" class="tsd-kind-icon">snapshot<wbr>Copy</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_redshift_cluster_.clusterargs.html#snapshotidentifier" class="tsd-kind-icon">snapshot<wbr>Identifier</a>

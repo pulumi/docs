@@ -95,9 +95,12 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#appname" class="tsd-kind-icon">app<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#autorollbackconfiguration" class="tsd-kind-icon">auto<wbr>Rollback<wbr>Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#autoscalinggroups" class="tsd-kind-icon">autoscaling<wbr>Groups</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#bluegreendeploymentconfig" class="tsd-kind-icon">blue<wbr>Green<wbr>Deployment<wbr>Config</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#deploymentconfigname" class="tsd-kind-icon">deployment<wbr>Config<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#deploymentgroupname" class="tsd-kind-icon">deployment<wbr>Group<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#deploymentstyle" class="tsd-kind-icon">deployment<wbr>Style</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#ec2tagfilter" class="tsd-kind-icon">ec2<wbr>Tag<wbr>Filter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#loadbalancerinfo" class="tsd-kind-icon">load<wbr>Balancer<wbr>Info</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#onpremisesinstancetagfilter" class="tsd-kind-icon">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#servicerolearn" class="tsd-kind-icon">service<wbr>Role<wbr>Arn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#triggerconfiguration" class="tsd-kind-icon">trigger<wbr>Configuration</a></li>
@@ -111,25 +114,25 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="alarmconfiguration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> alarm<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">alarm<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">alarm<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:91</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:105</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A list of alarms associated with the deployment group, documented below.</p>
+							<p>Information about alarms associated with the deployment group (documented below).</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="appname" class="tsd-anchor"></a>
 					<h3>app<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">app<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">app<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:95</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:109</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -141,25 +144,25 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="autorollbackconfiguration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> auto<wbr>Rollback<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">auto<wbr>Rollback<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">auto<wbr>Rollback<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:99</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:113</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The automatic rollback configuration associated with the deployment group, documented below.</p>
+							<p>The automatic rollback configuration associated with the deployment group (documented below).</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="autoscalinggroups" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> autoscaling<wbr>Groups</h3>
-					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:103</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:117</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -169,12 +172,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="deploymentconfigname" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> deployment<wbr>Config<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Config<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="bluegreendeploymentconfig" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> blue<wbr>Green<wbr>Deployment<wbr>Config</h3>
+					<div class="tsd-signature tsd-kind-icon">blue<wbr>Green<wbr>Deployment<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:107</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:121</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Information about blue/green deployment options for a deployment group (documented below).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="deploymentconfigname" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> deployment<wbr>Config<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Config<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in codedeploy/deploymentGroup.ts:125</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,10 +204,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="deploymentgroupname" class="tsd-anchor"></a>
 					<h3>deployment<wbr>Group<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:111</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:129</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -199,12 +217,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ec2tagfilter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ec2<wbr>Tag<wbr>Filter</h3>
-					<div class="tsd-signature tsd-kind-icon">ec2<wbr>Tag<wbr>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="deploymentstyle" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> deployment<wbr>Style</h3>
+					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:115</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:133</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Information about the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="ec2tagfilter" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ec2<wbr>Tag<wbr>Filter</h3>
+					<div class="tsd-signature tsd-kind-icon">ec2<wbr>Tag<wbr>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in codedeploy/deploymentGroup.ts:137</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -214,12 +247,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="onpremisesinstancetagfilter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="loadbalancerinfo" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> load<wbr>Balancer<wbr>Info</h3>
+					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:119</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:141</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Information about the load balancer to use in a blue/green deployment (documented below).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onpremisesinstancetagfilter" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in codedeploy/deploymentGroup.ts:145</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -231,10 +279,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="servicerolearn" class="tsd-anchor"></a>
 					<h3>service<wbr>Role<wbr>Arn</h3>
-					<div class="tsd-signature tsd-kind-icon">service<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">service<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:123</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:149</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -246,15 +294,15 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="triggerconfiguration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> trigger<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">trigger<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">trigger<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:127</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:153</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A Trigger Configuration block. Trigger Configurations are documented below.</p>
+							<p>Trigger Configurations for the deployment group (documented below).</p>
 						</div>
 					</div>
 				</section>
@@ -294,13 +342,22 @@
 								<a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#autoscalinggroups" class="tsd-kind-icon">autoscaling<wbr>Groups</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#bluegreendeploymentconfig" class="tsd-kind-icon">blue<wbr>Green<wbr>Deployment<wbr>Config</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#deploymentconfigname" class="tsd-kind-icon">deployment<wbr>Config<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#deploymentgroupname" class="tsd-kind-icon">deployment<wbr>Group<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#deploymentstyle" class="tsd-kind-icon">deployment<wbr>Style</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#ec2tagfilter" class="tsd-kind-icon">ec2<wbr>Tag<wbr>Filter</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#loadbalancerinfo" class="tsd-kind-icon">load<wbr>Balancer<wbr>Info</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_codedeploy_deploymentgroup_.deploymentgroupargs.html#onpremisesinstancetagfilter" class="tsd-kind-icon">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a>

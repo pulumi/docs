@@ -94,6 +94,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_vpcpeeringconnection_.vpcpeeringconnectionargs.html#accepter" class="tsd-kind-icon">accepter</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_vpcpeeringconnection_.vpcpeeringconnectionargs.html#autoaccept" class="tsd-kind-icon">auto<wbr>Accept</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_vpcpeeringconnection_.vpcpeeringconnectionargs.html#peerownerid" class="tsd-kind-icon">peer<wbr>Owner<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_vpcpeeringconnection_.vpcpeeringconnectionargs.html#peerregion" class="tsd-kind-icon">peer<wbr>Region</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_vpcpeeringconnection_.vpcpeeringconnectionargs.html#peervpcid" class="tsd-kind-icon">peer<wbr>Vpc<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_vpcpeeringconnection_.vpcpeeringconnectionargs.html#requester" class="tsd-kind-icon">requester</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_vpcpeeringconnection_.vpcpeeringconnectionargs.html#tags" class="tsd-kind-icon">tags</a></li>
@@ -108,10 +109,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="accepter" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> accepter</h3>
-					<div class="tsd-signature tsd-kind-icon">accepter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">accepter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:89</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -125,10 +126,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="autoaccept" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> auto<wbr>Accept</h3>
-					<div class="tsd-signature tsd-kind-icon">auto<wbr>Accept<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">auto<wbr>Accept<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:93</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:98</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -140,10 +141,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="peerownerid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> peer<wbr>Owner<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">peer<wbr>Owner<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">peer<wbr>Owner<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:98</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:103</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -154,12 +155,28 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="peervpcid" class="tsd-anchor"></a>
-					<h3>peer<wbr>Vpc<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">peer<wbr>Vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="peerregion" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> peer<wbr>Region</h3>
+					<div class="tsd-signature tsd-kind-icon">peer<wbr>Region<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:102</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:108</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The region of the accepter VPC of the [VPC Peering Connection]. <code>auto_accept</code> must be <code>false</code>,
+							and use the <code>aws_vpc_peering_connection_accepter</code> to manage the accepter side.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="peervpcid" class="tsd-anchor"></a>
+					<h3>peer<wbr>Vpc<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">peer<wbr>Vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpcPeeringConnection.ts:112</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -171,10 +188,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="requester" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> requester</h3>
-					<div class="tsd-signature tsd-kind-icon">requester<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">requester<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:108</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:118</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -188,10 +205,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
-					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:112</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:122</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -203,10 +220,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="vpcid" class="tsd-anchor"></a>
 					<h3>vpc<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:116</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:126</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -246,6 +263,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_vpcpeeringconnection_.vpcpeeringconnectionargs.html#peerownerid" class="tsd-kind-icon">peer<wbr>Owner<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_vpcpeeringconnection_.vpcpeeringconnectionargs.html#peerregion" class="tsd-kind-icon">peer<wbr>Region</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_vpcpeeringconnection_.vpcpeeringconnectionargs.html#peervpcid" class="tsd-kind-icon">peer<wbr>Vpc<wbr>Id</a>
