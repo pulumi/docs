@@ -92,13 +92,13 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_serverless_function_.html#createjavascriptlambda" class="tsd-kind-icon">create<wbr>Java<wbr>Script<wbr>Lambda</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_serverless_function_.html#sha1hash" class="tsd-kind-icon">sha1hash</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_serverless_function_.html#policy" class="tsd-kind-icon">policy</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_serverless_function_.html#lambdarolepolicy" class="tsd-kind-icon">lambda<wbr>Role<wbr>Policy</a></li>
 							</ul>
 						</section>
 					</div>
@@ -112,7 +112,7 @@
 					<div class="tsd-signature tsd-kind-icon">Handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in serverless/function.ts:28</li>
+							<li>Defined in serverless/function.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -173,34 +173,25 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="createjavascriptlambda" class="tsd-anchor"></a>
-					<h3>create<wbr>Java<wbr>Script<wbr>Lambda</h3>
+					<a name="sha1hash" class="tsd-anchor"></a>
+					<h3>sha1hash</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Java<wbr>Script<wbr>Lambda<span class="tsd-signature-symbol">(</span>functionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, role<span class="tsd-signature-symbol">: </span><a href="../classes/_iam_role_.role.html" class="tsd-signature-type">Role</a>, closure<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.runtime.Closure</span><span class="tsd-signature-symbol">&gt;</span>, opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_serverless_function_.functionoptions.html" class="tsd-signature-type">FunctionOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">lambda.Function</span></li>
+						<li class="tsd-signature tsd-kind-icon">sha1hash<span class="tsd-signature-symbol">(</span>s<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in serverless/function.ts:44</li>
+									<li>Defined in serverless/function.ts:117</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>functionName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>role: <a href="../classes/_iam_role_.role.html" class="tsd-signature-type">Role</a></h5>
-								</li>
-								<li>
-									<h5>closure: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.runtime.Closure</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-								<li>
-									<h5>opts: <a href="../interfaces/_serverless_function_.functionoptions.html" class="tsd-signature-type">FunctionOptions</a></h5>
+									<h5>s: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">lambda.Function</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -208,31 +199,31 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="policy" class="tsd-anchor"></a>
-					<h3>policy</h3>
-					<div class="tsd-signature tsd-kind-icon">policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="lambdarolepolicy" class="tsd-anchor"></a>
+					<h3>lambda<wbr>Role<wbr>Policy</h3>
+					<div class="tsd-signature tsd-kind-icon">lambda<wbr>Role<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in serverless/function.ts:30</li>
+							<li>Defined in serverless/function.ts:102</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="policy.statement" class="tsd-anchor"></a>
+						<a name="lambdarolepolicy.statement" class="tsd-anchor"></a>
 						<h3>Statement</h3>
 						<div class="tsd-signature tsd-kind-icon">Statement<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[{&quot;Action&quot;: &quot;sts:AssumeRole&quot;,&quot;Principal&quot;: {&quot;Service&quot;: &quot;lambda.amazonaws.com&quot;,},&quot;Effect&quot;: &quot;Allow&quot;,&quot;Sid&quot;: &quot;&quot;,},]</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in serverless/function.ts:32</li>
+								<li>Defined in serverless/function.ts:104</li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="policy.version" class="tsd-anchor"></a>
+						<a name="lambdarolepolicy.version" class="tsd-anchor"></a>
 						<h3>Version</h3>
 						<div class="tsd-signature tsd-kind-icon">Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;2012-10-17&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in serverless/function.ts:31</li>
+								<li>Defined in serverless/function.ts:103</li>
 							</ul>
 						</aside>
 					</section>
@@ -265,10 +256,10 @@
 						<a href="_serverless_function_.html#handler" class="tsd-kind-icon">Handler</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_serverless_function_.html#createjavascriptlambda" class="tsd-kind-icon">create<wbr>Java<wbr>Script<wbr>Lambda</a>
+						<a href="_serverless_function_.html#sha1hash" class="tsd-kind-icon">sha1hash</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_serverless_function_.html#policy" class="tsd-kind-icon">policy</a>
+						<a href="_serverless_function_.html#lambdarolepolicy" class="tsd-kind-icon">lambda<wbr>Role<wbr>Policy</a>
 					</li>
 				</ul>
 			</nav>

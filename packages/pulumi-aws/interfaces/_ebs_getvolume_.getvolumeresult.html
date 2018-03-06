@@ -91,6 +91,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ebs_getvolume_.getvolumeresult.html#arn" class="tsd-kind-icon">arn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ebs_getvolume_.getvolumeresult.html#availabilityzone" class="tsd-kind-icon">availability<wbr>Zone</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ebs_getvolume_.getvolumeresult.html#encrypted" class="tsd-kind-icon">encrypted</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ebs_getvolume_.getvolumeresult.html#iops" class="tsd-kind-icon">iops</a></li>
@@ -108,12 +109,27 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="arn" class="tsd-anchor"></a>
+					<h3>arn</h3>
+					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ebs/getVolume.ts:44</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="availabilityzone" class="tsd-anchor"></a>
 					<h3>availability<wbr>Zone</h3>
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getVolume.ts:42</li>
+							<li>Defined in ebs/getVolume.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -128,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">encrypted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getVolume.ts:46</li>
+							<li>Defined in ebs/getVolume.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -143,7 +159,7 @@
 					<div class="tsd-signature tsd-kind-icon">iops<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getVolume.ts:50</li>
+							<li>Defined in ebs/getVolume.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -158,7 +174,7 @@
 					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getVolume.ts:54</li>
+							<li>Defined in ebs/getVolume.ts:60</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -173,7 +189,7 @@
 					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getVolume.ts:58</li>
+							<li>Defined in ebs/getVolume.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -188,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getVolume.ts:62</li>
+							<li>Defined in ebs/getVolume.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -200,16 +216,24 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
 					<h3>tags</h3>
-					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getVolume.ts:66</li>
+							<li>Defined in ebs/getVolume.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags for the resource.</p>
 						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -218,7 +242,7 @@
 					<div class="tsd-signature tsd-kind-icon">volume<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getVolume.ts:70</li>
+							<li>Defined in ebs/getVolume.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -233,7 +257,7 @@
 					<div class="tsd-signature tsd-kind-icon">volume<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getVolume.ts:74</li>
+							<li>Defined in ebs/getVolume.ts:80</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -265,6 +289,9 @@
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="_ebs_getvolume_.getvolumeresult.html" class="tsd-kind-icon">Get<wbr>Volume<wbr>Result</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ebs_getvolume_.getvolumeresult.html#arn" class="tsd-kind-icon">arn</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ebs_getvolume_.getvolumeresult.html#availabilityzone" class="tsd-kind-icon">availability<wbr>Zone</a>
 							</li>
