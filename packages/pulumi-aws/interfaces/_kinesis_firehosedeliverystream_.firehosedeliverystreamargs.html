@@ -96,6 +96,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html#destinationid" class="tsd-kind-icon">destination<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html#elasticsearchconfiguration" class="tsd-kind-icon">elasticsearch<wbr>Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html#extendeds3configuration" class="tsd-kind-icon">extended<wbr>S3Configuration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html#kinesissourceconfiguration" class="tsd-kind-icon">kinesis<wbr>Source<wbr>Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html#redshiftconfiguration" class="tsd-kind-icon">redshift<wbr>Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html#s3configuration" class="tsd-kind-icon">s3<wbr>Configuration</a></li>
@@ -110,20 +111,25 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="arn" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> arn</h3>
-					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:74</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:81</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Amazon Resource Name (ARN) specifying the Stream</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="destination" class="tsd-anchor"></a>
 					<h3>destination</h3>
-					<div class="tsd-signature tsd-kind-icon">destination<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">destination<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:78</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:85</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -135,30 +141,30 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="destinationid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> destination<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">destination<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">destination<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:79</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:86</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="elasticsearchconfiguration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> elasticsearch<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">elasticsearch<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">elasticsearch<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:80</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:87</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="extendeds3configuration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> extended<wbr>S3Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">extended<wbr>S3Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">extended<wbr>S3Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:84</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:91</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -168,12 +174,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="name" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="kinesissourceconfiguration" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> kinesis<wbr>Source<wbr>Configuration</h3>
+					<div class="tsd-signature tsd-kind-icon">kinesis<wbr>Source<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:89</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:95</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:100</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,10 +207,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="redshiftconfiguration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> redshift<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">redshift<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">redshift<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:95</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:106</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -203,10 +224,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="s3configuration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> s3<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">s3<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">s3<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:100</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:111</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -219,10 +240,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="versionid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> version<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">version<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.ComputedValue</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">version<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:101</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:112</li>
 						</ul>
 					</aside>
 				</section>
@@ -263,6 +284,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html#extendeds3configuration" class="tsd-kind-icon">extended<wbr>S3Configuration</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html#kinesissourceconfiguration" class="tsd-kind-icon">kinesis<wbr>Source<wbr>Configuration</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_kinesis_firehosedeliverystream_.firehosedeliverystreamargs.html#name" class="tsd-kind-icon">name</a>

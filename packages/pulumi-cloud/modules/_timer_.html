@@ -104,7 +104,7 @@
 					<div class="tsd-signature tsd-kind-icon">Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L6">timer.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L8">timer.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -135,13 +135,13 @@
 					<a name="cron" class="tsd-anchor"></a>
 					<h3>cron</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">cron<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cronTab<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">cron<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cronTab<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L71">timer.ts:71</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L76">timer.ts:76</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -174,6 +174,12 @@
 										<p>A handler to invoke when the timer fires.</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <span class="tsd-signature-type">pulumi.ResourceOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A bag of options that controls how this resource behaves.</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -183,14 +189,14 @@
 					<a name="daily" class="tsd-anchor"></a>
 					<h3>daily</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">daily<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-						<li class="tsd-signature tsd-kind-icon">daily<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schedule<span class="tsd-signature-symbol">: </span><a href="../interfaces/_timer_.dailyschedule.html" class="tsd-signature-type">DailySchedule</a>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">daily<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">daily<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schedule<span class="tsd-signature-symbol">: </span><a href="../interfaces/_timer_.dailyschedule.html" class="tsd-signature-type">DailySchedule</a>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L80">timer.ts:80</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L87">timer.ts:87</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -212,13 +218,19 @@
 										<p>A handler to invoke when the timer fires.</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <span class="tsd-signature-type">pulumi.ResourceOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A bag of options that controls how this resource behaves.</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L89">timer.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L98">timer.ts:98</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -246,6 +258,12 @@
 										<p>A handler to invoke when the timer fires.</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <span class="tsd-signature-type">pulumi.ResourceOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A bag of options that controls how this resource behaves.</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -255,14 +273,14 @@
 					<a name="hourly" class="tsd-anchor"></a>
 					<h3>hourly</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">hourly<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-						<li class="tsd-signature tsd-kind-icon">hourly<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schedule<span class="tsd-signature-symbol">: </span><a href="../interfaces/_timer_.hourlyschedule.html" class="tsd-signature-type">HourlySchedule</a>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">hourly<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">hourly<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, schedule<span class="tsd-signature-symbol">: </span><a href="../interfaces/_timer_.hourlyschedule.html" class="tsd-signature-type">HourlySchedule</a>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L97">timer.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L108">timer.ts:108</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -284,13 +302,19 @@
 										<p>A handler to invoke when the timer fires.</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <span class="tsd-signature-type">pulumi.ResourceOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A bag of options that controls how this resource behaves.</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L106">timer.ts:106</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L119">timer.ts:119</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -318,6 +342,12 @@
 										<p>A handler to invoke when the timer fires.</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <span class="tsd-signature-type">pulumi.ResourceOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A bag of options that controls how this resource behaves.</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -327,13 +357,13 @@
 					<a name="interval" class="tsd-anchor"></a>
 					<h3>interval</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">interval<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><a href="../interfaces/_timer_.intervalrate.html" class="tsd-signature-type">IntervalRate</a>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">interval<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><a href="../interfaces/_timer_.intervalrate.html" class="tsd-signature-type">IntervalRate</a>, handler<span class="tsd-signature-symbol">: </span><a href="_timer_.html#action" class="tsd-signature-type">Action</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L60">timer.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L63">timer.ts:63</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -359,6 +389,12 @@
 									<h5>handler: <a href="_timer_.html#action" class="tsd-signature-type">Action</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A handler to invoke when the timer fires.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <span class="tsd-signature-type">pulumi.ResourceOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A bag of options that controls how this resource behaves.</p>
 									</div>
 								</li>
 							</ul>
