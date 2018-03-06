@@ -73,7 +73,7 @@
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_config_vars_.html#_config" class="tsd-kind-icon">_config</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_config_vars_.html#__config" class="tsd-kind-icon">__config</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_config_vars_.html#accesskey" class="tsd-kind-icon">access<wbr>Key</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_config_vars_.html#allowedaccountids" class="tsd-kind-icon">allowed<wbr>Account<wbr>Ids</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_config_vars_.html#assumerole" class="tsd-kind-icon">assume<wbr>Role</a></li>
@@ -102,9 +102,9 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="_config" class="tsd-anchor"></a>
-					<h3>_config</h3>
-					<div class="tsd-signature tsd-kind-icon">_config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Config</span><span class="tsd-signature-symbol"> =&nbsp;new pulumi.Config(&quot;aws:config&quot;)</span></div>
+					<a name="__config" class="tsd-anchor"></a>
+					<h3>__config</h3>
+					<div class="tsd-signature tsd-kind-icon">__config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Config</span><span class="tsd-signature-symbol"> =&nbsp;new pulumi.Config(&quot;aws:config&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:8</li>
@@ -114,7 +114,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="accesskey" class="tsd-anchor"></a>
 					<h3>access<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">access<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;accessKey&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">access<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.get(&quot;accessKey&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:13</li>
@@ -129,7 +129,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="allowedaccountids" class="tsd-anchor"></a>
 					<h3>allowed<wbr>Account<wbr>Ids</h3>
-					<div class="tsd-signature tsd-kind-icon">allowed<wbr>Account<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;string[] | undefined&gt;(&quot;allowedAccountIds&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">allowed<wbr>Account<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;string[]&gt;(&quot;allowedAccountIds&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:14</li>
@@ -139,7 +139,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="assumerole" class="tsd-anchor"></a>
 					<h3>assume<wbr>Role</h3>
-					<div class="tsd-signature tsd-kind-icon">assume<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;{ externalId?: string, policy?: string, roleArn?: string, sessionName?: string }[] | undefined&gt;(&quot;assumeRole&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">assume<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;{ externalId?: string, policy?: string, roleArn?: string, sessionName?: string }[]&gt;(&quot;assumeRole&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:15</li>
@@ -149,7 +149,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="dynamodbendpoint" class="tsd-anchor"></a>
 					<h3>dynamodb<wbr>Endpoint</h3>
-					<div class="tsd-signature tsd-kind-icon">dynamodb<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;dynamodbEndpoint&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">dynamodb<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.get(&quot;dynamodbEndpoint&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:20</li>
@@ -165,7 +165,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="endpoints" class="tsd-anchor"></a>
 					<h3>endpoints</h3>
-					<div class="tsd-signature tsd-kind-icon">endpoints<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;{ cloudformation?: string, cloudwatch?: string, cloudwatchevents?: string, cloudwatchlogs?: string, devicefarm?: string, dynamodb?: string, ec2?: string, elb?: string, iam?: string, kinesis?: string, kms?: string, rds?: string, s3?: string, sns?: string, sqs?: string }[] | undefined&gt;(&quot;endpoints&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">endpoints<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;{ acm?: string, apigateway?: string, cloudformation?: string, cloudwatch?: string, cloudwatchevents?: string, cloudwatchlogs?: string, devicefarm?: string, dynamodb?: string, ec2?: string, ecr?: string, ecs?: string, elb?: string, iam?: string, kinesis?: string, kms?: string, lambda?: string, r53?: string, rds?: string, s3?: string, sns?: string, sqs?: string, sts?: string }[]&gt;(&quot;endpoints&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:21</li>
@@ -175,7 +175,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="forbiddenaccountids" class="tsd-anchor"></a>
 					<h3>forbidden<wbr>Account<wbr>Ids</h3>
-					<div class="tsd-signature tsd-kind-icon">forbidden<wbr>Account<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;string[] | undefined&gt;(&quot;forbiddenAccountIds&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">forbidden<wbr>Account<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;string[]&gt;(&quot;forbiddenAccountIds&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:22</li>
@@ -185,7 +185,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="insecure" class="tsd-anchor"></a>
 					<h3>insecure</h3>
-					<div class="tsd-signature tsd-kind-icon">insecure<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;insecure&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">insecure<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;boolean&gt;(&quot;insecure&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:26</li>
@@ -200,7 +200,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="kinesisendpoint" class="tsd-anchor"></a>
 					<h3>kinesis<wbr>Endpoint</h3>
-					<div class="tsd-signature tsd-kind-icon">kinesis<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;kinesisEndpoint&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">kinesis<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.get(&quot;kinesisEndpoint&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:31</li>
@@ -216,7 +216,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="maxretries" class="tsd-anchor"></a>
 					<h3>max<wbr>Retries</h3>
-					<div class="tsd-signature tsd-kind-icon">max<wbr>Retries<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;number | undefined&gt;(&quot;maxRetries&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Retries<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;number&gt;(&quot;maxRetries&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:35</li>
@@ -231,7 +231,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="profile" class="tsd-anchor"></a>
 					<h3>profile</h3>
-					<div class="tsd-signature tsd-kind-icon">profile<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;profile&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">profile<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.get(&quot;profile&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:39</li>
@@ -246,7 +246,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="region" class="tsd-anchor"></a>
 					<h3>region</h3>
-					<div class="tsd-signature tsd-kind-icon">region<span class="tsd-signature-symbol">:</span> <a href="_region_.html#region" class="tsd-signature-type">Region</a><span class="tsd-signature-symbol"> =&nbsp;&lt;any&gt;_config.require(&quot;region&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">region<span class="tsd-signature-symbol">:</span> <a href="_region_.html#region" class="tsd-signature-type">Region</a><span class="tsd-signature-symbol"> =&nbsp;&lt;any&gt;__config.require(&quot;region&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:43</li>
@@ -261,7 +261,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="s3forcepathstyle" class="tsd-anchor"></a>
 					<h3>s3<wbr>Force<wbr>Path<wbr>Style</h3>
-					<div class="tsd-signature tsd-kind-icon">s3<wbr>Force<wbr>Path<wbr>Style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;s3ForcePathStyle&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">s3<wbr>Force<wbr>Path<wbr>Style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;boolean&gt;(&quot;s3ForcePathStyle&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:49</li>
@@ -270,7 +270,7 @@
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Set this to true to force the request to use path-style addressing, i.e., <a href="http://s3.amazonaws.com/BUCKET/KEY">http://s3.amazonaws.com/BUCKET/KEY</a>. By
-								default, the S3 client will use virtual hosted bucket addressing when possible (<a href="http://BUCKET.s3.amazonaws.com/KEY">http://BUCKET.s3.amazonaws.com/KEY</a>).
+								default, the S3 client will use virtual hosted bucket addressing when possible (<a href="http://BUCKET.s3.amazonaws.com/KEY)">http://BUCKET.s3.amazonaws.com/KEY)</a>.
 							Specific to the Amazon S3 service.</p>
 						</div>
 					</div>
@@ -278,7 +278,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="secretkey" class="tsd-anchor"></a>
 					<h3>secret<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">secret<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;secretKey&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">secret<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.get(&quot;secretKey&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:53</li>
@@ -293,7 +293,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="sharedcredentialsfile" class="tsd-anchor"></a>
 					<h3>shared<wbr>Credentials<wbr>File</h3>
-					<div class="tsd-signature tsd-kind-icon">shared<wbr>Credentials<wbr>File<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;sharedCredentialsFile&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">shared<wbr>Credentials<wbr>File<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.get(&quot;sharedCredentialsFile&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:57</li>
@@ -308,7 +308,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="skipcredentialsvalidation" class="tsd-anchor"></a>
 					<h3>skip<wbr>Credentials<wbr>Validation</h3>
-					<div class="tsd-signature tsd-kind-icon">skip<wbr>Credentials<wbr>Validation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;skipCredentialsValidation&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">skip<wbr>Credentials<wbr>Validation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;boolean&gt;(&quot;skipCredentialsValidation&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:62</li>
@@ -324,7 +324,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="skipgetec2platforms" class="tsd-anchor"></a>
 					<h3>skip<wbr>Get<wbr>Ec2<wbr>Platforms</h3>
-					<div class="tsd-signature tsd-kind-icon">skip<wbr>Get<wbr>Ec2<wbr>Platforms<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;skipGetEc2Platforms&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">skip<wbr>Get<wbr>Ec2<wbr>Platforms<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;boolean&gt;(&quot;skipGetEc2Platforms&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:66</li>
@@ -339,7 +339,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="skipmetadataapicheck" class="tsd-anchor"></a>
 					<h3>skip<wbr>Metadata<wbr>Api<wbr>Check</h3>
-					<div class="tsd-signature tsd-kind-icon">skip<wbr>Metadata<wbr>Api<wbr>Check<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;skipMetadataApiCheck&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">skip<wbr>Metadata<wbr>Api<wbr>Check<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;boolean&gt;(&quot;skipMetadataApiCheck&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:67</li>
@@ -349,7 +349,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="skipregionvalidation" class="tsd-anchor"></a>
 					<h3>skip<wbr>Region<wbr>Validation</h3>
-					<div class="tsd-signature tsd-kind-icon">skip<wbr>Region<wbr>Validation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;skipRegionValidation&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">skip<wbr>Region<wbr>Validation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;boolean&gt;(&quot;skipRegionValidation&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:72</li>
@@ -365,7 +365,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="skiprequestingaccountid" class="tsd-anchor"></a>
 					<h3>skip<wbr>Requesting<wbr>Account<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">skip<wbr>Requesting<wbr>Account<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.getObject&lt;boolean | undefined&gt;(&quot;skipRequestingAccountId&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">skip<wbr>Requesting<wbr>Account<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.getObject&lt;boolean&gt;(&quot;skipRequestingAccountId&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:76</li>
@@ -380,7 +380,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="token" class="tsd-anchor"></a>
 					<h3>token</h3>
-					<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;_config.get(&quot;token&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> =&nbsp;__config.get(&quot;token&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in config/vars.ts:80</li>
@@ -408,7 +408,7 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_config_vars_.html#_config" class="tsd-kind-icon">_config</a>
+						<a href="_config_vars_.html#__config" class="tsd-kind-icon">__config</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
 						<a href="_config_vars_.html#accesskey" class="tsd-kind-icon">access<wbr>Key</a>
