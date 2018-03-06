@@ -3,6 +3,11 @@
 # Runs typedoc on various Pulumi repos and copies them to 
 # the /libraries folder.
 
+# NOTE: typedoc needs to be installed globally (see README.md) rather than
+# in a local node_modules folder. This is because typedoc does not correctly
+# support relative paths within a TypeScript file. (So, you can point it at a folder,
+# but if those .ts files use a path like "..\", typedoc will fail to resolve as intended.)
+
 set -o nounset -o errexit -o pipefail
 
 PULUMI_AWS_DOCS=`mktemp -d`
