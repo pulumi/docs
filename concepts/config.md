@@ -2,21 +2,104 @@
 title: "Configuration"
 ---
 
-Often, your Colada program will need configuration values that change independently from the program itself. For instance, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack. 
+Often, your Colada program will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack. 
 
-Settings that are specific to a stack are defined in `Pulumi.yaml` and are set via the `pulumi config` verbs. 
+For these configuration values, you can use _stack settings_. Stack settings are defined in [`Pulumi.<stack-name>.yaml`] and are set via the `pulumi config set` command. 
 
-## Defining stack settings {#config-stack}
+## Defining and setting stack settings {#config-stack}
 
-To add a new stack setting in plaintext, 
+To add a new stack setting, use `pulumi config set <key> [value]`. 
+
+Since [Colada packages](./packages.html) can define configuration keys, you can use a namespace with the syntax  `namespace:key`. If a namespace is not specified, the [project name] defined in `Pulumi.yaml` is used. 
+
+For example, if a project is named `broome-proj` and the active stack is `dev`, the following command adds the key  `broome-proj:name` to `Pulumi.dev.yaml`:
+
+```
+$ pulumi config set name BroomeLLC
+warning: saved config key 'broome-proj:name' value 'BroomeLLC' as plaintext; re-run with --secret to encrypt the value instead
+```
+
+To specify a particular namespace, use `config set namespace:name`. For instance, the [AWS package](./aws.html) defines the required setting `region`, which is set via `aws:region`.
+
+By default, configuration values are saved in plaintext. To explicitly save a setting as plaintext, use the `--plaintext` flag.
+
+```bash
+$ pulumi config set --plaintext aws:region us-west-2
+```
+
+If `[value]` is not specified, the CLI will prompt for it. Alternatively, the config value can be set from standard input, which is useful for multiline values or any value that must be escaped on the command line. 
+
+```bash
+$ cat my_key.pub | pulumi config set publicKey
+```
+
+> NOTE: When using the `config set` command, any existing values for `<key>` will be overridden without warning. 
+
+### Encrypted configuration values
+
+To add an encrypted stack setting, such as for configuration secrets, use the `--secret` flag. Secrets are encrypted with an encryption salt and passphrase. The encryption salt for each stack is stored in `Pulumi.<stack-name>.yaml`. The salt value is based on your passphrase, is not itself a secret and can safely be stored in source control. The first time a passphrase is configured for a stack, the CLI prompts twice for its value. 
+
+If you wish to change your passphrase, delete the config value for `encryptionsalt` in `Pulumi.<stack-name>.yaml` and delete your existing secure values. To avoid the interactive prompt, set the environment variable `PULUMI_CONFIG_PASSPHRASE`.
+
+```
+$ pulumi config set --secret secretValue S3cr37
+Enter your passphrase to protect config/secrets: 
+Re-enter your passphrase to confirm: 
+```
+
+## Viewing stack settings
+
+To view all settings for the currently selected stack, use `pulumi config`. To view the values of secrets, use the `--show-secrets` flag.
+
+```
+$ pulumi config
+KEY                                              VALUE                                           
+aws:region                                       us-west-1                                       
+secretValue                                      ********                                        
+```
+
+```
+$ pulumi config --show-secrets
+Enter your passphrase to unlock config/secrets
+    (set PULUMI_CONFIG_PASSPHRASE to remember): 
+KEY                                              VALUE                                           
+aws:region                                       us-west-1                                       
+secretValue                                      S3cr37                                          
+```
 
 ## Using configuration values in code
 
+On `pulumi preview` and `pulumi update`, secret values are decrypted. If the the environment variable `PULUMI_CONFIG_PASSPHRASE` is not set, the CLI performs an interactive prompt.
+
+Your Colada program can read any configuration value that is set via `pulumi config`. Since secret values are decrypted before your program is executed, secret and plaintext values are accessed the same way, through APIs specific to each language.
+
+Additionally, all shell environment variables are passed to the running program and can be accessed via standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python.
+
+#### JavaScript
+
+In JavaScript, use `pulumi.Config` in the `@pulumi` namespace, passing in the configuration namespace. This is typically  the name defined in `Pulumi.yaml`.
+
+```
+pulumi config set name BroomeLLC              # set a plaintext value
+pulumi config set --secret secretValue S3cr37 # set a secret value
+```
+
+```javascript
+const pulumi = require("@pulumi/pulumi");
+
+let config = new pulumi.Config("broome-proj"); // broome-proj is name defined in Pulumi.yaml
+
+console.log(`Hello, ${config.require("BroomeLLC")}!`);	
+console.log(`Psst, ${config.require("secretValue")}`);
+```
+
+#### Python
+
+TODO add Python example
 
 
-## Additional
+<!-- MARKDOWN LINKS -->
 
-Features to document
-- Any environment variables that are set locally will be passed to the running program
-- Read config from stdin (useful for secrets and public keys). See https://github.com/pulumi/pulumi/issues/670#issuecomment-364835504. See https://github.com/pulumi/pulumi/issues/822 for a example of how you might use it with a public key.
-- 
+[`Pulumi.<stack-name>.yaml`]: ./colada-files.html#stack-settings-file
+[project name]: ./colada-files#project-name
+[AWS package]: ./aws.html
