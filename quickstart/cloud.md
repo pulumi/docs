@@ -23,6 +23,8 @@ To solve the never-ending debate of "tabs vs. spaces" once and for all, we'll cr
 
 Even in this simple example, it would be tedious and error prone to define this infrastructure with CloudFormation and similar tools. In AWS terms, the application needs an ECS cluster, a load balancer, an AWS Container Registry (ECR) instance, IAM roles, and so forth. If we were to do this manually, we'd provision around 38 resources. Pulumi handles this automatically!
 
+{% include aws-resource-warning.md %}
+
 ### Prerequisites
 
 Since this example builds a custom container, you should first have [Docker](https://docs.docker.com/engine/installation/) installed. 
