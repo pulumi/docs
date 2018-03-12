@@ -37,7 +37,7 @@ $ cat my_key.pub | pulumi config set publicKey
 
 ### Encrypted configuration values
 
-To add an encrypted stack setting, such as for configuration secrets, use the `--secret` flag. Secrets are encrypted with an encryption salt and passphrase. The encryption salt for each stack is stored in `Pulumi.<stack-name>.yaml`. The salt value is based on your passphrase, is not itself a secret and can safely be stored in source control. The first time a passphrase is configured for a stack, the CLI prompts twice for its value. 
+To add an encrypted stack setting, such as for configuration secrets, use the `--secret` flag. Secrets are encrypted with an encryption salt and passphrase. The encryption salt for each stack is stored in `Pulumi.<stack-name>.yaml`. The salt value is based on your passphrase, but is not itself a secret and can safely be stored in source control. The first time a passphrase is configured for a stack, the CLI prompts twice for its value. 
 
 If you wish to change your passphrase, delete the config value for `encryptionsalt` in `Pulumi.<stack-name>.yaml` and delete your existing secure values. To avoid the interactive prompt, set the environment variable `PULUMI_CONFIG_PASSPHRASE`.
 
@@ -89,8 +89,8 @@ const pulumi = require("@pulumi/pulumi");
 
 let config = new pulumi.Config("broome-proj"); // broome-proj is name defined in Pulumi.yaml
 
-console.log(`Hello, ${config.require("BroomeLLC")}!`);	
-console.log(`Psst, ${config.require("secretValue")}`);
+console.log(`Hello, ${config.require("name")}!`);	    // prints "BroomeLLC"
+console.log(`Psst, ${config.require("secretValue")}`);  // prints "S3cr37"
 ```
 
 #### Python
