@@ -16,6 +16,8 @@ Each AWS resource is exposed as a class under a submodule of `aws`. For example,
 For our first application, we'll create an AWS [EC2 Instance](/packages/pulumi-aws/classes/_ec2_instance_.instance.html)
 and associated [Security Group](/packages/pulumi-aws/classes/_ec2_securitygroup_.securitygroup.html) using Pulumi. We'll do a lookup to get the appropriate AMI for the AWS region and machine type. This example uses TypeScript to get improved validation of the program, but you can also use JavaScript.
 
+{% include aws-resource-warning.md %}
+
 ### Set up the project
 
 1. Create a folder `webserver`:
