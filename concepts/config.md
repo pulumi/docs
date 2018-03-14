@@ -1,8 +1,8 @@
 ---
-title: "Configuration"
+title: "Config"
 ---
 
-Often, your Colada program will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack. 
+Often, your Pulumi program will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack. 
 
 For these configuration values, you can use _stack settings_. Stack settings are defined in [`Pulumi.<stack-name>.yaml`] and are set via the `pulumi config set` command. 
 
@@ -10,7 +10,7 @@ For these configuration values, you can use _stack settings_. Stack settings are
 
 To add a new stack setting, use `pulumi config set <key> [value]`. 
 
-Since [Colada packages](./packages.html) can define configuration keys, you can use a namespace with the syntax  `namespace:key`. If a namespace is not specified, the [project name] defined in `Pulumi.yaml` is used. 
+Since [Pulumi packages](./packages.html) can define configuration keys, you can use a namespace with the syntax  `namespace:key`. If a namespace is not specified, the [project name] defined in `Pulumi.yaml` is used. 
 
 For example, if a project is named `broome-proj` and the active stack is `dev`, the following command adds the key  `broome-proj:name` to `Pulumi.dev.yaml`:
 
@@ -71,7 +71,7 @@ secretValue                                      S3cr37
 
 On `pulumi preview` and `pulumi update`, secret values are decrypted. If the the environment variable `PULUMI_CONFIG_PASSPHRASE` is not set, the CLI performs an interactive prompt.
 
-Your Colada program can read any configuration value that is set via `pulumi config`. Since secret values are decrypted before your program is executed, secret and plaintext values are accessed the same way, through APIs specific to each language.
+Your Pulumi program can read any configuration value that is set via `pulumi config`. Since secret values are decrypted before your program is executed, secret and plaintext values are accessed the same way, through APIs specific to each language.
 
 Additionally, all shell environment variables are passed to the running program and can be accessed via standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python.
 
@@ -97,9 +97,8 @@ console.log(`Psst, ${config.require("secretValue")}`);  // prints "S3cr37"
 
 TODO add Python example
 
-
 <!-- MARKDOWN LINKS -->
 
-[`Pulumi.<stack-name>.yaml`]: ./colada-files.html#stack-settings-file
-[project name]: ./colada-files#project-name
+[`Pulumi.<stack-name>.yaml`]: ./project#stack-settings-file
+[project name]: ./project#project-name
 [AWS package]: ./aws.html

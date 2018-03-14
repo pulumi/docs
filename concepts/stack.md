@@ -1,92 +1,110 @@
 ---
-title: "Stacks, previews, and updates"
+title: "Stacks"
 ---
 
-Every Colada program is deployed to a **stack**.  A stack is an isolated, independently configurable
-target in which programs will run. Stacks are commonly used to denote different phases of development (such as **development**, **staging** and **production**) or feature branches (such as **feature-x-dev**, **jane-feature-x-dev**).
-
-A stack may define stack-specific configuration. To learn more, see [Defining stack settings](./config.html#config-stack).
-
-A stack is created via `pulumi stack init`. A Colada program is then deployed to the stack via `pulumi preview` and `pulumi update`, which are described in the following sections.
+Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently configurable
+instance of a Pulumi project. Stacks are commonly used to denote different phases of development (such as **development**, **staging** and **production**) or feature branches (such as **feature-x-dev**, **jane-feature-x-dev**).
 
 ## Create a stack
 
-To create a new stack, use `pulumi stack init stackName`. This creates an empty stack `stackName` and sets it as the *active* stack. 
+To create a new stack, use `pulumi stack init stackName`. This creates an empty stack `stackName` and sets it as the *active* stack.  The project that the stack is associated with is determined by finding the nearest `Pulumi.yaml` file.  
 
-**Example**
+```
+$ pulumi stack init staging --local
+```
 
-TODO: add command, output, and flags, once finalized.
+## Listing stacks
+
+To see the list of stacks associated with the current project (the nearest `Pulumi.yaml` file), use `pulumi stack ls`.
+
+```
+$ pulumi stack ls
+NAME                                             LAST UPDATE              RESOURCE COUNT     CLOUD
+jane-dev                                         4 hours ago              97                 n/a
+staging*                                         n/a                      n/a                n/a
+testing                                          2 weeks ago              121                n/a
+```
 
 ## Select a stack
 
 The top-level `pulumi` operations `config`, `preview`, `update` and `destroy` operate on the *active* stack. To change the active stack, run `pulumi stack select`.
 
-**Example**
+```
+$ pulumi stack select jane-dev
 
-TODO: add command and output
+$ pulumi stack ls
+NAME                                             LAST UPDATE              RESOURCE COUNT
+jane-dev*                                        4 hours ago              2             
+staging                                          n/a                      n/a           
+testing                                          2 weeks ago              3             
+```
 
 ## View stack resources
 
-To view resources currently deployed to a stack, run `pulumi stack` with no arguments.
+To view details of the currently selected stack, run `pulumi stack` with no arguments.  This displays the metadata, resources and output properties associated with the stack.
 
-Options:
+```
+$ pulumi stack
+Current stack is jane-dev:
+    Last updated 1 week ago (2018-03-02 10:26:09.850357 -0800 PST)
+    Pulumi version v0.11.0
+    Plugin nodejs [language] version 0.11.0
+    Plugin aws [resource] version 0.11.0
 
--  `-i, --show-ids`. Display each resource's provider-assigned unique ID. For instance, with AWS, this displays [Amazon Resource Names](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html). 
--  `-u, --show-urns`. Display each resource's Colada-assigned globally unique URN
-   
-**Example**
+Current stack resources (3):
+    TYPE                                             NAME
+    pulumi:pulumi:Stack                              webserver-jane-dev
+    aws:ec2/securityGroup:SecurityGroup              web-secgrp
+    aws:ec2/instance:Instance                        web-server-www
 
-TODO: add command and output
+Current stack outputs (2):
+    OUTPUT                                           VALUE
+    publicDns                                        ec2-18-218-85-197.us-east-2.compute.amazonaws.com
+    publicIp                                         18.218.85.197
 
-## List stacks
-
-To list all known stacks, run `pulumi stack ls`. When using local stacks, this shows TBD.
+Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
+```
 
 ## View stack outputs
 
-When you use [output properties](./programming-model.html#output-properties) in your Colada program, they become stack outputs. Stack outputs can be viewed via `stack output`.
-
-**Example**
+When you use [output properties](./programming-model.html#output-properties) in your Pulumi program, they become stack outputs. Stack outputs can be viewed via `pulumi stack output`.
 
 ```
 $ pulumi stack output
-Current stack outputs (1):
+Current stack outputs (2):
     OUTPUT                                           VALUE
-    endpointUrl                                      https://m4i09o77b4.execute-api.us-west-2.amazonaws.com/stage/
+    publicDns                                        ec2-18-218-85-197.us-east-2.compute.amazonaws.com
+    publicIp                                         18.218.85.197
+```
+
+The values of specific properties can also be retreived directly, which is useful when writing scripts that use these output values.
+
+```
+$ pulumi stack output publicIp
+18.218.85.197
 ```
 
 ## Import and export a stack deployment
 
-TODO
+A stack can be exported to see the raw data associated with the stack.  This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of.  The modified stack can then be imported to set the current state of the stack to the new values.  The format of the stack files is versioned, and 
+
+*NOTE*: This is a powerful capability, which subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments.  Importing an incorrect stack specification could lead to orphaning of cloud resources or the inability to make future updates to the stack.  Use care when using the import and export capabilities.
+
+```
+$ pulumi stack export > stack.json
+
+$ pulumi stack import < stack.json
+```
 
 ## Delete a stack
 
-To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove the tracking information for the stack and will also delete stack settings in `Pulumi.yaml`.
+To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove the tracking information for the stack and will also delete stack settings in `Pulumi.yaml`.  
 
-TODO: document `--force` and document whether other locations of stack settings are affected when doing `stack rm`.
+```
+$ pulumi stack rm jane-dev
+This will permanently remove the 'jane-dev' stack!
+Please confirm that this is what you'd like to do by typing ("jane-dev"): jane-dev
+Stack 'jane-dev' has been removed!
+```
 
-## Create, update and delete stack resources
-
-### Preview updates to a stack
-
-Before updating your running stack, it is recommended that you first view a preview of your the changes via `pulumi preview`. A stack must first be selected via `pulumi stack init` or `pulumi stack select`.
-
-Since the Colada CLI runs your program in order to determine which infrastructure changes to apply, `pulumi preview` always provides a pessimistic set of resource changes. Once the program is actually deployed through `pulumi update`, the actual changes may be much smaller.
-
-For more information, see [the Colada programming model](./programming-model.html).
-
-### Update and deploy a Colada program
-
-To deploy a Colada program to a stack for the first time, or to apply program changes to a running stack, use the `pulumi update` command. A stack must first be selected via `pulumi stack init` or `pulumi stack select`.
-
-TODO: add command, output, and flags
-
-### Delete all stack resources
-
-To delete all resources in the selected stack, use the `pulumi destroy` command. 
-
-## Local and managed stacks
-
-There are two kinds of stacks, *local* and *managed*. With local stacks, the [checkpoint file](./checkpoint.html) is stored on your local machine. With managed stacks, the checkpoint is managed by Pulumi Enterprise.
-
-TODO document how you create a local vs managed stack.
+If a stack still has resources associated with it, they must first be deleted via `pulumi destroy`.  To force the deletion of a stack with resources still in it (and therefore to orphan the resources in the target cloud provider so that they are no longer managed by Pulumi), use `pulumi stack rm -f`.
