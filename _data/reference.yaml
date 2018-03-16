@@ -6,28 +6,26 @@ toc: # No landing page
   section:
   - reference/index.md # This denotes the landing page for this section
 
-  - concepts/index.md # landing page
-  - concepts/stack.md
-  - concepts/project.md
-  - concepts/config.md
-  - concepts/resource.md
+  - reference/concepts.md # landing page
+  - reference/stack.md
+  - reference/project.md
+  - reference/config.md
+  - reference/resource.md
   
-  - concepts/programming-model.md
-  - concepts/javascript.md
-  - concepts/typescript.md
-  - concepts/python.md
+  - reference/programming-model.md
+  - reference/javascript.md
+  - reference/typescript.md
+  - reference/python.md
 
-  - concepts/packages.md
-  - concepts/aws.md
-  - concepts/azure.md
-  - concepts/kubernetes.md
+  - reference/cloud-resources.md
+  - reference/cloud.md
+  - reference/aws.md
+  - reference/azure.md
+  - reference/kubernetes.md
 
-  - reference/cli.md
-
-  - concepts/how.md
-  - concepts/resource-graph.md
-  - concepts/terraform.md
-  - concepts/providers.md
+  - reference/how.md
+  - reference/providers.md
+  - reference/terraform.md
   
   #- managed-cloud/index.md # Landing page is in TOC
   #- managed-cloud/cloud-stack.md

@@ -6,7 +6,7 @@ Let's describe what happens when a Pulumi program is run via `pulumi update`. Yo
 
 During program execution, whenever there is a resource creation statement (via `new Resource()` in JavaScript or TODO in Python), the resource is registered with the engine. This does not necessarily mean that a new resource should be created, it simply means that the program intends for the resource to exist. Using the last state in the checkpoint file, the engine then determines which requests it should make to the underlying **provider** in order to create, delete, or replace the resource. At the end the program execution, if a particular resource **R** is never registered, the engine will make a delete request to the resource provider. The following diagram illustrates the interaction between these parts of the system.
 
-![Pulumi engine and providers](../images/concepts/engine-block-diagram.png){:width="500px"}
+![Pulumi engine and providers](../images/reference/engine-block-diagram.png){:width="500px"}
 
 For instance, suppose we have the following Pulumi program, which creates one security group and one EC2 instance:
 
