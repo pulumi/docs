@@ -1,197 +1,102 @@
 ---
-title: "CLI reference"
+title: Introduction
 ---
 
-The `pulumi` CLI supports creating, configuring and updating Pulumi stacks.
+Pulumi is a programming platform for the cloud.  Pulumi lets you write cloud programs in your favorite language, using your favorite developer tools and IDEs, and handles the task of keeping your application, services, and infrastructure in sync, without needing to resort to separate configuration DSLs or templating languages.  Instead of treating application code and infrastructure as completely separate things, managed by different people with different skills using different tools, Pulumi levels the playing field by focusing on building all aspects of distributed cloud applications using a consistent set of tools and techniques.
 
-An __stack__ represents a running Pulumi program.  `pulumi stack init` creates a new Pulumi stack for the
-program in the working directory. Multiple stacks can be managed in a single program directory, and you can
-see all environments with `pulumi stack ls`.
+Because Pulumi uses general purpose programming languages, you get all the things you already know and love from your favorite programming language: ranging from simple expressiveness features like loops, conditionals, and async; to a rich ecosystems of libraries from your package manager; all the way to powerful abstractions and reuse by way of classes and functions.  Pulumi currently supports JavaScript, TypeScript, and Python, with support for additional languages on the way.
 
-Each environment has an associated set of __config__.  The config is a set of key value pairs which are available to
-your Pulumi program.
+Pulumi supports all major clouds -- including AWS, Azure and Google Cloud, as well as Kubernetes clusters -- and offers a higher level Pulumi Cloud Framework for productively building modern cloud-neutral applications that use containers, serverless, and hosted managed infrastructure, and that may run on any of these clouds with a great degree of code sharing.
 
-The running application can be __updated__, combining the current config with the current version of the program in the
-working directory and deploying those updates into the running application---updating any necessary infrastructure and
-deploying any new code or resources into the application.
+## Better Together: Containers + Serverless Functions + Infrastructure
+Pulumi supports the full spectrum of cloud programs.  It works just as well for containers
 
-An update can be __previewed__, displaying a summary of the expected changes that will be made during an update
-operation based on the current state of the program and config.  This preview is a conservative summary---it will
-include updates which may not need to be made depending on the results of applying some of the changes to the target
-infrastructure.
-
-## Command groups
-```
-Usage:
-  pulumi [command]
-
-Available Commands:
-  config      Manage configuration
-  destroy     Destroy an existing stack and its resources
-  help        Help about any command
-  init        Initialize a new Pulumi repository
-  login       Log into the Pulumi Cloud Console
-  logout      Log out of the Pulumi CLI
-  logs        Show aggregated logs for a project
-  preview     Show a preview of updates to an stack's resources
-  stack       Manage stacks
-  update      Update the resources in an stack
-  version     Print Pulumi's version number
-
-Flags:
-  -C, --cwd string       Run pulumi as if it had been started in another directory
-  -h, --help             help for pulumi
-      --logflow          Flow log settings to child processes (like plugins)
-      --logtostderr      Log to stderr instead of to files
-      --tracing string   Emit tracing to a Zipkin-compatible tracing endpoint
-  -v, --verbose int      Enable verbose logging (e.g., v=3); anything >3 is very verbose
-
-Use "pulumi [command] --help" for more information about a command.
+```javascript
+// Create a container with a stable, load balanced DNS name:
+let cache = new cloud.Service("redis-cache", {
+    image: "redis:alpine",
+    memory: 128,
+    ports: [6379],
+});
 ```
 
-## pulumi stack
+as it does serverless functions and APIs
 
-```
-Manage stacks
+```javascript
+// Run a lambda every hour to clear the cache:
+let { port, host } = await cache.getURL();
+let redisClient() = () => require("redis").createClient(port, host);
+cloud.timer.cron("clear-daily", { hourUTC: 7, minuteUTC: 30 }, async () => {
+    await redisClient().clear();
+});
 
-An stack is a named update target, and a single project may have many of them.
-Each stack has a configuration and update history associated with it, stored in
-the workspace, in addition to a full checkpoint of the last known good update.
-
-Usage:
-  pulumi stack [flags]
-  pulumi stack [command]
-
-Available Commands:
-  init        Create an empty stack with the given name, ready for updates
-  ls          List all known stacks
-  rm          Remove an stack and its configuration
-  select      Switch the current workspace to the given stack
-
-Flags:
-  -h, --help        help for stack
-  -i, --show-ids    Display each resource's provider-assigned unique ID
-  -u, --show-urns   Display each resource's Pulumi-assigned globally unique URN
-
-Global Flags:
-  -C, --cwd string       Run pulumi as if it had been started in another directory
-      --logflow          Flow log settings to child processes (like plugins)
-      --logtostderr      Log to stderr instead of to files
-      --tracing string   Emit tracing to a Zipkin-compatible tracing endpoint
-  -v, --verbose int      Enable verbose logging (e.g., v=3); anything >3 is very verbose
-
-Use "pulumi stack [command] --help" for more information about a command.
+// Register an API endpoint that can get and put keys:
+let api = new cloud.APIGateway("cache-api");
+api.get("/{key}", async (req, res) => {
+    let obj = await redisClient().get(req.params["key"]);
+    res.json(obj);
+});
+api.put("/{key}", async (req, res) => {
+    await redisClient().put(req.params["key"], req.body);
+    res.json({ status: "ok" });
+});
+api.publish();
 ```
 
-## pulumi config
+as it does low-level cloud infrastructure
 
-```
-Lists all configuration values for a specific stack. To add a new configuration value, run
-'pulumi config set', to remove and existing value run 'pulumi config rm'. To get the value of
-for a specific configuration key, use 'pulumi config get <key-name>'.
-
-Usage:
-  pulumi config [flags]
-  pulumi config [command]
-
-Available Commands:
-  get         Get a single configuration value
-  rm          Remove configuration value
-  set         Set configuration value
-
-Flags:
-  -h, --help           help for config
-      --show-secrets   Show secret values when listing config instead of displaying blinded values
-  -s, --stack string   Operate on a different stack than the currently selected stack
-
-Global Flags:
-  -C, --cwd string       Run pulumi as if it had been started in another directory
-      --logflow          Flow log settings to child processes (like plugins)
-      --logtostderr      Log to stderr instead of to files
-      --tracing string   Emit tracing to a Zipkin-compatible tracing endpoint
-  -v, --verbose int      Enable verbose logging (e.g., v=3); anything >3 is very verbose
-
-Use "pulumi config [command] --help" for more information about a command.
+```javascript
+// Create a simple VM-based web server in AWS listening on port 80:
+let group = new aws.ec2.SecurityGroup("web-secgrp", {
+    description: "Enable HTTP access",
+    ingress: [
+        { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+    ],
+});
+let server = new aws.ec2.Instance("web-server", {
+    instanceType: "t2.micro",
+    securityGroups: [group.name],
+    ami: "ami-7172b611",
+});
 ```
 
-## pulumi update
+Pulumi enables you to mix and match these high- and low-level cloud resources inside of the same program or file.  In some cases, you will want to just use pure infrastructure, such as when replacing DevOps tools, CloudFormation or Azure Resource Manager templates, or Chef and Puppet scripts; in other cases, you will want to just use the higher level frameworks, such as when building web-, API-, or event-oriented serverless applications.  We find, however, that most real world use cases end up mixing a range of these kinds of resources, because each has its own unique strengths, and the built-in composability of Pulumi makes it easy and productive to combine the best of both.
 
-```
-Update the resources in an stack
+## Application and Infrastructure Code as One
 
-This command updates an existing stack whose state is represented by the
-existing snapshot file. The new desired state is computed by compiling and evaluating an
-executable package, and extracting all resource allocations from its resulting object graph.
-These allocations are then compared against the existing state to determine what operations
-must take place to achieve the desired state. This command results in a full snapshot of the
-stack's new resource state, so that it may be updated incrementally again later.
+Notice that, with the serverless function example earlier, we have used both **deployment-time** code -- the creation of the cache, cron-job, security group, and server -- alongside **runtime** code -- the body of the lambda itself, which may close over and capture references to other cloud resources and services.  This is a powerful capability unique to Pulumi and, much like your choice of high- versus low-level resources being unique to the situation, so too is the extent to which you will use this capability.
 
-The package to execute is loaded from the current directory. Use the `-C` or `--cwd` flag to
-use a different directory.
+The ability to combine these two leads to a unique benefit of Pulumi: versioning application and infrastructure code together.  By using a consistent set of tools and languages to express all aspects of your cloud program, managing both becomes easier in a few ways; you can
 
-Usage:
-  pulumi update [flags]
+* Commit both alongside one another in source control;
+* Collaborate in the usual ways on changes, such as code reviews and pull requests;
+* Reuse functionality flexibly across the boundaries;
+* Apply traditional software engineering techniques, like testing, linting, and static analysis.
 
-Aliases:
-  update, up
+This shows up in several ways: the serverless scenario above; the ability to automatically build, publish, and consume container images as you deploy your Pulumi programs; and, the capability to version file assets within your infrastructure code, as a few examples.
 
-Flags:
-      --analyzer stringSlice     Run one or more analyzers as part of this update
-  -d, --debug                    Print detailed debugging output during resource operations
-  -h, --help                     help for update
-  -p, --parallel int             Allow P resource operations to run in parallel at once (<=1 for no parallelism)
-      --show-config              Show configuration keys and variables
-      --show-replacement-steps   Show detailed resource replacement creates and deletes instead of a single step (default true)
-      --show-sames               Show resources that needn't be updated because they haven't changed, alongside those that do
-  -s, --stack string             Choose an stack other than the currently selected one
-      --summary                  Only display summarization of resources and operations
+Pulumi can be plugged in to your favorite CI tools to automate all application and infrastructure changes via a single CI pipeline.  This removes the need to use separate tools and services for building, packaging and publishing application code, containers, and infrastructure, and trying to keep them in sync.
 
-Global Flags:
-  -C, --cwd string       Run pulumi as if it had been started in another directory
-      --logflow          Flow log settings to child processes (like plugins)
-      --logtostderr      Log to stderr instead of to files
-      --tracing string   Emit tracing to a Zipkin-compatible tracing endpoint
-  -v, --verbose int      Enable verbose logging (e.g., v=3); anything >3 is very verbose
-```
+Of course, you may have an application architecture where you really do want to version two layers of your system separately, and that is also well support in Pulumi.
 
-## pulumi preview
+## Immutable Infrastructure
 
-```
-Show a preview of updates an stack's resources
+It is important to note that Pulumi is based on the concept of **immutable infrastructure**.  Pulumi programs are not like Boto scripts that mutate infrastructure each time you run them. Instead, Pulumi runs your program to generate the desired set of resources and their dependencies.
 
-This command displays a preview of the updates to an existing stack whose state is
-represented by an existing snapshot file. The new desired state is computed by compiling
-and evaluating an executable package, and extracting all resource allocations from its
-resulting object graph. These allocations are then compared against the existing state to
-determine what operations must take place to achieve the desired state. No changes to the
-stack will actually take place.
+Pulumi can perform this task in **preview mode** where you will be shown the full set of changes, in the order in which they would be made, before actually performing them.  After previewing the changes to see what would be done, you can perform an **update** which will apply those changes to the target cloud resource provider, such as AWS or Azure.
 
-The package to execute is loaded from the current directory. Use the `-C` or `--cwd` flag to
-use a different directory.
+Most developers don’t need to dig into how exactly this works.  The key take-away, however, is that you have full visibility and control into the cloud resource requirements of your program.  This is often important because ultimately you will be creating resources in your cloud account.
 
-Usage:
-  pulumi preview [flags]
+## What Pulumi is Not
 
-Aliases:
-  preview, pre
+Pulumi is not a PaaS.  For the most part, it gets entirely out of your way at runtime.
 
-Flags:
-      --analyzer stringSlice     Run one or more analyzers as part of this preview
-  -d, --debug                    Print detailed debugging output during resource operations
-  -h, --help                     help for preview
-  -p, --parallel int             Allow P resource operations to run in parallel at once (<=1 for no parallelism)
-      --show-config              Show configuration keys and variables
-      --show-replacement-steps   Show detailed resource replacement creates and deletes instead of a single step
-      --show-sames               Show resources that needn't be updated because they haven't changed, alongside those that do
-  -s, --stack string             Choose an stack other than the currently selected one
-      --summary                  Only display summarization of resources and operations
+Although Pulumi eases the integration between application code and infrastructure, it generally does not influence your runtime behavior.  This means, for example, that when you provision a container or lambda with Pulumi, you are running directly against your chosen cloud provider.
 
-Global Flags:
-  -C, --cwd string       Run pulumi as if it had been started in another directory
-      --logflow          Flow log settings to child processes (like plugins)
-      --logtostderr      Log to stderr instead of to files
-      --tracing string   Emit tracing to a Zipkin-compatible tracing endpoint
-  -v, --verbose int      Enable verbose logging (e.g., v=3); anything >3 is very verbose
-```
+There are, of course, some areas where Pulumi will help you generate runtime code, such as when creating a serverless function using your favorite language’s syntax.  In these cases, Pulumi does the minimal amount of scaffolding to ensure you have a seamless experience, like injecting variables into your function’s scope.  Even then, there is no runtime agent or heavy footprint implied: it is simply code.  In other words, Pulumi is unopinionated about what runtime environment you choose to run those functions within.  We think this is important architectural decision that ensures that you retain full control over your cloud computing environment, especially in areas like security, reliability, and performance.
 
+Pulumi also stays unopinionated about whether you choose containers, serverless, virtual machines, public clouds, or private clouds.  Pulumi as a platform is as happy if you use 100% containers as it is if you use 100% serverless functions as it is if you use a hybrid.  Indeed, Pulumi’s unique perspective is in embracing all of these things, living together in harmony.
 
+# Next Steps
+
+Check out the [Getting Started tutorial](./quickstart) or the [conceptual docs](./concepts) for more details on how to get started using Pulumi.

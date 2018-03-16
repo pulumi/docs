@@ -1,6 +1,9 @@
 ---
-title: "AWS package"
+title: "--AWS"
 ---
 
-- Use a Jekyll include to pull in content from the setup step, for installing the AWS SDK and setting up secrets
-- The AWS provider uses the AWS SDK, so that's where accessKey and secretKey are pulled from
+TODO: 
+* Example program
+* Configuration
+* Link to reference docs
+* Relationship to Terraform provider

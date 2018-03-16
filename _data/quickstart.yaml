@@ -1,8 +1,15 @@
 nav_section: "Quickstart"
 toc: 
 
-- title: Quickstart
+- title: Getting Started
   section:
   - quickstart/index.md # landing page
+
+  - quickstart/step1.md
+  - quickstart/step2.md
+  - quickstart/step3.md
+  - quickstart/step4.md
+  - quickstart/step5.md
+  
   - quickstart/aws.md
   - quickstart/cloud.md
