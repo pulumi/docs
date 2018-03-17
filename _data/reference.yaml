@@ -6,7 +6,7 @@ toc: # No landing page
   section:
   - reference/index.md # This denotes the landing page for this section
 
-  - reference/concepts.md # landing page
+  - reference/concepts.md
   - reference/stack.md
   - reference/project.md
   - reference/config.md
@@ -14,7 +14,6 @@ toc: # No landing page
   
   - reference/programming-model.md
   - reference/javascript.md
-  - reference/typescript.md
   - reference/python.md
 
   - reference/cloud-resources.md
@@ -25,11 +24,5 @@ toc: # No landing page
 
   - reference/how.md
   - reference/providers.md
-  - reference/terraform.md
   
-  #- managed-cloud/index.md # Landing page is in TOC
-  #- managed-cloud/cloud-stack.md
-  #- managed-cloud/console.md
-  #- managed-cloud/cicd-with-travis.md
-
   - reference/known-issues.md
