@@ -1,5 +1,5 @@
 ---
-title: "Installation and setup"
+title: "Installation and Setup"
 installer_version: "0.10.0"
 ---
 

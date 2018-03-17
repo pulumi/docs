@@ -1,5 +1,5 @@
 ---
-title: Programming AWS
+title: --Programming AWS
 ---
 
 The `@pulumi/aws` package allows you use Pulumi to create and manage AWS resources using JavaScript or TypeScript. You can use regular programming language constructs, such as objects, functions, and control flow. Resource definitions are declarative: they describe the desired end state of your infrastructure. Pulumi will automatically make resource changes based on the current state of what has already been provisioned.
