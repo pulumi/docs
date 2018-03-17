@@ -99,4 +99,4 @@ Pulumi also stays unopinionated about whether you choose containers, serverless,
 
 # Next Steps
 
-Check out the [Getting Started tutorial](./quickstart) or the [conceptual docs](./concepts) for more details on how to get started using Pulumi.
+Check out the [Getting Started tutorial](../quickstart) or the [conceptual docs](./concepts) for more details on how to get started using Pulumi.

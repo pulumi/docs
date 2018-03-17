@@ -7,8 +7,8 @@ layout: default
 **Welcome to Pulumi, a new programming platform for the cloud.**
 
 To get started:
+* [Install](./install) the Pulumi SDK
 * Read the [Introduction](./reference)
 * Check out the [Getting Started](./quickstart)
-* [Install](./install) the Pulumi SDK
 
 For questions or feedback, reach out at [contact@pulumi.com](mailto:contact@pulumi.com).
