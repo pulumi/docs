@@ -2,9 +2,78 @@
 title: "Change log"
 ---
 
-<!-- TODO: update the date below with 0.10 release date -->
-
 See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## [v0.11.0] - 2018/03/20 {#v11}
+
+### Breaking
+
+There have been a number of breaking changes in this release:
+-  Provider configuration is now required for `pulumi-cloud`.
+-  Some APIs names have changed in `pulumi-cloud` from singular to plural names (such as `cacheBehaviors` instead of `cacheBehavior`).
+-  Configuration keys no longer have the superfluous `:config` token as part of the name.
+
+For more details, see the [v0.11.0 changed](#v11-changed) section below.
+
+### Added
+-   Added a `pulumi new` command to scaffold a project ([pulumi/pulumi#1008](https://github.com/pulumi/pulumi/pull/1008)). Usage is `pulumi new [templateName]`. If template name is not specified, the CLI will prompt with a list of templates. Currently, the templates `javascript`, `python` and `typescript` are available. 
+
+-   Python is now a supported language in Pulumi ([pulumi/pulumi#800](https://github.com/pulumi/pulumi/pull/800)). For more information, see [Python documentation](../reference/python.html).
+
+-   Add ECS container definition JSON schemas ([pulumi/pulumi-aws#156](https://github.com/pulumi/pulumi-aws/pull/156)). Additionally, the Lambda runtime enum has been updated. The function `getLinuxAMI` has been removed from `ec2` and moved directly into example code.
+
+-   Add link to documentation source in doc comments ([pulumi/pulumi-terraform#126](https://github.com/pulumi/pulumi-terraform/pull/126)). Adds a "Sourced from \<url\>" annotation to all generated doc comments, with links to Terraform source documentation.
+
+### Changed {#v11-changed}
+-  [**Breaking**] Capture modules through normal value capture. ([pulumi/pulumi#1030](https://github.com/pulumi/pulumi/pull/1030)). This reduces the amount of async/await required in user code. TODO add more info.
+
+-  [**Breaking**] Eliminate the superfluous `:config` part of configuration keys ([pulumi/pulumi#995](https://github.com/pulumi/pulumi/pull/995)). `pulumi` no longer requires configuration keys to have the string `:config` in them. Using the `:config` string in keys for the object `@pulumi/pulumi.Config` is deprecated and `preview` and `update` show warnings when it is used. Additionally, it is preferred to set keys in the form `aws:region` rather than `aws:config:region`. For compatibility, the old behavior is also supported, but will be removed in a future release. For more information, see the article [Configuration](../reference/config.html).
+
+-  [**Breaking**] Change the way that configuration is stored ([pulumi/pulumi#986](https://github.com/pulumi/pulumi/pull/986)). To simplify the configuration model, there is no longer a separate notion of project and workspace settings, but only stack settings. The switches `--all` and `--save` are no longer supported; any common settings across stacks must be set on each stack directly. Settings for a stack are stored in a file that is a sibling to `Pulumi.yaml`, named `Pulumi.<stack-name>.yaml`. On first run `pulumi`, will migrate projects from the previous configuration format to the new one.  For more information, see the section [Defining and setting stack settings](../reference/config.html#config-stack).
+
+-  [**Breaking**] Serialize resource registration after inputs resolve ([pulumi/pulumi#964](https://github.com/pulumi/pulumi/pull/964)). Rather than using implicit dependencies specified through program order, Pulumi component dependencies will be made explicit by using `Output<T>` directly. 
+
+-  [**Breaking**] Require provider config and improve error message when provider not installed ([pulumi/pulumi-cloud#377](https://github.com/pulumi/pulumi-cloud/pull/377)). When using the JavaScript package `@pulumi/cloud`, you must first set the configuration value for `cloud:provider`. For instance, to target AWS, use `pulumi config set cloud:provider aws`. Additionally, if the package `@pulumi/cloud-aws` is not included in the `dependencies` section of `package.json`, a descriptive error message is shown.
+
+-  [**Breaking**] Use plural names for array-typed values ([pulumi/pulumi-aws#146](https://github.com/pulumi/pulumi-aws/pull/146)) and ([pulumi/pulumi-terraform#123](https://github.com/pulumi/pulumi-terraform/pull/123)). API properties that are array-typed now have a plural name. For example, the property is `aws.cloudfront.Distribution.cacheBehaviors` (plural), rather than `cacheBehavior` (singular).
+
+-  [**Breaking**] Project array with one element as nested struct instead of array ([pulumi/pulumi-terraform#122](https://github.com/pulumi/pulumi-terraform/pull/122)). The API is now improved for properties that were previously array typed but accepted exactly one value. These properties are now nested structs instead of an array. For example, the properties `clusterConfig`, `ebsOptions` and `snapshotOptions` in `aws.elasticsearch.Domain` are no longer array-typed.
+
+-   Hide secrets from CLI output ([pulumi/pulumi#1002](https://github.com/pulumi/pulumi/pull/1002)). To prevent secret values from being accidentally disclosed in command output or logs, `pulumi` replaces secret values with the string `[secret]`.
+
+-   Change default of where stack is created ([pulumi/pulumi#971](https://github.com/pulumi/pulumi/pull/971)). If currently logged in to the Pulumi CLI, `stack init` creates a managed stack; otherwise, it creates a local stack. To force a local or remote stack, use the flags `--local` or `--remote`.
+
+-   Don't pool load balancers in `cloud.Service`, allow each `Service` to allocate its own `LoadBalancer` ([pulumi/pulumi-cloud#395](https://github.com/pulumi/pulumi-cloud/pull/395)). There is also a new `target` port property which allows exposing port that is different from the internal container port.
+
+### Fixed
+
+-   In `cloud.Service`, wait for ECS services to reach a steady state ([pulumi/pulumi-cloud#396](https://github.com/pulumi/pulumi-cloud/pull/396)). Previously, when a `cloud.Service` resource was updated from resource **A** to **B** during `pulumi update`, the update operation did not wait for the underlying ECS service for **B** to finish initializing and would proceed to the next resource update. This issue is now fixed.
+
+-   Improve error messages output by the CLI ([pulumi/pulumi#1011](https://github.com/pulumi/pulumi/pull/1011)). RPC endpoint errors have been improved. Errors such as "catastrophic error" and "fatal error" are no longer duplicated in the output.
+
+-   Produce better error messages when the main module is not found ([pulumi/pulumi#976](https://github.com/pulumi/pulumi/pull/976)).  For example, if the program uses Typescript but `tsc` has not been run, you'll see a message such as the following:
+
+    ```
+    $ pulumi update
+    Performing changes:
+    info: We failed to locate the entry point for your program: /Users/swgillespie/go/src/github.com/pulumi/pulumi/examples/minimal
+    info: Here's what we think went wrong:
+    info:   * Your program looks like it has a build script associated with it ('tsc').
+    info:
+    info: Pulumi does not run build scripts before running your program. Please run 'tsc' or 'yarn build' and try again.
+    error: an unhandled error occurred: Program exited with non-zero exit code: 1
+    ```
+
+    If you're not using TypeScript, `pulumi` will detect if your `main` file does not exist:
+
+    ```
+    $ pulumi update
+    Performing changes:
+    info: We failed to locate the entry point for your program: /Users/swgillespie/go/src/github.com/pulumi/pulumi/examples/minimal
+    info: Here's what we think went wrong:
+    info:   * Your program's 'main' file (/Users/swgillespie/go/src/github.com/pulumi/pulumi/examples/minimal/bin/index.js) does not exist.
+    error: an unhandled error occurred: Program exited with non-zero exit code: 1
+    ```
 
 ## [0.10] - 2018/02/27 {#v10}
 
