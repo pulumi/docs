@@ -6,7 +6,9 @@ You should be aware of the following known issues and product limitations. The e
 
 If you encounter an problem that's not on this list, please file a [GitHub issue](https://github.com/pulumi/pulumi/issues/new). <!-- validate the link once public -->
 
-1.  **Errors after bypassing Pulumi for CloudFront resources.** See [Consider performing a `Refresh` operation before each `Apply`. #57](https://github.com/pulumi/pulumi-terraform/issues/57). When using AWS CloudFront resources with Pulumi, you can run into errors if you update the CloudFront resource directly through AWS, such as the AWS CLI or console. The CLI will show an error such as the following:
+1.  **Errors after bypassing Pulumi for CloudFront resources.** When using AWS CloudFront resources with Pulumi, you can run into errors if you update the CloudFront resource directly through AWS, such as the AWS CLI or console. This known issue is anticipated to be solved in the v0.12.0 SDK, as part of implementing the fix [Perform a `Refresh` operation before each `Apply`. #57](https://github.com/pulumi/pulumi-terraform/issues/57).
+
+    The CLI will show an error such as the following:
 
     ```
     rpc error: code 

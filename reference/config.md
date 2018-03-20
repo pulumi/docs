@@ -47,6 +47,12 @@ Enter your passphrase to protect config/secrets:
 Re-enter your passphrase to confirm: 
 ```
 
+### Stack settings and source control
+
+For stacks that are actively developed by multiple members of a team, the recommended practice is to check them in to source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings.
+
+For stacks that are ephemeral or are used in "inner loop" development, the stack settings are typically not checked in to source control.
+
 ## Viewing stack settings
 
 To view all settings for the currently selected stack, use `pulumi config`. To view the values of secrets, use the `--show-secrets` flag.
