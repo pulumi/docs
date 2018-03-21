@@ -1,8 +1,8 @@
 ---
-title: "--Kubernetes"
+title: "▶ Kubernetes"
 ---
 
-TODO: 
+🚧 TODO:
 * Example program
 * Configuration
 * Link to reference docs

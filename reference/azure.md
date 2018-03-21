@@ -1,10 +1,10 @@
 ---
-title: "--Azure"
+title: "▶ Azure"
 ---
 
-TODO: 
+🚧 TODO:
 * Example program
 * Configuration
 * Link to reference docs
 * Relationship to Terraform provider
-* [@pulumi/azure](../packages/pulumi-azure)
+* TODO: generate docs and add link for `@pulumi/azure`

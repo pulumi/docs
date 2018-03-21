@@ -26,8 +26,8 @@ TODO define how to refer to CLI, to service, etc.
 
 ### Language and terminology styles
 
-- [Needs consensus] Top level headings use **Sentence case**. (Note: as of 1/4/18, we have a mix of title and sentence case. Needs to be improved.)
-- [Needs consensus] All other headings use **Sentence case**, where only the first word and any proper nouns have a capital letter.
+- [Needs consensus] Top level headings use **Sentence case**. (Note: as of 3/21/18, we have a mix of **Title Case** and **Sentence case**.)
+- [Needs consensus] All other headings use **Sentence case**, where only the first word and any proper nouns have a capital letter. (Note: as of 3/21/18, we have a mix of **Title Case** and **Sentence case**.)
 - Use capitalization only for a proper noun, and use throughout. For example, "stack" should almost always be lowercase in text
 
 ### Referring to "things"
@@ -43,7 +43,7 @@ TODO define how to refer to CLI, to service, etc.
 - Use underscore for italic `_`
 - Use triple-backtick and language for code formatting, e.g. ```typescript
 - Don't use hard linebreaks. They are discouraged by the the kramdown formatter, which calls it "lazy syntax". See [kramdown Syntax](https://kramdown.gettalong.org/syntax.html).
-- In contrast to GitHub-flavored markdown, use two spaces after a list item, so that the indentation of the next level aligns correctly. This is because kramdown parses lists differently than GitHub. See http://idratherbewriting.com/documentation-theme-jekyll/#markdown.
+- **In contrast to GitHub-flavored markdown, use two spaces after a list item**, so that the indentation of the next level aligns correctly. This is because kramdown parses lists differently than GitHub. See http://idratherbewriting.com/documentation-theme-jekyll/#markdown.
 
   I.e., do 
   ```1.  First item``` (two spaces)

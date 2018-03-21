@@ -1,5 +1,5 @@
 ---
-title: "--JavaScript and TypeScript"
+title: "▶ JavaScript and TypeScript"
 ---
 
 ## Using Pulumi NPM Packages {#npm-packages}

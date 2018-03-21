@@ -1,10 +1,11 @@
 ---
-title: "--Cloud Framework"
+title: "▶ Cloud Framework"
 ---
 
-TODO: 
+JavaScript and TypeScript API reference: [@pulumi/cloud](../packages/pulumi-cloud)
+
+🚧 TODO:
 * Example program
 * Configuration
 * Link to reference docs
 * Relationship to Terraform provider
-* [@pulumi/cloud](../packages/pulumi-cloud)

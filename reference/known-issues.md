@@ -1,5 +1,5 @@
 ---
-title: "Known issues and workarounds"
+title: "Known issues"
 ---
 
 You should be aware of the following known issues and product limitations. The engineering team is actively working on fixing these issues. 
