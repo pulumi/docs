@@ -18,6 +18,7 @@ configure:
 .PHONY: ensure
 ensure:
 	bundle install
+	npm install -g broken-link-checker
 
 .PHONY: serve
 serve: 
@@ -34,6 +35,10 @@ build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
 	bundle install
 	bundler exec jekyll build
+
+.PHONY: test
+test:
+	blc http://localhost:4000 -r --exclude-external --exclude '*/packages/*' --exclude '*/releases/pulumi*' --exclude '*/examples/*'
 
 .PHONY: deploy
 deploy:
