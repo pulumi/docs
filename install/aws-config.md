@@ -16,7 +16,7 @@ The [Pulumi AWS provider] uses the AWS SDK to manage and provision resources.
 3.  Configure the AWS CLI with the IAM credentials, such as with the `aws configure` command. For other configuration options, see the AWS article [Configuring the AWS CLI](configure-aws-cli).
 
     ```bash
-    $ aws configure --profile user2
+    $ aws configure
     AWS Access Key ID [None]: AKIAI44QH8DHBEXAMPLE
     AWS Secret Access Key [None]: je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
     Default region name [None]: us-west-2

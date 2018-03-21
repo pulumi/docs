@@ -24,7 +24,7 @@ let server = new aws.ec2.Instance("web-server-www", {
 
 Now, we run `pulumi stack init mystack`. Since `mystack` is a new stack, the stack checkpoint file is empty. 
 
-Next, we run `pulumi update`. When the program runs to completion, it encounters two statements that create resources, `new aws.ec2.SecurityGroup()` and `new aws.ec2.Instance()`. So, the language host registers the following with the engine: a resource corresponding to `group` and a resource corresponding to `server`, using a naming scheme TODO. (TODO: need to explain how the program name corresponds to a URN that the language host/program and engine both understand.)
+Next, we run `pulumi update`. When the program runs to completion, it encounters two statements that create resources, `new aws.ec2.SecurityGroup()` and `new aws.ec2.Instance()`. So, the language host registers the following with the engine: a resource corresponding to `group` and a resource corresponding to `server`, using a naming scheme TODO. (🚧 TODO:need to explain how the program name corresponds to a URN that the language host/program and engine both understand.)
 
 The engine consults the checkpoint file, and sees that these two resources do not already exist. So, the engine calls the AWS resource provider, requesting that it create a security group. Once the operation succeeds, this state is written to the checkpoint file, including the value of the security group `name` property. Next, an EC2 instance is created, referencing this same `name` property. So, the resource graph will look like the following:
 
@@ -36,4 +36,4 @@ stack mystack
 
 Now, suppose that we change the instance size from `t2.micro` to `t2.nano`. This time, the engine will not create another security group, because it exists in the checkpoint file. The engine then makes a "replace" call to the AWS provider. Since changing the instance size requires recreating the EC2 instance, a new instance of size `t2.nano` is created. Once the creation is successful, the original `t2.micro` instance is deleted.
 
-TODO: consider diagrams showing the changes in resource state
+🚧 TODO:consider diagrams showing the changes in resource state

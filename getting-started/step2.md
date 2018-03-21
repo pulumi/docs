@@ -1,5 +1,5 @@
 ---
-title: --Step 2
+title: ▶ Step 2 🚧
 ---
 
 # Infrastructure as Software

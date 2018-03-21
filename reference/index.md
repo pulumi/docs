@@ -2,6 +2,8 @@
 title: Introduction
 ---
 
+> 🚧 The documentation is **still in progress**, so there are a number of TODOs and partially-written articles, especially in this section. Some articles are meant to appear nested under others in the left navigation. Until we add a CSS style, we're using the symbol ▶ in the article title. 
+
 Pulumi is a programming platform for the cloud.  Pulumi lets you write cloud programs in your favorite language, using your favorite developer tools and IDEs, and handles the task of keeping your application, services, and infrastructure in sync, without needing to resort to separate configuration DSLs or templating languages.  Instead of treating application code and infrastructure as completely separate things, managed by different people with different skills using different tools, Pulumi levels the playing field by focusing on building all aspects of distributed cloud applications using a consistent set of tools and techniques.
 
 Because Pulumi uses general purpose programming languages, you get all the things you already know and love from your favorite programming language: ranging from simple expressiveness features like loops, conditionals, and async; to a rich ecosystems of libraries from your package manager; all the way to powerful abstractions and reuse by way of classes and functions.  Pulumi currently supports JavaScript, TypeScript, and Python, with support for additional languages on the way.

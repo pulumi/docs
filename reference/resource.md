@@ -1,8 +1,8 @@
 ---
-title: "--Resources"
+title: "▶ Resources"
 ---
 
-TODO
+🚧 TODO add info on:
 - Properties
 - Dependencies
 - Components
@@ -20,12 +20,12 @@ Note that the URN for a Pulumi resource is never compared across *different* sta
 
 ## How URNs are generated
 
-TODO fill out
+🚧 TODO fill out
 
 ## What changes a URN
 
-TODO fill out
+🚧 TODO fill out
 
 ## How to author a Pulumi component
 
-TODO fill out
+🚧 TODO fill out
