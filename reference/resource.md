@@ -10,7 +10,7 @@ TODO
 - Checkpoints
 
 ## Names
-All resources managed by a Pulumi program have a Universal Resource Name (URN), which is a logical identifier for the resource. This name must be unique among all the resources in a Pulumi program; attempting to create two resources with the same name causes an error during `pulumi update`. The URN is stored in the stack's [checkpoint file](./checkpoint.html) and is the primary key for looking up a resource's state. 
+All resources managed by a Pulumi program have a Universal Resource Name (URN), which is a logical identifier for the resource. This name must be unique among all the resources in a Pulumi program; attempting to create two resources with the same name causes an error during `pulumi update`. The URN is stored in the stack's checkpoint and is the primary key for looking up a resource's state. 
 
 During `pulumi update`, the URN is how Pulumi maps from a resource in the program text to a resource tracked in the checkpoint file. So, whenever a program allocates a resource with a URN that is contained in the checkpoint, Pulumi assumes these are the same resource and determines whether an update or replacement should be performed.  
 
