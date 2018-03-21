@@ -13,4 +13,4 @@ For deeper dives into a couple of specific user cases, check out these tutorials
 * [Using Pulumi with AWS Infrastructure](./aws)
 * [Using Pulumi for Cloud-Agnostic Serverless + Containers](./aws)
 
-To learn more about Pulumi, checkout the [Introduction](../reference) and [Concepts](../concepts).
+To learn more about Pulumi, checkout the [Introduction](../reference) and [Concepts](../reference/concepts.html).

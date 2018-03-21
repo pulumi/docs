@@ -204,4 +204,3 @@ To learn more about using managed stacks, see the following:
 
 - [Using the Pulumi Console](./console.html)
 - [Use Travis to continuously deploy Pulumi programs](./cicd-with-travis.html)
-- [Pulumi CLI reference](./cli-commands.html)
