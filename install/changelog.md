@@ -14,9 +14,43 @@ title: "Change log"
 [Using the Pulumi Console]: ../managed-cloud/console.html
 <!-- End common links -->
 
-See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+## Available versions {#all-versions}
 
-## v0.11.0 {#v11}
+<table class="table table-sm table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Version</th>
+      <th scope="col">Date</th>
+      <th scope="col">Downloads</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="#v11">0.11.0</a></th>
+      <td>2018/03/20</td>
+      <td>{% include sdk-links.html version='0.11.0' %}</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#v10">0.10.0</a></th>
+      <td>2018/02/27</td>
+      <td>{% include sdk-links.html version='0.10.0' %}</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#v913">0.9.13</a></th>
+      <td>2018/02/07</td>
+      <td>{% include sdk-links.html version='0.9.13' %}</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#v911">0.9.11</a></th>
+      <td>2018/01/22</td>
+      <td>{% include sdk-links.html version='0.9.11' %}</td>
+    </tr>
+  </tbody>
+</table>
+
+> See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## SDK version 0.11.0 {#v11}
 Released 2018/03/20 
 
 ### Added
@@ -66,7 +100,7 @@ Released 2018/03/20
 
 -  Produce better error messages when the main module is not found ([pulumi/pulumi#976](https://github.com/pulumi/pulumi/pull/976)). If you're running TypeScript but have not run `tsc` or your main JavaScript file does not exist, the CLI will print a helpful `info:` message that points to the possible source of the error. 
 
-## 0.10 {#v10}
+## SDK version 0.10.0 {#v10}
 Released on 2018/02/27 
 
 ### Added
@@ -117,7 +151,7 @@ Released on 2018/02/27
 -  Error when using `float64` attributes using SDK v0.9.9 ([pulumi-terraform#95](https://github.com/pulumi/pulumi-terraform/issues/95))
 -  `pulumi logs` entries only return first line ([pulumi#857](https://github.com/pulumi/pulumi/issues/857))
 
-## 0.9.13 {#v913}
+## SDK version 0.9.13 {#v913}
 Released on 2018/02/07 
 
 ### Added
@@ -126,7 +160,7 @@ Released on 2018/02/07
 
 - Added additional configuration for docker builds for a container. The `build` property of a container may now either be a string (which is treated as a path to the folder to do a `docker build` in) or an object with properties `context`, `dockerfile` and `args`, which are passed to `docker build`. If unset, `context` defaults to the current working directory, `dockerfile` defaults to `Dockerfile` and `args` default to no arguments.
 
-## 0.9.11 {#v911}
+## SDK version 0.9.11 {#v911}
 Released on 2018/01/22
 
 ### Added
@@ -169,7 +203,7 @@ Released on 2018/01/22
 
 - When a stack is removed, `pulumi` now deletes any configuration it had saved in either the `Pulumi.yaml` file or the workspace.
 
-## 0.9.8 
+## SDK version 0.9.8 
 
 ### Added 
 
