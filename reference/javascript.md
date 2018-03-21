@@ -2,7 +2,7 @@
 title: "--JavaScript and TypeScript"
 ---
 
-## Using Pulumi NPM Packages
+## Using Pulumi NPM Packages {#npm-packages}
 
 As of release `0.10`, packages in the `@pulumi` namespace have been moved to an NPMJS registry, accessible through an NPM proxy.
 
@@ -26,7 +26,7 @@ To install NPM dependencies, do the following:
 
 1.  Run `npm install` to restore `@pulumi` packages.
 
-### Adding a new dependency
+### Adding a new dependency {#packages}
 
 To add a new package from the `@pulumi` namespace, run `npm install --save @pulumi/package-name`. The following packages are available. 
 
