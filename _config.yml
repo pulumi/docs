@@ -46,7 +46,7 @@ exclude:
 tocs:
   - home
   - install
-  - quickstart
+  - getting-started
   - concepts
   - reference
   - managed-cloud
