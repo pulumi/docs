@@ -6,7 +6,7 @@ TODO define how to refer to CLI, to service, etc.
 
 ## Documentation structure
 
-- There is a folder for each heading in the top navigation, such as `Install`, `Quickstart`, etc.
+- There is a folder for each heading in the top navigation, such as `Install`, `getting-started`, etc.
 
 - The mapping from documentation page to section and table-of-contents (TOC) is stored in yaml files in `_data`. 
 

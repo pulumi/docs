@@ -9,6 +9,6 @@ layout: default
 To get started:
 * [Install](./install) the Pulumi SDK
 * Read the [Introduction](./reference)
-* Check out the [Getting Started](./quickstart)
+* Check out the [Getting Started](./getting-started)
 
 For questions or feedback, reach out at [contact@pulumi.com](mailto:contact@pulumi.com).
