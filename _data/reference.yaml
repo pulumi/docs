@@ -4,6 +4,25 @@ toc: # No landing page
 
 - title: Reference
   section:
-  - reference/index.md
-  - reference/packages.md
+  - reference/index.md # This denotes the landing page for this section
+
+  - reference/concepts.md
+  - reference/stack.md
+  - reference/project.md
+  - reference/config.md
+  - reference/resource.md
+  
+  - reference/programming-model.md
+  - reference/javascript.md
+  - reference/python.md
+
+  - reference/cloud-resources.md
+  - reference/cloud.md
+  - reference/aws.md
+  - reference/azure.md
+  - reference/kubernetes.md
+
+  - reference/how.md
+  - reference/providers.md
+  
   - reference/known-issues.md

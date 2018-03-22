@@ -1,8 +1,0 @@
-nav_section: "Quickstart"
-toc: 
-
-- title: Quickstart
-  section:
-  - quickstart/index.md # landing page
-  - quickstart/aws.md
-  - quickstart/cloud.md

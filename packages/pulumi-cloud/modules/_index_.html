@@ -74,7 +74,6 @@
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#config" class="tsd-kind-icon">config</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#frameworkmodule" class="tsd-kind-icon">framework<wbr>Module</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#module" class="tsd-kind-icon">module</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#provider" class="tsd-kind-icon">provider</a></li>
 							</ul>
@@ -82,6 +81,7 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#loadframeworkmodule" class="tsd-kind-icon">load<wbr>Framework<wbr>Module</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_index_.html#require" class="tsd-kind-icon">require</a></li>
 							</ul>
 						</section>
@@ -93,20 +93,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="config" class="tsd-anchor"></a>
 					<h3>config</h3>
-					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Config</span><span class="tsd-signature-symbol"> =&nbsp;new pulumi.Config(&quot;cloud:config&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Config</span><span class="tsd-signature-symbol"> =&nbsp;new pulumi.Config(&quot;cloud&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/index.ts#L12">index.ts:12</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="frameworkmodule" class="tsd-anchor"></a>
-					<h3>framework<wbr>Module</h3>
-					<div class="tsd-signature tsd-kind-icon">framework<wbr>Module<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&#x60;@pulumi/cloud-${provider}&#x60;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/index.ts#L27">index.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/index.ts#L13">index.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -116,23 +106,40 @@
 					<div class="tsd-signature tsd-kind-icon">module<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/index.ts#L9">index.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/index.ts#L10">index.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="provider" class="tsd-anchor"></a>
 					<h3>provider</h3>
-					<div class="tsd-signature tsd-kind-icon">provider<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;config.get(&quot;provider&quot;)</span></div>
+					<div class="tsd-signature tsd-kind-icon">provider<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;config.require(&quot;provider&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/index.ts#L20">index.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/index.ts#L15">index.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="loadframeworkmodule" class="tsd-anchor"></a>
+					<h3>load<wbr>Framework<wbr>Module</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Framework<wbr>Module<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/index.ts#L18">index.ts:18</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="require" class="tsd-anchor"></a>
 					<h3>require</h3>
@@ -143,7 +150,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/index.ts#L10">index.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/index.ts#L11">index.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -177,6 +184,9 @@
 						<span>Externals</span>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="_bucket_.html">"bucket"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="_httpendpoint_.html">"http<wbr>Endpoint"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
@@ -202,13 +212,13 @@
 						<a href="_index_.html#config" class="tsd-kind-icon">config</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_index_.html#frameworkmodule" class="tsd-kind-icon">framework<wbr>Module</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_.html#module" class="tsd-kind-icon">module</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_.html#provider" class="tsd-kind-icon">provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_index_.html#loadframeworkmodule" class="tsd-kind-icon">load<wbr>Framework<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_index_.html#require" class="tsd-kind-icon">require</a>

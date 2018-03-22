@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides an OpsWorks stack resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -108,7 +109,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#color" class="tsd-kind-icon">color</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#configurationmanagername" class="tsd-kind-icon">configuration<wbr>Manager<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#configurationmanagerversion" class="tsd-kind-icon">configuration<wbr>Manager<wbr>Version</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#customcookbookssource" class="tsd-kind-icon">custom<wbr>Cookbooks<wbr>Source</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#customcookbookssources" class="tsd-kind-icon">custom<wbr>Cookbooks<wbr>Sources</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#customjson" class="tsd-kind-icon">custom<wbr>Json</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#defaultavailabilityzone" class="tsd-kind-icon">default<wbr>Availability<wbr>Zone</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_stack_.stack.html#defaultinstanceprofilearn" class="tsd-kind-icon">default<wbr>Instance<wbr>Profile<wbr>Arn</a></li>
@@ -146,7 +147,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in opsworks/stack.ts:106</li>
+									<li>Defined in opsworks/stack.ts:152</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -194,13 +195,14 @@
 					<div class="tsd-signature tsd-kind-icon">agent<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:13</li>
+							<li>Defined in opsworks/stack.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If set to <code>&quot;LATEST&quot;</code>, OpsWorks will automatically install the latest version.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#agent_version">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#agent_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -209,7 +211,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:14</li>
+							<li>Defined in opsworks/stack.ts:18</li>
 						</ul>
 					</aside>
 				</section>
@@ -219,13 +221,14 @@
 					<div class="tsd-signature tsd-kind-icon">berkshelf<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:18</li>
+							<li>Defined in opsworks/stack.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If <code>manage_berkshelf</code> is enabled, the version of Berkshelf to use.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#berkshelf_version">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#berkshelf_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -234,13 +237,14 @@
 					<div class="tsd-signature tsd-kind-icon">color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:22</li>
+							<li>Defined in opsworks/stack.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Color to paint next to the stack&#39;s resources in the OpsWorks console.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#color">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#color</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -249,13 +253,14 @@
 					<div class="tsd-signature tsd-kind-icon">configuration<wbr>Manager<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:26</li>
+							<li>Defined in opsworks/stack.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of the configuration manager to use. Defaults to &quot;Chef&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#configuration_manager_name">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#configuration_manager_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -264,22 +269,23 @@
 					<div class="tsd-signature tsd-kind-icon">configuration<wbr>Manager<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:30</li>
+							<li>Defined in opsworks/stack.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Version of the configuration manager to use. Defaults to &quot;11.4&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#configuration_manager_version">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#configuration_manager_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="customcookbookssource" class="tsd-anchor"></a>
-					<h3>custom<wbr>Cookbooks<wbr>Source</h3>
-					<div class="tsd-signature tsd-kind-icon">custom<wbr>Cookbooks<wbr>Source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="customcookbookssources" class="tsd-anchor"></a>
+					<h3>custom<wbr>Cookbooks<wbr>Sources</h3>
+					<div class="tsd-signature tsd-kind-icon">custom<wbr>Cookbooks<wbr>Sources<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:35</li>
+							<li>Defined in opsworks/stack.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -287,6 +293,7 @@
 							<p>When <code>use_custom_cookbooks</code> is set, provide this sub-object as
 							described below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#custom_cookbooks_source">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#custom_cookbooks_source</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -295,13 +302,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:39</li>
+							<li>Defined in opsworks/stack.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Custom JSON attributes to apply to the entire stack.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#custom_json">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#custom_json</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -310,7 +318,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:44</li>
+							<li>Defined in opsworks/stack.ts:62</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -318,6 +326,7 @@
 							<p>Name of the availability zone where instances will be created
 							by default. This is required unless you set <code>vpc_id</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_availability_zone">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -326,7 +335,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Instance<wbr>Profile<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:49</li>
+							<li>Defined in opsworks/stack.ts:69</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -334,6 +343,7 @@
 							<p>The ARN of an IAM Instance Profile that created instances
 							will have by default.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_instance_profile_arn">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_instance_profile_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -342,13 +352,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Os<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:53</li>
+							<li>Defined in opsworks/stack.ts:75</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of OS that will be installed on instances by default.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_os">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_os</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -357,13 +368,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Root<wbr>Device<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:57</li>
+							<li>Defined in opsworks/stack.ts:81</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of the type of root device instances will have by default.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_root_device_type">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_root_device_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -372,13 +384,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Ssh<wbr>Key<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:61</li>
+							<li>Defined in opsworks/stack.ts:87</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of the SSH keypair that instances will have by default.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_ssh_key_name">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_ssh_key_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -387,7 +400,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Subnet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:66</li>
+							<li>Defined in opsworks/stack.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -395,6 +408,7 @@
 							<p>Id of the subnet in which instances will be created by default. Mandatory
 							if <code>vpc_id</code> is set, and forbidden if it isn&#39;t.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_subnet_id">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#default_subnet_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -403,7 +417,7 @@
 					<div class="tsd-signature tsd-kind-icon">hostname<wbr>Theme<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:71</li>
+							<li>Defined in opsworks/stack.ts:101</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -411,6 +425,7 @@
 							<p>Keyword representing the naming scheme that will be used for instance hostnames
 							within this stack.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#hostname_theme">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#hostname_theme</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -436,13 +451,14 @@
 					<div class="tsd-signature tsd-kind-icon">manage<wbr>Berkshelf<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:75</li>
+							<li>Defined in opsworks/stack.ts:107</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Boolean value controlling whether Opsworks will run Berkshelf for this stack.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#manage_berkshelf">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#manage_berkshelf</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -451,13 +467,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:79</li>
+							<li>Defined in opsworks/stack.ts:113</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the stack.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#name">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -466,13 +483,14 @@
 					<div class="tsd-signature tsd-kind-icon">region<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:83</li>
+							<li>Defined in opsworks/stack.ts:119</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the region where the stack will exist.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#region">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#region</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -481,13 +499,14 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:87</li>
+							<li>Defined in opsworks/stack.ts:125</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of an IAM role that the OpsWorks service will act as.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#service_role_arn">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#service_role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -496,7 +515,7 @@
 					<div class="tsd-signature tsd-kind-icon">stack<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:88</li>
+							<li>Defined in opsworks/stack.ts:126</li>
 						</ul>
 					</aside>
 				</section>
@@ -506,13 +525,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:92</li>
+							<li>Defined in opsworks/stack.ts:132</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#tags">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -538,7 +558,7 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Custom<wbr>Cookbooks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:97</li>
+							<li>Defined in opsworks/stack.ts:139</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -546,6 +566,7 @@
 							<p>Boolean value controlling whether the custom cookbook settings are
 							enabled.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#use_custom_cookbooks">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#use_custom_cookbooks</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -554,7 +575,7 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Opsworks<wbr>Security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:102</li>
+							<li>Defined in opsworks/stack.ts:146</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -562,6 +583,7 @@
 							<p>Boolean value controlling whether the standard OpsWorks
 							security groups apply to created instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#use_opsworks_security_groups">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#use_opsworks_security_groups</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -570,13 +592,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/stack.ts:106</li>
+							<li>Defined in opsworks/stack.ts:152</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The id of the VPC that this stack belongs to.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#vpc_id">https://www.terraform.io/docs/providers/aws/r/opsworks_stack.html#vpc_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -621,7 +644,7 @@
 								<a href="_opsworks_stack_.stack.html#configurationmanagerversion" class="tsd-kind-icon">configuration<wbr>Manager<wbr>Version</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_opsworks_stack_.stack.html#customcookbookssource" class="tsd-kind-icon">custom<wbr>Cookbooks<wbr>Source</a>
+								<a href="_opsworks_stack_.stack.html#customcookbookssources" class="tsd-kind-icon">custom<wbr>Cookbooks<wbr>Sources</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_opsworks_stack_.stack.html#customjson" class="tsd-kind-icon">custom<wbr>Json</a>

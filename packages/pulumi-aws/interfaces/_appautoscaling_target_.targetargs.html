@@ -110,13 +110,14 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/target.ts:77</li>
+							<li>Defined in appautoscaling/target.ts:93</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The max capacity of the scalable target.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#max_capacity">https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#max_capacity</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -125,13 +126,14 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/target.ts:81</li>
+							<li>Defined in appautoscaling/target.ts:99</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The min capacity of the scalable target.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#min_capacity">https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#min_capacity</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -140,13 +142,14 @@
 					<div class="tsd-signature tsd-kind-icon">resource<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/target.ts:85</li>
+							<li>Defined in appautoscaling/target.ts:105</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the <code>ResourceId</code> parameter at: <a href="http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters">AWS Application Auto Scaling API Reference</a></p>
+							<p>The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the <code>ResourceId</code> parameter at: <a href="https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters">AWS Application Auto Scaling API Reference</a></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#resource_id">https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#resource_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -155,7 +158,7 @@
 					<div class="tsd-signature tsd-kind-icon">role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/target.ts:90</li>
+							<li>Defined in appautoscaling/target.ts:112</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -163,6 +166,7 @@
 							<p>The ARN of the IAM role that allows Application
 							AutoScaling to modify your scalable target on your behalf.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#role_arn">https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -171,13 +175,14 @@
 					<div class="tsd-signature tsd-kind-icon">scalable<wbr>Dimension<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/target.ts:94</li>
+							<li>Defined in appautoscaling/target.ts:118</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The scalable dimension of the scalable target. Documentation can be found in the <code>ScalableDimension</code> parameter at: <a href="http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters">AWS Application Auto Scaling API Reference</a></p>
+							<p>The scalable dimension of the scalable target. Documentation can be found in the <code>ScalableDimension</code> parameter at: <a href="https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters">AWS Application Auto Scaling API Reference</a></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#scalable_dimension">https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#scalable_dimension</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -186,13 +191,14 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Namespace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/target.ts:98</li>
+							<li>Defined in appautoscaling/target.ts:124</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The AWS service namespace of the scalable target. Documentation can be found in the <code>ServiceNamespace</code> parameter at: <a href="http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters">AWS Application Auto Scaling API Reference</a></p>
+							<p>The AWS service namespace of the scalable target. Documentation can be found in the <code>ServiceNamespace</code> parameter at: <a href="https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters">AWS Application Auto Scaling API Reference</a></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#service_namespace">https://www.terraform.io/docs/providers/aws/r/appautoscaling_target.html#service_namespace</a>.</p>
 					</div>
 				</section>
 			</section>

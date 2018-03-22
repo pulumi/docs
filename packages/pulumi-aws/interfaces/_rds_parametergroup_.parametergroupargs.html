@@ -95,7 +95,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_parametergroup_.parametergroupargs.html#family" class="tsd-kind-icon">family</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_parametergroup_.parametergroupargs.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_parametergroup_.parametergroupargs.html#nameprefix" class="tsd-kind-icon">name<wbr>Prefix</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_parametergroup_.parametergroupargs.html#parameter" class="tsd-kind-icon">parameter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_parametergroup_.parametergroupargs.html#parameters" class="tsd-kind-icon">parameters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_rds_parametergroup_.parametergroupargs.html#tags" class="tsd-kind-icon">tags</a></li>
 							</ul>
 						</section>
@@ -110,13 +110,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/parameterGroup.ts:69</li>
+							<li>Defined in rds/parameterGroup.ts:87</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The description of the DB parameter group. Defaults to &quot;Managed by Terraform&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#description">https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -125,13 +126,14 @@
 					<div class="tsd-signature tsd-kind-icon">family<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/parameterGroup.ts:73</li>
+							<li>Defined in rds/parameterGroup.ts:93</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The family of the DB parameter group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#family">https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#family</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -140,13 +142,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/parameterGroup.ts:77</li>
+							<li>Defined in rds/parameterGroup.ts:99</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the DB parameter.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#name">https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -155,28 +158,30 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/parameterGroup.ts:81</li>
+							<li>Defined in rds/parameterGroup.ts:105</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Creates a unique name beginning with the specified prefix. Conflicts with <code>name</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#name_prefix">https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#name_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="parameter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> parameter</h3>
-					<div class="tsd-signature tsd-kind-icon">parameter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="parameters" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> parameters</h3>
+					<div class="tsd-signature tsd-kind-icon">parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/parameterGroup.ts:85</li>
+							<li>Defined in rds/parameterGroup.ts:111</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <a href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html"><code>aws rds describe-db-parameters</code></a> after initial creation of the group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#parameter">https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#parameter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -185,13 +190,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/parameterGroup.ts:89</li>
+							<li>Defined in rds/parameterGroup.ts:117</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#tags">https://www.terraform.io/docs/providers/aws/r/db_parameter_group.html#tags</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -230,7 +236,7 @@
 								<a href="_rds_parametergroup_.parametergroupargs.html#nameprefix" class="tsd-kind-icon">name<wbr>Prefix</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_rds_parametergroup_.parametergroupargs.html#parameter" class="tsd-kind-icon">parameter</a>
+								<a href="_rds_parametergroup_.parametergroupargs.html#parameters" class="tsd-kind-icon">parameters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_rds_parametergroup_.parametergroupargs.html#tags" class="tsd-kind-icon">tags</a>

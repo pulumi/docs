@@ -1,0 +1,15 @@
+nav_section: "getting-started"
+toc: 
+
+- title: Getting Started
+  section:
+  - getting-started/index.md # landing page
+
+  - getting-started/step1.md
+  - getting-started/step2.md
+  - getting-started/step3.md
+  - getting-started/step4.md
+  - getting-started/step5.md
+  
+  - getting-started/aws.md
+  - getting-started/cloud.md

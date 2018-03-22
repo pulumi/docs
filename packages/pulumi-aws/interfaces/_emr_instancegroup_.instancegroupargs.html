@@ -92,7 +92,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_instancegroup_.instancegroupargs.html#clusterid" class="tsd-kind-icon">cluster<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_instancegroup_.instancegroupargs.html#ebsconfig" class="tsd-kind-icon">ebs<wbr>Config</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_instancegroup_.instancegroupargs.html#ebsconfigs" class="tsd-kind-icon">ebs<wbr>Configs</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_instancegroup_.instancegroupargs.html#ebsoptimized" class="tsd-kind-icon">ebs<wbr>Optimized</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_instancegroup_.instancegroupargs.html#instancecount" class="tsd-kind-icon">instance<wbr>Count</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_instancegroup_.instancegroupargs.html#instancetype" class="tsd-kind-icon">instance<wbr>Type</a></li>
@@ -110,28 +110,30 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/instanceGroup.ts:76</li>
+							<li>Defined in emr/instanceGroup.ts:92</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#cluster_id">https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#cluster_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ebsconfig" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ebs<wbr>Config</h3>
-					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="ebsconfigs" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ebs<wbr>Configs</h3>
+					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Configs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/instanceGroup.ts:80</li>
+							<li>Defined in emr/instanceGroup.ts:98</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>One or more <code>ebs_config</code> blocks as defined below. Changing this forces a new resource to be created.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#ebs_config">https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#ebs_config</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -140,13 +142,14 @@
 					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Optimized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/instanceGroup.ts:84</li>
+							<li>Defined in emr/instanceGroup.ts:104</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#ebs_optimized">https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#ebs_optimized</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -155,13 +158,14 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/instanceGroup.ts:88</li>
+							<li>Defined in emr/instanceGroup.ts:110</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Target number of instances for the instance group. Defaults to 0.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#instance_count">https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#instance_count</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -170,13 +174,14 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/instanceGroup.ts:92</li>
+							<li>Defined in emr/instanceGroup.ts:116</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#instance_type">https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#instance_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -185,13 +190,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/instanceGroup.ts:96</li>
+							<li>Defined in emr/instanceGroup.ts:122</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Human friendly name given to the instance group. Changing this forces a new resource to be created.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#name">https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html#name</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -221,7 +227,7 @@
 								<a href="_emr_instancegroup_.instancegroupargs.html#clusterid" class="tsd-kind-icon">cluster<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_emr_instancegroup_.instancegroupargs.html#ebsconfig" class="tsd-kind-icon">ebs<wbr>Config</a>
+								<a href="_emr_instancegroup_.instancegroupargs.html#ebsconfigs" class="tsd-kind-icon">ebs<wbr>Configs</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_emr_instancegroup_.instancegroupargs.html#ebsoptimized" class="tsd-kind-icon">ebs<wbr>Optimized</a>

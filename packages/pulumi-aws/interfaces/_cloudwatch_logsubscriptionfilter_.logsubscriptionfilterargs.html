@@ -92,6 +92,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudwatch_logsubscriptionfilter_.logsubscriptionfilterargs.html#destinationarn" class="tsd-kind-icon">destination<wbr>Arn</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudwatch_logsubscriptionfilter_.logsubscriptionfilterargs.html#distribution" class="tsd-kind-icon">distribution</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudwatch_logsubscriptionfilter_.logsubscriptionfilterargs.html#filterpattern" class="tsd-kind-icon">filter<wbr>Pattern</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudwatch_logsubscriptionfilter_.logsubscriptionfilterargs.html#loggroup" class="tsd-kind-icon">log<wbr>Group</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudwatch_logsubscriptionfilter_.logsubscriptionfilterargs.html#name" class="tsd-kind-icon">name</a></li>
@@ -109,13 +110,30 @@
 					<div class="tsd-signature tsd-kind-icon">destination<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logSubscriptionFilter.ts:67</li>
+							<li>Defined in cloudwatch/logSubscriptionFilter.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the destination to deliver matching log events to. Kinesis stream or Lambda function ARN.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#destination_arn">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#destination_arn</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="distribution" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> distribution</h3>
+					<div class="tsd-signature tsd-kind-icon">distribution<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in cloudwatch/logSubscriptionFilter.ts:94</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The method used to distribute log data to the destination. By default log data is grouped by log stream, but the grouping can be set to random for a more even distribution. This property is only applicable when the destination is an Amazon Kinesis stream. Valid values are &quot;Random&quot; and &quot;ByLogStream&quot;.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#distribution">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#distribution</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -124,13 +142,14 @@
 					<div class="tsd-signature tsd-kind-icon">filter<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logSubscriptionFilter.ts:71</li>
+							<li>Defined in cloudwatch/logSubscriptionFilter.ts:100</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#filter_pattern">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#filter_pattern</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -139,13 +158,14 @@
 					<div class="tsd-signature tsd-kind-icon">log<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_cloudwatch_loggroup_.loggroup.html" class="tsd-signature-type">LogGroup</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logSubscriptionFilter.ts:75</li>
+							<li>Defined in cloudwatch/logSubscriptionFilter.ts:106</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the log group to associate the subscription filter with</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#log_group_name">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#log_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -154,13 +174,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logSubscriptionFilter.ts:79</li>
+							<li>Defined in cloudwatch/logSubscriptionFilter.ts:112</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A name for the subscription filter</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#name">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -169,13 +190,14 @@
 					<div class="tsd-signature tsd-kind-icon">role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logSubscriptionFilter.ts:83</li>
+							<li>Defined in cloudwatch/logSubscriptionFilter.ts:118</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to deliver ingested log events to the destination. If you use Lambda as a destination, you should skip this argument and use <code>aws_lambda_permission</code> resource for granting access from CloudWatch logs to the destination Lambda function.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#role_arn">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_subscription_filter.html#role_arn</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -203,6 +225,9 @@
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_cloudwatch_logsubscriptionfilter_.logsubscriptionfilterargs.html#destinationarn" class="tsd-kind-icon">destination<wbr>Arn</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_cloudwatch_logsubscriptionfilter_.logsubscriptionfilterargs.html#distribution" class="tsd-kind-icon">distribution</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_cloudwatch_logsubscriptionfilter_.logsubscriptionfilterargs.html#filterpattern" class="tsd-kind-icon">filter<wbr>Pattern</a>

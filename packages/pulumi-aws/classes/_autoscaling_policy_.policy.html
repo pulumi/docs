@@ -79,6 +79,7 @@
 						<a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-manual-scaling.html">manual</a>
 						or <a href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html">dynamic</a>
 					(policy-based) scaling.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -119,7 +120,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_policy_.policy.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_policy_.policy.html#policytype" class="tsd-kind-icon">policy<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_policy_.policy.html#scalingadjustment" class="tsd-kind-icon">scaling<wbr>Adjustment</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_policy_.policy.html#stepadjustment" class="tsd-kind-icon">step<wbr>Adjustment</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_policy_.policy.html#stepadjustments" class="tsd-kind-icon">step<wbr>Adjustments</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_policy_.policy.html#targettrackingconfiguration" class="tsd-kind-icon">target<wbr>Tracking<wbr>Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_autoscaling_policy_.policy.html#urn" class="tsd-kind-icon">urn</a></li>
 							</ul>
 						</section>
@@ -139,7 +141,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in autoscaling/policy.ts:59</li>
+									<li>Defined in autoscaling/policy.ts:87</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -184,16 +186,17 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="adjustmenttype" class="tsd-anchor"></a>
 					<h3>adjustment<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">adjustment<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">adjustment<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:19</li>
+							<li>Defined in autoscaling/policy.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are <code>ChangeInCapacity</code>, <code>ExactCapacity</code>, and <code>PercentChangeInCapacity</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#adjustment_type">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#adjustment_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -202,13 +205,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:23</li>
+							<li>Defined in autoscaling/policy.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN assigned by AWS to the scaling policy.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#arn">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -217,13 +221,14 @@
 					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:27</li>
+							<li>Defined in autoscaling/policy.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the autoscaling group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#autoscaling_group_name">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#autoscaling_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -232,13 +237,14 @@
 					<div class="tsd-signature tsd-kind-icon">cooldown<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:31</li>
+							<li>Defined in autoscaling/policy.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#cooldown">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#cooldown</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -247,13 +253,14 @@
 					<div class="tsd-signature tsd-kind-icon">estimated<wbr>Instance<wbr>Warmup<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:35</li>
+							<li>Defined in autoscaling/policy.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group&#39;s specified cooldown period.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#estimated_instance_warmup">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#estimated_instance_warmup</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -279,13 +286,14 @@
 					<div class="tsd-signature tsd-kind-icon">metric<wbr>Aggregation<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:39</li>
+							<li>Defined in autoscaling/policy.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The aggregation type for the policy&#39;s metrics. Valid values are &quot;Minimum&quot;, &quot;Maximum&quot;, and &quot;Average&quot;. Without a value, AWS will treat the aggregation type as &quot;Average&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#metric_aggregation_type">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#metric_aggregation_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -294,7 +302,7 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Adjustment<wbr>Magnitude<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:40</li>
+							<li>Defined in autoscaling/policy.ts:54</li>
 						</ul>
 					</aside>
 				</section>
@@ -304,13 +312,14 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Adjustment<wbr>Step<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:44</li>
+							<li>Defined in autoscaling/policy.ts:60</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Use <code>min_adjustment_magnitude</code> instead.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#min_adjustment_step">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#min_adjustment_step</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -319,13 +328,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:48</li>
+							<li>Defined in autoscaling/policy.ts:66</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The name of the policy.</p>
+							<p>The name of the dimension.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#name">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -334,13 +344,14 @@
 					<div class="tsd-signature tsd-kind-icon">policy<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:52</li>
+							<li>Defined in autoscaling/policy.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The policy type, either &quot;SimpleScaling&quot; or &quot;StepScaling&quot;. If this value isn&#39;t provided, AWS will default to &quot;SimpleScaling.&quot;</p>
+							<p>The policy type, either &quot;SimpleScaling&quot;, &quot;StepScaling&quot; or &quot;TargetTrackingScaling&quot;. If this value isn&#39;t provided, AWS will default to &quot;SimpleScaling.&quot;</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#policy_type">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#policy_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -349,7 +360,7 @@
 					<div class="tsd-signature tsd-kind-icon">scaling<wbr>Adjustment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:58</li>
+							<li>Defined in autoscaling/policy.ts:80</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -358,17 +369,34 @@
 								scale, when the adjustment bounds are breached. A positive value scales
 							up. A negative value scales down.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#scaling_adjustment">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#scaling_adjustment</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="stepadjustment" class="tsd-anchor"></a>
-					<h3>step<wbr>Adjustment</h3>
-					<div class="tsd-signature tsd-kind-icon">step<wbr>Adjustment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="stepadjustments" class="tsd-anchor"></a>
+					<h3>step<wbr>Adjustments</h3>
+					<div class="tsd-signature tsd-kind-icon">step<wbr>Adjustments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/policy.ts:59</li>
+							<li>Defined in autoscaling/policy.ts:81</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="targettrackingconfiguration" class="tsd-anchor"></a>
+					<h3>target<wbr>Tracking<wbr>Configuration</h3>
+					<div class="tsd-signature tsd-kind-icon">target<wbr>Tracking<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in autoscaling/policy.ts:87</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A target tracking policy. These have the following structure:</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#target_tracking_configuration">https://www.terraform.io/docs/providers/aws/r/autoscaling_policy.html#target_tracking_configuration</a>.</p>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -447,7 +475,10 @@
 								<a href="_autoscaling_policy_.policy.html#scalingadjustment" class="tsd-kind-icon">scaling<wbr>Adjustment</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_autoscaling_policy_.policy.html#stepadjustment" class="tsd-kind-icon">step<wbr>Adjustment</a>
+								<a href="_autoscaling_policy_.policy.html#stepadjustments" class="tsd-kind-icon">step<wbr>Adjustments</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_autoscaling_policy_.policy.html#targettrackingconfiguration" class="tsd-kind-icon">target<wbr>Tracking<wbr>Configuration</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_autoscaling_policy_.policy.html#urn" class="tsd-kind-icon">urn</a>

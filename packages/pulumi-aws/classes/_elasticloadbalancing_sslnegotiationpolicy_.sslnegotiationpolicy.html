@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides a load balancer SSL negotiation policy, which allows an ELB to control the ciphers and protocols that are supported during SSL negotiations between a client and a load balancer.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_ssl_negotiation_policy.html">https://www.terraform.io/docs/providers/aws/r/lb_ssl_negotiation_policy.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -102,7 +103,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancing_sslnegotiationpolicy_.sslnegotiationpolicy.html#attribute" class="tsd-kind-icon">attribute</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancing_sslnegotiationpolicy_.sslnegotiationpolicy.html#attributes" class="tsd-kind-icon">attributes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_elasticloadbalancing_sslnegotiationpolicy_.sslnegotiationpolicy.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancing_sslnegotiationpolicy_.sslnegotiationpolicy.html#lbport" class="tsd-kind-icon">lb<wbr>Port</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancing_sslnegotiationpolicy_.sslnegotiationpolicy.html#loadbalancer" class="tsd-kind-icon">load<wbr>Balancer</a></li>
@@ -126,7 +127,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elasticloadbalancing/sslNegotiationPolicy.ts:28</li>
+									<li>Defined in elasticloadbalancing/sslNegotiationPolicy.ts:38</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -169,18 +170,19 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="attribute" class="tsd-anchor"></a>
-					<h3>attribute</h3>
-					<div class="tsd-signature tsd-kind-icon">attribute<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="attributes" class="tsd-anchor"></a>
+					<h3>attributes</h3>
+					<div class="tsd-signature tsd-kind-icon">attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancing/sslNegotiationPolicy.ts:13</li>
+							<li>Defined in elasticloadbalancing/sslNegotiationPolicy.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>An SSL Negotiation policy attribute. Each has two properties:</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_ssl_negotiation_policy.html#attribute">https://www.terraform.io/docs/providers/aws/r/lb_ssl_negotiation_policy.html#attribute</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -206,7 +208,7 @@
 					<div class="tsd-signature tsd-kind-icon">lb<wbr>Port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancing/sslNegotiationPolicy.ts:19</li>
+							<li>Defined in elasticloadbalancing/sslNegotiationPolicy.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -215,6 +217,7 @@
 								should be applied. This must be an active listener on the load
 							balancer.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_ssl_negotiation_policy.html#lb_port">https://www.terraform.io/docs/providers/aws/r/lb_ssl_negotiation_policy.html#lb_port</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -223,7 +226,7 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancing/sslNegotiationPolicy.ts:24</li>
+							<li>Defined in elasticloadbalancing/sslNegotiationPolicy.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -231,6 +234,7 @@
 							<p>The load balancer to which the policy
 							should be attached.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_ssl_negotiation_policy.html#load_balancer">https://www.terraform.io/docs/providers/aws/r/lb_ssl_negotiation_policy.html#load_balancer</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -239,13 +243,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancing/sslNegotiationPolicy.ts:28</li>
+							<li>Defined in elasticloadbalancing/sslNegotiationPolicy.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the attribute</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_ssl_negotiation_policy.html#name">https://www.terraform.io/docs/providers/aws/r/lb_ssl_negotiation_policy.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -289,7 +294,7 @@
 								<a href="_elasticloadbalancing_sslnegotiationpolicy_.sslnegotiationpolicy.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_elasticloadbalancing_sslnegotiationpolicy_.sslnegotiationpolicy.html#attribute" class="tsd-kind-icon">attribute</a>
+								<a href="_elasticloadbalancing_sslnegotiationpolicy_.sslnegotiationpolicy.html#attributes" class="tsd-kind-icon">attributes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_elasticloadbalancing_sslnegotiationpolicy_.sslnegotiationpolicy.html#id" class="tsd-kind-icon">id</a>

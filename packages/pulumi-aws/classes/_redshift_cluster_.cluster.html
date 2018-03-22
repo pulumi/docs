@@ -76,6 +76,7 @@
 					</div>
 					<p>~&gt; <strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 					<a href="/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -161,7 +162,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in redshift/cluster.ts:165</li>
+									<li>Defined in redshift/cluster.ts:239</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -209,13 +210,14 @@
 					<div class="tsd-signature tsd-kind-icon">allow<wbr>Version<wbr>Upgrade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:16</li>
+							<li>Defined in redshift/cluster.ts:20</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#allow_version_upgrade">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#allow_version_upgrade</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -224,13 +226,14 @@
 					<div class="tsd-signature tsd-kind-icon">automated<wbr>Snapshot<wbr>Retention<wbr>Period<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:20</li>
+							<li>Defined in redshift/cluster.ts:26</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#automated_snapshot_retention_period">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#automated_snapshot_retention_period</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -239,13 +242,14 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:24</li>
+							<li>Defined in redshift/cluster.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#availability_zone">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -254,7 +258,7 @@
 					<div class="tsd-signature tsd-kind-icon">bucket<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:29</li>
+							<li>Defined in redshift/cluster.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -262,6 +266,7 @@
 							<p>The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
 							For more information on the permissions required for the bucket, please read the AWS <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">documentation</a></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#bucket_name">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#bucket_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -270,7 +275,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:34</li>
+							<li>Defined in redshift/cluster.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -278,6 +283,7 @@
 							<p>The Cluster Identifier. Must be a lower case
 							string.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_identifier">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_identifier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -286,13 +292,14 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Parameter<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:38</li>
+							<li>Defined in redshift/cluster.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the parameter group to be associated with this cluster.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_parameter_group_name">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_parameter_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -301,13 +308,14 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Public<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:42</li>
+							<li>Defined in redshift/cluster.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The public key for the cluster</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_public_key">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_public_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -316,13 +324,14 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Revision<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:46</li>
+							<li>Defined in redshift/cluster.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The specific revision number of the database in the cluster</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_revision_number">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_revision_number</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -331,13 +340,14 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:50</li>
+							<li>Defined in redshift/cluster.ts:70</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of security groups to be associated with this cluster.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_security_groups">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_security_groups</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -346,13 +356,14 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Subnet<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:54</li>
+							<li>Defined in redshift/cluster.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_subnet_group_name">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_subnet_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -361,13 +372,14 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:58</li>
+							<li>Defined in redshift/cluster.ts:82</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The cluster type to use. Either <code>single-node</code> or <code>multi-node</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_type">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -376,7 +388,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:63</li>
+							<li>Defined in redshift/cluster.ts:89</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -384,6 +396,7 @@
 							<p>The version of the Amazon Redshift engine software that you want to deploy on the cluster.
 							The version selected runs on all the nodes in the cluster.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_version">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#cluster_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -392,7 +405,7 @@
 					<div class="tsd-signature tsd-kind-icon">database<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:68</li>
+							<li>Defined in redshift/cluster.ts:96</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -400,6 +413,7 @@
 							<p>The name of the first database to be created when the cluster is created.
 							If you do not provide a name, Amazon Redshift will create a default database called <code>dev</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#database_name">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#database_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -408,13 +422,14 @@
 					<div class="tsd-signature tsd-kind-icon">elastic<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:72</li>
+							<li>Defined in redshift/cluster.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Elastic IP (EIP) address for the cluster.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#elastic_ip">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#elastic_ip</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -423,7 +438,7 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:73</li>
+							<li>Defined in redshift/cluster.ts:103</li>
 						</ul>
 					</aside>
 				</section>
@@ -433,13 +448,14 @@
 					<div class="tsd-signature tsd-kind-icon">encrypted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:77</li>
+							<li>Defined in redshift/cluster.ts:109</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If true , the data in the cluster is encrypted at rest.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#encrypted">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#encrypted</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -448,13 +464,14 @@
 					<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:81</li>
+							<li>Defined in redshift/cluster.ts:115</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The connection endpoint</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#endpoint">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#endpoint</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -463,13 +480,14 @@
 					<div class="tsd-signature tsd-kind-icon">enhanced<wbr>Vpc<wbr>Routing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:85</li>
+							<li>Defined in redshift/cluster.ts:121</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If true , enhanced VPC routing is enabled.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#enhanced_vpc_routing">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#enhanced_vpc_routing</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -478,13 +496,14 @@
 					<div class="tsd-signature tsd-kind-icon">final<wbr>Snapshot<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:89</li>
+							<li>Defined in redshift/cluster.ts:127</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, <code>skip_final_snapshot</code> must be false.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#final_snapshot_identifier">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#final_snapshot_identifier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -493,13 +512,14 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Roles<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:93</li>
+							<li>Defined in redshift/cluster.ts:133</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#iam_roles">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#iam_roles</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -525,28 +545,30 @@
 					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:97</li>
+							<li>Defined in redshift/cluster.ts:139</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN for the KMS encryption key. When specifying <code>kms_key_id</code>, <code>encrypted</code> needs to be set to true.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#kms_key_id">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#kms_key_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="logging" class="tsd-anchor"></a>
 					<h3>logging</h3>
-					<div class="tsd-signature tsd-kind-icon">logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:101</li>
+							<li>Defined in redshift/cluster.ts:145</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Logging, documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#logging">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#logging</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -555,7 +577,7 @@
 					<div class="tsd-signature tsd-kind-icon">master<wbr>Password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:107</li>
+							<li>Defined in redshift/cluster.ts:153</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -564,6 +586,7 @@
 								Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 chars and
 							contain at least one uppercase letter, one lowercase letter, and one number.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#master_password">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#master_password</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -572,13 +595,14 @@
 					<div class="tsd-signature tsd-kind-icon">master<wbr>Username<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:111</li>
+							<li>Defined in redshift/cluster.ts:159</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Username for the master DB user.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#master_username">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#master_username</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -587,13 +611,14 @@
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:115</li>
+							<li>Defined in redshift/cluster.ts:165</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The node type to be provisioned for the cluster.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#node_type">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#node_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -602,13 +627,14 @@
 					<div class="tsd-signature tsd-kind-icon">number<wbr>OfNodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:119</li>
+							<li>Defined in redshift/cluster.ts:171</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#number_of_nodes">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#number_of_nodes</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -617,13 +643,14 @@
 					<div class="tsd-signature tsd-kind-icon">owner<wbr>Account<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:123</li>
+							<li>Defined in redshift/cluster.ts:177</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#owner_account">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#owner_account</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -632,7 +659,7 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:128</li>
+							<li>Defined in redshift/cluster.ts:184</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -640,6 +667,7 @@
 							<p>The port number on which the cluster accepts incoming connections.
 							The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#port">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#port</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -648,7 +676,7 @@
 					<div class="tsd-signature tsd-kind-icon">preferred<wbr>Maintenance<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:133</li>
+							<li>Defined in redshift/cluster.ts:191</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -656,6 +684,7 @@
 							<p>The weekly time range (in UTC) during which automated cluster maintenance can occur.
 							Format: ddd:hh24:mi-ddd:hh24:mi</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#preferred_maintenance_window">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#preferred_maintenance_window</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -664,13 +693,14 @@
 					<div class="tsd-signature tsd-kind-icon">publicly<wbr>Accessible<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:137</li>
+							<li>Defined in redshift/cluster.ts:197</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If true, the cluster can be accessed from a public network. Default is <code>true</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#publicly_accessible">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#publicly_accessible</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -679,13 +709,14 @@
 					<div class="tsd-signature tsd-kind-icon">s3<wbr>Key<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:141</li>
+							<li>Defined in redshift/cluster.ts:203</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The prefix applied to the log file names.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#s3_key_prefix">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#s3_key_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -694,13 +725,14 @@
 					<div class="tsd-signature tsd-kind-icon">skip<wbr>Final<wbr>Snapshot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:145</li>
+							<li>Defined in redshift/cluster.ts:209</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#skip_final_snapshot">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#skip_final_snapshot</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -709,28 +741,30 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Cluster<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:149</li>
+							<li>Defined in redshift/cluster.ts:215</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the cluster the source snapshot was created from.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#snapshot_cluster_identifier">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#snapshot_cluster_identifier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="snapshotcopy" class="tsd-anchor"></a>
 					<h3>snapshot<wbr>Copy</h3>
-					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Copy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Copy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:153</li>
+							<li>Defined in redshift/cluster.ts:221</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Configuration of automatic copy of snapshots from one region to another. Documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#snapshot_copy">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#snapshot_copy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -739,13 +773,14 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:157</li>
+							<li>Defined in redshift/cluster.ts:227</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the snapshot from which to create the new cluster.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#snapshot_identifier">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#snapshot_identifier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -754,13 +789,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:161</li>
+							<li>Defined in redshift/cluster.ts:233</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#tags">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -786,13 +822,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in redshift/cluster.ts:165</li>
+							<li>Defined in redshift/cluster.ts:239</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#vpc_security_group_ids">https://www.terraform.io/docs/providers/aws/r/redshift_cluster.html#vpc_security_group_ids</a>.</p>
 					</div>
 				</section>
 			</section>

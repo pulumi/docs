@@ -91,7 +91,14 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#acceptancerequired" class="tsd-kind-icon">acceptance<wbr>Required</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#availabilityzones" class="tsd-kind-icon">availability<wbr>Zones</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#baseendpointdnsnames" class="tsd-kind-icon">base<wbr>Endpoint<wbr>Dns<wbr>Names</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#owner" class="tsd-kind-icon">owner</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#privatednsname" class="tsd-kind-icon">private<wbr>Dns<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#servicename" class="tsd-kind-icon">service<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#servicetype" class="tsd-kind-icon">service<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#vpcendpointpolicysupported" class="tsd-kind-icon">vpc<wbr>Endpoint<wbr>Policy<wbr>Supported</a></li>
 							</ul>
 						</section>
 					</div>
@@ -100,18 +107,125 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="acceptancerequired" class="tsd-anchor"></a>
+					<h3>acceptance<wbr>Required</h3>
+					<div class="tsd-signature tsd-kind-icon">acceptance<wbr>Required<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/getVpcEndpointService.ts:47</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <code>true</code> or <code>false</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#acceptance_required">https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#acceptance_required</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="availabilityzones" class="tsd-anchor"></a>
+					<h3>availability<wbr>Zones</h3>
+					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zones<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/getVpcEndpointService.ts:53</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Availability Zones in which the service is available.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#availability_zones">https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#availability_zones</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="baseendpointdnsnames" class="tsd-anchor"></a>
+					<h3>base<wbr>Endpoint<wbr>Dns<wbr>Names</h3>
+					<div class="tsd-signature tsd-kind-icon">base<wbr>Endpoint<wbr>Dns<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/getVpcEndpointService.ts:59</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The DNS names for the service.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#base_endpoint_dns_names">https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#base_endpoint_dns_names</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="owner" class="tsd-anchor"></a>
+					<h3>owner</h3>
+					<div class="tsd-signature tsd-kind-icon">owner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/getVpcEndpointService.ts:65</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The AWS account ID of the service owner or <code>amazon</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#owner">https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#owner</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="privatednsname" class="tsd-anchor"></a>
+					<h3>private<wbr>Dns<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">private<wbr>Dns<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/getVpcEndpointService.ts:71</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The private DNS name for the service.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#private_dns_name">https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#private_dns_name</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="servicename" class="tsd-anchor"></a>
 					<h3>service<wbr>Name</h3>
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getVpcEndpointService.ts:34</li>
+							<li>Defined in ec2/getVpcEndpointService.ts:72</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="servicetype" class="tsd-anchor"></a>
+					<h3>service<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">service<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/getVpcEndpointService.ts:78</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The service name of the AWS service that can be specified when creating a VPC endpoint.</p>
+							<p>The service type, <code>Gateway</code> or <code>Interface</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#service_type">https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#service_type</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="vpcendpointpolicysupported" class="tsd-anchor"></a>
+					<h3>vpc<wbr>Endpoint<wbr>Policy<wbr>Supported</h3>
+					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Endpoint<wbr>Policy<wbr>Supported<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/getVpcEndpointService.ts:84</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether or not the service supports endpoint policies - <code>true</code> or <code>false</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#vpc_endpoint_policy_supported">https://www.terraform.io/docs/providers/aws/d/vpc_endpoint_service.html#vpc_endpoint_policy_supported</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -138,7 +252,28 @@
 						<a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html" class="tsd-kind-icon">Get<wbr>Vpc<wbr>Endpoint<wbr>Service<wbr>Result</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#acceptancerequired" class="tsd-kind-icon">acceptance<wbr>Required</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#availabilityzones" class="tsd-kind-icon">availability<wbr>Zones</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#baseendpointdnsnames" class="tsd-kind-icon">base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#owner" class="tsd-kind-icon">owner</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#privatednsname" class="tsd-kind-icon">private<wbr>Dns<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#servicename" class="tsd-kind-icon">service<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#servicetype" class="tsd-kind-icon">service<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_getvpcendpointservice_.getvpcendpointserviceresult.html#vpcendpointpolicysupported" class="tsd-kind-icon">vpc<wbr>Endpoint<wbr>Policy<wbr>Supported</a>
 							</li>
 						</ul>
 					</li>

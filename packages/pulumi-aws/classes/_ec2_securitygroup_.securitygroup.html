@@ -80,6 +80,7 @@
 						defined in-line. At this time you cannot use a Security Group with in-line rules
 						in conjunction with any Security Group Rule resources. Doing so will cause
 					a conflict of rule settings and will overwrite rules.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html">https://www.terraform.io/docs/providers/aws/r/security_group.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -137,7 +138,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/securityGroup.ts:62</li>
+									<li>Defined in ec2/securityGroup.ts:82</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -185,13 +186,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroup.ts:20</li>
+							<li>Defined in ec2/securityGroup.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Description of this egress rule.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html#description">https://www.terraform.io/docs/providers/aws/r/security_group.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -200,7 +202,7 @@
 					<div class="tsd-signature tsd-kind-icon">egress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroup.ts:25</li>
+							<li>Defined in ec2/securityGroup.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -208,6 +210,7 @@
 							<p>Can be specified multiple times for each
 							egress rule. Each egress block supports fields documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html#egress">https://www.terraform.io/docs/providers/aws/r/security_group.html#egress</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -233,7 +236,7 @@
 					<div class="tsd-signature tsd-kind-icon">ingress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroup.ts:30</li>
+							<li>Defined in ec2/securityGroup.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -241,6 +244,7 @@
 							<p>Can be specified multiple times for each
 							ingress rule. Each ingress block supports fields documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html#ingress">https://www.terraform.io/docs/providers/aws/r/security_group.html#ingress</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -249,7 +253,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroup.ts:35</li>
+							<li>Defined in ec2/securityGroup.ts:45</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -257,6 +261,7 @@
 							<p>The name of the security group. If omitted, Terraform will
 							assign a random, unique name</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html#name">https://www.terraform.io/docs/providers/aws/r/security_group.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -265,7 +270,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroup.ts:40</li>
+							<li>Defined in ec2/securityGroup.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -273,6 +278,7 @@
 							<p>Creates a unique name beginning with the specified
 							prefix. Conflicts with <code>name</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html#name_prefix">https://www.terraform.io/docs/providers/aws/r/security_group.html#name_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -281,13 +287,14 @@
 					<div class="tsd-signature tsd-kind-icon">owner<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroup.ts:44</li>
+							<li>Defined in ec2/securityGroup.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The owner ID.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html#owner_id">https://www.terraform.io/docs/providers/aws/r/security_group.html#owner_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -296,7 +303,7 @@
 					<div class="tsd-signature tsd-kind-icon">revoke<wbr>Rules<wbr>OnDelete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroup.ts:54</li>
+							<li>Defined in ec2/securityGroup.ts:70</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -309,6 +316,7 @@
 								the security groups from being destroyed without removing the dependency first.
 							Default <code>false</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html#revoke_rules_on_delete">https://www.terraform.io/docs/providers/aws/r/security_group.html#revoke_rules_on_delete</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -317,13 +325,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroup.ts:58</li>
+							<li>Defined in ec2/securityGroup.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html#tags">https://www.terraform.io/docs/providers/aws/r/security_group.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -349,13 +358,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroup.ts:62</li>
+							<li>Defined in ec2/securityGroup.ts:82</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The VPC ID.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html#vpc_id">https://www.terraform.io/docs/providers/aws/r/security_group.html#vpc_id</a>.</p>
 					</div>
 				</section>
 			</section>

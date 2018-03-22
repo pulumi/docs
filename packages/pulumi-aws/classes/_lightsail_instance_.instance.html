@@ -77,6 +77,7 @@
 						for more information.</p>
 					</div>
 					<p>~&gt; <strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">&quot;Regions and Availability Zones in Amazon Lightsail&quot;</a> for more details</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html">https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -140,7 +141,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in lightsail/instance.ts:57</li>
+									<li>Defined in lightsail/instance.ts:73</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -188,7 +189,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:22</li>
+							<li>Defined in lightsail/instance.ts:26</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -202,6 +203,7 @@
 								<li><code>user_data</code></li>
 							</ul>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#arn">https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -210,7 +212,7 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:27</li>
+							<li>Defined in lightsail/instance.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -218,6 +220,7 @@
 							<p>The Availability Zone in which to create your
 							instance. At this time, must be in <code>us-east-1</code>, <code>us-east-2</code>, <code>us-west-2</code>, <code>eu-west-1</code>, <code>eu-west-2</code>, <code>eu-central-1</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-northeast-1</code>, <code>ap-south-1</code> regions</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#availability_zone">https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -226,7 +229,7 @@
 					<div class="tsd-signature tsd-kind-icon">blueprint<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:32</li>
+							<li>Defined in lightsail/instance.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -234,6 +237,7 @@
 							<p>The ID for a virtual private server image
 							(see list below)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#blueprint_id">https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#blueprint_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -242,13 +246,14 @@
 					<div class="tsd-signature tsd-kind-icon">bundle<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:36</li>
+							<li>Defined in lightsail/instance.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The bundle of specification information (see list below)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#bundle_id">https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#bundle_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -257,7 +262,7 @@
 					<div class="tsd-signature tsd-kind-icon">cpu<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:37</li>
+							<li>Defined in lightsail/instance.ts:47</li>
 						</ul>
 					</aside>
 				</section>
@@ -267,7 +272,7 @@
 					<div class="tsd-signature tsd-kind-icon">created<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:38</li>
+							<li>Defined in lightsail/instance.ts:48</li>
 						</ul>
 					</aside>
 				</section>
@@ -294,7 +299,7 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:39</li>
+							<li>Defined in lightsail/instance.ts:49</li>
 						</ul>
 					</aside>
 				</section>
@@ -304,7 +309,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Static<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:40</li>
+							<li>Defined in lightsail/instance.ts:50</li>
 						</ul>
 					</aside>
 				</section>
@@ -314,7 +319,7 @@
 					<div class="tsd-signature tsd-kind-icon">key<wbr>Pair<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:45</li>
+							<li>Defined in lightsail/instance.ts:57</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -322,6 +327,7 @@
 							<p>The name of your key pair. Created in the
 							Lightsail console (cannot use <code>aws_key_pair</code> at this time)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#key_pair_name">https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#key_pair_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -330,13 +336,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:49</li>
+							<li>Defined in lightsail/instance.ts:63</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the Lightsail Instance</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#name">https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -345,7 +352,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>IpAddress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:50</li>
+							<li>Defined in lightsail/instance.ts:64</li>
 						</ul>
 					</aside>
 				</section>
@@ -355,7 +362,7 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>IpAddress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:51</li>
+							<li>Defined in lightsail/instance.ts:65</li>
 						</ul>
 					</aside>
 				</section>
@@ -365,7 +372,7 @@
 					<div class="tsd-signature tsd-kind-icon">ram<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:52</li>
+							<li>Defined in lightsail/instance.ts:66</li>
 						</ul>
 					</aside>
 				</section>
@@ -392,13 +399,14 @@
 					<div class="tsd-signature tsd-kind-icon">user<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:56</li>
+							<li>Defined in lightsail/instance.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>launch script to configure server with additional user data</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#user_data">https://www.terraform.io/docs/providers/aws/r/lightsail_instance.html#user_data</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -407,7 +415,7 @@
 					<div class="tsd-signature tsd-kind-icon">username<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/instance.ts:57</li>
+							<li>Defined in lightsail/instance.ts:73</li>
 						</ul>
 					</aside>
 				</section>

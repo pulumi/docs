@@ -97,6 +97,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticsearch_domain_.domainargs.html#domainname" class="tsd-kind-icon">domain<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticsearch_domain_.domainargs.html#ebsoptions" class="tsd-kind-icon">ebs<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticsearch_domain_.domainargs.html#elasticsearchversion" class="tsd-kind-icon">elasticsearch<wbr>Version</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticsearch_domain_.domainargs.html#encryptatrest" class="tsd-kind-icon">encrypt<wbr>AtRest</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticsearch_domain_.domainargs.html#logpublishingoptions" class="tsd-kind-icon">log<wbr>Publishing<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticsearch_domain_.domainargs.html#snapshotoptions" class="tsd-kind-icon">snapshot<wbr>Options</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticsearch_domain_.domainargs.html#tags" class="tsd-kind-icon">tags</a></li>
@@ -114,13 +115,14 @@
 					<div class="tsd-signature tsd-kind-icon">access<wbr>Policies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticsearch/domain.ts:101</li>
+							<li>Defined in elasticsearch/domain.ts:138</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>IAM policy document specifying the access policies for the domain</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#access_policies">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#access_policies</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -129,28 +131,30 @@
 					<div class="tsd-signature tsd-kind-icon">advanced<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticsearch/domain.ts:105</li>
+							<li>Defined in elasticsearch/domain.ts:144</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Key-value string pairs to specify advanced configuration options.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#advanced_options">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#advanced_options</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="clusterconfig" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cluster<wbr>Config</h3>
-					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticsearch/domain.ts:109</li>
+							<li>Defined in elasticsearch/domain.ts:150</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Cluster configuration of the domain, see below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#cluster_config">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#cluster_config</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -159,28 +163,30 @@
 					<div class="tsd-signature tsd-kind-icon">domain<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticsearch/domain.ts:113</li>
+							<li>Defined in elasticsearch/domain.ts:156</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of the domain.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#domain_name">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#domain_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="ebsoptions" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ebs<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticsearch/domain.ts:117</li>
+							<li>Defined in elasticsearch/domain.ts:162</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>EBS related options, may be required based on chosen <a href="https://aws.amazon.com/elasticsearch-service/pricing/">instance size</a>. See below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#ebs_options">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#ebs_options</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -189,13 +195,30 @@
 					<div class="tsd-signature tsd-kind-icon">elasticsearch<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticsearch/domain.ts:121</li>
+							<li>Defined in elasticsearch/domain.ts:168</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The version of ElasticSearch to deploy. Defaults to <code>1.5</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#elasticsearch_version">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#elasticsearch_version</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="encryptatrest" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> encrypt<wbr>AtRest</h3>
+					<div class="tsd-signature tsd-kind-icon">encrypt<wbr>AtRest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in elasticsearch/domain.ts:174</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Encrypt at rest options. Only available for <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html">certain instance types</a>. See below.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#encrypt_at_rest">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#encrypt_at_rest</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -204,28 +227,30 @@
 					<div class="tsd-signature tsd-kind-icon">log<wbr>Publishing<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticsearch/domain.ts:125</li>
+							<li>Defined in elasticsearch/domain.ts:180</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Options for publishing slow logs to CloudWatch Logs.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#log_publishing_options">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#log_publishing_options</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="snapshotoptions" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> snapshot<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticsearch/domain.ts:129</li>
+							<li>Defined in elasticsearch/domain.ts:186</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Snapshot related options, see below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#snapshot_options">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#snapshot_options</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -234,28 +259,30 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticsearch/domain.ts:133</li>
+							<li>Defined in elasticsearch/domain.ts:192</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#tags">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="vpcoptions" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> vpc<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticsearch/domain.ts:137</li>
+							<li>Defined in elasticsearch/domain.ts:198</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>VPC related options, see below. Adding or removing this configuration forces a new resource (<a href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations">documentation</a>).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#vpc_options">https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain.html#vpc_options</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -298,6 +325,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_elasticsearch_domain_.domainargs.html#elasticsearchversion" class="tsd-kind-icon">elasticsearch<wbr>Version</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_elasticsearch_domain_.domainargs.html#encryptatrest" class="tsd-kind-icon">encrypt<wbr>AtRest</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_elasticsearch_domain_.domainargs.html#logpublishingoptions" class="tsd-kind-icon">log<wbr>Publishing<wbr>Options</a>

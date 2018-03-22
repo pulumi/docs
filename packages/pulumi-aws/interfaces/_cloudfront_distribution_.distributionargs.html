@@ -92,16 +92,16 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#aliases" class="tsd-kind-icon">aliases</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#cachebehavior" class="tsd-kind-icon">cache<wbr>Behavior</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#cachebehaviors" class="tsd-kind-icon">cache<wbr>Behaviors</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#comment" class="tsd-kind-icon">comment</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#customerrorresponse" class="tsd-kind-icon">custom<wbr>Error<wbr>Response</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#customerrorresponses" class="tsd-kind-icon">custom<wbr>Error<wbr>Responses</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#defaultcachebehavior" class="tsd-kind-icon">default<wbr>Cache<wbr>Behavior</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#defaultrootobject" class="tsd-kind-icon">default<wbr>Root<wbr>Object</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#enabled" class="tsd-kind-icon">enabled</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#httpversion" class="tsd-kind-icon">http<wbr>Version</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#isipv6enabled" class="tsd-kind-icon">is<wbr>Ipv6<wbr>Enabled</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#loggingconfig" class="tsd-kind-icon">logging<wbr>Config</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#origin" class="tsd-kind-icon">origin</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#origins" class="tsd-kind-icon">origins</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#priceclass" class="tsd-kind-icon">price<wbr>Class</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#restrictions" class="tsd-kind-icon">restrictions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_cloudfront_distribution_.distributionargs.html#retainondelete" class="tsd-kind-icon">retain<wbr>OnDelete</a></li>
@@ -121,7 +121,7 @@
 					<div class="tsd-signature tsd-kind-icon">aliases<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:213</li>
+							<li>Defined in cloudfront/distribution.ts:272</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -129,15 +129,16 @@
 							<p>Extra CNAMEs (alternate domain names), if any, for
 							this distribution.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#aliases">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#aliases</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="cachebehavior" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cache<wbr>Behavior</h3>
-					<div class="tsd-signature tsd-kind-icon">cache<wbr>Behavior<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="cachebehaviors" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> cache<wbr>Behaviors</h3>
+					<div class="tsd-signature tsd-kind-icon">cache<wbr>Behaviors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:218</li>
+							<li>Defined in cloudfront/distribution.ts:279</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -145,6 +146,7 @@
 							<p>A <a href="#cache-behavior-arguments">cache behavior</a>
 							resource for this distribution (multiples allowed).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#cache_behavior">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#cache_behavior</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -153,7 +155,7 @@
 					<div class="tsd-signature tsd-kind-icon">comment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:223</li>
+							<li>Defined in cloudfront/distribution.ts:286</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -161,30 +163,32 @@
 							<p>Any comments you want to include about the
 							distribution.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#comment">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#comment</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="customerrorresponse" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> custom<wbr>Error<wbr>Response</h3>
-					<div class="tsd-signature tsd-kind-icon">custom<wbr>Error<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="customerrorresponses" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> custom<wbr>Error<wbr>Responses</h3>
+					<div class="tsd-signature tsd-kind-icon">custom<wbr>Error<wbr>Responses<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:227</li>
+							<li>Defined in cloudfront/distribution.ts:292</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>One or more <a href="#custom-error-response-arguments">custom error response</a> elements (multiples allowed).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#custom_error_response">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#custom_error_response</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="defaultcachebehavior" class="tsd-anchor"></a>
 					<h3>default<wbr>Cache<wbr>Behavior</h3>
-					<div class="tsd-signature tsd-kind-icon">default<wbr>Cache<wbr>Behavior<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Cache<wbr>Behavior<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:232</li>
+							<li>Defined in cloudfront/distribution.ts:299</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -192,6 +196,7 @@
 							<p>The <a href="#default-cache-behavior-arguments">default cache behavior</a> for this distribution (maximum
 							one).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#default_cache_behavior">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#default_cache_behavior</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -200,7 +205,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Root<wbr>Object<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:237</li>
+							<li>Defined in cloudfront/distribution.ts:306</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -208,6 +213,7 @@
 							<p>The object that you want CloudFront to
 							return (for example, index.html) when an end user requests the root URL.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#default_root_object">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#default_root_object</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -216,7 +222,7 @@
 					<div class="tsd-signature tsd-kind-icon">enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:242</li>
+							<li>Defined in cloudfront/distribution.ts:313</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -224,6 +230,7 @@
 							<p>Whether the distribution is enabled to accept end
 							user requests for content.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#enabled">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#enabled</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -232,7 +239,7 @@
 					<div class="tsd-signature tsd-kind-icon">http<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:248</li>
+							<li>Defined in cloudfront/distribution.ts:321</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -241,6 +248,7 @@
 								distribution. Allowed values are <code>http1.1</code> and <code>http2</code>. The default is
 							<code>http2</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#http_version">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#http_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -249,22 +257,23 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Ipv6<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:252</li>
+							<li>Defined in cloudfront/distribution.ts:327</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether the IPv6 is enabled for the distribution.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#is_ipv6_enabled">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#is_ipv6_enabled</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="loggingconfig" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> logging<wbr>Config</h3>
-					<div class="tsd-signature tsd-kind-icon">logging<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">logging<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:258</li>
+							<li>Defined in cloudfront/distribution.ts:335</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -273,15 +282,16 @@
 								configuration</a> that controls how logs are written
 							to your distribution (maximum one).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#logging_config">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#logging_config</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="origin" class="tsd-anchor"></a>
-					<h3>origin</h3>
-					<div class="tsd-signature tsd-kind-icon">origin<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="origins" class="tsd-anchor"></a>
+					<h3>origins</h3>
+					<div class="tsd-signature tsd-kind-icon">origins<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:263</li>
+							<li>Defined in cloudfront/distribution.ts:342</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -289,6 +299,7 @@
 							<p>One or more <a href="#origin-arguments">origins</a> for this
 							distribution (multiples allowed).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#origin">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#origin</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -297,7 +308,7 @@
 					<div class="tsd-signature tsd-kind-icon">price<wbr>Class<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:268</li>
+							<li>Defined in cloudfront/distribution.ts:349</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -305,15 +316,16 @@
 							<p>The price class for this distribution. One of
 							<code>PriceClass_All</code>, <code>PriceClass_200</code>, <code>PriceClass_100</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#price_class">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#price_class</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="restrictions" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> restrictions</h3>
-					<div class="tsd-signature tsd-kind-icon">restrictions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<h3>restrictions</h3>
+					<div class="tsd-signature tsd-kind-icon">restrictions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:273</li>
+							<li>Defined in cloudfront/distribution.ts:356</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -321,6 +333,7 @@
 							<p>The <a href="#restrictions-arguments">restriction
 							configuration</a> for this distribution (maximum one).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#restrictions">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#restrictions</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -329,7 +342,7 @@
 					<div class="tsd-signature tsd-kind-icon">retain<wbr>OnDelete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:279</li>
+							<li>Defined in cloudfront/distribution.ts:364</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -338,6 +351,7 @@
 								deleting it when destroying the resource through Terraform. If this is set,
 							the distribution needs to be deleted manually afterwards. Default: <code>false</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#retain_on_delete">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#retain_on_delete</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -346,22 +360,23 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:283</li>
+							<li>Defined in cloudfront/distribution.ts:370</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#tags">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="viewercertificate" class="tsd-anchor"></a>
 					<h3>viewer<wbr>Certificate</h3>
-					<div class="tsd-signature tsd-kind-icon">viewer<wbr>Certificate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">viewer<wbr>Certificate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:289</li>
+							<li>Defined in cloudfront/distribution.ts:378</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -370,6 +385,7 @@
 								configuration</a> for this distribution (maximum
 							one).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#viewer_certificate">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#viewer_certificate</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -378,7 +394,7 @@
 					<div class="tsd-signature tsd-kind-icon">web<wbr>Acl<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:295</li>
+							<li>Defined in cloudfront/distribution.ts:386</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -387,6 +403,7 @@
 								requests, the Id of the AWS WAF web ACL that is associated with the
 							distribution.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#web_acl_id">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#web_acl_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -416,13 +433,13 @@
 								<a href="_cloudfront_distribution_.distributionargs.html#aliases" class="tsd-kind-icon">aliases</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_cloudfront_distribution_.distributionargs.html#cachebehavior" class="tsd-kind-icon">cache<wbr>Behavior</a>
+								<a href="_cloudfront_distribution_.distributionargs.html#cachebehaviors" class="tsd-kind-icon">cache<wbr>Behaviors</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_cloudfront_distribution_.distributionargs.html#comment" class="tsd-kind-icon">comment</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_cloudfront_distribution_.distributionargs.html#customerrorresponse" class="tsd-kind-icon">custom<wbr>Error<wbr>Response</a>
+								<a href="_cloudfront_distribution_.distributionargs.html#customerrorresponses" class="tsd-kind-icon">custom<wbr>Error<wbr>Responses</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_cloudfront_distribution_.distributionargs.html#defaultcachebehavior" class="tsd-kind-icon">default<wbr>Cache<wbr>Behavior</a>
@@ -443,7 +460,7 @@
 								<a href="_cloudfront_distribution_.distributionargs.html#loggingconfig" class="tsd-kind-icon">logging<wbr>Config</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_cloudfront_distribution_.distributionargs.html#origin" class="tsd-kind-icon">origin</a>
+								<a href="_cloudfront_distribution_.distributionargs.html#origins" class="tsd-kind-icon">origins</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_cloudfront_distribution_.distributionargs.html#priceclass" class="tsd-kind-icon">price<wbr>Class</a>

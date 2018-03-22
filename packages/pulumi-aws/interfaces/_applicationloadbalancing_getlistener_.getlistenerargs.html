@@ -92,6 +92,8 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getlistener_.getlistenerargs.html#arn" class="tsd-kind-icon">arn</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getlistener_.getlistenerargs.html#loadbalancerarn" class="tsd-kind-icon">load<wbr>Balancer<wbr>Arn</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getlistener_.getlistenerargs.html#port" class="tsd-kind-icon">port</a></li>
 							</ul>
 						</section>
 					</div>
@@ -101,17 +103,50 @@
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="arn" class="tsd-anchor"></a>
-					<h3>arn</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> arn</h3>
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getListener.ts:28</li>
+							<li>Defined in applicationloadbalancing/getListener.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The ARN of the listener.</p>
+							<p>The arn of the listener. Required if <code>load_balancer_arn</code> and <code>port</code> is not set.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/alb_listener.html#arn">https://www.terraform.io/docs/providers/aws/d/alb_listener.html#arn</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="loadbalancerarn" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> load<wbr>Balancer<wbr>Arn</h3>
+					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/getListener.ts:41</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The arn of the load balander. Required if <code>arn</code> is not set.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/alb_listener.html#load_balancer_arn">https://www.terraform.io/docs/providers/aws/d/alb_listener.html#load_balancer_arn</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="port" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> port</h3>
+					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in applicationloadbalancing/getListener.ts:47</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The port of the listener. Required if <code>arn</code> is not set.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/alb_listener.html#port">https://www.terraform.io/docs/providers/aws/d/alb_listener.html#port</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -136,6 +171,12 @@
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_applicationloadbalancing_getlistener_.getlistenerargs.html#arn" class="tsd-kind-icon">arn</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_applicationloadbalancing_getlistener_.getlistenerargs.html#loadbalancerarn" class="tsd-kind-icon">load<wbr>Balancer<wbr>Arn</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_applicationloadbalancing_getlistener_.getlistenerargs.html#port" class="tsd-kind-icon">port</a>
 							</li>
 						</ul>
 					</li>

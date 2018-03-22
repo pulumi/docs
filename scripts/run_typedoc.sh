@@ -16,22 +16,21 @@ PULUMI_CLOUD_DOCS=`mktemp -d`
 
 TYPEDOC_OPTS="--mode modules --readme none --gitRevision master --excludePrivate"
 
-# pulumi-aws
-echo -e "\033[0;95mrunning typedoc on pulumi-aws\033[0m"
-pushd .
-cd ../pulumi-aws/pack
-typedoc . $TYPEDOC_OPTS --out $PULUMI_AWS_DOCS
-popd
-
-# pulumi-fabric
+# pulumi
 echo -e "\033[0;95mrunning typedoc on pulumi\033[0m"
 pushd .
 cd ../pulumi/sdk/nodejs
 typedoc . $TYPEDOC_OPTS --out $PULUMI_DOCS
 popd
 
+# pulumi-aws
+echo -e "\033[0;95mrunning typedoc on pulumi-aws\033[0m"
+pushd .
+cd ../pulumi-aws/pack/nodejs
+typedoc . $TYPEDOC_OPTS --out $PULUMI_AWS_DOCS
+popd
 
-# pulumi-framework
+# pulumi-cloud
 echo -e "\033[0;95mrunning typedoc on pulumi-cloud\033[0m"
 pushd .
 cd ../pulumi-cloud/api

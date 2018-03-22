@@ -1,28 +1,19 @@
 ---
-title: "Installation and setup"
-installer_version: "0.10.0"
+title: "Installation and Setup"
+installer_version: "0.11.0"
 ---
 
 <!-- 
 NOTE: To update this page with a new binary release, do the following:
 - Update `installer_version` in the YAML front matter above. 
-- Update release-notes.md with the latest fixes in the release
+- Update changelog.md with the latest fixes in the release
 -->
 
-Follow these instructions to install the Pulumi SDK on your development or build machine.
-
-The latest version of the Pulumi SDK is **{{ page.installer_version }}**. See the [change log](./changelog.html) to learn what's new.
-
-## Download the SDK
-
-### Featured downloads
-
-The current version of Pulumi's SDK is **{{ page.installer_version }}** and is
-available for these systems:
+## Pulumi SDK 
 
 <div class="little-jumbotron">
     <div class="container">
-        <h4 class="f4 title">Pulumi Cloud SDK</h4>
+        <h4 class="f4 title">Version {{ page.installer_version }}</h4>
         <p>
             <a
                     id="macos-download-link"
@@ -46,128 +37,73 @@ available for these systems:
                 {% octicon cloud-download height:24 %} Linux x64
             </a>
         </p>
+        <p>For all available SDKs, see <a href="./changelog.html#all-versions">Previous SDK Versions</a></p>
     </div>
 </div>
 
-### All available versions
+## Installation instructions
 
-We provide pre-built binaries for x64 architectures on the following OS versions:
--  macOS: Sierra or later
--  Windows: 8 and 10
--  Linux: Ubuntu Trusty 14.04 LTS
+- [macOS](#mac)
+- [Windows](#windows)
+- [Linux](#linux)
 
-<table class="table table-sm table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Version</th>
-      <th scope="col">Date</th>
-      <th scope="col">Downloads</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"><a href="./changelog.html#v10">0.10.0</a></th>
-      <td>2018/02/27</td>
-      <td>{% include sdk-links.html version='0.10.0' %}</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="./changelog.html#v913">0.9.13</a></th>
-      <td>2018/02/07</td>
-      <td>{% include sdk-links.html version='0.9.13' %}</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="./changelog.html#v911">0.9.11</a></th>
-      <td>2018/01/22</td>
-      <td>{% include sdk-links.html version='0.9.11' %}</td>
-    </tr>
-  </tbody>
-</table>
+### macOS install {#mac}
 
-## Installation and setup
+macOS Siera (10.12) or later is required. 
 
-### Prerequisites
+1.  Install [Node.js 6.10.2 (LTS)](https://nodejs.org/dist/v6.10.2/node-v6.10.2.pkg). This exact version is required, to match the version supported by AWS Lambda and other public cloud implementations. You can use [Node Version Manager (nvm)](https://github.com/creationix/nvm) to manage multiple Node versions.
 
-Before installing and using Pulumi's SDK, you'll need Node.js and an NPM package management client.
+2.  Download [Pulumi {{page.installer_version}} for macOS](/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz).
 
-#### Node.js 6.10.2 (LTS)
+3.  Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
 
-First, install Node.js 6.10.2 (LTS).  This can be done by downloading and installing a package from the
-[Node.js release page](https://nodejs.org/download/release/v6.10.2/), or by using the [Node Version Manager (nvm)](
-https://github.com/creationix/nvm).  Links are included below for convenience.
+    ```bash
+    $ tar -xzf pulumi-v{{page.installer_version}}-darwin.x64.tar.gz
+    $ ./pulumi/install.sh 
+    ```
 
-<div class="little-jumbotron">
-    <div class="container">
-        <h4 class="f4 title">Node.js 6.10.2 (LTS)</h4>
-        <p>
-            <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
-                    style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="https://nodejs.org/dist/v6.10.2/node-v6.10.2.pkg" role="button">
-                {% octicon cloud-download height:24 %} macOS x64
-            </a>
-            <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
-                    style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="https://nodejs.org/dist/v6.10.2/node-v6.10.2-x64.msi" role="button">
-                {% octicon cloud-download height:24 %} Windows x64
-            </a>
-            <a class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
-                    style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="https://nodejs.org/dist/v6.10.2/node-v6.10.2-linux-x64.tar.gz" role="button">
-                {% octicon cloud-download height:24 %} Linux x64
-            </a>
-        </p>
-    </div>
-</div>
+4.  Add `/usr/local/pulumi/bin` to your path:
 
-**Please note**: Pulumi *requires* Node.js 6.10.2 (LTS).  This ensures the environment that you are using locally
-matches the version of the Node.js runtime used by AWS Lambda.  In the future, Pulumi intends to support additional
-Node.js versions.  
+    ```
+    echo "export PATH=\$PATH:/usr/local/pulumi/bin" >> ~/.profile
+    ```
 
-#### NPM or Yarn
+### Windows install {#windows}
 
-Next, install an NPM client.  Either NPM itself or Yarn are fine choices, and you only need one:
+Windows 8 and 10 are supported.
 
-* NPM comes with Node.js, so if this is your client of choice, you're done!  If you need to update or check your
-  installation, please follow the [instructions](https://docs.npmjs.com/getting-started/installing-node) to do so.
+1.  Install [Node.js 6.10.2 (LTS)](https://nodejs.org/dist/v6.10.2/node-v6.10.2-x64.msi). This exact version is required, to match the version supported by AWS Lambda and other public cloud implementations. You can use [Node Version Manager (nvm)](https://github.com/creationix/nvm) to manage multiple Node versions.
 
-* To install Yarn, a slightly faster client thanks to improved caching, follow the [installation instructions](
-  https://yarnpkg.com/lang/en/docs/install/) and run `yarn --version` afterwards to ensure that it worked.
+2.  Download [Pulumi {{page.installer_version}} for Windows x64](/releases/pulumi-v{{page.installer_version}}-windows.x64.zip).
 
-### Install the Pulumi tools
+3.  Extract the zipfile to `%SystemRoot%\Program Files` or another directory and run `install.cmd` from either the command prompt or PowerShell.
 
-First download the Pulumi SDK release for your operating system per the above instructions.
+4. Add `%SystemRoot%\Program Files\Pulumi` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 
-Now run the installer, the process depends on if you are on macOS/Linux vs Windows:
+### Linux install {#linux}
 
-* On macOS and Linux, extract the `pulumi-v{{page.installer_version}}-darwin.x64.tar.gz` or `pulumi-v{{page.installer_version}}-linux.x64.tar.gz` tarball to any
-  directory, then run the `install.sh` script inside the pulumi folder that was extracted.
+We provide a pre-built binary for Ubuntu Trusty 14.04 LTS.
 
-On macOS run:
-```bash
-$ tar -xzf pulumi-v{{page.installer_version}}-darwin.x64.tar.gz
-$ ./pulumi/install.sh
-```
+1.  Install [Node.js 6.10.2 (LTS)](https://nodejs.org/dist/v6.10.2/node-v6.10.2-linux-x64.tar.gz). This exact version is required, to match the version supported by AWS Lambda and other public cloud implementations. You can use [Node Version Manager (nvm)](https://github.com/creationix/nvm) to manage multiple Node versions.
 
-On Linux run:
-```bash
-$ tar -xzf pulumi-v{{page.installer_version}}-linux.x64.tar.gz
-$ ./pulumi/install.sh
-```
+2.  Download [Pulumi {{page.installer_version}} for Linux x64](/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz).
 
-This script will install Pulumi into `/usr/local/pulumi`. Depending on your system, the process may ask for your password
-so it can create a subfolder of `/usr/local` and so it can run `npm link`. The script will tell you if this is going to
-happen.  After the installer has run, you may delete the `pulumi` folder that was created by untaring the tarball.
+3.  Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
 
-* On Windows, extract `pulumi-v{{page.installer_version}}-windows.x64.zip` to the installation target and run  `install.cmd` from either a
-  CMD or PowerShell shell.  We recommend `%SystemRoot%\Program Files`.
+    ```bash
+    $ tar -xzf pulumi-v{{page.installer_version}}-linux.x64.tar.gz
+    $ ./pulumi/install.sh
+    ```
 
-Afterwards, you'll need to add the installation's `bin` directory to you `PATH`.  This makes running `pulumi` CLI easy
-and also ensures that dynamically loaded language and resource providers can be found:
+4.  Add `/usr/local/pulumi/bin` to your path:
 
-* On macOS and Linux, add a line to your profile: `echo "export PATH=\$PATH:/usr/local/pulumi/bin" >> ~/.profile`.
-* On Windows, add `%SystemRoot%\Program Files\Pulumi` to your `PATH` environment variable underneath system settings.
+    ```
+    echo "export PATH=\$PATH:/usr/local/pulumi/bin" >> ~/.profile
+    ```
 
-After doing this, the `pulumi` CLI will be available for creating, configuring, and deploying applications.  To verify
-you have the tools installed and available on your `PATH`, try running `pulumi version`.  You should see:
+## Verify the install
+
+After installing Pulumi, verify the tool is on your path: 
 
 ```bash
 $ pulumi version
@@ -176,5 +112,7 @@ v{{page.installer_version}}
 
 ## Configure provider credentials
 
-Next, configure the AWS CLI and set up your credentials. See [Configuring Pulumi for AWS](./aws-config.html).
-
+Configure the credentials for your cloud provider of choice:
+-   [Configure Pulumi for AWS](./aws-config.html)
+-   Configure Pulumi for Azure
+-   Configure Pulumi for Kubernetes

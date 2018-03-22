@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides an Elastic Transcoder preset resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html">https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -133,7 +134,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elastictranscoder/preset.ts:45</li>
+									<li>Defined in elastictranscoder/preset.ts:63</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -181,29 +182,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elastictranscoder/preset.ts:10</li>
+							<li>Defined in elastictranscoder/preset.ts:12</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="audio" class="tsd-anchor"></a>
 					<h3>audio</h3>
-					<div class="tsd-signature tsd-kind-icon">audio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in elastictranscoder/preset.ts:14</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Audio parameters object (documented below).</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="audiocodecoptions" class="tsd-anchor"></a>
-					<h3>audio<wbr>Codec<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">audio<wbr>Codec<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">audio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in elastictranscoder/preset.ts:18</li>
@@ -211,8 +197,25 @@
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
+							<p>Audio parameters object (documented below).</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#audio">https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#audio</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="audiocodecoptions" class="tsd-anchor"></a>
+					<h3>audio<wbr>Codec<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">audio<wbr>Codec<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in elastictranscoder/preset.ts:24</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
 							<p>Codec options for the audio parameters (documented below)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#audio_codec_options">https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#audio_codec_options</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -221,13 +224,14 @@
 					<div class="tsd-signature tsd-kind-icon">container<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elastictranscoder/preset.ts:22</li>
+							<li>Defined in elastictranscoder/preset.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The container type for the output file. Valid values are <code>flac</code>, <code>flv</code>, <code>fmp4</code>, <code>gif</code>, <code>mp3</code>, <code>mp4</code>, <code>mpg</code>, <code>mxf</code>, <code>oga</code>, <code>ogg</code>, <code>ts</code>, and <code>webm</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#container">https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#container</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -236,13 +240,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elastictranscoder/preset.ts:26</li>
+							<li>Defined in elastictranscoder/preset.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A description of the preset (maximum 255 characters)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#description">https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -268,28 +273,30 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elastictranscoder/preset.ts:30</li>
+							<li>Defined in elastictranscoder/preset.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the preset. (maximum 40 characters)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#name">https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="thumbnails" class="tsd-anchor"></a>
 					<h3>thumbnails</h3>
-					<div class="tsd-signature tsd-kind-icon">thumbnails<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">thumbnails<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elastictranscoder/preset.ts:34</li>
+							<li>Defined in elastictranscoder/preset.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Thumbnail parameters object (documented below)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#thumbnails">https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#thumbnails</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -298,7 +305,7 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elastictranscoder/preset.ts:35</li>
+							<li>Defined in elastictranscoder/preset.ts:49</li>
 						</ul>
 					</aside>
 				</section>
@@ -322,16 +329,17 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="video" class="tsd-anchor"></a>
 					<h3>video</h3>
-					<div class="tsd-signature tsd-kind-icon">video<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">video<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elastictranscoder/preset.ts:39</li>
+							<li>Defined in elastictranscoder/preset.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Video parameters object (documented below)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#video">https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#video</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -340,7 +348,7 @@
 					<div class="tsd-signature tsd-kind-icon">video<wbr>Codec<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elastictranscoder/preset.ts:40</li>
+							<li>Defined in elastictranscoder/preset.ts:56</li>
 						</ul>
 					</aside>
 				</section>
@@ -350,7 +358,7 @@
 					<div class="tsd-signature tsd-kind-icon">video<wbr>Watermarks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elastictranscoder/preset.ts:45</li>
+							<li>Defined in elastictranscoder/preset.ts:63</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -360,6 +368,7 @@
 								<li><code>video_codec_options</code> (Optional, Forces new resource) Codec options for the video parameters</li>
 							</ul>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#video_watermarks">https://www.terraform.io/docs/providers/aws/r/elastictranscoder_preset.html#video_watermarks</a>.</p>
 					</div>
 				</section>
 			</section>

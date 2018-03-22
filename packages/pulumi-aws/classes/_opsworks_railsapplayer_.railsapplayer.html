@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides an OpsWorks Ruby on Rails application layer resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -116,7 +117,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_railsapplayer_.railsapplayer.html#customshutdownrecipes" class="tsd-kind-icon">custom<wbr>Shutdown<wbr>Recipes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_railsapplayer_.railsapplayer.html#customundeployrecipes" class="tsd-kind-icon">custom<wbr>Undeploy<wbr>Recipes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_railsapplayer_.railsapplayer.html#drainelbonshutdown" class="tsd-kind-icon">drain<wbr>Elb<wbr>OnShutdown</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_railsapplayer_.railsapplayer.html#ebsvolume" class="tsd-kind-icon">ebs<wbr>Volume</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_railsapplayer_.railsapplayer.html#ebsvolumes" class="tsd-kind-icon">ebs<wbr>Volumes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_railsapplayer_.railsapplayer.html#elasticloadbalancer" class="tsd-kind-icon">elastic<wbr>Load<wbr>Balancer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_opsworks_railsapplayer_.railsapplayer.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_railsapplayer_.railsapplayer.html#installupdatesonboot" class="tsd-kind-icon">install<wbr>Updates<wbr>OnBoot</a></li>
@@ -148,7 +149,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in opsworks/railsAppLayer.ts:98</li>
+									<li>Defined in opsworks/railsAppLayer.ts:142</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -196,13 +197,14 @@
 					<div class="tsd-signature tsd-kind-icon">app<wbr>Server<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:13</li>
+							<li>Defined in opsworks/railsAppLayer.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Keyword for the app server to use. Defaults to &quot;apache_passenger&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#app_server">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#app_server</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -211,13 +213,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Assign<wbr>Elastic<wbr>Ips<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:17</li>
+							<li>Defined in opsworks/railsAppLayer.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to automatically assign an elastic IP address to the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#auto_assign_elastic_ips">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#auto_assign_elastic_ips</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -226,13 +229,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Assign<wbr>Public<wbr>Ips<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:21</li>
+							<li>Defined in opsworks/railsAppLayer.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#auto_assign_public_ips">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#auto_assign_public_ips</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -241,13 +245,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Healing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:25</li>
+							<li>Defined in opsworks/railsAppLayer.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to enable auto-healing for the layer.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#auto_healing">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#auto_healing</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -256,13 +261,14 @@
 					<div class="tsd-signature tsd-kind-icon">bundler<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:29</li>
+							<li>Defined in opsworks/railsAppLayer.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>When OpsWorks is managing Bundler, which version to use. Defaults to &quot;1.5.3&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#bundler_version">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#bundler_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -271,7 +277,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Configure<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:30</li>
+							<li>Defined in opsworks/railsAppLayer.ts:42</li>
 						</ul>
 					</aside>
 				</section>
@@ -281,7 +287,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Deploy<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:31</li>
+							<li>Defined in opsworks/railsAppLayer.ts:43</li>
 						</ul>
 					</aside>
 				</section>
@@ -291,13 +297,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Instance<wbr>Profile<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:35</li>
+							<li>Defined in opsworks/railsAppLayer.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of an IAM profile that will be used for the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#custom_instance_profile_arn">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#custom_instance_profile_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -306,13 +313,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:39</li>
+							<li>Defined in opsworks/railsAppLayer.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Custom JSON attributes to apply to the layer.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#custom_json">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#custom_json</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -321,13 +329,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:43</li>
+							<li>Defined in opsworks/railsAppLayer.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Ids for a set of security groups to apply to the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#custom_security_group_ids">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#custom_security_group_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -336,7 +345,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Setup<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:44</li>
+							<li>Defined in opsworks/railsAppLayer.ts:62</li>
 						</ul>
 					</aside>
 				</section>
@@ -346,7 +355,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Shutdown<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:45</li>
+							<li>Defined in opsworks/railsAppLayer.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -356,7 +365,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Undeploy<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:46</li>
+							<li>Defined in opsworks/railsAppLayer.ts:64</li>
 						</ul>
 					</aside>
 				</section>
@@ -366,28 +375,30 @@
 					<div class="tsd-signature tsd-kind-icon">drain<wbr>Elb<wbr>OnShutdown<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:50</li>
+							<li>Defined in opsworks/railsAppLayer.ts:70</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to enable Elastic Load Balancing connection draining.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#drain_elb_on_shutdown">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#drain_elb_on_shutdown</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ebsvolume" class="tsd-anchor"></a>
-					<h3>ebs<wbr>Volume</h3>
-					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Volume<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="ebsvolumes" class="tsd-anchor"></a>
+					<h3>ebs<wbr>Volumes</h3>
+					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Volumes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:54</li>
+							<li>Defined in opsworks/railsAppLayer.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p><code>ebs_volume</code> blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#ebs_volume">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#ebs_volume</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -396,13 +407,14 @@
 					<div class="tsd-signature tsd-kind-icon">elastic<wbr>Load<wbr>Balancer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:58</li>
+							<li>Defined in opsworks/railsAppLayer.ts:82</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of an Elastic Load Balancer to attach to this layer</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#elastic_load_balancer">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#elastic_load_balancer</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -428,13 +440,14 @@
 					<div class="tsd-signature tsd-kind-icon">install<wbr>Updates<wbr>OnBoot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:62</li>
+							<li>Defined in opsworks/railsAppLayer.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to install OS and package updates on each instance when it boots.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#install_updates_on_boot">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#install_updates_on_boot</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -443,13 +456,14 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Shutdown<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:66</li>
+							<li>Defined in opsworks/railsAppLayer.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#instance_shutdown_timeout">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#instance_shutdown_timeout</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -458,13 +472,14 @@
 					<div class="tsd-signature tsd-kind-icon">manage<wbr>Bundler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:70</li>
+							<li>Defined in opsworks/railsAppLayer.ts:100</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether OpsWorks should manage bundler. On by default.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#manage_bundler">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#manage_bundler</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -473,13 +488,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:74</li>
+							<li>Defined in opsworks/railsAppLayer.ts:106</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A human-readable name for the layer.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#name">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -488,13 +504,14 @@
 					<div class="tsd-signature tsd-kind-icon">passenger<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:78</li>
+							<li>Defined in opsworks/railsAppLayer.ts:112</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The version of Passenger to use. Defaults to &quot;4.0.46&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#passenger_version">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#passenger_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -503,13 +520,14 @@
 					<div class="tsd-signature tsd-kind-icon">ruby<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:82</li>
+							<li>Defined in opsworks/railsAppLayer.ts:118</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The version of Ruby to use. Defaults to &quot;2.0.0&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#ruby_version">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#ruby_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -518,13 +536,14 @@
 					<div class="tsd-signature tsd-kind-icon">rubygems<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:86</li>
+							<li>Defined in opsworks/railsAppLayer.ts:124</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The version of RubyGems to use. Defaults to &quot;2.2.2&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#rubygems_version">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#rubygems_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -533,13 +552,14 @@
 					<div class="tsd-signature tsd-kind-icon">stack<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:90</li>
+							<li>Defined in opsworks/railsAppLayer.ts:130</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The id of the stack the layer will belong to.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#stack_id">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#stack_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -548,13 +568,14 @@
 					<div class="tsd-signature tsd-kind-icon">system<wbr>Packages<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:94</li>
+							<li>Defined in opsworks/railsAppLayer.ts:136</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Names of a set of system packages to install on the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#system_packages">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#system_packages</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -580,13 +601,14 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Ebs<wbr>Optimized<wbr>Instances<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/railsAppLayer.ts:98</li>
+							<li>Defined in opsworks/railsAppLayer.ts:142</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to use EBS-optimized instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#use_ebs_optimized_instances">https://www.terraform.io/docs/providers/aws/r/opsworks_rails_app_layer.html#use_ebs_optimized_instances</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -655,7 +677,7 @@
 								<a href="_opsworks_railsapplayer_.railsapplayer.html#drainelbonshutdown" class="tsd-kind-icon">drain<wbr>Elb<wbr>OnShutdown</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_opsworks_railsapplayer_.railsapplayer.html#ebsvolume" class="tsd-kind-icon">ebs<wbr>Volume</a>
+								<a href="_opsworks_railsapplayer_.railsapplayer.html#ebsvolumes" class="tsd-kind-icon">ebs<wbr>Volumes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_opsworks_railsapplayer_.railsapplayer.html#elasticloadbalancer" class="tsd-kind-icon">elastic<wbr>Load<wbr>Balancer</a>

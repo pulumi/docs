@@ -91,7 +91,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ebs_getsnapshot_.getsnapshotargs.html#filter" class="tsd-kind-icon">filter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ebs_getsnapshot_.getsnapshotargs.html#filters" class="tsd-kind-icon">filters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ebs_getsnapshot_.getsnapshotargs.html#mostrecent" class="tsd-kind-icon">most<wbr>Recent</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ebs_getsnapshot_.getsnapshotargs.html#owners" class="tsd-kind-icon">owners</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ebs_getsnapshot_.getsnapshotargs.html#restorablebyuserids" class="tsd-kind-icon">restorable<wbr>ByUser<wbr>Ids</a></li>
@@ -105,12 +105,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="filter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filter</h3>
-					<div class="tsd-signature tsd-kind-icon">filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="filters" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filters</h3>
+					<div class="tsd-signature tsd-kind-icon">filters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getSnapshot.ts:30</li>
+							<li>Defined in ebs/getSnapshot.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -119,6 +119,7 @@
 								several valid keys, for a full reference, check out
 							[describe-snapshots in the AWS CLI reference][1].</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/ebs_snapshot.html#filter">https://www.terraform.io/docs/providers/aws/d/ebs_snapshot.html#filter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -127,13 +128,14 @@
 					<div class="tsd-signature tsd-kind-icon">most<wbr>Recent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getSnapshot.ts:34</li>
+							<li>Defined in ebs/getSnapshot.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If more than one result is returned, use the most recent snapshot.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/ebs_snapshot.html#most_recent">https://www.terraform.io/docs/providers/aws/d/ebs_snapshot.html#most_recent</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -142,13 +144,14 @@
 					<div class="tsd-signature tsd-kind-icon">owners<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getSnapshot.ts:38</li>
+							<li>Defined in ebs/getSnapshot.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Returns the snapshots owned by the specified owner id. Multiple owners can be specified.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/ebs_snapshot.html#owners">https://www.terraform.io/docs/providers/aws/d/ebs_snapshot.html#owners</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -157,13 +160,14 @@
 					<div class="tsd-signature tsd-kind-icon">restorable<wbr>ByUser<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getSnapshot.ts:42</li>
+							<li>Defined in ebs/getSnapshot.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>One or more AWS accounts IDs that can create volumes from the snapshot.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/ebs_snapshot.html#restorable_by_user_ids">https://www.terraform.io/docs/providers/aws/d/ebs_snapshot.html#restorable_by_user_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -172,13 +176,14 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getSnapshot.ts:46</li>
+							<li>Defined in ebs/getSnapshot.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Returns information on a specific snapshot_id.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/ebs_snapshot.html#snapshot_ids">https://www.terraform.io/docs/providers/aws/d/ebs_snapshot.html#snapshot_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -187,7 +192,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/getSnapshot.ts:47</li>
+							<li>Defined in ebs/getSnapshot.ts:59</li>
 						</ul>
 					</aside>
 				</section>
@@ -212,7 +217,7 @@
 						<a href="_ebs_getsnapshot_.getsnapshotargs.html" class="tsd-kind-icon">Get<wbr>Snapshot<wbr>Args</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ebs_getsnapshot_.getsnapshotargs.html#filter" class="tsd-kind-icon">filter</a>
+								<a href="_ebs_getsnapshot_.getsnapshotargs.html#filters" class="tsd-kind-icon">filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ebs_getsnapshot_.getsnapshotargs.html#mostrecent" class="tsd-kind-icon">most<wbr>Recent</a>

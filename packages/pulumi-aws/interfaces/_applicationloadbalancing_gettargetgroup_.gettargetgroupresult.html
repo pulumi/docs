@@ -96,8 +96,8 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#deregistrationdelay" class="tsd-kind-icon">deregistration<wbr>Delay</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#healthcheck" class="tsd-kind-icon">health<wbr>Check</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#port" class="tsd-kind-icon">port</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#protocol" class="tsd-kind-icon">protocol</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#port-1" class="tsd-kind-icon">port</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#protocol-1" class="tsd-kind-icon">protocol</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#stickiness" class="tsd-kind-icon">stickiness</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#vpcid" class="tsd-kind-icon">vpc<wbr>Id</a></li>
@@ -114,7 +114,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getTargetGroup.ts:43</li>
+							<li>Defined in applicationloadbalancing/getTargetGroup.ts:49</li>
 						</ul>
 					</aside>
 				</section>
@@ -124,7 +124,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<wbr>Suffix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getTargetGroup.ts:44</li>
+							<li>Defined in applicationloadbalancing/getTargetGroup.ts:50</li>
 						</ul>
 					</aside>
 				</section>
@@ -134,19 +134,48 @@
 					<div class="tsd-signature tsd-kind-icon">deregistration<wbr>Delay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getTargetGroup.ts:45</li>
+							<li>Defined in applicationloadbalancing/getTargetGroup.ts:51</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="healthcheck" class="tsd-anchor"></a>
 					<h3>health<wbr>Check</h3>
-					<div class="tsd-signature tsd-kind-icon">health<wbr>Check<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">health<wbr>Check<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getTargetGroup.ts:46</li>
+							<li>Defined in applicationloadbalancing/getTargetGroup.ts:52</li>
 						</ul>
 					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>healthy<wbr>Threshold<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>interval<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>matcher<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>protocol<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>timeout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>unhealthy<wbr>Threshold<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="name" class="tsd-anchor"></a>
@@ -154,39 +183,53 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getTargetGroup.ts:47</li>
+							<li>Defined in applicationloadbalancing/getTargetGroup.ts:53</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="port" class="tsd-anchor"></a>
+					<a name="port-1" class="tsd-anchor"></a>
 					<h3>port</h3>
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getTargetGroup.ts:48</li>
+							<li>Defined in applicationloadbalancing/getTargetGroup.ts:54</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="protocol" class="tsd-anchor"></a>
+					<a name="protocol-1" class="tsd-anchor"></a>
 					<h3>protocol</h3>
 					<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getTargetGroup.ts:49</li>
+							<li>Defined in applicationloadbalancing/getTargetGroup.ts:55</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="stickiness" class="tsd-anchor"></a>
 					<h3>stickiness</h3>
-					<div class="tsd-signature tsd-kind-icon">stickiness<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">stickiness<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getTargetGroup.ts:50</li>
+							<li>Defined in applicationloadbalancing/getTargetGroup.ts:56</li>
 						</ul>
 					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>cookie<wbr>Duration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>enabled<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
@@ -194,7 +237,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getTargetGroup.ts:51</li>
+							<li>Defined in applicationloadbalancing/getTargetGroup.ts:57</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -212,7 +255,7 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getTargetGroup.ts:52</li>
+							<li>Defined in applicationloadbalancing/getTargetGroup.ts:58</li>
 						</ul>
 					</aside>
 				</section>
@@ -255,10 +298,10 @@
 								<a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#port" class="tsd-kind-icon">port</a>
+								<a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#port-1" class="tsd-kind-icon">port</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#protocol" class="tsd-kind-icon">protocol</a>
+								<a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#protocol-1" class="tsd-kind-icon">protocol</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_applicationloadbalancing_gettargetgroup_.gettargetgroupresult.html#stickiness" class="tsd-kind-icon">stickiness</a>
