@@ -13,7 +13,7 @@ The [Pulumi AWS provider] uses the AWS SDK to manage and provision resources.
 
 2.  If necessary, [create an IAM user in the AWS console][iam-user-console] with type  **Programmatic access**. The IAM user should have sufficient rights to deploy and manage your program's resources. If you know the precise kinds of resources you wish to create and delete, you can restrict the IAM user accordingly.
 
-3.  Configure the AWS CLI with the IAM credentials, such as with the `aws configure` command. For other configuration options, see the AWS article [Configuring the AWS CLI](configure-aws-cli).
+3.  Configure the AWS CLI with the IAM credentials, such as with the `aws configure` command. For other configuration options, see the AWS article [Configuring the AWS CLI][configure-aws-cli].
 
     ```bash
     $ aws configure
