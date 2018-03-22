@@ -6,4 +6,5 @@ toc:  # No landing page
   section:
   - install/index.md
   - install/aws-config.md
+  - install/configure-npm.md
   - install/changelog.md
