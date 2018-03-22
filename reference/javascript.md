@@ -2,9 +2,15 @@
 title: "▶ JavaScript and TypeScript"
 ---
 
+<!-- LINKS -->
+[Configure your NPM client]: ../install/configure-npm.html
+<!-- END LINKS -->
+
 ## Using Pulumi NPM Packages {#npm-packages}
 
-As of release `0.10`, packages in the `@pulumi` namespace have been moved to an NPMJS registry, accessible through an NPM proxy.
+As of release `0.10`, packages in the `@pulumi` namespace have been moved to an NPMJS registry. To use these packages, follow the instructions in [Configure your NPM client].
+
+> NOTE: versions of Pulumi packages prior to `0.10.0` are only supported via the `npm link` workflow.
 
 The packages `@pulumi/pulumi`, `@pulumi/aws`, `@pulumi/cloud` and `@pulumi/cloud-aws` are regular NPM packages and should be specified in the `dependencies` section of `package.json`. As a best practice, Pulumi programs should only list the packages they strictly depend on.
 
@@ -12,19 +18,16 @@ For example, if a program used **all** the `@pulumi/*` packages, it would have t
 
 ```json
 "dependencies": {
-  "@pulumi/pulumi": "^0.10.0",
-  "@pulumi/aws": "^0.10.0",
-  "@pulumi/cloud": "^0.10.0",
-  "@pulumi/cloud-aws": "^0.10.0"
+  "@pulumi/pulumi": "^0.11.0",
+  "@pulumi/aws": "^0.11.0",
+  "@pulumi/cloud": "^0.11.0",
+  "@pulumi/cloud-aws": "^0.11.0"
 }
 ```
 
-### Installing packages 
-To install NPM dependencies, do the following:
+To install NPM dependencies, run `npm install` to restore `@pulumi` packages.
 
-1.  Set up your login credentials for the Pulumi NPM proxy (see [Logging in to the Pulumi NPM proxy](#proxy-login)).
-
-1.  Run `npm install` to restore `@pulumi` packages.
+> NOTE: if you see an error such as `npm ERR! 403 Forbidden: @pulumi/pulumi@^0.11.0`, that means that your NPM client is not configured with the correct token. Follow the steps in instructions in [Configure your NPM client].
 
 ### Adding a new dependency {#packages}
 
@@ -36,21 +39,6 @@ To add a new package from the `@pulumi` namespace, run `npm install --save @pulu
 - `@pulumi/pulumi`
 
 > NOTE: to use `@pulumi/cloud` on AWS, you must also include the package `@pulumi/cloud-aws`.
-
-> NOTE: versions of Pulumi packages prior to `0.10.0` are only supported via the `npm link` workflow.
-
-## Logging in to the Pulumi NPM proxy {#proxy-login}
-
-While Pulumi is in private preview, `@pulumi` packages are only available through the Pulumi NPM proxy. 
-
-1.  To authenticate against this proxy, set the environment variable `PULUMI_ACCESS_TOKEN` to your [Pulumi access token](../managed-cloud/console.html#account-page).
-
-1.  To configure your NPM client, add the following to `~/.npmrc`. Note that the `${PULUMI_ACCESS_TOKEN}` syntax will be auto-expanded by your NPM client.
-
-    ```
-    @pulumi:registry=https://npmjs.pulumi.com/
-    //npmjs.pulumi.com/:_authToken=${PULUMI_ACCESS_TOKEN}
-    ```
 
 # TypeScript
 You can write Pulumi programs in TypeScript to get additional verification and tooling benefits.  To use TypeScript,
@@ -119,7 +107,7 @@ Create a `tsconfig.json` file with the TypeScript compiler settings and a list o
 ```
 
 You may customize this however you'd like, including the TypeScript settings that work for you.  For
-information on additional settings, see the [TypeScript documentation for `tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html.
+information on additional settings, see the [TypeScript documentation for `tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 
 ### 4. Build
 

@@ -116,3 +116,7 @@ Configure the credentials for your cloud provider of choice:
 -   [Configure Pulumi for AWS](./aws-config.html)
 -   Configure Pulumi for Azure
 -   Configure Pulumi for Kubernetes
+
+## Configure NPM client
+
+If you're using Pulumi with JavaScript or TypeScript, follow the instructions in [Configure your NPM client](./configure-npm.html).
