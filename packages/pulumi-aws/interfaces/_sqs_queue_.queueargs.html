@@ -118,13 +118,14 @@
 					<div class="tsd-signature tsd-kind-icon">content<wbr>Based<wbr>Deduplication<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:104</li>
+							<li>Defined in sqs/queue.ts:136</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Enables content-based deduplication for FIFO queues. For more information, see the <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing">related documentation</a></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#content_based_deduplication">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#content_based_deduplication</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -133,13 +134,14 @@
 					<div class="tsd-signature tsd-kind-icon">delay<wbr>Seconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:108</li>
+							<li>Defined in sqs/queue.ts:142</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#delay_seconds">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#delay_seconds</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -148,13 +150,14 @@
 					<div class="tsd-signature tsd-kind-icon">fifo<wbr>Queue<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:112</li>
+							<li>Defined in sqs/queue.ts:148</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Boolean designating a FIFO queue. If not set, it defaults to <code>false</code> making it standard.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#fifo_queue">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#fifo_queue</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -163,13 +166,14 @@
 					<div class="tsd-signature tsd-kind-icon">kms<wbr>Data<wbr>Key<wbr>Reuse<wbr>Period<wbr>Seconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:116</li>
+							<li>Defined in sqs/queue.ts:154</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#kms_data_key_reuse_period_seconds">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#kms_data_key_reuse_period_seconds</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -178,13 +182,14 @@
 					<div class="tsd-signature tsd-kind-icon">kms<wbr>Master<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:120</li>
+							<li>Defined in sqs/queue.ts:160</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html#sqs-sse-key-terms">Key Terms</a>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#kms_master_key_id">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#kms_master_key_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -193,13 +198,14 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Message<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:124</li>
+							<li>Defined in sqs/queue.ts:166</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB). The default for this attribute is 262144 (256 KiB).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#max_message_size">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#max_message_size</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -208,13 +214,14 @@
 					<div class="tsd-signature tsd-kind-icon">message<wbr>Retention<wbr>Seconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:128</li>
+							<li>Defined in sqs/queue.ts:172</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#message_retention_seconds">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#message_retention_seconds</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -223,13 +230,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:132</li>
+							<li>Defined in sqs/queue.ts:178</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>This is the human-readable name of the queue. If omitted, Terraform will assign a random name.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#name">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -238,13 +246,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:136</li>
+							<li>Defined in sqs/queue.ts:184</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Creates a unique name beginning with the specified prefix. Conflicts with <code>name</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#name_prefix">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#name_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -253,13 +262,14 @@
 					<div class="tsd-signature tsd-kind-icon">policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:140</li>
+							<li>Defined in sqs/queue.ts:190</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The JSON policy for the SQS queue</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#policy">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -268,13 +278,14 @@
 					<div class="tsd-signature tsd-kind-icon">receive<wbr>Wait<wbr>Time<wbr>Seconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:144</li>
+							<li>Defined in sqs/queue.ts:196</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#receive_wait_time_seconds">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#receive_wait_time_seconds</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -283,13 +294,14 @@
 					<div class="tsd-signature tsd-kind-icon">redrive<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:148</li>
+							<li>Defined in sqs/queue.ts:202</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The JSON policy to set up the Dead Letter Queue, see <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSDeadLetterQueue.html">AWS docs</a>. <strong>Note:</strong> when specifying <code>maxReceiveCount</code>, you must specify it as an integer (<code>5</code>), and not a string (<code>&quot;5&quot;</code>).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#redrive_policy">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#redrive_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -298,13 +310,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:152</li>
+							<li>Defined in sqs/queue.ts:208</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the queue.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#tags">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -313,13 +326,14 @@
 					<div class="tsd-signature tsd-kind-icon">visibility<wbr>Timeout<wbr>Seconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sqs/queue.ts:156</li>
+							<li>Defined in sqs/queue.ts:214</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/AboutVT.html">AWS docs</a>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#visibility_timeout_seconds">https://www.terraform.io/docs/providers/aws/r/sqs_queue.html#visibility_timeout_seconds</a>.</p>
 					</div>
 				</section>
 			</section>

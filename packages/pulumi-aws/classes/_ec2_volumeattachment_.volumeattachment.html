@@ -76,6 +76,7 @@
 						detach volumes from AWS Instances.</p>
 					</div>
 					<p>~&gt; <strong>NOTE on EBS block devices:</strong> If you use <code>ebs_block_device</code> on an <code>aws_instance</code>, Terraform will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, <code>ebs_block_device</code> cannot be mixed with external <code>aws_ebs_volume</code> + <code>aws_ebs_volume_attachment</code> resources for a given instance.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/volume_attachment.html">https://www.terraform.io/docs/providers/aws/r/volume_attachment.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -129,7 +130,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/volumeAttachment.ts:40</li>
+									<li>Defined in ec2/volumeAttachment.ts:52</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -177,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">device<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/volumeAttachment.ts:17</li>
+							<li>Defined in ec2/volumeAttachment.ts:21</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -185,15 +186,16 @@
 							<p>The device name to expose to the instance (for
 							example, <code>/dev/sdh</code> or <code>xvdh</code>)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/volume_attachment.html#device_name">https://www.terraform.io/docs/providers/aws/r/volume_attachment.html#device_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="forcedetach" class="tsd-anchor"></a>
 					<h3>force<wbr>Detach</h3>
-					<div class="tsd-signature tsd-kind-icon">force<wbr>Detach<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">force<wbr>Detach<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/volumeAttachment.ts:24</li>
+							<li>Defined in ec2/volumeAttachment.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -203,6 +205,7 @@
 								as a last resort, as this can result in <strong>data loss</strong>. See
 							[Detaching an Amazon EBS Volume from an Instance][1] for more information.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/volume_attachment.html#force_detach">https://www.terraform.io/docs/providers/aws/r/volume_attachment.html#force_detach</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -228,22 +231,23 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/volumeAttachment.ts:28</li>
+							<li>Defined in ec2/volumeAttachment.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>ID of the Instance to attach to</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/volume_attachment.html#instance_id">https://www.terraform.io/docs/providers/aws/r/volume_attachment.html#instance_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="skipdestroy" class="tsd-anchor"></a>
 					<h3>skip<wbr>Destroy</h3>
-					<div class="tsd-signature tsd-kind-icon">skip<wbr>Destroy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">skip<wbr>Destroy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/volumeAttachment.ts:36</li>
+							<li>Defined in ec2/volumeAttachment.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -254,6 +258,7 @@
 								useful when destroying an instance which has volumes created by some other
 							means attached.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/volume_attachment.html#skip_destroy">https://www.terraform.io/docs/providers/aws/r/volume_attachment.html#skip_destroy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -279,13 +284,14 @@
 					<div class="tsd-signature tsd-kind-icon">volume<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/volumeAttachment.ts:40</li>
+							<li>Defined in ec2/volumeAttachment.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>ID of the Volume to be attached</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/volume_attachment.html#volume_id">https://www.terraform.io/docs/providers/aws/r/volume_attachment.html#volume_id</a>.</p>
 					</div>
 				</section>
 			</section>

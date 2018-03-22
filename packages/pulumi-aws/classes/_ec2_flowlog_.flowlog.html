@@ -130,6 +130,7 @@ resource &quot;aws_iam_role_policy&quot; &quot;test_policy&quot; {
 EOF
 }
 </code></pre>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/flow_log.html">https://www.terraform.io/docs/providers/aws/r/flow_log.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -184,7 +185,7 @@ EOF
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/flowLog.ts:93</li>
+									<li>Defined in ec2/flowLog.ts:107</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -232,13 +233,14 @@ EOF
 					<div class="tsd-signature tsd-kind-icon">eni<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/flowLog.ts:71</li>
+							<li>Defined in ec2/flowLog.ts:75</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Elastic Network Interface ID to attach to</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/flow_log.html#eni_id">https://www.terraform.io/docs/providers/aws/r/flow_log.html#eni_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -247,7 +249,7 @@ EOF
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/flowLog.ts:76</li>
+							<li>Defined in ec2/flowLog.ts:82</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -255,6 +257,7 @@ EOF
 							<p>The ARN for the IAM role that&#39;s used to post flow
 							logs to a CloudWatch Logs log group</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/flow_log.html#iam_role_arn">https://www.terraform.io/docs/providers/aws/r/flow_log.html#iam_role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -280,13 +283,14 @@ EOF
 					<div class="tsd-signature tsd-kind-icon">log<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/flowLog.ts:80</li>
+							<li>Defined in ec2/flowLog.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the CloudWatch log group</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/flow_log.html#log_group_name">https://www.terraform.io/docs/providers/aws/r/flow_log.html#log_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -295,13 +299,14 @@ EOF
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/flowLog.ts:84</li>
+							<li>Defined in ec2/flowLog.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Subnet ID to attach to</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/flow_log.html#subnet_id">https://www.terraform.io/docs/providers/aws/r/flow_log.html#subnet_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -310,7 +315,7 @@ EOF
 					<div class="tsd-signature tsd-kind-icon">traffic<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/flowLog.ts:89</li>
+							<li>Defined in ec2/flowLog.ts:101</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -318,6 +323,7 @@ EOF
 							<p>The type of traffic to capture. Valid values:
 							<code>ACCEPT</code>,<code>REJECT</code>, <code>ALL</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/flow_log.html#traffic_type">https://www.terraform.io/docs/providers/aws/r/flow_log.html#traffic_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -343,13 +349,14 @@ EOF
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/flowLog.ts:93</li>
+							<li>Defined in ec2/flowLog.ts:107</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>VPC ID to attach to</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/flow_log.html#vpc_id">https://www.terraform.io/docs/providers/aws/r/flow_log.html#vpc_id</a>.</p>
 					</div>
 				</section>
 			</section>

@@ -77,6 +77,7 @@
 					<p>~&gt; <strong>NOTE on updating SSM documents:</strong> Only documents with a schema version of 2.0
 						or greater can update their content once created, see [SSM Schema Features][1]. To update a document with an older
 					schema version you must recreate the resource.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html">https://www.terraform.io/docs/providers/aws/r/ssm_document.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -117,7 +118,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ssm_document_.document.html#latestversion" class="tsd-kind-icon">latest<wbr>Version</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ssm_document_.document.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ssm_document_.document.html#owner" class="tsd-kind-icon">owner</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ssm_document_.document.html#parameter" class="tsd-kind-icon">parameter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ssm_document_.document.html#parameters" class="tsd-kind-icon">parameters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ssm_document_.document.html#permissions" class="tsd-kind-icon">permissions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ssm_document_.document.html#platformtypes" class="tsd-kind-icon">platform<wbr>Types</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ssm_document_.document.html#schemaversion" class="tsd-kind-icon">schema<wbr>Version</a></li>
@@ -141,7 +142,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ssm/document.ts:74</li>
+									<li>Defined in ssm/document.ts:106</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -189,7 +190,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:14</li>
+							<li>Defined in ssm/document.ts:16</li>
 						</ul>
 					</aside>
 				</section>
@@ -199,13 +200,14 @@
 					<div class="tsd-signature tsd-kind-icon">content<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:18</li>
+							<li>Defined in ssm/document.ts:22</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The json content of the document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#content">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#content</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -214,13 +216,14 @@
 					<div class="tsd-signature tsd-kind-icon">created<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:22</li>
+							<li>Defined in ssm/document.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The date the document was created.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#created_date">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#created_date</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -229,13 +232,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:26</li>
+							<li>Defined in ssm/document.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The default version of the document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#default_version">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#default_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -244,13 +248,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:30</li>
+							<li>Defined in ssm/document.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The description of the document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#description">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -259,13 +264,14 @@
 					<div class="tsd-signature tsd-kind-icon">document<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:34</li>
+							<li>Defined in ssm/document.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of the document. Valid document types include: <code>Command</code>, <code>Policy</code> and <code>Automation</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#document_type">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#document_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -274,13 +280,14 @@
 					<div class="tsd-signature tsd-kind-icon">hash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:38</li>
+							<li>Defined in ssm/document.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The sha1 or sha256 of the document content</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#hash">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#hash</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -289,13 +296,14 @@
 					<div class="tsd-signature tsd-kind-icon">hash<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:42</li>
+							<li>Defined in ssm/document.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>&quot;Sha1&quot; &quot;Sha256&quot;. The hashing algorithm used when hashing the content.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#hash_type">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#hash_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -321,13 +329,14 @@
 					<div class="tsd-signature tsd-kind-icon">latest<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:46</li>
+							<li>Defined in ssm/document.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The latest version of the document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#latest_version">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#latest_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -336,13 +345,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:50</li>
+							<li>Defined in ssm/document.ts:70</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#name">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -351,28 +361,30 @@
 					<div class="tsd-signature tsd-kind-icon">owner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:54</li>
+							<li>Defined in ssm/document.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The AWS user account of the person who created the document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#owner">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#owner</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="parameter" class="tsd-anchor"></a>
-					<h3>parameter</h3>
-					<div class="tsd-signature tsd-kind-icon">parameter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="parameters" class="tsd-anchor"></a>
+					<h3>parameters</h3>
+					<div class="tsd-signature tsd-kind-icon">parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:58</li>
+							<li>Defined in ssm/document.ts:82</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The parameters that are available to this document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#parameter">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#parameter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -381,13 +393,14 @@
 					<div class="tsd-signature tsd-kind-icon">permissions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:62</li>
+							<li>Defined in ssm/document.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Additional Permissions to attach to the document. See <a href="#permissions">Permissions</a> below for details.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#permissions">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#permissions</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -396,13 +409,14 @@
 					<div class="tsd-signature tsd-kind-icon">platform<wbr>Types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:66</li>
+							<li>Defined in ssm/document.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of OS platforms compatible with this SSM document, either &quot;Windows&quot; or &quot;Linux&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#platform_types">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#platform_types</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -411,13 +425,14 @@
 					<div class="tsd-signature tsd-kind-icon">schema<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:70</li>
+							<li>Defined in ssm/document.ts:100</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The schema version of the document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#schema_version">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#schema_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -426,13 +441,14 @@
 					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/document.ts:74</li>
+							<li>Defined in ssm/document.ts:106</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>&quot;Creating&quot;, &quot;Active&quot; or &quot;Deleting&quot;. The current status of the document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_document.html#status">https://www.terraform.io/docs/providers/aws/r/ssm_document.html#status</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -512,7 +528,7 @@
 								<a href="_ssm_document_.document.html#owner" class="tsd-kind-icon">owner</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_ssm_document_.document.html#parameter" class="tsd-kind-icon">parameter</a>
+								<a href="_ssm_document_.document.html#parameters" class="tsd-kind-icon">parameters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ssm_document_.document.html#permissions" class="tsd-kind-icon">permissions</a>

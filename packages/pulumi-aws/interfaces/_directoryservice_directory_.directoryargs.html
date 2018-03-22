@@ -94,6 +94,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_directoryservice_directory_.directoryargs.html#alias" class="tsd-kind-icon">alias</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_directoryservice_directory_.directoryargs.html#connectsettings" class="tsd-kind-icon">connect<wbr>Settings</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_directoryservice_directory_.directoryargs.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_directoryservice_directory_.directoryargs.html#edition" class="tsd-kind-icon">edition</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_directoryservice_directory_.directoryargs.html#enablesso" class="tsd-kind-icon">enable<wbr>Sso</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_directoryservice_directory_.directoryargs.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_directoryservice_directory_.directoryargs.html#password" class="tsd-kind-icon">password</a></li>
@@ -115,28 +116,30 @@
 					<div class="tsd-signature tsd-kind-icon">alias<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:107</li>
+							<li>Defined in directoryservice/directory.ts:146</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The alias for the directory (must be unique amongst all aliases in AWS). Required for <code>enable_sso</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#alias">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#alias</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="connectsettings" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> connect<wbr>Settings</h3>
-					<div class="tsd-signature tsd-kind-icon">connect<wbr>Settings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">connect<wbr>Settings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:111</li>
+							<li>Defined in directoryservice/directory.ts:152</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Connector related information about the directory. Fields documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#connect_settings">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#connect_settings</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -145,13 +148,30 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:115</li>
+							<li>Defined in directoryservice/directory.ts:158</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A textual description for the directory.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#description">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#description</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="edition" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> edition</h3>
+					<div class="tsd-signature tsd-kind-icon">edition<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in directoryservice/directory.ts:164</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The MicrosoftAD edition (<code>Standard</code> or <code>Enterprise</code>). Defaults to <code>Enterprise</code> (applies to MicrosoftAD type only).</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#edition">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#edition</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -160,13 +180,14 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Sso<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:119</li>
+							<li>Defined in directoryservice/directory.ts:170</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to enable single-sign on for the directory. Requires <code>alias</code>. Defaults to <code>false</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#enable_sso">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#enable_sso</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -175,13 +196,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:123</li>
+							<li>Defined in directoryservice/directory.ts:176</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The fully qualified name for the directory, such as <code>corp.example.com</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#name">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -190,13 +212,14 @@
 					<div class="tsd-signature tsd-kind-icon">password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:127</li>
+							<li>Defined in directoryservice/directory.ts:182</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The password for the directory administrator or connector user.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#password">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#password</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -205,13 +228,14 @@
 					<div class="tsd-signature tsd-kind-icon">short<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:131</li>
+							<li>Defined in directoryservice/directory.ts:188</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The short name of the directory, such as <code>CORP</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#short_name">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#short_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -220,13 +244,14 @@
 					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:135</li>
+							<li>Defined in directoryservice/directory.ts:194</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The size of the directory (<code>Small</code> or <code>Large</code> are accepted values).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#size">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#size</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -235,13 +260,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:139</li>
+							<li>Defined in directoryservice/directory.ts:200</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#tags">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -250,28 +276,30 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:143</li>
+							<li>Defined in directoryservice/directory.ts:206</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The directory type (<code>SimpleAD</code> or <code>MicrosoftAD</code> are accepted values). Defaults to <code>SimpleAD</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#type">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="vpcsettings" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> vpc<wbr>Settings</h3>
-					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Settings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Settings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directoryservice/directory.ts:147</li>
+							<li>Defined in directoryservice/directory.ts:212</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>VPC related information about the directory. Fields documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#vpc_settings">https://www.terraform.io/docs/providers/aws/r/directory_service_directory.html#vpc_settings</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -305,6 +333,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_directoryservice_directory_.directoryargs.html#description" class="tsd-kind-icon">description</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_directoryservice_directory_.directoryargs.html#edition" class="tsd-kind-icon">edition</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_directoryservice_directory_.directoryargs.html#enablesso" class="tsd-kind-icon">enable<wbr>Sso</a>

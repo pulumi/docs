@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides an AutoScaling Schedule resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -131,7 +132,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in autoscaling/schedule.ts:49</li>
+									<li>Defined in autoscaling/schedule.ts:69</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -179,13 +180,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:13</li>
+							<li>Defined in autoscaling/schedule.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN assigned by AWS to the autoscaling schedule.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#arn">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -194,13 +196,14 @@
 					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:17</li>
+							<li>Defined in autoscaling/schedule.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name or Amazon Resource Name (ARN) of the Auto Scaling group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#autoscaling_group_name">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#autoscaling_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -209,13 +212,14 @@
 					<div class="tsd-signature tsd-kind-icon">desired<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:21</li>
+							<li>Defined in autoscaling/schedule.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don&#39;t want to change the desired capacity at the scheduled time.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#desired_capacity">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#desired_capacity</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -224,7 +228,7 @@
 					<div class="tsd-signature tsd-kind-icon">end<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:26</li>
+							<li>Defined in autoscaling/schedule.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -232,6 +236,7 @@
 							<p>The time for this action to end, in &quot;YYYY-MM-DDThh:mm:ssZ&quot; format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 							If you try to schedule your action in the past, Auto Scaling returns an error message.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#end_time">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#end_time</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -257,7 +262,7 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:31</li>
+							<li>Defined in autoscaling/schedule.ts:43</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -267,6 +272,7 @@
 								<li>Set to -1 if you don&#39;t want to change the maximum size at the scheduled time.</li>
 							</ol>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#max_size">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#max_size</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -275,7 +281,7 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:36</li>
+							<li>Defined in autoscaling/schedule.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -285,6 +291,7 @@
 								<li>Set to -1 if you don&#39;t want to change the minimum size at the scheduled time.</li>
 							</ol>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#min_size">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#min_size</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -293,13 +300,14 @@
 					<div class="tsd-signature tsd-kind-icon">recurrence<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:40</li>
+							<li>Defined in autoscaling/schedule.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#recurrence">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#recurrence</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -308,13 +316,14 @@
 					<div class="tsd-signature tsd-kind-icon">scheduled<wbr>Action<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:44</li>
+							<li>Defined in autoscaling/schedule.ts:62</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of this scaling action.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#scheduled_action_name">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#scheduled_action_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -323,7 +332,7 @@
 					<div class="tsd-signature tsd-kind-icon">start<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:49</li>
+							<li>Defined in autoscaling/schedule.ts:69</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -331,6 +340,7 @@
 							<p>The time for this action to start, in &quot;YYYY-MM-DDThh:mm:ssZ&quot; format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 							If you try to schedule your action in the past, Auto Scaling returns an error message.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#start_time">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#start_time</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">

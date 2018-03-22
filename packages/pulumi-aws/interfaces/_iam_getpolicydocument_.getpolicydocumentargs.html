@@ -91,8 +91,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_iam_getpolicydocument_.getpolicydocumentargs.html#overridejson" class="tsd-kind-icon">override<wbr>Json</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_iam_getpolicydocument_.getpolicydocumentargs.html#policyid" class="tsd-kind-icon">policy<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_iam_getpolicydocument_.getpolicydocumentargs.html#statement" class="tsd-kind-icon">statement</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_iam_getpolicydocument_.getpolicydocumentargs.html#sourcejson" class="tsd-kind-icon">source<wbr>Json</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_iam_getpolicydocument_.getpolicydocumentargs.html#statements" class="tsd-kind-icon">statements</a></li>
 							</ul>
 						</section>
 					</div>
@@ -101,27 +103,66 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="overridejson" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> override<wbr>Json</h3>
+					<div class="tsd-signature tsd-kind-icon">override<wbr>Json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in iam/getPolicyDocument.ts:95</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An IAM policy document to import and override the
+								current policy document.  Statements with non-blank <code>sid</code>s in the override
+								document will overwrite statements with the same <code>sid</code> in the current document.
+							Statements without an <code>sid</code> cannot be overwritten.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html#override_json">https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html#override_json</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="policyid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> policy<wbr>Id</h3>
 					<div class="tsd-signature tsd-kind-icon">policy<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/getPolicyDocument.ts:86</li>
+							<li>Defined in iam/getPolicyDocument.ts:101</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>An ID for the policy document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html#policy_id">https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html#policy_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="statement" class="tsd-anchor"></a>
-					<h3>statement</h3>
-					<div class="tsd-signature tsd-kind-icon">statement<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="sourcejson" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> source<wbr>Json</h3>
+					<div class="tsd-signature tsd-kind-icon">source<wbr>Json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/getPolicyDocument.ts:91</li>
+							<li>Defined in iam/getPolicyDocument.ts:110</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An IAM policy document to import as a base for the
+								current policy document.  Statements with non-blank <code>sid</code>s in the current
+								policy document will overwrite statements with the same <code>sid</code> in the source
+							json.  Statements without an <code>sid</code> cannot be overwritten.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html#source_json">https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html#source_json</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="statements" class="tsd-anchor"></a>
+					<h3>statements</h3>
+					<div class="tsd-signature tsd-kind-icon">statements<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in iam/getPolicyDocument.ts:117</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -129,6 +170,7 @@
 							<p>A nested configuration block (described below)
 							configuring one <em>statement</em> to be included in the policy document.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html#statement">https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html#statement</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -152,10 +194,16 @@
 						<a href="_iam_getpolicydocument_.getpolicydocumentargs.html" class="tsd-kind-icon">Get<wbr>Policy<wbr>Document<wbr>Args</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_iam_getpolicydocument_.getpolicydocumentargs.html#overridejson" class="tsd-kind-icon">override<wbr>Json</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_iam_getpolicydocument_.getpolicydocumentargs.html#policyid" class="tsd-kind-icon">policy<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_iam_getpolicydocument_.getpolicydocumentargs.html#statement" class="tsd-kind-icon">statement</a>
+								<a href="_iam_getpolicydocument_.getpolicydocumentargs.html#sourcejson" class="tsd-kind-icon">source<wbr>Json</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_iam_getpolicydocument_.getpolicydocumentargs.html#statements" class="tsd-kind-icon">statements</a>
 							</li>
 						</ul>
 					</li>

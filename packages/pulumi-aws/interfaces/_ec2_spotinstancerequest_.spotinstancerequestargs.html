@@ -96,9 +96,9 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#availabilityzone" class="tsd-kind-icon">availability<wbr>Zone</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#blockdurationminutes" class="tsd-kind-icon">block<wbr>Duration<wbr>Minutes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#disableapitermination" class="tsd-kind-icon">disable<wbr>Api<wbr>Termination</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#ebsblockdevice" class="tsd-kind-icon">ebs<wbr>Block<wbr>Device</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#ebsblockdevices" class="tsd-kind-icon">ebs<wbr>Block<wbr>Devices</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#ebsoptimized" class="tsd-kind-icon">ebs<wbr>Optimized</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#ephemeralblockdevice" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Device</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#ephemeralblockdevices" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#iaminstanceprofile" class="tsd-kind-icon">iam<wbr>Instance<wbr>Profile</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#instanceinitiatedshutdownbehavior" class="tsd-kind-icon">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#instanceinterruptionbehaviour" class="tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour</a></li>
@@ -108,7 +108,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#keyname" class="tsd-kind-icon">key<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#launchgroup" class="tsd-kind-icon">launch<wbr>Group</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#monitoring" class="tsd-kind-icon">monitoring</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#networkinterface" class="tsd-kind-icon">network<wbr>Interface</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#networkinterfaces" class="tsd-kind-icon">network<wbr>Interfaces</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#placementgroup" class="tsd-kind-icon">placement<wbr>Group</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#privateip" class="tsd-kind-icon">private<wbr>Ip</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#rootblockdevice" class="tsd-kind-icon">root<wbr>Block<wbr>Device</a></li>
@@ -137,13 +137,14 @@
 					<div class="tsd-signature tsd-kind-icon">ami<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:282</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:360</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The AMI to use for the instance.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#ami">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#ami</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -152,13 +153,14 @@
 					<div class="tsd-signature tsd-kind-icon">associate<wbr>Public<wbr>IpAddress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:286</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:366</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Associate a public ip address with an instance in a VPC.  Boolean value.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#associate_public_ip_address">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#associate_public_ip_address</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -167,13 +169,14 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:290</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:372</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The AZ to start the instance in.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#availability_zone">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -182,7 +185,7 @@
 					<div class="tsd-signature tsd-kind-icon">block<wbr>Duration<wbr>Minutes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:296</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:380</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -191,6 +194,7 @@
 								The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 							Note that you can&#39;t specify an Availability Zone group or a launch group if you specify a duration.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#block_duration_minutes">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#block_duration_minutes</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -199,7 +203,7 @@
 					<div class="tsd-signature tsd-kind-icon">disable<wbr>Api<wbr>Termination<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:301</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:387</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -207,15 +211,16 @@
 							<p>If true, enables <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
 							Termination Protection</a></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#disable_api_termination">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#disable_api_termination</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ebsblockdevice" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ebs<wbr>Block<wbr>Device</h3>
-					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="ebsblockdevices" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ebs<wbr>Block<wbr>Devices</h3>
+					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Block<wbr>Devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:306</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:394</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -223,6 +228,7 @@
 							<p>Additional EBS block devices to attach to the
 							instance.  See <a href="#block-devices">Block Devices</a> below for details.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#ebs_block_device">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#ebs_block_device</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -231,7 +237,7 @@
 					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Optimized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:311</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:401</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -239,15 +245,16 @@
 							<p>If true, the launched EC2 instance will be
 							EBS-optimized.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#ebs_optimized">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#ebs_optimized</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="ephemeralblockdevice" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ephemeral<wbr>Block<wbr>Device</h3>
-					<div class="tsd-signature tsd-kind-icon">ephemeral<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="ephemeralblockdevices" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ephemeral<wbr>Block<wbr>Devices</h3>
+					<div class="tsd-signature tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:316</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:408</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -255,6 +262,7 @@
 							<p>Customize Ephemeral (also known as
 							&quot;Instance Store&quot;) volumes on the instance. See <a href="#block-devices">Block Devices</a> below for details.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#ephemeral_block_device">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#ephemeral_block_device</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -263,7 +271,7 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Instance<wbr>Profile<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:322</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:416</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -274,6 +282,7 @@
 								<li><code>ipv6_address_count</code>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</li>
 							</ul>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#iam_instance_profile">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#iam_instance_profile</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -282,7 +291,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:329</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:425</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -292,6 +301,7 @@
 								<code>terminate</code> for instance-store instances. Cannot be set on instance-store
 							instances. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">Shutdown Behavior</a> for more information.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#instance_initiated_shutdown_behavior">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#instance_initiated_shutdown_behavior</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -300,7 +310,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:330</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:426</li>
 						</ul>
 					</aside>
 				</section>
@@ -310,13 +320,14 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:334</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:432</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#instance_type">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#instance_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -325,7 +336,7 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Address<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:335</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:433</li>
 						</ul>
 					</aside>
 				</section>
@@ -335,13 +346,14 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Addresses<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:339</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:439</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#ipv6_addresses">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#ipv6_addresses</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -350,13 +362,14 @@
 					<div class="tsd-signature tsd-kind-icon">key<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:343</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:445</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The key name to use for the instance.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#key_name">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#key_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -365,7 +378,7 @@
 					<div class="tsd-signature tsd-kind-icon">launch<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:348</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:452</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -373,6 +386,7 @@
 							<p>A launch group is a group of spot instances that launch together and terminate together.
 							If left empty instances are launched and terminated individually.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#launch_group">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#launch_group</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -381,28 +395,30 @@
 					<div class="tsd-signature tsd-kind-icon">monitoring<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:352</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:458</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#monitoring">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#monitoring</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="networkinterface" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> network<wbr>Interface</h3>
-					<div class="tsd-signature tsd-kind-icon">network<wbr>Interface<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="networkinterfaces" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> network<wbr>Interfaces</h3>
+					<div class="tsd-signature tsd-kind-icon">network<wbr>Interfaces<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:356</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:464</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Customize network interfaces to be attached at instance boot time. See <a href="#network-interfaces">Network Interfaces</a> below for more details.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#network_interface">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#network_interface</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -411,13 +427,14 @@
 					<div class="tsd-signature tsd-kind-icon">placement<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:360</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:470</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Placement Group to start the instance in.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#placement_group">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#placement_group</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -426,7 +443,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:365</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:477</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -434,15 +451,16 @@
 							<p>Private IP address to associate with the
 							instance in a VPC.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#private_ip">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#private_ip</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="rootblockdevice" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> root<wbr>Block<wbr>Device</h3>
-					<div class="tsd-signature tsd-kind-icon">root<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">root<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:370</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:484</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -450,6 +468,7 @@
 							<p>Customize details about the root block
 							device of the instance. See <a href="#block-devices">Block Devices</a> below for details.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#root_block_device">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#root_block_device</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -458,7 +477,7 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:375</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:491</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -466,6 +485,7 @@
 							<p>A list of security group names to associate with.
 							If you are creating Instances in a VPC, use <code>vpc_security_group_ids</code> instead.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#security_groups">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#security_groups</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -474,7 +494,7 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Dest<wbr>Check<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:380</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:498</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -482,6 +502,7 @@
 							<p>Controls if traffic is routed to the instance when
 							the destination address does not match the instance. Used for NAT or VPNs. Defaults true.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#source_dest_check">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#source_dest_check</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -490,13 +511,14 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Price<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:384</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:504</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The price to request on the spot market.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#spot_price">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#spot_price</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -505,7 +527,7 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:390</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:512</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -514,6 +536,7 @@
 								the instance is terminated, the spot request will be closed. Also, Terraform
 							can&#39;t manage one-time spot requests, just launch them.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#spot_type">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#spot_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -522,13 +545,14 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:394</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:518</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The VPC Subnet ID to launch in.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#subnet_id">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#subnet_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -537,13 +561,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:398</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:524</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#tags">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -552,13 +577,14 @@
 					<div class="tsd-signature tsd-kind-icon">tenancy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:402</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:530</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#tenancy">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#tenancy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -567,13 +593,14 @@
 					<div class="tsd-signature tsd-kind-icon">user<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:406</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:536</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code>user_data_base64</code> instead.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#user_data">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#user_data</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -582,13 +609,14 @@
 					<div class="tsd-signature tsd-kind-icon">user<wbr>Data<wbr>Base64<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:410</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:542</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Can be used instead of <code>user_data</code> to pass base64-encoded binary data directly. Use this instead of <code>user_data</code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#user_data_base64">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#user_data_base64</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -597,13 +625,14 @@
 					<div class="tsd-signature tsd-kind-icon">volume<wbr>Tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:414</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:548</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the devices created by the instance at launch time.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#volume_tags">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#volume_tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -612,13 +641,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:418</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:554</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of security group IDs to associate with.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#vpc_security_group_ids">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#vpc_security_group_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -627,7 +657,7 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Fulfillment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotInstanceRequest.ts:424</li>
+							<li>Defined in ec2/spotInstanceRequest.ts:562</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -636,6 +666,7 @@
 								wait for the Spot Request to be fulfilled, and will throw an error if the
 							timeout of 10m is reached.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#wait_for_fulfillment">https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html#wait_for_fulfillment</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -677,13 +708,13 @@
 								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#disableapitermination" class="tsd-kind-icon">disable<wbr>Api<wbr>Termination</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#ebsblockdevice" class="tsd-kind-icon">ebs<wbr>Block<wbr>Device</a>
+								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#ebsblockdevices" class="tsd-kind-icon">ebs<wbr>Block<wbr>Devices</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#ebsoptimized" class="tsd-kind-icon">ebs<wbr>Optimized</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#ephemeralblockdevice" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Device</a>
+								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#ephemeralblockdevices" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#iaminstanceprofile" class="tsd-kind-icon">iam<wbr>Instance<wbr>Profile</a>
@@ -713,7 +744,7 @@
 								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#monitoring" class="tsd-kind-icon">monitoring</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#networkinterface" class="tsd-kind-icon">network<wbr>Interface</a>
+								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#networkinterfaces" class="tsd-kind-icon">network<wbr>Interfaces</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_spotinstancerequest_.spotinstancerequestargs.html#placementgroup" class="tsd-kind-icon">placement<wbr>Group</a>

@@ -112,13 +112,14 @@
 					<div class="tsd-signature tsd-kind-icon">end<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/scheduledAction.ts:82</li>
+							<li>Defined in appautoscaling/scheduledAction.ts:104</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The date and time for the scheduled action to end. Specify the following format: 2006-01-02T15:04:05Z</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#end_time">https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#end_time</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -127,13 +128,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/scheduledAction.ts:86</li>
+							<li>Defined in appautoscaling/scheduledAction.ts:110</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the scheduled action.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#name">https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -142,13 +144,14 @@
 					<div class="tsd-signature tsd-kind-icon">resource<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/scheduledAction.ts:90</li>
+							<li>Defined in appautoscaling/scheduledAction.ts:116</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The identifier of the resource associated with the scheduled action. Documentation can be found in the parameter at: <a href="https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ResourceId">AWS Application Auto Scaling API Reference</a></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#resource_id">https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#resource_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -157,28 +160,30 @@
 					<div class="tsd-signature tsd-kind-icon">scalable<wbr>Dimension<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/scheduledAction.ts:94</li>
+							<li>Defined in appautoscaling/scheduledAction.ts:122</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The scalable dimension. Documentation can be found in the parameter at: <a href="https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ScalableDimension">AWS Application Auto Scaling API Reference</a> Example: ecs:service:DesiredCount</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#scalable_dimension">https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#scalable_dimension</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="scalabletargetaction" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> scalable<wbr>Target<wbr>Action</h3>
-					<div class="tsd-signature tsd-kind-icon">scalable<wbr>Target<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">scalable<wbr>Target<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/scheduledAction.ts:98</li>
+							<li>Defined in appautoscaling/scheduledAction.ts:128</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The new minimum and maximum capacity. You can set both values or just one. See <a href="#scalable-target-action-arguments">below</a></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#scalable_target_action">https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#scalable_target_action</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -187,13 +192,14 @@
 					<div class="tsd-signature tsd-kind-icon">schedule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/scheduledAction.ts:102</li>
+							<li>Defined in appautoscaling/scheduledAction.ts:134</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The schedule for this action. The following formats are supported: At expressions - at(yyyy-mm-ddThh:mm:ss), Rate expressions - rate(valueunit), Cron expressions - cron(fields). In UTC. Documentation can be found in the parameter at: <a href="https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-Schedule">AWS Application Auto Scaling API Reference</a></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#schedule">https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#schedule</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -202,13 +208,14 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Namespace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/scheduledAction.ts:106</li>
+							<li>Defined in appautoscaling/scheduledAction.ts:140</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The namespace of the AWS service. Documentation can be found in the parameter at: <a href="https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ServiceNamespace">AWS Application Auto Scaling API Reference</a> Example: ecs</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#service_namespace">https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#service_namespace</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -217,13 +224,14 @@
 					<div class="tsd-signature tsd-kind-icon">start<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in appautoscaling/scheduledAction.ts:110</li>
+							<li>Defined in appautoscaling/scheduledAction.ts:146</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The date and time for the scheduled action to start. Specify the following format: 2006-01-02T15:04:05Z</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#start_time">https://www.terraform.io/docs/providers/aws/r/appautoscaling_scheduled_action.html#start_time</a>.</p>
 					</div>
 				</section>
 			</section>

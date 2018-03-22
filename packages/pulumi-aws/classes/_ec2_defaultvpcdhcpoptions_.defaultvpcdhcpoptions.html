@@ -81,6 +81,7 @@
 					<p>The <code>aws_default_vpc_dhcp_options</code> behaves differently from normal resources, in that
 						Terraform does not <em>create</em> this resource, but instead &quot;adopts&quot; it
 					into management.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/default_vpc_dhcp_options.html">https://www.terraform.io/docs/providers/aws/r/default_vpc_dhcp_options.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -135,7 +136,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/defaultVpcDhcpOptions.ts:33</li>
+									<li>Defined in ec2/defaultVpcDhcpOptions.ts:41</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -183,7 +184,7 @@
 					<div class="tsd-signature tsd-kind-icon">domain<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultVpcDhcpOptions.ts:19</li>
+							<li>Defined in ec2/defaultVpcDhcpOptions.ts:21</li>
 						</ul>
 					</aside>
 				</section>
@@ -193,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">domain<wbr>Name<wbr>Servers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultVpcDhcpOptions.ts:20</li>
+							<li>Defined in ec2/defaultVpcDhcpOptions.ts:22</li>
 						</ul>
 					</aside>
 				</section>
@@ -220,13 +221,14 @@
 					<div class="tsd-signature tsd-kind-icon">netbios<wbr>Name<wbr>Servers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultVpcDhcpOptions.ts:24</li>
+							<li>Defined in ec2/defaultVpcDhcpOptions.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>List of NETBIOS name servers.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/default_vpc_dhcp_options.html#netbios_name_servers">https://www.terraform.io/docs/providers/aws/r/default_vpc_dhcp_options.html#netbios_name_servers</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -235,13 +237,14 @@
 					<div class="tsd-signature tsd-kind-icon">netbios<wbr>Node<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultVpcDhcpOptions.ts:28</li>
+							<li>Defined in ec2/defaultVpcDhcpOptions.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/default_vpc_dhcp_options.html#netbios_node_type">https://www.terraform.io/docs/providers/aws/r/default_vpc_dhcp_options.html#netbios_node_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -250,7 +253,7 @@
 					<div class="tsd-signature tsd-kind-icon">ntp<wbr>Servers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultVpcDhcpOptions.ts:29</li>
+							<li>Defined in ec2/defaultVpcDhcpOptions.ts:35</li>
 						</ul>
 					</aside>
 				</section>
@@ -260,13 +263,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultVpcDhcpOptions.ts:33</li>
+							<li>Defined in ec2/defaultVpcDhcpOptions.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/default_vpc_dhcp_options.html#tags">https://www.terraform.io/docs/providers/aws/r/default_vpc_dhcp_options.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">

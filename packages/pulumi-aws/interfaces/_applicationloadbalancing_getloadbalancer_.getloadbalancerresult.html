@@ -101,7 +101,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#loadbalancertype" class="tsd-kind-icon">load<wbr>Balancer<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#securitygroups" class="tsd-kind-icon">security<wbr>Groups</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#subnetmapping" class="tsd-kind-icon">subnet<wbr>Mapping</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#subnetmappings" class="tsd-kind-icon">subnet<wbr>Mappings</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#subnets" class="tsd-kind-icon">subnets</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#vpcid" class="tsd-kind-icon">vpc<wbr>Id</a></li>
@@ -116,12 +116,26 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="accesslogs" class="tsd-anchor"></a>
 					<h3>access<wbr>Logs</h3>
-					<div class="tsd-signature tsd-kind-icon">access<wbr>Logs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">access<wbr>Logs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:43</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:49</li>
 						</ul>
 					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>bucket<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>enabled<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>prefix<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="arn" class="tsd-anchor"></a>
@@ -129,7 +143,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:44</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:50</li>
 						</ul>
 					</aside>
 				</section>
@@ -139,7 +153,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<wbr>Suffix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:45</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:51</li>
 						</ul>
 					</aside>
 				</section>
@@ -149,7 +163,7 @@
 					<div class="tsd-signature tsd-kind-icon">dns<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:46</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:52</li>
 						</ul>
 					</aside>
 				</section>
@@ -159,7 +173,7 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Deletion<wbr>Protection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:47</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:53</li>
 						</ul>
 					</aside>
 				</section>
@@ -169,7 +183,7 @@
 					<div class="tsd-signature tsd-kind-icon">idle<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:48</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:54</li>
 						</ul>
 					</aside>
 				</section>
@@ -179,7 +193,7 @@
 					<div class="tsd-signature tsd-kind-icon">internal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:49</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:55</li>
 						</ul>
 					</aside>
 				</section>
@@ -189,7 +203,7 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:50</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:56</li>
 						</ul>
 					</aside>
 				</section>
@@ -199,7 +213,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:51</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:57</li>
 						</ul>
 					</aside>
 				</section>
@@ -209,17 +223,17 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:52</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:58</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="subnetmapping" class="tsd-anchor"></a>
-					<h3>subnet<wbr>Mapping</h3>
-					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Mapping<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></div>
+					<a name="subnetmappings" class="tsd-anchor"></a>
+					<h3>subnet<wbr>Mappings</h3>
+					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Mappings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:53</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:59</li>
 						</ul>
 					</aside>
 				</section>
@@ -229,7 +243,7 @@
 					<div class="tsd-signature tsd-kind-icon">subnets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:54</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:60</li>
 						</ul>
 					</aside>
 				</section>
@@ -239,7 +253,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:55</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -257,7 +271,7 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:56</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:62</li>
 						</ul>
 					</aside>
 				</section>
@@ -267,7 +281,7 @@
 					<div class="tsd-signature tsd-kind-icon">zone<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:57</li>
+							<li>Defined in applicationloadbalancing/getLoadBalancer.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -325,7 +339,7 @@
 								<a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#securitygroups" class="tsd-kind-icon">security<wbr>Groups</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#subnetmapping" class="tsd-kind-icon">subnet<wbr>Mapping</a>
+								<a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#subnetmappings" class="tsd-kind-icon">subnet<wbr>Mappings</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_applicationloadbalancing_getloadbalancer_.getloadbalancerresult.html#subnets" class="tsd-kind-icon">subnets</a>

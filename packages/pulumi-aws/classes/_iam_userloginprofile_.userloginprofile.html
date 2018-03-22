@@ -76,6 +76,7 @@
 							encrypt the password for safe transport to the user. PGP keys can be
 						obtained from Keybase.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html">https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -130,7 +131,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in iam/userLoginProfile.ts:39</li>
+									<li>Defined in iam/userLoginProfile.ts:53</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -178,13 +179,14 @@
 					<div class="tsd-signature tsd-kind-icon">encrypted<wbr>Password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/userLoginProfile.ts:15</li>
+							<li>Defined in iam/userLoginProfile.ts:19</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The encrypted password, base64 encoded.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#encrypted_password">https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#encrypted_password</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -210,7 +212,7 @@
 					<div class="tsd-signature tsd-kind-icon">key<wbr>Fingerprint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/userLoginProfile.ts:20</li>
+							<li>Defined in iam/userLoginProfile.ts:26</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -218,6 +220,7 @@
 							<p>The fingerprint of the PGP key used to encrypt
 							the password</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#key_fingerprint">https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#key_fingerprint</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -226,7 +229,7 @@
 					<div class="tsd-signature tsd-kind-icon">password<wbr>Length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/userLoginProfile.ts:25</li>
+							<li>Defined in iam/userLoginProfile.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -234,6 +237,7 @@
 							<p>The length of the generated
 							password.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#password_length">https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#password_length</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -242,7 +246,7 @@
 					<div class="tsd-signature tsd-kind-icon">password<wbr>Reset<wbr>Required<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/userLoginProfile.ts:30</li>
+							<li>Defined in iam/userLoginProfile.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -250,6 +254,7 @@
 							<p>Whether the
 							user should be forced to reset the generated password on first login.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#password_reset_required">https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#password_reset_required</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -258,7 +263,7 @@
 					<div class="tsd-signature tsd-kind-icon">pgp<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/userLoginProfile.ts:35</li>
+							<li>Defined in iam/userLoginProfile.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -266,6 +271,7 @@
 							<p>Either a base-64 encoded PGP public key, or a
 							keybase username in the form <code>keybase:username</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#pgp_key">https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#pgp_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -291,13 +297,14 @@
 					<div class="tsd-signature tsd-kind-icon">user<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/userLoginProfile.ts:39</li>
+							<li>Defined in iam/userLoginProfile.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The IAM user&#39;s name.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#user">https://www.terraform.io/docs/providers/aws/r/iam_user_login_profile.html#user</a>.</p>
 					</div>
 				</section>
 			</section>

@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides an AWS Cognito Identity Pool Roles Attachment.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cognito_identity_pool_roles_attachment.html">https://www.terraform.io/docs/providers/aws/r/cognito_identity_pool_roles_attachment.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -104,7 +105,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_cognito_identitypoolroleattachment_.identitypoolroleattachment.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cognito_identitypoolroleattachment_.identitypoolroleattachment.html#identitypoolid" class="tsd-kind-icon">identity<wbr>Pool<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cognito_identitypoolroleattachment_.identitypoolroleattachment.html#rolemapping" class="tsd-kind-icon">role<wbr>Mapping</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cognito_identitypoolroleattachment_.identitypoolroleattachment.html#rolemappings" class="tsd-kind-icon">role<wbr>Mappings</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cognito_identitypoolroleattachment_.identitypoolroleattachment.html#roles" class="tsd-kind-icon">roles</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_cognito_identitypoolroleattachment_.identitypoolroleattachment.html#urn" class="tsd-kind-icon">urn</a></li>
 							</ul>
@@ -125,7 +126,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in cognito/identityPoolRoleAttachment.ts:21</li>
+									<li>Defined in cognito/identityPoolRoleAttachment.ts:29</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -190,28 +191,30 @@
 					<div class="tsd-signature tsd-kind-icon">identity<wbr>Pool<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cognito/identityPoolRoleAttachment.ts:13</li>
+							<li>Defined in cognito/identityPoolRoleAttachment.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>An identity pool ID in the format REGION:GUID.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cognito_identity_pool_roles_attachment.html#identity_pool_id">https://www.terraform.io/docs/providers/aws/r/cognito_identity_pool_roles_attachment.html#identity_pool_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="rolemapping" class="tsd-anchor"></a>
-					<h3>role<wbr>Mapping</h3>
-					<div class="tsd-signature tsd-kind-icon">role<wbr>Mapping<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="rolemappings" class="tsd-anchor"></a>
+					<h3>role<wbr>Mappings</h3>
+					<div class="tsd-signature tsd-kind-icon">role<wbr>Mappings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cognito/identityPoolRoleAttachment.ts:17</li>
+							<li>Defined in cognito/identityPoolRoleAttachment.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A List of <a href="#role-mappings">Role Mapping</a>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cognito_identity_pool_roles_attachment.html#role_mapping">https://www.terraform.io/docs/providers/aws/r/cognito_identity_pool_roles_attachment.html#role_mapping</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -220,13 +223,14 @@
 					<div class="tsd-signature tsd-kind-icon">roles<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cognito/identityPoolRoleAttachment.ts:21</li>
+							<li>Defined in cognito/identityPoolRoleAttachment.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The map of roles associated with this pool. For a given role, the key will be either &quot;authenticated&quot; or &quot;unauthenticated&quot; and the value will be the Role ARN.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cognito_identity_pool_roles_attachment.html#roles">https://www.terraform.io/docs/providers/aws/r/cognito_identity_pool_roles_attachment.html#roles</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -276,7 +280,7 @@
 								<a href="_cognito_identitypoolroleattachment_.identitypoolroleattachment.html#identitypoolid" class="tsd-kind-icon">identity<wbr>Pool<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_cognito_identitypoolroleattachment_.identitypoolroleattachment.html#rolemapping" class="tsd-kind-icon">role<wbr>Mapping</a>
+								<a href="_cognito_identitypoolroleattachment_.identitypoolroleattachment.html#rolemappings" class="tsd-kind-icon">role<wbr>Mappings</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_cognito_identitypoolroleattachment_.identitypoolroleattachment.html#roles" class="tsd-kind-icon">roles</a>

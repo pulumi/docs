@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Manages a single EBS volume.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ebs_volume.html">https://www.terraform.io/docs/providers/aws/r/ebs_volume.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -131,7 +132,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ebs/volume.ts:45</li>
+									<li>Defined in ebs/volume.ts:65</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -179,13 +180,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/volume.ts:13</li>
+							<li>Defined in ebs/volume.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#arn">https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -194,13 +196,14 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/volume.ts:17</li>
+							<li>Defined in ebs/volume.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The AZ where the EBS volume will exist.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#availability_zone">https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -209,13 +212,14 @@
 					<div class="tsd-signature tsd-kind-icon">encrypted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/volume.ts:21</li>
+							<li>Defined in ebs/volume.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If true, the disk will be encrypted.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#encrypted">https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#encrypted</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -241,13 +245,14 @@
 					<div class="tsd-signature tsd-kind-icon">iops<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/volume.ts:25</li>
+							<li>Defined in ebs/volume.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The amount of IOPS to provision for the disk.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#iops">https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#iops</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -256,13 +261,14 @@
 					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/volume.ts:29</li>
+							<li>Defined in ebs/volume.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN for the KMS encryption key. When specifying <code>kms_key_id</code>, <code>encrypted</code> needs to be set to true.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#kms_key_id">https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#kms_key_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -271,13 +277,14 @@
 					<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/volume.ts:33</li>
+							<li>Defined in ebs/volume.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The size of the drive in GiBs.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#size">https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#size</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -286,13 +293,14 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/volume.ts:37</li>
+							<li>Defined in ebs/volume.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A snapshot to base the EBS volume off of.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#snapshot_id">https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#snapshot_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -301,13 +309,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/volume.ts:41</li>
+							<li>Defined in ebs/volume.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#tags">https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -316,13 +325,14 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ebs/volume.ts:45</li>
+							<li>Defined in ebs/volume.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of EBS volume. Can be &quot;standard&quot;, &quot;gp2&quot;, &quot;io1&quot;, &quot;sc1&quot; or &quot;st1&quot; (Default: &quot;standard&quot;).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#type">https://www.terraform.io/docs/providers/aws/r/ebs_volume.html#type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">

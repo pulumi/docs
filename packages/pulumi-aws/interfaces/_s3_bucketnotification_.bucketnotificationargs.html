@@ -92,9 +92,9 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_s3_bucketnotification_.bucketnotificationargs.html#bucket" class="tsd-kind-icon">bucket</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_s3_bucketnotification_.bucketnotificationargs.html#lambdafunction" class="tsd-kind-icon">lambda<wbr>Function</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_s3_bucketnotification_.bucketnotificationargs.html#queue" class="tsd-kind-icon">queue</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_s3_bucketnotification_.bucketnotificationargs.html#topic" class="tsd-kind-icon">topic</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_s3_bucketnotification_.bucketnotificationargs.html#lambdafunctions" class="tsd-kind-icon">lambda<wbr>Functions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_s3_bucketnotification_.bucketnotificationargs.html#queues" class="tsd-kind-icon">queues</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_s3_bucketnotification_.bucketnotificationargs.html#topics" class="tsd-kind-icon">topics</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,58 +108,62 @@
 					<div class="tsd-signature tsd-kind-icon">bucket<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucketNotification.ts:54</li>
+							<li>Defined in s3/bucketNotification.ts:66</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the bucket to put notification configuration.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket_notification.html#bucket">https://www.terraform.io/docs/providers/aws/r/s3_bucket_notification.html#bucket</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="lambdafunction" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> lambda<wbr>Function</h3>
-					<div class="tsd-signature tsd-kind-icon">lambda<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="lambdafunctions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> lambda<wbr>Functions</h3>
+					<div class="tsd-signature tsd-kind-icon">lambda<wbr>Functions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucketNotification.ts:58</li>
+							<li>Defined in s3/bucketNotification.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Used to configure notifications to a Lambda Function (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket_notification.html#lambda_function">https://www.terraform.io/docs/providers/aws/r/s3_bucket_notification.html#lambda_function</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="queue" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> queue</h3>
-					<div class="tsd-signature tsd-kind-icon">queue<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="queues" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> queues</h3>
+					<div class="tsd-signature tsd-kind-icon">queues<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucketNotification.ts:62</li>
+							<li>Defined in s3/bucketNotification.ts:78</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The notification configuration to SQS Queue (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket_notification.html#queue">https://www.terraform.io/docs/providers/aws/r/s3_bucket_notification.html#queue</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="topic" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> topic</h3>
-					<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="topics" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> topics</h3>
+					<div class="tsd-signature tsd-kind-icon">topics<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucketNotification.ts:66</li>
+							<li>Defined in s3/bucketNotification.ts:84</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The notification configuration to SNS Topic (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket_notification.html#topic">https://www.terraform.io/docs/providers/aws/r/s3_bucket_notification.html#topic</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -189,13 +193,13 @@
 								<a href="_s3_bucketnotification_.bucketnotificationargs.html#bucket" class="tsd-kind-icon">bucket</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_s3_bucketnotification_.bucketnotificationargs.html#lambdafunction" class="tsd-kind-icon">lambda<wbr>Function</a>
+								<a href="_s3_bucketnotification_.bucketnotificationargs.html#lambdafunctions" class="tsd-kind-icon">lambda<wbr>Functions</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_s3_bucketnotification_.bucketnotificationargs.html#queue" class="tsd-kind-icon">queue</a>
+								<a href="_s3_bucketnotification_.bucketnotificationargs.html#queues" class="tsd-kind-icon">queues</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_s3_bucketnotification_.bucketnotificationargs.html#topic" class="tsd-kind-icon">topic</a>
+								<a href="_s3_bucketnotification_.bucketnotificationargs.html#topics" class="tsd-kind-icon">topics</a>
 							</li>
 						</ul>
 					</li>

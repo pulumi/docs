@@ -110,13 +110,14 @@
 					<div class="tsd-signature tsd-kind-icon">assume<wbr>Role<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/role.ts:80</li>
+							<li>Defined in iam/role.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The policy that grants an entity permission to assume the role.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_role.html#assume_role_policy">https://www.terraform.io/docs/providers/aws/r/iam_role.html#assume_role_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -125,13 +126,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/role.ts:84</li>
+							<li>Defined in iam/role.ts:108</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The description of the role.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_role.html#description">https://www.terraform.io/docs/providers/aws/r/iam_role.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -140,13 +142,14 @@
 					<div class="tsd-signature tsd-kind-icon">force<wbr>Detach<wbr>Policies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/role.ts:88</li>
+							<li>Defined in iam/role.ts:114</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies to force detaching any policies the role has before destroying it. Defaults to <code>false</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_role.html#force_detach_policies">https://www.terraform.io/docs/providers/aws/r/iam_role.html#force_detach_policies</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -155,13 +158,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/role.ts:92</li>
+							<li>Defined in iam/role.ts:120</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the role. If omitted, Terraform will assign a random, unique name.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_role.html#name">https://www.terraform.io/docs/providers/aws/r/iam_role.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -170,13 +174,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/role.ts:96</li>
+							<li>Defined in iam/role.ts:126</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Creates a unique name beginning with the specified prefix. Conflicts with <code>name</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_role.html#name_prefix">https://www.terraform.io/docs/providers/aws/r/iam_role.html#name_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -185,7 +190,7 @@
 					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/role.ts:101</li>
+							<li>Defined in iam/role.ts:133</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -193,6 +198,7 @@
 							<p>The path to the role.
 							See <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_role.html#path">https://www.terraform.io/docs/providers/aws/r/iam_role.html#path</a>.</p>
 					</div>
 				</section>
 			</section>

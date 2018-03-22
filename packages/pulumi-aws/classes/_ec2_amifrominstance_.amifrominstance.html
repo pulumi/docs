@@ -87,6 +87,7 @@
 						resource. Ongoing updates to the referenced instance will not be propagated into
 						the generated AMI. Users may taint or otherwise recreate the resource in order
 					to produce a fresh snapshot.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -117,8 +118,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_amifrominstance_.amifrominstance.html#architecture" class="tsd-kind-icon">architecture</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_amifrominstance_.amifrominstance.html#description" class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_amifrominstance_.amifrominstance.html#ebsblockdevice" class="tsd-kind-icon">ebs<wbr>Block<wbr>Device</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_amifrominstance_.amifrominstance.html#ephemeralblockdevice" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Device</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_amifrominstance_.amifrominstance.html#ebsblockdevices" class="tsd-kind-icon">ebs<wbr>Block<wbr>Devices</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_amifrominstance_.amifrominstance.html#ephemeralblockdevices" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_ec2_amifrominstance_.amifrominstance.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_amifrominstance_.amifrominstance.html#imagelocation" class="tsd-kind-icon">image<wbr>Location</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_amifrominstance_.amifrominstance.html#kernelid" class="tsd-kind-icon">kernel<wbr>Id</a></li>
@@ -151,7 +152,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/amiFromInstance.ts:91</li>
+									<li>Defined in ec2/amiFromInstance.ts:119</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -199,13 +200,14 @@
 					<div class="tsd-signature tsd-kind-icon">architecture<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:29</li>
+							<li>Defined in ec2/amiFromInstance.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Machine architecture for created instances. Defaults to &quot;x86_64&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#architecture">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#architecture</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -214,22 +216,23 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:33</li>
+							<li>Defined in ec2/amiFromInstance.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A longer, human-readable description for the AMI.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#description">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ebsblockdevice" class="tsd-anchor"></a>
-					<h3>ebs<wbr>Block<wbr>Device</h3>
-					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="ebsblockdevices" class="tsd-anchor"></a>
+					<h3>ebs<wbr>Block<wbr>Devices</h3>
+					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Block<wbr>Devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:38</li>
+							<li>Defined in ec2/amiFromInstance.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -237,15 +240,16 @@
 							<p>Nested block describing an EBS block device that should be
 							attached to created instances. The structure of this block is described below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#ebs_block_device">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#ebs_block_device</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ephemeralblockdevice" class="tsd-anchor"></a>
-					<h3>ephemeral<wbr>Block<wbr>Device</h3>
-					<div class="tsd-signature tsd-kind-icon">ephemeral<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="ephemeralblockdevices" class="tsd-anchor"></a>
+					<h3>ephemeral<wbr>Block<wbr>Devices</h3>
+					<div class="tsd-signature tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:43</li>
+							<li>Defined in ec2/amiFromInstance.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -253,6 +257,7 @@
 							<p>Nested block describing an ephemeral block device that
 							should be attached to created instances. The structure of this block is described below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#ephemeral_block_device">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#ephemeral_block_device</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -278,7 +283,7 @@
 					<div class="tsd-signature tsd-kind-icon">image<wbr>Location<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:48</li>
+							<li>Defined in ec2/amiFromInstance.ts:60</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -286,6 +291,7 @@
 							<p>Path to an S3 object containing an image manifest, e.g. created
 							by the <code>ec2-upload-bundle</code> command in the EC2 command line tools.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#image_location">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#image_location</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -294,7 +300,7 @@
 					<div class="tsd-signature tsd-kind-icon">kernel<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:53</li>
+							<li>Defined in ec2/amiFromInstance.ts:67</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -302,6 +308,7 @@
 							<p>The id of the kernel image (AKI) that will be used as the paravirtual
 							kernel in created instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#kernel_id">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#kernel_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -310,7 +317,7 @@
 					<div class="tsd-signature tsd-kind-icon">manage<wbr>Ebs<wbr>Snapshots<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:54</li>
+							<li>Defined in ec2/amiFromInstance.ts:68</li>
 						</ul>
 					</aside>
 				</section>
@@ -320,13 +327,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:58</li>
+							<li>Defined in ec2/amiFromInstance.ts:74</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A region-unique name for the AMI.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#name">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -335,7 +343,7 @@
 					<div class="tsd-signature tsd-kind-icon">ramdisk<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:63</li>
+							<li>Defined in ec2/amiFromInstance.ts:81</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -343,6 +351,7 @@
 							<p>The id of an initrd image (ARI) that will be used when booting the
 							created instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#ramdisk_id">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#ramdisk_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -351,13 +360,14 @@
 					<div class="tsd-signature tsd-kind-icon">root<wbr>Device<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:67</li>
+							<li>Defined in ec2/amiFromInstance.ts:87</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the root device (for example, <code>/dev/sda1</code>, or <code>/dev/xvda</code>).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#root_device_name">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#root_device_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -366,7 +376,7 @@
 					<div class="tsd-signature tsd-kind-icon">root<wbr>Snapshot<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:68</li>
+							<li>Defined in ec2/amiFromInstance.ts:88</li>
 						</ul>
 					</aside>
 				</section>
@@ -376,7 +386,7 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Without<wbr>Reboot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:75</li>
+							<li>Defined in ec2/amiFromInstance.ts:97</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -386,6 +396,7 @@
 								inconsistent filesystem state, but can be used to avoid downtime if the user otherwise
 							guarantees that no filesystem writes will be underway at the time of snapshot.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#snapshot_without_reboot">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#snapshot_without_reboot</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -394,13 +405,14 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Instance<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:79</li>
+							<li>Defined in ec2/amiFromInstance.ts:103</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The id of the instance to use as the basis of the AMI.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#source_instance_id">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#source_instance_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -409,7 +421,7 @@
 					<div class="tsd-signature tsd-kind-icon">sriov<wbr>Net<wbr>Support<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:84</li>
+							<li>Defined in ec2/amiFromInstance.ts:110</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -417,6 +429,7 @@
 							<p>When set to &quot;simple&quot; (the default), enables enhanced networking
 							for created instances. No other value is supported at this time.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#sriov_net_support">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#sriov_net_support</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -425,7 +438,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:85</li>
+							<li>Defined in ec2/amiFromInstance.ts:111</li>
 						</ul>
 					</aside>
 				</section>
@@ -452,7 +465,7 @@
 					<div class="tsd-signature tsd-kind-icon">virtualization<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/amiFromInstance.ts:91</li>
+							<li>Defined in ec2/amiFromInstance.ts:119</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -461,6 +474,7 @@
 								will use. Can be either &quot;paravirtual&quot; (the default) or &quot;hvm&quot;. The choice of virtualization type
 							changes the set of further arguments that are required, as described below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#virtualization_type">https://www.terraform.io/docs/providers/aws/r/ami_from_instance.html#virtualization_type</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -493,10 +507,10 @@
 								<a href="_ec2_amifrominstance_.amifrominstance.html#description" class="tsd-kind-icon">description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_ec2_amifrominstance_.amifrominstance.html#ebsblockdevice" class="tsd-kind-icon">ebs<wbr>Block<wbr>Device</a>
+								<a href="_ec2_amifrominstance_.amifrominstance.html#ebsblockdevices" class="tsd-kind-icon">ebs<wbr>Block<wbr>Devices</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_ec2_amifrominstance_.amifrominstance.html#ephemeralblockdevice" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Device</a>
+								<a href="_ec2_amifrominstance_.amifrominstance.html#ephemeralblockdevices" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_ec2_amifrominstance_.amifrominstance.html#id" class="tsd-kind-icon">id</a>

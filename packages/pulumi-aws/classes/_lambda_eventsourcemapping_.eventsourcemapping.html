@@ -76,6 +76,7 @@
 					</div>
 					<p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]
 					For information about event source mappings, see [CreateEventSourceMapping][2] in the API docs.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -135,7 +136,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in lambda/eventSourceMapping.ts:56</li>
+									<li>Defined in lambda/eventSourceMapping.ts:80</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -183,13 +184,14 @@
 					<div class="tsd-signature tsd-kind-icon">batch<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:16</li>
+							<li>Defined in lambda/eventSourceMapping.ts:20</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to <code>100</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#batch_size">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#batch_size</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -198,13 +200,14 @@
 					<div class="tsd-signature tsd-kind-icon">enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:20</li>
+							<li>Defined in lambda/eventSourceMapping.ts:26</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Determines if the mapping will be enabled on creation. Defaults to <code>true</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#enabled">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#enabled</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -213,13 +216,14 @@
 					<div class="tsd-signature tsd-kind-icon">event<wbr>Source<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:24</li>
+							<li>Defined in lambda/eventSourceMapping.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The event source ARN - can either be a Kinesis or DynamoDB stream.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#event_source_arn">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#event_source_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -228,13 +232,14 @@
 					<div class="tsd-signature tsd-kind-icon">function<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:28</li>
+							<li>Defined in lambda/eventSourceMapping.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from <code>function_name</code> above.)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#function_arn">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#function_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -243,13 +248,14 @@
 					<div class="tsd-signature tsd-kind-icon">function<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:32</li>
+							<li>Defined in lambda/eventSourceMapping.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name or the ARN of the Lambda function that will be subscribing to events.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#function_name">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#function_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -275,13 +281,14 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Modified<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:36</li>
+							<li>Defined in lambda/eventSourceMapping.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The date this resource was last modified.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#last_modified">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#last_modified</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -290,13 +297,14 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Processing<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:40</li>
+							<li>Defined in lambda/eventSourceMapping.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The result of the last AWS Lambda invocation of your Lambda function.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#last_processing_result">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#last_processing_result</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -305,13 +313,14 @@
 					<div class="tsd-signature tsd-kind-icon">starting<wbr>Position<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:44</li>
+							<li>Defined in lambda/eventSourceMapping.ts:62</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The position in the stream where AWS Lambda should start reading. Can be one of either <code>TRIM_HORIZON</code> or <code>LATEST</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#starting_position">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#starting_position</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -320,13 +329,14 @@
 					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:48</li>
+							<li>Defined in lambda/eventSourceMapping.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The state of the event source mapping.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#state">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#state</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -335,13 +345,14 @@
 					<div class="tsd-signature tsd-kind-icon">state<wbr>Transition<wbr>Reason<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:52</li>
+							<li>Defined in lambda/eventSourceMapping.ts:74</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The reason the event source mapping is in its current state.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#state_transition_reason">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#state_transition_reason</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -367,13 +378,14 @@
 					<div class="tsd-signature tsd-kind-icon">uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/eventSourceMapping.ts:56</li>
+							<li>Defined in lambda/eventSourceMapping.ts:80</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The UUID of the created event source mapping.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#uuid">https://www.terraform.io/docs/providers/aws/r/lambda_event_source_mapping.html#uuid</a>.</p>
 					</div>
 				</section>
 			</section>

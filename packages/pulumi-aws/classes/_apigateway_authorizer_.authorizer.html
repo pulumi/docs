@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides an API Gateway Authorizer.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -130,7 +131,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in apigateway/authorizer.ts:52</li>
+									<li>Defined in apigateway/authorizer.ts:70</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -178,7 +179,7 @@
 					<div class="tsd-signature tsd-kind-icon">authorizer<wbr>Credentials<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:16</li>
+							<li>Defined in apigateway/authorizer.ts:20</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,6 +187,7 @@
 							<p>The credentials required for the authorizer.
 							To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#authorizer_credentials">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#authorizer_credentials</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -194,7 +196,7 @@
 					<div class="tsd-signature tsd-kind-icon">authorizer<wbr>Result<wbr>Ttl<wbr>InSeconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:21</li>
+							<li>Defined in apigateway/authorizer.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -202,6 +204,7 @@
 							<p>The TTL of cached authorizer results in seconds.
 							Defaults to <code>300</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#authorizer_result_ttl_in_seconds">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#authorizer_result_ttl_in_seconds</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -210,7 +213,7 @@
 					<div class="tsd-signature tsd-kind-icon">authorizer<wbr>Uri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:27</li>
+							<li>Defined in apigateway/authorizer.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -219,6 +222,7 @@
 								For <code>TOKEN</code> type, this must be a well-formed Lambda function URI in the form of
 							<code>arn:aws:apigateway:{region}:lambda:path/{service_api}</code>. e.g. <code>arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#authorizer_uri">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#authorizer_uri</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -244,7 +248,7 @@
 					<div class="tsd-signature tsd-kind-icon">identity<wbr>Source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:32</li>
+							<li>Defined in apigateway/authorizer.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -252,6 +256,7 @@
 							<p>The source of the identity in an incoming request.
 							Defaults to <code>method.request.header.Authorization</code>. For <code>REQUEST</code> type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. <code>&quot;method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName&quot;</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#identity_source">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#identity_source</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -260,7 +265,7 @@
 					<div class="tsd-signature tsd-kind-icon">identity<wbr>Validation<wbr>Expression<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:39</li>
+							<li>Defined in apigateway/authorizer.ts:51</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -270,6 +275,7 @@
 								against this expression, and will proceed if the token matches. If the token doesn&#39;t match,
 							the client receives a 401 Unauthorized response.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#identity_validation_expression">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#identity_validation_expression</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -278,13 +284,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:43</li>
+							<li>Defined in apigateway/authorizer.ts:57</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the authorizer</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#name">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -293,13 +300,14 @@
 					<div class="tsd-signature tsd-kind-icon">rest<wbr>Api<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="_apigateway_restapi_.restapi.html" class="tsd-signature-type">RestApi</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:47</li>
+							<li>Defined in apigateway/authorizer.ts:63</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the associated REST API</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#rest_api_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#rest_api_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -308,7 +316,7 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:52</li>
+							<li>Defined in apigateway/authorizer.ts:70</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -316,6 +324,7 @@
 							<p>The type of the authorizer. Possible values are <code>TOKEN</code> and <code>REQUEST</code>.
 							Defaults to <code>TOKEN</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#type">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">

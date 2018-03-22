@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides a load balancer policy, which can be attached to an ELB listener or backend server.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/load_balancer_policy.html">https://www.terraform.io/docs/providers/aws/r/load_balancer_policy.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -104,7 +105,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#loadbalancername" class="tsd-kind-icon">load<wbr>Balancer<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#policyattribute" class="tsd-kind-icon">policy<wbr>Attribute</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#policyattributes" class="tsd-kind-icon">policy<wbr>Attributes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#policyname" class="tsd-kind-icon">policy<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#policytypename" class="tsd-kind-icon">policy<wbr>Type<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#urn" class="tsd-kind-icon">urn</a></li>
@@ -126,7 +127,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elasticloadbalancing/loadBalancerPolicy.ts:25</li>
+									<li>Defined in elasticloadbalancing/loadBalancerPolicy.ts:35</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -191,28 +192,30 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancing/loadBalancerPolicy.ts:13</li>
+							<li>Defined in elasticloadbalancing/loadBalancerPolicy.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The load balancer on which the policy is defined.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/load_balancer_policy.html#load_balancer_name">https://www.terraform.io/docs/providers/aws/r/load_balancer_policy.html#load_balancer_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="policyattribute" class="tsd-anchor"></a>
-					<h3>policy<wbr>Attribute</h3>
-					<div class="tsd-signature tsd-kind-icon">policy<wbr>Attribute<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="policyattributes" class="tsd-anchor"></a>
+					<h3>policy<wbr>Attributes</h3>
+					<div class="tsd-signature tsd-kind-icon">policy<wbr>Attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancing/loadBalancerPolicy.ts:17</li>
+							<li>Defined in elasticloadbalancing/loadBalancerPolicy.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Policy attribute to apply to the policy.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/load_balancer_policy.html#policy_attribute">https://www.terraform.io/docs/providers/aws/r/load_balancer_policy.html#policy_attribute</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -221,13 +224,14 @@
 					<div class="tsd-signature tsd-kind-icon">policy<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancing/loadBalancerPolicy.ts:21</li>
+							<li>Defined in elasticloadbalancing/loadBalancerPolicy.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the load balancer policy.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/load_balancer_policy.html#policy_name">https://www.terraform.io/docs/providers/aws/r/load_balancer_policy.html#policy_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -236,13 +240,14 @@
 					<div class="tsd-signature tsd-kind-icon">policy<wbr>Type<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancing/loadBalancerPolicy.ts:25</li>
+							<li>Defined in elasticloadbalancing/loadBalancerPolicy.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The policy type.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/load_balancer_policy.html#policy_type_name">https://www.terraform.io/docs/providers/aws/r/load_balancer_policy.html#policy_type_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -292,7 +297,7 @@
 								<a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#loadbalancername" class="tsd-kind-icon">load<wbr>Balancer<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#policyattribute" class="tsd-kind-icon">policy<wbr>Attribute</a>
+								<a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#policyattributes" class="tsd-kind-icon">policy<wbr>Attributes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_elasticloadbalancing_loadbalancerpolicy_.loadbalancerpolicy.html#policyname" class="tsd-kind-icon">policy<wbr>Name</a>

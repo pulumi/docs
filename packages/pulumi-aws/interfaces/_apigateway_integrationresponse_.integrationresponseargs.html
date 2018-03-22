@@ -113,13 +113,14 @@
 					<div class="tsd-signature tsd-kind-icon">content<wbr>Handling<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integrationResponse.ts:97</li>
+							<li>Defined in apigateway/integrationResponse.ts:119</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies how to handle request payload content type conversions. Supported values are <code>CONVERT_TO_BINARY</code> and <code>CONVERT_TO_TEXT</code>. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#content_handling">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#content_handling</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -128,13 +129,14 @@
 					<div class="tsd-signature tsd-kind-icon">http<wbr>Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integrationResponse.ts:101</li>
+							<li>Defined in apigateway/integrationResponse.ts:125</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The HTTP method (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, <code>HEAD</code>, <code>OPTIONS</code>, <code>ANY</code>)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#http_method">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#http_method</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -143,13 +145,14 @@
 					<div class="tsd-signature tsd-kind-icon">resource<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integrationResponse.ts:105</li>
+							<li>Defined in apigateway/integrationResponse.ts:131</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The API resource ID</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#resource_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#resource_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -158,7 +161,7 @@
 					<div class="tsd-signature tsd-kind-icon">response<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integrationResponse.ts:110</li>
+							<li>Defined in apigateway/integrationResponse.ts:138</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -166,6 +169,7 @@
 							<p>A map of response parameters that can be read from the backend response.
 							For example: <code>response_parameters = { &quot;method.response.header.X-Some-Header&quot; = &quot;integration.response.header.X-Some-Other-Header&quot; }</code>,</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#response_parameters">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#response_parameters</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -174,13 +178,14 @@
 					<div class="tsd-signature tsd-kind-icon">response<wbr>Parameters<wbr>InJson<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integrationResponse.ts:114</li>
+							<li>Defined in apigateway/integrationResponse.ts:144</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p><strong>Deprecated</strong>, use <code>response_parameters</code> instead.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#response_parameters_in_json">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#response_parameters_in_json</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -189,13 +194,14 @@
 					<div class="tsd-signature tsd-kind-icon">response<wbr>Templates<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integrationResponse.ts:118</li>
+							<li>Defined in apigateway/integrationResponse.ts:150</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A map specifying the templates used to transform the integration response body</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#response_templates">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#response_templates</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -204,13 +210,14 @@
 					<div class="tsd-signature tsd-kind-icon">rest<wbr>Api<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_apigateway_restapi_.restapi.html" class="tsd-signature-type">RestApi</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integrationResponse.ts:122</li>
+							<li>Defined in apigateway/integrationResponse.ts:156</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the associated REST API</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#rest_api_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#rest_api_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -219,7 +226,7 @@
 					<div class="tsd-signature tsd-kind-icon">selection<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integrationResponse.ts:129</li>
+							<li>Defined in apigateway/integrationResponse.ts:165</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -229,6 +236,7 @@
 								If the backend is an <code>AWS</code> Lambda function, the AWS Lambda function error header is matched.
 							For all other <code>HTTP</code> and <code>AWS</code> backends, the HTTP status code is matched.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#selection_pattern">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#selection_pattern</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -237,13 +245,14 @@
 					<div class="tsd-signature tsd-kind-icon">status<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integrationResponse.ts:133</li>
+							<li>Defined in apigateway/integrationResponse.ts:171</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The HTTP status code</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#status_code">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration_response.html#status_code</a>.</p>
 					</div>
 				</section>
 			</section>

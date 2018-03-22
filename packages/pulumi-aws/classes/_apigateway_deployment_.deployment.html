@@ -76,6 +76,7 @@
 					</div>
 					<p>-&gt; <strong>Note:</strong> Depends on having <code>aws_api_gateway_integration</code> inside your rest api (which in turn depends on <code>aws_api_gateway_method</code>). To avoid race conditions
 					you might need to add an explicit <code>depends_on = [&quot;aws_api_gateway_integration.name&quot;]</code>.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -132,7 +133,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in apigateway/deployment.ts:49</li>
+									<li>Defined in apigateway/deployment.ts:67</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -180,13 +181,14 @@
 					<div class="tsd-signature tsd-kind-icon">created<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/deployment.ts:18</li>
+							<li>Defined in apigateway/deployment.ts:22</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The creation date of the deployment</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#created_date">https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#created_date</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -195,13 +197,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/deployment.ts:22</li>
+							<li>Defined in apigateway/deployment.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The description of the deployment</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#description">https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -210,7 +213,7 @@
 					<div class="tsd-signature tsd-kind-icon">execution<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/deployment.ts:28</li>
+							<li>Defined in apigateway/deployment.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -219,6 +222,7 @@
 								when allowing API Gateway to invoke a Lambda function,
 							e.g. <code>arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#execution_arn">https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#execution_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -244,7 +248,7 @@
 					<div class="tsd-signature tsd-kind-icon">invoke<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/deployment.ts:33</li>
+							<li>Defined in apigateway/deployment.ts:43</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -252,6 +256,7 @@
 							<p>The URL to invoke the API pointing to the stage,
 							e.g. <code>https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#invoke_url">https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#invoke_url</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -260,13 +265,14 @@
 					<div class="tsd-signature tsd-kind-icon">rest<wbr>Api<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="_apigateway_restapi_.restapi.html" class="tsd-signature-type">RestApi</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/deployment.ts:37</li>
+							<li>Defined in apigateway/deployment.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the associated REST API</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#rest_api_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#rest_api_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -275,13 +281,14 @@
 					<div class="tsd-signature tsd-kind-icon">stage<wbr>Description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/deployment.ts:41</li>
+							<li>Defined in apigateway/deployment.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The description of the stage</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#stage_description">https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#stage_description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -290,13 +297,14 @@
 					<div class="tsd-signature tsd-kind-icon">stage<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/deployment.ts:45</li>
+							<li>Defined in apigateway/deployment.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the stage</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#stage_name">https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#stage_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -322,13 +330,14 @@
 					<div class="tsd-signature tsd-kind-icon">variables<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/deployment.ts:49</li>
+							<li>Defined in apigateway/deployment.ts:67</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A map that defines variables for the stage</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#variables">https://www.terraform.io/docs/providers/aws/r/api_gateway_deployment.html#variables</a>.</p>
 					</div>
 				</section>
 			</section>

@@ -94,7 +94,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codepipeline_pipeline_.pipelineargs.html#artifactstore" class="tsd-kind-icon">artifact<wbr>Store</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codepipeline_pipeline_.pipelineargs.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codepipeline_pipeline_.pipelineargs.html#rolearn" class="tsd-kind-icon">role<wbr>Arn</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codepipeline_pipeline_.pipelineargs.html#stage" class="tsd-kind-icon">stage</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_codepipeline_pipeline_.pipelineargs.html#stages" class="tsd-kind-icon">stages</a></li>
 							</ul>
 						</section>
 					</div>
@@ -105,16 +105,17 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="artifactstore" class="tsd-anchor"></a>
 					<h3>artifact<wbr>Store</h3>
-					<div class="tsd-signature tsd-kind-icon">artifact<wbr>Store<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">artifact<wbr>Store<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codepipeline/pipeline.ts:67</li>
+							<li>Defined in codepipeline/pipeline.ts:81</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>An artifact_store block. Artifact stores are documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codepipeline.html#artifact_store">https://www.terraform.io/docs/providers/aws/r/codepipeline.html#artifact_store</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -123,13 +124,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codepipeline/pipeline.ts:71</li>
+							<li>Defined in codepipeline/pipeline.ts:87</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The action declaration&#39;s name.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codepipeline.html#name">https://www.terraform.io/docs/providers/aws/r/codepipeline.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -138,28 +140,30 @@
 					<div class="tsd-signature tsd-kind-icon">role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codepipeline/pipeline.ts:75</li>
+							<li>Defined in codepipeline/pipeline.ts:93</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the IAM service role that will perform the declared action. This is assumed through the roleArn for the pipeline.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codepipeline.html#role_arn">https://www.terraform.io/docs/providers/aws/r/codepipeline.html#role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="stage" class="tsd-anchor"></a>
-					<h3>stage</h3>
-					<div class="tsd-signature tsd-kind-icon">stage<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="stages" class="tsd-anchor"></a>
+					<h3>stages</h3>
+					<div class="tsd-signature tsd-kind-icon">stages<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codepipeline/pipeline.ts:79</li>
+							<li>Defined in codepipeline/pipeline.ts:99</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A stage block. Stages are documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codepipeline.html#stage">https://www.terraform.io/docs/providers/aws/r/codepipeline.html#stage</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -195,7 +199,7 @@
 								<a href="_codepipeline_pipeline_.pipelineargs.html#rolearn" class="tsd-kind-icon">role<wbr>Arn</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_codepipeline_pipeline_.pipelineargs.html#stage" class="tsd-kind-icon">stage</a>
+								<a href="_codepipeline_pipeline_.pipelineargs.html#stages" class="tsd-kind-icon">stages</a>
 							</li>
 						</ul>
 					</li>

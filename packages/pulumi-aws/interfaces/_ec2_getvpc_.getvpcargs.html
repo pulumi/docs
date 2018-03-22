@@ -94,7 +94,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpc_.getvpcargs.html#cidrblock" class="tsd-kind-icon">cidr<wbr>Block</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpc_.getvpcargs.html#default" class="tsd-kind-icon">default</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpc_.getvpcargs.html#dhcpoptionsid" class="tsd-kind-icon">dhcp<wbr>Options<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpc_.getvpcargs.html#filter" class="tsd-kind-icon">filter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpc_.getvpcargs.html#filters" class="tsd-kind-icon">filters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpc_.getvpcargs.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpc_.getvpcargs.html#state" class="tsd-kind-icon">state</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getvpc_.getvpcargs.html#tags" class="tsd-kind-icon">tags</a></li>
@@ -111,13 +111,14 @@
 					<div class="tsd-signature tsd-kind-icon">cidr<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getVpc.ts:33</li>
+							<li>Defined in ec2/getVpc.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The cidr block of the desired VPC.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc.html#cidr_block">https://www.terraform.io/docs/providers/aws/d/vpc.html#cidr_block</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -126,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getVpc.ts:38</li>
+							<li>Defined in ec2/getVpc.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -134,6 +135,7 @@
 							<p>Boolean constraint on whether the desired VPC is
 							the default VPC for the region.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc.html#default">https://www.terraform.io/docs/providers/aws/d/vpc.html#default</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -142,28 +144,30 @@
 					<div class="tsd-signature tsd-kind-icon">dhcp<wbr>Options<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getVpc.ts:42</li>
+							<li>Defined in ec2/getVpc.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The DHCP options id of the desired VPC.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc.html#dhcp_options_id">https://www.terraform.io/docs/providers/aws/d/vpc.html#dhcp_options_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="filter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filter</h3>
-					<div class="tsd-signature tsd-kind-icon">filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="filters" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filters</h3>
+					<div class="tsd-signature tsd-kind-icon">filters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getVpc.ts:46</li>
+							<li>Defined in ec2/getVpc.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Custom filter block as described below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc.html#filter">https://www.terraform.io/docs/providers/aws/d/vpc.html#filter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -172,13 +176,14 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getVpc.ts:50</li>
+							<li>Defined in ec2/getVpc.ts:62</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The id of the specific VPC to retrieve.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc.html#id">https://www.terraform.io/docs/providers/aws/d/vpc.html#id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -187,7 +192,7 @@
 					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getVpc.ts:55</li>
+							<li>Defined in ec2/getVpc.ts:69</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -195,6 +200,7 @@
 							<p>The current state of the desired VPC.
 							Can be either <code>&quot;pending&quot;</code> or <code>&quot;available&quot;</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc.html#state">https://www.terraform.io/docs/providers/aws/d/vpc.html#state</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -203,7 +209,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getVpc.ts:60</li>
+							<li>Defined in ec2/getVpc.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -211,6 +217,7 @@
 							<p>A mapping of tags, each pair of which must exactly match
 							a pair on the desired VPC.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/vpc.html#tags">https://www.terraform.io/docs/providers/aws/d/vpc.html#tags</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -243,7 +250,7 @@
 								<a href="_ec2_getvpc_.getvpcargs.html#dhcpoptionsid" class="tsd-kind-icon">dhcp<wbr>Options<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ec2_getvpc_.getvpcargs.html#filter" class="tsd-kind-icon">filter</a>
+								<a href="_ec2_getvpc_.getvpcargs.html#filters" class="tsd-kind-icon">filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_getvpc_.getvpcargs.html#id" class="tsd-kind-icon">id</a>

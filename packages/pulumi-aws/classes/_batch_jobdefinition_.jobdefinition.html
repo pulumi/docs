@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides a Batch Job Definition resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html">https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -129,7 +130,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in batch/jobDefinition.ts:39</li>
+									<li>Defined in batch/jobDefinition.ts:55</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -177,13 +178,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/jobDefinition.ts:13</li>
+							<li>Defined in batch/jobDefinition.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name of the job definition.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#arn">https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -192,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">container<wbr>Properties<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/jobDefinition.ts:18</li>
+							<li>Defined in batch/jobDefinition.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -200,6 +202,7 @@
 							<p>A valid <a href="http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html">container properties</a>
 							provided as a single valid JSON document. This parameter is required if the <code>type</code> parameter is <code>container</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#container_properties">https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#container_properties</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -225,13 +228,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/jobDefinition.ts:22</li>
+							<li>Defined in batch/jobDefinition.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies the name of the job definition.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#name">https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -240,22 +244,23 @@
 					<div class="tsd-signature tsd-kind-icon">parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/jobDefinition.ts:26</li>
+							<li>Defined in batch/jobDefinition.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies the parameter substitution placeholders to set in the job definition.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#parameters">https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#parameters</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="retrystrategy" class="tsd-anchor"></a>
 					<h3>retry<wbr>Strategy</h3>
-					<div class="tsd-signature tsd-kind-icon">retry<wbr>Strategy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">retry<wbr>Strategy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/jobDefinition.ts:31</li>
+							<li>Defined in batch/jobDefinition.ts:43</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -263,6 +268,7 @@
 							<p>Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 							Maximum number of <code>retry_strategy</code> is <code>1</code>.  Defined below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#retry_strategy">https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#retry_strategy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -271,13 +277,14 @@
 					<div class="tsd-signature tsd-kind-icon">revision<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/jobDefinition.ts:35</li>
+							<li>Defined in batch/jobDefinition.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The revision of the job definition.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#revision">https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#revision</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -286,13 +293,14 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/jobDefinition.ts:39</li>
+							<li>Defined in batch/jobDefinition.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of job definition.  Must be <code>container</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#type">https://www.terraform.io/docs/providers/aws/r/batch_job_definition.html#type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
