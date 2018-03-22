@@ -5,4 +5,6 @@ gem "jekyll", "3.6.2"
 gem "jekyll-octicons"
 gem "kramdown"
 gem "jekyll-include-cache", "~> 0.1"
+gem "jekyll-redirect-from"
+
 

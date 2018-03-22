@@ -1,5 +1,6 @@
 ---
 title: "▶ JavaScript and TypeScript"
+redirect_from: "/concepts/npm-packages.html"
 ---
 
 ## Using Pulumi NPM Packages {#npm-packages}
