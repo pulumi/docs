@@ -5,6 +5,7 @@ plugins:
   - jekyll-octicons
   - kramdown
   - jekyll-include-cache # used for recursive loop in _includes/tree.html
+  - jekyll-redirect-from # for 301 redirects
 
 markdown: kramdown
 kramdown:
