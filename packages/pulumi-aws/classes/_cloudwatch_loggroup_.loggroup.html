@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides a CloudWatch Log Group resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -128,7 +129,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in cloudwatch/logGroup.ts:36</li>
+									<li>Defined in cloudwatch/logGroup.ts:50</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -176,13 +177,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logGroup.ts:13</li>
+							<li>Defined in cloudwatch/logGroup.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name (ARN) specifying the log group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#arn">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -208,7 +210,7 @@
 					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logGroup.ts:19</li>
+							<li>Defined in cloudwatch/logGroup.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -217,6 +219,7 @@
 								AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All previously ingested data remains encrypted, and AWS CloudWatch Logs requires
 							permissions for the CMK whenever the encrypted data is requested.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#kms_key_id">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#kms_key_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -225,13 +228,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logGroup.ts:23</li>
+							<li>Defined in cloudwatch/logGroup.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the log group. If omitted, Terraform will assign a random, unique name.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#name">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -240,13 +244,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logGroup.ts:27</li>
+							<li>Defined in cloudwatch/logGroup.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Creates a unique name beginning with the specified prefix. Conflicts with <code>name</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#name_prefix">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#name_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -255,7 +260,7 @@
 					<div class="tsd-signature tsd-kind-icon">retention<wbr>InDays<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logGroup.ts:32</li>
+							<li>Defined in cloudwatch/logGroup.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -263,6 +268,7 @@
 							<p>Specifies the number of days
 							you want to retain log events in the specified log group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#retention_in_days">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#retention_in_days</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -271,13 +277,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/logGroup.ts:36</li>
+							<li>Defined in cloudwatch/logGroup.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#tags">https://www.terraform.io/docs/providers/aws/r/cloudwatch_log_group.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">

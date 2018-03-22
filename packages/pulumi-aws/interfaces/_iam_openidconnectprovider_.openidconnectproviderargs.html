@@ -91,8 +91,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_iam_openidconnectprovider_.openidconnectproviderargs.html#clientidlist" class="tsd-kind-icon">client<wbr>IdList</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_iam_openidconnectprovider_.openidconnectproviderargs.html#thumbprintlist" class="tsd-kind-icon">thumbprint<wbr>List</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_iam_openidconnectprovider_.openidconnectproviderargs.html#clientidlists" class="tsd-kind-icon">client<wbr>IdLists</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_iam_openidconnectprovider_.openidconnectproviderargs.html#thumbprintlists" class="tsd-kind-icon">thumbprint<wbr>Lists</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_iam_openidconnectprovider_.openidconnectproviderargs.html#url" class="tsd-kind-icon">url</a></li>
 							</ul>
 						</section>
@@ -102,33 +102,35 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="clientidlist" class="tsd-anchor"></a>
-					<h3>client<wbr>IdList</h3>
-					<div class="tsd-signature tsd-kind-icon">client<wbr>IdList<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="clientidlists" class="tsd-anchor"></a>
+					<h3>client<wbr>IdLists</h3>
+					<div class="tsd-signature tsd-kind-icon">client<wbr>IdLists<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/openIdConnectProvider.ts:60</li>
+							<li>Defined in iam/openIdConnectProvider.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that&#39;s sent as the client_id parameter on OAuth requests.)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#client_id_list">https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#client_id_list</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="thumbprintlist" class="tsd-anchor"></a>
-					<h3>thumbprint<wbr>List</h3>
-					<div class="tsd-signature tsd-kind-icon">thumbprint<wbr>List<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="thumbprintlists" class="tsd-anchor"></a>
+					<h3>thumbprint<wbr>Lists</h3>
+					<div class="tsd-signature tsd-kind-icon">thumbprint<wbr>Lists<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/openIdConnectProvider.ts:64</li>
+							<li>Defined in iam/openIdConnectProvider.ts:78</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider&#39;s server certificate(s).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#thumbprint_list">https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#thumbprint_list</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -137,13 +139,14 @@
 					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/openIdConnectProvider.ts:68</li>
+							<li>Defined in iam/openIdConnectProvider.ts:84</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The URL of the identity provider. Corresponds to the <em>iss</em> claim.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#url">https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#url</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -170,10 +173,10 @@
 						<a href="_iam_openidconnectprovider_.openidconnectproviderargs.html" class="tsd-kind-icon">Open<wbr>IdConnect<wbr>Provider<wbr>Args</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_iam_openidconnectprovider_.openidconnectproviderargs.html#clientidlist" class="tsd-kind-icon">client<wbr>IdList</a>
+								<a href="_iam_openidconnectprovider_.openidconnectproviderargs.html#clientidlists" class="tsd-kind-icon">client<wbr>IdLists</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_iam_openidconnectprovider_.openidconnectproviderargs.html#thumbprintlist" class="tsd-kind-icon">thumbprint<wbr>List</a>
+								<a href="_iam_openidconnectprovider_.openidconnectproviderargs.html#thumbprintlists" class="tsd-kind-icon">thumbprint<wbr>Lists</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_iam_openidconnectprovider_.openidconnectproviderargs.html#url" class="tsd-kind-icon">url</a>

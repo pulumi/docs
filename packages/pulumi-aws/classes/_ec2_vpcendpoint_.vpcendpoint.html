@@ -74,12 +74,13 @@
 					<div class="lead">
 						<p>Provides a VPC Endpoint resource.</p>
 					</div>
-					<p>~&gt; <strong>NOTE on VPC Endpoints and VPC Endpoint Route Table Associations:</strong> Terraform provides
-						both a standalone <a href="vpc_endpoint_route_table_association.html">VPC Endpoint Route Table Association</a>
-						(an association between a VPC endpoint and a single <code>route_table_id</code>) and a VPC Endpoint resource
-						with a <code>route_table_ids</code> attribute. Do not use the same route table ID in both a VPC Endpoint resource
-						and a VPC Endpoint Route Table Association resource. Doing so will cause a conflict of associations
-					and will overwrite the association.</p>
+					<p>~&gt; <strong>NOTE on VPC Endpoints and VPC Endpoint Associations:</strong> Terraform provides both standalone VPC Endpoint Associations for
+						<a href="vpc_endpoint_route_table_association.html">Route Tables</a> - (an association between a VPC endpoint and a single <code>route_table_id</code>) and
+						<a href="vpc_endpoint_subnet_association.html">Subnets</a> - (an association between a VPC endpoint and a single <code>subnet_id</code>) and
+						a VPC Endpoint resource with <code>route_table_ids</code> and <code>subnet_ids</code> attributes.
+						Do not use the same resource ID in both a VPC Endpoint resource and a VPC Endpoint Association resource.
+					Doing so will cause a conflict of associations and will overwrite the association.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -108,13 +109,21 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#autoaccept" class="tsd-kind-icon">auto<wbr>Accept</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#cidrblocks" class="tsd-kind-icon">cidr<wbr>Blocks</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#dnsentries" class="tsd-kind-icon">dns<wbr>Entries</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_ec2_vpcendpoint_.vpcendpoint.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#networkinterfaceids" class="tsd-kind-icon">network<wbr>Interface<wbr>Ids</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#policy" class="tsd-kind-icon">policy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#prefixlistid" class="tsd-kind-icon">prefix<wbr>List<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#privatednsenabled" class="tsd-kind-icon">private<wbr>Dns<wbr>Enabled</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#routetableids" class="tsd-kind-icon">route<wbr>Table<wbr>Ids</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#securitygroupids" class="tsd-kind-icon">security<wbr>Group<wbr>Ids</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#servicename" class="tsd-kind-icon">service<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#state" class="tsd-kind-icon">state</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#subnetids" class="tsd-kind-icon">subnet<wbr>Ids</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_ec2_vpcendpoint_.vpcendpoint.html#urn" class="tsd-kind-icon">urn</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#vpcendpointtype" class="tsd-kind-icon">vpc<wbr>Endpoint<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpcendpoint_.vpcendpoint.html#vpcid" class="tsd-kind-icon">vpc<wbr>Id</a></li>
 							</ul>
 						</section>
@@ -134,7 +143,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/vpcEndpoint.ts:40</li>
+									<li>Defined in ec2/vpcEndpoint.ts:104</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -177,18 +186,51 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="autoaccept" class="tsd-anchor"></a>
+					<h3>auto<wbr>Accept</h3>
+					<div class="tsd-signature tsd-kind-icon">auto<wbr>Accept<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpcEndpoint.ts:24</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#auto_accept">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#auto_accept</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="cidrblocks" class="tsd-anchor"></a>
 					<h3>cidr<wbr>Blocks</h3>
 					<div class="tsd-signature tsd-kind-icon">cidr<wbr>Blocks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:20</li>
+							<li>Defined in ec2/vpcEndpoint.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The list of CIDR blocks for the exposed service.</p>
+							<p>The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type <code>Gateway</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#cidr_blocks">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#cidr_blocks</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="dnsentries" class="tsd-anchor"></a>
+					<h3>dns<wbr>Entries</h3>
+					<div class="tsd-signature tsd-kind-icon">dns<wbr>Entries<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpcEndpoint.ts:36</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The DNS entries for the VPC Endpoint. Applicable for endpoints of type <code>Interface</code>. DNS blocks are documented below.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#dns_entry">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#dns_entry</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -209,18 +251,36 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="networkinterfaceids" class="tsd-anchor"></a>
+					<h3>network<wbr>Interface<wbr>Ids</h3>
+					<div class="tsd-signature tsd-kind-icon">network<wbr>Interface<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpcEndpoint.ts:42</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type <code>Interface</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#network_interface_ids">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#network_interface_ids</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="policy" class="tsd-anchor"></a>
 					<h3>policy</h3>
 					<div class="tsd-signature tsd-kind-icon">policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:24</li>
+							<li>Defined in ec2/vpcEndpoint.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A policy to attach to the endpoint that controls access to the service.</p>
+							<p>A policy to attach to the endpoint that controls access to the service. Applicable for endpoints of type <code>Gateway</code>.
+							Defaults to full access.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#policy">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -229,13 +289,31 @@
 					<div class="tsd-signature tsd-kind-icon">prefix<wbr>List<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:28</li>
+							<li>Defined in ec2/vpcEndpoint.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The prefix list ID of the exposed service.</p>
+							<p>The prefix list ID of the exposed AWS service. Applicable for endpoints of type <code>Gateway</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#prefix_list_id">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#prefix_list_id</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="privatednsenabled" class="tsd-anchor"></a>
+					<h3>private<wbr>Dns<wbr>Enabled</h3>
+					<div class="tsd-signature tsd-kind-icon">private<wbr>Dns<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpcEndpoint.ts:62</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code>Interface</code>.
+							Defaults to <code>false</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#private_dns_enabled">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#private_dns_enabled</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -244,13 +322,30 @@
 					<div class="tsd-signature tsd-kind-icon">route<wbr>Table<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:32</li>
+							<li>Defined in ec2/vpcEndpoint.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>One or more route table IDs.</p>
+							<p>One or more route table IDs. Applicable for endpoints of type <code>Gateway</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#route_table_ids">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#route_table_ids</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="securitygroupids" class="tsd-anchor"></a>
+					<h3>security<wbr>Group<wbr>Ids</h3>
+					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpcEndpoint.ts:74</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ID of one or more security groups to associate with the network interface. Required for endpoints of type <code>Interface</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#security_group_ids">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#security_group_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -259,13 +354,46 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:36</li>
+							<li>Defined in ec2/vpcEndpoint.ts:80</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The AWS service name, in the form <code>com.amazonaws.region.service</code>.</p>
+							<p>The service name, in the form <code>com.amazonaws.region.service</code> for AWS services.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#service_name">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#service_name</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="state" class="tsd-anchor"></a>
+					<h3>state</h3>
+					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpcEndpoint.ts:86</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The state of the VPC endpoint.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#state">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#state</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="subnetids" class="tsd-anchor"></a>
+					<h3>subnet<wbr>Ids</h3>
+					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpcEndpoint.ts:92</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type <code>Interface</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#subnet_ids">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#subnet_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -286,18 +414,35 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="vpcendpointtype" class="tsd-anchor"></a>
+					<h3>vpc<wbr>Endpoint<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Endpoint<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpcEndpoint.ts:98</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The VPC endpoint type, <code>Gateway</code> or <code>Interface</code>. Defaults to <code>Gateway</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#vpc_endpoint_type">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#vpc_endpoint_type</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="vpcid" class="tsd-anchor"></a>
 					<h3>vpc<wbr>Id</h3>
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:40</li>
+							<li>Defined in ec2/vpcEndpoint.ts:104</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the VPC in which the endpoint will be used.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#vpc_id">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#vpc_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -324,10 +469,19 @@
 								<a href="_ec2_vpcendpoint_.vpcendpoint.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_vpcendpoint_.vpcendpoint.html#autoaccept" class="tsd-kind-icon">auto<wbr>Accept</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_vpcendpoint_.vpcendpoint.html#cidrblocks" class="tsd-kind-icon">cidr<wbr>Blocks</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_vpcendpoint_.vpcendpoint.html#dnsentries" class="tsd-kind-icon">dns<wbr>Entries</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_ec2_vpcendpoint_.vpcendpoint.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_vpcendpoint_.vpcendpoint.html#networkinterfaceids" class="tsd-kind-icon">network<wbr>Interface<wbr>Ids</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_vpcendpoint_.vpcendpoint.html#policy" class="tsd-kind-icon">policy</a>
@@ -336,13 +490,28 @@
 								<a href="_ec2_vpcendpoint_.vpcendpoint.html#prefixlistid" class="tsd-kind-icon">prefix<wbr>List<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_vpcendpoint_.vpcendpoint.html#privatednsenabled" class="tsd-kind-icon">private<wbr>Dns<wbr>Enabled</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_vpcendpoint_.vpcendpoint.html#routetableids" class="tsd-kind-icon">route<wbr>Table<wbr>Ids</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_vpcendpoint_.vpcendpoint.html#securitygroupids" class="tsd-kind-icon">security<wbr>Group<wbr>Ids</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_vpcendpoint_.vpcendpoint.html#servicename" class="tsd-kind-icon">service<wbr>Name</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_vpcendpoint_.vpcendpoint.html#state" class="tsd-kind-icon">state</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_vpcendpoint_.vpcendpoint.html#subnetids" class="tsd-kind-icon">subnet<wbr>Ids</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_ec2_vpcendpoint_.vpcendpoint.html#urn" class="tsd-kind-icon">urn</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_vpcendpoint_.vpcendpoint.html#vpcendpointtype" class="tsd-kind-icon">vpc<wbr>Endpoint<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_vpcendpoint_.vpcendpoint.html#vpcid" class="tsd-kind-icon">vpc<wbr>Id</a>

@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides an Elastic File System (EFS) mount target.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html">https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -128,7 +129,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in efs/mountTarget.ts:35</li>
+									<li>Defined in efs/mountTarget.ts:49</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -176,13 +177,14 @@
 					<div class="tsd-signature tsd-kind-icon">dns<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in efs/mountTarget.ts:13</li>
+							<li>Defined in efs/mountTarget.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The DNS name for the given subnet/AZ per <a href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#dns_name">https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#dns_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -191,13 +193,14 @@
 					<div class="tsd-signature tsd-kind-icon">file<wbr>System<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in efs/mountTarget.ts:17</li>
+							<li>Defined in efs/mountTarget.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the file system for which the mount target is intended.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#file_system_id">https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#file_system_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -223,7 +226,7 @@
 					<div class="tsd-signature tsd-kind-icon">ip<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in efs/mountTarget.ts:22</li>
+							<li>Defined in efs/mountTarget.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -231,6 +234,7 @@
 							<p>The address (within the address range of the specified subnet) at
 							which the file system may be mounted via the mount target.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#ip_address">https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#ip_address</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -239,13 +243,14 @@
 					<div class="tsd-signature tsd-kind-icon">network<wbr>Interface<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in efs/mountTarget.ts:26</li>
+							<li>Defined in efs/mountTarget.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the network interface that Amazon EFS created when it created the mount target.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#network_interface_id">https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#network_interface_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -254,7 +259,7 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in efs/mountTarget.ts:31</li>
+							<li>Defined in efs/mountTarget.ts:43</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -262,6 +267,7 @@
 							<p>A list of up to 5 VPC security group IDs (that must
 							be for the same VPC as subnet specified) in effect for the mount target.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#security_groups">https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#security_groups</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -270,13 +276,14 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in efs/mountTarget.ts:35</li>
+							<li>Defined in efs/mountTarget.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the subnet to add the mount target in.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#subnet_id">https://www.terraform.io/docs/providers/aws/r/efs_mount_target.html#subnet_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">

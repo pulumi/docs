@@ -102,8 +102,9 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ecs_service_.serviceargs.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ecs_service_.serviceargs.html#networkconfiguration" class="tsd-kind-icon">network<wbr>Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ecs_service_.serviceargs.html#placementconstraints" class="tsd-kind-icon">placement<wbr>Constraints</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ecs_service_.serviceargs.html#placementstrategy" class="tsd-kind-icon">placement<wbr>Strategy</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ecs_service_.serviceargs.html#placementstrategies" class="tsd-kind-icon">placement<wbr>Strategies</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ecs_service_.serviceargs.html#taskdefinition" class="tsd-kind-icon">task<wbr>Definition</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ecs_service_.serviceargs.html#waitforsteadystate" class="tsd-kind-icon">wait<wbr>For<wbr>Steady<wbr>State</a></li>
 							</ul>
 						</section>
 					</div>
@@ -117,13 +118,14 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:106</li>
+							<li>Defined in ecs/service.ts:143</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>ARN of an ECS cluster</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#cluster">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#cluster</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -132,13 +134,14 @@
 					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Maximum<wbr>Percent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:110</li>
+							<li>Defined in ecs/service.ts:149</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The upper limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that can be running in a service during a deployment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#deployment_maximum_percent">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#deployment_maximum_percent</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -147,13 +150,14 @@
 					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Minimum<wbr>Healthy<wbr>Percent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:114</li>
+							<li>Defined in ecs/service.ts:155</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The lower limit (as a percentage of the service&#39;s desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#deployment_minimum_healthy_percent">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#deployment_minimum_healthy_percent</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -162,13 +166,14 @@
 					<div class="tsd-signature tsd-kind-icon">desired<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:118</li>
+							<li>Defined in ecs/service.ts:161</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The number of instances of the task definition to place and keep running</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#desired_count">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#desired_count</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -177,13 +182,14 @@
 					<div class="tsd-signature tsd-kind-icon">health<wbr>Check<wbr>Grace<wbr>Period<wbr>Seconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:122</li>
+							<li>Defined in ecs/service.ts:167</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 1800. Only valid for services configured to use load balancers.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#health_check_grace_period_seconds">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#health_check_grace_period_seconds</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -192,13 +198,14 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:126</li>
+							<li>Defined in ecs/service.ts:173</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of IAM role that allows your Amazon ECS container agent to make calls to your load balancer on your behalf. This parameter is only required if you are using a load balancer with your service.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#iam_role">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#iam_role</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -207,13 +214,14 @@
 					<div class="tsd-signature tsd-kind-icon">launch<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:130</li>
+							<li>Defined in ecs/service.ts:179</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The launch type on which to run your service. The valid values are <code>EC2</code> and <code>FARGATE</code>. Defaults to <code>EC2</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#launch_type">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#launch_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -222,13 +230,14 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:134</li>
+							<li>Defined in ecs/service.ts:185</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A load balancer block. Load balancers documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#load_balancer">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#load_balancer</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -237,28 +246,30 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:138</li>
+							<li>Defined in ecs/service.ts:191</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the service (up to 255 letters, numbers, hyphens, and underscores)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#name">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="networkconfiguration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> network<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">network<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">network<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:142</li>
+							<li>Defined in ecs/service.ts:197</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The network configuration for the service. This parameter is required for task definitions that use the awsvpc network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#network_configuration">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#network_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -267,7 +278,7 @@
 					<div class="tsd-signature tsd-kind-icon">placement<wbr>Constraints<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:147</li>
+							<li>Defined in ecs/service.ts:204</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -275,15 +286,16 @@
 							<p>rules that are taken into consideration during task placement. Maximum number of
 							<code>placement_constraints</code> is <code>10</code>. Defined below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#placement_constraints">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#placement_constraints</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="placementstrategy" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> placement<wbr>Strategy</h3>
-					<div class="tsd-signature tsd-kind-icon">placement<wbr>Strategy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="placementstrategies" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> placement<wbr>Strategies</h3>
+					<div class="tsd-signature tsd-kind-icon">placement<wbr>Strategies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:153</li>
+							<li>Defined in ecs/service.ts:212</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -292,6 +304,7 @@
 								into consideration during task placement. The maximum number of
 							<code>placement_strategy</code> blocks is <code>5</code>. Defined below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#placement_strategy">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#placement_strategy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -300,13 +313,30 @@
 					<div class="tsd-signature tsd-kind-icon">task<wbr>Definition<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/service.ts:157</li>
+							<li>Defined in ecs/service.ts:218</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The family and revision (<code>family:revision</code>) or full ARN of the task definition that you want to run in your service.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#task_definition">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#task_definition</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="waitforsteadystate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> wait<wbr>For<wbr>Steady<wbr>State</h3>
+					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Steady<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ecs/service.ts:224</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If <code>true</code>, Terraform will wait for the service to reach a steady state (like <a href="https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html"><code>aws ecs wait services-stable</code></a>) before continuing. Default <code>false</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_service.html#wait_for_steady_state">https://www.terraform.io/docs/providers/aws/r/ecs_service.html#wait_for_steady_state</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -366,10 +396,13 @@
 								<a href="_ecs_service_.serviceargs.html#placementconstraints" class="tsd-kind-icon">placement<wbr>Constraints</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ecs_service_.serviceargs.html#placementstrategy" class="tsd-kind-icon">placement<wbr>Strategy</a>
+								<a href="_ecs_service_.serviceargs.html#placementstrategies" class="tsd-kind-icon">placement<wbr>Strategies</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ecs_service_.serviceargs.html#taskdefinition" class="tsd-kind-icon">task<wbr>Definition</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ecs_service_.serviceargs.html#waitforsteadystate" class="tsd-kind-icon">wait<wbr>For<wbr>Steady<wbr>State</a>
 							</li>
 						</ul>
 					</li>

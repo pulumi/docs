@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides a CloudTrail resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -107,6 +108,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudtrail_trail_.trail.html#cloudwatchlogsrolearn" class="tsd-kind-icon">cloud<wbr>Watch<wbr>Logs<wbr>Role<wbr>Arn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudtrail_trail_.trail.html#enablelogfilevalidation" class="tsd-kind-icon">enable<wbr>Log<wbr>File<wbr>Validation</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudtrail_trail_.trail.html#enablelogging" class="tsd-kind-icon">enable<wbr>Logging</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudtrail_trail_.trail.html#eventselectors" class="tsd-kind-icon">event<wbr>Selectors</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudtrail_trail_.trail.html#homeregion" class="tsd-kind-icon">home<wbr>Region</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_cloudtrail_trail_.trail.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudtrail_trail_.trail.html#includeglobalserviceevents" class="tsd-kind-icon">include<wbr>Global<wbr>Service<wbr>Events</a></li>
@@ -136,7 +138,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in cloudtrail/trail.ts:73</li>
+									<li>Defined in cloudtrail/trail.ts:109</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -184,13 +186,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:13</li>
+							<li>Defined in cloudtrail/trail.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name of the trail.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#arn">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -199,7 +202,7 @@
 					<div class="tsd-signature tsd-kind-icon">cloud<wbr>Watch<wbr>Logs<wbr>Group<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:18</li>
+							<li>Defined in cloudtrail/trail.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -207,6 +210,7 @@
 							<p>Specifies a log group name using an Amazon Resource Name (ARN),
 							that represents the log group to which CloudTrail logs will be delivered.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#cloud_watch_logs_group_arn">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#cloud_watch_logs_group_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -215,7 +219,7 @@
 					<div class="tsd-signature tsd-kind-icon">cloud<wbr>Watch<wbr>Logs<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:23</li>
+							<li>Defined in cloudtrail/trail.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -223,6 +227,7 @@
 							<p>Specifies the role for the CloudWatch Logs
 							endpoint to assume to write to a user’s log group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#cloud_watch_logs_role_arn">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#cloud_watch_logs_role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -231,7 +236,7 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Log<wbr>File<wbr>Validation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:28</li>
+							<li>Defined in cloudtrail/trail.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -239,6 +244,7 @@
 							<p>Specifies whether log file integrity validation is enabled.
 							Defaults to <code>false</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#enable_log_file_validation">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#enable_log_file_validation</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -247,7 +253,7 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:33</li>
+							<li>Defined in cloudtrail/trail.ts:45</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -255,6 +261,23 @@
 							<p>Enables logging for the trail. Defaults to <code>true</code>.
 							Setting this to <code>false</code> will pause logging.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#enable_logging">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#enable_logging</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="eventselectors" class="tsd-anchor"></a>
+					<h3>event<wbr>Selectors</h3>
+					<div class="tsd-signature tsd-kind-icon">event<wbr>Selectors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in cloudtrail/trail.ts:51</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specifies the event selector. Fields documented below.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#event_selector">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#event_selector</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -263,13 +286,14 @@
 					<div class="tsd-signature tsd-kind-icon">home<wbr>Region<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:37</li>
+							<li>Defined in cloudtrail/trail.ts:57</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The region in which the trail was created.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#home_region">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#home_region</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -295,7 +319,7 @@
 					<div class="tsd-signature tsd-kind-icon">include<wbr>Global<wbr>Service<wbr>Events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:42</li>
+							<li>Defined in cloudtrail/trail.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -303,6 +327,7 @@
 							<p>Specifies whether the trail is publishing events
 							from global services such as IAM to the log files. Defaults to <code>true</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#include_global_service_events">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#include_global_service_events</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -311,7 +336,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Multi<wbr>Region<wbr>Trail<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:47</li>
+							<li>Defined in cloudtrail/trail.ts:71</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -319,6 +344,7 @@
 							<p>Specifies whether the trail is created in the current
 							region or in all regions. Defaults to <code>false</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#is_multi_region_trail">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#is_multi_region_trail</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -327,13 +353,14 @@
 					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:51</li>
+							<li>Defined in cloudtrail/trail.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#kms_key_id">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#kms_key_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -342,13 +369,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:55</li>
+							<li>Defined in cloudtrail/trail.ts:83</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies the name of the trail.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#name">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -357,13 +385,14 @@
 					<div class="tsd-signature tsd-kind-icon">s3<wbr>Bucket<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:59</li>
+							<li>Defined in cloudtrail/trail.ts:89</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies the name of the S3 bucket designated for publishing log files.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#s3_bucket_name">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#s3_bucket_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -372,7 +401,7 @@
 					<div class="tsd-signature tsd-kind-icon">s3<wbr>Key<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:64</li>
+							<li>Defined in cloudtrail/trail.ts:96</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -380,6 +409,7 @@
 							<p>Specifies the S3 key prefix that precedes
 							the name of the bucket you have designated for log file delivery.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#s3_key_prefix">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#s3_key_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -388,7 +418,7 @@
 					<div class="tsd-signature tsd-kind-icon">sns<wbr>Topic<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:69</li>
+							<li>Defined in cloudtrail/trail.ts:103</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -396,6 +426,7 @@
 							<p>Specifies the name of the Amazon SNS topic
 							defined for notification of log file delivery.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#sns_topic_name">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#sns_topic_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -404,13 +435,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudtrail/trail.ts:73</li>
+							<li>Defined in cloudtrail/trail.ts:109</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the trail</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#tags">https://www.terraform.io/docs/providers/aws/r/cloudtrail.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -467,6 +499,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_cloudtrail_trail_.trail.html#enablelogging" class="tsd-kind-icon">enable<wbr>Logging</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_cloudtrail_trail_.trail.html#eventselectors" class="tsd-kind-icon">event<wbr>Selectors</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_cloudtrail_trail_.trail.html#homeregion" class="tsd-kind-icon">home<wbr>Region</a>

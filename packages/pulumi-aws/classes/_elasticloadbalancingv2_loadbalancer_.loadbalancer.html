@@ -75,6 +75,7 @@
 						<p>Provides a Load Balancer resource.</p>
 					</div>
 					<p>~&gt; <strong>Note:</strong> <code>aws_alb</code> is known as <code>aws_lb</code>. The functionality is identical.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html">https://www.terraform.io/docs/providers/aws/r/lb.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -116,7 +117,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#nameprefix" class="tsd-kind-icon">name<wbr>Prefix</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#securitygroups" class="tsd-kind-icon">security<wbr>Groups</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#subnetmapping" class="tsd-kind-icon">subnet<wbr>Mapping</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#subnetmappings" class="tsd-kind-icon">subnet<wbr>Mappings</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#subnets" class="tsd-kind-icon">subnets</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#urn" class="tsd-kind-icon">urn</a></li>
@@ -140,7 +141,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elasticloadbalancingv2/loadBalancer.ts:81</li>
+									<li>Defined in elasticloadbalancingv2/loadBalancer.ts:115</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -185,16 +186,17 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="accesslogs" class="tsd-anchor"></a>
 					<h3>access<wbr>Logs</h3>
-					<div class="tsd-signature tsd-kind-icon">access<wbr>Logs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">access<wbr>Logs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:15</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:19</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>An Access Logs block. Access Logs documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#access_logs">https://www.terraform.io/docs/providers/aws/r/lb.html#access_logs</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -203,13 +205,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:19</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the load balancer (matches <code>id</code>).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#arn">https://www.terraform.io/docs/providers/aws/r/lb.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -218,13 +221,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<wbr>Suffix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:23</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN suffix for use with CloudWatch Metrics.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#arn_suffix">https://www.terraform.io/docs/providers/aws/r/lb.html#arn_suffix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -233,13 +237,14 @@
 					<div class="tsd-signature tsd-kind-icon">dns<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:27</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The DNS name of the load balancer.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#dns_name">https://www.terraform.io/docs/providers/aws/r/lb.html#dns_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -248,7 +253,7 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Deletion<wbr>Protection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:32</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -256,6 +261,7 @@
 							<p>If true, deletion of the load balancer will be disabled via
 							the AWS API. This will prevent Terraform from deleting the load balancer. Defaults to <code>false</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#enable_deletion_protection">https://www.terraform.io/docs/providers/aws/r/lb.html#enable_deletion_protection</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -281,13 +287,14 @@
 					<div class="tsd-signature tsd-kind-icon">idle<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:36</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The time in seconds that the connection is allowed to be idle. Default: 60.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#idle_timeout">https://www.terraform.io/docs/providers/aws/r/lb.html#idle_timeout</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -296,13 +303,14 @@
 					<div class="tsd-signature tsd-kind-icon">internal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:40</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If true, the LB will be internal.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#internal">https://www.terraform.io/docs/providers/aws/r/lb.html#internal</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -311,13 +319,14 @@
 					<div class="tsd-signature tsd-kind-icon">ip<wbr>Address<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:44</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:62</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of IP addresses used by the subnets for your load balancer. The possible values are <code>ipv4</code> and <code>dualstack</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#ip_address_type">https://www.terraform.io/docs/providers/aws/r/lb.html#ip_address_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -326,13 +335,14 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:48</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of load balancer to create. Possible values are <code>application</code> or <code>network</code>. The default value is <code>application</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#load_balancer_type">https://www.terraform.io/docs/providers/aws/r/lb.html#load_balancer_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -341,7 +351,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:54</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -350,6 +360,7 @@
 								must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
 							Terraform will autogenerate a name beginning with <code>tf-lb</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#name">https://www.terraform.io/docs/providers/aws/r/lb.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -358,13 +369,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:58</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:82</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Creates a unique name beginning with the specified prefix. Conflicts with <code>name</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#name_prefix">https://www.terraform.io/docs/providers/aws/r/lb.html#name_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -373,28 +385,30 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:62</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of security group IDs to assign to the LB. Only valid for Load Balancers of type <code>application</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#security_groups">https://www.terraform.io/docs/providers/aws/r/lb.html#security_groups</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="subnetmapping" class="tsd-anchor"></a>
-					<h3>subnet<wbr>Mapping</h3>
-					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Mapping<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="subnetmappings" class="tsd-anchor"></a>
+					<h3>subnet<wbr>Mappings</h3>
+					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Mappings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:66</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A subnet mapping block as documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#subnet_mapping">https://www.terraform.io/docs/providers/aws/r/lb.html#subnet_mapping</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -403,7 +417,7 @@
 					<div class="tsd-signature tsd-kind-icon">subnets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:72</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -412,6 +426,7 @@
 								cannot be updated for Load Balancers of type <code>network</code>. Changing this value
 							will for load balancers of type <code>network</code> will force a recreation of the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#subnets">https://www.terraform.io/docs/providers/aws/r/lb.html#subnets</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -420,13 +435,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:76</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:108</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#tags">https://www.terraform.io/docs/providers/aws/r/lb.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -452,7 +468,7 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:77</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:109</li>
 						</ul>
 					</aside>
 				</section>
@@ -462,13 +478,14 @@
 					<div class="tsd-signature tsd-kind-icon">zone<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:81</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:115</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#zone_id">https://www.terraform.io/docs/providers/aws/r/lb.html#zone_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -534,7 +551,7 @@
 								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#securitygroups" class="tsd-kind-icon">security<wbr>Groups</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#subnetmapping" class="tsd-kind-icon">subnet<wbr>Mapping</a>
+								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#subnetmappings" class="tsd-kind-icon">subnet<wbr>Mappings</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancer.html#subnets" class="tsd-kind-icon">subnets</a>

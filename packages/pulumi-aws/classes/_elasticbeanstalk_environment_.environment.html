@@ -78,6 +78,7 @@
 					</div>
 					<p>Environments are often things such as <code>development</code>, <code>integration</code>, or
 					<code>production</code>.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -119,7 +120,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticbeanstalk_environment_.environment.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticbeanstalk_environment_.environment.html#pollinterval" class="tsd-kind-icon">poll<wbr>Interval</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticbeanstalk_environment_.environment.html#queues" class="tsd-kind-icon">queues</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticbeanstalk_environment_.environment.html#setting" class="tsd-kind-icon">setting</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticbeanstalk_environment_.environment.html#settings" class="tsd-kind-icon">settings</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticbeanstalk_environment_.environment.html#solutionstackname" class="tsd-kind-icon">solution<wbr>Stack<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticbeanstalk_environment_.environment.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_elasticbeanstalk_environment_.environment.html#templatename" class="tsd-kind-icon">template<wbr>Name</a></li>
@@ -146,7 +147,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elasticbeanstalk/environment.ts:111</li>
+									<li>Defined in elasticbeanstalk/environment.ts:147</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -194,7 +195,7 @@
 					<div class="tsd-signature tsd-kind-icon">all<wbr>Settings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:23</li>
+							<li>Defined in elasticbeanstalk/environment.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -203,6 +204,7 @@
 								are a combination of default settings and their overrides from <code>setting</code> in
 							the configuration.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#all_settings">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#all_settings</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -211,7 +213,7 @@
 					<div class="tsd-signature tsd-kind-icon">application<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="_elasticbeanstalk_application_.application.html" class="tsd-signature-type">Application</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:28</li>
+							<li>Defined in elasticbeanstalk/environment.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -219,6 +221,7 @@
 							<p>Name of the application that contains the version
 							to be deployed</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#application">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#application</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -227,13 +230,14 @@
 					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:32</li>
+							<li>Defined in elasticbeanstalk/environment.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The autoscaling groups used by this environment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#autoscaling_groups">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#autoscaling_groups</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -242,13 +246,14 @@
 					<div class="tsd-signature tsd-kind-icon">cname<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:36</li>
+							<li>Defined in elasticbeanstalk/environment.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Fully qualified DNS name for the Environment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#cname">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#cname</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -257,7 +262,7 @@
 					<div class="tsd-signature tsd-kind-icon">cname<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:41</li>
+							<li>Defined in elasticbeanstalk/environment.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -265,6 +270,7 @@
 							<p>Prefix to use for the fully qualified DNS name of
 							the Environment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#cname_prefix">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#cname_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -273,13 +279,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:45</li>
+							<li>Defined in elasticbeanstalk/environment.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Short description of the Environment</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#description">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -305,13 +312,14 @@
 					<div class="tsd-signature tsd-kind-icon">instances<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:49</li>
+							<li>Defined in elasticbeanstalk/environment.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Instances used by this environment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#instances">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#instances</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -320,13 +328,14 @@
 					<div class="tsd-signature tsd-kind-icon">launch<wbr>Configurations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:53</li>
+							<li>Defined in elasticbeanstalk/environment.ts:71</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Launch configurations in use by this environment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#launch_configurations">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#launch_configurations</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -335,13 +344,14 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:57</li>
+							<li>Defined in elasticbeanstalk/environment.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Elastic load balancers in use by this environment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#load_balancers">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#load_balancers</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -350,7 +360,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:62</li>
+							<li>Defined in elasticbeanstalk/environment.ts:84</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -358,6 +368,7 @@
 							<p>A unique name for this Environment. This name is used
 							in the application URL</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#name">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -366,7 +377,7 @@
 					<div class="tsd-signature tsd-kind-icon">poll<wbr>Interval<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:63</li>
+							<li>Defined in elasticbeanstalk/environment.ts:85</li>
 						</ul>
 					</aside>
 				</section>
@@ -376,28 +387,30 @@
 					<div class="tsd-signature tsd-kind-icon">queues<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:67</li>
+							<li>Defined in elasticbeanstalk/environment.ts:91</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>SQS queues in use by this environment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#queues">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#queues</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="setting" class="tsd-anchor"></a>
-					<h3>setting</h3>
-					<div class="tsd-signature tsd-kind-icon">setting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="settings" class="tsd-anchor"></a>
+					<h3>settings</h3>
+					<div class="tsd-signature tsd-kind-icon">settings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:71</li>
+							<li>Defined in elasticbeanstalk/environment.ts:97</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Settings specifically set for this Environment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#setting">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#setting</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -406,7 +419,7 @@
 					<div class="tsd-signature tsd-kind-icon">solution<wbr>Stack<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:72</li>
+							<li>Defined in elasticbeanstalk/environment.ts:98</li>
 						</ul>
 					</aside>
 				</section>
@@ -416,7 +429,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:73</li>
+							<li>Defined in elasticbeanstalk/environment.ts:99</li>
 						</ul>
 					</aside>
 				</section>
@@ -426,7 +439,7 @@
 					<div class="tsd-signature tsd-kind-icon">template<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:78</li>
+							<li>Defined in elasticbeanstalk/environment.ts:106</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -434,6 +447,7 @@
 							<p>The name of the Elastic Beanstalk Configuration
 							template to use in deployment</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#template_name">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#template_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -442,7 +456,7 @@
 					<div class="tsd-signature tsd-kind-icon">tier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:88</li>
+							<li>Defined in elasticbeanstalk/environment.ts:118</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -457,6 +471,7 @@
 								off of. Example stacks can be found in the [Amazon API documentation][1]</li>
 							</ul>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#tier">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#tier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -465,13 +480,14 @@
 					<div class="tsd-signature tsd-kind-icon">triggers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:92</li>
+							<li>Defined in elasticbeanstalk/environment.ts:124</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Autoscaling triggers in use by this environment.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#triggers">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#triggers</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -497,7 +513,7 @@
 					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="_elasticbeanstalk_applicationversion_.applicationversion.html" class="tsd-signature-type">ApplicationVersion</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:100</li>
+							<li>Defined in elasticbeanstalk/environment.ts:134</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -510,6 +526,7 @@
 								changing these tags after initial application</li>
 							</ul>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#version_label">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#version_label</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -518,7 +535,7 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Ready<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticbeanstalk/environment.ts:111</li>
+							<li>Defined in elasticbeanstalk/environment.ts:147</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -534,6 +551,7 @@
 								use the default behavior, which is an exponential backoff</li>
 							</ul>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#wait_for_ready_timeout">https://www.terraform.io/docs/providers/aws/r/elastic_beanstalk_environment.html#wait_for_ready_timeout</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -599,7 +617,7 @@
 								<a href="_elasticbeanstalk_environment_.environment.html#queues" class="tsd-kind-icon">queues</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_elasticbeanstalk_environment_.environment.html#setting" class="tsd-kind-icon">setting</a>
+								<a href="_elasticbeanstalk_environment_.environment.html#settings" class="tsd-kind-icon">settings</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_elasticbeanstalk_environment_.environment.html#solutionstackname" class="tsd-kind-icon">solution<wbr>Stack<wbr>Name</a>

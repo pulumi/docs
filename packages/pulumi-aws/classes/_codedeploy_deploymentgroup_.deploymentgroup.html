@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides a CodeDeploy Deployment Group for a CodeDeploy Application</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -110,12 +111,12 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#deploymentconfigname" class="tsd-kind-icon">deployment<wbr>Config<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#deploymentgroupname" class="tsd-kind-icon">deployment<wbr>Group<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#deploymentstyle" class="tsd-kind-icon">deployment<wbr>Style</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#ec2tagfilter" class="tsd-kind-icon">ec2<wbr>Tag<wbr>Filter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#ec2tagfilters" class="tsd-kind-icon">ec2<wbr>Tag<wbr>Filters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#loadbalancerinfo" class="tsd-kind-icon">load<wbr>Balancer<wbr>Info</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#onpremisesinstancetagfilter" class="tsd-kind-icon">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#onpremisesinstancetagfilters" class="tsd-kind-icon">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#servicerolearn" class="tsd-kind-icon">service<wbr>Role<wbr>Arn</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#triggerconfiguration" class="tsd-kind-icon">trigger<wbr>Configuration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#triggerconfigurations" class="tsd-kind-icon">trigger<wbr>Configurations</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_codedeploy_deploymentgroup_.deploymentgroup.html#urn" class="tsd-kind-icon">urn</a></li>
 							</ul>
 						</section>
@@ -135,7 +136,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in codedeploy/deploymentGroup.ts:61</li>
+									<li>Defined in codedeploy/deploymentGroup.ts:89</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -180,16 +181,17 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="alarmconfiguration" class="tsd-anchor"></a>
 					<h3>alarm<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">alarm<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">alarm<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:13</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Information about alarms associated with the deployment group (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#alarm_configuration">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#alarm_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -198,28 +200,30 @@
 					<div class="tsd-signature tsd-kind-icon">app<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:17</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the application.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#app_name">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#app_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="autorollbackconfiguration" class="tsd-anchor"></a>
 					<h3>auto<wbr>Rollback<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">auto<wbr>Rollback<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">auto<wbr>Rollback<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:21</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The automatic rollback configuration associated with the deployment group (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#auto_rollback_configuration">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#auto_rollback_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -228,28 +232,30 @@
 					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:25</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Autoscaling groups associated with the deployment group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#autoscaling_groups">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#autoscaling_groups</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="bluegreendeploymentconfig" class="tsd-anchor"></a>
 					<h3>blue<wbr>Green<wbr>Deployment<wbr>Config</h3>
-					<div class="tsd-signature tsd-kind-icon">blue<wbr>Green<wbr>Deployment<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">blue<wbr>Green<wbr>Deployment<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:29</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Information about blue/green deployment options for a deployment group (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#blue_green_deployment_config">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#blue_green_deployment_config</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -258,13 +264,14 @@
 					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Config<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:33</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the group&#39;s deployment config. The default is &quot;CodeDeployDefault.OneAtATime&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#deployment_config_name">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#deployment_config_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -273,43 +280,46 @@
 					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:37</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the deployment group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#deployment_group_name">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#deployment_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="deploymentstyle" class="tsd-anchor"></a>
 					<h3>deployment<wbr>Style</h3>
-					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">deployment<wbr>Style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:41</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Information about the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#deployment_style">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#deployment_style</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ec2tagfilter" class="tsd-anchor"></a>
-					<h3>ec2<wbr>Tag<wbr>Filter</h3>
-					<div class="tsd-signature tsd-kind-icon">ec2<wbr>Tag<wbr>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="ec2tagfilters" class="tsd-anchor"></a>
+					<h3>ec2<wbr>Tag<wbr>Filters</h3>
+					<div class="tsd-signature tsd-kind-icon">ec2<wbr>Tag<wbr>Filters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:45</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Tag filters associated with the group. See the AWS docs for details.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#ec2_tag_filter">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#ec2_tag_filter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -332,31 +342,33 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="loadbalancerinfo" class="tsd-anchor"></a>
 					<h3>load<wbr>Balancer<wbr>Info</h3>
-					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:49</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:71</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Information about the load balancer to use in a blue/green deployment (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#load_balancer_info">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#load_balancer_info</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="onpremisesinstancetagfilter" class="tsd-anchor"></a>
-					<h3>on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="onpremisesinstancetagfilters" class="tsd-anchor"></a>
+					<h3>on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:53</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>On premise tag filters associated with the group. See the AWS docs for details.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#on_premises_instance_tag_filter">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#on_premises_instance_tag_filter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -365,28 +377,30 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:57</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:83</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The service role ARN that allows deployments.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#service_role_arn">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#service_role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="triggerconfiguration" class="tsd-anchor"></a>
-					<h3>trigger<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">trigger<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="triggerconfigurations" class="tsd-anchor"></a>
+					<h3>trigger<wbr>Configurations</h3>
+					<div class="tsd-signature tsd-kind-icon">trigger<wbr>Configurations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in codedeploy/deploymentGroup.ts:61</li>
+							<li>Defined in codedeploy/deploymentGroup.ts:89</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Trigger Configurations for the deployment group (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#trigger_configuration">https://www.terraform.io/docs/providers/aws/r/codedeploy_deployment_group.html#trigger_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -454,7 +468,7 @@
 								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#deploymentstyle" class="tsd-kind-icon">deployment<wbr>Style</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#ec2tagfilter" class="tsd-kind-icon">ec2<wbr>Tag<wbr>Filter</a>
+								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#ec2tagfilters" class="tsd-kind-icon">ec2<wbr>Tag<wbr>Filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#id" class="tsd-kind-icon">id</a>
@@ -463,13 +477,13 @@
 								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#loadbalancerinfo" class="tsd-kind-icon">load<wbr>Balancer<wbr>Info</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#onpremisesinstancetagfilter" class="tsd-kind-icon">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter</a>
+								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#onpremisesinstancetagfilters" class="tsd-kind-icon">on<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#servicerolearn" class="tsd-kind-icon">service<wbr>Role<wbr>Arn</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#triggerconfiguration" class="tsd-kind-icon">trigger<wbr>Configuration</a>
+								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#triggerconfigurations" class="tsd-kind-icon">trigger<wbr>Configurations</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_codedeploy_deploymentgroup_.deploymentgroup.html#urn" class="tsd-kind-icon">urn</a>

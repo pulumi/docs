@@ -92,7 +92,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_getami_.getamiargs.html#executableusers" class="tsd-kind-icon">executable<wbr>Users</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_getami_.getamiargs.html#filter" class="tsd-kind-icon">filter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_getami_.getamiargs.html#filters" class="tsd-kind-icon">filters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_getami_.getamiargs.html#mostrecent" class="tsd-kind-icon">most<wbr>Recent</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_getami_.getamiargs.html#nameregex" class="tsd-kind-icon">name<wbr>Regex</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_getami_.getamiargs.html#owners" class="tsd-kind-icon">owners</a></li>
@@ -110,7 +110,7 @@
 					<div class="tsd-signature tsd-kind-icon">executable<wbr>Users<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in getAmi.ts:30</li>
+							<li>Defined in getAmi.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -118,15 +118,16 @@
 							<p>Limit search to users with <em>explicit</em> launch permission on
 							the image. Valid items are the numeric account ID or <code>self</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/ami.html#executable_users">https://www.terraform.io/docs/providers/aws/d/ami.html#executable_users</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="filter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filter</h3>
-					<div class="tsd-signature tsd-kind-icon">filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="filters" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filters</h3>
+					<div class="tsd-signature tsd-kind-icon">filters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in getAmi.ts:36</li>
+							<li>Defined in getAmi.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -135,6 +136,7 @@
 								several valid keys, for a full reference, check out
 							[describe-images in the AWS CLI reference][1].</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/ami.html#filter">https://www.terraform.io/docs/providers/aws/d/ami.html#filter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -143,7 +145,7 @@
 					<div class="tsd-signature tsd-kind-icon">most<wbr>Recent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in getAmi.ts:41</li>
+							<li>Defined in getAmi.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -151,6 +153,7 @@
 							<p>If more than one result is returned, use the most
 							recent AMI.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/ami.html#most_recent">https://www.terraform.io/docs/providers/aws/d/ami.html#most_recent</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -159,7 +162,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in getAmi.ts:49</li>
+							<li>Defined in getAmi.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -170,6 +173,7 @@
 								impact if the result is large. It is recommended to combine this with other
 							options to narrow down the list AWS returns.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/ami.html#name_regex">https://www.terraform.io/docs/providers/aws/d/ami.html#name_regex</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -178,7 +182,7 @@
 					<div class="tsd-signature tsd-kind-icon">owners<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in getAmi.ts:54</li>
+							<li>Defined in getAmi.ts:66</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,6 +190,7 @@
 							<p>Limit search to specific AMI owners. Valid items are the numeric
 							account ID, <code>amazon</code>, or <code>self</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/ami.html#owners">https://www.terraform.io/docs/providers/aws/d/ami.html#owners</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -194,7 +199,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in getAmi.ts:55</li>
+							<li>Defined in getAmi.ts:67</li>
 						</ul>
 					</aside>
 				</section>
@@ -222,7 +227,7 @@
 								<a href="_getami_.getamiargs.html#executableusers" class="tsd-kind-icon">executable<wbr>Users</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_getami_.getamiargs.html#filter" class="tsd-kind-icon">filter</a>
+								<a href="_getami_.getamiargs.html#filters" class="tsd-kind-icon">filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_getami_.getamiargs.html#mostrecent" class="tsd-kind-icon">most<wbr>Recent</a>

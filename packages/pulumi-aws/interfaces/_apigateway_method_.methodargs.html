@@ -114,13 +114,14 @@
 					<div class="tsd-signature tsd-kind-icon">api<wbr>Key<wbr>Required<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/method.ts:105</li>
+							<li>Defined in apigateway/method.ts:129</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specify if the method requires an API key</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#api_key_required">https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#api_key_required</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -129,13 +130,14 @@
 					<div class="tsd-signature tsd-kind-icon">authorization<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/method.ts:109</li>
+							<li>Defined in apigateway/method.ts:135</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of authorization used for the method (<code>NONE</code>, <code>CUSTOM</code>, <code>AWS_IAM</code>)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#authorization">https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#authorization</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -144,13 +146,14 @@
 					<div class="tsd-signature tsd-kind-icon">authorizer<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/method.ts:113</li>
+							<li>Defined in apigateway/method.ts:141</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The authorizer id to be used when the authorization is <code>CUSTOM</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#authorizer_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#authorizer_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -159,13 +162,14 @@
 					<div class="tsd-signature tsd-kind-icon">http<wbr>Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/method.ts:117</li>
+							<li>Defined in apigateway/method.ts:147</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The HTTP Method (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, <code>HEAD</code>, <code>OPTIONS</code>, <code>ANY</code>)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#http_method">https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#http_method</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -174,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">request<wbr>Models<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/method.ts:123</li>
+							<li>Defined in apigateway/method.ts:155</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -183,6 +187,7 @@
 								where key is the content type (e.g. <code>application/json</code>)
 							and value is either <code>Error</code>, <code>Empty</code> (built-in models) or <code>aws_api_gateway_model</code>&#39;s <code>name</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#request_models">https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#request_models</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -191,7 +196,7 @@
 					<div class="tsd-signature tsd-kind-icon">request<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/method.ts:135</li>
+							<li>Defined in apigateway/method.ts:169</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -205,6 +210,7 @@
 </code></pre>
 							<p>would define that the header <code>X-Some-Header</code> and the query string <code>some-query-param</code> must be provided on the request, or</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#request_parameters">https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#request_parameters</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -213,13 +219,14 @@
 					<div class="tsd-signature tsd-kind-icon">request<wbr>Parameters<wbr>InJson<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/method.ts:139</li>
+							<li>Defined in apigateway/method.ts:175</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p><strong>Deprecated</strong>, use <code>request_parameters</code> instead.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#request_parameters_in_json">https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#request_parameters_in_json</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -228,13 +235,14 @@
 					<div class="tsd-signature tsd-kind-icon">request<wbr>Validator<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/method.ts:143</li>
+							<li>Defined in apigateway/method.ts:181</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of a <code>aws_api_gateway_request_validator</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#request_validator_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#request_validator_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -243,13 +251,14 @@
 					<div class="tsd-signature tsd-kind-icon">resource<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/method.ts:147</li>
+							<li>Defined in apigateway/method.ts:187</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The API resource ID</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#resource_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#resource_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -258,13 +267,14 @@
 					<div class="tsd-signature tsd-kind-icon">rest<wbr>Api<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_apigateway_restapi_.restapi.html" class="tsd-signature-type">RestApi</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/method.ts:151</li>
+							<li>Defined in apigateway/method.ts:193</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the associated REST API</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#rest_api_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_method.html#rest_api_id</a>.</p>
 					</div>
 				</section>
 			</section>

@@ -76,6 +76,9 @@
 					</div>
 					<p>~&gt; <strong>Note:</strong> All arguments including <code>tunnel1_preshared_key</code> and <code>tunnel2_preshared_key</code> will be stored in the raw state as plain-text.
 					<a href="/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+					<p>~&gt; <strong>Note:</strong> The CIDR blocks in the arguments <code>tunnel1_inside_cidr</code> and <code>tunnel2_inside_cidr</code> must have a prefix of /30 and be a part of a specific range.
+					<a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html">Read more about this in the AWS documentation</a>.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -114,17 +117,19 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel1bgpasn" class="tsd-kind-icon">tunnel1<wbr>Bgp<wbr>Asn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel1bgpholdtime" class="tsd-kind-icon">tunnel1<wbr>Bgp<wbr>Holdtime</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel1cgwinsideaddress" class="tsd-kind-icon">tunnel1<wbr>Cgw<wbr>Inside<wbr>Address</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel1insidecidr" class="tsd-kind-icon">tunnel1<wbr>Inside<wbr>Cidr</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel1presharedkey" class="tsd-kind-icon">tunnel1<wbr>Preshared<wbr>Key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel1vgwinsideaddress" class="tsd-kind-icon">tunnel1<wbr>Vgw<wbr>Inside<wbr>Address</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel2address" class="tsd-kind-icon">tunnel2<wbr>Address</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel2bgpasn" class="tsd-kind-icon">tunnel2<wbr>Bgp<wbr>Asn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel2bgpholdtime" class="tsd-kind-icon">tunnel2<wbr>Bgp<wbr>Holdtime</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel2cgwinsideaddress" class="tsd-kind-icon">tunnel2<wbr>Cgw<wbr>Inside<wbr>Address</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel2insidecidr" class="tsd-kind-icon">tunnel2<wbr>Inside<wbr>Cidr</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel2presharedkey" class="tsd-kind-icon">tunnel2<wbr>Preshared<wbr>Key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#tunnel2vgwinsideaddress" class="tsd-kind-icon">tunnel2<wbr>Vgw<wbr>Inside<wbr>Address</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_ec2_vpnconnection_.vpnconnection.html#urn" class="tsd-kind-icon">urn</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#vgwtelemetry" class="tsd-kind-icon">vgw<wbr>Telemetry</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#vgwtelemetries" class="tsd-kind-icon">vgw<wbr>Telemetries</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_vpnconnection_.vpnconnection.html#vpngatewayid" class="tsd-kind-icon">vpn<wbr>Gateway<wbr>Id</a></li>
 							</ul>
 						</section>
@@ -144,7 +149,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/vpnConnection.ts:87</li>
+									<li>Defined in ec2/vpnConnection.ts:140</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -192,13 +197,14 @@
 					<div class="tsd-signature tsd-kind-icon">customer<wbr>Gateway<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:17</li>
+							<li>Defined in ec2/vpnConnection.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The configuration information for the VPN connection&#39;s customer gateway (in the native XML format).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#customer_gateway_configuration">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#customer_gateway_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -207,13 +213,14 @@
 					<div class="tsd-signature tsd-kind-icon">customer<wbr>Gateway<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:21</li>
+							<li>Defined in ec2/vpnConnection.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the customer gateway.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#customer_gateway_id">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#customer_gateway_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -239,7 +246,7 @@
 					<div class="tsd-signature tsd-kind-icon">routes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:22</li>
+							<li>Defined in ec2/vpnConnection.ts:31</li>
 						</ul>
 					</aside>
 				</section>
@@ -249,13 +256,14 @@
 					<div class="tsd-signature tsd-kind-icon">static<wbr>Routes<wbr>Only<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:26</li>
+							<li>Defined in ec2/vpnConnection.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don&#39;t support BGP.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#static_routes_only">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#static_routes_only</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -264,13 +272,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:30</li>
+							<li>Defined in ec2/vpnConnection.ts:43</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Tags to apply to the connection.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tags">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -279,13 +288,14 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel1<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:34</li>
+							<li>Defined in ec2/vpnConnection.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The public IP address of the first VPN tunnel.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_address">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_address</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -294,13 +304,14 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel1<wbr>Bgp<wbr>Asn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:38</li>
+							<li>Defined in ec2/vpnConnection.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The bgp asn number of the first VPN tunnel.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_bgp_asn">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_bgp_asn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -309,13 +320,14 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel1<wbr>Bgp<wbr>Holdtime<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:42</li>
+							<li>Defined in ec2/vpnConnection.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The bgp holdtime of the first VPN tunnel.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_bgp_holdtime">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_bgp_holdtime</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -324,13 +336,30 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel1<wbr>Cgw<wbr>Inside<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:46</li>
+							<li>Defined in ec2/vpnConnection.ts:67</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The RFC 6890 link-local address of the first VPN tunnel (Customer Gateway Side).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_cgw_inside_address">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_cgw_inside_address</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="tunnel1insidecidr" class="tsd-anchor"></a>
+					<h3>tunnel1<wbr>Inside<wbr>Cidr</h3>
+					<div class="tsd-signature tsd-kind-icon">tunnel1<wbr>Inside<wbr>Cidr<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpnConnection.ts:73</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The CIDR block of the inside IP addresses for the first VPN tunnel.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_inside_cidr">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_inside_cidr</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -339,13 +368,14 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel1<wbr>Preshared<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:50</li>
+							<li>Defined in ec2/vpnConnection.ts:79</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The preshared key of the first VPN tunnel.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_preshared_key">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_preshared_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -354,13 +384,14 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel1<wbr>Vgw<wbr>Inside<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:54</li>
+							<li>Defined in ec2/vpnConnection.ts:85</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The RFC 6890 link-local address of the first VPN tunnel (VPN Gateway Side).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_vgw_inside_address">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel1_vgw_inside_address</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -369,13 +400,14 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel2<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:58</li>
+							<li>Defined in ec2/vpnConnection.ts:91</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The public IP address of the second VPN tunnel.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_address">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_address</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -384,13 +416,14 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel2<wbr>Bgp<wbr>Asn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:62</li>
+							<li>Defined in ec2/vpnConnection.ts:97</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The bgp asn number of the second VPN tunnel.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_bgp_asn">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_bgp_asn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -399,13 +432,14 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel2<wbr>Bgp<wbr>Holdtime<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:66</li>
+							<li>Defined in ec2/vpnConnection.ts:103</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The bgp holdtime of the second VPN tunnel.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_bgp_holdtime">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_bgp_holdtime</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -414,13 +448,30 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel2<wbr>Cgw<wbr>Inside<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:70</li>
+							<li>Defined in ec2/vpnConnection.ts:109</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The RFC 6890 link-local address of the second VPN tunnel (Customer Gateway Side).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_cgw_inside_address">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_cgw_inside_address</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="tunnel2insidecidr" class="tsd-anchor"></a>
+					<h3>tunnel2<wbr>Inside<wbr>Cidr</h3>
+					<div class="tsd-signature tsd-kind-icon">tunnel2<wbr>Inside<wbr>Cidr<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/vpnConnection.ts:115</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The CIDR block of the second IP addresses for the first VPN tunnel.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_inside_cidr">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_inside_cidr</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -429,13 +480,14 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel2<wbr>Preshared<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:74</li>
+							<li>Defined in ec2/vpnConnection.ts:121</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The preshared key of the second VPN tunnel.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_preshared_key">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_preshared_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -444,13 +496,14 @@
 					<div class="tsd-signature tsd-kind-icon">tunnel2<wbr>Vgw<wbr>Inside<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:78</li>
+							<li>Defined in ec2/vpnConnection.ts:127</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_vgw_inside_address">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#tunnel2_vgw_inside_address</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -459,13 +512,14 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:82</li>
+							<li>Defined in ec2/vpnConnection.ts:133</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of VPN connection. The only type AWS supports at this time is &quot;ipsec.1&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#type">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -486,12 +540,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="vgwtelemetry" class="tsd-anchor"></a>
-					<h3>vgw<wbr>Telemetry</h3>
-					<div class="tsd-signature tsd-kind-icon">vgw<wbr>Telemetry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="vgwtelemetries" class="tsd-anchor"></a>
+					<h3>vgw<wbr>Telemetries</h3>
+					<div class="tsd-signature tsd-kind-icon">vgw<wbr>Telemetries<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:83</li>
+							<li>Defined in ec2/vpnConnection.ts:134</li>
 						</ul>
 					</aside>
 				</section>
@@ -501,13 +555,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpn<wbr>Gateway<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpnConnection.ts:87</li>
+							<li>Defined in ec2/vpnConnection.ts:140</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the virtual private gateway.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#vpn_gateway_id">https://www.terraform.io/docs/providers/aws/r/vpn_connection.html#vpn_gateway_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -564,6 +619,9 @@
 								<a href="_ec2_vpnconnection_.vpnconnection.html#tunnel1cgwinsideaddress" class="tsd-kind-icon">tunnel1<wbr>Cgw<wbr>Inside<wbr>Address</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_vpnconnection_.vpnconnection.html#tunnel1insidecidr" class="tsd-kind-icon">tunnel1<wbr>Inside<wbr>Cidr</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_vpnconnection_.vpnconnection.html#tunnel1presharedkey" class="tsd-kind-icon">tunnel1<wbr>Preshared<wbr>Key</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -582,6 +640,9 @@
 								<a href="_ec2_vpnconnection_.vpnconnection.html#tunnel2cgwinsideaddress" class="tsd-kind-icon">tunnel2<wbr>Cgw<wbr>Inside<wbr>Address</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_vpnconnection_.vpnconnection.html#tunnel2insidecidr" class="tsd-kind-icon">tunnel2<wbr>Inside<wbr>Cidr</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_vpnconnection_.vpnconnection.html#tunnel2presharedkey" class="tsd-kind-icon">tunnel2<wbr>Preshared<wbr>Key</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -594,7 +655,7 @@
 								<a href="_ec2_vpnconnection_.vpnconnection.html#urn" class="tsd-kind-icon">urn</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_ec2_vpnconnection_.vpnconnection.html#vgwtelemetry" class="tsd-kind-icon">vgw<wbr>Telemetry</a>
+								<a href="_ec2_vpnconnection_.vpnconnection.html#vgwtelemetries" class="tsd-kind-icon">vgw<wbr>Telemetries</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_vpnconnection_.vpnconnection.html#vpngatewayid" class="tsd-kind-icon">vpn<wbr>Gateway<wbr>Id</a>

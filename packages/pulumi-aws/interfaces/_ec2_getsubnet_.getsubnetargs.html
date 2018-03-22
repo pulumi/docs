@@ -94,7 +94,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsubnet_.getsubnetargs.html#availabilityzone" class="tsd-kind-icon">availability<wbr>Zone</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsubnet_.getsubnetargs.html#cidrblock" class="tsd-kind-icon">cidr<wbr>Block</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsubnet_.getsubnetargs.html#defaultforaz" class="tsd-kind-icon">default<wbr>For<wbr>Az</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsubnet_.getsubnetargs.html#filter" class="tsd-kind-icon">filter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsubnet_.getsubnetargs.html#filters" class="tsd-kind-icon">filters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsubnet_.getsubnetargs.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsubnet_.getsubnetargs.html#ipv6cidrblock" class="tsd-kind-icon">ipv6<wbr>Cidr<wbr>Block</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsubnet_.getsubnetargs.html#state" class="tsd-kind-icon">state</a></li>
@@ -113,7 +113,7 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSubnet.ts:36</li>
+							<li>Defined in ec2/getSubnet.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -121,6 +121,7 @@
 							<p>The availability zone where the
 							subnet must reside.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/subnet.html#availability_zone">https://www.terraform.io/docs/providers/aws/d/subnet.html#availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -129,13 +130,14 @@
 					<div class="tsd-signature tsd-kind-icon">cidr<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSubnet.ts:40</li>
+							<li>Defined in ec2/getSubnet.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The cidr block of the desired subnet.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/subnet.html#cidr_block">https://www.terraform.io/docs/providers/aws/d/subnet.html#cidr_block</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -144,7 +146,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>For<wbr>Az<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSubnet.ts:45</li>
+							<li>Defined in ec2/getSubnet.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -152,21 +154,23 @@
 							<p>Boolean constraint for whether the desired
 							subnet must be the default subnet for its associated availability zone.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/subnet.html#default_for_az">https://www.terraform.io/docs/providers/aws/d/subnet.html#default_for_az</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="filter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filter</h3>
-					<div class="tsd-signature tsd-kind-icon">filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="filters" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filters</h3>
+					<div class="tsd-signature tsd-kind-icon">filters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSubnet.ts:49</li>
+							<li>Defined in ec2/getSubnet.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Custom filter block as described below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/subnet.html#filter">https://www.terraform.io/docs/providers/aws/d/subnet.html#filter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -175,13 +179,14 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSubnet.ts:53</li>
+							<li>Defined in ec2/getSubnet.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The id of the specific subnet to retrieve.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/subnet.html#id">https://www.terraform.io/docs/providers/aws/d/subnet.html#id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -190,13 +195,14 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Cidr<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSubnet.ts:57</li>
+							<li>Defined in ec2/getSubnet.ts:71</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Ipv6 cidr block of the desired subnet</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/subnet.html#ipv6_cidr_block">https://www.terraform.io/docs/providers/aws/d/subnet.html#ipv6_cidr_block</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -205,13 +211,14 @@
 					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSubnet.ts:61</li>
+							<li>Defined in ec2/getSubnet.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The state that the desired subnet must have.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/subnet.html#state">https://www.terraform.io/docs/providers/aws/d/subnet.html#state</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -220,7 +227,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSubnet.ts:66</li>
+							<li>Defined in ec2/getSubnet.ts:84</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -228,6 +235,7 @@
 							<p>A mapping of tags, each pair of which must exactly match
 							a pair on the desired subnet.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/subnet.html#tags">https://www.terraform.io/docs/providers/aws/d/subnet.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -236,13 +244,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSubnet.ts:70</li>
+							<li>Defined in ec2/getSubnet.ts:90</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The id of the VPC that the desired subnet belongs to.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/subnet.html#vpc_id">https://www.terraform.io/docs/providers/aws/d/subnet.html#vpc_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -275,7 +284,7 @@
 								<a href="_ec2_getsubnet_.getsubnetargs.html#defaultforaz" class="tsd-kind-icon">default<wbr>For<wbr>Az</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ec2_getsubnet_.getsubnetargs.html#filter" class="tsd-kind-icon">filter</a>
+								<a href="_ec2_getsubnet_.getsubnetargs.html#filters" class="tsd-kind-icon">filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_getsubnet_.getsubnetargs.html#id" class="tsd-kind-icon">id</a>

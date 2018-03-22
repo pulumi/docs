@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides an AutoScaling Group resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -111,7 +112,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#healthcheckgraceperiod" class="tsd-kind-icon">health<wbr>Check<wbr>Grace<wbr>Period</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#healthchecktype" class="tsd-kind-icon">health<wbr>Check<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_autoscaling_group_.group.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#initiallifecyclehook" class="tsd-kind-icon">initial<wbr>Lifecycle<wbr>Hook</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#initiallifecyclehooks" class="tsd-kind-icon">initial<wbr>Lifecycle<wbr>Hooks</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#launchconfiguration" class="tsd-kind-icon">launch<wbr>Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#loadbalancers" class="tsd-kind-icon">load<wbr>Balancers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#maxsize" class="tsd-kind-icon">max<wbr>Size</a></li>
@@ -123,12 +124,12 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#placementgroup" class="tsd-kind-icon">placement<wbr>Group</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#protectfromscalein" class="tsd-kind-icon">protect<wbr>From<wbr>Scale<wbr>In</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#suspendedprocesses" class="tsd-kind-icon">suspended<wbr>Processes</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#tag" class="tsd-kind-icon">tag</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#tags" class="tsd-kind-icon">tags</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#tagscollection" class="tsd-kind-icon">tags<wbr>Collection</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#targetgrouparns" class="tsd-kind-icon">target<wbr>Group<wbr>Arns</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#terminationpolicies" class="tsd-kind-icon">termination<wbr>Policies</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_autoscaling_group_.group.html#urn" class="tsd-kind-icon">urn</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#vpczoneidentifier" class="tsd-kind-icon">vpc<wbr>Zone<wbr>Identifier</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#vpczoneidentifiers" class="tsd-kind-icon">vpc<wbr>Zone<wbr>Identifiers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#waitforcapacitytimeout" class="tsd-kind-icon">wait<wbr>For<wbr>Capacity<wbr>Timeout</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_autoscaling_group_.group.html#waitforelbcapacity" class="tsd-kind-icon">wait<wbr>For<wbr>Elb<wbr>Capacity</a></li>
 							</ul>
@@ -149,7 +150,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in autoscaling/group.ts:146</li>
+									<li>Defined in autoscaling/group.ts:199</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -197,13 +198,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:13</li>
+							<li>Defined in autoscaling/group.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN for this AutoScaling Group</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#arn">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -212,7 +214,7 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zones<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:18</li>
+							<li>Defined in autoscaling/group.ts:24</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -220,6 +222,7 @@
 							<p>A list of AZs to launch resources in.
 							Required only if you do not specify any <code>vpc_zone_identifier</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#availability_zones">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#availability_zones</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -228,13 +231,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Cooldown<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:22</li>
+							<li>Defined in autoscaling/group.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#default_cooldown">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#default_cooldown</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -243,7 +247,7 @@
 					<div class="tsd-signature tsd-kind-icon">desired<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:28</li>
+							<li>Defined in autoscaling/group.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -252,6 +256,7 @@
 								should be running in the group. (See also <a href="#waiting-for-capacity">Waiting for
 							Capacity</a> below.)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#desired_capacity">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#desired_capacity</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -260,7 +265,7 @@
 					<div class="tsd-signature tsd-kind-icon">enabled<wbr>Metrics<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:37</li>
+							<li>Defined in autoscaling/group.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -274,6 +279,7 @@
 								Terraform to skip all Capacity Waiting behavior.</li>
 							</ul>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#enabled_metrics">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#enabled_metrics</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -282,7 +288,7 @@
 					<div class="tsd-signature tsd-kind-icon">force<wbr>Delete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:45</li>
+							<li>Defined in autoscaling/group.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -293,6 +299,7 @@
 								drains all the instances before deleting the group.  This bypasses that
 							behavior and potentially leaves resources dangling.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#force_delete">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#force_delete</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -301,13 +308,14 @@
 					<div class="tsd-signature tsd-kind-icon">health<wbr>Check<wbr>Grace<wbr>Period<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:49</li>
+							<li>Defined in autoscaling/group.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Time (in seconds) after instance comes into service before checking health.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#health_check_grace_period">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#health_check_grace_period</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -316,13 +324,14 @@
 					<div class="tsd-signature tsd-kind-icon">health<wbr>Check<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:53</li>
+							<li>Defined in autoscaling/group.ts:71</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>&quot;EC2&quot; or &quot;ELB&quot;. Controls how health checking is done.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#health_check_type">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#health_check_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -343,12 +352,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="initiallifecyclehook" class="tsd-anchor"></a>
-					<h3>initial<wbr>Lifecycle<wbr>Hook</h3>
-					<div class="tsd-signature tsd-kind-icon">initial<wbr>Lifecycle<wbr>Hook<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="initiallifecyclehooks" class="tsd-anchor"></a>
+					<h3>initial<wbr>Lifecycle<wbr>Hooks</h3>
+					<div class="tsd-signature tsd-kind-icon">initial<wbr>Lifecycle<wbr>Hooks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:63</li>
+							<li>Defined in autoscaling/group.ts:83</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -361,6 +370,7 @@
 								resource, without the <code>autoscaling_group_name</code> attribute. Please note that this will only work when creating
 							a new autoscaling group. For all other use-cases, please use <code>aws_autoscaling_lifecycle_hook</code> resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#initial_lifecycle_hook">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#initial_lifecycle_hook</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -369,13 +379,14 @@
 					<div class="tsd-signature tsd-kind-icon">launch<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:67</li>
+							<li>Defined in autoscaling/group.ts:89</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the launch configuration to use.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#launch_configuration">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#launch_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -384,14 +395,15 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:72</li>
+							<li>Defined in autoscaling/group.ts:96</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of elastic load balancer names to add to the autoscaling
-							group names.</p>
+							group names. Only valid for classic load balancers. For ALBs, use <code>target_group_arns</code> instead.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#load_balancers">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#load_balancers</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -400,13 +412,14 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:76</li>
+							<li>Defined in autoscaling/group.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The maximum size of the auto scale group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#max_size">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#max_size</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -415,13 +428,14 @@
 					<div class="tsd-signature tsd-kind-icon">metrics<wbr>Granularity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:80</li>
+							<li>Defined in autoscaling/group.ts:108</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The granularity to associate with the metrics to collect. The only valid value is <code>1Minute</code>. Default is <code>1Minute</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#metrics_granularity">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#metrics_granularity</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -430,7 +444,7 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Elb<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:87</li>
+							<li>Defined in autoscaling/group.ts:117</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -440,6 +454,7 @@
 								Updates will not wait on ELB instance number changes.
 							(See also <a href="#waiting-for-capacity">Waiting for Capacity</a> below.)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#min_elb_capacity">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#min_elb_capacity</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -448,7 +463,7 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:92</li>
+							<li>Defined in autoscaling/group.ts:124</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -456,6 +471,7 @@
 							<p>The minimum size of the auto scale group.
 							(See also <a href="#waiting-for-capacity">Waiting for Capacity</a> below.)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#min_size">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#min_size</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -464,13 +480,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:96</li>
+							<li>Defined in autoscaling/group.ts:130</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the auto scaling group. By default generated by Terraform.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#name">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -479,7 +496,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:101</li>
+							<li>Defined in autoscaling/group.ts:137</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -487,6 +504,7 @@
 							<p>Creates a unique name beginning with the specified
 							prefix. Conflicts with <code>name</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#name_prefix">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#name_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -495,13 +513,14 @@
 					<div class="tsd-signature tsd-kind-icon">placement<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:105</li>
+							<li>Defined in autoscaling/group.ts:143</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the placement group into which you&#39;ll launch your instances, if any.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#placement_group">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#placement_group</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -510,7 +529,7 @@
 					<div class="tsd-signature tsd-kind-icon">protect<wbr>From<wbr>Scale<wbr>In<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:111</li>
+							<li>Defined in autoscaling/group.ts:151</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -519,6 +538,7 @@
 								autoscaling group will not select instances with this setting for terminination
 							during scale in events.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#protect_from_scale_in">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#protect_from_scale_in</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -527,7 +547,7 @@
 					<div class="tsd-signature tsd-kind-icon">suspended<wbr>Processes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:116</li>
+							<li>Defined in autoscaling/group.ts:158</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -535,21 +555,7 @@
 							<p>A list of processes to suspend for the AutoScaling Group. The allowed values are <code>Launch</code>, <code>Terminate</code>, <code>HealthCheck</code>, <code>ReplaceUnhealthy</code>, <code>AZRebalance</code>, <code>AlarmNotification</code>, <code>ScheduledActions</code>, <code>AddToLoadBalancer</code>.
 							Note that if you suspend either the <code>Launch</code> or <code>Terminate</code> process types, it can prevent your autoscaling group from functioning properly.</p>
 						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="tag" class="tsd-anchor"></a>
-					<h3>tag</h3>
-					<div class="tsd-signature tsd-kind-icon">tag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in autoscaling/group.ts:120</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>A list of tag blocks. Tags documented below.</p>
-						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#suspended_processes">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#suspended_processes</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -558,13 +564,30 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:124</li>
+							<li>Defined in autoscaling/group.ts:164</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of tag blocks. Tags documented below.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#tag">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#tag</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="tagscollection" class="tsd-anchor"></a>
+					<h3>tags<wbr>Collection</h3>
+					<div class="tsd-signature tsd-kind-icon">tags<wbr>Collection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in autoscaling/group.ts:170</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of tag blocks (maps). Tags documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#tags">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -573,14 +596,14 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Group<wbr>Arns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:129</li>
+							<li>Defined in autoscaling/group.ts:176</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A list of <code>aws_alb_target_group</code> ARNs, for use with
-							Application Load Balancing</p>
+							<p>A list of <code>aws_alb_target_group</code> ARNs, for use with Application Load Balancing.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#target_group_arns">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#target_group_arns</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -589,13 +612,14 @@
 					<div class="tsd-signature tsd-kind-icon">termination<wbr>Policies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:133</li>
+							<li>Defined in autoscaling/group.ts:182</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code>OldestInstance</code>, <code>NewestInstance</code>, <code>OldestLaunchConfiguration</code>, <code>ClosestToNextInstanceHour</code>, <code>Default</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#termination_policies">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#termination_policies</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -616,18 +640,19 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="vpczoneidentifier" class="tsd-anchor"></a>
-					<h3>vpc<wbr>Zone<wbr>Identifier</h3>
-					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Zone<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="vpczoneidentifiers" class="tsd-anchor"></a>
+					<h3>vpc<wbr>Zone<wbr>Identifiers</h3>
+					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Zone<wbr>Identifiers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:137</li>
+							<li>Defined in autoscaling/group.ts:188</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of subnet IDs to launch resources in.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#vpc_zone_identifier">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#vpc_zone_identifier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -636,7 +661,7 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Capacity<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:138</li>
+							<li>Defined in autoscaling/group.ts:189</li>
 						</ul>
 					</aside>
 				</section>
@@ -646,7 +671,7 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Elb<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/group.ts:146</li>
+							<li>Defined in autoscaling/group.ts:199</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -657,6 +682,7 @@
 								<code>min_elb_capacity</code> behavior.)
 							(See also <a href="#waiting-for-capacity">Waiting for Capacity</a> below.)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#wait_for_elb_capacity">https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#wait_for_elb_capacity</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -710,7 +736,7 @@
 								<a href="_autoscaling_group_.group.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_autoscaling_group_.group.html#initiallifecyclehook" class="tsd-kind-icon">initial<wbr>Lifecycle<wbr>Hook</a>
+								<a href="_autoscaling_group_.group.html#initiallifecyclehooks" class="tsd-kind-icon">initial<wbr>Lifecycle<wbr>Hooks</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_autoscaling_group_.group.html#launchconfiguration" class="tsd-kind-icon">launch<wbr>Configuration</a>
@@ -746,10 +772,10 @@
 								<a href="_autoscaling_group_.group.html#suspendedprocesses" class="tsd-kind-icon">suspended<wbr>Processes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_autoscaling_group_.group.html#tag" class="tsd-kind-icon">tag</a>
+								<a href="_autoscaling_group_.group.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_autoscaling_group_.group.html#tags" class="tsd-kind-icon">tags</a>
+								<a href="_autoscaling_group_.group.html#tagscollection" class="tsd-kind-icon">tags<wbr>Collection</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_autoscaling_group_.group.html#targetgrouparns" class="tsd-kind-icon">target<wbr>Group<wbr>Arns</a>
@@ -761,7 +787,7 @@
 								<a href="_autoscaling_group_.group.html#urn" class="tsd-kind-icon">urn</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_autoscaling_group_.group.html#vpczoneidentifier" class="tsd-kind-icon">vpc<wbr>Zone<wbr>Identifier</a>
+								<a href="_autoscaling_group_.group.html#vpczoneidentifiers" class="tsd-kind-icon">vpc<wbr>Zone<wbr>Identifiers</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_autoscaling_group_.group.html#waitforcapacitytimeout" class="tsd-kind-icon">wait<wbr>For<wbr>Capacity<wbr>Timeout</a>

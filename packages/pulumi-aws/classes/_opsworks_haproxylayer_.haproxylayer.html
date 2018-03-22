@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides an OpsWorks haproxy layer resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -114,7 +115,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_haproxylayer_.haproxylayer.html#customshutdownrecipes" class="tsd-kind-icon">custom<wbr>Shutdown<wbr>Recipes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_haproxylayer_.haproxylayer.html#customundeployrecipes" class="tsd-kind-icon">custom<wbr>Undeploy<wbr>Recipes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_haproxylayer_.haproxylayer.html#drainelbonshutdown" class="tsd-kind-icon">drain<wbr>Elb<wbr>OnShutdown</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_haproxylayer_.haproxylayer.html#ebsvolume" class="tsd-kind-icon">ebs<wbr>Volume</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_haproxylayer_.haproxylayer.html#ebsvolumes" class="tsd-kind-icon">ebs<wbr>Volumes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_haproxylayer_.haproxylayer.html#elasticloadbalancer" class="tsd-kind-icon">elastic<wbr>Load<wbr>Balancer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_haproxylayer_.haproxylayer.html#healthcheckmethod" class="tsd-kind-icon">healthcheck<wbr>Method</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_haproxylayer_.haproxylayer.html#healthcheckurl" class="tsd-kind-icon">healthcheck<wbr>Url</a></li>
@@ -148,7 +149,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in opsworks/haproxyLayer.ts:98</li>
+									<li>Defined in opsworks/haproxyLayer.ts:142</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -196,13 +197,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Assign<wbr>Elastic<wbr>Ips<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:13</li>
+							<li>Defined in opsworks/haproxyLayer.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to automatically assign an elastic IP address to the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#auto_assign_elastic_ips">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#auto_assign_elastic_ips</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -211,13 +213,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Assign<wbr>Public<wbr>Ips<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:17</li>
+							<li>Defined in opsworks/haproxyLayer.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#auto_assign_public_ips">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#auto_assign_public_ips</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -226,13 +229,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Healing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:21</li>
+							<li>Defined in opsworks/haproxyLayer.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to enable auto-healing for the layer.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#auto_healing">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#auto_healing</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -241,7 +245,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Configure<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:22</li>
+							<li>Defined in opsworks/haproxyLayer.ts:30</li>
 						</ul>
 					</aside>
 				</section>
@@ -251,7 +255,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Deploy<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:23</li>
+							<li>Defined in opsworks/haproxyLayer.ts:31</li>
 						</ul>
 					</aside>
 				</section>
@@ -261,13 +265,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Instance<wbr>Profile<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:27</li>
+							<li>Defined in opsworks/haproxyLayer.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of an IAM profile that will be used for the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#custom_instance_profile_arn">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#custom_instance_profile_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -276,13 +281,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Json<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:31</li>
+							<li>Defined in opsworks/haproxyLayer.ts:43</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Custom JSON attributes to apply to the layer.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#custom_json">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#custom_json</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -291,13 +297,14 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:35</li>
+							<li>Defined in opsworks/haproxyLayer.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Ids for a set of security groups to apply to the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#custom_security_group_ids">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#custom_security_group_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -306,7 +313,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Setup<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:36</li>
+							<li>Defined in opsworks/haproxyLayer.ts:50</li>
 						</ul>
 					</aside>
 				</section>
@@ -316,7 +323,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Shutdown<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:37</li>
+							<li>Defined in opsworks/haproxyLayer.ts:51</li>
 						</ul>
 					</aside>
 				</section>
@@ -326,7 +333,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Undeploy<wbr>Recipes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:38</li>
+							<li>Defined in opsworks/haproxyLayer.ts:52</li>
 						</ul>
 					</aside>
 				</section>
@@ -336,28 +343,30 @@
 					<div class="tsd-signature tsd-kind-icon">drain<wbr>Elb<wbr>OnShutdown<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:42</li>
+							<li>Defined in opsworks/haproxyLayer.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to enable Elastic Load Balancing connection draining.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#drain_elb_on_shutdown">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#drain_elb_on_shutdown</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ebsvolume" class="tsd-anchor"></a>
-					<h3>ebs<wbr>Volume</h3>
-					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Volume<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="ebsvolumes" class="tsd-anchor"></a>
+					<h3>ebs<wbr>Volumes</h3>
+					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Volumes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:46</li>
+							<li>Defined in opsworks/haproxyLayer.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p><code>ebs_volume</code> blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#ebs_volume">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#ebs_volume</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -366,13 +375,14 @@
 					<div class="tsd-signature tsd-kind-icon">elastic<wbr>Load<wbr>Balancer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:50</li>
+							<li>Defined in opsworks/haproxyLayer.ts:70</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of an Elastic Load Balancer to attach to this layer</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#elastic_load_balancer">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#elastic_load_balancer</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -381,13 +391,14 @@
 					<div class="tsd-signature tsd-kind-icon">healthcheck<wbr>Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:54</li>
+							<li>Defined in opsworks/haproxyLayer.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>HTTP method to use for instance healthchecks. Defaults to &quot;OPTIONS&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#healthcheck_method">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#healthcheck_method</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -396,13 +407,14 @@
 					<div class="tsd-signature tsd-kind-icon">healthcheck<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:58</li>
+							<li>Defined in opsworks/haproxyLayer.ts:82</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>URL path to use for instance healthchecks. Defaults to &quot;/&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#healthcheck_url">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#healthcheck_url</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -428,13 +440,14 @@
 					<div class="tsd-signature tsd-kind-icon">install<wbr>Updates<wbr>OnBoot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:62</li>
+							<li>Defined in opsworks/haproxyLayer.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to install OS and package updates on each instance when it boots.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#install_updates_on_boot">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#install_updates_on_boot</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -443,13 +456,14 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Shutdown<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:66</li>
+							<li>Defined in opsworks/haproxyLayer.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#instance_shutdown_timeout">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#instance_shutdown_timeout</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -458,13 +472,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:70</li>
+							<li>Defined in opsworks/haproxyLayer.ts:100</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A human-readable name for the layer.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#name">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -473,13 +488,14 @@
 					<div class="tsd-signature tsd-kind-icon">stack<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:74</li>
+							<li>Defined in opsworks/haproxyLayer.ts:106</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The id of the stack the layer will belong to.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#stack_id">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#stack_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -488,13 +504,14 @@
 					<div class="tsd-signature tsd-kind-icon">stats<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:78</li>
+							<li>Defined in opsworks/haproxyLayer.ts:112</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to enable HAProxy stats.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#stats_enabled">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#stats_enabled</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -503,13 +520,14 @@
 					<div class="tsd-signature tsd-kind-icon">stats<wbr>Password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:82</li>
+							<li>Defined in opsworks/haproxyLayer.ts:118</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The password to use for HAProxy stats.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#stats_password">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#stats_password</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -518,13 +536,14 @@
 					<div class="tsd-signature tsd-kind-icon">stats<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:86</li>
+							<li>Defined in opsworks/haproxyLayer.ts:124</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The HAProxy stats URL. Defaults to &quot;/haproxy?stats&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#stats_url">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#stats_url</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -533,13 +552,14 @@
 					<div class="tsd-signature tsd-kind-icon">stats<wbr>User<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:90</li>
+							<li>Defined in opsworks/haproxyLayer.ts:130</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The username for HAProxy stats. Defaults to &quot;opsworks&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#stats_user">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#stats_user</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -548,13 +568,14 @@
 					<div class="tsd-signature tsd-kind-icon">system<wbr>Packages<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:94</li>
+							<li>Defined in opsworks/haproxyLayer.ts:136</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Names of a set of system packages to install on the layer&#39;s instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#system_packages">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#system_packages</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -580,13 +601,14 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Ebs<wbr>Optimized<wbr>Instances<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/haproxyLayer.ts:98</li>
+							<li>Defined in opsworks/haproxyLayer.ts:142</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether to use EBS-optimized instances.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#use_ebs_optimized_instances">https://www.terraform.io/docs/providers/aws/r/opsworks_haproxy_layer.html#use_ebs_optimized_instances</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -649,7 +671,7 @@
 								<a href="_opsworks_haproxylayer_.haproxylayer.html#drainelbonshutdown" class="tsd-kind-icon">drain<wbr>Elb<wbr>OnShutdown</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_opsworks_haproxylayer_.haproxylayer.html#ebsvolume" class="tsd-kind-icon">ebs<wbr>Volume</a>
+								<a href="_opsworks_haproxylayer_.haproxylayer.html#ebsvolumes" class="tsd-kind-icon">ebs<wbr>Volumes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_opsworks_haproxylayer_.haproxylayer.html#elasticloadbalancer" class="tsd-kind-icon">elastic<wbr>Load<wbr>Balancer</a>

@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides a CloudWatch Event Target resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html">https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -131,7 +132,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in cloudwatch/eventTarget.ts:46</li>
+									<li>Defined in cloudwatch/eventTarget.ts:66</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -179,28 +180,30 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/eventTarget.ts:13</li>
+							<li>Defined in cloudwatch/eventTarget.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name (ARN) associated of the target.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#arn">https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ecstarget" class="tsd-anchor"></a>
 					<h3>ecs<wbr>Target</h3>
-					<div class="tsd-signature tsd-kind-icon">ecs<wbr>Target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">ecs<wbr>Target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/eventTarget.ts:17</li>
+							<li>Defined in cloudwatch/eventTarget.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#ecs_target">https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#ecs_target</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -226,13 +229,14 @@
 					<div class="tsd-signature tsd-kind-icon">input<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/eventTarget.ts:21</li>
+							<li>Defined in cloudwatch/eventTarget.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Valid JSON text passed to the target.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#input">https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#input</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -241,7 +245,7 @@
 					<div class="tsd-signature tsd-kind-icon">input<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/eventTarget.ts:26</li>
+							<li>Defined in cloudwatch/eventTarget.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -249,21 +253,23 @@
 							<p>The value of the <a href="http://goessner.net/articles/JsonPath/">JSONPath</a>
 							that is used for extracting part of the matched event when passing it to the target.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#input_path">https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#input_path</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="inputtransformer" class="tsd-anchor"></a>
 					<h3>input<wbr>Transformer</h3>
-					<div class="tsd-signature tsd-kind-icon">input<wbr>Transformer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">input<wbr>Transformer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/eventTarget.ts:30</li>
+							<li>Defined in cloudwatch/eventTarget.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Parameters used when you are providing a custom input to a target based on certain event data.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#input_transformer">https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#input_transformer</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -272,13 +278,14 @@
 					<div class="tsd-signature tsd-kind-icon">role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/eventTarget.ts:34</li>
+							<li>Defined in cloudwatch/eventTarget.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if <code>ecs_target</code> is used.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#role_arn">https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -287,13 +294,14 @@
 					<div class="tsd-signature tsd-kind-icon">rule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/eventTarget.ts:38</li>
+							<li>Defined in cloudwatch/eventTarget.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the rule you want to add targets to.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#rule">https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#rule</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -302,13 +310,14 @@
 					<div class="tsd-signature tsd-kind-icon">run<wbr>Command<wbr>Targets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/eventTarget.ts:42</li>
+							<li>Defined in cloudwatch/eventTarget.ts:60</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#run_command_targets">https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#run_command_targets</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -317,13 +326,14 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudwatch/eventTarget.ts:46</li>
+							<li>Defined in cloudwatch/eventTarget.ts:66</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The unique target assignment ID.  If missing, will generate a random, unique id.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#target_id">https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html#target_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">

@@ -75,6 +75,7 @@
 						<p>Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.</p>
 					</div>
 					<p>For more details, see the [Amazon Kinesis Firehose Documentation][1].</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html">https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -113,6 +114,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#redshiftconfiguration" class="tsd-kind-icon">redshift<wbr>Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#s3configuration" class="tsd-kind-icon">s3<wbr>Configuration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#splunkconfiguration" class="tsd-kind-icon">splunk<wbr>Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#urn" class="tsd-kind-icon">urn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#versionid" class="tsd-kind-icon">version<wbr>Id</a></li>
 							</ul>
@@ -133,7 +135,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in kinesis/firehoseDeliveryStream.ts:46</li>
+									<li>Defined in kinesis/firehoseDeliveryStream.ts:63</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -181,13 +183,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:15</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:19</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name (ARN) specifying the Stream</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#arn">https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -196,13 +199,14 @@
 					<div class="tsd-signature tsd-kind-icon">destination<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:19</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>This is the destination to where the data is delivered. The only options are <code>s3</code> (Deprecated, use <code>extended_s3</code> instead), <code>extended_s3</code>, <code>redshift</code>, and <code>elasticsearch</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#destination">https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#destination</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -211,33 +215,34 @@
 					<div class="tsd-signature tsd-kind-icon">destination<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:20</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:26</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="elasticsearchconfiguration" class="tsd-anchor"></a>
 					<h3>elasticsearch<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">elasticsearch<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">elasticsearch<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:21</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:27</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="extendeds3configuration" class="tsd-anchor"></a>
 					<h3>extended<wbr>S3Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">extended<wbr>S3Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">extended<wbr>S3Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:25</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Enhanced configuration options for the s3 destination. More details are given below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#extended_s3_configuration">https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#extended_s3_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -260,16 +265,17 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="kinesissourceconfiguration" class="tsd-anchor"></a>
 					<h3>kinesis<wbr>Source<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">kinesis<wbr>Source<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">kinesis<wbr>Source<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:29</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#kinesis_source_configuration">https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#kinesis_source_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -278,7 +284,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:34</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -286,15 +292,16 @@
 							<p>A name to identify the stream. This is unique to the
 							AWS account and region the Stream is created in.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#name">https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="redshiftconfiguration" class="tsd-anchor"></a>
 					<h3>redshift<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">redshift<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">redshift<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:40</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -303,15 +310,16 @@
 								Using <code>redshift_configuration</code> requires the user to also specify a
 							<code>s3_configuration</code> block. More details are given below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#redshift_configuration">https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#redshift_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="s3configuration" class="tsd-anchor"></a>
 					<h3>s3<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">s3<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">s3<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:45</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -319,7 +327,18 @@
 							<p>Configuration options for the s3 destination (or the intermediate bucket if the destination
 							is redshift). More details are given below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#s3_configuration">https://www.terraform.io/docs/providers/aws/r/kinesis_firehose_delivery_stream.html#s3_configuration</a>.</p>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="splunkconfiguration" class="tsd-anchor"></a>
+					<h3>splunk<wbr>Configuration</h3>
+					<div class="tsd-signature tsd-kind-icon">splunk<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:62</li>
+						</ul>
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="urn" class="tsd-anchor"></a>
@@ -344,7 +363,7 @@
 					<div class="tsd-signature tsd-kind-icon">version<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kinesis/firehoseDeliveryStream.ts:46</li>
+							<li>Defined in kinesis/firehoseDeliveryStream.ts:63</li>
 						</ul>
 					</aside>
 				</section>
@@ -400,6 +419,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#s3configuration" class="tsd-kind-icon">s3<wbr>Configuration</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#splunkconfiguration" class="tsd-kind-icon">splunk<wbr>Configuration</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_kinesis_firehosedeliverystream_.firehosedeliverystream.html#urn" class="tsd-kind-icon">urn</a>

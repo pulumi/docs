@@ -90,6 +90,7 @@
 						this resource will delete any propagating gateways not explicitly listed in
 						<code>propagating_vgws</code>. Omit this argument when defining route propagation using
 					the separate resource.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route_table.html">https://www.terraform.io/docs/providers/aws/r/route_table.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -120,7 +121,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_ec2_routetable_.routetable.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_routetable_.routetable.html#propagatingvgws" class="tsd-kind-icon">propagating<wbr>Vgws</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_routetable_.routetable.html#route" class="tsd-kind-icon">route</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_routetable_.routetable.html#routes" class="tsd-kind-icon">routes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_routetable_.routetable.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_ec2_routetable_.routetable.html#urn" class="tsd-kind-icon">urn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_routetable_.routetable.html#vpcid" class="tsd-kind-icon">vpc<wbr>Id</a></li>
@@ -142,7 +143,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/routeTable.ts:44</li>
+									<li>Defined in ec2/routeTable.ts:54</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -207,28 +208,30 @@
 					<div class="tsd-signature tsd-kind-icon">propagating<wbr>Vgws<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/routeTable.ts:32</li>
+							<li>Defined in ec2/routeTable.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of virtual gateways for propagation.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route_table.html#propagating_vgws">https://www.terraform.io/docs/providers/aws/r/route_table.html#propagating_vgws</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="route" class="tsd-anchor"></a>
-					<h3>route</h3>
-					<div class="tsd-signature tsd-kind-icon">route<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="routes" class="tsd-anchor"></a>
+					<h3>routes</h3>
+					<div class="tsd-signature tsd-kind-icon">routes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/routeTable.ts:36</li>
+							<li>Defined in ec2/routeTable.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of route objects. Their keys are documented below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route_table.html#route">https://www.terraform.io/docs/providers/aws/r/route_table.html#route</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -237,13 +240,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/routeTable.ts:40</li>
+							<li>Defined in ec2/routeTable.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route_table.html#tags">https://www.terraform.io/docs/providers/aws/r/route_table.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -269,13 +273,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/routeTable.ts:44</li>
+							<li>Defined in ec2/routeTable.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The VPC ID.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route_table.html#vpc_id">https://www.terraform.io/docs/providers/aws/r/route_table.html#vpc_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -308,7 +313,7 @@
 								<a href="_ec2_routetable_.routetable.html#propagatingvgws" class="tsd-kind-icon">propagating<wbr>Vgws</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_ec2_routetable_.routetable.html#route" class="tsd-kind-icon">route</a>
+								<a href="_ec2_routetable_.routetable.html#routes" class="tsd-kind-icon">routes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_routetable_.routetable.html#tags" class="tsd-kind-icon">tags</a>

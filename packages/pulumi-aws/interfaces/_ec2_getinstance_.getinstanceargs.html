@@ -91,7 +91,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getinstance_.getinstanceargs.html#filter" class="tsd-kind-icon">filter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getinstance_.getinstanceargs.html#filters" class="tsd-kind-icon">filters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getinstance_.getinstanceargs.html#instanceid" class="tsd-kind-icon">instance<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getinstance_.getinstanceargs.html#instancetags" class="tsd-kind-icon">instance<wbr>Tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getinstance_.getinstanceargs.html#tags" class="tsd-kind-icon">tags</a></li>
@@ -103,12 +103,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="filter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filter</h3>
-					<div class="tsd-signature tsd-kind-icon">filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="filters" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filters</h3>
+					<div class="tsd-signature tsd-kind-icon">filters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getInstance.ts:29</li>
+							<li>Defined in ec2/getInstance.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -117,6 +117,7 @@
 								several valid keys, for a full reference, check out
 							[describe-instances in the AWS CLI reference][1].</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/instance.html#filter">https://www.terraform.io/docs/providers/aws/d/instance.html#filter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -125,13 +126,14 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getInstance.ts:33</li>
+							<li>Defined in ec2/getInstance.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specify the exact Instance ID with which to populate the data source.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/instance.html#instance_id">https://www.terraform.io/docs/providers/aws/d/instance.html#instance_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -140,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getInstance.ts:38</li>
+							<li>Defined in ec2/getInstance.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -148,6 +150,7 @@
 							<p>A mapping of tags, each pair of which must
 							exactly match a pair on the desired Instance.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/instance.html#instance_tags">https://www.terraform.io/docs/providers/aws/d/instance.html#instance_tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -156,7 +159,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getInstance.ts:39</li>
+							<li>Defined in ec2/getInstance.ts:47</li>
 						</ul>
 					</aside>
 				</section>
@@ -181,7 +184,7 @@
 						<a href="_ec2_getinstance_.getinstanceargs.html" class="tsd-kind-icon">Get<wbr>Instance<wbr>Args</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ec2_getinstance_.getinstanceargs.html#filter" class="tsd-kind-icon">filter</a>
+								<a href="_ec2_getinstance_.getinstanceargs.html#filters" class="tsd-kind-icon">filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_getinstance_.getinstanceargs.html#instanceid" class="tsd-kind-icon">instance<wbr>Id</a>

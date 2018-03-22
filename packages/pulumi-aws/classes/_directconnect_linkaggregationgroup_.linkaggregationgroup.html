@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides a Direct Connect LAG.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dx_lag.html">https://www.terraform.io/docs/providers/aws/r/dx_lag.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -102,12 +103,14 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#arn" class="tsd-kind-icon">arn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#connectionsbandwidth" class="tsd-kind-icon">connections<wbr>Bandwidth</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#forcedestroy" class="tsd-kind-icon">force<wbr>Destroy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#location" class="tsd-kind-icon">location</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#numberofconnections" class="tsd-kind-icon">number<wbr>OfConnections</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#urn" class="tsd-kind-icon">urn</a></li>
 							</ul>
 						</section>
@@ -127,7 +130,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in directconnect/linkAggregationGroup.ts:29</li>
+									<li>Defined in directconnect/linkAggregationGroup.ts:53</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -170,18 +173,35 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="arn" class="tsd-anchor"></a>
+					<h3>arn</h3>
+					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in directconnect/linkAggregationGroup.ts:17</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The ARN of the LAG.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dx_lag.html#arn">https://www.terraform.io/docs/providers/aws/r/dx_lag.html#arn</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="connectionsbandwidth" class="tsd-anchor"></a>
 					<h3>connections<wbr>Bandwidth</h3>
 					<div class="tsd-signature tsd-kind-icon">connections<wbr>Bandwidth<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directconnect/linkAggregationGroup.ts:13</li>
+							<li>Defined in directconnect/linkAggregationGroup.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The bandwidth of the individual physical connections bundled by the LAG. Available values: 1Gbps, 10Gbps. Case sensitive.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dx_lag.html#connections_bandwidth">https://www.terraform.io/docs/providers/aws/r/dx_lag.html#connections_bandwidth</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -190,13 +210,14 @@
 					<div class="tsd-signature tsd-kind-icon">force<wbr>Destroy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directconnect/linkAggregationGroup.ts:17</li>
+							<li>Defined in directconnect/linkAggregationGroup.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are <em>not</em> recoverable.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dx_lag.html#force_destroy">https://www.terraform.io/docs/providers/aws/r/dx_lag.html#force_destroy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -222,13 +243,14 @@
 					<div class="tsd-signature tsd-kind-icon">location<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directconnect/linkAggregationGroup.ts:21</li>
+							<li>Defined in directconnect/linkAggregationGroup.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The AWS Direct Connect location in which the LAG should be allocated. See <a href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html">DescribeLocations</a> for the list of AWS Direct Connect locations. Use <code>locationCode</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dx_lag.html#location">https://www.terraform.io/docs/providers/aws/r/dx_lag.html#location</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -237,13 +259,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directconnect/linkAggregationGroup.ts:25</li>
+							<li>Defined in directconnect/linkAggregationGroup.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the LAG.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dx_lag.html#name">https://www.terraform.io/docs/providers/aws/r/dx_lag.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -252,13 +275,30 @@
 					<div class="tsd-signature tsd-kind-icon">number<wbr>OfConnections<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in directconnect/linkAggregationGroup.ts:29</li>
+							<li>Defined in directconnect/linkAggregationGroup.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The number of physical connections initially provisioned and bundled by the LAG.</p>
+							<p>The number of physical connections initially provisioned and bundled by the LAG. Use <code>aws_dx_connection</code> and <code>aws_dx_connection_association</code> resources instead. Default connections will be removed as part of LAG creation automatically in future versions.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dx_lag.html#number_of_connections">https://www.terraform.io/docs/providers/aws/r/dx_lag.html#number_of_connections</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="tags" class="tsd-anchor"></a>
+					<h3>tags</h3>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in directconnect/linkAggregationGroup.ts:53</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping of tags to assign to the resource.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dx_lag.html#tags">https://www.terraform.io/docs/providers/aws/r/dx_lag.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -302,6 +342,9 @@
 								<a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#arn" class="tsd-kind-icon">arn</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#connectionsbandwidth" class="tsd-kind-icon">connections<wbr>Bandwidth</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -318,6 +361,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#numberofconnections" class="tsd-kind-icon">number<wbr>OfConnections</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_directconnect_linkaggregationgroup_.linkaggregationgroup.html#urn" class="tsd-kind-icon">urn</a>

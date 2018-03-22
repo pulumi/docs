@@ -92,6 +92,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_acm_getcertificate_.getcertificateargs.html#domain" class="tsd-kind-icon">domain</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_acm_getcertificate_.getcertificateargs.html#mostrecent" class="tsd-kind-icon">most<wbr>Recent</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_acm_getcertificate_.getcertificateargs.html#statuses" class="tsd-kind-icon">statuses</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_acm_getcertificate_.getcertificateargs.html#types" class="tsd-kind-icon">types</a></li>
 							</ul>
@@ -107,13 +108,30 @@
 					<div class="tsd-signature tsd-kind-icon">domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/getCertificate.ts:28</li>
+							<li>Defined in acm/getCertificate.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/acm_certificate.html#domain">https://www.terraform.io/docs/providers/aws/d/acm_certificate.html#domain</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="mostrecent" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> most<wbr>Recent</h3>
+					<div class="tsd-signature tsd-kind-icon">most<wbr>Recent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in acm/getCertificate.ts:39</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/acm_certificate.html#most_recent">https://www.terraform.io/docs/providers/aws/d/acm_certificate.html#most_recent</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -122,7 +140,7 @@
 					<div class="tsd-signature tsd-kind-icon">statuses<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/getCertificate.ts:34</li>
+							<li>Defined in acm/getCertificate.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -131,6 +149,7 @@
 								<code>INACTIVE</code>, <code>EXPIRED</code>, <code>VALIDATION_TIMED_OUT</code>, <code>REVOKED</code> and <code>FAILED</code>. If no value is specified, only certificates in the <code>ISSUED</code> state
 							are returned.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/acm_certificate.html#statuses">https://www.terraform.io/docs/providers/aws/d/acm_certificate.html#statuses</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -139,9 +158,15 @@
 					<div class="tsd-signature tsd-kind-icon">types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/getCertificate.ts:35</li>
+							<li>Defined in acm/getCertificate.ts:53</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of types on which to filter the returned list. Valid values are <code>AMAZON_ISSUED</code> and <code>IMPORTED</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/acm_certificate.html#types">https://www.terraform.io/docs/providers/aws/d/acm_certificate.html#types</a>.</p>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -165,6 +190,9 @@
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_acm_getcertificate_.getcertificateargs.html#domain" class="tsd-kind-icon">domain</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_acm_getcertificate_.getcertificateargs.html#mostrecent" class="tsd-kind-icon">most<wbr>Recent</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_acm_getcertificate_.getcertificateargs.html#statuses" class="tsd-kind-icon">statuses</a>

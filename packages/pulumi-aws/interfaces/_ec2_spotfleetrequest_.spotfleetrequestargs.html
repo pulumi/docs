@@ -95,7 +95,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#excesscapacityterminationpolicy" class="tsd-kind-icon">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#iamfleetrole" class="tsd-kind-icon">iam<wbr>Fleet<wbr>Role</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#instanceinterruptionbehaviour" class="tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#launchspecification" class="tsd-kind-icon">launch<wbr>Specification</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#launchspecifications" class="tsd-kind-icon">launch<wbr>Specifications</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#replaceunhealthyinstances" class="tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#spotprice" class="tsd-kind-icon">spot<wbr>Price</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#targetcapacity" class="tsd-kind-icon">target<wbr>Capacity</a></li>
@@ -116,7 +116,7 @@
 					<div class="tsd-signature tsd-kind-icon">allocation<wbr>Strategy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:123</li>
+							<li>Defined in ec2/spotFleetRequest.ts:149</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -125,6 +125,7 @@
 								the Spot pools specified by the Spot fleet request. The default is
 							lowestPrice.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#allocation_strategy">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#allocation_strategy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -133,7 +134,7 @@
 					<div class="tsd-signature tsd-kind-icon">excess<wbr>Capacity<wbr>Termination<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:129</li>
+							<li>Defined in ec2/spotFleetRequest.ts:157</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -142,6 +143,7 @@
 								instances should be terminated if the target capacity of the Spot fleet
 							request is decreased below the current size of the Spot fleet.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#excess_capacity_termination_policy">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#excess_capacity_termination_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -150,7 +152,7 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Fleet<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:136</li>
+							<li>Defined in ec2/spotFleetRequest.ts:166</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -160,6 +162,7 @@
 								CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 							terminateInstancesWithExpiration.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#iam_fleet_role">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#iam_fleet_role</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -168,17 +171,17 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:137</li>
+							<li>Defined in ec2/spotFleetRequest.ts:167</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="launchspecification" class="tsd-anchor"></a>
-					<h3>launch<wbr>Specification</h3>
-					<div class="tsd-signature tsd-kind-icon">launch<wbr>Specification<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="launchspecifications" class="tsd-anchor"></a>
+					<h3>launch<wbr>Specifications</h3>
+					<div class="tsd-signature tsd-kind-icon">launch<wbr>Specifications<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:143</li>
+							<li>Defined in ec2/spotFleetRequest.ts:175</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -187,6 +190,7 @@
 								spot-fleet request. Can be specified multiple times to define different bids
 							across different markets and instance types.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#launch_specification">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#launch_specification</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -195,13 +199,14 @@
 					<div class="tsd-signature tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:147</li>
+							<li>Defined in ec2/spotFleetRequest.ts:181</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Indicates whether Spot fleet should replace unhealthy instances. Default <code>false</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#replace_unhealthy_instances">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#replace_unhealthy_instances</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -210,13 +215,14 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Price<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:151</li>
+							<li>Defined in ec2/spotFleetRequest.ts:187</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The bid price per unit hour.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#spot_price">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#spot_price</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -225,7 +231,7 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:157</li>
+							<li>Defined in ec2/spotFleetRequest.ts:195</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -234,6 +240,7 @@
 								target capacity in terms of instances or a performance characteristic that is
 							important to your application workload, such as vCPUs, memory, or I/O.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#target_capacity">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#target_capacity</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -242,7 +249,7 @@
 					<div class="tsd-signature tsd-kind-icon">terminate<wbr>Instances<wbr>With<wbr>Expiration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:162</li>
+							<li>Defined in ec2/spotFleetRequest.ts:202</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -250,6 +257,7 @@
 							<p>Indicates whether running Spot
 							instances should be terminated when the Spot fleet request expires.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#terminate_instances_with_expiration">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#terminate_instances_with_expiration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -258,7 +266,7 @@
 					<div class="tsd-signature tsd-kind-icon">valid<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:163</li>
+							<li>Defined in ec2/spotFleetRequest.ts:203</li>
 						</ul>
 					</aside>
 				</section>
@@ -268,7 +276,7 @@
 					<div class="tsd-signature tsd-kind-icon">valid<wbr>Until<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:169</li>
+							<li>Defined in ec2/spotFleetRequest.ts:211</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -277,6 +285,7 @@
 								(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance
 							requests are placed or enabled to fulfill the request. Defaults to 24 hours.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#valid_until">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#valid_until</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -285,7 +294,7 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Fulfillment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:175</li>
+							<li>Defined in ec2/spotFleetRequest.ts:219</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -294,6 +303,7 @@
 								wait for the Spot Request to be fulfilled, and will throw an error if the
 							timeout of 10m is reached.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#wait_for_fulfillment">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#wait_for_fulfillment</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -332,7 +342,7 @@
 								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#instanceinterruptionbehaviour" class="tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#launchspecification" class="tsd-kind-icon">launch<wbr>Specification</a>
+								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#launchspecifications" class="tsd-kind-icon">launch<wbr>Specifications</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#replaceunhealthyinstances" class="tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances</a>

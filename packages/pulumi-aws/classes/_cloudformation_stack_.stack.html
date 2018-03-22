@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides a CloudFormation Stack resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -136,7 +137,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in cloudformation/stack.ts:70</li>
+									<li>Defined in cloudformation/stack.ts:100</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -184,7 +185,7 @@
 					<div class="tsd-signature tsd-kind-icon">capabilities<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:14</li>
+							<li>Defined in cloudformation/stack.ts:18</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -192,6 +193,7 @@
 							<p>A list of capabilities.
 							Valid values: <code>CAPABILITY_IAM</code> or <code>CAPABILITY_NAMED_IAM</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#capabilities">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#capabilities</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -200,7 +202,7 @@
 					<div class="tsd-signature tsd-kind-icon">disable<wbr>Rollback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:19</li>
+							<li>Defined in cloudformation/stack.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -208,6 +210,7 @@
 							<p>Set to true to disable rollback of the stack if stack creation failed.
 							Conflicts with <code>on_failure</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#disable_rollback">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#disable_rollback</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -216,13 +219,14 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:23</li>
+							<li>Defined in cloudformation/stack.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don&#39;t specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#iam_role_arn">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#iam_role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -248,13 +252,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:27</li>
+							<li>Defined in cloudformation/stack.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Stack name.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#name">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -263,13 +268,14 @@
 					<div class="tsd-signature tsd-kind-icon">notification<wbr>Arns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:31</li>
+							<li>Defined in cloudformation/stack.ts:43</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of SNS topic ARNs to publish stack related events.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#notification_arns">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#notification_arns</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -278,7 +284,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Failure<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:36</li>
+							<li>Defined in cloudformation/stack.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -286,6 +292,7 @@
 							<p>Action to be taken if stack creation fails. This must be
 							one of: <code>DO_NOTHING</code>, <code>ROLLBACK</code>, or <code>DELETE</code>. Conflicts with <code>disable_rollback</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#on_failure">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#on_failure</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -294,13 +301,14 @@
 					<div class="tsd-signature tsd-kind-icon">outputs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:40</li>
+							<li>Defined in cloudformation/stack.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A map of outputs from the stack.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#outputs">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#outputs</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -309,13 +317,14 @@
 					<div class="tsd-signature tsd-kind-icon">parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:44</li>
+							<li>Defined in cloudformation/stack.ts:62</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of Parameter structures that specify input parameters for the stack.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#parameters">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#parameters</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -324,7 +333,7 @@
 					<div class="tsd-signature tsd-kind-icon">policy<wbr>Body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:49</li>
+							<li>Defined in cloudformation/stack.ts:69</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -332,6 +341,7 @@
 							<p>Structure containing the stack policy body.
 							Conflicts w/ <code>policy_url</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#policy_body">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#policy_body</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -340,7 +350,7 @@
 					<div class="tsd-signature tsd-kind-icon">policy<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:54</li>
+							<li>Defined in cloudformation/stack.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -348,6 +358,7 @@
 							<p>Location of a file containing the stack policy.
 							Conflicts w/ <code>policy_body</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#policy_url">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#policy_url</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -356,13 +367,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:58</li>
+							<li>Defined in cloudformation/stack.ts:82</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of tags to associate with this stack.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#tags">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -371,13 +383,14 @@
 					<div class="tsd-signature tsd-kind-icon">template<wbr>Body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:62</li>
+							<li>Defined in cloudformation/stack.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Structure containing the template body (max size: 51,200 bytes).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#template_body">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#template_body</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -386,13 +399,14 @@
 					<div class="tsd-signature tsd-kind-icon">template<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:66</li>
+							<li>Defined in cloudformation/stack.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Location of a file containing the template body (max size: 460,800 bytes).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#template_url">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#template_url</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -401,13 +415,14 @@
 					<div class="tsd-signature tsd-kind-icon">timeout<wbr>InMinutes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudformation/stack.ts:70</li>
+							<li>Defined in cloudformation/stack.ts:100</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The amount of time that can pass before the stack status becomes <code>CREATE_FAILED</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#timeout_in_minutes">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack.html#timeout_in_minutes</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">

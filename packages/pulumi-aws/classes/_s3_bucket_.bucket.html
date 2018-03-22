@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides a S3 bucket resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -108,12 +109,12 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#bucket" class="tsd-kind-icon">bucket</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#bucketdomainname" class="tsd-kind-icon">bucket<wbr>Domain<wbr>Name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#bucketprefix" class="tsd-kind-icon">bucket<wbr>Prefix</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#corsrule" class="tsd-kind-icon">cors<wbr>Rule</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#corsrules" class="tsd-kind-icon">cors<wbr>Rules</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#forcedestroy" class="tsd-kind-icon">force<wbr>Destroy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#hostedzoneid" class="tsd-kind-icon">hosted<wbr>Zone<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_s3_bucket_.bucket.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#lifecyclerule" class="tsd-kind-icon">lifecycle<wbr>Rule</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#logging" class="tsd-kind-icon">logging</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#lifecyclerules" class="tsd-kind-icon">lifecycle<wbr>Rules</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#loggings" class="tsd-kind-icon">loggings</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#policy" class="tsd-kind-icon">policy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#region" class="tsd-kind-icon">region</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#replicationconfiguration" class="tsd-kind-icon">replication<wbr>Configuration</a></li>
@@ -122,9 +123,9 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_s3_bucket_.bucket.html#urn" class="tsd-kind-icon">urn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#versioning" class="tsd-kind-icon">versioning</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#website" class="tsd-kind-icon">website</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#websitedomain" class="tsd-kind-icon">website<wbr>Domain</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#websiteendpoint" class="tsd-kind-icon">website<wbr>Endpoint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_s3_bucket_.bucket.html#websites" class="tsd-kind-icon">websites</a></li>
 							</ul>
 						</section>
 					</div>
@@ -143,7 +144,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in s3/bucket.ts:96</li>
+									<li>Defined in s3/bucket.ts:140</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -191,13 +192,14 @@
 					<div class="tsd-signature tsd-kind-icon">acceleration<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:13</li>
+							<li>Defined in s3/bucket.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Sets the accelerate configuration of an existing bucket. Can be <code>Enabled</code> or <code>Suspended</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#acceleration_status">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#acceleration_status</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -206,13 +208,14 @@
 					<div class="tsd-signature tsd-kind-icon">acl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:17</li>
+							<li>Defined in s3/bucket.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to &quot;private&quot;.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#acl">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#acl</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -221,13 +224,14 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:21</li>
+							<li>Defined in s3/bucket.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the bucket. Will be of format <code>arn:aws:s3:::bucketname</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#arn">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -236,13 +240,14 @@
 					<div class="tsd-signature tsd-kind-icon">bucket<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:25</li>
+							<li>Defined in s3/bucket.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#bucket">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#bucket</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -251,13 +256,14 @@
 					<div class="tsd-signature tsd-kind-icon">bucket<wbr>Domain<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:29</li>
+							<li>Defined in s3/bucket.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The bucket domain name. Will be of format <code>bucketname.s3.amazonaws.com</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#bucket_domain_name">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#bucket_domain_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -266,28 +272,30 @@
 					<div class="tsd-signature tsd-kind-icon">bucket<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:33</li>
+							<li>Defined in s3/bucket.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Creates a unique bucket name beginning with the specified prefix. Conflicts with <code>bucket</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#bucket_prefix">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#bucket_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="corsrule" class="tsd-anchor"></a>
-					<h3>cors<wbr>Rule</h3>
-					<div class="tsd-signature tsd-kind-icon">cors<wbr>Rule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="corsrules" class="tsd-anchor"></a>
+					<h3>cors<wbr>Rules</h3>
+					<div class="tsd-signature tsd-kind-icon">cors<wbr>Rules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:37</li>
+							<li>Defined in s3/bucket.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A rule of <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">Cross-Origin Resource Sharing</a> (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#cors_rule">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#cors_rule</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -296,13 +304,14 @@
 					<div class="tsd-signature tsd-kind-icon">force<wbr>Destroy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:41</li>
+							<li>Defined in s3/bucket.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are <em>not</em> recoverable.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#force_destroy">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#force_destroy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -311,13 +320,14 @@
 					<div class="tsd-signature tsd-kind-icon">hosted<wbr>Zone<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:45</li>
+							<li>Defined in s3/bucket.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints">Route 53 Hosted Zone ID</a> for this bucket&#39;s region.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#hosted_zone_id">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#hosted_zone_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -338,33 +348,35 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="lifecyclerule" class="tsd-anchor"></a>
-					<h3>lifecycle<wbr>Rule</h3>
-					<div class="tsd-signature tsd-kind-icon">lifecycle<wbr>Rule<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="lifecyclerules" class="tsd-anchor"></a>
+					<h3>lifecycle<wbr>Rules</h3>
+					<div class="tsd-signature tsd-kind-icon">lifecycle<wbr>Rules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:49</li>
+							<li>Defined in s3/bucket.ts:71</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A configuration of <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">object lifecycle management</a> (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#lifecycle_rule">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#lifecycle_rule</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="logging" class="tsd-anchor"></a>
-					<h3>logging</h3>
-					<div class="tsd-signature tsd-kind-icon">logging<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="loggings" class="tsd-anchor"></a>
+					<h3>loggings</h3>
+					<div class="tsd-signature tsd-kind-icon">loggings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:53</li>
+							<li>Defined in s3/bucket.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A settings of <a href="https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html">bucket logging</a> (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#logging">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#logging</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -373,13 +385,14 @@
 					<div class="tsd-signature tsd-kind-icon">policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:57</li>
+							<li>Defined in s3/bucket.ts:83</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A valid <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html">bucket policy</a> JSON document. Note that if the policy document is not specific enough (but still valid), Terraform may view the policy as constantly changing in a <code>terraform plan</code>. In this case, please make sure you use the verbose/specific version of the policy.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#policy">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -388,28 +401,30 @@
 					<div class="tsd-signature tsd-kind-icon">region<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:61</li>
+							<li>Defined in s3/bucket.ts:89</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#region">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#region</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="replicationconfiguration" class="tsd-anchor"></a>
 					<h3>replication<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">replication<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">replication<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:65</li>
+							<li>Defined in s3/bucket.ts:95</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A configuration of <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">replication configuration</a> (documented below).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#replication_configuration">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#replication_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -418,7 +433,7 @@
 					<div class="tsd-signature tsd-kind-icon">request<wbr>Payer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:72</li>
+							<li>Defined in s3/bucket.ts:104</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -428,21 +443,23 @@
 								the costs of any data transfer. See <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html">Requester Pays Buckets</a>
 							developer guide for more information.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#request_payer">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#request_payer</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="serversideencryptionconfiguration" class="tsd-anchor"></a>
 					<h3>server<wbr>Side<wbr>Encryption<wbr>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">server<wbr>Side<wbr>Encryption<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">server<wbr>Side<wbr>Encryption<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:76</li>
+							<li>Defined in s3/bucket.ts:110</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A configuration of <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html">server-side encryption configuration</a> (documented below)</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#server_side_encryption_configuration">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#server_side_encryption_configuration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -451,13 +468,14 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:80</li>
+							<li>Defined in s3/bucket.ts:116</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies object tags key and value.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#tags">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -480,31 +498,17 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="versioning" class="tsd-anchor"></a>
 					<h3>versioning</h3>
-					<div class="tsd-signature tsd-kind-icon">versioning<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">versioning<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:84</li>
+							<li>Defined in s3/bucket.ts:122</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A state of <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html">versioning</a> (documented below)</p>
 						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="website" class="tsd-anchor"></a>
-					<h3>website</h3>
-					<div class="tsd-signature tsd-kind-icon">website<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in s3/bucket.ts:88</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>A website object (documented below).</p>
-						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#versioning">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#versioning</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -513,13 +517,14 @@
 					<div class="tsd-signature tsd-kind-icon">website<wbr>Domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:92</li>
+							<li>Defined in s3/bucket.ts:134</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#website_domain">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#website_domain</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -528,13 +533,30 @@
 					<div class="tsd-signature tsd-kind-icon">website<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in s3/bucket.ts:96</li>
+							<li>Defined in s3/bucket.ts:140</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#website_endpoint">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#website_endpoint</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="websites" class="tsd-anchor"></a>
+					<h3>websites</h3>
+					<div class="tsd-signature tsd-kind-icon">websites<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in s3/bucket.ts:128</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A website object (documented below).</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#website">https://www.terraform.io/docs/providers/aws/r/s3_bucket.html#website</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -579,7 +601,7 @@
 								<a href="_s3_bucket_.bucket.html#bucketprefix" class="tsd-kind-icon">bucket<wbr>Prefix</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_s3_bucket_.bucket.html#corsrule" class="tsd-kind-icon">cors<wbr>Rule</a>
+								<a href="_s3_bucket_.bucket.html#corsrules" class="tsd-kind-icon">cors<wbr>Rules</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_s3_bucket_.bucket.html#forcedestroy" class="tsd-kind-icon">force<wbr>Destroy</a>
@@ -591,10 +613,10 @@
 								<a href="_s3_bucket_.bucket.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_s3_bucket_.bucket.html#lifecyclerule" class="tsd-kind-icon">lifecycle<wbr>Rule</a>
+								<a href="_s3_bucket_.bucket.html#lifecyclerules" class="tsd-kind-icon">lifecycle<wbr>Rules</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_s3_bucket_.bucket.html#logging" class="tsd-kind-icon">logging</a>
+								<a href="_s3_bucket_.bucket.html#loggings" class="tsd-kind-icon">loggings</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_s3_bucket_.bucket.html#policy" class="tsd-kind-icon">policy</a>
@@ -621,13 +643,13 @@
 								<a href="_s3_bucket_.bucket.html#versioning" class="tsd-kind-icon">versioning</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_s3_bucket_.bucket.html#website" class="tsd-kind-icon">website</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_s3_bucket_.bucket.html#websitedomain" class="tsd-kind-icon">website<wbr>Domain</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_s3_bucket_.bucket.html#websiteendpoint" class="tsd-kind-icon">website<wbr>Endpoint</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_s3_bucket_.bucket.html#websites" class="tsd-kind-icon">websites</a>
 							</li>
 						</ul>
 					</li>

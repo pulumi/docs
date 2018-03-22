@@ -72,10 +72,10 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Output helps encode the relationship between Resources in a Pulumi application. Specifically
-							an Output holds onto a piece of Data and the Resource it was generated from. An Output
-							value can then be provided when constructing new Resources, allowing that new Resource to know
-							both the value as well as the Resource the value came from.  This allows for a precise &#39;Resource
+						<p>Output helps encode the relationship between Resources in a Pulumi application. Specifically an
+							Output holds onto a piece of Data and the Resource it was generated from. An Output value can
+							then be provided when constructing new Resources, allowing that new Resource to know both the
+							value as well as the Resource the value came from.  This allows for a precise &#39;Resource
 						dependency graph&#39; to be created, which properly tracks the relationship between resources.</p>
 					</div>
 				</div>
@@ -96,6 +96,12 @@
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="_runtime_closure_createclosure_.serializedoutput.html" class="tsd-signature-type">SerializedOutput</a></li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -111,6 +117,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_resource_.output.html#apply" class="tsd-kind-icon">apply</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_resource_.output.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_resource_.output.html#performapply" class="tsd-kind-icon">perform<wbr>Apply</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_resource_.output.html#promise" class="tsd-kind-icon">promise</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_resource_.output.html#resources" class="tsd-kind-icon">resources</a></li>
 							</ul>
@@ -130,13 +137,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Output<span class="tsd-signature-symbol">(</span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="_resource_.resource.html" class="tsd-signature-type">Resource</a><span class="tsd-signature-symbol">&gt;</span>, promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_resource_.output.html" class="tsd-signature-type">Output</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Output<span class="tsd-signature-symbol">(</span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="_resource_.resource.html" class="tsd-signature-type">Resource</a><span class="tsd-signature-symbol">&gt;</span>, promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, performApply<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_resource_.output.html" class="tsd-signature-type">Output</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L195">resource.ts:195</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L210">resource.ts:210</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -146,6 +153,9 @@
 								</li>
 								<li>
 									<h5>promise: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>performApply: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_resource_.output.html" class="tsd-signature-type">Output</a></h4>
@@ -161,7 +171,7 @@
 					<div class="tsd-signature tsd-kind-icon">apply<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L179">resource.ts:179</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L193">resource.ts:193</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -237,7 +247,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L190">resource.ts:190</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L204">resource.ts:204</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -267,12 +277,22 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="performapply" class="tsd-anchor"></a>
+					<h3>perform<wbr>Apply</h3>
+					<div class="tsd-signature tsd-kind-icon">perform<wbr>Apply<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L154">resource.ts:154</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="promise" class="tsd-anchor"></a>
 					<h3>promise</h3>
 					<div class="tsd-signature tsd-kind-icon">promise<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L146">resource.ts:146</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L160">resource.ts:160</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -297,7 +317,7 @@
 					<div class="tsd-signature tsd-kind-icon">resources<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L151">resource.ts:151</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L165">resource.ts:165</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -323,13 +343,13 @@
 					<a name="create" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> create</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">create&lt;T&gt;<span class="tsd-signature-symbol">(</span>resource<span class="tsd-signature-symbol">: </span><a href="_resource_.resource.html" class="tsd-signature-type">Resource</a>, promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create&lt;T&gt;<span class="tsd-signature-symbol">(</span>resource<span class="tsd-signature-symbol">: </span><a href="_resource_.resource.html" class="tsd-signature-type">Resource</a>, promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, performApply<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L193">resource.ts:193</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L207">resource.ts:207</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -345,6 +365,9 @@
 								</li>
 								<li>
 									<h5>promise: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>performApply: <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_resource_.output.html" class="tsd-signature-type">Output</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -385,6 +408,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_resource_.output.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_resource_.output.html#performapply" class="tsd-kind-icon">perform<wbr>Apply</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_resource_.output.html#promise" class="tsd-kind-icon">promise</a>

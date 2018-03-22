@@ -75,6 +75,7 @@
 						<p>Provides a DynamoDB table resource</p>
 					</div>
 					<p>~&gt; <strong>Note:</strong> It is recommended to use <code>lifecycle</code> <a href="/docs/configuration/resources.html#ignore_changes"><code>ignore_changes</code></a> for <code>read_capacity</code> and/or <code>write_capacity</code> if there&#39;s <a href="/docs/providers/aws/r/appautoscaling_policy.html">autoscaling policy</a> attached to the table.</p>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -104,11 +105,11 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#arn" class="tsd-kind-icon">arn</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#attribute" class="tsd-kind-icon">attribute</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#globalsecondaryindex" class="tsd-kind-icon">global<wbr>Secondary<wbr>Index</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#attributes" class="tsd-kind-icon">attributes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#globalsecondaryindexes" class="tsd-kind-icon">global<wbr>Secondary<wbr>Indexes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#hashkey" class="tsd-kind-icon">hash<wbr>Key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_dynamodb_table_.table.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#localsecondaryindex" class="tsd-kind-icon">local<wbr>Secondary<wbr>Index</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#localsecondaryindexes" class="tsd-kind-icon">local<wbr>Secondary<wbr>Indexes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#rangekey" class="tsd-kind-icon">range<wbr>Key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_dynamodb_table_.table.html#readcapacity" class="tsd-kind-icon">read<wbr>Capacity</a></li>
@@ -138,7 +139,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in dynamodb/table.ts:80</li>
+									<li>Defined in dynamodb/table.ts:111</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -186,37 +187,39 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:15</li>
+							<li>Defined in dynamodb/table.ts:19</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The arn of the table</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#arn">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="attribute" class="tsd-anchor"></a>
-					<h3>attribute</h3>
-					<div class="tsd-signature tsd-kind-icon">attribute<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="attributes" class="tsd-anchor"></a>
+					<h3>attributes</h3>
+					<div class="tsd-signature tsd-kind-icon">attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:19</li>
+							<li>Defined in dynamodb/table.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Define an attribute, has two properties:</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#attribute">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#attribute</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="globalsecondaryindex" class="tsd-anchor"></a>
-					<h3>global<wbr>Secondary<wbr>Index</h3>
-					<div class="tsd-signature tsd-kind-icon">global<wbr>Secondary<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="globalsecondaryindexes" class="tsd-anchor"></a>
+					<h3>global<wbr>Secondary<wbr>Indexes</h3>
+					<div class="tsd-signature tsd-kind-icon">global<wbr>Secondary<wbr>Indexes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:25</li>
+							<li>Defined in dynamodb/table.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -225,6 +228,7 @@
 								subject to the normal limits on the number of GSIs, projected
 							attributes, etc.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#global_secondary_index">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#global_secondary_index</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -233,15 +237,15 @@
 					<div class="tsd-signature tsd-kind-icon">hash<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:31</li>
+							<li>Defined in dynamodb/table.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the hash key in the index; must be
-								defined as an attribute in the resource. Only applies to
-							<code>global_secondary_index</code></p>
+							defined as an attribute in the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#hash_key">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#hash_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -262,12 +266,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="localsecondaryindex" class="tsd-anchor"></a>
-					<h3>local<wbr>Secondary<wbr>Index</h3>
-					<div class="tsd-signature tsd-kind-icon">local<wbr>Secondary<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="localsecondaryindexes" class="tsd-anchor"></a>
+					<h3>local<wbr>Secondary<wbr>Indexes</h3>
+					<div class="tsd-signature tsd-kind-icon">local<wbr>Secondary<wbr>Indexes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:37</li>
+							<li>Defined in dynamodb/table.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -276,6 +280,7 @@
 								these can only be allocated <em>at creation</em> so you cannot change this
 							definition after you have created the resource.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#local_secondary_index">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#local_secondary_index</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -284,13 +289,14 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:41</li>
+							<li>Defined in dynamodb/table.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The name of the LSI or GSI</p>
+							<p>The name of the index</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#name">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -299,13 +305,14 @@
 					<div class="tsd-signature tsd-kind-icon">range<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:45</li>
+							<li>Defined in dynamodb/table.ts:60</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the range key; must be defined</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#range_key">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#range_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -314,13 +321,14 @@
 					<div class="tsd-signature tsd-kind-icon">read<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:49</li>
+							<li>Defined in dynamodb/table.ts:66</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The number of read units for this table</p>
+							<p>The number of read units for this index</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#read_capacity">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#read_capacity</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -329,28 +337,30 @@
 					<div class="tsd-signature tsd-kind-icon">stream<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:53</li>
+							<li>Defined in dynamodb/table.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the Table Stream. Only available when <code>stream_enabled = true</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#stream_arn">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#stream_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="streamenabled" class="tsd-anchor"></a>
 					<h3>stream<wbr>Enabled</h3>
-					<div class="tsd-signature tsd-kind-icon">stream<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">stream<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:57</li>
+							<li>Defined in dynamodb/table.ts:78</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Indicates whether Streams are to be enabled (true) or disabled (false).</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#stream_enabled">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#stream_enabled</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -359,7 +369,7 @@
 					<div class="tsd-signature tsd-kind-icon">stream<wbr>Label<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:64</li>
+							<li>Defined in dynamodb/table.ts:87</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -369,6 +379,7 @@
 								table name and this field is guaranteed to be unique.
 							It can be used for creating CloudWatch Alarms. Only available when <code>stream_enabled = true</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#stream_label">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#stream_label</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -377,13 +388,14 @@
 					<div class="tsd-signature tsd-kind-icon">stream<wbr>View<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:68</li>
+							<li>Defined in dynamodb/table.ts:93</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>When an item in the table is modified, StreamViewType determines what information is written to the table&#39;s stream. Valid values are KEYS_ONLY, NEW_IMAGE, OLD_IMAGE, NEW_AND_OLD_IMAGES.</p>
+							<p>When an item in the table is modified, StreamViewType determines what information is written to the table&#39;s stream. Valid values are <code>KEYS_ONLY</code>, <code>NEW_IMAGE</code>, <code>OLD_IMAGE</code>, <code>NEW_AND_OLD_IMAGES</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#stream_view_type">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#stream_view_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -392,28 +404,30 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:72</li>
+							<li>Defined in dynamodb/table.ts:99</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A map of tags to populate on the created table.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#tags">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="ttl" class="tsd-anchor"></a>
 					<h3>ttl</h3>
-					<div class="tsd-signature tsd-kind-icon">ttl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">ttl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:76</li>
+							<li>Defined in dynamodb/table.ts:105</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Defines ttl, has two properties, and can only be specified once:</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#ttl">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#ttl</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -439,13 +453,14 @@
 					<div class="tsd-signature tsd-kind-icon">write<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:80</li>
+							<li>Defined in dynamodb/table.ts:111</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The number of write units for this table</p>
+							<p>The number of write units for this index</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#write_capacity">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#write_capacity</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -475,10 +490,10 @@
 								<a href="_dynamodb_table_.table.html#arn" class="tsd-kind-icon">arn</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_dynamodb_table_.table.html#attribute" class="tsd-kind-icon">attribute</a>
+								<a href="_dynamodb_table_.table.html#attributes" class="tsd-kind-icon">attributes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_dynamodb_table_.table.html#globalsecondaryindex" class="tsd-kind-icon">global<wbr>Secondary<wbr>Index</a>
+								<a href="_dynamodb_table_.table.html#globalsecondaryindexes" class="tsd-kind-icon">global<wbr>Secondary<wbr>Indexes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_dynamodb_table_.table.html#hashkey" class="tsd-kind-icon">hash<wbr>Key</a>
@@ -487,7 +502,7 @@
 								<a href="_dynamodb_table_.table.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_dynamodb_table_.table.html#localsecondaryindex" class="tsd-kind-icon">local<wbr>Secondary<wbr>Index</a>
+								<a href="_dynamodb_table_.table.html#localsecondaryindexes" class="tsd-kind-icon">local<wbr>Secondary<wbr>Indexes</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_dynamodb_table_.table.html#name" class="tsd-kind-icon">name</a>

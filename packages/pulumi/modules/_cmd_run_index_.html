@@ -83,6 +83,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_cmd_run_index_.html#main" class="tsd-kind-icon">main</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_run_index_.html#printerrorusageandexit" class="tsd-kind-icon">print<wbr>Error<wbr>Usage<wbr>And<wbr>Exit</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_run_index_.html#reportmoduleloadfailure" class="tsd-kind-icon">report<wbr>Module<wbr>Load<wbr>Failure</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_cmd_run_index_.html#usage" class="tsd-kind-icon">usage</a></li>
 							</ul>
 						</section>
@@ -97,7 +98,7 @@
 					<div class="tsd-signature tsd-kind-icon">engrpc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;../../proto/engine_grpc_pb.js&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L13">cmd/run/index.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L14">cmd/run/index.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -107,7 +108,7 @@
 					<div class="tsd-signature tsd-kind-icon">grpc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;grpc&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L12">cmd/run/index.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L13">cmd/run/index.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -117,7 +118,7 @@
 					<div class="tsd-signature tsd-kind-icon">resrpc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;../../proto/resource_grpc_pb.js&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L14">cmd/run/index.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L15">cmd/run/index.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -134,7 +135,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L39">cmd/run/index.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L136">cmd/run/index.ts:136</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -157,13 +158,51 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L33">cmd/run/index.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L34">cmd/run/index.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>message: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">never</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="reportmoduleloadfailure" class="tsd-anchor"></a>
+					<h3>report<wbr>Module<wbr>Load<wbr>Failure</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">report<wbr>Module<wbr>Load<wbr>Failure<span class="tsd-signature-symbol">(</span>program<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L46">cmd/run/index.ts:46</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Attempts to provide a detailed error message for module load failure if the
+									module that failed to load is the top-level module.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>program: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name of the program given to <code>run</code>, i.e. the top level module</p>
+									</div>
+								</li>
+								<li>
+									<h5>error: <span class="tsd-signature-type">Error</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The error that occured. Must be a module load error.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">never</span></h4>
@@ -180,7 +219,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L16">cmd/run/index.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L17">cmd/run/index.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -216,6 +255,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_cmd_run_index_.html#printerrorusageandexit" class="tsd-kind-icon">print<wbr>Error<wbr>Usage<wbr>And<wbr>Exit</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_cmd_run_index_.html#reportmoduleloadfailure" class="tsd-kind-icon">report<wbr>Module<wbr>Load<wbr>Failure</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_cmd_run_index_.html#usage" class="tsd-kind-icon">usage</a>

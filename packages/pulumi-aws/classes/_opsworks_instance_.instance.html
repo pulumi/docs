@@ -74,6 +74,7 @@
 					<div class="lead">
 						<p>Provides an OpsWorks instance resource.</p>
 					</div>
+					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -110,12 +111,12 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#createdat" class="tsd-kind-icon">created<wbr>At</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#deleteebs" class="tsd-kind-icon">delete<wbr>Ebs</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#deleteeip" class="tsd-kind-icon">delete<wbr>Eip</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#ebsblockdevice" class="tsd-kind-icon">ebs<wbr>Block<wbr>Device</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#ebsblockdevices" class="tsd-kind-icon">ebs<wbr>Block<wbr>Devices</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#ebsoptimized" class="tsd-kind-icon">ebs<wbr>Optimized</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#ec2instanceid" class="tsd-kind-icon">ec2<wbr>Instance<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#ecsclusterarn" class="tsd-kind-icon">ecs<wbr>Cluster<wbr>Arn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#elasticip" class="tsd-kind-icon">elastic<wbr>Ip</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#ephemeralblockdevice" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Device</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#ephemeralblockdevices" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#hostname" class="tsd-kind-icon">hostname</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_opsworks_instance_.instance.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#infrastructureclass" class="tsd-kind-icon">infrastructure<wbr>Class</a></li>
@@ -135,7 +136,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#reportedosfamily" class="tsd-kind-icon">reported<wbr>OsFamily</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#reportedosname" class="tsd-kind-icon">reported<wbr>OsName</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#reportedosversion" class="tsd-kind-icon">reported<wbr>OsVersion</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#rootblockdevice" class="tsd-kind-icon">root<wbr>Block<wbr>Device</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#rootblockdevices" class="tsd-kind-icon">root<wbr>Block<wbr>Devices</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#rootdevicetype" class="tsd-kind-icon">root<wbr>Device<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#rootdevicevolumeid" class="tsd-kind-icon">root<wbr>Device<wbr>Volume<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_opsworks_instance_.instance.html#securitygroupids" class="tsd-kind-icon">security<wbr>Group<wbr>Ids</a></li>
@@ -167,7 +168,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in opsworks/instance.ts:140</li>
+									<li>Defined in opsworks/instance.ts:194</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -215,13 +216,14 @@
 					<div class="tsd-signature tsd-kind-icon">agent<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:13</li>
+							<li>Defined in opsworks/instance.ts:17</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The AWS OpsWorks agent to install.  Defaults to <code>&quot;INHERIT&quot;</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#agent_version">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#agent_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -230,13 +232,14 @@
 					<div class="tsd-signature tsd-kind-icon">ami<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:17</li>
+							<li>Defined in opsworks/instance.ts:23</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The AMI to use for the instance.  If an AMI is specified, <code>os</code> must be <code>&quot;Custom&quot;</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#ami_id">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#ami_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -245,13 +248,14 @@
 					<div class="tsd-signature tsd-kind-icon">architecture<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:21</li>
+							<li>Defined in opsworks/instance.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Machine architecture for created instances.  Can be either <code>&quot;x86_64&quot;</code> (the default) or <code>&quot;i386&quot;</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#architecture">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#architecture</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -260,13 +264,14 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Scaling<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:25</li>
+							<li>Defined in opsworks/instance.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Creates load-based or time-based instances.  If set, can be either: <code>&quot;load&quot;</code> or <code>&quot;timer&quot;</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#auto_scaling_type">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#auto_scaling_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -275,7 +280,7 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:30</li>
+							<li>Defined in opsworks/instance.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -283,6 +288,7 @@
 							<p>Name of the availability zone where instances will be created
 							by default.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#availability_zone">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -291,7 +297,7 @@
 					<div class="tsd-signature tsd-kind-icon">created<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:31</li>
+							<li>Defined in opsworks/instance.ts:43</li>
 						</ul>
 					</aside>
 				</section>
@@ -301,7 +307,7 @@
 					<div class="tsd-signature tsd-kind-icon">delete<wbr>Ebs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:32</li>
+							<li>Defined in opsworks/instance.ts:44</li>
 						</ul>
 					</aside>
 				</section>
@@ -311,17 +317,17 @@
 					<div class="tsd-signature tsd-kind-icon">delete<wbr>Eip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:33</li>
+							<li>Defined in opsworks/instance.ts:45</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ebsblockdevice" class="tsd-anchor"></a>
-					<h3>ebs<wbr>Block<wbr>Device</h3>
-					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="ebsblockdevices" class="tsd-anchor"></a>
+					<h3>ebs<wbr>Block<wbr>Devices</h3>
+					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Block<wbr>Devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:38</li>
+							<li>Defined in opsworks/instance.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -329,6 +335,7 @@
 							<p>Additional EBS block devices to attach to the
 							instance.  See <a href="#block-devices">Block Devices</a> below for details.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#ebs_block_device">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#ebs_block_device</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -337,13 +344,14 @@
 					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Optimized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:42</li>
+							<li>Defined in opsworks/instance.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If true, the launched EC2 instance will be EBS-optimized.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#ebs_optimized">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#ebs_optimized</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -352,7 +360,7 @@
 					<div class="tsd-signature tsd-kind-icon">ec2<wbr>Instance<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:43</li>
+							<li>Defined in opsworks/instance.ts:59</li>
 						</ul>
 					</aside>
 				</section>
@@ -362,7 +370,7 @@
 					<div class="tsd-signature tsd-kind-icon">ecs<wbr>Cluster<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:44</li>
+							<li>Defined in opsworks/instance.ts:60</li>
 						</ul>
 					</aside>
 				</section>
@@ -372,17 +380,17 @@
 					<div class="tsd-signature tsd-kind-icon">elastic<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:45</li>
+							<li>Defined in opsworks/instance.ts:61</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ephemeralblockdevice" class="tsd-anchor"></a>
-					<h3>ephemeral<wbr>Block<wbr>Device</h3>
-					<div class="tsd-signature tsd-kind-icon">ephemeral<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="ephemeralblockdevices" class="tsd-anchor"></a>
+					<h3>ephemeral<wbr>Block<wbr>Devices</h3>
+					<div class="tsd-signature tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:50</li>
+							<li>Defined in opsworks/instance.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -390,6 +398,7 @@
 							<p>Customize Ephemeral (also known as
 							&quot;Instance Store&quot;) volumes on the instance. See <a href="#block-devices">Block Devices</a> below for details.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#ephemeral_block_device">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#ephemeral_block_device</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -398,13 +407,14 @@
 					<div class="tsd-signature tsd-kind-icon">hostname<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:54</li>
+							<li>Defined in opsworks/instance.ts:74</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The instance&#39;s host name.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#hostname">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#hostname</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -430,7 +440,7 @@
 					<div class="tsd-signature tsd-kind-icon">infrastructure<wbr>Class<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:55</li>
+							<li>Defined in opsworks/instance.ts:75</li>
 						</ul>
 					</aside>
 				</section>
@@ -440,13 +450,14 @@
 					<div class="tsd-signature tsd-kind-icon">install<wbr>Updates<wbr>OnBoot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:59</li>
+							<li>Defined in opsworks/instance.ts:81</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Controls where to install OS and package updates when the instance boots.  Defaults to <code>true</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#install_updates_on_boot">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#install_updates_on_boot</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -455,7 +466,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Profile<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:60</li>
+							<li>Defined in opsworks/instance.ts:82</li>
 						</ul>
 					</aside>
 				</section>
@@ -465,13 +476,14 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:64</li>
+							<li>Defined in opsworks/instance.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of instance to start</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#instance_type">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#instance_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -480,7 +492,7 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Service<wbr>Error<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:65</li>
+							<li>Defined in opsworks/instance.ts:89</li>
 						</ul>
 					</aside>
 				</section>
@@ -490,13 +502,14 @@
 					<div class="tsd-signature tsd-kind-icon">layer<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:69</li>
+							<li>Defined in opsworks/instance.ts:95</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ids of the layers the instance will belong to.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#layer_ids">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#layer_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -505,13 +518,14 @@
 					<div class="tsd-signature tsd-kind-icon">os<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:73</li>
+							<li>Defined in opsworks/instance.ts:101</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of operating system that will be installed.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#os">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#os</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -520,7 +534,7 @@
 					<div class="tsd-signature tsd-kind-icon">platform<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:74</li>
+							<li>Defined in opsworks/instance.ts:102</li>
 						</ul>
 					</aside>
 				</section>
@@ -530,7 +544,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Dns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:80</li>
+							<li>Defined in opsworks/instance.ts:110</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -539,6 +553,7 @@
 								used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
 							for your VPC</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#private_dns">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#private_dns</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -547,13 +562,14 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:84</li>
+							<li>Defined in opsworks/instance.ts:116</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The private IP address assigned to the instance</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#private_ip">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#private_ip</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -562,7 +578,7 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>Dns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:89</li>
+							<li>Defined in opsworks/instance.ts:123</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -570,6 +586,7 @@
 							<p>The public DNS name assigned to the instance. For EC2-VPC, this
 							is only available if you&#39;ve enabled DNS hostnames for your VPC</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#public_dns">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#public_dns</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -578,13 +595,14 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:93</li>
+							<li>Defined in opsworks/instance.ts:129</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The public IP address assigned to the instance, if applicable.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#public_ip">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#public_ip</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -593,7 +611,7 @@
 					<div class="tsd-signature tsd-kind-icon">registered<wbr>By<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:94</li>
+							<li>Defined in opsworks/instance.ts:130</li>
 						</ul>
 					</aside>
 				</section>
@@ -603,7 +621,7 @@
 					<div class="tsd-signature tsd-kind-icon">reported<wbr>Agent<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:95</li>
+							<li>Defined in opsworks/instance.ts:131</li>
 						</ul>
 					</aside>
 				</section>
@@ -613,7 +631,7 @@
 					<div class="tsd-signature tsd-kind-icon">reported<wbr>OsFamily<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:96</li>
+							<li>Defined in opsworks/instance.ts:132</li>
 						</ul>
 					</aside>
 				</section>
@@ -623,7 +641,7 @@
 					<div class="tsd-signature tsd-kind-icon">reported<wbr>OsName<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:97</li>
+							<li>Defined in opsworks/instance.ts:133</li>
 						</ul>
 					</aside>
 				</section>
@@ -633,17 +651,17 @@
 					<div class="tsd-signature tsd-kind-icon">reported<wbr>OsVersion<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:98</li>
+							<li>Defined in opsworks/instance.ts:134</li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="rootblockdevice" class="tsd-anchor"></a>
-					<h3>root<wbr>Block<wbr>Device</h3>
-					<div class="tsd-signature tsd-kind-icon">root<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="rootblockdevices" class="tsd-anchor"></a>
+					<h3>root<wbr>Block<wbr>Devices</h3>
+					<div class="tsd-signature tsd-kind-icon">root<wbr>Block<wbr>Devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:103</li>
+							<li>Defined in opsworks/instance.ts:141</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -651,6 +669,7 @@
 							<p>Customize details about the root block
 							device of the instance. See <a href="#block-devices">Block Devices</a> below for details.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#root_block_device">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#root_block_device</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -659,13 +678,14 @@
 					<div class="tsd-signature tsd-kind-icon">root<wbr>Device<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:107</li>
+							<li>Defined in opsworks/instance.ts:147</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of the type of root device instances will have by default.  Can be either <code>&quot;ebs&quot;</code> or <code>&quot;instance-store&quot;</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#root_device_type">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#root_device_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -674,7 +694,7 @@
 					<div class="tsd-signature tsd-kind-icon">root<wbr>Device<wbr>Volume<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:108</li>
+							<li>Defined in opsworks/instance.ts:148</li>
 						</ul>
 					</aside>
 				</section>
@@ -684,13 +704,14 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:112</li>
+							<li>Defined in opsworks/instance.ts:154</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The associated security groups.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#security_group_ids">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#security_group_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -699,7 +720,7 @@
 					<div class="tsd-signature tsd-kind-icon">ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:113</li>
+							<li>Defined in opsworks/instance.ts:155</li>
 						</ul>
 					</aside>
 				</section>
@@ -709,7 +730,7 @@
 					<div class="tsd-signature tsd-kind-icon">ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:114</li>
+							<li>Defined in opsworks/instance.ts:156</li>
 						</ul>
 					</aside>
 				</section>
@@ -719,13 +740,14 @@
 					<div class="tsd-signature tsd-kind-icon">ssh<wbr>Key<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:118</li>
+							<li>Defined in opsworks/instance.ts:162</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of the SSH keypair that instances will have by default.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#ssh_key_name">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#ssh_key_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -734,13 +756,14 @@
 					<div class="tsd-signature tsd-kind-icon">stack<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:122</li>
+							<li>Defined in opsworks/instance.ts:168</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The id of the stack the instance will belong to.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#stack_id">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#stack_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -749,13 +772,14 @@
 					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:126</li>
+							<li>Defined in opsworks/instance.ts:174</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The desired state of the instance.  Can be either <code>&quot;running&quot;</code> or <code>&quot;stopped&quot;</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#state">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#state</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -764,7 +788,7 @@
 					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:127</li>
+							<li>Defined in opsworks/instance.ts:175</li>
 						</ul>
 					</aside>
 				</section>
@@ -774,13 +798,14 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:131</li>
+							<li>Defined in opsworks/instance.ts:181</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Subnet ID to attach to</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#subnet_id">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#subnet_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -789,13 +814,14 @@
 					<div class="tsd-signature tsd-kind-icon">tenancy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:135</li>
+							<li>Defined in opsworks/instance.ts:187</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Instance tenancy to use. Can be one of <code>&quot;default&quot;</code>, <code>&quot;dedicated&quot;</code> or <code>&quot;host&quot;</code></p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#tenancy">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#tenancy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -821,7 +847,7 @@
 					<div class="tsd-signature tsd-kind-icon">virtualization<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/instance.ts:140</li>
+							<li>Defined in opsworks/instance.ts:194</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -829,6 +855,7 @@
 							<p>Keyword to choose what virtualization mode created instances
 							will use. Can be either <code>&quot;paravirtual&quot;</code> or <code>&quot;hvm&quot;</code>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#virtualization_type">https://www.terraform.io/docs/providers/aws/r/opsworks_instance.html#virtualization_type</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -879,7 +906,7 @@
 								<a href="_opsworks_instance_.instance.html#deleteeip" class="tsd-kind-icon">delete<wbr>Eip</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_opsworks_instance_.instance.html#ebsblockdevice" class="tsd-kind-icon">ebs<wbr>Block<wbr>Device</a>
+								<a href="_opsworks_instance_.instance.html#ebsblockdevices" class="tsd-kind-icon">ebs<wbr>Block<wbr>Devices</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_opsworks_instance_.instance.html#ebsoptimized" class="tsd-kind-icon">ebs<wbr>Optimized</a>
@@ -894,7 +921,7 @@
 								<a href="_opsworks_instance_.instance.html#elasticip" class="tsd-kind-icon">elastic<wbr>Ip</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_opsworks_instance_.instance.html#ephemeralblockdevice" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Device</a>
+								<a href="_opsworks_instance_.instance.html#ephemeralblockdevices" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_opsworks_instance_.instance.html#hostname" class="tsd-kind-icon">hostname</a>
@@ -954,7 +981,7 @@
 								<a href="_opsworks_instance_.instance.html#reportedosversion" class="tsd-kind-icon">reported<wbr>OsVersion</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_opsworks_instance_.instance.html#rootblockdevice" class="tsd-kind-icon">root<wbr>Block<wbr>Device</a>
+								<a href="_opsworks_instance_.instance.html#rootblockdevices" class="tsd-kind-icon">root<wbr>Block<wbr>Devices</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_opsworks_instance_.instance.html#rootdevicetype" class="tsd-kind-icon">root<wbr>Device<wbr>Type</a>

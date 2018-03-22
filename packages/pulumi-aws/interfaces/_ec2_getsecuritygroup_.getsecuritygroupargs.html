@@ -91,7 +91,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsecuritygroup_.getsecuritygroupargs.html#filter" class="tsd-kind-icon">filter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsecuritygroup_.getsecuritygroupargs.html#filters" class="tsd-kind-icon">filters</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsecuritygroup_.getsecuritygroupargs.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsecuritygroup_.getsecuritygroupargs.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_getsecuritygroup_.getsecuritygroupargs.html#tags" class="tsd-kind-icon">tags</a></li>
@@ -104,18 +104,19 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="filter" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filter</h3>
-					<div class="tsd-signature tsd-kind-icon">filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="filters" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filters</h3>
+					<div class="tsd-signature tsd-kind-icon">filters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSecurityGroup.ts:31</li>
+							<li>Defined in ec2/getSecurityGroup.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Custom filter block as described below.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/security_group.html#filter">https://www.terraform.io/docs/providers/aws/d/security_group.html#filter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -124,13 +125,14 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSecurityGroup.ts:35</li>
+							<li>Defined in ec2/getSecurityGroup.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The id of the specific security group to retrieve.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/security_group.html#id">https://www.terraform.io/docs/providers/aws/d/security_group.html#id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -139,7 +141,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSecurityGroup.ts:40</li>
+							<li>Defined in ec2/getSecurityGroup.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -147,6 +149,7 @@
 							<p>The name of the field to filter by, as defined by
 							<a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSecurityGroups.html">the underlying AWS API</a>.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/security_group.html#name">https://www.terraform.io/docs/providers/aws/d/security_group.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -155,7 +158,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSecurityGroup.ts:45</li>
+							<li>Defined in ec2/getSecurityGroup.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -163,6 +166,7 @@
 							<p>A mapping of tags, each pair of which must exactly match
 							a pair on the desired security group.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/security_group.html#tags">https://www.terraform.io/docs/providers/aws/d/security_group.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -171,13 +175,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/getSecurityGroup.ts:49</li>
+							<li>Defined in ec2/getSecurityGroup.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The id of the VPC that the desired security group belongs to.</p>
 						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/security_group.html#vpc_id">https://www.terraform.io/docs/providers/aws/d/security_group.html#vpc_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -201,7 +206,7 @@
 						<a href="_ec2_getsecuritygroup_.getsecuritygroupargs.html" class="tsd-kind-icon">Get<wbr>Security<wbr>Group<wbr>Args</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_ec2_getsecuritygroup_.getsecuritygroupargs.html#filter" class="tsd-kind-icon">filter</a>
+								<a href="_ec2_getsecuritygroup_.getsecuritygroupargs.html#filters" class="tsd-kind-icon">filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_getsecuritygroup_.getsecuritygroupargs.html#id" class="tsd-kind-icon">id</a>
