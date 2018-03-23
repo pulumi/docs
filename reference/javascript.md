@@ -1,5 +1,5 @@
 ---
-title: "▶ JavaScript and TypeScript"
+title: "JavaScript and TypeScript"
 redirect_from: "/concepts/npm-packages.html"
 ---
 

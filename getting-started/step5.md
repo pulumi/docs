@@ -1,5 +1,5 @@
 ---
-title: ▶ Step 5 🚧
+title: Step 5 🚧
 ---
 
 # Next Steps

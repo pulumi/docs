@@ -1,5 +1,5 @@
 ---
-title: "▶ Azure"
+title: "Azure"
 ---
 
 🚧 TODO:

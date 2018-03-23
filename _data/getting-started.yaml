@@ -2,9 +2,8 @@ nav_section: "getting-started"
 toc: 
 
 - title: Getting Started
+  path: /getting-started/index
   section:
-  - getting-started/index.md # landing page
-
   - getting-started/step1.md
   - getting-started/step2.md
   - getting-started/step3.md

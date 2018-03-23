@@ -4,36 +4,30 @@ toc:
 - reference/index.md
 
 - title: Concepts
-  landing_page: /reference/concepts
+  path: /reference/concepts
   section: 
-  - reference/concepts.md
   - reference/stack.md
   - reference/project.md
   - reference/config.md
   - reference/resource.md
 
 - title: Programming Model
-  landing_page: /reference/programming-model
+  path: /reference/programming-model
   section:
   - reference/javascript.md
   - reference/python.md
 
 - title: Cloud Resources
-  landing_page: /reference/cloud-resources
+  path: /reference/cloud-resources
   section:
-  - reference/cloud-resources.md
   - reference/cloud.md
   - reference/aws.md
   - reference/azure.md
   - reference/kubernetes.md
 
 - title: How Pulumi Works
-  landing_page: /reference/how
+  path: /reference/how
   section:
-  - reference/how.md
   - reference/providers.md
 
-- title: Known Issues
-  landing_page: /reference/known-issues
-  section:
-  - reference/known-issues.md
+- reference/known-issues.md

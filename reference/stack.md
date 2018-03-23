@@ -1,5 +1,5 @@
 ---
-title: "▶ Stacks"
+title: "Stacks"
 ---
 
 Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently configurable

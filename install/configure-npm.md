@@ -1,5 +1,5 @@
 ---
-title: "▶ Configure your NPM client"
+title: "Configure your NPM client"
 ---
 
 While Pulumi is in private preview, `@pulumi` packages are not publicly available on npmjs.org. If you are a customer of the Pulumi Managed Cloud beta, use the [Pulumi NPM proxy](#proxy-login). Otherwise, follow the steps in [Authenticate with an NPM token](#configure-npmrc).
