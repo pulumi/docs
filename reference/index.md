@@ -83,7 +83,7 @@ Pulumi can be plugged in to your favorite CI tools to automate all application a
 
 Of course, you may have an application architecture where you really do want to version two layers of your system separately, and that is also well support in Pulumi.
 
-## Immutable Infrastructure
+## Immutable Infrastructure {#immutable-infrastructure}
 
 It is important to note that Pulumi is based on the concept of **immutable infrastructure**.  Pulumi programs are not like Boto scripts that mutate infrastructure each time you run them. Instead, Pulumi runs your program to generate the desired set of resources and their dependencies.
 
