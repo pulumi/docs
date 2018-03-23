@@ -10,5 +10,6 @@ To get started:
 * [Install](./install) the Pulumi SDK
 * Read the [Introduction](./reference)
 * Check out the [Getting Started](./getting-started)
+* Download and try [Pulumi code examples](/examples/pulumi-v0.11-examples.zip)
 
 For questions or feedback, reach out at [contact@pulumi.com](mailto:contact@pulumi.com).

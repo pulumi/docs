@@ -31,57 +31,54 @@ Since this example builds a custom container, you should first have [Docker](htt
 
 ### Set up the project
 
-1. Download and unzip the file [pulumi-voting-app-example.zip](/examples/pulumi-voting-app-example.zip). 
+1.  In the [Pulumi examples zipfile](/examples/pulumi-v0.11-examples.zip), open the `voting-app` directory in your favorite editor. You'll see a Python Flask app in the `frontend` folder and a Pulumi program in `index.ts`. You may ignore the details of the Python app. 
 
-1. In your favorite editor, open the directory you just unzipped. You'll see a Python Flask app in the `frontend` folder and a Pulumi program in `index.ts`. You may ignore the details of the Python app. 
+1.  Open the file `index.ts`, which has the contents below.
 
-1. Open the file `index.ts`, which has the contents below.
+    ```typescript
+    import * as pulumi from "@pulumi/pulumi";
+    import * as cloud from "@pulumi/cloud";
 
-   ```typescript
-   import * as cloud from "@pulumi/cloud";
+    // Get the password to use for Redis from config.
+    let config = new pulumi.Config("voting-app");
+    let redisPassword = config.require("redisPassword"); 
 
-   // To simplify this example, we have defined the password directly in code
-   // In a real app, would add the secret via `pulumi config secret <key> <value>` and
-   // access via pulumi.Config APIs
-   // A future tutorial will show how to configure secrets.
-   let redisPassword = "SECRETPASSWORD"; 
+    // The data layer for the application
+    // Use the 'image' property to point to a pre-built Docker image.
+    let redisCache = new cloud.Service("voting-app-cache", {
+        containers: {
+            redis: {
+                image: "redis:alpine",
+                memory: 128,
+                ports: [{ port: 6379 }],
+                command: ["redis-server", "--requirepass", redisPassword],
+            },
+        },
+    });
 
-   // The data layer for the application
-   // Use the 'image' property to point to a pre-built Docker image.
-   let redisCache = new cloud.Service("voting-app-cache", {
-      containers: {
-         redis: {
-               image: "redis:alpine",
-               memory: 128,
-               ports: [{ port: 6379 }],
-               command: ["redis-server", "--requirepass", redisPassword],
-         },
-      },
-   });
+    // A custom container for the frontend, which is a Python Flask app
+    // Use the 'build' property to specify a folder that contains a Dockerfile.
+    // Pulumi builds the container for you and pushes to an ECR registry
+    let frontend = new cloud.Service("voting-app-frontend", {
+        containers: {
+            votingAppFrontend: {
+                build: "./frontend",   // path to the folder containing the Dockerfile
+                memory: 128,
+                ports: [{ port: 80 }],            
+                environment: { 
+                    // pass the Redis container info in environment variables
+                    // (the use of promises will be improved in the future)
+                    "REDIS": redisCache.getEndpoint().then(e => e.hostname),
+                    "REDIS_PORT": redisCache.getEndpoint().then(e => e.port.toString()),
+                    "REDIS_PWD": redisPassword
+                }
+            },
+        },
+    });
 
-   // A custom container for the frontend, which is a Python Flask app
-   // Use the 'build' property to specify a folder that contains a Dockerfile.
-   // Pulumi builds the container for you and pushes to an ECR registry
-   let frontend = new cloud.Service("voting-app-frontend", {
-      containers: {
-         votingAppFrontend: {
-               build: "./frontend",   // path to the folder containing the Dockerfile
-               memory: 128,
-               ports: [{ port: 80 }],            
-               environment: { 
-                  // pass the Redis container info in environment variables
-                  // (the use of promises will be improved in the future)
-                  "REDIS": redisCache.getEndpoint().then(e => e.hostname),
-                  "REDIS_PORT": redisCache.getEndpoint().then(e => e.port.toString()),
-                  "REDIS_PWD": redisPassword
-               }
-         },
-      },
-   });
-
-   // Export a variable that will be displayed during 'pulumi update'
-   export let frontendURL = frontend.getEndpoint().then(e => `http://${e.hostname}:${e.port}`);
-   ```
+    // Export a variable that will be displayed during 'pulumi update'
+    export let frontendURL = frontend.getEndpoint().then(e => `http://${e.hostname}:${e.port}`);
+    ```
 
 #### Understanding the code
 
@@ -110,24 +107,30 @@ The code exports the output `frontendURL`, via the declaration `export let front
 
 Now, lets deploy this elegant program to AWS.
 
-1. Run `yarn install` or `npm install` to install the dependencies to your `node_modules` directory.
+1.  Run `npm install` .
 
-1. Link with the Pulumi SDK packages so that your `require`s will find the right thing, using either `yarn` or `npm`:
+1.  Compile the code via `tsc` or `npm run build`.
 
-   ```bash
-   $ yarn link pulumi @pulumi/cloud
-   ```
+1.  Create a new Pulumi repository and stack:
 
-1. Compile the code via `yarn build`.
+    ```bash
+    $ pulumi init
+    $ pulumi stack init votingapp-testing
+    ```
 
-1. Create a new Pulumi repository and stack:
+1.  Set your AWS region via `pulumi config set aws:config:region us-west-2` (or whichever region you prefer).
 
-   ```bash
-   $ pulumi init
-   $ pulumi stack init votingapp-testing --local
-   ```
+1.  Set AWS as the provider for the `@pulumi/cloud` library:
 
-1. Set your AWS region via `pulumi config set aws:config:region us-west-2` (or whichever region you prefer).
+    ```bash
+    $ pulumi config set cloud:provider aws
+    ```
+
+1.  Set a value for the password configuration value:
+
+    ```
+    $ pulumi config set --secrete voting-app:redisPassword passw0rd
+    ```
 
 1. The `cloud.Service` component can either create a new ECS cluster or deploy into an existing one. Let's use the "autocluster" functionality:
 
@@ -146,106 +149,9 @@ Now, lets deploy this elegant program to AWS.
       [urn=urn:pulumi:votingapp-testing::voting-app::pulumi:pulumi:Stack::voting-app-votingapp-testing]
       + aws:ec2/vpc:Vpc: (create)
          [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/vpc:Vpc::pulumi-votingapp--global]
-      + aws:ec2/internetGateway:InternetGateway: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/internetGateway:InternetGateway::pulumi-votingapp--global]
-      + aws:ec2/routeTable:RouteTable: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/routeTable:RouteTable::pulumi-votingapp--global]
-      + aws:ec2/subnet:Subnet: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/subnet:Subnet::pulumi-votingapp--global-0]
-      + aws:ec2/routeTableAssociation:RouteTableAssociation: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/routeTableAssociation:RouteTableAssociation::pulumi-votingapp--global-0]
-      + aws:ec2/subnet:Subnet: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/subnet:Subnet::pulumi-votingapp--global-1]
-      + aws:ec2/routeTableAssociation:RouteTableAssociation: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/routeTableAssociation:RouteTableAssociation::pulumi-votingapp--global-1]
-      + aws:ecs/cluster:Cluster: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ecs/cluster:Cluster::pulumi-votingapp--global]
-      + aws:iam/role:Role: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:iam/role:Role::pulumi-votingapp--global]
-      + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:iam/rolePolicyAttachment:RolePolicyAttachment::pulumi-votingapp--global-5e4162cd]
-      + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:iam/rolePolicyAttachment:RolePolicyAttachment::pulumi-votingapp--global-efc8f10d]
-      + aws:iam/instanceProfile:InstanceProfile: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:iam/instanceProfile:InstanceProfile::pulumi-votingapp--global]
-      + aws:ec2/securityGroup:SecurityGroup: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/securityGroup:SecurityGroup::pulumi-votingapp--global]
-      + aws:efs/fileSystem:FileSystem: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:efs/fileSystem:FileSystem::pulumi-votingapp--global]
-      + aws:ec2/securityGroup:SecurityGroup: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/securityGroup:SecurityGroup::pulumi-votingapp--global-fs]
-      + aws:efs/mountTarget:MountTarget: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:efs/mountTarget:MountTarget::pulumi-votingapp--global-0]
-      + aws:efs/mountTarget:MountTarget: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:efs/mountTarget:MountTarget::pulumi-votingapp--global-1]
-      + aws:ec2/launchConfiguration:LaunchConfiguration: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/launchConfiguration:LaunchConfiguration::pulumi-votingapp--global]
-      + aws:cloudformation/stack:Stack: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:cloudformation/stack:Stack::pulumi-votingapp--global]
-      + cloud:service:Service: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service::voting-app-cache]
-      + aws:elasticloadbalancingv2/loadBalancer:LoadBalancer: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:elasticloadbalancingv2/loadBalancer:LoadBalancer::pulumi-vo-ne1]
-         + aws:elasticloadbalancingv2/targetGroup:TargetGroup: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:elasticloadbalancingv2/targetGroup:TargetGroup::pulumi-vo-ne0]
-         + aws:elasticloadbalancingv2/listener:Listener: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:elasticloadbalancingv2/listener:Listener::pulumi-vo-ne0]
-      + cloud:global:infrastructure: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::cloud:global:infrastructure::global-infrastructure]
-         + aws:iam/role:Role: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:global:infrastructure$aws:iam/role:Role::pulumi-vot-load-balancer]
-         + aws:iam/rolePolicy:RolePolicy: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:global:infrastructure$aws:iam/rolePolicy:RolePolicy::pulumi-vot-load-balancer]
-         + aws:cloudwatch/logGroup:LogGroup: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:cloudwatch/logGroup:LogGroup::voting-app-cache]
-      + cloud:logCollector:LogCollector: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::cloud:logCollector:LogCollector::pulumi-votingapp-testing]
-         + aws:serverless:Function: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:logCollector:LogCollector$aws:serverless:Function::pulumi-votingapp-testing]
-               + aws:iam/role:Role: (create)
-                  [urn=urn:pulumi:votingapp-testing::voting-app::cloud:logCollector:LogCollector$aws:serverless:Function$aws:iam/role:Role::pulumi-votingapp-testing]
-               + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-                  [urn=urn:pulumi:votingapp-testing::voting-app::cloud:logCollector:LogCollector$aws:serverless:Function$aws:iam/rolePolicyAttachment:RolePolicyAttachment::pulumi-votingapp-testing-32be53a2]
-               + aws:lambda/function:Function: (create)
-                  [urn=urn:pulumi:votingapp-testing::voting-app::cloud:logCollector:LogCollector$aws:serverless:Function$aws:lambda/function:Function::pulumi-votingapp-testing]
-         + aws:lambda/permission:Permission: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:logCollector:LogCollector$aws:lambda/permission:Permission::pulumi-votingapp-testing]
-         + aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter::voting-app-cache]
-         + aws:iam/role:Role: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:global:infrastructure$aws:iam/role:Role::pulumi-votingapp-te-task]
-         + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:global:infrastructure$aws:iam/rolePolicyAttachment:RolePolicyAttachment::pulumi-vot-task-32be53a2]
-         + aws:iam/rolePolicyAttachment:RolePolicyAttachment: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:global:infrastructure$aws:iam/rolePolicyAttachment:RolePolicyAttachment::pulumi-vot-task-fd1a00e5]
-         + aws:ecs/taskDefinition:TaskDefinition: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:ecs/taskDefinition:TaskDefinition::voting-app-cache]
-         + aws:ecs/service:Service: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:ecs/service:Service::voting-app-cache]
-      + cloud:service:Service: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service::voting-app-frontend]
-      + aws:elasticloadbalancingv2/loadBalancer:LoadBalancer: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:elasticloadbalancingv2/loadBalancer:LoadBalancer::pulumi-vo-ne2]
-         + aws:elasticloadbalancingv2/targetGroup:TargetGroup: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:elasticloadbalancingv2/targetGroup:TargetGroup::pulumi-vo-ne1]
-   info: Building container image 'pulum-df6d90cb-container' from ./frontend
-         + aws:elasticloadbalancingv2/listener:Listener: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:elasticloadbalancingv2/listener:Listener::pulumi-vo-ne1]
-         + aws:cloudwatch/logGroup:LogGroup: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:cloudwatch/logGroup:LogGroup::voting-app-frontend]
-         + aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter::voting-app-frontend]
-      + aws:ecr/repository:Repository: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ecr/repository:Repository::pulum-df6d90cb-container]
-   info: Sending build context to Docker daemon  12.29kB
-   <snip>
-   info: Skipping image publish during preview: pulum-df6d90cb-container
-         + aws:ecs/taskDefinition:TaskDefinition: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:ecs/taskDefinition:TaskDefinition::voting-app-frontend]
-         + aws:ecs/service:Service: (create)
-               [urn=urn:pulumi:votingapp-testing::voting-app::cloud:service:Service$aws:ecs/service:Service::voting-app-frontend]
-   info: 49 changes previewed:
-       + 49 resources to create
+      .. 98 lines elided
+   info: 50 changes previewed:
+       + 50 resources to create
    ```
 
 1. Deploy the changes with `pulumi update`. This is when the resources are provisioned and will take 20-30 minutes. (In the future, Pulumi will parallelize resource creations so that the experience is smoother.) You'll see that there is a stack output `frontendUrl`:
