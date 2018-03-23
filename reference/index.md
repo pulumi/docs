@@ -2,7 +2,9 @@
 title: Introduction
 ---
 
-> 🚧 The documentation is **still in progress**, so there are a number of TODOs and partially-written articles, especially in this section. Some articles are meant to appear nested under others in the left navigation. Until we add a CSS style, we're using the symbol ▶ in the article title. 
+> 🚧 The documentation is **still in progress**, so there are a number of TODOs and partially-written articles.  We will
+> be continuing to these out over the coming weeks.  If there is any specific content you are looking for please reach
+> out at [contact@pulumi.com](mailto:contact@pulumi.com) so we can prioritize adding it.
 
 Pulumi is a programming platform for the cloud.  Pulumi lets you write cloud programs in your favorite language, using your favorite developer tools and IDEs, and handles the task of keeping your application, services, and infrastructure in sync, without needing to resort to separate configuration DSLs or templating languages.  Instead of treating application code and infrastructure as completely separate things, managed by different people with different skills using different tools, Pulumi levels the playing field by focusing on building all aspects of distributed cloud applications using a consistent set of tools and techniques.
 

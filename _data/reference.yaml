@@ -1,28 +1,33 @@
 nav_section: "Reference"
-toc: # No landing page
--
+landing_page: /reference/
+toc:
+- reference/index.md
 
-- title: Reference
-  section:
-  - reference/index.md # This denotes the landing page for this section
-
-  - reference/concepts.md
+- title: Concepts
+  path: /reference/concepts
+  section: 
   - reference/stack.md
   - reference/project.md
   - reference/config.md
   - reference/resource.md
-  
-  - reference/programming-model.md
+
+- title: Programming Model
+  path: /reference/programming-model
+  section:
   - reference/javascript.md
   - reference/python.md
 
-  - reference/cloud-resources.md
+- title: Cloud Resources
+  path: /reference/cloud-resources
+  section:
   - reference/cloud.md
   - reference/aws.md
   - reference/azure.md
   - reference/kubernetes.md
 
-  - reference/how.md
+- title: How Pulumi Works
+  path: /reference/how
+  section:
   - reference/providers.md
-  
-  - reference/known-issues.md
+
+- reference/known-issues.md

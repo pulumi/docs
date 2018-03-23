@@ -1,5 +1,5 @@
 ---
-title: "▶ Cloud Framework"
+title: "Cloud Framework"
 ---
 
 JavaScript and TypeScript API reference: [@pulumi/cloud](../packages/pulumi-cloud)

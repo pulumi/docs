@@ -1,5 +1,5 @@
 ---
-title: "▶ AWS"
+title: "AWS"
 ---
 
 JavaScript and TypeScript API reference: [@pulumi/aws](../packages/pulumi-aws)
