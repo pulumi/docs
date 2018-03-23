@@ -11,35 +11,86 @@ NOTE: To update this page with a new binary release, do the following:
 
 ## Pulumi SDK 
 
-<div class="little-jumbotron">
-    <div class="container">
-        <h4 class="f4 title">Version {{ page.installer_version }}</h4>
-        <p>
-            <a
-                    id="macos-download-link"
-                    class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
-                    style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz" role="button">
-                {% octicon cloud-download height:24 %} macOS x64
-            </a>
-            <a
-                    id="windows-download-link"
-                    class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
-                    style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="/releases/pulumi-v{{page.installer_version}}-windows.x64.zip" role="button">
-                {% octicon cloud-download height:24 %} Windows x64
-            </a>
-            <a
-                    id="linux-download-link"
-                    class="[ btn btn-lg ] [ white hover-white bg-brand hover-bg-accent2 no-underline ]"
-                    style="padding-left: 12px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px"
-                    href="/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz" role="button">
-                {% octicon cloud-download height:24 %} Linux x64
-            </a>
-        </p>
-        <p>For all available SDKs, see <a href="./changelog.html#all-versions">Previous SDK Versions</a></p>
-    </div>
-</div>
+The current version is **{{ page.installer_version }}**.
+
+<table class="card-table" width="100%">
+    <tr>
+        <td align="center" valign="center" width="33%">
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">
+                        <i class="material-icons">get_app</i>
+                        &nbsp;
+                        <a href="/install">macOS x64</a>
+                    </h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    macOS Sierra 10.12 or later is required.
+                    See <a href="#mac">below</a> for detailed installation instructions.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a
+                            id="macos-download-link"
+                            href="/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz" role="button">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                            {% octicon cloud-download height:24 %} DOWNLOAD
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </td>
+        <td align="center" valign="center" width="33%">
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">
+                        <i class="material-icons">get_app</i>
+                        &nbsp;
+                        <a href="/install">Linux x64</a>
+                    </h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Ubuntu Trusty 14.04 LTS builds available.
+                    See <a href="#linux">below</a> for detailed installation instructions.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a
+                            id="linux-download-link"
+                            href="/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz" role="button">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                            {% octicon cloud-download height:24 %} DOWNLOAD
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </td>
+        <td align="center" valign="center" width="33%">
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">
+                        <i class="material-icons">get_app</i>
+                        &nbsp;
+                        <a href="/install">Windows x64</a>
+                    </h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Windows 8 or 10 are required.
+                    See <a href="#windows">below</a> for detailed installation instructions.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a
+                            id="windows-download-link"
+                            href="/releases/pulumi-v{{page.installer_version}}-windows.x64.zip" role="button">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                            {% octicon cloud-download height:24 %} DOWNLOAD
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+For older SDK versions, please see <a href="./changelog.html#all-versions">Previous SDK Versions</a>.
 
 ## Installation instructions
 
@@ -49,7 +100,7 @@ NOTE: To update this page with a new binary release, do the following:
 
 ### macOS install {#mac}
 
-macOS Siera (10.12) or later is required. 
+macOS Sierra (10.12) or later is required. 
 
 1.  Install [Node.js 6.10.2 (LTS)](https://nodejs.org/dist/v6.10.2/node-v6.10.2.pkg). This exact version is required, to match the version supported by AWS Lambda and other public cloud implementations. You can use [Node Version Manager (nvm)](https://github.com/creationix/nvm) to manage multiple Node versions.
 

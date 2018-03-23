@@ -1,9 +1,9 @@
 ---
-title: "▶ Stacks"
+title: "Stacks"
 ---
 
 Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently configurable
-instance of a Pulumi project. Stacks are commonly used to denote different phases of development (such as **development**, **staging** and **production**) or feature branches (such as **feature-x-dev**, **jane-feature-x-dev**).
+instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as **development**, **staging** and **production**) or feature branches (such as **feature-x-dev**, **jane-feature-x-dev**).
 
 ## Create a stack
 

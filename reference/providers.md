@@ -1,5 +1,5 @@
 ---
-title: "▶ Providers"
+title: "Providers"
 ---
 
 🚧 TODO description of providers

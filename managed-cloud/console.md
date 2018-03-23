@@ -1,5 +1,5 @@
 ---
-title: "▶ Using the Pulumi Console"
+title: "Using the Pulumi Console"
 ---
 
 The Pulumi Console provides a web-based management experience for Pulumi. Visit [https://beta.pulumi.com](https://beta.pulumi.com).

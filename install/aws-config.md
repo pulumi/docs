@@ -1,5 +1,5 @@
 ---
-title: "▶ Configure Pulumi for AWS"
+title: "Configure Pulumi for AWS"
 ---
 
 <!-- LINKS -->

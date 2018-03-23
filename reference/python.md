@@ -1,5 +1,5 @@
 ---
-title: "▶ Python"
+title: "Python"
 ---
 
 🚧 TODO 

@@ -1,0 +1,31 @@
+{% for item in include.tree %}
+    {% capture whitespace %}
+        {% if item.path %}
+            {% assign path   = item.path %}
+            {% assign title  = item.title %}
+        {% else %}
+            {% assign found_page = site.pages | where: "path", item | first %}
+            {% assign title = found_page.title %}
+            {% assign path  = found_page.url %}
+        {% endif %}
+    {% endcapture %}
+
+    <div class="sidenav-section {% if forloop.last == false %}separator{% endif %}">
+        {% if item.section %}
+            <div data-title="{{ item.title }}">
+                <div>
+                    <a data-title="{{ item.title }}" href="{{ path }}">{{ item.title}}</a>
+                </div>
+                <div class="sidenav-subsection">
+                    {% include_cached toc_sub.html tree=item.section %}
+                </div>
+            </div>
+        {% else %}
+            {% if path %}
+                <div>
+                    <a data-title="{{ title }}" href="{{ path }}">{{ title}}</a>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endfor %}

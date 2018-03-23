@@ -2,7 +2,9 @@
 title: Introduction
 ---
 
-> 🚧 The documentation is **still in progress**, so there are a number of TODOs and partially-written articles, especially in this section. Some articles are meant to appear nested under others in the left navigation. Until we add a CSS style, we're using the symbol ▶ in the article title. 
+> **Note:** The documentation is still in progress so there are a number of TODOs and partially-written articles.
+> We are hard at work finishing these.  If there is any specific content you are looking for please reach
+> out at [support@pulumi.com](mailto:support@pulumi.com) so we can prioritize adding it.
 
 Pulumi is a programming platform for the cloud.  Pulumi lets you write cloud programs in your favorite language, using your favorite developer tools and IDEs, and handles the task of keeping your application, services, and infrastructure in sync, without needing to resort to separate configuration DSLs or templating languages.  Instead of treating application code and infrastructure as completely separate things, managed by different people with different skills using different tools, Pulumi levels the playing field by focusing on building all aspects of distributed cloud applications using a consistent set of tools and techniques.
 
@@ -81,7 +83,7 @@ Pulumi can be plugged in to your favorite CI tools to automate all application a
 
 Of course, you may have an application architecture where you really do want to version two layers of your system separately, and that is also well support in Pulumi.
 
-## Immutable Infrastructure
+## Immutable Infrastructure {#immutable-infrastructure}
 
 It is important to note that Pulumi is based on the concept of **immutable infrastructure**.  Pulumi programs are not like Boto scripts that mutate infrastructure each time you run them. Instead, Pulumi runs your program to generate the desired set of resources and their dependencies.
 
@@ -101,4 +103,4 @@ Pulumi also stays unopinionated about whether you choose containers, serverless,
 
 # Next Steps
 
-Check out the [Getting Started tutorial](../getting-started) or the [conceptual docs](./concepts) for more details on how to get started using Pulumi.
+Check out the [Quickstart](../quickstart) or the [conceptual docs](./concepts) for more details on how to get started using Pulumi.

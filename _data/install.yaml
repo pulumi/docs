@@ -1,10 +1,8 @@
 nav_section: "Install"
-toc:  # No landing page
-- 
-
-- title: Install
+toc:
+- title: Installation and Setup
+  path: /install/index
   section:
-  - install/index.md
   - install/aws-config.md
   - install/configure-npm.md
   - install/changelog.md
