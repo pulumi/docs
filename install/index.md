@@ -57,7 +57,7 @@ The current version is **{{ page.installer_version }}**.
                             id="linux-download-link"
                             href="/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz" role="button">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                            {% octicon cloud-download height:24 %} Linux x64
+                            {% octicon cloud-download height:24 %} DOWNLOAD
                         </button>
                     </a>
                 </div>
@@ -81,7 +81,7 @@ The current version is **{{ page.installer_version }}**.
                             id="windows-download-link"
                             href="/releases/pulumi-v{{page.installer_version}}-windows.x64.zip" role="button">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                            {% octicon cloud-download height:24 %} Windows x64
+                            {% octicon cloud-download height:24 %} DOWNLOAD
                         </button>
                     </a>
                 </div>

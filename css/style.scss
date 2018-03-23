@@ -15,7 +15,7 @@ comment3: prototypical Jekyll/Liquid template file.
 /**
 * Size constants
 */
-$CENTER-WIDTH: 1400px;
+$CENTER-WIDTH: 1200px;
 $TOOLBAR-HEIGHT: 70px;
 $TAB-GROUP-HEIGHT: 60px;
 
@@ -212,7 +212,7 @@ a.btn > svg {
 
 .docsToc {
     background: rgb(247,247,247);
-    max-width: 15%;
+    width: 200px;
     font-size: 13px;
     padding: 0 8px 8px 8px;
 }
@@ -224,8 +224,9 @@ a.btn > svg {
 }
 
 .docsContent {
+    max-width: 960px;
     padding-left: 24px;
-    max-width: 85%;
+    margin-right: auto;
 }
 
 .toolbar {
