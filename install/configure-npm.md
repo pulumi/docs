@@ -10,7 +10,7 @@ These steps are for customers of the Pulumi Managed Cloud beta.
 
 1.  Login in to the Pulumi Console and copy your [Pulumi access token](../managed-cloud/console.html#account-page).
 
-1.  Set the environment variable `PULUMI_ACCESS_TOKEN` to the value you copied.
+1.  Set the environment variable `PULUMI_ACCESS_TOKEN` to the value you copied, in either `~/.bashrc` or in  System Properties on Windows.
 
 1.  Add the following to `$HOME/.npmrc`. Note that the `${PULUMI_ACCESS_TOKEN}` syntax will be auto-expanded by your NPM client.
 

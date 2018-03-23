@@ -9,9 +9,7 @@ redirect_from: "/concepts/npm-packages.html"
 
 ## Using Pulumi NPM Packages {#npm-packages}
 
-As of release `0.10`, packages in the `@pulumi` namespace have been moved to an NPMJS registry. To use these packages, follow the instructions in [Configure your NPM client].
-
-> NOTE: versions of Pulumi packages prior to `0.10.0` are only supported via the `npm link` workflow.
+To use `@pulumi` packages, follow the instructions in [Configure your NPM client].
 
 The packages `@pulumi/pulumi`, `@pulumi/aws`, `@pulumi/cloud` and `@pulumi/cloud-aws` are regular NPM packages and should be specified in the `dependencies` section of `package.json`. As a best practice, Pulumi programs should only list the packages they strictly depend on.
 
