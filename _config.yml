@@ -47,13 +47,11 @@ exclude:
 tocs:
   - home
   - install
-  - getting-started
-  - concepts
+  - quickstart
   - reference
-  - managed-cloud
 
-# By default, use a `withtoc` layout, that shows a table of contents on the left
+# By default, use a `default_toc` layout, that shows a table of contents on the left
 defaults:
   -
     values:
-      layout: withtoc
+      layout: default_toc

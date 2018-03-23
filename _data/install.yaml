@@ -1,7 +1,5 @@
 nav_section: "Install"
-toc:  # No landing page
-- 
-
+toc:
 - title: Installation and Setup
   path: /install/index
   section:

@@ -13,43 +13,51 @@ comment3: prototypical Jekyll/Liquid template file.
  */
 
 /**
+* Size constants
+*/
+$CENTER-WIDTH: 1200px;
+$TOOLBAR-HEIGHT: 70px;
+$TAB-GROUP-HEIGHT: 60px;
+
+/**
  * Fonts
  */
+@import url('https://fonts.googleapis.com/css?family=Google Sans');
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
- 
-.oxygen      { font-family: 'Oxygen', sans-serif; }
-.roboto      { font-family: 'Roboto', sans-serif; }
-.roboto-mono { font-family: 'Roboto Mono', monospace; }
+
+$font-family: 'Helvetica Neue',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI';
+$header-font-family: 'Google Sans',sans-serif;
+$code-font-family: 'SFMono-Regular',Consolas,'Liberation Mono',Menlo,Courier,monospace;
  
 /**
  * Colors
  */
-// Define custom CSS styles for Pūlumi webpages. This allow us to make dramatic
+// Define custom CSS styles for Pulumi webpages. This allow us to make dramatic
 // changes to the color scheme without much churn.
-$pulumi-brand: #3f0e44;    // Mardi Gras
-$pulumi-brand2: #711A7A;
-$pulumi-brand3: #9E50A7;
-$accent1: #a463f2;
-$accent2: #d5008f;
+$primary: #7c4792;
+$primary2: #69377f;
+$primary3: #4c2063;
+$accent1: #a37eb3;
+$accent2: #d8c8de;
+$accent3: #f2e6ff;
 
 // Generate via:
 // https://gist.github.com/chrsmith/692ea3833f2b48f121ad5515aff174ad
-.brand                 {            color: $pulumi-brand; }
-.bg-brand              { background-color: $pulumi-brand; }
-.hover-brand:hover     {            color: $pulumi-brand; }
-.hover-bg-brand:hover  { background-color: $pulumi-brand; }
+.brand                 {            color: $primary; }
+.bg-brand              { background-color: $primary; }
+.hover-brand:hover     {            color: $primary; }
+.hover-bg-brand:hover  { background-color: $primary; }
 
-.brand2                {            color: $pulumi-brand2; }
-.bg-brand2             { background-color: $pulumi-brand2; }
-.hover-brand2:hover    {            color: $pulumi-brand2; }
-.hover-bg-brand2:hover { background-color: $pulumi-brand2; }
+.brand2                {            color: $primary2; }
+.bg-brand2             { background-color: $primary2; }
+.hover-brand2:hover    {            color: $primary2; }
+.hover-bg-brand2:hover { background-color: $primary2; }
 
-.brand3                {            color: $pulumi-brand3; }
-.bg-brand3             { background-color: $pulumi-brand3; }
-.hover-brand3:hover    {            color: $pulumi-brand3; }
-.hover-bg-brand3:hover { background-color: $pulumi-brand3; }
+.brand3                {            color: $primary3; }
+.bg-brand3             { background-color: $primary3; }
+.hover-brand3:hover    {            color: $primary3; }
+.hover-bg-brand3:hover { background-color: $primary3; }
 
 .accent1                {            color: $accent1; }
 .bg-accent1             { background-color: $accent1; }
@@ -65,125 +73,282 @@ $accent2: #d5008f;
  * Elements
  */
 
-// Apply Pulumi fonts to regular elements to make semantic markup easier.
-h1, h2, h3, h4, h5, h6 { font-family: 'Oxygen', sans-serif; }
-button, input { font-family: 'Oxygen', sans-serif; }
-
-a, p, small, label, legend, li { font-family: 'Roboto', sans-serif; }
-
 a {
+    color: $primary;
     font-weight: bold;
+    text-decoration: none;
 }
 a:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 
 code {
-  background-color: #EEEEEE;  // .light-gray
-  font-family: 'Roboto Mono', monospace;
-  font-size: 14px;
+    background-color: #f7f7f7;
+    color: #37474f;
+    font-size: 14px;
+    font-family: $code-font-family;
+    margin: 16px 0;
 }
 
 pre {
-  background-color: #EEEEEE;  // .light-gray
-  // font-size: 0.8em;
-  padding: 16px;
-}
-
-/**
- * Reminders that HTML and CSS are terrible things that nobody should like.
- * https://theksmith.com/software/safari-bug-text-suddenly-appears-bold-after-css-animation/
- */
-html {
-  -webkit-font-smoothing: antialiased;
+    @extend code;
+    padding: 8px;
 }
 
 // Move body down because of a fixed nav at the top.
 body {
-  padding-top: 3.5rem;
-  margin-bottom: 70px;
-}
-
-h1:not(.title) {
-  font-size: 2rem;
-  font-weight: bold;
-  padding-bottom: 8px;
-  margin-bottom: 24px;
-}
-
-h2:not(.title) {
-  font-size: 1.75rem;
-  font-weight: bold;
-  padding-top: 4px;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
-}
-
-h3:not(.title) {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding-top: 6px;
-  padding-bottom: 4px;
-  margin-bottom: 12px;
-}
-
-h4:not(.title) {
-  font-size: 1.25rem;
-  font-weight: bold;
-  padding-bottom: 4px;
+    background: #fff;
+    color: #555;
+    font-family: $font-family;
+    font-size: 13px;
 }
 
 // Remove the background color from Bootstrap's Jumptron class.
 .pulumi-jumbotron {
-  background-color: #f2e6ff;
-  margin-bottom: 1rem;
-  border-radius: .3rem;
-  padding: 2rem 1rem;
+    background-color: $accent3;
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+    padding: 2rem 1rem;
 }
 
 .little-jumbotron {
-  background-color: #f2e6ff;
-  margin: 8px;
-  border-radius: .3rem;
-  padding: 8px;
+    background-color: $accent3;
+    margin: 8px;
+    border-radius: .3rem;
+    padding: 8px;
 }
 
 // Don't have SVG icons default to black. Just use current text color.
 svg {
-  fill: currentColor;
+    fill: currentColor;
 }
 
 // Make octicons on the homepage look better.
 a.btn > svg {
-  padding-top: 8px;
-}
-
-// Add styling for blockquotes 
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+    padding-top: 8px;
 }
 
 .column {
-  float:left; 
-  padding:10px;
+    float: left; 
+}
+
+.center-container {
+    padding: 0 24px;
+    min-height: calc(100vh - 250px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    max-width: $CENTER-WIDTH;
+}
+
+.content-container {
+    color: #212121;
+
+    p, li {
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+    }
+    h1 {
+        font-size: 32px;
+        margin: 0 0 24px 0;
+    }
+    h2 {
+        font-size: 22px;
+        margin: 48px 0 24px 0;
+    }
+    h3 {
+        font-size: 18px;
+        margin: 32px 0 16px 0;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $header-font-family;
+        text-overflow: ellipsis;
+    }
+    p, li, h1, h2, h3, h4, h5, h6 {
+        font-stretch: 100%;
+        font-style: normal;
+        font-variant-caps: normal;
+        font-variant-east-asian: normal;
+        font-variant-ligatures: normal;
+        font-variant-numeric: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-size-adjust: 100%;
+    }
+
+    // Add styling for blockquotes 
+    blockquote {
+        display: block;
+        background: #e1f5fe;
+        color: #0288d1;
+        margin: 16px 0;
+        padding: 12px 24px 12px 60px;
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+    }
+
+    blockquote::before {
+        color: #039be5;
+        content: 'star';
+        float: left;
+        line-height: 1px;
+        font: normal normal normal 24px/1 'Material Icons';
+        margin-left: -36px;
+        position: static;
+        text-rendering: optimizeLegibility;
+        word-wrap: normal;
+    }
+
+    blockquote::after {
+        content: '';
+        margin: 0;
+    }
 }
 
 .docsToc {
-  width: 25%;
-  font-size: 15px;
-  padding-left: 0px;
-  padding-right: 0px;
+    background: rgb(247,247,247);
+    width: 200px;
+    font-size: 13px;
+    padding: 0 8px 8px 8px;
 }
 
-.docsToc:after {
-  content: "";
-  display: table;
-  clear: both;
+.docsToc::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 .docsContent {
-  width: 75%;
+    max-width: 960px;
+    padding-left: 24px;
+    margin-right: auto;
+}
+
+.toolbar {
+    display: flex;
+    height: $TOOLBAR-HEIGHT;
+    padding: 0 12px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    z-index: 5;
+}
+
+.toolbar-shadow {
+    -webkit-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.toolbar-button {
+    color: white;
+}
+
+.toolbar-icon {
+    color: white;
+}
+
+.toolbar-item {
+    align-self: center;
+    margin: 8px 8px;
+}
+
+.toolbar-logo {
+    height: 20px;
+    margin: 0 40px 0 12px;
+}
+
+.toolbar-spacer {
+    flex-grow: 1;
+    -webkit-box-flex: 1;
+}
+
+.toolbar-tabs {
+    vertical-align: middle;
+    height: $TAB-GROUP-HEIGHT;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    z-index: 1;
+}
+
+.mdl-tabs__tab {
+    height: $TAB-GROUP-HEIGHT;
+    line-height: $TAB-GROUP-HEIGHT;
+}
+
+.mdl-tabs__tab.is-active {
+    color: $primary;
+    border-bottom: 2px solid $primary;
+}
+
+.sidenav-section {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 8px 0;
+}
+
+.sidenav-section.separator {
+    border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+.sidenav-section a {
+    font-weight: bold;
+}
+
+.sidenav-subsection {
+    padding: 8px 0 0 16px;
+}
+
+.sidenav-subsection a {
+    font-weight: normal;
+}
+
+.footer {
+    flex: 1;
+    height: 70px;
+    padding: 40px 40px;
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    color: #a1a1a1;
+    float: right;
+    font-size: 13px;
+}
+
+.section {
+    padding-top: 24px;
+}
+
+.card-table {
+    margin: 24px 0;
+    td {
+        padding: 8px;
+    }
+}
+
+.mdl-card {
+    background-color: $accent3;
+    min-height: 128px;
+    width: 100%;
+}
+
+.mdl-card__title {
+    color: #fff;
+    background-color: $accent1;
+    vertical-align: middle;
+
+    a, i {
+        color: #fff;
+    }
+    h2 {
+        margin: 0;
+    }
+}
+
+.mdl-card__supporting-text {
+    color: #555;
 }
