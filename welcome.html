@@ -3,24 +3,399 @@ layout: empty
 ---
 
 <style>
-  a:hover {
-    text-decoration: none;
-  }
-</style>
-<article class="mw7 center ph3 ph5-ns tc br4 pv5 bg-brand white mb5">
-  <h1 class="lh-title mt0 mb3 title">
-    Welcome to Pulumi
-  </h1>
-  <p class="fw1 f5 mt0 mb3">
-      To have access to our private beta you need to be<br>
-      a member of the Pulumi organization on GitHub.
-  </p>
-  <div>
-    <a
-        class="[ f6 pv2 ph3 dib ] [ pointer bn ] [ white hover-white bg-animate bg-accent1 hover-bg-accent2 ]"
-        href="/login">
-      Login with GitHub
-    </a>
-  </div>
-</article>  
+    body {
+        background-color: #7c4792;
+    }
 
+    p {
+        margin: 40px 0;
+    }
+
+    /* At a small width, enlarge everything. */
+    @media (max-width: 830px) {
+      .logo {
+        height: calc(4.65vw * 1.5);
+        top: calc(3.06vw * 1.5);
+        left: calc(3.47vw * 1.5);
+      }
+
+      .cloud1 {
+        height: calc(10.49vw * 1.5);
+        top: calc(3.33vw * 1.5);
+        left: calc(31.8vw * 1.5);
+      }
+
+      .cloud2 {
+        height: calc(13.33vw * 1.5);
+        top: calc(6.6vw * 1.5);
+        left: calc(63.19vw * 1.5);
+      }
+
+      .cloud3 {
+        height: calc(33.82vw * 1.5);
+        top: calc(2.5vw * 1.5);
+        left: calc(37.99vw * 1.5);
+      }
+
+      .lightning3 {
+        height: calc(53.82vw * 1.5);
+        top: calc(15.5vw * 1.5);
+        left: calc(50vw * 1.5);
+      }
+
+      .cloud4 {
+        height: calc(42.7vw * 1.5);
+        top: calc(1.67vw * 1.5);
+        left: calc(22.01vw * 1.5);
+      }
+
+      .beam1 {
+        height: calc(138vw * 1.5);
+        top: calc(7.3vw * 1.5);
+        left: calc(32.9vw * 1.5);
+      }
+
+      .beam2 {
+        height: calc(186vw * 1.5);
+        top: calc(11.7vw * 1.5);
+        left: calc(64.65vw * 1.5);
+      }
+
+      .beam3 {
+        height: calc(599vw * 1.5);
+        top: calc(15.4vw * 1.5);
+        left: calc(35.3vw * 1.5);
+      }
+
+      .beam4 {
+        height: calc(595vw * 1.5);
+        top: calc(18.0vw * 1.5);
+        left: calc(26.8vw * 1.5);
+      }
+    }
+    @media (min-width: 830px) {
+      .logo {
+        height: 4.65vw;
+        top: 3.06vw;
+        left: 3.47vw;
+      }
+
+      .cloud1 {
+        height: 10.49vw;
+        top: 3.33vw;
+        left: 31.8vw;
+      }
+
+      .cloud2 {
+        height: 13.33vw;
+        top: 6.6vw;
+        left: 63.19vw;
+      }
+
+      .cloud3 {
+        height: 33.82vw;
+        top: 2.5vw;
+        left: 37.99vw;
+      }
+
+      .lightning3 {
+        height: 53.82vw;
+        top: 15.5vw;
+        left: 50vw;
+      }
+
+      .cloud4 {
+        height: 42.7vw;
+        top: 1.67vw;
+        left: 22.01vw;
+      }
+
+      .beam1 {
+        height: 138vw;
+        top: 7.3vw;
+        left: 32.9vw;
+      }
+
+      .beam2 {
+        height: 186vw;
+        top: 11.7vw;
+        left: 64.65vw;
+      }
+
+      .beam3 {
+        height: 599vw;
+        top: 15.4vw;
+        left: 35.3vw;
+      }
+
+      .beam4 {
+        height: 595vw;
+        top: 18.0vw;
+        left: 26.8vw;
+      }
+    }
+
+    .logo {
+      position: absolute;
+    }
+
+    @keyframes fadein {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes lightningframes {
+      14% {opacity: 0;}
+      15% {opacity: 1;}
+      17% {opacity: 1;}
+      18% {opacity: 0;}
+      19% {opacity: 0;}
+      20% {opacity: 1;}
+      22% {opacity: 1;}
+      23% {opacity: 0;}
+    }
+
+    @keyframes frames1 {
+      from {transform: translateY(0);}
+      to {transform: translateY(.6vw);}
+    }
+
+    @keyframes frames2 {
+      from {transform: translateY(0);}
+      to {transform: translateY(-.75vw);}
+    }
+
+    @keyframes frames3 {
+      from {transform: translateY(0);}
+      to {transform: translateY(1vw);}
+    }
+
+    @keyframes frames4 {
+      from {transform: translateY(0);}
+      to {transform: translateY(-.5vw);}
+    }
+    .anim1 {
+      animation: frames1 8s ease-in-out 0s infinite alternate-reverse;
+    }
+
+    .anim2 {
+      animation: frames3 17s ease-in-out 0s infinite alternate-reverse;
+    }
+
+    .anim3 {
+      animation: frames3 14s ease-in-out 0s infinite alternate-reverse;
+    }
+
+    .anim4 {
+      animation: frames4 7s ease-in-out 0s infinite alternate-reverse;
+    }
+
+    .cloud1 {
+      opacity: 0;
+      position: absolute;
+      animation: fadein .5s ease-in .6s;
+      animation-fill-mode: forwards;
+    }
+
+    .cloud2 {
+      opacity: 0;
+      position: absolute;
+      animation: fadein .5s ease-in .4s;
+      animation-fill-mode: forwards;
+    }
+
+    .cloud3 {
+      opacity: 0;
+      position: absolute;
+      animation: fadein .5s ease-in .2s;
+      animation-fill-mode: forwards;
+    }
+
+    .lightning3 {
+      opacity: 0;
+      position: fixed;
+      animation: lightningframes 5s linear .2s infinite;
+    }
+
+    .cloud4 {
+      opacity: 0;
+      position: absolute;
+      animation: fadein .5s ease-in 0s;
+      animation-fill-mode: forwards;
+    }
+
+    .beam1 {
+      opacity: 0;
+      position: fixed;
+      animation: fadein .5s ease-in .6s;
+      animation-fill-mode: forwards;
+    }
+
+    .beam2 {
+      opacity: 0;
+      position: fixed;
+      animation: fadein .5s ease-in .4s;
+      animation-fill-mode: forwards;
+    }
+
+    .beam3 {
+      opacity: 0;
+      position: fixed;
+      animation: fadein .5s ease-in .2s;
+      animation-fill-mode: forwards;
+    }
+
+    .beam4 {
+      opacity: 0;
+      position: fixed;
+      animation: fadein .5s ease-in 0s;
+      animation-fill-mode: forwards;
+    }
+    // At small width, enlarge everything.
+    @media (max-width: 830px) {
+        .heading1 {
+            font-size: calc(2.779vw * 1.5);
+            top: calc(17.46vw * 1.5);
+            left: calc(26.75vw * 1.5);
+            text-shadow: calc(.14vw * 1.5) calc(.14vw * 1.5) calc(.28vw * 1.5)
+                        rgba(32, 21, 75, 0.5);
+        }
+
+        .heading2 {
+            font-size: calc(2.779vw * 1.5);
+            top: calc(20.18vw * 1.5);
+            left: calc(26.75vw * 1.5);
+            text-shadow: calc(.14vw * 1.5) calc(.14vw * 1.5) calc(.28vw * 1.5)
+                        rgba(32, 21, 75, 0.5);
+        }
+
+        .fineprint {
+            font-size: calc(1.39vw * 1.5);
+            top: calc(29.88vw * 1.5);
+            left: calc(26.75vw * 1.5);
+            text-shadow: calc(.14vw * 1.5) calc(.14vw * 1.5) calc(.28vw * 1.5)
+                            rgba(32, 21, 75, 0.5);
+        }
+
+        .welcome-button {
+            border-radius: calc(.7vw * 1.5);
+            border-width: calc(.14vw * 1.5);
+            padding: calc(.9vw * 1.5) calc(1.4vw * 1.5);
+            font-size: calc(1.4vw * 1.5);
+            top: calc(34.6vw * 1.5);
+            left: calc(26.75vw * 1.5);
+            text-shadow: calc(.14vw * 1.5) calc(.14vw * 1.5) calc(.28vw * 1.5)
+                            rgba(32, 21, 75, 0.5);
+        }
+    }
+
+    @media (min-width: 830px) {
+        .heading1 {
+            font-size: 2.779vw;
+            top: 17.46vw;
+            left: 26.75vw;
+            text-shadow: .14vw .14vw .28vw rgba(32, 21, 75, 0.5);
+        }
+
+        .heading2 {
+            font-size: 2.779vw;
+            top: 20.18vw;
+            left: 26.75vw;
+            text-shadow: .14vw .14vw .28vw rgba(32, 21, 75, 0.5);
+        }
+
+        .fineprint {
+            font-size: 1.39vw;
+            top: 29.88vw;
+            left: 26.75vw;
+            text-shadow: .14vw .14vw .28vw rgba(32, 21, 75, 0.5);
+        }
+
+        .welcome-button {
+            border-radius: .7vw;
+            border-width: .14vw;
+            padding: .9vw 1.4vw;
+            font-size: 1.4vw;
+            top: 34.6vw;
+            left: 26.75vw;
+            text-shadow: .14vw .14vw .28vw rgba(32, 21, 75, 0.5);
+        }
+    }
+
+    .text {
+        color: #fcf7e7;
+        position: absolute;
+        font-family: Oxygen;
+    }
+
+    .welcome-button {
+        border-color: #fcf7e7;
+        background-color: transparent;
+        color: #fcf7e7;
+        position: absolute;
+        font-family: Oxygen;
+        font-weight: 700;
+    }
+
+    .bold {
+        font-weight: 700;
+    }
+
+    .welcome-button:hover {
+        background-color: rgba(255, 255, 255, .3);
+    }
+
+    .welcome-button:active {
+        background-color: rgba(255, 255, 255, .5);
+    }
+
+    button:focus {
+        outline: 0;
+    }
+
+    // For the faked layout we put the buttons relative to
+    // each other, rather than at an absolute position.
+    .button-group {
+        display: inline-block;
+        position: relative;
+    }
+</style>
+
+<img src="/images/logo/logo-white-normal-shadow.svg" class="logo" alt="Pulumi">
+
+<div class="anim1">
+<img src="/images/welcome/welcome-beam1.svg" class="beam1">
+</div>
+<div class="anim2">
+<img src="/images/welcome/welcome-beam2.svg" class="beam2">
+</div>
+<div class="anim3">
+<img src="/images/welcome/welcome-beam3.svg" class="beam3">
+</div>
+<div class="anim4">
+<img src="/images/welcome/welcome-beam4.svg" class="beam4">
+</div>
+<div class="anim4">
+  <img src="/images/welcome/welcome-cloud4.svg" class="cloud4">
+</div>
+<div class="anim2">
+  <img src="/images/welcome/welcome-cloud2.svg" class="cloud2">
+</div>
+<div class="anim3">
+  <img src="/images/welcome/welcome-cloud3.svg" class="cloud3">
+</div>
+<div class="anim1">
+  <img src="/images/welcome/welcome-cloud1.svg" class="cloud1">
+</div>
+
+<div>
+    <p class="text heading1">An <span class="bold">easier cloud computing</span></p>
+    <p class="text heading2">experience awaits.</p>
+    <p class="text fineprint">But we are in private beta, so access is limited.</p>
+
+    <a href="/login" >
+        <button class="welcome-button">
+            SIGN IN WITH GITHUB
+        </button>
+    </form>
+</div>
