@@ -25,8 +25,10 @@ The current version is **{{ page.installer_version }}**.
                     </h2>
                 </div>
                 <div class="mdl-card__supporting-text">
-                    macOS Sierra 10.12 or later is required.
-                    See <a href="#mac">below</a> for detailed installation instructions.
+                    <span class="card-text">
+                        macOS Sierra 10.12 or later is required.
+                        See <a href="#mac">below</a> for detailed installation instructions.
+                    </span>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
                     <a
@@ -49,8 +51,10 @@ The current version is **{{ page.installer_version }}**.
                     </h2>
                 </div>
                 <div class="mdl-card__supporting-text">
-                    Ubuntu Trusty 14.04 LTS builds available.
-                    See <a href="#linux">below</a> for detailed installation instructions.
+                    <span class="card-text">
+                        Ubuntu Trusty 14.04 LTS builds are available.
+                        See <a href="#linux">below</a> for detailed installation instructions.
+                    </span>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
                     <a
@@ -73,8 +77,10 @@ The current version is **{{ page.installer_version }}**.
                     </h2>
                 </div>
                 <div class="mdl-card__supporting-text">
-                    Windows 8 or 10 are required.
-                    See <a href="#windows">below</a> for detailed installation instructions.
+                    <span class="card-text">
+                        Windows 8 or 10 are supported.
+                        See <a href="#windows">below</a> for detailed installation instructions.
+                    </span>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
                     <a

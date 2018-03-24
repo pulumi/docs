@@ -351,4 +351,12 @@ a.btn > svg {
 
 .mdl-card__supporting-text {
     color: #555;
+    height: 64px;
+    line-height: 64px;
+}
+
+.card-text {
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: middle;
 }
