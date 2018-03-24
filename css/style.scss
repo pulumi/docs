@@ -135,6 +135,7 @@ a.btn > svg {
 
 .center-container {
     padding: 0 24px;
+    overflow: hidden;
     min-height: calc(100vh - 250px);
     margin-left: auto;
     margin-right: auto;
