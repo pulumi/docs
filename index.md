@@ -20,7 +20,9 @@ layout: default
                     </h2>
                 </div>
                 <div class="mdl-card__supporting-text">
-                    Install the Pulumi SDK for JavaScript, TypeScript, or Python
+                    <span class="card-text">
+                        Install the Pulumi SDK for JavaScript, TypeScript, or Python
+                    </span>
                 </div>
             </div>
         </td>
@@ -34,7 +36,9 @@ layout: default
                     </h2>
                 </div>
                 <div class="mdl-card__supporting-text">
-                    Learn how to use Pulumi in just a few minutes
+                    <span class="card-text">
+                        Learn how to use Pulumi in just a few minutes
+                    </span>
                 </div>
             </div>
         </td>
@@ -48,7 +52,9 @@ layout: default
                     </h2>
                 </div>
                 <div class="mdl-card__supporting-text">
-                    Read all about Pulumi concepts, CLI, and APIs
+                    <span class="card-text">
+                        Read all about Pulumi concepts, CLI, and APIs
+                    </span>
                 </div>
             </div>
         </td>
