@@ -14,7 +14,7 @@
         {% if item.section %}
             <div data-title="{{ item.title }}">
                 <div>
-                    <a data-title="{{ item.title }}" href="{{ path }}">{{ item.title}}</a>
+                    <a data-title="{{ item.title }}" href="{{ path }}.html">{{ item.title}}</a>
                 </div>
                 <div class="sidenav-subsection">
                     {% include_cached toc_sub.html tree=item.section %}
