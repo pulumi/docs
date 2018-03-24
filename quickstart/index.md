@@ -10,11 +10,11 @@ Get started with Pulumi by taking this 5 part tour (🚧 coming soon):
 * Step 5: Next Steps
 
 For deeper dives into some specific use cases, check out these tutorials:
-* [Using Pulumi with AWS Infrastructure](./aws)
-* [Using Pulumi for Cloud-Agnostic Serverless + Containers](./cloud)
+* [Using Pulumi with AWS Infrastructure](./aws.html)
+* [Using Pulumi for Cloud-Agnostic Serverless + Containers](./cloud.html)
 
 For code samples, see the following folders in the [Pulumi examples zipfile](/examples/pulumi-v0.11-examples.zip):
-- **webserver-\***. Examples that correspond with [AWS Infrastructure](./aws) tutorial
+- **webserver-\***. Examples that correspond with [AWS Infrastructure](./aws.html) tutorial
 - **url-shortener**. AWS Lambda and Dynamo DB, using Pulumi's high-level cloud programming model
 - **serverless-raw**. Serverless example using lower-level AWS APIs, with app code in C#
 - **video-thumbnailer**. Containers and serverless, using Lambda and Fargate
