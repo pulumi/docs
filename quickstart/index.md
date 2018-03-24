@@ -2,6 +2,10 @@
 title: Getting Started
 ---
 
+> **Note:** The 5-step Quickstart is still under development.  In the meantime, please see the
+> [AWS Tutorial](./aws.html), the [Cloud-Agnostic Serverless and Containers Tutorial](./cloud.html), or the detailed
+> [Reference](/reference), which includes details about Pulumi concepts, programming model, and APIs.
+
 Get started with Pulumi by taking this 5 part tour (🚧 coming soon): 
 * Step 1. Your First Pulumi Program
 * Step 2: Infrastructure as Software
