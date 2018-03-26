@@ -13,88 +13,80 @@ NOTE: To update this page with a new binary release, do the following:
 
 The current version is **{{ page.installer_version }}**.
 
-<table class="card-table" width="100%">
-    <tr>
-        <td align="center" valign="center" width="33%">
-            <div class="mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">
-                        <i class="material-icons">get_app</i>
-                        &nbsp;
-                        <a href="/install">macOS x64</a>
-                    </h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    <span class="card-text">
-                        macOS Sierra 10.12 or later is required.
-                        See <a href="#mac">below</a> for detailed installation instructions.
-                    </span>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a
-                            id="macos-download-link"
-                            href="/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz" role="button">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                            {% octicon cloud-download height:24 %} DOWNLOAD
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </td>
-        <td align="center" valign="center" width="33%">
-            <div class="mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">
-                        <i class="material-icons">get_app</i>
-                        &nbsp;
-                        <a href="/install">Linux x64</a>
-                    </h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    <span class="card-text">
-                        Ubuntu Trusty 14.04 LTS builds are available.
-                        See <a href="#linux">below</a> for detailed installation instructions.
-                    </span>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a
-                            id="linux-download-link"
-                            href="/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz" role="button">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                            {% octicon cloud-download height:24 %} DOWNLOAD
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </td>
-        <td align="center" valign="center" width="33%">
-            <div class="mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">
-                        <i class="material-icons">get_app</i>
-                        &nbsp;
-                        <a href="/install">Windows x64</a>
-                    </h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    <span class="card-text">
-                        Windows 8 or 10 are supported.
-                        See <a href="#windows">below</a> for detailed installation instructions.
-                    </span>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a
-                            id="windows-download-link"
-                            href="/releases/pulumi-v{{page.installer_version}}-windows.x64.zip" role="button">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                            {% octicon cloud-download height:24 %} DOWNLOAD
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </td>
-    </tr>
-</table>
+<div class="card-table">
+    <div class="mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">
+                <i class="material-icons">get_app</i>
+                &nbsp;
+                <a href="/install">macOS x64</a>
+            </h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <span class="card-text">
+                macOS Sierra 10.12 or later is required.
+                See <a href="#mac">below</a> for detailed installation instructions.
+            </span>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a
+                    id="macos-download-link"
+                    href="/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz" role="button">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    {% octicon cloud-download height:24 %} DOWNLOAD
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">
+                <i class="material-icons">get_app</i>
+                &nbsp;
+                <a href="/install">Linux x64</a>
+            </h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <span class="card-text">
+                Ubuntu Trusty 14.04 LTS builds are available.
+                See <a href="#linux">below</a> for detailed installation instructions.
+            </span>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a
+                    id="linux-download-link"
+                    href="/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz" role="button">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    {% octicon cloud-download height:24 %} DOWNLOAD
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">
+                <i class="material-icons">get_app</i>
+                &nbsp;
+                <a href="/install">Windows x64</a>
+            </h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <span class="card-text">
+                Windows 8 or 10 are supported.
+                See <a href="#windows">below</a> for detailed installation instructions.
+            </span>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a
+                    id="windows-download-link"
+                    href="/releases/pulumi-v{{page.installer_version}}-windows.x64.zip" role="button">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    {% octicon cloud-download height:24 %} DOWNLOAD
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
 
 For older SDK versions, please see <a href="./changelog.html#all-versions">Previous SDK Versions</a>.
 

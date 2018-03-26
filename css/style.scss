@@ -18,6 +18,7 @@ comment3: prototypical Jekyll/Liquid template file.
 $CENTER-WIDTH: 1200px;
 $TOOLBAR-HEIGHT: 70px;
 $TAB-GROUP-HEIGHT: 60px;
+$MOBILE-WIDTH: 830px;
 
 /**
  * Fonts
@@ -129,8 +130,11 @@ a.btn > svg {
     padding-top: 8px;
 }
 
-.column {
-    float: left; 
+@media (min-width: $MOBILE-WIDTH) {
+    /* Don't float left otherwise the text expands to consume too much horizontal space. */
+    .column {
+        float: left;
+    }
 }
 
 .center-container {
@@ -147,7 +151,6 @@ a.btn > svg {
     color: #212121;
 
     p, li {
-        font-size: 16px;
         -webkit-font-smoothing: antialiased;
     }
     h1 {
@@ -212,6 +215,22 @@ a.btn > svg {
     }
 }
 
+@media (max-width: $MOBILE-WIDTH) {
+    /* Smaller fonts on mobile. */
+    .content-container {
+        p, li {
+            font-size: 14px;
+        }
+    }
+}
+@media (min-width: $MOBILE-WIDTH) {
+    .content-container {
+        p, li {
+            font-size: 16px;
+        }
+    }
+}
+
 .docsToc {
     background: rgb(247,247,247);
     width: 200px;
@@ -227,8 +246,20 @@ a.btn > svg {
 
 .docsContent {
     max-width: 960px;
-    padding-left: 24px;
     margin-right: auto;
+}
+
+@media (max-width: $MOBILE-WIDTH) {
+    /* On mobile, add a bit of padding at the top due to the current weirdness of wrapping the TOC. */
+    .docsContent {
+        padding-top: 24px;
+    }
+}
+@media (min-width: $MOBILE-WIDTH) {
+    /* On non-mobile, add some padding between the TOC and content. */
+    .docsContent {
+        padding-left: 24px;
+    }
 }
 
 .toolbar {
@@ -322,20 +353,33 @@ a.btn > svg {
 }
 
 .section {
-    padding-top: 24px;
-}
-
-.card-table {
-    margin: 24px 0;
-    td {
-        padding: 8px;
-    }
+    padding: 24px 0 8px 0;
 }
 
 .mdl-card {
+    margin: 24px 0;
     background-color: $accent3;
     min-height: 128px;
-    width: 100%;
+}
+
+@media (max-width: $MOBILE-WIDTH) {
+    /* On mobile, cards show up vertically stacked, and expanded to 100% width. */
+    .mdl-card {
+        width: 100%;
+    }
+}
+@media (min-width: $MOBILE-WIDTH) {
+    /* On regular browsers, cards are horizontally aligned, like a table, and are evenly spaced. */
+    .card-table {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-spacing: 10px;
+        margin-bottom: 24px;
+    }
+    .mdl-card {
+        display: table-cell;
+    }
 }
 
 .mdl-card__title {
@@ -361,4 +405,11 @@ a.btn > svg {
     line-height: 20px;
     display: inline-block;
     vertical-align: middle;
+}
+
+@media (max-width: $MOBILE-WIDTH) {
+    /* Hide the WELCOME tab on mobile (there isn't enough space for it, and the Pulumi logo suffices). */
+    .welcome-tab {
+        display: none;
+    }
 }
