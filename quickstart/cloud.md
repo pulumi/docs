@@ -25,6 +25,8 @@ Even in this simple example, it would be tedious and error prone to define this 
 
 {% include aws-resource-warning.md %}
 
+> **Note**: since this example provisions an number of resources, it can take 20-30 minutes to deploy. For a quicker tutorial, see the `url-shortener` or `video-thumnailer` examples in the [Pulumi examples zipfile](/examples/pulumi-v0.11-examples.zip).
+
 ### Prerequisites
 
 Since this example builds a custom container, you should first have [Docker](https://docs.docker.com/engine/installation/) installed. 
@@ -129,7 +131,7 @@ Now, lets deploy this elegant program to AWS.
 1.  Set a value for the password configuration value:
 
     ```
-    $ pulumi config set --secrete voting-app:redisPassword passw0rd
+    $ pulumi config set --secret voting-app:redisPassword passw0rd
     ```
 
 1. The `cloud.Service` component can either create a new ECS cluster or deploy into an existing one. Let's use the "autocluster" functionality:
