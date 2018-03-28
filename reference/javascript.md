@@ -5,6 +5,8 @@ redirect_from: "/concepts/npm-packages.html"
 
 <!-- LINKS -->
 [Configure your NPM client]: ../install/configure-npm.html
+[`pulumi.Config`]: ./packages/pulumi/classes/_config_.config.html
+[Using configuration values in JavaScript]: ./config.html#javascript
 <!-- END LINKS -->
 
 ## Using Pulumi NPM Packages {#npm-packages}
@@ -39,14 +41,18 @@ To add a new package from the `@pulumi` namespace, run `npm install --save @pulu
 
 > NOTE: to use `@pulumi/cloud` on AWS, you must also include the package `@pulumi/cloud-aws`.
 
-# TypeScript
+## Using Pulumi configuration values
+
+To use configuration values in JavaScript, use the [`pulumi.Config`] class. For more information, see [Using configuration values in JavaScript].
+
+## TypeScript
 You can write Pulumi programs in TypeScript to get additional verification and tooling benefits.  To use TypeScript,
 apply the following four steps to an existing project.
 
 ### 1. Update package.json
 
 Update your `package.json` to look like the following (with your own values for `name`, `version`, etc.).  This
-is what tells Node.js and NPM what packages you depend on, where to find your code's entrypoints, and so on:
+is what tells Node.js and NPM what packages you depend on, where to find your code's entry points, and so on:
 
 ```json
 {
