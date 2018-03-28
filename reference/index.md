@@ -2,8 +2,8 @@
 title: Introduction
 ---
 
-> **Note:** The documentation is still in progress so there are a number of TODOs and partially-written articles.
-> We are hard at work finishing these.  If there is any specific content you are looking for please reach
+> **Note:** The documentation is still in progress, so there are a number of TODOs and partially-written articles.
+> We are hard at work finishing these.  If there is any specific content you are looking, for please reach
 > out at [support@pulumi.com](mailto:support@pulumi.com) so we can prioritize adding it.
 
 Pulumi is a programming platform for the cloud.  Pulumi lets you write cloud programs in your favorite language, using your favorite developer tools and IDEs, and handles the task of keeping your application, services, and infrastructure in sync, without needing to resort to separate configuration DSLs or templating languages.  Instead of treating application code and infrastructure as completely separate things, managed by different people with different skills using different tools, Pulumi levels the playing field by focusing on building all aspects of distributed cloud applications using a consistent set of tools and techniques.
@@ -101,6 +101,6 @@ There are, of course, some areas where Pulumi will help you generate runtime cod
 
 Pulumi also stays unopinionated about whether you choose containers, serverless, virtual machines, public clouds, or private clouds.  Pulumi as a platform is as happy if you use 100% containers as it is if you use 100% serverless functions as it is if you use a hybrid.  Indeed, Pulumi’s unique perspective is in embracing all of these things, living together in harmony.
 
-# Next Steps
+## Next Steps
 
-Check out the [Quickstart](../quickstart) or the [conceptual docs](./concepts) for more details on how to get started using Pulumi.
+Check out the [quickstart](../quickstart) or the [conceptual documentation](./concepts.html) for more details on how to get started using Pulumi.

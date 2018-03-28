@@ -1,5 +1,5 @@
 ---
-title: "Config"
+title: "Configuration"
 ---
 
 Often, your Pulumi program will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack. 
@@ -81,7 +81,7 @@ Your Pulumi program can read any configuration value that is set via `pulumi con
 
 Additionally, all shell environment variables are passed to the running program and can be accessed via standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python.
 
-#### JavaScript
+#### JavaScript {#javascript}
 
 In JavaScript, use `pulumi.Config` in the `@pulumi` namespace, passing in the configuration namespace. This is typically  the name defined in `Pulumi.yaml`.
 
@@ -105,6 +105,6 @@ TODO add Python example
 
 <!-- MARKDOWN LINKS -->
 
-[`Pulumi.<stack-name>.yaml`]: ./project#stack-settings-file
-[project name]: ./project#project-name
+[`Pulumi.<stack-name>.yaml`]: ./project.html#stack-settings-file
+[project name]: ./project.html#project-name
 [AWS package]: ./aws.html

@@ -231,6 +231,7 @@ Add the a definition for `userData` and use it in the `ec2.Instance` constructor
 ```javascript
 let userData = 
 `#!/bin/bash
+echo "Hello, World!" > index.html
 nohup python -m SimpleHTTPServer 80 &`;
 
 let server = new aws.ec2.Instance("web-server-www", {
