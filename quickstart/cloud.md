@@ -2,6 +2,10 @@
 title: Programming containers
 ---
 
+<!-- LINKS: -->
+[Pulumi examples zipfile]: /examples/pulumi-examples.zip
+<!-- END LINKS -->
+
 The `@pulumi/cloud` package lets you program infrastructure and application logic, side by side in harmony, using
 simple, high-level cloud building blocks.  This package has three key defining attributes:
 
@@ -25,7 +29,7 @@ Even in this simple example, it would be tedious and error prone to define this 
 
 {% include aws-resource-warning.md %}
 
-> **Note**: since this example provisions an number of resources, it can take 20-30 minutes to deploy. For a quicker tutorial, see the `url-shortener` or `video-thumnailer` examples in the [Pulumi examples zipfile](/examples/pulumi-v0.11-examples.zip).
+> **Note**: since this example provisions an number of resources, it can take 20-30 minutes to deploy. For a quicker tutorial, see the `url-shortener` or `video-thumnailer` examples in the [Pulumi examples zipfile].
 
 ### Prerequisites
 
@@ -33,7 +37,7 @@ Since this example builds a custom container, you should first have [Docker](htt
 
 ### Set up the project
 
-1.  In the [Pulumi examples zipfile](/examples/pulumi-v0.11-examples.zip), open the `voting-app` directory in your favorite editor. You'll see a Python Flask app in the `frontend` folder and a Pulumi program in `index.ts`. You may ignore the details of the Python app. 
+1.  In the [Pulumi examples zipfile], open the `voting-app` directory in your favorite editor. You'll see a Python Flask app in the `frontend` folder and a Pulumi program in `index.ts`. You may ignore the details of the Python app. 
 
 1.  Open the file `index.ts`, which has the contents below.
 
