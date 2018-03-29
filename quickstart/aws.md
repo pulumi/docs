@@ -6,6 +6,7 @@ title: Programming AWS
 [EC2 Instance]: /packages/pulumi-aws/classes/_ec2_instance_.instance.html
 [Security Group]: /packages/pulumi-aws/classes/_ec2_securitygroup_.securitygroup.html
 [`@pulumi/aws`]: /packages/pulumi-aws/index.html
+[Pulumi examples zipfile]: /examples/pulumi-examples.zip
 <!-- End common links -->
 
 The `@pulumi/aws` package allows you use Pulumi to create and manage AWS resources using JavaScript or TypeScript. You can use regular programming language constructs, such as objects, functions, and control flow. Resource definitions are declarative: they describe the desired end state of your infrastructure. Pulumi will automatically make resource changes based on the current state of what has already been provisioned.
@@ -345,9 +346,7 @@ For a production service, you would typically deploy a virtual machine in each a
 
 Since the list of availability zones is dynamic data, it is very difficult to create this infrastructure specification in CloudFormation or similar tools. Since Pulumi allows you to define infrastructure requirements directly in code, this scenario is very easy to define in Pulumi.
 
-TODO: link to examples.zip
-
-For an example of this, see the example `webserver-zones` in [examples.zip]()
+For an example of this, see the example `webserver-zones` in the [Pulumi examples zipfile].
 
 ## Clean up
 

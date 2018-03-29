@@ -24,7 +24,7 @@ For an introductory walkthrough of Pulumi, see the following tutorials:
 
 ## Code Examples
 
-For code samples, see the following folders in the [Pulumi examples zipfile](/examples/pulumi-v0.11-examples.zip):
+For code samples, see the following folders in the [Pulumi examples zipfile](/examples/pulumi-examples.zip):
 - **webserver**. Create EC2 VMs using JavaScript. Companion to the [AWS infrastructure tutorial](./aws.html). 
 - **url-shortener**. A complete URL shortener SPA that uses Pulumi's high-level cloud programming model.
 - **serverless-raw**. Deploy a complete serverless C# application using lower-level AWS resources.

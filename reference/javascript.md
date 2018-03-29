@@ -9,45 +9,73 @@ redirect_from: "/concepts/npm-packages.html"
 [Using configuration values in JavaScript]: ./config.html#javascript
 <!-- END LINKS -->
 
+> **Note:** Pulumi currently only supports Node.js v6.10.2.  This is a temporary limitation, but you will want to [ensure you've configured it properly before getting too far](/install).
+
+## Getting Started
+
+The fastest way to get started with Pulumi JavaScript is by using a template.  From the directory in which you'd like to create a new project:
+
+```
+$ pulumi new javascript
+Your project was created successfully.
+```
+
+This will leave behind a `Pulumi.yaml` file, containing some minimal metadata about your project (including a name and description which you may wish to change), a `package.json` file, where you will specify your dependencies (see #npm-packages below), and an `index.js` file, containing your program.
+
 ## Using Pulumi NPM Packages {#npm-packages}
 
-To use `@pulumi` packages, follow the instructions in [Configure your NPM client].
+The first thing you'll want to do is install the Pulumi SDK package.  This is listed in the template's `package.json` file.  Normally you'd just run `npm install` or `yarn install` at this time, however to use any `@pulumi` packages, you'll first need to follow the instructions in [Configure your NPM client].
 
-The packages `@pulumi/pulumi`, `@pulumi/aws`, `@pulumi/cloud` and `@pulumi/cloud-aws` are regular NPM packages and should be specified in the `dependencies` section of `package.json`. As a best practice, Pulumi programs should only list the packages they strictly depend on.
+> **Note:** Because Pulumi is still in Private Beta, packages aren't publically available on NPM yet.  This is why the manual NPM client configuration is required.  As soon as Pulumi is public, all packages will be too.
+
+All Pulumi packages are regular NPM packages, and live in the `@pulumi` organization scope.  The four most commonly used packages are `@pulumi/pulumi`, `@pulumi/aws`, `@pulumi/cloud` and `@pulumi/cloud-aws`, and they are specified as usual in the `dependencies` section of `package.json`.
 
 For example, if a program used **all** the `@pulumi/*` packages, it would have the following `package.json`. 
 
 ```json
 "dependencies": {
-  "@pulumi/pulumi": "^0.11.0",
-  "@pulumi/aws": "^0.11.0",
-  "@pulumi/cloud": "^0.11.0",
-  "@pulumi/cloud-aws": "^0.11.0"
+    "@pulumi/pulumi": "^0.11.0",
+    "@pulumi/aws": "^0.11.0",
+    "@pulumi/cloud": "^0.11.0",
+    "@pulumi/cloud-aws": "^0.11.0"
 }
 ```
 
-To install NPM dependencies, run `npm install` to restore `@pulumi` packages.
+Most of the time, you will not need to use all of the packages.  To install the resulting dependencies, run `npm install` as usual, and they will be downloaded and placed into `node_modules`.  If you'd like to update an existing project's dependencies and check for newer versions, simply run `npm install --update`.
 
-> NOTE: if you see an error such as `npm ERR! 403 Forbidden: @pulumi/pulumi@^0.11.0`, that means that your NPM client is not configured with the correct token. Follow the steps in instructions in [Configure your NPM client].
+> **Note:** If you see an error such as `npm ERR! 403 Forbidden: @pulumi/pulumi@^0.11.0`, that means that your NPM client is not configured with the correct token. Follow the steps in instructions in [Configure your NPM client].
 
 ### Adding a new dependency {#packages}
 
-To add a new package from the `@pulumi` namespace, run `npm install --save @pulumi/package-name`. The following packages are available. 
+To add a new package from the `@pulumi` namespace, run `npm install --save @pulumi/package-name`.  The following packages are available:
 
-- `@pulumi/aws`
-- `@pulumi/cloud`
-- `@pulumi/cloud-aws`
-- `@pulumi/pulumi`
+- `@pulumi/pulumi`: the core Pulumi JavaScript SDK package
+- `@pulumi/aws`: the AWS resource provider package, for programming AWS directly
+- `@pulumi/azure`: the Azure resource provider package, for programming Azure directly
+- `@pulumi/kubernetes`: the Kubernetes resource provider package, for programming Kubernetes directly
+- `@pulumi/cloud`: Pulumi's high-level, cross-cloud programming framework
+- `@pulumi/cloud-aws`: the implementation package for Pulumi's cloud framework, for use when targeting AWS
 
-> NOTE: to use `@pulumi/cloud` on AWS, you must also include the package `@pulumi/cloud-aws`.
+> **Note:** To use `@pulumi/cloud` on AWS, you must also include the package `@pulumi/cloud-aws`.
+
+More packages are on their way, so please keep an eye out.  Please also let us know if there are specific packages you'd like to see sooner!
 
 ## Using Pulumi configuration values
 
 To use configuration values in JavaScript, use the [`pulumi.Config`] class. For more information, see [Using configuration values in JavaScript].
 
 ## TypeScript
-You can write Pulumi programs in TypeScript to get additional verification and tooling benefits.  To use TypeScript,
-apply the following four steps to an existing project.
+
+You can elect to write Pulumi programs in TypeScript to get additional verification and tooling benefits.  To use TypeScript, some additional steps are required, because you will be compiling code using the TypeScript compiler.
+
+The fastest way to get started with Pulumi in TypeScript, is to use a template:
+
+```
+$ pulumi new typescript
+Your project was created successfully.
+```
+
+This will auto-generate all the basic artifacts required to use TypeScript.  But you may also perform the steps manually if you prefer.
 
 ### 1. Update package.json
 
@@ -67,9 +95,8 @@ is what tells Node.js and NPM what packages you depend on, where to find your co
         "typescript": "^2.5.3",
         "@types/node": "^8.0.26"
     },
-    "peerDependencies": {
-        "@pulumi/aws": "*",
-        "pulumi": "*"
+    "dependencies": {
+        ... as before ...
     }
 }
 ```
@@ -78,7 +105,7 @@ You can customize this however you'd like, such as adding test scripts, npm pack
 
 ### 2. Install dependencies
 
-Run `npm install` or `yarn install` to install the dependencies to your `node_modules` directory.
+Run `npm install` or `yarn install` to install the new development-time dependencies to your `node_modules` directory.
 
 ### 3. Create tsconfig.json
 
