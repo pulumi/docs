@@ -27,9 +27,9 @@ If an update is interrupted partway through, it is possible that the service's u
 
 To recover from this situation, you will need to do three things:
 
-1. Export your stack's current state checkpoint by running the `pulumi export` command.  It is JSON and you probably want to redirect it to a file for easy viewing and editing: `pulumi export > stack.json`.  We recommend making a backup of this file for safe-keeping, since what follows requires a bit of manual and error prone editing.
+1. Export your stack's current state checkpoint by running the `pulumi stack export` command.  It is JSON and you probably want to redirect it to a file for easy viewing and editing: `pulumi stack export > stack.json`.  We recommend making a backup of this file for safe-keeping, since what follows requires a bit of manual and error prone editing.
 2. Manually verify that the state represents the current state in your cloud and make any necessary edits to the state file (if any -- it is possible none will be needed).  *Be very careful making edits; any incorrect information may worsen the situation, and any deletions are not easy to recover in the current system.*
-3. Import your stack's updated state checkpoint, with the newly patched resource information, using the `pulumi import` command.  For example, if stored in the `stack.json` file, just run `pulumi import < stack.json`.  This will upload your file and automatically clear the unknown status on your stack so that it is usable once again.
+3. Import your stack's updated state checkpoint, with the newly patched resource information, using the `pulumi stack import` command.  For example, if stored in the `stack.json` file, just run `pulumi stack import < stack.json`.  This will upload your file and automatically clear the unknown status on your stack so that it is usable once again.
 
 This issue is being tracked primarily by [Improved recovery for invalid stacks](https://github.com/pulumi/pulumi/issues/1094), although [CLI command to refresh a resource's state](https://github.com/pulumi/pulumi/issues/1081) will also be a critical element to improving the experience here.
 
@@ -73,4 +73,4 @@ You can update the ETag using the stack `import` and `export` operations:
 
 ## Cannot Change Pulumi.yaml Project Name {#pulumi-pulumi-541}
 
-The project name in `Pulumi.yaml` is assumed to be part of a stable identifier in identifying a stack (either a local or managed stack). Currently, renaming the project will result in all stack resources being orphaned. To work around this, run `pulumi destroy` before renaming the project. (If you have already changed the project name, simply change back to the old name and run `pulumi destroy`.) See [Changing `name` in Pulumi.yaml leads to assert #541](https://github.com/pulumi/pulumi/issues/541).
+The project name in `Pulumi.yaml` is assumed to be part of a stable identifier in identifying a stack (either a local or managed stack).  Currently, renaming the project will result in all stack resources being orphaned. To work around this, run `pulumi destroy` before renaming the project.  (If you have already changed the project name, simply change back to the old name and run `pulumi destroy`.)  See [Allow changing project names](https://github.com/pulumi/pulumi/issues/950).
