@@ -16,6 +16,6 @@ do
     echo -e "\033[0;95m--- Updating repo pulumi/${repo} ---\033[0m" 
     pushd .
     cd "../${repo}"
-    git checkout master; git pull origin master
+    git checkout master; git pull origin master; git fetch --tags
     popd
 done
