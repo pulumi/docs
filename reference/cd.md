@@ -3,7 +3,7 @@ title: Continuous Deployment
 ---
 
 Pulumi is great for continuous deployment and supports a range of workflows.  In fact, our team uses Pulumi
-itself to deploy and manage https://pulumi.com/ and follows many of the practices described below.
+itself to deploy and manage [https://pulumi.com/](https://pulumi.com) and follows many of the practices described below.
 
 ## Continuous Integration
 
@@ -18,7 +18,8 @@ For help with specific CI systems, please see these links:
 
 * [Travis](./cd-travis.html)
 
-> **Note:** More content is on it's way here.  Please let us know what specific topics you'd like to know more about.
+> **Note:** More content is on it's way here.  Please let us know what specific systems and topics you'd like to know
+> more about.
 
 ## Branching Strategy for Deployments
 

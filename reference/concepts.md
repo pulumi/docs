@@ -23,4 +23,3 @@ Each deployment runs the program to determine what the desired state is, and the
 Some of those resources may have runtime code associated with them, which can run continuously throughout the lifetime of the resource (in the case of containers or VMs), or on-demand (in the case of serverless functions).
 
 ![Object Lifetimes](../images/reference/object-lifetimes-diagram.png){:width="500px"}
-
