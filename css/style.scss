@@ -18,7 +18,7 @@ comment3: prototypical Jekyll/Liquid template file.
 $CENTER-WIDTH: 1200px;
 $TOOLBAR-HEIGHT: 70px;
 $TAB-GROUP-HEIGHT: 60px;
-$MOBILE-WIDTH: 830px;
+$MOBILE-WIDTH: 768px;
 
 /**
  * Fonts
@@ -245,7 +245,6 @@ a.btn > svg {
 }
 
 .docsContent {
-    max-width: 960px;
     margin-right: auto;
 }
 
@@ -253,12 +252,14 @@ a.btn > svg {
     /* On mobile, add a bit of padding at the top due to the current weirdness of wrapping the TOC. */
     .docsContent {
         padding-top: 24px;
+        max-width: calc(100% - 32px);
     }
 }
 @media (min-width: $MOBILE-WIDTH) {
     /* On non-mobile, add some padding between the TOC and content. */
     .docsContent {
         padding-left: 24px;
+        max-width: calc(100% - 290px);
     }
 }
 
