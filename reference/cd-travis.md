@@ -1,0 +1,65 @@
+---
+title: Travis
+---
+
+If you are using Travis as your CI system, follow the below instructions to get up and running with Pulumi for CD.
+
+## Example Scripts
+
+We will be using the example scripts at https://github.com/pulumi/examples/tree/master/misc/travis.  There are two:
+
+* [`install-pulumi.sh`](https://github.com/pulumi/examples/blob/master/misc/travis/install-pulumi.sh) shows how to
+  install the Pulumi SDK from a CI environment.  Eventually this will be simpler, but while we are in Private Beta,
+  there are some extra steps due to the need to authenticate in order to download.
+
+* [`update-stack.sh`](https://github.com/pulumi/examples/blob/master/misc/travis/update-stack.sh) demonstrates the
+  recommended way to build and invoke the Pulumi CLI to perform deployments based on your branching structure.
+
+Please make sure to review `update-stack.sh` very carefully, as it contains policy around which branches map to
+which Pulumi stacks.  You will want to customize this.
+
+## Configuring Travis
+
+First, add your Pulumi access token to your Travis settings as the `PULUMI_ACCESS_TOKEN` environment variable, either
+via the `travis.yml` file, Travis CLI, or the Travis Web UI, however you typically do it ([see here for more
+information](https://docs.travis-ci.com/user/environment-variables/)).  This ensures that you can login to the service.
+
+> **Note:** You'll also need to configure your cloud provider credentials in the same way you do on your development
+> machines.  This most often means provisioning a key specifically for CI, and then setting the environment variables so
+> that the Travis machine can perform the necessary operations.  If you are using AWS, for example, you'll want to set
+> `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.  Please consult your cloud provider's documentation.
+
+Next, add three things to your `travis.yml` file.
+
+1. In the `before_install` section, add a line to install the Pulumi version you're currently using, put it on the
+`$PATH`, initialize the workspace, and then login to the service:
+
+    ```yaml
+    before_install:
+        # Install the Pulumi SDK, add it to the $PATH, and initialize the workspace.
+        - ./scripts/install-pulumi.sh v0.11.0
+        - export PATH=$PATH:/usr/local/pulumi/bin
+        - pulumi init
+    ```
+
+2. While we are in Private Beta, you will also need to
+   [configure your NPM or Yarn client to use our private NPM server](../install/configure-npm.html).  To do so, also
+   add this line to your `before_install` section:
+
+   ```yaml
+   before_install:
+       # Use Pulumi's NPM server for any @pulumi/* packages (while still in Private Beta).
+       - echo -e "@pulumi:registry=https://npmjs.pulumi.com/\n//npmjs.pulumi.com/:_authToken=\${PULUMI_ACCESS_TOKEN}" > ~/.npmrc
+   ```
+
+3. Finally, add the line to perform the Pulumi update to the `script` section:
+
+    ```yaml
+    script:
+        # Pre-deployment verification goes here ...
+        # After any tests have been performed, do the Pulumi deployment:
+        - ./scripts/update-stack.sh
+        # Post-deployment verification goes here ...
+    ```
+
+After doing this, any pushes to the branches you have configured will perform CD using Pulumi.
