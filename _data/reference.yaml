@@ -30,4 +30,9 @@ toc:
   section:
   - reference/providers.md
 
+- title: Continuous Deployment
+  path: /reference/cd
+  section:
+  - cd-travis.md
+
 - reference/known-issues.md
