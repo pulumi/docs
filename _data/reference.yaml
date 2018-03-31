@@ -33,6 +33,6 @@ toc:
 - title: Continuous Deployment
   path: /reference/cd
   section:
-  - cd-travis.md
+  - reference/cd-travis.md
 
 - reference/known-issues.md

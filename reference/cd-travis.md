@@ -6,7 +6,8 @@ If you are using Travis as your CI system, follow the below instructions to get 
 
 ## Example Scripts
 
-We will be using the example scripts at https://github.com/pulumi/examples/tree/master/misc/travis.  There are two:
+We will be using the scripts from [our Travis examples on GitHub](
+https://github.com/pulumi/examples/tree/master/misc/travis).  There are two:
 
 * [`install-pulumi.sh`](https://github.com/pulumi/examples/blob/master/misc/travis/install-pulumi.sh) shows how to
   install the Pulumi SDK from a CI environment.  Eventually this will be simpler, but while we are in Private Beta,
@@ -49,7 +50,8 @@ Next, add three things to your `travis.yml` file.
    ```yaml
    before_install:
        # Use Pulumi's NPM server for any @pulumi/* packages (while still in Private Beta).
-       - echo -e "@pulumi:registry=https://npmjs.pulumi.com/\n//npmjs.pulumi.com/:_authToken=\${PULUMI_ACCESS_TOKEN}" > ~/.npmrc
+       - echo -e "@pulumi:registry=https://npmjs.pulumi.com/" > ~/.npmrc
+       - echo -e "//npmjs.pulumi.com/:_authToken=\${PULUMI_ACCESS_TOKEN}" >> ~/.npmrc
    ```
 
 3. Finally, add the line to perform the Pulumi update to the `script` section:
