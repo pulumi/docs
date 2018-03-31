@@ -16,42 +16,55 @@ title: "Change log"
 
 ## Available versions {#all-versions}
 
-<table class="table table-sm table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Version</th>
-      <th scope="col">Date</th>
-      <th scope="col">Downloads</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"><a href="#v11">0.11.0</a></th>
-      <td>2018/03/20</td>
-      <td>{% include sdk-links.html version='0.11.0' %}</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#v10">0.10.0</a></th>
-      <td>2018/02/27</td>
-      <td>{% include sdk-links.html version='0.10.0' %}</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#v913">0.9.13</a></th>
-      <td>2018/02/07</td>
-      <td>{% include sdk-links.html version='0.9.13' %}</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#v911">0.9.11</a></th>
-      <td>2018/01/22</td>
-      <td>{% include sdk-links.html version='0.9.11' %}</td>
-    </tr>
-  </tbody>
+<table class="version-table">
+    <thead>
+        <tr>
+            <th scope="col" width="25%">Version</th>
+            <th scope="col" width="25%">Date</th>
+            <th scope="col" width="50%">Downloads</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row"><a href="#v111">0.11.1</a></th>
+            <td>2018/03/30</td>
+            <td>{% include sdk-links.html version='0.11.1' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v11">0.11.0</a></th>
+            <td>2018/03/20</td>
+            <td>{% include sdk-links.html version='0.11.0' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v10">0.10.0</a></th>
+            <td>2018/02/27</td>
+            <td>{% include sdk-links.html version='0.10.0' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v913">0.9.13</a></th>
+            <td>2018/02/07</td>
+            <td>{% include sdk-links.html version='0.9.13' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v911">0.9.11</a></th>
+            <td>2018/01/22</td>
+            <td>{% include sdk-links.html version='0.9.11' %}</td>
+        </tr>
+    </tbody>
 </table>
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
-## SDK version 0.11.0 {#v11}
-Released 2018/03/20 
+## v0.11.1 {#v111}
+
+Released on March 30, 2018
+
+> **Note:** Release notes are currently being written.  The primary difference in this version is that we have begun to
+> transition to a version of the CLI in which you log into Pulumi.com to manage stack state and concurrent access.
+
+## v0.11.0 {#v11}
+
+Released on March 20, 2018
 
 ### Added
 
@@ -72,8 +85,8 @@ Released 2018/03/20
 -  (Breaking) Require provider config and improve error message when provider not installed ([pulumi/pulumi-cloud#377](https://github.com/pulumi/pulumi-cloud/pull/377)). When using the JavaScript package `@pulumi/cloud`, you must first set the configuration value for `cloud:provider`. For instance, to target AWS, use `pulumi config set cloud:provider aws`.  Additionally, if the package `@pulumi/cloud-aws` is not included in the `dependencies` section of `package.json`, you'll see the following error message. For more information, see [Pulumi npm packages].
 
     ```
-    Attempted to load the 'aws' implementation of '@pulumi/cloud', 
-    but no '@pulumi/cloud-aws' module is installed. Install it now 
+    Attempted to load the 'aws' implementation of '@pulumi/cloud',
+    but no '@pulumi/cloud-aws' module is installed. Install it now
     or select another provider implementation with the "cloud:config:provider" setting.
     ```
 
@@ -98,10 +111,11 @@ Released 2018/03/20
 
 -  Improve error messages output by the CLI ([pulumi/pulumi#1011](https://github.com/pulumi/pulumi/pull/1011)). RPC endpoint errors have been improved. Errors such as "catastrophic error" and "fatal error" are no longer duplicated in the output.
 
--  Produce better error messages when the main module is not found ([pulumi/pulumi#976](https://github.com/pulumi/pulumi/pull/976)). If you're running TypeScript but have not run `tsc` or your main JavaScript file does not exist, the CLI will print a helpful `info:` message that points to the possible source of the error. 
+-  Produce better error messages when the main module is not found ([pulumi/pulumi#976](https://github.com/pulumi/pulumi/pull/976)). If you're running TypeScript but have not run `tsc` or your main JavaScript file does not exist, the CLI will print a helpful `info:` message that points to the possible source of the error.
 
-## SDK version 0.10.0 {#v10}
-Released on 2018/02/27 
+## v0.10.0 {#v10}
+
+Released on February 27, 2018
 
 ### Added
 
@@ -122,11 +136,11 @@ Released on 2018/02/27
 
 ### Changed {#v10-changed}
 
-#### Pulumi CLI and SDK 
+#### Pulumi CLI and SDK
 
 -  (Breaking) Use `npm install` instead of `npm link` to reference the Pulumi SDK `@pulumi/aws`, `@pulumi/cloud`, `@pulumi/cloud-aws`. For more information, see [Pulumi npm packages].
 
--  (Breaking) Explicitly track resource dependencies via `Input` and `Output` types. This enables future improvements to the Pulumi development experience, such as parallel resource creation and enhanced dependency visualization. When a resource is created, all of its output properties are instances of a new type [`pulumi.Output<T>`][`Output`]. `Output<T>` contains both the value of the resource property and metadata that tracks resource dependencies. Inputs to a resource now accept `Output<T>` in addition to `T` and `Promise<T>`.  
+-  (Breaking) Explicitly track resource dependencies via `Input` and `Output` types. This enables future improvements to the Pulumi development experience, such as parallel resource creation and enhanced dependency visualization. When a resource is created, all of its output properties are instances of a new type [`pulumi.Output<T>`][`Output`]. `Output<T>` contains both the value of the resource property and metadata that tracks resource dependencies. Inputs to a resource now accept `Output<T>` in addition to `T` and `Promise<T>`.
 
 #### Pulumi Console
 
@@ -142,7 +156,7 @@ Released on 2018/02/27
 
 #### Pulumi CLI and SDK
 
--  Make change detection more accurate for complex values ([pulumi-terraform#99](https://github.com/pulumi/pulumi-terraform/issues/99)). 
+-  Make change detection more accurate for complex values ([pulumi-terraform#99](https://github.com/pulumi/pulumi-terraform/issues/99)).
 -  In `@pulumi/cloud`, ensure `Deployment` is recreated on all changes to API body. ([pulumi-cloud#360](https://github.com/pulumi/pulumi-cloud/issues/360))
 -  In `@pulumi/cloud`, `Task.run` does not throw an error when running the task fails ([pulumi-cloud#368](https://github.com/pulumi/pulumi-cloud/issues/368))
 -  In `@pulumi/cloud`, when creating `Cluster`, sporadic failure to create requested number of EC2 instances ([pulumi-cloud#195](https://github.com/pulumi/pulumi-cloud/issues/195))
@@ -151,8 +165,9 @@ Released on 2018/02/27
 -  Error when using `float64` attributes using SDK v0.9.9 ([pulumi-terraform#95](https://github.com/pulumi/pulumi-terraform/issues/95))
 -  `pulumi logs` entries only return first line ([pulumi#857](https://github.com/pulumi/pulumi/issues/857))
 
-## SDK version 0.9.13 {#v913}
-Released on 2018/02/07 
+## v0.9.13 {#v913}
+
+Released on February 7, 2018
 
 ### Added
 
@@ -160,8 +175,9 @@ Released on 2018/02/07
 
 - Added additional configuration for docker builds for a container. The `build` property of a container may now either be a string (which is treated as a path to the folder to do a `docker build` in) or an object with properties `context`, `dockerfile` and `args`, which are passed to `docker build`. If unset, `context` defaults to the current working directory, `dockerfile` defaults to `Dockerfile` and `args` default to no arguments.
 
-## SDK version 0.9.11 {#v911}
-Released on 2018/01/22
+## v0.9.11 {#v911}
+
+Released on January 22, 2018
 
 ### Added
 
@@ -169,9 +185,9 @@ Released on 2018/01/22
    - `export` writes the current stack's latest deployment to stdout in JSON format.
    - `import` reads a new JSON deployment from stdin and applies it to the current stack.
 
-- A basic progress spinner is displayed during deployment operations. 
+- A basic progress spinner is displayed during deployment operations.
    - When the Pulumi CLI is run in interactive mode, it displays an animated ASCII spinner
-   - When run in non-interactive mode, CLI prints a message that it is still working. For CI systems that kill jobs when there is no CLI output (such as TravisCI), this eliminates the need to create shell scripts that periodically print output. 
+   - When run in non-interactive mode, CLI prints a message that it is still working. For CI systems that kill jobs when there is no CLI output (such as TravisCI), this eliminates the need to create shell scripts that periodically print output.
 
 - [@pulumi/cloud] Support for ACM certificates on HttpEndpoint. The AWS implementation of `HttpEndpoint#attachCustomDomain` accepts an ACM cert in place of raw certificate material, making it much easier to use `HttpEndpoint` with custom domains.
 
@@ -203,14 +219,16 @@ Released on 2018/01/22
 
 - When a stack is removed, `pulumi` now deletes any configuration it had saved in either the `Pulumi.yaml` file or the workspace.
 
-## SDK version 0.9.8 
+## v0.9.8
 
-### Added 
+Released on December 28, 2017
+
+### Added
 
 #### Pulumi Console and managed stacks
 
 New in this release is the [Pulumi Console](https://beta.pulumi.com) and stacks that are managed by Pulumi. This is the recommended way to safely deploy cloud applications.
-- `pulumi stack init` now creates a Pulumi managed stack. For a local stack, use `--local`. To learn more, see the tutorial [Create and work with managed stacks]. 
+- `pulumi stack init` now creates a Pulumi managed stack. For a local stack, use `--local`. To learn more, see the tutorial [Create and work with managed stacks].
 - All Pulumi CLI commands now work with managed stacks. Login to Pulumi via `pulumi login`.
 - The [Pulumi Console](https://beta.pulumi.com) provides a management experience for stacks. You can view the currently deployed resources (along with the AWS ARNs) and see logs from the last update operation.
 For more information, see the documentation articles [Using the Pulumi Console] and [Use Travis to continuously deploy Pulumi programs].
@@ -218,7 +236,7 @@ For more information, see the documentation articles [Using the Pulumi Console] 
 #### Components and output properties
 
 -  Support for component resources([pulumi #340](https://github.com/pulumi/pulumi/issues/340)), enabling grouping of resources into logical components. This provides an improved view of resources during `preview` and `update` operations in the CLI ([pulumi #417](https://github.com/pulumi/pulumi/issues/417)).
-  
+
   ```
   + pulumi:pulumi:Stack: (create)
      [urn=urn:pulumi:donna-testing::url-shortener::pulumi:pulumi:Stack::url-shortener-donna-testing]
@@ -231,7 +249,7 @@ For more information, see the documentation articles [Using the Pulumi Console] 
 
 #### Resource naming
 
-Resource naming is now more consistent, but there is a new file format for checkpoint files for both local and managed stacks. 
+Resource naming is now more consistent, but there is a new file format for checkpoint files for both local and managed stacks.
 
 > If you created stacks in the 0.8 release, you should destroy them with the 0.8 CLI, then recreate with the 0.9.x CLI.
 

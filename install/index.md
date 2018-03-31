@@ -11,7 +11,7 @@ NOTE: To update this page with a new binary release, do the following:
 
 ## Pulumi SDK 
 
-The current version is **{{ page.installer_version }}**.
+The current SDK version is <a href="./changelog.html#{{ page.installer_version }}">{{ page.installer_version }}</a>.
 
 <div class="card-table">
     <div class="mdl-card mdl-shadow--2dp">

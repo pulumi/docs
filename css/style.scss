@@ -413,3 +413,29 @@ a.btn > svg {
         display: none;
     }
 }
+
+.version-table {
+    margin-bottom: 24px;
+
+    th {
+        font-weight: 600;
+    }
+
+    thead > tr > th {
+        background-color: #ccc;
+    }
+
+    th, td {
+        padding: 4px 16px;
+        text-align: center;
+        font-size: 16px;
+        border: 1px solid #ccc;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f1f1f1;
+    }
+    tr:nth-child(odd) {
+        background-color: #fff;
+    }
+}
