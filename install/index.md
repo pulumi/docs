@@ -90,7 +90,7 @@ The current version is **{{ page.installer_version }}**.
 
 For older SDK versions, please see <a href="./changelog.html#all-versions">Previous SDK Versions</a>.
 
-## Installation instructions
+## Installation instructions {#instructions}
 
 - [macOS](#mac)
 - [Windows](#windows)
@@ -121,13 +121,19 @@ macOS Sierra (10.12) or later is required.
 
 Windows 8 and 10 are supported.
 
+<!-- 
+Tracked by https://github.com/pulumi/home/issues/156. Not linked in the text, since "home" will not be open-sourced.
+-->
+
+> **Note:** Due to a known issue, the SDK must be installed in a path that has no spaces. For instance, the path `C:\Program Files` will not work correctly. 
+
 1.  Install [Node.js 6.10.2 (LTS)](https://nodejs.org/dist/v6.10.2/node-v6.10.2-x64.msi). This exact version is required, to match the version supported by AWS Lambda and other public cloud implementations. You can use [Node Version Manager (nvm)](https://github.com/creationix/nvm) to manage multiple Node versions.
 
 2.  Download [Pulumi {{page.installer_version}} for Windows x64](/releases/pulumi-v{{page.installer_version}}-windows.x64.zip).
 
-3.  Extract the zipfile to `%SystemRoot%\Program Files` or another directory and run `install.cmd` from either the command prompt or PowerShell.
+3.  Extract the zipfile to `%SystemRoot%\pulumi` and run `install.cmd` from either the command prompt or PowerShell.
 
-4. Add `%SystemRoot%\Program Files\Pulumi` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
+4. Add `%SystemRoot%\pulumi\Pulumi` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 
 ### Linux install {#linux}
 
