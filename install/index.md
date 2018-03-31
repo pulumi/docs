@@ -131,9 +131,9 @@ Tracked by https://github.com/pulumi/home/issues/156. Not linked in the text, si
 
 2.  Download [Pulumi {{page.installer_version}} for Windows x64](/releases/pulumi-v{{page.installer_version}}-windows.x64.zip).
 
-3.  Extract the zipfile to `%SystemRoot%\pulumi` and run `install.cmd` from either the command prompt or PowerShell.
+3.  Extract the zipfile to `C:\pulumi` and run `install.cmd` from either the command prompt or PowerShell.
 
-4. Add `%SystemRoot%\pulumi\Pulumi` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
+4. Add `C:\pulumi\Pulumi` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 
 ### Linux install {#linux}
 
