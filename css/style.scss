@@ -438,4 +438,7 @@ a.btn > svg {
     tr:nth-child(odd) {
         background-color: #fff;
     }
+    tr:first-child {
+        background-color: #ffff99;
+    }
 }
