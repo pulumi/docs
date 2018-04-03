@@ -5,10 +5,10 @@ title: "Kubernetes"
 Pulumi supports managing Kubernetes resources using your language of choice.  This lets you express the same set of
 concepts you'd normally write in your declarative YAML file, except that you'll also get the ability to
 
-* Abstract away common patterns by using familiar programming language constructs;
-* Share and reuse common patterns, either within your own app, inside your organization, or with the community;
-* Manage resources and state using diffable state, and with full auditability pertaining to updates;
-* Mix cloud provider abstractions alongside your Kubernetes abstractions, and manage them consistently.
+* **Abstract** away common patterns by using familiar programming language constructs;
+* **Share and reuse** common patterns, either within your own app, inside your organization, or with the community;
+* **Diff and deploy resource state** with full auditability around who updated what, when, and why;
+* **Manage cloud provider resources** alongside your Kubernetes abstractions, with a single consistent toolchain.
 
 Everything you already know about Pulumi applies to managing Kubernetes resources, and the below guide will help get
 you up and running with the Kubernetes provider.
@@ -119,7 +119,7 @@ The following HTTP basic authentication options are available:
 * `kubernetes:username`: The username used for HTTP basic authentication when communicating with the Kubernetes
   master node.  If unspecified, the `KUBE_USER` environment variable is consulted.
 
-* `kubernetes:password`: The passowrd used for HTTP basic authentication when communicating with the Kubernetes
+* `kubernetes:password`: The password used for HTTP basic authentication when communicating with the Kubernetes
   master node.  If unspecified, the `KUBE_PASSWORD` environment variable is consulted.
 
 The following TLS certificate authentication options available:
