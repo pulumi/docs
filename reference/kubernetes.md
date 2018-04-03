@@ -6,7 +6,7 @@ Pulumi supports managing Kubernetes resources using your language of choice.  Th
 concepts you'd normally write in your declarative YAML file, except that you'll also get the ability to
 
 * **Abstract** away common patterns by using familiar programming language constructs;
-* **Share and reuse** common patterns, either within your own app, inside your organization, or with the community;
+* **Share and reuse** packages, either within your own app, inside your organization, or with the community;
 * **Diff and deploy resource state** with full auditability around who updated what, when, and why;
 * **Manage cloud provider resources** alongside your Kubernetes abstractions, with a single consistent toolchain.
 
