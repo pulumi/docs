@@ -8,7 +8,7 @@ While Pulumi is in private preview, `@pulumi` packages are not publicly availabl
 
 These steps are for customers of the Pulumi Managed Cloud beta.
 
-1.  Login in to the Pulumi Console and copy your [Pulumi access token](../managed-cloud/console.html#account-page).
+1.  Login in to the Pulumi Console and copy your [Pulumi access token](https://pulumi.com/account).
 
 1.  Set the environment variable `PULUMI_ACCESS_TOKEN` to the value you copied, in either `~/.bashrc` or in  System Properties on Windows.
 

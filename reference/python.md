@@ -38,7 +38,7 @@ $ pip install \
     -r requirements.txt
 ```
 
-The `PULUMI_ACCESS_TOKEN` is your access token from the Pulumi Console found on your Account page.  After running installing the packages, you're ready to go!
+The `PULUMI_ACCESS_TOKEN` is your access token from the Pulumi Console found on [your Account page](https://pulumi.com/account).  After running installing the packages, you're ready to go!
 
 > **Note:** If you see an HTTP 403 Forbidden error, or you see an error that says "No matching distribution found for pulumi>=0.11.0", then you have not correctly specified the `--extra-index-url` and/or have used an incorrect Pulumi access token.  Double check both and try again.  If it still doesn't work, please let us know.
 
