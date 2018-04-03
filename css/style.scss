@@ -195,6 +195,11 @@ a.btn > svg {
             padding: 0;
             font-size: 14px;
         }
+
+        pre, code {
+            font-style: normal;
+            letter-spacing: normal;
+        }
     }
 
     blockquote::before {
