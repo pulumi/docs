@@ -2,9 +2,7 @@
 title: "Programming Model"
 ---
 
-JavaScript and TypeScript API reference: [@pulumi/pulumi](../packages/pulumi)
-
-🚧 TODO 🚧
+🚧 WORK IN PROGRESS 🚧
 
 ## Programs {#programs}
 * Written in Node.js or Python
@@ -19,6 +17,16 @@ JavaScript and TypeScript API reference: [@pulumi/pulumi](../packages/pulumi)
   (currently 6.10.2) will be used to run the program.  The `package.json` file next to `Pulumi.yaml` (or in the folder
   referred to by the `main` property of `Pulumi.yaml`) is used to identify which JavaScript code will be used as the
   entry point for the Pulumi program.
+
+## `@pulumi/pulumi` Package {#pulumipulumi}
+* The core library for working with the Pulumi planning engine from a Pulumi program or library.
+* Defines how resources are created (`pulumi.Resource`), and how resources can be defined in external cloud platforms
+  (`pulumi.CustomResource`) or as components in pure code (`pulumi.ComponentResource`).
+* Defines how dependencies between resources are represented, as `pulumi.Output<T>` values.
+* Provides helpers for getting stack information (`pulumi.getStack`), logging deployment information (`pulumi.log`), and
+  for turning JavaScript callbacks into data which can be [used as application code](#runtime)
+  (`pulumi.runtime.serializeFunctionAsync`).
+* Full API documentation available at [@pulumi/pulumi API docs](../packages/pulumi)
 
 ## Creating Resources {#resources}
 * `new Resource()`

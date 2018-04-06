@@ -109,7 +109,8 @@ virtual machine in the cloud.
     $ npm install
     ```
 
-1. Pulumi programs are deployed to a [stack](../reference/stack.html), which is an isolated and independently configurable instance of a Pulumi program.  We'll create a new stack for our program.
+1. Pulumi programs are deployed to a [stack](../reference/stack.html), which is an isolated and independently
+   configurable instance of a Pulumi program.  We'll create a new stack for our program.
 
     ```bash
     $ pulumi stack init webserver-testing
@@ -124,7 +125,9 @@ virtual machine in the cloud.
     webserver-testing*                               n/a                      0                  https://api.pulumi.com/:lukehoban/pulumi
     ```
 
-1. Pulumi programs also support [configuration]() which is defined per-stack to decide how that instance of the program should be parameterized.  We need to configure the AWS region we'll deploy to - we'll use `us-west-2`.
+1. Pulumi programs also support [configuration](../reference/config) which is defined per-stack to decide how that
+   instance of the program should be parameterized.  We need to configure the AWS region we'll deploy to - we'll use
+   `us-west-2`.
 
     ```bash
     $ pulumi config set aws:region us-west-2
