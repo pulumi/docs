@@ -46,6 +46,24 @@ installation on your system.
 
 - To add a new article and add it to the table-of-contents for that section, create a new file in the right section and add an entry in the corresponding file in `_data\top-level-section.yaml`.
 
+## Generating a change log
+
+To generate a change log from closed pull requests, run the script `/scripts/generate_changelog.sh`. It generates a file using the rules documented here: [Planning, Work Items, and Changelog](https://github.com/pulumi/home/wiki/Planning,-Work-Items,-and-Changelog#tldr-minimal-label-requirements).
+
+1. Run `./scripts/update_repos.sh` to pull down the latest tags for the repos `pulumi`, `pulumi-cloud`, `pulumi-aws`, `pulumi-terraform`, and `pulumi-azure`
+
+1. Set the environment variable `GITHUB_TOKEN` to a token that has "repo" scope.
+
+1. [Will be improved] Clone the repo at https://github.com/lindydonna/github-pr-changelog and run `npm i -g` to globally install the command `gh-changelog`.
+
+1. Generate a change log with the following command:
+
+    ```
+    ./scripts/generate_changelog.sh <from-git-tag> <to-git-tag> > output.file
+    ```
+
+    You can also use the optional flags `--all-prs` to print out all PRs (not just ones with the relevant labels) and `--tab-output` to print in a format that can be pasted to a Google Sheet.
+
 ## Design Reference
 
 Web design is hard. Documentation is hard. Good web design for documentation is harder.

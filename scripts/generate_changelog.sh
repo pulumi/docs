@@ -9,11 +9,16 @@
 
 set -o nounset -o errexit -o pipefail
 
-LAUNCH_DIR="${PWD}"
+if [ -z "${1:-}" ] || [ -z "${2:-}" ]; then
+    echo "Missing required arguments."
+    echo "Usage: generate-changelog <from-git-tag> <to-git-tag> [--all-prs] [--tab-output]"
+    exit 1
+fi
+
+# not currently used, will add back when gh-changelog is moved to a locally installed package
+SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 TOOLS_REPOS="pulumi,pulumi-cloud,pulumi-aws,pulumi-terraform,pulumi-azure"
-
-echo -e "\033[0;95m+++ Generating changelog for repos pulumi/{${TOOLS_REPOS}} +++\033[0m" 
 
 gh-changelog \
     --owner pulumi --repos "${TOOLS_REPOS}" \
