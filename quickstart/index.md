@@ -7,7 +7,7 @@ title: Getting Started
 > [Reference](/reference), which includes details about Pulumi concepts, programming model, and APIs.
 
 Get started with Pulumi by taking this 5 part tour (🚧 coming soon): 
-* Step 1. Your First Pulumi Program
+* [Step 1. Your First Pulumi Program](./step1.html)
 * Step 2: Infrastructure as Software
 * Step 3: Containers and Functions
 * Step 4: Application and Infrastructure as One
