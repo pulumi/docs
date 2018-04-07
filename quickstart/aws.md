@@ -49,16 +49,19 @@ For our first JavaScript application, we'll create an AWS [EC2 Instance] and ass
 
 ### Add code to provision an EC2 instance
 
-Create a new file `index.js` with the following contents:
+Replace `index.js` with the following contents:
 
 ```javascript
 "use strict";
 
 const aws = require("@pulumi/aws");
 
-let size = "t2.micro";    // t2.micro is available in the AWS free tier
-let ami  = "ami-7172b611" // AMI for Amazon Linux in us-west-2 (Oregon)
-// let ami  = "ami-6869aa05" // AMI for Amazon Linux in us-east-1 (Virginia)
+let size = "t2.micro";       // t2.micro is available in the AWS free tier
+let ami  = "ami-7172b611"    // AMI for Amazon Linux in us-west-2 (Oregon)
+// let ami  = "ami-6869aa05" // AMI for us-east-1 (Virginia)
+// let ami  = "ami-31490d51" // AMI for us-west-1 (California)
+// let ami  = "ami-f9dd458a" // AMI for eu-west-1 (Ireland)
+// let ami  = "ami-ea26ce85" // AMI for eu-central-1 (Frankfurt)
 
 // create a new security group for port 80
 let group = new aws.ec2.SecurityGroup("web-secgrp", { 
@@ -94,6 +97,13 @@ Now let's deploy the code. Pulumi programs are deployed to a [stack](../referenc
     Initialized Pulumi repository in /Users/donnam/src/hello-world/.pulumi
     ```
 
+1.  Go to `https://pulumi.com/account` and copy your access token. Run `pulumi login` and paste the token:
+
+    ```bash
+    $ pulumi login
+    Enter your Pulumi access token (located at https://pulumi.com/account): 7hisis4r34llys3cr374cc3ss70k3ns0d0n7l34ki7=
+    ```
+
 1.  Create a new Pulumi stack called `testing`: 
 
     ```bash
@@ -104,7 +114,7 @@ Now let's deploy the code. Pulumi programs are deployed to a [stack](../referenc
 
     ```bash
     $ pulumi config set aws:region us-west-2
-    warning: saved config key 'aws:region' value 'us-west-2' as plaintext; re-run with --secret to encrypt the value instead. Use--plaintext to avoid this warning
+    warning: saved config key 'aws:region' value 'us-west-2' as plaintext; re-run with --secret to encrypt the value instead. Use --plaintext to avoid this warning
     ```
 
     You can view config values for the current stack via `pulumi config`:
@@ -179,7 +189,10 @@ Now let's deploy the code. Pulumi programs are deployed to a [stack](../referenc
     info: 3 changes performed:
         + 3 resources created
     Update duration: 19.949019861s
+    Permalink: https://pulumi.com/pulumi/examples/webserver/testing/updates/1
     ```
+
+1.  Note the link at the end. If you navigate to this URL, you'll see the program configuration and output from the `pulumi update` operation.
 
 1.  Since this is an instance running in your own AWS account, you can view the instance properties in either the AWS console or by running `aws ec2 describe-instances`.
 
@@ -250,7 +263,7 @@ Now, when you run `pulumi preview` and `pulumi update`, you'll see that the secu
 Give the instances a few minutes to initialize, then run `curl` on the URL:
 
 ```bash
-curl `pulumi stack output webUrl`    
+curl `pulumi stack output publicDns`
 ```
 
 ### Leverage a reusable component
