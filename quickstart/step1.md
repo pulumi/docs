@@ -20,13 +20,13 @@ later sections.
 
 We'll focus in this quickstart on using **JavaScript** and on building applications deployed to **AWS**. 
 
-Pulumi supports authoring programs in additional languages ([TypeScript](../reference/javascript#TypeScript),
-[Python](../reference/python), and more in the future), and targeting additional clouds ([Azure](../reference/aws),
-[GCP](../reference/gcp), [Kubernetes](../reference/kubernetes) and more in the future) - but JavaScript and AWS are
-currently supported for the [broadest set of use cases](TODO), so we'll use that combination to highlight the full set of
-features of Pulumi.
+> **Note:** Pulumi supports authoring programs in additional languages
+([TypeScript](../reference/javascript#TypeScript), [Python](../reference/python), and more in the future), and targeting
+additional clouds ([Azure](../reference/aws), [GCP](../reference/gcp), [Kubernetes](../reference/kubernetes) and more in
+the future) - but JavaScript and AWS are currently supported for the [broadest set of use cases](TODO), so we'll use
+that combination to highlight the full set of features of Pulumi.
 
-> **NOTE:** If you do not already have an AWS account, you can [create an account](https://aws.amazon.com/free/) to use
+> **Note:** If you do not already have an AWS account, you can [create an account](https://aws.amazon.com/free/) to use
 > for these examples.  Most of the resources used in these examples are free within the Free Tier, but we encourage you
 > to follow the steps at the end of each section to delete the applications you deploy when you are done to avoid paying
 > for anything you aren't using.
@@ -36,7 +36,7 @@ features of Pulumi.
 Make sure you have followed the steps to [install Pulumi](../install), and to setup the [AWS
 CLI](../install/aws-config.html) and your [NPM token](../install/configure-npm.html) to access the Pulumi NPM packages.
 
-Let's create our first Pulumi application - a simple webserver EC2 instance in AWS.
+Let's create a new Pulumi project for our first application - a simple webserver EC2 instance in AWS.
 
 1.  Create a folder `webserver`:
 
@@ -66,16 +66,14 @@ virtual machine in the cloud.
     let size = "t2.micro";     // t2.micro is available in the AWS free tier
     let ami  = "ami-7172b611"; // AMI for Amazon Linux in us-west-2 (Oregon)
 
-    // create a new security group for port 80
     let group = new aws.ec2.SecurityGroup("webserver-secgrp", { 
         description: "Enable HTTP access",
         ingress: [
-            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+            { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
         ],
     });
 
     let server = new aws.ec2.Instance("webserver-www", {
-        tags: { "Name": "webserver-www" },
         instanceType: size,
         securityGroups: [ group.name ], // reference the security group resource above
         ami: ami,
@@ -86,15 +84,17 @@ virtual machine in the cloud.
     ```
 
     This example uses the [`@pulumi/aws`] package to create and manage two AWS resources: an
-    [`aws.ec2.SecurityGroup`][Security Group], which allows access for incoming HTTP requests, and an
+    [`aws.ec2.SecurityGroup`][Security Group], which allows access for incoming SSH access, and an
     [`aws.ec2.Instance`][EC2 Instance], which will be created in that security group using the appropriate Amazon
     Machine Image (AMI) for the region where you deploy the program.
 
     This simple example highlights several core features of Pulumi:
-    * [Resources](../reference/programming-model#resources) are defined by creating resource objects in code (e.g. `new
-      aws.ec2.Instance(...)`).
-    * Dependencies between resources are represented as simple references to [output properties]() of a resource (e.g.
-      the `group.name` property of the `SecurityGroup`).
+    * [Resources](../reference/programming-model#resources) are defined by allocating resource objects in code (e.g.
+      `new aws.ec2.Instance(...)`).  The first argument passed to the resource constructor is its `name`, which must be
+      unique within the Pulumi program.
+    * Dependencies between resources are represented as simple references to [output
+      properties](../reference/programming-model#outputs) of a resource (e.g. the `group.name` property of the
+      `SecurityGroup`).
     * [Variables](../reference/programming-model#programs) can be used just like you would expect to store constants, or
       to precompute and share values that will be used in the program.
     * [Packages](../reference/programming-model#packages) (e.g. `@pulumi/aws`) provide access to Resources and
@@ -105,8 +105,7 @@ virtual machine in the cloud.
 1. Since we are using the `@pulumi/aws` NPM package, we need to add it and install all NPM dependencies.
 
     ```bash
-    $ npm add @pulumi/aws@0.11.1
-    $ npm install
+    $ npm install --save @pulumi/pulumi @pulumi/aws
     ```
 
 1. Pulumi programs are deployed to a [stack](../reference/stack.html), which is an isolated and independently
@@ -114,7 +113,7 @@ virtual machine in the cloud.
 
     ```bash
     $ pulumi stack init webserver-testing
-    Created stack 'webserver-testing' hosted in Pulumi Cloud PPC pulumi
+    Created stack 'webserver-testing'.
     ```
 
     You can see all the stacks for your program via `pulumi stack ls`:
@@ -124,6 +123,9 @@ virtual machine in the cloud.
     NAME                                             LAST UPDATE              RESOURCE COUNT     CLOUD
     webserver-testing*                               n/a                      0                  https://api.pulumi.com/:lukehoban/pulumi
     ```
+
+    The new stack is marked with an astericks to indicate that it is the currently active stack, and will be used by
+    default for deployment operations.
 
 1. Pulumi programs also support [configuration](../reference/config) which is defined per-stack to decide how that
    instance of the program should be parameterized.  We need to configure the AWS region we'll deploy to - we'll use
@@ -139,7 +141,7 @@ virtual machine in the cloud.
     ```bash
     $ pulumi config
     KEY                              VALUE
-    aws:config:region                us-west-2
+    aws:region                us-west-2
     ```
 
 1. Before we actually deploy our program, we can preview it to see what resources it will create in AWS.
@@ -158,10 +160,10 @@ virtual machine in the cloud.
                     cidrBlocks: [
                         [0]: "0.0.0.0/0"
                     ]
-                    fromPort  : 80
+                    fromPort  : 22
                     protocol  : "tcp"
                     self      : false
-                    toPort    : 80
+                    toPort    : 22
                 }
             ]
             name               : "webserver-secgrp-26e0bb6"
@@ -175,12 +177,9 @@ virtual machine in the cloud.
                 [0]: "webserver-secgrp-26e0bb6"
             ]
             sourceDestCheck: true
-            tags           : {
-                Name: "webserver-www"
-            }
-    ---outputs:---
-    publicDns: computed<string>
-    publicIp : computed<string>
+        ---outputs:---
+        publicDns: computed<string>
+        publicIp : computed<string>
     info: 3 changes previewed:
         + 3 resources to create
     ```
@@ -190,7 +189,8 @@ virtual machine in the cloud.
     as a component which owns all of the resources we'll create.  Components will be covered in more details in [step
     2](./step2).
 
-1.  Now, let's deploy the program and provision resources, via `pulumi update`. This will take 20-30 seconds to provision the EC2 instance.  **NOTE**: The output below has been condensed.
+1.  Now, let's deploy the program and provision resources, via `pulumi update`. This will take 20-30 seconds to
+    provision the EC2 instance.
     
     ```
     $ pulumi update
@@ -205,7 +205,9 @@ virtual machine in the cloud.
     Permalink: https://pulumi.com/lukehoban/webserver2/webserver2/webserver-testing/updates/1
     ```
 
-    Note that this time, we see real values for the two outputs, corresponding to the IP and DNS name of the EC2 instances we've created.  Pulumi also provides a link to the pulumi.com console where you can see additional details about the eployment and the resources that are now part of the stack.
+    Note that this time, we see real values for the two outputs, corresponding to the IP and DNS name of the EC2
+    instances we've created.  Pulumi also provides a link to the pulumi.com console where you can see additional details
+    about the deployment and the resources that are now part of the stack.
 
 1. To view your provisioned resources, run `pulumi stack`.
 
@@ -232,12 +234,24 @@ virtual machine in the cloud.
 
 # Updating the Pulumi program
 
-Now that we have an instance of our Pulumi program deployed, we may want to make changes. We do this by updating our Pulumi program to define the new state we want our infrastructure to be in, and re-running `pulumi update`.
+Now that we have an instance of our Pulumi program deployed, we may want to make changes. We do this by updating our
+Pulumi program to define the new state we want our infrastructure to be in, and re-running `pulumi preview` and, if it
+looks as we expect, `pulumi update` to commit the changes.
 
-1. Replace the creation of the `aws.ec2.Instance` with the following.  This will add a startup script to our instance.
+1. Replace the creation of the two resources with the following.  This will expose an additional port and add a startup
+   script to run a simple HTTP server on our instance at startup.
 
     ```javascript
     ...
+
+    let group = new aws.ec2.SecurityGroup("webserver-secgrp", { 
+        description: "Enable HTTP access",
+        ingress: [
+            { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] }, 
+            // ^-- ADD THIS LINE
+        ],
+    });
 
     let userData = 
     `#!/bin/bash
@@ -245,7 +259,6 @@ Now that we have an instance of our Pulumi program deployed, we may want to make
     nohup python -m SimpleHTTPServer 80 &`;
 
     let server = new aws.ec2.Instance("web-server-www", {
-        tags: { "Name": "web-server-www" },
         instanceType: size,
         securityGroups: [ group.name ], // reference the group object above
         ami: ami,
@@ -260,38 +273,67 @@ Now that we have an instance of our Pulumi program deployed, we may want to make
     defined in our program.  We'll see in later sections how we can deploy and version the application code of our
     program in a variety of different ways using Pulumi.
 
-1. Run `pulumi preview` to see that that only one resource will be replaced.
+1. Run `pulumi preview` to see that two changes will be made when this is deployed.
 
     ```
     $ pulumi preview
     Previewing stack 'webserver-testing' in the Pulumi Cloud ☁️
     Previewing changes:
     * pulumi:pulumi:Stack: (same)
-        [urn=urn:pulumi:webserver-testing::webserver2::pulumi:pulumi:Stack::webserver2-webserver-testing]
-    ---outputs:---
-    publicDns: "ec2-34-210-112-213.us-west-2.compute.amazonaws.com"
-    publicIp : "34.210.112.213"
+        [urn=urn:pulumi:dsadas::webserver3::pulumi:pulumi:Stack::webserver3-dsadas]
+        ~ aws:ec2/securityGroup:SecurityGroup: (update)
+            [id=sg-97ae1de9]
+            [urn=urn:pulumi:dsadas::webserver3::aws:ec2/securityGroup:SecurityGroup::webserver-secgrp]
+            description        : "Enable HTTP access"
+          ~ ingress            : [
+                [0]: {
+                        cidrBlocks: [
+                            [0]: "0.0.0.0/0"
+                        ]
+                        fromPort  : 22
+                        protocol  : "tcp"
+                        self      : false
+                        toPort    : 22
+                    }
+              + [1]: {
+                      + cidrBlocks: [
+                      +     [0]: "0.0.0.0/0"
+                        ]
+                      + fromPort  : 80
+                      + protocol  : "tcp"
+                      + self      : false
+                      + toPort    : 80
+                    }
+            ]
+            name               : "webserver-secgrp-7f564cb"
+            revokeRulesOnDelete: false
         +-aws:ec2/instance:Instance: (replace)
-            [id=i-066813fbe532d6b1b]
-            [urn=urn:pulumi:webserver-testing::webserver2::aws:ec2/instance:Instance::webserver-www]
+            [id=i-0452d91e4e1117d4d]
+            [urn=urn:pulumi:dsadas::webserver3::aws:ec2/instance:Instance::webserver-www]
             ami            : "ami-7172b611"
             getPasswordData: false
             instanceType   : "t2.micro"
             securityGroups : [
-                [0]: "webserver-secgrp-cf10413"
+                [0]: "webserver-secgrp-7f564cb"
             ]
             sourceDestCheck: true
             tags           : {
                 Name: "webserver-www"
             }
-        + userData       : "#!/bin/bash\necho \"Hello, World!\" > index.html\nnohup python -m SimpleHTTPServer 80 &"
-    ---outputs:---
-    publicDns: computed<string>
-    publicIp : computed<string>
-    info: 1 change previewed:
+          + userData       : "#!/bin/bash\necho \"Hello, World!\" > index.html\nnohup python -m SimpleHTTPServer 80 &"
+        ---outputs:---
+        publicDns: computed<string>
+        publicIp : computed<string>
+    info: 2 changes previewed:
+        ~ 1 resource to update
         +-1 resource to replace
-        2 resources unchanged
+          1 resource unchanged
     ```
+
+    We see that two changes will be applied.  First, the `SecurityGroup` will be updated in-place to also expose port
+    `80` for our HTTP server.  Second, the `Instance` will be replaced with a new EC2 Instance which will run the new
+    script on startup. Pulumi understands which changes to a given cloud resource can be made in-place, and which
+    require replacement, and computes the minimally disruptive change to achieve the desired state.
 
 1. Then run `pulumi update` to deploy the changes.
 
@@ -301,9 +343,10 @@ Now that we have an instance of our Pulumi program deployed, we may want to make
     [ ...details omitted... ]
     publicDns: "ec2-52-37-221-116.us-west-2.compute.amazonaws.com"
     publicIp : "52.37.221.116"
-    info: 1 change performed:
+    info: 2 changes performed:
+        ~ 1 resource updated
         +-1 resource replaced
-        2 resources unchanged
+          1 resource unchanged
     Update duration: 1m4.980730307s
     Permalink: https://pulumi.com/lukehoban/webserver2/webserver2/webserver-testing/updates/2
     ```
@@ -319,7 +362,9 @@ Now that we have an instance of our Pulumi program deployed, we may want to make
 
 Before moving on, let's tear down the resources that are part of our stack.
 
-1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources.  This will take 50-60 seconds.
+1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these
+   resources.  This will take 50-60 seconds, as Pulumi waits for the EC2 instance to finish shutting down before
+   considering the destroy done.
 
     ```
     $ pulumi destroy
@@ -345,8 +390,8 @@ Before moving on, let's tear down the resources that are part of our stack.
 # Next Steps
 
 In this first tutorial, we saw how to use Pulumi programs to create and manage cloud resources.  We saw that we can use
-plain JavaScript, and that Pulumi programs are executed during `preview` and `update` to determine that state we want
-our infrastructure to be in.  We also saw the core lifecycle of a Pulumi stack.
+plain JavaScript and NPM pacakges, and that Pulumi programs are executed during `preview` and `update` to determine that
+state we want our infrastructure to be in.  We also saw the core lifecycle of a Pulumi stack.
 
 In the [next section](./step2), we'll look at ways we can use programming languages to make defining infrastructure
 even easier by using loops, conditionals, functions and classes.  And we'll see how these can be combined to build
