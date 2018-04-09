@@ -51,18 +51,16 @@ Let's create a new Pulumi project for our first application - a simple webserver
     $ pulumi new javascript
     ```
 
-1.  Initialize a Pulumi repository with `pulumi init`. (Note: this step will be removed in the future.)
-
-    ```
-    $ pulumi init
-    Initialized Pulumi repository in /Users/donnam/code/playground/quickstart1/webserver/.pulumi
-    ```
-
 1.  Go to `https://pulumi.com/account` and copy your access token. Run `pulumi login` and paste the token:
 
     ```bash
     $ pulumi login
-    Enter your Pulumi access token (located at https://pulumi.com/account): 7hisis4r34llys3cr374cc3ss70k3ns0d0n7l34ki7=
+    ```
+
+1.  Initialize a Pulumi repository with `pulumi init`, using your GitHub username. (Note: this step will be removed in the future.)
+
+    ```
+    $ pulumi init --owner gitHubUsername
     ```
 
 # A first Pulumi program
@@ -80,7 +78,6 @@ virtual machine in the cloud.
     let ami  = "ami-7172b611"; // AMI for Amazon Linux in us-west-2 (Oregon)
 
     let group = new aws.ec2.SecurityGroup("webserver-secgrp", { 
-        description: "Enable SSH access",
         ingress: [
             { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
         ],
@@ -145,7 +142,6 @@ virtual machine in the cloud.
 
     ```bash
     $ pulumi config set aws:region us-west-2
-    Created stack 'webserver-testing' hosted in Pulumi Cloud PPC pulumi
     ```
 
     You can view config values for the current stack via `pulumi config`:
@@ -166,7 +162,7 @@ virtual machine in the cloud.
         [urn=urn:pulumi:webserver-testing::webserver2::pulumi:pulumi:Stack::webserver2-webserver-testing]
         + aws:ec2/securityGroup:SecurityGroup: (create)
             [urn=urn:pulumi:webserver-testing::webserver2::aws:ec2/securityGroup:SecurityGroup::webserver-secgrp]
-            description        : "Enable HTTP access"
+            description        : "Managed by Pulumi"
             ingress            : [
                 [0]: {
                     cidrBlocks: [
@@ -219,7 +215,7 @@ virtual machine in the cloud.
 
     Note that this time, we see real values for the two outputs, corresponding to the IP and DNS name of the EC2
     instances we've created.  Pulumi also provides a link to the pulumi.com console where you can see additional details
-    about the deployment and the resources that are now part of the stack. 
+    about the deployment and the resources that are now part of the stack.
 
 1.  To view your provisioned resources, run `pulumi stack`.
 
@@ -257,7 +253,6 @@ looks as we expect, `pulumi update` to commit the changes.
     ...
 
     let group = new aws.ec2.SecurityGroup("webserver-secgrp", { 
-        description: "Enable SSH and HTTP access",
         ingress: [
             { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
             { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] }, 
@@ -296,7 +291,7 @@ looks as we expect, `pulumi update` to commit the changes.
         ~ aws:ec2/securityGroup:SecurityGroup: (update)
             [id=sg-97ae1de9]
             [urn=urn:pulumi:dsadas::webserver3::aws:ec2/securityGroup:SecurityGroup::webserver-secgrp]
-            description        : "Enable SSH access"
+            description        : "Managed by Pulumi"
           ~ ingress            : [
                 [0]: {
                         cidrBlocks: [
