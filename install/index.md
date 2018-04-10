@@ -121,7 +121,7 @@ macOS Sierra (10.12) or later is required.
 
 Windows 8 and 10 are supported.
 
-> **Note:** The Windows installer for the v0.11.1 and v0.11.2 releases is broken. See [No Windows installer for 0.11.1 and 0.11.2](../reference/known-issues.html#pulumi-sdk-14) in the Known Issues.
+> **Note:** The Windows installer for the v0.11.1 and v0.11.2 releases is missing key components and will not function correctly. In the meantime, please use the [Pulumi v0.11.0 Windows x64 installer](/releases/pulumi-v0.11.0-windows.x64.zip). This issue is tracked by [pulumi/sdk#14](https://github.com/pulumi/sdk/issues/14).
 
 <!-- 
 Tracked by https://github.com/pulumi/home/issues/156. Not linked in the text, since "home" will not be open-sourced.

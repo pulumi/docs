@@ -60,10 +60,11 @@ title: "Change log"
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
-## [v0.11.2] {#v112}
+## v0.11.2 {#v112}
 
-> **NOTE:** Due to a regression in `cloud.Service` in the v0.11.2 release, it does not work correctly when targeting EC2 containers. For more information, see [cloud.Service Can Only Be Used in Fargate Mode](../reference/known-issues.html#pulumi-cloud-454).
-> If you are using `cloud.Service` to target EC2, you should **not** upgrade to the v0.11.2 SDK.
+Released on April 6, 2018
+
+> **NOTE:** This release has a known issue that `cloud.Service` does not work correctly when deployed targeting a cluster of EC2 instances.  Instead, it will only work when targeting the newly supported Fargate execution model (using `cloud-aws:useFargate`).  Users of `cloud.Service` targeting a cluster of EC2 instances (or the `cloud-aws:ecsAutoCluster` configuration setting) should avoid upgrading to the `v0.11.2` SDK.  This issue is tracked by [Failure to deploy non-Fargate services #454](https://github.com/pulumi/pulumi-cloud/issues/454).
 
 ### Added
 

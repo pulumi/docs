@@ -8,11 +8,11 @@ If you encounter an problem that's not on this list, please file a [GitHub issue
 
 ## cloud.Service Can Only Be Used in Fargate Mode {#pulumi-cloud-454}
 
-In the `0.11.2` version of the `pulumi-cloud` package, only Fargate can be targeted as a deployment mode (with the `cloud-aws:useFargate` configuration). To use `cloud.Service` with EC2-deployed containers, you must instead use the CLI and NPM  package at version `0.11.1` or earlier. This issue is tracked by [Failure to deploy non-Fargate services #454](https://github.com/pulumi/pulumi-cloud/issues/454).
+In the `0.11.2` version of the `pulumi-cloud` package, only Fargate can be targeted as a deployment mode (with the `cloud-aws:useFargate` configuration). Users of `cloud.Service` targeting a cluster of EC2 instances (or the `cloud-aws:ecsAutoCluster` configuration setting) should avoid upgrading to the `v0.11.2` SDK. This issue is tracked by [Failure to deploy non-Fargate services #454](https://github.com/pulumi/pulumi-cloud/issues/454).
 
 ## No Windows Installer for v0.11.1 and v0.11.2 {#pulumi-sdk-14}
 
-Due to a regression, several necessary files are missing from the Windows install package for Pulumi versions 0.11.1 and 0.11.2.  This issue is tracked by [Windows installer doesn't include many necessary files #14](https://github.com/pulumi/sdk/issues/14).
+Due to a regression, several necessary files are missing from the Windows install package for Pulumi versions 0.11.1 and 0.11.2 and it will not function correctly. In the meantime, please use the [Pulumi v0.11.0 Windows x64 installer](/releases/pulumi-v0.11.0-windows.x64.zip). This issue is tracked by [Windows installer doesn't include many necessary files #14](https://github.com/pulumi/sdk/issues/14).
 
 ## Update Lease Cannot Be Renewed {#pulumi-pulumi-1077}
 
