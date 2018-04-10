@@ -26,6 +26,11 @@ title: "Change log"
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v112">0.11.2</a></th>
+            <td>2018/04/06</td>
+            <td>{% include sdk-links.html version='0.11.2' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v111">0.11.1</a></th>
             <td>2018/03/30</td>
             <td>{% include sdk-links.html version='0.11.1' %}</td>
@@ -55,12 +60,35 @@ title: "Change log"
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
+## v0.11.2 {#v112}
+
+Released on April 6, 2018
+
+> **NOTE:** This release has a known issue that `cloud.Service` does not work correctly when deployed targeting a cluster of EC2 instances.  Instead, it will only work when targeting the newly supported Fargate execution model (using `cloud-aws:useFargate`).  Users of `cloud.Service` targeting a cluster of EC2 instances (or the `cloud-aws:ecsAutoCluster` configuration setting) should avoid upgrading to the `v0.11.2` SDK.  This issue is tracked by [Failure to deploy non-Fargate services #454](https://github.com/pulumi/pulumi-cloud/issues/454).
+
+### Added
+
+-  Add support for AWS Fargate ([pulumi/pulumi-cloud#411](https://github.com/pulumi/pulumi-cloud/pull/411)). Adds a `cloud-aws:useFargate` flag which causes container compute to run in Fargate. Also, when neither `cloud-aws:externalVpcId` nor `cloud-aws:usePrivateNetwork` are defined, `cloud.Service` uses the default VPC as the target network.
+
+### Changed
+
+-  (Breaking) Require `pulumi login` before commands that need a backend ([pulumi/pulumi#1114](https://github.com/pulumi/pulumi/pull/1114)). The `pulumi` CLI now requires you to log in to pulumi.com for most operations. 
+
+### Fixed
+
+-  Improve the error message arising from missing required configurations for resource providers ([pulumi/pulumi#1097](https://github.com/pulumi/pulumi/pull/1097)). The error message now prints all missing configuration keys, along with their descriptions.
+
 ## v0.11.1 {#v111}
 
 Released on March 30, 2018
 
-> **Note:** Release notes are currently being written.  The primary difference in this version is that we have begun to
-> transition to a version of the CLI in which you log into Pulumi.com to manage stack state and concurrent access.
+### Added
+
+-  Initial support for a new `cloud.Bucket` component ([pulumi/pulumi-cloud#426](https://github.com/pulumi/pulumi-cloud/pull/426)).
+
+### Fixed
+
+-  When waiting for an ECS service to reach steady state, retry when ECS says the service can't be found ([pulumi/pulumi-cloud#443](https://github.com/pulumi/pulumi-cloud/pull/443)). This situation can occur when the ECS API performs a stale read of its datastore, so the workaround is to retry the operation.
 
 ## v0.11.0 {#v11}
 
@@ -76,7 +104,7 @@ Released on March 20, 2018
 
 -  Add link to documentation source in doc comments ([pulumi/pulumi-terraform#126](https://github.com/pulumi/pulumi-terraform/pull/126)). Adds a "Sourced from \<url\>" annotation to all generated doc comments, with links to Terraform resource provider source documentation.
 
-### Changed {#v11-changed}
+### Changed
 
 -  (Breaking) Change the way that configuration is stored ([pulumi/pulumi#986](https://github.com/pulumi/pulumi/pull/986)). To simplify the configuration model, there is no longer a separate notion of project and workspace settings, but only stack settings. The switches `--all` and `--save` are no longer supported; any common settings across stacks must be set on each stack directly. Settings for a stack are stored in a file that is a sibling to `Pulumi.yaml`, named `Pulumi.<stack-name>.yaml`. On first run `pulumi`, will migrate projects from the previous configuration format to the new one. The recommended practice is that developer stacks that are not shared between team members should be added to `.gitignore`, while stack setting files for shared stacks should be checked in to source control. For more information, see the section [Defining and setting stack settings].
 
