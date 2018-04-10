@@ -6,6 +6,14 @@ You should be aware of the following known issues and product limitations.  The 
 
 If you encounter an problem that's not on this list, please file a [GitHub issue](https://github.com/pulumi/pulumi/issues/new). <!-- validate the link once public -->
 
+## cloud.Service Can Only Be Used in Fargate Mode {#pulumi-cloud-454}
+
+In the `0.11.2` version of the `pulumi-cloud` package, only Fargate can be targeted as a deployment mode (with the `cloud-aws:useFargate` configuration). To use `cloud.Service` with EC2-deployed containers, you must instead use the CLI and NPM  package at version `0.11.1` or earlier. This issue is tracked by [Failure to deploy non-Fargate services #454](https://github.com/pulumi/pulumi-cloud/issues/454).
+
+## No Windows Installer for v0.11.1 and v0.11.2 {#pulumi-sdk-14}
+
+Due to a regression, several necessary files are missing from the Windows install package for Pulumi versions 0.11.1 and 0.11.2.  This issue is tracked by [Windows installer doesn't include many necessary files #14](https://github.com/pulumi/sdk/issues/14).
+
 ## Update Lease Cannot Be Renewed {#pulumi-pulumi-1077}
 
 If an update is interrupted when logged into the Pulumi service, for example by hitting ^C, losing Internet connectivity, or closing your laptop in the middle of an update, the update lease token will be orphaned and the service will refuse to let you proceed with subsequent updates.  This will yield the following error message:
@@ -33,7 +41,7 @@ To recover from this situation, you will need to do three things:
 
 This issue is being tracked primarily by [Improved recovery for invalid stacks](https://github.com/pulumi/pulumi/issues/1094), although [CLI command to refresh a resource's state](https://github.com/pulumi/pulumi/issues/1081) will also be a critical element to improving the experience here.
 
-## CloudFront ETag Out Of Synch {#pulumi-terraform-57}
+## CloudFront ETag Out Of Sync {#pulumi-terraform-57}
 
 When using AWS CloudFront resources with Pulumi, you can run into errors if you update the CloudFront resource directly through AWS, such as the AWS CLI or console. This known issue is anticipated to be solved in the v0.12.0 SDK, as part of implementing the fix [Perform a `Refresh` operation before each `Apply` #57](https://github.com/pulumi/pulumi-terraform/issues/57).
 

@@ -62,6 +62,9 @@ title: "Change log"
 
 ## [v0.11.2] {#v112}
 
+> **NOTE:** Due to a regression in `cloud.Service` in the v0.11.2 release, it does not work correctly when targeting EC2 containers. For more information, see [cloud.Service Can Only Be Used in Fargate Mode](../reference/known-issues.html#pulumi-cloud-454).
+> If you are using `cloud.Service` to target EC2, you should **not** upgrade to the v0.11.2 SDK.
+
 ### Added
 
 -  Add support for AWS Fargate ([pulumi/pulumi-cloud#411](https://github.com/pulumi/pulumi-cloud/pull/411)). Adds a `cloud-aws:useFargate` flag which causes container compute to run in Fargate. Also, when neither `cloud-aws:externalVpcId` nor `cloud-aws:usePrivateNetwork` are defined, `cloud.Service` uses the default VPC as the target network.
