@@ -31,11 +31,11 @@ Even in this simple example, it would be tedious and error prone to define this 
 
 > **Note**: since this example provisions an number of resources, it can take 20-30 minutes to deploy. For a quicker tutorial, see the `url-shortener` or `video-thumnailer` examples in the [Pulumi examples zipfile].
 
-### Prerequisites
+## Prerequisites
 
 Since this example builds a custom container, you should first have [Docker](https://docs.docker.com/engine/installation/) installed. 
 
-### Set up the project
+## Set up the project
 
 1.  In the [Pulumi examples zipfile], open the `voting-app` directory in your favorite editor. You'll see a Python Flask app in the `frontend` folder and a Pulumi program in `index.ts`. You may ignore the details of the Python app. 
 
@@ -48,6 +48,7 @@ Since this example builds a custom container, you should first have [Docker](htt
     // Get the password to use for Redis from config.
     let config = new pulumi.Config("voting-app");
     let redisPassword = config.require("redisPassword"); 
+    let redisPort = 6379;
 
     // The data layer for the application
     // Use the 'image' property to point to a pre-built Docker image.
@@ -56,11 +57,13 @@ Since this example builds a custom container, you should first have [Docker](htt
             redis: {
                 image: "redis:alpine",
                 memory: 128,
-                ports: [{ port: 6379 }],
+                ports: [{ port: redisPort }],
                 command: ["redis-server", "--requirepass", redisPassword],
             },
         },
     });
+
+    let redisEndpoint = redisCache.endpoints.apply(endpoints => endpoints.redis[redisPort]);
 
     // A custom container for the frontend, which is a Python Flask app
     // Use the 'build' property to specify a folder that contains a Dockerfile.
@@ -73,22 +76,21 @@ Since this example builds a custom container, you should first have [Docker](htt
                 ports: [{ port: 80 }],            
                 environment: { 
                     // pass the Redis container info in environment variables
-                    // (the use of promises will be improved in the future)
-                    "REDIS": redisCache.getEndpoint().then(e => e.hostname),
-                    "REDIS_PORT": redisCache.getEndpoint().then(e => e.port.toString()),
-                    "REDIS_PWD": redisPassword
+                    "REDIS":      redisEndpoint.apply(e => e.hostname),
+                    "REDIS_PORT": redisEndpoint.apply(e => e.port.toString()),
+                    "REDIS_PWD":  redisPassword
                 }
             },
         },
     });
 
     // Export a variable that will be displayed during 'pulumi update'
-    export let frontendURL = frontend.getEndpoint().then(e => `http://${e.hostname}:${e.port}`);
+    export let frontendURL = frontend.endpoints.apply(e => `http://${e.hostname}:${e.port}`);
     ```
 
-#### Understanding the code
+### Understanding the code
 
-Even though this Pulumi program is just over 36 lines long, it does quite a bit:
+Even though this Pulumi program is just over 40 lines long, it does quite a bit:
 
 **`redisCache` container**
 
@@ -105,78 +107,83 @@ Even though this Pulumi program is just over 36 lines long, it does quite a bit:
   redis_password = os.environ['REDIS_PWD']
   ```
 
-#### Output properties
+### Output properties
 
 The code exports the output `frontendURL`, via the declaration `export let frontEndUrl`. You can view the last deployed value for the output property using `pulumi stack output varName` and use it as part of a shell script.
 
-### Build, preview, and update
+## Build, preview, and update
 
-Now, lets deploy this elegant program to AWS.
+Now, let's deploy this elegant program to AWS.
 
-1.  Run `npm install` .
+### Configure the deployment  
 
-1.  Compile the code via `tsc` or `npm run build`.
+1.  Run `pulumi init`. (Note: this command will not be required in a future SDK release.)
 
-1.  Create a new Pulumi repository and stack:
+1.  Login via `pulumi login`:
 
     ```bash
-    $ pulumi init
-    $ pulumi stack init votingapp-testing
+    $ pulumi login
+    Enter your Pulumi access token (located at https://pulumi.com/account): 7hisis4r34llys3cr374cc3ss70k3ns0d0n7l34ki7=
     ```
 
-1.  Set your AWS region via `pulumi config set aws:config:region us-west-2` (or whichever region you prefer).
+1.  Create a new stack:
 
-1.  Set AWS as the provider for the `@pulumi/cloud` library:
+    ```
+    $ pulumi stack init
+    Enter a stack name: testing
+    ```
 
-    ```bash
+1.  Set AWS as the provider:
+
+    ```
     $ pulumi config set cloud:provider aws
     ```
 
-1.  Set a value for the password configuration value:
+1.  Configure Pulumi to use AWS Fargate, which is currently only available in `us-east-1`:
 
     ```
-    $ pulumi config set --secret voting-app:redisPassword passw0rd
+    $ pulumi config set aws:region us-east-1
+    $ pulumi config set cloud-aws:useFargate true
     ```
 
-1. The `cloud.Service` component can either create a new ECS cluster or deploy into an existing one. Let's use the "autocluster" functionality:
+1.  Set a value for the Redis password. The value can be an encrypted secret, specified with the `--secret` flag. If this flag is not provided, the value will be saved as plaintext in `Pulumi.testing.yaml` (since `testing` is the current stack name).
 
-   ```bash
-   $ pulumi config set cloud-aws:config:ecsAutoCluster true
-   ```
+    ```
+    $ pulumi config set --secret redisPassword S3cr37Password
+    Enter your passphrase to protect config/secrets: 
+    Re-enter your passphrase to confirm:     
+    ```
 
-1. Ensure the Docker daemon is running on your machine, then preview changes via `pulumi preview`. This step will create the Docker container but will not provision resources.
+### Compile the TypeScript program
 
-   There are a number of resources that are automatically created for you, such as the ECS cluster, EFS instance, networking resources, log group, and so on. This is all implemented using the patterns specified in AWS reference architectures, freeing you to think in terms of high-level concepts.
+1.  Restore NPM modules via `npm install`.
 
-   ```bash
-   $ pulumi preview --summary
-   Previewing changes:
-   + pulumi:pulumi:Stack: (create)
-      [urn=urn:pulumi:votingapp-testing::voting-app::pulumi:pulumi:Stack::voting-app-votingapp-testing]
-      + aws:ec2/vpc:Vpc: (create)
-         [urn=urn:pulumi:votingapp-testing::voting-app::aws:ec2/vpc:Vpc::pulumi-votingapp--global]
-      .. 98 lines elided
-   info: 50 changes previewed:
-       + 50 resources to create
-   ```
+1.  Compile the program via `tsc` or `npm run build`.
 
-1. Deploy the changes with `pulumi update`. This is when the resources are provisioned and will take 20-30 minutes. (In the future, Pulumi will parallelize resource creations so that the experience is smoother.) You'll see that there is a stack output `frontendUrl`:
+### Preview and deploy
 
-   ```bash
-   ---outputs:---
-   frontendURL: "http://pulumi-vo-ne2-d7f97ef-7c5e2c22a22ec44a.elb.us-west-2.amazonaws.com:34567"
-   ```
+1.  Ensure the Docker daemon is running on your machine, then preview changes via `pulumi preview`. This step will create the Docker container but will not provision resources. If you encrypted the value for the `redisPassword` key, you'll be prompted for your password before each `preview` and `update` operation.
 
-1. In your terminal, view the stack output property:
+    ```
+    $ pulumi preview --summary
+    [...details omitted...]
+    info: 34 changes previewed:
+        + 34 resources to create
+    ```
 
-   ```bash
-   $ pulumi stack output frontendURL
-   http://pulumi-vo-ne2-d7f97ef-7c5e2c22a22ec44a.elb.us-west-2.amazonaws.com:34567
-   ```
+1.  Deploy the changes with `pulumi update`. Since this actually deploys a number of resources, it will take about 20-30 minutes to complete. (An upcoming improvement in `@pulumi/cloud` will substantially reduce the deployment time.) Note the stack output property `frontendUrl`, which shows the URL and port of the deployed app:
 
-1. In a browser, navigate to the URL from the previous step. You should see the voting app webpage.
+    ```bash
+    $ pulumi update
+    [...details omitted...]
+    ---outputs:---
+    frontendURL: "http://pulumi-vo-ne2-d7f97ef-7c5e2c22a22ec44a.elb.us-west-2.amazonaws.com:34567"
+    Permalink: https://pulumi.com/pulumi/examples/voting-app/testing/updates/1
+    ```
 
-   ![Voting app screenshot](./voting-app-webpage.png)
+1.  In a browser, navigate to the URL for `frontendURL`. You should see the voting app webpage.
+
+    ![Voting app screenshot](./voting-app-webpage.png)
 
 ### Clean up resources
 

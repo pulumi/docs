@@ -14,6 +14,10 @@ TODO define how to refer to CLI, to service, etc.
 
 - To add a new article and add it to the table-of-contents for that section, create a new file in the right section and add an entry in the corresponding file in `_data\top-level-section.yaml`.
 
+### Links to other files
+
+**NOTE:** The local Jekyll web server will resolve URLs without an extension, so `[topic](section/topic)` will resolve to `section/topic.html`. Unfortunately, the Go binary that serves content does **not** honor this behavior. If you're running the `make test` target against a Jekyll web server, you won't see the issue, but there will be 404s on the production docs site.
+
 ### Jekyll and Liquid tips
 
 - **Includes.** To share common content across articles, use an "include" file. Place a file in the [`_includes`](_includes/) folder with the appropriate file extension. To include it in a page, use the syntax `{% include %}`.
