@@ -21,8 +21,8 @@ later sections.
 We'll focus in this quickstart on using **JavaScript** and on building applications deployed to **AWS**. 
 
 > **Note:** Pulumi supports authoring programs in additional languages
-([TypeScript](../reference/javascript#TypeScript), [Python](../reference/python), and more in the future), and targeting
-additional clouds ([Azure](../reference/aws), [GCP](../reference/gcp), [Kubernetes](../reference/kubernetes) and more in
+([TypeScript](../reference/javascript.html#TypeScript), [Python](../reference/python.html), and more in the future), and targeting
+additional clouds ([Azure](../reference/azure.html), [GCP](../reference/gcp.html), [Kubernetes](../reference/kubernetes.html) and more in
 the future) - but JavaScript and AWS are currently supported for the [broadest set of use cases](TODO), so we'll use
 that combination to highlight the full set of features of Pulumi.
 
@@ -99,17 +99,17 @@ virtual machine in the cloud.
     Machine Image (AMI) for the region where you deploy the program.
 
     This simple example highlights several core features of Pulumi:
-    * [Resources](../reference/programming-model#resources) are defined by allocating resource objects in code (e.g.
+    * [Resources](../reference/programming-model.html#resources) are defined by allocating resource objects in code (e.g.
       `new aws.ec2.Instance(...)`).  The first argument passed to the resource constructor is its `name`, which must be
       unique within the Pulumi program.
     * Dependencies between resources are represented as simple references to [output
-      properties](../reference/programming-model#outputs) of a resource (e.g. the `group.name` property of the
+      properties](../reference/programming-model.html#outputs) of a resource (e.g. the `group.name` property of the
       `SecurityGroup`).
-    * [Variables](../reference/programming-model#programs) can be used just like you would expect to store constants, or
+    * [Variables](../reference/programming-model.html#programs) can be used just like you would expect to store constants, or
       to precompute and share values that are used in the program.
-    * [Packages](../reference/programming-model#packages) (e.g. `@pulumi/aws`) provide access to Resources and
+    * [Packages](../reference/programming-model.html#packages) (e.g. `@pulumi/aws`) provide access to Resources and
       Components you can use to build your applications.
-    * Module [exports](../reference/programming-model#exports) (e.g. `exports.publicIP = ...`) are used to publish
+    * Module [exports](../reference/programming-model.html#exports) (e.g. `exports.publicIP = ...`) are used to publish
       values that you want to access from outside your application.
     
 1.  Since we are using the `@pulumi/aws` NPM package, we need to add it and install all NPM dependencies.
@@ -136,7 +136,7 @@ virtual machine in the cloud.
 
     The new stack is marked with an asterisk to indicate that it is the currently active stack. All deployment operations target this stack.
 
-1.  Pulumi programs also support [configuration](../reference/config) which is defined per-stack to decide how that
+1.  Pulumi programs also support [configuration](../reference/config.html) which is defined per-stack to decide how that
    instance of the program should be parameterized.  We need to configure the AWS region we'll deploy to, such as 
    `us-west-2`.
 
@@ -195,7 +195,7 @@ virtual machine in the cloud.
     Note the output values `publicDns` and `publicIp` are not yet available, as they depend on the properties of a
     provisioned resource. The update shows that it will create 3 resources, rather than 2, as the stack is itself counted
     as a component which owns all resources being created.  Components are covered in more details in [step
-    2](./step2).
+    2](./step2.html).
 
 1.  Now, let's deploy the program and provision resources, via `pulumi update`. It takes about 30 seconds to
     provision the EC2 instance.
@@ -400,16 +400,16 @@ In this first tutorial, we saw how to use Pulumi programs to create and manage c
 plain JavaScript and NPM packages, and that Pulumi programs are executed during `preview` and `update` to determine that
 state we want our infrastructure to be in.  We also saw the core lifecycle of a Pulumi stack.
 
-In the [next section](./step2), we'll look at ways we can use programming languages to make defining infrastructure
+In the [next section](./step2.html), we'll look at ways we can use programming languages to make defining infrastructure
 even easier by using loops, conditionals, functions and classes.  And we'll see how these can be combined to build
 reusable abstractions, libraries and new packages.
 
-After that, in [step 3](./step3) and [step 4](./step4), we'll see examples of some powerful libraries that can be built
+After that, in [step 3](./step3.html) and [step 4](./step4.html), we'll see examples of some powerful libraries that can be built
 from these abstractions for serverless application development and for highly-productive cloud-agnostic app development.
 We'll see that the foundational principles of Pulumi programs and stacks covered in this tutorial apply in all of these
 other cases as well.
 
-And finally, in [step 5](./step5), we'll see how we can mix and match the kind of raw cloud infrastructure we defined in
+And finally, in [step 5](./step5.html), we'll see how we can mix and match the kind of raw cloud infrastructure we defined in
 this tutorial with the higher level libraries in later sections.
 
-[Continue with step 2 of the quickstart.](./step2)
+[Continue with step 2 of the quickstart.](./step2.html)
