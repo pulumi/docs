@@ -254,9 +254,7 @@ a.btn > svg {
 }
 
 @media (max-width: $MOBILE-WIDTH) {
-    /* On mobile, add a bit of padding at the top due to the current weirdness of wrapping the TOC. */
     .docsContent {
-        padding-top: 24px;
         max-width: calc(100% - 32px);
     }
 }
@@ -277,7 +275,7 @@ a.btn > svg {
     justify-content: center;
     -webkit-box-align: center;
     -webkit-box-pack: center;
-    z-index: 5;
+    z-index: 6;
 }
 
 .toolbar-shadow {
@@ -313,6 +311,10 @@ a.btn > svg {
     height: $TAB-GROUP-HEIGHT;
     border-bottom: 1px solid rgba(0,0,0,.12);
     z-index: 1;
+}
+
+.toolbar-tabs a:hover {
+    text-decoration: none;
 }
 
 .mdl-tabs__tab {
@@ -415,6 +417,44 @@ a.btn > svg {
 @media (max-width: $MOBILE-WIDTH) {
     /* Hide the WELCOME tab on mobile (there isn't enough space for it, and the Pulumi logo suffices). */
     .welcome-tab {
+        display: none;
+    }
+}
+
+.mdl-layout__header-row {
+    padding: 0 12px;
+}
+
+.mdl-layout__obfuscator {
+    // Makes the darkened view (shown when the drawer is visible)
+    // take up the whole screen.
+    position: fixed;
+}
+
+.mdl-layout__drawer {
+    margin-top: $TOOLBAR-HEIGHT;
+    padding: 0 8px 8px 8px;
+}
+
+// Always hide the default drawer toggle button.
+.mdl-layout__drawer-button {
+    display: none;
+}
+
+// Hide our custom toggle drawer button by default.
+.toggle-drawer-button {
+    display: none;
+}
+
+@media (max-width: $MOBILE-WIDTH) {
+    // Show the toggle drawer button.
+    .toggle-drawer-button {
+        display: block;
+    }
+
+    // Hide the normal toc on the page, since it will now
+    // be accessed through the drawer.
+    .column.docsToc {
         display: none;
     }
 }
