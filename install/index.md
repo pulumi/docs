@@ -124,7 +124,7 @@ Windows 8 and 10 are supported.
 > **Note:** The Windows installer for the v0.11.1 and v0.11.2 releases is missing key components and will not function correctly. In the meantime, please use the [Pulumi v0.11.0 Windows x64 installer](/releases/pulumi-v0.11.0-windows.x64.zip). This issue is tracked by [pulumi/sdk#14](https://github.com/pulumi/sdk/issues/14).
 
 <!-- 
-Tracked by https://github.com/pulumi/home/issues/156. Not linked in the text, since "home" will not be open-sourced.
+The below known issue is tracked by https://github.com/pulumi/home/issues/156. Not linked in the doc, since "home" will not be OSS in its current form.
 -->
 
 > **Note:** Due to a known issue, the SDK must be installed in a path that has no spaces. For instance, the path `C:\Program Files` will not work correctly. 
@@ -133,9 +133,9 @@ Tracked by https://github.com/pulumi/home/issues/156. Not linked in the text, si
 
 2.  Download [Pulumi {{page.installer_version}} for Windows x64](/releases/pulumi-v{{page.installer_version}}-windows.x64.zip).
 
-3.  Extract the zipfile to `C:\pulumi` and run `install.cmd` from either the command prompt or PowerShell.
+3.  Copy the extracted zipfile contents to a folder such as `C:\pulumi`.
 
-4. Add `C:\pulumi\Pulumi` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
+4. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 
 ### Linux install {#linux}
 
