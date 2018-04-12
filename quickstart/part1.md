@@ -1,5 +1,5 @@
 ---
-title: Part 1: Your First Pulumi Program
+title: Part 1. Your First Pulumi Program
 ---
 
 <!-- Common links -->

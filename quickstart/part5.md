@@ -1,8 +1,8 @@
 ---
-title: Part 5: Next Steps 🚧
+title: 5. Next Steps
 ---
 
-# Next Steps
+> **Note:** This section is under development 🚧.
 
 * Ideas for extensions on the tutorial to try to learn more about Pulumi.
 * Pointers to examples/tutorials for additional scenarios
