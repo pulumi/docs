@@ -14,19 +14,14 @@ Welcome!  We are excited that you want to learn Pulumi.  The Pulumi Quickstart t
 4. [Deploy application and infrastructure code together using the same tools and workflows](./part4.html)
 5. [Navigate our examples and reference documentation to learn more](./part5.html)
 
-## Tutorials
-
-For an introductory walkthrough of Pulumi, see the following tutorials:
-
-* [Using Pulumi with AWS Infrastructure](./aws.html)
-* [Using Pulumi for Cloud-Agnostic Serverless + Containers](./cloud.html)
-
 ## Additional Documentation
 
 In addition to the tutorial, you can check out the reference documentation for information:
 
 * [An overall introduction to Pulumi](../reference/index.html)
 * [Learn the core concepts used by Pulumi programs](../reference/concepts.html)
+* [Using Pulumi to manage AWS Infrastructure](../reference/aws.html)
+* [Using Pulumi to create Cloud-Agnostic Serverless and Containers](../reference/cloud.html)
 * [Use JavaScript or TypeScript to program the cloud](../reference/javascript.html)
 * [Use Python to program the cloud](../reference/python.html)
 
