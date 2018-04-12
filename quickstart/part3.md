@@ -1,5 +1,5 @@
 ---
-title: Step 3 🚧
+title: Part 3: Containers and Functions 🚧
 ---
 
 # Containers and Functions

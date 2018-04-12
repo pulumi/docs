@@ -1,5 +1,5 @@
 ---
-title: Step 1 - Your First Pulumi Program
+title: Part 1: Your First Pulumi Program
 ---
 
 <!-- Common links -->
@@ -194,8 +194,8 @@ virtual machine in the cloud.
 
     Note the output values `publicDns` and `publicIp` are not yet available, as they depend on the properties of a
     provisioned resource. The update shows that it will create 3 resources, rather than 2, as the stack is itself counted
-    as a component which owns all resources being created.  Components are covered in more details in [step
-    2](./step2.html).
+    as a component which owns all resources being created.  Components are covered in more details in [part
+    2](./part2.html).
 
 1.  Now, let's deploy the program and provision resources, via `pulumi update`. It takes about 30 seconds to
     provision the EC2 instance.
@@ -400,16 +400,16 @@ In this first tutorial, we saw how to use Pulumi programs to create and manage c
 plain JavaScript and NPM packages, and that Pulumi programs are executed during `preview` and `update` to determine that
 state we want our infrastructure to be in.  We also saw the core lifecycle of a Pulumi stack.
 
-In the [next section](./step2.html), we'll look at ways we can use programming languages to make defining infrastructure
+In the [next section](./part2.html), we'll look at ways we can use programming languages to make defining infrastructure
 even easier by using loops, conditionals, functions and classes.  And we'll see how these can be combined to build
 reusable abstractions, libraries and new packages.
 
-After that, in [step 3](./step3.html) and [step 4](./step4.html), we'll see examples of some powerful libraries that can be built
+After that, in [part 3](./part3.html) and [part 4](./part4.html), we'll see examples of some powerful libraries that can be built
 from these abstractions for serverless application development and for highly-productive cloud-agnostic app development.
 We'll see that the foundational principles of Pulumi programs and stacks covered in this tutorial apply in all of these
 other cases as well.
 
-And finally, in [step 5](./step5.html), we'll see how we can mix and match the kind of raw cloud infrastructure we defined in
+And finally, in [part 5](./part5.html), we'll see how we can mix and match the kind of raw cloud infrastructure we defined in
 this tutorial with the higher level libraries in later sections.
 
-[Continue with step 2 of the quickstart.](./step2.html)
+[Continue with part 2 of the quickstart.](./part2.html)
