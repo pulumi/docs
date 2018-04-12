@@ -1,5 +1,5 @@
 ---
-title: Step 4 🚧
+title: Part 4: Application and Infrastructure as One 🚧
 ---
 
 # Application and Infrastructure as One

@@ -1,31 +1,23 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header toolbar-shadow">
-    <header class="mdl-layout__header">
-        <div class="toolbar">
-            <!-- Header Links -->
-            <a href="/">
-                <img src="/images/logo/logo-white-white.svg" class="toolbar-logo" alt="Pulumi">
-            </a>
-            <span class="toolbar-spacer"></span>
-            <a href="mailto:support@pulumi.com" class="toolbar-item">
-                <button class="mdl-button mdl-js-button mdl-button--icon">
-                  <i class="material-icons toolbar-icon">feedback</i>
-                </button>
-            </a>
-            <a href="https://pulumi.com/welcome" class="toolbar-item">
-                <button class="mdl-button mdl-js-button mdl-button-primary toolbar-button">
-                    DASHBOARD
-                </button>
-            </a>
-        </div>
-    </header>
-</div>
-
-<!-- Tabs -->
-<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-    <div class="mdl-tabs__tab-dir toolbar-tabs">
-        <a href="/" class="mdl-tabs__tab welcome-tab {% if toc.nav_section == "Welcome" %}is-active{% endif %}">WELCOME</a>
-        <a href="/install" class="mdl-tabs__tab {% if toc.nav_section == "Install" %}is-active{% endif %}">INSTALL</a>
-        <a href="/quickstart" class="mdl-tabs__tab {% if toc.nav_section == "Quickstart" %}is-active{% endif %}">QUICKSTART</a>
-        <a href="/reference" class="mdl-tabs__tab {% if toc.nav_section == "Reference" %}is-active{% endif %}">REFERENCE</a>
+<header class="mdl-layout__header toolbar-shadow toolbar">
+    <div class="mdl-layout__header-row">
+        {% if include.toc %}
+            <button class="mdl-button mdl-js-button mdl-button--icon toggle-drawer-button" onclick="document.getElementById('app').MaterialLayout.toggleDrawer()">
+                <i class="material-icons toolbar-icon">menu</i>
+            </button>
+        {% endif %}
+        <a href="/">
+            <img src="/images/logo/logo-white-white.svg" class="toolbar-logo" alt="Pulumi">
+        </a>
+        <div class="mdl-layout-spacer"></div>
+        <a href="mailto:support@pulumi.com">
+            <button class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons toolbar-icon">feedback</i>
+            </button>
+        </a>
+        <a href="https://pulumi.com/welcome">
+            <button class="mdl-button mdl-js-button mdl-button-primary toolbar-button">
+                DASHBOARD
+            </button>
+        </a>
     </div>
-</div>
+</header>
