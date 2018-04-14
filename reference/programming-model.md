@@ -13,8 +13,8 @@ title: "Programming Model"
   folder, docker images built during the program execution, or code compiled form Pulumi program callbacks into AWS
   Lambdas or Azure Functions).
 * A `Pulumi.yaml` file in a folder indicates that it is a Pulumi program.  The `runtime` field of the `Pulumi.yaml`
-  indicates which runtime will be used to run the program.  When the `runtime` is `nodejs`, the Node.js runtime
-  (currently 6.10.2) will be used to run the program.  The `package.json` file next to `Pulumi.yaml` (or in the folder
+  indicates which runtime will be used to run the program.  When the `runtime` is `nodejs`, the user-installed Node.js runtime
+  will be used to run the program.  The `package.json` file next to `Pulumi.yaml` (or in the folder
   referred to by the `main` property of `Pulumi.yaml`) is used to identify which JavaScript code will be used as the
   entry point for the Pulumi program.
 

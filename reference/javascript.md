@@ -9,8 +9,6 @@ redirect_from: "/concepts/npm-packages.html"
 [Using configuration values in JavaScript]: ./config.html#javascript
 <!-- END LINKS -->
 
-> **Note:** Pulumi currently only supports Node.js v6.10.2.  This is a temporary limitation, but you will want to [ensure you've configured it properly before getting too far](/install).
-
 ## Getting Started
 
 The fastest way to get started with Pulumi JavaScript is by using a template.  From the directory in which you'd like to create a new project:
@@ -26,7 +24,7 @@ This will leave behind a `Pulumi.yaml` file, containing some minimal metadata ab
 
 The first thing you'll want to do is install the Pulumi SDK package.  This is listed in the template's `package.json` file.  Normally you'd just run `npm install` or `yarn install` at this time, however to use any `@pulumi` packages, you'll first need to follow the instructions in [Configure your NPM client].
 
-> **Note:** Because Pulumi is still in Private Beta, packages aren't publically available on NPM yet.  This is why the manual NPM client configuration is required.  As soon as Pulumi is public, all packages will be too.
+> **Note:** Because Pulumi is still in Private Beta, packages aren't publicly available on NPM yet.  This is why the manual NPM client configuration is required.  As soon as Pulumi is public, all packages will be too.
 
 All Pulumi packages are regular NPM packages, and live in the `@pulumi` organization scope.  The four most commonly used packages are `@pulumi/pulumi`, `@pulumi/aws`, `@pulumi/cloud` and `@pulumi/cloud-aws`, and they are specified as usual in the `dependencies` section of `package.json`.
 
@@ -59,6 +57,10 @@ To add a new package from the `@pulumi` namespace, run `npm install --save @pulu
 > **Note:** To use `@pulumi/cloud` on AWS, you must also include the package `@pulumi/cloud-aws`.
 
 More packages are on their way, so please keep an eye out.  Please also let us know if there are specific packages you'd like to see sooner!
+
+## Node.js runtime
+
+Any Node.js version after 6.10.x is supported, as long it is under **Active LTS** or is the **Current** stable release.
 
 ## Using Pulumi configuration values
 
