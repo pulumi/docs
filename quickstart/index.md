@@ -2,17 +2,19 @@
 title: Getting Started
 ---
 
-> **Note:** The 5-part Quickstart is still under development.  In the meantime, please see the
-> [AWS Tutorial](./aws.html), the [Cloud-Agnostic Serverless and Containers Tutorial](./cloud.html), or the detailed
-> [Reference](/reference), which includes details about Pulumi concepts, programming model, and APIs.
+<!-- LINKS: -->
+[Pulumi examples repo on GitHub]: https://github.com/pulumi/examples
+<!-- END LINKS: -->
+
+> **Note:** Some sections of 5-part Quickstart are still under development. In the meantime, check out the [Pulumi introduction](../reference/index.html) and the [Pulumi examples repo on GitHub].
 
 Welcome!  We are excited that you want to learn Pulumi.  The Pulumi Quickstart teaches you how to:
 
 1. [Set up your environment and build your first Pulumi program](./part1.html)
-2. [Manage your infrastructure using Pulumi](./part2.html)
-3. [Create programs that use containers and serverless functions](./part3.html)
-4. [Deploy application and infrastructure code together using the same tools and workflows](./part4.html)
-5. [Navigate our examples and reference documentation to learn more](./part5.html)
+2. Manage your infrastructure using Pulumi
+3. Create programs that use containers and serverless functions
+4. Deploy application and infrastructure code together using the same tools and workflows
+5. Learn more
 
 ## Additional Documentation
 
@@ -29,9 +31,12 @@ Much more is available in the table of contents available in [the reference sect
 
 ## Code Examples
 
-For code samples, see the following folders in the [Pulumi examples zipfile](/examples/pulumi-examples.zip):
+For code samples, see examples in the [Pulumi examples repo]. Below are some highlighted samples.
 
-- **webserver**. Create EC2 VMs using JavaScript. Companion to the [AWS infrastructure tutorial](./aws.html). 
-- **url-shortener**. A complete URL shortener SPA that uses Pulumi's high-level cloud programming model.
-- **serverless-raw**. Deploy a complete serverless C# application using lower-level AWS resources.
-- **video-thumbnailer**. Generate keyframe thumbnails from videos uploaded to a bucket, using FFmpeg in a container.
+- [AWS EC2 instance in JavaScript](https://github.com/pulumi/examples/tree/master/aws-js-webserver)
+- [AWS EC2 instance in Python](https://github.com/pulumi/examples/tree/master/aws-py-webserver)
+- [Azure Virtual Machine in JavaScript](https://github.com/pulumi/examples/tree/master/azure-js-webserver)
+- [Kubernetes Nginx in TypeScript](https://github.com/pulumi/examples/tree/master/kubernetes-ts-webserver)
+- [URL Shortener](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener/). A complete URL shortener web application using high-level `cloud.Table` and `cloud.HttpEndpoint` components.
+- [Video Thumnailer](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer/). An end-to-end pipeline for generating keyframe thumbnails from videos uploaded to a bucket using containerized [FFmpeg](https://www.ffmpeg.org/).  
+- [Raw AWS Serverless](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw). A complete serverless C# application using raw `aws.apigateway.RestAPI`, `aws.lambda.Function` and `aws.dynamodb.Table` resources from `@pulumi/aws`. 

@@ -26,45 +26,45 @@ title: "Change log"
     </thead>
     <tbody>
         <tr>
-            <th scope="row"><a href="#v112">0.11.2</a></th>
-            <td>2018/04/06</td>
-            <td>{% include sdk-links.html version='0.11.2' %}</td>
-        </tr>
-        <tr>
-            <th scope="row"><a href="#v111">0.11.1</a></th>
-            <td>2018/03/30</td>
-            <td>{% include sdk-links.html version='0.11.1' %}</td>
-        </tr>
-        <tr>
-            <th scope="row"><a href="#v11">0.11.0</a></th>
-            <td>2018/03/20</td>
-            <td>{% include sdk-links.html version='0.11.0' %}</td>
+            <th scope="row"><a href="#v112">0.11.3</a></th>
+            <td>2018/04/13</td>
+            <td>{% include sdk-links.html version='0.11.3' %}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v10">0.10.0</a></th>
             <td>2018/02/27</td>
             <td>{% include sdk-links.html version='0.10.0' %}</td>
         </tr>
-        <tr>
-            <th scope="row"><a href="#v913">0.9.13</a></th>
-            <td>2018/02/07</td>
-            <td>{% include sdk-links.html version='0.9.13' %}</td>
-        </tr>
-        <tr>
-            <th scope="row"><a href="#v911">0.9.11</a></th>
-            <td>2018/01/22</td>
-            <td>{% include sdk-links.html version='0.9.11' %}</td>
-        </tr>
     </tbody>
 </table>
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
+## v0.11.3 {#v1113}
+
+Released on April 13, 2018
+
+### Added 
+
+-  Add a static `get` method to all AWS resource classes. ([pulumi/pulumi-aws#189](https://github.com/pulumi/pulumi-aws/pull/189)). Each Pulumi resource class now has a static `get` method that construct an instance by reading existing resource state from your cloud provider.  For example, to read an existing EC2 VM, use `aws.ec2.Instance.get("vm", "i-01d7e1cddb70a2f0d")`. 
+
+### Changed 
+
+-  Switch to a resource-progress oriented view for pulumi preview, update, and destroy operations ([pulumi/pulumi#1116](https://github.com/pulumi/pulumi/pull/1116)). The operations `pulumi preview`, `update` and `destroy` have far simpler output by default, and show a progress view of ongoing operations. In addition, there is a structured component view, showing a parent operation as complete only when all child resources have been created.
+
+-  Remove strict dependency on Node v6.10.x ([pulumi/pulumi#1139](https://github.com/pulumi/pulumi/pull/1139)). It is now no longer necessary to use a specific version of Node to run Pulumi programs. Node versions after 6.10.x are supported, as long as they are under **Active LTS** or are the **Current** stable release.
+
+-  Use subnets instead of subnetMappings on LoadBalancer ([pulumi/pulumi-cloud#451](https://github.com/pulumi/pulumi-cloud/pull/451)). A change to how load balancers are configured for `cloud.Service` will mean that applications may see load balancers for non-HTTP services get replaced during updates.  This should not cause disruption to applications, but may change the DNS names of the load balancers where services are exposed.
+
+### Fixed
+
+-  Fix non-Fargate support for `cloud.Service` ([pulumi/pulumi-cloud#458](https://github.com/pulumi/pulumi-cloud/pull/458)). The issue in the 0.11.2 version of the SDK has now been fixed, and `cloud.Service` can either be used in the Fargate execution mode, or to target a cluster of EC2 instances (including the `cloud-aws:ecsAutoCluster` configuration setting).
+
+-  Allow multiple Pulumi SDK packages side-by-side ([pulumi/pulumi#1132](https://github.com/pulumi/pulumi/pull/1132)). 
+
 ## v0.11.2 {#v112}
 
 Released on April 6, 2018
-
-> **NOTE:** This release has a known issue that `cloud.Service` does not work correctly when deployed targeting a cluster of EC2 instances.  Instead, it will only work when targeting the newly supported Fargate execution model (using `cloud-aws:useFargate`).  Users of `cloud.Service` targeting a cluster of EC2 instances (or the `cloud-aws:ecsAutoCluster` configuration setting) should avoid upgrading to the `v0.11.2` SDK.  This issue is tracked by [Failure to deploy non-Fargate services #454](https://github.com/pulumi/pulumi-cloud/issues/454).
 
 ### Added
 

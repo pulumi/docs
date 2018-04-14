@@ -6,7 +6,6 @@ title: Part 1. Your First Pulumi Program
 [EC2 Instance]: /packages/pulumi-aws/classes/_ec2_instance_.instance.html
 [Security Group]: /packages/pulumi-aws/classes/_ec2_securitygroup_.securitygroup.html
 [`@pulumi/aws`]: /packages/pulumi-aws/index.html
-[Pulumi examples zipfile]: /examples/pulumi-examples.zip
 <!-- End common links -->
 
 In this quickstart we'll give you a guided tour of the core features of Pulumi, and how to apply them to build a variety
@@ -23,13 +22,17 @@ We'll focus in this quickstart on using **JavaScript** and on building applicati
 > **Note:** Pulumi supports authoring programs in additional languages
 ([TypeScript](../reference/javascript.html#TypeScript), [Python](../reference/python.html), and more in the future), and targeting
 additional clouds ([Azure](../reference/azure.html), [GCP](../reference/gcp.html), [Kubernetes](../reference/kubernetes.html) and more in
-the future) - but JavaScript and AWS are currently supported for the [broadest set of use cases](TODO), so we'll use
+the future) --- but JavaScript and AWS are currently supported for the broadest set of use cases, so we'll use
 that combination to highlight the full set of features of Pulumi.
 
 > **Note:** If you do not already have an AWS account, you can [create an account](https://aws.amazon.com/free/) to use
 > for these examples.  Most of the resources used in these examples are free within the Free Tier, but we encourage you
 > to follow the steps at the end of each section to delete the applications you deploy when you are done to avoid paying
 > for anything you aren't using.
+
+# Sample code
+
+The [sample code for this quickstart](https://github.com/pulumi/examples/tree/master/aws-js-webserver) is available on GitHub. For other languages and clouds, see the [Web Server examples collection](https://github.com/pulumi/examples#web-server).
 
 # Setup
 
@@ -90,7 +93,7 @@ virtual machine in the cloud.
     });
 
     exports.publicIp = server.publicIp;
-    exports.publicDns = server.publicDns;
+    exports.publicHostName = server.publicDns;
     ```
 
     This example uses the [`@pulumi/aws`] package to create and manage two AWS resources: an
@@ -158,62 +161,35 @@ virtual machine in the cloud.
     $ pulumi preview
     Previewing stack 'webserver-testing' in the Pulumi Cloud ☁️
     Previewing changes:
-    + pulumi:pulumi:Stack: (create)
-        [urn=urn:pulumi:webserver-testing::webserver2::pulumi:pulumi:Stack::webserver2-webserver-testing]
-        + aws:ec2/securityGroup:SecurityGroup: (create)
-            [urn=urn:pulumi:webserver-testing::webserver2::aws:ec2/securityGroup:SecurityGroup::webserver-secgrp]
-            description        : "Managed by Pulumi"
-            ingress            : [
-                [0]: {
-                    cidrBlocks: [
-                        [0]: "0.0.0.0/0"
-                    ]
-                    fromPort  : 22
-                    protocol  : "tcp"
-                    self      : false
-                    toPort    : 22
-                }
-            ]
-            name               : "webserver-secgrp-26e0bb6"
-            revokeRulesOnDelete: false
-        + aws:ec2/instance:Instance: (create)
-            [urn=urn:pulumi:webserver-testing::webserver2::aws:ec2/instance:Instance::webserver-www]
-            ami            : "ami-7172b611"
-            getPasswordData: false
-            instanceType   : "t2.micro"
-            securityGroups : [
-                [0]: "webserver-secgrp-26e0bb6"
-            ]
-            sourceDestCheck: true
-        ---outputs:---
-        publicDns: computed<string>
-        publicIp : computed<string>
+
+    pulumi:Stack("webserver-webserver-testing"): Completed
+    aws:SecurityGroup("web-secgrp"):             + Would create
+    aws:Instance("web-server-www"):              + Would create
     info: 3 changes previewed:
         + 3 resources to create
     ```
 
-    Note the output values `publicDns` and `publicIp` are not yet available, as they depend on the properties of a
-    provisioned resource. The update shows that it will create 3 resources, rather than 2, as the stack is itself counted
-    as a component which owns all resources being created.  Components are covered in more details in [part
-    2](./part2.html).
+    The update shows that it will create 3 resources, rather than 2, as the stack is itself counted as a component which owns all resources being created. Components are covered in more details in [part 2](./part2.html).
 
 1.  Now, let's deploy the program and provision resources, via `pulumi update`. It takes about 30 seconds to
-    provision the EC2 instance.
+    provision the EC2 instance. While the resources of the stack are being created, you will see a `Running...` progress indicator for the stack component. 
     
     ```
     $ pulumi update
     Updating stack 'webserver-testing' in the Pulumi Cloud ☁️
-    [ ...details omitted... ]
-    ---outputs:---
-    publicDns: "ec2-34-210-112-213.us-west-2.compute.amazonaws.com"
-    publicIp : "34.210.112.213"
+    Performing changes:
+
+    pulumi:Stack("webserver-webserver-testing"): Completed
+    aws:SecurityGroup("web-secgrp"):             + Created
+    aws:Instance("web-server-www"):              + Created
     info: 3 changes performed:
         + 3 resources created
-    Update duration: 20.233032918s
-    Permalink: https://pulumi.com/lukehoban/webserver2/webserver2/webserver-testing/updates/1
+    Update duration: 25.828272189s
+
+    Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/1
     ```
 
-    Note that this time, we see real values for the two outputs, corresponding to the IP and DNS name of the EC2
+    Note that this time, we see real values for the two outputs, corresponding to the IP and full-qualified host name of the EC2
     instances we've created.  Pulumi also provides a link to the pulumi.com console where you can see additional details
     about the deployment and the resources that are now part of the stack.
 
@@ -222,22 +198,24 @@ virtual machine in the cloud.
     ```
     $ pulumi stack
     Current stack is webserver-testing:
-        Managed by https://api.pulumi.com/ ☁️
-        Organization lukehoban
+        Managed by https://api.pulumi.com ☁️
+        Organization lindydonna
         PPC pulumi
         Last update time unknown
         Pulumi version ?
 
     Current stack resources (3):
         TYPE                                             NAME
-        pulumi:pulumi:Stack                              webserver2-webserver-testing
-        aws:ec2/securityGroup:SecurityGroup              webserver-secgrp
-        aws:ec2/instance:Instance                        webserver-www
+        pulumi:pulumi:Stack                              webserver-webserver-testing
+        aws:ec2/securityGroup:SecurityGroup              web-secgrp
+        aws:ec2/instance:Instance                        web-server-www
 
     Current stack outputs (2):
         OUTPUT                                           VALUE
-        publicDns                                        ec2-34-210-112-213.us-west-2.compute.amazonaws.com
-        publicIp                                         34.210.112.213
+        publicHostName                                   ec2-34-217-59-219.us-west-2.compute.amazonaws.com
+        publicIp                                         34.217.59.219
+
+    Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
     ```
 
 # Updating the Pulumi program
@@ -276,7 +254,7 @@ looks as we expect, `pulumi update` to commit the changes.
     ```
 
     Note that we defined the `userData` script inline in a string.  Because we are using JavaScript, we could also read
-    this from a file, construct this string programmaticaly, or even build up a string that depends on other resources
+    this from a file, construct this string programmatically, or even build up a string that depends on other resources
     defined in our program.  We'll see in later sections how we can deploy and version the application code of our
     program in a variety of different ways using Pulumi.
 
@@ -286,82 +264,44 @@ looks as we expect, `pulumi update` to commit the changes.
     $ pulumi preview
     Previewing stack 'webserver-testing' in the Pulumi Cloud ☁️
     Previewing changes:
-    * pulumi:pulumi:Stack: (same)
-        [urn=urn:pulumi:dsadas::webserver3::pulumi:pulumi:Stack::webserver3-dsadas]
-        ~ aws:ec2/securityGroup:SecurityGroup: (update)
-            [id=sg-97ae1de9]
-            [urn=urn:pulumi:dsadas::webserver3::aws:ec2/securityGroup:SecurityGroup::webserver-secgrp]
-            description        : "Managed by Pulumi"
-          ~ ingress            : [
-                [0]: {
-                        cidrBlocks: [
-                            [0]: "0.0.0.0/0"
-                        ]
-                        fromPort  : 22
-                        protocol  : "tcp"
-                        self      : false
-                        toPort    : 22
-                    }
-              + [1]: {
-                      + cidrBlocks: [
-                      +     [0]: "0.0.0.0/0"
-                        ]
-                      + fromPort  : 80
-                      + protocol  : "tcp"
-                      + self      : false
-                      + toPort    : 80
-                    }
-            ]
-            name               : "webserver-secgrp-7f564cb"
-            revokeRulesOnDelete: false
-        +-aws:ec2/instance:Instance: (replace)
-            [id=i-0452d91e4e1117d4d]
-            [urn=urn:pulumi:dsadas::webserver3::aws:ec2/instance:Instance::webserver-www]
-            ami            : "ami-7172b611"
-            getPasswordData: false
-            instanceType   : "t2.micro"
-            securityGroups : [
-                [0]: "webserver-secgrp-7f564cb"
-            ]
-            sourceDestCheck: true
-            tags           : {
-                Name: "webserver-www"
-            }
-          + userData       : "#!/bin/bash\necho \"Hello, World!\" > index.html\nnohup python -m SimpleHTTPServer 80 &"
-        ---outputs:---
-        publicDns: computed<string>
-        publicIp : computed<string>
+
+    pulumi:Stack("webserver-webserver-testing"): Completed
+    aws:SecurityGroup("web-secgrp"):             ~ Would update. Changes: +-ingress
+    aws:Instance("web-server-www"):              +-Would replace. Changes: + userData
     info: 2 changes previewed:
         ~ 1 resource to update
         +-1 resource to replace
           1 resource unchanged
+
     ```
 
-    We see that two changes will be applied.  First, the `SecurityGroup` will be updated in-place to also expose port
-    `80` for our HTTP server.  Second, the `Instance` will be replaced with a new EC2 Instance which will run the new
+    We see that two changes will be applied.  First, the `ingress` property of the `SecurityGroup` will be _updated_ in-place.  Second, the `Instance` will be _replaced_ with a new EC2 Instance which will run the new 
     script on startup. Pulumi understands which changes to a given cloud resource can be made in-place, and which
     require replacement, and computes the minimally disruptive change to achieve the desired state.
 
-1.  Then run `pulumi update` to deploy the changes.
+1.  Now, run `pulumi update` to deploy the changes.
 
     ```
     $ pulumi update
     Updating stack 'webserver-testing' in the Pulumi Cloud ☁️
-    [ ...details omitted... ]
-    publicDns: "ec2-52-37-221-116.us-west-2.compute.amazonaws.com"
-    publicIp : "52.37.221.116"
+    Performing changes:
+
+    pulumi:Stack("webserver-webserver-testing"): Completed
+    aws:SecurityGroup("web-secgrp"):             ~ Updated. Changes: +-ingress
+    aws:Instance("web-server-www"):              +-Replaced. Changes: + userData
     info: 2 changes performed:
         ~ 1 resource updated
         +-1 resource replaced
           1 resource unchanged
-    Update duration: 1m4.980730307s
-    Permalink: https://pulumi.com/lukehoban/webserver2/webserver2/webserver-testing/updates/2
+    Update duration: 1m14.133839913s
+
+    Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/4
     ```
 
 1.  We can use `pulumi stack output` to get the value of stack outputs from the CLI.  So we can `curl` the EC2 instance to see the HTTP server running there:
 
     ```
-    $ curl $(pulumi stack output publicDns)
+    $ curl $(pulumi stack output publicHostName)
     Hello, World!
     ```
 
@@ -378,11 +318,16 @@ Before moving on, let's tear down the resources that are part of our stack.
     This will permanently destroy all resources in the 'webserver-testing' stack!
     Please confirm that this is what you'd like to do by typing ("webserver-testing"): webserver-testing
     Destroying stack 'webserver-testing' in the Pulumi Cloud ☁️
-    [ ...details omitted... ]
+    Performing changes:
+
+    aws:Instance("web-server-www"):    - Deleted
+    aws:SecurityGroup("web-secgrp"):   - Deleted
+    pulumi:Stack("webserver-webserver-testing"): Completed
     info: 3 changes performed:
         - 3 resources deleted
-    Update duration: 52.746125589s
-    Permalink: https://pulumi.com/lukehoban/webserver2/webserver2/webserver-testing/updates/3
+    Update duration: 51.623097429s
+
+    Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/3
     ```
 
 1.  We can also remove the stack itself with `pulumi stack rm`.
