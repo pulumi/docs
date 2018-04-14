@@ -39,7 +39,7 @@ pulumi_kubernetes>=0.11.0
 Install the package using `pip install -r requirements.txt`.  This will download the latest version, and also install
 the associated Pulumi resource provider plugin.
 
-> **Note:** While Pulumi is in Private Beta, be sure to [configure your Pip client](./python.md#pypi-packages)
+> **Note:** While Pulumi is in Private Beta, be sure to [configure your Pip client](./python.html#pypi-packages)
 > to correctly download packages from Pulumi's private PyPI proxy server.  This is a temporary requirement.
 
 ### JavaScript and TypeScript
