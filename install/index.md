@@ -1,6 +1,6 @@
 ---
 title: "Installation and Setup"
-installer_version: "0.11.2"
+installer_version: "0.11.3"
 ---
 
 <!-- 
@@ -92,6 +92,8 @@ For older SDK versions, please see <a href="./changelog.html#all-versions">Previ
 
 ## Installation instructions {#instructions}
 
+> **NOTE:** Versions of the Pulumi SDK prior to 0.11.3 have a strict dependency on Node.js 6.10.2.
+
 - [macOS](#mac)
 - [Windows](#windows)
 - [Linux](#linux)
@@ -99,8 +101,6 @@ For older SDK versions, please see <a href="./changelog.html#all-versions">Previ
 ### macOS install {#mac}
 
 macOS Sierra (10.12) or later is required. 
-
-1.  Install [Node.js 6.10.2 (LTS)](https://nodejs.org/dist/v6.10.2/node-v6.10.2.pkg). This exact version is required, to match the version supported by AWS Lambda and other public cloud implementations. You can use [Node Version Manager (nvm)](https://github.com/creationix/nvm) to manage multiple Node versions.
 
 2.  Download [Pulumi {{page.installer_version}} for macOS](/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz).
 
@@ -121,15 +121,11 @@ macOS Sierra (10.12) or later is required.
 
 Windows 8 and 10 are supported.
 
-> **Note:** The Windows installer for the v0.11.1 and v0.11.2 releases is missing key components and will not function correctly. In the meantime, please use the [Pulumi v0.11.0 Windows x64 installer](/releases/pulumi-v0.11.0-windows.x64.zip). This issue is tracked by [pulumi/sdk#14](https://github.com/pulumi/sdk/issues/14).
-
 <!-- 
 The below known issue is tracked by https://github.com/pulumi/home/issues/156. Not linked in the doc, since "home" will not be OSS in its current form.
 -->
 
 > **Note:** Due to a known issue, the SDK must be installed in a path that has no spaces. For instance, the path `C:\Program Files` will not work correctly. 
-
-1.  Install [Node.js 6.10.2 (LTS)](https://nodejs.org/dist/v6.10.2/node-v6.10.2-x64.msi). This exact version is required, to match the version supported by AWS Lambda and other public cloud implementations. You can use [Node Version Manager (nvm)](https://github.com/creationix/nvm) to manage multiple Node versions.
 
 2.  Download [Pulumi {{page.installer_version}} for Windows x64](/releases/pulumi-v{{page.installer_version}}-windows.x64.zip).
 
@@ -140,8 +136,6 @@ The below known issue is tracked by https://github.com/pulumi/home/issues/156. N
 ### Linux install {#linux}
 
 We provide a pre-built binary for Ubuntu Trusty 14.04 LTS.
-
-1.  Install [Node.js 6.10.2 (LTS)](https://nodejs.org/dist/v6.10.2/node-v6.10.2-linux-x64.tar.gz). This exact version is required, to match the version supported by AWS Lambda and other public cloud implementations. You can use [Node Version Manager (nvm)](https://github.com/creationix/nvm) to manage multiple Node versions.
 
 2.  Download [Pulumi {{page.installer_version}} for Linux x64](/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz).
 

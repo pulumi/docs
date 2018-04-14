@@ -425,15 +425,8 @@ a.btn > svg {
     padding: 0 12px;
 }
 
-.mdl-layout__obfuscator {
-    // Makes the darkened view (shown when the drawer is visible)
-    // take up the whole screen.
-    position: fixed;
-}
-
 .mdl-layout__drawer {
-    margin-top: $TOOLBAR-HEIGHT;
-    padding: 0 8px 8px 8px;
+    padding: $TOOLBAR-HEIGHT 8px 8px 8px;
 }
 
 // Always hide the default drawer toggle button.
