@@ -341,8 +341,6 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 # Next Steps
 
-See the JavaScript and TypeScript API reference for [@pulumi/aws](../packages/pulumi-aws).
-
 In this first tutorial, we saw how to use Pulumi programs to create and manage cloud resources.  We saw that we can use
 plain JavaScript and NPM packages, and that Pulumi programs are executed during `preview` and `update` to determine that
 state we want our infrastructure to be in.  We also saw the core lifecycle of a Pulumi stack.
@@ -360,4 +358,3 @@ And finally, in [part 5](./part5.html), we'll see how we can mix and match the k
 this tutorial with the higher level libraries in later sections.
 
 [Continue with part 2 of the quickstart.](./part2.html)
-
