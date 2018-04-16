@@ -92,8 +92,6 @@ For older SDK versions, please see <a href="./changelog.html#all-versions">Previ
 
 ## Installation instructions {#instructions}
 
-> **NOTE:** Versions of the Pulumi SDK prior to 0.11.3 have a strict dependency on Node.js 6.10.2.
-
 - [macOS](#mac)
 - [Windows](#windows)
 - [Linux](#linux)
@@ -160,6 +158,19 @@ After installing Pulumi, verify the tool is on your path:
 $ pulumi version
 v{{page.installer_version}}
 ```
+
+## Login to the Pulumi Console and CLI
+
+1.  Go to the [Pulumi Console](https://pulumi.com/welcome) and sign in with GitHub. If you don't already have an account, signing in will create one for you.
+
+1.  Copy your [Pulumi access token](https://pulumi.com/account).
+
+1.  Login to the Pulumi CLI:
+
+    ```bash
+    $ pulumi login
+    Enter your Pulumi access token (located at https://pulumi.com/account): YOUR_TOKEN_HERE
+    ```
 
 ## Configure provider credentials
 
