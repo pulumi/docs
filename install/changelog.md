@@ -40,6 +40,8 @@ title: "Change log"
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
+> **NOTE:** Versions of the Pulumi SDK prior to 0.11.3 have a strict dependency on Node.js 6.10.2.
+
 ## v0.11.3 {#v1113}
 
 Released on April 13, 2018
@@ -59,8 +61,6 @@ Released on April 13, 2018
 ### Fixed
 
 -  Fix non-Fargate support for `cloud.Service` ([pulumi/pulumi-cloud#458](https://github.com/pulumi/pulumi-cloud/pull/458)). The issue in the 0.11.2 version of the SDK has now been fixed, and `cloud.Service` can either be used in the Fargate execution mode, or to target a cluster of EC2 instances (including the `cloud-aws:ecsAutoCluster` configuration setting).
-
--  Allow multiple Pulumi SDK packages side-by-side ([pulumi/pulumi#1132](https://github.com/pulumi/pulumi/pull/1132)). 
 
 ## v0.11.2 {#v112}
 

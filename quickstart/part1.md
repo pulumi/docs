@@ -5,41 +5,24 @@ title: Part 1. Your First Pulumi Program
 <!-- Common links -->
 [EC2 Instance]: /packages/pulumi-aws/classes/_ec2_instance_.instance.html
 [Security Group]: /packages/pulumi-aws/classes/_ec2_securitygroup_.securitygroup.html
-[`@pulumi/aws`]: /packages/pulumi-aws/index.html
+[@pulumi/aws]: /packages/pulumi-aws/index.html
 <!-- End common links -->
 
-In this quickstart we'll give you a guided tour of the core features of Pulumi, and how to apply them to build a variety
-of cloud applications.
+This quickstart presents a guided tour of Pulumi's core features and how you can use them to build a variety of cloud applications. 
 
-Pulumi is a programming platform for the cloud, enabling you to create and manage cloud infrastructure and managed
-services as well as application code deployed to containers and serverless functions.  We'll cover all of these in the
-quickstart, from a couple individual cloud resources in this first section, to components comprised of many managed
-cloud services, and applications built from a combination of cloud resources, containers and serverless functions in
-later sections.
+Pulumi is a programming platform for the cloud. You can easily create and manage infrastructure and higher-level services, or deploy application code to containers and serverless functions. This quickstart starts by creating a few individual resources, then continues to full applications built from a combination of cloud resources, such as cloud storage, containers, and serverless functions. 
 
-We'll focus in this quickstart on using **JavaScript** and on building applications deployed to **AWS**. 
+This quickstart uses **JavaScript** to build applications deployed on **AWS**.
 
-> **Note:** Pulumi supports authoring programs in additional languages
-([TypeScript](../reference/javascript.html#TypeScript), [Python](../reference/python.html), and more in the future), and targeting
-additional clouds ([Azure](../reference/azure.html), [GCP](../reference/gcp.html), [Kubernetes](../reference/kubernetes.html) and more in
-the future) --- but JavaScript and AWS are currently supported for the broadest set of use cases, so we'll use
-that combination to highlight the full set of features of Pulumi.
+> **Note:** Pulumi also supports [TypeScript](../reference/javascript.html#TypeScript) and [Python](../reference/python.html), with more languages coming in the future. For clouds, you can also target [Azure](../reference/azure.html), [GCP](../reference/gcp.html) and [Kubernetes](../reference/kubernetes.html), with more clouds supported in the future.
 
-> **Note:** If you do not already have an AWS account, you can [create an account](https://aws.amazon.com/free/) to use
-> for these examples.  Most of the resources used in these examples are free within the Free Tier, but we encourage you
-> to follow the steps at the end of each section to delete the applications you deploy when you are done to avoid paying
-> for anything you aren't using.
-
-# Sample code
-
-The [sample code for this quickstart](https://github.com/pulumi/examples/tree/master/aws-js-webserver) is available on GitHub. For other languages and clouds, see the [Web Server examples collection](https://github.com/pulumi/examples#web-server).
+{% include aws-resource-note.md %}
 
 # Setup
 
-Make sure you have followed the steps to [install Pulumi](../install), and to setup the [AWS
-CLI](../install/aws-config.html) and your [NPM token](../install/configure-npm.html) to access the Pulumi NPM packages.
+First, make sure you have 1) [installed Pulumi](../install), 2) [set up the AWS CLI](../install/aws-config.html) and 3) [configured your NPM client](../install/configure-npm.html) to access the Pulumi NPM packages.
 
-Let's create a new Pulumi project for our first application - a simple webserver EC2 instance in AWS.
+Let's create a new Pulumi project for our first application, which is a simple webserver EC2 instance in AWS.
 
 1.  Create a folder `webserver`:
 
@@ -52,12 +35,6 @@ Let's create a new Pulumi project for our first application - a simple webserver
 
     ```
     $ pulumi new javascript
-    ```
-
-1.  Go to `https://pulumi.com/account` and copy your access token. Run `pulumi login` and paste the token:
-
-    ```bash
-    $ pulumi login
     ```
 
 1.  Initialize a Pulumi repository with `pulumi init`, using your GitHub username. (Note: this step will be removed in the future.)
@@ -96,9 +73,9 @@ virtual machine in the cloud.
     exports.publicHostName = server.publicDns;
     ```
 
-    This example uses the [`@pulumi/aws`] package to create and manage two AWS resources: an
-    [`aws.ec2.SecurityGroup`][Security Group], which allows access for incoming SSH access, and an
-    [`aws.ec2.Instance`][EC2 Instance], which is created in that security group using the appropriate Amazon
+    This example uses the [@pulumi/aws] package to create and manage two AWS resources: an
+    [aws.ec2.SecurityGroup][Security Group], which allows access for incoming SSH access, and an
+    [aws.ec2.Instance][EC2 Instance], which is created in that security group using the appropriate Amazon
     Machine Image (AMI) for the region where you deploy the program.
 
     This simple example highlights several core features of Pulumi:
@@ -341,9 +318,9 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 # Next Steps
 
-In this first tutorial, we saw how to use Pulumi programs to create and manage cloud resources.  We saw that we can use
-plain JavaScript and NPM packages, and that Pulumi programs are executed during `preview` and `update` to determine that
-state we want our infrastructure to be in.  We also saw the core lifecycle of a Pulumi stack.
+In this first tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS. We saw that we can use plain JavaScript and NPM packages, and that Pulumi programs are executed during `preview` and `update` to determine that state we want our infrastructure to be in.  We also saw the core lifecycle of a Pulumi stack.
+
+For the same example in other languages and clouds, see the [Web Server examples collection](https://github.com/pulumi/examples#web-server).
 
 In the [next section](./part2.html), we'll look at ways we can use programming languages to make defining infrastructure
 even easier by using loops, conditionals, functions and classes.  And we'll see how these can be combined to build
