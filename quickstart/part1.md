@@ -166,11 +166,10 @@ virtual machine in the cloud.
     Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/1
     ```
 
-    Note that this time, we see real values for the two outputs, corresponding to the IP and full-qualified host name of the EC2
-    instances we've created.  Pulumi also provides a link to the pulumi.com console where you can see additional details
+    Now that the program is deployed, Pulumi link to the pulumi.com console where you can see additional details
     about the deployment and the resources that are now part of the stack.
 
-1.  To view your provisioned resources, run `pulumi stack`.
+1.  To view your provisioned resources, run `pulumi stack`. You'll see two [stack outputs](../reference/stack.html#output) corresponding to the IP and full-qualified host name of the EC2 instances we've created.  
 
     ```
     $ pulumi stack
