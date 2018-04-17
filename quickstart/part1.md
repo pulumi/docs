@@ -146,7 +146,7 @@ virtual machine in the cloud.
         + 3 resources to create
     ```
 
-    The update shows that it will create 3 resources, rather than 2, as the stack is itself counted as a component which owns all resources being created. Components are covered in more details in [part 2](./part2.html).
+    The update shows that it will create 3 resources, rather than 2, as the stack is itself counted as a virtual component which owns all resources being created. Components are covered in more details in [part 2](./part2.html).
 
 1.  Now, let's deploy the program and provision resources, via `pulumi update`. It takes about 30 seconds to
     provision the EC2 instance. While the resources of the stack are being created, you will see a `Running...` progress indicator for the stack component. 
@@ -281,7 +281,7 @@ looks as we expect, `pulumi update` to commit the changes.
     Hello, World!
     ```
 
-## Cleanup
+## Clean up
 
 Before moving on, let's tear down the resources that are part of our stack.
 
@@ -306,7 +306,7 @@ Before moving on, let's tear down the resources that are part of our stack.
     Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/3
     ```
 
-1.  We can also remove the stack itself with `pulumi stack rm`.
+1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
 
     ```
     $ pulumi stack rm

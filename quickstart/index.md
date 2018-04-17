@@ -11,7 +11,7 @@ title: Getting Started
 Welcome!  We are excited that you want to learn Pulumi.  The Pulumi Quickstart teaches you how to:
 
 1. [Set up your environment and build your first Pulumi program](./part1.html)
-2. Manage your infrastructure using Pulumi
+2. [Create reusable libraries for infrastructure](./part2.html)
 3. Create programs that use containers and serverless functions
 4. Deploy application and infrastructure code together using the same tools and workflows
 5. Learn more
