@@ -18,7 +18,7 @@ This quickstart uses **JavaScript** to build applications deployed on **AWS**.
 
 {% include aws-resource-note.md %}
 
-# Setup
+## Setup
 
 First, make sure you have 1) [installed Pulumi](../install), 2) [set up the AWS CLI](../install/aws-config.html) and 3) [configured your NPM client](../install/configure-npm.html) to access the Pulumi NPM packages.
 
@@ -43,7 +43,7 @@ Let's create a new Pulumi project for our first application, which is a simple w
     $ pulumi init --owner gitHubUsername
     ```
 
-# A first Pulumi program
+## A first Pulumi program
 
 Pulumi programs are written in your favorite general purpose programming language (JavaScript in this example), and
 define the resources you want to exist in your target cloud environment.  We'll start with a program that deploys a
@@ -194,7 +194,7 @@ virtual machine in the cloud.
     Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
     ```
 
-# Updating the Pulumi program
+## Updating the Pulumi program
 
 Now that we have an instance of our Pulumi program deployed, we may want to make changes. We do this by updating our
 Pulumi program to define the new state we want our infrastructure to be in, and re-running `pulumi preview` and, if it
@@ -281,7 +281,7 @@ looks as we expect, `pulumi update` to commit the changes.
     Hello, World!
     ```
 
-# Cleanup
+## Cleanup
 
 Before moving on, let's tear down the resources that are part of our stack.
 
@@ -315,7 +315,7 @@ Before moving on, let's tear down the resources that are part of our stack.
     Stack 'webserver-testing' has been removed!
     ```
 
-# Next Steps
+## Next steps
 
 In this first tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS. We saw that we can use plain JavaScript and NPM packages, and that Pulumi programs are executed during `preview` and `update` to determine that state we want our infrastructure to be in.  We also saw the core lifecycle of a Pulumi stack.
 
