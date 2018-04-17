@@ -22,6 +22,6 @@ TOOLS_REPOS="pulumi,pulumi-cloud,pulumi-aws,pulumi-terraform,pulumi-azure"
 
 gh-changelog \
     --owner pulumi --repos "${TOOLS_REPOS}" \
-    --git-directory "${LAUNCH_DIR}/../" \
+    --git-directory "../" \
     --from "${1}" --to "${2}" \
     "${3:-}" "${4:-}" 
