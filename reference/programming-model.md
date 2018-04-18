@@ -62,8 +62,9 @@ title: "Programming Model"
   more strongly typed form with `config.getNumber`, `config.getBoolean`, etc.
 
 ## Components {#components}
+* A Pulumi **component** is a logical group of resources which contains other components and physical cloud resources. A Pulumi stack is itself a component that contains all top-level components and resources in a program.
 * Programs and libraries can define new Components by defining classes derived from `pulumi.ComponentResource`.
-* These components provide a way of creating resuable abstractions made up of other resources.
+* These components provide a way of creating reusable abstractions made up of other resources.
 * A simple components looks like:
 
   ```typescript
@@ -76,7 +77,7 @@ title: "Programming Model"
 
 * The call to `super` will cause an instance of the component to be registered with Pulumi.  This will allow it to be
   recorded in the checkpoint and tracked across deployments of the program.
-* The component must register a Type (e.g. `pkg:MyResource`).  This is used to identify resources that are maanged by
+* The component must register a Type (e.g. `pkg:MyResource`).  This is used to identify resources that are managed by
   this component.  The name should include the package name and resource type, along with any static namespacing (e.g.
   `aws:lambda:Function`).  In general, it should be the same as the way users will refer to the resource in code, but
   with `:` in place of `.`.

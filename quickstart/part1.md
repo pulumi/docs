@@ -40,10 +40,10 @@ Let's create a new Pulumi project for our first application, which is a simple w
 1.  Initialize a Pulumi repository with `pulumi init`, using your GitHub username. (Note: this step will be removed in the future.)
 
     ```
-    $ pulumi init --owner gitHubUsername
+    $ pulumi init --owner githubUsername
     ```
 
-## A first Pulumi program
+## A first Pulumi program {#webserver}
 
 Pulumi programs are written in your favorite general purpose programming language (JavaScript in this example), and
 define the resources you want to exist in your target cloud environment.  We'll start with a program that deploys a
@@ -146,7 +146,7 @@ virtual machine in the cloud.
         + 3 resources to create
     ```
 
-    The update shows that it will create 3 resources, rather than 2, as the stack is itself counted as a virtual component which owns all resources being created. Components are covered in more details in [part 2](./part2.html).
+    The update shows that it will create 3 resources, rather than 2, as the stack is itself counted as a [Component](../reference/programming-model.html#components) which owns all resources being created. Components are covered in more details in [part 2](./part2.html).
 
 1.  Now, let's deploy the program and provision resources, via `pulumi update`. It takes about 30 seconds to
     provision the EC2 instance. While the resources of the stack are being created, you will see a `Running...` progress indicator for the stack component. 
@@ -166,10 +166,9 @@ virtual machine in the cloud.
     Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/1
     ```
 
-    Now that the program is deployed, Pulumi link to the pulumi.com console where you can see additional details
-    about the deployment and the resources that are now part of the stack.
-
-1.  To view your provisioned resources, run `pulumi stack`. You'll see two [stack outputs](../reference/stack.html#output) corresponding to the IP and full-qualified host name of the EC2 instances we've created.  
+    To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser.
+    
+1.  To view your provisioned resources, run `pulumi stack`. You'll see two [stack outputs](../reference/stack.html#output) corresponding to the IP and full-qualified host name of the EC2 instance we've created.  
 
     ```
     $ pulumi stack
