@@ -65,7 +65,7 @@ Current stack outputs (2):
 Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 ```
 
-## View stack outputs
+## View stack outputs {#outputs}
 
 When you use [output properties](./programming-model.html#output-properties) in your Pulumi program, they become stack outputs. Stack outputs can be viewed via `pulumi stack output`.
 
