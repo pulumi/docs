@@ -13,6 +13,7 @@ title: Part 2. Infrastructure as Software
 [pulumi.Output]: /packages/pulumi/classes/_resource_.output.html
 [pulumi.Output.apply]: /packages/pulumi/classes/_resource_.output.html#apply
 [pulumi.Input]: /packages/pulumi/modules/_resource_.html#input
+[pulumi.ComponentResource]: /packages/pulumi/classes/_resource_.componentresource.html
 
 <!-- End common links -->
 
@@ -139,7 +140,7 @@ First, we'll create a Pulumi program that uploads files from the `www` directory
     Permalink: https://pulumi.com/lindydonna/s3website/s3website/website-testing/updates/1
     ```
 
-1.  To see the name of the bucket that was created, run `pulumi stack export`. Note that an extra 7-digit identifier is appended to the name. All Pulumi resources add this identifier automatically, so that you don't have to manually create unique names.
+1.  To see the name of the bucket that was created, run `pulumi stack output`. Note that an extra 7-digit identifier is appended to the name. All Pulumi resources add this identifier automatically, so that you don't have to manually create unique names.
 
     ```bash
     $ pulumi stack output
@@ -267,9 +268,11 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
 
 ## Create a Pulumi component 
 
-In this example, we defined a function `publicReadPolicyForBucket`. Since it is just a plain JavaScript function, it can be put into a shared library. In Pulumi, you can also create libraries and NPM packages for infrastructure definitions!
+In this example, we defined a function `publicReadPolicyForBucket`. Since it is just a plain JavaScript function, it can be put into a shared library. In Pulumi, you can even create libraries and NPM packages for infrastructure definitions.
 
-It's easy to turn the S3 website example into a reusable [Component](../reference/programming-model.html#components) that you share with your team or the community. A component is a logical container for physical cloud resources. 
+It's easy to turn the S3 website example into a reusable [Component](../reference/programming-model.html#components) that you share with your team or the community. A component is a logical container for physical cloud resources. Programs and libraries can create new components by creating a subclass of [pulumi.ComponentResource].
+
+
 
 🚧 TODO: finish  
 

@@ -124,6 +124,7 @@ title: "Programming Model"
   resource class with the resource provider it depends on for resource management.  Packages like `@pulumi/aws` and
   `@pulumi/kubernetes` define resources (like `aws.ec2.Intance`, `kubernetes.Pod`), which are managed by the AWS and
   Kubernetes ressource providers.
+* A `CustomResource` needs an associated CRUD provider, whereas a `ComponentResource` does not (its logic is entirely in JS/TS/Py).
 * Other Pulumi packages define components purely in JavaScript (or Python) which are built out of these raw provider
   resource building blocks.  This includes packages like `@pulumi/cloud` or `@pulumi/aws-infrastructure` which provide
   higher-level components..
