@@ -299,6 +299,11 @@ a.btn > svg {
 .toolbar-logo {
     height: 20px;
     margin: 0 40px 0 12px;
+
+    // Workaround for Chrome rendering issue related to SVG while other CSS transition
+    // effects are occurring at the same time. See:
+    // https://github.com/pulumi/pulumi-service/issues/1160#issuecomment-382611311
+    transform: translateZ(0);
 }
 
 .toolbar-spacer {
