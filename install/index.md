@@ -161,7 +161,7 @@ v{{page.installer_version}}
 
 ## Login to the Pulumi Console and CLI
 
-1.  Go to the [Pulumi Console](https://pulumi.com/welcome) and sign in with GitHub. If you don't already have an account, signing in will create one for you.
+1.  Go to the [Pulumi Console](https://pulumi.com/welcome) and sign in with GitHub. If you don't already have a Pulumi account, signing in will create one for you.
 
 1.  Copy your [Pulumi access token](https://pulumi.com/account).
 

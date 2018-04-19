@@ -18,7 +18,7 @@ This quickstart uses **JavaScript** to build applications deployed on **AWS**.
 
 {% include aws-resource-note.md %}
 
-# Setup
+## Setup
 
 First, make sure you have 1) [installed Pulumi](../install), 2) [set up the AWS CLI](../install/aws-config.html) and 3) [configured your NPM client](../install/configure-npm.html) to access the Pulumi NPM packages.
 
@@ -40,10 +40,10 @@ Let's create a new Pulumi project for our first application, which is a simple w
 1.  Initialize a Pulumi repository with `pulumi init`, using your GitHub username. (Note: this step will be removed in the future.)
 
     ```
-    $ pulumi init --owner gitHubUsername
+    $ pulumi init --owner githubUsername
     ```
 
-# A first Pulumi program
+## A first Pulumi program {#webserver}
 
 Pulumi programs are written in your favorite general purpose programming language (JavaScript in this example), and
 define the resources you want to exist in your target cloud environment.  We'll start with a program that deploys a
@@ -146,7 +146,7 @@ virtual machine in the cloud.
         + 3 resources to create
     ```
 
-    The update shows that it will create 3 resources, rather than 2, as the stack is itself counted as a component which owns all resources being created. Components are covered in more details in [part 2](./part2.html).
+    The update shows that it will create 3 resources, rather than 2, as the stack is itself counted as a [Component](../reference/programming-model.html#components) which owns all resources being created. Components are covered in more details in [part 2](./part2.html).
 
 1.  Now, let's deploy the program and provision resources, via `pulumi update`. It takes about 30 seconds to
     provision the EC2 instance. While the resources of the stack are being created, you will see a `Running...` progress indicator for the stack component. 
@@ -166,11 +166,9 @@ virtual machine in the cloud.
     Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/1
     ```
 
-    Note that this time, we see real values for the two outputs, corresponding to the IP and full-qualified host name of the EC2
-    instances we've created.  Pulumi also provides a link to the pulumi.com console where you can see additional details
-    about the deployment and the resources that are now part of the stack.
-
-1.  To view your provisioned resources, run `pulumi stack`.
+    To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser.
+    
+1.  To view your provisioned resources, run `pulumi stack`. You'll see two [stack outputs](../reference/stack.html#output) corresponding to the IP and full-qualified host name of the EC2 instance we've created.  
 
     ```
     $ pulumi stack
@@ -195,7 +193,7 @@ virtual machine in the cloud.
     Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
     ```
 
-# Updating the Pulumi program
+## Updating the Pulumi program
 
 Now that we have an instance of our Pulumi program deployed, we may want to make changes. We do this by updating our
 Pulumi program to define the new state we want our infrastructure to be in, and re-running `pulumi preview` and, if it
@@ -282,7 +280,7 @@ looks as we expect, `pulumi update` to commit the changes.
     Hello, World!
     ```
 
-# Cleanup
+## Clean up
 
 Before moving on, let's tear down the resources that are part of our stack.
 
@@ -307,7 +305,7 @@ Before moving on, let's tear down the resources that are part of our stack.
     Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/3
     ```
 
-1.  We can also remove the stack itself with `pulumi stack rm`.
+1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
 
     ```
     $ pulumi stack rm
@@ -316,7 +314,7 @@ Before moving on, let's tear down the resources that are part of our stack.
     Stack 'webserver-testing' has been removed!
     ```
 
-# Next Steps
+## Next steps
 
 In this first tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS. We saw that we can use plain JavaScript and NPM packages, and that Pulumi programs are executed during `preview` and `update` to determine that state we want our infrastructure to be in.  We also saw the core lifecycle of a Pulumi stack.
 
