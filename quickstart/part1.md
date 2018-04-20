@@ -314,11 +314,13 @@ Before moving on, let's tear down the resources that are part of our stack.
     Stack 'webserver-testing' has been removed!
     ```
 
-## Next steps
+## Summary
 
 In this first tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS. We saw that we can use plain JavaScript and NPM packages, and that Pulumi programs are executed during `preview` and `update` to determine that state we want our infrastructure to be in.  We also saw the core lifecycle of a Pulumi stack.
 
 For the same example in other languages and clouds, see the [Web Server examples collection](https://github.com/pulumi/examples#web-server).
+
+## Next steps
 
 In the [next section](./part2.html), we'll look at ways we can use programming languages to make defining infrastructure
 even easier by using loops, conditionals, functions and classes.  And we'll see how these can be combined to build

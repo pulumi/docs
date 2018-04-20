@@ -32,11 +32,23 @@ layout: welcome
 <div>
     <p class="text heading1">An <span class="bold">easier cloud computing</span></p>
     <p class="text heading2">experience awaits.</p>
-    <p class="text fineprint">But we are in private beta, so access is limited.</p>
+    <p class="text fineprint">Welcome to our private beta! Sign in with your GitHub account to get started.</p>
 
-    <a href="/login" >
+    <form method="post" action="https://pulumi.com/login">
+        <input id="redirect-url-form-input" type="hidden" name="redirectUrl" value="" /> 
         <button class="welcome-button">
             SIGN IN WITH GITHUB
         </button>
     </form>
 </div>
+
+ <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"></script>
+ <script>
+     function getUrlParameter(name) {
+         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+         var results = regex.exec(location.search);
+         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+     };
+     $("#redirect-url-form-input")[0].value = getUrlParameter("redirect");
+ </script>
