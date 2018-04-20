@@ -188,7 +188,6 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
       return JSON.stringify({
         Version: "2012-10-17",
         Statement: [{
-          // Sid: "PublicReadGetObject",
           Effect: "Allow",
           Principal: "*",
           Action: [
