@@ -6,7 +6,7 @@ title: Getting Started
 [Pulumi examples repo]: https://github.com/pulumi/examples
 <!-- END LINKS: -->
 
-> **Note:** Some sections of 5-part Quickstart are still under development. In the meantime, check out the [Pulumi introduction](../reference/index.html) and the [Pulumi examples repo on GitHub].
+> **Note:** Some sections of 5-part Quickstart are still under development. In the meantime, check out the [Pulumi introduction](../reference/index.html) and the [Pulumi examples repo] on GitHub.
 
 Welcome!  We are excited that you want to learn Pulumi.  The Pulumi Quickstart teaches you how to:
 
@@ -22,8 +22,6 @@ In addition to the tutorial, you can check out the reference documentation for i
 
 * [An overall introduction to Pulumi](../reference/index.html)
 * [Learn the core concepts used by Pulumi programs](../reference/concepts.html)
-* [Using Pulumi to manage AWS Infrastructure](../reference/aws.html)
-* [Using Pulumi to create Cloud-Agnostic Serverless and Containers](../reference/cloud.html)
 * [Use JavaScript or TypeScript to program the cloud](../reference/javascript.html)
 * [Use Python to program the cloud](../reference/python.html)
 
