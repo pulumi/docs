@@ -1,5 +1,5 @@
 ---
-title: 5. Next Steps
+title: Part 5. Next Steps
 ---
 
 > **Note:** This section is under development 🚧.

@@ -3,7 +3,7 @@ title: Getting Started
 ---
 
 <!-- LINKS: -->
-[Pulumi examples repo on GitHub]: https://github.com/pulumi/examples
+[Pulumi examples repo]: https://github.com/pulumi/examples
 <!-- END LINKS: -->
 
 > **Note:** Some sections of 5-part Quickstart are still under development. In the meantime, check out the [Pulumi introduction](../reference/index.html) and the [Pulumi examples repo on GitHub].
@@ -31,12 +31,12 @@ Much more is available in the table of contents available in [the reference sect
 
 ## Code Examples
 
-For code samples, see examples in the [Pulumi examples repo]. Below are some highlighted samples.
+For code samples, see examples in the [Pulumi examples repo] on GitHub. Below are some highlighted samples.
 
 - [AWS EC2 instance in JavaScript](https://github.com/pulumi/examples/tree/master/aws-js-webserver)
 - [AWS EC2 instance in Python](https://github.com/pulumi/examples/tree/master/aws-py-webserver)
 - [Azure Virtual Machine in JavaScript](https://github.com/pulumi/examples/tree/master/azure-js-webserver)
 - [Kubernetes Nginx in TypeScript](https://github.com/pulumi/examples/tree/master/kubernetes-ts-webserver)
 - [URL Shortener](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener/). A complete URL shortener web application using high-level `cloud.Table` and `cloud.HttpEndpoint` components.
-- [Video Thumnailer](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer/). An end-to-end pipeline for generating keyframe thumbnails from videos uploaded to a bucket using containerized [FFmpeg](https://www.ffmpeg.org/).  
+- [Video Thumbnailer](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer/). An end-to-end pipeline for generating keyframe thumbnails from videos uploaded to a bucket using containerized [FFmpeg](https://www.ffmpeg.org/).  
 - [Raw AWS Serverless](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw). A complete serverless C# application using raw `aws.apigateway.RestAPI`, `aws.lambda.Function` and `aws.dynamodb.Table` resources from `@pulumi/aws`. 
