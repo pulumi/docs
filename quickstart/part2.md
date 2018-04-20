@@ -394,5 +394,5 @@ The full source of the examples are available in the [Pulumi examples repo](http
 
 ## Next steps
 
-Continue with [part 3 of the quickstart](./part2.html) to learn how to create programs that contain both infrastructure and application code, using serverless functions and containers.
+Continue with [part 3 of the quickstart](./part3.html) to learn how to create programs that contain both infrastructure and application code, using serverless functions and containers.
 
