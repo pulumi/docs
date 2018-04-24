@@ -26,7 +26,7 @@ title: "Change log"
     </thead>
     <tbody>
         <tr>
-            <th scope="row"><a href="#v112">0.11.3</a></th>
+            <th scope="row"><a href="#v113">0.11.3</a></th>
             <td>2018/04/13</td>
             <td>{% include sdk-links.html version='0.11.3' %}</td>
         </tr>
@@ -42,7 +42,7 @@ title: "Change log"
 
 > **Note:** Versions of the Pulumi SDK prior to 0.11.3 have a strict dependency on Node.js 6.10.2.
 
-## v0.11.3 {#v1113}
+## v0.11.3 {#v113}
 
 Released on April 13, 2018
 
