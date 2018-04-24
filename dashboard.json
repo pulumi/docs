@@ -1,0 +1,35 @@
+{
+    "gettingStarted": {
+        "title": "Getting Started",
+        "icon": "school",
+        "items": [
+            { "title": "Installation and Setup", "url": "https://docs.pulumi.com/install/" },
+            { "title": "Quick Start", "url": "https://docs.pulumi.com/quickstart/" },
+            { "title": "Examples", "url": "https://github.com/pulumi/examples" },
+            { "title": "Pulumi Slack", "url": "https://pulumi.slack.com/" }
+        ]
+    },
+    "documentation": {
+        "title": "Documentation",
+        "icon": "library_books",
+        "items": [
+            { "title": "Introduction", "url": "https://docs.pulumi.com/reference/" },
+            { "title": "Concepts", "url": "https://docs.pulumi.com/reference/concepts.html" },
+            { "title": "Programming Model", "url": "https://docs.pulumi.com/reference/programming-model.html" },
+            { "title": "Learn about AWS", "url": "https://docs.pulumi.com/reference/aws.html" },
+            { "title": "Learn about Kubernetes", "url": "https://docs.pulumi.com/reference/kubernetes.html" }
+        ]
+    },
+    "news": {
+        "title": "News",
+        "icon": "radio",
+        "items": [
+            {
+                "title": "Pulumi 0.11.3 now available",
+                "url": "https://docs.pulumi.com/install/changelog.html#v113",
+                "date": "2018-04-13"
+            }
+        ],
+        "actionItem": { "title": "Read all news", "url": "https://docs.pulumi.com/install/changelog.html" }
+    }
+}
