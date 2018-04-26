@@ -26,6 +26,11 @@ title: "Change log"
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v113">0.12.0</a></th>
+            <td>2018/04/26</td>
+            <td>{% include sdk-links.html version='0.12.0' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v113">0.11.3</a></th>
             <td>2018/04/13</td>
             <td>{% include sdk-links.html version='0.11.3' %}</td>
@@ -40,11 +45,16 @@ title: "Change log"
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
-> **Note:** Versions of the Pulumi SDK prior to 0.11.3 have a strict dependency on Node.js 6.10.2.
+## v.12.0 {#v120}
+
+Released on April 26, 2018
+
 
 ## v0.11.3 {#v113}
 
 Released on April 13, 2018
+
+> **Note:** Versions of the Pulumi SDK prior to 0.11.3 have a strict dependency on Node.js 6.10.2.
 
 ### Added 
 
@@ -65,6 +75,9 @@ Released on April 13, 2018
 ## v0.11.2 {#v112}
 
 Released on April 6, 2018
+
+- Default organization is the user. To target a different one, use `<owner-name>/<stack-name>`.
+- Removed the preview command, which is now `pulumi update --preview`.
 
 ### Added
 

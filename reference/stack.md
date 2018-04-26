@@ -5,12 +5,21 @@ title: "Stacks"
 Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently configurable
 instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as **development**, **staging** and **production**) or feature branches (such as **feature-x-dev**, **jane-feature-x-dev**).
 
-## Create a stack
+
+## Create a stack {#create-stack}
 
 To create a new stack, use `pulumi stack init stackName`. This creates an empty stack `stackName` and sets it as the *active* stack.  The project that the stack is associated with is determined by finding the nearest `Pulumi.yaml` file.  
 
+The stack name must be unique within within your account. As a best practice, prefix the stack name with a project name. 
+
 ```
-$ pulumi stack init staging --local
+$ pulumi stack init myproj-staging
+```
+
+If you are using Pulumi in your organization, by default the stack will be created in your user account. To target the organization, name the stack using `orgName/stackName`:
+
+```
+$ pulumi stack init broomllc/myproj-staging
 ```
 
 ## Listing stacks
@@ -19,10 +28,10 @@ To see the list of stacks associated with the current project (the nearest `Pulu
 
 ```
 $ pulumi stack ls
-NAME                                             LAST UPDATE              RESOURCE COUNT     CLOUD
-jane-dev                                         4 hours ago              97                 n/a
-staging*                                         n/a                      n/a                n/a
-testing                                          2 weeks ago              121                n/a
+NAME                                             LAST UPDATE              RESOURCE COUNT
+myproj-jane-dev                                  4 hours ago              97            
+myproj-staging*                                  n/a                      n/a           
+myproj-test                                      2 weeks ago              121           
 ```
 
 ## Select a stack
@@ -30,13 +39,13 @@ testing                                          2 weeks ago              121   
 The top-level `pulumi` operations `config`, `preview`, `update` and `destroy` operate on the *active* stack. To change the active stack, run `pulumi stack select`.
 
 ```
-$ pulumi stack select jane-dev
+$ pulumi stack select myproj-jane-dev
 
 $ pulumi stack ls
 NAME                                             LAST UPDATE              RESOURCE COUNT
-jane-dev*                                        4 hours ago              2             
-staging                                          n/a                      n/a           
-testing                                          2 weeks ago              3             
+myproj-jane-dev*                                 4 hours ago              97            
+myproj-staging                                   n/a                      n/a           
+myproj-test                                      2 weeks ago              121           
 ```
 
 ## View stack resources

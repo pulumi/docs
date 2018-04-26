@@ -37,12 +37,6 @@ Let's create a new Pulumi project for our first application, which is a simple w
     $ pulumi new javascript
     ```
 
-1.  Initialize a Pulumi repository with `pulumi init`, using your GitHub username. (Note: this step will be removed in the future.)
-
-    ```
-    $ pulumi init --owner githubUsername
-    ```
-
 ## A first Pulumi program {#webserver}
 
 Pulumi programs are written in your favorite general purpose programming language (JavaScript in this example), and
@@ -99,7 +93,7 @@ virtual machine in the cloud.
     ```
 
 1.  Pulumi programs are deployed to a [stack](../reference/stack.html), which is an isolated and independently
-   configurable instance of a Pulumi program.  We'll create a new stack for our program.
+   configurable instance of a Pulumi program.  We'll create a new stack for our program. 
 
     ```bash
     $ pulumi stack init webserver-testing
@@ -110,11 +104,11 @@ virtual machine in the cloud.
 
     ```bash
     $ pulumi stack ls
-    NAME                                             LAST UPDATE              RESOURCE COUNT     CLOUD
-    webserver-testing*                               n/a                      0                  https://api.pulumi.com/:lukehoban/pulumi
+    NAME                                             LAST UPDATE              RESOURCE COUNT
+    webserver-testing*                               n/a                      n/a
     ```
 
-    The new stack is marked with an asterisk to indicate that it is the currently active stack. All deployment operations target this stack.
+    The new stack is marked with an asterisk to indicate that it is the currently active stack. All deployment operations target this stack. Stack names must be unique within an account, so you should include a unique project name as a prefix.
 
 1.  Pulumi programs also support [configuration](../reference/config.html) which is defined per-stack to decide how that
    instance of the program should be parameterized.  We need to configure the AWS region we'll deploy to, such as 
@@ -132,38 +126,69 @@ virtual machine in the cloud.
     aws:region                       us-west-2
     ```
 
-1.  Before we actually deploy our program, we can preview it to see what resources it will create in AWS.
+1.  To preview and deploy changes, run `pulumi update`. The command first displays the resources that will be created, with a prompt to proceed:
 
     ```
-    $ pulumi preview
-    Previewing stack 'webserver-testing' in the Pulumi Cloud ☁️
+    $ pulumi update
+    Previewing stack 'webserver-testing'
     Previewing changes:
 
-    pulumi:Stack("webserver-webserver-testing"): Completed
-    aws:SecurityGroup("web-secgrp"):             + Would create
-    aws:Instance("web-server-www"):              + Would create
+    #: Resource Type          Name                         Plan      Extra Info
+    1: pulumi:pulumi:Stack    webserver-webserver-testing  + create
+    2: aws:ec2:SecurityGroup  webserver-secgrp             + create
+    3: aws:ec2:Instance       webserver-www                + create
+
     info: 3 changes previewed:
         + 3 resources to create
+
+    Do you want to proceed?
+      yes
+    > no
+      details    
     ```
 
     The update shows that it will create 3 resources, rather than 2, as the stack is itself counted as a [Component](../reference/programming-model.html#components) which owns all resources being created. Components are covered in more details in [part 2](./part2.html).
 
-1.  Now, let's deploy the program and provision resources, via `pulumi update`. It takes about 30 seconds to
-    provision the EC2 instance. While the resources of the stack are being created, you will see a `Running...` progress indicator for the stack component. 
+1.  To see the exact resource that will be created, choose the "details" option:
+
+    ```
+    Do you want to proceed? details
+    + pulumi:pulumi:Stack: (create)
+        [urn=urn:pulumi:webserver-testing::webserver::pulumi:pulumi:Stack::webserver-webserver-testing]
+        + aws:ec2/securityGroup:SecurityGroup: (create)
+          [... details omitted ...]
+        + aws:ec2/instance:Instance: (create)
+          [... details omitted ...]
+        ---outputs:---
+        publicHostName: computed<string>
+        publicIp      : computed<string>
+
+    info: 3 changes previewed:
+        + 3 resources to create
+
+    Do you want to proceed?
+      yes
+    > no
+      details
+    ```
+
+1.  Now, deploy the program and provision resources with the "yes" option, which takes about 30 seconds to complete. While resources are being created, you will see a `creating...` progress indicator for the stack component. 
     
     ```
-    $ pulumi update
-    Updating stack 'webserver-testing' in the Pulumi Cloud ☁️
+    Do you want to proceed? yes
+    Updating stack 'webserver-testing'
     Performing changes:
 
-    pulumi:Stack("webserver-webserver-testing"): Completed
-    aws:SecurityGroup("web-secgrp"):             + Created
-    aws:Instance("web-server-www"):              + Created
+    #: Resource Type          Name                         Status     Extra Info
+    1: pulumi:pulumi:Stack    webserver-webserver-testing  + created
+    2: aws:ec2:SecurityGroup  webserver-secgrp             + created
+    3: aws:ec2:Instance       webserver-www                + created
+
     info: 3 changes performed:
         + 3 resources created
-    Update duration: 25.828272189s
+    Update duration: 24.875321975s
 
-    Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/1
+    Permalink: https://pulumi.com/lindydonna/-/-/webserver-testing/updates/1
     ```
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser.
@@ -173,22 +198,22 @@ virtual machine in the cloud.
     ```
     $ pulumi stack
     Current stack is webserver-testing:
-        Managed by https://api.pulumi.com ☁️
-        Organization lindydonna
-        PPC pulumi
+        Owner: lindydonna
         Last update time unknown
-        Pulumi version ?
+        Pulumi version: ?
 
     Current stack resources (3):
         TYPE                                             NAME
         pulumi:pulumi:Stack                              webserver-webserver-testing
-        aws:ec2/securityGroup:SecurityGroup              web-secgrp
-        aws:ec2/instance:Instance                        web-server-www
+        aws:ec2/securityGroup:SecurityGroup              webserver-secgrp
+        aws:ec2/instance:Instance                        webserver-www
 
     Current stack outputs (2):
         OUTPUT                                           VALUE
-        publicHostName                                   ec2-34-217-59-219.us-west-2.compute.amazonaws.com
-        publicIp                                         34.217.59.219
+        publicHostName                                   ec2-54-213-251-255.us-west-2.compute.amazonaws.com
+        publicIp                                         54.213.251.255
+
+    More information at: https://pulumi.com/lindydonna/-/-/webserver-testing
 
     Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
     ```
@@ -196,11 +221,10 @@ virtual machine in the cloud.
 ## Updating the Pulumi program
 
 Now that we have an instance of our Pulumi program deployed, we may want to make changes. We do this by updating our
-Pulumi program to define the new state we want our infrastructure to be in, and re-running `pulumi preview` and, if it
-looks as we expect, `pulumi update` to commit the changes.
+Pulumi program to define the new state we want our infrastructure to be in, then and running `pulumi update` to commit the changes.
 
 1.  Replace the creation of the two resources with the following. This exposes an additional port and adds a startup
-    script to run a simple HTTP server on the instance at startup.
+    script to run a simple HTTP server at startup.
 
     ```javascript
     ...
@@ -233,47 +257,53 @@ looks as we expect, `pulumi update` to commit the changes.
     defined in our program.  We'll see in later sections how we can deploy and version the application code of our
     program in a variety of different ways using Pulumi.
 
-1.  Run `pulumi preview` to see that two changes will be made when this is deployed.
+1.  Run `pulumi update` to see that two changes will be made when this is deployed.
 
     ```
-    $ pulumi preview
-    Previewing stack 'webserver-testing' in the Pulumi Cloud ☁️
+    $ pulumi update
+    Previewing stack 'webserver-testing'
     Previewing changes:
 
-    pulumi:Stack("webserver-webserver-testing"): Completed
-    aws:SecurityGroup("web-secgrp"):             ~ Would update. Changes: +-ingress
-    aws:Instance("web-server-www"):              +-Would replace. Changes: + userData
+    #: Resource Type          Name                         Plan         Extra Info
+    1: pulumi:pulumi:Stack    webserver-webserver-testing  * no change
+    2: aws:ec2:SecurityGroup  webserver-secgrp             ~ update     changes: +-ingress
+    3: aws:ec2:Instance       webserver-www                +-replace    changes: + userData
+
     info: 2 changes previewed:
         ~ 1 resource to update
         +-1 resource to replace
           1 resource unchanged
 
+    Do you want to proceed?
+      yes
+    > no
+      details
     ```
 
     We see that two changes will be applied.  First, the `ingress` property of the `SecurityGroup` will be _updated_ in-place.  Second, the `Instance` will be _replaced_ with a new EC2 Instance which will run the new 
     script on startup. Pulumi understands which changes to a given cloud resource can be made in-place, and which
     require replacement, and computes the minimally disruptive change to achieve the desired state.
 
-1.  Now, run `pulumi update` to deploy the changes.
+1.  Select "yes" to deploy the changes:
 
     ```
-    $ pulumi update
-    Updating stack 'webserver-testing' in the Pulumi Cloud ☁️
+    Do you want to proceed? yes
+    Updating stack 'webserver-testing'
     Performing changes:
 
-    pulumi:Stack("webserver-webserver-testing"): Completed
-    aws:SecurityGroup("web-secgrp"):             ~ Updated. Changes: +-ingress
-    aws:Instance("web-server-www"):              +-Replaced. Changes: + userData
+    #: Resource Type          Name                         Status      Extra Info
+    1: pulumi:pulumi:Stack    webserver-webserver-testing  done
+    2: aws:ec2:SecurityGroup  webserver-secgrp             ~ updated   changes: +-ingress
+    3: aws:ec2:Instance       webserver-www                +-replaced  changes: + userData
+
     info: 2 changes performed:
         ~ 1 resource updated
         +-1 resource replaced
           1 resource unchanged
-    Update duration: 1m14.133839913s
-
-    Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/4
+    Update duration: 1m15.29471554s
     ```
 
-1.  We can use `pulumi stack output` to get the value of stack outputs from the CLI.  So we can `curl` the EC2 instance to see the HTTP server running there:
+1.  We can use `pulumi stack output` to get the value of stack outputs from the CLI.  So we can `curl` the EC2 instance to see the HTTP server running there. Stack outputs can also be viewed on the Pulumi Console.
 
     ```
     $ curl $(pulumi stack output publicHostName)
@@ -285,24 +315,38 @@ looks as we expect, `pulumi update` to commit the changes.
 Before moving on, let's tear down the resources that are part of our stack.
 
 1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these
-   resources.  This takes about 60 seconds; Pulumi waits for the EC2 instance to finish shutting down before
+   resources. This takes about 60 seconds; Pulumi waits for the EC2 instance to finish shutting down before
    it considers the destroy operation to be complete.
 
     ```
     $ pulumi destroy
     This will permanently destroy all resources in the 'webserver-testing' stack!
     Please confirm that this is what you'd like to do by typing ("webserver-testing"): webserver-testing
-    Destroying stack 'webserver-testing' in the Pulumi Cloud ☁️
+    Previewing stack 'webserver-testing'
+    Previewing changes:
+
+    #: Resource Type          Name                         Plan      Extra Info
+    1: aws:ec2:Instance       webserver-www                - delete
+    2: aws:ec2:SecurityGroup  webserver-secgrp             - delete
+    3: pulumi:pulumi:Stack    webserver-webserver-testing  - delete
+
+    info: 3 changes previewed:
+        - 3 resources to delete
+
+    Do you want to proceed? yes
+    Destroying stack 'webserver-testing'
     Performing changes:
 
-    aws:Instance("web-server-www"):    - Deleted
-    aws:SecurityGroup("web-secgrp"):   - Deleted
-    pulumi:Stack("webserver-webserver-testing"): Completed
+    #: Resource Type          Name                         Status     Extra Info
+    1: aws:ec2:Instance       webserver-www                - deleted
+    2: aws:ec2:SecurityGroup  webserver-secgrp             - deleted
+    3: pulumi:pulumi:Stack    webserver-webserver-testing  - deleted
+
     info: 3 changes performed:
         - 3 resources deleted
-    Update duration: 51.623097429s
+    Update duration: 51.685414554s
 
-    Permalink: https://pulumi.com/lindydonna/examples/webserver/webserver-testing/updates/3
+    Permalink: https://pulumi.com/lindydonna/-/-/webserver-testing/updates/3
     ```
 
 1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.

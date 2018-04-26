@@ -7,7 +7,7 @@ title: "Programming Model"
 ## Programs {#programs}
 * Written in Node.js or Python
 * Can use any pacakges, but also can use Pulumi packages (e.g. @pulumi/aws)
-* Run during `pulumi preview` and `pulumi update` to determine the desired state of the application's resources
+* Run during `pulumi update` to determine the desired state of the application's resources
 * Application logic can be included int Pulumi programs via references to published artifacts (S3 buckets, existing
   docker images, etc.), or artifacts that version with the Pulumi program (strings or files in the Pulumi program
   folder, docker images built during the program execution, or code compiled form Pulumi program callbacks into AWS

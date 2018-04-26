@@ -145,7 +145,7 @@ information on additional settings, see the [TypeScript documentation for `tscon
 
 ### 4. Build
 
-Before running `pulumi preview` or `pulumi update`, you should run `tsc` or `yarn build`. If you use Visual Studio Code, you can also do a continuous background build.
+Before running `pulumi update`, you should run `tsc` or `yarn build`. If you use Visual Studio Code, you can also do a continuous background build.
 
 Tools like VS Code will give you completion lists, live error reporting and inline documentation help.
 
