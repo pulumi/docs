@@ -26,6 +26,11 @@ title: "Change log"
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v113">0.12.0</a></th>
+            <td>2018/04/26</td>
+            <td>{% include sdk-links.html version='0.12.0' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v113">0.11.3</a></th>
             <td>2018/04/13</td>
             <td>{% include sdk-links.html version='0.11.3' %}</td>
@@ -40,7 +45,29 @@ title: "Change log"
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
-> **Note:** Versions of the Pulumi SDK prior to 0.11.3 have a strict dependency on Node.js 6.10.2.
+## v.12.0 {#v120}
+
+Released on April 26, 2018
+
+### Added
+
+-  Add a `pulumi cancel` command ([pulumi/pulumi#1230](https://github.com/pulumi/pulumi/pull/1230)). This command cancels any in-progress operation for the current stack. Note that the target stack may need to be manually repaired via `stack export` and `import`.
+
+### Changed 
+-  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks](../reference/stack.html#create-stack).
+
+-  (**Breaking**) Remove the explicit 'pulumi preview' command ([pulumi/pulumi#1170](https://github.com/pulumi/pulumi/pull/1170)). The `pulumi preview` output has now been merged in to the `pulumi update` command. Before an update is run, the preview is shown you can choose whether to proceed or see more update details. To see just the preview operation, run `pulumi update --preview`.
+
+-  (**Breaking**) Add support for Node 8.10 for Lambda implementations ([pulumi/pulumi-aws#195](https://github.com/pulumi/pulumi-aws/pull/195)). When provisioning an AWS Lambda, the target runtime is Node.js version 8.10, rather than 6.10.2.
+
+-  Switch to a more streamlined view for property diffs in `pulumi update` ([pulumi/pulumi#1212](https://github.com/pulumi/pulumi/pull/1212)). When just part of a property has changed, only the changed part is displayed.
+
+-  Allow multiple versions of the `@pulumi/pulumi` package to be loaded ([pulumi/pulumi#1209](https://github.com/pulumi/pulumi/pull/1209)). This change allows a program to use more than one version of `@pulumi/pulumi`. 
+
+### Fixed
+-  When running a `pulumi update` or `destroy` operation, a single ctrl-c will cancel the current operation. A second ctrl-c will terminate the operation, possibly leaving resources in an untracked state. ([pulumi/pulumi#1231](https://github.com/pulumi/pulumi/pull/1231)).
+
+-  When getting update logs, get all results ([pulumi/pulumi#1220](https://github.com/pulumi/pulumi/pull/1220)). Fixes a bug where logs could sometimes be truncated.
 
 ## v0.11.3 {#v113}
 
@@ -65,6 +92,9 @@ Released on April 13, 2018
 ## v0.11.2 {#v112}
 
 Released on April 6, 2018
+
+- Default organization is the user. To target a different one, use `<owner-name>/<stack-name>`.
+- Removed the preview command, which is now `pulumi update --preview`.
 
 ### Added
 
@@ -144,6 +174,8 @@ Released on March 20, 2018
 ## v0.10.0 {#v10}
 
 Released on February 27, 2018
+
+> **Note:** The v0.10.0 SDK has a strict dependency on Node.js 6.10.2.
 
 ### Added
 

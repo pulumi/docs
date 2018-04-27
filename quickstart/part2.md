@@ -41,12 +41,6 @@ In this section, we'll create a static website hosted on AWS S3 and show how to 
     $ pulumi new javascript
     ```
 
-1.  Initialize a Pulumi repository with `pulumi init`, using your GitHub username. (Note: this step will be removed in the future.)
-
-    ```bash
-    $ pulumi init --owner githubUsername
-    ```
-
 ## A static website hosted on S3
 
 First, we'll create a Pulumi program that uploads files from the `www` directory to S3. Then, we'll configure the bucket to serve a website.
@@ -110,37 +104,37 @@ First, we'll create a Pulumi program that uploads files from the `www` directory
     $ pulumi config set aws:region us-west-2
     ```
 
-1.  Run `pulumi preview` to see what AWS resources will be created. As expected, a stack component will be created, along with a new Bucket and two S3 Objects --- one for each file in the `www` folder.
-
-    ```bash
-    $ pulumi preview
-    Previewing stack 'website-testing' in the Pulumi Cloud ☁️
-    Previewing changes:
-
-    pulumi:Stack("s3website-website-testing"): Completed
-    aws:Bucket("s3-website-bucket"):           + Would create
-    aws:BucketObject("favicon.png"):           + Would create
-    aws:BucketObject("index.html"):            + Would create
-    info: 4 changes previewed:
-        + 4 resources to create
-    ```
-
-1.  Now, provision resources via `pulumi update`:
+1.  Run `pulumi update` preview and deploy AWS resources. As expected, a stack component is creataed, along with a new Bucket and two S3 Objects --- one for each file in the `www` folder.
 
     ```bash
     $ pulumi update
-    Updating stack 'website-testing' in the Pulumi Cloud ☁️
+    Previewing stack 'website-testing'
+    Previewing changes:
+
+    #: Resource Type        Name                       Plan      Extra Info
+    1: pulumi:pulumi:Stack  s3website-website-testing  + create
+    2: aws:s3:Bucket        s3-website-bucket          + create
+    3: aws:s3:BucketObject  favicon.png                + create
+    4: aws:s3:BucketObject  index.html                 + create
+
+    info: 4 changes previewed:
+        + 4 resources to create
+
+    Do you want to proceed? yes
+    Updating stack 'website-testing'
     Performing changes:
 
-    pulumi:Stack("s3website-website-testing"): Completed
-    aws:Bucket("s3-website-bucket"):           + Created
-    aws:BucketObject("favicon.png"):           + Created
-    aws:BucketObject("index.html"):            + Created
+    #: Resource Type        Name                       Status     Extra Info
+    1: pulumi:pulumi:Stack  s3website-website-testing  + created
+    2: aws:s3:Bucket        s3-website-bucket          + created
+    3: aws:s3:BucketObject  favicon.png                + created
+    4: aws:s3:BucketObject  index.html                 + created
+
     info: 4 changes performed:
         + 4 resources created
-    Update duration: 7.206358082s
+    Update duration: 5.792898385s
 
-    Permalink: https://pulumi.com/lindydonna/s3website/s3website/website-testing/updates/1
+    Permalink: https://pulumi.com/lindydonna/-/-/website-testing/updates/1
     ```
 
 1.  To see the name of the bucket that was created, run `pulumi stack output`. Note that an extra 7-digit identifier is appended to the name. All Pulumi resources add this identifier automatically, so that you don't have to manually create unique names.
@@ -169,9 +163,9 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
     ```javascript
     ...
 
-    // Create a bucket and expose a website index document
-    let siteBucket = new aws.s3.Bucket("s3-website-bucket", {
-      websites: [{                      // <-- ADD THESE LINES  
+    // REMOVE previous declaration and add this
+    let siteBucket = new aws.s3.Bucket("s3-website-bucket", {  
+      websites: [{                       
         indexDocument: "index.html",  
       }],
     });
@@ -183,7 +177,7 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
 
     ```javascript
     // Create an S3 Bucket Policy to allow public read of all objects in bucket
-    // This resuable function can be pulled out into its own module
+    // This reusable function can be pulled out into its own module
     function publicReadPolicyForBucket(bucketName) {   
       return JSON.stringify({
         Version: "2012-10-17",
@@ -216,39 +210,39 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
 
     Whenever you need to create a dependency between resources, simply use the output property of one resource as the input to another one. Pulumi uses this information to create physical resources in the correct order. In fact, we have been using this feature all along: when constructing a `BucketObject`, the line `bucket: siteBucket` ensures that the physical AWS bucket exists before S3 objects are created. Similarly, in [Part 1 of the quickstart](./part1.html#webserver), output properties established the dependency between the security group and EC2 instance.  
 
-1.  Run `pulumi preview`, which shows the planned change to **update** the `Bucket` resource and **create** a new `BucketPolicy` resource:
+1.  Run `pulumi update`, which shows the change to **update** the `Bucket` resource and **create** a new `BucketPolicy` resource:
 
     ```bash
-    $ pulumi preview
-    Previewing stack 'website-testing' in the Pulumi Cloud ☁️
+    $ pulumi update
+    Previewing stack 'website-testing'
     Previewing changes:
 
-    pulumi:Stack("s3website-website-testing"): Completed
-    aws:Bucket("s3-website-bucket"):           ~ Would update. Changes: + websites
-    aws:BucketPolicy("bucketPolicy"):          + Would create
+    #: Resource Type        Name                       Plan         Extra Info
+    1: pulumi:pulumi:Stack  s3website-website-testing  * no change
+    2: aws:s3:Bucket        s3-website-bucket          ~ update     changes: + websites
+    3: aws:s3:BucketPolicy  bucketPolicy               + create
+
     info: 2 changes previewed:
         + 1 resource to create
         ~ 1 resource to update
           3 resources unchanged
-    ```
 
-1.  Run `pulumi update` to deploy the changes:
-
-    ```bash
-    $ pulumi update
-    Updating stack 'website-testing' in the Pulumi Cloud ☁️
+    Do you want to proceed? yes
+    Updating stack 'website-testing'
     Performing changes:
 
-    pulumi:Stack("s3website-website-testing"): Completed
-    aws:Bucket("s3-website-bucket"):           ~ Updated. Changes: + websites
-    aws:BucketPolicy("bucketPolicy"):          + Created
+    #: Resource Type        Name                       Status     Extra Info
+    1: pulumi:pulumi:Stack  s3website-website-testing  done
+    2: aws:s3:Bucket        s3-website-bucket          ~ updated  changes: + websites
+    3: aws:s3:BucketPolicy  bucketPolicy               + created
+
     info: 2 changes performed:
         + 1 resource created
         ~ 1 resource updated
           3 resources unchanged
-    Update duration: 4.289355841s
+    Update duration: 4.882755297s
 
-    Permalink: https://pulumi.com/lindydonna/s3website/s3website/website-testing/updates/17
+    Permalink: https://pulumi.com/lindydonna/-/-/website-testing/updates/2    
     ```
 
 1.  Open the site URL in a browser to see both the rendered HTML and the favicon:
@@ -299,9 +293,9 @@ In this section, we'll create a simplified version of the example above, that ju
     module.exports.S3Folder = S3Folder;
     ```
 
-    The call to `super` specifies the string name for the component, which is typically in the form `namespace:className`. This name is shown in `pulumi preview` and `update` commands as well as at pulumi.com. The second parameter to the `super` call is the name of the resource. In this case, we use the `bucketName` constructor parameter.
+    The call to `super` specifies the string name for the component, which is typically in the form `namespace:className`. This name is shown in `pulumi update` command as well as at pulumi.com. The second parameter to the `super` call is the name of the resource. In this case, we use the `bucketName` constructor parameter.
 
-    Since the `path` parameter is not used, we just log its value via `console.log`. During `pulumi preview` and `update`, this log message is shown.
+    Since the `path` parameter is not used, we just log its value via `console.log`. During `pulumi update`, this log message is shown.
 
     When creating a resource within a component, add a parent property as the last argument to the constructor, as in the definition of `siteBucket`. When resources are created at the top level, they do not need an explicit parent; the Pulumi stack resource is the parent of all top-level resources and components.
 
@@ -321,31 +315,39 @@ In this section, we'll create a simplified version of the example above, that ju
 
     Since we still want a stack output for `bucketName`, we create a stack output of the component output property `folder.bucketName`.
 
-1.  Run `pulumi preview`. Because the program no longer creates S3 objects and does not apply a bucket policy, those resources will be deleted. The bucket Bucket will also be re-created: the parent of a resource is part of its identity and the parent of `s3-website-bucket` has changed from the stack to an instance of `S3Folder`. 
+1.  Run `pulumi update`. Because the program no longer creates S3 objects and does not apply a bucket policy, those resources will be deleted. The bucket Bucket will also be re-created: the parent of a resource is part of its identity and the parent of `s3-website-bucket` has changed from the stack to an instance of `S3Folder`. Note that the output of `console.log` is printed in the "Diagnostics" section below.
 
-    ```
-    $ pulumi preview
-    Previewing stack 'website-testing' in the Pulumi Cloud ☁️
+    ```bash
+    $ pulumi update
+    Previewing stack 'website-testing'
     Previewing changes:
+    [... details omitted ...]
 
-    pulumi:Stack("s3website-website-testing"): Completed
-    examples:S3Folder("s3-website-bucket"):  + Would create, 1 info message(s). info: Path where files would be uploaded: ./www
-    aws:Bucket("s3-website-bucket"):         + Would create
-    aws:BucketObject("index.html"):          - Would delete
-    aws:BucketObject("favicon.png"):         - Would delete
-    aws:BucketPolicy("bucketPolicy"):        - Would delete
-    aws:Bucket("s3-website-bucket")-1:       - Would delete
+    Do you want to proceed? yes
+    Updating stack 'website-testing'
+    Performing changes:
 
-    global: Diagnostics
-      info: Path where files would be uploaded: ./www
-    
-    info: 6 changes previewed:
-        + 2 resources to create
-        - 4 resources to delete
+    #: Resource Type        Name                       Status     Extra Info
+    1: pulumi:pulumi:Stack  s3website-website-testing  done       1 info message
+    2: examples:S3Folder    s3-website-bucket          + created
+    3: aws:s3:Bucket        s3-website-bucket          + created
+    4: aws:s3:BucketObject  index.html                 - deleted
+    5: aws:s3:BucketObject  favicon.png                - deleted
+    6: aws:s3:BucketPolicy  bucketPolicy               - deleted
+    7: aws:s3:Bucket        s3-website-bucket          - deleted
+
+    Diagnostics:
+      pulumi:pulumi:Stack: s3website-website-testing
+        info: Path where files would be uploaded: ./www
+
+    info: 6 changes performed:
+        + 2 resources created
+        - 4 resources deleted
           1 resource unchanged
-    ```
+    Update duration: 7.047243828s
 
-1.  Run `pulumi update`. 
+    Permalink: https://pulumi.com/lindydonna/-/-/website-testing/updates/3
+    ```
 
 1.  Verify the bucket exists by using the AWS Console or CLI:
 
@@ -364,17 +366,24 @@ Let's remove the cloud resources that have been provisioned.
     $ pulumi destroy
     This will permanently destroy all resources in the 'website-testing' stack!
     Please confirm that this is what you'd like to do by typing ("website-testing"): website-testing
-    Destroying stack 'website-testing' in the Pulumi Cloud ☁️
+    Previewing stack 'website-testing'
+    Previewing changes:
+    [... details omitted ...]
+
+    Do you want to proceed? yes
+    Destroying stack 'website-testing'
     Performing changes:
 
-    aws:Bucket("s3-website-bucket"):         - Deleted
-    examples:S3Folder("s3-website-bucket"):  - Deleted
-    pulumi:Stack("s3website-website-testing"): Completed
+    #: Resource Type        Name                       Status     Extra Info
+    1: aws:s3:Bucket        s3-website-bucket          - deleted
+    2: examples:S3Folder    s3-website-bucket          - deleted
+    3: pulumi:pulumi:Stack  s3website-website-testing  - deleted
+
     info: 3 changes performed:
         - 3 resources deleted
-    Update duration: 1.942418044s
+    Update duration: 1.021430968s
 
-    Permalink: https://pulumi.com/lindydonna/s3website/s3website/website-testing/updates/3
+    Permalink: https://pulumi.com/lindydonna/-/-/website-testing/updates/4
     ```
 
 1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.

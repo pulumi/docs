@@ -6,35 +6,23 @@ A deployment occurs any time a stack is updated.  During a deployment, the Pulum
 
 ### Preview updates to a stack
 
-Before updating your stack, it is recommended that you first view a preview of your the changes via `pulumi preview`.  This will preview the impact of deploying the program in the current project to the active stack.
+Before updating your stack, `pulumi update` first shows a preview of changes, which shows the impact of deploying the current project to the active stack. To view just the preview, run `pulumi update --preview`.
 
 ```
-$ pulumi preview
+$ pulumi update --preview
+Previewing stack 'webserver-testing'
 Previewing changes:
-* pulumi:pulumi:Stack: (same)
-    [urn=urn:pulumi:jane-dev::webserver::pulumi:pulumi:Stack::webserver-jane-dev]
----outputs:---
-publicDns: "ec2-18-218-85-197.us-east-2.compute.amazonaws.com"
-publicIp : "18.218.85.197"
-    ~ aws:ec2/instance:Instance: (update)
-        [id=i-01aedebaf8fe019c2]
-        [urn=urn:pulumi:jane-dev::webserver::aws:ec2/instance:Instance::web-server-www]
-        ami            : "ami-f6035893"
-      - instanceType   : "t2.micro"
-      + instanceType   : "t2.nano"
-        securityGroups : [
-            [0]: "web-secgrp-e31b7dd"
-        ]
-        sourceDestCheck: true
----outputs:---
-publicDns: computed<string>
-publicIp : computed<string>
-info: 1 change previewed:
-    ~ 1 resource to update
-      2 resources unchanged
+
+#: Resource Type          Name                         Plan      Extra Info
+1: pulumi:pulumi:Stack    webserver-webserver-testing  + create
+2: aws:ec2:SecurityGroup  webserver-secgrp             + create
+3: aws:ec2:Instance       webserver-www                + create
+
+info: 3 changes previewed:
+    + 3 resources to create
 ```
 
-Because the changes are not actually applied during a preview, it is not possible for `pulumi preview` to know for sure whether a change will occur or not when it is dependent on the ouput of some resource being created or replaced.  Because of this, `pulumi preview` always presents a conservative summary of the changes that will be applied.  This means that when the corresponding `pulumi update` is run, it may observe fewer changes being needed, but will never observe more than what was shown during preview.
+Because the changes are not actually applied during the preview phase, it is not possible for `pulumi update` to know for sure whether a change will occur or not when it is dependent on the output of some resource being created or replaced.  Because of this, `pulumi update --preview` always presents a conservative summary of the changes that will be applied.  This means that when changes are actually applied, it may observe fewer changes being needed, but will never observe more than what was shown during preview.
 
 For more information, see [the Pulumi programming model](./programming-model.html).
 
@@ -43,56 +31,20 @@ For more information, see [the Pulumi programming model](./programming-model.htm
 To deploy a Pulumi program to a stack for the first time, or to apply program changes to a running stack, use the `pulumi update` command.  This will execute the program in the current project and create, update and delete resources in the active stack to match the desired state.
 
 ```
-$ pulumi update
+Do you want to proceed? yes
+Updating stack 'webserver-testing'
 Performing changes:
-* pulumi:pulumi:Stack: (same)
-    [urn=urn:pulumi:jane-dev::webserver::pulumi:pulumi:Stack::webserver-jane-dev]
----outputs:---
-publicDns: "ec2-18-218-85-197.us-east-2.compute.amazonaws.com"
-publicIp : "18.218.85.197"
-    ~ aws:ec2/instance:Instance: (update)
-        [id=i-01aedebaf8fe019c2]
-        [urn=urn:pulumi:jane-dev::webserver::aws:ec2/instance:Instance::web-server-www]
-        ami            : "ami-f6035893"
-      - instanceType   : "t2.micro"
-      + instanceType   : "t2.nano"
-        securityGroups : [
-            [0]: "web-secgrp-e31b7dd"
-        ]
-        sourceDestCheck: true
-    ---outputs:---
-    associatePublicIpAddress : true
-    availabilityZone         : "us-east-2b"
-    disableApiTermination    : false
-    ebsOptimized             : false
-    id                       : "i-01aedebaf8fe019c2"
-    instanceState            : "running"
-    monitoring               : false
-    networkInterfaceId       : "eni-3037a664"
-    primaryNetworkInterfaceId: "eni-3037a664"
-    privateDns               : "ip-172-31-29-149.us-east-2.compute.internal"
-    privateIp                : "172.31.29.149"
-    publicDns                : "ec2-18-219-35-110.us-east-2.compute.amazonaws.com"
-    publicIp                 : "18.219.35.110"
-    rootBlockDevice          : {
-        deleteOnTermination: true
-        iops               : "100"
-        volumeId           : "vol-0948a0c6d05c55daa"
-        volumeSize         : "8"
-        volumeType         : "gp2"
-    }
-    subnetId                 : "subnet-fa248781"
-    tenancy                  : "default"
-    vpcSecurityGroupIds      : [
-        [0]: "sg-6bf88900"
-    ]
----outputs:---
-publicDns: "ec2-18-219-35-110.us-east-2.compute.amazonaws.com"
-publicIp : "18.219.35.110"
-info: 1 change performed:
-    ~ 1 resource updated
-      2 resources unchanged
-Update duration: 58.328243145s
+
+#: Resource Type          Name                         Status     Extra Info
+1: pulumi:pulumi:Stack    webserver-webserver-testing  + created
+2: aws:ec2:SecurityGroup  webserver-secgrp             + created
+3: aws:ec2:Instance       webserver-www                + created
+
+info: 3 changes performed:
+    + 3 resources created
+Update duration: 24.875321975s
+
+Permalink: https://pulumi.com/lindydonna/-/-/webserver-testing/updates/1
 ```
 
 ### Delete all stack resources
