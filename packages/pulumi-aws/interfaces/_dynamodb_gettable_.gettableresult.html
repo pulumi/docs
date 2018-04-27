@@ -98,6 +98,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_gettable_.gettableresult.html#localsecondaryindexes" class="tsd-kind-icon">local<wbr>Secondary<wbr>Indexes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_gettable_.gettableresult.html#rangekey" class="tsd-kind-icon">range<wbr>Key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_gettable_.gettableresult.html#readcapacity" class="tsd-kind-icon">read<wbr>Capacity</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_gettable_.gettableresult.html#serversideencryption" class="tsd-kind-icon">server<wbr>Side<wbr>Encryption</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_gettable_.gettableresult.html#streamarn" class="tsd-kind-icon">stream<wbr>Arn</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_gettable_.gettableresult.html#streamenabled" class="tsd-kind-icon">stream<wbr>Enabled</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_gettable_.gettableresult.html#streamlabel" class="tsd-kind-icon">stream<wbr>Label</a></li>
@@ -118,7 +119,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:35</li>
+							<li>Defined in dynamodb/getTable.ts:37</li>
 						</ul>
 					</aside>
 				</section>
@@ -128,7 +129,7 @@
 					<div class="tsd-signature tsd-kind-icon">attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:36</li>
+							<li>Defined in dynamodb/getTable.ts:38</li>
 						</ul>
 					</aside>
 				</section>
@@ -138,7 +139,7 @@
 					<div class="tsd-signature tsd-kind-icon">global<wbr>Secondary<wbr>Indexes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:37</li>
+							<li>Defined in dynamodb/getTable.ts:39</li>
 						</ul>
 					</aside>
 				</section>
@@ -148,7 +149,7 @@
 					<div class="tsd-signature tsd-kind-icon">hash<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:38</li>
+							<li>Defined in dynamodb/getTable.ts:40</li>
 						</ul>
 					</aside>
 				</section>
@@ -158,7 +159,7 @@
 					<div class="tsd-signature tsd-kind-icon">local<wbr>Secondary<wbr>Indexes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:39</li>
+							<li>Defined in dynamodb/getTable.ts:41</li>
 						</ul>
 					</aside>
 				</section>
@@ -168,7 +169,7 @@
 					<div class="tsd-signature tsd-kind-icon">range<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:40</li>
+							<li>Defined in dynamodb/getTable.ts:42</li>
 						</ul>
 					</aside>
 				</section>
@@ -178,9 +179,27 @@
 					<div class="tsd-signature tsd-kind-icon">read<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:41</li>
+							<li>Defined in dynamodb/getTable.ts:43</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="serversideencryption" class="tsd-anchor"></a>
+					<h3>server<wbr>Side<wbr>Encryption</h3>
+					<div class="tsd-signature tsd-kind-icon">server<wbr>Side<wbr>Encryption<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in dynamodb/getTable.ts:44</li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>enabled<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="streamarn" class="tsd-anchor"></a>
@@ -188,7 +207,7 @@
 					<div class="tsd-signature tsd-kind-icon">stream<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:42</li>
+							<li>Defined in dynamodb/getTable.ts:45</li>
 						</ul>
 					</aside>
 				</section>
@@ -198,7 +217,7 @@
 					<div class="tsd-signature tsd-kind-icon">stream<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:43</li>
+							<li>Defined in dynamodb/getTable.ts:46</li>
 						</ul>
 					</aside>
 				</section>
@@ -208,7 +227,7 @@
 					<div class="tsd-signature tsd-kind-icon">stream<wbr>Label<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:44</li>
+							<li>Defined in dynamodb/getTable.ts:47</li>
 						</ul>
 					</aside>
 				</section>
@@ -218,7 +237,7 @@
 					<div class="tsd-signature tsd-kind-icon">stream<wbr>View<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:45</li>
+							<li>Defined in dynamodb/getTable.ts:48</li>
 						</ul>
 					</aside>
 				</section>
@@ -228,7 +247,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:46</li>
+							<li>Defined in dynamodb/getTable.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -246,7 +265,7 @@
 					<div class="tsd-signature tsd-kind-icon">ttl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:47</li>
+							<li>Defined in dynamodb/getTable.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -267,7 +286,7 @@
 					<div class="tsd-signature tsd-kind-icon">write<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/getTable.ts:48</li>
+							<li>Defined in dynamodb/getTable.ts:51</li>
 						</ul>
 					</aside>
 				</section>
@@ -314,6 +333,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_dynamodb_gettable_.gettableresult.html#readcapacity" class="tsd-kind-icon">read<wbr>Capacity</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_dynamodb_gettable_.gettableresult.html#serversideencryption" class="tsd-kind-icon">server<wbr>Side<wbr>Encryption</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_dynamodb_gettable_.gettableresult.html#streamarn" class="tsd-kind-icon">stream<wbr>Arn</a>

@@ -98,6 +98,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_table_.tableargs.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_table_.tableargs.html#rangekey" class="tsd-kind-icon">range<wbr>Key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_table_.tableargs.html#readcapacity" class="tsd-kind-icon">read<wbr>Capacity</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_table_.tableargs.html#serversideencryption" class="tsd-kind-icon">server<wbr>Side<wbr>Encryption</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_table_.tableargs.html#streamenabled" class="tsd-kind-icon">stream<wbr>Enabled</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_table_.tableargs.html#streamviewtype" class="tsd-kind-icon">stream<wbr>View<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_dynamodb_table_.tableargs.html#tags" class="tsd-kind-icon">tags</a></li>
@@ -116,7 +117,7 @@
 					<div class="tsd-signature tsd-kind-icon">attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:162</li>
+							<li>Defined in dynamodb/table.ts:315</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -132,7 +133,7 @@
 					<div class="tsd-signature tsd-kind-icon">global<wbr>Secondary<wbr>Indexes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:170</li>
+							<li>Defined in dynamodb/table.ts:323</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -150,7 +151,7 @@
 					<div class="tsd-signature tsd-kind-icon">hash<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:177</li>
+							<li>Defined in dynamodb/table.ts:330</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -167,7 +168,7 @@
 					<div class="tsd-signature tsd-kind-icon">local<wbr>Secondary<wbr>Indexes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:185</li>
+							<li>Defined in dynamodb/table.ts:338</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -185,7 +186,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:191</li>
+							<li>Defined in dynamodb/table.ts:344</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -201,7 +202,7 @@
 					<div class="tsd-signature tsd-kind-icon">range<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:197</li>
+							<li>Defined in dynamodb/table.ts:350</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -217,7 +218,7 @@
 					<div class="tsd-signature tsd-kind-icon">read<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:203</li>
+							<li>Defined in dynamodb/table.ts:356</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -228,12 +229,28 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="serversideencryption" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> server<wbr>Side<wbr>Encryption</h3>
+					<div class="tsd-signature tsd-kind-icon">server<wbr>Side<wbr>Encryption<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in dynamodb/table.ts:362</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Encrypt at rest options.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#server_side_encryption">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html#server_side_encryption</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="streamenabled" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> stream<wbr>Enabled</h3>
 					<div class="tsd-signature tsd-kind-icon">stream<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:209</li>
+							<li>Defined in dynamodb/table.ts:368</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -249,7 +266,7 @@
 					<div class="tsd-signature tsd-kind-icon">stream<wbr>View<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:215</li>
+							<li>Defined in dynamodb/table.ts:374</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -265,7 +282,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:221</li>
+							<li>Defined in dynamodb/table.ts:380</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -281,7 +298,7 @@
 					<div class="tsd-signature tsd-kind-icon">ttl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:227</li>
+							<li>Defined in dynamodb/table.ts:386</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -297,7 +314,7 @@
 					<div class="tsd-signature tsd-kind-icon">write<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/table.ts:233</li>
+							<li>Defined in dynamodb/table.ts:392</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -352,6 +369,9 @@
 								<a href="_dynamodb_table_.tableargs.html#readcapacity" class="tsd-kind-icon">read<wbr>Capacity</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_dynamodb_table_.tableargs.html#serversideencryption" class="tsd-kind-icon">server<wbr>Side<wbr>Encryption</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_dynamodb_table_.tableargs.html#streamenabled" class="tsd-kind-icon">stream<wbr>Enabled</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -370,6 +390,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_dynamodb_table_.tablestate.html" class="tsd-kind-icon">Table<wbr>State</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

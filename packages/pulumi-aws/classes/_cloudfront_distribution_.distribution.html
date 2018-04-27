@@ -141,6 +141,13 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_cloudfront_distribution_.distribution.html#webaclid" class="tsd-kind-icon">web<wbr>Acl<wbr>Id</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_cloudfront_distribution_.distribution.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-static"><a href="_cloudfront_distribution_.distribution.html#isinstance" class="tsd-kind-icon">is<wbr>Instance</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -151,13 +158,14 @@
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Distribution<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/_cloudfront_distribution_.distributionargs.html" class="tsd-signature-type">DistributionArgs</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_cloudfront_distribution_.distribution.html" class="tsd-signature-type">Distribution</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Distribution<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, state<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_cloudfront_distribution_.distributionstate.html" class="tsd-signature-type">DistributionState</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_cloudfront_distribution_.distribution.html" class="tsd-signature-type">Distribution</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in cloudfront/distribution.ts:206</li>
+									<li>Defined in cloudfront/distribution.ts:218</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -179,7 +187,48 @@
 									<h5>args: <a href="../interfaces/_cloudfront_distribution_.distributionargs.html" class="tsd-signature-type">DistributionArgs</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>The arguments to use to populate this resource.</p>
+											<p>The arguments to use to populate this resource&#39;s properties.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <span class="tsd-signature-type">pulumi.ResourceOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A bag of options that control this resource&#39;s behavior.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_cloudfront_distribution_.distribution.html" class="tsd-signature-type">Distribution</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides CustomResource.__constructor</p>
+								<ul>
+									<li>Defined in cloudfront/distribution.ts:228</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a Distribution resource with the given unique name, arguments, and options.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The <em>unique</em> name of the resource.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> state: <a href="../interfaces/_cloudfront_distribution_.distributionstate.html" class="tsd-signature-type">DistributionState</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The state to use when looking up an instance of this resource.</p>
 										</div>
 									</div>
 								</li>
@@ -205,7 +254,7 @@
 					<div class="tsd-signature tsd-kind-icon">active<wbr>Trusted<wbr>Signers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:29</li>
+							<li>Defined in cloudfront/distribution.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -223,7 +272,7 @@
 					<div class="tsd-signature tsd-kind-icon">aliases<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:36</li>
+							<li>Defined in cloudfront/distribution.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -240,7 +289,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:42</li>
+							<li>Defined in cloudfront/distribution.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -256,7 +305,7 @@
 					<div class="tsd-signature tsd-kind-icon">cache<wbr>Behaviors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:49</li>
+							<li>Defined in cloudfront/distribution.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -273,7 +322,7 @@
 					<div class="tsd-signature tsd-kind-icon">caller<wbr>Reference<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:56</li>
+							<li>Defined in cloudfront/distribution.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -290,7 +339,7 @@
 					<div class="tsd-signature tsd-kind-icon">comment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:63</li>
+							<li>Defined in cloudfront/distribution.ts:75</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -307,7 +356,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Error<wbr>Responses<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:69</li>
+							<li>Defined in cloudfront/distribution.ts:81</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -323,7 +372,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Cache<wbr>Behavior<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:76</li>
+							<li>Defined in cloudfront/distribution.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -340,7 +389,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Root<wbr>Object<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:83</li>
+							<li>Defined in cloudfront/distribution.ts:95</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -357,7 +406,7 @@
 					<div class="tsd-signature tsd-kind-icon">domain<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:90</li>
+							<li>Defined in cloudfront/distribution.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -374,7 +423,7 @@
 					<div class="tsd-signature tsd-kind-icon">enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:97</li>
+							<li>Defined in cloudfront/distribution.ts:109</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -391,7 +440,7 @@
 					<div class="tsd-signature tsd-kind-icon">etag<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:104</li>
+							<li>Defined in cloudfront/distribution.ts:116</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -408,7 +457,7 @@
 					<div class="tsd-signature tsd-kind-icon">hosted<wbr>Zone<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:112</li>
+							<li>Defined in cloudfront/distribution.ts:124</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -426,7 +475,7 @@
 					<div class="tsd-signature tsd-kind-icon">http<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:120</li>
+							<li>Defined in cloudfront/distribution.ts:132</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -445,7 +494,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from CustomResource.id</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:54</li>
+							<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:67</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -461,7 +510,7 @@
 					<div class="tsd-signature tsd-kind-icon">in<wbr>Progress<wbr>Validation<wbr>Batches<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:127</li>
+							<li>Defined in cloudfront/distribution.ts:139</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -478,7 +527,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Ipv6<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:133</li>
+							<li>Defined in cloudfront/distribution.ts:145</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -494,7 +543,7 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Modified<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:139</li>
+							<li>Defined in cloudfront/distribution.ts:151</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -510,7 +559,7 @@
 					<div class="tsd-signature tsd-kind-icon">logging<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:147</li>
+							<li>Defined in cloudfront/distribution.ts:159</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -528,7 +577,7 @@
 					<div class="tsd-signature tsd-kind-icon">origins<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:154</li>
+							<li>Defined in cloudfront/distribution.ts:166</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -545,7 +594,7 @@
 					<div class="tsd-signature tsd-kind-icon">price<wbr>Class<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:161</li>
+							<li>Defined in cloudfront/distribution.ts:173</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -562,7 +611,7 @@
 					<div class="tsd-signature tsd-kind-icon">restrictions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:168</li>
+							<li>Defined in cloudfront/distribution.ts:180</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -579,7 +628,7 @@
 					<div class="tsd-signature tsd-kind-icon">retain<wbr>OnDelete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:176</li>
+							<li>Defined in cloudfront/distribution.ts:188</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -597,7 +646,7 @@
 					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:184</li>
+							<li>Defined in cloudfront/distribution.ts:196</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -615,7 +664,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:190</li>
+							<li>Defined in cloudfront/distribution.ts:202</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -632,7 +681,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.urn</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:11</li>
+							<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:15</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -648,7 +697,7 @@
 					<div class="tsd-signature tsd-kind-icon">viewer<wbr>Certificate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:198</li>
+							<li>Defined in cloudfront/distribution.ts:210</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -666,7 +715,7 @@
 					<div class="tsd-signature tsd-kind-icon">web<wbr>Acl<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in cloudfront/distribution.ts:206</li>
+							<li>Defined in cloudfront/distribution.ts:218</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -677,6 +726,84 @@
 						</div>
 						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#web_acl_id">https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#web_acl_id</a>.</p>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="get" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.ID</span><span class="tsd-signature-symbol">&gt;</span>, state<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_cloudfront_distribution_.distributionstate.html" class="tsd-signature-type">DistributionState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_cloudfront_distribution_.distribution.html" class="tsd-signature-type">Distribution</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in cloudfront/distribution.ts:30</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get an existing Distribution resource&#39;s state with the given name, ID, and optional extra
+									properties used to qualify the lookup.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <em>unique</em> name of the resulting resource.</p>
+									</div>
+								</li>
+								<li>
+									<h5>id: <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.ID</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <em>unique</em> provider ID of the resource to lookup.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> state: <a href="../interfaces/_cloudfront_distribution_.distributionstate.html" class="tsd-signature-type">DistributionState</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Any extra arguments used during the lookup.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_cloudfront_distribution_.distribution.html" class="tsd-signature-type">Distribution</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-static">
+					<a name="isinstance" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Instance</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Instance<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from CustomResource.isInstance</p>
+								<p>Overrides Resource.isInstance</p>
+								<ul>
+									<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:72</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+									multiple copies of the Pulumi SDK have been loaded into the same process.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>obj: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -785,12 +912,21 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_cloudfront_distribution_.distribution.html#webaclid" class="tsd-kind-icon">web<wbr>Acl<wbr>Id</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_cloudfront_distribution_.distribution.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-static">
+								<a href="_cloudfront_distribution_.distribution.html#isinstance" class="tsd-kind-icon">is<wbr>Instance</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/_cloudfront_distribution_.distributionargs.html" class="tsd-kind-icon">Distribution<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_cloudfront_distribution_.distributionstate.html" class="tsd-kind-icon">Distribution<wbr>State</a>
 					</li>
 				</ul>
 			</nav>

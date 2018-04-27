@@ -111,6 +111,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#ebsblockdevices" class="tsd-kind-icon">ebs<wbr>Block<wbr>Devices</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#ebsoptimized" class="tsd-kind-icon">ebs<wbr>Optimized</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#ephemeralblockdevices" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#getpassworddata" class="tsd-kind-icon">get<wbr>Password<wbr>Data</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#iaminstanceprofile" class="tsd-kind-icon">iam<wbr>Instance<wbr>Profile</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_ec2_instance_.instance.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#instanceinitiatedshutdownbehavior" class="tsd-kind-icon">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a></li>
@@ -122,6 +123,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#monitoring" class="tsd-kind-icon">monitoring</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#networkinterfaceid" class="tsd-kind-icon">network<wbr>Interface<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#networkinterfaces" class="tsd-kind-icon">network<wbr>Interfaces</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#passworddata" class="tsd-kind-icon">password<wbr>Data</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#placementgroup" class="tsd-kind-icon">placement<wbr>Group</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#primarynetworkinterfaceid" class="tsd-kind-icon">primary<wbr>Network<wbr>Interface<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#privatedns" class="tsd-kind-icon">private<wbr>Dns</a></li>
@@ -141,6 +143,13 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_ec2_instance_.instance.html#vpcsecuritygroupids" class="tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_ec2_instance_.instance.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-static"><a href="_ec2_instance_.instance.html#isinstance" class="tsd-kind-icon">is<wbr>Instance</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -151,13 +160,14 @@
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Instance<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><a href="../interfaces/_ec2_instance_.instanceargs.html" class="tsd-signature-type">InstanceArgs</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_ec2_instance_.instance.html" class="tsd-signature-type">Instance</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Instance<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, state<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_ec2_instance_.instancestate.html" class="tsd-signature-type">InstanceState</a>, opts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">pulumi.ResourceOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_ec2_instance_.instance.html" class="tsd-signature-type">Instance</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/instance.ts:218</li>
+									<li>Defined in ec2/instance.ts:246</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -179,7 +189,48 @@
 									<h5>args: <a href="../interfaces/_ec2_instance_.instanceargs.html" class="tsd-signature-type">InstanceArgs</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>The arguments to use to populate this resource.</p>
+											<p>The arguments to use to populate this resource&#39;s properties.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> opts: <span class="tsd-signature-type">pulumi.ResourceOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A bag of options that control this resource&#39;s behavior.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_ec2_instance_.instance.html" class="tsd-signature-type">Instance</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides CustomResource.__constructor</p>
+								<ul>
+									<li>Defined in ec2/instance.ts:256</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a Instance resource with the given unique name, arguments, and options.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The <em>unique</em> name of the resource.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> state: <a href="../interfaces/_ec2_instance_.instancestate.html" class="tsd-signature-type">InstanceState</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The state to use when looking up an instance of this resource.</p>
 										</div>
 									</div>
 								</li>
@@ -205,7 +256,7 @@
 					<div class="tsd-signature tsd-kind-icon">ami<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:20</li>
+							<li>Defined in ec2/instance.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -221,7 +272,7 @@
 					<div class="tsd-signature tsd-kind-icon">associate<wbr>Public<wbr>IpAddress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:26</li>
+							<li>Defined in ec2/instance.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -237,7 +288,7 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:32</li>
+							<li>Defined in ec2/instance.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -253,7 +304,7 @@
 					<div class="tsd-signature tsd-kind-icon">disable<wbr>Api<wbr>Termination<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:39</li>
+							<li>Defined in ec2/instance.ts:51</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -270,7 +321,7 @@
 					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Block<wbr>Devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:46</li>
+							<li>Defined in ec2/instance.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -287,7 +338,7 @@
 					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Optimized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:53</li>
+							<li>Defined in ec2/instance.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -304,7 +355,7 @@
 					<div class="tsd-signature tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:60</li>
+							<li>Defined in ec2/instance.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -316,12 +367,28 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="getpassworddata" class="tsd-anchor"></a>
+					<h3>get<wbr>Password<wbr>Data</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Password<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/instance.ts:78</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the <code>password_data</code> attribute. See <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">GetPasswordData</a> for more information.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/instance.html#get_password_data">https://www.terraform.io/docs/providers/aws/r/instance.html#get_password_data</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="iaminstanceprofile" class="tsd-anchor"></a>
 					<h3>iam<wbr>Instance<wbr>Profile</h3>
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Instance<wbr>Profile<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:68</li>
+							<li>Defined in ec2/instance.ts:86</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -342,7 +409,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from CustomResource.id</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:54</li>
+							<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:67</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -358,7 +425,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:77</li>
+							<li>Defined in ec2/instance.ts:95</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -377,7 +444,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:78</li>
+							<li>Defined in ec2/instance.ts:96</li>
 						</ul>
 					</aside>
 				</section>
@@ -387,7 +454,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_ec2_instancetype_.html#instancetype" class="tsd-signature-type">InstanceType</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:84</li>
+							<li>Defined in ec2/instance.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -403,7 +470,7 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Address<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:85</li>
+							<li>Defined in ec2/instance.ts:103</li>
 						</ul>
 					</aside>
 				</section>
@@ -413,7 +480,7 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Addresses<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:91</li>
+							<li>Defined in ec2/instance.ts:109</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -429,7 +496,7 @@
 					<div class="tsd-signature tsd-kind-icon">key<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:97</li>
+							<li>Defined in ec2/instance.ts:115</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -445,7 +512,7 @@
 					<div class="tsd-signature tsd-kind-icon">monitoring<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:103</li>
+							<li>Defined in ec2/instance.ts:121</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -461,7 +528,7 @@
 					<div class="tsd-signature tsd-kind-icon">network<wbr>Interface<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:115</li>
+							<li>Defined in ec2/instance.ts:133</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -477,7 +544,7 @@
 					<div class="tsd-signature tsd-kind-icon">network<wbr>Interfaces<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:109</li>
+							<li>Defined in ec2/instance.ts:127</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -488,12 +555,32 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="passworddata" class="tsd-anchor"></a>
+					<h3>password<wbr>Data</h3>
+					<div class="tsd-signature tsd-kind-icon">password<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/instance.ts:143</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Base-64 encoded encrypted password data for the instance.
+								Useful for getting the administrator password for instances running Microsoft Windows.
+								This attribute is only exported if <code>get_password_data</code> is true.
+								Note that this encrypted value will be stored in the state file, as with all exported attributes.
+							See <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">GetPasswordData</a> for more information.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/instance.html#password_data">https://www.terraform.io/docs/providers/aws/r/instance.html#password_data</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="placementgroup" class="tsd-anchor"></a>
 					<h3>placement<wbr>Group</h3>
 					<div class="tsd-signature tsd-kind-icon">placement<wbr>Group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:121</li>
+							<li>Defined in ec2/instance.ts:149</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -509,7 +596,7 @@
 					<div class="tsd-signature tsd-kind-icon">primary<wbr>Network<wbr>Interface<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:127</li>
+							<li>Defined in ec2/instance.ts:155</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -525,7 +612,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Dns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:135</li>
+							<li>Defined in ec2/instance.ts:163</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -543,7 +630,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:142</li>
+							<li>Defined in ec2/instance.ts:170</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -560,7 +647,7 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>Dns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:149</li>
+							<li>Defined in ec2/instance.ts:177</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -577,7 +664,7 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:155</li>
+							<li>Defined in ec2/instance.ts:183</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -593,7 +680,7 @@
 					<div class="tsd-signature tsd-kind-icon">root<wbr>Block<wbr>Device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:162</li>
+							<li>Defined in ec2/instance.ts:190</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -610,7 +697,7 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:169</li>
+							<li>Defined in ec2/instance.ts:197</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -627,7 +714,7 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Dest<wbr>Check<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:176</li>
+							<li>Defined in ec2/instance.ts:204</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -644,7 +731,7 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:182</li>
+							<li>Defined in ec2/instance.ts:210</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -660,7 +747,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:188</li>
+							<li>Defined in ec2/instance.ts:216</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -676,7 +763,7 @@
 					<div class="tsd-signature tsd-kind-icon">tenancy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:194</li>
+							<li>Defined in ec2/instance.ts:222</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -693,7 +780,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Resource.urn</p>
 						<ul>
-							<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:11</li>
+							<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:15</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -709,7 +796,7 @@
 					<div class="tsd-signature tsd-kind-icon">user<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:200</li>
+							<li>Defined in ec2/instance.ts:228</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -725,7 +812,7 @@
 					<div class="tsd-signature tsd-kind-icon">user<wbr>Data<wbr>Base64<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:206</li>
+							<li>Defined in ec2/instance.ts:234</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -741,7 +828,7 @@
 					<div class="tsd-signature tsd-kind-icon">volume<wbr>Tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:212</li>
+							<li>Defined in ec2/instance.ts:240</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -757,7 +844,7 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/instance.ts:218</li>
+							<li>Defined in ec2/instance.ts:246</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -766,6 +853,84 @@
 						</div>
 						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/instance.html#vpc_security_group_ids">https://www.terraform.io/docs/providers/aws/r/instance.html#vpc_security_group_ids</a>.</p>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="get" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.ID</span><span class="tsd-signature-symbol">&gt;</span>, state<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_ec2_instance_.instancestate.html" class="tsd-signature-type">InstanceState</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_ec2_instance_.instance.html" class="tsd-signature-type">Instance</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in ec2/instance.ts:23</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get an existing Instance resource&#39;s state with the given name, ID, and optional extra
+									properties used to qualify the lookup.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <em>unique</em> name of the resulting resource.</p>
+									</div>
+								</li>
+								<li>
+									<h5>id: <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.ID</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <em>unique</em> provider ID of the resource to lookup.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> state: <a href="../interfaces/_ec2_instance_.instancestate.html" class="tsd-signature-type">InstanceState</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Any extra arguments used during the lookup.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_ec2_instance_.instance.html" class="tsd-signature-type">Instance</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-static">
+					<a name="isinstance" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Instance</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Instance<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from CustomResource.isInstance</p>
+								<p>Overrides Resource.isInstance</p>
+								<ul>
+									<li>Defined in node_modules/@pulumi/pulumi/resource.d.ts:72</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+									multiple copies of the Pulumi SDK have been loaded into the same process.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>obj: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -812,6 +977,9 @@
 								<a href="_ec2_instance_.instance.html#ephemeralblockdevices" class="tsd-kind-icon">ephemeral<wbr>Block<wbr>Devices</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_instance_.instance.html#getpassworddata" class="tsd-kind-icon">get<wbr>Password<wbr>Data</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_instance_.instance.html#iaminstanceprofile" class="tsd-kind-icon">iam<wbr>Instance<wbr>Profile</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -843,6 +1011,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_instance_.instance.html#networkinterfaces" class="tsd-kind-icon">network<wbr>Interfaces</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_ec2_instance_.instance.html#passworddata" class="tsd-kind-icon">password<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_instance_.instance.html#placementgroup" class="tsd-kind-icon">placement<wbr>Group</a>
@@ -895,12 +1066,21 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_ec2_instance_.instance.html#vpcsecuritygroupids" class="tsd-kind-icon">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_ec2_instance_.instance.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-static">
+								<a href="_ec2_instance_.instance.html#isinstance" class="tsd-kind-icon">is<wbr>Instance</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/_ec2_instance_.instanceargs.html" class="tsd-kind-icon">Instance<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_ec2_instance_.instancestate.html" class="tsd-kind-icon">Instance<wbr>State</a>
 					</li>
 				</ul>
 			</nav>

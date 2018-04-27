@@ -92,7 +92,9 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#accesslogs" class="tsd-kind-icon">access<wbr>Logs</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#enablecrosszoneloadbalancing" class="tsd-kind-icon">enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#enabledeletionprotection" class="tsd-kind-icon">enable<wbr>Deletion<wbr>Protection</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#enablehttp2" class="tsd-kind-icon">enable<wbr>Http2</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#idletimeout" class="tsd-kind-icon">idle<wbr>Timeout</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#internal" class="tsd-kind-icon">internal</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#ipaddresstype" class="tsd-kind-icon">ip<wbr>Address<wbr>Type</a></li>
@@ -116,7 +118,7 @@
 					<div class="tsd-signature tsd-kind-icon">access<wbr>Logs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:157</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:331</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -127,12 +129,29 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="enablecrosszoneloadbalancing" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</h3>
+					<div class="tsd-signature tsd-kind-icon">enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:338</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, cross-zone load balancing of the load balancer will be enabled.
+							This is a <code>network</code> load balancer feature. Defaults to <code>false</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#enable_cross_zone_load_balancing">https://www.terraform.io/docs/providers/aws/r/lb.html#enable_cross_zone_load_balancing</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="enabledeletionprotection" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enable<wbr>Deletion<wbr>Protection</h3>
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Deletion<wbr>Protection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:164</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:345</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -144,12 +163,28 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="enablehttp2" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> enable<wbr>Http2</h3>
+					<div class="tsd-signature tsd-kind-icon">enable<wbr>Http2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:351</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Indicates whether HTTP/2 is enabled in <code>application</code> load balancers. Defaults to <code>true</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#enable_http2">https://www.terraform.io/docs/providers/aws/r/lb.html#enable_http2</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="idletimeout" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> idle<wbr>Timeout</h3>
 					<div class="tsd-signature tsd-kind-icon">idle<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:170</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:357</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -165,7 +200,7 @@
 					<div class="tsd-signature tsd-kind-icon">internal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:176</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:363</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -181,7 +216,7 @@
 					<div class="tsd-signature tsd-kind-icon">ip<wbr>Address<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:182</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:369</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -197,7 +232,7 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:188</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:375</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -213,7 +248,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:196</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:383</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -231,7 +266,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:202</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:389</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -247,7 +282,7 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:208</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:395</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -263,7 +298,7 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Mappings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:214</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:401</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -279,14 +314,14 @@
 					<div class="tsd-signature tsd-kind-icon">subnets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:222</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:409</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of subnet IDs to attach to the LB. Subnets
 								cannot be updated for Load Balancers of type <code>network</code>. Changing this value
-							will for load balancers of type <code>network</code> will force a recreation of the resource.</p>
+							for load balancers of type <code>network</code> will force a recreation of the resource.</p>
 						</div>
 						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb.html#subnets">https://www.terraform.io/docs/providers/aws/r/lb.html#subnets</a>.</p>
 					</div>
@@ -297,7 +332,7 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:228</li>
+							<li>Defined in elasticloadbalancingv2/loadBalancer.ts:415</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -334,7 +369,13 @@
 								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#accesslogs" class="tsd-kind-icon">access<wbr>Logs</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#enablecrosszoneloadbalancing" class="tsd-kind-icon">enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#enabledeletionprotection" class="tsd-kind-icon">enable<wbr>Deletion<wbr>Protection</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#enablehttp2" class="tsd-kind-icon">enable<wbr>Http2</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerargs.html#idletimeout" class="tsd-kind-icon">idle<wbr>Timeout</a>
@@ -370,6 +411,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_elasticloadbalancingv2_loadbalancer_.loadbalancerstate.html" class="tsd-kind-icon">Load<wbr>Balancer<wbr>State</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

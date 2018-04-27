@@ -96,9 +96,11 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#iamfleetrole" class="tsd-kind-icon">iam<wbr>Fleet<wbr>Role</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#instanceinterruptionbehaviour" class="tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#launchspecifications" class="tsd-kind-icon">launch<wbr>Specifications</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#loadbalancers" class="tsd-kind-icon">load<wbr>Balancers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#replaceunhealthyinstances" class="tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#spotprice" class="tsd-kind-icon">spot<wbr>Price</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#targetcapacity" class="tsd-kind-icon">target<wbr>Capacity</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#targetgrouparns" class="tsd-kind-icon">target<wbr>Group<wbr>Arns</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#terminateinstanceswithexpiration" class="tsd-kind-icon">terminate<wbr>Instances<wbr>With<wbr>Expiration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#validfrom" class="tsd-kind-icon">valid<wbr>From</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#validuntil" class="tsd-kind-icon">valid<wbr>Until</a></li>
@@ -116,7 +118,7 @@
 					<div class="tsd-signature tsd-kind-icon">allocation<wbr>Strategy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:149</li>
+							<li>Defined in ec2/spotFleetRequest.ts:304</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -134,7 +136,7 @@
 					<div class="tsd-signature tsd-kind-icon">excess<wbr>Capacity<wbr>Termination<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:157</li>
+							<li>Defined in ec2/spotFleetRequest.ts:312</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -152,7 +154,7 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Fleet<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:166</li>
+							<li>Defined in ec2/spotFleetRequest.ts:321</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -171,7 +173,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:167</li>
+							<li>Defined in ec2/spotFleetRequest.ts:322</li>
 						</ul>
 					</aside>
 				</section>
@@ -181,7 +183,7 @@
 					<div class="tsd-signature tsd-kind-icon">launch<wbr>Specifications<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:175</li>
+							<li>Defined in ec2/spotFleetRequest.ts:330</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -194,12 +196,28 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="loadbalancers" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> load<wbr>Balancers</h3>
+					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/spotFleetRequest.ts:336</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of elastic load balancer names to add to the Spot fleet.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#load_balancers">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#load_balancers</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="replaceunhealthyinstances" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> replace<wbr>Unhealthy<wbr>Instances</h3>
 					<div class="tsd-signature tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:181</li>
+							<li>Defined in ec2/spotFleetRequest.ts:342</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -215,7 +233,7 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Price<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:187</li>
+							<li>Defined in ec2/spotFleetRequest.ts:348</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -231,7 +249,7 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:195</li>
+							<li>Defined in ec2/spotFleetRequest.ts:356</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -244,12 +262,29 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="targetgrouparns" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> target<wbr>Group<wbr>Arns</h3>
+					<div class="tsd-signature tsd-kind-icon">target<wbr>Group<wbr>Arns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in ec2/spotFleetRequest.ts:363</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of <code>aws_alb_target_group</code> ARNs, for use with
+							Application Load Balancing.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#target_group_arns">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#target_group_arns</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="terminateinstanceswithexpiration" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> terminate<wbr>Instances<wbr>With<wbr>Expiration</h3>
 					<div class="tsd-signature tsd-kind-icon">terminate<wbr>Instances<wbr>With<wbr>Expiration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:202</li>
+							<li>Defined in ec2/spotFleetRequest.ts:370</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -266,7 +301,7 @@
 					<div class="tsd-signature tsd-kind-icon">valid<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:203</li>
+							<li>Defined in ec2/spotFleetRequest.ts:371</li>
 						</ul>
 					</aside>
 				</section>
@@ -276,7 +311,7 @@
 					<div class="tsd-signature tsd-kind-icon">valid<wbr>Until<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:211</li>
+							<li>Defined in ec2/spotFleetRequest.ts:379</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -294,7 +329,7 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Fulfillment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:219</li>
+							<li>Defined in ec2/spotFleetRequest.ts:387</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -345,6 +380,9 @@
 								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#launchspecifications" class="tsd-kind-icon">launch<wbr>Specifications</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#loadbalancers" class="tsd-kind-icon">load<wbr>Balancers</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#replaceunhealthyinstances" class="tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -352,6 +390,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#targetcapacity" class="tsd-kind-icon">target<wbr>Capacity</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#targetgrouparns" class="tsd-kind-icon">target<wbr>Group<wbr>Arns</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_ec2_spotfleetrequest_.spotfleetrequestargs.html#terminateinstanceswithexpiration" class="tsd-kind-icon">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -369,6 +410,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_ec2_spotfleetrequest_.spotfleetrequeststate.html" class="tsd-kind-icon">Spot<wbr>Fleet<wbr>Request<wbr>State</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

@@ -96,8 +96,6 @@
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_closure_createclosure_.html#builtinmodulenames" class="tsd-kind-icon">built<wbr>InModule<wbr>Names</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_closure_createclosure_.html#builtinmodules" class="tsd-kind-icon">built<wbr>InModules</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_closure_createclosure_.html#legalnameregex" class="tsd-kind-icon">legal<wbr>Name<wbr>Regex</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_closure_createclosure_.html#nativeruntime" class="tsd-kind-icon">nativeruntime</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_closure_createclosure_.html#supportednodeversions" class="tsd-kind-icon">supported<wbr>Node<wbr>Versions</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -112,7 +110,8 @@
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_closure_createclosure_.html#getownpropertynamesandsymbols" class="tsd-kind-icon">get<wbr>Own<wbr>Property<wbr>Names<wbr>And<wbr>Symbols</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_closure_createclosure_.html#isdefaultfunctionprototype" class="tsd-kind-icon">is<wbr>Default<wbr>Function<wbr>Prototype</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_closure_createclosure_.html#isderivednocaptureconstructor" class="tsd-kind-icon">is<wbr>Derived<wbr>NoCapture<wbr>Constructor</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_closure_createclosure_.html#islegalname" class="tsd-kind-icon">is<wbr>Legal<wbr>Name</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_closure_createclosure_.html#islegalfunctionname" class="tsd-kind-icon">is<wbr>Legal<wbr>Function<wbr>Name</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_closure_createclosure_.html#islegalmembername" class="tsd-kind-icon">is<wbr>Legal<wbr>Member<wbr>Name</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_closure_createclosure_.html#throwserializationerror" class="tsd-kind-icon">throw<wbr>Serialization<wbr>Error</a></li>
 							</ul>
 						</section>
@@ -127,7 +126,7 @@
 					<div class="tsd-signature tsd-kind-icon">built<wbr>InModule<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&quot;assert&quot;, &quot;buffer&quot;, &quot;child_process&quot;, &quot;cluster&quot;, &quot;console&quot;, &quot;constants&quot;, &quot;crypto&quot;,&quot;dgram&quot;, &quot;dns&quot;, &quot;domain&quot;, &quot;events&quot;, &quot;fs&quot;, &quot;http&quot;, &quot;https&quot;, &quot;module&quot;, &quot;net&quot;, &quot;os&quot;,&quot;path&quot;, &quot;process&quot;, &quot;punycode&quot;, &quot;querystring&quot;, &quot;readline&quot;, &quot;repl&quot;, &quot;stream&quot;, &quot;string_decoder&quot;,/* &quot;sys&quot; deprecated ,*/ &quot;timers&quot;, &quot;tls&quot;, &quot;tty&quot;, &quot;url&quot;, &quot;util&quot;, &quot;v8&quot;, &quot;vm&quot;, &quot;zlib&quot;,]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L927">runtime/closure/createClosure.ts:927</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L902">runtime/closure/createClosure.ts:902</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -137,7 +136,7 @@
 					<div class="tsd-signature tsd-kind-icon">built<wbr>InModules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Map&lt;any, string&gt;()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L933">runtime/closure/createClosure.ts:933</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L908">runtime/closure/createClosure.ts:908</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -147,27 +146,7 @@
 					<div class="tsd-signature tsd-kind-icon">legal<wbr>Name<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/^[a-zA-Z_][0-9a-zA-Z_]*$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L964">runtime/closure/createClosure.ts:964</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="nativeruntime" class="tsd-anchor"></a>
-					<h3>nativeruntime</h3>
-					<div class="tsd-signature tsd-kind-icon">nativeruntime<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L18">runtime/closure/createClosure.ts:18</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="supportednodeversions" class="tsd-anchor"></a>
-					<h3>supported<wbr>Node<wbr>Versions</h3>
-					<div class="tsd-signature tsd-kind-icon">supported<wbr>Node<wbr>Versions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&quot;v6.10.2&quot;]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L17">runtime/closure/createClosure.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L939">runtime/closure/createClosure.ts:939</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -184,7 +163,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L318">runtime/closure/createClosure.ts:318</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L295">runtime/closure/createClosure.ts:295</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -237,7 +216,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L206">runtime/closure/createClosure.ts:206</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L181">runtime/closure/createClosure.ts:181</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -289,7 +268,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L940">runtime/closure/createClosure.ts:940</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L915">runtime/closure/createClosure.ts:915</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -315,7 +294,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L638">runtime/closure/createClosure.ts:638</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L615">runtime/closure/createClosure.ts:615</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -338,7 +317,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L648">runtime/closure/createClosure.ts:648</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L625">runtime/closure/createClosure.ts:625</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -361,7 +340,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L694">runtime/closure/createClosure.ts:694</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L671">runtime/closure/createClosure.ts:671</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -418,7 +397,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L555">runtime/closure/createClosure.ts:555</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L532">runtime/closure/createClosure.ts:532</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -441,7 +420,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L678">runtime/closure/createClosure.ts:678</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L655">runtime/closure/createClosure.ts:655</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -467,7 +446,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L913">runtime/closure/createClosure.ts:913</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L888">runtime/closure/createClosure.ts:888</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -481,16 +460,39 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="islegalname" class="tsd-anchor"></a>
-					<h3>is<wbr>Legal<wbr>Name</h3>
+					<a name="islegalfunctionname" class="tsd-anchor"></a>
+					<h3>is<wbr>Legal<wbr>Function<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Legal<wbr>Name<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Legal<wbr>Function<wbr>Name<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L965">runtime/closure/createClosure.ts:965</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L944">runtime/closure/createClosure.ts:944</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>n: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="islegalmembername" class="tsd-anchor"></a>
+					<h3>is<wbr>Legal<wbr>Member<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Legal<wbr>Member<wbr>Name<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L940">runtime/closure/createClosure.ts:940</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -513,7 +515,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L560">runtime/closure/createClosure.ts:560</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L537">runtime/closure/createClosure.ts:537</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -586,12 +588,6 @@
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_runtime_closure_createclosure_.html#legalnameregex" class="tsd-kind-icon">legal<wbr>Name<wbr>Regex</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_runtime_closure_createclosure_.html#nativeruntime" class="tsd-kind-icon">nativeruntime</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_runtime_closure_createclosure_.html#supportednodeversions" class="tsd-kind-icon">supported<wbr>Node<wbr>Versions</a>
-					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_runtime_closure_createclosure_.html#createfunctioninfo" class="tsd-kind-icon">create<wbr>Function<wbr>Info</a>
 					</li>
@@ -620,7 +616,10 @@
 						<a href="_runtime_closure_createclosure_.html#isderivednocaptureconstructor" class="tsd-kind-icon">is<wbr>Derived<wbr>NoCapture<wbr>Constructor</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_runtime_closure_createclosure_.html#islegalname" class="tsd-kind-icon">is<wbr>Legal<wbr>Name</a>
+						<a href="_runtime_closure_createclosure_.html#islegalfunctionname" class="tsd-kind-icon">is<wbr>Legal<wbr>Function<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_runtime_closure_createclosure_.html#islegalmembername" class="tsd-kind-icon">is<wbr>Legal<wbr>Member<wbr>Name</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_runtime_closure_createclosure_.html#throwserializationerror" class="tsd-kind-icon">throw<wbr>Serialization<wbr>Error</a>
