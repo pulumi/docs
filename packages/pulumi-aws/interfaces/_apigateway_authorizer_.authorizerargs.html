@@ -97,6 +97,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_apigateway_authorizer_.authorizerargs.html#identitysource" class="tsd-kind-icon">identity<wbr>Source</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_apigateway_authorizer_.authorizerargs.html#identityvalidationexpression" class="tsd-kind-icon">identity<wbr>Validation<wbr>Expression</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_apigateway_authorizer_.authorizerargs.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_apigateway_authorizer_.authorizerargs.html#providerarns" class="tsd-kind-icon">provider<wbr>Arns</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_apigateway_authorizer_.authorizerargs.html#restapi" class="tsd-kind-icon">rest<wbr>Api</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_apigateway_authorizer_.authorizerargs.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
@@ -112,7 +113,7 @@
 					<div class="tsd-signature tsd-kind-icon">authorizer<wbr>Credentials<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:109</li>
+							<li>Defined in apigateway/authorizer.ts:213</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -129,7 +130,7 @@
 					<div class="tsd-signature tsd-kind-icon">authorizer<wbr>Result<wbr>Ttl<wbr>InSeconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:116</li>
+							<li>Defined in apigateway/authorizer.ts:220</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -142,18 +143,18 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="authorizeruri" class="tsd-anchor"></a>
-					<h3>authorizer<wbr>Uri</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> authorizer<wbr>Uri</h3>
 					<div class="tsd-signature tsd-kind-icon">authorizer<wbr>Uri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:124</li>
+							<li>Defined in apigateway/authorizer.ts:228</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The authorizer&#39;s Uniform Resource Identifier (URI).
-								For <code>TOKEN</code> type, this must be a well-formed Lambda function URI in the form of
-							<code>arn:aws:apigateway:{region}:lambda:path/{service_api}</code>. e.g. <code>arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations</code></p>
+								This must be a well-formed Lambda function URI in the form of <code>arn:aws:apigateway:{region}:lambda:path/{service_api}</code>,
+							e.g. <code>arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations</code></p>
 						</div>
 						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#authorizer_uri">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#authorizer_uri</a>.</p>
 					</div>
@@ -164,7 +165,7 @@
 					<div class="tsd-signature tsd-kind-icon">identity<wbr>Source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:131</li>
+							<li>Defined in apigateway/authorizer.ts:235</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -181,7 +182,7 @@
 					<div class="tsd-signature tsd-kind-icon">identity<wbr>Validation<wbr>Expression<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:140</li>
+							<li>Defined in apigateway/authorizer.ts:244</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -200,7 +201,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:146</li>
+							<li>Defined in apigateway/authorizer.ts:250</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -211,12 +212,29 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="providerarns" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> provider<wbr>Arns</h3>
+					<div class="tsd-signature tsd-kind-icon">provider<wbr>Arns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in apigateway/authorizer.ts:257</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of the Amazon Cognito user pool ARNs.
+							Each element is of this format: <code>arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}</code>.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#provider_arns">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#provider_arns</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="restapi" class="tsd-anchor"></a>
 					<h3>rest<wbr>Api</h3>
 					<div class="tsd-signature tsd-kind-icon">rest<wbr>Api<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_apigateway_restapi_.restapi.html" class="tsd-signature-type">RestApi</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:152</li>
+							<li>Defined in apigateway/authorizer.ts:263</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -232,12 +250,12 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/authorizer.ts:159</li>
+							<li>Defined in apigateway/authorizer.ts:270</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The type of the authorizer. Possible values are <code>TOKEN</code> and <code>REQUEST</code>.
+							<p>The type of the authorizer. Possible values are <code>TOKEN</code> for a Lambda function using a single authorization token submitted in a custom header, <code>REQUEST</code> for a Lambda function using incoming request parameters, or <code>COGNITO_USER_POOLS</code> for using an Amazon Cognito user pool.
 							Defaults to <code>TOKEN</code>.</p>
 						</div>
 						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#type">https://www.terraform.io/docs/providers/aws/r/api_gateway_authorizer.html#type</a>.</p>
@@ -285,6 +303,9 @@
 								<a href="_apigateway_authorizer_.authorizerargs.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_apigateway_authorizer_.authorizerargs.html#providerarns" class="tsd-kind-icon">provider<wbr>Arns</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_apigateway_authorizer_.authorizerargs.html#restapi" class="tsd-kind-icon">rest<wbr>Api</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -294,6 +315,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_apigateway_authorizer_.authorizerstate.html" class="tsd-kind-icon">Authorizer<wbr>State</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

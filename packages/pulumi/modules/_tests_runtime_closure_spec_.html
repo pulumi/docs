@@ -76,7 +76,64 @@
 								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_tests_runtime_closure_spec_.closurecase.html" class="tsd-kind-icon">Closure<wbr>Case</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_tests_runtime_closure_spec_.html#compareerrortext" class="tsd-kind-icon">compare<wbr>Error<wbr>Text</a></li>
+							</ul>
+						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="compareerrortext" class="tsd-anchor"></a>
+					<h3>compare<wbr>Error<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">compare<wbr>Error<wbr>Text<span class="tsd-signature-symbol">(</span>expected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, actual<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L3845">tests/runtime/closure.spec.ts:3845</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>compareErrorText compares an &quot;expected&quot; error string and an &quot;actual&quot; error string
+									and issues an error if they do not match.</p>
+								</div>
+								<p>This function accepts two repetition operators to make writing tests easier against
+								error messages that are dependent on the environment:</p>
+								<ul>
+									<li>(...) alone on a single line causes the matcher to accept zero or more lines
+									between the repetition and the next line.</li>
+									<li>(...) within in the context of a line causes the matcher to accept zero or more characters
+									between the repetition and the next character.</li>
+								</ul>
+								<p>This is useful when testing error messages that you get when capturing bulit-in modules,
+								because the specific error message differs between Node versions.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expected: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The expected error message string, potentially containing repetitions</p>
+									</div>
+								</li>
+								<li>
+									<h5>actual: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The actual error message string</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -95,6 +152,9 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../interfaces/_tests_runtime_closure_spec_.closurecase.html" class="tsd-kind-icon">Closure<wbr>Case</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_tests_runtime_closure_spec_.html#compareerrortext" class="tsd-kind-icon">compare<wbr>Error<wbr>Text</a>
 					</li>
 				</ul>
 			</nav>

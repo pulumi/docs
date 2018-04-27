@@ -29,7 +29,7 @@ Much more is available in the table of contents available in [the reference sect
 
 ## Code Examples
 
-For code samples, see examples in the [Pulumi examples repo] on GitHub. Below are some highlighted samples.
+For code samples, see examples in the [Pulumi examples repo] on GitHub. Below are some highlighted samples. (If you don't have access to the GitHub repo, please email [support@pulumi.com](mailto:support@pulumi.com) to get access. There is also a [Pulumi examples zipfile](/examples/pulumi-examples.zip).)
 
 - [AWS EC2 instance in JavaScript](https://github.com/pulumi/examples/tree/master/aws-js-webserver)
 - [AWS EC2 instance in Python](https://github.com/pulumi/examples/tree/master/aws-py-webserver)

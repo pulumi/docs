@@ -110,12 +110,12 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/listener.ts:95</li>
+							<li>Defined in applicationloadbalancing/listener.ts:170</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS.</p>
+							<p>The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the <a href="/docs/providers/aws/r/lb_listener_certificate.html"><code>aws_lb_listener_certificate</code> resource</a>.</p>
 						</div>
 						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/alb_listener.html#certificate_arn">https://www.terraform.io/docs/providers/aws/r/alb_listener.html#certificate_arn</a>.</p>
 					</div>
@@ -126,7 +126,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/listener.ts:101</li>
+							<li>Defined in applicationloadbalancing/listener.ts:176</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -142,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/listener.ts:107</li>
+							<li>Defined in applicationloadbalancing/listener.ts:182</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -158,7 +158,7 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/listener.ts:113</li>
+							<li>Defined in applicationloadbalancing/listener.ts:188</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -174,7 +174,7 @@
 					<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/listener.ts:119</li>
+							<li>Defined in applicationloadbalancing/listener.ts:194</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -190,7 +190,7 @@
 					<div class="tsd-signature tsd-kind-icon">ssl<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in applicationloadbalancing/listener.ts:125</li>
+							<li>Defined in applicationloadbalancing/listener.ts:200</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -245,6 +245,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_applicationloadbalancing_listener_.listenerstate.html" class="tsd-kind-icon">Listener<wbr>State</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

@@ -15,3 +15,9 @@ While Pulumi is in private preview, `@pulumi` packages are not publicly availabl
     $ npm config set @pulumi:registry=https://npmjs.pulumi.com/
     $ npm config set //npmjs.pulumi.com/:_authToken=YOUR_PULUMI_TOKEN
     ```
+
+> If you see an error such as `npm ERR! 403 Forbidden`, there is likely a problem with your NPM configuration. Open the file `.npmrc` in your home directory, and ensure it has only the following lines:
+```
+//npmjs.pulumi.com/:_authToken=YOUR_PULUMI_TOKEN
+@pulumi:registry=https://npmjs.pulumi.com/
+```

@@ -102,6 +102,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#ec2attributes" class="tsd-kind-icon">ec2<wbr>Attributes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#instancegroups" class="tsd-kind-icon">instance<wbr>Groups</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#keepjobflowalivewhennosteps" class="tsd-kind-icon">keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>NoSteps</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#kerberosattributes" class="tsd-kind-icon">kerberos<wbr>Attributes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#loguri" class="tsd-kind-icon">log<wbr>Uri</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#masterinstancetype" class="tsd-kind-icon">master<wbr>Instance<wbr>Type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#name" class="tsd-kind-icon">name</a></li>
@@ -109,6 +110,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#scaledownbehavior" class="tsd-kind-icon">scale<wbr>Down<wbr>Behavior</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#securityconfiguration" class="tsd-kind-icon">security<wbr>Configuration</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#servicerole" class="tsd-kind-icon">service<wbr>Role</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#steps" class="tsd-kind-icon">steps</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#tags" class="tsd-kind-icon">tags</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#terminationprotection" class="tsd-kind-icon">termination<wbr>Protection</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_emr_cluster_.clusterargs.html#visibletoallusers" class="tsd-kind-icon">visible<wbr>ToAll<wbr>Users</a></li>
@@ -125,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">applications<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:202</li>
+							<li>Defined in emr/cluster.ts:415</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -141,7 +143,7 @@
 					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:208</li>
+							<li>Defined in emr/cluster.ts:421</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,7 +159,7 @@
 					<div class="tsd-signature tsd-kind-icon">bootstrap<wbr>Actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:215</li>
+							<li>Defined in emr/cluster.ts:428</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -174,7 +176,7 @@
 					<div class="tsd-signature tsd-kind-icon">configurations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:221</li>
+							<li>Defined in emr/cluster.ts:434</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -190,7 +192,7 @@
 					<div class="tsd-signature tsd-kind-icon">core<wbr>Instance<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:227</li>
+							<li>Defined in emr/cluster.ts:440</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -206,7 +208,7 @@
 					<div class="tsd-signature tsd-kind-icon">core<wbr>Instance<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:233</li>
+							<li>Defined in emr/cluster.ts:446</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -222,7 +224,7 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Ami<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:239</li>
+							<li>Defined in emr/cluster.ts:452</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -238,7 +240,7 @@
 					<div class="tsd-signature tsd-kind-icon">ebs<wbr>Root<wbr>Volume<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:245</li>
+							<li>Defined in emr/cluster.ts:458</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -254,7 +256,7 @@
 					<div class="tsd-signature tsd-kind-icon">ec2<wbr>Attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:252</li>
+							<li>Defined in emr/cluster.ts:465</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -271,7 +273,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:258</li>
+							<li>Defined in emr/cluster.ts:471</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -287,7 +289,7 @@
 					<div class="tsd-signature tsd-kind-icon">keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>NoSteps<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:264</li>
+							<li>Defined in emr/cluster.ts:477</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -298,12 +300,28 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="kerberosattributes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> kerberos<wbr>Attributes</h3>
+					<div class="tsd-signature tsd-kind-icon">kerberos<wbr>Attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in emr/cluster.ts:483</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Kerberos configuration for the cluster. Defined below</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/emr_cluster.html#kerberos_attributes">https://www.terraform.io/docs/providers/aws/r/emr_cluster.html#kerberos_attributes</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="loguri" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> log<wbr>Uri</h3>
 					<div class="tsd-signature tsd-kind-icon">log<wbr>Uri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:271</li>
+							<li>Defined in emr/cluster.ts:490</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -320,7 +338,7 @@
 					<div class="tsd-signature tsd-kind-icon">master<wbr>Instance<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:277</li>
+							<li>Defined in emr/cluster.ts:496</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -336,7 +354,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:283</li>
+							<li>Defined in emr/cluster.ts:502</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -352,7 +370,7 @@
 					<div class="tsd-signature tsd-kind-icon">release<wbr>Label<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:289</li>
+							<li>Defined in emr/cluster.ts:508</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -368,7 +386,7 @@
 					<div class="tsd-signature tsd-kind-icon">scale<wbr>Down<wbr>Behavior<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:295</li>
+							<li>Defined in emr/cluster.ts:514</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -384,7 +402,7 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:301</li>
+							<li>Defined in emr/cluster.ts:520</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -400,7 +418,7 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:307</li>
+							<li>Defined in emr/cluster.ts:526</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -411,12 +429,28 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="steps" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> steps</h3>
+					<div class="tsd-signature tsd-kind-icon">steps<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in emr/cluster.ts:532</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize the <a href="/docs/configuration/resources.html">lifecycle configuration block</a> with <code>ignore_changes</code> if other steps are being managed outside of Terraform.</p>
+						</div>
+						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/emr_cluster.html#step">https://www.terraform.io/docs/providers/aws/r/emr_cluster.html#step</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tags" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tags</h3>
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:313</li>
+							<li>Defined in emr/cluster.ts:538</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -432,7 +466,7 @@
 					<div class="tsd-signature tsd-kind-icon">termination<wbr>Protection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:319</li>
+							<li>Defined in emr/cluster.ts:544</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -448,7 +482,7 @@
 					<div class="tsd-signature tsd-kind-icon">visible<wbr>ToAll<wbr>Users<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in emr/cluster.ts:325</li>
+							<li>Defined in emr/cluster.ts:550</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -515,6 +549,9 @@
 								<a href="_emr_cluster_.clusterargs.html#keepjobflowalivewhennosteps" class="tsd-kind-icon">keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>NoSteps</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_emr_cluster_.clusterargs.html#kerberosattributes" class="tsd-kind-icon">kerberos<wbr>Attributes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_emr_cluster_.clusterargs.html#loguri" class="tsd-kind-icon">log<wbr>Uri</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -536,6 +573,9 @@
 								<a href="_emr_cluster_.clusterargs.html#servicerole" class="tsd-kind-icon">service<wbr>Role</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_emr_cluster_.clusterargs.html#steps" class="tsd-kind-icon">steps</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_emr_cluster_.clusterargs.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -548,6 +588,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_emr_cluster_.clusterstate.html" class="tsd-kind-icon">Cluster<wbr>State</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
