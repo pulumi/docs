@@ -71,6 +71,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_runtime_rpc_.html#outputresolvers" class="tsd-kind-icon">Output<wbr>Resolvers</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_rpc_.html#gstruct" class="tsd-kind-icon">gstruct</a></li>
@@ -84,14 +90,27 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_rpc_.html#deserializeproperties" class="tsd-kind-icon">deserialize<wbr>Properties</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_rpc_.html#deserializeproperty" class="tsd-kind-icon">deserialize<wbr>Property</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_rpc_.html#deserializeproperty" class="tsd-kind-icon">deserialize<wbr>Property</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_rpc_.html#resolveproperties" class="tsd-kind-icon">resolve<wbr>Properties</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_rpc_.html#serializeproperties" class="tsd-kind-icon">serialize<wbr>Properties</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_rpc_.html#serializeproperty" class="tsd-kind-icon">serialize<wbr>Property</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_rpc_.html#serializeproperty" class="tsd-kind-icon">serialize<wbr>Property</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_rpc_.html#transferproperties" class="tsd-kind-icon">transfer<wbr>Properties</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="outputresolvers" class="tsd-anchor"></a>
+					<h3>Output<wbr>Resolvers</h3>
+					<div class="tsd-signature tsd-kind-icon">Output<wbr>Resolvers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L12">runtime/rpc.ts:12</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -197,10 +216,10 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
 					<a name="deserializeproperty" class="tsd-anchor"></a>
 					<h3>deserialize<wbr>Property</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
 						<li class="tsd-signature tsd-kind-icon">deserialize<wbr>Property<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -282,7 +301,7 @@
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>serializeAllProperties walks the props object passed in, awaiting all interior promises,
-									creating a reaosnable POJO object that can be remoted over to registerResource.</p>
+									creating a reasonable POJO object that can be remoted over to registerResource.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -301,11 +320,11 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
 					<a name="serializeproperty" class="tsd-anchor"></a>
 					<h3>serialize<wbr>Property</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">serialize<wbr>Property<span class="tsd-signature-symbol">(</span>prop<span class="tsd-signature-symbol">: </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, dependentResources<span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.resource.html" class="tsd-signature-type">Resource</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">serialize<wbr>Property<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, prop<span class="tsd-signature-symbol">: </span><a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, dependentResources<span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.resource.html" class="tsd-signature-type">Resource</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -323,10 +342,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>prop: <a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>ctx: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>ctx: <span class="tsd-signature-type">string</span></h5>
+									<h5>prop: <a href="_resource_.html#input" class="tsd-signature-type">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
 									<h5>dependentResources: <a href="../classes/_resource_.resource.html" class="tsd-signature-type">Resource</a><span class="tsd-signature-symbol">[]</span></h5>
@@ -340,13 +359,13 @@
 					<a name="transferproperties" class="tsd-anchor"></a>
 					<h3>transfer<wbr>Properties</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">transfer<wbr>Properties<span class="tsd-signature-symbol">(</span>onto<span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.resource.html" class="tsd-signature-type">Resource</a>, label<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, props<span class="tsd-signature-symbol">: </span><a href="_resource_.html#inputs" class="tsd-signature-type">Inputs</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">transfer<wbr>Properties<span class="tsd-signature-symbol">(</span>onto<span class="tsd-signature-symbol">: </span><a href="../classes/_resource_.resource.html" class="tsd-signature-type">Resource</a>, label<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, props<span class="tsd-signature-symbol">: </span><a href="_resource_.html#inputs" class="tsd-signature-type">Inputs</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_runtime_rpc_.html#outputresolvers" class="tsd-signature-type">OutputResolvers</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L24">runtime/rpc.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L26">runtime/rpc.ts:26</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -374,7 +393,7 @@
 									<h5>props: <a href="_resource_.html#inputs" class="tsd-signature-type">Inputs</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_runtime_rpc_.html#outputresolvers" class="tsd-signature-type">OutputResolvers</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -393,6 +412,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_runtime_rpc_.html#outputresolvers" class="tsd-kind-icon">Output<wbr>Resolvers</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_runtime_rpc_.html#gstruct" class="tsd-kind-icon">gstruct</a>
 					</li>
@@ -411,7 +433,7 @@
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_runtime_rpc_.html#deserializeproperties" class="tsd-kind-icon">deserialize<wbr>Properties</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_runtime_rpc_.html#deserializeproperty" class="tsd-kind-icon">deserialize<wbr>Property</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
@@ -420,7 +442,7 @@
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_runtime_rpc_.html#serializeproperties" class="tsd-kind-icon">serialize<wbr>Properties</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_runtime_rpc_.html#serializeproperty" class="tsd-kind-icon">serialize<wbr>Property</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">

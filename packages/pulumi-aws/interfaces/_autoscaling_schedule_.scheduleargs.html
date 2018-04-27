@@ -112,7 +112,7 @@
 					<div class="tsd-signature tsd-kind-icon">autoscaling<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:108</li>
+							<li>Defined in autoscaling/schedule.ts:201</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -128,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">desired<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:114</li>
+							<li>Defined in autoscaling/schedule.ts:207</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -144,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">end<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:121</li>
+							<li>Defined in autoscaling/schedule.ts:214</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -161,15 +161,13 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:128</li>
+							<li>Defined in autoscaling/schedule.ts:221</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The maximum size for the Auto Scaling group. Default</p>
-							<ol>
-								<li>Set to -1 if you don&#39;t want to change the maximum size at the scheduled time.</li>
-							</ol>
+							<p>The maximum size for the Auto Scaling group. Default 0.
+							Set to -1 if you don&#39;t want to change the maximum size at the scheduled time.</p>
 						</div>
 						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#max_size">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#max_size</a>.</p>
 					</div>
@@ -180,15 +178,13 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:135</li>
+							<li>Defined in autoscaling/schedule.ts:228</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The minimum size for the Auto Scaling group. Default</p>
-							<ol>
-								<li>Set to -1 if you don&#39;t want to change the minimum size at the scheduled time.</li>
-							</ol>
+							<p>The minimum size for the Auto Scaling group. Default 0.
+							Set to -1 if you don&#39;t want to change the minimum size at the scheduled time.</p>
 						</div>
 						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#min_size">https://www.terraform.io/docs/providers/aws/r/autoscaling_schedule.html#min_size</a>.</p>
 					</div>
@@ -199,7 +195,7 @@
 					<div class="tsd-signature tsd-kind-icon">recurrence<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:141</li>
+							<li>Defined in autoscaling/schedule.ts:234</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -215,7 +211,7 @@
 					<div class="tsd-signature tsd-kind-icon">scheduled<wbr>Action<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:147</li>
+							<li>Defined in autoscaling/schedule.ts:240</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -231,7 +227,7 @@
 					<div class="tsd-signature tsd-kind-icon">start<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in autoscaling/schedule.ts:154</li>
+							<li>Defined in autoscaling/schedule.ts:247</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -293,6 +289,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_autoscaling_schedule_.schedulestate.html" class="tsd-kind-icon">Schedule<wbr>State</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
