@@ -22,7 +22,7 @@ info: 3 changes previewed:
     + 3 resources to create
 ```
 
-Because the changes are not actually applied during the preview phase, it is not possible for `pulumi update` to know for sure whether a change will occur or not when it is dependent on the output of some resource being created or replaced.  Because of this, `pulumi update --preview` always presents a conservative summary of the changes that will be applied.  This means that when changes are actually applied, it may observe fewer changes being needed, but will never observe more than what was shown during preview.
+Because the changes are not actually applied during the preview phase, the preview doesn't always know whether a change will occur, as it may be dependent on whether another resource is created on replaced. So, the preview always presents a conservative summary of the changes that will be applied.  When changes are actually applied, there may be fewer changes than the preview, but there will never be additional changes.
 
 For more information, see [the Pulumi programming model](./programming-model.html).
 
