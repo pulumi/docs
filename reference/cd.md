@@ -38,7 +38,7 @@ your source code is effectively everything Pulumi needs to perform a deployment,
 The easiest way to achieve a Pulumi-based CD flow is to simply integrate it into your existing CI process.
 
 The basic idea here is that, after running your usual CI processes upon merging a commit into a release branch, you can
-proceed to doing a Pulumi deployment.  This usually entails running `pulumi update --preview` followed by a `pulumi update`.
+proceed to doing a Pulumi deployment.  This usually entails running `pulumi update --preview` followed by a `pulumi update --force`.
 After the deployment completes, of course, you may want to perform additional post-deployment verification.
 
 There are many variants of this, of course.  For instance, Pulumi makes it so easy to stand up new developer stacks, you

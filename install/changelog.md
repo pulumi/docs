@@ -51,23 +51,23 @@ Released on April 26, 2018
 
 ### Added
 
--  Add a `pulumi cancel` command ([pulumi/pulumi#1230](https://github.com/pulumi/pulumi/pull/1230)). This command cancels any in-progress operation for the current stack. Note that the target stack may need to be manually repaired via `stack export` and `import`.
+-  Add a `pulumi cancel` command ([pulumi/pulumi#1230](https://github.com/pulumi/pulumi/pull/1230)). This command cancels any in-progress operation for the current stack. 
 
 ### Changed 
 -  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks](../reference/stack.html#create-stack).
 
--  (**Breaking**) Remove the explicit 'pulumi preview' command ([pulumi/pulumi#1170](https://github.com/pulumi/pulumi/pull/1170)). The `pulumi preview` output has now been merged in to the `pulumi update` command. Before an update is run, the preview is shown you can choose whether to proceed or see more update details. To see just the preview operation, run `pulumi update --preview`.
+-  (**Breaking**) Remove the explicit 'pulumi preview' command ([pulumi/pulumi#1170](https://github.com/pulumi/pulumi/pull/1170)). The `pulumi preview` output has now been merged in to the `pulumi update` command. Before an update is run, the preview is shown and you can choose whether to proceed or see more update details. To see just the preview operation, run `pulumi update --preview`.
 
--  (**Breaking**) Add support for Node 8.10 for Lambda implementations ([pulumi/pulumi-aws#195](https://github.com/pulumi/pulumi-aws/pull/195)). When provisioning an AWS Lambda, the target runtime is Node.js version 8.10, rather than 6.10.2.
+-  (**Breaking**) Add support for Node 8.10 for AWS Lambda ([pulumi/pulumi-aws#195](https://github.com/pulumi/pulumi-aws/pull/195)). Lambdas created with `aws.serverless.Function` and via JavaScript callbacks in `@pulumi/cloud` now default to Node.js 8.10.
 
--  Switch to a more streamlined view for property diffs in `pulumi update` ([pulumi/pulumi#1212](https://github.com/pulumi/pulumi/pull/1212)). When just part of a property has changed, only the changed part is displayed.
+-  Switch to a more streamlined view for property diffs in `pulumi update` ([pulumi/pulumi#1212](https://github.com/pulumi/pulumi/pull/1212)). 
 
--  Allow multiple versions of the `@pulumi/pulumi` package to be loaded ([pulumi/pulumi#1209](https://github.com/pulumi/pulumi/pull/1209)). This change allows a program to use more than one version of `@pulumi/pulumi`. 
+-  Allow multiple versions of the `@pulumi/pulumi` package to be loaded ([pulumi/pulumi#1209](https://github.com/pulumi/pulumi/pull/1209)). This allows packages and dependencies to be versioned independently.
 
 ### Fixed
--  When running a `pulumi update` or `destroy` operation, a single ctrl-c will cancel the current operation. A second ctrl-c will terminate the operation, possibly leaving resources in an untracked state. ([pulumi/pulumi#1231](https://github.com/pulumi/pulumi/pull/1231)).
+-  When running a `pulumi update` or `destroy` operation, a single ctrl-c will cancel the current operation, waiting for it to complete. A second ctrl-c will terminate the operation immediately. ([pulumi/pulumi#1231](https://github.com/pulumi/pulumi/pull/1231)).
 
--  When getting update logs, get all results ([pulumi/pulumi#1220](https://github.com/pulumi/pulumi/pull/1220)). Fixes a bug where logs could sometimes be truncated.
+-  When getting update logs, get all results ([pulumi/pulumi#1220](https://github.com/pulumi/pulumi/pull/1220)). Fixes a bug where logs could sometimes be truncated in the pulumi.com console.
 
 ## v0.11.3 {#v113}
 
@@ -92,9 +92,6 @@ Released on April 13, 2018
 ## v0.11.2 {#v112}
 
 Released on April 6, 2018
-
-- Default organization is the user. To target a different one, use `<owner-name>/<stack-name>`.
-- Removed the preview command, which is now `pulumi update --preview`.
 
 ### Added
 
