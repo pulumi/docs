@@ -7,7 +7,7 @@ the CLI to carry out tasks such as deploying updates to your cloud program and i
 of who updated what in your team and when.  This CLI has been designed to work well in unattended scenarios, such as
 in [continuous integration and deployment](./cd.html), and communicates all errors properly using non-zero exit codes.
 
-The most common in the CLI that you'll be using are as follows:
+The most common commands in the CLI that you'll be using are as follows:
 
 * [`pulumi new`](./cli/pulumi_new.html): creates a new project using a template
 * [`pulumi stack`](./cli/pulumi_stack.html): manage your stacks (at least one is required to perform an update)
