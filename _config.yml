@@ -6,10 +6,19 @@ plugins:
   - kramdown
   - jekyll-include-cache # used for recursive loop in _includes/tree.html
   - jekyll-redirect-from # for 301 redirects
+  - jekyll-relative-links # to convert internal MD links to HTML
+  - jekyll-optional-front-matter # for Markdown without front matter (e.g., CLI reference)
 
 markdown: kramdown
 kramdown:
   parse_block_html: false
+
+optional_front_matter:
+  remove_originals: true
+
+relative_links:
+  enabled: true
+  collections: true
 
 # Totally lame workaround until typedoc emits files withouty a leading
 # underscore or we have our own TypeScript documentation generation stack.
