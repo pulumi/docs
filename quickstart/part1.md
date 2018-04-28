@@ -93,7 +93,7 @@ virtual machine in the cloud.
     ```
 
 1.  Pulumi programs are deployed to a [stack](../reference/stack.html), which is an isolated and independently
-   configurable instance of a Pulumi program.  We'll create a new stack for our program. 
+   configurable instance of a Pulumi program.  We'll create a new stack for our program.
 
     ```bash
     $ pulumi stack init webserver-testing
@@ -108,7 +108,7 @@ virtual machine in the cloud.
     webserver-testing*                               n/a                      n/a
     ```
 
-    The new stack is marked with an asterisk to indicate that it is the currently active stack. All deployment operations target this stack. Stack names must be unique within an account, so you should include a unique project name as a prefix.
+    The new stack is marked with an asterisk to indicate that it is the currently active stack. All deployment operations target this stack.
 
 1.  Pulumi programs also support [configuration](../reference/config.html) which is defined per-stack to decide how that
    instance of the program should be parameterized.  We need to configure the AWS region we'll deploy to, such as 
@@ -148,29 +148,6 @@ virtual machine in the cloud.
     ```
 
     The update shows that it will create 3 resources, rather than 2, as the stack is itself counted as a [Component](../reference/programming-model.html#components) which owns all resources being created. Components are covered in more details in [part 2](./part2.html).
-
-1.  To see the exact resource that will be created, choose the "details" option:
-
-    ```
-    Do you want to proceed? details
-    + pulumi:pulumi:Stack: (create)
-        [urn=urn:pulumi:webserver-testing::webserver::pulumi:pulumi:Stack::webserver-webserver-testing]
-        + aws:ec2/securityGroup:SecurityGroup: (create)
-          [... details omitted ...]
-        + aws:ec2/instance:Instance: (create)
-          [... details omitted ...]
-        ---outputs:---
-        publicHostName: computed<string>
-        publicIp      : computed<string>
-
-    info: 3 changes previewed:
-        + 3 resources to create
-
-    Do you want to proceed?
-      yes
-    > no
-      details
-    ```
 
 1.  Now, deploy the program and provision resources with the "yes" option, which takes about 30 seconds to complete. While resources are being created, you will see a `creating...` progress indicator for the stack component. 
     
@@ -324,17 +301,8 @@ Before moving on, let's tear down the resources that are part of our stack.
     Please confirm that this is what you'd like to do by typing ("webserver-testing"): webserver-testing
     Previewing stack 'webserver-testing'
     Previewing changes:
+    ...
 
-    #: Resource Type          Name                         Plan      Extra Info
-    1: aws:ec2:Instance       webserver-www                - delete
-    2: aws:ec2:SecurityGroup  webserver-secgrp             - delete
-    3: pulumi:pulumi:Stack    webserver-webserver-testing  - delete
-
-    info: 3 changes previewed:
-        - 3 resources to delete
-
-    Do you want to proceed? yes
-    Destroying stack 'webserver-testing'
     Performing changes:
 
     #: Resource Type          Name                         Status     Extra Info

@@ -42,6 +42,12 @@ The `PULUMI_ACCESS_TOKEN` is your access token from the Pulumi Console found on 
 
 > **Note:** If you see an HTTP 403 Forbidden error, or you see an error that says "No matching distribution found for pulumi>=0.11.0", then you have not correctly specified the `--extra-index-url` and/or have used an incorrect Pulumi access token.  Double check both and try again.  If it still doesn't work, please let us know.
 
+If you prefer to configure `pip` so that it always checks the Pulumi package server, simply run:
+
+```bash
+$ pip config set global.extra-index.url https://${PULUMI_ACCESS_TOKEN}@pypi.pulumi.com/simple
+```
+
 ### Adding a new dependency {#packages}
 
 The following Pulumi Python packages are available:

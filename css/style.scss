@@ -23,12 +23,11 @@ $MOBILE-WIDTH: 768px;
 /**
  * Fonts
  */
-@import url('https://fonts.googleapis.com/css?family=Google Sans');
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 $font-family: 'Helvetica Neue',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI';
-$header-font-family: 'Google Sans',sans-serif;
+$header-font-family: 'Helvetica Neue',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI';
 $code-font-family: 'SFMono-Regular',Consolas,'Liberation Mono',Menlo,Courier,monospace;
  
 /**
@@ -76,7 +75,7 @@ $accent3: #f2e6ff;
 
 a {
     color: $primary;
-    font-weight: bold;
+    font-weight: 500;
     text-decoration: none;
 }
 a:hover {
@@ -85,7 +84,7 @@ a:hover {
 }
 
 code {
-    background-color: #f7f7f7;
+    background-color: #f2f2f2;
     color: #37474f;
     font-size: 14px;
     font-family: $code-font-family;
@@ -150,8 +149,12 @@ a.btn > svg {
 .content-container {
     color: #212121;
 
-    p {
+    p, li {
+        font-weight: 400;
         -webkit-font-smoothing: antialiased;
+    }
+    pre, code {
+        -webkit-font-smoothing: auto;
     }
     h1 {
         font-size: 32px;
@@ -172,6 +175,7 @@ a.btn > svg {
     }
     h1, h2, h3, h4, h5, h6 {
         font-family: $header-font-family;
+        font-weight: 500;
         text-overflow: ellipsis;
     }
     p, li, h1, h2, h3, h4, h5, h6 {
@@ -181,7 +185,6 @@ a.btn > svg {
         font-variant-east-asian: normal;
         font-variant-ligatures: normal;
         font-variant-numeric: normal;
-        font-weight: 400;
         line-height: 24px;
         text-size-adjust: 100%;
     }

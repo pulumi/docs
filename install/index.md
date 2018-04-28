@@ -19,7 +19,7 @@ The current SDK version is <a href="./changelog.html#{{ page.installer_version }
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">get_app</i>
                 &nbsp;
-                <a href="/install">macOS x64</a>
+                <a href="/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz">macOS x64</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -43,7 +43,7 @@ The current SDK version is <a href="./changelog.html#{{ page.installer_version }
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">get_app</i>
                 &nbsp;
-                <a href="/install">Linux x64</a>
+                <a href="/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz">Linux x64</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -67,7 +67,7 @@ The current SDK version is <a href="./changelog.html#{{ page.installer_version }
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">get_app</i>
                 &nbsp;
-                <a href="/install">Windows x64</a>
+                <a href="/releases/pulumi-v{{page.installer_version}}-windows.x64.zip">Windows x64</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
