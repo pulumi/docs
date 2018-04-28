@@ -45,7 +45,7 @@ title: "Change log"
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
-## v.12.0 {#v120}
+## v0.12.0 {#v120}
 
 Released on April 26, 2018
 
