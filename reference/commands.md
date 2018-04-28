@@ -1,5 +1,5 @@
 ---
-title: "Pulumi CLI"
+title: "Commands (CLI)"
 ---
 
 TODO:

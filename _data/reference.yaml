@@ -17,6 +17,32 @@ toc:
   - reference/javascript.md
   - reference/python.md
 
+- title: Commands (CLI)
+  path: /reference/commands
+  section:
+  - title: Cancel
+    path: /reference/cli/pulumi_cancel.html
+  - title: Config
+    path: /reference/cli/pulumi_config.html
+  - title: Destroy
+    path: /reference/cli/pulumi_destroy.html
+  - title: Login
+    path: /reference/cli/pulumi_login.html
+  - title: Logout
+    path: /reference/cli/pulumi_logout.html
+  - title: Logs
+    path: /reference/cli/pulumi_logs.html
+  - title: New
+    path: /reference/cli/pulumi_new.html
+  - title: Plugin
+    path: /reference/cli/pulumi_plugin.html
+  - title: Refresh
+    path: /reference/cli/pulumi_refresh.html
+  - title: Stack
+    path: /reference/cli/pulumi_stack.html
+  - title: Update
+    path: /reference/cli/pulumi_update.html
+
 - title: Cloud Resources
   path: /reference/cloud-resources
   section:
