@@ -21,7 +21,8 @@ The most common commands in the CLI that you'll be using are as follows:
 
 Below is the complete documentation for all available commands:
 
-{% include_relative cli/pulumi.md %}
+{% capture pulumi_cli %}{% include_relative cli/pulumi.md %}{% endcapture %}
+{{ pulumi_cli | markdownify | replace_regex: 'pulumi_(.*)\.md', './cli/pulumi_\1.html' }}
 
 ## Command-line Completion
 
