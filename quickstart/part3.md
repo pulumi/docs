@@ -96,6 +96,8 @@ Let's remove the cloud resources that have been provisioned.
 
 ## Next steps
 
+For an end-to-end application with a frontend, see the [URL shortener sample](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener).
+
 TODO
 
 <!-- LINKS -->
