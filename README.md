@@ -6,6 +6,9 @@
 |---|---|
 | [![Build Status](https://travis-ci.com/pulumi/docs.svg?token=eHg7Zp5zdDDJfTjY8ejq&branch=master)](https://travis-ci.com/pulumi/docs) | [![Build Status](https://travis-ci.com/pulumi/docs.svg?token=eHg7Zp5zdDDJfTjY8ejq&branch=production)](https://travis-ci.com/pulumi/docs) |
 
+## Contributing
+
+**Before adding new content, read [CONTRIBUTING.md](CONTRIBUTING.md).**
 
 ## Toolchain
 
@@ -22,6 +25,10 @@ installation on your system.
 
 `make build` will generate the website (published to _site).
 
+`make serve` will build the website and serve it to http://localhost:4000.
+
+`make test` runs a broken link checker tool against http://localhost:4000.
+
 `make generate` will regenerate the TypeScript documentation if needed. The generated documentation is placed in the [packages](packages/) folder. This is extremely hacky.
 
    Prerequisites:
@@ -33,12 +40,6 @@ installation on your system.
     ```rm -rf /usr/local/lib/node_modules/typedoc/node_modules/typescript/```
   - Install TypeScript globally:
     ```npm install -g typescript@2.6.2```
-
-`make serve` will build the website and serve it to http://localhost:4000.
-
-## Additional
-
-Site structure and style guide are available in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Generating a change log
 

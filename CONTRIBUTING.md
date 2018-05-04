@@ -2,7 +2,8 @@
 
 ## Pulumi terminology
 
-TODO define how to refer to CLI, to service, etc.
+- Use `pulumi` or "the Pulumi CLI" to refer to the CLI
+- Use `pulumi.com` to refer to the service
 
 ## Documentation structure
 
@@ -19,6 +20,8 @@ TODO define how to refer to CLI, to service, etc.
 **NOTE:** The local Jekyll web server will resolve URLs without an extension, so `[topic](section/topic)` will resolve to `section/topic.html`. Unfortunately, the Go binary that serves content does **not** honor this behavior. If you're running the `make test` target against a Jekyll web server, you won't see the issue, but there will be 404s on the production docs site.
 
 ### Jekyll and Liquid tips
+
+- **Redirects.** If you rename a file or directory, add a 301 redirect in the front-matter via `redirect_from: "/previous-dir/previousfile.html"`.
 
 - **Includes.** To share common content across articles, use an "include" file. Place a file in the [`_includes`](_includes/) folder with the appropriate file extension. To include it in a page, use the syntax `{% include %}`.
 

@@ -3,8 +3,6 @@ toc:
 - title: Quickstart
   path: /quickstart/index
   section:
-  - quickstart/part1.md
-  - quickstart/part2.md
-  - quickstart/part3.md
-  - quickstart/part4.md
-  - quickstart/part5.md
+  - quickstart/aws-ec2.md
+  - quickstart/aws-s3-website.md
+  - quickstart/aws-rest-api.md
