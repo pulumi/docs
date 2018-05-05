@@ -1,24 +1,12 @@
 ---
-title: "Scenario: create EC2 instances on AWS"
+title: "Create EC2 Instances on AWS"
 redirect_from: "/quickstart/part1.html"
 ---
-
-<!-- Common links -->
-[EC2 Instance]: /packages/pulumi-aws/classes/_ec2_instance_.instance.html
-[Security Group]: /packages/pulumi-aws/classes/_ec2_securitygroup_.securitygroup.html
-[@pulumi/aws]: /packages/pulumi-aws/index.html
-<!-- End common links -->
 
 In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance in AWS.
 
 {% include aws-resource-note.md %}
-
-## Prerequisites
-
-1.  [Install Pulumi](../install)
-1.  [Configure the AWS CLI](../install/aws-config.html)
-<!-- TODO: remove -->
-1.  [Configure your NPM client](../install/configure-npm.html) to access the private Pulumi NPM packages (this only required while Pulumi is in private beta).
+{% include aws-js-prereqs.md %}
 
 ## Create an EC2 instance with SSH access {#webserver}
 
@@ -65,7 +53,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
     ```
 
 <!-- TODO: remove -->
-1.  Pulumi programs are deployed to a [stack](../reference/stack.html). Use `pulumi stack init` to create a new stack:
+1.  Pulumi programs are deployed to a [stack](../concepts/stack.html). Use `pulumi stack init` to create a new stack:
 
     ```bash
     $ pulumi stack init webserver-testing
@@ -120,7 +108,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab on pulumi.com has a link to the AWS console for the provisioned EC2 instance.
     
-1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs](../reference/stack.html#output) corresponding to the IP and full-qualified host name of the EC2 instance we've created.  
+1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs](../concepts/stack.html#output) corresponding to the IP and full-qualified host name of the EC2 instance we've created.  
 
     ```
     $ pulumi stack
@@ -245,3 +233,9 @@ Before moving on, let's tear down the resources that are part of our stack.
 In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS, using regular JavaScript and NPM packages. To preview and update infrastructure, use `pulumi update`. To clean up resources, run `pulumi destroy`.
 
 For a similar example in other languages and clouds, see the [Web Server examples collection](https://github.com/pulumi/examples#web-server).
+
+<!-- Common links -->
+[EC2 Instance]: /packages/pulumi-aws/classes/_ec2_instance_.instance.html
+[Security Group]: /packages/pulumi-aws/classes/_ec2_securitygroup_.securitygroup.html
+[@pulumi/aws]: /packages/pulumi-aws/index.html
+<!-- End common links -->

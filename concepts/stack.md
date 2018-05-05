@@ -97,7 +97,7 @@ $ pulumi stack output publicIp
 
 A stack can be exported to see the raw data associated with the stack.  This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of.  The modified stack can then be imported to set the current state of the stack to the new values.  The format of the stack files is versioned, and 
 
-*NOTE*: This is a powerful capability, which subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments.  Importing an incorrect stack specification could lead to orphaning of cloud resources or the inability to make future updates to the stack.  Use care when using the import and export capabilities.
+> **Note:** This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments.  Importing an incorrect stack specification could lead to orphaning of cloud resources or the inability to make future updates to the stack.  Use care when using the import and export capabilities.
 
 ```
 $ pulumi stack export > stack.json
@@ -107,13 +107,6 @@ $ pulumi stack import < stack.json
 
 ## Delete a stack
 
-To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove the tracking information for the stack and will also delete stack settings in `Pulumi.yaml`.  
+To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.  
 
-```
-$ pulumi stack rm jane-dev
-This will permanently remove the 'jane-dev' stack!
-Please confirm that this is what you'd like to do by typing ("jane-dev"): jane-dev
-Stack 'jane-dev' has been removed!
-```
-
-If a stack still has resources associated with it, they must first be deleted via `pulumi destroy`.  To force the deletion of a stack with resources still in it (and therefore to orphan the resources in the target cloud provider so that they are no longer managed by Pulumi), use `pulumi stack rm -f`.
+If a stack still has resources associated with it, they must first be deleted via `pulumi destroy`.  To force the deletion of a stack that still contains resources --- potentially orphaning them --- use `pulumi stack rm --force`. 

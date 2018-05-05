@@ -1,5 +1,5 @@
 ---
-title: "Configure your NPM client"
+title: "Configure Your NPM Client"
 ---
 
 While Pulumi is in private preview, `@pulumi` packages are not publicly available on npmjs.org. Use the following instructions to access them via the NPM proxy hosted at npmjs.pulumi.com. 

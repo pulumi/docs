@@ -1,10 +1,12 @@
-## Create a Pulumi component 
+---
+title: "Tutorial: Pulumi Components"
+---
 
-In this example, we defined a function `publicReadPolicyForBucket`. Since it is just a plain JavaScript function, it can be put into a shared library. In Pulumi, you can even create libraries and NPM packages for infrastructure definitions.
+It's easy to turn the [S3 website example] into a reusable [Component] that you share with your team or the community. A component is a logical container for physical cloud resources and controls how resources are grouped in the CLI and pulumi.com Console. To create a component in JavaScript, simply subclass [pulumi.ComponentResource]. 
 
-It's easy to turn the S3 website example into a reusable [Component] that you share with your team or the community. A component is a logical container for physical cloud resources and controls how resources are grouped in the CLI and pulumi.com Console. To create a component in JavaScript, simply subclass [pulumi.ComponentResource]. 
+In this tutorial, we'll create a simplified version of the example above, that just creates an S3 bucket. For a working end-to-end version that serves a stack website, see the [full source in the Pulumi examples repo][s3-folder-component].
 
-In this section, we'll create a simplified version of the example above, that just creates an S3 bucket. For a working end-to-end version that serves a stack website, see the [full source in the Pulumi examples repo][s3-folder-component].
+## Create an S3 folder component
 
 1.  In your project directory, create a new file `s3folder.js` with the following contents:
 
@@ -57,9 +59,9 @@ In this section, we'll create a simplified version of the example above, that ju
     exports.bucketName = folder.bucketName;
     ```
 
-    Since we still want a stack output for `bucketName`, we create a stack output of the component output property `folder.bucketName`.
+    Since we want a stack output for `bucketName`, we create a stack output of the component output property `folder.bucketName`.
 
-1.  Run `pulumi update`. Because the program no longer creates S3 objects and does not apply a bucket policy, those resources will be deleted. The bucket Bucket will also be re-created: the parent of a resource is part of its identity and the parent of `s3-website-bucket` has changed from the stack to an instance of `S3Folder`. Note that the output of `console.log` is printed in the "Diagnostics" section.
+1.  Run `pulumi update`. The output of `console.log` is printed in the "Diagnostics" section. Note the parent-child relationship between the resources that have been created. 
 
 1.  Verify the bucket exists by using the AWS Console or CLI:
 
@@ -67,3 +69,11 @@ In this section, we'll create a simplified version of the example above, that ju
     $ aws s3 ls | grep $(pulumi stack output bucketName)
     2018-04-19 18:40:04 s3-website-bucket-82616a0
     ```  
+
+<!-- LINKS -->
+[pulumi.ComponentResource]: /packages/pulumi/classes/_resource_.componentresource.html
+[Component]: ../concepts/programming-model.html#components
+[s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
+[s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
+[S3 website example]: ../quickstart/aws-s3-website.html#pulumi-aws
+<!-- END LINKS -->

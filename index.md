@@ -42,12 +42,12 @@ layout: default
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">description</i>
                 &nbsp;
-                <a href="/reference">Reference</a>
+                <a href="/concepts">Concepts</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
             <span class="card-text">
-                Read all about Pulumi concepts, CLI, and APIs
+                Learn how Pulumi works
             </span>
         </div>
     </div>

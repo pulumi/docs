@@ -20,7 +20,7 @@ The `description` property is a helpful string of text to describe the contents 
 
 The `runtime` property tells Pulumi what language runtime to use.  Currently `nodejs` (for JavaScript and TypeScript) and `python` (for Python) are supported.
 
-🚧 TODO: document `entrypoint` property.
+The optional `main` property points to a relative path where `package.json` or `__main__.py` is located.
 
 ## Stack settings files {#stack-settings-file}
 

@@ -9,6 +9,14 @@ NOTE: To update this page with a new binary release, do the following:
 - Update changelog.md with the latest fixes in the release
 -->
 
+## Mac and Linux easy install
+
+Run the following command to install the latest version of Pulumi.
+
+```bash
+curl -o- -L https://get.pulumi.com/install.sh | sh
+```
+
 ## Pulumi SDK 
 
 The current SDK version is <a href="./changelog.html#{{ page.installer_version }}">{{ page.installer_version }}</a>.
@@ -25,7 +33,7 @@ The current SDK version is <a href="./changelog.html#{{ page.installer_version }
         <div class="mdl-card__supporting-text">
             <span class="card-text">
                 macOS Sierra 10.12 or later is required.
-                See <a href="#mac">below</a> for detailed installation instructions.
+                More information is <a href="#mac">below</a>.
             </span>
         </div>
         <div class="mdl-card__actions mdl-card--border">
@@ -48,8 +56,7 @@ The current SDK version is <a href="./changelog.html#{{ page.installer_version }
         </div>
         <div class="mdl-card__supporting-text">
             <span class="card-text">
-                Ubuntu Trusty 14.04 LTS builds are available.
-                See <a href="#linux">below</a> for detailed installation instructions.
+                More information is <a href="#linux">below</a>.
             </span>
         </div>
         <div class="mdl-card__actions mdl-card--border">
@@ -73,7 +80,7 @@ The current SDK version is <a href="./changelog.html#{{ page.installer_version }
         <div class="mdl-card__supporting-text">
             <span class="card-text">
                 Windows 8 or 10 are supported.
-                See <a href="#windows">below</a> for detailed installation instructions.
+                More information is <a href="#windows">below</a>.
             </span>
         </div>
         <div class="mdl-card__actions mdl-card--border">
@@ -158,19 +165,6 @@ After installing Pulumi, verify the tool is on your path:
 $ pulumi version
 v{{page.installer_version}}
 ```
-
-## Login to the Pulumi Console and CLI
-
-1.  Go to the [Pulumi Console](https://pulumi.com/welcome) and sign in with GitHub. If you don't already have a Pulumi account, signing in will create one for you.
-
-1.  Copy your [Pulumi access token](https://pulumi.com/account).
-
-1.  Login to the Pulumi CLI:
-
-    ```bash
-    $ pulumi login
-    Enter your Pulumi access token (located at https://pulumi.com/account): YOUR_TOKEN_HERE
-    ```
 
 ## Configure provider credentials
 

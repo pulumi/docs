@@ -57,6 +57,7 @@ tocs:
   - home
   - install
   - quickstart
+  - concepts
   - reference
 
 # By default, use a `default_toc` layout, that shows a table of contents on the left

@@ -1,0 +1,34 @@
+nav_section: "Concepts"
+toc: 
+- title: Introduction
+  path: /concepts/index
+  section: 
+  - concepts/stack.md
+  - concepts/project.md
+  - concepts/config.md
+  - concepts/resource.md
+
+- title: Programming Model
+  path: /concepts/programming-model
+  section:
+  - concepts/javascript.md
+  - concepts/python.md
+  - concepts/component-tutorial.md
+
+- title: Cloud Resources
+  path: /concepts/cloud-resources
+  section:
+  - concepts/cloud.md
+  - concepts/aws.md
+  - concepts/azure.md
+  - concepts/kubernetes.md
+
+- title: How Pulumi Works
+  path: /concepts/how
+  section:
+  - concepts/providers.md
+
+- title: Continuous Deployment
+  path: /concepts/cd
+  section:
+  - concepts/cd-travis.md
