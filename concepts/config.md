@@ -16,7 +16,6 @@ For example, if a project is named `broome-proj` and the active stack is `dev`, 
 
 ```
 $ pulumi config set name BroomeLLC
-warning: saved config key 'broome-proj:name' value 'BroomeLLC' as plaintext; re-run with --secret to encrypt the value instead
 ```
 
 To specify a particular namespace, use `config set namespace:name`. For instance, the [AWS package](./aws.html) defines the required setting `region`, which is set via `aws:region`.
@@ -35,16 +34,17 @@ $ cat my_key.pub | pulumi config set publicKey
 
 > NOTE: When using the `config set` command, any existing values for `<key>` will be overridden without warning. 
 
-### Encrypted configuration values
+### Encrypted configuration values {#secrets}
 
-To add an encrypted stack setting, such as for configuration secrets, use the `--secret` flag. Secrets are encrypted with an encryption salt and passphrase. The encryption salt for each stack is stored in `Pulumi.<stack-name>.yaml`. The salt value is based on your passphrase, but is not itself a secret and can safely be stored in source control. The first time a passphrase is configured for a stack, the CLI prompts twice for its value. 
+To add an encrypted stack setting, such as for configuration secrets, use the `--secret` flag. Secrets are encrypted using a unique stack key that is stored on pulumi.com. Pulumi first adds a random encryption salt, so if you use the same plaintext value for two different keys, you'll have two different ciphertext values stored in  `Pulumi.<stackname>.yaml`.
 
-If you wish to change your passphrase, delete the config value for `encryptionsalt` in `Pulumi.<stack-name>.yaml` and delete your existing secure values. To avoid the interactive prompt, set the environment variable `PULUMI_CONFIG_PASSPHRASE`.
-
-```
+```bash
 $ pulumi config set --secret secretValue S3cr37
-Enter your passphrase to protect config/secrets: 
-Re-enter your passphrase to confirm: 
+
+$ pulumi config
+KEY                                              VALUE                                           
+aws:region                                       us-west-1                                       
+secretValue                                      ********                                        
 ```
 
 ### Stack settings and source control
@@ -66,8 +66,6 @@ secretValue                                      ********
 
 ```
 $ pulumi config --show-secrets
-Enter your passphrase to unlock config/secrets
-    (set PULUMI_CONFIG_PASSPHRASE to remember): 
 KEY                                              VALUE                                           
 aws:region                                       us-west-1                                       
 secretValue                                      S3cr37                                          
@@ -99,7 +97,9 @@ console.log(`Psst, ${config.require("secretValue")}`);  // prints "S3cr37"
 
 #### Python
 
-TODO add Python example
+<!-- TODO add Python example -->
+
+Coming soon!
 
 <!-- MARKDOWN LINKS -->
 

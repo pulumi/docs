@@ -4,6 +4,12 @@ title: "Programming Model"
 
 🚧 WORK IN PROGRESS 🚧
 
+- [Resources](../concepts/programming-model.html#resources) are defined by allocating resource objects in code (e.g. `new aws.ec2.Instance(...)`).  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program. 
+- Dependencies between resources are represented as simple references to [output properties](../concepts/programming-model.html#outputs) of a resource (such as the `group.name` property of the `SecurityGroup` in the [EC2 webserver example](../quickstart/aws-ec2.html#webserver)
+- [Variables](../concepts/programming-model.html#programs) can be used just like you would expect to store constants, or to precompute and share values that are used in the program. 
+- [Packages](../concepts/programming-model.html#packages) (e.g. `@pulumi/aws`) provide access to Resources and Components you can use to build your applications. 
+- Module [exports](../concepts/programming-model.html#exports) (e.g. `exports.publicIP = ...`) are used to publish values that you want to access from outside your application.
+
 ## Programs {#programs}
 * Written in Node.js or Python
 * Can use any pacakges, but also can use Pulumi packages (e.g. @pulumi/aws)

@@ -1,40 +1,24 @@
 ---
-title: Getting Started
+title: Quickstart tutorials
 ---
 
 <!-- LINKS: -->
 [Pulumi examples repo]: https://github.com/pulumi/examples
 <!-- END LINKS: -->
 
-> **Note:** Some sections of 5-part Quickstart are still under development. In the meantime, check out the [Pulumi introduction](../reference/index.html) and the [Pulumi examples repo] on GitHub.
+Pulumi is a open-source tool and service that makes it easier to build modern cloud applications on AWS, Azure, GCP, and Kubernetes. Instead of using a configuration language, you use JavaScript or Python to define your desired cloud resources. 
 
-Welcome!  We are excited that you want to learn Pulumi.  The Pulumi Quickstart teaches you how to:
+Resources are declared with syntax like `new aws.ec2.Instance` in JavaScript or `ec2.Instance(...)` in Python. Pulumi is based on the concept of _immutable infrastructure_. Unlike Boto scripts that mutate infrastructure when they are run, Pulumi runs your program to determine the desired set of resources. Then, Pulumi makes only the minimal required changes to your infrastructure, without disrupting existing resources.
 
-1. [Set up your environment and build your first Pulumi program](./part1.html)
-2. [Create reusable libraries for infrastructure](./part2.html)
-3. Create programs that use containers and serverless functions
-4. Deploy application and infrastructure code together using the same tools and workflows
-5. Learn more
+## 5-minute quickstarts
 
-## Additional Documentation
+- [Create a serverless REST API](./aws-rest-api.html)
+- [Host a static site on S3](./aws-s3-website.html)
+- [Create EC2 instances on AWS](./aws-ec2.html)
+- Provision containers on AWS (coming soon!)
 
-In addition to the tutorial, you can check out the reference documentation for information:
+## Examples
 
-* [An overall introduction to Pulumi](../reference/index.html)
-* [Learn the core concepts used by Pulumi programs](../reference/concepts.html)
-* [Use JavaScript or TypeScript to program the cloud](../reference/javascript.html)
-* [Use Python to program the cloud](../reference/python.html)
+We have a number of code examples available in the [Pulumi examples repo] on GitHub. If you don't have access to the GitHub repo, please email [support@pulumi.com](mailto:support@pulumi.com) to get access, or download the [Pulumi examples zipfile](/examples/pulumi-examples.zip).
 
-Much more is available in the table of contents available in [the reference section index](../reference/index.html).
-
-## Code Examples
-
-For code samples, see examples in the [Pulumi examples repo] on GitHub. Below are some highlighted samples. (If you don't have access to the GitHub repo, please email [support@pulumi.com](mailto:support@pulumi.com) to get access. There is also a [Pulumi examples zipfile](/examples/pulumi-examples.zip).)
-
-- [AWS EC2 instance in JavaScript](https://github.com/pulumi/examples/tree/master/aws-js-webserver)
-- [AWS EC2 instance in Python](https://github.com/pulumi/examples/tree/master/aws-py-webserver)
-- [Azure Virtual Machine in JavaScript](https://github.com/pulumi/examples/tree/master/azure-js-webserver)
-- [Kubernetes Nginx in TypeScript](https://github.com/pulumi/examples/tree/master/kubernetes-ts-webserver)
-- [URL Shortener](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener/). A complete URL shortener web application using high-level `cloud.Table` and `cloud.HttpEndpoint` components.
-- [Video Thumbnailer](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer/). An end-to-end pipeline for generating keyframe thumbnails from videos uploaded to a bucket using containerized [FFmpeg](https://www.ffmpeg.org/).  
-- [Raw AWS Serverless](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw). A complete serverless C# application using raw `aws.apigateway.RestAPI`, `aws.lambda.Function` and `aws.dynamodb.Table` resources from `@pulumi/aws`. 
+To learn more, check out the [featured example list](./examples).
