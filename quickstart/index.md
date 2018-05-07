@@ -6,9 +6,9 @@ title: Quickstart tutorials
 [Pulumi examples repo]: https://github.com/pulumi/examples
 <!-- END LINKS: -->
 
-Pulumi is a open-source tool and service that makes it easier to build modern cloud applications on AWS, Azure, GCP, and Kubernetes. Instead of using a configuration language, you use JavaScript or Python to define your desired cloud resources. 
+Pulumi is a open-source tool and service that makes it easier to build modern cloud applications on AWS, Azure, GCP, and Kubernetes.
 
-Resources are declared with syntax like `new aws.ec2.Instance` in JavaScript or `ec2.Instance(...)` in Python. Pulumi is based on the concept of _immutable infrastructure_. Unlike Boto scripts that mutate infrastructure when they are run, Pulumi runs your program to determine the desired set of resources. Then, Pulumi makes only the minimal required changes to your infrastructure, without disrupting existing resources.
+In the quickstarts and examples below, you will see how Pulumi can be used to build serverless applications, manage low-level infrastrucutre, orchestrate containers and do everything in between. Each example highlights how pulumi programs written in JavaScript or Python can define and version immutable infrastructure using both raw cloud resources, as well as higher-level components built on top of them.
 
 ## 5-minute quickstarts
 

@@ -9,6 +9,7 @@ title: Reference
 - [@pulumi/cloud](../packages/pulumi-cloud)
 - @pulumi/azure (coming soon)
 - @pulumi/kubernetes (coming soon)
+- @pulumi/gcp (coming soon)
 
 ## Python API reference
 

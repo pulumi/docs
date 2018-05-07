@@ -14,7 +14,7 @@ NOTE: To update this page with a new binary release, do the following:
 Run the following command to install the latest version of Pulumi.
 
 ```bash
-curl -o- -L https://get.pulumi.com | sh
+curl -fsSL https://get.pulumi.com | sh
 ```
 
 ## Pulumi SDK 
