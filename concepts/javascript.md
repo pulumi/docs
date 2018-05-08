@@ -18,7 +18,7 @@ $ pulumi new javascript
 Your project was created successfully.
 ```
 
-This will leave behind a `Pulumi.yaml` file, containing some minimal metadata about your project (including a name and description which you may wish to change), a `package.json` file, where you will specify your dependencies (see #npm-packages below), and an `index.js` file, containing your program.
+This will create a `Pulumi.yaml` [project file](./project.html), a `package.json` file, where you will specify your dependencies (see #npm-packages below), and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
 
 ## Using Pulumi NPM Packages {#npm-packages}
 

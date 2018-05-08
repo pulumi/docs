@@ -5,7 +5,7 @@ title: "Commands (CLI)"
 Pulumi is controlled primarily using the command line interface (CLI).  The Pulumi service works in conjunction with
 the CLI to carry out tasks such as deploying updates to your cloud program and infrastructure, and keeping a history
 of who updated what in your team and when.  This CLI has been designed to work well in unattended scenarios, such as
-in [continuous integration and deployment](./cd.html), and communicates all errors properly using non-zero exit codes.
+in [continuous integration and deployment](../concepts/cd.html), and communicates all errors properly using non-zero exit codes.
 
 ## Common Commands
 

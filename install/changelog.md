@@ -1,17 +1,14 @@
 ---
-title: "Change log"
+title: "Change Log"
 ---
 
 <!-- Common links -->
 [`Output`]: https://docs.pulumi.com/packages/pulumi/classes/_resource_.output.html
-[Python documentation]: ../reference/python.html
-[Defining and setting stack settings]: ../reference/config.html#config-stack
-[Configuration]: ../reference/config.html
-[Pulumi npm packages]: ../reference/javascript.html#npm-packages
-[Programming Model]: ../reference/programming-model.html
-[Use Travis to continuously deploy Pulumi programs]: ../managed-cloud/cicd-with-travis.html
-[Create and work with managed stacks]: ../managed-cloud/cloud-stack.html
-[Using the Pulumi Console]: ../managed-cloud/console.html
+[Python documentation]: ../concepts/python.html
+[Defining and setting stack settings]: ../concepts/config.html#config-stack
+[Configuration]: ../concepts/config.html
+[Pulumi npm packages]: ../concepts/javascript.html#npm-packages
+[Programming Model]: ../concepts/programming-model.html
 <!-- End common links -->
 
 ## Available versions {#all-versions}
@@ -54,7 +51,7 @@ Released on April 26, 2018
 -  Add a `pulumi cancel` command ([pulumi/pulumi#1230](https://github.com/pulumi/pulumi/pull/1230)). This command cancels any in-progress operation for the current stack. 
 
 ### Changed 
--  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks](../reference/stack.html#create-stack).
+-  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks](../concepts/stack.html#create-stack).
 
 -  (**Breaking**) Remove the explicit 'pulumi preview' command ([pulumi/pulumi#1170](https://github.com/pulumi/pulumi/pull/1170)). The `pulumi preview` output has now been merged in to the `pulumi update` command. Before an update is run, the preview is shown and you can choose whether to proceed or see more update details. To see just the preview operation, run `pulumi update --preview`.
 
@@ -285,10 +282,9 @@ Released on December 28, 2017
 #### Pulumi Console and managed stacks
 
 New in this release is the [Pulumi Console](https://beta.pulumi.com) and stacks that are managed by Pulumi. This is the recommended way to safely deploy cloud applications.
-- `pulumi stack init` now creates a Pulumi managed stack. For a local stack, use `--local`. To learn more, see the tutorial [Create and work with managed stacks].
+- `pulumi stack init` now creates a Pulumi managed stack. For a local stack, use `--local`. 
 - All Pulumi CLI commands now work with managed stacks. Login to Pulumi via `pulumi login`.
 - The [Pulumi Console](https://beta.pulumi.com) provides a management experience for stacks. You can view the currently deployed resources (along with the AWS ARNs) and see logs from the last update operation.
-For more information, see the documentation articles [Using the Pulumi Console] and [Use Travis to continuously deploy Pulumi programs].
 
 #### Components and output properties
 
