@@ -17,6 +17,8 @@ Run the following command to install the latest version of Pulumi.
 curl -fsSL https://get.pulumi.com | sh
 ```
 
+After running this command, Pulumi is installed, and you can skip the rest of these instructions.  If you would like to install Pulumi manually, please follow the steps below for your platform.
+
 ## Pulumi SDK 
 
 The current SDK version is <a href="./changelog.html#{{ page.installer_version }}">{{ page.installer_version }}</a>.
