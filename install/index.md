@@ -140,7 +140,7 @@ The below known issue is tracked by https://github.com/pulumi/home/issues/156. N
 
 ### Linux install {#linux}
 
-We provide a pre-built binary for Ubuntu Trusty 14.04 LTS.
+We provide a pre-built binary for Linux.
 
 2.  Download [Pulumi {{page.installer_version}} for Linux x64](/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz).
 
