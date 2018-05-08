@@ -21,4 +21,4 @@ In the quickstarts and examples below, you will see how Pulumi can be used to bu
 
 We have a number of code examples available in the [Pulumi examples repo] on GitHub. If you don't have access to the GitHub repo, please email [support@pulumi.com](mailto:support@pulumi.com) to get access, or download the [Pulumi examples zipfile](/examples/pulumi-examples.zip).
 
-To learn more, check out the [featured example list](./examples).
+To learn more, check out the [featured example list](./examples.html).
