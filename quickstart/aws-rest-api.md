@@ -2,7 +2,7 @@
 title: "Create a Serverless REST API"
 ---
 
-With Pulumi, you can combine infrastructure definitions and application code in one program. The [@pulumi/cloud] library is a set of [components](../concepts/programming-model.html#components) that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use [cloud.HttpEndpoint] and define application code at the same time as the infrastructure it depends on.
+With Pulumi, you can combine infrastructure definitions and application code in one program. The [@pulumi/cloud] library is a set of Pulumi [components](../concepts/programming-model.html#components) that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use [cloud.HttpEndpoint] and define application code at the same time as the infrastructure it depends on.
 
 In this tutorial, we'll show how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a key-value store, an API endpoint, and a Lambda function. 
 
@@ -25,17 +25,19 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
     // Create an API endpoint
     let endpoint = new cloud.HttpEndpoint("hello-world");
 
-    endpoint.get("/{route+}", async (req, res) => {
+    endpoint.get("/{route+}", (req, res) => {
         let route = req.params["route"];
         console.log(`Getting count for '${route}'`);
 
         // get previous value and increment
-        let value = await counterTable.get({route}); // reference outer `counterTable` object
-        let count = (value && value.count) || 0;
-        await counterTable.insert( { route, count: ++count });
-
-        res.status(200).json({ route, count});
-        console.log(`Got count ${count} for '${route}'`);
+        let count;
+        return counterTable.get({route}).then(value => {
+            count = (value && value.count) || 0;
+            return counterTable.insert( { route, count: ++count });
+        }).then(() => {
+            res.status(200).json({ route, count});
+            console.log(`Got count ${count} for '${route}'`);
+        });
     });
 
     module.exports.endpoint = endpoint.publish().url;
@@ -67,10 +69,9 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
         OUTPUT            VALUE
         url               https://5e8xrktey3.execute-api.us-west-2.amazonaws.com/stage/
     
-    $ export BASE_URL=$(pulumi stack output url)
-    $ curl $BASE_URL/hello
+    $ curl $(pulumi stack output url)/hello
     {"route":"hello","count":1}
-    $ curl $BASE_URL/woohoo
+    $ curl $(pulumi stack output url)/woohoo
     {"route":"woohoo","count":1}
     ```
 
