@@ -9,6 +9,8 @@ NOTE: To update this page with a new binary release, do the following:
 - Update changelog.md with the latest fixes in the release
 -->
 
+The current Pulumi SDK version is <a href="./changelog.html#{{ page.installer_version }}">{{ page.installer_version }}</a>.  For older SDK versions, please see <a href="./changelog.html#all-versions">Previous SDK Versions</a>.
+
 ## Mac and Linux easy install
 
 Run the following command to install the latest version of Pulumi.
@@ -20,8 +22,6 @@ curl -fsSL https://get.pulumi.com | sh
 After running this command, Pulumi is installed, and you can skip the rest of these instructions.  If you would like to install Pulumi manually, please follow the steps below for your platform.
 
 ## Pulumi SDK 
-
-The current SDK version is <a href="./changelog.html#{{ page.installer_version }}">{{ page.installer_version }}</a>.
 
 <div class="card-table">
     <div class="mdl-card mdl-shadow--2dp">
@@ -97,7 +97,6 @@ The current SDK version is <a href="./changelog.html#{{ page.installer_version }
     </div>
 </div>
 
-For older SDK versions, please see <a href="./changelog.html#all-versions">Previous SDK Versions</a>.
 
 ## Installation instructions {#instructions}
 
@@ -171,7 +170,7 @@ v{{page.installer_version}}
 ## Configure provider credentials
 
 Configure the credentials for your cloud provider of choice:
--   [Configure Pulumi for AWS](./aws-config.html)
+-   [Configure Pulumi for AWS](./aws.html)
 -   Configure Pulumi for Azure
 -   Configure Pulumi for Kubernetes
 

@@ -1,12 +1,23 @@
 {
-    "gettingStarted": {
+    "gettingStartedTerminal": {
         "title": "Getting Started",
-        "icon": "school",
-        "items": [
-            { "title": "Installation and Setup", "url": "https://docs.pulumi.com/install/" },
-            { "title": "Quick Start", "url": "https://docs.pulumi.com/quickstart/" },
-            { "title": "Examples", "url": "https://github.com/pulumi/examples" },
-            { "title": "Pulumi Slack", "url": "https://pulumi.slack.com/" }
+        "icon": "play_circle_filled",
+        "lines": [
+            { "type": "comment", "line": "Prerequisites" },
+            { "type": "comment", "line": "* Install Node.js:" },
+            { "type": "comment", "line": "https://nodejs.org/en/download/" },
+            { "type": "comment", "line": "* Configure AWS:" },
+            { "type": "comment", "line": "https://docs.pulumi.com/install/aws.html" },
+            { "type": "comment", "line": "" },
+
+            { "type": "comment", "line": "Step 1. Install Pulumi" },
+            { "type": "command", "line": "curl -fsSL https://get.pulumi.com | sh" },
+
+            { "type": "comment", "line": "Step 2. Create a new project" },
+            { "type": "command", "line": "pulumi new hello-aws-javascript" },
+
+            { "type": "comment", "line": "Step 3. Deploy to the cloud" },
+            { "type": "command", "line": "pulumi update" }
         ]
     },
     "documentation": {

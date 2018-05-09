@@ -48,7 +48,7 @@ Released on May 9, 2018
 
 ### Added
 
--  A new all-in-one installer script is now available at https://get.pulumi.com.
+-  A new all-in-one installer script is now available at [https://get.pulumi.com](../).
 
 -  Many enhancements to `pulumi new` ([pulumi/pulumi#1307](https://github.com/pulumi/pulumi/pull/1307)).  The command now interactively walks through creating everything needed to deploy a new stack, including selecting a template, providing a name, creating a stack, setting default configuration, and installing dependencies.
 
@@ -67,6 +67,79 @@ Released on May 9, 2018
 -  JavaScript `async` functions in Node 7.6+ now work with Pulumi function serialization ([pulumi/pulumi#1311](https://github.com/pulumi/pulumi/pull/1311).
 
 -  Support installation on Windows in folders which contain spaces in their name ([pulumi/pulumi#1300](https://github.com/pulumi/pulumi/pull/1300)).
+
+### Commits
+
+-  [pulumi/pulumi#1346](https://github.com/pulumi/pulumi/pull/1346): Fix preview against a PPC
+-  [pulumi/pulumi#1345](https://github.com/pulumi/pulumi/pull/1345): Make tokenSource.Close() synchronous.
+-  [pulumi/pulumi#1342](https://github.com/pulumi/pulumi/pull/1342): "Revert ""Revert the changes from #1261."""
+-  [pulumi/pulumi#1341](https://github.com/pulumi/pulumi/pull/1341): Capture Git committer and author info
+-  [pulumi/pulumi#1340](https://github.com/pulumi/pulumi/pull/1340): Support -y as shorthand for --yes
+-  [pulumi/pulumi#1339](https://github.com/pulumi/pulumi/pull/1339): Make the default `pulumi new` project description empty
+-  [pulumi/pulumi#1338](https://github.com/pulumi/pulumi/pull/1338): Simplify cmdutil.InitTracing.
+-  [pulumi/pulumi#1336](https://github.com/pulumi/pulumi/pull/1336): "Add ""Sign in to Pulumi"" to the login prompt"
+-  [pulumi/pulumi#1335](https://github.com/pulumi/pulumi/pull/1335): Avoid treating binary template files as text
+-  [pulumi/pulumi#1333](https://github.com/pulumi/pulumi/pull/1333): Restore streaming of plugin outputs to the progress display.
+-  [pulumi/pulumi#1332](https://github.com/pulumi/pulumi/pull/1332): Simplify code that decides to show stack outputs.
+-  [pulumi/pulumi#1330](https://github.com/pulumi/pulumi/pull/1330): Begin tracing Pulumi API calls.
+-  [pulumi/pulumi#1328](https://github.com/pulumi/pulumi/pull/1328): Enhance the engine's tracing support a bit.
+-  [pulumi/pulumi#1327](https://github.com/pulumi/pulumi/pull/1327): Print stack outputs at the end of an update.
+-  [pulumi/pulumi#1326](https://github.com/pulumi/pulumi/pull/1326): Cache workspaces based on full path.
+-  [pulumi/pulumi#1323](https://github.com/pulumi/pulumi/pull/1323): Remove test token
+-  [pulumi/pulumi#1322](https://github.com/pulumi/pulumi/pull/1322): Fix a typo.
+-  [pulumi/pulumi#1321](https://github.com/pulumi/pulumi/pull/1321): Run Configure calls in parallel
+-  [pulumi/pulumi#1319](https://github.com/pulumi/pulumi/pull/1319): Use `git` for detecting a dirty worktree.
+-  [pulumi/pulumi#1318](https://github.com/pulumi/pulumi/pull/1318): Add support for CPU and heap profiling.
+-  [pulumi/pulumi#1317](https://github.com/pulumi/pulumi/pull/1317): Enable tracing of integration tests.
+-  [pulumi/pulumi#1315](https://github.com/pulumi/pulumi/pull/1315): Make debuggable promise properties non-enumerable
+-  [pulumi/pulumi#1311](https://github.com/pulumi/pulumi/pull/1311): Support async function serialization.
+-  [pulumi/pulumi#1307](https://github.com/pulumi/pulumi/pull/1307): `pulumi new` improvements
+-  [pulumi/pulumi#1305](https://github.com/pulumi/pulumi/pull/1305): Put StartUpdateRequest in POST body
+-  [pulumi/pulumi#1304](https://github.com/pulumi/pulumi/pull/1304): Don't attempt to preview a destroy operation for a PPC hosted stack
+-  [pulumi/pulumi#1303](https://github.com/pulumi/pulumi/pull/1303): Fix Preview against a PPC
+-  [pulumi/pulumi#1302](https://github.com/pulumi/pulumi/pull/1302): Revert the changes from #1261.
+-  [pulumi/pulumi#1300](https://github.com/pulumi/pulumi/pull/1300): Invoke node directly from the language host
+-  [pulumi/pulumi#1299](https://github.com/pulumi/pulumi/pull/1299): Add necessary refresh apitypes
+-  [pulumi/pulumi#1297](https://github.com/pulumi/pulumi/pull/1297): Disable interactive mode for a CI/CD server.
+-  [pulumi/pulumi#1295](https://github.com/pulumi/pulumi/pull/1295): Use nicer URLs for stacks on the new identity model
+-  [pulumi/pulumi#1293](https://github.com/pulumi/pulumi/pull/1293): Improve two minor UX things in the CLI
+-  [pulumi/pulumi#1290](https://github.com/pulumi/pulumi/pull/1290): Revise the way previews are controlled
+-  [pulumi/pulumi#1289](https://github.com/pulumi/pulumi/pull/1289): Remove SDK dependencies
+-  [pulumi/pulumi#1288](https://github.com/pulumi/pulumi/pull/1288): Add commands to generate goodies
+-  [pulumi/pulumi#1287](https://github.com/pulumi/pulumi/pull/1287): Fix login/logout issue against non api.pulumi.com clouds
+-  [pulumi/pulumi#1286](https://github.com/pulumi/pulumi/pull/1286): Improve the error message if Pulumi runtime SDK isn't installed
+-  [pulumi/pulumi#1285](https://github.com/pulumi/pulumi/pull/1285): Fix an issue where errors outside of resource creation got dropped
+-  [pulumi/pulumi#1284](https://github.com/pulumi/pulumi/pull/1284): Remove `pulumi history` command
+-  [pulumi/pulumi#1283](https://github.com/pulumi/pulumi/pull/1283): Fix handling of nested archives
+-  [pulumi/pulumi#1282](https://github.com/pulumi/pulumi/pull/1282): Add static entries for Pulumi backends to /etc/hosts
+-  [pulumi/pulumi#1281](https://github.com/pulumi/pulumi/pull/1281): Use glog instead of printf
+-  [pulumi/pulumi#1277](https://github.com/pulumi/pulumi/pull/1277): "Pass ""special"" properties to `Invoke`."
+-  [pulumi/pulumi#1275](https://github.com/pulumi/pulumi/pull/1275): Add a URL column to `stack ls`.
+-  [pulumi/pulumi#1274](https://github.com/pulumi/pulumi/pull/1274): Minor CLI improvements
+-  [pulumi/pulumi#1273](https://github.com/pulumi/pulumi/pull/1273): Snapshot management overhaul and refactor
+-  [pulumi/pulumi#1271](https://github.com/pulumi/pulumi/pull/1271): Remove some obsolete flags from `pulumi config rm`
+-  [pulumi/pulumi#1267](https://github.com/pulumi/pulumi/pull/1267): Fix python package versions
+-  [pulumi/pulumi#1266](https://github.com/pulumi/pulumi/pull/1266): Require a resource's parent to actually be a resource.
+-  [pulumi/pulumi#1264](https://github.com/pulumi/pulumi/pull/1264): Fix update permalink for stacks on new identity model
+-  [pulumi/pulumi#1262](https://github.com/pulumi/pulumi/pull/1262): Add a hidden --no-interactive flag so that we can reduce interactive noise when running jenkins.
+-  [pulumi/pulumi#1261](https://github.com/pulumi/pulumi/pull/1261): Work around issue #1251.
+-  [pulumi/pulumi#1260](https://github.com/pulumi/pulumi/pull/1260): Add a new tree-view form for the progress view.
+-  [pulumi/pulumi#1254](https://github.com/pulumi/pulumi/pull/1254): Re-introduce interface for snapshot management
+-  [pulumi/pulumi-aws#205](https://github.com/pulumi/pulumi-aws/pull/205): Revert 2 PRs
+-  [pulumi/pulumi-aws#204](https://github.com/pulumi/pulumi-aws/pull/204): Enable tracing for integration tests.
+-  [pulumi/pulumi-aws#203](https://github.com/pulumi/pulumi-aws/pull/203): Make 'Function' a generic type
+-  [pulumi/pulumi-aws#202](https://github.com/pulumi/pulumi-aws/pull/202): Make serverless/function into a subclass of lambda/function.
+-  [pulumi/pulumi-cloud#480](https://github.com/pulumi/pulumi-cloud/pull/480): Fix package publishing
+-  [pulumi/pulumi-cloud#478](https://github.com/pulumi/pulumi-cloud/pull/478): Remove aws-infra from pulumi-cloud.
+-  [pulumi/pulumi-cloud#477](https://github.com/pulumi/pulumi-cloud/pull/477): Use interface in place of class.
+-  [pulumi/pulumi-cloud#474](https://github.com/pulumi/pulumi-cloud/pull/474): Remove LogCollector and onError
+-  [pulumi/pulumi-cloud#473](https://github.com/pulumi/pulumi-cloud/pull/473): Enable tracing for integration tests.
+-  [pulumi/pulumi-cloud#472](https://github.com/pulumi/pulumi-cloud/pull/472): Extract 'aws-infra' types into their own package independent of cloud-aws
+-  [pulumi/pulumi-cloud#470](https://github.com/pulumi/pulumi-cloud/pull/470): Allow paging in Table.scan.
+-  [pulumi/pulumi-cloud#469](https://github.com/pulumi/pulumi-cloud/pull/469): Use newer way of naming configuration
+-  [pulumi/pulumi-cloud#467](https://github.com/pulumi/pulumi-cloud/pull/467): Don't yarn link @pulumi dependencies
+-  [pulumi/pulumi-cloud#465](https://github.com/pulumi/pulumi-cloud/pull/465): Expose a 'defaultEndpoint' off of a Service to make consumption easier.
+-  [pulumi/pulumi-cloud#464](https://github.com/pulumi/pulumi-cloud/pull/464): Pass `hostPort` explicitly in container definitions
 
 ## v0.12.0 {#v120}
 

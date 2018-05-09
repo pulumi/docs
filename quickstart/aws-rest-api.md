@@ -30,11 +30,11 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
         console.log(`Getting count for '${route}'`);
 
         // get previous value and increment
-        let value = await counterTable.get({route}); // reference outer `counterTable` object
+        let value = await counterTable.get({ route }); // reference outer `counterTable` object
         let count = (value && value.count) || 0;
         await counterTable.insert( { route, count: ++count });
 
-        res.status(200).json({ route, count});
+        res.status(200).json({ route, count });
         console.log(`Got count ${count} for '${route}'`);
     });
 
