@@ -23,9 +23,9 @@ title: "Change Log"
     </thead>
     <tbody>
         <tr>
-            <th scope="row"><a href="#v120">0.12.0</a></th>
-            <td>2018/04/26</td>
-            <td>{% include sdk-links.html version='0.12.0' %}</td>
+            <th scope="row"><a href="#v121">0.12.1</a></th>
+            <td>2018/05/09</td>
+            <td>{% include sdk-links.html version='0.12.1' %}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v113">0.11.3</a></th>
@@ -41,6 +41,32 @@ title: "Change Log"
 </table>
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## v0.12.1 {#v121}
+
+Released on May 9, 2018
+
+### Added
+
+-  Several improvements to the `pulumi update` CLI experience ([pulumi/pulumi#1260](https://github.com/pulumi/pulumi/pull/1260)): a tree view display, more details from logs during deployments, and rendering of stack outputs at the end of updates.
+
+-  Many enhancements to `pulumi new` ([pulumi/pulumi#1307](https://github.com/pulumi/pulumi/pull/1307)).  The command now interactively walks through creating everything needed to deploy a new stack, including selecting a template, providing a name, creating a stack, setting default configuration, and installing dependencies.
+
+-  A new all-in-one installer script is now available at https://get.pulumi.com.
+
+-  A new `@pulumi/aws-infra` package is available which contains useful AWS infrastructure components for `Network` and `Cluster` (([pulumi/pulumi-cloud#472](https://github.com/pulumi/pulumi-cloud/pull/472)).
+
+### Changed 
+
+-  (**Breaking**) Removed the `LogCollector` and `onError` handler from `@pulumi-cloud` ([pulumi/pulumi-cloud#474](https://github.com/pulumi/pulumi-cloud/pull/474)).  These were previously created in all stacks using `@pulumi/cloud`, but in practice were not being used.
+
+### Fixed
+
+-  Significant performance improvements for `pulumi update` ([pulumi/pulumi#1319](https://github.com/pulumi/pulumi/pull/1319)).
+
+-  JavaScript `async` functions in Node 7.6+ now work with Pulumi function serialization ([pulumi/pulumi#1311](https://github.com/pulumi/pulumi/pull/1311).
+
+-  Support installation on Windows in folders which contain spaces in their name ([pulumi/pulumi#1300](https://github.com/pulumi/pulumi/pull/1300)).
 
 ## v0.12.0 {#v120}
 
