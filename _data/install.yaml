@@ -3,6 +3,6 @@ toc:
 - title: Installation and Setup
   path: /install/index
   section:
-  - install/aws-config.md
+  - install/aws.md
   - install/configure-npm.md
   - install/changelog.md

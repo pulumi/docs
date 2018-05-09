@@ -1,7 +1,7 @@
 nav_section: "Reference"
 toc:
 - title: API reference
-  path: /reference/index
+  path: /reference/
 
 - title: Commands (CLI)
   path: /reference/commands
