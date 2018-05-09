@@ -48,11 +48,11 @@ Released on May 9, 2018
 
 ### Added
 
--  Several improvements to the `pulumi update` CLI experience ([pulumi/pulumi#1260](https://github.com/pulumi/pulumi/pull/1260)): a tree view display, more details from logs during deployments, and rendering of stack outputs at the end of updates.
+-  A new all-in-one installer script is now available at https://get.pulumi.com.
 
 -  Many enhancements to `pulumi new` ([pulumi/pulumi#1307](https://github.com/pulumi/pulumi/pull/1307)).  The command now interactively walks through creating everything needed to deploy a new stack, including selecting a template, providing a name, creating a stack, setting default configuration, and installing dependencies.
 
--  A new all-in-one installer script is now available at https://get.pulumi.com.
+-  Several improvements to the `pulumi update` CLI experience ([pulumi/pulumi#1260](https://github.com/pulumi/pulumi/pull/1260)): a tree view display, more details from logs during deployments, and rendering of stack outputs at the end of updates.
 
 -  A new `@pulumi/aws-infra` package is available which contains useful AWS infrastructure components for `Network` and `Cluster` (([pulumi/pulumi-cloud#472](https://github.com/pulumi/pulumi-cloud/pull/472)).
 
