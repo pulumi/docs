@@ -24,11 +24,11 @@
         "title": "Documentation",
         "icon": "library_books",
         "items": [
+            { "title": "Quick Start", "url": "https://docs.pulumi.com/quickstart/" },
             { "title": "Introduction", "url": "https://docs.pulumi.com/concepts/" },
-            { "title": "Programming Model", "url": "https://docs.pulumi.com/concepts/programming-model.html" },
             { "title": "Reference", "url": "https://docs.pulumi.com/reference" },
-            { "title": "Learn about AWS", "url": "https://docs.pulumi.com/concepts/aws.html" },
-            { "title": "Learn about Kubernetes", "url": "https://docs.pulumi.com/concepts/kubernetes.html" }
+            { "title": "Examples", "url": "https://github.com/pulumi/examples" },
+            { "title": "Pulumi Slack", "url": "https://pulumi.slack.com/" }
         ]
     },
     "news": {
