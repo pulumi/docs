@@ -24,12 +24,12 @@
         "title": "Documentation",
         "icon": "library_books",
         "items": [
-            { "title": "Quick Start", "url": "https://docs.pulumi.com/quickstart/" },
-            { "title": "Introduction", "url": "https://docs.pulumi.com/concepts/" },
-            { "title": "Reference", "url": "https://docs.pulumi.com/reference" },
-            { "title": "Examples", "url": "https://github.com/pulumi/examples" },
-            { "title": "Pulumi Slack", "url": "https://pulumi.slack.com/" }
-        ]
+            { "title": "Quickstart", "url": "https://docs.pulumi.com/quickstart/" },
+            { "title": "Concepts Overview", "url": "https://docs.pulumi.com/concepts/" },
+            { "title": "Examples Repo", "url": "https://github.com/pulumi/examples" },
+            { "title": "Pulumi Community Slack", "url": "https://pulumi.slack.com/messages/C9SEFSC4C" }
+        ],
+        "actionItem": { "title": "Read all documentation", "url": "https://docs.pulumi.com/" }
     },
     "news": {
         "title": "News",
