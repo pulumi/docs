@@ -19,33 +19,19 @@ This will leave behind a `Pulumi.yaml` file, containing some minimal metadata ab
 
 ## Using Pulumi PyPI Packages {#pypi-packages}
 
-The first thing you'll want to do is install the Pulumi SDK package.  This is listed in the template's `requirements.txt` file.
-
-> **Note:** As a next step, you'd normally just run `pip install -r requirements.txt`, however, because Pulumi is still in Private Beta, packages aren't publically available on PyPI yet.  As a result, a few extra gestures are required.  As soon as Pulumi is public, all packages will be too.
-
-We recommend using [`virtualenv`](http://docs.python-guide.org/en/latest/dev/virtualenvs/) for repeatable installations that work no matter your operating system.  Pulumi will function just fine if you choose not to, however for the instructions immediately below assume you are using it.  From your Pulumi program root, simply run:
+It is not required, but we recommend using [`virtualenv`](http://docs.python-guide.org/en/latest/dev/virtualenvs/) for repeatable installations that work no matter your operating system.
 
 ```
 $ virtualenv .
 $ . ./bin/activate
 ```
 
-The only thing special while Pulumi is still private is that you must pass an `--extra-index-url` to `pip`, so that it knows how to download Pulumi packages:
+The first thing you'll want to do is install the Pulumi SDK package, which is listed in the template's `requirements.txt` file.
 
-```
-$ pip install \
-    --extra-index-url https://${PULUMI_ACCESS_TOKEN}@pypi.pulumi.com/simple \
-    -r requirements.txt
-```
-
-The `PULUMI_ACCESS_TOKEN` is your access token from the Pulumi Console found on [your Account page](https://pulumi.com/account).  After running installing the packages, you're ready to go!
-
-> **Note:** If you see an HTTP 403 Forbidden error, or you see an error that says "No matching distribution found for pulumi>=0.11.0", then you have not correctly specified the `--extra-index-url` and/or have used an incorrect Pulumi access token.  Double check both and try again.  If it still doesn't work, please let us know.
-
-If you prefer to configure `pip` so that it always checks the Pulumi package server, simply run:
+While Pulumi is in private preview, packages are not publicly available on PyPI. If you used the easy install script for Mac and Linux (available at [get.pulumi.com/install.sh](https://get.pulumi.com/install.sh)), no additional configuration is required. If you're on Windows or have used the manual installer, run this command in a terminal:
 
 ```bash
-$ pip config set global.extra-index.url https://${PULUMI_ACCESS_TOKEN}@pypi.pulumi.com/simple
+$ pip config set global.extra-index-url https://pypi.pulumi.com/simple
 ```
 
 ### Adding a new dependency {#packages}
