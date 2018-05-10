@@ -7,5 +7,4 @@ toc:
   - quickstart/aws-s3-website.md
   - quickstart/aws-ec2.md
 
-- title: Examples
-  path: /quickstart/examples
+- quickstart/examples.md
