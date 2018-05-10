@@ -19,7 +19,7 @@ Run the following command to install the latest version of Pulumi.
 curl -fsSL https://get.pulumi.com | sh
 ```
 
-After running this command, Pulumi is installed, and you can skip the rest of these instructions.  If you would like to install Pulumi manually, please follow the steps below for your platform.
+After running this command, Pulumi is installed, and you can move on to [Configure Pulumi for AWS](./aws.html). To install Pulumi manually, follow the steps below for your platform.
 
 ## Pulumi SDK 
 
@@ -97,66 +97,61 @@ After running this command, Pulumi is installed, and you can skip the rest of th
     </div>
 </div>
 
-
 ## Installation instructions {#instructions}
 
-- [macOS](#mac)
-- [Windows](#windows)
-- [Linux](#linux)
+### Windows install {#windows}
+
+Windows 8 and 10 are supported.
+
+1.  Download [Pulumi {{page.installer_version}} for Windows x64](/releases/pulumi-v{{page.installer_version}}-windows.x64.zip).
+
+1.  Copy the extracted zipfile contents to a folder such as `C:\pulumi`.
+
+1. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
+
+1.  If you're using Pulumi with JavaScript or TypeScript, follow the instructions in [Configure your NPM client](./configure-npm.html).
 
 ### macOS install {#mac}
 
 macOS Sierra (10.12) or later is required. 
 
-2.  Download [Pulumi {{page.installer_version}} for macOS](/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz).
+1.  Download [Pulumi {{page.installer_version}} for macOS](/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz).
 
-3.  Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
+1.  Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
 
     ```bash
     $ tar -xzf pulumi-v{{page.installer_version}}-darwin.x64.tar.gz
     $ ./pulumi/install.sh 
     ```
 
-4.  Add `/usr/local/pulumi/bin` to your path:
+1.  Add `/usr/local/pulumi/bin` to your path:
 
     ```
     echo "export PATH=\$PATH:/usr/local/pulumi/bin" >> ~/.profile
     ```
 
-### Windows install {#windows}
-
-Windows 8 and 10 are supported.
-
-<!-- 
-The below known issue is tracked by https://github.com/pulumi/home/issues/156. Not linked in the doc, since "home" will not be OSS in its current form.
--->
-
-> **Note:** Due to a known issue, the SDK must be installed in a path that has no spaces. For instance, the path `C:\Program Files` will not work correctly. 
-
-2.  Download [Pulumi {{page.installer_version}} for Windows x64](/releases/pulumi-v{{page.installer_version}}-windows.x64.zip).
-
-3.  Copy the extracted zipfile contents to a folder such as `C:\pulumi`.
-
-4. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
+1.  If you're using Pulumi with JavaScript or TypeScript, follow the instructions in [Configure your NPM client](./configure-npm.html).
 
 ### Linux install {#linux}
 
 We provide a pre-built binary for Linux.
 
-2.  Download [Pulumi {{page.installer_version}} for Linux x64](/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz).
+1.  Download [Pulumi {{page.installer_version}} for Linux x64](/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz).
 
-3.  Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
+1.  Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
 
     ```bash
     $ tar -xzf pulumi-v{{page.installer_version}}-linux.x64.tar.gz
     $ ./pulumi/install.sh
     ```
 
-4.  Add `/usr/local/pulumi/bin` to your path:
+1.  Add `/usr/local/pulumi/bin` to your path:
 
     ```
     echo "export PATH=\$PATH:/usr/local/pulumi/bin" >> ~/.profile
     ```
+
+1.  If you're using Pulumi with JavaScript or TypeScript, follow the instructions in [Configure your NPM client](./configure-npm.html).
 
 ## Verify the install
 
@@ -173,7 +168,3 @@ Configure the credentials for your cloud provider of choice:
 -   [Configure Pulumi for AWS](./aws.html)
 -   Configure Pulumi for Azure
 -   Configure Pulumi for Kubernetes
-
-## Configure NPM client
-
-If you're using Pulumi with JavaScript or TypeScript, follow the instructions in [Configure your NPM client](./configure-npm.html).
