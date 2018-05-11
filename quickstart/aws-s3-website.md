@@ -48,10 +48,8 @@ The [Pulumi Cloud] framework provides high-level components that encode common i
 1.  Add and install the NPM dependencies:
 
     ```bash
-    $ npm install --save @pulumi/pulumi @pulumi/cloud-aws
+    $ npm install --save @pulumi/cloud-aws
     ```
-
-1.  Create a new [stack](../concepts/stack.html) via `pulumi stack init cloud-site-testing`.
 
 1.  Configure the AWS region to deploy to, such as `us-west-2`:
 
@@ -63,31 +61,38 @@ The [Pulumi Cloud] framework provides high-level components that encode common i
 
     ```bash
     $ pulumi update
-    Previewing stack 'cloud-site-testing'
-    Previewing changes:
+    Previewing update of stack 'cloud-static-dev'
     ...
 
-    Do you want to proceed? yes
-    Updating stack 'cloud-site-testing'
+    Do you want to perform this update? yes
+    Updating stack 'cloud-static-dev'
     Performing changes:
 
-    #:  Resource Type                 Name                              Status     Extra Info
-    1:  pulumi:pulumi:Stack           cloud-static-cloud-site-testing   + created  
-    2:  cloud:http:HttpEndpoint       cloud-static                      + created  
-    3:  aws:s3:Bucket                 cloud-static                      + created  
-    4:  aws:iam:Role                  cloud-static4c238266              + created  
-    5:  aws:s3:BucketObject           cloud-static4c238266/favicon.png  + created  
-    6:  aws:s3:BucketObject           cloud-static4c238266/index.html   + created  
-    7:  aws:iam:RolePolicyAttachment  cloud-static4c238266              + created  
-    8:  aws:apigateway:RestApi        cloud-static                      + created  
-    9:  aws:apigateway:Deployment     cloud-static                      + created  
-    10: aws:apigateway:Stage          cloud-static                      + created  
+        Type                                Name                              Status      Info
+    +   pulumi:pulumi:Stack                 cloud-static-cloud-static-dev     created     
+    +   └─ cloud:http:HttpEndpoint          cloud-static                      created     
+    +      ├─ aws:s3:Bucket                 cloud-static                      created     
+    +      ├─ aws:iam:Role                  cloud-static4c238266              created     
+    +      ├─ aws:s3:BucketObject           cloud-static4c238266/favicon.png  created     
+    +      ├─ aws:s3:BucketObject           cloud-static4c238266/index.html   created     
+    +      ├─ aws:iam:RolePolicyAttachment  cloud-static4c238266              created     
+    +      ├─ aws:apigateway:RestApi        cloud-static                      created     
+    +      ├─ aws:apigateway:Deployment     cloud-static                      created     
+    +      └─ aws:apigateway:Stage          cloud-static                      created     
     
+    ---outputs:---
+    url: "https://g8tc01nssk.execute-api.us-west-2.amazonaws.com/stage/"
+
     info: 10 changes performed:
         + 10 resources created
+    Update duration: 13.403487743s
+
+    Permalink: https://pulumi.com/lindydonna/cloud-static-dev/updates/1
     ```
 
-1.  To view the endpoint that was created, run `pulumi stack output`. 
+1.  Open the url shown in the "outputs" section to view the page and the favicon.
+  
+1.  To display just the endpoint that was created, run `pulumi stack output`. 
 
     ```bash
     $ pulumi stack output
@@ -95,8 +100,6 @@ The [Pulumi Cloud] framework provides high-level components that encode common i
         OUTPUT               VALUE
         url                  https://simc3a8ieg.execute-api.us-west-1.amazonaws.com/stage/
     ```
-
-1.  Open the site in a browser, to view the page and the favicon.
 
 ### Clean up
 
@@ -163,7 +166,7 @@ First, we'll create a Pulumi program that uploads files from the `www` directory
 1.  Add and install the NPM dependencies:
 
     ```bash
-    $ npm install --save @pulumi/pulumi @pulumi/aws mime
+    $ npm install --save @pulumi/aws mime
     ```
 
 1.  Create a new [stack](../concepts/stack.html) via `pulumi stack init website-testing`.
