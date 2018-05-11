@@ -46,20 +46,12 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
     [aws.ec2.Instance][EC2 Instance], which is created in that security group using the appropriate Amazon
     Machine Image (AMI) for the region where you deploy the program.
 
-1.  Install the `@pulumi/aws` NPM package and its dependency:
+1.  Install the `@pulumi/aws` NPM package:
 
     ```bash
-    $ npm install --save @pulumi/pulumi @pulumi/aws
+    $ npm install --save @pulumi/aws
     ```
 
-<!-- TODO: remove -->
-1.  Pulumi programs are deployed to a [stack](../concepts/stack.html). Use `pulumi stack init` to create a new stack:
-
-    ```bash
-    $ pulumi stack init webserver-testing
-    ```
-
-<!-- TODO: remove -->
 1.  Configure the AWS region to deploy to, such as `us-west-2`. Use `pulumi config` to view the current stack's configuration values.
 
     ```bash

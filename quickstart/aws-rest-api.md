@@ -16,7 +16,6 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
 1.  Replace the contents of `index.js` with the following:
 
     ```javascript
-    const pulumi = require("@pulumi/pulumi");
     const cloud = require("@pulumi/cloud-aws");
 
     // Create a mapping from 'route' to a count
@@ -48,7 +47,7 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
 1.  Add and install the NPM dependencies:
 
     ```bash
-    $ npm install --save @pulumi/pulumi @pulumi/cloud @pulumi/cloud-aws
+    $ npm install --save @pulumi/cloud @pulumi/cloud-aws
     ```
 
 1.  Configure your AWS region:
@@ -57,7 +56,7 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
     $ pulumi config set aws:region us-west-2
     ```
 
-1.  Preview and deploy changes via `pulumi update`. A total of 24 resources will be created.
+1.  Preview and deploy changes via `pulumi update`. A total of 14 resources will be created.
 
 1.  View the endpoint URL and curl a few routes:
 
@@ -65,11 +64,11 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
     $ pulumi stack output 
     Current stack outputs (1):
         OUTPUT            VALUE
-        url               https://5e8xrktey3.execute-api.us-west-2.amazonaws.com/stage/
+        endpoint          https://5e8xrktey3.execute-api.us-west-2.amazonaws.com/stage/
     
-    $ curl $(pulumi stack output url)/hello
+    $ curl $(pulumi stack output endpoint)/hello
     {"route":"hello","count":1}
-    $ curl $(pulumi stack output url)/woohoo
+    $ curl $(pulumi stack output endpoint)/woohoo
     {"route":"woohoo","count":1}
     ```
 
