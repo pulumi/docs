@@ -22,6 +22,8 @@ toc:
     path: /reference/cli/pulumi_new.html
   - title: Plugin
     path: /reference/cli/pulumi_plugin.html
+  - title: Preview
+    path: /reference/cli/pulumi_preview.html
   - title: Refresh
     path: /reference/cli/pulumi_refresh.html
   - title: Stack
