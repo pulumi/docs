@@ -2,11 +2,14 @@
 layout: default
 ---
 
-<h1>Pulumi Documentation</h1>
+<h1>Welcome to Pulumi</h1>
 
-<p class="section">
-    Pulumi is a programming platform for the cloud.  To get started, choose from one of the following:
-</p>
+Pulumi is a programming platform for the cloud to make creating cloud programs easy and productive.
+
+Pulumi lets you use real programming languages to create containers, serverless functions, and cloud infrastructure.
+Pulumi's heritage is infrastructure as code, but uses real languages to deliver powerful abstractions and expressiveness
+-- thanks to classes and objects, for loops, conditionals -- while retaining all the benefits of immutable
+infrastructure.  Pulumi leverages existing IDEs, tools, and package managers, enabling an ecosystem of sharing and reuse.
 
 <div class="card-table">
     <div class="mdl-card mdl-shadow--2dp">
@@ -19,7 +22,9 @@ layout: default
         </div>
         <div class="mdl-card__supporting-text">
             <span class="card-text">
-                Install the Pulumi SDK for JavaScript, TypeScript, or Python
+                <p>On macOS and Linux, install with:</p>
+                <pre><code>curl -fsSL https://get.pulumi.com | sh</code></pre>
+                <p>For Windows or manual installation steps <a href="/install">click here</a>.</p>
             </span>
         </div>
     </div>
@@ -28,12 +33,14 @@ layout: default
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">schedule</i>
                 &nbsp;
-                <a href="/quickstart">Quickstart</a>
+                <a href="/quickstart">Tutorials</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
             <span class="card-text">
-                Learn how to use Pulumi in just a few minutes
+                <p>Learn how to use Pulumi in just a few minutes, by creating
+                static websites, containers, serverless functions, and infrastructure.</p>
+                <p><a href="/quickstart">Click here</a> to start.</p>
             </span>
         </div>
     </div>
@@ -42,15 +49,29 @@ layout: default
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">description</i>
                 &nbsp;
-                <a href="/concepts">Concepts</a>
+                <a href="/tour">A Tour of Pulumi</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
             <span class="card-text">
-                Learn how Pulumi works
+                <p>Take a tour of Pulumi, and learn about the core concepts in the CLI, programming
+                model, and Pulumi.com service.  Become a Pulumi expert.</p>
+                <p><a href="/tour">Click here</a> to start.</p>
             </span>
         </div>
     </div>
+</div>
+
+<div class="card-table">
+    <h3>Featured Video</h3>
+    <p>Deploy a Serverless App to AWS</p>
+    <script src="js/gifffer.min.js"></script>
+    <img data-gifffer="/images/walkthroughs/DeployServerlessAWS.gif" title="Deploy a Serverless App to AWS">
+    <script>
+        window.onload = function() {
+            Gifffer();
+        };
+    </script>
 </div>
 
 For questions or feedback, reach us at [support@pulumi.com](mailto:support@pulumi.com), or [on GitHub](
