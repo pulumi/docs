@@ -53,11 +53,11 @@ pulumi new hello-aws-javascript
 ```
 You can accept the defaults to this command. In my example, I changed the AWS region to `us-west-2`.
 
-![](images/quickstart1.png)
+![](./images/quickstart1.png)
 
 After some dependency installations from NPM, you'll see a few files have been generated from this initialization process. 
 
-![](images/quickstart2.png)
+![](./images/quickstart2.png)
 
 Let's look at some of those.
 
@@ -96,23 +96,23 @@ pulumi update
 ```
 This command instructs Pulumi to figure out the resources needed to create the stack. These are then returned in preview.
 
-![](images/quickstart3.png)
+![](./images/quickstart3.png)
 
 Choosing `yes` will create the stack in AWS. This may take a minute or two.
 
-![](images/quickstart4.png)
+![](./images/quickstart4.png)
 
 In the output, we can see that we have exported the url of the endpoint, so we can quickly test the stack.
 ```bash
 curl $(pulumi stack output url)
 ```
-![](images/quickstart5.png)
+![](./images/quickstart5.png)
 
 # Manage our stack.
 
 Our output also contained a permalink to the Pulumi dashboard. We can review the stack in the UI, and examine logs and resource usage, along with inviting friends and co-workers to collaborate on stacks. 
 
-![](images/quickstart6.png)
+![](./images/quickstart6.png)
 
 # Tear Down
 
@@ -122,7 +122,7 @@ pulumi destroy
 ```
 Once confirmed, Pulumi will go ahead and remove all of the resources you've used. The stack itself is preserved in the Pulumi dashboard and is ready to go again as needed.
 
-![](images/quickstart7.png)
+![](./images/quickstart7.png)
 
 # Recap
 
