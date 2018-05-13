@@ -21,10 +21,10 @@ Pulumi enables teams to manage cloud native infrastructure with familiar code ma
 # What we'll do
 
 - Install and configure Pulumi.
-- **Initialize.** Create a new Pulumi project.
+- **Initialize** a new Pulumi project.
 - **Define** our stack in NodeJS.
 - **Deploy** our stack to AWS.
-- **Manag** our stack in the Pulumi dashboard.
+- **Manage** our stack in the Pulumi dashboard.
 - Tear it down.
 
 # First time using Pulumi?
@@ -35,11 +35,11 @@ If so, then you need to install the CLI, and configure AWS and NPM. [More instru
 ```
 curl -fsSL https://get.pulumi.com | sh
 ```
-## ⚠️ Pre-requisites: configure AWS and NPM
+## ⚠️ Prerequisites: configure AWS and NPM
 
-Pulumi relies on your AWS credentials to work, so [make sure you have them set up](https://docs.pulumi.com/install/aws.html).
+Pulumi relies on your AWS credentials to work, so [make sure you have them set up](../install/aws.html).
 
-The Pulumi libraries are currently private NPM packages (while we're in beta), [so make sure to set up NPM too](https://docs.pulumi.com/install/configure-npm.html).  
+The Pulumi libraries are currently private NPM packages (while we're in beta), [so make sure to set up NPM too](../install/configure-npm.html).  
 
 # Initialize the project
 
@@ -86,7 +86,7 @@ endpoint.get("/source", (req, res) => res.json({name: "AWS"}))
 // Export the public URL for the HTTP service
 exports.url = endpoint.publish().url;
 ```
-You can examine the reference documentation for the detail on these API calls.
+You can examine the [reference documentation](../reference/index.html) for the detail on these API calls.
 
 # Deploy our stack.
 
