@@ -13,6 +13,8 @@ Each stack contains its own bag of configuration key/value pairs.
 For instance, we may want `prod` and `staging` to use different database instance sizes or container replica counts.
 We might put `prod-na-east` and `prod-na-west` into different regions.  Both are perfect use cases for configuration.
 
+Configuration values like passwords or authorization tokens can be encrypted as **secrets**.
+
 A package or program can accept configuration by creating a `pulumi.Config` object:
 
 ```typescript
@@ -21,6 +23,9 @@ let config = new Config("ahoy-pulumi");
 ```
 
 The constructor takes the name of the current package.  This scopes the keys and avoids naming collisions.
+
+Each configuration setting has a key.  Because of package scoping, all keys are of the form
+`<PACKAGE>:<NAME>`.  For instance, the `aws` package's `region` variable has `aws:region` as its key.
 
 Our program can then read the stack's values using `require` (for required) or `get` (for optional):
 
