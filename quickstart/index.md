@@ -53,7 +53,7 @@ pulumi new hello-aws-javascript
 ```
 You can accept the defaults to this command. In my example, I changed the AWS region to `us-west-2`.
 
-![](./images/quickstart1.png)
+![](./images/Quickstart1.png)
 
 After some dependency installations from NPM, you'll see a few files have been generated from this initialization process. 
 
