@@ -1,0 +1,36 @@
+nav_section: "Tour"
+toc:
+- title: A Tour of Pulumi
+  path: /tour/index
+  section:
+  - tour/basics-pulumi.md
+  - tour/basics-projects.md
+  - tour/basics-programs.md
+  - tour/basics-packages.md
+  - tour/basics-stacks.md
+  - tour/basics-configuration.md
+  - tour/basics-templates.md
+- title: Deployments
+  path: /tour/deployments
+  section:
+  - tour/deployments-resources.md
+  - tour/deployments-properties.md
+  - tour/deployments-previews.md
+  - tour/deployments-diffs.md
+  - tour/deployments-updates.md
+  - tour/deployments-outputs.md
+  - tour/deployments-teams.md
+- title: Cloud Patterns
+  path: /tour/cloud
+  section:
+  - tour/cloud-infrastructure.md
+  - tour/cloud-containers.md
+  - tour/cloud-serverless.md
+- title: Advanced Concepts
+  path: /tour/advanced
+  section:
+  - tour/advanced-checkpoints.md
+  - tour/advanced-plugins.md
+  - tour/advanced-custom-resources.md
+  - tour/advanced-components.md
+  - tour/advanced-refresh.md

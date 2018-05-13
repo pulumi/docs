@@ -28,7 +28,7 @@ $MOBILE-WIDTH: 768px;
 
 $font-family: 'Helvetica Neue',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI';
 $header-font-family: 'Helvetica Neue',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI';
-$code-font-family: 'SFMono-Regular',Consolas,'Liberation Mono',Menlo,Courier,monospace;
+$code-font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
  
 /**
  * Colors
@@ -86,7 +86,8 @@ a:hover {
 code {
     background-color: #f2f2f2;
     color: #37474f;
-    font-size: 14px;
+    line-height: 18px;
+    font-size: 13px;
     font-family: $code-font-family;
     margin: 16px 0;
 }
@@ -94,6 +95,8 @@ code {
 pre {
     @extend code;
     padding: 8px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
 }
 
 // Move body down because of a fixed nav at the top.
@@ -150,8 +153,9 @@ a.btn > svg {
     color: #212121;
 
     p, li {
+        font-size: 15px;
         font-weight: 400;
-        -webkit-font-smoothing: antialiased;
+        -webkit-font-smoothing: auto;
     }
     pre, code {
         -webkit-font-smoothing: auto;
@@ -163,15 +167,15 @@ a.btn > svg {
     }
     h2 {
         font-size: 22px;
-        margin: 48px 0 24px 0;
+        margin: 24px 0 24px 0;
     }
     h3 {
         font-size: 18px;
-        margin: 32px 0 16px 0;
+        margin: 16px 0 16px 0;
     }
     h4 {
         font-size: 16px;
-        margin: 32px 0 16px 0;
+        margin: 16px 0 16px 0;
     }
     h1, h2, h3, h4, h5, h6 {
         font-family: $header-font-family;
@@ -185,7 +189,7 @@ a.btn > svg {
         font-variant-east-asian: normal;
         font-variant-ligatures: normal;
         font-variant-numeric: normal;
-        line-height: 24px;
+        line-height: 20px;
         text-size-adjust: 100%;
     }
 
@@ -224,22 +228,6 @@ a.btn > svg {
     blockquote::after {
         content: '';
         margin: 0;
-    }
-}
-
-@media (max-width: $MOBILE-WIDTH) {
-    /* Smaller fonts on mobile. */
-    .content-container {
-        p, li {
-            font-size: 14px;
-        }
-    }
-}
-@media (min-width: $MOBILE-WIDTH) {
-    .content-container {
-        p, li {
-            font-size: 16px;
-        }
     }
 }
 
@@ -491,4 +479,39 @@ a.btn > svg {
     tr:first-child {
         background-color: #ffff99;
     }
+}
+
+.tour-nav {
+    display: inline-block;
+    margin-top: 32px;
+}
+
+.tour-button {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(124,77,255);
+    border: 1px solid #555;
+    border-radius: 10%;
+}
+
+.tour-button.enabled {
+}
+.tour-button.enabled:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tour-button.disabled {
+    background-color: #ddd;
+}
+.tour-button.disabled:hover {
+    cursor: default;
+    text-decoration: none;
+}
+
+.tour-index {
+    font-size: 20px;
+    padding: 8px;
 }

@@ -58,10 +58,10 @@ tocs:
   - install
   - quickstart
   - concepts
+  - tour
   - reference
 
 # By default, use a `default_toc` layout, that shows a table of contents on the left
 defaults:
-  -
-    values:
+  - values:
       layout: default_toc
