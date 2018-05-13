@@ -20,11 +20,13 @@ aws:region: (us-east-1)
 New project is configured and ready to deploy with 'pulumi update'.
 ```
 
-Notice that this single command created a project, program, stack, and even configured it!
+This single command created a project, program, stack, and even configured it!
 
-Many templates are available for different languages, target clouds, and scenarios.  Browse them at
-[pulumi/templates](https://github.com/pulumi/templates) or run `pulumi new` without an argument to interactively
-choose from a list.  If you don't find what you're looking for, consider sending a PR to help out!
+Templates are available for different languages, target clouds, and scenarios.  Run `pulumi new` without an
+argument to see a list.
+
+All of our templates are defined at [pulumi/templates](https://github.com/pulumi/templates).  If you don't find what
+you're looking for, [let us know](mailto:support@pulumi.com).  PRs welcome!
 
 ***
 

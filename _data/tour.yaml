@@ -9,6 +9,7 @@ toc:
   - tour/basics-packages.md
   - tour/basics-stacks.md
   - tour/basics-configuration.md
+  - tour/basics-configuring.md
   - tour/basics-templates.md
 - title: Deployments
   path: /tour/deployments
@@ -34,3 +35,4 @@ toc:
   - tour/advanced-custom-resources.md
   - tour/advanced-components.md
   - tour/advanced-refresh.md
+  - tour/advanced-analyzers.md
