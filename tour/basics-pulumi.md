@@ -24,7 +24,7 @@ use Pulumi in team environments safely.
 You can log in explicitly using the [`pulumi login`](/reference/cli/pulumi_login.html) command, just as you may log out
 using [`pulumi logout`](/reference/cli/pulumi_logout.html) when you are done.
 
-As soon as you've got the `pulumi` CLI ready to go, we can create a <a href="basics-project.html">project</a>.
+As soon as you've got the `pulumi` CLI ready to go, we can create a <a href="basics-projects.html">project</a>.
 
 <div class="tour-nav">
     <a class="tour-button enabled" href="index.html" title="A Tour of Pulumi">◀</a>
