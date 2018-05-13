@@ -364,6 +364,10 @@ a.btn > svg {
     padding: 24px 0 8px 0;
 }
 
+.mdl-button {
+    font-family: $font-family;
+}
+
 .mdl-card {
     margin: 24px 0;
     background-color: $accent3;
@@ -403,9 +407,8 @@ a.btn > svg {
 }
 
 .mdl-card__supporting-text {
-    color: #555;
-    height: 64px;
-    line-height: 64px;
+    color: #333;
+    min-height: 64px;
 }
 
 .card-text {

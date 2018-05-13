@@ -13,15 +13,17 @@ The current Pulumi SDK version is <a href="./changelog.html#{{ page.installer_ve
 
 ## Mac and Linux easy install
 
-Run the following command to install the latest version of Pulumi.
+Run the following command to install the latest version of Pulumi:
 
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
 
-After running this command, Pulumi is installed, and you can move on to [Configure Pulumi for AWS](./aws.html). To install Pulumi manually, follow the steps below for your platform.
+After running this command, Pulumi is installed, and you can move on to [Configure Pulumi for AWS](./aws.html).
 
-## Pulumi SDK 
+To install Pulumi manually, follow the steps below for your platform.
+
+## Pulumi SDK installation
 
 <div class="card-table">
     <div class="mdl-card mdl-shadow--2dp">
@@ -97,7 +99,7 @@ After running this command, Pulumi is installed, and you can move on to [Configu
     </div>
 </div>
 
-## Installation instructions {#instructions}
+## Manual installation {#instructions}
 
 ### Windows install {#windows}
 
