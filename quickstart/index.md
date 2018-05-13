@@ -141,7 +141,7 @@ From here, you can dive deeper:
   - [Create a serverless REST API](./aws-rest-api.html)
   - [Host a static site on S3](./aws-s3-website.html)
   - [Create EC2 instances on AWS](./aws-ec2.html)
-- Examine the [reference material[(../reference/index.html)] for the Pulumi APIs.
+- Examine the [reference material](../reference/index.html)] for the Pulumi APIs.
 
 ## More Examples
 
