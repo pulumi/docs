@@ -86,7 +86,7 @@ a:hover {
 code {
     background-color: #f2f2f2;
     color: #37474f;
-    line-height: 16px;
+    line-height: 18px;
     font-size: 13px;
     font-family: $code-font-family;
     margin: 16px 0;
@@ -153,7 +153,7 @@ a.btn > svg {
     color: #212121;
 
     p, li {
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 400;
         -webkit-font-smoothing: auto;
     }
@@ -479,4 +479,39 @@ a.btn > svg {
     tr:first-child {
         background-color: #ffff99;
     }
+}
+
+.tour-nav {
+    display: inline-block;
+    margin-top: 32px;
+}
+
+.tour-button {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(124,77,255);
+    border: 1px solid #555;
+    border-radius: 10%;
+}
+
+.tour-button.enabled {
+}
+.tour-button.enabled:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tour-button.disabled {
+    background-color: #ddd;
+}
+.tour-button.disabled:hover {
+    cursor: default;
+    text-decoration: none;
+}
+
+.tour-index {
+    font-size: 20px;
+    padding: 8px;
 }

@@ -4,6 +4,21 @@
         <a href="/install" class="mdl-tabs__tab {% if toc.nav_section == "Install" %}is-active{% endif %}">INSTALL</a>
         <a href="/quickstart" class="mdl-tabs__tab {% if toc.nav_section == "Quickstart" %}is-active{% endif %}">QUICKSTART</a>
         <a href="/concepts" class="mdl-tabs__tab {% if toc.nav_section == "Concepts" %}is-active{% endif %}">CONCEPTS</a>
+        <script>
+            // Set the Pulumi Tour cookie if the magic querystring parameter is set.
+            var enablePulumiTour = new URL(document.location).searchParams.get("tour");
+            if (enablePulumiTour === "1" || enablePulumiTour === "true") {
+                document.cookie = "pulumi_tour=1; expires=Fri, 29 Jun 2018 12:00:00 UTC; path=/";
+            } else if (enablePulumiTour === "0" || enablePulumiTour === "false") {
+                document.cookie = "pulumi_tour=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+            }
+            // If the Pulumi Tour is enabled, we will show the TOUR tab.
+            if (document.cookie.split(';').filter(function(item) {
+                return item.indexOf("pulumi_tour=") >= 0
+            }).length) {
+                document.write('<a href="/tour" class="mdl-tabs__tab {% if toc.nav_section == "Tour" %}is-active{% endif %}">TOUR</a>');
+            }
+        </script>
         <a href="/reference" class="mdl-tabs__tab {% if toc.nav_section == "Reference" %}is-active{% endif %}">REFERENCE</a>
     </div>
 </div>
