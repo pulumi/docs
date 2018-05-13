@@ -1,4 +1,4 @@
 ---
-title: Deploying Code
+title: Deployments
 ---
 

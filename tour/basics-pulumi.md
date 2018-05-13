@@ -28,6 +28,6 @@ As soon as you've got the `pulumi` CLI ready to go, we can create a <a href="bas
 
 <div class="tour-nav">
     <a class="tour-button enabled" href="index.html" title="A Tour of Pulumi">◀</a>
-    <span class="tour-index"><strong>2</strong>/8</span>
+    <span class="tour-index"><strong>2</strong>/9</span>
     <a class="tour-button enabled" href="basics-projects.html" title="Projects">▶</a>
 </div>

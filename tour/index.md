@@ -15,6 +15,6 @@ Let's get started!
 
 <div class="tour-nav">
     <a class="tour-button disabled">◀</a>
-    <span class="tour-index"><strong>1</strong>/8</span>
+    <span class="tour-index"><strong>1</strong>/9</span>
     <a class="tour-button enabled" href="basics-pulumi.html" title="Pulumi">▶</a>
 </div>

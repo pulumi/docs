@@ -29,4 +29,5 @@ toc:
     path: /reference/cli/pulumi_stack.html
   - title: Update
     path: /reference/cli/pulumi_update.html
+- reference/yaml.md
 - reference/known-issues.md
