@@ -3,7 +3,7 @@ title: "Configure Pulumi for AWS"
 ---
 
 <!-- LINKS -->
-[Pulumi AWS provider]: ../concepts/aws.html
+[Pulumi AWS provider]: ../reference/aws.html
 [iam-user-console]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console
 [configure-aws-cli]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 

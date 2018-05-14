@@ -4,11 +4,11 @@ title: "Change Log"
 
 <!-- Common links -->
 [`Output`]: https://docs.pulumi.com/packages/pulumi/classes/_resource_.output.html
-[Python documentation]: ../concepts/python.html
-[Defining and setting stack settings]: ../concepts/config.html#config-stack
-[Configuration]: ../concepts/config.html
-[Pulumi npm packages]: ../concepts/javascript.html#npm-packages
-[Programming Model]: ../concepts/programming-model.html
+[Python documentation]: ../reference/python.html
+[Defining and setting stack settings]: ../reference/config.html#config-stack
+[Configuration]: ../reference/config.html
+[Pulumi npm packages]: ../reference/javascript.html#npm-packages
+[Programming Model]: ../reference/programming-model.html
 <!-- End common links -->
 
 ## Available versions {#all-versions}
@@ -150,7 +150,7 @@ Released on April 26, 2018
 -  Add a `pulumi cancel` command ([pulumi/pulumi#1230](https://github.com/pulumi/pulumi/pull/1230)). This command cancels any in-progress operation for the current stack. 
 
 ### Changed 
--  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks](../concepts/stack.html#create-stack).
+-  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks](../reference/stack.html#create-stack).
 
 -  (**Breaking**) Remove the explicit 'pulumi preview' command ([pulumi/pulumi#1170](https://github.com/pulumi/pulumi/pull/1170)). The `pulumi preview` output has now been merged in to the `pulumi update` command. Before an update is run, the preview is shown and you can choose whether to proceed or see more update details. To see just the preview operation, run `pulumi update --preview`.
 

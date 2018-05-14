@@ -1,7 +1,12 @@
 nav_section: "Reference"
 toc:
-- title: API reference
-  path: /reference/
+- title: Overview
+  path: /reference/index
+  section: 
+  - reference/stack.md
+  - reference/project.md
+  - reference/config.md
+  - reference/resource.md
 - title: Commands (CLI)
   path: /reference/commands
   section:
@@ -29,5 +34,27 @@ toc:
     path: /reference/cli/pulumi_stack.html
   - title: Update
     path: /reference/cli/pulumi_update.html
-- reference/yaml.md
+- title: API reference
+  path: /reference/apis
+- title: Programming Model
+  path: /reference/programming-model
+  section:
+  - reference/javascript.md
+  - reference/python.md
+  - reference/component-tutorial.md
+- title: Cloud Resources
+  path: /reference/cloud-resources
+  section:
+  - reference/cloud.md
+  - reference/aws.md
+  - reference/azure.md
+  - reference/kubernetes.md
+- title: How Pulumi Works
+  path: /reference/how
+  section:
+  - reference/providers.md
+- title: Continuous Deployment
+  path: /reference/cd
+  section:
+  - reference/cd-travis.md
 - reference/known-issues.md

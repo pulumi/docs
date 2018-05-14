@@ -26,7 +26,7 @@ runtime: nodejs
 EOF
 ```
 
-The are [more properties](/reference/yaml.html) you can put in your `Pulumi.yaml`, but `name`, `description`, and
+The are [more properties](/reference/project.html) you can put in your `Pulumi.yaml`, but `name`, `description`, and
 `runtime` are good enough for most cases.
 
 Now that we have a project, let's create a program for it!

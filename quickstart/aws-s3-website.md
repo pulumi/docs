@@ -169,9 +169,9 @@ First, we'll create a Pulumi program that uploads files from the `www` directory
     $ npm install --save @pulumi/aws mime
     ```
 
-1.  Create a new [stack](../concepts/stack.html) via `pulumi stack init website-testing`.
+1.  Create a new [stack](../reference/stack.html) via `pulumi stack init website-testing`.
 
-1.  Configure the AWS region to deploy to, such as `us-west-2`. After this step, a new file `Pulumi.website-testing.yaml` is created, next to your [Pulumi.yaml project file](../concepts/project.html). See [Defining and setting stack settings](../concepts/config.html#config-stack) for more information about this file.
+1.  Configure the AWS region to deploy to, such as `us-west-2`. After this step, a new file `Pulumi.website-testing.yaml` is created, next to your [Pulumi.yaml project file](../reference/project.html). See [Defining and setting stack settings](../reference/config.html#config-stack) for more information about this file.
 
     ```bash
     $ pulumi config set aws:region us-west-2
@@ -289,7 +289,7 @@ The full source of the example is available in the [Pulumi examples repo](https:
 - [S3 website][s3-folder]
 - [S3 website as component][s3-folder-component]
 
-To learn how to convert the raw AWS option to a high-level component, see the [Pulumi Components](../concepts/component-tutorial.html) tutorial.
+To learn how to convert the raw AWS option to a high-level component, see the [Pulumi Components](../reference/component-tutorial.html) tutorial.
 
 <!-- Common links -->
 [@pulumi/aws]: /packages/pulumi-aws/index.html
@@ -303,9 +303,9 @@ To learn how to convert the raw AWS option to a high-level component, see the [P
 [pulumi.Output.apply]: /packages/pulumi/classes/_resource_.output.html#apply
 [pulumi.Input]: /packages/pulumi/modules/_resource_.html#input
 [pulumi.ComponentResource]: /packages/pulumi/classes/_resource_.componentresource.html
-[Component]: ../concepts/programming-model.html#components
+[Component]: ../reference/programming-model.html#components
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
-[Pulumi Cloud]: ../concepts/cloud.html
+[Pulumi Cloud]: ../reference/cloud.html
 [HttpEndpoint]: ../packages/pulumi-cloud/modules/_httpendpoint_.html
 <!-- End common links -->

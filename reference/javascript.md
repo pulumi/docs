@@ -1,6 +1,6 @@
 ---
 title: "JavaScript and TypeScript"
-redirect_from: "/concepts/npm-packages.html"
+redirect_from: "npm-packages.html"
 ---
 
 <!-- LINKS -->
