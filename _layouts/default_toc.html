@@ -14,14 +14,14 @@
         <div id="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             {% include toolbar.html toc=true %}
             <div class="mdl-layout__drawer">
-                {% include_cached toc.html tree=toc.toc %}
+                {% include toc.html tree=toc.toc %}
             </div>
             {% include tabs.html %}
             <main class="mdl-layout__content">
                 <div class="page-content">
                     <div class="center-container">
                         <div class="column docsToc">
-                            {% include_cached toc.html tree=toc.toc %}
+                            {% include toc.html tree=toc.toc %}
                         </div>
                         <div class="column docsContent content-container">
                             <h1>{{page.title}}</h1>
