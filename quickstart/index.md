@@ -10,7 +10,7 @@ In this quickstart, we'll use Pulumi to create a serverless SPA that uses a AWS 
 
 ## Pulumi helps you get code to the cloud. Together. Faster.
 
-Pulumi is a set of tools and services to help development and DevOps teams define, deploy, and manage cloud native infrastructure. 
+Pulumi is a set of tools and services to help Development and DevOps teams define, deploy, and manage cloud native infrastructure.
 
 Pulumi enables teams to define cloud native infrastructure in familiar languages (e.g. JavaScript, Python). So, you can be more productive and take advantage of your existing skills, rather than learn a new DSL.
 
@@ -69,7 +69,7 @@ After some dependency installations from NPM, you'll see a few files have been g
 
 Let's look at some of those.
 
-- `Pulumi.yaml` defines the [project](../concepts/project.html).
+- `Pulumi.yaml` defines the [project](../reference/project.html).
 - `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file](../tour/basics-configuring.html) for the stack we initialized.
 - `www` contains our sample static content.
 - The key file for defining our stack resources `index.js` so let's examine that.
@@ -153,7 +153,7 @@ In this example we've seen:
 
 From here, you can dive deeper:
 
-- Take a tour of the [core concepts of Pulumi](../concepts/index.html).
+- Take [a tour of Pulumi](../tour/index.html).
 - Try out more quickstarts including:
   - [Create a serverless REST API](./aws-rest-api.html)
   - [Host a static site on S3](./aws-s3-website.html)
