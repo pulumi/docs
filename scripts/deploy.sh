@@ -13,6 +13,17 @@ if [ -z ${ENVIRONMENT} ]; then
     exit 1
 fi
 
+if [[ -z ${AWS_ACCESS_KEY_ID:-} || -z ${AWS_SECRET_ACCESS_KEY:-} || -z ${AWS_REGION:-} ]]; then
+    echo "Error: Missing AWS credentials. Unable to deploy built website."
+    exit 1
+fi
+
+# AWS credentials are expected to be provided to the Travis job, and that
+# account should be able to assume role to get the access needed for S3.
+aws configure set aws_access_key_id ${AWS_ACCESS_KEY_ID}
+aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
+aws configure set region ${AWS_REGION}
+
 echo "Assuming the role of UploadPulumiReleases, uploading ${ENVIRONMENT} at ${CURRENT_COMMIT:0:6}..."
 CREDS_JSON=$(aws sts assume-role \
     --role-arn "arn:aws:iam::058607598222:role/UploadPulumiReleases" \
