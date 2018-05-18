@@ -1,5 +1,6 @@
 ---
 title: A Tour of Pulumi
+redirect_from: /concepts/
 ---
 
 Welcome to a tour of Pulumi.

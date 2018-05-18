@@ -25,7 +25,7 @@
         "icon": "library_books",
         "items": [
             { "title": "Quickstart", "url": "https://docs.pulumi.com/quickstart/" },
-            { "title": "Concepts Overview", "url": "https://docs.pulumi.com/concepts/" },
+            { "title": "A Tour of Pulumi", "url": "https://docs.pulumi.com/tour/" },
             { "title": "Examples Repo", "url": "https://github.com/pulumi/examples" },
             { "title": "Pulumi Community Slack", "url": "https://pulumi.slack.com/messages/C9SEFSC4C" }
         ],
