@@ -13,6 +13,8 @@ set -o nounset -o errexit -o pipefail
 PULUMI_AWS_DOCS=`mktemp -d`
 PULUMI_DOCS=`mktemp -d`
 PULUMI_CLOUD_DOCS=`mktemp -d`
+PULUMI_AZURE_DOCS=`mktemp -d`
+PULUMI_K8S_DOCS=`mktemp -d`
 
 TYPEDOC_OPTS="--mode modules --readme none --gitRevision master --excludePrivate"
 
@@ -37,6 +39,20 @@ cd ../pulumi-cloud/api
 typedoc . $TYPEDOC_OPTS --out $PULUMI_CLOUD_DOCS
 popd
 
+# pulumi-azure
+echo -e "\033[0;95mrunning typedoc on pulumi-azure\033[0m"
+pushd .
+cd ../pulumi-azure/pack/nodejs
+typedoc . $TYPEDOC_OPTS --out $PULUMI_AZURE_DOCS
+popd
+
+# pulumi-kubernetes
+echo -e "\033[0;95mrunning typedoc on pulumi-kubernetes\033[0m"
+pushd .
+cd ../pulumi-kubernetes/pack/nodejs
+typedoc . $TYPEDOC_OPTS --out $PULUMI_K8S_DOCS
+popd
+
 echo "Finished running typedoc. Copying into /packages."
 mkdir -p ./packages/
 
@@ -44,19 +60,27 @@ mkdir -p ./packages/
 rm -rf ./packages/pulumi-aws/
 rm -rf ./packages/pulumi/
 rm -rf ./packages/pulumi-cloud/
+rm -rf ./packages/pulumi-azure/
+rm -rf ./packages/pulumi-kubernetes/
 
 mkdir ./packages/pulumi-aws/
 mkdir ./packages/pulumi/
 mkdir ./packages/pulumi-cloud/
+mkdir ./packages/pulumi-azure/
+mkdir ./packages/pulumi-kubernetes/
 
 # Copy updated
 cp -R $PULUMI_AWS_DOCS/   ./packages/pulumi-aws/
 cp -R $PULUMI_DOCS/       ./packages/pulumi/
 cp -R $PULUMI_CLOUD_DOCS/ ./packages/pulumi-cloud/
+cp -R $PULUMI_AZURE_DOCS/   ./packages/pulumi-azure/
+cp -R $PULUMI_K8S_DOCS/   ./packages/pulumi-kubernetes/
 
 # Cleanup
 rm -rf $PULUMI_AWS_DOCS
 rm -rf $PULUMI_DOCS
 rm -rf $PULUMI_CLOUD_DOCS
+rm -rf $PULUMI_AZURE_DOCS
+rm -rf $PULUMI_K8S_DOCS
 
 echo "Done"
