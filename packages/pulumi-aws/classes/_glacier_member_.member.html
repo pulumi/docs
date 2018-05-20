@@ -75,7 +75,6 @@
 						<p>Provides a resource to manage a GuardDuty member.</p>
 					</div>
 					<p>~&gt; <strong>NOTE:</strong> Currently after using this resource, you must manually invite and accept member account invitations before GuardDuty will begin sending cross-account events. More information for how to accomplish this via the AWS Console or API can be found in the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_accounts.html">GuardDuty User Guide</a>. Terraform implementation of member invitation and acceptance resources can be tracked in <a href="https://github.com/terraform-providers/terraform-provider-aws/issues/2489">Github</a>.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_member.html">https://www.terraform.io/docs/providers/aws/r/guardduty_member.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -135,7 +134,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in glacier/member.ts:43</li>
+									<li>Defined in glacier/member.ts:35</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -176,7 +175,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in glacier/member.ts:53</li>
+									<li>Defined in glacier/member.ts:45</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -224,14 +223,13 @@
 					<div class="tsd-signature tsd-kind-icon">account<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in glacier/member.ts:31</li>
+							<li>Defined in glacier/member.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>AWS account ID for member account.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_member.html#account_id">https://www.terraform.io/docs/providers/aws/r/guardduty_member.html#account_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -240,14 +238,13 @@
 					<div class="tsd-signature tsd-kind-icon">detector<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in glacier/member.ts:37</li>
+							<li>Defined in glacier/member.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The detector ID of the GuardDuty account where you want to create member accounts.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_member.html#detector_id">https://www.terraform.io/docs/providers/aws/r/guardduty_member.html#detector_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -256,14 +253,13 @@
 					<div class="tsd-signature tsd-kind-icon">email<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in glacier/member.ts:43</li>
+							<li>Defined in glacier/member.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Email address for member account.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_member.html#email">https://www.terraform.io/docs/providers/aws/r/guardduty_member.html#email</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -313,7 +309,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in glacier/member.ts:22</li>
+									<li>Defined in glacier/member.ts:20</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

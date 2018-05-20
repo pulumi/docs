@@ -75,7 +75,6 @@
 						<p>Provides an SES domain MAIL FROM resource.</p>
 					</div>
 					<p>~&gt; <strong>NOTE:</strong> For the MAIL FROM domain to be fully usable, this resource should be paired with the <a href="/docs/providers/aws/r/ses_domain_identity.html">aws_ses_domain_identity resource</a>. To validate the MAIL FROM domain, a DNS MX record is required. To pass SPF checks, a DNS TXT record may also be required. See the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from-set.html">Amazon SES MAIL FROM documentation</a> for more information.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ses_domain_mail_from.html">https://www.terraform.io/docs/providers/aws/r/ses_domain_mail_from.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -135,7 +134,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ses/mailFrom.ts:43</li>
+									<li>Defined in ses/mailFrom.ts:35</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -176,7 +175,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ses/mailFrom.ts:53</li>
+									<li>Defined in ses/mailFrom.ts:45</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -224,14 +223,13 @@
 					<div class="tsd-signature tsd-kind-icon">behavior<wbr>OnMx<wbr>Failure<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ses/mailFrom.ts:31</li>
+							<li>Defined in ses/mailFrom.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to <code>UseDefaultValue</code>. See the <a href="https://docs.aws.amazon.com/ses/latest/APIReference/API_SetIdentityMailFromDomain.html">SES API documentation</a> for more information.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ses_domain_mail_from.html#behavior_on_mx_failure">https://www.terraform.io/docs/providers/aws/r/ses_domain_mail_from.html#behavior_on_mx_failure</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -240,14 +238,13 @@
 					<div class="tsd-signature tsd-kind-icon">domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ses/mailFrom.ts:37</li>
+							<li>Defined in ses/mailFrom.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Verified domain name to generate DKIM tokens for.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ses_domain_mail_from.html#domain">https://www.terraform.io/docs/providers/aws/r/ses_domain_mail_from.html#domain</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -273,14 +270,13 @@
 					<div class="tsd-signature tsd-kind-icon">mail<wbr>From<wbr>Domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ses/mailFrom.ts:43</li>
+							<li>Defined in ses/mailFrom.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Subdomain (of above domain) which is to be used as MAIL FROM address (Required for DMARC validation)</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ses_domain_mail_from.html#mail_from_domain">https://www.terraform.io/docs/providers/aws/r/ses_domain_mail_from.html#mail_from_domain</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -313,7 +309,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ses/mailFrom.ts:22</li>
+									<li>Defined in ses/mailFrom.ts:20</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

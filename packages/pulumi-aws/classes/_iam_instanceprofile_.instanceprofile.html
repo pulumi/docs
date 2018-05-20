@@ -75,7 +75,6 @@
 						<p>Provides an IAM instance profile.</p>
 					</div>
 					<p>~&gt; <strong>NOTE:</strong> Either <code>role</code> or <code>roles</code> (<strong>deprecated</strong>) must be specified.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html">https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -140,7 +139,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in iam/instanceProfile.ts:77</li>
+									<li>Defined in iam/instanceProfile.ts:59</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -181,7 +180,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in iam/instanceProfile.ts:87</li>
+									<li>Defined in iam/instanceProfile.ts:69</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -229,14 +228,13 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/instanceProfile.ts:33</li>
+							<li>Defined in iam/instanceProfile.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN assigned by AWS to the instance profile.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#arn">https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -245,14 +243,13 @@
 					<div class="tsd-signature tsd-kind-icon">create<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/instanceProfile.ts:39</li>
+							<li>Defined in iam/instanceProfile.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The creation timestamp of the instance profile.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#create_date">https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#create_date</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -278,14 +275,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/instanceProfile.ts:45</li>
+							<li>Defined in iam/instanceProfile.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The profile&#39;s name. If omitted, Terraform will assign a random, unique name.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#name">https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -294,14 +290,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/instanceProfile.ts:51</li>
+							<li>Defined in iam/instanceProfile.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Creates a unique name beginning with the specified prefix. Conflicts with <code>name</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#name_prefix">https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#name_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -310,14 +305,13 @@
 					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/instanceProfile.ts:57</li>
+							<li>Defined in iam/instanceProfile.ts:45</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Path in which to create the profile.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#path">https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#path</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -326,14 +320,13 @@
 					<div class="tsd-signature tsd-kind-icon">role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="_iam_role_.role.html" class="tsd-signature-type">Role</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/instanceProfile.ts:63</li>
+							<li>Defined in iam/instanceProfile.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The role name to include in the profile.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#role">https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#role</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -342,7 +335,7 @@
 					<div class="tsd-signature tsd-kind-icon">roles<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="_iam_role_.role.html" class="tsd-signature-type">Role</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/instanceProfile.ts:71</li>
+							<li>Defined in iam/instanceProfile.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -350,7 +343,6 @@
 							<p>A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to <code>Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1</code>, then you must contact AWS support and ask for a limit increase.
 							WARNING: This is deprecated since <a href="https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md#093-april-12-2017">version 0.9.3 (April 12, 2017)</a>, as &gt;= 2 roles are not possible. See <a href="https://github.com/hashicorp/terraform/issues/11575">issue #11575</a>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#roles">https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#roles</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -359,14 +351,13 @@
 					<div class="tsd-signature tsd-kind-icon">unique<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/instanceProfile.ts:77</li>
+							<li>Defined in iam/instanceProfile.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The [unique ID][1] assigned by AWS.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#unique_id">https://www.terraform.io/docs/providers/aws/r/iam_instance_profile.html#unique_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -399,7 +390,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in iam/instanceProfile.ts:24</li>
+									<li>Defined in iam/instanceProfile.ts:22</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

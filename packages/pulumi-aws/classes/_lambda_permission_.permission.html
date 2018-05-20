@@ -75,7 +75,6 @@
 						<p>Creates a Lambda permission to allow external sources invoking the Lambda function
 						(e.g. CloudWatch Event Rule, SNS or S3).</p>
 					</div>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -139,7 +138,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in lambda/permission.ts:77</li>
+									<li>Defined in lambda/permission.ts:61</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -180,7 +179,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in lambda/permission.ts:87</li>
+									<li>Defined in lambda/permission.ts:71</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -228,14 +227,13 @@
 					<div class="tsd-signature tsd-kind-icon">action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/permission.ts:32</li>
+							<li>Defined in lambda/permission.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The AWS Lambda action you want to allow in this statement. (e.g. <code>lambda:InvokeFunction</code>)</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#action">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#action</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -244,14 +242,13 @@
 					<div class="tsd-signature tsd-kind-icon">function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="_lambda_function_.function.html" class="tsd-signature-type">Function</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/permission.ts:38</li>
+							<li>Defined in lambda/permission.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of the Lambda function whose resource policy you are updating</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#function_name">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#function_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -277,7 +274,7 @@
 					<div class="tsd-signature tsd-kind-icon">principal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/permission.ts:46</li>
+							<li>Defined in lambda/permission.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -286,7 +283,6 @@
 								e.g. <code>s3.amazonaws.com</code>, an AWS account ID, or any valid AWS service principal
 							such as <code>events.amazonaws.com</code> or <code>sns.amazonaws.com</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#principal">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#principal</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -295,7 +291,7 @@
 					<div class="tsd-signature tsd-kind-icon">qualifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/permission.ts:54</li>
+							<li>Defined in lambda/permission.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -304,7 +300,6 @@
 								The permission will then apply to the specific qualified ARN.
 							e.g. <code>arn:aws:lambda:aws-region:acct-id:function:function-name:2</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#qualifier">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#qualifier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -313,14 +308,13 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Account<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/permission.ts:60</li>
+							<li>Defined in lambda/permission.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#source_account">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#source_account</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -329,7 +323,7 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/permission.ts:71</li>
+							<li>Defined in lambda/permission.ts:57</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -341,7 +335,6 @@
 								API Gateway ARNs have a unique structure described
 							<a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html">here</a>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#source_arn">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#source_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -350,14 +343,13 @@
 					<div class="tsd-signature tsd-kind-icon">statement<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/permission.ts:77</li>
+							<li>Defined in lambda/permission.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A unique statement identifier.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#statement_id">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html#statement_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -390,7 +382,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in lambda/permission.ts:23</li>
+									<li>Defined in lambda/permission.ts:21</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

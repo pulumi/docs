@@ -75,7 +75,6 @@
 						<p>Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 						instances to be requested on the Spot market.</p>
 					</div>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -148,7 +147,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/spotFleetRequest.ts:122</li>
+									<li>Defined in ec2/spotFleetRequest.ts:94</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -189,7 +188,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/spotFleetRequest.ts:132</li>
+									<li>Defined in ec2/spotFleetRequest.ts:104</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -237,7 +236,7 @@
 					<div class="tsd-signature tsd-kind-icon">allocation<wbr>Strategy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:32</li>
+							<li>Defined in ec2/spotFleetRequest.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -246,7 +245,6 @@
 								the Spot pools specified by the Spot fleet request. The default is
 							lowestPrice.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#allocation_strategy">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#allocation_strategy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -255,7 +253,7 @@
 					<div class="tsd-signature tsd-kind-icon">client<wbr>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:33</li>
+							<li>Defined in ec2/spotFleetRequest.ts:29</li>
 						</ul>
 					</aside>
 				</section>
@@ -265,7 +263,7 @@
 					<div class="tsd-signature tsd-kind-icon">excess<wbr>Capacity<wbr>Termination<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:41</li>
+							<li>Defined in ec2/spotFleetRequest.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -274,7 +272,6 @@
 								instances should be terminated if the target capacity of the Spot fleet
 							request is decreased below the current size of the Spot fleet.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#excess_capacity_termination_policy">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#excess_capacity_termination_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -283,7 +280,7 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Fleet<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:50</li>
+							<li>Defined in ec2/spotFleetRequest.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -293,7 +290,6 @@
 								CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 							terminateInstancesWithExpiration.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#iam_fleet_role">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#iam_fleet_role</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -319,7 +315,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Interruption<wbr>Behaviour<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:51</li>
+							<li>Defined in ec2/spotFleetRequest.ts:43</li>
 						</ul>
 					</aside>
 				</section>
@@ -329,7 +325,7 @@
 					<div class="tsd-signature tsd-kind-icon">launch<wbr>Specifications<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:59</li>
+							<li>Defined in ec2/spotFleetRequest.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -338,7 +334,6 @@
 								spot-fleet request. Can be specified multiple times to define different bids
 							across different markets and instance types.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#launch_specification">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#launch_specification</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -347,14 +342,13 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:65</li>
+							<li>Defined in ec2/spotFleetRequest.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of elastic load balancer names to add to the Spot fleet.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#load_balancers">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#load_balancers</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -363,14 +357,13 @@
 					<div class="tsd-signature tsd-kind-icon">replace<wbr>Unhealthy<wbr>Instances<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:71</li>
+							<li>Defined in ec2/spotFleetRequest.ts:57</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Indicates whether Spot fleet should replace unhealthy instances. Default <code>false</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#replace_unhealthy_instances">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#replace_unhealthy_instances</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -379,14 +372,13 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Price<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:77</li>
+							<li>Defined in ec2/spotFleetRequest.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The bid price per unit hour.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#spot_price">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#spot_price</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -395,14 +387,13 @@
 					<div class="tsd-signature tsd-kind-icon">spot<wbr>Request<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:83</li>
+							<li>Defined in ec2/spotFleetRequest.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The state of the Spot fleet request.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#spot_request_state">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#spot_request_state</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -411,7 +402,7 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Capacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:91</li>
+							<li>Defined in ec2/spotFleetRequest.ts:71</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -420,7 +411,6 @@
 								target capacity in terms of instances or a performance characteristic that is
 							important to your application workload, such as vCPUs, memory, or I/O.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#target_capacity">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#target_capacity</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -429,7 +419,7 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Group<wbr>Arns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:98</li>
+							<li>Defined in ec2/spotFleetRequest.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -437,7 +427,6 @@
 							<p>A list of <code>aws_alb_target_group</code> ARNs, for use with
 							Application Load Balancing.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#target_group_arns">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#target_group_arns</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -446,7 +435,7 @@
 					<div class="tsd-signature tsd-kind-icon">terminate<wbr>Instances<wbr>With<wbr>Expiration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:105</li>
+							<li>Defined in ec2/spotFleetRequest.ts:81</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -454,7 +443,6 @@
 							<p>Indicates whether running Spot
 							instances should be terminated when the Spot fleet request expires.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#terminate_instances_with_expiration">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#terminate_instances_with_expiration</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -480,7 +468,7 @@
 					<div class="tsd-signature tsd-kind-icon">valid<wbr>From<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:106</li>
+							<li>Defined in ec2/spotFleetRequest.ts:82</li>
 						</ul>
 					</aside>
 				</section>
@@ -490,7 +478,7 @@
 					<div class="tsd-signature tsd-kind-icon">valid<wbr>Until<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:114</li>
+							<li>Defined in ec2/spotFleetRequest.ts:88</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -499,7 +487,6 @@
 								(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance
 							requests are placed or enabled to fulfill the request. Defaults to 24 hours.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#valid_until">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#valid_until</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -508,7 +495,7 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Fulfillment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/spotFleetRequest.ts:122</li>
+							<li>Defined in ec2/spotFleetRequest.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -517,7 +504,6 @@
 								wait for the Spot Request to be fulfilled, and will throw an error if the
 							timeout of 10m is reached.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#wait_for_fulfillment">https://www.terraform.io/docs/providers/aws/r/spot_fleet_request.html#wait_for_fulfillment</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -533,7 +519,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ec2/spotFleetRequest.ts:21</li>
+									<li>Defined in ec2/spotFleetRequest.ts:19</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

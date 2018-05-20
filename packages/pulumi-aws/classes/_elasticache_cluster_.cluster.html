@@ -82,7 +82,6 @@
 						place. You can use the <code>apply_immediately</code> flag to instruct the service to apply the
 						change immediately. Using <code>apply_immediately</code> can result in a brief downtime as the server reboots.
 					See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -164,7 +163,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elasticache/cluster.ts:189</li>
+									<li>Defined in elasticache/cluster.ts:143</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -205,7 +204,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elasticache/cluster.ts:199</li>
+									<li>Defined in elasticache/cluster.ts:153</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -253,7 +252,7 @@
 					<div class="tsd-signature tsd-kind-icon">apply<wbr>Immediately<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:41</li>
+							<li>Defined in elasticache/cluster.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -263,7 +262,6 @@
 								<code>false</code>. See [Amazon ElastiCache Documentation for more information.][1]
 							(Available since v0.6.0)</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#apply_immediately">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#apply_immediately</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -272,14 +270,13 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:47</li>
+							<li>Defined in elasticache/cluster.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <code>availability_zones</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#availability_zone">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -288,14 +285,13 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zones<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:53</li>
+							<li>Defined in elasticache/cluster.ts:45</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>List of Availability Zones in which the cache nodes will be created. If you want to create cache nodes in single-az, use <code>availability_zone</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#availability_zones">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#availability_zones</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -304,14 +300,13 @@
 					<div class="tsd-signature tsd-kind-icon">az<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:59</li>
+							<li>Defined in elasticache/cluster.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster&#39;s region. Valid values for this parameter are <code>single-az</code> or <code>cross-az</code>, default is <code>single-az</code>. If you want to choose <code>cross-az</code>, <code>num_cache_nodes</code> must be greater than <code>1</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#az_mode">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#az_mode</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -320,7 +315,7 @@
 					<div class="tsd-signature tsd-kind-icon">cache<wbr>Nodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:66</li>
+							<li>Defined in elasticache/cluster.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -328,7 +323,6 @@
 							<p>List of node objects including <code>id</code>, <code>address</code>, <code>port</code> and <code>availability_zone</code>.
 							Referenceable e.g. as <code>${aws_elasticache_cluster.bar.cache_nodes.0.address}</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#cache_nodes">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#cache_nodes</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -337,14 +331,13 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:72</li>
+							<li>Defined in elasticache/cluster.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>(Memcached only) The DNS name of the cache cluster without the port appended.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#cluster_address">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#cluster_address</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -353,7 +346,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:79</li>
+							<li>Defined in elasticache/cluster.ts:63</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -361,7 +354,6 @@
 							<p>Group identifier. ElastiCache converts
 							this name to lowercase</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#cluster_id">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#cluster_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -370,14 +362,13 @@
 					<div class="tsd-signature tsd-kind-icon">configuration<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:85</li>
+							<li>Defined in elasticache/cluster.ts:67</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>(Memcached only) The configuration endpoint to allow host discovery.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#configuration_endpoint">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#configuration_endpoint</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -386,7 +377,7 @@
 					<div class="tsd-signature tsd-kind-icon">engine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:92</li>
+							<li>Defined in elasticache/cluster.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -394,7 +385,6 @@
 							<p>Name of the cache engine to be used for this cache cluster.
 							Valid values for this parameter are <code>memcached</code> or <code>redis</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#engine">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#engine</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -403,7 +393,7 @@
 					<div class="tsd-signature tsd-kind-icon">engine<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:100</li>
+							<li>Defined in elasticache/cluster.ts:78</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -412,7 +402,6 @@
 								See <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/SelectEngine.html">Selecting a Cache Engine and Version</a>
 							in the AWS Documentation center for supported versions</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#engine_version">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#engine_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -438,7 +427,7 @@
 					<div class="tsd-signature tsd-kind-icon">maintenance<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:101</li>
+							<li>Defined in elasticache/cluster.ts:79</li>
 						</ul>
 					</aside>
 				</section>
@@ -448,7 +437,7 @@
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:109</li>
+							<li>Defined in elasticache/cluster.ts:85</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -457,7 +446,6 @@
 								<a href="https://aws.amazon.com/elasticache/details#Available_Cache_Node_Types">Available Cache Node Types</a> for
 							supported node types</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#node_type">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#node_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -466,7 +454,7 @@
 					<div class="tsd-signature tsd-kind-icon">notification<wbr>Topic<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:110</li>
+							<li>Defined in elasticache/cluster.ts:86</li>
 						</ul>
 					</aside>
 				</section>
@@ -476,7 +464,7 @@
 					<div class="tsd-signature tsd-kind-icon">num<wbr>Cache<wbr>Nodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:119</li>
+							<li>Defined in elasticache/cluster.ts:93</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -486,7 +474,6 @@
 								value must be between 1 and 20. If this number is reduced on subsequent runs,
 							the highest numbered nodes will be removed.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#num_cache_nodes">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#num_cache_nodes</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -495,7 +482,7 @@
 					<div class="tsd-signature tsd-kind-icon">parameter<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:126</li>
+							<li>Defined in elasticache/cluster.ts:98</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -503,7 +490,6 @@
 							<p>Name of the parameter group to associate
 							with this cache cluster</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#parameter_group_name">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#parameter_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -512,14 +498,13 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:132</li>
+							<li>Defined in elasticache/cluster.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with <code>replication_group_id</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#port">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#port</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -528,14 +513,13 @@
 					<div class="tsd-signature tsd-kind-icon">replication<wbr>Group<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:138</li>
+							<li>Defined in elasticache/cluster.ts:106</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#replication_group_id">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#replication_group_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -544,7 +528,7 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:145</li>
+							<li>Defined in elasticache/cluster.ts:111</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -552,7 +536,6 @@
 							<p>One or more VPC security groups associated
 							with the cache cluster</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#security_group_ids">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#security_group_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -561,7 +544,7 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:152</li>
+							<li>Defined in elasticache/cluster.ts:116</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -569,7 +552,6 @@
 							<p>List of security group
 							names to associate with this cache cluster</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#security_group_names">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#security_group_names</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -578,7 +560,7 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Arns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:153</li>
+							<li>Defined in elasticache/cluster.ts:117</li>
 						</ul>
 					</aside>
 				</section>
@@ -588,14 +570,13 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:159</li>
+							<li>Defined in elasticache/cluster.ts:121</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of a snapshot from which to restore data into the new node group.  Changing the <code>snapshot_name</code> forces a new resource.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#snapshot_name">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#snapshot_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -604,7 +585,7 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Retention<wbr>Limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:169</li>
+							<li>Defined in elasticache/cluster.ts:129</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -615,7 +596,6 @@
 								before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
 							Please note that setting a <code>snapshot_retention_limit</code> is not supported on cache.t1.micro or cache.t2.* cache nodes</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#snapshot_retention_limit">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#snapshot_retention_limit</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -624,7 +604,7 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:176</li>
+							<li>Defined in elasticache/cluster.ts:134</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -632,7 +612,6 @@
 							<p>The daily time range (in UTC) during which ElastiCache will
 							begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#snapshot_window">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#snapshot_window</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -641,7 +620,7 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:183</li>
+							<li>Defined in elasticache/cluster.ts:139</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -649,7 +628,6 @@
 							<p>Name of the subnet group to be used
 							for the cache cluster.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#subnet_group_name">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#subnet_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -658,14 +636,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/cluster.ts:189</li>
+							<li>Defined in elasticache/cluster.ts:143</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#tags">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -698,7 +675,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in elasticache/cluster.ts:29</li>
+									<li>Defined in elasticache/cluster.ts:27</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

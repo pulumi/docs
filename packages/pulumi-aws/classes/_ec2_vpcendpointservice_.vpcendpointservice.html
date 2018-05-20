@@ -80,7 +80,6 @@
 						and a VPC Endpoint Service resource with an <code>allowed_principals</code> attribute. Do not use the same principal ARN in both
 						a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
 					and will overwrite the association.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -146,7 +145,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/vpcEndpointService.ts:84</li>
+									<li>Defined in ec2/vpcEndpointService.ts:64</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -187,7 +186,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/vpcEndpointService.ts:94</li>
+									<li>Defined in ec2/vpcEndpointService.ts:74</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -235,14 +234,13 @@
 					<div class="tsd-signature tsd-kind-icon">acceptance<wbr>Required<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpointService.ts:36</li>
+							<li>Defined in ec2/vpcEndpointService.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <code>true</code> or <code>false</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#acceptance_required">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#acceptance_required</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -251,14 +249,13 @@
 					<div class="tsd-signature tsd-kind-icon">allowed<wbr>Principals<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpointService.ts:42</li>
+							<li>Defined in ec2/vpcEndpointService.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARNs of one or more principals allowed to discover the endpoint service.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#allowed_principals">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#allowed_principals</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -267,14 +264,13 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zones<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpointService.ts:48</li>
+							<li>Defined in ec2/vpcEndpointService.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Availability Zones in which the service is available.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#availability_zones">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#availability_zones</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -283,14 +279,13 @@
 					<div class="tsd-signature tsd-kind-icon">base<wbr>Endpoint<wbr>Dns<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpointService.ts:54</li>
+							<li>Defined in ec2/vpcEndpointService.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The DNS names for the service.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#base_endpoint_dns_names">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#base_endpoint_dns_names</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -316,14 +311,13 @@
 					<div class="tsd-signature tsd-kind-icon">network<wbr>Load<wbr>Balancer<wbr>Arns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpointService.ts:60</li>
+							<li>Defined in ec2/vpcEndpointService.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARNs of one or more Network Load Balancers for the endpoint service.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#network_load_balancer_arns">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#network_load_balancer_arns</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -332,14 +326,13 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Dns<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpointService.ts:66</li>
+							<li>Defined in ec2/vpcEndpointService.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The private DNS name for the service.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#private_dns_name">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#private_dns_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -348,14 +341,13 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpointService.ts:72</li>
+							<li>Defined in ec2/vpcEndpointService.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The service name.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#service_name">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#service_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -364,14 +356,13 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpointService.ts:78</li>
+							<li>Defined in ec2/vpcEndpointService.ts:60</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The service type, <code>Gateway</code> or <code>Interface</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#service_type">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#service_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -380,14 +371,13 @@
 					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpointService.ts:84</li>
+							<li>Defined in ec2/vpcEndpointService.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The state of the VPC endpoint service.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#state">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint_service.html#state</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -420,7 +410,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ec2/vpcEndpointService.ts:27</li>
+									<li>Defined in ec2/vpcEndpointService.ts:25</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

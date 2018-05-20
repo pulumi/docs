@@ -113,14 +113,13 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sns/topicSubscription.ts:144</li>
+							<li>Defined in sns/topicSubscription.ts:124</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the subscription stored as a more user-friendly property</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#arn">https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -129,14 +128,13 @@
 					<div class="tsd-signature tsd-kind-icon">confirmation<wbr>Timeout<wbr>InMinutes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sns/topicSubscription.ts:150</li>
+							<li>Defined in sns/topicSubscription.ts:128</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Integer indicating number of minutes to wait in retying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols (default is 1 minute).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#confirmation_timeout_in_minutes">https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#confirmation_timeout_in_minutes</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -145,7 +143,7 @@
 					<div class="tsd-signature tsd-kind-icon">delivery<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sns/topicSubscription.ts:151</li>
+							<li>Defined in sns/topicSubscription.ts:129</li>
 						</ul>
 					</aside>
 				</section>
@@ -155,14 +153,13 @@
 					<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sns/topicSubscription.ts:157</li>
+							<li>Defined in sns/topicSubscription.ts:133</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The endpoint to send data to, the contents will vary with the protocol. (see below for more information)</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#endpoint">https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#endpoint</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -171,14 +168,13 @@
 					<div class="tsd-signature tsd-kind-icon">endpoint<wbr>Auto<wbr>Confirms<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sns/topicSubscription.ts:163</li>
+							<li>Defined in sns/topicSubscription.ts:137</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Boolean indicating whether the end point is capable of <a href="http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare">auto confirming subscription</a> e.g., PagerDuty (default is false)</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#endpoint_auto_confirms">https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#endpoint_auto_confirms</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -187,14 +183,13 @@
 					<div class="tsd-signature tsd-kind-icon">filter<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sns/topicSubscription.ts:169</li>
+							<li>Defined in sns/topicSubscription.ts:141</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The text of a filter policy to the topic subscription.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#filter_policy">https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#filter_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -203,14 +198,13 @@
 					<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sns/topicSubscription.ts:175</li>
+							<li>Defined in sns/topicSubscription.ts:145</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The protocol to use. The possible values for this are: <code>sqs</code>, <code>sms</code>, <code>lambda</code>, <code>application</code>. (<code>http</code> or <code>https</code> are partially supported, see below) (<code>email</code> is option but unsupported, see below).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#protocol">https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#protocol</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -219,14 +213,13 @@
 					<div class="tsd-signature tsd-kind-icon">raw<wbr>Message<wbr>Delivery<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sns/topicSubscription.ts:181</li>
+							<li>Defined in sns/topicSubscription.ts:149</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Boolean indicating whether or not to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property) (default is false).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#raw_message_delivery">https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#raw_message_delivery</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -235,14 +228,13 @@
 					<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_sns_topic_.topic.html" class="tsd-signature-type">Topic</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in sns/topicSubscription.ts:187</li>
+							<li>Defined in sns/topicSubscription.ts:153</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the SNS topic to subscribe to</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#topic_arn">https://www.terraform.io/docs/providers/aws/r/sns_topic_subscription.html#topic_arn</a>.</p>
 					</div>
 				</section>
 			</section>

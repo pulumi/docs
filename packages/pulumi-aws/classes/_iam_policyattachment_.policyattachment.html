@@ -101,7 +101,6 @@ resource &quot;aws_iam_policy_attachment&quot; &quot;test-attach&quot; {
   policy_arn = &quot;${aws_iam_policy.policy.arn}&quot;
 }
 </code></pre>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html">https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -163,7 +162,7 @@ resource &quot;aws_iam_policy_attachment&quot; &quot;test-attach&quot; {
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in iam/policyAttachment.ts:88</li>
+									<li>Defined in iam/policyAttachment.ts:76</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -204,7 +203,7 @@ resource &quot;aws_iam_policy_attachment&quot; &quot;test-attach&quot; {
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in iam/policyAttachment.ts:98</li>
+									<li>Defined in iam/policyAttachment.ts:86</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -252,14 +251,13 @@ resource &quot;aws_iam_policy_attachment&quot; &quot;test-attach&quot; {
 					<div class="tsd-signature tsd-kind-icon">groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="_iam_group_.group.html" class="tsd-signature-type">Group</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/policyAttachment.ts:64</li>
+							<li>Defined in iam/policyAttachment.ts:60</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The group(s) the policy should be applied to</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html#groups">https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html#groups</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -285,14 +283,13 @@ resource &quot;aws_iam_policy_attachment&quot; &quot;test-attach&quot; {
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/policyAttachment.ts:70</li>
+							<li>Defined in iam/policyAttachment.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the policy. This cannot be an empty string.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html#name">https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -301,14 +298,13 @@ resource &quot;aws_iam_policy_attachment&quot; &quot;test-attach&quot; {
 					<div class="tsd-signature tsd-kind-icon">policy<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_arn_.html#arn" class="tsd-signature-type">ARN</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/policyAttachment.ts:76</li>
+							<li>Defined in iam/policyAttachment.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the policy you want to apply</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html#policy_arn">https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html#policy_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -317,14 +313,13 @@ resource &quot;aws_iam_policy_attachment&quot; &quot;test-attach&quot; {
 					<div class="tsd-signature tsd-kind-icon">roles<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="_iam_role_.role.html" class="tsd-signature-type">Role</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/policyAttachment.ts:82</li>
+							<li>Defined in iam/policyAttachment.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The role(s) the policy should be applied to</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html#roles">https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html#roles</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -350,14 +345,13 @@ resource &quot;aws_iam_policy_attachment&quot; &quot;test-attach&quot; {
 					<div class="tsd-signature tsd-kind-icon">users<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><a href="_iam_user_.user.html" class="tsd-signature-type">User</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/policyAttachment.ts:88</li>
+							<li>Defined in iam/policyAttachment.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The user(s) the policy should be applied to</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html#users">https://www.terraform.io/docs/providers/aws/r/iam_policy_attachment.html#users</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -373,7 +367,7 @@ resource &quot;aws_iam_policy_attachment&quot; &quot;test-attach&quot; {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in iam/policyAttachment.ts:55</li>
+									<li>Defined in iam/policyAttachment.ts:53</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

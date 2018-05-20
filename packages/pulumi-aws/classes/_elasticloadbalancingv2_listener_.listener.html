@@ -75,7 +75,6 @@
 						<p>Provides a Load Balancer Listener resource.</p>
 					</div>
 					<p>~&gt; <strong>Note:</strong> <code>aws_alb_listener</code> is known as <code>aws_lb_listener</code>. The functionality is identical.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_listener.html">https://www.terraform.io/docs/providers/aws/r/lb_listener.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -139,7 +138,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elasticloadbalancingv2/listener.ts:67</li>
+									<li>Defined in elasticloadbalancingv2/listener.ts:51</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -180,7 +179,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elasticloadbalancingv2/listener.ts:77</li>
+									<li>Defined in elasticloadbalancingv2/listener.ts:61</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -228,14 +227,13 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/listener.ts:31</li>
+							<li>Defined in elasticloadbalancingv2/listener.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the listener (matches <code>id</code>)</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_listener.html#arn">https://www.terraform.io/docs/providers/aws/r/lb_listener.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -244,14 +242,13 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/listener.ts:37</li>
+							<li>Defined in elasticloadbalancingv2/listener.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the <a href="/docs/providers/aws/r/lb_listener_certificate.html"><code>aws_lb_listener_certificate</code> resource</a>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_listener.html#certificate_arn">https://www.terraform.io/docs/providers/aws/r/lb_listener.html#certificate_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -260,14 +257,13 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/listener.ts:43</li>
+							<li>Defined in elasticloadbalancingv2/listener.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>An Action block. Action blocks are documented below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_listener.html#default_action">https://www.terraform.io/docs/providers/aws/r/lb_listener.html#default_action</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -293,14 +289,13 @@
 					<div class="tsd-signature tsd-kind-icon">load<wbr>Balancer<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/listener.ts:49</li>
+							<li>Defined in elasticloadbalancingv2/listener.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the load balancer.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_listener.html#load_balancer_arn">https://www.terraform.io/docs/providers/aws/r/lb_listener.html#load_balancer_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -309,14 +304,13 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/listener.ts:55</li>
+							<li>Defined in elasticloadbalancingv2/listener.ts:43</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The port on which the load balancer is listening.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_listener.html#port">https://www.terraform.io/docs/providers/aws/r/lb_listener.html#port</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -325,14 +319,13 @@
 					<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/listener.ts:61</li>
+							<li>Defined in elasticloadbalancingv2/listener.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The protocol for connections from clients to the load balancer. Valid values are <code>TCP</code>, <code>HTTP</code> and <code>HTTPS</code>. Defaults to <code>HTTP</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_listener.html#protocol">https://www.terraform.io/docs/providers/aws/r/lb_listener.html#protocol</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -341,14 +334,13 @@
 					<div class="tsd-signature tsd-kind-icon">ssl<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/listener.ts:67</li>
+							<li>Defined in elasticloadbalancingv2/listener.ts:51</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the SSL Policy for the listener. Required if <code>protocol</code> is <code>HTTPS</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_listener.html#ssl_policy">https://www.terraform.io/docs/providers/aws/r/lb_listener.html#ssl_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -381,7 +373,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in elasticloadbalancingv2/listener.ts:22</li>
+									<li>Defined in elasticloadbalancingv2/listener.ts:20</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

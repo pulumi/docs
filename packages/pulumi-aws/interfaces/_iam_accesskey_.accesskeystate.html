@@ -111,7 +111,7 @@
 					<div class="tsd-signature tsd-kind-icon">encrypted<wbr>Secret<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/accessKey.ts:125</li>
+							<li>Defined in iam/accessKey.ts:107</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -120,7 +120,6 @@
 								~&gt; <strong>NOTE:</strong> The encrypted secret may be decrypted using the command line,
 							for example: <code>terraform output secret | base64 --decode | keybase pgp decrypt</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#encrypted_secret">https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#encrypted_secret</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -129,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">key<wbr>Fingerprint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/accessKey.ts:132</li>
+							<li>Defined in iam/accessKey.ts:112</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -137,7 +136,6 @@
 							<p>The fingerprint of the PGP key used to encrypt
 							the secret</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#key_fingerprint">https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#key_fingerprint</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -146,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">pgp<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/accessKey.ts:139</li>
+							<li>Defined in iam/accessKey.ts:117</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -154,7 +152,6 @@
 							<p>Either a base-64 encoded PGP public key, or a
 							keybase username in the form <code>keybase:some_person_that_exists</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#pgp_key">https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#pgp_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -163,7 +160,7 @@
 					<div class="tsd-signature tsd-kind-icon">secret<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/accessKey.ts:147</li>
+							<li>Defined in iam/accessKey.ts:123</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -172,7 +169,6 @@
 								to the state file. Please supply a <code>pgp_key</code> instead, which will prevent the
 							secret from being stored in plain text</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#secret">https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#secret</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -181,7 +177,7 @@
 					<div class="tsd-signature tsd-kind-icon">ses<wbr>Smtp<wbr>Password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/accessKey.ts:155</li>
+							<li>Defined in iam/accessKey.ts:129</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -190,7 +186,6 @@
 								password by applying <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert">AWS&#39;s documented conversion
 							algorithm</a>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#ses_smtp_password">https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#ses_smtp_password</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -199,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/accessKey.ts:162</li>
+							<li>Defined in iam/accessKey.ts:134</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -207,7 +202,6 @@
 							<p>&quot;Active&quot; or &quot;Inactive&quot;. Keys are initially active, but can be made
 							inactive by other means.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#status">https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#status</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -216,14 +210,13 @@
 					<div class="tsd-signature tsd-kind-icon">user<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/accessKey.ts:168</li>
+							<li>Defined in iam/accessKey.ts:138</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The IAM user to associate with this access key.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#user">https://www.terraform.io/docs/providers/aws/r/iam_access_key.html#user</a>.</p>
 					</div>
 				</section>
 			</section>

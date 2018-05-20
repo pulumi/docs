@@ -75,7 +75,6 @@
 						<p>Provides a resource to manage a GuardDuty detector.</p>
 					</div>
 					<p>~&gt; <strong>NOTE:</strong> Deleting this resource is equivalent to &quot;disabling&quot; GuardDuty for an AWS region, which removes all existing findings. You can set the <code>enable</code> attribute to <code>false</code> to instead &quot;suspend&quot; monitoring and feedback reporting while keeping existing data. See the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_suspend-disable.html">Suspending or Disabling Amazon GuardDuty documentation</a> for more information.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_detector.html">https://www.terraform.io/docs/providers/aws/r/guardduty_detector.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -134,7 +133,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in glacier/detector.ts:37</li>
+									<li>Defined in glacier/detector.ts:31</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -175,7 +174,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in glacier/detector.ts:47</li>
+									<li>Defined in glacier/detector.ts:41</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -223,14 +222,13 @@
 					<div class="tsd-signature tsd-kind-icon">account<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in glacier/detector.ts:31</li>
+							<li>Defined in glacier/detector.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The AWS account ID of the GuardDuty detector</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_detector.html#account_id">https://www.terraform.io/docs/providers/aws/r/guardduty_detector.html#account_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -239,14 +237,13 @@
 					<div class="tsd-signature tsd-kind-icon">enable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in glacier/detector.ts:37</li>
+							<li>Defined in glacier/detector.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Enable monitoring and feedback reporting. Setting to <code>false</code> is equivalent to &quot;suspending&quot; GuardDuty. Defaults to <code>true</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_detector.html#enable">https://www.terraform.io/docs/providers/aws/r/guardduty_detector.html#enable</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -296,7 +293,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in glacier/detector.ts:22</li>
+									<li>Defined in glacier/detector.ts:20</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

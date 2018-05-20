@@ -124,7 +124,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:35</li>
+							<li>Defined in elasticache/getCluster.ts:31</li>
 						</ul>
 					</aside>
 				</section>
@@ -134,7 +134,7 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:43</li>
+							<li>Defined in elasticache/getCluster.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -145,7 +145,6 @@
 								SNS topic that ElastiCache notifications get sent to.</li>
 							</ul>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#availability_zone">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -154,7 +153,7 @@
 					<div class="tsd-signature tsd-kind-icon">cache<wbr>Nodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:50</li>
+							<li>Defined in elasticache/getCluster.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -162,7 +161,6 @@
 							<p>List of node objects including <code>id</code>, <code>address</code>, <code>port</code> and <code>availability_zone</code>.
 							Referenceable e.g. as <code>${data.aws_elasticache_cluster.bar.cache_nodes.0.address}</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#cache_nodes">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#cache_nodes</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -171,14 +169,13 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:56</li>
+							<li>Defined in elasticache/getCluster.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The DNS name of the cache cluster without the port appended.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#cluster_address">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#cluster_address</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -187,14 +184,13 @@
 					<div class="tsd-signature tsd-kind-icon">configuration<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:62</li>
+							<li>Defined in elasticache/getCluster.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The configuration endpoint to allow host discovery.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#configuration_endpoint">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#configuration_endpoint</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -203,14 +199,13 @@
 					<div class="tsd-signature tsd-kind-icon">engine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:68</li>
+							<li>Defined in elasticache/getCluster.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of the cache engine.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#engine">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#engine</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -219,14 +214,13 @@
 					<div class="tsd-signature tsd-kind-icon">engine<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:74</li>
+							<li>Defined in elasticache/getCluster.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Version number of the cache engine.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#engine_version">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#engine_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -235,7 +229,7 @@
 					<div class="tsd-signature tsd-kind-icon">maintenance<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:75</li>
+							<li>Defined in elasticache/getCluster.ts:59</li>
 						</ul>
 					</aside>
 				</section>
@@ -245,14 +239,13 @@
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:81</li>
+							<li>Defined in elasticache/getCluster.ts:63</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The cluster node type.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#node_type">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#node_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -261,7 +254,7 @@
 					<div class="tsd-signature tsd-kind-icon">notification<wbr>Topic<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:82</li>
+							<li>Defined in elasticache/getCluster.ts:64</li>
 						</ul>
 					</aside>
 				</section>
@@ -271,14 +264,13 @@
 					<div class="tsd-signature tsd-kind-icon">num<wbr>Cache<wbr>Nodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:88</li>
+							<li>Defined in elasticache/getCluster.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The number of cache nodes that the cache cluster has.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#num_cache_nodes">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#num_cache_nodes</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -287,14 +279,13 @@
 					<div class="tsd-signature tsd-kind-icon">parameter<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:94</li>
+							<li>Defined in elasticache/getCluster.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of the parameter group associated with this cache cluster.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#parameter_group_name">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#parameter_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -303,7 +294,7 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:101</li>
+							<li>Defined in elasticache/getCluster.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -311,7 +302,6 @@
 							<p>The port number on which each of the cache nodes will
 							accept connections.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#port">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#port</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -320,7 +310,7 @@
 					<div class="tsd-signature tsd-kind-icon">replication<wbr>Group<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:109</li>
+							<li>Defined in elasticache/getCluster.ts:83</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -331,7 +321,6 @@
 								on the cache cluster is performed.</li>
 							</ul>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#replication_group_id">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#replication_group_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -340,14 +329,13 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:115</li>
+							<li>Defined in elasticache/getCluster.ts:87</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>List VPC security groups associated with the cache cluster.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#security_group_ids">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#security_group_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -356,14 +344,13 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:121</li>
+							<li>Defined in elasticache/getCluster.ts:91</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>List of security group names associated with this cache cluster.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#security_group_names">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#security_group_names</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -372,7 +359,7 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Retention<wbr>Limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:128</li>
+							<li>Defined in elasticache/getCluster.ts:96</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -380,7 +367,6 @@
 							<p>The number of days for which ElastiCache will
 							retain automatic cache cluster snapshots before deleting them.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#snapshot_retention_limit">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#snapshot_retention_limit</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -389,7 +375,7 @@
 					<div class="tsd-signature tsd-kind-icon">snapshot<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:135</li>
+							<li>Defined in elasticache/getCluster.ts:101</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -397,7 +383,6 @@
 							<p>The daily time range (in UTC) during which ElastiCache will
 							begin taking a daily snapshot of the cache cluster.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#snapshot_window">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#snapshot_window</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -406,14 +391,13 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:141</li>
+							<li>Defined in elasticache/getCluster.ts:105</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name of the subnet group associated to the cache cluster.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#subnet_group_name">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#subnet_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -422,14 +406,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticache/getCluster.ts:147</li>
+							<li>Defined in elasticache/getCluster.ts:109</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The tags assigned to the resource</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#tags">https://www.terraform.io/docs/providers/aws/d/elasticache_cluster.html#tags</a>.</p>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
