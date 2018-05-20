@@ -94,6 +94,6 @@ For an end-to-end application with a frontend, see the [URL shortener sample](ht
 
 <!-- LINKS -->
 [@pulumi/cloud]: ../reference/cloud.html
-[cloud.HttpEndpoint]: ../packages/pulumi-cloud/modules/_httpendpoint_.html
-[cloud.Table]: ../packages/pulumi-cloud/modules/_table_.html
+[cloud.HttpEndpoint]: ../packages/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html
+[cloud.Table]: ../packages/pulumi-cloud/interfaces/_table_.table.html
 <!-- END LINKS -->

@@ -35,7 +35,7 @@ toc:
   - title: Update
     path: /reference/cli/pulumi_update.html
 - title: API reference
-  path: /reference/apis
+  path: /reference/apis.html
 - title: Programming Model
   path: /reference/programming-model
   section:

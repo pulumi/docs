@@ -23,6 +23,11 @@ title: "Change Log"
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v122">0.12.2</a></th>
+            <td>2018/05/19</td>
+            <td>{% include sdk-links.html version='0.12.2' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v121">0.12.1</a></th>
             <td>2018/05/09</td>
             <td>{% include sdk-links.html version='0.12.1' %}</td>
@@ -42,6 +47,35 @@ title: "Change Log"
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
+## v0.12.2 {#v122}
+
+Released on May 19, 2018
+
+With the v0.12.2 CLI release, we have also released the following packages:
+- [@pulumi/aws v0.13.0](https://www.npmjs.com/package/@pulumi/aws)
+- [@pulumi/aws-infra v0.13.0](https://www.npmjs.com/package/@pulumi/aws-infra)
+- [@pulumi/azure v0.12.2](https://www.npmjs.com/package/@pulumi/azure)
+- [@pulumi/cloud v0.13.0](https://www.npmjs.com/package/@pulumi/cloud)
+- [@pulumi/kubernetes v0.13.0](https://www.npmjs.com/package/@pulumi/kubernetes)
+- [@pulumi/pulumi v0.12.2](https://www.npmjs.com/package/@pulumi/pulumi)
+
+### Pulumi CLI 
+
+#### Fixed
+
+-  Improve the promise leak experience ([pulumi/pulumi#1374](https://github.com/pulumi/pulumi/pull/1374)). Fixes an issue where a promise leak could be erroneously reported. Also, show simple error message by default, unless the environment variable `PULUMI_DEBUG_PROMISE_LEAKS` is set.
+
+### @pulumi-aws v0.13.0
+
+#### Added
+
+-  Allow passing an existing `Role` to `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). [FunctionOptions](../packages/pulumi-aws/interfaces/_serverless_function_.functionoptions.html) now includes a `Role` property, for scenarios where you wish to use an existing `Role` or share one across multiple Lambda functions.
+
+#### Changed 
+-  (**Breaking**) Support configuring the paths to include in `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). Previously, all files in the directory would be included in the Lambda deployment package. With this change, only the generated `__index.js` and `./node_modules` are included by default. To add other files, use the new `includePaths` property in [FunctionOptions](../packages/pulumi-aws/interfaces/_serverless_function_.functionoptions.html).
+
+-  (**Breaking**) Rename `aws.s3.Bucket#websites` to the singular `aws.s3.Bucket#website`. ([pulumi/pulumi-aws#207](https://github.com/pulumi/pulumi-aws/pull/207)). Since this property contains only one element, it has been renamed to `website` (singular) and is no longer an array property.
+
 ## v0.12.1 {#v121}
 
 Released on May 9, 2018
@@ -54,11 +88,14 @@ Released on May 9, 2018
 
 -  Several improvements to the `pulumi update` CLI experience ([pulumi/pulumi#1260](https://github.com/pulumi/pulumi/pull/1260)): a tree view display, more details from logs during deployments, and rendering of stack outputs at the end of updates.
 
--  A new `@pulumi/aws-infra` package is available which contains useful AWS infrastructure components for `Network` and `Cluster` (([pulumi/pulumi-cloud#472](https://github.com/pulumi/pulumi-cloud/pull/472)).
+-  A new `@pulumi/aws-infra` package is available which contains useful AWS infrastructure components for `Network` and `Cluster` ([pulumi/pulumi-cloud#472](https://github.com/pulumi/pulumi-cloud/pull/472)).
 
 ### Changed 
 
 -  (**Breaking**) Removed the `LogCollector` and `onError` handler from `@pulumi-cloud` ([pulumi/pulumi-cloud#474](https://github.com/pulumi/pulumi-cloud/pull/474)).  These were previously created in all stacks using `@pulumi/cloud`, but in practice were not being used.
+
+-  (**Breaking**) Remove the `--preview` flag in `pulumi update`, in favor of reintroducing `pulumi preview` ([pulumi/pulumi#1290](https://github.com/pulumi/pulumi/pull/1290)). Also, to accept an update without the interactive prompt, use the `--yes` flag, rather than `--force`.
+
 
 ### Fixed
 
@@ -103,7 +140,6 @@ Released on May 9, 2018
 -  [pulumi/pulumi#1297](https://github.com/pulumi/pulumi/pull/1297): Disable interactive mode for a CI/CD server.
 -  [pulumi/pulumi#1295](https://github.com/pulumi/pulumi/pull/1295): Use nicer URLs for stacks on the new identity model
 -  [pulumi/pulumi#1293](https://github.com/pulumi/pulumi/pull/1293): Improve two minor UX things in the CLI
--  [pulumi/pulumi#1290](https://github.com/pulumi/pulumi/pull/1290): Revise the way previews are controlled
 -  [pulumi/pulumi#1289](https://github.com/pulumi/pulumi/pull/1289): Remove SDK dependencies
 -  [pulumi/pulumi#1288](https://github.com/pulumi/pulumi/pull/1288): Add commands to generate goodies
 -  [pulumi/pulumi#1287](https://github.com/pulumi/pulumi/pull/1287): Fix login/logout issue against non api.pulumi.com clouds
