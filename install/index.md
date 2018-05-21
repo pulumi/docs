@@ -78,7 +78,7 @@ To install Pulumi manually, follow the steps below for your platform.
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">get_app</i>
                 &nbsp;
-                <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows.x64.zip">Windows x64</a>
+                <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows-x64.zip">Windows x64</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -90,7 +90,7 @@ To install Pulumi manually, follow the steps below for your platform.
         <div class="mdl-card__actions mdl-card--border">
             <a
                     id="windows-download-link"
-                    href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows.x64.zip" role="button">
+                    href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows-x64.zip" role="button">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                     {% octicon cloud-download height:24 %} DOWNLOAD
                 </button>
