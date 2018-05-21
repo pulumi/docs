@@ -31,7 +31,7 @@ To install Pulumi manually, follow the steps below for your platform.
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">get_app</i>
                 &nbsp;
-                <a href="/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz">macOS x64</a>
+                <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin-x64.tar.gz">macOS x64</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -43,7 +43,7 @@ To install Pulumi manually, follow the steps below for your platform.
         <div class="mdl-card__actions mdl-card--border">
             <a
                     id="macos-download-link"
-                    href="/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz" role="button">
+                    href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin-x64.tar.gz" role="button">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                     {% octicon cloud-download height:24 %} DOWNLOAD
                 </button>
@@ -55,7 +55,7 @@ To install Pulumi manually, follow the steps below for your platform.
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">get_app</i>
                 &nbsp;
-                <a href="/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz">Linux x64</a>
+                <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz">Linux x64</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -66,7 +66,7 @@ To install Pulumi manually, follow the steps below for your platform.
         <div class="mdl-card__actions mdl-card--border">
             <a
                     id="linux-download-link"
-                    href="/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz" role="button">
+                    href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz" role="button">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                     {% octicon cloud-download height:24 %} DOWNLOAD
                 </button>
@@ -78,7 +78,7 @@ To install Pulumi manually, follow the steps below for your platform.
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">get_app</i>
                 &nbsp;
-                <a href="/releases/pulumi-v{{page.installer_version}}-windows.x64.zip">Windows x64</a>
+                <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows.x64.zip">Windows x64</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -90,7 +90,7 @@ To install Pulumi manually, follow the steps below for your platform.
         <div class="mdl-card__actions mdl-card--border">
             <a
                     id="windows-download-link"
-                    href="/releases/pulumi-v{{page.installer_version}}-windows.x64.zip" role="button">
+                    href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows.x64.zip" role="button">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                     {% octicon cloud-download height:24 %} DOWNLOAD
                 </button>
@@ -105,7 +105,7 @@ To install Pulumi manually, follow the steps below for your platform.
 
 Windows 8 and 10 are supported.
 
-1.  Download [Pulumi {{page.installer_version}} for Windows x64](/releases/pulumi-v{{page.installer_version}}-windows.x64.zip).
+1.  Download [Pulumi {{page.installer_version}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows.x64.zip).
 
 1.  Copy the extracted zipfile contents to a folder such as `C:\pulumi`.
 
@@ -117,7 +117,7 @@ Windows 8 and 10 are supported.
 
 macOS Sierra (10.12) or later is required. 
 
-1.  Download [Pulumi {{page.installer_version}} for macOS](/releases/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz).
+1.  Download [Pulumi {{page.installer_version}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz).
 
 1.  Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
 
@@ -138,7 +138,7 @@ macOS Sierra (10.12) or later is required.
 
 We provide a pre-built binary for Linux.
 
-1.  Download [Pulumi {{page.installer_version}} for Linux x64](/releases/pulumi-v{{page.installer_version}}-linux.x64.tar.gz).
+1.  Download [Pulumi {{page.installer_version}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux.x64.tar.gz).
 
 1.  Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
 
