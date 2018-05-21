@@ -9,6 +9,8 @@ title: "Configure Pulumi for AWS"
 
 The [Pulumi AWS provider] uses the AWS SDK to manage and provision resources. 
 
+> Your AWS credentials are never read directly by Pulumi, nor are they stored in the service. When you run the Pulumi CLI, it provisions resources using the AWS SDK.
+
 1.  If you haven't already, [install the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html). If you're using [Homebrew](https://brew.sh/) on macOS, you can use the community-managed [awscli](http://formulae.brew.sh/formula/awscli) via `brew install awscli`.
 
 2.  If necessary, [create an IAM user in the AWS console][iam-user-console] with type  **Programmatic access**. The IAM user should have sufficient rights to deploy and manage your program's resources. If you know the precise kinds of resources you wish to create and delete, you can restrict the IAM user accordingly.
