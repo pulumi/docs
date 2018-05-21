@@ -29,7 +29,7 @@ installation on your system.
 
 `make test` runs a broken link checker tool against http://localhost:4000.
 
-`make generate` will regenerate the TypeScript documentation if needed. The generated documentation is placed in the [packages](packages/) folder. This is extremely hacky.
+`make generate` will regenerate the TypeScript documentation if needed, as well as the CLI documentation in [references/cli](reference/cli). The generated API documentation is placed in the [packages](packages/) folder. This is extremely hacky.
 
    Prerequisites:
   - Ensure that repos `pulumi`, `pulumi-aws`, and `pulumi-cloud` are peers to `docs`, and have been checked out to the right release branch.

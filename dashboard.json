@@ -36,6 +36,11 @@
         "icon": "radio",
         "items": [
             {
+                "title": "Pulumi 0.12.2 now available",
+                "url": "https://docs.pulumi.com/install/changelog.html#v122",
+                "date": "2018-05-19"
+            },
+            {
                 "title": "Pulumi 0.12.1 now available",
                 "url": "https://docs.pulumi.com/install/changelog.html#v121",
                 "date": "2018-05-09"
