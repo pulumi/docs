@@ -81,7 +81,6 @@
 						defined in-line. At this time you cannot use a Security Group with in-line rules
 						in conjunction with any Security Group Rule resources. Doing so will cause
 					a conflict of rule settings and will overwrite rules.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -149,7 +148,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/securityGroupRule.ts:101</li>
+									<li>Defined in ec2/securityGroupRule.ts:77</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -190,7 +189,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/securityGroupRule.ts:111</li>
+									<li>Defined in ec2/securityGroupRule.ts:87</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -238,14 +237,13 @@
 					<div class="tsd-signature tsd-kind-icon">cidr<wbr>Blocks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:37</li>
+							<li>Defined in ec2/securityGroupRule.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>List of CIDR blocks. Cannot be specified with <code>source_security_group_id</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#cidr_blocks">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#cidr_blocks</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -254,14 +252,13 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:43</li>
+							<li>Defined in ec2/securityGroupRule.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Description of the rule.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#description">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -270,14 +267,13 @@
 					<div class="tsd-signature tsd-kind-icon">from<wbr>Port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:49</li>
+							<li>Defined in ec2/securityGroupRule.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The start port (or ICMP type number if protocol is &quot;icmp&quot;).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#from_port">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#from_port</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -303,14 +299,13 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Cidr<wbr>Blocks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:55</li>
+							<li>Defined in ec2/securityGroupRule.ts:45</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>List of IPv6 CIDR blocks.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#ipv6_cidr_blocks">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#ipv6_cidr_blocks</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -319,7 +314,7 @@
 					<div class="tsd-signature tsd-kind-icon">prefix<wbr>List<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:62</li>
+							<li>Defined in ec2/securityGroupRule.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -327,7 +322,6 @@
 							<p>List of prefix list IDs (for allowing access to VPC endpoints).
 							Only valid with <code>egress</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#prefix_list_ids">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#prefix_list_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -336,14 +330,13 @@
 					<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:68</li>
+							<li>Defined in ec2/securityGroupRule.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The protocol. If not icmp, tcp, udp, or all use the <a href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#protocol">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#protocol</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -352,14 +345,13 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:74</li>
+							<li>Defined in ec2/securityGroupRule.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The security group to apply this rule to.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#security_group_id">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#security_group_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -368,7 +360,7 @@
 					<div class="tsd-signature tsd-kind-icon">self<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:81</li>
+							<li>Defined in ec2/securityGroupRule.ts:63</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -376,7 +368,6 @@
 							<p>If true, the security group itself will be added as
 							a source to this ingress rule.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#self">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#self</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -385,7 +376,7 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Security<wbr>Group<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:88</li>
+							<li>Defined in ec2/securityGroupRule.ts:68</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -393,7 +384,6 @@
 							<p>The security group id to allow access to/from,
 							depending on the <code>type</code>. Cannot be specified with <code>cidr_blocks</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#source_security_group_id">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#source_security_group_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -402,14 +392,13 @@
 					<div class="tsd-signature tsd-kind-icon">to<wbr>Port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:94</li>
+							<li>Defined in ec2/securityGroupRule.ts:72</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The end port (or ICMP code if protocol is &quot;icmp&quot;).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#to_port">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#to_port</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -418,7 +407,7 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/securityGroupRule.ts:101</li>
+							<li>Defined in ec2/securityGroupRule.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -426,7 +415,6 @@
 							<p>The type of rule being created. Valid options are <code>ingress</code> (inbound)
 							or <code>egress</code> (outbound).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#type">https://www.terraform.io/docs/providers/aws/r/security_group_rule.html#type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -459,7 +447,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ec2/securityGroupRule.ts:28</li>
+									<li>Defined in ec2/securityGroupRule.ts:26</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

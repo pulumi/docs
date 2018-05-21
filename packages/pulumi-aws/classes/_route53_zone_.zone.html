@@ -74,7 +74,6 @@
 					<div class="lead">
 						<p>Provides a Route53 Hosted Zone resource.</p>
 					</div>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html">https://www.terraform.io/docs/providers/aws/r/route53_zone.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -140,7 +139,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in route53/zone.ts:81</li>
+									<li>Defined in route53/zone.ts:61</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -181,7 +180,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in route53/zone.ts:91</li>
+									<li>Defined in route53/zone.ts:71</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -229,14 +228,13 @@
 					<div class="tsd-signature tsd-kind-icon">comment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/zone.ts:29</li>
+							<li>Defined in route53/zone.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A comment for the hosted zone. Defaults to &#39;Managed by Terraform&#39;.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html#comment">https://www.terraform.io/docs/providers/aws/r/route53_zone.html#comment</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -245,7 +243,7 @@
 					<div class="tsd-signature tsd-kind-icon">delegation<wbr>Set<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/zone.ts:36</li>
+							<li>Defined in route53/zone.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -253,7 +251,6 @@
 							<p>The ID of the reusable delegation set whose NS records you want to assign to the hosted zone.
 							Conflicts w/ <code>vpc_id</code> as delegation sets can only be used for public zones.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html#delegation_set_id">https://www.terraform.io/docs/providers/aws/r/route53_zone.html#delegation_set_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -262,7 +259,7 @@
 					<div class="tsd-signature tsd-kind-icon">force<wbr>Destroy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/zone.ts:43</li>
+							<li>Defined in route53/zone.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -270,7 +267,6 @@
 							<p>Whether to destroy all records (possibly managed outside of Terraform)
 							in the zone when destroying the zone.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html#force_destroy">https://www.terraform.io/docs/providers/aws/r/route53_zone.html#force_destroy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -296,14 +292,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/zone.ts:49</li>
+							<li>Defined in route53/zone.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>This is the name of the hosted zone.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html#name">https://www.terraform.io/docs/providers/aws/r/route53_zone.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -312,7 +307,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Servers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/zone.ts:56</li>
+							<li>Defined in route53/zone.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -320,7 +315,6 @@
 							<p>A list of name servers in associated (or default) delegation set.
 							Find more about delegation sets in <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html">AWS docs</a>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html#name_servers">https://www.terraform.io/docs/providers/aws/r/route53_zone.html#name_servers</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -329,14 +323,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/zone.ts:62</li>
+							<li>Defined in route53/zone.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the zone.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html#tags">https://www.terraform.io/docs/providers/aws/r/route53_zone.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -362,7 +355,7 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/zone.ts:69</li>
+							<li>Defined in route53/zone.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -370,7 +363,6 @@
 							<p>The VPC to associate with a private hosted zone. Specifying <code>vpc_id</code> will create a private hosted zone.
 							Conflicts w/ <code>delegation_set_id</code> as delegation sets can only be used for public zones.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html#vpc_id">https://www.terraform.io/docs/providers/aws/r/route53_zone.html#vpc_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -379,14 +371,13 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Region<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/zone.ts:75</li>
+							<li>Defined in route53/zone.ts:57</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The VPC&#39;s region. Defaults to the region of the AWS provider.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html#vpc_region">https://www.terraform.io/docs/providers/aws/r/route53_zone.html#vpc_region</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -395,14 +386,13 @@
 					<div class="tsd-signature tsd-kind-icon">zone<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/zone.ts:81</li>
+							<li>Defined in route53/zone.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Hosted Zone ID. This can be referenced by zone records.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html#zone_id">https://www.terraform.io/docs/providers/aws/r/route53_zone.html#zone_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -418,7 +408,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in route53/zone.ts:20</li>
+									<li>Defined in route53/zone.ts:18</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

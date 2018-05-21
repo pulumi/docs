@@ -76,7 +76,6 @@
 					</div>
 					<p>~&gt; <strong>Note:</strong> All arguments including the PEM encoded certificate will be stored in the raw state as plain-text.
 					<a href="/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dms_certificate.html">https://www.terraform.io/docs/providers/aws/r/dms_certificate.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -137,7 +136,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in dms/certificate.ts:50</li>
+									<li>Defined in dms/certificate.ts:40</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -178,7 +177,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in dms/certificate.ts:60</li>
+									<li>Defined in dms/certificate.ts:50</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -226,14 +225,13 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dms/certificate.ts:32</li>
+							<li>Defined in dms/certificate.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name (ARN) for the certificate.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dms_certificate.html#certificate_arn">https://www.terraform.io/docs/providers/aws/r/dms_certificate.html#certificate_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -242,14 +240,13 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dms/certificate.ts:38</li>
+							<li>Defined in dms/certificate.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The certificate identifier.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dms_certificate.html#certificate_id">https://www.terraform.io/docs/providers/aws/r/dms_certificate.html#certificate_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -258,14 +255,13 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Pem<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dms/certificate.ts:44</li>
+							<li>Defined in dms/certificate.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The contents of the .pem X.509 certificate file for the certificate. Either <code>certificate_pem</code> or <code>certificate_wallet</code> must be set.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dms_certificate.html#certificate_pem">https://www.terraform.io/docs/providers/aws/r/dms_certificate.html#certificate_pem</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -274,14 +270,13 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Wallet<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dms/certificate.ts:50</li>
+							<li>Defined in dms/certificate.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The contents of the Oracle Wallet certificate for use with SSL. Either <code>certificate_pem</code> or <code>certificate_wallet</code> must be set.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dms_certificate.html#certificate_wallet">https://www.terraform.io/docs/providers/aws/r/dms_certificate.html#certificate_wallet</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -331,7 +326,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in dms/certificate.ts:23</li>
+									<li>Defined in dms/certificate.ts:21</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

@@ -75,7 +75,6 @@
 						<p>Provides a resource to manage a DynamoDB Global Table. These are layered on top of existing DynamoDB Tables.</p>
 					</div>
 					<p>~&gt; Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html">AWS DynamoDB Global Table Requirements</a> for more information.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_global_table.html">https://www.terraform.io/docs/providers/aws/r/dynamodb_global_table.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -135,7 +134,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in dynamodb/globalTable.ts:43</li>
+									<li>Defined in dynamodb/globalTable.ts:35</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -176,7 +175,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in dynamodb/globalTable.ts:53</li>
+									<li>Defined in dynamodb/globalTable.ts:45</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -224,14 +223,13 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/globalTable.ts:31</li>
+							<li>Defined in dynamodb/globalTable.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the DynamoDB Global Table</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_global_table.html#arn">https://www.terraform.io/docs/providers/aws/r/dynamodb_global_table.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -257,14 +255,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/globalTable.ts:37</li>
+							<li>Defined in dynamodb/globalTable.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the global table. Must match underlying DynamoDB Table names in all regions.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_global_table.html#name">https://www.terraform.io/docs/providers/aws/r/dynamodb_global_table.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -273,14 +270,13 @@
 					<div class="tsd-signature tsd-kind-icon">replicas<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dynamodb/globalTable.ts:43</li>
+							<li>Defined in dynamodb/globalTable.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Underlying DynamoDB Table. At least 1 replica must be defined. See below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dynamodb_global_table.html#replica">https://www.terraform.io/docs/providers/aws/r/dynamodb_global_table.html#replica</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -313,7 +309,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in dynamodb/globalTable.ts:22</li>
+									<li>Defined in dynamodb/globalTable.ts:20</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

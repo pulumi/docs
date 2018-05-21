@@ -76,7 +76,6 @@
 					</div>
 					<p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]
 					For information about function aliases, see [CreateAlias][2] in the API docs.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_alias.html">https://www.terraform.io/docs/providers/aws/r/lambda_alias.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -138,7 +137,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in lambda/alias.ts:56</li>
+									<li>Defined in lambda/alias.ts:44</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -179,7 +178,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in lambda/alias.ts:66</li>
+									<li>Defined in lambda/alias.ts:54</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -227,14 +226,13 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/alias.ts:32</li>
+							<li>Defined in lambda/alias.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name (ARN) identifying your Lambda function alias.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#arn">https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -243,14 +241,13 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/alias.ts:38</li>
+							<li>Defined in lambda/alias.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Description of the alias.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#description">https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -259,14 +256,13 @@
 					<div class="tsd-signature tsd-kind-icon">function<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/alias.ts:44</li>
+							<li>Defined in lambda/alias.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The function ARN of the Lambda function for which you want to create an alias.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#function_name">https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#function_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -275,14 +271,13 @@
 					<div class="tsd-signature tsd-kind-icon">function<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/alias.ts:50</li>
+							<li>Defined in lambda/alias.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Lambda function version for which you are creating the alias. Pattern: <code>(\$LATEST|[0-9]+)</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#function_version">https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#function_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -308,14 +303,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lambda/alias.ts:56</li>
+							<li>Defined in lambda/alias.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Name for the alias you are creating. Pattern: <code>(?!^[0-9]+$)([a-zA-Z0-9-_]+)</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#name">https://www.terraform.io/docs/providers/aws/r/lambda_alias.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -348,7 +342,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in lambda/alias.ts:23</li>
+									<li>Defined in lambda/alias.ts:21</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

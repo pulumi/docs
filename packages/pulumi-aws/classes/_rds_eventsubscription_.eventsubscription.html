@@ -74,7 +74,6 @@
 					<div class="lead">
 						<p>Provides a DB event subscription resource.</p>
 					</div>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html">https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -140,7 +139,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in rds/eventSubscription.ts:67</li>
+									<li>Defined in rds/eventSubscription.ts:51</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -181,7 +180,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in rds/eventSubscription.ts:77</li>
+									<li>Defined in rds/eventSubscription.ts:61</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -229,7 +228,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/eventSubscription.ts:24</li>
+							<li>Defined in rds/eventSubscription.ts:22</li>
 						</ul>
 					</aside>
 				</section>
@@ -239,7 +238,7 @@
 					<div class="tsd-signature tsd-kind-icon">customer<wbr>Aws<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/eventSubscription.ts:25</li>
+							<li>Defined in rds/eventSubscription.ts:23</li>
 						</ul>
 					</aside>
 				</section>
@@ -249,14 +248,13 @@
 					<div class="tsd-signature tsd-kind-icon">enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/eventSubscription.ts:31</li>
+							<li>Defined in rds/eventSubscription.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A boolean flag to enable/disable the subscription. Defaults to true.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#enabled">https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#enabled</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -265,14 +263,13 @@
 					<div class="tsd-signature tsd-kind-icon">event<wbr>Categories<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/eventSubscription.ts:37</li>
+							<li>Defined in rds/eventSubscription.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of event categories for a SourceType that you want to subscribe to. See <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide//USER_Events.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide//USER_Events.html</a></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#event_categories">https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#event_categories</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -298,14 +295,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/eventSubscription.ts:43</li>
+							<li>Defined in rds/eventSubscription.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the DB event subscription.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#name">https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -314,14 +310,13 @@
 					<div class="tsd-signature tsd-kind-icon">sns<wbr>Topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/eventSubscription.ts:49</li>
+							<li>Defined in rds/eventSubscription.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The SNS topic to send events to.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#sns_topic">https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#sns_topic</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -330,14 +325,13 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/eventSubscription.ts:55</li>
+							<li>Defined in rds/eventSubscription.ts:43</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#source_ids">https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#source_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -346,14 +340,13 @@
 					<div class="tsd-signature tsd-kind-icon">source<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/eventSubscription.ts:61</li>
+							<li>Defined in rds/eventSubscription.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of source that will be generating the events.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#source_type">https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#source_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -362,14 +355,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/eventSubscription.ts:67</li>
+							<li>Defined in rds/eventSubscription.ts:51</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#tags">https://www.terraform.io/docs/providers/aws/r/db_event_subscription.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -402,7 +394,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in rds/eventSubscription.ts:20</li>
+									<li>Defined in rds/eventSubscription.ts:18</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

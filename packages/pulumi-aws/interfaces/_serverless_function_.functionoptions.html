@@ -69,6 +69,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>FunctionOptions provides configuration options for the serverless Function.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -85,8 +92,10 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#deadletterconfig" class="tsd-kind-icon">dead<wbr>Letter<wbr>Config</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#includepaths" class="tsd-kind-icon">include<wbr>Paths</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#memorysize" class="tsd-kind-icon">memory<wbr>Size</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#policies" class="tsd-kind-icon">policies</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#role" class="tsd-kind-icon">role</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#runtime" class="tsd-kind-icon">runtime</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#timeout" class="tsd-kind-icon">timeout</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_serverless_function_.functionoptions.html#vpcconfig" class="tsd-kind-icon">vpc<wbr>Config</a></li>
@@ -103,9 +112,14 @@
 					<div class="tsd-signature tsd-kind-icon">dead<wbr>Letter<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in serverless/function.ts:36</li>
+							<li>Defined in serverless/function.ts:59</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A dead letter target ARN to send function invocation failures to.</p>
+						</div>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -116,24 +130,64 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="includepaths" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> include<wbr>Paths</h3>
+					<div class="tsd-signature tsd-kind-icon">include<wbr>Paths<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in serverless/function.ts:70</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The paths relative to the program folder to include in the Lambda upload.  Default is <code>[&quot;node_modules&quot;]</code>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="memorysize" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> memory<wbr>Size</h3>
 					<div class="tsd-signature tsd-kind-icon">memory<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in serverless/function.ts:34</li>
+							<li>Defined in serverless/function.ts:51</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The memory size limit to use for execution of the Function.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="policies" class="tsd-anchor"></a>
-					<h3>policies</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> policies</h3>
 					<div class="tsd-signature tsd-kind-icon">policies<span class="tsd-signature-symbol">:</span> <a href="../modules/_arn_.html#arn" class="tsd-signature-type">ARN</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in serverless/function.ts:32</li>
+							<li>Defined in serverless/function.ts:39</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of IAM policy ARNs to attach to the Function.  Must provide either [policies] or [role].</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="role" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> role</h3>
+					<div class="tsd-signature tsd-kind-icon">role<span class="tsd-signature-symbol">:</span> <a href="../classes/_iam_role_.role.html" class="tsd-signature-type">Role</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in serverless/function.ts:43</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A pre-created role to use for the Function.  Must provide either [policies] or [role].</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="runtime" class="tsd-anchor"></a>
@@ -141,9 +195,14 @@
 					<div class="tsd-signature tsd-kind-icon">runtime<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">lambda.Runtime</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in serverless/function.ts:35</li>
+							<li>Defined in serverless/function.ts:55</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Lambda runtime to use.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="timeout" class="tsd-anchor"></a>
@@ -151,9 +210,14 @@
 					<div class="tsd-signature tsd-kind-icon">timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in serverless/function.ts:33</li>
+							<li>Defined in serverless/function.ts:47</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A timout, in seconds, to apply to the Function.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="vpcconfig" class="tsd-anchor"></a>
@@ -161,9 +225,14 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in serverless/function.ts:37</li>
+							<li>Defined in serverless/function.ts:63</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Configuration for a VPC to run the Function within.</p>
+						</div>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
@@ -206,10 +275,16 @@
 								<a href="_serverless_function_.functionoptions.html#deadletterconfig" class="tsd-kind-icon">dead<wbr>Letter<wbr>Config</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_serverless_function_.functionoptions.html#includepaths" class="tsd-kind-icon">include<wbr>Paths</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_serverless_function_.functionoptions.html#memorysize" class="tsd-kind-icon">memory<wbr>Size</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_serverless_function_.functionoptions.html#policies" class="tsd-kind-icon">policies</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_serverless_function_.functionoptions.html#role" class="tsd-kind-icon">role</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_serverless_function_.functionoptions.html#runtime" class="tsd-kind-icon">runtime</a>

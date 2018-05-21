@@ -76,7 +76,6 @@
 					</div>
 					<p>~&gt; <strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 					<a href="/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rds_db_instance.html">https://www.terraform.io/docs/providers/aws/r/opsworks_rds_db_instance.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -137,7 +136,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in opsworks/rdsDbInstance.ts:50</li>
+									<li>Defined in opsworks/rdsDbInstance.ts:40</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -178,7 +177,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in opsworks/rdsDbInstance.ts:60</li>
+									<li>Defined in opsworks/rdsDbInstance.ts:50</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -226,14 +225,13 @@
 					<div class="tsd-signature tsd-kind-icon">db<wbr>Password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/rdsDbInstance.ts:32</li>
+							<li>Defined in opsworks/rdsDbInstance.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A db password</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rds_db_instance.html#db_password">https://www.terraform.io/docs/providers/aws/r/opsworks_rds_db_instance.html#db_password</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -242,14 +240,13 @@
 					<div class="tsd-signature tsd-kind-icon">db<wbr>User<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/rdsDbInstance.ts:38</li>
+							<li>Defined in opsworks/rdsDbInstance.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A db username</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rds_db_instance.html#db_user">https://www.terraform.io/docs/providers/aws/r/opsworks_rds_db_instance.html#db_user</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -275,14 +272,13 @@
 					<div class="tsd-signature tsd-kind-icon">rds<wbr>DbInstance<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/rdsDbInstance.ts:44</li>
+							<li>Defined in opsworks/rdsDbInstance.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The db instance to register for this stack. Changing this will force a new resource.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rds_db_instance.html#rds_db_instance_arn">https://www.terraform.io/docs/providers/aws/r/opsworks_rds_db_instance.html#rds_db_instance_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -291,14 +287,13 @@
 					<div class="tsd-signature tsd-kind-icon">stack<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in opsworks/rdsDbInstance.ts:50</li>
+							<li>Defined in opsworks/rdsDbInstance.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The stack to register a db inatance for. Changing this will force a new resource.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/opsworks_rds_db_instance.html#stack_id">https://www.terraform.io/docs/providers/aws/r/opsworks_rds_db_instance.html#stack_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -331,7 +326,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in opsworks/rdsDbInstance.ts:23</li>
+									<li>Defined in opsworks/rdsDbInstance.ts:21</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

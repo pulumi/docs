@@ -77,7 +77,6 @@
 					<p>-&gt; <strong>Note:</strong> For cross-account (requester&#39;s AWS account differs from the accepter&#39;s AWS account) or inter-region
 						VPC Peering Connections use the <code>aws_vpc_peering_connection</code> resource to manage the requester&#39;s side of the
 					connection and use the <code>aws_vpc_peering_connection_accepter</code> resource to manage the accepter&#39;s side of the connection.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html">https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -143,7 +142,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/vpcPeeringConnection.ts:87</li>
+									<li>Defined in ec2/vpcPeeringConnection.ts:67</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -184,7 +183,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/vpcPeeringConnection.ts:97</li>
+									<li>Defined in ec2/vpcPeeringConnection.ts:77</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -232,14 +231,13 @@
 					<div class="tsd-signature tsd-kind-icon">accept<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:33</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The status of the VPC Peering Connection request.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#accept_status">https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#accept_status</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -248,7 +246,7 @@
 					<div class="tsd-signature tsd-kind-icon">accepter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:41</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -257,7 +255,6 @@
 								(<a href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
 							the peering connection (a maximum of one).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#accepter">https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#accepter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -266,14 +263,13 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Accept<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:47</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Accept the peering (both VPCs need to be in the same AWS account).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#auto_accept">https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#auto_accept</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -299,7 +295,7 @@
 					<div class="tsd-signature tsd-kind-icon">peer<wbr>Owner<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:54</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -307,7 +303,6 @@
 							<p>The AWS account ID of the owner of the peer VPC.
 							Defaults to the account ID the [AWS provider][1] is currently connected to.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#peer_owner_id">https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#peer_owner_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -316,7 +311,7 @@
 					<div class="tsd-signature tsd-kind-icon">peer<wbr>Region<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:61</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -324,7 +319,6 @@
 							<p>The region of the accepter VPC of the [VPC Peering Connection]. <code>auto_accept</code> must be <code>false</code>,
 							and use the <code>aws_vpc_peering_connection_accepter</code> to manage the accepter side.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#peer_region">https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#peer_region</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -333,14 +327,13 @@
 					<div class="tsd-signature tsd-kind-icon">peer<wbr>Vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:67</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the VPC with which you are creating the VPC Peering Connection.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#peer_vpc_id">https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#peer_vpc_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -349,7 +342,7 @@
 					<div class="tsd-signature tsd-kind-icon">requester<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:75</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -358,7 +351,6 @@
 								(<a href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
 							the peering connection (a maximum of one).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#requester">https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#requester</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -367,14 +359,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:81</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:63</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#tags">https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -400,14 +391,13 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcPeeringConnection.ts:87</li>
+							<li>Defined in ec2/vpcPeeringConnection.ts:67</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the requester VPC.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#vpc_id">https://www.terraform.io/docs/providers/aws/r/vpc_peering_connection.html#vpc_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -423,7 +413,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ec2/vpcPeeringConnection.ts:24</li>
+									<li>Defined in ec2/vpcPeeringConnection.ts:22</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

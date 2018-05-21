@@ -77,7 +77,6 @@
 					</div>
 					<p>~&gt; <strong>NOTE:</strong> <code>aws_eip_association</code> is useful in scenarios where EIPs are either
 					pre-existing or distributed to customers or users and therefore cannot be changed.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/eip_association.html">https://www.terraform.io/docs/providers/aws/r/eip_association.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -140,7 +139,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/eipAssociation.ts:72</li>
+									<li>Defined in ec2/eipAssociation.ts:58</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -181,7 +180,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/eipAssociation.ts:82</li>
+									<li>Defined in ec2/eipAssociation.ts:68</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -229,14 +228,13 @@
 					<div class="tsd-signature tsd-kind-icon">allocation<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/eipAssociation.ts:33</li>
+							<li>Defined in ec2/eipAssociation.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The allocation ID. This is required for EC2-VPC.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/eip_association.html#allocation_id">https://www.terraform.io/docs/providers/aws/r/eip_association.html#allocation_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -245,7 +243,7 @@
 					<div class="tsd-signature tsd-kind-icon">allow<wbr>Reassociation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/eipAssociation.ts:40</li>
+							<li>Defined in ec2/eipAssociation.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -253,7 +251,6 @@
 							<p>Whether to allow an Elastic IP to
 							be re-associated. Defaults to <code>true</code> in VPC.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/eip_association.html#allow_reassociation">https://www.terraform.io/docs/providers/aws/r/eip_association.html#allow_reassociation</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -279,7 +276,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/eipAssociation.ts:49</li>
+							<li>Defined in ec2/eipAssociation.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -289,7 +286,6 @@
 								network interface ID, but not both. The operation fails if you specify an
 							instance ID unless exactly one network interface is attached.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/eip_association.html#instance_id">https://www.terraform.io/docs/providers/aws/r/eip_association.html#instance_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -298,7 +294,7 @@
 					<div class="tsd-signature tsd-kind-icon">network<wbr>Interface<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/eipAssociation.ts:57</li>
+							<li>Defined in ec2/eipAssociation.ts:47</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -307,7 +303,6 @@
 								instance has more than one network interface, you must specify a network
 							interface ID.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/eip_association.html#network_interface_id">https://www.terraform.io/docs/providers/aws/r/eip_association.html#network_interface_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -316,7 +311,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>IpAddress<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/eipAssociation.ts:66</li>
+							<li>Defined in ec2/eipAssociation.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -326,7 +321,6 @@
 								specified, the Elastic IP address is associated with the primary private IP
 							address.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/eip_association.html#private_ip_address">https://www.terraform.io/docs/providers/aws/r/eip_association.html#private_ip_address</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -335,14 +329,13 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>Ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/eipAssociation.ts:72</li>
+							<li>Defined in ec2/eipAssociation.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Elastic IP address. This is required for EC2-Classic.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/eip_association.html#public_ip">https://www.terraform.io/docs/providers/aws/r/eip_association.html#public_ip</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -375,7 +368,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ec2/eipAssociation.ts:24</li>
+									<li>Defined in ec2/eipAssociation.ts:22</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

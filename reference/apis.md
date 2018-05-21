@@ -7,8 +7,8 @@ title: API Reference
 - [@pulumi/pulumi](../packages/pulumi)
 - [@pulumi/aws](../packages/pulumi-aws)
 - [@pulumi/cloud](../packages/pulumi-cloud)
-- @pulumi/azure (coming soon)
-- @pulumi/kubernetes (coming soon)
+- [@pulumi/azure](../packages/pulumi-azure)
+- [@pulumi/kubernetes](../packages/pulumi-kubernetes)
 - @pulumi/gcp (coming soon)
 
 ## Python API reference

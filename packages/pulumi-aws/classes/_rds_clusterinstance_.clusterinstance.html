@@ -83,7 +83,6 @@
 						Cluster, or you may specify different Cluster Instance resources with various
 					<code>instance_class</code> sizes.</p>
 					<p>For more information on Amazon Aurora, see [Aurora on Amazon RDS][2] in the Amazon RDS User Guide.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -166,7 +165,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in rds/clusterInstance.ts:201</li>
+									<li>Defined in rds/clusterInstance.ts:149</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -207,7 +206,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in rds/clusterInstance.ts:211</li>
+									<li>Defined in rds/clusterInstance.ts:159</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -255,7 +254,7 @@
 					<div class="tsd-signature tsd-kind-icon">apply<wbr>Immediately<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:41</li>
+							<li>Defined in rds/clusterInstance.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -263,7 +262,6 @@
 							<p>Specifies whether any database modifications
 							are applied immediately, or during the next maintenance window. Default is<code>false</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#apply_immediately">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#apply_immediately</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -272,14 +270,13 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Minor<wbr>Version<wbr>Upgrade<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:47</li>
+							<li>Defined in rds/clusterInstance.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <code>true</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#auto_minor_version_upgrade">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#auto_minor_version_upgrade</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -288,14 +285,13 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:53</li>
+							<li>Defined in rds/clusterInstance.ts:45</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The EC2 Availability Zone that the DB instance is created in. See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">docs</a> about the details.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#availability_zone">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -304,14 +300,13 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:59</li>
+							<li>Defined in rds/clusterInstance.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The identifier of the <a href="/docs/providers/aws/r/rds_cluster.html"><code>aws_rds_cluster</code></a> in which to launch this instance.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#cluster_identifier">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#cluster_identifier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -320,14 +315,13 @@
 					<div class="tsd-signature tsd-kind-icon">db<wbr>Parameter<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:65</li>
+							<li>Defined in rds/clusterInstance.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the DB parameter group to associate with this instance.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#db_parameter_group_name">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#db_parameter_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -336,14 +330,13 @@
 					<div class="tsd-signature tsd-kind-icon">db<wbr>Subnet<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:71</li>
+							<li>Defined in rds/clusterInstance.ts:57</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <code>db_subnet_group_name</code> of the attached <a href="/docs/providers/aws/r/rds_cluster.html"><code>aws_rds_cluster</code></a>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#db_subnet_group_name">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#db_subnet_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -352,14 +345,13 @@
 					<div class="tsd-signature tsd-kind-icon">dbi<wbr>Resource<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:77</li>
+							<li>Defined in rds/clusterInstance.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The region-unique, immutable identifier for the DB instance.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#dbi_resource_id">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#dbi_resource_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -368,14 +360,13 @@
 					<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:83</li>
+							<li>Defined in rds/clusterInstance.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The DNS address for this instance. May not be writable</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#endpoint">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#endpoint</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -384,14 +375,13 @@
 					<div class="tsd-signature tsd-kind-icon">engine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:89</li>
+							<li>Defined in rds/clusterInstance.ts:69</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the database engine to be used for the RDS instance. Defaults to <code>aurora</code>. Valid Values: aurora,aurora-mysql,aurora-postgresql</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#engine">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#engine</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -400,14 +390,13 @@
 					<div class="tsd-signature tsd-kind-icon">engine<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:95</li>
+							<li>Defined in rds/clusterInstance.ts:73</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The database engine version.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#engine_version">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#engine_version</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -433,14 +422,13 @@
 					<div class="tsd-signature tsd-kind-icon">identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:101</li>
+							<li>Defined in rds/clusterInstance.ts:77</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The indentifier for the RDS instance, if omitted, Terraform will assign a random, unique identifier.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#identifier">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#identifier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -449,14 +437,13 @@
 					<div class="tsd-signature tsd-kind-icon">identifier<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:107</li>
+							<li>Defined in rds/clusterInstance.ts:81</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Creates a unique identifier beginning with the specified prefix. Conflicts with <code>identifer</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#identifier_prefix">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#identifier_prefix</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -465,7 +452,7 @@
 					<div class="tsd-signature tsd-kind-icon">instance<wbr>Class<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:122</li>
+							<li>Defined in rds/clusterInstance.ts:94</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -483,7 +470,6 @@
 								<li>db.r3.8xlarge</li>
 							</ul>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#instance_class">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#instance_class</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -492,14 +478,13 @@
 					<div class="tsd-signature tsd-kind-icon">kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:128</li>
+							<li>Defined in rds/clusterInstance.ts:98</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN for the KMS encryption key if one is set to the cluster.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#kms_key_id">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#kms_key_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -508,14 +493,13 @@
 					<div class="tsd-signature tsd-kind-icon">monitoring<wbr>Interval<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:134</li>
+							<li>Defined in rds/clusterInstance.ts:102</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#monitoring_interval">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#monitoring_interval</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -524,7 +508,7 @@
 					<div class="tsd-signature tsd-kind-icon">monitoring<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:142</li>
+							<li>Defined in rds/clusterInstance.ts:108</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -533,7 +517,6 @@
 								enhanced monitoring metrics to CloudWatch Logs. You can find more information on the <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">AWS Documentation</a>
 							what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#monitoring_role_arn">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#monitoring_role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -542,14 +525,13 @@
 					<div class="tsd-signature tsd-kind-icon">performance<wbr>Insights<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:148</li>
+							<li>Defined in rds/clusterInstance.ts:112</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies whether Performance Insights is enabled or not.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#performance_insights_enabled">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#performance_insights_enabled</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -558,14 +540,13 @@
 					<div class="tsd-signature tsd-kind-icon">performance<wbr>Insights<wbr>Kms<wbr>Key<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:154</li>
+							<li>Defined in rds/clusterInstance.ts:116</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN for the KMS key to encrypt Performance Insights data. When specifying <code>performance_insights_kms_key_id</code>, <code>performance_insights_enabled</code> needs to be set to true.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#performance_insights_kms_key_id">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#performance_insights_kms_key_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -574,14 +555,13 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:160</li>
+							<li>Defined in rds/clusterInstance.ts:120</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The database port</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#port">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#port</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -590,7 +570,7 @@
 					<div class="tsd-signature tsd-kind-icon">preferred<wbr>Backup<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:167</li>
+							<li>Defined in rds/clusterInstance.ts:125</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -598,7 +578,6 @@
 							<p>The daily time range during which automated backups are created if automated backups are enabled.
 							Eg: &quot;04:00-09:00&quot;</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#preferred_backup_window">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#preferred_backup_window</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -607,7 +586,7 @@
 					<div class="tsd-signature tsd-kind-icon">preferred<wbr>Maintenance<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:174</li>
+							<li>Defined in rds/clusterInstance.ts:130</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -615,7 +594,6 @@
 							<p>The window to perform maintenance in.
 							Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#preferred_maintenance_window">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#preferred_maintenance_window</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -624,14 +602,13 @@
 					<div class="tsd-signature tsd-kind-icon">promotion<wbr>Tier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:180</li>
+							<li>Defined in rds/clusterInstance.ts:134</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#promotion_tier">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#promotion_tier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -640,7 +617,7 @@
 					<div class="tsd-signature tsd-kind-icon">publicly<wbr>Accessible<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:188</li>
+							<li>Defined in rds/clusterInstance.ts:140</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -649,7 +626,6 @@
 								Default <code>false</code>. See the documentation on [Creating DB Instances][6] for more
 							details on controlling this property.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#publicly_accessible">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#publicly_accessible</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -658,14 +634,13 @@
 					<div class="tsd-signature tsd-kind-icon">storage<wbr>Encrypted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:194</li>
+							<li>Defined in rds/clusterInstance.ts:144</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies whether the DB cluster is encrypted.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#storage_encrypted">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#storage_encrypted</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -674,14 +649,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:200</li>
+							<li>Defined in rds/clusterInstance.ts:148</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the instance.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#tags">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -707,7 +681,7 @@
 					<div class="tsd-signature tsd-kind-icon">writer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in rds/clusterInstance.ts:201</li>
+							<li>Defined in rds/clusterInstance.ts:149</li>
 						</ul>
 					</aside>
 				</section>
@@ -724,7 +698,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in rds/clusterInstance.ts:31</li>
+									<li>Defined in rds/clusterInstance.ts:29</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

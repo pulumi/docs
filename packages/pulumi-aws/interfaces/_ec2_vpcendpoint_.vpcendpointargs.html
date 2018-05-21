@@ -113,14 +113,13 @@
 					<div class="tsd-signature tsd-kind-icon">auto<wbr>Accept<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:274</li>
+							<li>Defined in ec2/vpcEndpoint.ts:214</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#auto_accept">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#auto_accept</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -129,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:281</li>
+							<li>Defined in ec2/vpcEndpoint.ts:219</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -137,7 +136,6 @@
 							<p>A policy to attach to the endpoint that controls access to the service. Applicable for endpoints of type <code>Gateway</code>.
 							Defaults to full access.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#policy">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -146,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Dns<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:288</li>
+							<li>Defined in ec2/vpcEndpoint.ts:224</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -154,7 +152,6 @@
 							<p>Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code>Interface</code>.
 							Defaults to <code>false</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#private_dns_enabled">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#private_dns_enabled</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -163,14 +160,13 @@
 					<div class="tsd-signature tsd-kind-icon">route<wbr>Table<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:294</li>
+							<li>Defined in ec2/vpcEndpoint.ts:228</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>One or more route table IDs. Applicable for endpoints of type <code>Gateway</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#route_table_ids">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#route_table_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -179,14 +175,13 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:300</li>
+							<li>Defined in ec2/vpcEndpoint.ts:232</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of one or more security groups to associate with the network interface. Required for endpoints of type <code>Interface</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#security_group_ids">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#security_group_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -195,14 +190,13 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:306</li>
+							<li>Defined in ec2/vpcEndpoint.ts:236</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The service name, in the form <code>com.amazonaws.region.service</code> for AWS services.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#service_name">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#service_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -211,14 +205,13 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:312</li>
+							<li>Defined in ec2/vpcEndpoint.ts:240</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type <code>Interface</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#subnet_ids">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#subnet_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -227,14 +220,13 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Endpoint<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:318</li>
+							<li>Defined in ec2/vpcEndpoint.ts:244</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The VPC endpoint type, <code>Gateway</code> or <code>Interface</code>. Defaults to <code>Gateway</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#vpc_endpoint_type">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#vpc_endpoint_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -243,14 +235,13 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/vpcEndpoint.ts:324</li>
+							<li>Defined in ec2/vpcEndpoint.ts:248</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the VPC in which the endpoint will be used.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#vpc_id">https://www.terraform.io/docs/providers/aws/r/vpc_endpoint.html#vpc_id</a>.</p>
 					</div>
 				</section>
 			</section>

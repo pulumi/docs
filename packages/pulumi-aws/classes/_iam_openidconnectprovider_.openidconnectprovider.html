@@ -74,7 +74,6 @@
 					<div class="lead">
 						<p>Provides an IAM OpenID Connect provider.</p>
 					</div>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html">https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -135,7 +134,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in iam/openIdConnectProvider.ts:47</li>
+									<li>Defined in iam/openIdConnectProvider.ts:37</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -176,7 +175,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in iam/openIdConnectProvider.ts:57</li>
+									<li>Defined in iam/openIdConnectProvider.ts:47</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -224,14 +223,13 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/openIdConnectProvider.ts:29</li>
+							<li>Defined in iam/openIdConnectProvider.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN assigned by AWS for this provider.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#arn">https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -240,14 +238,13 @@
 					<div class="tsd-signature tsd-kind-icon">client<wbr>IdLists<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/openIdConnectProvider.ts:35</li>
+							<li>Defined in iam/openIdConnectProvider.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that&#39;s sent as the client_id parameter on OAuth requests.)</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#client_id_list">https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#client_id_list</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -273,14 +270,13 @@
 					<div class="tsd-signature tsd-kind-icon">thumbprint<wbr>Lists<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/openIdConnectProvider.ts:41</li>
+							<li>Defined in iam/openIdConnectProvider.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider&#39;s server certificate(s).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#thumbprint_list">https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#thumbprint_list</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -289,14 +285,13 @@
 					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in iam/openIdConnectProvider.ts:47</li>
+							<li>Defined in iam/openIdConnectProvider.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The URL of the identity provider. Corresponds to the <em>iss</em> claim.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#url">https://www.terraform.io/docs/providers/aws/r/iam_openid_connect_provider.html#url</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -329,7 +324,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in iam/openIdConnectProvider.ts:20</li>
+									<li>Defined in iam/openIdConnectProvider.ts:18</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

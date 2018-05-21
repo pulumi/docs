@@ -118,7 +118,7 @@
 					<div class="tsd-signature tsd-kind-icon">aliases<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:280</li>
+							<li>Defined in route53/record.ts:216</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -126,7 +126,6 @@
 							<p>An alias block. Conflicts with <code>ttl</code> &amp; <code>records</code>.
 							Alias record documented below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#alias">https://www.terraform.io/docs/providers/aws/r/route53_record.html#alias</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -135,14 +134,13 @@
 					<div class="tsd-signature tsd-kind-icon">allow<wbr>Overwrite<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:286</li>
+							<li>Defined in route53/record.ts:220</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Allow creation of this record in Terraform to overwrite an existing record, if any. This does not prevent other resources within Terraform or manual Route53 changes from overwriting this record. <code>true</code> by default.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#allow_overwrite">https://www.terraform.io/docs/providers/aws/r/route53_record.html#allow_overwrite</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -151,14 +149,13 @@
 					<div class="tsd-signature tsd-kind-icon">failover<wbr>Routing<wbr>Policies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:292</li>
+							<li>Defined in route53/record.ts:224</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#failover_routing_policy">https://www.terraform.io/docs/providers/aws/r/route53_record.html#failover_routing_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -167,14 +164,13 @@
 					<div class="tsd-signature tsd-kind-icon">geolocation<wbr>Routing<wbr>Policies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:298</li>
+							<li>Defined in route53/record.ts:228</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#geolocation_routing_policy">https://www.terraform.io/docs/providers/aws/r/route53_record.html#geolocation_routing_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -183,14 +179,13 @@
 					<div class="tsd-signature tsd-kind-icon">health<wbr>Check<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:304</li>
+							<li>Defined in route53/record.ts:232</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The health check the record should be associated with.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#health_check_id">https://www.terraform.io/docs/providers/aws/r/route53_record.html#health_check_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -199,14 +194,13 @@
 					<div class="tsd-signature tsd-kind-icon">latency<wbr>Routing<wbr>Policies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:310</li>
+							<li>Defined in route53/record.ts:236</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#latency_routing_policy">https://www.terraform.io/docs/providers/aws/r/route53_record.html#latency_routing_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -215,14 +209,13 @@
 					<div class="tsd-signature tsd-kind-icon">multivalue<wbr>Answer<wbr>Routing<wbr>Policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:316</li>
+							<li>Defined in route53/record.ts:240</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A block indicating a multivalue answer routing policy. Conflicts with any other routing policy.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#multivalue_answer_routing_policy">https://www.terraform.io/docs/providers/aws/r/route53_record.html#multivalue_answer_routing_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -231,14 +224,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:322</li>
+							<li>Defined in route53/record.ts:244</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#name">https://www.terraform.io/docs/providers/aws/r/route53_record.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -247,14 +239,13 @@
 					<div class="tsd-signature tsd-kind-icon">records<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:328</li>
+							<li>Defined in route53/record.ts:248</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add <code>\&quot;\&quot;</code> inside the Terraform configuration string (e.g. <code>&quot;first255characters\&quot;\&quot;morecharacters&quot;</code>).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#records">https://www.terraform.io/docs/providers/aws/r/route53_record.html#records</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -263,14 +254,13 @@
 					<div class="tsd-signature tsd-kind-icon">set<wbr>Identifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:334</li>
+							<li>Defined in route53/record.ts:252</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Unique identifier to differentiate records with routing policies from one another. Required if using <code>failover</code>, <code>geolocation</code>, <code>latency</code>, or <code>weighted</code> routing policies documented below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#set_identifier">https://www.terraform.io/docs/providers/aws/r/route53_record.html#set_identifier</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -279,14 +269,13 @@
 					<div class="tsd-signature tsd-kind-icon">ttl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:340</li>
+							<li>Defined in route53/record.ts:256</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The TTL of the record.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#ttl">https://www.terraform.io/docs/providers/aws/r/route53_record.html#ttl</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -295,14 +284,13 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:346</li>
+							<li>Defined in route53/record.ts:260</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p><code>PRIMARY</code> or <code>SECONDARY</code>. A <code>PRIMARY</code> record will be served if its healthcheck is passing, otherwise the <code>SECONDARY</code> will be served. See <a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets</a></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#type">https://www.terraform.io/docs/providers/aws/r/route53_record.html#type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -311,14 +299,13 @@
 					<div class="tsd-signature tsd-kind-icon">weighted<wbr>Routing<wbr>Policies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:352</li>
+							<li>Defined in route53/record.ts:264</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#weighted_routing_policy">https://www.terraform.io/docs/providers/aws/r/route53_record.html#weighted_routing_policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -327,14 +314,13 @@
 					<div class="tsd-signature tsd-kind-icon">zone<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in route53/record.ts:358</li>
+							<li>Defined in route53/record.ts:268</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See <a href="/docs/providers/aws/r/elb.html#zone_id"><code>resource_elb.zone_id</code></a> for example.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/route53_record.html#zone_id">https://www.terraform.io/docs/providers/aws/r/route53_record.html#zone_id</a>.</p>
 					</div>
 				</section>
 			</section>

@@ -74,7 +74,6 @@
 					<div class="lead">
 						<p>Provides an VPC subnet resource.</p>
 					</div>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/subnet.html">https://www.terraform.io/docs/providers/aws/r/subnet.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -139,7 +138,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/subnet.ts:66</li>
+									<li>Defined in ec2/subnet.ts:52</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -180,7 +179,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/subnet.ts:76</li>
+									<li>Defined in ec2/subnet.ts:62</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -228,7 +227,7 @@
 					<div class="tsd-signature tsd-kind-icon">assign<wbr>Ipv6<wbr>Address<wbr>OnCreation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/subnet.ts:31</li>
+							<li>Defined in ec2/subnet.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -237,7 +236,6 @@
 								that network interfaces created in the specified subnet should be
 							assigned an IPv6 address. Default is <code>false</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/subnet.html#assign_ipv6_address_on_creation">https://www.terraform.io/docs/providers/aws/r/subnet.html#assign_ipv6_address_on_creation</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -246,7 +244,7 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/subnet.ts:32</li>
+							<li>Defined in ec2/subnet.ts:28</li>
 						</ul>
 					</aside>
 				</section>
@@ -256,14 +254,13 @@
 					<div class="tsd-signature tsd-kind-icon">cidr<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/subnet.ts:38</li>
+							<li>Defined in ec2/subnet.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The CIDR block for the subnet.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/subnet.html#cidr_block">https://www.terraform.io/docs/providers/aws/r/subnet.html#cidr_block</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -289,7 +286,7 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Cidr<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/subnet.ts:45</li>
+							<li>Defined in ec2/subnet.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -297,7 +294,6 @@
 							<p>The IPv6 network range for the subnet,
 							in CIDR notation. The subnet size must use a /64 prefix length.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/subnet.html#ipv6_cidr_block">https://www.terraform.io/docs/providers/aws/r/subnet.html#ipv6_cidr_block</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -306,7 +302,7 @@
 					<div class="tsd-signature tsd-kind-icon">ipv6<wbr>Cidr<wbr>Block<wbr>Association<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/subnet.ts:46</li>
+							<li>Defined in ec2/subnet.ts:38</li>
 						</ul>
 					</aside>
 				</section>
@@ -316,7 +312,7 @@
 					<div class="tsd-signature tsd-kind-icon">map<wbr>Public<wbr>IpOn<wbr>Launch<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/subnet.ts:54</li>
+							<li>Defined in ec2/subnet.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -325,7 +321,6 @@
 								that instances launched into the subnet should be assigned
 							a public IP address. Default is <code>false</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/subnet.html#map_public_ip_on_launch">https://www.terraform.io/docs/providers/aws/r/subnet.html#map_public_ip_on_launch</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -334,14 +329,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/subnet.ts:60</li>
+							<li>Defined in ec2/subnet.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/subnet.html#tags">https://www.terraform.io/docs/providers/aws/r/subnet.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -367,14 +361,13 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/subnet.ts:66</li>
+							<li>Defined in ec2/subnet.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The VPC ID.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/subnet.html#vpc_id">https://www.terraform.io/docs/providers/aws/r/subnet.html#vpc_id</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -390,7 +383,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ec2/subnet.ts:20</li>
+									<li>Defined in ec2/subnet.ts:18</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

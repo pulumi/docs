@@ -77,7 +77,6 @@
 						Lightsail.</p>
 					</div>
 					<p>~&gt; <strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">&quot;Regions and Availability Zones in Amazon Lightsail&quot;</a> for more details</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html">https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -143,7 +142,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in lightsail/keyPair.ts:75</li>
+									<li>Defined in lightsail/keyPair.ts:61</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -184,7 +183,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in lightsail/keyPair.ts:85</li>
+									<li>Defined in lightsail/keyPair.ts:71</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -232,14 +231,13 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/keyPair.ts:33</li>
+							<li>Defined in lightsail/keyPair.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the Lightsail key pair</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#arn">https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -248,7 +246,7 @@
 					<div class="tsd-signature tsd-kind-icon">encrypted<wbr>Fingerprint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/keyPair.ts:40</li>
+							<li>Defined in lightsail/keyPair.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -256,7 +254,6 @@
 							<p>The MD5 public key fingerprint for the encrypted
 							private key</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#encrypted_fingerprint">https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#encrypted_fingerprint</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -265,7 +262,7 @@
 					<div class="tsd-signature tsd-kind-icon">encrypted<wbr>Private<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/keyPair.ts:41</li>
+							<li>Defined in lightsail/keyPair.ts:35</li>
 						</ul>
 					</aside>
 				</section>
@@ -275,14 +272,13 @@
 					<div class="tsd-signature tsd-kind-icon">fingerprint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/keyPair.ts:47</li>
+							<li>Defined in lightsail/keyPair.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The MD5 public key fingerprint as specified in section 4 of RFC 4716.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#fingerprint">https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#fingerprint</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -308,7 +304,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/keyPair.ts:56</li>
+							<li>Defined in lightsail/keyPair.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -320,7 +316,6 @@
 								key material. Only used when creating a new key pair</li>
 							</ul>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#name">https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -329,7 +324,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<wbr>Prefix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/keyPair.ts:57</li>
+							<li>Defined in lightsail/keyPair.ts:47</li>
 						</ul>
 					</aside>
 				</section>
@@ -339,7 +334,7 @@
 					<div class="tsd-signature tsd-kind-icon">pgp<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/keyPair.ts:58</li>
+							<li>Defined in lightsail/keyPair.ts:48</li>
 						</ul>
 					</aside>
 				</section>
@@ -349,7 +344,7 @@
 					<div class="tsd-signature tsd-kind-icon">private<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/keyPair.ts:68</li>
+							<li>Defined in lightsail/keyPair.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -362,7 +357,6 @@
 								key and <code>pgp_key</code> is supplied</li>
 							</ul>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#private_key">https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#private_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -371,7 +365,7 @@
 					<div class="tsd-signature tsd-kind-icon">public<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lightsail/keyPair.ts:75</li>
+							<li>Defined in lightsail/keyPair.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -379,7 +373,6 @@
 							<p>The public key material. This public key will be
 							imported into Lightsail</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#public_key">https://www.terraform.io/docs/providers/aws/r/lightsail_key_pair.html#public_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -412,7 +405,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in lightsail/keyPair.ts:24</li>
+									<li>Defined in lightsail/keyPair.ts:22</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

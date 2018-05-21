@@ -78,7 +78,6 @@
 					For information about compute environment, see [Compute Environments][2] .</p>
 					<p>~&gt; <strong>Note:</strong> To prevent a race condition during environment deletion, make sure to set <code>depends_on</code> to the related <code>aws_iam_role_policy_attachment</code>;
 					otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the <code>DELETING</code> state, see [Troubleshooting AWS Batch][3] .</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html">https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -145,7 +144,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in batch/computeEnvironment.ts:84</li>
+									<li>Defined in batch/computeEnvironment.ts:64</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -186,7 +185,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in batch/computeEnvironment.ts:94</li>
+									<li>Defined in batch/computeEnvironment.ts:74</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -234,14 +233,13 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/computeEnvironment.ts:35</li>
+							<li>Defined in batch/computeEnvironment.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name (ARN) of the compute environment.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#arn">https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -250,14 +248,13 @@
 					<div class="tsd-signature tsd-kind-icon">compute<wbr>Environment<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/computeEnvironment.ts:41</li>
+							<li>Defined in batch/computeEnvironment.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#compute_environment_name">https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#compute_environment_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -266,14 +263,13 @@
 					<div class="tsd-signature tsd-kind-icon">compute<wbr>Resources<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/computeEnvironment.ts:47</li>
+							<li>Defined in batch/computeEnvironment.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#compute_resources">https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#compute_resources</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -282,7 +278,7 @@
 					<div class="tsd-signature tsd-kind-icon">ecc<wbr>Cluster<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/computeEnvironment.ts:48</li>
+							<li>Defined in batch/computeEnvironment.ts:40</li>
 						</ul>
 					</aside>
 				</section>
@@ -292,14 +288,13 @@
 					<div class="tsd-signature tsd-kind-icon">ecs<wbr>Cluster<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/computeEnvironment.ts:54</li>
+							<li>Defined in batch/computeEnvironment.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#ecs_cluster_arn">https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#ecs_cluster_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -325,14 +320,13 @@
 					<div class="tsd-signature tsd-kind-icon">service<wbr>Role<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/computeEnvironment.ts:60</li>
+							<li>Defined in batch/computeEnvironment.ts:48</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#service_role">https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#service_role</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -341,14 +335,13 @@
 					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/computeEnvironment.ts:66</li>
+							<li>Defined in batch/computeEnvironment.ts:52</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The state of the compute environment. If the state is <code>ENABLED</code>, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are <code>ENABLED</code> or <code>DISABLED</code>. Defaults to <code>ENABLED</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#state">https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#state</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -357,14 +350,13 @@
 					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/computeEnvironment.ts:72</li>
+							<li>Defined in batch/computeEnvironment.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The current status of the compute environment (for example, CREATING or VALID).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#status">https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#status</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -373,14 +365,13 @@
 					<div class="tsd-signature tsd-kind-icon">status<wbr>Reason<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/computeEnvironment.ts:78</li>
+							<li>Defined in batch/computeEnvironment.ts:60</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A short, human-readable string to provide additional details about the current status of the compute environment.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#status_reason">https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#status_reason</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -389,14 +380,13 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in batch/computeEnvironment.ts:84</li>
+							<li>Defined in batch/computeEnvironment.ts:64</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The type of compute environment. Valid items are <code>EC2</code> or <code>SPOT</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#type">https://www.terraform.io/docs/providers/aws/r/batch_compute_environment.html#type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -429,7 +419,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in batch/computeEnvironment.ts:26</li>
+									<li>Defined in batch/computeEnvironment.ts:24</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

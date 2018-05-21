@@ -76,7 +76,6 @@
 						target group</p>
 					</div>
 					<p>~&gt; <strong>Note:</strong> <code>aws_alb_target_group_attachment</code> is known as <code>aws_lb_target_group_attachment</code>. The functionality is identical.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html">https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -137,7 +136,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:50</li>
+									<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:40</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -178,7 +177,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:60</li>
+									<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:50</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -226,14 +225,13 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:32</li>
+							<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:28</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Availability Zone where the IP address of the target is to be registered.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html#availability_zone">https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html#availability_zone</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -259,14 +257,13 @@
 					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:38</li>
+							<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:32</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The port on which targets receive traffic.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html#port">https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html#port</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -275,14 +272,13 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Group<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:44</li>
+							<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:36</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the target group with which to register targets</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html#target_group_arn">https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html#target_group_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -291,14 +287,13 @@
 					<div class="tsd-signature tsd-kind-icon">target<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:50</li>
+							<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html#target_id">https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html#target_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -331,7 +326,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:23</li>
+									<li>Defined in elasticloadbalancingv2/targetGroupAttachment.ts:21</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
