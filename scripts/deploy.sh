@@ -13,6 +13,11 @@ if [ -z ${ENVIRONMENT} ]; then
     exit 1
 fi
 
+if [[ -z ${AWS_ACCESS_KEY_ID:-} || -z ${AWS_SECRET_ACCESS_KEY:-} || -z ${AWS_REGION:-} ]]; then
+    echo "Error: Missing AWS credentials. Unable to deploy built website."
+    exit 1
+fi
+
 echo "Assuming the role of UploadPulumiReleases, uploading ${ENVIRONMENT} at ${CURRENT_COMMIT:0:6}..."
 CREDS_JSON=$(aws sts assume-role \
     --role-arn "arn:aws:iam::058607598222:role/UploadPulumiReleases" \
