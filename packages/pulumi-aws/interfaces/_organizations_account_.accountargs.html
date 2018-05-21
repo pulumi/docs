@@ -108,14 +108,13 @@
 					<div class="tsd-signature tsd-kind-icon">email<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:140</li>
+							<li>Defined in organizations/account.ts:120</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/organizations_account.html#email">https://www.terraform.io/docs/providers/aws/r/organizations_account.html#email</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -124,14 +123,13 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>User<wbr>Access<wbr>ToBilling<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:146</li>
+							<li>Defined in organizations/account.ts:124</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If set to <code>ALLOW</code>, the new account enables IAM users to access account billing information if they have the required permissions. If set to <code>DENY</code>, then only the root user of the new account can access account billing information.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/organizations_account.html#iam_user_access_to_billing">https://www.terraform.io/docs/providers/aws/r/organizations_account.html#iam_user_access_to_billing</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -140,14 +138,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:152</li>
+							<li>Defined in organizations/account.ts:128</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A friendly name for the member account.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/organizations_account.html#name">https://www.terraform.io/docs/providers/aws/r/organizations_account.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -156,14 +153,13 @@
 					<div class="tsd-signature tsd-kind-icon">role<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:158</li>
+							<li>Defined in organizations/account.ts:132</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/organizations_account.html#role_name">https://www.terraform.io/docs/providers/aws/r/organizations_account.html#role_name</a>.</p>
 					</div>
 				</section>
 			</section>

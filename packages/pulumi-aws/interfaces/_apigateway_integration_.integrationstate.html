@@ -118,14 +118,13 @@
 					<div class="tsd-signature tsd-kind-icon">cache<wbr>Key<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:189</li>
+							<li>Defined in apigateway/integration.ts:157</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of cache key parameters for the integration.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#cache_key_parameters">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#cache_key_parameters</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -134,14 +133,13 @@
 					<div class="tsd-signature tsd-kind-icon">cache<wbr>Namespace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:195</li>
+							<li>Defined in apigateway/integration.ts:161</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The integration&#39;s cache namespace.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#cache_namespace">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#cache_namespace</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -150,14 +148,13 @@
 					<div class="tsd-signature tsd-kind-icon">content<wbr>Handling<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:201</li>
+							<li>Defined in apigateway/integration.ts:165</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies how to handle request payload content type conversions. Supported values are <code>CONVERT_TO_BINARY</code> and <code>CONVERT_TO_TEXT</code>. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#content_handling">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#content_handling</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -166,14 +163,13 @@
 					<div class="tsd-signature tsd-kind-icon">credentials<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:207</li>
+							<li>Defined in apigateway/integration.ts:169</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The credentials required for the integration. For <code>AWS</code> integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role&#39;s ARN. To require that the caller&#39;s identity be passed through from the request, specify the string <code>arn:aws:iam::\*:user/\*</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#credentials">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#credentials</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -182,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">http<wbr>Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:214</li>
+							<li>Defined in apigateway/integration.ts:174</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -190,7 +186,6 @@
 							<p>The HTTP method (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, <code>HEAD</code>, <code>OPTION</code>, <code>ANY</code>)
 							when calling the associated resource.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#http_method">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#http_method</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -199,7 +194,7 @@
 					<div class="tsd-signature tsd-kind-icon">integration<wbr>Http<wbr>Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:224</li>
+							<li>Defined in apigateway/integration.ts:182</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -210,7 +205,6 @@
 								Not all methods are compatible with all <code>AWS</code> integrations.
 							e.g. Lambda function <a href="https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005">can only be invoked</a> via <code>POST</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#integration_http_method">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#integration_http_method</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -219,14 +213,13 @@
 					<div class="tsd-signature tsd-kind-icon">passthrough<wbr>Behavior<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:230</li>
+							<li>Defined in apigateway/integration.ts:186</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The integration passthrough behavior (<code>WHEN_NO_MATCH</code>, <code>WHEN_NO_TEMPLATES</code>, <code>NEVER</code>).  <strong>Required</strong> if <code>request_templates</code> is used.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#passthrough_behavior">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#passthrough_behavior</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -235,7 +228,7 @@
 					<div class="tsd-signature tsd-kind-icon">request<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:237</li>
+							<li>Defined in apigateway/integration.ts:191</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -243,7 +236,6 @@
 							<p>A map of request query string parameters and headers that should be passed to the backend responder.
 							For example: <code>request_parameters = { &quot;integration.request.header.X-Some-Other-Header&quot; = &quot;method.request.header.X-Some-Header&quot; }</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#request_parameters">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#request_parameters</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -252,14 +244,13 @@
 					<div class="tsd-signature tsd-kind-icon">request<wbr>Parameters<wbr>InJson<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:243</li>
+							<li>Defined in apigateway/integration.ts:195</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p><strong>Deprecated</strong>, use <code>request_parameters</code> instead.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#request_parameters_in_json">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#request_parameters_in_json</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -268,14 +259,13 @@
 					<div class="tsd-signature tsd-kind-icon">request<wbr>Templates<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:249</li>
+							<li>Defined in apigateway/integration.ts:199</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A map of the integration&#39;s request templates.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#request_templates">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#request_templates</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -284,14 +274,13 @@
 					<div class="tsd-signature tsd-kind-icon">resource<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:255</li>
+							<li>Defined in apigateway/integration.ts:203</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The API resource ID.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#resource_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#resource_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -300,14 +289,13 @@
 					<div class="tsd-signature tsd-kind-icon">rest<wbr>Api<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_apigateway_restapi_.restapi.html" class="tsd-signature-type">RestApi</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:261</li>
+							<li>Defined in apigateway/integration.ts:207</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the associated REST API.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#rest_api_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#rest_api_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -316,14 +304,13 @@
 					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:267</li>
+							<li>Defined in apigateway/integration.ts:211</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The integration input&#39;s <a href="https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/">type</a>. Valid values are <code>HTTP</code> (for HTTP backends), <code>MOCK</code> (not calling any real backend), <code>AWS</code> (for AWS services), <code>AWS_PROXY</code> (for Lambda proxy integration) and <code>HTTP_PROXY</code> (for HTTP proxy integration).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#type">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -332,7 +319,7 @@
 					<div class="tsd-signature tsd-kind-icon">uri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/integration.ts:275</li>
+							<li>Defined in apigateway/integration.ts:217</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -341,7 +328,6 @@
 								For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form <code>arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}</code>. <code>region</code>, <code>subdomain</code> and <code>service</code> are used to determine the right endpoint.
 							e.g. <code>arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#uri">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html#uri</a>.</p>
 					</div>
 				</section>
 			</section>

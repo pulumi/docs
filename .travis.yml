@@ -6,12 +6,9 @@ branches:
   - master
   - production
 before_install:
-# The Travis job is configured to use travis-cicd in the testing account.
-# Deployments use AssumeRole to get temp creds to access another account.
+# Builds to certain branches deploy the built website to an S3 bucket.
+# We use the AWS CLI in /scripts.
 - pip install --upgrade --user awscli
-- aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
-- aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-- aws configure set region $AWS_REGION
 # Work around a current issue in bundler. See:
 # https://github.com/travis-ci/travis-ci/issues/8969
 - gem update --system

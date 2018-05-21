@@ -28,7 +28,7 @@ The [Pulumi Cloud] framework provides high-level components that encode common i
       ```html
       <html><head>
         <title>Hello S3</title><meta charset="UTF-8">
-        <link rel="shortcut icon" href="/stage/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="favicon.png" type="image/png">
       </head>
       <body><p>Hello, world!</p><p>Made with ❤️ with <a href="https://pulumi.com">Pulumi</a></p>
       </body></html>
@@ -206,12 +206,11 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
     ...
 
     // REMOVE previous declaration and add this
-    let siteBucket = new aws.s3.Bucket("s3-website-bucket", {  
-      websites: [{                       
-        indexDocument: "index.html",  
-      }],
+    let siteBucket = new aws.s3.Bucket("s3-website-bucket", {
+      website: {
+        indexDocument: "index.html",
+      },
     });
-
     ...
     ```
 
@@ -307,5 +306,5 @@ To learn how to convert the raw AWS option to a high-level component, see the [P
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
 [Pulumi Cloud]: ../reference/cloud.html
-[HttpEndpoint]: ../packages/pulumi-cloud/modules/_httpendpoint_.html
+[HttpEndpoint]: ../packages/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html
 <!-- End common links -->

@@ -76,7 +76,6 @@
 					</div>
 					<p>~&gt; <strong>Note:</strong> Account management must be done from the organization&#39;s master account.</p>
 					<p>!&gt; <strong>WARNING:</strong> Deleting this Terraform resource will only remove an AWS account from an organization. Terraform will not close the account. The member account must be prepared to be a standalone account beforehand. See the <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html">AWS Organizations documentation</a> for more information.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/organizations_account.html">https://www.terraform.io/docs/providers/aws/r/organizations_account.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -141,7 +140,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in organizations/account.ts:55</li>
+									<li>Defined in organizations/account.ts:45</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -182,7 +181,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in organizations/account.ts:65</li>
+									<li>Defined in organizations/account.ts:55</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -230,7 +229,7 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:28</li>
+							<li>Defined in organizations/account.ts:26</li>
 						</ul>
 					</aside>
 				</section>
@@ -240,14 +239,13 @@
 					<div class="tsd-signature tsd-kind-icon">email<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:34</li>
+							<li>Defined in organizations/account.ts:30</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/organizations_account.html#email">https://www.terraform.io/docs/providers/aws/r/organizations_account.html#email</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -256,14 +254,13 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>User<wbr>Access<wbr>ToBilling<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:40</li>
+							<li>Defined in organizations/account.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>If set to <code>ALLOW</code>, the new account enables IAM users to access account billing information if they have the required permissions. If set to <code>DENY</code>, then only the root user of the new account can access account billing information.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/organizations_account.html#iam_user_access_to_billing">https://www.terraform.io/docs/providers/aws/r/organizations_account.html#iam_user_access_to_billing</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -289,7 +286,7 @@
 					<div class="tsd-signature tsd-kind-icon">joined<wbr>Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:41</li>
+							<li>Defined in organizations/account.ts:35</li>
 						</ul>
 					</aside>
 				</section>
@@ -299,7 +296,7 @@
 					<div class="tsd-signature tsd-kind-icon">joined<wbr>Timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:42</li>
+							<li>Defined in organizations/account.ts:36</li>
 						</ul>
 					</aside>
 				</section>
@@ -309,14 +306,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:48</li>
+							<li>Defined in organizations/account.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A friendly name for the member account.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/organizations_account.html#name">https://www.terraform.io/docs/providers/aws/r/organizations_account.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -325,14 +321,13 @@
 					<div class="tsd-signature tsd-kind-icon">role<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:54</li>
+							<li>Defined in organizations/account.ts:44</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/organizations_account.html#role_name">https://www.terraform.io/docs/providers/aws/r/organizations_account.html#role_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -341,7 +336,7 @@
 					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in organizations/account.ts:55</li>
+							<li>Defined in organizations/account.ts:45</li>
 						</ul>
 					</aside>
 				</section>
@@ -375,7 +370,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in organizations/account.ts:24</li>
+									<li>Defined in organizations/account.ts:22</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

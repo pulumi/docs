@@ -79,7 +79,6 @@
 						<a href="acm_certificate.html"><code>aws_acm_certificate</code></a> to request a DNS validated certificate,
 					deploy the required validation records and wait for validation to complete.</p>
 					<p>~&gt; <strong>WARNING:</strong> This resource implements a part of the validation workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate_validation.html">https://www.terraform.io/docs/providers/aws/r/acm_certificate_validation.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -138,7 +137,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in acm/certificateValidation.ts:43</li>
+									<li>Defined in acm/certificateValidation.ts:37</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -179,7 +178,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in acm/certificateValidation.ts:53</li>
+									<li>Defined in acm/certificateValidation.ts:47</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -227,14 +226,13 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/certificateValidation.ts:37</li>
+							<li>Defined in acm/certificateValidation.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the certificate that is being validated.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate_validation.html#certificate_arn">https://www.terraform.io/docs/providers/aws/r/acm_certificate_validation.html#certificate_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -277,14 +275,13 @@
 					<div class="tsd-signature tsd-kind-icon">validation<wbr>Record<wbr>Fqdns<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/certificateValidation.ts:43</li>
+							<li>Defined in acm/certificateValidation.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate_validation.html#validation_record_fqdns">https://www.terraform.io/docs/providers/aws/r/acm_certificate_validation.html#validation_record_fqdns</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -300,7 +297,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in acm/certificateValidation.ts:28</li>
+									<li>Defined in acm/certificateValidation.ts:26</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

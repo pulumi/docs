@@ -74,7 +74,6 @@
 					<div class="lead">
 						<p>Provides a WAF Rate Based Rule Resource</p>
 					</div>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -136,7 +135,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in wafregional/rateBasedRule.ts:53</li>
+									<li>Defined in wafregional/rateBasedRule.ts:41</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -177,7 +176,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in wafregional/rateBasedRule.ts:63</li>
+									<li>Defined in wafregional/rateBasedRule.ts:51</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -242,14 +241,13 @@
 					<div class="tsd-signature tsd-kind-icon">metric<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in wafregional/rateBasedRule.ts:29</li>
+							<li>Defined in wafregional/rateBasedRule.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name or description for the Amazon CloudWatch metric of this rule.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html#metric_name">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html#metric_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -258,14 +256,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in wafregional/rateBasedRule.ts:35</li>
+							<li>Defined in wafregional/rateBasedRule.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name or description of the rule.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html#name">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -274,14 +271,13 @@
 					<div class="tsd-signature tsd-kind-icon">predicates<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in wafregional/rateBasedRule.ts:41</li>
+							<li>Defined in wafregional/rateBasedRule.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>One of ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html#predicate">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html#predicate</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -290,14 +286,13 @@
 					<div class="tsd-signature tsd-kind-icon">rate<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in wafregional/rateBasedRule.ts:47</li>
+							<li>Defined in wafregional/rateBasedRule.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Valid value is IP.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html#rate_key">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html#rate_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -306,14 +301,13 @@
 					<div class="tsd-signature tsd-kind-icon">rate<wbr>Limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in wafregional/rateBasedRule.ts:53</li>
+							<li>Defined in wafregional/rateBasedRule.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 2000.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html#rate_limit">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html#rate_limit</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -346,7 +340,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in wafregional/rateBasedRule.ts:20</li>
+									<li>Defined in wafregional/rateBasedRule.ts:18</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

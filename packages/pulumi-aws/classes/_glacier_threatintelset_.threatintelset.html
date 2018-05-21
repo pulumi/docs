@@ -75,7 +75,6 @@
 						<p>Provides a resource to manage a GuardDuty ThreatIntelSet.</p>
 					</div>
 					<p>~&gt; <strong>Note:</strong> Currently in GuardDuty, users from member accounts cannot upload and further manage ThreatIntelSets. ThreatIntelSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the <a href="https://docs.aws.amazon.com/guardduty/latest/ug/create-threat-intel-set.html">GuardDuty API Documentation</a></p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html">https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -137,7 +136,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in glacier/threatIntelSet.ts:55</li>
+									<li>Defined in glacier/threatIntelSet.ts:43</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -178,7 +177,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in glacier/threatIntelSet.ts:65</li>
+									<li>Defined in glacier/threatIntelSet.ts:53</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -226,14 +225,13 @@
 					<div class="tsd-signature tsd-kind-icon">activate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in glacier/threatIntelSet.ts:31</li>
+							<li>Defined in glacier/threatIntelSet.ts:27</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html#activate">https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html#activate</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -242,14 +240,13 @@
 					<div class="tsd-signature tsd-kind-icon">detector<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in glacier/threatIntelSet.ts:37</li>
+							<li>Defined in glacier/threatIntelSet.ts:31</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The detector ID of the GuardDuty.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html#detector_id">https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html#detector_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -258,14 +255,13 @@
 					<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in glacier/threatIntelSet.ts:43</li>
+							<li>Defined in glacier/threatIntelSet.ts:35</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The format of the file that contains the ThreatIntelSet. Valid values: <code>TXT</code> | <code>STIX</code> | <code>OTX_CSV</code> | <code>ALIEN_VAULT</code> | <code>PROOF_POINT</code> | <code>FIRE_EYE</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html#format">https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html#format</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -291,14 +287,13 @@
 					<div class="tsd-signature tsd-kind-icon">location<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in glacier/threatIntelSet.ts:49</li>
+							<li>Defined in glacier/threatIntelSet.ts:39</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The URI of the file that contains the ThreatIntelSet.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html#location">https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html#location</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -307,14 +302,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in glacier/threatIntelSet.ts:55</li>
+							<li>Defined in glacier/threatIntelSet.ts:43</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The friendly name to identify the ThreatIntelSet.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html#name">https://www.terraform.io/docs/providers/aws/r/guardduty_threatintelset.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -347,7 +341,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in glacier/threatIntelSet.ts:22</li>
+									<li>Defined in glacier/threatIntelSet.ts:20</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

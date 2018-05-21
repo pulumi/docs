@@ -97,7 +97,6 @@
 						defined in-line. At this time you cannot use a Route Table with in-line routes
 						in conjunction with any Route resources. Doing so will cause
 					a conflict of rule settings and will overwrite routes.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/default_route_table.html">https://www.terraform.io/docs/providers/aws/r/default_route_table.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -159,7 +158,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/defaultRouteTable.ts:78</li>
+									<li>Defined in ec2/defaultRouteTable.ts:68</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -200,7 +199,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ec2/defaultRouteTable.ts:88</li>
+									<li>Defined in ec2/defaultRouteTable.ts:78</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -248,14 +247,13 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Route<wbr>Table<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultRouteTable.ts:59</li>
+							<li>Defined in ec2/defaultRouteTable.ts:55</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ID of the Default Routing Table.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/default_route_table.html#default_route_table_id">https://www.terraform.io/docs/providers/aws/r/default_route_table.html#default_route_table_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -281,14 +279,13 @@
 					<div class="tsd-signature tsd-kind-icon">propagating<wbr>Vgws<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultRouteTable.ts:65</li>
+							<li>Defined in ec2/defaultRouteTable.ts:59</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of virtual gateways for propagation.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/default_route_table.html#propagating_vgws">https://www.terraform.io/docs/providers/aws/r/default_route_table.html#propagating_vgws</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -297,14 +294,13 @@
 					<div class="tsd-signature tsd-kind-icon">routes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultRouteTable.ts:71</li>
+							<li>Defined in ec2/defaultRouteTable.ts:63</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of route objects. Their keys are documented below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/default_route_table.html#route">https://www.terraform.io/docs/providers/aws/r/default_route_table.html#route</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -313,14 +309,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultRouteTable.ts:77</li>
+							<li>Defined in ec2/defaultRouteTable.ts:67</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/default_route_table.html#tags">https://www.terraform.io/docs/providers/aws/r/default_route_table.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -346,7 +341,7 @@
 					<div class="tsd-signature tsd-kind-icon">vpc<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ec2/defaultRouteTable.ts:78</li>
+							<li>Defined in ec2/defaultRouteTable.ts:68</li>
 						</ul>
 					</aside>
 				</section>
@@ -363,7 +358,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ec2/defaultRouteTable.ts:50</li>
+									<li>Defined in ec2/defaultRouteTable.ts:48</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

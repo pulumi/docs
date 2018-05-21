@@ -74,7 +74,6 @@
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_debuggable_.html#debugpromiseleaks" class="tsd-kind-icon">debug<wbr>Promise<wbr>Leaks</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_debuggable_.html#debugpromisetimeout" class="tsd-kind-icon">debug<wbr>Promise<wbr>Timeout</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_debuggable_.html#leakcandidates" class="tsd-kind-icon">leak<wbr>Candidates</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_debuggable_.html#leakdetectorscheduled" class="tsd-kind-icon">leak<wbr>Detector<wbr>Scheduled</a></li>
 							</ul>
@@ -95,10 +94,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="debugpromiseleaks" class="tsd-anchor"></a>
 					<h3>debug<wbr>Promise<wbr>Leaks</h3>
-					<div class="tsd-signature tsd-kind-icon">debug<wbr>Promise<wbr>Leaks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></div>
+					<div class="tsd-signature tsd-kind-icon">debug<wbr>Promise<wbr>Leaks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;!!process.env.PULUMI_DEBUG_PROMISE_LEAKS</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L14">runtime/debuggable.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L8">runtime/debuggable.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -108,28 +107,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="debugpromisetimeout" class="tsd-anchor"></a>
-					<h3>debug<wbr>Promise<wbr>Timeout</h3>
-					<div class="tsd-signature tsd-kind-icon">debug<wbr>Promise<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;-1</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L9">runtime/debuggable.ts:9</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>debugPromiseTimeout can be set to enable promises debugging.  If it is -1, it has no effect.  Be careful setting
-							this to other values, because too small a value will cause legitimate promise resolutions to appear as timeouts.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="leakcandidates" class="tsd-anchor"></a>
 					<h3>leak<wbr>Candidates</h3>
 					<div class="tsd-signature tsd-kind-icon">leak<wbr>Candidates<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Set&lt;Promise&lt;any&gt;&gt;()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L23">runtime/debuggable.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L17">runtime/debuggable.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -144,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">leak<wbr>Detector<wbr>Scheduled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L19">runtime/debuggable.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L13">runtime/debuggable.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -166,7 +149,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L34">runtime/debuggable.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L28">runtime/debuggable.ts:28</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -203,7 +186,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L89">runtime/debuggable.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L87">runtime/debuggable.ts:87</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -231,7 +214,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L25">runtime/debuggable.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts#L19">runtime/debuggable.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -261,9 +244,6 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_runtime_debuggable_.html#debugpromiseleaks" class="tsd-kind-icon">debug<wbr>Promise<wbr>Leaks</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_runtime_debuggable_.html#debugpromisetimeout" class="tsd-kind-icon">debug<wbr>Promise<wbr>Timeout</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_runtime_debuggable_.html#leakcandidates" class="tsd-kind-icon">leak<wbr>Candidates</a>

@@ -74,7 +74,6 @@
 					<div class="lead">
 						<p>Provides an ECS task definition to be used in <code>aws_ecs_service</code>.</p>
 					</div>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -143,7 +142,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ecs/taskDefinition.ts:100</li>
+									<li>Defined in ecs/taskDefinition.ts:74</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -184,7 +183,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ecs/taskDefinition.ts:110</li>
+									<li>Defined in ecs/taskDefinition.ts:84</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -232,14 +231,13 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:29</li>
+							<li>Defined in ecs/taskDefinition.ts:25</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Full ARN of the Task Definition (including both <code>family</code> and <code>revision</code>).</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#arn">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -248,7 +246,7 @@
 					<div class="tsd-signature tsd-kind-icon">container<wbr>Definitions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:40</li>
+							<li>Defined in ecs/taskDefinition.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -260,7 +258,6 @@
 								(<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html</a>) section from the
 							official <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide">Developer Guide</a>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#container_definitions">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#container_definitions</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -269,14 +266,13 @@
 					<div class="tsd-signature tsd-kind-icon">cpu<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:46</li>
+							<li>Defined in ecs/taskDefinition.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The number of cpu units used by the task. If the <code>requires_compatibilities</code> is <code>FARGATE</code> this field is required.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#cpu">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#cpu</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -285,14 +281,13 @@
 					<div class="tsd-signature tsd-kind-icon">execution<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:52</li>
+							<li>Defined in ecs/taskDefinition.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#execution_role_arn">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#execution_role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -301,14 +296,13 @@
 					<div class="tsd-signature tsd-kind-icon">family<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:58</li>
+							<li>Defined in ecs/taskDefinition.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A unique name for your task definition.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#family">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#family</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -334,14 +328,13 @@
 					<div class="tsd-signature tsd-kind-icon">memory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:64</li>
+							<li>Defined in ecs/taskDefinition.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The amount (in MiB) of memory used by the task. If the <code>requires_compatibilities</code> is <code>FARGATE</code> this field is required.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#memory">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#memory</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -350,14 +343,13 @@
 					<div class="tsd-signature tsd-kind-icon">network<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:70</li>
+							<li>Defined in ecs/taskDefinition.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The Docker networking mode to use for the containers in the task. The valid values are <code>none</code>, <code>bridge</code>, <code>awsvpc</code>, and <code>host</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#network_mode">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#network_mode</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -366,14 +358,13 @@
 					<div class="tsd-signature tsd-kind-icon">placement<wbr>Constraints<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:76</li>
+							<li>Defined in ecs/taskDefinition.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A set of <a href="#placement-constraints-arguments">placement constraints</a> rules that are taken into consideration during task placement. Maximum number of <code>placement_constraints</code> is <code>10</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#placement_constraints">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#placement_constraints</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -382,14 +373,13 @@
 					<div class="tsd-signature tsd-kind-icon">requires<wbr>Compatibilities<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:82</li>
+							<li>Defined in ecs/taskDefinition.ts:62</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A set of launch types required by the task. The valid values are <code>EC2</code> and <code>FARGATE</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#requires_compatibilities">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#requires_compatibilities</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -398,14 +388,13 @@
 					<div class="tsd-signature tsd-kind-icon">revision<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:88</li>
+							<li>Defined in ecs/taskDefinition.ts:66</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The revision of the task in a particular family.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#revision">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#revision</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -414,14 +403,13 @@
 					<div class="tsd-signature tsd-kind-icon">task<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:94</li>
+							<li>Defined in ecs/taskDefinition.ts:70</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#task_role_arn">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#task_role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -447,14 +435,13 @@
 					<div class="tsd-signature tsd-kind-icon">volumes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ecs/taskDefinition.ts:100</li>
+							<li>Defined in ecs/taskDefinition.ts:74</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A set of <a href="#volume-block-arguments">volume blocks</a> that containers in your task may use.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#volume">https://www.terraform.io/docs/providers/aws/r/ecs_task_definition.html#volume</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -470,7 +457,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ecs/taskDefinition.ts:20</li>
+									<li>Defined in ecs/taskDefinition.ts:18</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

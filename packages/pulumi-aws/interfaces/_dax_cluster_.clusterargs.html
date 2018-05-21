@@ -116,7 +116,7 @@
 					<div class="tsd-signature tsd-kind-icon">availability<wbr>Zones<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:348</li>
+							<li>Defined in dax/cluster.ts:276</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -124,7 +124,6 @@
 							<p>List of Availability Zones in which the
 							nodes will be created</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#availability_zones">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#availability_zones</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -133,7 +132,7 @@
 					<div class="tsd-signature tsd-kind-icon">cluster<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:355</li>
+							<li>Defined in dax/cluster.ts:281</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -141,7 +140,6 @@
 							<p>Group identifier. DAX converts this name to
 							lowercase</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#cluster_name">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#cluster_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -150,14 +148,13 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:361</li>
+							<li>Defined in dax/cluster.ts:285</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Description for the cluster</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#description">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -166,7 +163,7 @@
 					<div class="tsd-signature tsd-kind-icon">iam<wbr>Role<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:369</li>
+							<li>Defined in dax/cluster.ts:291</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -175,7 +172,6 @@
 								an IAM role. At runtime, DAX will assume this role and use the role&#39;s
 							permissions to access DynamoDB on your behalf</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#iam_role_arn">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#iam_role_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -184,7 +180,7 @@
 					<div class="tsd-signature tsd-kind-icon">maintenance<wbr>Window<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:378</li>
+							<li>Defined in dax/cluster.ts:298</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -194,7 +190,6 @@
 								(24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 							<code>sun:05:00-sun:09:00</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#maintenance_window">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#maintenance_window</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -203,7 +198,7 @@
 					<div class="tsd-signature tsd-kind-icon">node<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:385</li>
+							<li>Defined in dax/cluster.ts:303</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -211,7 +206,6 @@
 							<p>The compute and memory capacity of the nodes. See
 							[Nodes][1] for supported node types</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#node_type">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#node_type</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -220,7 +214,7 @@
 					<div class="tsd-signature tsd-kind-icon">notification<wbr>Topic<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:393</li>
+							<li>Defined in dax/cluster.ts:309</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -229,7 +223,6 @@
 								SNS topic to send DAX notifications to. Example:
 							<code>arn:aws:sns:us-east-1:012345678999:my_sns_topic</code></p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#notification_topic_arn">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#notification_topic_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -238,7 +231,7 @@
 					<div class="tsd-signature tsd-kind-icon">parameter<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:400</li>
+							<li>Defined in dax/cluster.ts:314</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -246,7 +239,6 @@
 							<p>Name of the parameter group to associate
 							with this DAX cluster</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#parameter_group_name">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#parameter_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -255,7 +247,7 @@
 					<div class="tsd-signature tsd-kind-icon">replication<wbr>Factor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:408</li>
+							<li>Defined in dax/cluster.ts:320</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -264,7 +256,6 @@
 								replication factor of 1 will create a single-node cluster, without any read
 							replicas</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#replication_factor">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#replication_factor</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -273,7 +264,7 @@
 					<div class="tsd-signature tsd-kind-icon">security<wbr>Group<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:415</li>
+							<li>Defined in dax/cluster.ts:325</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -281,7 +272,6 @@
 							<p>One or more VPC security groups associated
 							with the cluster</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#security_group_ids">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#security_group_ids</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -290,7 +280,7 @@
 					<div class="tsd-signature tsd-kind-icon">subnet<wbr>Group<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:422</li>
+							<li>Defined in dax/cluster.ts:330</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -298,7 +288,6 @@
 							<p>Name of the subnet group to be used for the
 							cluster</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#subnet_group_name">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#subnet_group_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -307,14 +296,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in dax/cluster.ts:428</li>
+							<li>Defined in dax/cluster.ts:334</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#tags">https://www.terraform.io/docs/providers/aws/r/dax_cluster.html#tags</a>.</p>
 					</div>
 				</section>
 			</section>

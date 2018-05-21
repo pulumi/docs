@@ -81,6 +81,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_runtime_invoke_.html#invoke" class="tsd-kind-icon">invoke</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_runtime_invoke_.html#waitfordeath" class="tsd-kind-icon">wait<wbr>For<wbr>Death</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,7 +95,7 @@
 					<div class="tsd-signature tsd-kind-icon">gstruct<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;google-protobuf/google/protobuf/struct_pb.js&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L9">runtime/invoke.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L10">runtime/invoke.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -104,7 +105,7 @@
 					<div class="tsd-signature tsd-kind-icon">resproto<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;require(&quot;../proto/resource_pb.js&quot;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L10">runtime/invoke.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L11">runtime/invoke.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -121,7 +122,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L17">runtime/invoke.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L18">runtime/invoke.ts:18</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -141,6 +142,29 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="waitfordeath" class="tsd-anchor"></a>
+					<h3>wait<wbr>For<wbr>Death</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Death<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L71">runtime/invoke.ts:71</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>waitForDeath loops forever. See the comments in resource.ts on the function with
+									the same name for an explanation as to why this exists.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">never</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -167,6 +191,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_runtime_invoke_.html#invoke" class="tsd-kind-icon">invoke</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_runtime_invoke_.html#waitfordeath" class="tsd-kind-icon">wait<wbr>For<wbr>Death</a>
 					</li>
 				</ul>
 			</nav>

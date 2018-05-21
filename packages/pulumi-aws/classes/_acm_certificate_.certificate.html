@@ -84,7 +84,6 @@
 					deploy the required validation records and wait for validation to complete.</p>
 					<p>Domain validation through E-Mail is also supported but should be avoided as it requires a manual step outside
 					of Terraform.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -148,7 +147,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in acm/certificate.ts:78</li>
+									<li>Defined in acm/certificate.ts:62</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -189,7 +188,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in acm/certificate.ts:88</li>
+									<li>Defined in acm/certificate.ts:72</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -237,14 +236,13 @@
 					<div class="tsd-signature tsd-kind-icon">arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/certificate.ts:42</li>
+							<li>Defined in acm/certificate.ts:38</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN of the certificate</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#arn">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -253,14 +251,13 @@
 					<div class="tsd-signature tsd-kind-icon">domain<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/certificate.ts:48</li>
+							<li>Defined in acm/certificate.ts:42</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A domain name for which the certificate should be issued</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#domain_name">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#domain_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -269,14 +266,13 @@
 					<div class="tsd-signature tsd-kind-icon">domain<wbr>Validation<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/certificate.ts:54</li>
+							<li>Defined in acm/certificate.ts:46</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if <code>DNS</code>-validation was used.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#domain_validation_options">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#domain_validation_options</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -302,14 +298,13 @@
 					<div class="tsd-signature tsd-kind-icon">subject<wbr>Alternative<wbr>Names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/certificate.ts:60</li>
+							<li>Defined in acm/certificate.ts:50</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of domains that should be SANs in the issued certificate</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#subject_alternative_names">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#subject_alternative_names</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -318,14 +313,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/certificate.ts:66</li>
+							<li>Defined in acm/certificate.ts:54</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the resource.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#tags">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#tags</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -351,14 +345,13 @@
 					<div class="tsd-signature tsd-kind-icon">validation<wbr>Emails<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/certificate.ts:72</li>
+							<li>Defined in acm/certificate.ts:58</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of addresses that received a validation E-Mail. Only set if <code>EMAIL</code>-validation was used.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#validation_emails">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#validation_emails</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -367,14 +360,13 @@
 					<div class="tsd-signature tsd-kind-icon">validation<wbr>Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in acm/certificate.ts:78</li>
+							<li>Defined in acm/certificate.ts:62</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Which method to use for validation. <code>DNS</code> or <code>EMAIL</code> are valid, <code>NONE</code> can be used for certificates that were imported into ACM and then into Terraform.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#validation_method">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html#validation_method</a>.</p>
 					</div>
 				</section>
 			</section>
@@ -390,7 +382,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in acm/certificate.ts:33</li>
+									<li>Defined in acm/certificate.ts:31</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

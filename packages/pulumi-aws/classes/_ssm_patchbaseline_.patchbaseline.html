@@ -77,7 +77,6 @@
 					<p>~&gt; <strong>NOTE on Patch Baselines:</strong> The <code>approved_patches</code> and <code>approval_rule</code> are
 						both marked as optional fields, but the Patch Baseline requires that at least one
 					of them is specified.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html">https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -142,7 +141,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ssm/patchBaseline.ts:75</li>
+									<li>Defined in ssm/patchBaseline.ts:57</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -183,7 +182,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in ssm/patchBaseline.ts:85</li>
+									<li>Defined in ssm/patchBaseline.ts:67</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -231,14 +230,13 @@
 					<div class="tsd-signature tsd-kind-icon">approval<wbr>Rules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/patchBaseline.ts:33</li>
+							<li>Defined in ssm/patchBaseline.ts:29</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#approval_rule">https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#approval_rule</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -247,14 +245,13 @@
 					<div class="tsd-signature tsd-kind-icon">approved<wbr>Patches<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/patchBaseline.ts:39</li>
+							<li>Defined in ssm/patchBaseline.ts:33</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of explicitly approved patches for the baseline.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#approved_patches">https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#approved_patches</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -263,14 +260,13 @@
 					<div class="tsd-signature tsd-kind-icon">approved<wbr>Patches<wbr>Compliance<wbr>Level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/patchBaseline.ts:45</li>
+							<li>Defined in ssm/patchBaseline.ts:37</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: <code>CRITICAL</code>, <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code>, <code>INFORMATIONAL</code>, <code>UNSPECIFIED</code>. The default value is <code>UNSPECIFIED</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#approved_patches_compliance_level">https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#approved_patches_compliance_level</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -279,14 +275,13 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/patchBaseline.ts:51</li>
+							<li>Defined in ssm/patchBaseline.ts:41</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The description of the patch baseline.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#description">https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -295,14 +290,13 @@
 					<div class="tsd-signature tsd-kind-icon">global<wbr>Filters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/patchBaseline.ts:57</li>
+							<li>Defined in ssm/patchBaseline.ts:45</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are <code>PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#global_filter">https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#global_filter</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -328,14 +322,13 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/patchBaseline.ts:63</li>
+							<li>Defined in ssm/patchBaseline.ts:49</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The name of the patch baseline.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#name">https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -344,14 +337,13 @@
 					<div class="tsd-signature tsd-kind-icon">operating<wbr>System<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/patchBaseline.ts:69</li>
+							<li>Defined in ssm/patchBaseline.ts:53</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Defines the operating system the patch baseline applies to. Supported operating systems include <code>WINDOWS</code>, <code>AMAZON_LINUX</code>, <code>UBUNTU</code> and <code>REDHAT_ENTERPRISE_LINUX</code>. The Default value is <code>WINDOWS</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#operating_system">https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#operating_system</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -360,14 +352,13 @@
 					<div class="tsd-signature tsd-kind-icon">rejected<wbr>Patches<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in ssm/patchBaseline.ts:75</li>
+							<li>Defined in ssm/patchBaseline.ts:57</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of rejected patches.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#rejected_patches">https://www.terraform.io/docs/providers/aws/r/ssm_patch_baseline.html#rejected_patches</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -400,7 +391,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in ssm/patchBaseline.ts:24</li>
+									<li>Defined in ssm/patchBaseline.ts:22</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

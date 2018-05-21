@@ -86,7 +86,6 @@
 					<code>cloudfront_domain_name</code> attribute.</p>
 					<p>~&gt; <strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
 					<a href="/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-					<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -152,7 +151,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in apigateway/domainName.ts:99</li>
+									<li>Defined in apigateway/domainName.ts:79</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -193,7 +192,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CustomResource.__constructor</p>
 								<ul>
-									<li>Defined in apigateway/domainName.ts:109</li>
+									<li>Defined in apigateway/domainName.ts:89</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -241,14 +240,13 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Arn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/domainName.ts:44</li>
+							<li>Defined in apigateway/domainName.ts:40</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The ARN for an AWS-managed certificate. Conflicts with <code>certificate_name</code>, <code>certificate_body</code>, <code>certificate_chain</code> and <code>certificate_private_key</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_arn">https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_arn</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -257,7 +255,7 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/domainName.ts:51</li>
+							<li>Defined in apigateway/domainName.ts:45</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -265,7 +263,6 @@
 							<p>The certificate issued for the domain name
 							being registered, in PEM format. Conflicts with <code>certificate_arn</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_body">https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_body</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -274,7 +271,7 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Chain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/domainName.ts:59</li>
+							<li>Defined in apigateway/domainName.ts:51</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -283,7 +280,6 @@
 								certificate, along with any intermediate CA certificates required to
 							create an unbroken chain to a certificate trusted by the intended API clients. Conflicts with <code>certificate_arn</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_chain">https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_chain</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -292,7 +288,7 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/domainName.ts:66</li>
+							<li>Defined in apigateway/domainName.ts:56</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -300,7 +296,6 @@
 							<p>The unique name to use when registering this
 							cert as an IAM server certificate. Conflicts with <code>certificate_arn</code>. Required if <code>certificate_arn</code> is not set.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_name">https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -309,7 +304,7 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Private<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/domainName.ts:73</li>
+							<li>Defined in apigateway/domainName.ts:61</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -317,7 +312,6 @@
 							<p>The private key associated with the
 							domain certificate given in <code>certificate_body</code>. Conflicts with <code>certificate_arn</code>.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_private_key">https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_private_key</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -326,14 +320,13 @@
 					<div class="tsd-signature tsd-kind-icon">certificate<wbr>Upload<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/domainName.ts:79</li>
+							<li>Defined in apigateway/domainName.ts:65</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The upload date associated with the domain certificate.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_upload_date">https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#certificate_upload_date</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -342,7 +335,7 @@
 					<div class="tsd-signature tsd-kind-icon">cloudfront<wbr>Domain<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/domainName.ts:86</li>
+							<li>Defined in apigateway/domainName.ts:70</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -350,7 +343,6 @@
 							<p>The hostname created by Cloudfront to represent
 							the distribution that implements this domain name mapping.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#cloudfront_domain_name">https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#cloudfront_domain_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -359,7 +351,7 @@
 					<div class="tsd-signature tsd-kind-icon">cloudfront<wbr>Zone<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/domainName.ts:93</li>
+							<li>Defined in apigateway/domainName.ts:75</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -367,7 +359,6 @@
 							<p>For convenience, the hosted zone id (<code>Z2FDTNDATAQYW2</code>)
 							that can be used to create a Route53 alias record for the distribution.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#cloudfront_zone_id">https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#cloudfront_zone_id</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
@@ -376,14 +367,13 @@
 					<div class="tsd-signature tsd-kind-icon">domain<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Output</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in apigateway/domainName.ts:99</li>
+							<li>Defined in apigateway/domainName.ts:79</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The fully-qualified domain name to register</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#domain_name">https://www.terraform.io/docs/providers/aws/r/api_gateway_domain_name.html#domain_name</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -433,7 +423,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in apigateway/domainName.ts:35</li>
+									<li>Defined in apigateway/domainName.ts:33</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

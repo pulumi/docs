@@ -111,7 +111,7 @@
 					<div class="tsd-signature tsd-kind-icon">deletion<wbr>Window<wbr>InDays<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kms/key.ts:194</li>
+							<li>Defined in kms/key.ts:154</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -119,7 +119,6 @@
 							<p>Duration in days after which the key is deleted
 							after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kms_key.html#deletion_window_in_days">https://www.terraform.io/docs/providers/aws/r/kms_key.html#deletion_window_in_days</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -128,14 +127,13 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kms/key.ts:200</li>
+							<li>Defined in kms/key.ts:158</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The description of the key as viewed in AWS console.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kms_key.html#description">https://www.terraform.io/docs/providers/aws/r/kms_key.html#description</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -144,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Key<wbr>Rotation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kms/key.ts:207</li>
+							<li>Defined in kms/key.ts:163</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -152,7 +150,6 @@
 							<p>Specifies whether <a href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">key rotation</a>
 							is enabled. Defaults to false.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kms_key.html#enable_key_rotation">https://www.terraform.io/docs/providers/aws/r/kms_key.html#enable_key_rotation</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -161,14 +158,13 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kms/key.ts:213</li>
+							<li>Defined in kms/key.ts:167</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Specifies whether the key is enabled. Defaults to true.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kms_key.html#is_enabled">https://www.terraform.io/docs/providers/aws/r/kms_key.html#is_enabled</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -177,7 +173,7 @@
 					<div class="tsd-signature tsd-kind-icon">key<wbr>Usage<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kms/key.ts:220</li>
+							<li>Defined in kms/key.ts:172</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -185,7 +181,6 @@
 							<p>Specifies the intended use of the key.
 							Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kms_key.html#key_usage">https://www.terraform.io/docs/providers/aws/r/kms_key.html#key_usage</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -194,14 +189,13 @@
 					<div class="tsd-signature tsd-kind-icon">policy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kms/key.ts:226</li>
+							<li>Defined in kms/key.ts:176</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A valid policy JSON document.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kms_key.html#policy">https://www.terraform.io/docs/providers/aws/r/kms_key.html#policy</a>.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -210,14 +204,13 @@
 					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">pulumi.Input</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in kms/key.ts:232</li>
+							<li>Defined in kms/key.ts:180</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A mapping of tags to assign to the object.</p>
 						</div>
-						<p>Sourced from <a href="https://www.terraform.io/docs/providers/aws/r/kms_key.html#tags">https://www.terraform.io/docs/providers/aws/r/kms_key.html#tags</a>.</p>
 					</div>
 				</section>
 			</section>
