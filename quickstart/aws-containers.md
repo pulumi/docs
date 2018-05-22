@@ -88,30 +88,6 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
     ...
 
     Updating stack 'container-quickstart-dev'
-    Performing changes:
-
-        Type                                           Name                                           Status   
-    *   global                                         global                                         unchanged
-    +   pulumi:pulumi:Stack                            container-quickstart-container-quickstart-dev  created  
-    +   ├─ aws-infra:network:Network                   default-vpc                                    created
-    +   ├─ aws:ecr:Repository                          pulum-164fa748-container                       created
-    +   ├─ cloud:global:infrastructure                 global-infrastructure                          created
-    +   │  ├─ aws:iam:Role                             pulumi-container-qu-task                       created
-    +   │  ├─ aws:iam:Role                             pulumi-contain-execution                       created
-    +   │  ├─ aws:iam:RolePolicyAttachment             pulumi-con-task-32be53a2                       created
-    +   │  ├─ aws:iam:RolePolicyAttachment             pulumi-con-task-fd1a00e5                       created
-    +   │  └─ aws:iam:RolePolicyAttachment             pulumi-contain-execution                       created
-    +   ├─ cloud:service:Service                       pulumi-nginx                                   created
-    +   │  ├─ aws:cloudwatch:LogGroup                  pulumi-nginx                                   created
-    +   │  ├─ aws:elasticloadbalancingv2:TargetGroup   42dc3ff4                                       created
-    +   │  ├─ aws:elasticloadbalancingv2:LoadBalancer  42dc3ff4                                       created
-    +   │  ├─ aws:elasticloadbalancingv2:Listener      pulumi-nginx-nginx-80                          created
-    +   │  ├─ aws:ecs:TaskDefinition                   pulumi-nginx                                   created
-    +   │  └─ aws:ecs:Service                          pulumi-nginx                                   created
-    +   └─ aws-infra:cluster:Cluster                   pulumi-container--global                       created
-    +      ├─ aws:ecs:Cluster                          pulumi-container--global                       created
-    +      └─ aws:ec2:SecurityGroup                    pulumi-container--global                       created
-
     ...
 
     ---outputs:---
