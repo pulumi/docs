@@ -50,13 +50,19 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
     $ npm install --save @pulumi/cloud @pulumi/cloud-aws
     ```
 
-1.  Configure your AWS region:
+1.  Preview and deploy changes via `pulumi update`:
 
-    ```bash
-    $ pulumi config set aws:region us-west-2
     ```
+    $ pulumi update
+    Previewing update of stack 'hello-http'
+    ...
 
-1.  Preview and deploy changes via `pulumi update`. A total of 14 resources will be created.
+    Updating stack 'hello-http'
+    ...
+
+    info: 14 changes performed:
+        + 14 resources created
+    ```
 
 1.  View the endpoint URL and curl a few routes:
 
