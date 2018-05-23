@@ -29,7 +29,7 @@ Pulumi enables teams to manage cloud native infrastructure with familiar code ma
 
 ## First time using Pulumi?
 
-If so, then you need to install the CLI, and configure AWS and NPM. 
+If so, then you need to install the CLI, and configure AWS.
 
 ### Install Pulumi
 

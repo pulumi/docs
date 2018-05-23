@@ -22,7 +22,7 @@ Kubernetes resources are defined in the following locations:
 
 * Source repo: [pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
 * PyPI package for Python: `pulumi_kubernetes`
-* NPM package for JavaScript and/or TypeScript: `@pulumi/kubernetes`
+* NPM package for JavaScript and/or TypeScript: [@pulumi/kubernetes](https://www.npmjs.com/package/@pulumi/kubernetes)
 
 > **Note:** Detailed API documentation is coming soon.
 
@@ -56,9 +56,6 @@ If you're using JavaScript and/or TypeScript, add your dependency to `package.js
 
 Install the package using `npm install` or `yarn install`.  This will download the latest version, and also install
 the associated Pulumi resource provider plugin.
-
-> **Note:** While Pulumi is in Private Beta, be sure to [configure your NPM client](../install/configure-npm.html)
-> to correctly download packages from Pulumi's private NPM proxy server.  This is a temporary requirement.
 
 ## Examples
 
