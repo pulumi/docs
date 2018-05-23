@@ -4,5 +4,4 @@ toc:
   path: /install/index
   section:
   - install/aws.md
-  - install/configure-npm.md
   - install/changelog.md

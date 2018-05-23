@@ -9,7 +9,7 @@ title: "Configure Pulumi for AWS"
 
 The [Pulumi AWS provider] uses the AWS SDK to manage and provision resources. 
 
-> Your AWS credentials are never read directly by Pulumi, nor are they stored in the service. When you run the Pulumi CLI, it provisions resources using the AWS SDK.
+> Pulumi relies on the AWS SDK to authenticate requests from your computer to AWS. Your AWS credentials are never sent to pulumi.com.
 
 1.  If you haven't already, [install the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html). If you're using [Homebrew](https://brew.sh/) on macOS, you can use the community-managed [awscli](http://formulae.brew.sh/formula/awscli) via `brew install awscli`.
 

@@ -43,18 +43,7 @@ Next, add three things to your `travis.yml` file.
         - pulumi init
     ```
 
-2. While we are in Private Beta, you will also need to
-   [configure your NPM or Yarn client to use our private NPM server](../install/configure-npm.html).  To do so, also
-   add this line to your `before_install` section:
-
-   ```yaml
-   before_install:
-       # Use Pulumi's NPM server for any @pulumi/* packages (while still in Private Beta).
-       - echo -e "@pulumi:registry=https://npmjs.pulumi.com/" > ~/.npmrc
-       - echo -e "//npmjs.pulumi.com/:_authToken=\${PULUMI_ACCESS_TOKEN}" >> ~/.npmrc
-   ```
-
-3. Finally, add the line to perform the Pulumi update to the `script` section:
+1. Add the line to perform the Pulumi update to the `script` section:
 
     ```yaml
     script:

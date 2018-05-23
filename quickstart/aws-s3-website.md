@@ -51,12 +51,6 @@ The [Pulumi Cloud] framework provides high-level components that encode common i
     $ npm install --save @pulumi/cloud-aws
     ```
 
-1.  Configure the AWS region to deploy to, such as `us-west-2`:
-
-    ```bash
-    $ pulumi config set aws:region us-west-2
-    ```
-
 1.  Run `pulumi update` to preview and deploy AWS resources. This creates a stack component, a Bucket, two S3 Objects (one for each file in the `www` folder), and several API Gateway resources.
 
     ```bash
