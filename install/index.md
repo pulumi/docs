@@ -111,8 +111,6 @@ Windows 8 and 10 are supported.
 
 1. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 
-1.  If you're using Pulumi with JavaScript or TypeScript, follow the instructions in [Configure your NPM client](./configure-npm.html).
-
 ### macOS install {#mac}
 
 macOS Sierra (10.12) or later is required. 
@@ -132,8 +130,6 @@ macOS Sierra (10.12) or later is required.
     echo "export PATH=\$PATH:/usr/local/pulumi/bin" >> ~/.profile
     ```
 
-1.  If you're using Pulumi with JavaScript or TypeScript, follow the instructions in [Configure your NPM client](./configure-npm.html).
-
 ### Linux install {#linux}
 
 We provide a pre-built binary for Linux.
@@ -152,8 +148,6 @@ We provide a pre-built binary for Linux.
     ```
     echo "export PATH=\$PATH:/usr/local/pulumi/bin" >> ~/.profile
     ```
-
-1.  If you're using Pulumi with JavaScript or TypeScript, follow the instructions in [Configure your NPM client](./configure-npm.html).
 
 ## Verify the install
 

@@ -1,13 +1,9 @@
 ---
 title: "JavaScript and TypeScript"
 redirect_from: "npm-packages.html"
----
+redirect_from: "install/configure-npm.html"
 
-<!-- LINKS -->
-[Configure your NPM client]: ../install/configure-npm.html
-[`pulumi.Config`]: ./packages/pulumi/classes/_config_.config.html
-[Using configuration values in JavaScript]: ./config.html#javascript
-<!-- END LINKS -->
+---
 
 ## Getting Started
 
@@ -18,45 +14,23 @@ $ pulumi new javascript
 Your project was created successfully.
 ```
 
-This will create a `Pulumi.yaml` [project file](./project.html), a `package.json` file, where you will specify your dependencies (see #npm-packages below), and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file](./project.html), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
 
-## Using Pulumi NPM Packages {#npm-packages}
+## Pulumi packages
 
-The first thing you'll want to do is install the Pulumi SDK package.  This is listed in the template's `package.json` file.  Normally you'd just run `npm install` or `yarn install` at this time, however to use any `@pulumi` packages, you'll first need to follow the instructions in [Configure your NPM client].
-
-> **Note:** Because Pulumi is still in Private Beta, packages aren't publicly available on NPM yet.  This is why the manual NPM client configuration is required.  As soon as Pulumi is public, all packages will be too.
-
-All Pulumi packages are regular NPM packages, and live in the `@pulumi` organization scope.  The four most commonly used packages are `@pulumi/pulumi`, `@pulumi/aws`, `@pulumi/cloud` and `@pulumi/cloud-aws`, and they are specified as usual in the `dependencies` section of `package.json`.
-
-For example, if a program used **all** the `@pulumi/*` packages, it would have the following `package.json`. 
-
-```json
-"dependencies": {
-    "@pulumi/pulumi": "^0.11.0",
-    "@pulumi/aws": "^0.11.0",
-    "@pulumi/cloud": "^0.11.0",
-    "@pulumi/cloud-aws": "^0.11.0"
-}
-```
-
-Most of the time, you will not need to use all of the packages.  To install the resulting dependencies, run `npm install` as usual, and they will be downloaded and placed into `node_modules`.  If you'd like to update an existing project's dependencies and check for newer versions, simply run `npm install --update`.
-
-> **Note:** If you see an error such as `npm ERR! 403 Forbidden: @pulumi/pulumi@^0.11.0`, that means that your NPM client is not configured with the correct token. Follow the steps in instructions in [Configure your NPM client].
-
-### Adding a new dependency {#packages}
+All Pulumi packages are regular NPM packages in the [`@pulumi` organization scope](https://www.npmjs.com/org/pulumi) on NPMJS. 
 
 To add a new package from the `@pulumi` namespace, run `npm install --save @pulumi/package-name`.  The following packages are available:
 
-- `@pulumi/pulumi`: the core Pulumi JavaScript SDK package
-- `@pulumi/aws`: the AWS resource provider package, for programming AWS directly
-- `@pulumi/azure`: the Azure resource provider package, for programming Azure directly
-- `@pulumi/kubernetes`: the Kubernetes resource provider package, for programming Kubernetes directly
-- `@pulumi/cloud`: Pulumi's high-level, cross-cloud programming framework
-- `@pulumi/cloud-aws`: the implementation package for Pulumi's cloud framework, for use when targeting AWS
+- [@pulumi/pulumi]: the core Pulumi JavaScript SDK package
+- [@pulumi/aws]: the AWS resource provider package, for programming AWS directly
+- [@pulumi/aws-infra]: Infrastructure components on top of @pulumi/aws
+- [@pulumi/cloud]: Pulumi's high-level, cross-cloud programming framework
+- [@pulumi/cloud-aws]: the implementation package for Pulumi's cloud framework, for use when targeting AWS
+- [@pulumi/kubernetes]: the Kubernetes resource provider package, for programming Kubernetes directly
+- [@pulumi/azure]: the Azure resource provider package, for programming Azure directly
 
 > **Note:** To use `@pulumi/cloud` on AWS, you must also include the package `@pulumi/cloud-aws`.
-
-More packages are on their way, so please keep an eye out.  Please also let us know if there are specific packages you'd like to see sooner!
 
 ## Node.js runtime
 
@@ -150,3 +124,16 @@ Before running `pulumi update`, you should run `tsc` or `yarn build`. If you use
 Tools like VS Code will give you completion lists, live error reporting and inline documentation help.
 
 ![Pulumi TypeScript in VS Code](../images/reference/vscode.png){:width="700px"}
+
+<!-- LINKS -->
+[`pulumi.Config`]: ./packages/pulumi/classes/_config_.config.html
+[Using configuration values in JavaScript]: ./config.html#javascript
+
+[@pulumi/pulumi]: https://www.npmjs.com/package/@pulumi/pulumi
+[@pulumi/kubernetes]: https://www.npmjs.com/package/@pulumi/kubernetes
+[@pulumi/aws]: https://www.npmjs.com/package/@pulumi/aws
+[@pulumi/azure]: https://www.npmjs.com/package/@pulumi/azure
+[@pulumi/aws-infra]: https://www.npmjs.com/package/@pulumi/aws-infra
+[@pulumi/cloud]: https://www.npmjs.com/package/@pulumi/cloud
+[@pulumi/cloud-aws]: https://www.npmjs.com/package/@pulumi/cloud-aws
+<!-- END LINKS -->
