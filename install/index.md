@@ -157,10 +157,3 @@ After installing Pulumi, verify the tool is on your path:
 $ pulumi version
 v{{page.installer_version}}
 ```
-
-## Configure provider credentials
-
-Configure the credentials for your cloud provider of choice:
--   [Configure Pulumi for AWS](./aws.html)
--   Configure Pulumi for Azure
--   Configure Pulumi for Kubernetes
