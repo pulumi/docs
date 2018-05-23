@@ -22,13 +22,13 @@ All Pulumi packages are regular NPM packages in the [`@pulumi` organization scop
 
 To add a new package from the `@pulumi` namespace, run `npm install --save @pulumi/package-name`.  The following packages are available:
 
-- [@pulumi/pulumi]: the core Pulumi JavaScript SDK package
-- [@pulumi/aws]: the AWS resource provider package, for programming AWS directly
-- [@pulumi/aws-infra]: Infrastructure components on top of @pulumi/aws
-- [@pulumi/cloud]: Pulumi's high-level, cross-cloud programming framework
-- [@pulumi/cloud-aws]: the implementation package for Pulumi's cloud framework, for use when targeting AWS
-- [@pulumi/kubernetes]: the Kubernetes resource provider package, for programming Kubernetes directly
-- [@pulumi/azure]: the Azure resource provider package, for programming Azure directly
+- [@pulumi/pulumi](https://www.npmjs.com/package/@pulumi/pulumi): the core Pulumi JavaScript SDK package
+- [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws): the AWS resource provider package, for programming AWS directly
+- [@pulumi/aws-infra](https://www.npmjs.com/package/@pulumi/aws-infra): Infrastructure components on top of @pulumi/aws
+- [@pulumi/cloud](https://www.npmjs.com/package/@pulumi/cloud): Pulumi's high-level, cross-cloud programming framework
+- [@pulumi/cloud-aws](https://www.npmjs.com/package/@pulumi/cloud-aws): the implementation package for Pulumi's cloud framework, for use when targeting AWS
+- [@pulumi/kubernetes](https://www.npmjs.com/package/@pulumi/kubernetes): the Kubernetes resource provider package, for programming Kubernetes directly
+- [@pulumi/azure](https://www.npmjs.com/package/@pulumi/azure): the Azure resource provider package, for programming Azure directly
 
 > **Note:** To use `@pulumi/cloud` on AWS, you must also include the package `@pulumi/cloud-aws`.
 
@@ -128,12 +128,4 @@ Tools like VS Code will give you completion lists, live error reporting and inli
 <!-- LINKS -->
 [`pulumi.Config`]: ./packages/pulumi/classes/_config_.config.html
 [Using configuration values in JavaScript]: ./config.html#javascript
-
-[@pulumi/pulumi]: https://www.npmjs.com/package/@pulumi/pulumi
-[@pulumi/kubernetes]: https://www.npmjs.com/package/@pulumi/kubernetes
-[@pulumi/aws]: https://www.npmjs.com/package/@pulumi/aws
-[@pulumi/azure]: https://www.npmjs.com/package/@pulumi/azure
-[@pulumi/aws-infra]: https://www.npmjs.com/package/@pulumi/aws-infra
-[@pulumi/cloud]: https://www.npmjs.com/package/@pulumi/cloud
-[@pulumi/cloud-aws]: https://www.npmjs.com/package/@pulumi/cloud-aws
 <!-- END LINKS -->
