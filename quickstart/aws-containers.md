@@ -34,7 +34,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
     });
 
     // export just the hostname property of the container frontend
-    exports.hostname = service.defaultEndpoint.apply(e => e.hostname);
+    exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
     ```    
 
     This example uses [cloud.Service](../reference/packages/pulumi-cloud/interfaces/_service_.service.html), which is a high-level, convenient interface for building containers and provisioning an AWS container service.
@@ -91,7 +91,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
     ...
 
     ---outputs:---
-    hostname: "42dc3ff4-ac65d11-86a100b6e1d7f210.elb.us-west-2.amazonaws.com"
+    url: "http://42dc3ff4-ac65d11-86a100b6e1d7f210.elb.us-west-2.amazonaws.com"
 
     info: 19 changes performed:
         + 19 resources created
@@ -104,9 +104,9 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
     $ pulumi stack output
     Current stack outputs (1)  
         OUTPUT                  VALUE
-        hostname                42dc3ff4-ac65d11-86a100b6e1d7f210.elb.us-west-2.amazonaws.com
+        url                     42dc3ff4-ac65d11-86a100b6e1d7f210.elb.us-west-2.amazonaws.com
 
-    $ curl $(pulumi stack output hostname)
+    $ curl $(pulumi stack output url)
     <html><head>
         <title>Hello world</title><meta charset="UTF-8">
     </head>
