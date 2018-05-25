@@ -77,7 +77,7 @@ A program may require [configuration](./config.html), such as the region you are
 
 A program is deployed to a [stack](./stack.html), which is an isolated, independently configurable instance of your program's resources. Each stack represents one of the environments in which the program runs, such as `staging`, `production` or `dev-alice`. Since configuration can vary from one stack to another, it is easy to specify that a development stack should provision fewer resources than the production version.
 
-Each Pulumi stack has a collection of associated [resources](./resource.html).  A resource defines and tracks an externally managed cloud resource - such as an AWS Lambda Function, a Kubernetes Pod or an Azure Virtual Network.  Each resource is managed by a **resource provider** which defines how creation, update and delete of resources should be managed in the target cloud environment. You can create and use [components](./programming-model.html#components), which are themselves composed of many resources. Components make it possible to create and share new abstractions on top of raw cloud infrastructure resources.
+Each Pulumi stack has a collection of associated resources.  A resource defines and tracks an externally managed cloud resource - such as an AWS Lambda Function, a Kubernetes Pod or an Azure Virtual Network.  Each resource is managed by a **resource provider** which defines how creation, update and delete of resources should be managed in the target cloud environment. You can create and use [components](./programming-model.html#components), which are themselves composed of many resources. Components make it possible to create and share new abstractions on top of raw cloud infrastructure resources.
 
 ### Lifecycle of a Pulumi Stack
 
