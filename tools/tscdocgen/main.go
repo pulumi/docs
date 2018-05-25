@@ -506,6 +506,21 @@ func createDetailedLabel(node *typeDocNode) string {
 			label += " = " + *node.DefaultValue
 		}
 		return label + ";"
+	case typeDocVariableNode:
+		var label string
+		if node.Flags.IsConst {
+			label += "const "
+		} else {
+			label += "let "
+		}
+		label += node.Name
+		if vartyp := createTypeLabel(node.Type); vartyp != "" {
+			label += ": " + vartyp
+		}
+		if node.DefaultValue != nil {
+			label += " = " + *node.DefaultValue
+		}
+		return label + ";"
 	default:
 		return ""
 	}
