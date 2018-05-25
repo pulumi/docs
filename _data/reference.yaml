@@ -47,8 +47,7 @@ toc:
   - reference/aws.md
   - reference/azure.md
   - reference/kubernetes.md
-- title: How Pulumi Works
-  path: /reference/how
+- reference/how.md
 - title: Continuous Deployment
   path: /reference/cd
   section:
