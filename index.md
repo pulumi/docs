@@ -4,12 +4,8 @@ layout: default
 
 <h1>Welcome to Pulumi</h1>
 
-Pulumi is a programming platform for the cloud to make creating cloud programs easy and productive.
-
-Pulumi lets you use real programming languages to create containers, serverless functions, and cloud infrastructure.
-Pulumi's heritage is infrastructure as code, but uses real languages to deliver powerful abstractions and expressiveness
--- thanks to classes and objects, for loops, conditionals -- while retaining all the benefits of immutable
-infrastructure.  Pulumi leverages existing IDEs, tools, and package managers, enabling an ecosystem of sharing and reuse.
+Pulumi is a programming platform for easily and productively building cloud programs.  Use real programming languages
+to create containers, serverless functions, and cloud infrastructure, with all the benefits of immutable infrastructure.
 
 <div class="card-table">
     <div class="mdl-card mdl-shadow--2dp">
