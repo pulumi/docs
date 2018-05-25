@@ -6,7 +6,7 @@ When a Pulumi program is deployed via `pulumi update`, there are a few processes
 
 During program execution, whenever there is a resource creation statement (via `new Resource()` in JavaScript or `Resource(...)` in Python), the resource is registered with the engine. This does not necessarily mean that a new resource should be created, it simply means that the program intends for the resource to exist. Using the last state in the checkpoint stored on pulumi.com, the engine determines which requests it should make to the underlying _provider_ in order to create, delete, or replace the resource. At the end the program execution, if a particular resource _R_ is never registered, the engine will make a delete request to the resource provider. The following diagram illustrates the interaction between these parts of the system.
 
-![Pulumi engine and providers](../images/reference/engine-block-diagram.png){:width="500px"}
+![Pulumi engine and providers](../images/reference/engine-block-diagram.png){:width="600px"}
 
 For instance, suppose we have the following Pulumi program, which creates one security group and one EC2 instance:
 
@@ -22,11 +22,11 @@ let server = new aws.ec2.Instance("web-server-www", {
 });
 ```
 
-Now, we run `pulumi stack init mystack`. Since `mystack` is a new stack, the stack checkpoint file is empty. 
+Now, we run `pulumi stack init mystack`. Since `mystack` is a new stack, the "last deployed state" has no resources. 
 
-Next, we run `pulumi update`. When the program runs to completion, it encounters two statements that create resources, `new aws.ec2.SecurityGroup()` and `new aws.ec2.Instance()`. So, the language host registers the following with the engine: a resource corresponding to `group` and a resource corresponding to `server`.
+Next, we run `pulumi update`. When the program runs to completion, it encounters two statements that create resources, `new aws.ec2.SecurityGroup()` and `new aws.ec2.Instance()`. So, the language host registers two resources with the engine.
 
-The engine consults the checkpoint on pulumi.com, and sees that these two resources do not already exist. So, the engine calls the AWS resource provider, requesting that it create a security group. Once the operation succeeds, this state is written to the checkpoint file, including the value of the security group `name` property. Next, an EC2 instance is created, referencing this same `name` property. So, the resource graph will look like the following:
+The engine consults the last deployed state on pulumi.com, and determines that these resources do not already exist. So, the engine calls the AWS resource provider, requesting that it create a security group. Once the operation succeeds, this state is written to the checkpoint file, including the value of the security group `name` property. Next, an EC2 instance is created, referencing this same `name` property. So, the resource graph will look like the following:
 
 ```
 stack mystack
