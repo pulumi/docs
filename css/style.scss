@@ -245,6 +245,7 @@ a.btn > svg {
 }
 
 .docsContent {
+    width: 100%;
     margin-right: auto;
 }
 
@@ -526,4 +527,11 @@ a.btn > svg {
 .tour-index {
     font-size: 20px;
     padding: 8px;
+}
+
+.pdoc-module-header {
+    background-color: #f5e0f5;
+    font-size: 20px;
+    padding: 8px;
+    font-weight: normal;
 }

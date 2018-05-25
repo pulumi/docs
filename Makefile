@@ -39,7 +39,7 @@ build:
 
 .PHONY: test
 test:
-	blc http://localhost:4000 -r --exclude-external --exclude '*/packages/*' --exclude '*/releases/pulumi*' --exclude '*/examples/*'
+	blc http://localhost:4000 -r --exclude-external  --exclude '*/releases/pulumi*' --exclude '*/examples/*'
 
 .PHONY: deploy
 deploy:
