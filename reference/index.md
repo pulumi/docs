@@ -6,7 +6,7 @@ title: Overview
 > We are hard at work finishing these.  If there is any specific content you are looking, for please reach
 > out at [support@pulumi.com](mailto:support@pulumi.com) so we can prioritize adding it.
 
-Pulumi is an open-source tool and service that makes it easier to build modern cloud applications. Instead of using a configuration language, you use JavaScript or Python to define your desired cloud resources. This reduces the learning curve and makes it easier to express your configuration requirements. Pulumi enables developers to easily create repeatable infrastructure, and allows DevOps engineers to move logic out of scripts and onto one toolchain. Instead of treating application code and infrastructure as separate things that are managed by very different tools, Pulumi provides one tool for defining all aspects of a distributed cloud application.
+Pulumi is an open-source tool and service that allows you to easily connect and compose services for modern cloud applications. Instead of using a configuration language, you use JavaScript or Python to define your desired cloud resources. This reduces the learning curve and makes it easier to express your configuration requirements. Pulumi enables developers to easily create repeatable infrastructure, and allows DevOps engineers to move logic out of scripts and onto one toolchain. Instead of treating application code and infrastructure as separate things that are managed by very different tools, Pulumi provides one tool for defining all aspects of a distributed cloud application.
 
 Because Pulumi uses general purpose programming languages, you don't have to learn a custom configuration language. You can also bring software engineering to the task of defining cloud infrastructure, with reusable libraries, type checking, IDE tooling, and testing. Pulumi currently supports JavaScript, TypeScript, and Python, with more languages supported in the future.
 
@@ -21,7 +21,7 @@ You can use serverless functions and APIs:
 
 ```javascript
 // Create a public HTTP endpoint (using AWS APIGateway)
-const endpoint = new cloud.HttpEndpoint("urlshortener");
+const endpoint = new cloud.HttpEndpoint("hello");
 
 // Serve static files from the `www` folder (using AWS S3)
 endpoint.static("/", "www");
@@ -86,10 +86,3 @@ A stack exists from the time it is created (`pulumi stack init`) until it is del
 Each deployment runs the program to determine what the desired state is, and then creates, updates or deletes various resources to achieve that desired state.  As a result, at any given point in time, the stack has a set of resources associated with it.
 
 Some of those resources may have runtime code associated with them, which can run continuously throughout the lifetime of the resource (in the case of containers or VMs), or on-demand (in the case of serverless functions).
-
-![Object Lifetimes](../images/reference/object-lifetimes-diagram.png){:width="500px"}
-
-<!-- LINKS -->
-
-
-<!-- END LINKS -->
