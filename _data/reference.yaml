@@ -6,7 +6,6 @@ toc:
   - reference/stack.md
   - reference/project.md
   - reference/config.md
-  - reference/resource.md
 - title: Commands (CLI)
   path: /reference/commands
   section:
@@ -50,8 +49,6 @@ toc:
   - reference/kubernetes.md
 - title: How Pulumi Works
   path: /reference/how
-  section:
-  - reference/providers.md
 - title: Continuous Deployment
   path: /reference/cd
   section:
