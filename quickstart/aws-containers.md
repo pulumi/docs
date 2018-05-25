@@ -42,7 +42,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
 1.  Create a subfolder `app` with the following files:
 
     - Add the following file as `Dockerfile`:
-      ```Dockerfile
+      ```docker
       FROM nginx
       COPY index.html /usr/share/nginx/html
       ```
@@ -71,7 +71,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
     $ npm install --save @pulumi/cloud-aws @pulumi/cloud
     ```
 
-1.  Configure Pulumi to use AWS Fargate. (Note: Fargate is currently available only in `us-east-1`, `us-west-2`, and `eu-west-1`).
+1.  Configure Pulumi to use AWS Fargate. (Note: Fargate is currently available only in `us-east-1`, `us-east-2`, `us-west-2`, and `eu-west-1`).
 
     ```bash
     $ pulumi config set cloud-aws:useFargate true
@@ -84,9 +84,12 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
     Previewing update of stack 'container-quickstart-dev'
     Previewing changes:
     ...
+    Diagnostics:
+        ...
+        global: global  
         info: Building container image 'pulum-164fa748-container': context=./app
     ...
-
+    Do you want to perform this update? yes
     Updating stack 'container-quickstart-dev'
     ...
 
