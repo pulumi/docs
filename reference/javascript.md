@@ -126,6 +126,6 @@ Tools like VS Code will give you completion lists, live error reporting and inli
 ![Pulumi TypeScript in VS Code](../images/reference/vscode.png){:width="700px"}
 
 <!-- LINKS -->
-[`pulumi.Config`]: ./packages/pulumi/classes/_config_.config.html
+[`pulumi.Config`]: pkg/nodejs/@pulumi/index.html#Config
 [Using configuration values in JavaScript]: ./config.html#javascript
 <!-- END LINKS -->

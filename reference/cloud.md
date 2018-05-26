@@ -2,7 +2,7 @@
 title: "Cloud Framework"
 ---
 
-JavaScript and TypeScript API reference: [@pulumi/cloud](../packages/pulumi-cloud)
+JavaScript and TypeScript API reference: [@pulumi/cloud](pkg/nodejs/@pulumi/cloud)
 
 The `@pulumi/cloud` package lets you program infrastructure and application logic, side by side in harmony, using
 simple, high-level cloud building blocks.  This package has three key defining attributes:
@@ -27,7 +27,7 @@ See the following examples of programs that use the Pulumi Cloud library:
 
 <!-- LINKS -->
 
-[Service]: /packages/pulumi-cloud/interfaces/_service_.service.html
-[Table]: /packages/pulumi-cloud/interfaces/_service_.service.html
-[Topic]: /packages/pulumi-cloud/interfaces/_topic_.topic.html
-[HttpEndpoint]: /packages/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html
+[Service]: pkg/nodejs/@pulumi/cloud/index.html#Service
+[Table]: pkg/nodejs/@pulumi/cloud/index.html#Table
+[Topic]: pkg/nodejs/@pulumi/cloud/index.html#Topic
+[HttpEndpoint]: pkg/nodejs/@pulumi/cloud/index.html#HttpEndpoint

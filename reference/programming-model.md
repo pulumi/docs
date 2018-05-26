@@ -32,7 +32,7 @@ title: "Programming Model"
 * Provides helpers for getting stack information (`pulumi.getStack`), logging deployment information (`pulumi.log`), and
   for turning JavaScript callbacks into data which can be [used as application code](#runtime)
   (`pulumi.runtime.serializeFunctionAsync`).
-* Full API documentation available at [@pulumi/pulumi API docs](../packages/pulumi)
+* Full package documentation available at [@pulumi/pulumi API docs](pkg/)
 
 ## Creating Resources {#resources}
 * `new Resource()`

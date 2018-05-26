@@ -69,10 +69,10 @@ With the v0.12.2 CLI release, we have also released the following packages:
 
 #### Added
 
--  Allow passing an existing `Role` to `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). [FunctionOptions](../packages/pulumi-aws/interfaces/_serverless_function_.functionoptions.html) now includes a `Role` property, for scenarios where you wish to use an existing `Role` or share one across multiple Lambda functions.
+-  Allow passing an existing `Role` to `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). [FunctionOptions](../reference/pkg/nodejs/@pulumi/aws/serverless/index.html#FunctionOptions) now includes a `Role` property, for scenarios where you wish to use an existing `Role` or share one across multiple Lambda functions.
 
 #### Changed 
--  (**Breaking**) Support configuring the paths to include in `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). Previously, all files in the directory would be included in the Lambda deployment package. With this change, only the generated `__index.js` and `./node_modules` are included by default. To add other files, use the new `includePaths` property in [FunctionOptions](../packages/pulumi-aws/interfaces/_serverless_function_.functionoptions.html).
+-  (**Breaking**) Support configuring the paths to include in `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). Previously, all files in the directory would be included in the Lambda deployment package. With this change, only the generated `__index.js` and `./node_modules` are included by default. To add other files, use the new `includePaths` property in [FunctionOptions](../reference/pkg/nodejs/@pulumi/aws/serverless/index.html#FunctionOptions).
 
 -  (**Breaking**) Rename `aws.s3.Bucket#websites` to the singular `aws.s3.Bucket#website`. ([pulumi/pulumi-aws#207](https://github.com/pulumi/pulumi-aws/pull/207)). Since this property contains only one element, it has been renamed to `website` (singular) and is no longer an array property.
 
