@@ -6,6 +6,23 @@ toc:
   - reference/stack.md
   - reference/project.md
   - reference/config.md
+- title: Packages
+  path: /reference/pkg/index
+  section:
+    - title: pulumi
+      path: /reference/pkg/nodejs/@pulumi/pulumi/index.html
+    - title: aws
+      path: /reference/pkg/nodejs/@pulumi/aws/index.html
+    - title: aws-infra
+      path: /reference/pkg/nodejs/@pulumi/aws-infra/index.html
+    - title: azure
+      path: /reference/pkg/nodejs/@pulumi/azure/index.html
+    - title: cloud
+      path: /reference/pkg/nodejs/@pulumi/cloud/index.html
+    - title: cloud-aws
+      path: /reference/pkg/nodejs/@pulumi/cloud-aws/index.html
+    - title: kubernetes
+      path: /reference/pkg/nodejs/@pulumi/kubernetes/index.html
 - title: Commands (CLI)
   path: /reference/commands
   section:
@@ -33,23 +50,6 @@ toc:
     path: /reference/cli/pulumi_stack.html
   - title: Update
     path: /reference/cli/pulumi_update.html
-- title: Packages
-  path: /reference/pkg/index
-  section:
-    - title: pulumi
-      path: /reference/pkg/nodejs/@pulumi/pulumi/index.html
-    - title: aws
-      path: /reference/pkg/nodejs/@pulumi/aws/index.html
-    - title: aws-infra
-      path: /reference/pkg/nodejs/@pulumi/aws-infra/index.html
-    - title: azure
-      path: /reference/pkg/nodejs/@pulumi/azure/index.html
-    - title: cloud
-      path: /reference/pkg/nodejs/@pulumi/cloud/index.html
-    - title: cloud-aws
-      path: /reference/pkg/nodejs/@pulumi/cloud-aws/index.html
-    - title: kubernetes
-      path: /reference/pkg/nodejs/@pulumi/kubernetes/index.html
 - title: Programming Model
   path: /reference/programming-model
   section:

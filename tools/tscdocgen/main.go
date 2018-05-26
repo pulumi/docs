@@ -21,6 +21,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"path"
 	"path/filepath"
 	"sort"
 	"strings"
@@ -72,7 +73,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/pulumi":     "https://github.com/pulumi/pulumi/blob/master/sdk/nodejs",
 	"@pulumi/aws":        "https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs",
 	"@pulumi/azure":      "https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs",
-	"@pulumi/kubernetes": "https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs",
+	"@pulumi/kubernetes": "https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs",
 	"@pulumi/gcp":        "https://github.com/pulumi/pulumi-gcp/blob/master/pack/nodejs",
 	"@pulumi/cloud":      "https://github.com/pulumi/pulumi-cloud/blob/master/api",
 	"@pulumi/cloud-aws":  "https://github.com/pulumi/pulumi-cloud/blob/master/aws",
@@ -160,24 +161,39 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		pkgvar = e.pkg[strings.IndexRune(e.pkg, '/')+1:]
 	} else {
 		title = fmt.Sprintf("Module %s", name)
+
+		// Create the breadcrumb links (in LIFO order).  First, add the current module name.
+		var simplename string
+		if slix := strings.IndexRune(name, '/'); slix != -1 {
+			simplename = name[slix+1:]
+		} else {
+			simplename = name
+		}
+		breadcrumbs = append(breadcrumbs, simplename)
+
+		// Now split the parent and walk it in reverse, prepending all of the parent links.
 		parts := strings.Split(getModuleParentName(name), "/")
-		var crumbs string
-		for i, part := range parts {
-			name := part
-			if name == rootModule {
-				name = e.pkg
+		crumbs := ".."
+		for i := len(parts) - 1; i >= 0; i-- {
+			name := parts[i]
+			if i == 0 && name == rootModule {
+				// we will add the root after this loop, no need to be redundant.
+				break
 			}
+
+			breadcrumbs = append(
+				[]string{fmt.Sprintf("<a href=\"%s/index.html\">%s</a> &gt; ", crumbs, name)},
+				breadcrumbs...)
 			if crumbs != "" {
 				crumbs += string(filepath.Separator)
 			}
 			crumbs += ".."
-
-			link := fmt.Sprintf("<a href=\"%s\">%s</a>", crumbs, name)
-			if i != len(parts)-1 {
-				link += "/"
-			}
-			breadcrumbs = append(breadcrumbs, link)
 		}
+
+		// Finally, add the link to the root module.
+		breadcrumbs = append(
+			[]string{fmt.Sprintf("<a href=\"%s/index.html\">%s</a> &gt; ", crumbs, e.pkg)},
+			breadcrumbs...)
 	}
 
 	// Now build an index of files and members.
@@ -200,12 +216,30 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		return members[i].Label < members[j].Label
 	})
 
-	// Get any submodules and ensure they are sorted in a deterministic order.
-	var modules []string
-	for m := range mod.Modules {
-		modules = append(modules, m)
+	// Get any submodules, make relative links, and ensure they are sorted in a deterministic order.
+	var modules []struct {
+		Name string
+		Link string
 	}
-	sort.Strings(modules)
+	for modname := range mod.Modules {
+		var link string
+		prefix := name + "/"
+		if nix := strings.Index(modname, prefix); nix != -1 {
+			link = modname[len(prefix):]
+		} else {
+			link = modname
+		}
+		modules = append(modules, struct {
+			Name string
+			Link string
+		}{
+			Name: modname,
+			Link: link,
+		})
+	}
+	sort.Slice(modules, func(i, j int) bool {
+		return modules[i].Name < modules[j].Name
+	})
 
 	// To generate the code, simply render the source Mustache template, using the right set of arguments.
 	if err = indexTemplate.FRender(f, map[string]interface{}{
@@ -216,7 +250,9 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		"PackageVar":  pkgvar,
 		"Files":       files,
 		"Modules":     modules,
+		"HasModules":  len(modules) > 0,
 		"Members":     members,
+		"HasMembers":  len(members) > 0,
 	}); err != nil {
 		return err
 	}
@@ -241,8 +277,8 @@ func (e *emitter) gatherModules(doc *typeDocNode) *module {
 			continue
 		}
 
-		// We expect top-level children to be modules.  (This is why --mode file won't work.)
-		if modnode.Kind != typeDocModuleNode {
+		// We expect all top-level children to be modules.  (This is why `--mode file` won't work.)
+		if modnode.Kind != typeDocExternalModuleNode {
 			fmt.Fprintf(os.Stderr, "warning: expected a module, got %s (%s)\n", modnode.Kind, modnode.Name)
 			continue
 		}
@@ -260,14 +296,28 @@ func (e *emitter) gatherModules(doc *typeDocNode) *module {
 
 		// Add all exported children from this module to the export list.
 		for _, child := range modnode.Children {
-			// Register this child as an export.
-			name := child.Name
-			if mod.Exports[name] != nil {
-				fmt.Fprintf(os.Stderr, "warning: duplicate child %s for module %s\n", name, modname)
-				continue
+			if child.Kind == typeDocModuleNode {
+				// If this is a module (namespace), we must explode it out into the top-level modules list.
+				// This may very well conflict, so we'll need to merge the new members in if so.
+				nss := e.gatherNamespaceModules(path.Join(child.Name), child)
+				for nsname, ns := range nss {
+					if exist, has := mods[nsname]; has {
+						exist.Merge(ns)
+					} else {
+						mods[nsname] = ns
+					}
+				}
+			} else {
+				// Else, register this child as an export.
+				name := child.Name
+				if mod.Exports[name] != nil {
+					fmt.Fprintf(os.Stderr, "warning: duplicate child %s for module %s\n", name, modname)
+					continue
+				}
+				mod.Exports[name] = child
 			}
-			mod.Exports[name] = child
 		}
+
 	}
 
 	// Now that we've done a first pass, construct the tree structure, and return the root node.
@@ -290,6 +340,39 @@ func (e *emitter) gatherModules(doc *typeDocNode) *module {
 	return root
 }
 
+// gatherNamespaceModules returns a flat list of namespaces, recursively extracted from the tree.  The list is
+// flat so that we can easily merge any duplicate entries, as namespaces can be spread across many modules.
+func (e *emitter) gatherNamespaceModules(name string, node *typeDocNode) map[string]*module {
+	// Start with a single module, but be prepared to append more if we find them.
+	ns := newModule()
+	nss := map[string]*module{
+		name: ns,
+	}
+
+	// Find any children modules.
+	for _, child := range node.Children {
+		if child.Kind == typeDocModuleNode {
+			submods := e.gatherNamespaceModules(path.Join(name, child.Name), child)
+			for subname, submod := range submods {
+				if exist, has := nss[subname]; has {
+					exist.Merge(submod)
+				} else {
+					nss[subname] = submod
+				}
+			}
+		} else {
+			cn := child.Name
+			if ns.Exports[cn] != nil {
+				fmt.Fprintf(os.Stderr, "warning: duplicate child %s for namespace %s\n", cn, name)
+				continue
+			}
+			ns.Exports[cn] = child
+		}
+	}
+
+	return nss
+}
+
 // module is an aggregate structure conceptually mapping to an ES6 module.
 type module struct {
 	// Exports is a map of names to the exported member's Typedoc AST node.
@@ -302,6 +385,23 @@ func newModule() *module {
 	return &module{
 		Exports: make(map[string]*typeDocNode),
 		Modules: make(map[string]*module),
+	}
+}
+
+// Merge another module into this one, in place, by mutating it.
+func (m *module) Merge(other *module) {
+	for k, exp := range other.Exports {
+		if _, has := m.Exports[k]; has {
+			//fmt.Fprintf(os.Stderr, "warning: duplicate module member %s\n", k)
+		}
+		m.Exports[k] = exp
+	}
+	for k, mod := range other.Modules {
+		if exist, has := m.Modules[k]; has {
+			exist.Merge(mod)
+		} else {
+			m.Modules[k] = mod
+		}
 	}
 }
 
@@ -391,10 +491,11 @@ const (
 	typeDocConstructorSigNode typeDocNodeKind = "Constructor signature"
 	typeDocEnumNode           typeDocNodeKind = "Enumeration"
 	typeDocEnumMemberNode     typeDocNodeKind = "Enumeration member"
+	typeDocExternalModuleNode typeDocNodeKind = "External module"
 	typeDocFunctionNode       typeDocNodeKind = "Function"
-	typeDocModuleNode         typeDocNodeKind = "External module"
 	typeDocInterfaceNode      typeDocNodeKind = "Interface"
 	typeDocMethodNode         typeDocNodeKind = "Method"
+	typeDocModuleNode         typeDocNodeKind = "Module"
 	typeDocParameterNode      typeDocNodeKind = "Parameter"
 	typeDocPropertyNode       typeDocNodeKind = "Property"
 	typeDocTypeAliasNode      typeDocNodeKind = "Type alias"
@@ -417,7 +518,7 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 		return fmt.Sprintf("interface %s", node.Name)
 	case typeDocMethodNode:
 		return fmt.Sprintf("method %s", node.Name)
-	case typeDocModuleNode:
+	case typeDocExternalModuleNode, typeDocModuleNode:
 		return fmt.Sprintf("module %s", node.Name)
 	case typeDocPackageNode:
 		return fmt.Sprintf("package %s", node.Name)
