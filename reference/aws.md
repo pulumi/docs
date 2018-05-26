@@ -2,7 +2,7 @@
 title: "AWS"
 ---
 
-JavaScript and TypeScript API reference: [@pulumi/aws](../packages/pulumi-aws)
+JavaScript and TypeScript API reference: [@pulumi/aws](pkg/nodejs/@pulumi/aws)
 
 🚧 TODO:
 * Example program

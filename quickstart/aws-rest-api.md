@@ -100,6 +100,6 @@ For an end-to-end application with a frontend, see the [URL shortener sample](ht
 
 <!-- LINKS -->
 [@pulumi/cloud]: ../reference/cloud.html
-[cloud.HttpEndpoint]: ../packages/pulumi-cloud/interfaces/_httpendpoint_.httpendpoint.html
-[cloud.Table]: ../packages/pulumi-cloud/interfaces/_table_.table.html
+[cloud.HttpEndpoint]: ../reference/pkg/nodejs/@pulumi/cloud/index.html#HttpEndpoint
+[cloud.Table]: ../reference/pkg/nodejs/@pulumi/cloud/index.html#Table
 <!-- END LINKS -->

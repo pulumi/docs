@@ -153,7 +153,6 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	var title string
 	var pkg string
 	var pkgvar string
-	var repoURL string
 	var breadcrumbs []string
 	if root {
 		title = fmt.Sprintf("Package %s", e.pkg)
@@ -245,7 +244,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	if err = indexTemplate.FRender(f, map[string]interface{}{
 		"Title":       title,
 		"Breadcrumbs": breadcrumbs,
-		"RepoURL":     repoURL,
+		"RepoURL":     e.repoURL,
 		"Package":     pkg,
 		"PackageVar":  pkgvar,
 		"Files":       files,

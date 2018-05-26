@@ -23,7 +23,7 @@ Kubernetes resources are defined in the following locations:
 * Source repo: [pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
 * PyPI package for Python: `pulumi_kubernetes`
 * NPM package for JavaScript and/or TypeScript: [@pulumi/kubernetes](https://www.npmjs.com/package/@pulumi/kubernetes)
-* API documentation: [@pulumi/kubernetes](../packages/pulumi-kubernetes)
+* Package documentation: [@pulumi/kubernetes](pkg/nodejs/@pulumi/kubernetes)
 
 To use a Kubernetes package, you simply add it to your project's package management file, as usual.
 
