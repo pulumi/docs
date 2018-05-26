@@ -37,6 +37,7 @@ import * as {{PackageVar}} from "{{Package}}";
 ` + "```" + `
 {{/Package}}
 
+{{#HasMembers}}
 <h2 class="pdoc-module-header">Index</h2>
 
 {{#Members}}
@@ -44,12 +45,15 @@ import * as {{PackageVar}} from "{{Package}}";
 {{/Members}}
 
 {{#Files}}<a href="{{RepoURL}}/{{.}}">{{.}}</a> {{/Files}}
+{{/HasMembers}}
 
+{{#HasModules}}
 <h2 class="pdoc-module-header">Modules</h2>
 
 {{#Modules}}
-* <a href="{{.}}">{{.}}</a>
+* <a href="{{Link}}">{{Name}}</a>
 {{/Modules}}
+{{/HasModules}}
 
 {{#Members}}
 <h2 class="pdoc-module-header" id="{{Name}}">
