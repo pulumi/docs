@@ -61,7 +61,7 @@ layout: default
             <h2 class="mdl-card__title-text">
                 <i class="material-icons">flash_on</i>
                 &nbsp;
-                <a href="/quickstart/index.html">Serverless</a>
+                <a href="/quickstart/aws-rest-api.html">Serverless</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
