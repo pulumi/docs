@@ -5,6 +5,7 @@ toc:
   section:
   - quickstart/aws-rest-api.md
   - quickstart/aws-containers.md
+  - quickstart/aws-extract-thumbnail.md
   - quickstart/aws-s3-website.md
   - quickstart/aws-ec2.md
 

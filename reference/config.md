@@ -10,7 +10,7 @@ For these configuration values, you can use _stack settings_. Stack settings are
 
 To add a new stack setting, use `pulumi config set <key> [value]`. 
 
-Since [Pulumi components](./resource.html) can define configuration keys, you can use a namespace with the syntax  `namespace:key`. If a namespace is not specified, the [project name] defined in `Pulumi.yaml` is used. 
+Since [Pulumi components](../tour/advanced-components.html) can define configuration keys, you can use a namespace with the syntax  `namespace:key`. If a namespace is not specified, the [project name] defined in `Pulumi.yaml` is used. 
 
 For example, if a project is named `broome-proj` and the active stack is `dev`, the following command adds the key  `broome-proj:name` to `Pulumi.dev.yaml`:
 
