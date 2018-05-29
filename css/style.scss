@@ -16,7 +16,7 @@ comment3: prototypical Jekyll/Liquid template file.
  * Size constants
  */
 $CENTER-WIDTH: 1200px;
-$TOOLBAR-HEIGHT: 70px;
+$TOOLBAR-HEIGHT: 60px;
 $TAB-GROUP-HEIGHT: 60px;
 $MOBILE-WIDTH: 768px;
 
@@ -35,12 +35,13 @@ $code-font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
  */
 // Define custom CSS styles for Pulumi webpages. This allow us to make dramatic
 // changes to the color scheme without much churn.
-$primary: #7c4792;
-$primary2: #69377f;
-$primary3: #4c2063;
-$accent1: #a37eb3;
-$accent2: #d8c8de;
-$accent3: #f2e6ff;
+$primary: #512668;  // primary purple
+$primary2: #00acf2; // primary blue
+$primary3: #2fc89f; // primary green
+$primary4: #ee975c; // primary orange
+$accent1: #f6e5ff; // light purple
+$accent2: #e1f6ff; // light blue
+$accent3: #3EC2F8; // bright blue
 
 // Generate via:
 // https://gist.github.com/chrsmith/692ea3833f2b48f121ad5515aff174ad
@@ -86,8 +87,8 @@ a:hover {
 code {
     background-color: #f2f2f2;
     color: #37474f;
-    line-height: 20px;
-    font-size: 13px;
+    line-height: 22px;
+    font-size: 14px;
     font-family: $code-font-family;
     margin: 16px 0;
 }
@@ -105,7 +106,7 @@ body {
     background: #fff;
     color: #555;
     font-family: $font-family;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 // Remove the background color from Bootstrap's Jumptron class.
@@ -154,7 +155,7 @@ a.btn > svg {
     color: #212121;
 
     p, li {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 400;
         -webkit-font-smoothing: auto;
     }
@@ -162,8 +163,8 @@ a.btn > svg {
         -webkit-font-smoothing: auto;
     }
     h1 {
-        font-size: 32px;
-        margin: 0 0 24px 0;
+        font-size: 42px;
+        margin: 12px 0 24px 0;
         padding: 4px 0 0 0;
     }
     h2 {
@@ -190,15 +191,15 @@ a.btn > svg {
         font-variant-east-asian: normal;
         font-variant-ligatures: normal;
         font-variant-numeric: normal;
-        line-height: 22px;
+        line-height: 24px;
         text-size-adjust: 100%;
     }
 
     // Add styling for blockquotes 
     blockquote {
         display: block;
-        background: #e1f5fe;
-        color: #0288d1;
+        background: $accent2;
+        color: $primary2;
         margin: 16px 0;
         padding: 12px 24px 12px 60px;
 
@@ -215,7 +216,7 @@ a.btn > svg {
     }
 
     blockquote::before {
-        color: #039be5;
+        color: $primary2;
         content: 'star';
         float: left;
         line-height: 1px;
@@ -230,6 +231,25 @@ a.btn > svg {
         content: '';
         margin: 0;
     }
+}
+
+.get-to-the-cloud {
+    color: #4a5960;
+    margin-top: 0px !important;
+}
+
+.learn {
+    color: #4a5960;
+    border-radius: 2px;
+    margin-top: 0px !important;
+}
+
+.curl-install {
+    font-size: 22px !important;
+    font-family: $code-font-family;
+    padding: 8px;
+    background-color: #eee;
+    border-radius: 2px;
 }
 
 .docsToc {
@@ -267,12 +287,19 @@ a.btn > svg {
     display: flex;
     height: $TOOLBAR-HEIGHT;
     padding: 0 12px;
-    max-width: 100%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     -webkit-box-align: center;
     -webkit-box-pack: center;
     z-index: 6;
+}
+
+.toolbar-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .toolbar-shadow {
@@ -295,7 +322,6 @@ a.btn > svg {
 
 .toolbar-logo {
     height: 20px;
-    margin: 0 40px 0 12px;
 
     // Workaround for Chrome rendering issue related to SVG while other CSS transition
     // effects are occurring at the same time. See:
@@ -309,6 +335,9 @@ a.btn > svg {
 }
 
 .toolbar-tabs {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     vertical-align: middle;
     height: $TAB-GROUP-HEIGHT;
     border-bottom: 1px solid rgba(0,0,0,.12);
@@ -348,7 +377,7 @@ a.btn > svg {
 }
 
 .sidenav-selected {
-    background: $accent3;
+    background: $accent1;
 }
 
 .sidenav-subsection {
@@ -357,6 +386,12 @@ a.btn > svg {
 
 .sidenav-subsection a {
     font-weight: normal;
+}
+
+.learn-box {
+    vertical-align: top;
+    background-color: #f1f6ff;
+    padding: 16px;
 }
 
 .footer {
@@ -376,12 +411,23 @@ a.btn > svg {
 
 .mdl-button {
     font-family: $font-family;
+    color: #fff;
+    background-color: $primary2;
+}
+.mdl-button:hover {
+    background-color: $accent3;
 }
 
 .mdl-card {
     margin: 24px 0;
-    background-color: $accent3;
+    background-color: $accent2;
     min-height: 128px;
+}
+
+.mdl-card__actions {
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 16px;
 }
 
 @media (max-width: $MOBILE-WIDTH) {
@@ -404,12 +450,11 @@ a.btn > svg {
 }
 
 .mdl-card__title {
-    color: #fff;
-    background-color: $accent1;
+    color: $primary2;
     vertical-align: middle;
 
     a, i {
-        color: #fff;
+        color: $primary2;
     }
     h2 {
         margin: 0;
@@ -419,6 +464,7 @@ a.btn > svg {
 .mdl-card__supporting-text {
     color: #333;
     min-height: 64px;
+    padding: 8px 16px;
 }
 
 .card-text {
@@ -435,7 +481,7 @@ a.btn > svg {
 }
 
 .mdl-layout__header-row {
-    padding: 0 12px;
+    padding: 0 0;
 }
 
 .mdl-layout__drawer {
@@ -505,7 +551,7 @@ a.btn > svg {
     text-decoration: none;
     font-size: 16px;
     color: #fff;
-    background-color: rgb(124,77,255);
+    background-color: $primary2;
     border: 1px solid #555;
     border-radius: 10%;
 }
