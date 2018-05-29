@@ -44,7 +44,7 @@ To install Pulumi manually, follow the steps below for your platform.
             <a
                     id="macos-download-link"
                     href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin-x64.tar.gz" role="button">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                <button class="mdl-button mdl-js-button mdl-button--raised">
                     {% octicon cloud-download height:24 %} DOWNLOAD
                 </button>
             </a>
@@ -67,7 +67,7 @@ To install Pulumi manually, follow the steps below for your platform.
             <a
                     id="linux-download-link"
                     href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz" role="button">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                <button class="mdl-button mdl-js-button mdl-button--raised">
                     {% octicon cloud-download height:24 %} DOWNLOAD
                 </button>
             </a>
@@ -91,7 +91,7 @@ To install Pulumi manually, follow the steps below for your platform.
             <a
                     id="windows-download-link"
                     href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows-x64.zip" role="button">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                <button class="mdl-button mdl-js-button mdl-button--raised">
                     {% octicon cloud-download height:24 %} DOWNLOAD
                 </button>
             </a>
