@@ -89,9 +89,9 @@ pulumi config set --secret secretValue S3cr37 # set a secret value
 ```javascript
 const pulumi = require("@pulumi/pulumi");
 
-let config = new pulumi.Config("broome-proj"); // broome-proj is name defined in Pulumi.yaml
+let config = new pulumi.Config("broome-proj");          // broome-proj is name defined in Pulumi.yaml
 
-console.log(`Hello, ${config.require("name")}!`);	    // prints "BroomeLLC"
+console.log(`Hello, ${config.require("name")}!`);       // prints "BroomeLLC"
 console.log(`Psst, ${config.require("secretValue")}`);  // prints "S3cr37"
 ```
 
