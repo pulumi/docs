@@ -12,7 +12,7 @@ layout: default
     <tr>
         <td width="60%" style="vertical-align: top">
             <h2 class="get-to-the-cloud">
-                Get Code to the Cloud. Together. Faster.
+                Get Code to the Cloud. Faster. Together.
             </h2>
             <p>
                 Build and deploy production-ready containers, serverless functions, and managed cloud services,
