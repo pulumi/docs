@@ -2,9 +2,9 @@
 title: Extract a video frame using AWS Lambda and Fargate
 ---
 
-In this tutorial, we'll use JavaScript to deploy a full application that extracts a thumbnail from a video using AWS Lambda and [Fargate](https://aws.amazon.com/fargate/). The easiest way to extract a frame from a video file is to use [FFmpeg](https://www.ffmpeg.org/). This example runs FFmpeg in a Docker container on Fargate, for two reasons: 1) AWS Lambda cannot natively run FFmpeg, and 2) Lambda is not designed for long-running processes. Processing a large video file could exceed the Lambda execution limit.
+In this tutorial, we'll use JavaScript combine serverless, containers and cloud infrastructure together in a single application. We use serverless functions as event triggers and containers for longer-running tasks. 
 
-Below is the architecture of the Pulumi application. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is available on GitHub.
+We'll build an application that extracts a thumbnail from a video using AWS Lambda and [Fargate](https://aws.amazon.com/fargate/). Below is the architecture of the Pulumi application. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is available on GitHub. 
 
 ![Video thumbnail diagram](../images/quickstart/video-thumbnail-diagram.png){:width="600px"}
 
@@ -66,12 +66,13 @@ Below is the architecture of the Pulumi application. The [code for this tutorial
     exports.bucketName = bucketName;
     ```
 
-    This code does the following:
-    - Defines a bucket for videos and still frames
-    - Defines a [cloud.Service](../reference/packages/pulumi-cloud/interfaces/_service_.service.html), which is a high-level, convenient package for working with containers. The class automatically provisions a container registry instance in ECR, runs a Docker build, and saves the Docker image to the provisioned ECR instance. It also defines an ECS task and configures it to use the built image.
-    - Defines a Lambda that is triggered whenever a new `.mp4` file is uploaded to the S3 bucket. The Lambda extracts the time index that is encoded in the video filename (in the form `file_mm-ss`) and launches the container task.
-    - Defines a Lambda that is triggered when a new `.jpg` file is uploaded to the S3 bucket, which prints a message to the log file.
-    - Defines `bucketName` as a [stack output property](../reference/stack.html#outputs), so that we can easily retrieve the value after the project has been deployed.
+    This code declares the following resources:
+
+    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property](../reference/stack.html#outputs) `bucketName`, to easily retrieve this value after the project has been deployed.
+    - **Containers**. Uses [cloud.Task](../reference/pkg/nodejs/@pulumi/cloud/#Task), which is a high-level, convenient component for working with containers. The component automatically provisions a container registry instance in ECR, runs a Docker build, and saves the Docker image to the provisioned ECR instance. It also defines an ECS task and configures it to use the built image.
+    - **Serverless functions**
+      - The Lambda function `onNewVideo` is triggered whenever a new `.mp4` video file is uploaded to the S3 bucket. The Lambda extracts the time index that is encoded in the video filename (in the form `file_mm-ss`) and launches the container task.
+      - The Lambda function `onNewThumbnail` is triggered when a new `.jpg` thumbnail file is uploaded to the S3 bucket, and prints a message to the log file.
 
 1.  In the same directory, create a `Dockerfile` with the following contents. For the container setup, it uses an existing container for FFmpeg ad installs Python and the AWS CLI. When the container is started, it copies the video file from S3, runs `ffmpeg`, and copies the output back to S3.
 
@@ -169,28 +170,10 @@ upload: ./cat.jpg to s3://bucket-756b44a/cat.jpg                  pleted 86.6 Ki
 
 After you see the `*** New thumbnail` message, copy the jpg from S3. 
 
-#### Option 1: On the command line
-
 ```bash
 $ aws s3 cp s3://$(pulumi stack output bucketName)/cat.jpg .
 download: s3://bucket-0c91106/cat.jpg to ./cat.jpg            
 ```
-
-#### Option 2: Use the Pulumi Console and AWS Console
-
-1.  Navigate to your stack in the Pulumi Console. Either use the link printed at the end of `pulumi update`, or run `pulumi stack`:
-
-    ```bash
-    $ pulumi stack
-    ...
-    More information at: https://pulumi.com/lindydonna/thumbnailer-testing
-    ```
-
-1.  Navigate to the **Resources** tab. Type "bucket" to filter the resources, then click the AWS console link. 
-
-    ![Resources tab](../images/quickstart/pulumi-console-resources-tab.png){:width="600px"}
-
-1.  On the AWS S3 Console, view the file `cat.jpg`.
 
 ## Clean up
 
