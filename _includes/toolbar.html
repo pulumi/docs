@@ -1,5 +1,5 @@
 <header class="mdl-layout__header toolbar-shadow toolbar">
-    <div class="mdl-layout__header-row">
+    <div class="mdl-layout__header-row toolbar-content">
         {% if include.toc %}
             <button class="mdl-button mdl-js-button mdl-button--icon toggle-drawer-button" onclick="document.getElementById('app').MaterialLayout.toggleDrawer()">
                 <i class="material-icons toolbar-icon">menu</i>
@@ -9,11 +9,6 @@
             <img src="/images/logo/logo-white-white.svg" class="toolbar-logo" alt="Pulumi">
         </a>
         <div class="mdl-layout-spacer"></div>
-        <a href="mailto:support@pulumi.com">
-            <button class="mdl-button mdl-js-button mdl-button--icon">
-                <i class="material-icons toolbar-icon">feedback</i>
-            </button>
-        </a>
         <a href="https://pulumi.com/home">
             <button class="mdl-button mdl-js-button mdl-button-primary toolbar-button">
                 DASHBOARD

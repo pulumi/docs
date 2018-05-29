@@ -1,66 +1,104 @@
 ---
+title: Welcome to Pulumi
 layout: default
 ---
 
-<h1>Welcome to Pulumi</h1>
+<span style="float: right; margin-top: -64px">
+    <a href="https://pulumi.slack.com/messages/C9SEFSC4C" target="_blank"><i class="fab fa-slack fa-2x" style="color: #4A5960" aria-hidden="true"></i></a>
+    <a href="https://github.com/pulumi" target="_blank"><i class="fab fa-github fa-2x" style="color: #4A5960" aria-hidden="true"></i></a>
+</span>
 
-Pulumi is a programming platform for easily and productively building cloud programs.  Use real programming languages
-to create containers, serverless functions, and cloud infrastructure, with all the benefits of immutable infrastructure.
-
+<table width="100%">
+    <tr>
+        <td width="60%" style="vertical-align: top">
+            <h2 class="get-to-the-cloud">
+                Get Code to the Cloud. Together. Faster.
+            </h2>
+            <p>
+                Build and deploy production-ready containers, serverless functions, and managed cloud services,
+                all in your favorite language but with the benefits of infrastructure as code.
+            </p>
+            <p class="curl-install">
+                $ curl -fsSL https://get.pulumi.com/ | sh
+            </p>
+        </td>
+        <td width="6%"></td>
+        <td width="33%">
+            <div class="learn-box">
+                <h2 class="learn"><i class="material-icons">library_books</i>&nbsp;Learn</h2>
+                <p style="text-align: center">
+                    <a href="/install"><button class="mdl-button mdl-js-button mdl-button--raised">INSTALL</button></a>
+                    <a href="/tour"><button class="mdl-button mdl-js-button mdl-button--raised">TAKE A TOUR</button></a>
+                    <a href="https://github.com/pulumi/examples"><button class="mdl-button mdl-js-button mdl-button--raised">EXAMPLES</button></a>
+                </p>
+            </div>
+        </td>
+    </tr>
+</table>
+<h2>Get Started</h2>
 <div class="card-table">
     <div class="mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">
-                <i class="material-icons">get_app</i>
+                <i class="material-icons">widgets</i>
                 &nbsp;
-                <a href="/install">Install</a>
+                <a href="/quickstart/aws-containers.html">Containers</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
             <span class="card-text">
-                <p>On macOS and Linux, install with:</p>
-                <pre><code>curl -fsSL https://get.pulumi.com | sh</code></pre>
-                <p>For Windows or manual installation steps <a href="/install">click here</a>.</p>
+                <p>Stand up a Docker container in 5 minutes.</p>
             </span>
+        </div>
+        <div class="mdl-card__actions">
+            <a href="/quickstart/aws-containers.html">
+                <button class="mdl-button mdl-js-button mdl-button--raised">GET STARTED</button>
+            </a>
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">
-                <i class="material-icons">schedule</i>
+                <i class="material-icons">flash_on</i>
                 &nbsp;
-                <a href="/quickstart">Tutorials</a>
+                <a href="/quickstart/index.html">Serverless</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
             <span class="card-text">
-                <p>Learn how to use Pulumi in just a few minutes, by creating
-                static websites, containers, serverless functions, and infrastructure.</p>
-                <p><a href="/quickstart">Click here</a> to start.</p>
+                <p>Stand up a serverless function in 5 minutes.</p>
             </span>
+        </div>
+        <div class="mdl-card__actions">
+            <a href="/quickstart/aws-rest-api.html">
+                <button class="mdl-button mdl-js-button mdl-button--raised">GET STARTED</button>
+            </a>
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">
-                <i class="material-icons">description</i>
+                <i class="material-icons">storage</i>
                 &nbsp;
-                <a href="/tour">A Tour of Pulumi</a>
+                <a href="/quickstart/aws-ec2.html">Infrastructure</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
             <span class="card-text">
-                <p>Take a tour of Pulumi, and learn about the core concepts in the CLI, programming
-                model, and Pulumi.com service.  Become a Pulumi expert.</p>
-                <p><a href="/tour">Click here</a> to start.</p>
+                <p>Manage traditional cloud infrastructure or hosted services
+                   using infrastructure as code.</p>
             </span>
+        </div>
+        <div class="mdl-card__actions">
+            <a href="/quickstart/aws-ec2.html">
+                <button class="mdl-button mdl-js-button mdl-button--raised">GET STARTED</button>
+            </a>
         </div>
     </div>
 </div>
 
+<h2>Featured Video</h2>
 <div class="card-table">
-    <h3>Featured Video</h3>
-    <p>Deploy a Serverless App to AWS</p>
     <script src="js/gifffer.min.js"></script>
     <img data-gifffer="/images/walkthroughs/DeployServerlessAWS.gif" title="Deploy a Serverless App to AWS">
     <script>
