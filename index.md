@@ -47,7 +47,7 @@ layout: default
         </div>
         <div class="mdl-card__supporting-text">
             <span class="card-text">
-                <p>Stand up a Docker container in 5 minutes.</p>
+                <p>Deploy a Docker container to production in 5 minutes.</p>
             </span>
         </div>
         <div class="mdl-card__actions">

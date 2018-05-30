@@ -1,5 +1,5 @@
 ---
-title: Provision containers on AWS
+title: "Containers on AWS"
 ---
 
 In this tutorial, we'll use JavaScript to build and deploy a simple container to [AWS Fargate](https://aws.amazon.com/fargate/).
