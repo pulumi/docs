@@ -48,6 +48,10 @@ myproj-staging                                   n/a                      n/a
 myproj-test                                      2 weeks ago              121           
 ```
 
+## Deploy a project
+
+To deploy your project to the currently selected stack, run `pulumi update`. The operation uses the latest [configuration values](config.html) for the active stack.
+
 ## View stack resources
 
 To view details of the currently selected stack, run `pulumi stack` with no arguments.  This displays the metadata, resources and output properties associated with the stack.
@@ -117,4 +121,6 @@ $ pulumi stack import < stack.json
 
 To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.  
 
-If a stack still has resources associated with it, they must first be deleted via `pulumi destroy`.  To force the deletion of a stack that still contains resources --- potentially orphaning them --- use `pulumi stack rm --force`. 
+If a stack still has resources associated with it, they must first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed. 
+
+To force the deletion of a stack that still contains resources --- potentially orphaning them --- use `pulumi stack rm --force`.  

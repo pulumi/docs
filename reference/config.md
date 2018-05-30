@@ -55,7 +55,7 @@ For stacks that are ephemeral or are used in "inner loop" development, the stack
 
 ## Viewing stack settings
 
-To view all settings for the currently selected stack, use `pulumi config`. To view the values of secrets, use the `--show-secrets` flag.
+To view the active settings for the currently selected stack, use `pulumi config`. To view the values of secrets, use the `--show-secrets` flag.
 
 ```
 $ pulumi config
