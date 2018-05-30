@@ -8,30 +8,30 @@ During program execution, whenever there is a resource creation statement (via `
 
 ![Pulumi engine and providers](../images/reference/engine-block-diagram.png){:width="600px"}
 
-For instance, suppose we have the following Pulumi program, which creates one security group and one EC2 instance:
+For instance, suppose we have the following Pulumi program, which creates two S3 buckets:
 
 ```javascript
-let group = new aws.ec2.SecurityGroup("web-secgrp", { /* ... */ });
-
-let size = "t2.micro";
-
-let server = new aws.ec2.Instance("web-server-www", {
-    instanceType: size,
-    securityGroups: [ group.name ],
-    ami: getLinuxAMI(size)
-});
+const bucket = new aws.s3.Bucket("media-bucket");
+const bucket = new aws.s3.Bucket("content-bucket");
 ```
 
 Now, we run `pulumi stack init mystack`. Since `mystack` is a new stack, the "last deployed state" has no resources. 
 
-Next, we run `pulumi update`. When the program runs to completion, it encounters two statements that create resources, `new aws.ec2.SecurityGroup()` and `new aws.ec2.Instance()`. So, the language host registers two resources with the engine.
+Next, we run `pulumi update`. When the program runs to completion, it runs the two `new aws.s3.Bucket()` statements. So, the language host registers two resources with the engine.
 
-The engine consults the last deployed state on pulumi.com, and determines that these resources do not already exist. So, the engine calls the AWS resource provider, requesting that it create a security group. Once the operation succeeds, this state is written to the checkpoint file, including the value of the security group `name` property. Next, an EC2 instance is created, referencing this same `name` property. So, the resource graph will look like the following:
+The engine consults the last deployed state on pulumi.com, and determines that these resources do not already exist. So, the engine calls the AWS resource provider, requesting that it create a security group. Once the operation succeeds, this state is written to the last-deployed checkpoint. So, the resource list will be similar to the following:
 
 ```
 stack mystack
-   - aws.ec2.SecurityGroup "web-secgrp"
-   - aws.ec2.Instance "web-server-www" size: "t2.micro"
+   - aws.s3.Bucket "media-bucket653a4"
+   - aws.s3.Bucket "content-bucket125ce"
 ```
 
-Now, suppose that we change the instance size from `t2.micro` to `t2.nano`. This time, the engine will not create another security group, because it exists in the checkpoint file. The engine then makes a "replace" call to the AWS provider. Since changing the instance size requires recreating the EC2 instance, a new instance of size `t2.nano` is created. Once the creation is successful, the original `t2.micro` instance is deleted.
+Now, suppose we rename `content-bucket` to `app-bucket`:
+
+```javascript
+const bucket = new aws.s3.Bucket("media-bucket");
+const bucket = new aws.s3.Bucket("app-bucket"); // renamed bucket
+```
+
+This time, the engine will not create another `media-bucket`, since it exists in the checkpoint. Now, since an S3 bucket cannot be renamed in place, the engine makes a "replace" call to the AWS provider. The provider deletes the bucket `content-bucket125ce` and creates a new one. 
