@@ -6,7 +6,7 @@ Often, your Pulumi program will need configuration values that change independen
 
 For these configuration values, you can use _stack settings_. Stack settings are defined in [`Pulumi.<stack-name>.yaml`] and are set via the `pulumi config set` command. 
 
-## Defining and setting stack settings {#config-stack}
+## Adding and setting stack settings {#config-stack}
 
 To add a new stack setting, use `pulumi config set <key> [value]`. 
 
@@ -14,7 +14,7 @@ Since [Pulumi components](../tour/advanced-components.html) can define configura
 
 For example, if a project is named `broome-proj` and the active stack is `dev`, the following command adds the key  `broome-proj:name` to `Pulumi.dev.yaml`:
 
-```
+```bash
 $ pulumi config set name BroomeLLC
 ```
 
@@ -57,14 +57,14 @@ For stacks that are ephemeral or are used in "inner loop" development, the stack
 
 To view the active settings for the currently selected stack, use `pulumi config`. To view the values of secrets, use the `--show-secrets` flag.
 
-```
+```bash
 $ pulumi config
 KEY                                              VALUE                                           
 aws:region                                       us-west-1                                       
 secretValue                                      ********                                        
 ```
 
-```
+```bash
 $ pulumi config --show-secrets
 KEY                                              VALUE                                           
 aws:region                                       us-west-1                                       
@@ -77,29 +77,38 @@ On `pulumi update`, secret values are decrypted. Your Pulumi program can read an
 
 Additionally, all shell environment variables are passed to the running program and can be accessed via standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python.
 
+To access configuration values, use `pulumi.Config` and specify the configuration namespace. This is generally the same as the project name defined in `Pulumi.yaml`.
+
+For example, assume the following configuration values have been set:
+
+```bash
+$ pulumi config set name BroomeLLC              # set a plaintext value
+$ pulumi config set --secret secretValue S3cr37 # set a secret value
+```
+
+Use the following code to access these configuration values in your Pulumi program.
+
 #### JavaScript {#javascript}
-
-In JavaScript, use `pulumi.Config` in the `@pulumi` namespace, passing in the configuration namespace. This is typically  the name defined in `Pulumi.yaml`.
-
-```
-pulumi config set name BroomeLLC              # set a plaintext value
-pulumi config set --secret secretValue S3cr37 # set a secret value
-```
 
 ```javascript
 const pulumi = require("@pulumi/pulumi");
 
-let config = new pulumi.Config("broome-proj");          // broome-proj is name defined in Pulumi.yaml
+let config = new pulumi.Config("broome-proj"); // broome-proj is name defined in Pulumi.yaml
 
-console.log(`Hello, ${config.require("name")}!`);       // prints "BroomeLLC"
-console.log(`Psst, ${config.require("secretValue")}`);  // prints "S3cr37"
+console.log(config.require("name"));           // prints "BroomeLLC"
+console.log(config.require("secretValue"));    // prints "S3cr37"
 ```
 
-#### Python
+#### Python {#python}
 
-<!-- TODO add Python example -->
+```python
+import pulumi
 
-Coming soon!
+config = pulumi.Config('broome-proj')  # broome-proj is name defined in Pulumi.yaml
+
+print(config.require('name'))          # prints "BroomeLLC"
+print(config.require('secretValue'))   # prints "S3cr37"
+```
 
 <!-- MARKDOWN LINKS -->
 
