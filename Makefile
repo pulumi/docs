@@ -23,7 +23,7 @@ ensure:
 .PHONY: serve
 serve: 
 	@echo -e "\033[0;32mSERVE:\033[0m"
-	bundler exec jekyll serve --strict_front_matter --host 0.0.0.0
+	bundler exec jekyll serve --strict_front_matter --host 0.0.0.0 --incremental
 
 .PHONY: generate
 generate:
@@ -39,7 +39,7 @@ build:
 
 .PHONY: test
 test:
-	blc http://localhost:4000 -r --exclude-external  --exclude '*/releases/pulumi*' --exclude '*/examples/*'
+	blc http://localhost:4000 -r --exclude-external  --exclude '*/releases/pulumi*' --exclude '*/examples/*' --exclude '*/reference/pkg/*'
 
 .PHONY: deploy
 deploy:
