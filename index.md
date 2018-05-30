@@ -97,16 +97,5 @@ layout: default
     </div>
 </div>
 
-<h2>Featured Video</h2>
-<div class="card-table">
-    <script src="js/gifffer.min.js"></script>
-    <img data-gifffer="/images/walkthroughs/DeployServerlessAWS.gif" title="Deploy a Serverless App to AWS">
-    <script>
-        window.onload = function() {
-            Gifffer();
-        };
-    </script>
-</div>
-
-For questions or feedback, reach us at [support@pulumi.com](mailto:support@pulumi.com), or [on GitHub](
-https://github.com/pulumi).
+For questions or feedback, reach us in our [community Slack channel](https://pulumi.slack.com/messages/C9SEFSC4C),
+on [GitHub](https://github.com/pulumi), or by emailing [support@pulumi.com](mailto:support@pulumi.com).
