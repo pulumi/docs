@@ -157,3 +157,7 @@ After installing Pulumi, verify the tool is on your path:
 $ pulumi version
 v{{page.installer_version}}
 ```
+
+## Uninstalling Pulumi
+
+If you use the get.pulumi.com install script, simply delete the `.pulumi` folder in your home directory. If you did the manual installation, delete the main `pulumi` folder.
