@@ -4,6 +4,21 @@ title: Tutorials and examples
 
 Pulumi is a set of tools and services to help Development and DevOps teams define, deploy, and manage cloud native infrastructure. Pulumi enables teams to define cloud native infrastructure in familiar languages (e.g. JavaScript, Python). So, you can be more productive and take advantage of your existing skills, rather than learn a new DSL.
 
+## Get started with Pulumi
+
+First, [configure AWS](../install/aws.html). Then, run the following commands: 
+
+```bash
+# Step 1. Install Pulumi
+curl -fsSL https://get.pulumi.com | sh
+
+# Step 2. Create a new project
+pulumi new hello-aws-javascript
+
+# Step 3. Deploy to the cloud
+pulumi update
+```
+
 ## Featured tutorials
 
 - [Hello World](aws-hello-world.html). A simple single-page app that uses serverless functions.
