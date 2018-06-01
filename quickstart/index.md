@@ -2,11 +2,7 @@
 title: Tutorials and examples
 ---
 
-Pulumi is a set of tools and services to help Development and DevOps teams define, deploy, and manage cloud native infrastructure. Pulumi enables teams to define cloud native infrastructure in familiar languages (e.g. JavaScript, Python). So, you can be more productive and take advantage of your existing skills, rather than learn a new DSL.
-
-## Get started with Pulumi
-
-First, [configure AWS](../install/aws.html). Then, run the following commands: 
+To get started with Pulumi, [configure AWS](../install/aws.html). Then, run the following commands: 
 
 ```bash
 # Step 1. Install Pulumi
@@ -27,11 +23,9 @@ pulumi update
 - [Provision virtual machines on AWS](aws-ec2.html). Use JavaScript to create repeatable deployments of cloud infrastructure.
 - [Create an application with serverless functions and containers](aws-extract-thumbnail.html). Create a full application that extracts a thumbnail from a video, using AWS Lambda and FFmpeg running in a Docker container.
 
-## Examples
+## Featured examples
 
-We have a number of examples in the [Pulumi examples repo](https://github.com/pulumi/examples) on GitHub. Below are some highlighted samples. 
-
-If you don't have access to the GitHub repo, please email [support@pulumi.com](mailto:support@pulumi.com) to get access, or download the [Pulumi examples zipfile](/examples/pulumi-examples.zip).
+Check out these examples in the [Pulumi examples repo](https://github.com/pulumi/examples) on GitHub. 
 
 ### Containers
 

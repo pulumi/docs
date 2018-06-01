@@ -4,6 +4,8 @@ title: "Projects"
 
 A Pulumi project is any folder which contains a `Pulumi.yaml` file.  When in a subfolder, the closest enclosing folder with a `Pulumi.yaml` file determines the current project.  A new project can be created with `pulumi new`.  A project specifies which runtime to use, which determines where to look for the program that should be executed during deployments.  Currently, `nodejs` and `python` are supported runtimes.
 
+Packages that contain [reusable components](./programming-model.html#components) do not need a project file and can simply use the package manager's standard metadata format.
+
 ## Project file {#pulumi-yaml}
 
 The `Pulumi.yaml` project file specifies metadata about your project.
@@ -31,11 +33,9 @@ A project file contains the following attributes:
 
 * `main`: (optional) an override for the main program's location. By default, the program's working directory is assumed to be the location of `Pulumi.yaml`. To choose a different location, use the `main` property. For example, if your Pulumi program is in a subdirectory `infra/`, use `main: infra/`.
 
-Projects that are deployed directly require a project file. Packages that contain reusable components do not need a project file and can simply use the package manager's standard metadata format.
-
-### Scoping
-
 When using JavaScript, the working directory for the project should contain a `package.json` that points to a file such as `index.js`. In Python, there should either be a `__main__.py` file or a file `setup.py` that defines the entry point.
+
+### Paths
 
 When your Pulumi program references resources in the local filesystem, they are always relative to the working directory. For example, the following code references a subfolder `app` of the working directory, that contains a `Dockerfile`:
 

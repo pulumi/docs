@@ -5,11 +5,9 @@ redirect_from: "install/configure-npm.html"
 
 ---
 
-## Getting Started
+The fastest way to get started in JavaScript is using a template.  From the directory in which you'd like to create a new project:
 
-The fastest way to get started with Pulumi JavaScript is by using a template.  From the directory in which you'd like to create a new project:
-
-```
+```bash
 $ pulumi new javascript
 Your project was created successfully.
 ```
@@ -46,12 +44,12 @@ You can elect to write Pulumi programs in TypeScript to get additional verificat
 
 The fastest way to get started with Pulumi in TypeScript, is to use a template:
 
-```
+```bash
 $ pulumi new typescript
 Your project was created successfully.
 ```
 
-This will auto-generate all the basic artifacts required to use TypeScript.  But you may also perform the steps manually if you prefer.
+This will auto-generate all the basic artifacts required to use TypeScript.  If you prefer, you can instead run the following manual steps.
 
 ### 1. Update package.json
 
