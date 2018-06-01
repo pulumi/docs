@@ -1,5 +1,5 @@
 ---
-title: "Create EC2 Instances on AWS"
+title: "Infrastructure on AWS"
 redirect_from: "/quickstart/part1.html"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Extract a video frame using AWS Lambda and Fargate
+title: "Serverless and Containers on AWS"
 ---
 
 In this tutorial, we'll use JavaScript combine serverless, containers and cloud infrastructure together in a single application. We use serverless functions as event triggers and containers for longer-running tasks. 
