@@ -6,7 +6,7 @@ Often, your Pulumi program will need configuration values that change independen
 
 For these configuration values, you can use _stack settings_. Stack settings are defined in [`Pulumi.<stack-name>.yaml`] and are set via the `pulumi config set` command. 
 
-## Adding and setting stack settings {#config-stack}
+## Adding and configuring stack settings {#config-stack}
 
 To add a new stack setting, use `pulumi config set <key> [value]`. 
 
