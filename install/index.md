@@ -105,7 +105,7 @@ To install Pulumi manually, follow the steps below for your platform.
 
 Windows 8 and 10 are supported.
 
-1.  Download [Pulumi {{page.installer_version}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows.x64.zip).
+1.  Download [Pulumi {{page.installer_version}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows-x64.zip).
 
 1.  Copy the extracted zipfile contents to a folder such as `C:\pulumi`.
 
@@ -115,12 +115,12 @@ Windows 8 and 10 are supported.
 
 macOS Sierra (10.12) or later is required. 
 
-1.  Download [Pulumi {{page.installer_version}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin.x64.tar.gz).
+1.  Download [Pulumi {{page.installer_version}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin-x64.tar.gz).
 
 1.  Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
 
     ```bash
-    $ tar -xzf pulumi-v{{page.installer_version}}-darwin.x64.tar.gz
+    $ tar -xzf pulumi-v{{page.installer_version}}-darwin-x64.tar.gz
     $ ./pulumi/install.sh 
     ```
 
@@ -134,12 +134,12 @@ macOS Sierra (10.12) or later is required.
 
 We provide a pre-built binary for Linux.
 
-1.  Download [Pulumi {{page.installer_version}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux.x64.tar.gz).
+1.  Download [Pulumi {{page.installer_version}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz).
 
 1.  Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
 
     ```bash
-    $ tar -xzf pulumi-v{{page.installer_version}}-linux.x64.tar.gz
+    $ tar -xzf pulumi-v{{page.installer_version}}-linux-x64.tar.gz
     $ ./pulumi/install.sh
     ```
 
