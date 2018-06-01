@@ -132,6 +132,6 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
 
 ## Next steps
 
-For an end-to-end application that use containers and serverless functions, see the [Video Thumbnailer](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) example.
+For an end-to-end application also includes serverless functions, see the [Serverless and Containers](./aws-extract-thumbnail.html) tutorial.
 
 For an example application that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app) TypeScript sample.

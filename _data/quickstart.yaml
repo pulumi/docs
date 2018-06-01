@@ -1,12 +1,11 @@
-nav_section: "Quickstart"
+nav_section: "Tutorials"
 toc: 
-- title: Quickstart
+- title: Tutorials
   path: /quickstart/index
   section:
+  - quickstart/aws-hello-world.md
   - quickstart/aws-containers.md
   - quickstart/aws-rest-api.md
   - quickstart/aws-ec2.md
   - quickstart/aws-extract-thumbnail.md
   - quickstart/aws-s3-website.md
-
-- quickstart/examples.md

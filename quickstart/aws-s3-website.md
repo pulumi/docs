@@ -1,111 +1,14 @@
 ---
-title: "Host a Static Website on S3"
+title: "Static Website on AWS S3"
 redirect_from: "/quickstart/part2.html"
 ---
 
-<!-- TODO: add link to reference doc for cloud-aws -->
-There are two ways to host a static website on S3 using Pulumi: you can use raw AWS resources to create a bucket and bucket objects, or you can use the higher-level `@pulumi/cloud-aws` package. 
+In this tutorial, we'll show how you can use [@pulumi/aws] to provision raw resources. First, we'll create a Pulumi program that uploads files from the `www` directory to S3. Then, we'll configure the bucket to serve a website. The [code for this tutorial][s3-folder] is available on GitHub. 
 
 {% include aws-resource-note.md %}
 {% include aws-js-prereqs.md %}
 
-## Option 1: Use the Pulumi Cloud framework {#pulumi-cloud}
-
-The [Pulumi Cloud] framework provides high-level components that encode common infrastructure and application patterns. Using the class [HttpEndpoint], you can create an AWS API Gateway resource that proxies requests to S3.
-
-1.  In a new folder `cloud-static`, create an empty project with `pulumi new`:
-
-    ```bash
-    $ mkdir cloud-static; cd cloud-static
-    $ pulumi new javascript
-    ```
-
-1.  Create some files in `www`:
-    - Create a subfolder of `cloud-static` called `www`.
-    - Download [favicon.png](/examples/favicon.png) and save it to `www`.
-    - In `www`, save the following as `index.html`:
-
-      ```html
-      <html><head>
-        <title>Hello S3</title><meta charset="UTF-8">
-        <link rel="shortcut icon" href="favicon.png" type="image/png">
-      </head>
-      <body><p>Hello, world!</p><p>Made with ❤️ with <a href="https://pulumi.com">Pulumi</a></p>
-      </body></html>
-      ```
-
-1.  Replace the contents of `index.js` with the following:
-
-    ```javascript
-    const cloud = require("@pulumi/cloud-aws");
-    
-    const endpoint = new cloud.HttpEndpoint("cloud-static");
-    endpoint.static("/", "www"); // Serve static files from the `www` folder, using S3
-    
-    exports.url = endpoint.publish().url; // Export the public URL for the HTTP service
-    ```
-
-1.  Add and install the NPM dependencies:
-
-    ```bash
-    $ npm install --save @pulumi/cloud-aws
-    ```
-
-1.  Run `pulumi update` to preview and deploy AWS resources. This creates a stack component, a Bucket, two S3 Objects (one for each file in the `www` folder), and several API Gateway resources.
-
-    ```bash
-    $ pulumi update
-    Previewing update of stack 'cloud-static-dev'
-    ...
-
-    Do you want to perform this update? yes
-    Updating stack 'cloud-static-dev'
-    Performing changes:
-
-        Type                                Name                              Status      Info
-    +   pulumi:pulumi:Stack                 cloud-static-cloud-static-dev     created     
-    +   └─ cloud:http:HttpEndpoint          cloud-static                      created     
-    +      ├─ aws:s3:Bucket                 cloud-static                      created     
-    +      ├─ aws:iam:Role                  cloud-static4c238266              created     
-    +      ├─ aws:s3:BucketObject           cloud-static4c238266/favicon.png  created     
-    +      ├─ aws:s3:BucketObject           cloud-static4c238266/index.html   created     
-    +      ├─ aws:iam:RolePolicyAttachment  cloud-static4c238266              created     
-    +      ├─ aws:apigateway:RestApi        cloud-static                      created     
-    +      ├─ aws:apigateway:Deployment     cloud-static                      created     
-    +      └─ aws:apigateway:Stage          cloud-static                      created     
-    
-    ---outputs:---
-    url: "https://g8tc01nssk.execute-api.us-west-2.amazonaws.com/stage/"
-
-    info: 10 changes performed:
-        + 10 resources created
-    Update duration: 13.403487743s
-
-    Permalink: https://pulumi.com/lindydonna/cloud-static-dev/updates/1
-    ```
-
-1.  Open the url shown in the "outputs" section to view the page and the favicon.
-  
-1.  To display just the endpoint that was created, run `pulumi stack output`. 
-
-    ```bash
-    $ pulumi stack output
-    Current stack outputs (1):
-        OUTPUT               VALUE
-        url                  https://simc3a8ieg.execute-api.us-west-1.amazonaws.com/stage/
-    ```
-
-### Clean up
-
-{% include cleanup.md %}
-
-## Option 2: Configure AWS resources directly {#pulumi-aws}
-
-The Pulumi Cloud framework has been created as a higher-level abstraction over AWS resources. For full control over you resources, you can use [@pulumi/aws] directly.
-
-First, we'll create a Pulumi program that uploads files from the `www` directory to S3. Then, we'll configure the bucket to serve a website.
-
-### Create a bucket and upload files 
+## Create a bucket and upload files 
 
 1.  In a new folder `s3website`, create an empty project with `pulumi new`:
 
@@ -190,7 +93,7 @@ First, we'll create a Pulumi program that uploads files from the `www` directory
     2018-04-17 15:40:48        249 index.html
     ```
 
-### Add S3 website support
+## Add S3 website support
 
 In this section, we configure the S3 bucket to serve the files to a browser. To do this, we use the [aws.s3.Bucket.websites] property and attach an [aws.s3.BucketPolicy] object. 
 
@@ -266,9 +169,9 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
     s3-website-bucket-8533d8b.s3-website-us-west-2.amazonaws.com
     ```
 
-    ![Hello S3 example](images/part2-website.png){:width="700px"}
+    ![Hello S3 example](../images/quickstart/s3-website.png){:width="700px"}
 
-### Clean up
+## Clean up
 
 {% include cleanup.md %}
 
