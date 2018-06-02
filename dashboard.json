@@ -27,6 +27,7 @@
             { "title": "Quickstart", "url": "https://docs.pulumi.com/quickstart/" },
             { "title": "A Tour of Pulumi", "url": "https://docs.pulumi.com/tour/" },
             { "title": "Examples Repo", "url": "https://github.com/pulumi/examples" },
+            { "title": "Pulumi Community Forum", "url": "https://community.pulumi.com/" },
             { "title": "Pulumi Community Slack", "url": "https://pulumi.slack.com/messages/C9SEFSC4C" }
         ],
         "actionItem": { "title": "Read all documentation", "url": "https://docs.pulumi.com/" }
