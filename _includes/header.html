@@ -53,10 +53,9 @@
                         </button>
 
                         <span>
-                            <!-- TODO[pulumi/docs#296]: Enable search in docs. -->
-                            <form id="search-form">
-                                <input type="search" placeholder="Search...">
-                                <button><i class="fas fa-search"></i></button>
+                            <form id="search-form" action="/search.html" method="get">
+                                <input type="search" id="search-box" name="q" placeholder="Search..." autocomplete="off">
+                                <button type="submit"><i class="fas fa-search"></i></button>
                             </form>
                         </span>
                     </div>

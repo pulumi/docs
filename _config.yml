@@ -29,6 +29,9 @@ exclude:
   - .gitattributes
   - .gitignore
   - .travis.yml
+  - CODE-OF-CONDUCT.md
+  - CONTRIBUTING.md
+  - Dockerfile
   - infrastructure
   - Gemfile
   - Gemfile.lock
