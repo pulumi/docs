@@ -98,7 +98,6 @@ pre {
     overflow: scroll;
     padding: 8px;
     border-radius: 2px;
-    border: 1px solid #ddd;
 }
 
 // Move body down because of a fixed nav at the top.
@@ -343,7 +342,6 @@ a.btn > svg {
     border-bottom: 1px solid rgba(0,0,0,.12);
     z-index: 1;
 }
-
 .toolbar-tabs a:hover {
     text-decoration: none;
 }
@@ -356,6 +354,11 @@ a.btn > svg {
 .mdl-tabs__tab.is-active {
     color: $primary;
     border-bottom: 2px solid $primary;
+}
+
+.mdl-tabs__tab.langtab.is-active {
+    color: $primary;
+    border-bottom: 1px solid $primary;
 }
 
 .sidenav-section {
@@ -574,6 +577,22 @@ a.btn > svg {
 .tour-index {
     font-size: 20px;
     padding: 8px;
+}
+
+.langtab-tabs {
+    margin-bottom: -16px;
+}
+
+.langtab-tabstrip {
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    height: $TAB-GROUP-HEIGHT;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    z-index: 1;
+}
+.langtab-tabstrip a:hover {
+    text-decoration: none;
 }
 
 .pdoc-module-header {

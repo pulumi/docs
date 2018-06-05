@@ -2,11 +2,9 @@
 title: Programs
 ---
 
-<div style="float: right; padding: 8px; background-color: #ddd;">LANG</div>
-
 To get code to the cloud, you write Pulumi programs.
 
-Programs are written in your language of choice.  For a customized experience, please choose your language above.
+Programs are written in your language of choice.  Examples in all supported languages will be shown.
 
 > Pulumi currently supports JavaScript and TypeScript, using Node.js, and Python.  More languages are on their way!
 
@@ -23,12 +21,30 @@ The full power of your language is available -- loops and conditionals, classes 
 
 Here is a very basic program that creates a single load-balanced container service:
 
+{% include langchoose.html %}
+
+```javascript
+let Service = require("@pulumi/cloud").Service;
+let redis = new Service("redis-cache", {
+    image: "redis: alpine",
+    ports: [{ port: 6379 }],
+});
+```
+
 ```typescript
 import {Service} from "@pulumi/cloud";
 const redis = new Service("redis-cache", {
     image: "redis:alpine",
     ports: [{ port: 6379 }],
 });
+```
+
+```python
+from pulumi_cloud import Service
+redis = Service('redis-cache', {
+    image='redis:alpine',
+    ports=[{ 'port': 6379 }],
+})
 ```
 
 Don't worry if the specific nuances of resources and deployments don't add up yet.  Those are
