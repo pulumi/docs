@@ -35,17 +35,22 @@ exclude:
   - _drafts
   - _includes
   - _layouts
+  - _plugins
   - _site
   - _config.yml
   - .gitattributes
   - .gitignore
   - .travis.yml
+  - CODE-OF-CONDUCT.md
+  - CONTRIBUTING.md
+  - Dockerfile
   - Gemfile
   - Gemfile.lock
   - Makefile
   - package.json
   - README.md
   - scripts
+  - tools
   - vendor
   - yarn.lock
 
