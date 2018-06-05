@@ -84,7 +84,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
         + 3 resources created
     Update duration: 32.938640858s
 
-    Permalink: https://pulumi.com/lindydonna/ec2-quickstart-dev/updates/3
+    Permalink: https://app.pulumi.com/lindydonna/ec2-quickstart-dev/updates/3
     ```
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab on pulumi.com has a link to the AWS console for the provisioned EC2 instance.
@@ -171,7 +171,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
           1 resource unchanged
     Update duration: 1m44.50461533s
 
-    Permalink: https://pulumi.com/lindydonna/ec2-quickstart-dev/updates/6
+    Permalink: https://app.pulumi.com/lindydonna/ec2-quickstart-dev/updates/6
     ```
 
 1.  We can use `pulumi stack output` to get the value of stack outputs from the CLI.  So we can `curl` the EC2 instance to see the HTTP server running there. Stack outputs can also be viewed on the Pulumi Console.

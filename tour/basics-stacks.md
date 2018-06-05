@@ -23,8 +23,8 @@ The [`pulumi stack`](/reference/cli/pulumi_stack) command manages all things sta
 ```bash
 $ pulumi stack ls
 NAME                   RESOURCE COUNT     URL
-broomllc/prod          73                 https://pulumi.com/broomllc/prod
-broomllc/staging*      88                 https://pulumi.com/broomllc/staging
+broomllc/prod          73                 https://app.pulumi.com/broomllc/prod
+broomllc/staging*      88                 https://app.pulumi.com/broomllc/staging
 ```
 
 The `*` next to `staging` indicates that's the stack we're on.  Most CLI commands are contextual depending on the
