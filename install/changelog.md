@@ -27,21 +27,6 @@ title: "Change Log"
             <td>2018/05/19</td>
             <td>{% include sdk-links.html version='0.12.2' %}</td>
         </tr>
-        <tr>
-            <th scope="row"><a href="#v121">0.12.1</a></th>
-            <td>2018/05/09</td>
-            <td>{% include sdk-links.html version='0.12.1' %}</td>
-        </tr>
-        <tr>
-            <th scope="row"><a href="#v113">0.11.3</a></th>
-            <td>2018/04/13</td>
-            <td>{% include sdk-links.html version='0.11.3' %}</td>
-        </tr>
-        <tr>
-            <th scope="row"><a href="#v10">0.10.0</a></th>
-            <td>2018/02/27</td>
-            <td>{% include sdk-links.html version='0.10.0' %}</td>
-        </tr>
     </tbody>
 </table>
 
