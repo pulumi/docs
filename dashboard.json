@@ -28,7 +28,7 @@
             { "title": "A Tour of Pulumi", "url": "https://docs.pulumi.com/tour/" },
             { "title": "Examples Repo", "url": "https://github.com/pulumi/examples" },
             { "title": "Pulumi Community Forum", "url": "https://community.pulumi.com/" },
-            { "title": "Pulumi Community Slack", "url": "https://pulumi.slack.com/messages/C9SEFSC4C" }
+            { "title": "Pulumi Community Slack", "url": "https://join.slack.com/t/pulumi-community/shared_invite/enQtMzc4MDEyMTk5NzAyLWIxYTEwZmM5ZGFiZTQwZDMzOTMzYWIyM2EyOWIwNDg5YzE1MTg5OGQ5NDQ1MjIzNjcxNDU3NzM0ZWI4NDY1ZGY" }
         ],
         "actionItem": { "title": "Read all documentation", "url": "https://docs.pulumi.com/" }
     },
