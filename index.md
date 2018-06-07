@@ -4,7 +4,7 @@ layout: default
 ---
 
 <span style="float: right; margin-top: -64px">
-    <a href="https://pulumi.slack.com/messages/C9SEFSC4C" target="_blank"><i class="fab fa-slack fa-2x" style="color: #4A5960" aria-hidden="true"></i></a>
+    <a href="https://join.slack.com/t/pulumi-community/shared_invite/enQtMzc4MDEyMTk5NzAyLWIxYTEwZmM5ZGFiZTQwZDMzOTMzYWIyM2EyOWIwNDg5YzE1MTg5OGQ5NDQ1MjIzNjcxNDU3NzM0ZWI4NDY1ZGY" target="_blank"><i class="fab fa-slack fa-2x" style="color: #4A5960" aria-hidden="true"></i></a>
     <a href="https://github.com/pulumi" target="_blank"><i class="fab fa-github fa-2x" style="color: #4A5960" aria-hidden="true"></i></a>
 </span>
 
@@ -97,5 +97,5 @@ layout: default
     </div>
 </div>
 
-For questions or feedback, reach us in our [community Slack channel](https://pulumi.slack.com/messages/C9SEFSC4C),
+For questions or feedback, reach us in our [community Slack channel](https://join.slack.com/t/pulumi-community/shared_invite/enQtMzc4MDEyMTk5NzAyLWIxYTEwZmM5ZGFiZTQwZDMzOTMzYWIyM2EyOWIwNDg5YzE1MTg5OGQ5NDQ1MjIzNjcxNDU3NzM0ZWI4NDY1ZGY),
 on [GitHub](https://github.com/pulumi), or by emailing [support@pulumi.com](mailto:support@pulumi.com).
