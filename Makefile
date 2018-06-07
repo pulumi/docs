@@ -44,7 +44,7 @@ test:
 .PHONY: deploy
 deploy:
 	@echo -e "\033[0;32mDEPLOY:\033[0m"
-ifeq ($(TRAVIS_BRANCH),cicd-for-staging)
+ifeq ($(TRAVIS_BRANCH),master)
 	./scripts/update.sh staging
 endif
 ifeq ($(TRAVIS_BRANCH),production)
