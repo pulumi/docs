@@ -45,10 +45,10 @@ test:
 deploy:
 	@echo -e "\033[0;32mDEPLOY:\033[0m"
 ifeq ($(TRAVIS_BRANCH),master)
-	./scripts/deploy.sh staging
+	./scripts/update.sh staging
 endif
 ifeq ($(TRAVIS_BRANCH),production)
-	./scripts/deploy.sh production
+	./scripts/update.sh production
 endif
 
 .PHONY: travis_push

@@ -40,6 +40,7 @@ exclude:
   - .gitattributes
   - .gitignore
   - .travis.yml
+  - infrastructure
   - Gemfile
   - Gemfile.lock
   - Makefile
