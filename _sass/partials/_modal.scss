@@ -1,0 +1,79 @@
+.modal-dialog {
+    .row & {
+        margin: 0;
+        width: 100%;
+    }
+}
+.modal {
+    .modal-content {
+        border-radius: 0;
+        box-shadow: none;
+        border: 1px solid #D1D1D1;
+        padding: 26px;
+        text-align: left;
+        padding-top: 66px;
+        
+        @media (min-width: $screen-md){
+            padding: 56px;
+        }
+        
+        @media (min-width: $screen-lg){
+            padding: 86px 96px 96px;
+        }
+    }
+    
+    .modal-body {
+        padding: 0;
+    }
+    
+    .close {
+        border: none;
+        background: none;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        line-height: 1;
+        background-image: url(../assets/icons/icon-close.svg);
+        width: 28px;
+        height: 28px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center center;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        
+        @media (min-width: $screen-md){
+            width: 38px;
+            height: 38px;
+        }
+        
+        span {
+            display: none;
+        }
+    }
+    
+    > .container-fluid {
+        display: table;
+        height: 100%;
+        
+        padding-top: 20px;
+        padding-bottom: 20px;
+            
+        @media (min-width: $screen-md){
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        
+        @media (min-width: $screen-lg){
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        > .row {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.content-block-anchors {
+	padding: 0;
+
+	.anchor-container {
+		background-color: $black;
+		z-index: 2;
+        
+        @media (max-width: $screen-sm-max) {
+            position: static !important;
+        }
+        
+		ul.anchor-list {
+			font-size: 0;
+			margin-bottom: 0;
+			text-align: center;
+
+			@media (max-width: $screen-sm-max) {
+				text-align: left;
+			}
+
+			li.anchor-item {
+				list-style: none;
+				display: inline-block;
+				padding: 15px 110px 15px 0;
+				margin-bottom: 0;
+
+				a {
+					text-decoration: none;
+					font-size: 20px;
+					font-weight: 400;
+					line-height: 27px;
+					@include transition();
+                    
+                    &:focus, &:active, &:visited {
+                        color: white;
+                    }
+					
+				}
+                
+                @media (max-width: $screen-md-max) {
+                    padding-right: 68px;
+                }
+                
+				@media (max-width: $screen-sm-max) {
+					padding-top: 15px;
+					padding-bottom: 15px;
+					padding-left: 10px;
+					padding-right: 10px;
+
+					&:last-child {
+						padding-right: 0;
+					}
+					a {
+						font-size: 16px;
+					}
+				}
+				&:last-child {
+					padding-right: 0;
+				}
+
+				&:before {
+					content: none;
+				}
+			}
+	}
+	}
+}

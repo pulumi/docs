@@ -1,0 +1,37 @@
+.testimonials-wrapper {
+    
+    .testimonials {
+        
+        @media(min-width: $screen-md){
+            margin-left: -42px;
+            margin-right: -42px;
+        }
+        
+    }
+    
+    .testimonial {
+        
+        @media(max-width: $screen-sm-max){
+            width: auto !important;
+            display: block !important;
+            
+            &:not(:last-child){
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media(min-width: $screen-md){
+            padding-left: 42px;
+            padding-right: 42px;
+        }
+        
+        
+        blockquote {
+            margin-top: 0;
+            
+            + p {
+                margin-left: 22px;
+            }
+        }
+    }
+}

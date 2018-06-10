@@ -27,9 +27,9 @@ layout: default
             <div class="learn-box">
                 <h2 class="learn"><i class="material-icons">library_books</i>&nbsp;Learn</h2>
                 <p style="text-align: center">
-                    <a href="/install"><button class="mdl-button mdl-js-button mdl-button--raised">INSTALL</button></a>
-                    <a href="/tour"><button class="mdl-button mdl-js-button mdl-button--raised">TAKE A TOUR</button></a>
-                    <a href="https://github.com/pulumi/examples"><button class="mdl-button mdl-js-button mdl-button--raised">EXAMPLES</button></a>
+                    <a href="/install"><button class="button">INSTALL</button></a>
+                    <a href="/tour"><button class="button">TAKE A TOUR</button></a>
+                    <a href="https://github.com/pulumi/examples"><button class="button">EXAMPLES</button></a>
                 </p>
             </div>
         </td>
@@ -52,7 +52,7 @@ layout: default
         </div>
         <div class="mdl-card__actions">
             <a href="/quickstart/aws-containers.html">
-                <button class="mdl-button mdl-js-button mdl-button--raised">GET STARTED</button>
+                <button class="button">GET STARTED</button>
             </a>
         </div>
     </div>
@@ -71,7 +71,7 @@ layout: default
         </div>
         <div class="mdl-card__actions">
             <a href="/quickstart/aws-rest-api.html">
-                <button class="mdl-button mdl-js-button mdl-button--raised">GET STARTED</button>
+                <button class="button">GET STARTED</button>
             </a>
         </div>
     </div>
@@ -91,7 +91,7 @@ layout: default
         </div>
         <div class="mdl-card__actions">
             <a href="/quickstart/aws-ec2.html">
-                <button class="mdl-button mdl-js-button mdl-button--raised">GET STARTED</button>
+                <button class="button">GET STARTED</button>
             </a>
         </div>
     </div>

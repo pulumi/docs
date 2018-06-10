@@ -1,0 +1,130 @@
+.hbspt-form-wrapper {
+	.hs-form {
+		fieldset {
+			max-width: 100% !important;
+			
+			@media (max-width: $screen-sm-max) {
+				margin: 0 auto;
+			}
+	
+			@media (max-width: $screen-xs-max) {
+				width: 100%;
+			}
+		}
+	}
+	
+	.hs_error_rollup {
+		@media (max-width: $screen-sm-max) {
+			margin: 0 auto;
+		
+		}
+	}
+		
+	.hs-form-field {
+		padding-bottom: 30px;
+		padding-right: 4px;
+	
+		&:nth-child(even) {
+			padding-left: 4px;
+			padding-right: 0;
+		}
+		@media (max-width: 1012px) {
+			width: 100%;
+		}
+	
+		&:not(.hs-fieldtype-textarea){
+			@media (max-width: $screen-sm-max) {
+				width: 50%;
+			}
+		}
+		
+		@media (max-width: $screen-xs-max) {
+			padding-right: 0;
+		}
+		
+		&:nth-child(even) {
+			.input {
+				margin-right: 0;
+				padding-right: 0;
+			}
+		}
+		.input {
+			margin-right: 0 !important;
+			position: relative;
+			z-index: 2;
+			
+			.hs-input {
+				width: 100%;
+				border-radius: 3px;
+				background-color: $white;
+				line-height: 1.65;
+				border: 1px solid #cecece;
+				padding: 16px 17px;
+				@media (max-width: $screen-xs-max) {
+					max-width: 100%;
+					width: 100% !important;
+				}
+			}
+		}
+		.hs-error-msgs {
+			position: relative;
+			margin-bottom: 0;
+			z-index: 1;
+			top: -2px;
+	
+			li {
+				padding:0;
+				width: 100%;
+				text-align: center;
+				margin-bottom: 0;
+	
+				label {
+					background-color: $red;
+					padding: 8px;
+					font-size: 14px;
+					font-weight: 500;
+					color: $white;
+					display: block;
+					margin-bottom: 0;
+					
+					@media (max-width: 1135px) {
+						font-size: 12px;
+					}
+					@media (max-width: $screen-sm-max) {
+						font-size: 14px;
+					}
+				}
+				&:before {
+					content: none;
+				}
+			}
+		}
+	}
+	.hs_submit {
+
+		@media (max-width: $screen-sm-max) {
+			margin: 0 auto;
+		
+		}
+		.actions {
+			text-align: center;
+			.hs-button {
+				margin-top: 15px;
+				background-color: $blue;
+				border: none;
+				color: $white;
+			
+				&:hover {
+					color: $white;
+					background-color: $blue-hover;
+				}
+			}
+		}
+	}
+}
+
+.legal-consent-container {
+	p {
+		font-size: 14px;
+	}
+}

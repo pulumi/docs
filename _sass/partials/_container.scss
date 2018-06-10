@@ -1,0 +1,202 @@
+body {
+    position: relative;
+    background-color: $purple;
+}
+
+.row {
+    @include clearfix(); 
+}
+.container-fluid {
+    max-width: 1440px;
+    padding-left: 20px;
+    padding-right: 20px;
+        
+    @media (min-width: $screen-md){
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    @media (min-width: $screen-lg){
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+//create xxs cols
+@media (max-width: $screen-xxs-max) {
+  @include make-grid(xxs);
+}
+
+//create xlg cols
+@media (min-width: $screen-xlg-min) {
+  @include make-grid(xlg);
+}
+
+.display-table {
+    display: table;
+    width: 100%;
+}
+.display-table-md {
+    @media(min-width: $screen-md){
+        display: table;
+        width: 100%;
+    }
+}
+
+.display-cell {
+    display: table-cell;
+    vertical-align: middle;
+    
+    &.valign-bottom {
+        vertical-align: bottom;
+    }
+    
+    &.valign-middle {
+        vertical-align: middle;
+    }
+}
+.display-cell-md {
+    @media(min-width: $screen-md){
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.float-left {
+    float: left;
+    margin-right: 23px;
+    margin-bottom: 23px;
+    
+    &-md {
+        display: inline-block;
+        margin-bottom: 23px;
+        
+        @media(min-width: $screen-md){
+            float: left;
+            margin-right: 23px;
+            
+        }
+    }
+    
+    &-lg {
+        display: inline-block;
+        margin-bottom: 23px;
+        
+        @media(min-width: $screen-lg){
+            float: left;
+            margin-right: 23px;
+            
+        }
+    }
+}
+
+.float-right {
+    float: right;
+    margin-left: 23px;
+    margin-bottom: 23px;
+    
+    &-md {
+        @media(min-width: $screen-md){
+            float: right;
+            margin-left: 23px;
+            margin-bottom: 23px;
+        }
+    }
+    
+    &-lg {
+        @media(min-width: $screen-lg){
+            float: right;
+            margin-left: 23px;
+            margin-bottom: 23px;
+        }
+    }
+}
+
+.valign-center {
+    display: flex;
+    align-items: center;
+    
+    &-sm {
+        @media(min-width: $screen-sm){
+            display: flex;
+            align-items: center;
+        }
+    }
+    
+    &-md {
+        @media(min-width: $screen-md){
+            display: flex;
+            align-items: center;
+        }
+    }
+    
+    &-lg {
+        @media(min-width: $screen-lg){
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+    
+    &.vert-top {
+        > .col {
+            vertical-align: top; 
+        }
+    }
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    /*text-align:left;*/
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+#main-content {
+    background-color: white;
+}
+
+.margin-bottom{
+    &-0 {
+    margin-bottom: 0px;
+  }
+  &-5 {
+    margin-bottom: 5px;
+  }
+  &-10 {
+    margin-bottom: 10px;
+  }
+  &-15 {
+    margin-bottom: 15px;
+  }
+  &-20 {
+    margin-bottom: 20px;
+  }
+  &-25 {
+    margin-bottom: 25px;
+  }
+  &-30 {
+    margin-bottom: 30px;
+  }
+  &-35 {
+    margin-bottom: 35px;
+  }
+  &-40 {
+    margin-bottom: 40px;
+  }
+  &-45 {
+    margin-bottom: 45px;
+  }
+  &-50 {
+    margin-bottom: 50px;
+  }
+}

@@ -1,18 +1,24 @@
-<header class="mdl-layout__header toolbar-shadow toolbar">
-    <div class="mdl-layout__header-row toolbar-content">
-        {% if include.toc %}
-            <button class="mdl-button mdl-js-button mdl-button--icon toggle-drawer-button" onclick="document.getElementById('app').MaterialLayout.toggleDrawer()">
-                <i class="material-icons toolbar-icon">menu</i>
-            </button>
-        {% endif %}
-        <a href="/">
-            <img src="/images/logo/logo-white-white.svg" class="toolbar-logo" alt="Pulumi">
-        </a>
-        <div class="mdl-layout-spacer"></div>
-        <a href="https://app.pulumi.com/home">
-            <button class="mdl-button mdl-js-button mdl-button-primary toolbar-button">
-                DASHBOARD
-            </button>
-        </a>
+<header>
+    <div class="utility-bar">
+        <div class="utility-bar-content">
+            <a href="https://www.pulumi.com/" target="_blank">WWW</a>
+            <a href="https://blog.pulumi.com/" target="_blank">Blog</a>
+            <a href="https://join.slack.com/t/pulumi-community/shared_invite/enQtMzc4MDEyMTk5NzAyLWIxYTEwZmM5ZGFiZTQwZDMzOTMzYWIyM2EyOWIwNDg5YzE1MTg5OGQ5NDQ1MjIzNjcxNDU3NzM0ZWI4NDY1ZGY" target="_blank">Slack</a>
+            <a href="https://github.com/pulumi" target="_blank">GitHub</a>
+            <a href="https://app.pulumi.com/" target="_blank">Console</a>
+        </div>
+    </div>
+
+    <div class="toolbar">
+        <div class="toolbar-content">
+            <a href="/">
+                <img src="/images/logo/logo-inv.svg" class="toolbar-logo" alt="Pulumi">
+            </a>
+
+            <a href="/install" class="toolbar-button {% if toc.nav_section == "Install" %}is-active{% endif %}">Install</a>
+            <a href="/quickstart" class="toolbar-button {% if toc.nav_section == "Tutorials" %}is-active{% endif %}">Tutorials</a>
+            <a href="/tour" class="toolbar-button {% if toc.nav_section == "Tour" %}is-active{% endif %}">Tour</a>
+            <a href="/reference" class="toolbar-button {% if toc.nav_section == "Reference" %}is-active{% endif %}">Reference</a>
+        </div>
     </div>
 </header>

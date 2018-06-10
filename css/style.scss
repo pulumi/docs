@@ -4,32 +4,14 @@ comment2: the scenes. But in order for that to happen it needs to look like a
 comment3: prototypical Jekyll/Liquid template file.
 ---
 
-/**
- * Pulumi CSS Styles
- *
- * We start with including the full Tachyons framework (http://tachyons.io).
- * This works well for definining components. To see how this would work for
- * a large website, see the Heroku's Purple3 (https://purple3.herokuapp.com).
- */
-
-/**
- * Size constants
- */
-$CENTER-WIDTH: 1200px;
-$TOOLBAR-HEIGHT: 60px;
+$CENTER-WIDTH: 1400px;
+$UTILITYBAR-HEIGHT: 45px;
+$TOOLBAR-HEIGHT: 110px;
 $TAB-GROUP-HEIGHT: 60px;
 $MOBILE-WIDTH: 768px;
 
-/**
- * Fonts
- */
-@import url('https://fonts.googleapis.com/css?family=Oxygen');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-$font-family: 'Helvetica Neue',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI';
-$header-font-family: 'Helvetica Neue',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI';
 $code-font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
- 
+
 /**
  * Colors
  */
@@ -70,43 +52,8 @@ $accent3: #3EC2F8; // bright blue
 .hover-accent2:hover    {            color: $accent2; }
 .hover-bg-accent2:hover { background-color: $accent2; }
 
-/**
- * Elements
- */
 
-a {
-    color: $primary;
-    font-weight: 500;
-    text-decoration: none;
-}
-a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
 
-code {
-    background-color: #f2f2f2;
-    color: #37474f;
-    line-height: 22px;
-    font-size: 14px;
-    font-family: $code-font-family;
-    margin: 16px 0;
-}
-
-pre {
-    @extend code;
-    overflow: auto;
-    padding: 8px;
-    border-radius: 2px;
-}
-
-// Move body down because of a fixed nav at the top.
-body {
-    background: #fff;
-    color: #555;
-    font-family: $font-family;
-    font-size: 16px;
-}
 
 // Remove the background color from Bootstrap's Jumptron class.
 .pulumi-jumbotron {
@@ -126,110 +73,6 @@ body {
 // Don't have SVG icons default to black. Just use current text color.
 svg {
     fill: currentColor;
-}
-
-// Make octicons on the homepage look better.
-a.btn > svg {
-    padding-top: 8px;
-}
-
-@media (min-width: $MOBILE-WIDTH) {
-    /* Don't float left otherwise the text expands to consume too much horizontal space. */
-    .column {
-        float: left;
-    }
-}
-
-.center-container {
-    padding: 0 24px;
-    overflow: hidden;
-    min-height: calc(100vh - 250px);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 32px;
-    max-width: $CENTER-WIDTH;
-}
-
-.content-container {
-    color: #212121;
-
-    p, li {
-        font-size: 16px;
-        font-weight: 400;
-        -webkit-font-smoothing: auto;
-    }
-    pre, code {
-        -webkit-font-smoothing: auto;
-    }
-    h1 {
-        font-size: 42px;
-        margin: 12px 0 24px 0;
-        padding: 4px 0 0 0;
-    }
-    h2 {
-        font-size: 22px;
-        margin: 24px 0 24px 0;
-    }
-    h3 {
-        font-size: 18px;
-        margin: 16px 0 16px 0;
-    }
-    h4 {
-        font-size: 16px;
-        margin: 16px 0 16px 0;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        font-family: $header-font-family;
-        font-weight: 500;
-        text-overflow: ellipsis;
-    }
-    p, li, h1, h2, h3, h4, h5, h6 {
-        font-stretch: 100%;
-        font-style: normal;
-        font-variant-caps: normal;
-        font-variant-east-asian: normal;
-        font-variant-ligatures: normal;
-        font-variant-numeric: normal;
-        line-height: 24px;
-        text-size-adjust: 100%;
-    }
-
-    // Add styling for blockquotes 
-    blockquote {
-        display: block;
-        background: $accent2;
-        color: $primary2;
-        margin: 16px 0;
-        padding: 12px 24px 12px 60px;
-
-        p {
-            margin: 0;
-            padding: 0;
-            font-size: 14px;
-        }
-
-        pre, code {
-            font-style: normal;
-            letter-spacing: normal;
-        }
-    }
-
-    blockquote::before {
-        color: $primary2;
-        content: 'star';
-        float: left;
-        line-height: 1px;
-        font: normal normal normal 24px/1 'Material Icons';
-        margin-left: -36px;
-        position: static;
-        text-rendering: optimizeLegibility;
-        word-wrap: normal;
-    }
-
-    blockquote::after {
-        content: '';
-        margin: 0;
-    }
 }
 
 .get-to-the-cloud {
@@ -282,68 +125,132 @@ a.btn > svg {
     }
 }
 
-.toolbar {
-    display: flex;
-    height: $TOOLBAR-HEIGHT;
-    padding: 0 12px;
+$palette-grey:
+"250,250,250"
+"245,245,245"
+"238,238,238"
+"224,224,224"
+"189,189,189"
+"158,158,158"
+"117,117,117"
+"97,97,97"
+"66,66,66"
+"33,33,33";
+
+$palette-grey-50: nth($palette-grey, 1);
+$palette-grey-100: nth($palette-grey, 2);
+$palette-grey-200: nth($palette-grey, 3);
+$palette-grey-300: nth($palette-grey, 4);
+$palette-grey-400: nth($palette-grey, 5);
+$palette-grey-500: nth($palette-grey, 6);
+$palette-grey-600: nth($palette-grey, 7);
+$palette-grey-700: nth($palette-grey, 8);
+$palette-grey-800: nth($palette-grey, 9);
+$palette-grey-900: nth($palette-grey, 10);
+
+$color-black: "0,0,0";
+
+$tab-highlight-color: unquote("rgb(#{$primary})") !default;
+$tab-text-color: unquote("rgba(#{$color-black}, 0.54)") !default;
+$tab-active-text-color: unquote("rgba(#{$color-black}, 0.87)") !default;
+$tab-border-color: unquote("rgb(#{$palette-grey-300})") !default;
+
+$layout-tab-font-size: 14px !default;
+
+.mdl-tabs {
+    display: block;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    z-index: 6;
 }
 
-.toolbar-content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 1200px;
+.mdl-tabs__tab-bar {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : center;
+    align-content   : space-between;
+    align-items     : flex-start;
+
+    height          : 48px;
+    padding         : 0 0 0 0;
+    margin          : 0;
+    border-bottom   : 1px solid $tab-border-color;
 }
 
-.toolbar-shadow {
-    -webkit-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
-    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
-}
+.mdl-tabs__tab {
+    margin: 0;
+    border: none;
+    padding: 0 24px 0 24px;
 
-.toolbar-button {
-    color: white;
-}
+    float: left;
+    position: relative;
+    display: block;
 
-.toolbar-icon {
-    color: white;
-}
-
-.toolbar-item {
-    align-self: center;
-    margin: 8px 8px;
-}
-
-.toolbar-logo {
-    height: 20px;
-
-    // Workaround for Chrome rendering issue related to SVG while other CSS transition
-    // effects are occurring at the same time. See:
-    // https://github.com/pulumi/pulumi-service/issues/1160#issuecomment-382611311
-    transform: translateZ(0);
-}
-
-.toolbar-spacer {
-    flex-grow: 1;
-    -webkit-box-flex: 1;
-}
-
-.toolbar-tabs {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    vertical-align: middle;
-    height: $TAB-GROUP-HEIGHT;
-    border-bottom: 1px solid rgba(0,0,0,.12);
-    z-index: 1;
-}
-.toolbar-tabs a:hover {
     text-decoration: none;
+    height: 48px;
+    line-height: 48px;
+
+    text-align: center;
+    font-weight: 500;
+    font-size: $layout-tab-font-size;
+    text-transform: uppercase;
+
+    color: $tab-text-color;
+    overflow: hidden;
+
+    .mdl-tabs.is-upgraded &.is-active {
+        color: $tab-active-text-color;
+    }
+
+    .mdl-tabs.is-upgraded &.is-active:after {
+        height: 2px;
+        width: 100%;
+        display: block;
+        content: " ";
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        background: $tab-highlight-color;
+        animation: border-expand 0.2s cubic-bezier(0.4, 0.0, 0.4, 1) alternate forwards;
+        transition: all 1s cubic-bezier(0.4, 0.0, 1, 1);
+    }
+
+    & .mdl-tabs__ripple-container {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+        overflow: hidden;
+
+        & .mdl-ripple {
+            background: $tab-highlight-color;
+        }
+    }
+}
+
+.mdl-tabs__panel {
+    display: block;
+
+    .mdl-tabs.is-upgraded & {
+        display: none;
+    }
+
+    .mdl-tabs.is-upgraded &.is-active {
+        display: block;
+    }
+}
+
+@keyframes border-expand {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
 }
 
 .mdl-tabs__tab {
@@ -354,11 +261,6 @@ a.btn > svg {
 .mdl-tabs__tab.is-active {
     color: $primary;
     border-bottom: 2px solid $primary;
-}
-
-.mdl-tabs__tab.langtab.is-active {
-    color: $primary;
-    border-bottom: 1px solid $primary;
 }
 
 .sidenav-section {
@@ -410,15 +312,6 @@ a.btn > svg {
 
 .section {
     padding: 24px 0 8px 0;
-}
-
-.mdl-button {
-    font-family: $font-family;
-    color: #fff;
-    background-color: $primary2;
-}
-.mdl-button:hover {
-    background-color: $accent3;
 }
 
 .mdl-card {
@@ -477,36 +370,6 @@ a.btn > svg {
 }
 
 @media (max-width: $MOBILE-WIDTH) {
-    /* Hide the WELCOME tab on mobile (there isn't enough space for it, and the Pulumi logo suffices). */
-    .welcome-tab {
-        display: none;
-    }
-}
-
-.mdl-layout__header-row {
-    padding: 0 0;
-}
-
-.mdl-layout__drawer {
-    padding: $TOOLBAR-HEIGHT 8px 8px 8px;
-}
-
-// Always hide the default drawer toggle button.
-.mdl-layout__drawer-button {
-    display: none;
-}
-
-// Hide our custom toggle drawer button by default.
-.toggle-drawer-button {
-    display: none;
-}
-
-@media (max-width: $MOBILE-WIDTH) {
-    // Show the toggle drawer button.
-    .toggle-drawer-button {
-        display: block;
-    }
-
     // Hide the normal toc on the page, since it will now
     // be accessed through the drawer.
     .column.docsToc {
@@ -579,20 +442,19 @@ a.btn > svg {
     padding: 8px;
 }
 
-.langtab-tabs {
-    margin-bottom: -16px;
-}
-
 .langtab-tabstrip {
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
     height: $TAB-GROUP-HEIGHT;
-    border-bottom: 1px solid rgba(0,0,0,.12);
     z-index: 1;
 }
 .langtab-tabstrip a:hover {
     text-decoration: none;
+}
+
+.mdl-tabs__tab.langtab {
+    cursor: pointer;
 }
 
 .pdoc-module-header {

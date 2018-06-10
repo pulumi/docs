@@ -1,0 +1,62 @@
+.rwd-table {
+	th {
+		color: #8B8B8B;
+		font-size: 16px;
+		letter-spacing: -0.32px;
+		line-height: 18px;
+		@include ubuntu(normal);
+		padding: 10px;
+	}
+	tr {
+		background-color: $white;
+		border-top: 1px solid #CECECE;
+		&:last-child {
+			border-bottom: 1px solid #CECECE;
+		}
+		&:nth-child(even) {
+			background-color: #f6f6f6;
+		}
+
+
+		td {
+			padding: 10px;
+			p {
+				@include opensans(400);
+			}			
+
+			&:first-child {
+				width: 20%;
+
+				@media (max-width: $screen-md-max) {
+					width: 100%;
+				}
+				p {
+					@include ubuntu(normal);
+					line-height: 24px;
+					font-size: 20px;
+					color: $black;
+				}
+			}
+
+			&:nth-child(2) {
+				width: 50%;
+				@media (max-width: $screen-md-max) {
+					width: 100%;
+				}
+			}
+			&:nth-child(3) {
+				width: 30%;
+				@media (max-width: $screen-md-max) {
+					width: 100%;
+				}
+			}
+			&:before {
+				color: #8B8B8B;
+				font-size: 16px;
+				letter-spacing: -0.32px;
+				line-height: 18px;
+				@include ubuntu(normal);
+			}
+		}
+	}
+}

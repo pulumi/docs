@@ -1,0 +1,141 @@
+.button {
+	@include button();
+	margin-bottom: 20px;
+	
+	@media(min-width: $screen-md){
+		min-width: 160px;
+	}
+	
+	&.smaller {
+		font-size: 14px;
+		padding: 11px 32px;
+	}
+	
+	&.orange {
+		color: $purple;
+		background: transparent;
+		border: 3px solid $orange;
+		padding: 16px 32px;
+		
+		&:focus, &:active {
+			color: $purple;
+		}
+		
+		&:hover {
+			color: white;
+			background-color: $orange;
+		}
+		
+		&.smaller {
+			padding: 8px 30px;
+		}
+		
+		.white-text & {
+			color: white;
+			
+			&:focus, &:active {
+				color: white;
+			}
+		}
+	}
+	
+	&.purple {
+		color: $purple;
+		background: white;
+		border: 3px solid $purple;
+		padding: 16px 32px;
+		
+		&:focus, &:active {
+			color: $purple;
+		}
+		
+		&:hover {
+			color: white;
+			background-color: $purple;
+		}
+		
+		&.smaller {
+			padding: 8px 30px;
+		}
+		
+		.white-text & {
+			background-color: white;
+			color: $purple;
+			border-color: transparent;
+			
+			&:focus, &:active {
+				color: $purple;
+			}
+		
+			&:hover {
+				background-color: transparent;
+				border-color: white;
+				color: white;
+			}
+		}
+	}
+	
+	&:not(:last-child){
+		margin-right: 20px;
+	}
+	
+	&:not(.smaller){
+		@media(max-width: $screen-xs-max){
+			width: 100%;
+		}
+	}
+	
+	&.with-icon {
+	
+		i {
+			font-size: 30px;
+			margin-right: 10px;
+			margin-top: -9px;
+			position: relative;
+			top: 6px;
+		}
+		
+		&.smaller {
+			
+			i {
+				font-size: 20px;
+				top: 2px;
+				margin-top: -2px;
+			}
+		}
+	}
+}
+
+.cta {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 1.357;
+	@include ubuntu(bold);
+	color: $orange;
+	position: relative;
+	padding-right: 20px;
+	
+	&:hover {
+		color: $purple;
+		
+		&:after {
+			margin-left: 16px;
+		}
+		.white-text & {
+			color: $blue; 
+		}
+	}
+	
+	&:after {
+		content: "";
+		background-image: url('../assets/icons/icon-arrow-right.svg');
+		width: 13px;
+		height: 13px;
+		background-size: 100%;
+		display: inline-block;
+		position: absolute;
+		top: 2px;
+		margin-left: 6px;
+		transition: margin-left 0.15s ease-in-out;
+	}
+}

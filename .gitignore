@@ -1,3 +1,4 @@
+/_js/build/
 /_site/
 .DS_Store
 *.swp
@@ -5,3 +6,4 @@
 vendor
 .bundle
 node_modules
+*.map

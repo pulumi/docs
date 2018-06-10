@@ -1,0 +1,39 @@
+.slick-dots {
+    line-height: 0;
+    @include reset-ul();
+    
+    button {
+        border: none;
+        background: none;
+        outline: none;
+        padding: 0;
+        margin: 0; 
+        height: 18px;
+        width: 18px;
+        border: 1px solid #D1D1D1;
+        border-radius: 50%;
+        color: transparent;
+        font-size: 0;
+        line-height: 0;
+        background-color: white;
+        transition: background 0.15s ease-in-out;
+    }
+    
+    li {
+        line-height: 0;
+        display: inline-block;
+        
+        &:not(:last-child){
+            margin-right: 12px;
+        }
+        
+        &.slick-active {
+            button {
+                border-color: $green;
+                background-color: $green;
+            }
+        }
+    }
+    
+    
+}
