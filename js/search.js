@@ -6,7 +6,7 @@
     var spinner = document.getElementById("spinner");
     var searchResultsContainer = document.getElementById("search-results-container");
 
-    // Use a worker to create the index in the background.
+    // Use a worker to download and setup the index in the background.
     var worker = new Worker("/js/search-worker.js");
     worker.onmessage = function (message) {
         var payload = message.data.payload;

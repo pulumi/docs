@@ -2,38 +2,18 @@
 
 importScripts("/js/lunr.min.js");
 
-var data = {};
 var index;
 
-// Download the search data synchronously.
+// Download the search index synchronously.
 var req = new XMLHttpRequest();
 var async = false;
-req.open("GET", "/search-data.json", async);
+req.open("GET", "/search-index.json", async);
 req.send();
 if (req.readyState === req.DONE && req.status === 200) {
-    data = JSON.parse(req.responseText);
-    loadIndex();
+    var data = JSON.parse(req.responseText);
+    index = lunr.Index.load(data);
 } else {
-    console.log("problem downloading search-data.json");
-}
-
-function loadIndex() {
-    index = lunr(function() {
-        this.ref("id");
-        this.field("title", { boost: 10 });
-        this.field("content");
-
-        for (var key in data) {
-            var item = data[key];
-            if (item.title || item.content) {
-                this.add({
-                    id: key,
-                    title: data[key].title,
-                    content: data[key].content
-                });
-            }
-        }
-    });
+    console.log("problem downloading search-index.json");
 }
 
 function search(query) {
@@ -42,11 +22,11 @@ function search(query) {
             var results = index.search(query);
 
             return results.map(function(result) {
-                return {
-                    score: result.score,
-                    url: result.ref,
-                    title: data[result.ref].title
-                };
+                // Extract the url and title from the ref string (they're separated by "|").
+                var i = result.ref.indexOf("|");
+                var url = result.ref.substring(0, i);
+                var title = result.ref.substring(i + 1);
+                return { url: url, title: title };
             });
         }
     } catch (e) {
