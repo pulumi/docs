@@ -27,6 +27,13 @@ const contentBucket = new aws.s3.Bucket(
     {
         bucket: config.targetDomain,
         acl: "public-read",
+
+        // Have S3 serve its contents as if it were a website. This is how we get the right behavior
+        // for routes like "foo/", which S3 will automatically translate to "foo/index.html".
+        website: {
+            indexDocument: "index.html",
+            errorDocument: "404.html",
+        }
     },
     protectResource);
 
@@ -53,7 +60,16 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     origins: [
         {
             originId: contentBucket.arn,
-            domainName: contentBucket.bucketDomainName,
+            domainName: contentBucket.websiteEndpoint,
+            customOriginConfig: {
+                // > If your Amazon S3 bucket is configured as a website endpoint, [like we have here] you must specify HTTP Only.
+                // > Amazon S3 doesn't support HTTPS connections in that configuration.
+                // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginProtocolPolicy
+                originProtocolPolicy: "http-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            },
         },
     ],
 
@@ -124,7 +140,13 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 //
 // For information on how to work around this error, see "CloudFront ETag Out Of Sync":
 // https://docs.pulumi.com/reference/known-issues.html
-const cdn = new aws.cloudfront.Distribution("cdn", distributionArgs, protectResource);
+const cdn = new aws.cloudfront.Distribution(
+    "cdn",
+    distributionArgs,
+    {
+        protect: true,
+        dependsOn: [ contentBucket, logsBucket ],
+    });
 
 // crawlDirectory recursive crawls the provided directory, applying the provided function
 // to every file it contains. Doesn't handle cycles from symlinks.
@@ -209,4 +231,6 @@ async function createAliasRecord(
 const aRecord = createAliasRecord(config.targetDomain, cdn);
 
 export const contentBucketUri = contentBucket.bucket.apply(b => `s3://${b}`);
+export const contentBucketWebsiteDomain = contentBucket.websiteDomain;
+export const contentBucketWebsiteEndpoint = contentBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
