@@ -5,7 +5,7 @@
         "lines": [
             { "type": "comment", "line": "Prerequisites" },
             { "type": "comment", "line": " - <a href='https://nodejs.org/en/download/' target='_blank'>Install Node.js</a>" },
-            { "type": "comment", "line": " - <a href='https://docs.pulumi.com/install/aws.html' target='_blank'>Configure AWS</a>" },
+            { "type": "comment", "line": " - <a href='https://pulumi.io/install/aws.html' target='_blank'>Configure AWS</a>" },
             { "type": "blank", "line": "" },
 
             { "type": "comment", "line": "Step 1. Install Pulumi" },
@@ -24,13 +24,13 @@
         "title": "Documentation",
         "icon": "library_books",
         "items": [
-            { "title": "Quickstart", "url": "https://docs.pulumi.com/quickstart/" },
-            { "title": "A Tour of Pulumi", "url": "https://docs.pulumi.com/tour/" },
+            { "title": "Quickstart", "url": "https://pulumi.io/quickstart/" },
+            { "title": "A Tour of Pulumi", "url": "https://pulumi.io/tour/" },
             { "title": "Examples Repo", "url": "https://github.com/pulumi/examples" },
             { "title": "Pulumi Community Forum", "url": "https://community.pulumi.com/" },
             { "title": "Pulumi Community Slack", "url": "https://join.slack.com/t/pulumi-community/shared_invite/enQtMzc4MDEyMTk5NzAyLWIxYTEwZmM5ZGFiZTQwZDMzOTMzYWIyM2EyOWIwNDg5YzE1MTg5OGQ5NDQ1MjIzNjcxNDU3NzM0ZWI4NDY1ZGY" }
         ],
-        "actionItem": { "title": "Read all documentation", "url": "https://docs.pulumi.com/" }
+        "actionItem": { "title": "Read all documentation", "url": "https://pulumi.io/" }
     },
     "news": {
         "title": "News",
@@ -38,25 +38,25 @@
         "items": [
             {
                 "title": "Pulumi 0.12.2 now available",
-                "url": "https://docs.pulumi.com/install/changelog.html#v122",
+                "url": "https://pulumi.io/install/changelog.html#v122",
                 "date": "2018-05-19"
             },
             {
                 "title": "Pulumi 0.12.1 now available",
-                "url": "https://docs.pulumi.com/install/changelog.html#v121",
+                "url": "https://pulumi.io/install/changelog.html#v121",
                 "date": "2018-05-09"
             },
             {
                 "title": "Pulumi 0.12.0 now available",
-                "url": "https://docs.pulumi.com/install/changelog.html#v120",
+                "url": "https://pulumi.io/install/changelog.html#v120",
                 "date": "2018-04-26"
             },
             {
                 "title": "Pulumi 0.11.3 now available",
-                "url": "https://docs.pulumi.com/install/changelog.html#v113",
+                "url": "https://pulumi.io/install/changelog.html#v113",
                 "date": "2018-04-13"
             }
         ],
-        "actionItem": { "title": "Read all news", "url": "https://docs.pulumi.com/install/changelog.html" }
+        "actionItem": { "title": "Read all news", "url": "https://pulumi.io/install/changelog.html" }
     }
 }
