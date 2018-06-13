@@ -601,3 +601,13 @@ a.btn > svg {
     padding: 8px;
     font-weight: normal;
 }
+
+// The #console-button is in the header and has specific size requirements so
+// it doesn't clash with the GitHub star button.
+#console-button {
+    font-size: 10pt !important;
+    height: 26px !important;
+    line-height: 0 !important;
+    margin-right: 8px !important;
+    text-align: center !important;
+}
