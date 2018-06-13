@@ -1,5 +1,5 @@
 ---
-title: Configuration
+title: Custom configuration
 ---
 
 Pulumi programs can be configurable.
@@ -47,8 +47,12 @@ It's common to use default values for optional variables; for instance, 4 replic
 let replicaCount: number = config.getNumber("replicaCount") || 4;
 ```
 
+***
+
+
+
 <div class="tour-nav">
-    <a class="tour-button enabled" href="basics-stacks.html" title="Stacks">◀</a>
+    <a class="tour-button enabled" href="programs-properties.html" title="Resource properties">◀</a>
     <span class="tour-index"><strong>7</strong>/9</span>
-    <a class="tour-button enabled" href="basics-configuring.html" title="Configuring">▶</a>
+    <a class="tour-button enabled" href="programs-exports.html" title="Stack exports">▶</a>
 </div>

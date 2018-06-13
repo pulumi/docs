@@ -1,3 +1,7 @@
+function getElemClasses(e) {
+    return ($(e).attr("class") || "").split(/\s+/);
+}
+
 // selectLanguage will remember a given language as a preferred setting using a cookie and walk the DOM enabling
 // all code tabs and snippets for this language, and disabling those for unselected languages.
 function selectLanguage(lang) {
@@ -7,7 +11,7 @@ function selectLanguage(lang) {
         // Change the active tab.
         var langTabs = 0;
         $("a").each(function (i, e) {
-            var classes = ($(e).attr("class") || "").split(/\s+/);
+            var classes = getElemClasses(e);
             for (var i = 0; i < classes.length; i++) {
                 if (classes[i] === "langtab") {
                     langTabs++;
@@ -23,14 +27,38 @@ function selectLanguage(lang) {
 
         // If and only if we found tabs, hide divs for the relevant languages.
         if (langTabs > 0) {
+            // Highlighted code blocks:
             $("div").each(function (i, e) {
-                var classes = ($(e).attr("class") || "").split(/\s+/);
+                var classes = getElemClasses(e);
                 for (var i = 0; i < classes.length; i++) {
-                    if (classes[i].startsWith("language-")) {
+                    if (classes[i].startsWith("language-") && classes[i] !== "language-bash") {
                         if (classes[i] === "language-"+lang) {
                             $(e).show();
                         } else {
                             $(e).hide();
+                        }
+                        break;
+                    }
+                }
+            });
+
+            // Any explicit prologue elements:
+            $("span").each(function (i, e) { 
+                var classes = getElemClasses(e);
+                for (var i = 0; i < classes.length; i++) {
+                    if (classes[i].startsWith("language-prologue-")) {
+                        // A prologue, when used correctly, ends up in a <p/> block.  So, head up to that, and then
+                        // take the immediately following sibling, and either hide or show it.
+                        var p = $(e).parent();
+                        if (p) {
+                            var next = p.next();
+                            if (next) {
+                                if (classes[i] === "language-prologue-"+lang) {
+                                    $(next).show();
+                                } else {
+                                    $(next).hide();
+                                }
+                            }
                         }
                         break;
                     }
