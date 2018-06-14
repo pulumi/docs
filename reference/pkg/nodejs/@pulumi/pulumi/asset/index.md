@@ -2,7 +2,7 @@
 title: Module asset
 ---
 
-<a href="..">@pulumi/pulumi</a>
+<a href="../index.html">@pulumi/pulumi</a> &gt; asset
 
 <h2 class="pdoc-module-header">Index</h2>
 
@@ -16,9 +16,7 @@ title: Module asset
 * <a href="#StringAsset">class StringAsset</a>
 * <a href="#AssetMap">type AssetMap</a>
 
-<a href="/asset/archive.ts">asset/archive.ts</a> <a href="/asset/asset.ts">asset/asset.ts</a> 
-
-<h2 class="pdoc-module-header">Modules</h2>
+<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/archive.ts">asset/archive.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/asset.ts">asset/asset.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Archive">
