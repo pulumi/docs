@@ -36,6 +36,13 @@ cd ../pulumi-cloud/api
 $TYPEDOC --json $PULUMI_DOCS/pulumi-cloud.docs.json --mode modules --includeDeclarations --excludeExternals
 popd
 
+# pulumi-cloud-aws
+echo -e "\033[0;95mrunning typedoc on pulumi-cloud-aws\033[0m"
+pushd .
+cd ../pulumi-cloud/aws
+$TYPEDOC --json $PULUMI_DOCS/pulumi-cloud-aws.docs.json --mode modules --includeDeclarations --excludeExternals
+popd
+
 # pulumi-azure
 echo -e "\033[0;95mrunning typedoc on pulumi-azure\033[0m"
 pushd .
@@ -64,6 +71,7 @@ PKG_DOCS=./reference/pkg/nodejs/@pulumi
 $TSC_DOCGEN $PULUMI_DOCS/pulumi.docs.json $PKG_DOCS/pulumi
 $TSC_DOCGEN $PULUMI_DOCS/pulumi-aws.docs.json $PKG_DOCS/aws
 $TSC_DOCGEN $PULUMI_DOCS/pulumi-cloud.docs.json $PKG_DOCS/cloud
+$TSC_DOCGEN $PULUMI_DOCS/pulumi-cloud-aws.docs.json $PKG_DOCS/cloud-aws
 $TSC_DOCGEN $PULUMI_DOCS/pulumi-azure.docs.json $PKG_DOCS/azure
 $TSC_DOCGEN $PULUMI_DOCS/pulumi-kubernetes.docs.json $PKG_DOCS/kubernetes
 $TSC_DOCGEN $PULUMI_DOCS/pulumi-gcp.docs.json $PKG_DOCS/gcp
