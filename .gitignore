@@ -2,3 +2,6 @@
 .DS_Store
 *.swp
 .jekyll-metadata
+vendor
+.bundle
+node_modules
