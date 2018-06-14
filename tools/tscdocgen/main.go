@@ -497,6 +497,7 @@ const (
 	typeDocInterfaceNode      typeDocNodeKind = "Interface"
 	typeDocMethodNode         typeDocNodeKind = "Method"
 	typeDocModuleNode         typeDocNodeKind = "Module"
+	typeDocObjectLiteral      typeDocNodeKind = "Object literal"
 	typeDocParameterNode      typeDocNodeKind = "Parameter"
 	typeDocPropertyNode       typeDocNodeKind = "Property"
 	typeDocTypeAliasNode      typeDocNodeKind = "Type alias"
@@ -529,7 +530,9 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 		return fmt.Sprintf("property %s", node.Name)
 	case typeDocTypeAliasNode:
 		return fmt.Sprintf("type %s", node.Name)
-	case typeDocVariableNode:
+	case typeDocEnumMemberNode:
+		return fmt.Sprintf("enum member %s", node.Name)
+	case typeDocVariableNode, typeDocObjectLiteral:
 		if node.Flags.IsConst {
 			return fmt.Sprintf("const %s", node.Name)
 		} else {

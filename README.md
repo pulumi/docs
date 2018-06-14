@@ -20,6 +20,14 @@ just check the resulting files directly into the repo under `./packages/`.
 
 ## Development
 
+### Prerequisites
+- Install a recent version of Ruby
+- Install the necessary Ruby Gems:
+  ```gem install jekyll bundler```
+- Install a recent version of Go
+- Install mustache:
+  ```go get -u github.com/cbroglie/mustache```
+
 Run `make configure` to get the required Gem dependencies. (Assuming you have a recent Ruby
 installation on your system.
 
@@ -31,15 +39,13 @@ installation on your system.
 
 `make generate` will regenerate the TypeScript documentation if needed, as well as the CLI documentation in [references/cli](reference/cli). The generated API documentation is placed in the [packages](packages/) folder. This is extremely hacky.
 
-   Prerequisites:
-  - Ensure that repos `pulumi`, `pulumi-aws`, and `pulumi-cloud` are peers to `docs`, and have been checked out to the right release branch.
-  - Run `make only_build` in each of these repos
-  - Install typedoc globally:
-    ```npm install -g typedoc@0.8```
-  - Patch typedoc so it doesn't bring its own version of TypeScript. For more information, see [this issue comment in typedoc](https://github.com/TypeStrong/typedoc/issues/624#issuecomment-352897218). On a Mac:
-    ```rm -rf /usr/local/lib/node_modules/typedoc/node_modules/typescript/```
-  - Install TypeScript globally:
-    ```npm install -g typescript@2.6.2```
+The following repos must be peers of `docs`, should be checked out to an appropriate branch, and should be built before running `make generate`:
+- `pulumi`
+- `pulumi-aws`
+- `pulumi-azure`
+- `pulumi-cloud`
+- `pulumi-gcp`
+- `pulumi-kubernetes`
 
 ## Generating a change log
 
