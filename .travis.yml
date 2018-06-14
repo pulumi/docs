@@ -6,20 +6,18 @@ branches:
   - master
   - production
 before_install:
-# Builds to certain branches deploy the built website to an S3 bucket.
-# We use the AWS CLI in /scripts.
-- pip install --upgrade --user awscli
+# Install required tools.
+# pulumi
+- curl -L https://get.pulumi.com/ | bash -s -- --version 0.12.3
+- export PATH=$PATH:$HOME/.pulumi/bin
+# yarn
+- npm i -g yarn
 # Work around a current issue in bundler. See:
 # https://github.com/travis-ci/travis-ci/issues/8969
 - gem update --system
 - gem install bundler
 script:
+  - echo "TRAVIS_EVENT_TYPE=${TRAVIS_EVENT_TYPE}"
   - make travis_${TRAVIS_EVENT_TYPE}
-env:
-  global:
-  - AWS_ACCESS_KEY_ID=AKIAJUJPY4AUMTB3KF6Q
-  # AWS_SECRET_ACCESS_KEY
-  - secure: bGU9OqkpGzFV3wc/TXjsTVPpv95986nQkAi0jkumEkPg3EzZPN/ItTP8bdi/pnKPe3UOIUnQcTcvK/OPgOk3HB5zfD2aW20YvW9YOrgMzznRbl9vnJ8L158KAcrVSt90QYB3OT3lxzjWkhjzd2BKO/q3RfwT8clLYYx1IybY2/TGQ6KkaM61FKIAO0wDrWecnzPXUCv/ePCxoObzopr1FyIvSRnEsDi7Wxebpiv2CiYSVeR+D5jQLEdW3ORL91K3J/U3CP2aXM6MjIAE6XROfFyy7dDxRA3AS9soNh0Lcs2vY2lXwPMbJj9zdtGiidpv/jQkPm7mZeyLJPvi5brmX5X9DkWc8UUouEkRIrnHi1dJrRnO56g4d7qPwXA08anZ80dlQfH9fhsxfs0JcGESNRw6zExMtKZV8hDEL6K5sazQJGG1/weWfK3jG5XE/sa3g/8evgIWDD5mTAEoi54MrFUSVLneF9boKxcdKVTTbeg0Av3LcwcdQmM8b5HZWElMi0uOApOTQcEkRHRjB+IfuaE/w3lTIINYq39Joa4XTOO1vkU11lOG/eZuSdJkK81mRSpFNuK6OoqPdVF5ivGJWpx6+hfz2syT/WObwHQYOlDiHMVC5x/q1UE/GnilTh5+dWpsnZxlo0VJVf7tFD9olts0nWBrotPUHpD4oS8cVLg=
-  - AWS_REGION=us-west-2
 notifications:
   webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis

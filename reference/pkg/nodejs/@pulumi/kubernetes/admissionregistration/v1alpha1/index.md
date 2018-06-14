@@ -11,18 +11,18 @@ title: Module admissionregistration/v1alpha1
 * <a href="#InitializerConfigurationList">interface InitializerConfigurationList</a>
 * <a href="#Rule">interface Rule</a>
 
-<a href="/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Initializer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L10">interface Initializer</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10">interface Initializer</a>
 </h2>
 
 Initializer describes the name and the failure policy of an initializer, and what resources
 it applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L17">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17">property name</a>
 </h3>
 
 ```typescript
@@ -36,7 +36,7 @@ initialized. Name should be fully qualified, e.g., alwayspullimages.kubernetes.i
 organization. Required
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L24">property rules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L24">property rules</a>
 </h3>
 
 ```typescript
@@ -49,13 +49,13 @@ cares about an operation if it matches _any_ Rule. Rule.Resources must not inclu
 subresources.
 
 <h2 class="pdoc-module-header" id="InitializerConfiguration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L31">interface InitializerConfiguration</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L31">interface InitializerConfiguration</a>
 </h2>
 
 InitializerConfiguration describes the configuration of initializers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L38">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L38">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -69,7 +69,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L46">property initializers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L46">property initializers</a>
 </h3>
 
 ```typescript
@@ -83,7 +83,7 @@ InitializerConfigurations by the name of the InitializerConfigurations; the orde
 initializers from the same InitializerConfiguration is preserved.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L54">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L54">property kind</a>
 </h3>
 
 ```typescript
@@ -97,7 +97,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L60">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L60">property metadata</a>
 </h3>
 
 ```typescript
@@ -109,13 +109,13 @@ Standard object metadata; More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
 
 <h2 class="pdoc-module-header" id="InitializerConfigurationList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L67">interface InitializerConfigurationList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L67">interface InitializerConfigurationList</a>
 </h2>
 
 InitializerConfigurationList is a list of InitializerConfiguration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L74">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L74">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -129,7 +129,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L79">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L79">property items</a>
 </h3>
 
 ```typescript
@@ -140,7 +140,7 @@ items: InitializerConfiguration[];
 List of InitializerConfiguration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L87">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L87">property kind</a>
 </h3>
 
 ```typescript
@@ -154,7 +154,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L93">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L93">property metadata</a>
 </h3>
 
 ```typescript
@@ -166,14 +166,14 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h2 class="pdoc-module-header" id="Rule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L101">interface Rule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L101">interface Rule</a>
 </h2>
 
 Rule is a tuple of APIGroups, APIVersion, and Resources.It is recommended to make sure that
 all the tuple expansions are valid.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L106">property apiGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L106">property apiGroups</a>
 </h3>
 
 ```typescript
@@ -185,7 +185,7 @@ APIGroups is the API groups the resources belong to. '*' is all groups. If '*' i
 the length of the slice must be one. Required.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L112">property apiVersions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L112">property apiVersions</a>
 </h3>
 
 ```typescript
@@ -197,7 +197,7 @@ APIVersions is the API versions the resources belong to. '*' is all versions. If
 present, the length of the slice must be one. Required.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L126">property resources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L126">property resources</a>
 </h3>
 
 ```typescript

@@ -15,11 +15,11 @@ title: Module networking/v1
 * <a href="#NetworkPolicyPort">interface NetworkPolicyPort</a>
 * <a href="#NetworkPolicySpec">interface NetworkPolicySpec</a>
 
-<a href="/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="IPBlock">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14428">interface IPBlock</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14428">interface IPBlock</a>
 </h2>
 
 IPBlock describes a particular CIDR (Ex. "192.168.1.1/24") that is allowed to the pods
@@ -27,7 +27,7 @@ matched by a NetworkPolicySpec's podSelector. The except entry describes CIDRs t
 not be included within this rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14432">property cidr</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14432">property cidr</a>
 </h3>
 
 ```typescript
@@ -38,7 +38,7 @@ cidr: string;
 CIDR is a string representing the IP Block Valid examples are "192.168.1.1/24"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14438">property except</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14438">property except</a>
 </h3>
 
 ```typescript
@@ -50,13 +50,13 @@ Except is a slice of CIDRs that should not be included within an IP Block Valid 
 are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR range
 
 <h2 class="pdoc-module-header" id="NetworkPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14445">interface NetworkPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14445">interface NetworkPolicy</a>
 </h2>
 
 NetworkPolicy describes what network traffic is allowed for a set of Pods
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14452">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14452">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -70,7 +70,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14460">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14460">property kind</a>
 </h3>
 
 ```typescript
@@ -84,7 +84,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14466">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14466">property metadata</a>
 </h3>
 
 ```typescript
@@ -96,7 +96,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14471">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14471">property spec</a>
 </h3>
 
 ```typescript
@@ -107,7 +107,7 @@ spec: NetworkPolicySpec;
 Specification of the desired behavior for this NetworkPolicy.
 
 <h2 class="pdoc-module-header" id="NetworkPolicyEgressRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14480">interface NetworkPolicyEgressRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14480">interface NetworkPolicyEgressRule</a>
 </h2>
 
 NetworkPolicyEgressRule describes a particular set of traffic that is allowed out of pods
@@ -115,7 +115,7 @@ matched by a NetworkPolicySpec's podSelector. The traffic must match both ports 
 type is beta-level in 1.8
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14487">property ports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14487">property ports</a>
 </h3>
 
 ```typescript
@@ -129,7 +129,7 @@ restricted by port). If this field is present and contains at least one item, th
 rule allows traffic only if the traffic matches at least one port in the list.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14496">property to</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14496">property to</a>
 </h3>
 
 ```typescript
@@ -144,14 +144,14 @@ present and contains at least one item, this rule allows traffic only if the tra
 matches at least one item in the to list.
 
 <h2 class="pdoc-module-header" id="NetworkPolicyIngressRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14504">interface NetworkPolicyIngressRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14504">interface NetworkPolicyIngressRule</a>
 </h2>
 
 NetworkPolicyIngressRule describes a particular set of traffic that is allowed to the pods
 matched by a NetworkPolicySpec's podSelector. The traffic must match both ports and from.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14512">property from</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14512">property from</a>
 </h3>
 
 ```typescript
@@ -166,7 +166,7 @@ and contains at least on item, this rule allows traffic only if the traffic matc
 least one item in the from list.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14521">property ports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14521">property ports</a>
 </h3>
 
 ```typescript
@@ -181,13 +181,13 @@ at least one item, then this rule allows traffic only if the traffic matches at 
 port in the list.
 
 <h2 class="pdoc-module-header" id="NetworkPolicyList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14528">interface NetworkPolicyList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14528">interface NetworkPolicyList</a>
 </h2>
 
 NetworkPolicyList is a list of NetworkPolicy objects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14535">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14535">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -201,7 +201,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14540">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14540">property items</a>
 </h3>
 
 ```typescript
@@ -212,7 +212,7 @@ items: NetworkPolicy[];
 Items is a list of schema objects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14548">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14548">property kind</a>
 </h3>
 
 ```typescript
@@ -226,7 +226,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14554">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14554">property metadata</a>
 </h3>
 
 ```typescript
@@ -238,14 +238,14 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h2 class="pdoc-module-header" id="NetworkPolicyPeer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14562">interface NetworkPolicyPeer</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14562">interface NetworkPolicyPeer</a>
 </h2>
 
 NetworkPolicyPeer describes a peer to allow traffic from. Exactly one of its fields must be
 specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14566">property ipBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14566">property ipBlock</a>
 </h3>
 
 ```typescript
@@ -256,7 +256,7 @@ ipBlock: IPBlock;
 IPBlock defines policy on a particular IPBlock
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14573">property namespaceSelector</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14573">property namespaceSelector</a>
 </h3>
 
 ```typescript
@@ -269,7 +269,7 @@ selected by this label selector. This field follows standard label selector sema
 present but empty, this selector selects all namespaces.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14580">property podSelector</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14580">property podSelector</a>
 </h3>
 
 ```typescript
@@ -282,13 +282,13 @@ label selector semantics. If present but empty, this selector selects all pods i
 namespace.
 
 <h2 class="pdoc-module-header" id="NetworkPolicyPort">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14587">interface NetworkPolicyPort</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14587">interface NetworkPolicyPort</a>
 </h2>
 
 NetworkPolicyPort describes a port to allow traffic on
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14592">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14592">property port</a>
 </h3>
 
 ```typescript
@@ -300,7 +300,7 @@ The port on the given protocol. This can either be a numerical or named port on 
 this field is not provided, this matches all port names and numbers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14598">property protocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14598">property protocol</a>
 </h3>
 
 ```typescript
@@ -312,13 +312,13 @@ The protocol (TCP or UDP) which traffic must match. If not specified, this field
 to TCP.
 
 <h2 class="pdoc-module-header" id="NetworkPolicySpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14605">interface NetworkPolicySpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14605">interface NetworkPolicySpec</a>
 </h2>
 
 NetworkPolicySpec provides the specification of a NetworkPolicy
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14614">property egress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14614">property egress</a>
 </h3>
 
 ```typescript
@@ -334,7 +334,7 @@ NetworkPolicy limits all outgoing traffic (and serves solely to ensure that the 
 selects are isolated by default). This field is beta-level in 1.8
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14624">property ingress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14624">property ingress</a>
 </h3>
 
 ```typescript
@@ -350,7 +350,7 @@ the pod. If this field is empty then this NetworkPolicy does not allow any traff
 serves solely to ensure that the pods it selects are isolated by default)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14633">property podSelector</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14633">property podSelector</a>
 </h3>
 
 ```typescript
@@ -365,7 +365,7 @@ is NOT optional and follows standard label selector semantics. An empty podSelec
 all pods in this namespace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs/types/output.ts#L14646">property policyTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14646">property policyTypes</a>
 </h3>
 
 ```typescript

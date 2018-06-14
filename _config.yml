@@ -40,9 +40,11 @@ exclude:
   - .gitattributes
   - .gitignore
   - .travis.yml
+  - infrastructure
   - Gemfile
   - Gemfile.lock
   - Makefile
+  - node_modules
   - package.json
   - README.md
   - scripts

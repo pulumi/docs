@@ -7,11 +7,7 @@ If you are using Travis as your CI system, follow the below instructions to get 
 ## Example Scripts
 
 We will be using the scripts from [our Travis examples on GitHub](
-https://github.com/pulumi/examples/tree/master/misc/travis).  There are two:
-
-* [`install-pulumi.sh`](https://github.com/pulumi/examples/blob/master/misc/travis/install-pulumi.sh) shows how to
-  install the Pulumi SDK from a CI environment.  Eventually this will be simpler, but while we are in Private Beta,
-  there are some extra steps due to the need to authenticate in order to download.
+https://github.com/pulumi/examples/tree/master/misc/travis).  There is currently only a single script:
 
 * [`update-stack.sh`](https://github.com/pulumi/examples/blob/master/misc/travis/update-stack.sh) demonstrates the
   recommended way to build and invoke the Pulumi CLI to perform deployments based on your branching structure.
@@ -38,8 +34,8 @@ Next, add three things to your `travis.yml` file.
     ```yaml
     before_install:
         # Install the Pulumi SDK, add it to the $PATH, and initialize the workspace.
-        - ./scripts/install-pulumi.sh v0.11.0
-        - export PATH=$PATH:/usr/local/pulumi/bin
+        - curl -L https://get.pulumi.com | bash -s -- --version 0.14.0-rc1
+        - export PATH=$PATH:$HOME/.pulumi/bin
         - pulumi init
     ```
 

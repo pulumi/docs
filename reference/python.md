@@ -28,19 +28,13 @@ $ . ./bin/activate
 
 The first thing you'll want to do is install the Pulumi SDK package, which is listed in the template's `requirements.txt` file.
 
-While Pulumi is in private preview, packages are not publicly available on PyPI. If you used the easy install script for Mac and Linux (available at [get.pulumi.com/install.sh](https://get.pulumi.com/install.sh)), no additional configuration is required. If you're on Windows or have used the manual installer, run this command in a terminal:
-
-```bash
-$ pip config set global.extra-index-url https://pypi.pulumi.com/simple
-```
-
 ### Adding a new dependency {#packages}
 
 The following Pulumi Python packages are available:
 
-- `pulumi`: the core Pulumi JavaScript SDK package
-- `pulumi_aws`: the AWS resource provider package, for programming AWS directly
-- `pulumi_azure`: the Azure resource provider package, for programming Azure directly
-- `pulumi_kubernetes`: the Kubernetes resource provider package, for programming Kubernetes directly
+- [pulumi](https://pypi.org/project/pulumi/): the core Pulumi JavaScript SDK package
+- [pulumi_aws](https://pypi.org/project/pulumi_aws/): the AWS resource provider package, for programming AWS directly
+- [pulumi_azure](https://pypi.org/project/pulumi_azure/): the Azure resource provider package, for programming Azure directly
+- [pulumi_gcp](https://pypi.org/project/pulumi_gcp/): the Google Cloud resource provider package, for programming Google Cloud directly
 
 More packages are on their way, so please keep an eye out.  Please also let us know if there are specific packages you'd like to see sooner!

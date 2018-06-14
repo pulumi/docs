@@ -70,13 +70,15 @@ func loadAndParseDoc(filename string) (*typeDocNode, error) {
 // gitHubBaseURLs is a *hackhackhack* hard-coded list of URLs for our packages.
 // TODO(joe): base this off the package.json file.
 var gitHubBaseURLs = map[string]string{
-	"@pulumi/pulumi":     "https://github.com/pulumi/pulumi/blob/master/sdk/nodejs",
-	"@pulumi/aws":        "https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs",
-	"@pulumi/azure":      "https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs",
-	"@pulumi/kubernetes": "https://github.com/pulumi/pulumi-kubernetes/blob/master/pack/nodejs",
-	"@pulumi/gcp":        "https://github.com/pulumi/pulumi-gcp/blob/master/pack/nodejs",
-	"@pulumi/cloud":      "https://github.com/pulumi/pulumi-cloud/blob/master/api",
-	"@pulumi/cloud-aws":  "https://github.com/pulumi/pulumi-cloud/blob/master/aws",
+	"@pulumi/pulumi":         "https://github.com/pulumi/pulumi/blob/master/sdk/nodejs",
+	"@pulumi/aws":            "https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs",
+	"@pulumi/aws-infra":      "https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs",
+	"@pulumi/aws-serverless": "https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs",
+	"@pulumi/azure":          "https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs",
+	"@pulumi/kubernetes":     "https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs",
+	"@pulumi/gcp":            "https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs",
+	"@pulumi/cloud":          "https://github.com/pulumi/pulumi-cloud/blob/master/api",
+	"@pulumi/cloud-aws":      "https://github.com/pulumi/pulumi-cloud/blob/master/aws",
 }
 
 // emitMarkdownDocs takes as input a full Typedoc AST, transforms it into Markdown suitable for our documentation
@@ -495,6 +497,7 @@ const (
 	typeDocInterfaceNode      typeDocNodeKind = "Interface"
 	typeDocMethodNode         typeDocNodeKind = "Method"
 	typeDocModuleNode         typeDocNodeKind = "Module"
+	typeDocObjectLiteral      typeDocNodeKind = "Object literal"
 	typeDocParameterNode      typeDocNodeKind = "Parameter"
 	typeDocPropertyNode       typeDocNodeKind = "Property"
 	typeDocTypeAliasNode      typeDocNodeKind = "Type alias"
@@ -527,7 +530,9 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 		return fmt.Sprintf("property %s", node.Name)
 	case typeDocTypeAliasNode:
 		return fmt.Sprintf("type %s", node.Name)
-	case typeDocVariableNode:
+	case typeDocEnumMemberNode:
+		return fmt.Sprintf("enum member %s", node.Name)
+	case typeDocVariableNode, typeDocObjectLiteral:
 		if node.Flags.IsConst {
 			return fmt.Sprintf("const %s", node.Name)
 		} else {
@@ -667,6 +672,9 @@ func createTypeLabel(t typeDocType) string {
 			label += createTypeLabel(inner)
 		}
 		return label
+	case typeDocTypeOperatorType:
+		targetStr := createTypeLabel(*t.Target)
+		return fmt.Sprintf("%s %s", t.Operator, targetStr)
 	default:
 		log.Fatalf("unrecognized type node type: %v\n", t.Type)
 		return ""
@@ -713,6 +721,10 @@ type typeDocType struct {
 	Types []typeDocType `json:"types,omitempty"`
 	// Value is the actual value for literal types.
 	Value string `json:"value,omitempty"`
+	// Operator is the type operator used, if this is a type operator reference
+	Operator string `json:"operator,omitempty"`
+	// Target is the target of the type operator, if this is a type operator reference
+	Target *typeDocType `json:"target,omitempty"`
 }
 
 type typeDocTypeType string
@@ -727,6 +739,7 @@ const (
 	typeDocTupleType         typeDocTypeType = "tuple"
 	typeDocUnionType         typeDocTypeType = "union"
 	typeDocUnknownType       typeDocTypeType = "unknown"
+	typeDocTypeOperatorType  typeDocTypeType = "typeOperator"
 )
 
 type typeDocComment struct {
