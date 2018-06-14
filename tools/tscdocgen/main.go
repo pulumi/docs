@@ -672,6 +672,9 @@ func createTypeLabel(t typeDocType) string {
 			label += createTypeLabel(inner)
 		}
 		return label
+	case typeDocTypeOperatorType:
+		targetStr := createTypeLabel(*t.Target)
+		return fmt.Sprintf("%s %s", t.Operator, targetStr)
 	default:
 		log.Fatalf("unrecognized type node type: %v\n", t.Type)
 		return ""
@@ -718,6 +721,10 @@ type typeDocType struct {
 	Types []typeDocType `json:"types,omitempty"`
 	// Value is the actual value for literal types.
 	Value string `json:"value,omitempty"`
+	// Operator is the type operator used, if this is a type operator reference
+	Operator string `json:"operator,omitempty"`
+	// Target is the target of the type operator, if this is a type operator reference
+	Target *typeDocType `json:"target,omitempty"`
 }
 
 type typeDocTypeType string
@@ -732,6 +739,7 @@ const (
 	typeDocTupleType         typeDocTypeType = "tuple"
 	typeDocUnionType         typeDocTypeType = "union"
 	typeDocUnknownType       typeDocTypeType = "unknown"
+	typeDocTypeOperatorType  typeDocTypeType = "typeOperator"
 )
 
 type typeDocComment struct {
