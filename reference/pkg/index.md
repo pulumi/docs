@@ -22,7 +22,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 
 * [Amazon Web Services (`@pulumi/aws`)](nodejs/@pulumi/aws)
 * [Microsoft Azure (`@pulumi/azure`)](nodejs/@pulumi/azure)
-* Google Cloud Platform (`@pulumi/gcp`) (coming soon)
+* [Google Cloud Platform (`@pulumi/gcp`)](nodejs/@pulumi/gcp)
 * [Kubernetes (`@pulumi/kubernetes`)](nodejs/@pulumi/kubernetes)
 
 ### Cloud-Agnostic Packages
@@ -40,6 +40,9 @@ These libraries help with common cloud programming patterns and practices:
 
 * [AWS Infrastructure Components (`@pulumi/aws-infra`)](nodejs/@pulumi/aws-infra): common AWS networking and
   infrastructure patterns
+* [AWS Serverless Components (`@pulumi/aws-serverless`)](nodejs/@pulumi/aws-serverless): components for writing
+  serverless applications on AWS
+
 
 ## Python
 
