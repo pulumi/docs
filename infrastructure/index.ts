@@ -163,7 +163,7 @@ function crawlDirectory(dir: string, f: (_: string) => void) {
     const files = fs.readdirSync(dir);
     for (const file of files) {
         // Skip the `node_modules` and Ruby `vendor` directories.
-        if (file === "node_modules" || file == "vendor") {
+        if (file === "node_modules" || file === "vendor") {
             continue;
         }
 
