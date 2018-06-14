@@ -13,7 +13,7 @@ concepts you'd normally write in your declarative YAML file, except that you'll 
 Everything you already know about Pulumi applies to managing Kubernetes resources, and the below guide will help get
 you up and running with the Kubernetes provider.
 
-> **Note:** The Pulumi provider currently supports Kubernetes 1.7+.  If you have a specific version requirement and are
+> **Note:** The Pulumi provider currently supports Kubernetes 1.5+.  If you have a specific version requirement and are
 > unsure of whether we currently support it, or are certain we don't and need us to begin doing so, please contact us.
 
 ## Packages
