@@ -2,7 +2,7 @@
 title: Module redis
 ---
 
-<a href="..">@pulumi/azure</a>
+<a href="../index.html">@pulumi/azure</a> &gt; redis
 
 <h2 class="pdoc-module-header">Index</h2>
 
@@ -13,19 +13,17 @@ title: Module redis
 * <a href="#FirewallRuleArgs">interface FirewallRuleArgs</a>
 * <a href="#FirewallRuleState">interface FirewallRuleState</a>
 
-<a href="/redis/cache.ts">redis/cache.ts</a> <a href="/redis/firewallRule.ts">redis/firewallRule.ts</a> 
-
-<h2 class="pdoc-module-header">Modules</h2>
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts">redis/cache.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts">redis/firewallRule.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Cache">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L9">class Cache</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L9">class Cache</a>
 </h2>
 
-Creates a new Redis Cache Resource
+Manages a Redis Cache.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L84">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L92">constructor</a>
 </h3>
 
 ```typescript
@@ -39,20 +37,8 @@ Create a Cache resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Cache(name: string, state?: CacheState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Cache resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -64,7 +50,7 @@ Get an existing Cache resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -76,7 +62,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L25">property capacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L25">property capacity</a>
 </h3>
 
 ```typescript
@@ -87,7 +73,7 @@ public capacity: pulumi.Output<number>;
 The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L29">property enableNonSslPort</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L29">property enableNonSslPort</a>
 </h3>
 
 ```typescript
@@ -98,7 +84,7 @@ public enableNonSslPort: pulumi.Output<boolean | undefined>;
 Enable the non-SSL port (6789) - disabled by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L33">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L33">property family</a>
 </h3>
 
 ```typescript
@@ -109,7 +95,7 @@ public family: pulumi.Output<string>;
 The SKU family to use. Valid values are `C` and `P`, where C = Basic/Standard, P = Premium.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L37">property hostname</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L37">property hostname</a>
 </h3>
 
 ```typescript
@@ -120,7 +106,7 @@ public hostname: pulumi.Output<string>;
 The Hostname of the Redis Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -132,7 +118,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L41">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L41">property location</a>
 </h3>
 
 ```typescript
@@ -143,7 +129,7 @@ public location: pulumi.Output<string>;
 The location of the resource group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L46">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L46">property name</a>
 </h3>
 
 ```typescript
@@ -155,7 +141,7 @@ The name of the Redis instance. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L50">property patchSchedules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L50">property patchSchedules</a>
 </h3>
 
 ```typescript
@@ -166,7 +152,7 @@ public patchSchedules: pulumi.Output<{ ... }[] | undefined>;
 A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L54">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L54">property port</a>
 </h3>
 
 ```typescript
@@ -177,7 +163,7 @@ public port: pulumi.Output<number>;
 The non-SSL Port of the Redis Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L58">property primaryAccessKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L58">property primaryAccessKey</a>
 </h3>
 
 ```typescript
@@ -188,7 +174,18 @@ public primaryAccessKey: pulumi.Output<string>;
 The Primary Access Key for the Redis Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L62">property redisConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L62">property privateStaticIpAddress</a>
+</h3>
+
+```typescript
+public privateStaticIpAddress: pulumi.Output<string>;
+```
+
+
+The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L66">property redisConfiguration</a>
 </h3>
 
 ```typescript
@@ -199,7 +196,7 @@ public redisConfiguration: pulumi.Output<{ ... }>;
 A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L67">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L71">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -211,7 +208,7 @@ The name of the resource group in which to
 create the Redis instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L71">property secondaryAccessKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L75">property secondaryAccessKey</a>
 </h3>
 
 ```typescript
@@ -222,7 +219,7 @@ public secondaryAccessKey: pulumi.Output<string>;
 The Secondary Access Key for the Redis Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L75">property shardCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L79">property shardCount</a>
 </h3>
 
 ```typescript
@@ -233,7 +230,7 @@ public shardCount: pulumi.Output<number | undefined>;
 *Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L79">property skuName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L83">property skuName</a>
 </h3>
 
 ```typescript
@@ -244,7 +241,7 @@ public skuName: pulumi.Output<string>;
 The SKU of Redis to use - can be either Basic, Standard or Premium.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L83">property sslPort</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L87">property sslPort</a>
 </h3>
 
 ```typescript
@@ -255,7 +252,18 @@ public sslPort: pulumi.Output<number>;
 The SSL Port of the Redis Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L84">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L91">property subnetId</a>
+</h3>
+
+```typescript
+public subnetId: pulumi.Output<string | undefined>;
+```
+
+
+The ID of the Subnet within which the Redis Cache should be deployed. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L92">property tags</a>
 </h3>
 
 ```typescript
@@ -263,7 +271,7 @@ public tags: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -275,7 +283,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="FirewallRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L11">class FirewallRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L11">class FirewallRule</a>
 </h2>
 
 Manages a Firewall Rule associated with a Premium Redis Cache.
@@ -283,7 +291,7 @@ Manages a Firewall Rule associated with a Premium Redis Cache.
 ~> **Note:** Redis Firewall Rules can only be assigned to a Redis Cache with a `Premium` SKU.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L43">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L43">constructor</a>
 </h3>
 
 ```typescript
@@ -297,20 +305,8 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new FirewallRule(name: string, state?: FirewallRuleState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a FirewallRule resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -322,7 +318,7 @@ Get an existing FirewallRule resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -334,7 +330,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L27">property endIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L27">property endIp</a>
 </h3>
 
 ```typescript
@@ -345,7 +341,7 @@ public endIp: pulumi.Output<string>;
 The highest IP address included in the range.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -357,7 +353,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L31">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L31">property name</a>
 </h3>
 
 ```typescript
@@ -368,7 +364,7 @@ public name: pulumi.Output<string>;
 The name of the Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L35">property redisCacheName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L35">property redisCacheName</a>
 </h3>
 
 ```typescript
@@ -379,7 +375,7 @@ public redisCacheName: pulumi.Output<string>;
 The name of the Redis Cache. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L39">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L39">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -390,7 +386,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which this Redis Cache exists.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L43">property startIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L43">property startIp</a>
 </h3>
 
 ```typescript
@@ -401,7 +397,7 @@ public startIp: pulumi.Output<string>;
 The lowest IP address included in the range
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -413,13 +409,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="CacheArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L229">interface CacheArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L247">interface CacheArgs</a>
 </h2>
 
 The set of arguments for constructing a Cache resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L233">property capacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L251">property capacity</a>
 </h3>
 
 ```typescript
@@ -430,7 +426,7 @@ capacity: pulumi.Input<number>;
 The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L237">property enableNonSslPort</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L255">property enableNonSslPort</a>
 </h3>
 
 ```typescript
@@ -441,7 +437,7 @@ enableNonSslPort?: pulumi.Input<boolean>;
 Enable the non-SSL port (6789) - disabled by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L241">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L259">property family</a>
 </h3>
 
 ```typescript
@@ -452,7 +448,7 @@ family: pulumi.Input<string>;
 The SKU family to use. Valid values are `C` and `P`, where C = Basic/Standard, P = Premium.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L245">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L263">property location</a>
 </h3>
 
 ```typescript
@@ -463,7 +459,7 @@ location: pulumi.Input<string>;
 The location of the resource group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L250">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L268">property name</a>
 </h3>
 
 ```typescript
@@ -475,7 +471,7 @@ The name of the Redis instance. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L254">property patchSchedules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L272">property patchSchedules</a>
 </h3>
 
 ```typescript
@@ -486,7 +482,18 @@ patchSchedules?: pulumi.Input<{ ... }[]>;
 A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L258">property redisConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L276">property privateStaticIpAddress</a>
+</h3>
+
+```typescript
+privateStaticIpAddress?: pulumi.Input<string>;
+```
+
+
+The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L280">property redisConfiguration</a>
 </h3>
 
 ```typescript
@@ -497,7 +504,7 @@ redisConfiguration: pulumi.Input<{ ... }>;
 A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L263">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L285">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -509,7 +516,7 @@ The name of the resource group in which to
 create the Redis instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L267">property shardCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L289">property shardCount</a>
 </h3>
 
 ```typescript
@@ -520,7 +527,7 @@ shardCount?: pulumi.Input<number>;
 *Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L271">property skuName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L293">property skuName</a>
 </h3>
 
 ```typescript
@@ -531,7 +538,18 @@ skuName: pulumi.Input<string>;
 The SKU of Redis to use - can be either Basic, Standard or Premium.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L272">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L297">property subnetId</a>
+</h3>
+
+```typescript
+subnetId?: pulumi.Input<string>;
+```
+
+
+The ID of the Subnet within which the Redis Cache should be deployed. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L298">property tags</a>
 </h3>
 
 ```typescript
@@ -539,13 +557,13 @@ tags?: pulumi.Input<{ ... }>;
 ```
 
 <h2 class="pdoc-module-header" id="CacheState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L160">interface CacheState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L170">interface CacheState</a>
 </h2>
 
 Input properties used for looking up and filtering Cache resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L164">property capacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L174">property capacity</a>
 </h3>
 
 ```typescript
@@ -556,7 +574,7 @@ capacity?: pulumi.Input<number>;
 The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L168">property enableNonSslPort</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L178">property enableNonSslPort</a>
 </h3>
 
 ```typescript
@@ -567,7 +585,7 @@ enableNonSslPort?: pulumi.Input<boolean>;
 Enable the non-SSL port (6789) - disabled by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L172">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L182">property family</a>
 </h3>
 
 ```typescript
@@ -578,7 +596,7 @@ family?: pulumi.Input<string>;
 The SKU family to use. Valid values are `C` and `P`, where C = Basic/Standard, P = Premium.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L176">property hostname</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L186">property hostname</a>
 </h3>
 
 ```typescript
@@ -589,7 +607,7 @@ hostname?: pulumi.Input<string>;
 The Hostname of the Redis Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L180">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L190">property location</a>
 </h3>
 
 ```typescript
@@ -600,7 +618,7 @@ location?: pulumi.Input<string>;
 The location of the resource group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L185">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L195">property name</a>
 </h3>
 
 ```typescript
@@ -612,7 +630,7 @@ The name of the Redis instance. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L189">property patchSchedules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L199">property patchSchedules</a>
 </h3>
 
 ```typescript
@@ -623,7 +641,7 @@ patchSchedules?: pulumi.Input<{ ... }[]>;
 A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L193">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L203">property port</a>
 </h3>
 
 ```typescript
@@ -634,7 +652,7 @@ port?: pulumi.Input<number>;
 The non-SSL Port of the Redis Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L197">property primaryAccessKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L207">property primaryAccessKey</a>
 </h3>
 
 ```typescript
@@ -645,7 +663,18 @@ primaryAccessKey?: pulumi.Input<string>;
 The Primary Access Key for the Redis Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L201">property redisConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L211">property privateStaticIpAddress</a>
+</h3>
+
+```typescript
+privateStaticIpAddress?: pulumi.Input<string>;
+```
+
+
+The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L215">property redisConfiguration</a>
 </h3>
 
 ```typescript
@@ -656,7 +685,7 @@ redisConfiguration?: pulumi.Input<{ ... }>;
 A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L206">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L220">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -668,7 +697,7 @@ The name of the resource group in which to
 create the Redis instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L210">property secondaryAccessKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L224">property secondaryAccessKey</a>
 </h3>
 
 ```typescript
@@ -679,7 +708,7 @@ secondaryAccessKey?: pulumi.Input<string>;
 The Secondary Access Key for the Redis Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L214">property shardCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L228">property shardCount</a>
 </h3>
 
 ```typescript
@@ -690,7 +719,7 @@ shardCount?: pulumi.Input<number>;
 *Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L218">property skuName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L232">property skuName</a>
 </h3>
 
 ```typescript
@@ -701,7 +730,7 @@ skuName?: pulumi.Input<string>;
 The SKU of Redis to use - can be either Basic, Standard or Premium.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L222">property sslPort</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L236">property sslPort</a>
 </h3>
 
 ```typescript
@@ -712,7 +741,18 @@ sslPort?: pulumi.Input<number>;
 The SSL Port of the Redis Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/cache.ts#L223">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L240">property subnetId</a>
+</h3>
+
+```typescript
+subnetId?: pulumi.Input<string>;
+```
+
+
+The ID of the Subnet within which the Redis Cache should be deployed. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/cache.ts#L241">property tags</a>
 </h3>
 
 ```typescript
@@ -720,13 +760,13 @@ tags?: pulumi.Input<{ ... }>;
 ```
 
 <h2 class="pdoc-module-header" id="FirewallRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L117">interface FirewallRuleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L115">interface FirewallRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a FirewallRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L121">property endIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L119">property endIp</a>
 </h3>
 
 ```typescript
@@ -737,7 +777,7 @@ endIp: pulumi.Input<string>;
 The highest IP address included in the range.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L125">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L123">property name</a>
 </h3>
 
 ```typescript
@@ -748,7 +788,7 @@ name?: pulumi.Input<string>;
 The name of the Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L129">property redisCacheName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L127">property redisCacheName</a>
 </h3>
 
 ```typescript
@@ -759,7 +799,7 @@ redisCacheName: pulumi.Input<string>;
 The name of the Redis Cache. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L133">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L131">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -770,7 +810,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which this Redis Cache exists.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L137">property startIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L135">property startIp</a>
 </h3>
 
 ```typescript
@@ -781,13 +821,13 @@ startIp: pulumi.Input<string>;
 The lowest IP address included in the range
 
 <h2 class="pdoc-module-header" id="FirewallRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L91">interface FirewallRuleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L89">interface FirewallRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering FirewallRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L95">property endIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L93">property endIp</a>
 </h3>
 
 ```typescript
@@ -798,7 +838,7 @@ endIp?: pulumi.Input<string>;
 The highest IP address included in the range.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L99">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L97">property name</a>
 </h3>
 
 ```typescript
@@ -809,7 +849,7 @@ name?: pulumi.Input<string>;
 The name of the Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L103">property redisCacheName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L101">property redisCacheName</a>
 </h3>
 
 ```typescript
@@ -820,7 +860,7 @@ redisCacheName?: pulumi.Input<string>;
 The name of the Redis Cache. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L107">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L105">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -831,7 +871,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which this Redis Cache exists.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/redis/firewallRule.ts#L111">property startIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/redis/firewallRule.ts#L109">property startIp</a>
 </h3>
 
 ```typescript

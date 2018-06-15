@@ -162,6 +162,11 @@ const cdn = new aws.cloudfront.Distribution(
 function crawlDirectory(dir: string, f: (_: string) => void) {
     const files = fs.readdirSync(dir);
     for (const file of files) {
+        // Skip the `node_modules` and Ruby `vendor` directories.
+        if (file === "node_modules" || file === "vendor" || file === "package-lock.json") {
+            continue;
+        }
+
         const filePath = `${dir}/${file}`;
         const stat = fs.statSync(filePath);
         if (stat.isDirectory()) {
@@ -171,6 +176,18 @@ function crawlDirectory(dir: string, f: (_: string) => void) {
             f(filePath);
         }
     }
+}
+
+// Some files do not get the correct mime/type inferred from the mime package, and we
+// need to set our own.
+function getMimeType(filePath: string): string | null {
+    // Ensure that latest-version's mime type is always text/plain. Otherwise it
+    // will end up being set to binary/octet-stream, which is not what we want.
+    if (path.basename(filePath) === "latest-version") {
+        return "text/plain";
+    }
+
+    return mime.getType(filePath);
 }
 
 // Sync the contents of the source directory with the S3 bucket, which will in-turn show up on the CDN.
@@ -187,7 +204,7 @@ crawlDirectory(
                 key: relativeFilePath,
                 bucket: contentBucket,
                 source: new pulumi.asset.FileAsset(filePath),
-                contentType: mime.getType(filePath) || undefined,
+                contentType: getMimeType(filePath) || undefined,
             },
             {
                 parent: contentBucket,

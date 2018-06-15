@@ -3,36 +3,21 @@ toc:
 - title: A Tour of Pulumi
   path: /tour/index
   section:
-  - tour/basics-pulumi.md
-  - tour/basics-projects.md
   - tour/basics-programs.md
-  - tour/basics-packages.md
-  - tour/basics-stacks.md
-  - tour/basics-configuration.md
-  - tour/basics-configuring.md
-  - tour/basics-templates.md
-- title: Deployments
-  path: /tour/deployments
+  - tour/basics-projects.md
+  - tour/basics-deploying.md
+  - tour/basics-previewing.md
+  - tour/basics-up.md
+  - tour/basics-updating.md
+  - tour/basics-destroying.md
+- title: Beyond the Basics
+  path: /tour/programs
   section:
-  - tour/deployments-resources.md
-  - tour/deployments-properties.md
-  - tour/deployments-previews.md
-  - tour/deployments-diffs.md
-  - tour/deployments-updates.md
-  - tour/deployments-outputs.md
-  - tour/deployments-teams.md
-- title: Cloud Patterns
-  path: /tour/cloud
-  section:
-  - tour/cloud-infrastructure.md
-  - tour/cloud-containers.md
-  - tour/cloud-serverless.md
-- title: Advanced Concepts
-  path: /tour/advanced
-  section:
-  - tour/advanced-checkpoints.md
-  - tour/advanced-plugins.md
-  - tour/advanced-custom-resources.md
-  - tour/advanced-components.md
-  - tour/advanced-refresh.md
-  - tour/advanced-analyzers.md
+  - tour/programs-stacks.md
+  - tour/programs-packages.md
+  - tour/programs-configuring.md
+  - tour/programs-resources.md
+  - tour/programs-properties.md
+  - tour/programs-configuration.md
+  - tour/programs-exports.md
+  - tour/programs-functions.md

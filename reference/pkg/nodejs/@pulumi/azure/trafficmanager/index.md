@@ -2,7 +2,7 @@
 title: Module trafficmanager
 ---
 
-<a href="..">@pulumi/azure</a>
+<a href="../index.html">@pulumi/azure</a> &gt; trafficmanager
 
 <h2 class="pdoc-module-header">Index</h2>
 
@@ -15,19 +15,17 @@ title: Module trafficmanager
 * <a href="#ProfileArgs">interface ProfileArgs</a>
 * <a href="#ProfileState">interface ProfileState</a>
 
-<a href="/trafficmanager/endpoint.ts">trafficmanager/endpoint.ts</a> <a href="/trafficmanager/getGeographicalLocation.ts">trafficmanager/getGeographicalLocation.ts</a> <a href="/trafficmanager/profile.ts">trafficmanager/profile.ts</a> 
-
-<h2 class="pdoc-module-header">Modules</h2>
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts">trafficmanager/endpoint.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/getGeographicalLocation.ts">trafficmanager/getGeographicalLocation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts">trafficmanager/profile.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Endpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L9">class Endpoint</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L9">class Endpoint</a>
 </h2>
 
-Creates a Traffic Manager Endpoint.
+Manages a Traffic Manager Endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L94">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L94">constructor</a>
 </h3>
 
 ```typescript
@@ -41,20 +39,8 @@ Create a Endpoint resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Endpoint(name: string, state?: EndpointState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Endpoint resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -66,7 +52,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -78,7 +64,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L29">property endpointLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L29">property endpointLocation</a>
 </h3>
 
 ```typescript
@@ -93,7 +79,7 @@ For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L30">property endpointMonitorStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L30">property endpointMonitorStatus</a>
 </h3>
 
 ```typescript
@@ -101,7 +87,7 @@ public endpointMonitorStatus: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L35">property endpointStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L35">property endpointStatus</a>
 </h3>
 
 ```typescript
@@ -113,7 +99,7 @@ The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L39">property geoMappings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L39">property geoMappings</a>
 </h3>
 
 ```typescript
@@ -124,7 +110,7 @@ public geoMappings: pulumi.Output<string[] | undefined>;
 A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -136,7 +122,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L47">property minChildEndpoints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L47">property minChildEndpoints</a>
 </h3>
 
 ```typescript
@@ -151,7 +137,7 @@ profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L52">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L52">property name</a>
 </h3>
 
 ```typescript
@@ -163,7 +149,7 @@ The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L59">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L59">property priority</a>
 </h3>
 
 ```typescript
@@ -177,7 +163,7 @@ values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L64">property profileName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L64">property profileName</a>
 </h3>
 
 ```typescript
@@ -189,7 +175,7 @@ The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L69">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L69">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -201,7 +187,7 @@ The name of the resource group in which to
 create the Traffic Manager endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L75">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L75">property target</a>
 </h3>
 
 ```typescript
@@ -214,7 +200,7 @@ provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L81">property targetResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L81">property targetResourceId</a>
 </h3>
 
 ```typescript
@@ -227,7 +213,7 @@ target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L88">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L88">property type</a>
 </h3>
 
 ```typescript
@@ -241,7 +227,7 @@ The Endpoint type, must be one of:
 - `nestedEndpoints`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -253,7 +239,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L94">property weight</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L94">property weight</a>
 </h3>
 
 ```typescript
@@ -266,13 +252,13 @@ endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
 
 <h2 class="pdoc-module-header" id="Profile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L9">class Profile</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L9">class Profile</a>
 </h2>
 
-Creates a Traffic Manager Profile to which multiple endpoints can be attached.
+Manages a Traffic Manager Profile to which multiple endpoints can be attached.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L63">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L63">constructor</a>
 </h3>
 
 ```typescript
@@ -286,20 +272,8 @@ Create a Profile resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Profile(name: string, state?: ProfileState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Profile resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -311,7 +285,7 @@ Get an existing Profile resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -323,7 +297,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L26">property dnsConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L26">property dnsConfigs</a>
 </h3>
 
 ```typescript
@@ -335,7 +309,7 @@ This block specifies the DNS configuration of the
 Profile, it supports the fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L30">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L30">property fqdn</a>
 </h3>
 
 ```typescript
@@ -346,7 +320,7 @@ public fqdn: pulumi.Output<string>;
 The FQDN of the created Profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -358,7 +332,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L35">property monitorConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L35">property monitorConfigs</a>
 </h3>
 
 ```typescript
@@ -370,7 +344,7 @@ This block specifies the Endpoint monitoring
 configuration for the Profile, it supports the fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L40">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L40">property name</a>
 </h3>
 
 ```typescript
@@ -382,7 +356,7 @@ The name of the virtual network. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L45">property profileStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L45">property profileStatus</a>
 </h3>
 
 ```typescript
@@ -394,7 +368,7 @@ The status of the profile, can be set to either
 `Enabled` or `Disabled`. Defaults to `Enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L50">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L50">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -406,7 +380,7 @@ The name of the resource group in which to
 create the virtual network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L54">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L54">property tags</a>
 </h3>
 
 ```typescript
@@ -417,7 +391,7 @@ public tags: pulumi.Output<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L63">property trafficRoutingMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L63">property trafficRoutingMethod</a>
 </h3>
 
 ```typescript
@@ -433,7 +407,7 @@ traffic, possible values are:
 - `Priority` - Traffic is routed to the Endpoint with the lowest `priority` value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -445,7 +419,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="getGeographicalLocation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/getGeographicalLocation.ts#L9">function getGeographicalLocation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/getGeographicalLocation.ts#L9">function getGeographicalLocation</a>
 </h2>
 
 ```typescript
@@ -456,13 +430,13 @@ getGeographicalLocation(args: GetGeographicalLocationArgs): Promise<void>
 Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
 
 <h2 class="pdoc-module-header" id="EndpointArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L234">interface EndpointArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L232">interface EndpointArgs</a>
 </h2>
 
 The set of arguments for constructing a Endpoint resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L242">property endpointLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L240">property endpointLocation</a>
 </h3>
 
 ```typescript
@@ -477,7 +451,7 @@ For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L247">property endpointStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L245">property endpointStatus</a>
 </h3>
 
 ```typescript
@@ -489,7 +463,7 @@ The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L251">property geoMappings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L249">property geoMappings</a>
 </h3>
 
 ```typescript
@@ -500,7 +474,7 @@ geoMappings?: pulumi.Input<pulumi.Input<string>[]>;
 A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L259">property minChildEndpoints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L257">property minChildEndpoints</a>
 </h3>
 
 ```typescript
@@ -515,7 +489,7 @@ profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L264">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L262">property name</a>
 </h3>
 
 ```typescript
@@ -527,7 +501,7 @@ The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L271">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L269">property priority</a>
 </h3>
 
 ```typescript
@@ -541,7 +515,7 @@ values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L276">property profileName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L274">property profileName</a>
 </h3>
 
 ```typescript
@@ -553,7 +527,7 @@ The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L281">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L279">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -565,7 +539,7 @@ The name of the resource group in which to
 create the Traffic Manager endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L287">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L285">property target</a>
 </h3>
 
 ```typescript
@@ -578,7 +552,7 @@ provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L293">property targetResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L291">property targetResourceId</a>
 </h3>
 
 ```typescript
@@ -591,7 +565,7 @@ target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L300">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L298">property type</a>
 </h3>
 
 ```typescript
@@ -605,7 +579,7 @@ The Endpoint type, must be one of:
 - `nestedEndpoints`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L306">property weight</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L304">property weight</a>
 </h3>
 
 ```typescript
@@ -618,13 +592,13 @@ endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
 
 <h2 class="pdoc-module-header" id="EndpointState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L155">interface EndpointState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L153">interface EndpointState</a>
 </h2>
 
 Input properties used for looking up and filtering Endpoint resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L163">property endpointLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L161">property endpointLocation</a>
 </h3>
 
 ```typescript
@@ -639,7 +613,7 @@ For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L164">property endpointMonitorStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L162">property endpointMonitorStatus</a>
 </h3>
 
 ```typescript
@@ -647,7 +621,7 @@ endpointMonitorStatus?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L169">property endpointStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L167">property endpointStatus</a>
 </h3>
 
 ```typescript
@@ -659,7 +633,7 @@ The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L173">property geoMappings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L171">property geoMappings</a>
 </h3>
 
 ```typescript
@@ -670,7 +644,7 @@ geoMappings?: pulumi.Input<pulumi.Input<string>[]>;
 A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L181">property minChildEndpoints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L179">property minChildEndpoints</a>
 </h3>
 
 ```typescript
@@ -685,7 +659,7 @@ profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L186">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L184">property name</a>
 </h3>
 
 ```typescript
@@ -697,7 +671,7 @@ The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L193">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L191">property priority</a>
 </h3>
 
 ```typescript
@@ -711,7 +685,7 @@ values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L198">property profileName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L196">property profileName</a>
 </h3>
 
 ```typescript
@@ -723,7 +697,7 @@ The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L203">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L201">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -735,7 +709,7 @@ The name of the resource group in which to
 create the Traffic Manager endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L209">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L207">property target</a>
 </h3>
 
 ```typescript
@@ -748,7 +722,7 @@ provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L215">property targetResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L213">property targetResourceId</a>
 </h3>
 
 ```typescript
@@ -761,7 +735,7 @@ target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L222">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L220">property type</a>
 </h3>
 
 ```typescript
@@ -775,7 +749,7 @@ The Endpoint type, must be one of:
 - `nestedEndpoints`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/endpoint.ts#L228">property weight</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/endpoint.ts#L226">property weight</a>
 </h3>
 
 ```typescript
@@ -788,13 +762,13 @@ endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
 
 <h2 class="pdoc-module-header" id="GetGeographicalLocationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/getGeographicalLocation.ts#L18">interface GetGeographicalLocationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/getGeographicalLocation.ts#L18">interface GetGeographicalLocationArgs</a>
 </h2>
 
 A collection of arguments for invoking getGeographicalLocation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/getGeographicalLocation.ts#L22">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/getGeographicalLocation.ts#L22">property name</a>
 </h3>
 
 ```typescript
@@ -805,13 +779,13 @@ name: pulumi.Input<string>;
 Specifies the name of the Location, for example `World`, `Europe` or `Germany`.
 
 <h2 class="pdoc-module-header" id="ProfileArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L165">interface ProfileArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L163">interface ProfileArgs</a>
 </h2>
 
 The set of arguments for constructing a Profile resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L170">property dnsConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L168">property dnsConfigs</a>
 </h3>
 
 ```typescript
@@ -823,7 +797,7 @@ This block specifies the DNS configuration of the
 Profile, it supports the fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L175">property monitorConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L173">property monitorConfigs</a>
 </h3>
 
 ```typescript
@@ -835,7 +809,7 @@ This block specifies the Endpoint monitoring
 configuration for the Profile, it supports the fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L180">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L178">property name</a>
 </h3>
 
 ```typescript
@@ -847,7 +821,7 @@ The name of the virtual network. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L185">property profileStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L183">property profileStatus</a>
 </h3>
 
 ```typescript
@@ -859,7 +833,7 @@ The status of the profile, can be set to either
 `Enabled` or `Disabled`. Defaults to `Enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L190">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L188">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -871,7 +845,7 @@ The name of the resource group in which to
 create the virtual network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L194">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L192">property tags</a>
 </h3>
 
 ```typescript
@@ -882,7 +856,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L203">property trafficRoutingMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L201">property trafficRoutingMethod</a>
 </h3>
 
 ```typescript
@@ -898,13 +872,13 @@ traffic, possible values are:
 - `Priority` - Traffic is routed to the Endpoint with the lowest `priority` value.
 
 <h2 class="pdoc-module-header" id="ProfileState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L117">interface ProfileState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L115">interface ProfileState</a>
 </h2>
 
 Input properties used for looking up and filtering Profile resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L122">property dnsConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L120">property dnsConfigs</a>
 </h3>
 
 ```typescript
@@ -916,7 +890,7 @@ This block specifies the DNS configuration of the
 Profile, it supports the fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L126">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L124">property fqdn</a>
 </h3>
 
 ```typescript
@@ -927,7 +901,7 @@ fqdn?: pulumi.Input<string>;
 The FQDN of the created Profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L131">property monitorConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L129">property monitorConfigs</a>
 </h3>
 
 ```typescript
@@ -939,7 +913,7 @@ This block specifies the Endpoint monitoring
 configuration for the Profile, it supports the fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L136">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L134">property name</a>
 </h3>
 
 ```typescript
@@ -951,7 +925,7 @@ The name of the virtual network. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L141">property profileStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L139">property profileStatus</a>
 </h3>
 
 ```typescript
@@ -963,7 +937,7 @@ The status of the profile, can be set to either
 `Enabled` or `Disabled`. Defaults to `Enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L146">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L144">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -975,7 +949,7 @@ The name of the resource group in which to
 create the virtual network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L150">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L148">property tags</a>
 </h3>
 
 ```typescript
@@ -986,7 +960,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/pack/nodejs/trafficmanager/profile.ts#L159">property trafficRoutingMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L157">property trafficRoutingMethod</a>
 </h3>
 
 ```typescript

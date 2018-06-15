@@ -2,7 +2,7 @@
 title: Module apigateway
 ---
 
-<a href="..">@pulumi/aws</a>
+<a href="../index.html">@pulumi/aws</a> &gt; apigateway
 
 <h2 class="pdoc-module-header">Index</h2>
 
@@ -29,6 +29,7 @@ title: Module apigateway
 * <a href="#UsagePlan">class UsagePlan</a>
 * <a href="#UsagePlanKey">class UsagePlanKey</a>
 * <a href="#VpcLink">class VpcLink</a>
+* <a href="#getRestApi">function getRestApi</a>
 * <a href="#AccountArgs">interface AccountArgs</a>
 * <a href="#AccountState">interface AccountState</a>
 * <a href="#ApiKeyArgs">interface ApiKeyArgs</a>
@@ -47,6 +48,8 @@ title: Module apigateway
 * <a href="#DocumentationVersionState">interface DocumentationVersionState</a>
 * <a href="#DomainNameArgs">interface DomainNameArgs</a>
 * <a href="#DomainNameState">interface DomainNameState</a>
+* <a href="#GetRestApiArgs">interface GetRestApiArgs</a>
+* <a href="#GetRestApiResult">interface GetRestApiResult</a>
 * <a href="#IntegrationArgs">interface IntegrationArgs</a>
 * <a href="#IntegrationResponseArgs">interface IntegrationResponseArgs</a>
 * <a href="#IntegrationResponseState">interface IntegrationResponseState</a>
@@ -76,13 +79,11 @@ title: Module apigateway
 * <a href="#VpcLinkArgs">interface VpcLinkArgs</a>
 * <a href="#VpcLinkState">interface VpcLinkState</a>
 
-<a href="/apigateway/account.ts">apigateway/account.ts</a> <a href="/apigateway/apiKey.ts">apigateway/apiKey.ts</a> <a href="/apigateway/authorizer.ts">apigateway/authorizer.ts</a> <a href="/apigateway/basePathMapping.ts">apigateway/basePathMapping.ts</a> <a href="/apigateway/clientCertificate.ts">apigateway/clientCertificate.ts</a> <a href="/apigateway/deployment.ts">apigateway/deployment.ts</a> <a href="/apigateway/documentationPart.ts">apigateway/documentationPart.ts</a> <a href="/apigateway/documentationVersion.ts">apigateway/documentationVersion.ts</a> <a href="/apigateway/domainName.ts">apigateway/domainName.ts</a> <a href="/apigateway/integration.ts">apigateway/integration.ts</a> <a href="/apigateway/integrationResponse.ts">apigateway/integrationResponse.ts</a> <a href="/apigateway/method.ts">apigateway/method.ts</a> <a href="/apigateway/methodResponse.ts">apigateway/methodResponse.ts</a> <a href="/apigateway/methodSettings.ts">apigateway/methodSettings.ts</a> <a href="/apigateway/model.ts">apigateway/model.ts</a> <a href="/apigateway/requestValidator.ts">apigateway/requestValidator.ts</a> <a href="/apigateway/resource.ts">apigateway/resource.ts</a> <a href="/apigateway/response.ts">apigateway/response.ts</a> <a href="/apigateway/restApi.ts">apigateway/restApi.ts</a> <a href="/apigateway/stage.ts">apigateway/stage.ts</a> <a href="/apigateway/usagePlan.ts">apigateway/usagePlan.ts</a> <a href="/apigateway/usagePlanKey.ts">apigateway/usagePlanKey.ts</a> <a href="/apigateway/vpcLink.ts">apigateway/vpcLink.ts</a> 
-
-<h2 class="pdoc-module-header">Modules</h2>
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts">apigateway/account.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts">apigateway/apiKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts">apigateway/authorizer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts">apigateway/basePathMapping.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts">apigateway/clientCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts">apigateway/deployment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts">apigateway/documentationPart.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts">apigateway/documentationVersion.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts">apigateway/domainName.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts">apigateway/getRestApi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts">apigateway/integration.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts">apigateway/integrationResponse.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts">apigateway/method.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts">apigateway/methodResponse.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts">apigateway/methodSettings.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts">apigateway/model.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts">apigateway/requestValidator.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts">apigateway/resource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts">apigateway/response.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts">apigateway/restApi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts">apigateway/stage.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts">apigateway/usagePlan.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts">apigateway/usagePlanKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts">apigateway/vpcLink.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/account.ts#L11">class Account</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts#L11">class Account</a>
 </h2>
 
 Provides a settings of an API Gateway Account. Settings is applied region-wide per `provider` block.
@@ -90,7 +91,7 @@ Provides a settings of an API Gateway Account. Settings is applied region-wide p
 -> **Note:** As there is no API method for deleting account settings or resetting it to defaults, destroying this resource will keep your account settings intact
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/account.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -104,20 +105,8 @@ Create a Account resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Account(name: string, state?: AccountState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Account resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/account.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -129,7 +118,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -141,7 +130,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/account.ts#L29">property cloudwatchRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts#L29">property cloudwatchRoleArn</a>
 </h3>
 
 ```typescript
@@ -154,7 +143,7 @@ See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developergu
 Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -166,7 +155,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/account.ts#L33">property throttleSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts#L33">property throttleSettings</a>
 </h3>
 
 ```typescript
@@ -177,7 +166,7 @@ public throttleSettings: pulumi.Output<{ ... }>;
 Account-Level throttle settings. See exported fields below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -189,7 +178,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ApiKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L13">class ApiKey</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L13">class ApiKey</a>
 </h2>
 
 Provides an API Gateway API Key.
@@ -197,7 +186,7 @@ Provides an API Gateway API Key.
 ~> **Warning:** Since the API Gateway usage plans feature was launched on August 11, 2016, usage plans are now **required** to associate an API key with an API stage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L53">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L53">constructor</a>
 </h3>
 
 ```typescript
@@ -211,20 +200,8 @@ Create a ApiKey resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new ApiKey(name: string, state?: ApiKeyState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a ApiKey resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -236,7 +213,7 @@ Get an existing ApiKey resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -248,7 +225,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L29">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L29">property createdDate</a>
 </h3>
 
 ```typescript
@@ -259,7 +236,7 @@ public createdDate: pulumi.Output<string>;
 The creation date of the API key
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L33">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L33">property description</a>
 </h3>
 
 ```typescript
@@ -270,7 +247,7 @@ public description: pulumi.Output<string>;
 The API key description. Defaults to "Managed by Terraform".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L37">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L37">property enabled</a>
 </h3>
 
 ```typescript
@@ -281,7 +258,7 @@ public enabled: pulumi.Output<boolean | undefined>;
 Specifies whether the API key can be used by callers. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -293,7 +270,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L41">property lastUpdatedDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L41">property lastUpdatedDate</a>
 </h3>
 
 ```typescript
@@ -304,7 +281,7 @@ public lastUpdatedDate: pulumi.Output<string>;
 The last update date of the API key
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L45">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L45">property name</a>
 </h3>
 
 ```typescript
@@ -315,7 +292,7 @@ public name: pulumi.Output<string>;
 The name of the API key
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L49">property stageKeys</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L49">property stageKeys</a>
 </h3>
 
 ```typescript
@@ -326,7 +303,7 @@ public stageKeys: pulumi.Output<{ ... }[] | undefined>;
 A list of stage keys associated with the API key - see below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -338,7 +315,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L53">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L53">property value</a>
 </h3>
 
 ```typescript
@@ -349,13 +326,13 @@ public value: pulumi.Output<string>;
 The value of the API key. If not specified, it will be automatically generated by AWS on creation.
 
 <h2 class="pdoc-module-header" id="Authorizer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L11">class Authorizer</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L11">class Authorizer</a>
 </h2>
 
 Provides an API Gateway Authorizer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L69">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L69">constructor</a>
 </h3>
 
 ```typescript
@@ -369,20 +346,8 @@ Create a Authorizer resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Authorizer(name: string, state?: AuthorizerState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Authorizer resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -394,7 +359,7 @@ Get an existing Authorizer resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -406,7 +371,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L28">property authorizerCredentials</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L28">property authorizerCredentials</a>
 </h3>
 
 ```typescript
@@ -418,7 +383,7 @@ The credentials required for the authorizer.
 To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L33">property authorizerResultTtlInSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L33">property authorizerResultTtlInSeconds</a>
 </h3>
 
 ```typescript
@@ -430,7 +395,7 @@ The TTL of cached authorizer results in seconds.
 Defaults to `300`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L39">property authorizerUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L39">property authorizerUri</a>
 </h3>
 
 ```typescript
@@ -443,7 +408,7 @@ This must be a well-formed Lambda function URI in the form of `arn:aws:apigatewa
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -455,7 +420,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L44">property identitySource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L44">property identitySource</a>
 </h3>
 
 ```typescript
@@ -467,7 +432,7 @@ The source of the identity in an incoming request.
 Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L51">property identityValidationExpression</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L51">property identityValidationExpression</a>
 </h3>
 
 ```typescript
@@ -481,7 +446,7 @@ against this expression, and will proceed if the token matches. If the token doe
 the client receives a 401 Unauthorized response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L55">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L55">property name</a>
 </h3>
 
 ```typescript
@@ -492,7 +457,7 @@ public name: pulumi.Output<string>;
 The name of the authorizer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L60">property providerArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L60">property providerArns</a>
 </h3>
 
 ```typescript
@@ -504,7 +469,7 @@ A list of the Amazon Cognito user pool ARNs.
 Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L64">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L64">property restApi</a>
 </h3>
 
 ```typescript
@@ -515,7 +480,7 @@ public restApi: pulumi.Output<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L69">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L69">property type</a>
 </h3>
 
 ```typescript
@@ -527,7 +492,7 @@ The type of the authorizer. Possible values are `TOKEN` for a Lambda function us
 Defaults to `TOKEN`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -539,7 +504,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="BasePathMapping">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L13">class BasePathMapping</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L13">class BasePathMapping</a>
 </h2>
 
 Connects a custom domain name registered via `aws_api_gateway_domain_name`
@@ -547,7 +512,7 @@ with a deployed API so that its methods can be called via the
 custom domain name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L41">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L41">constructor</a>
 </h3>
 
 ```typescript
@@ -561,20 +526,8 @@ Create a BasePathMapping resource with the given unique name, arguments, and opt
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new BasePathMapping(name: string, state?: BasePathMappingState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a BasePathMapping resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -586,7 +539,7 @@ Get an existing BasePathMapping resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -598,7 +551,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L33">property basePath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L33">property basePath</a>
 </h3>
 
 ```typescript
@@ -609,7 +562,7 @@ public basePath: pulumi.Output<string | undefined>;
 Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L37">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L37">property domainName</a>
 </h3>
 
 ```typescript
@@ -620,7 +573,7 @@ public domainName: pulumi.Output<string>;
 The already-registered domain name to connect the API to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -632,7 +585,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L29">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L29">property restApi</a>
 </h3>
 
 ```typescript
@@ -643,7 +596,7 @@ public restApi: pulumi.Output<RestApi>;
 The id of the API to connect.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L41">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L41">property stageName</a>
 </h3>
 
 ```typescript
@@ -654,7 +607,7 @@ public stageName: pulumi.Output<string | undefined>;
 The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -666,13 +619,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ClientCertificate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L9">class ClientCertificate</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L9">class ClientCertificate</a>
 </h2>
 
 Provides an API Gateway Client Certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L37">constructor</a>
 </h3>
 
 ```typescript
@@ -686,20 +639,8 @@ Create a ClientCertificate resource with the given unique name, arguments, and o
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new ClientCertificate(name: string, state?: ClientCertificateState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a ClientCertificate resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -711,7 +652,7 @@ Get an existing ClientCertificate resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -723,7 +664,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L25">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L25">property createdDate</a>
 </h3>
 
 ```typescript
@@ -734,7 +675,7 @@ public createdDate: pulumi.Output<string>;
 The date when the client certificate was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L29">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L29">property description</a>
 </h3>
 
 ```typescript
@@ -745,7 +686,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the client certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L33">property expirationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L33">property expirationDate</a>
 </h3>
 
 ```typescript
@@ -756,7 +697,7 @@ public expirationDate: pulumi.Output<string>;
 The date when the client certificate will expire.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -768,7 +709,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L37">property pemEncodedCertificate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L37">property pemEncodedCertificate</a>
 </h3>
 
 ```typescript
@@ -779,7 +720,7 @@ public pemEncodedCertificate: pulumi.Output<string>;
 The PEM-encoded public key of the client certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -791,7 +732,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Deployment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L14">class Deployment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L14">class Deployment</a>
 </h2>
 
 Provides an API Gateway Deployment.
@@ -800,7 +741,7 @@ Provides an API Gateway Deployment.
 you might need to add an explicit `depends_on = ["aws_api_gateway_integration.name"]`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L61">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L61">constructor</a>
 </h3>
 
 ```typescript
@@ -814,20 +755,8 @@ Create a Deployment resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Deployment(name: string, state?: DeploymentState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Deployment resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L23">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -839,7 +768,7 @@ Get an existing Deployment resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -851,7 +780,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L30">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L30">property createdDate</a>
 </h3>
 
 ```typescript
@@ -862,7 +791,7 @@ public createdDate: pulumi.Output<string>;
 The creation date of the deployment
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L34">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L34">property description</a>
 </h3>
 
 ```typescript
@@ -873,7 +802,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the deployment
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L40">property executionArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L40">property executionArn</a>
 </h3>
 
 ```typescript
@@ -886,7 +815,7 @@ when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -898,7 +827,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L45">property invokeUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L45">property invokeUrl</a>
 </h3>
 
 ```typescript
@@ -910,7 +839,7 @@ The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L49">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L49">property restApi</a>
 </h3>
 
 ```typescript
@@ -921,7 +850,7 @@ public restApi: pulumi.Output<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L53">property stageDescription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L53">property stageDescription</a>
 </h3>
 
 ```typescript
@@ -932,7 +861,7 @@ public stageDescription: pulumi.Output<string | undefined>;
 The description of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L57">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L57">property stageName</a>
 </h3>
 
 ```typescript
@@ -943,7 +872,7 @@ public stageName: pulumi.Output<string>;
 The name of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -955,7 +884,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L61">property variables</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L61">property variables</a>
 </h3>
 
 ```typescript
@@ -966,13 +895,13 @@ public variables: pulumi.Output<{ ... } | undefined>;
 A map that defines variables for the stage
 
 <h2 class="pdoc-module-header" id="DocumentationPart">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L9">class DocumentationPart</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L9">class DocumentationPart</a>
 </h2>
 
 Provides a settings of an API Gateway Documentation Part.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -986,20 +915,8 @@ Create a DocumentationPart resource with the given unique name, arguments, and o
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new DocumentationPart(name: string, state?: DocumentationPartState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a DocumentationPart resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -1011,7 +928,7 @@ Get an existing DocumentationPart resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1023,7 +940,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -1035,7 +952,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L25">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L25">property location</a>
 </h3>
 
 ```typescript
@@ -1046,7 +963,7 @@ public location: pulumi.Output<{ ... }>;
 The location of the targeted API entity of the to-be-created documentation part. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L29">property properties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L29">property properties</a>
 </h3>
 
 ```typescript
@@ -1057,7 +974,7 @@ public properties: pulumi.Output<string>;
 A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ \"description\": \"The API does ...\" }". Only Swagger-compliant key-value pairs can be exported and, hence, published.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L33">property restApiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L33">property restApiId</a>
 </h3>
 
 ```typescript
@@ -1068,7 +985,7 @@ public restApiId: pulumi.Output<string>;
 The ID of the associated Rest API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -1080,13 +997,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="DocumentationVersion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L9">class DocumentationVersion</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L9">class DocumentationVersion</a>
 </h2>
 
 Provides a resource to manage an API Gateway Documentation Version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -1100,20 +1017,8 @@ Create a DocumentationVersion resource with the given unique name, arguments, an
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new DocumentationVersion(name: string, state?: DocumentationVersionState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a DocumentationVersion resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -1125,7 +1030,7 @@ Get an existing DocumentationVersion resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1137,7 +1042,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L25">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L25">property description</a>
 </h3>
 
 ```typescript
@@ -1148,7 +1053,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the API documentation version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -1160,7 +1065,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L29">property restApiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L29">property restApiId</a>
 </h3>
 
 ```typescript
@@ -1171,7 +1076,7 @@ public restApiId: pulumi.Output<string>;
 The ID of the associated Rest API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -1183,7 +1088,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L33">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L33">property version</a>
 </h3>
 
 ```typescript
@@ -1194,7 +1099,7 @@ public version: pulumi.Output<string>;
 The version identifier of the API documentation snapshot.
 
 <h2 class="pdoc-module-header" id="DomainName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L24">class DomainName</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L28">class DomainName</a>
 </h2>
 
 Registers a custom domain name for use with AWS API Gateway.
@@ -1204,18 +1109,22 @@ a particular domain name. An API can be attached to a particular path
 under the registered domain name using
 [the `aws_api_gateway_base_path_mapping` resource](api_gateway_base_path_mapping.html).
 
-Internally API Gateway creates a CloudFront distribution to
-route requests on the given hostname. In addition to this resource
-it's necessary to create a DNS record corresponding to the
-given domain name which is an alias (either Route53 alias or
-traditional CNAME) to the Cloudfront domain name exported in the
-`cloudfront_domain_name` attribute.
+API Gateway domains can be defined as either 'edge-optimized' or 'regional'.  In an edge-optimized configuration,
+API Gateway internally creates and manages a CloudFront distribution to route requests on the given hostname. In
+addition to this resource it's necessary to create a DNS record corresponding to the given domain name which is an alias
+(either Route53 alias or traditional CNAME) to the Cloudfront domain name exported in the `cloudfront_domain_name`
+attribute.
+
+In a regional configuration, API Gateway does not create a CloudFront distribution to route requests to the API, though
+a distribution can be created if needed. In either case, it is necessary to create a DNS record corresponding to the
+given domain name which is an alias (either Route53 alias or traditional CNAME) to the regional domain name exported in
+the `regional_domain_name` attribute.
 
 ~> **Note:** All arguments including the private key will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L79">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L111">constructor</a>
 </h3>
 
 ```typescript
@@ -1229,20 +1138,8 @@ Create a DomainName resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new DomainName(name: string, state?: DomainNameState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a DomainName resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L33">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L37">method get</a>
 </h3>
 
 ```typescript
@@ -1254,7 +1151,7 @@ Get an existing DomainName resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1266,7 +1163,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L40">property certificateArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L46">property certificateArn</a>
 </h3>
 
 ```typescript
@@ -1274,10 +1171,12 @@ public certificateArn: pulumi.Output<string | undefined>;
 ```
 
 
-The ARN for an AWS-managed certificate. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain` and `certificate_private_key`.
+The ARN for an AWS-managed certificate. Used when an edge-optimized domain name is
+desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`,
+`regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L45">property certificateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L52">property certificateBody</a>
 </h3>
 
 ```typescript
@@ -1286,10 +1185,11 @@ public certificateBody: pulumi.Output<string | undefined>;
 
 
 The certificate issued for the domain name
-being registered, in PEM format. Conflicts with `certificate_arn`.
+being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+`regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L51">property certificateChain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L59">property certificateChain</a>
 </h3>
 
 ```typescript
@@ -1299,10 +1199,11 @@ public certificateChain: pulumi.Output<string | undefined>;
 
 The certificate for the CA that issued the
 certificate, along with any intermediate CA certificates required to
-create an unbroken chain to a certificate trusted by the intended API clients. Conflicts with `certificate_arn`.
+create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
+`regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L56">property certificateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L65">property certificateName</a>
 </h3>
 
 ```typescript
@@ -1311,10 +1212,11 @@ public certificateName: pulumi.Output<string | undefined>;
 
 
 The unique name to use when registering this
-cert as an IAM server certificate. Conflicts with `certificate_arn`. Required if `certificate_arn` is not set.
+certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+`regional_certificate_name`. Required if `certificate_arn` is not set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L61">property certificatePrivateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L70">property certificatePrivateKey</a>
 </h3>
 
 ```typescript
@@ -1323,10 +1225,10 @@ public certificatePrivateKey: pulumi.Output<string | undefined>;
 
 
 The private key associated with the
-domain certificate given in `certificate_body`. Conflicts with `certificate_arn`.
+domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L65">property certificateUploadDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L74">property certificateUploadDate</a>
 </h3>
 
 ```typescript
@@ -1337,7 +1239,7 @@ public certificateUploadDate: pulumi.Output<string>;
 The upload date associated with the domain certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L70">property cloudfrontDomainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L79">property cloudfrontDomainName</a>
 </h3>
 
 ```typescript
@@ -1349,7 +1251,7 @@ The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L75">property cloudfrontZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L84">property cloudfrontZoneId</a>
 </h3>
 
 ```typescript
@@ -1357,11 +1259,11 @@ public cloudfrontZoneId: pulumi.Output<string>;
 ```
 
 
-For convenience, the hosted zone id (`Z2FDTNDATAQYW2`)
+For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L79">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L88">property domainName</a>
 </h3>
 
 ```typescript
@@ -1372,7 +1274,18 @@ public domainName: pulumi.Output<string>;
 The fully-qualified domain name to register
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L92">property endpointConfiguration</a>
+</h3>
+
+```typescript
+public endpointConfiguration: pulumi.Output<{ ... }>;
+```
+
+
+Nested argument defining API endpoint configuration including endpoint type. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -1384,7 +1297,54 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L98">property regionalCertificateArn</a>
+</h3>
+
+```typescript
+public regionalCertificateArn: pulumi.Output<string | undefined>;
+```
+
+
+The ARN for an AWS-managed certificate. Used when a regional domain name is
+desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
+`certificate_private_key`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L103">property regionalCertificateName</a>
+</h3>
+
+```typescript
+public regionalCertificateName: pulumi.Output<string | undefined>;
+```
+
+
+The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
+`certificate_private_key`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L107">property regionalDomainName</a>
+</h3>
+
+```typescript
+public regionalDomainName: pulumi.Output<string>;
+```
+
+
+The hostname for the custom domain's regional endpoint.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L111">property regionalZoneId</a>
+</h3>
+
+```typescript
+public regionalZoneId: pulumi.Output<string>;
+```
+
+
+The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -1396,13 +1356,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Integration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L11">class Integration</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L11">class Integration</a>
 </h2>
 
 Provides an HTTP Method Integration for an API Gateway Integration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L87">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L95">constructor</a>
 </h3>
 
 ```typescript
@@ -1416,20 +1376,8 @@ Create a Integration resource with the given unique name, arguments, and options
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Integration(name: string, state?: IntegrationState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Integration resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -1441,7 +1389,7 @@ Get an existing Integration resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1453,7 +1401,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L27">property cacheKeyParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L27">property cacheKeyParameters</a>
 </h3>
 
 ```typescript
@@ -1464,7 +1412,7 @@ public cacheKeyParameters: pulumi.Output<string[] | undefined>;
 A list of cache key parameters for the integration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L31">property cacheNamespace</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L31">property cacheNamespace</a>
 </h3>
 
 ```typescript
@@ -1475,7 +1423,29 @@ public cacheNamespace: pulumi.Output<string>;
 The integration's cache namespace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L35">property contentHandling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L35">property connectionId</a>
+</h3>
+
+```typescript
+public connectionId: pulumi.Output<string | undefined>;
+```
+
+
+The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L39">property connectionType</a>
+</h3>
+
+```typescript
+public connectionType: pulumi.Output<string | undefined>;
+```
+
+
+The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L43">property contentHandling</a>
 </h3>
 
 ```typescript
@@ -1486,7 +1456,7 @@ public contentHandling: pulumi.Output<string | undefined>;
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L39">property credentials</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L47">property credentials</a>
 </h3>
 
 ```typescript
@@ -1497,7 +1467,7 @@ public credentials: pulumi.Output<string | undefined>;
 The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L44">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L52">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -1509,7 +1479,7 @@ The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -1521,7 +1491,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L52">property integrationHttpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L60">property integrationHttpMethod</a>
 </h3>
 
 ```typescript
@@ -1536,7 +1506,7 @@ Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L56">property passthroughBehavior</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L64">property passthroughBehavior</a>
 </h3>
 
 ```typescript
@@ -1547,7 +1517,7 @@ public passthroughBehavior: pulumi.Output<string>;
 The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L61">property requestParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L69">property requestParameters</a>
 </h3>
 
 ```typescript
@@ -1559,7 +1529,7 @@ A map of request query string parameters and headers that should be passed to th
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L65">property requestParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L73">property requestParametersInJson</a>
 </h3>
 
 ```typescript
@@ -1570,7 +1540,7 @@ public requestParametersInJson: pulumi.Output<string | undefined>;
 **Deprecated**, use `request_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L69">property requestTemplates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L77">property requestTemplates</a>
 </h3>
 
 ```typescript
@@ -1581,7 +1551,7 @@ public requestTemplates: pulumi.Output<{ ... } | undefined>;
 A map of the integration's request templates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L73">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L81">property resourceId</a>
 </h3>
 
 ```typescript
@@ -1592,7 +1562,7 @@ public resourceId: pulumi.Output<string>;
 The API resource ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L77">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L85">property restApi</a>
 </h3>
 
 ```typescript
@@ -1603,7 +1573,7 @@ public restApi: pulumi.Output<RestApi>;
 The ID of the associated REST API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L81">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L89">property type</a>
 </h3>
 
 ```typescript
@@ -1611,10 +1581,10 @@ public type: pulumi.Output<string>;
 ```
 
 
-The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration).
+The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L87">property uri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L95">property uri</a>
 </h3>
 
 ```typescript
@@ -1627,7 +1597,7 @@ For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL accor
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -1639,7 +1609,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IntegrationResponse">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L14">class IntegrationResponse</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L14">class IntegrationResponse</a>
 </h2>
 
 Provides an HTTP Method Integration Response for an API Gateway Resource.
@@ -1648,7 +1618,7 @@ Provides an HTTP Method Integration Response for an API Gateway Resource.
 you might need to add an explicit `depends_on` for clean runs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L66">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L66">constructor</a>
 </h3>
 
 ```typescript
@@ -1662,20 +1632,8 @@ Create a IntegrationResponse resource with the given unique name, arguments, and
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new IntegrationResponse(name: string, state?: IntegrationResponseState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a IntegrationResponse resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L23">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -1687,7 +1645,7 @@ Get an existing IntegrationResponse resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1699,7 +1657,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L30">property contentHandling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L30">property contentHandling</a>
 </h3>
 
 ```typescript
@@ -1710,7 +1668,7 @@ public contentHandling: pulumi.Output<string | undefined>;
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L34">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L34">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -1721,7 +1679,7 @@ public httpMethod: pulumi.Output<string>;
 The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -1733,7 +1691,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L38">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L38">property resourceId</a>
 </h3>
 
 ```typescript
@@ -1744,7 +1702,7 @@ public resourceId: pulumi.Output<string>;
 The API resource ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L43">property responseParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L43">property responseParameters</a>
 </h3>
 
 ```typescript
@@ -1756,7 +1714,7 @@ A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`,
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L47">property responseParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L47">property responseParametersInJson</a>
 </h3>
 
 ```typescript
@@ -1767,7 +1725,7 @@ public responseParametersInJson: pulumi.Output<string | undefined>;
 **Deprecated**, use `response_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L51">property responseTemplates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L51">property responseTemplates</a>
 </h3>
 
 ```typescript
@@ -1778,7 +1736,7 @@ public responseTemplates: pulumi.Output<{ ... } | undefined>;
 A map specifying the templates used to transform the integration response body
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L55">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L55">property restApi</a>
 </h3>
 
 ```typescript
@@ -1789,7 +1747,7 @@ public restApi: pulumi.Output<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L62">property selectionPattern</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L62">property selectionPattern</a>
 </h3>
 
 ```typescript
@@ -1803,7 +1761,7 @@ If the backend is an `AWS` Lambda function, the AWS Lambda function error header
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L66">property statusCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L66">property statusCode</a>
 </h3>
 
 ```typescript
@@ -1814,7 +1772,7 @@ public statusCode: pulumi.Output<string>;
 The HTTP status code
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -1826,13 +1784,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Method">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L11">class Method</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L11">class Method</a>
 </h2>
 
 Provides a HTTP Method for an API Gateway Resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L73">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L77">constructor</a>
 </h3>
 
 ```typescript
@@ -1846,20 +1804,8 @@ Create a Method resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Method(name: string, state?: MethodState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Method resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -1871,7 +1817,7 @@ Get an existing Method resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1883,7 +1829,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L27">property apiKeyRequired</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L27">property apiKeyRequired</a>
 </h3>
 
 ```typescript
@@ -1894,7 +1840,7 @@ public apiKeyRequired: pulumi.Output<boolean | undefined>;
 Specify if the method requires an API key
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L31">property authorization</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L31">property authorization</a>
 </h3>
 
 ```typescript
@@ -1902,10 +1848,29 @@ public authorization: pulumi.Output<string>;
 ```
 
 
-The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`)
+The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L35">property authorizerId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L43">property authorizationScopes</a>
+</h3>
+
+```typescript
+public authorizationScopes: pulumi.Output<string[] | undefined>;
+```
+
+
+The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
+For example:
+```hcl
+request_parameters = {
+"method.request.header.X-Some-Header" = true,
+"method.request.querystring.some-query-param"  = true,
+}
+```
+would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L47">property authorizerId</a>
 </h3>
 
 ```typescript
@@ -1913,10 +1878,10 @@ public authorizerId: pulumi.Output<string | undefined>;
 ```
 
 
-The authorizer id to be used when the authorization is `CUSTOM`
+The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L39">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L51">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -1927,7 +1892,7 @@ public httpMethod: pulumi.Output<string>;
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -1939,7 +1904,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L45">property requestModels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L57">property requestModels</a>
 </h3>
 
 ```typescript
@@ -1952,7 +1917,7 @@ where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws_api_gateway_model`'s `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L57">property requestParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L61">property requestParameters</a>
 </h3>
 
 ```typescript
@@ -1961,17 +1926,9 @@ public requestParameters: pulumi.Output<{ ... } | undefined>;
 
 
 A map of request query string parameters and headers that should be passed to the integration.
-For example:
-```hcl
-request_parameters = {
-"method.request.header.X-Some-Header" = true,
-"method.request.querystring.some-query-param"  = true,
-}
-```
-would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L61">property requestParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L65">property requestParametersInJson</a>
 </h3>
 
 ```typescript
@@ -1982,7 +1939,7 @@ public requestParametersInJson: pulumi.Output<string | undefined>;
 **Deprecated**, use `request_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L65">property requestValidatorId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L69">property requestValidatorId</a>
 </h3>
 
 ```typescript
@@ -1993,7 +1950,7 @@ public requestValidatorId: pulumi.Output<string | undefined>;
 The ID of a `aws_api_gateway_request_validator`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L69">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L73">property resourceId</a>
 </h3>
 
 ```typescript
@@ -2004,7 +1961,7 @@ public resourceId: pulumi.Output<string>;
 The API resource ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L73">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L77">property restApi</a>
 </h3>
 
 ```typescript
@@ -2015,7 +1972,7 @@ public restApi: pulumi.Output<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -2027,13 +1984,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="MethodResponse">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L11">class MethodResponse</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L11">class MethodResponse</a>
 </h2>
 
 Provides an HTTP Method Response for an API Gateway Resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L53">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L53">constructor</a>
 </h3>
 
 ```typescript
@@ -2047,20 +2004,8 @@ Create a MethodResponse resource with the given unique name, arguments, and opti
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new MethodResponse(name: string, state?: MethodResponseState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a MethodResponse resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -2072,7 +2017,7 @@ Get an existing MethodResponse resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2084,7 +2029,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L27">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L27">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -2095,7 +2040,7 @@ public httpMethod: pulumi.Output<string>;
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -2107,7 +2052,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L31">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L31">property resourceId</a>
 </h3>
 
 ```typescript
@@ -2118,7 +2063,7 @@ public resourceId: pulumi.Output<string>;
 The API resource ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L35">property responseModels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L35">property responseModels</a>
 </h3>
 
 ```typescript
@@ -2129,7 +2074,7 @@ public responseModels: pulumi.Output<{ ... } | undefined>;
 A map of the API models used for the response's content type
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L41">property responseParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L41">property responseParameters</a>
 </h3>
 
 ```typescript
@@ -2142,7 +2087,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = t
 would define that the header `X-Some-Header` can be provided on the response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L45">property responseParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L45">property responseParametersInJson</a>
 </h3>
 
 ```typescript
@@ -2153,7 +2098,7 @@ public responseParametersInJson: pulumi.Output<string | undefined>;
 **Deprecated**, use `response_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L49">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L49">property restApi</a>
 </h3>
 
 ```typescript
@@ -2164,7 +2109,7 @@ public restApi: pulumi.Output<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L53">property statusCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L53">property statusCode</a>
 </h3>
 
 ```typescript
@@ -2175,7 +2120,7 @@ public statusCode: pulumi.Output<string>;
 The HTTP status code
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -2187,13 +2132,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="MethodSettings">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L11">class MethodSettings</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L11">class MethodSettings</a>
 </h2>
 
 Provides an API Gateway Method Settings, e.g. logging or monitoring.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L39">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L39">constructor</a>
 </h3>
 
 ```typescript
@@ -2207,20 +2152,8 @@ Create a MethodSettings resource with the given unique name, arguments, and opti
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new MethodSettings(name: string, state?: MethodSettingsState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a MethodSettings resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -2232,7 +2165,7 @@ Get an existing MethodSettings resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2244,7 +2177,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -2256,7 +2189,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L27">property methodPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L27">property methodPath</a>
 </h3>
 
 ```typescript
@@ -2267,7 +2200,7 @@ public methodPath: pulumi.Output<string>;
 Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*&#47;*` for overriding all methods in the stage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L31">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L31">property restApi</a>
 </h3>
 
 ```typescript
@@ -2278,7 +2211,7 @@ public restApi: pulumi.Output<RestApi>;
 The ID of the REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L35">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L35">property settings</a>
 </h3>
 
 ```typescript
@@ -2289,7 +2222,7 @@ public settings: pulumi.Output<{ ... }>;
 The settings block, see below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L39">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L39">property stageName</a>
 </h3>
 
 ```typescript
@@ -2300,7 +2233,7 @@ public stageName: pulumi.Output<string>;
 The name of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -2312,13 +2245,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Model">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L11">class Model</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L11">class Model</a>
 </h2>
 
 Provides a Model for a API Gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L43">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L43">constructor</a>
 </h3>
 
 ```typescript
@@ -2332,20 +2265,8 @@ Create a Model resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Model(name: string, state?: ModelState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Model resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -2357,7 +2278,7 @@ Get an existing Model resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2369,7 +2290,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L27">property contentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L27">property contentType</a>
 </h3>
 
 ```typescript
@@ -2380,7 +2301,7 @@ public contentType: pulumi.Output<string>;
 The content type of the model
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L31">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L31">property description</a>
 </h3>
 
 ```typescript
@@ -2391,7 +2312,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the model
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -2403,7 +2324,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L35">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L35">property name</a>
 </h3>
 
 ```typescript
@@ -2414,7 +2335,7 @@ public name: pulumi.Output<string>;
 The name of the model
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L39">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L39">property restApi</a>
 </h3>
 
 ```typescript
@@ -2425,7 +2346,7 @@ public restApi: pulumi.Output<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L43">property schema</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L43">property schema</a>
 </h3>
 
 ```typescript
@@ -2436,7 +2357,7 @@ public schema: pulumi.Output<string | undefined>;
 The schema of the model in a JSON form
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -2448,10 +2369,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RequestValidator">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L8">class RequestValidator</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L8">class RequestValidator</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L24">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L24">constructor</a>
 </h3>
 
 ```typescript
@@ -2465,20 +2386,8 @@ Create a RequestValidator resource with the given unique name, arguments, and op
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new RequestValidator(name: string, state?: RequestValidatorState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a RequestValidator resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L17">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L17">method get</a>
 </h3>
 
 ```typescript
@@ -2490,7 +2399,7 @@ Get an existing RequestValidator resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2502,7 +2411,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -2514,7 +2423,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L21">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L21">property name</a>
 </h3>
 
 ```typescript
@@ -2522,7 +2431,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L22">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L22">property restApi</a>
 </h3>
 
 ```typescript
@@ -2530,7 +2439,7 @@ public restApi: pulumi.Output<RestApi>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -2542,7 +2451,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L23">property validateRequestBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L23">property validateRequestBody</a>
 </h3>
 
 ```typescript
@@ -2550,7 +2459,7 @@ public validateRequestBody: pulumi.Output<boolean | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L24">property validateRequestParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L24">property validateRequestParameters</a>
 </h3>
 
 ```typescript
@@ -2558,13 +2467,13 @@ public validateRequestParameters: pulumi.Output<boolean | undefined>;
 ```
 
 <h2 class="pdoc-module-header" id="Resource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L11">class Resource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L11">class Resource</a>
 </h2>
 
 Provides an API Gateway Resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L39">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L39">constructor</a>
 </h3>
 
 ```typescript
@@ -2578,20 +2487,8 @@ Create a Resource resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Resource(name: string, state?: ResourceState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Resource resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -2603,7 +2500,7 @@ Get an existing Resource resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2615,7 +2512,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -2627,7 +2524,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L27">property parentId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L27">property parentId</a>
 </h3>
 
 ```typescript
@@ -2638,7 +2535,7 @@ public parentId: pulumi.Output<string>;
 The ID of the parent API resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L31">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L31">property path</a>
 </h3>
 
 ```typescript
@@ -2649,7 +2546,7 @@ public path: pulumi.Output<string>;
 The complete path for this API resource, including all parent paths.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L35">property pathPart</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L35">property pathPart</a>
 </h3>
 
 ```typescript
@@ -2660,7 +2557,7 @@ public pathPart: pulumi.Output<string>;
 The last path segment of this API resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L39">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L39">property restApi</a>
 </h3>
 
 ```typescript
@@ -2671,7 +2568,7 @@ public restApi: pulumi.Output<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -2683,13 +2580,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Response">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L9">class Response</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L9">class Response</a>
 </h2>
 
 Provides an API Gateway Gateway Response for a REST API Gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L41">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L41">constructor</a>
 </h3>
 
 ```typescript
@@ -2703,20 +2600,8 @@ Create a Response resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Response(name: string, state?: ResponseState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Response resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -2728,7 +2613,7 @@ Get an existing Response resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2740,7 +2625,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -2752,7 +2637,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L25">property responseParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L25">property responseParameters</a>
 </h3>
 
 ```typescript
@@ -2763,7 +2648,7 @@ public responseParameters: pulumi.Output<{ ... } | undefined>;
 A map specifying the templates used to transform the response body.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L29">property responseTemplates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L29">property responseTemplates</a>
 </h3>
 
 ```typescript
@@ -2774,7 +2659,7 @@ public responseTemplates: pulumi.Output<{ ... } | undefined>;
 A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L33">property responseType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L33">property responseType</a>
 </h3>
 
 ```typescript
@@ -2785,7 +2670,7 @@ public responseType: pulumi.Output<string>;
 The response type of the associated GatewayResponse.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L37">property restApiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L37">property restApiId</a>
 </h3>
 
 ```typescript
@@ -2796,7 +2681,7 @@ public restApiId: pulumi.Output<string>;
 The string identifier of the associated REST API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L41">property statusCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L41">property statusCode</a>
 </h3>
 
 ```typescript
@@ -2807,7 +2692,7 @@ public statusCode: pulumi.Output<string | undefined>;
 The HTTP status code of the Gateway Response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -2819,13 +2704,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RestApi">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L9">class RestApi</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L9">class RestApi</a>
 </h2>
 
 Provides an API Gateway REST API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L67">constructor</a>
 </h3>
 
 ```typescript
@@ -2839,20 +2724,8 @@ Create a RestApi resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new RestApi(name: string, state?: RestApiState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a RestApi resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -2864,7 +2737,7 @@ Get an existing RestApi resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2876,7 +2749,18 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L25">property binaryMediaTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L25">property apiKeySource</a>
+</h3>
+
+```typescript
+public apiKeySource: pulumi.Output<string | undefined>;
+```
+
+
+The source of the API key for requests. Valid values are HEADER (default) and AUTHORIZER.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L29">property binaryMediaTypes</a>
 </h3>
 
 ```typescript
@@ -2887,7 +2771,7 @@ public binaryMediaTypes: pulumi.Output<string[] | undefined>;
 The list of binary media types supported by the RestApi. By default, the RestApi supports only UTF-8-encoded text payloads.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L29">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L33">property body</a>
 </h3>
 
 ```typescript
@@ -2898,7 +2782,7 @@ public body: pulumi.Output<string | undefined>;
 An OpenAPI specification that defines the set of routes and integrations to create as part of the REST API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L33">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L37">property createdDate</a>
 </h3>
 
 ```typescript
@@ -2909,7 +2793,7 @@ public createdDate: pulumi.Output<string>;
 The creation date of the REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L37">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L41">property description</a>
 </h3>
 
 ```typescript
@@ -2920,7 +2804,31 @@ public description: pulumi.Output<string | undefined>;
 The description of the REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L45">property endpointConfiguration</a>
+</h3>
+
+```typescript
+public endpointConfiguration: pulumi.Output<{ ... }>;
+```
+
+
+Nested argument defining API endpoint configuration including endpoint type. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L51">property executionArn</a>
+</h3>
+
+```typescript
+public executionArn: pulumi.Output<string>;
+```
+
+
+The execution ARN part to be used in [`lambda_permission`](/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+when allowing API Gateway to invoke a Lambda function,
+e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -2932,7 +2840,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L41">property minimumCompressionSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L55">property minimumCompressionSize</a>
 </h3>
 
 ```typescript
@@ -2943,7 +2851,7 @@ public minimumCompressionSize: pulumi.Output<number | undefined>;
 Minimum response size to compress for the REST API. Integer between -1 and 10485760 (10MB). Setting a value greater than -1 will enable compression, -1 disables compression (default).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L45">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L59">property name</a>
 </h3>
 
 ```typescript
@@ -2954,7 +2862,18 @@ public name: pulumi.Output<string>;
 The name of the REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L49">property rootResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L63">property policy</a>
+</h3>
+
+```typescript
+public policy: pulumi.Output<string | undefined>;
+```
+
+
+JSON formatted policy document that controls access to the API Gateway
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L67">property rootResourceId</a>
 </h3>
 
 ```typescript
@@ -2965,7 +2884,7 @@ public rootResourceId: pulumi.Output<string>;
 The resource ID of the REST API's root
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -2977,13 +2896,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Stage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L12">class Stage</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L12">class Stage</a>
 </h2>
 
 Provides an API Gateway Stage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L61">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L80">constructor</a>
 </h3>
 
 ```typescript
@@ -2997,20 +2916,8 @@ Create a Stage resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new Stage(name: string, state?: StageState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a Stage resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -3022,7 +2929,7 @@ Get an existing Stage resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -3034,7 +2941,18 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L28">property cacheClusterEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L28">property accessLogSettings</a>
+</h3>
+
+```typescript
+public accessLogSettings: pulumi.Output<{ ... } | undefined>;
+```
+
+
+Enables access logs for the API stage. Detailed below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L32">property cacheClusterEnabled</a>
 </h3>
 
 ```typescript
@@ -3045,7 +2963,7 @@ public cacheClusterEnabled: pulumi.Output<boolean | undefined>;
 Specifies whether a cache cluster is enabled for the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L33">property cacheClusterSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L37">property cacheClusterSize</a>
 </h3>
 
 ```typescript
@@ -3057,7 +2975,7 @@ The size of the cache cluster for the stage, if enabled.
 Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L37">property clientCertificateId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L41">property clientCertificateId</a>
 </h3>
 
 ```typescript
@@ -3068,7 +2986,7 @@ public clientCertificateId: pulumi.Output<string | undefined>;
 The identifier of a client certificate for the stage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L41">property deployment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L45">property deployment</a>
 </h3>
 
 ```typescript
@@ -3079,7 +2997,7 @@ public deployment: pulumi.Output<Deployment>;
 The ID of the deployment that the stage points to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L45">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L49">property description</a>
 </h3>
 
 ```typescript
@@ -3090,7 +3008,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L49">property documentationVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L53">property documentationVersion</a>
 </h3>
 
 ```typescript
@@ -3101,7 +3019,20 @@ public documentationVersion: pulumi.Output<string | undefined>;
 The version of the associated API documentation
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L59">property executionArn</a>
+</h3>
+
+```typescript
+public executionArn: pulumi.Output<string>;
+```
+
+
+The execution ARN to be used in [`lambda_permission`](/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+when allowing API Gateway to invoke a Lambda function,
+e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -3113,7 +3044,19 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L53">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L64">property invokeUrl</a>
+</h3>
+
+```typescript
+public invokeUrl: pulumi.Output<string>;
+```
+
+
+The URL to invoke the API pointing to the stage,
+e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L68">property restApi</a>
 </h3>
 
 ```typescript
@@ -3124,7 +3067,7 @@ public restApi: pulumi.Output<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L57">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L72">property stageName</a>
 </h3>
 
 ```typescript
@@ -3135,7 +3078,18 @@ public stageName: pulumi.Output<string>;
 The name of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L76">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -3147,7 +3101,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L61">property variables</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L80">property variables</a>
 </h3>
 
 ```typescript
@@ -3158,13 +3112,13 @@ public variables: pulumi.Output<{ ... } | undefined>;
 A map that defines the stage variables
 
 <h2 class="pdoc-module-header" id="UsagePlan">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L9">class UsagePlan</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L9">class UsagePlan</a>
 </h2>
 
 Provides an API Gateway Usage Plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L45">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L45">constructor</a>
 </h3>
 
 ```typescript
@@ -3178,20 +3132,8 @@ Create a UsagePlan resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new UsagePlan(name: string, state?: UsagePlanState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a UsagePlan resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -3203,7 +3145,7 @@ Get an existing UsagePlan resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -3215,7 +3157,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L25">property apiStages</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L25">property apiStages</a>
 </h3>
 
 ```typescript
@@ -3226,7 +3168,7 @@ public apiStages: pulumi.Output<{ ... }[] | undefined>;
 The associated [API stages](#api-stages-arguments) of the usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L29">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L29">property description</a>
 </h3>
 
 ```typescript
@@ -3237,7 +3179,7 @@ public description: pulumi.Output<string | undefined>;
 The description of a usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -3249,7 +3191,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L33">property name</a>
 </h3>
 
 ```typescript
@@ -3260,7 +3202,7 @@ public name: pulumi.Output<string>;
 The name of the usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L37">property productCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L37">property productCode</a>
 </h3>
 
 ```typescript
@@ -3271,7 +3213,7 @@ public productCode: pulumi.Output<string | undefined>;
 The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L41">property quotaSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L41">property quotaSettings</a>
 </h3>
 
 ```typescript
@@ -3282,7 +3224,7 @@ public quotaSettings: pulumi.Output<{ ... } | undefined>;
 The [quota settings](#quota-settings-arguments) of the usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L45">property throttleSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L45">property throttleSettings</a>
 </h3>
 
 ```typescript
@@ -3293,7 +3235,7 @@ public throttleSettings: pulumi.Output<{ ... } | undefined>;
 The [throttling limits](#throttling-settings-arguments) of the usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -3305,13 +3247,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="UsagePlanKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L9">class UsagePlanKey</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L9">class UsagePlanKey</a>
 </h2>
 
 Provides an API Gateway Usage Plan Key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L41">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L41">constructor</a>
 </h3>
 
 ```typescript
@@ -3325,20 +3267,8 @@ Create a UsagePlanKey resource with the given unique name, arguments, and option
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new UsagePlanKey(name: string, state?: UsagePlanKeyState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a UsagePlanKey resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -3350,7 +3280,7 @@ Get an existing UsagePlanKey resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -3362,7 +3292,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -3374,7 +3304,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L25">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L25">property keyId</a>
 </h3>
 
 ```typescript
@@ -3385,7 +3315,7 @@ public keyId: pulumi.Output<string>;
 The identifier of the API key resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L29">property keyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L29">property keyType</a>
 </h3>
 
 ```typescript
@@ -3396,7 +3326,7 @@ public keyType: pulumi.Output<string>;
 The type of the API key resource. Currently, the valid key type is API_KEY.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L33">property name</a>
 </h3>
 
 ```typescript
@@ -3407,7 +3337,7 @@ public name: pulumi.Output<string>;
 The name of a usage plan key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -3419,7 +3349,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L37">property usagePlanId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L37">property usagePlanId</a>
 </h3>
 
 ```typescript
@@ -3430,7 +3360,7 @@ public usagePlanId: pulumi.Output<string>;
 The Id of the usage plan resource representing to associate the key to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L41">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L41">property value</a>
 </h3>
 
 ```typescript
@@ -3441,13 +3371,13 @@ public value: pulumi.Output<string>;
 The value of a usage plan key.
 
 <h2 class="pdoc-module-header" id="VpcLink">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L9">class VpcLink</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L9">class VpcLink</a>
 </h2>
 
 Provides an API Gateway VPC Link.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -3461,20 +3391,8 @@ Create a VpcLink resource with the given unique name, arguments, and options.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
-
-```typescript
-new VpcLink(name: string, state?: VpcLinkState, opts?: pulumi.ResourceOptions)
-```
-
-
-Create a VpcLink resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `state` The state to use when looking up an instance of this resource.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L18">method get</a>
 </h3>
 
 ```typescript
@@ -3486,7 +3404,7 @@ Get an existing VpcLink resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L72">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
 </h3>
 
 ```typescript
@@ -3498,7 +3416,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L25">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L25">property description</a>
 </h3>
 
 ```typescript
@@ -3509,7 +3427,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the VPC link.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L67">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -3521,7 +3439,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L29">property name</a>
 </h3>
 
 ```typescript
@@ -3532,7 +3450,7 @@ public name: pulumi.Output<string>;
 The name used to label and identify the VPC link.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L33">property targetArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L33">property targetArn</a>
 </h3>
 
 ```typescript
@@ -3543,7 +3461,7 @@ public targetArn: pulumi.Output<string>;
 The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -3554,14 +3472,28 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="getRestApi">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L12">function getRestApi</a>
+</h2>
+
+```typescript
+getRestApi(args: GetRestApiArgs): Promise<GetRestApiResult>
+```
+
+
+Use this data source to get the id and root_resource_id of a REST API in
+API Gateway. To fetch the REST API you must provide a name to match against.
+As there is no unique name constraint on REST APIs this data source will
+error if there is more than one match.
+
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/account.ts#L79">interface AccountArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts#L77">interface AccountArgs</a>
 </h2>
 
 The set of arguments for constructing a Account resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/account.ts#L85">property cloudwatchRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts#L83">property cloudwatchRoleArn</a>
 </h3>
 
 ```typescript
@@ -3574,13 +3506,13 @@ See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developergu
 Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
 
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/account.ts#L63">interface AccountState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts#L61">interface AccountState</a>
 </h2>
 
 Input properties used for looking up and filtering Account resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/account.ts#L69">property cloudwatchRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts#L67">property cloudwatchRoleArn</a>
 </h3>
 
 ```typescript
@@ -3593,7 +3525,7 @@ See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developergu
 Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/account.ts#L73">property throttleSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts#L71">property throttleSettings</a>
 </h3>
 
 ```typescript
@@ -3604,13 +3536,13 @@ throttleSettings?: pulumi.Input<{ ... }>;
 Account-Level throttle settings. See exported fields below.
 
 <h2 class="pdoc-module-header" id="ApiKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L127">interface ApiKeyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L125">interface ApiKeyArgs</a>
 </h2>
 
 The set of arguments for constructing a ApiKey resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L131">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L129">property description</a>
 </h3>
 
 ```typescript
@@ -3621,7 +3553,7 @@ description?: pulumi.Input<string>;
 The API key description. Defaults to "Managed by Terraform".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L135">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L133">property enabled</a>
 </h3>
 
 ```typescript
@@ -3632,7 +3564,7 @@ enabled?: pulumi.Input<boolean>;
 Specifies whether the API key can be used by callers. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L139">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L137">property name</a>
 </h3>
 
 ```typescript
@@ -3643,7 +3575,7 @@ name?: pulumi.Input<string>;
 The name of the API key
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L143">property stageKeys</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L141">property stageKeys</a>
 </h3>
 
 ```typescript
@@ -3654,7 +3586,7 @@ stageKeys?: pulumi.Input<{ ... }[]>;
 A list of stage keys associated with the API key - see below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L147">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L145">property value</a>
 </h3>
 
 ```typescript
@@ -3665,13 +3597,13 @@ value?: pulumi.Input<string>;
 The value of the API key. If not specified, it will be automatically generated by AWS on creation.
 
 <h2 class="pdoc-module-header" id="ApiKeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L93">interface ApiKeyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L91">interface ApiKeyState</a>
 </h2>
 
 Input properties used for looking up and filtering ApiKey resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L97">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L95">property createdDate</a>
 </h3>
 
 ```typescript
@@ -3682,7 +3614,7 @@ createdDate?: pulumi.Input<string>;
 The creation date of the API key
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L101">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L99">property description</a>
 </h3>
 
 ```typescript
@@ -3693,7 +3625,7 @@ description?: pulumi.Input<string>;
 The API key description. Defaults to "Managed by Terraform".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L105">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L103">property enabled</a>
 </h3>
 
 ```typescript
@@ -3704,7 +3636,7 @@ enabled?: pulumi.Input<boolean>;
 Specifies whether the API key can be used by callers. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L109">property lastUpdatedDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L107">property lastUpdatedDate</a>
 </h3>
 
 ```typescript
@@ -3715,7 +3647,7 @@ lastUpdatedDate?: pulumi.Input<string>;
 The last update date of the API key
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L113">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L111">property name</a>
 </h3>
 
 ```typescript
@@ -3726,7 +3658,7 @@ name?: pulumi.Input<string>;
 The name of the API key
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L117">property stageKeys</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L115">property stageKeys</a>
 </h3>
 
 ```typescript
@@ -3737,7 +3669,7 @@ stageKeys?: pulumi.Input<{ ... }[]>;
 A list of stage keys associated with the API key - see below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/apiKey.ts#L121">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts#L119">property value</a>
 </h3>
 
 ```typescript
@@ -3748,13 +3680,13 @@ value?: pulumi.Input<string>;
 The value of the API key. If not specified, it will be automatically generated by AWS on creation.
 
 <h2 class="pdoc-module-header" id="AuthorizerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L168">interface AuthorizerArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L166">interface AuthorizerArgs</a>
 </h2>
 
 The set of arguments for constructing a Authorizer resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L173">property authorizerCredentials</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L171">property authorizerCredentials</a>
 </h3>
 
 ```typescript
@@ -3766,7 +3698,7 @@ The credentials required for the authorizer.
 To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L178">property authorizerResultTtlInSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L176">property authorizerResultTtlInSeconds</a>
 </h3>
 
 ```typescript
@@ -3778,7 +3710,7 @@ The TTL of cached authorizer results in seconds.
 Defaults to `300`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L184">property authorizerUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L182">property authorizerUri</a>
 </h3>
 
 ```typescript
@@ -3791,7 +3723,7 @@ This must be a well-formed Lambda function URI in the form of `arn:aws:apigatewa
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L189">property identitySource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L187">property identitySource</a>
 </h3>
 
 ```typescript
@@ -3803,7 +3735,7 @@ The source of the identity in an incoming request.
 Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L196">property identityValidationExpression</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L194">property identityValidationExpression</a>
 </h3>
 
 ```typescript
@@ -3817,7 +3749,7 @@ against this expression, and will proceed if the token matches. If the token doe
 the client receives a 401 Unauthorized response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L200">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L198">property name</a>
 </h3>
 
 ```typescript
@@ -3828,7 +3760,7 @@ name?: pulumi.Input<string>;
 The name of the authorizer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L205">property providerArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L203">property providerArns</a>
 </h3>
 
 ```typescript
@@ -3840,7 +3772,7 @@ A list of the Amazon Cognito user pool ARNs.
 Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L209">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L207">property restApi</a>
 </h3>
 
 ```typescript
@@ -3851,7 +3783,7 @@ restApi: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L214">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L212">property type</a>
 </h3>
 
 ```typescript
@@ -3863,13 +3795,13 @@ The type of the authorizer. Possible values are `TOKEN` for a Lambda function us
 Defaults to `TOKEN`.
 
 <h2 class="pdoc-module-header" id="AuthorizerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L116">interface AuthorizerState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L114">interface AuthorizerState</a>
 </h2>
 
 Input properties used for looking up and filtering Authorizer resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L121">property authorizerCredentials</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L119">property authorizerCredentials</a>
 </h3>
 
 ```typescript
@@ -3881,7 +3813,7 @@ The credentials required for the authorizer.
 To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L126">property authorizerResultTtlInSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L124">property authorizerResultTtlInSeconds</a>
 </h3>
 
 ```typescript
@@ -3893,7 +3825,7 @@ The TTL of cached authorizer results in seconds.
 Defaults to `300`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L132">property authorizerUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L130">property authorizerUri</a>
 </h3>
 
 ```typescript
@@ -3906,7 +3838,7 @@ This must be a well-formed Lambda function URI in the form of `arn:aws:apigatewa
 e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L137">property identitySource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L135">property identitySource</a>
 </h3>
 
 ```typescript
@@ -3918,7 +3850,7 @@ The source of the identity in an incoming request.
 Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g. `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L144">property identityValidationExpression</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L142">property identityValidationExpression</a>
 </h3>
 
 ```typescript
@@ -3932,7 +3864,7 @@ against this expression, and will proceed if the token matches. If the token doe
 the client receives a 401 Unauthorized response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L148">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L146">property name</a>
 </h3>
 
 ```typescript
@@ -3943,7 +3875,7 @@ name?: pulumi.Input<string>;
 The name of the authorizer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L153">property providerArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L151">property providerArns</a>
 </h3>
 
 ```typescript
@@ -3955,7 +3887,7 @@ A list of the Amazon Cognito user pool ARNs.
 Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L157">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L155">property restApi</a>
 </h3>
 
 ```typescript
@@ -3966,7 +3898,7 @@ restApi?: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/authorizer.ts#L162">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts#L160">property type</a>
 </h3>
 
 ```typescript
@@ -3978,13 +3910,13 @@ The type of the authorizer. Possible values are `TOKEN` for a Lambda function us
 Defaults to `TOKEN`.
 
 <h2 class="pdoc-module-header" id="BasePathMappingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L103">interface BasePathMappingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L101">interface BasePathMappingArgs</a>
 </h2>
 
 The set of arguments for constructing a BasePathMapping resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L111">property basePath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L109">property basePath</a>
 </h3>
 
 ```typescript
@@ -3995,7 +3927,7 @@ basePath?: pulumi.Input<string>;
 Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L115">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L113">property domainName</a>
 </h3>
 
 ```typescript
@@ -4006,7 +3938,7 @@ domainName: pulumi.Input<string>;
 The already-registered domain name to connect the API to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L107">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L105">property restApi</a>
 </h3>
 
 ```typescript
@@ -4017,7 +3949,7 @@ restApi: pulumi.Input<RestApi>;
 The id of the API to connect.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L119">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L117">property stageName</a>
 </h3>
 
 ```typescript
@@ -4028,13 +3960,13 @@ stageName?: pulumi.Input<string>;
 The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
 
 <h2 class="pdoc-module-header" id="BasePathMappingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L81">interface BasePathMappingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L79">interface BasePathMappingState</a>
 </h2>
 
 Input properties used for looking up and filtering BasePathMapping resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L89">property basePath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L87">property basePath</a>
 </h3>
 
 ```typescript
@@ -4045,7 +3977,7 @@ basePath?: pulumi.Input<string>;
 Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L93">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L91">property domainName</a>
 </h3>
 
 ```typescript
@@ -4056,7 +3988,7 @@ domainName?: pulumi.Input<string>;
 The already-registered domain name to connect the API to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L85">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L83">property restApi</a>
 </h3>
 
 ```typescript
@@ -4067,7 +3999,7 @@ restApi?: pulumi.Input<RestApi>;
 The id of the API to connect.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/basePathMapping.ts#L97">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts#L95">property stageName</a>
 </h3>
 
 ```typescript
@@ -4078,13 +4010,13 @@ stageName?: pulumi.Input<string>;
 The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
 
 <h2 class="pdoc-module-header" id="ClientCertificateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L93">interface ClientCertificateArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L91">interface ClientCertificateArgs</a>
 </h2>
 
 The set of arguments for constructing a ClientCertificate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L97">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L95">property description</a>
 </h3>
 
 ```typescript
@@ -4095,13 +4027,13 @@ description?: pulumi.Input<string>;
 The description of the client certificate.
 
 <h2 class="pdoc-module-header" id="ClientCertificateState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L71">interface ClientCertificateState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L69">interface ClientCertificateState</a>
 </h2>
 
 Input properties used for looking up and filtering ClientCertificate resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L75">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L73">property createdDate</a>
 </h3>
 
 ```typescript
@@ -4112,7 +4044,7 @@ createdDate?: pulumi.Input<string>;
 The date when the client certificate was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L79">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L77">property description</a>
 </h3>
 
 ```typescript
@@ -4123,7 +4055,7 @@ description?: pulumi.Input<string>;
 The description of the client certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L83">property expirationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L81">property expirationDate</a>
 </h3>
 
 ```typescript
@@ -4134,7 +4066,7 @@ expirationDate?: pulumi.Input<string>;
 The date when the client certificate will expire.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/clientCertificate.ts#L87">property pemEncodedCertificate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts#L85">property pemEncodedCertificate</a>
 </h3>
 
 ```typescript
@@ -4145,13 +4077,13 @@ pemEncodedCertificate?: pulumi.Input<string>;
 The PEM-encoded public key of the client certificate.
 
 <h2 class="pdoc-module-header" id="DeploymentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L150">interface DeploymentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L148">interface DeploymentArgs</a>
 </h2>
 
 The set of arguments for constructing a Deployment resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L154">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L152">property description</a>
 </h3>
 
 ```typescript
@@ -4162,7 +4094,7 @@ description?: pulumi.Input<string>;
 The description of the deployment
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L158">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L156">property restApi</a>
 </h3>
 
 ```typescript
@@ -4173,7 +4105,7 @@ restApi: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L162">property stageDescription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L160">property stageDescription</a>
 </h3>
 
 ```typescript
@@ -4184,7 +4116,7 @@ stageDescription?: pulumi.Input<string>;
 The description of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L166">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L164">property stageName</a>
 </h3>
 
 ```typescript
@@ -4195,7 +4127,7 @@ stageName: pulumi.Input<string>;
 The name of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L170">property variables</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L168">property variables</a>
 </h3>
 
 ```typescript
@@ -4206,13 +4138,13 @@ variables?: pulumi.Input<{ ... }>;
 A map that defines variables for the stage
 
 <h2 class="pdoc-module-header" id="DeploymentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L109">interface DeploymentState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L107">interface DeploymentState</a>
 </h2>
 
 Input properties used for looking up and filtering Deployment resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L113">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L111">property createdDate</a>
 </h3>
 
 ```typescript
@@ -4223,7 +4155,7 @@ createdDate?: pulumi.Input<string>;
 The creation date of the deployment
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L117">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L115">property description</a>
 </h3>
 
 ```typescript
@@ -4234,7 +4166,7 @@ description?: pulumi.Input<string>;
 The description of the deployment
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L123">property executionArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L121">property executionArn</a>
 </h3>
 
 ```typescript
@@ -4247,7 +4179,7 @@ when allowing API Gateway to invoke a Lambda function,
 e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L128">property invokeUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L126">property invokeUrl</a>
 </h3>
 
 ```typescript
@@ -4259,7 +4191,7 @@ The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L132">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L130">property restApi</a>
 </h3>
 
 ```typescript
@@ -4270,7 +4202,7 @@ restApi?: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L136">property stageDescription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L134">property stageDescription</a>
 </h3>
 
 ```typescript
@@ -4281,7 +4213,7 @@ stageDescription?: pulumi.Input<string>;
 The description of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L140">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L138">property stageName</a>
 </h3>
 
 ```typescript
@@ -4292,7 +4224,7 @@ stageName?: pulumi.Input<string>;
 The name of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/deployment.ts#L144">property variables</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts#L142">property variables</a>
 </h3>
 
 ```typescript
@@ -4303,13 +4235,13 @@ variables?: pulumi.Input<{ ... }>;
 A map that defines variables for the stage
 
 <h2 class="pdoc-module-header" id="DocumentationPartArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L92">interface DocumentationPartArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L90">interface DocumentationPartArgs</a>
 </h2>
 
 The set of arguments for constructing a DocumentationPart resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L96">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L94">property location</a>
 </h3>
 
 ```typescript
@@ -4320,7 +4252,7 @@ location: pulumi.Input<{ ... }>;
 The location of the targeted API entity of the to-be-created documentation part. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L100">property properties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L98">property properties</a>
 </h3>
 
 ```typescript
@@ -4331,7 +4263,7 @@ properties: pulumi.Input<string>;
 A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ \"description\": \"The API does ...\" }". Only Swagger-compliant key-value pairs can be exported and, hence, published.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L104">property restApiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L102">property restApiId</a>
 </h3>
 
 ```typescript
@@ -4342,13 +4274,13 @@ restApiId: pulumi.Input<string>;
 The ID of the associated Rest API
 
 <h2 class="pdoc-module-header" id="DocumentationPartState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L74">interface DocumentationPartState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L72">interface DocumentationPartState</a>
 </h2>
 
 Input properties used for looking up and filtering DocumentationPart resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L78">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L76">property location</a>
 </h3>
 
 ```typescript
@@ -4359,7 +4291,7 @@ location?: pulumi.Input<{ ... }>;
 The location of the targeted API entity of the to-be-created documentation part. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L82">property properties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L80">property properties</a>
 </h3>
 
 ```typescript
@@ -4370,7 +4302,7 @@ properties?: pulumi.Input<string>;
 A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ \"description\": \"The API does ...\" }". Only Swagger-compliant key-value pairs can be exported and, hence, published.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationPart.ts#L86">property restApiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts#L84">property restApiId</a>
 </h3>
 
 ```typescript
@@ -4381,13 +4313,13 @@ restApiId?: pulumi.Input<string>;
 The ID of the associated Rest API
 
 <h2 class="pdoc-module-header" id="DocumentationVersionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L89">interface DocumentationVersionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L87">interface DocumentationVersionArgs</a>
 </h2>
 
 The set of arguments for constructing a DocumentationVersion resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L93">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L91">property description</a>
 </h3>
 
 ```typescript
@@ -4398,7 +4330,7 @@ description?: pulumi.Input<string>;
 The description of the API documentation version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L97">property restApiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L95">property restApiId</a>
 </h3>
 
 ```typescript
@@ -4409,7 +4341,7 @@ restApiId: pulumi.Input<string>;
 The ID of the associated Rest API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L101">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L99">property version</a>
 </h3>
 
 ```typescript
@@ -4420,13 +4352,13 @@ version: pulumi.Input<string>;
 The version identifier of the API documentation snapshot.
 
 <h2 class="pdoc-module-header" id="DocumentationVersionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L71">interface DocumentationVersionState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L69">interface DocumentationVersionState</a>
 </h2>
 
 Input properties used for looking up and filtering DocumentationVersion resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L75">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L73">property description</a>
 </h3>
 
 ```typescript
@@ -4437,7 +4369,7 @@ description?: pulumi.Input<string>;
 The description of the API documentation version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L79">property restApiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L77">property restApiId</a>
 </h3>
 
 ```typescript
@@ -4448,7 +4380,7 @@ restApiId?: pulumi.Input<string>;
 The ID of the associated Rest API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/documentationVersion.ts#L83">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts#L81">property version</a>
 </h3>
 
 ```typescript
@@ -4459,13 +4391,13 @@ version?: pulumi.Input<string>;
 The version identifier of the API documentation snapshot.
 
 <h2 class="pdoc-module-header" id="DomainNameArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L175">interface DomainNameArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L243">interface DomainNameArgs</a>
 </h2>
 
 The set of arguments for constructing a DomainName resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L179">property certificateArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L249">property certificateArn</a>
 </h3>
 
 ```typescript
@@ -4473,10 +4405,12 @@ certificateArn?: pulumi.Input<string>;
 ```
 
 
-The ARN for an AWS-managed certificate. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain` and `certificate_private_key`.
+The ARN for an AWS-managed certificate. Used when an edge-optimized domain name is
+desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`,
+`regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L184">property certificateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L255">property certificateBody</a>
 </h3>
 
 ```typescript
@@ -4485,10 +4419,11 @@ certificateBody?: pulumi.Input<string>;
 
 
 The certificate issued for the domain name
-being registered, in PEM format. Conflicts with `certificate_arn`.
+being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+`regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L190">property certificateChain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L262">property certificateChain</a>
 </h3>
 
 ```typescript
@@ -4498,10 +4433,11 @@ certificateChain?: pulumi.Input<string>;
 
 The certificate for the CA that issued the
 certificate, along with any intermediate CA certificates required to
-create an unbroken chain to a certificate trusted by the intended API clients. Conflicts with `certificate_arn`.
+create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
+`regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L195">property certificateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L268">property certificateName</a>
 </h3>
 
 ```typescript
@@ -4510,10 +4446,11 @@ certificateName?: pulumi.Input<string>;
 
 
 The unique name to use when registering this
-cert as an IAM server certificate. Conflicts with `certificate_arn`. Required if `certificate_arn` is not set.
+certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+`regional_certificate_name`. Required if `certificate_arn` is not set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L200">property certificatePrivateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L273">property certificatePrivateKey</a>
 </h3>
 
 ```typescript
@@ -4522,10 +4459,10 @@ certificatePrivateKey?: pulumi.Input<string>;
 
 
 The private key associated with the
-domain certificate given in `certificate_body`. Conflicts with `certificate_arn`.
+domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L204">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L277">property domainName</a>
 </h3>
 
 ```typescript
@@ -4535,14 +4472,50 @@ domainName: pulumi.Input<string>;
 
 The fully-qualified domain name to register
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L281">property endpointConfiguration</a>
+</h3>
+
+```typescript
+endpointConfiguration?: pulumi.Input<{ ... }>;
+```
+
+
+Nested argument defining API endpoint configuration including endpoint type. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L287">property regionalCertificateArn</a>
+</h3>
+
+```typescript
+regionalCertificateArn?: pulumi.Input<string>;
+```
+
+
+The ARN for an AWS-managed certificate. Used when a regional domain name is
+desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
+`certificate_private_key`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L292">property regionalCertificateName</a>
+</h3>
+
+```typescript
+regionalCertificateName?: pulumi.Input<string>;
+```
+
+
+The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
+`certificate_private_key`.
+
 <h2 class="pdoc-module-header" id="DomainNameState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L126">interface DomainNameState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L166">interface DomainNameState</a>
 </h2>
 
 Input properties used for looking up and filtering DomainName resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L130">property certificateArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L172">property certificateArn</a>
 </h3>
 
 ```typescript
@@ -4550,10 +4523,12 @@ certificateArn?: pulumi.Input<string>;
 ```
 
 
-The ARN for an AWS-managed certificate. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain` and `certificate_private_key`.
+The ARN for an AWS-managed certificate. Used when an edge-optimized domain name is
+desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`,
+`regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L135">property certificateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L178">property certificateBody</a>
 </h3>
 
 ```typescript
@@ -4562,10 +4537,11 @@ certificateBody?: pulumi.Input<string>;
 
 
 The certificate issued for the domain name
-being registered, in PEM format. Conflicts with `certificate_arn`.
+being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+`regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L141">property certificateChain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L185">property certificateChain</a>
 </h3>
 
 ```typescript
@@ -4575,10 +4551,11 @@ certificateChain?: pulumi.Input<string>;
 
 The certificate for the CA that issued the
 certificate, along with any intermediate CA certificates required to
-create an unbroken chain to a certificate trusted by the intended API clients. Conflicts with `certificate_arn`.
+create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
+`regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L146">property certificateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L191">property certificateName</a>
 </h3>
 
 ```typescript
@@ -4587,10 +4564,11 @@ certificateName?: pulumi.Input<string>;
 
 
 The unique name to use when registering this
-cert as an IAM server certificate. Conflicts with `certificate_arn`. Required if `certificate_arn` is not set.
+certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
+`regional_certificate_name`. Required if `certificate_arn` is not set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L151">property certificatePrivateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L196">property certificatePrivateKey</a>
 </h3>
 
 ```typescript
@@ -4599,10 +4577,10 @@ certificatePrivateKey?: pulumi.Input<string>;
 
 
 The private key associated with the
-domain certificate given in `certificate_body`. Conflicts with `certificate_arn`.
+domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L155">property certificateUploadDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L200">property certificateUploadDate</a>
 </h3>
 
 ```typescript
@@ -4613,7 +4591,7 @@ certificateUploadDate?: pulumi.Input<string>;
 The upload date associated with the domain certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L160">property cloudfrontDomainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L205">property cloudfrontDomainName</a>
 </h3>
 
 ```typescript
@@ -4625,7 +4603,7 @@ The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L165">property cloudfrontZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L210">property cloudfrontZoneId</a>
 </h3>
 
 ```typescript
@@ -4633,11 +4611,11 @@ cloudfrontZoneId?: pulumi.Input<string>;
 ```
 
 
-For convenience, the hosted zone id (`Z2FDTNDATAQYW2`)
+For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/domainName.ts#L169">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L214">property domainName</a>
 </h3>
 
 ```typescript
@@ -4647,14 +4625,107 @@ domainName?: pulumi.Input<string>;
 
 The fully-qualified domain name to register
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L218">property endpointConfiguration</a>
+</h3>
+
+```typescript
+endpointConfiguration?: pulumi.Input<{ ... }>;
+```
+
+
+Nested argument defining API endpoint configuration including endpoint type. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L224">property regionalCertificateArn</a>
+</h3>
+
+```typescript
+regionalCertificateArn?: pulumi.Input<string>;
+```
+
+
+The ARN for an AWS-managed certificate. Used when a regional domain name is
+desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
+`certificate_private_key`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L229">property regionalCertificateName</a>
+</h3>
+
+```typescript
+regionalCertificateName?: pulumi.Input<string>;
+```
+
+
+The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
+`certificate_private_key`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L233">property regionalDomainName</a>
+</h3>
+
+```typescript
+regionalDomainName?: pulumi.Input<string>;
+```
+
+
+The hostname for the custom domain's regional endpoint.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L237">property regionalZoneId</a>
+</h3>
+
+```typescript
+regionalZoneId?: pulumi.Input<string>;
+```
+
+
+The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
+
+<h2 class="pdoc-module-header" id="GetRestApiArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L21">interface GetRestApiArgs</a>
+</h2>
+
+A collection of arguments for invoking getRestApi.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L26">property name</a>
+</h3>
+
+```typescript
+name: pulumi.Input<string>;
+```
+
+
+The name of the REST API to look up. If no REST API is found with this name, an error will be returned.
+If multiple REST APIs are found with this name, an error will be returned.
+
+<h2 class="pdoc-module-header" id="GetRestApiResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L32">interface GetRestApiResult</a>
+</h2>
+
+A collection of values returned by getRestApi.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L36">property rootResourceId</a>
+</h3>
+
+```typescript
+rootResourceId: string;
+```
+
+
+Set to the ID of the API Gateway Resource on the found REST API where the route matches '/'.
+
 <h2 class="pdoc-module-header" id="IntegrationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L223">interface IntegrationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L241">interface IntegrationArgs</a>
 </h2>
 
 The set of arguments for constructing a Integration resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L227">property cacheKeyParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L245">property cacheKeyParameters</a>
 </h3>
 
 ```typescript
@@ -4665,7 +4736,7 @@ cacheKeyParameters?: pulumi.Input<pulumi.Input<string>[]>;
 A list of cache key parameters for the integration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L231">property cacheNamespace</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L249">property cacheNamespace</a>
 </h3>
 
 ```typescript
@@ -4676,7 +4747,29 @@ cacheNamespace?: pulumi.Input<string>;
 The integration's cache namespace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L235">property contentHandling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L253">property connectionId</a>
+</h3>
+
+```typescript
+connectionId?: pulumi.Input<string>;
+```
+
+
+The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L257">property connectionType</a>
+</h3>
+
+```typescript
+connectionType?: pulumi.Input<string>;
+```
+
+
+The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L261">property contentHandling</a>
 </h3>
 
 ```typescript
@@ -4687,7 +4780,7 @@ contentHandling?: pulumi.Input<string>;
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L239">property credentials</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L265">property credentials</a>
 </h3>
 
 ```typescript
@@ -4698,7 +4791,7 @@ credentials?: pulumi.Input<string>;
 The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L244">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L270">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -4710,7 +4803,7 @@ The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L252">property integrationHttpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L278">property integrationHttpMethod</a>
 </h3>
 
 ```typescript
@@ -4725,7 +4818,7 @@ Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L256">property passthroughBehavior</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L282">property passthroughBehavior</a>
 </h3>
 
 ```typescript
@@ -4736,7 +4829,7 @@ passthroughBehavior?: pulumi.Input<string>;
 The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L261">property requestParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L287">property requestParameters</a>
 </h3>
 
 ```typescript
@@ -4748,7 +4841,7 @@ A map of request query string parameters and headers that should be passed to th
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L265">property requestParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L291">property requestParametersInJson</a>
 </h3>
 
 ```typescript
@@ -4759,7 +4852,7 @@ requestParametersInJson?: pulumi.Input<string>;
 **Deprecated**, use `request_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L269">property requestTemplates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L295">property requestTemplates</a>
 </h3>
 
 ```typescript
@@ -4770,7 +4863,7 @@ requestTemplates?: pulumi.Input<{ ... }>;
 A map of the integration's request templates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L273">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L299">property resourceId</a>
 </h3>
 
 ```typescript
@@ -4781,7 +4874,7 @@ resourceId: pulumi.Input<string>;
 The API resource ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L277">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L303">property restApi</a>
 </h3>
 
 ```typescript
@@ -4792,7 +4885,7 @@ restApi: pulumi.Input<RestApi>;
 The ID of the associated REST API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L281">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L307">property type</a>
 </h3>
 
 ```typescript
@@ -4800,10 +4893,10 @@ type: pulumi.Input<string>;
 ```
 
 
-The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration).
+The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L287">property uri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L313">property uri</a>
 </h3>
 
 ```typescript
@@ -4816,13 +4909,13 @@ For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL accor
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`
 
 <h2 class="pdoc-module-header" id="IntegrationResponseArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L168">interface IntegrationResponseArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L166">interface IntegrationResponseArgs</a>
 </h2>
 
 The set of arguments for constructing a IntegrationResponse resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L172">property contentHandling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L170">property contentHandling</a>
 </h3>
 
 ```typescript
@@ -4833,7 +4926,7 @@ contentHandling?: pulumi.Input<string>;
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L176">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L174">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -4844,7 +4937,7 @@ httpMethod: pulumi.Input<string>;
 The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L180">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L178">property resourceId</a>
 </h3>
 
 ```typescript
@@ -4855,7 +4948,7 @@ resourceId: pulumi.Input<string>;
 The API resource ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L185">property responseParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L183">property responseParameters</a>
 </h3>
 
 ```typescript
@@ -4867,7 +4960,7 @@ A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`,
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L189">property responseParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L187">property responseParametersInJson</a>
 </h3>
 
 ```typescript
@@ -4878,7 +4971,7 @@ responseParametersInJson?: pulumi.Input<string>;
 **Deprecated**, use `response_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L193">property responseTemplates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L191">property responseTemplates</a>
 </h3>
 
 ```typescript
@@ -4889,7 +4982,7 @@ responseTemplates?: pulumi.Input<{ ... }>;
 A map specifying the templates used to transform the integration response body
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L197">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L195">property restApi</a>
 </h3>
 
 ```typescript
@@ -4900,7 +4993,7 @@ restApi: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L204">property selectionPattern</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L202">property selectionPattern</a>
 </h3>
 
 ```typescript
@@ -4914,7 +5007,7 @@ If the backend is an `AWS` Lambda function, the AWS Lambda function error header
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L208">property statusCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L206">property statusCode</a>
 </h3>
 
 ```typescript
@@ -4925,13 +5018,13 @@ statusCode: pulumi.Input<string>;
 The HTTP status code
 
 <h2 class="pdoc-module-header" id="IntegrationResponseState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L122">interface IntegrationResponseState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L120">interface IntegrationResponseState</a>
 </h2>
 
 Input properties used for looking up and filtering IntegrationResponse resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L126">property contentHandling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L124">property contentHandling</a>
 </h3>
 
 ```typescript
@@ -4942,7 +5035,7 @@ contentHandling?: pulumi.Input<string>;
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L130">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L128">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -4953,7 +5046,7 @@ httpMethod?: pulumi.Input<string>;
 The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L134">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L132">property resourceId</a>
 </h3>
 
 ```typescript
@@ -4964,7 +5057,7 @@ resourceId?: pulumi.Input<string>;
 The API resource ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L139">property responseParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L137">property responseParameters</a>
 </h3>
 
 ```typescript
@@ -4976,7 +5069,7 @@ A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`,
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L143">property responseParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L141">property responseParametersInJson</a>
 </h3>
 
 ```typescript
@@ -4987,7 +5080,7 @@ responseParametersInJson?: pulumi.Input<string>;
 **Deprecated**, use `response_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L147">property responseTemplates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L145">property responseTemplates</a>
 </h3>
 
 ```typescript
@@ -4998,7 +5091,7 @@ responseTemplates?: pulumi.Input<{ ... }>;
 A map specifying the templates used to transform the integration response body
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L151">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L149">property restApi</a>
 </h3>
 
 ```typescript
@@ -5009,7 +5102,7 @@ restApi?: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L158">property selectionPattern</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L156">property selectionPattern</a>
 </h3>
 
 ```typescript
@@ -5023,7 +5116,7 @@ If the backend is an `AWS` Lambda function, the AWS Lambda function error header
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integrationResponse.ts#L162">property statusCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts#L160">property statusCode</a>
 </h3>
 
 ```typescript
@@ -5034,13 +5127,13 @@ statusCode?: pulumi.Input<string>;
 The HTTP status code
 
 <h2 class="pdoc-module-header" id="IntegrationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L153">interface IntegrationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L163">interface IntegrationState</a>
 </h2>
 
 Input properties used for looking up and filtering Integration resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L157">property cacheKeyParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L167">property cacheKeyParameters</a>
 </h3>
 
 ```typescript
@@ -5051,7 +5144,7 @@ cacheKeyParameters?: pulumi.Input<pulumi.Input<string>[]>;
 A list of cache key parameters for the integration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L161">property cacheNamespace</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L171">property cacheNamespace</a>
 </h3>
 
 ```typescript
@@ -5062,7 +5155,29 @@ cacheNamespace?: pulumi.Input<string>;
 The integration's cache namespace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L165">property contentHandling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L175">property connectionId</a>
+</h3>
+
+```typescript
+connectionId?: pulumi.Input<string>;
+```
+
+
+The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L179">property connectionType</a>
+</h3>
+
+```typescript
+connectionType?: pulumi.Input<string>;
+```
+
+
+The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L183">property contentHandling</a>
 </h3>
 
 ```typescript
@@ -5073,7 +5188,7 @@ contentHandling?: pulumi.Input<string>;
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L169">property credentials</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L187">property credentials</a>
 </h3>
 
 ```typescript
@@ -5084,7 +5199,7 @@ credentials?: pulumi.Input<string>;
 The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L174">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L192">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -5096,7 +5211,7 @@ The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
 when calling the associated resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L182">property integrationHttpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L200">property integrationHttpMethod</a>
 </h3>
 
 ```typescript
@@ -5111,7 +5226,7 @@ Not all methods are compatible with all `AWS` integrations.
 e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L186">property passthroughBehavior</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L204">property passthroughBehavior</a>
 </h3>
 
 ```typescript
@@ -5122,7 +5237,7 @@ passthroughBehavior?: pulumi.Input<string>;
 The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L191">property requestParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L209">property requestParameters</a>
 </h3>
 
 ```typescript
@@ -5134,7 +5249,7 @@ A map of request query string parameters and headers that should be passed to th
 For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L195">property requestParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L213">property requestParametersInJson</a>
 </h3>
 
 ```typescript
@@ -5145,7 +5260,7 @@ requestParametersInJson?: pulumi.Input<string>;
 **Deprecated**, use `request_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L199">property requestTemplates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L217">property requestTemplates</a>
 </h3>
 
 ```typescript
@@ -5156,7 +5271,7 @@ requestTemplates?: pulumi.Input<{ ... }>;
 A map of the integration's request templates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L203">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L221">property resourceId</a>
 </h3>
 
 ```typescript
@@ -5167,7 +5282,7 @@ resourceId?: pulumi.Input<string>;
 The API resource ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L207">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L225">property restApi</a>
 </h3>
 
 ```typescript
@@ -5178,7 +5293,7 @@ restApi?: pulumi.Input<RestApi>;
 The ID of the associated REST API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L211">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L229">property type</a>
 </h3>
 
 ```typescript
@@ -5186,10 +5301,10 @@ type?: pulumi.Input<string>;
 ```
 
 
-The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration).
+The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/integration.ts#L217">property uri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L235">property uri</a>
 </h3>
 
 ```typescript
@@ -5202,13 +5317,13 @@ For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL accor
 e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`
 
 <h2 class="pdoc-module-header" id="MethodArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L187">interface MethodArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L195">interface MethodArgs</a>
 </h2>
 
 The set of arguments for constructing a Method resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L191">property apiKeyRequired</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L199">property apiKeyRequired</a>
 </h3>
 
 ```typescript
@@ -5219,7 +5334,7 @@ apiKeyRequired?: pulumi.Input<boolean>;
 Specify if the method requires an API key
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L195">property authorization</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L203">property authorization</a>
 </h3>
 
 ```typescript
@@ -5227,10 +5342,29 @@ authorization: pulumi.Input<string>;
 ```
 
 
-The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`)
+The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L199">property authorizerId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L215">property authorizationScopes</a>
+</h3>
+
+```typescript
+authorizationScopes?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
+For example:
+```hcl
+request_parameters = {
+"method.request.header.X-Some-Header" = true,
+"method.request.querystring.some-query-param"  = true,
+}
+```
+would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L219">property authorizerId</a>
 </h3>
 
 ```typescript
@@ -5238,10 +5372,10 @@ authorizerId?: pulumi.Input<string>;
 ```
 
 
-The authorizer id to be used when the authorization is `CUSTOM`
+The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L203">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L223">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -5252,7 +5386,7 @@ httpMethod: pulumi.Input<string>;
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L209">property requestModels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L229">property requestModels</a>
 </h3>
 
 ```typescript
@@ -5265,7 +5399,7 @@ where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws_api_gateway_model`'s `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L221">property requestParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L233">property requestParameters</a>
 </h3>
 
 ```typescript
@@ -5274,17 +5408,9 @@ requestParameters?: pulumi.Input<{ ... }>;
 
 
 A map of request query string parameters and headers that should be passed to the integration.
-For example:
-```hcl
-request_parameters = {
-"method.request.header.X-Some-Header" = true,
-"method.request.querystring.some-query-param"  = true,
-}
-```
-would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L225">property requestParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L237">property requestParametersInJson</a>
 </h3>
 
 ```typescript
@@ -5295,7 +5421,7 @@ requestParametersInJson?: pulumi.Input<string>;
 **Deprecated**, use `request_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L229">property requestValidatorId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L241">property requestValidatorId</a>
 </h3>
 
 ```typescript
@@ -5306,7 +5432,7 @@ requestValidatorId?: pulumi.Input<string>;
 The ID of a `aws_api_gateway_request_validator`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L233">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L245">property resourceId</a>
 </h3>
 
 ```typescript
@@ -5317,7 +5443,7 @@ resourceId: pulumi.Input<string>;
 The API resource ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L237">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L249">property restApi</a>
 </h3>
 
 ```typescript
@@ -5328,13 +5454,13 @@ restApi: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h2 class="pdoc-module-header" id="MethodResponseArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L141">interface MethodResponseArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L139">interface MethodResponseArgs</a>
 </h2>
 
 The set of arguments for constructing a MethodResponse resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L145">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L143">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -5345,7 +5471,7 @@ httpMethod: pulumi.Input<string>;
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L149">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L147">property resourceId</a>
 </h3>
 
 ```typescript
@@ -5356,7 +5482,7 @@ resourceId: pulumi.Input<string>;
 The API resource ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L153">property responseModels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L151">property responseModels</a>
 </h3>
 
 ```typescript
@@ -5367,7 +5493,7 @@ responseModels?: pulumi.Input<{ ... }>;
 A map of the API models used for the response's content type
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L159">property responseParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L157">property responseParameters</a>
 </h3>
 
 ```typescript
@@ -5380,7 +5506,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = t
 would define that the header `X-Some-Header` can be provided on the response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L163">property responseParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L161">property responseParametersInJson</a>
 </h3>
 
 ```typescript
@@ -5391,7 +5517,7 @@ responseParametersInJson?: pulumi.Input<string>;
 **Deprecated**, use `response_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L167">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L165">property restApi</a>
 </h3>
 
 ```typescript
@@ -5402,7 +5528,7 @@ restApi: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L171">property statusCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L169">property statusCode</a>
 </h3>
 
 ```typescript
@@ -5413,13 +5539,13 @@ statusCode: pulumi.Input<string>;
 The HTTP status code
 
 <h2 class="pdoc-module-header" id="MethodResponseState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L105">interface MethodResponseState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L103">interface MethodResponseState</a>
 </h2>
 
 Input properties used for looking up and filtering MethodResponse resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L109">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L107">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -5430,7 +5556,7 @@ httpMethod?: pulumi.Input<string>;
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L113">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L111">property resourceId</a>
 </h3>
 
 ```typescript
@@ -5441,7 +5567,7 @@ resourceId?: pulumi.Input<string>;
 The API resource ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L117">property responseModels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L115">property responseModels</a>
 </h3>
 
 ```typescript
@@ -5452,7 +5578,7 @@ responseModels?: pulumi.Input<{ ... }>;
 A map of the API models used for the response's content type
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L123">property responseParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L121">property responseParameters</a>
 </h3>
 
 ```typescript
@@ -5465,7 +5591,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = t
 would define that the header `X-Some-Header` can be provided on the response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L127">property responseParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L125">property responseParametersInJson</a>
 </h3>
 
 ```typescript
@@ -5476,7 +5602,7 @@ responseParametersInJson?: pulumi.Input<string>;
 **Deprecated**, use `response_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L131">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L129">property restApi</a>
 </h3>
 
 ```typescript
@@ -5487,7 +5613,7 @@ restApi?: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodResponse.ts#L135">property statusCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts#L133">property statusCode</a>
 </h3>
 
 ```typescript
@@ -5498,13 +5624,13 @@ statusCode?: pulumi.Input<string>;
 The HTTP status code
 
 <h2 class="pdoc-module-header" id="MethodSettingsArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L107">interface MethodSettingsArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L105">interface MethodSettingsArgs</a>
 </h2>
 
 The set of arguments for constructing a MethodSettings resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L111">property methodPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L109">property methodPath</a>
 </h3>
 
 ```typescript
@@ -5515,7 +5641,7 @@ methodPath: pulumi.Input<string>;
 Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*&#47;*` for overriding all methods in the stage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L115">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L113">property restApi</a>
 </h3>
 
 ```typescript
@@ -5526,7 +5652,7 @@ restApi: pulumi.Input<RestApi>;
 The ID of the REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L119">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L117">property settings</a>
 </h3>
 
 ```typescript
@@ -5537,7 +5663,7 @@ settings: pulumi.Input<{ ... }>;
 The settings block, see below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L123">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L121">property stageName</a>
 </h3>
 
 ```typescript
@@ -5548,13 +5674,13 @@ stageName: pulumi.Input<string>;
 The name of the stage
 
 <h2 class="pdoc-module-header" id="MethodSettingsState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L85">interface MethodSettingsState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L83">interface MethodSettingsState</a>
 </h2>
 
 Input properties used for looking up and filtering MethodSettings resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L89">property methodPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L87">property methodPath</a>
 </h3>
 
 ```typescript
@@ -5565,7 +5691,7 @@ methodPath?: pulumi.Input<string>;
 Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*&#47;*` for overriding all methods in the stage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L93">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L91">property restApi</a>
 </h3>
 
 ```typescript
@@ -5576,7 +5702,7 @@ restApi?: pulumi.Input<RestApi>;
 The ID of the REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L97">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L95">property settings</a>
 </h3>
 
 ```typescript
@@ -5587,7 +5713,7 @@ settings?: pulumi.Input<{ ... }>;
 The settings block, see below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/methodSettings.ts#L101">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts#L99">property stageName</a>
 </h3>
 
 ```typescript
@@ -5598,13 +5724,13 @@ stageName?: pulumi.Input<string>;
 The name of the stage
 
 <h2 class="pdoc-module-header" id="MethodState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L131">interface MethodState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L135">interface MethodState</a>
 </h2>
 
 Input properties used for looking up and filtering Method resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L135">property apiKeyRequired</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L139">property apiKeyRequired</a>
 </h3>
 
 ```typescript
@@ -5615,7 +5741,7 @@ apiKeyRequired?: pulumi.Input<boolean>;
 Specify if the method requires an API key
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L139">property authorization</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L143">property authorization</a>
 </h3>
 
 ```typescript
@@ -5623,10 +5749,29 @@ authorization?: pulumi.Input<string>;
 ```
 
 
-The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`)
+The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L143">property authorizerId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L155">property authorizationScopes</a>
+</h3>
+
+```typescript
+authorizationScopes?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
+For example:
+```hcl
+request_parameters = {
+"method.request.header.X-Some-Header" = true,
+"method.request.querystring.some-query-param"  = true,
+}
+```
+would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L159">property authorizerId</a>
 </h3>
 
 ```typescript
@@ -5634,10 +5779,10 @@ authorizerId?: pulumi.Input<string>;
 ```
 
 
-The authorizer id to be used when the authorization is `CUSTOM`
+The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L147">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L163">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -5648,7 +5793,7 @@ httpMethod?: pulumi.Input<string>;
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L153">property requestModels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L169">property requestModels</a>
 </h3>
 
 ```typescript
@@ -5661,7 +5806,7 @@ where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws_api_gateway_model`'s `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L165">property requestParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L173">property requestParameters</a>
 </h3>
 
 ```typescript
@@ -5670,17 +5815,9 @@ requestParameters?: pulumi.Input<{ ... }>;
 
 
 A map of request query string parameters and headers that should be passed to the integration.
-For example:
-```hcl
-request_parameters = {
-"method.request.header.X-Some-Header" = true,
-"method.request.querystring.some-query-param"  = true,
-}
-```
-would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L169">property requestParametersInJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L177">property requestParametersInJson</a>
 </h3>
 
 ```typescript
@@ -5691,7 +5828,7 @@ requestParametersInJson?: pulumi.Input<string>;
 **Deprecated**, use `request_parameters` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L173">property requestValidatorId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L181">property requestValidatorId</a>
 </h3>
 
 ```typescript
@@ -5702,7 +5839,7 @@ requestValidatorId?: pulumi.Input<string>;
 The ID of a `aws_api_gateway_request_validator`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L177">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L185">property resourceId</a>
 </h3>
 
 ```typescript
@@ -5713,7 +5850,7 @@ resourceId?: pulumi.Input<string>;
 The API resource ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/method.ts#L181">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L189">property restApi</a>
 </h3>
 
 ```typescript
@@ -5724,13 +5861,13 @@ restApi?: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h2 class="pdoc-module-header" id="ModelArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L111">interface ModelArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L109">interface ModelArgs</a>
 </h2>
 
 The set of arguments for constructing a Model resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L115">property contentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L113">property contentType</a>
 </h3>
 
 ```typescript
@@ -5741,7 +5878,7 @@ contentType: pulumi.Input<string>;
 The content type of the model
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L119">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L117">property description</a>
 </h3>
 
 ```typescript
@@ -5752,7 +5889,7 @@ description?: pulumi.Input<string>;
 The description of the model
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L123">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L121">property name</a>
 </h3>
 
 ```typescript
@@ -5763,7 +5900,7 @@ name?: pulumi.Input<string>;
 The name of the model
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L127">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L125">property restApi</a>
 </h3>
 
 ```typescript
@@ -5774,7 +5911,7 @@ restApi: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L131">property schema</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L129">property schema</a>
 </h3>
 
 ```typescript
@@ -5785,13 +5922,13 @@ schema?: pulumi.Input<string>;
 The schema of the model in a JSON form
 
 <h2 class="pdoc-module-header" id="ModelState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L85">interface ModelState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L83">interface ModelState</a>
 </h2>
 
 Input properties used for looking up and filtering Model resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L89">property contentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L87">property contentType</a>
 </h3>
 
 ```typescript
@@ -5802,7 +5939,7 @@ contentType?: pulumi.Input<string>;
 The content type of the model
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L93">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L91">property description</a>
 </h3>
 
 ```typescript
@@ -5813,7 +5950,7 @@ description?: pulumi.Input<string>;
 The description of the model
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L97">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L95">property name</a>
 </h3>
 
 ```typescript
@@ -5824,7 +5961,7 @@ name?: pulumi.Input<string>;
 The name of the model
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L101">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L99">property restApi</a>
 </h3>
 
 ```typescript
@@ -5835,7 +5972,7 @@ restApi?: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/model.ts#L105">property schema</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts#L103">property schema</a>
 </h3>
 
 ```typescript
@@ -5846,13 +5983,13 @@ schema?: pulumi.Input<string>;
 The schema of the model in a JSON form
 
 <h2 class="pdoc-module-header" id="RequestValidatorArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L71">interface RequestValidatorArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L69">interface RequestValidatorArgs</a>
 </h2>
 
 The set of arguments for constructing a RequestValidator resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L72">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L70">property name</a>
 </h3>
 
 ```typescript
@@ -5860,7 +5997,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L73">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L71">property restApi</a>
 </h3>
 
 ```typescript
@@ -5868,7 +6005,7 @@ restApi: pulumi.Input<RestApi>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L74">property validateRequestBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L72">property validateRequestBody</a>
 </h3>
 
 ```typescript
@@ -5876,7 +6013,7 @@ validateRequestBody?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L75">property validateRequestParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L73">property validateRequestParameters</a>
 </h3>
 
 ```typescript
@@ -5884,13 +6021,13 @@ validateRequestParameters?: pulumi.Input<boolean>;
 ```
 
 <h2 class="pdoc-module-header" id="RequestValidatorState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L61">interface RequestValidatorState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L59">interface RequestValidatorState</a>
 </h2>
 
 Input properties used for looking up and filtering RequestValidator resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L62">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L60">property name</a>
 </h3>
 
 ```typescript
@@ -5898,7 +6035,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L63">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L61">property restApi</a>
 </h3>
 
 ```typescript
@@ -5906,7 +6043,7 @@ restApi?: pulumi.Input<RestApi>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L64">property validateRequestBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L62">property validateRequestBody</a>
 </h3>
 
 ```typescript
@@ -5914,7 +6051,7 @@ validateRequestBody?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/requestValidator.ts#L65">property validateRequestParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts#L63">property validateRequestParameters</a>
 </h3>
 
 ```typescript
@@ -5922,13 +6059,13 @@ validateRequestParameters?: pulumi.Input<boolean>;
 ```
 
 <h2 class="pdoc-module-header" id="ResourceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L104">interface ResourceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L102">interface ResourceArgs</a>
 </h2>
 
 The set of arguments for constructing a Resource resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L108">property parentId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L106">property parentId</a>
 </h3>
 
 ```typescript
@@ -5939,7 +6076,7 @@ parentId: pulumi.Input<string>;
 The ID of the parent API resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L112">property pathPart</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L110">property pathPart</a>
 </h3>
 
 ```typescript
@@ -5950,7 +6087,7 @@ pathPart: pulumi.Input<string>;
 The last path segment of this API resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L116">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L114">property restApi</a>
 </h3>
 
 ```typescript
@@ -5961,13 +6098,13 @@ restApi: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h2 class="pdoc-module-header" id="ResourceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L82">interface ResourceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L80">interface ResourceState</a>
 </h2>
 
 Input properties used for looking up and filtering Resource resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L86">property parentId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L84">property parentId</a>
 </h3>
 
 ```typescript
@@ -5978,7 +6115,7 @@ parentId?: pulumi.Input<string>;
 The ID of the parent API resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L90">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L88">property path</a>
 </h3>
 
 ```typescript
@@ -5989,7 +6126,7 @@ path?: pulumi.Input<string>;
 The complete path for this API resource, including all parent paths.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L94">property pathPart</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L92">property pathPart</a>
 </h3>
 
 ```typescript
@@ -6000,7 +6137,7 @@ pathPart?: pulumi.Input<string>;
 The last path segment of this API resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/resource.ts#L98">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts#L96">property restApi</a>
 </h3>
 
 ```typescript
@@ -6011,13 +6148,13 @@ restApi?: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h2 class="pdoc-module-header" id="ResponseArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L109">interface ResponseArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L107">interface ResponseArgs</a>
 </h2>
 
 The set of arguments for constructing a Response resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L113">property responseParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L111">property responseParameters</a>
 </h3>
 
 ```typescript
@@ -6028,7 +6165,7 @@ responseParameters?: pulumi.Input<{ ... }>;
 A map specifying the templates used to transform the response body.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L117">property responseTemplates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L115">property responseTemplates</a>
 </h3>
 
 ```typescript
@@ -6039,7 +6176,7 @@ responseTemplates?: pulumi.Input<{ ... }>;
 A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L121">property responseType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L119">property responseType</a>
 </h3>
 
 ```typescript
@@ -6050,7 +6187,7 @@ responseType: pulumi.Input<string>;
 The response type of the associated GatewayResponse.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L125">property restApiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L123">property restApiId</a>
 </h3>
 
 ```typescript
@@ -6061,7 +6198,7 @@ restApiId: pulumi.Input<string>;
 The string identifier of the associated REST API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L129">property statusCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L127">property statusCode</a>
 </h3>
 
 ```typescript
@@ -6072,13 +6209,13 @@ statusCode?: pulumi.Input<string>;
 The HTTP status code of the Gateway Response.
 
 <h2 class="pdoc-module-header" id="ResponseState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L83">interface ResponseState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L81">interface ResponseState</a>
 </h2>
 
 Input properties used for looking up and filtering Response resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L87">property responseParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L85">property responseParameters</a>
 </h3>
 
 ```typescript
@@ -6089,7 +6226,7 @@ responseParameters?: pulumi.Input<{ ... }>;
 A map specifying the templates used to transform the response body.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L91">property responseTemplates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L89">property responseTemplates</a>
 </h3>
 
 ```typescript
@@ -6100,7 +6237,7 @@ responseTemplates?: pulumi.Input<{ ... }>;
 A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L95">property responseType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L93">property responseType</a>
 </h3>
 
 ```typescript
@@ -6111,7 +6248,7 @@ responseType?: pulumi.Input<string>;
 The response type of the associated GatewayResponse.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L99">property restApiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L97">property restApiId</a>
 </h3>
 
 ```typescript
@@ -6122,7 +6259,7 @@ restApiId?: pulumi.Input<string>;
 The string identifier of the associated REST API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/response.ts#L103">property statusCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts#L101">property statusCode</a>
 </h3>
 
 ```typescript
@@ -6133,13 +6270,24 @@ statusCode?: pulumi.Input<string>;
 The HTTP status code of the Gateway Response.
 
 <h2 class="pdoc-module-header" id="RestApiArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L123">interface RestApiArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L165">interface RestApiArgs</a>
 </h2>
 
 The set of arguments for constructing a RestApi resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L127">property binaryMediaTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L169">property apiKeySource</a>
+</h3>
+
+```typescript
+apiKeySource?: pulumi.Input<string>;
+```
+
+
+The source of the API key for requests. Valid values are HEADER (default) and AUTHORIZER.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L173">property binaryMediaTypes</a>
 </h3>
 
 ```typescript
@@ -6150,7 +6298,7 @@ binaryMediaTypes?: pulumi.Input<pulumi.Input<string>[]>;
 The list of binary media types supported by the RestApi. By default, the RestApi supports only UTF-8-encoded text payloads.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L131">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L177">property body</a>
 </h3>
 
 ```typescript
@@ -6161,7 +6309,7 @@ body?: pulumi.Input<string>;
 An OpenAPI specification that defines the set of routes and integrations to create as part of the REST API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L135">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L181">property description</a>
 </h3>
 
 ```typescript
@@ -6172,7 +6320,18 @@ description?: pulumi.Input<string>;
 The description of the REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L139">property minimumCompressionSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L185">property endpointConfiguration</a>
+</h3>
+
+```typescript
+endpointConfiguration?: pulumi.Input<{ ... }>;
+```
+
+
+Nested argument defining API endpoint configuration including endpoint type. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L189">property minimumCompressionSize</a>
 </h3>
 
 ```typescript
@@ -6183,7 +6342,7 @@ minimumCompressionSize?: pulumi.Input<number>;
 Minimum response size to compress for the REST API. Integer between -1 and 10485760 (10MB). Setting a value greater than -1 will enable compression, -1 disables compression (default).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L143">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L193">property name</a>
 </h3>
 
 ```typescript
@@ -6193,14 +6352,36 @@ name?: pulumi.Input<string>;
 
 The name of the REST API
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L197">property policy</a>
+</h3>
+
+```typescript
+policy?: pulumi.Input<string>;
+```
+
+
+JSON formatted policy document that controls access to the API Gateway
+
 <h2 class="pdoc-module-header" id="RestApiState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L89">interface RestApiState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L113">interface RestApiState</a>
 </h2>
 
 Input properties used for looking up and filtering RestApi resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L93">property binaryMediaTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L117">property apiKeySource</a>
+</h3>
+
+```typescript
+apiKeySource?: pulumi.Input<string>;
+```
+
+
+The source of the API key for requests. Valid values are HEADER (default) and AUTHORIZER.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L121">property binaryMediaTypes</a>
 </h3>
 
 ```typescript
@@ -6211,7 +6392,7 @@ binaryMediaTypes?: pulumi.Input<pulumi.Input<string>[]>;
 The list of binary media types supported by the RestApi. By default, the RestApi supports only UTF-8-encoded text payloads.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L97">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L125">property body</a>
 </h3>
 
 ```typescript
@@ -6222,7 +6403,7 @@ body?: pulumi.Input<string>;
 An OpenAPI specification that defines the set of routes and integrations to create as part of the REST API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L101">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L129">property createdDate</a>
 </h3>
 
 ```typescript
@@ -6233,7 +6414,7 @@ createdDate?: pulumi.Input<string>;
 The creation date of the REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L105">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L133">property description</a>
 </h3>
 
 ```typescript
@@ -6244,7 +6425,31 @@ description?: pulumi.Input<string>;
 The description of the REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L109">property minimumCompressionSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L137">property endpointConfiguration</a>
+</h3>
+
+```typescript
+endpointConfiguration?: pulumi.Input<{ ... }>;
+```
+
+
+Nested argument defining API endpoint configuration including endpoint type. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L143">property executionArn</a>
+</h3>
+
+```typescript
+executionArn?: pulumi.Input<string>;
+```
+
+
+The execution ARN part to be used in [`lambda_permission`](/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+when allowing API Gateway to invoke a Lambda function,
+e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L147">property minimumCompressionSize</a>
 </h3>
 
 ```typescript
@@ -6255,7 +6460,7 @@ minimumCompressionSize?: pulumi.Input<number>;
 Minimum response size to compress for the REST API. Integer between -1 and 10485760 (10MB). Setting a value greater than -1 will enable compression, -1 disables compression (default).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L113">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L151">property name</a>
 </h3>
 
 ```typescript
@@ -6266,7 +6471,18 @@ name?: pulumi.Input<string>;
 The name of the REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/restApi.ts#L117">property rootResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L155">property policy</a>
+</h3>
+
+```typescript
+policy?: pulumi.Input<string>;
+```
+
+
+JSON formatted policy document that controls access to the API Gateway
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L159">property rootResourceId</a>
 </h3>
 
 ```typescript
@@ -6277,13 +6493,24 @@ rootResourceId?: pulumi.Input<string>;
 The resource ID of the REST API's root
 
 <h2 class="pdoc-module-header" id="StageArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L157">interface StageArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L201">interface StageArgs</a>
 </h2>
 
 The set of arguments for constructing a Stage resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L161">property cacheClusterEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L205">property accessLogSettings</a>
+</h3>
+
+```typescript
+accessLogSettings?: pulumi.Input<{ ... }>;
+```
+
+
+Enables access logs for the API stage. Detailed below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L209">property cacheClusterEnabled</a>
 </h3>
 
 ```typescript
@@ -6294,7 +6521,7 @@ cacheClusterEnabled?: pulumi.Input<boolean>;
 Specifies whether a cache cluster is enabled for the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L166">property cacheClusterSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L214">property cacheClusterSize</a>
 </h3>
 
 ```typescript
@@ -6306,7 +6533,7 @@ The size of the cache cluster for the stage, if enabled.
 Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L170">property clientCertificateId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L218">property clientCertificateId</a>
 </h3>
 
 ```typescript
@@ -6317,7 +6544,7 @@ clientCertificateId?: pulumi.Input<string>;
 The identifier of a client certificate for the stage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L174">property deployment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L222">property deployment</a>
 </h3>
 
 ```typescript
@@ -6328,7 +6555,7 @@ deployment: pulumi.Input<Deployment>;
 The ID of the deployment that the stage points to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L178">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L226">property description</a>
 </h3>
 
 ```typescript
@@ -6339,7 +6566,7 @@ description?: pulumi.Input<string>;
 The description of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L182">property documentationVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L230">property documentationVersion</a>
 </h3>
 
 ```typescript
@@ -6350,7 +6577,7 @@ documentationVersion?: pulumi.Input<string>;
 The version of the associated API documentation
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L186">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L234">property restApi</a>
 </h3>
 
 ```typescript
@@ -6361,7 +6588,7 @@ restApi: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L190">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L238">property stageName</a>
 </h3>
 
 ```typescript
@@ -6372,7 +6599,18 @@ stageName: pulumi.Input<string>;
 The name of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L194">property variables</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L242">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L246">property variables</a>
 </h3>
 
 ```typescript
@@ -6383,13 +6621,24 @@ variables?: pulumi.Input<{ ... }>;
 A map that defines the stage variables
 
 <h2 class="pdoc-module-header" id="StageState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L114">interface StageState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L139">interface StageState</a>
 </h2>
 
 Input properties used for looking up and filtering Stage resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L118">property cacheClusterEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L143">property accessLogSettings</a>
+</h3>
+
+```typescript
+accessLogSettings?: pulumi.Input<{ ... }>;
+```
+
+
+Enables access logs for the API stage. Detailed below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L147">property cacheClusterEnabled</a>
 </h3>
 
 ```typescript
@@ -6400,7 +6649,7 @@ cacheClusterEnabled?: pulumi.Input<boolean>;
 Specifies whether a cache cluster is enabled for the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L123">property cacheClusterSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L152">property cacheClusterSize</a>
 </h3>
 
 ```typescript
@@ -6412,7 +6661,7 @@ The size of the cache cluster for the stage, if enabled.
 Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L127">property clientCertificateId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L156">property clientCertificateId</a>
 </h3>
 
 ```typescript
@@ -6423,7 +6672,7 @@ clientCertificateId?: pulumi.Input<string>;
 The identifier of a client certificate for the stage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L131">property deployment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L160">property deployment</a>
 </h3>
 
 ```typescript
@@ -6434,7 +6683,7 @@ deployment?: pulumi.Input<Deployment>;
 The ID of the deployment that the stage points to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L135">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L164">property description</a>
 </h3>
 
 ```typescript
@@ -6445,7 +6694,7 @@ description?: pulumi.Input<string>;
 The description of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L139">property documentationVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L168">property documentationVersion</a>
 </h3>
 
 ```typescript
@@ -6456,7 +6705,32 @@ documentationVersion?: pulumi.Input<string>;
 The version of the associated API documentation
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L143">property restApi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L174">property executionArn</a>
+</h3>
+
+```typescript
+executionArn?: pulumi.Input<string>;
+```
+
+
+The execution ARN to be used in [`lambda_permission`](/docs/providers/aws/r/lambda_permission.html)'s `source_arn`
+when allowing API Gateway to invoke a Lambda function,
+e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L179">property invokeUrl</a>
+</h3>
+
+```typescript
+invokeUrl?: pulumi.Input<string>;
+```
+
+
+The URL to invoke the API pointing to the stage,
+e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L183">property restApi</a>
 </h3>
 
 ```typescript
@@ -6467,7 +6741,7 @@ restApi?: pulumi.Input<RestApi>;
 The ID of the associated REST API
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L147">property stageName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L187">property stageName</a>
 </h3>
 
 ```typescript
@@ -6478,7 +6752,18 @@ stageName?: pulumi.Input<string>;
 The name of the stage
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/stage.ts#L151">property variables</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L191">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts#L195">property variables</a>
 </h3>
 
 ```typescript
@@ -6489,13 +6774,13 @@ variables?: pulumi.Input<{ ... }>;
 A map that defines the stage variables
 
 <h2 class="pdoc-module-header" id="UsagePlanArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L113">interface UsagePlanArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L111">interface UsagePlanArgs</a>
 </h2>
 
 The set of arguments for constructing a UsagePlan resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L117">property apiStages</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L115">property apiStages</a>
 </h3>
 
 ```typescript
@@ -6506,7 +6791,7 @@ apiStages?: pulumi.Input<{ ... }[]>;
 The associated [API stages](#api-stages-arguments) of the usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L121">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L119">property description</a>
 </h3>
 
 ```typescript
@@ -6517,7 +6802,7 @@ description?: pulumi.Input<string>;
 The description of a usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L125">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L123">property name</a>
 </h3>
 
 ```typescript
@@ -6528,7 +6813,7 @@ name?: pulumi.Input<string>;
 The name of the usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L129">property productCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L127">property productCode</a>
 </h3>
 
 ```typescript
@@ -6539,7 +6824,7 @@ productCode?: pulumi.Input<string>;
 The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L133">property quotaSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L131">property quotaSettings</a>
 </h3>
 
 ```typescript
@@ -6550,7 +6835,7 @@ quotaSettings?: pulumi.Input<{ ... }>;
 The [quota settings](#quota-settings-arguments) of the usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L137">property throttleSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L135">property throttleSettings</a>
 </h3>
 
 ```typescript
@@ -6561,13 +6846,13 @@ throttleSettings?: pulumi.Input<{ ... }>;
 The [throttling limits](#throttling-settings-arguments) of the usage plan.
 
 <h2 class="pdoc-module-header" id="UsagePlanKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L112">interface UsagePlanKeyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L110">interface UsagePlanKeyArgs</a>
 </h2>
 
 The set of arguments for constructing a UsagePlanKey resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L116">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L114">property keyId</a>
 </h3>
 
 ```typescript
@@ -6578,7 +6863,7 @@ keyId: pulumi.Input<string>;
 The identifier of the API key resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L120">property keyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L118">property keyType</a>
 </h3>
 
 ```typescript
@@ -6589,7 +6874,7 @@ keyType: pulumi.Input<string>;
 The type of the API key resource. Currently, the valid key type is API_KEY.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L124">property usagePlanId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L122">property usagePlanId</a>
 </h3>
 
 ```typescript
@@ -6600,13 +6885,13 @@ usagePlanId: pulumi.Input<string>;
 The Id of the usage plan resource representing to associate the key to.
 
 <h2 class="pdoc-module-header" id="UsagePlanKeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L86">interface UsagePlanKeyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L84">interface UsagePlanKeyState</a>
 </h2>
 
 Input properties used for looking up and filtering UsagePlanKey resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L90">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L88">property keyId</a>
 </h3>
 
 ```typescript
@@ -6617,7 +6902,7 @@ keyId?: pulumi.Input<string>;
 The identifier of the API key resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L94">property keyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L92">property keyType</a>
 </h3>
 
 ```typescript
@@ -6628,7 +6913,7 @@ keyType?: pulumi.Input<string>;
 The type of the API key resource. Currently, the valid key type is API_KEY.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L98">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L96">property name</a>
 </h3>
 
 ```typescript
@@ -6639,7 +6924,7 @@ name?: pulumi.Input<string>;
 The name of a usage plan key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L102">property usagePlanId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L100">property usagePlanId</a>
 </h3>
 
 ```typescript
@@ -6650,7 +6935,7 @@ usagePlanId?: pulumi.Input<string>;
 The Id of the usage plan resource representing to associate the key to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlanKey.ts#L106">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts#L104">property value</a>
 </h3>
 
 ```typescript
@@ -6661,13 +6946,13 @@ value?: pulumi.Input<string>;
 The value of a usage plan key.
 
 <h2 class="pdoc-module-header" id="UsagePlanState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L83">interface UsagePlanState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L81">interface UsagePlanState</a>
 </h2>
 
 Input properties used for looking up and filtering UsagePlan resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L87">property apiStages</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L85">property apiStages</a>
 </h3>
 
 ```typescript
@@ -6678,7 +6963,7 @@ apiStages?: pulumi.Input<{ ... }[]>;
 The associated [API stages](#api-stages-arguments) of the usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L91">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L89">property description</a>
 </h3>
 
 ```typescript
@@ -6689,7 +6974,7 @@ description?: pulumi.Input<string>;
 The description of a usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L95">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L93">property name</a>
 </h3>
 
 ```typescript
@@ -6700,7 +6985,7 @@ name?: pulumi.Input<string>;
 The name of the usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L99">property productCode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L97">property productCode</a>
 </h3>
 
 ```typescript
@@ -6711,7 +6996,7 @@ productCode?: pulumi.Input<string>;
 The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L103">property quotaSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L101">property quotaSettings</a>
 </h3>
 
 ```typescript
@@ -6722,7 +7007,7 @@ quotaSettings?: pulumi.Input<{ ... }>;
 The [quota settings](#quota-settings-arguments) of the usage plan.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/usagePlan.ts#L107">property throttleSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts#L105">property throttleSettings</a>
 </h3>
 
 ```typescript
@@ -6733,13 +7018,13 @@ throttleSettings?: pulumi.Input<{ ... }>;
 The [throttling limits](#throttling-settings-arguments) of the usage plan.
 
 <h2 class="pdoc-module-header" id="VpcLinkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L86">interface VpcLinkArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L84">interface VpcLinkArgs</a>
 </h2>
 
 The set of arguments for constructing a VpcLink resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L90">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L88">property description</a>
 </h3>
 
 ```typescript
@@ -6750,7 +7035,7 @@ description?: pulumi.Input<string>;
 The description of the VPC link.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L94">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L92">property name</a>
 </h3>
 
 ```typescript
@@ -6761,7 +7046,7 @@ name?: pulumi.Input<string>;
 The name used to label and identify the VPC link.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L98">property targetArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L96">property targetArn</a>
 </h3>
 
 ```typescript
@@ -6772,13 +7057,13 @@ targetArn: pulumi.Input<pulumi.Input<string>>;
 The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target.
 
 <h2 class="pdoc-module-header" id="VpcLinkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L68">interface VpcLinkState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L66">interface VpcLinkState</a>
 </h2>
 
 Input properties used for looking up and filtering VpcLink resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L72">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L70">property description</a>
 </h3>
 
 ```typescript
@@ -6789,7 +7074,7 @@ description?: pulumi.Input<string>;
 The description of the VPC link.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L76">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L74">property name</a>
 </h3>
 
 ```typescript
@@ -6800,7 +7085,7 @@ name?: pulumi.Input<string>;
 The name used to label and identify the VPC link.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/pack/nodejs/apigateway/vpcLink.ts#L80">property targetArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts#L78">property targetArn</a>
 </h3>
 
 ```typescript
