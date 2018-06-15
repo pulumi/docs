@@ -21,7 +21,6 @@ you up and running with the Kubernetes provider.
 Kubernetes resources are defined in the following locations:
 
 * Source repo: [pulumi/pulumi-kubernetes](https://github.com/pulumi/pulumi-kubernetes)
-* PyPI package for Python: `pulumi_kubernetes`
 * NPM package for JavaScript and/or TypeScript: [@pulumi/kubernetes](https://www.npmjs.com/package/@pulumi/kubernetes)
 * Package documentation: [@pulumi/kubernetes](pkg/nodejs/@pulumi/kubernetes)
 
@@ -34,7 +33,7 @@ If you're using JavaScript and/or TypeScript, add your dependency to `package.js
 ```json
 {
     "dependencies": {
-        "@pulumi/kubernetes": "^0.11.0"
+        "@pulumi/kubernetes": "^0.14.0"
     }
 }
 ```
@@ -44,12 +43,13 @@ the associated Pulumi resource provider plugin.
 
 ### Go
 
-The Pulumi Kubernetes provider **currently does not support Go.** We are planning to support it eventually. To track this work, see issue [#59](https://github.com/pulumi/pulumi-kubernetes/issues/59)
-
+The Pulumi Kubernetes provider **currently does not support Go.** We are planning to support it eventually. To track
+this work, see issue [#59](https://github.com/pulumi/pulumi-kubernetes/issues/59)
 
 ### Python
 
-The Pulumi Kubernetes provider **currently does not support Go.** We are planning to support it eventually. To track this work, see issue [#70](https://github.com/pulumi/pulumi-kubernetes/issues/70)
+The Pulumi Kubernetes provider **currently does not support Go.** We are planning to support it eventually. To track
+this work, see issue [#70](https://github.com/pulumi/pulumi-kubernetes/issues/70)
 
 ## Examples
 
@@ -86,16 +86,21 @@ composing many interesting resource types into a single application.
 
 ## Configuration
 
-Pulumi authenticates and connects to a Kubernetes cluster using a local [kubeconfig file](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/). In this way, its behavior is identical to `kubectl`, so if you have already provisioned a Kubernetes cluster and set up `kubectl` to connect to it, the Pulumi CLI should "just work."
+Pulumi authenticates and connects to a Kubernetes cluster using a local
+[kubeconfig file](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/). In
+this way, its behavior is identical to `kubectl`, so if you have already provisioned a Kubernetes cluster and set up
+`kubectl` to connect to it, the Pulumi CLI should "just work."
 
 By default, `kubectl` and Pulumi will both look for a kubeconfig file in:
 
 * `$KUBECONFIG`, the environment variable
 * `~/.kube/config`, in the current user's home directory
 
-If the kubeconfig file is not in either of these locations, Pulumi will not find it, and it will fail to authenticate against the cluster.
+If the kubeconfig file is not in either of these locations, Pulumi will not find it, and it will fail to authenticate
+against the cluster.
 
-The kubeconfig file defines some number of _contexts_. Each context is a name that is associated with a _cluster_, _namespace_, and a "_user_" (a local-only name that's associated with a credential that allows access to the cluster).
+The kubeconfig file defines some number of _contexts_. Each context is a name that is associated with a _cluster_,
+_namespace_, and a "_user_" (a local-only name that's associated with a credential that allows access to the cluster).
 
 To create a context, for example, you can run the `kubectl set-context` command as follows:
 

@@ -7,6 +7,14 @@ toc:
   - reference/project.md
   - reference/config.md
   - reference/how.md
+- title: Cloud Resources
+  path: /reference/cloud-resources
+  section:
+  - reference/aws.md
+  - reference/azure.md
+  - reference/gcp.md
+  - reference/kubernetes.md
+  - reference/cloud.md
 - title: Packages
   path: /reference/pkg/index
   section:
@@ -61,13 +69,6 @@ toc:
     path: /reference/cli/pulumi_stack.html
   - title: Update
     path: /reference/cli/pulumi_update.html  
-- title: Cloud Resources
-  path: /reference/cloud-resources
-  section:
-  - reference/cloud.md
-  - reference/aws.md
-  - reference/azure.md
-  - reference/kubernetes.md
 - title: Continuous Deployment
   path: /reference/cd
   section:
