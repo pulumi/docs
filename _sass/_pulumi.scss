@@ -5,3 +5,8 @@
 pre.highlight {
     border-radius: 0 !important;
 }
+
+// Force code snippets to scroll horizontally rather than word wrapping.
+pre.highlight code {
+    white-space: pre;
+}
