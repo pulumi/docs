@@ -79,6 +79,11 @@ $accent4: #fbe5d7; // light orange
     font-weight: bold;
 }
 
+.button.small {
+    font-size: 12px;
+    padding: 10px 12px;
+}
+
 // Don't have SVG icons default to black. Just use current text color.
 svg {
     fill: currentColor;
@@ -97,9 +102,10 @@ svg {
 }
 
 .curl-install {
+    display: inline-block;
     font-size: 22px !important;
     font-family: $code-font-family;
-    padding: 8px;
+    padding: 8px 32px;
     background-color: #eee;
     border-radius: 2px;
 }
@@ -172,7 +178,8 @@ p {
 }
 
 blockquote, blockquote p {
-    font-size: 16px;
+    color: #111;
+    font-size: 14px;
 }
 
 pre {
@@ -410,6 +417,11 @@ h4 { font-size: 22px; font-weight: 500; }
 
 .get-started-card {
     padding: 32px;
+    text-align: center;
+}
+
+.card-table {
+    text-align: center;
 }
 
 @media (max-width: $MOBILE-WIDTH) {
@@ -435,7 +447,7 @@ h4 { font-size: 22px; font-weight: 500; }
 }
 
 .mdl-card__title {
-    color: $primary2;
+    color: #000;
     text-align: center;
     vertical-align: middle;
 
