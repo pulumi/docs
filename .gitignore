@@ -4,6 +4,9 @@
 *.swp
 .jekyll-metadata
 vendor
+# We don't sync Sass-vendor dependencies
+# during `make ensure`, they are checked in.
+!_sass/vendor
 .bundle
 node_modules
 *.map
