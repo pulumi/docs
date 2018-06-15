@@ -69,7 +69,14 @@ $accent4: #fbe5d7; // light orange
 }
 
 .content-block {
-    padding-top: 60px !important;
+    padding-top: 60px;
+    min-height: calc(100vh - 396px);
+}
+
+.button {
+    min-width: 120px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 // Don't have SVG icons default to black. Just use current text color.
@@ -79,6 +86,7 @@ svg {
 
 .get-to-the-cloud {
     color: #4a5960;
+    font-size: 24px;
     margin-top: 0px !important;
 }
 
@@ -175,6 +183,11 @@ pre {
 h2, h3, h4 {
     margin-top: 24px;
 }
+
+h1 { font-size: 36px; font-weight: 500; }
+h2 { font-size: 28px; font-weight: 500; }
+h3 { font-size: 24px; font-weight: 500; }
+h4 { font-size: 22px; font-weight: 500; }
 
 .mdl-tabs {
     display: block;
@@ -387,14 +400,16 @@ h2, h3, h4 {
 
 .mdl-card {
     margin: 24px 0;
-    background-color: $accent2;
     min-height: 128px;
 }
 
 .mdl-card__actions {
     text-align: center;
-    padding-top: 0;
-    padding-bottom: 16px;
+    padding: 0;
+}
+
+.get-started-card {
+    padding: 32px;
 }
 
 @media (max-width: $MOBILE-WIDTH) {
@@ -414,10 +429,14 @@ h2, h3, h4 {
     .mdl-card {
         display: table-cell;
     }
+    .get-started-card {
+        width: 25%;
+    }
 }
 
 .mdl-card__title {
     color: $primary2;
+    text-align: center;
     vertical-align: middle;
 
     a, i {
@@ -437,6 +456,7 @@ h2, h3, h4 {
 .card-text {
     line-height: 22px;
     display: inline-block;
+    text-align: center;
     vertical-align: middle;
 }
 
@@ -562,13 +582,13 @@ h2, h3, h4 {
     min-width: 300px;
     flex-basis: 300px;
 
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    background-color: $accent2;
-    margin: 12px 12px;
-    padding: 12px 12px;
+    margin: 0 12px 12px 12px;
+    padding: 12px 12px 24px 12px;
 
     // Push the download button the bottom of the widget (so all
     // buttons are aligned.)

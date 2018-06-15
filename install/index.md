@@ -11,7 +11,7 @@ NOTE: To update this page with a new binary release, do the following:
 
 The current Pulumi SDK version is <a href="./changelog.html#{{ page.installer_version }}">{{ page.installer_version }}</a>.  For older SDK versions, please see <a href="./changelog.html#all-versions">Previous SDK Versions</a>.
 
-## Mac and Linux easy install
+## Easy Install
 
 Run the following command to install the latest version of Pulumi:
 
@@ -21,59 +21,45 @@ curl -fsSL https://get.pulumi.com | sh
 
 After running this command, Pulumi is installed, and you can move on to [Configure Pulumi for AWS](./aws.html).
 
-To install Pulumi manually, follow the steps below for your platform.
+## Manual Installation {#instructions}
 
-## Pulumi SDK installation
+If you prefer, you can download and install Pulumi manually.
 
 <div class="downloads-container">
     <div class="download-card">
-        <h2>
-            <i class="material-icons">get_app</i> macOS x64
-        </h2>
+        <h2>macOS x64</h2>
         <p>macOS Sierra 10.12 or later is required. More information is <a href="#mac">below</a>.</p>
         <a
                 id="macos-download-link"
                 class="download-button"
                 role="button"
                 href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin-x64.tar.gz">
-            <button class="button">
-                {% octicon cloud-download height:24 %} DOWNLOAD
-            </button>
+            <button class="button">DOWNLOAD</button>
         </a>
     </div>
     <div class="download-card">
-        <h2>
-            <i class="material-icons">get_app</i> Linux x64
-        </h2>
-        <p>More information is <a href="#linux">below</a>.</p>
+        <h2>Linux x64</h2>
+        <p>Pre-built binaries for most Linux distros. More information is <a href="#linux">below</a>.</p>
         <a
                 id="linux-download-link"
                 class="download-button"
                 role="button"
                 href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz">
-            <button class="button">
-                {% octicon cloud-download height:24 %} DOWNLOAD
-            </button>
+            <button class="button">DOWNLOAD</button>
         </a>
     </div>
     <div class="download-card">
-        <h2>
-            <i class="material-icons">get_app</i> Windows x64
-        </h2>
+        <h2>Windows x64</h2>
         <p>Windows 8 or 10 are supported. More information is <a href="#windows">below</a>.</p>
         <a
                 id="windows-download-link"
                 class="download-button"
                 role="button"
                 href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows-x64.zip">
-            <button class="button">
-                {% octicon cloud-download height:24 %} DOWNLOAD
-            </button>
+            <button class="button">DOWNLOAD</button>
         </a>
     </div>
 </div>
-
-## Manual installation {#instructions}
 
 ### Windows install {#windows}
 
