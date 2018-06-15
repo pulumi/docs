@@ -4,5 +4,6 @@ toc:
   path: /install/index
   section:
   - install/aws.md
+  - install/gcp.md
   - install/kubernetes.md
   - install/changelog.md
