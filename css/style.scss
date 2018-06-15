@@ -621,3 +621,19 @@ h4 { font-size: 22px; font-weight: 500; }
     margin-top: -64px;
     padding: 32px 32px;
 }
+
+.edit-this-page {
+    // The goal of this class is to align to the right and in the middle of
+    // an h1 title next to it.
+    float: right;
+
+    // h1s are 36px, so 10px (padding top) + 16px (font size) + 10px (implicit padding bottom)
+    // aligns us with the middle axis of the h1.
+    font-size: 16px;
+    padding-top: 10px;
+
+    a {
+        // The underline looks kinda bad with the edit-this-page's position on the screen.
+        text-decoration: none;
+    }
+}
