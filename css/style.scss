@@ -423,10 +423,19 @@ $layout-tab-font-size: 14px !default;
     background-color: $primary2;
     border: 1px solid #555;
     border-radius: 10%;
+
+    // Don't allow any modification of link colors.
+    &:hover {
+        color: #fff !important;
+    }
+    &:visted {
+        color: #fff !important;
+    }
 }
 
 .tour-button.enabled {
 }
+
 .tour-button.enabled:hover {
     cursor: pointer;
     text-decoration: none;
@@ -435,6 +444,7 @@ $layout-tab-font-size: 14px !default;
 .tour-button.disabled {
     background-color: #ddd;
 }
+
 .tour-button.disabled:hover {
     cursor: default;
     text-decoration: none;
