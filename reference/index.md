@@ -2,11 +2,13 @@
 title: Overview
 ---
 
-> **Note:** The documentation is still in progress, so there are a number of TODOs and partially-written articles.
-> We are hard at work finishing these.  If there is any specific content you are looking, for please reach
-> out at [support@pulumi.com](mailto:support@pulumi.com) so we can prioritize adding it.
+Pulumi is an open-source tool and service that allows you to easily connect and compose services for modern
+cloud applications. Instead of using a configuration language, you use JavaScript or Python to define your desired cloud
+resources. This reduces the learning curve and makes it easier to express your configuration requirements.
 
-Pulumi is an open-source tool and service that allows you to easily connect and compose services for modern cloud applications. Instead of using a configuration language, you use JavaScript or Python to define your desired cloud resources. This reduces the learning curve and makes it easier to express your configuration requirements. Pulumi enables developers to easily create repeatable infrastructure, and allows DevOps engineers to move logic out of scripts and onto one toolchain. Instead of treating application code and infrastructure as separate things that are managed by very different tools, Pulumi provides one tool for defining all aspects of a distributed cloud application.
+Pulumi enables developers to easily create repeatable infrastructure, and allows DevOps engineers to move logic out of
+scripts and onto one toolchain. Instead of treating application code and infrastructure as separate things that are
+managed by very different tools, Pulumi provides one tool for defining all aspects of a distributed cloud application.
 
 Because Pulumi uses general purpose programming languages, you don't have to learn a custom configuration language. You can also bring software engineering to the task of defining cloud infrastructure, with reusable libraries, type checking, IDE tooling, and testing. Pulumi currently supports JavaScript, TypeScript, and Python, with more languages supported in the future.
 
@@ -15,6 +17,7 @@ Pulumi is based on the concept of _immutable infrastructure_.  Pulumi programs a
 Pulumi supports all major clouds --- including AWS, Azure and Google Cloud, as well as Kubernetes clusters. There is also a higher level Pulumi Cloud Framework that makes it easy to configure resources in common patterns, such as a Docker container connected to a load balancer, a serverless API that has both static content and functions, or a standard network configuration for a VPC.
 
 ## Better together: containers + serverless functions + infrastructure
+
 Pulumi supports the full spectrum of cloud programs.  
 
 You can use serverless functions and APIs:
