@@ -2,7 +2,7 @@
 title: "Serverless REST API on AWS"
 ---
 
-With Pulumi, you can combine infrastructure definitions and application code in one program. The [@pulumi/cloud] library is a set of Pulumi [components](../reference/programming-model.html#components) that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use [cloud.HttpEndpoint] and define application code at the same time as the infrastructure it depends on.
+With Pulumi, you can combine infrastructure definitions and application code in one program. The [@pulumi/cloud] library is a set of Pulumi [components](../reference/programming-model.html#components) that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use [cloud.API] and define application code at the same time as the infrastructure it depends on.
 
 In this tutorial, we'll show how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a key-value store, an API endpoint, and a Lambda function. 
 
@@ -21,7 +21,7 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
     let counterTable = new cloud.Table("counterTable", "route");
 
     // Create an API endpoint
-    let endpoint = new cloud.HttpEndpoint("hello-world");
+    let endpoint = new cloud.API("hello-world");
 
     endpoint.get("/{route+}", async (req, res) => {
         let route = req.params["route"];
@@ -39,7 +39,7 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
     module.exports.endpoint = endpoint.publish().url;
     ```
 
-    The definition for `counterTable` stores a counter for each route, using [cloud.Table]. On AWS, this provisions a DynamoDB instance. To create a new API Gateway instance, we create an instance of [cloud.HttpEndpoint]. New routes can be added to this endpoint using methods like `get`, `post`, `put` etc.
+    The definition for `counterTable` stores a counter for each route, using [cloud.Table]. On AWS, this provisions a DynamoDB instance. To create a new API Gateway instance, we create an instance of [cloud.API]. New routes can be added to this endpoint using methods like `get`, `post`, `put` etc.
        
     The function passed to `get` is the interesting part: this becomes the body of a new AWS Lambda function that is called on a GET request to the API Gateway. The body of this function can use variables defined in the main program, such as `counterTable`. This is translated to a lookup on the provisioned DynamoDB instance; there is no need to store its ARN in an environment variable.
 
@@ -47,6 +47,11 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
 
     ```bash
     $ npm install --save @pulumi/cloud @pulumi/cloud-aws
+    ```
+
+1.  Set an AWS region to deploy our created resources into:
+    ```bash
+    $ pulumi config set aws:region us-east-1
     ```
 
 1.  Preview and deploy changes via `pulumi update`:
@@ -99,6 +104,6 @@ For an end-to-end application with a frontend, see the [URL shortener sample](ht
 
 <!-- LINKS -->
 [@pulumi/cloud]: ../reference/cloud.html
-[cloud.HttpEndpoint]: ../reference/pkg/nodejs/@pulumi/cloud/index.html#HttpEndpoint
-[cloud.Table]: ../reference/pkg/nodejs/@pulumi/cloud/index.html#Table
+[cloud.API]: ../reference/pkg/nodejs/@pulumi/cloud-aws/index.html#API
+[cloud.Table]: ../reference/pkg/nodejs/@pulumi/cloud-aws/index.html#Table
 <!-- END LINKS -->
