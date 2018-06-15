@@ -184,7 +184,12 @@ blockquote, blockquote p {
 
 pre {
     border-radius: 2px;
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+pre.highlight {
+    border-radius: 2px !important;
 }
 
 h2, h3, h4 {
