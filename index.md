@@ -92,7 +92,7 @@ layout: default_index
             style="margin-bottom: 30px" width="125">
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">
-                <a href="/quickstart/aws-ec2.html">CoLaDa</a>
+                <a href="/quickstart/aws-extract-thumbnail.html">CoLaDa</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -101,7 +101,7 @@ layout: default_index
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="/quickstart/aws-ec2.html">
+            <a href="/quickstart/aws-extract-thumbnail.html">
                 <button class="button">GET STARTED</button>
             </a>
         </div>
