@@ -9,9 +9,7 @@ layout: default_index
 </span>
 
 <div class="card-table">
-    <a href="https://www.pulumi.com">
-        <img src="/images/logo/pulumi_mark_on_light.svg" alt="Pulumi" width="200" style="margin-top: -64px">
-    </a>
+    <a href="https://www.pulumi.com"><img src="/images/logo/logo.svg" alt="Pulumi" width="350" style="margin-top: 32px"></a>
     <h2 class="get-to-the-cloud">
         Get Code to the Cloud. Faster. Together.
     </h2>
