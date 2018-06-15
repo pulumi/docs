@@ -51,8 +51,8 @@ Normally, we'd write some code to define resources for our cloud stack, but in t
 // Import the @pulumi/cloud-aws package
 const cloud = require("@pulumi/cloud-aws");
     
-// Create a public HTTP endpoint (using AWS APIGateway)
-const endpoint = new cloud.HttpEndpoint("hello");
+// Create a public HTTP REST API endpoint (using AWS APIGateway)
+const endpoint = new cloud.API("hello");
     
 // Serve static files from the `www` folder (using AWS S3)
 endpoint.static("/", "www");
