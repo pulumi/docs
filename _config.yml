@@ -29,9 +29,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Makefile
+  - node_modules
   - package.json
   - README.md
   - scripts
+  - tools
   - vendor
   - yarn.lock
 

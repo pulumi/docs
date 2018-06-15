@@ -1,3 +1,13 @@
+{% comment %}
+include.tree is the actual set of sections to render. It is an array with shape:
+
+    title: string;      // "A Tour of Pulumi"
+    path: string;       // "/tour/index"
+    section: string[];  // [ "tour/basics-pulumi.md", "tour/basics-programs.md", ... ]
+
+{% endcomment %}
+
+<div class="toc">
 {% for item in include.tree %}
     {% capture whitespace %}
         {% if item.path %}
@@ -9,7 +19,6 @@
             {% assign path  = found_page.url %}
         {% endif %}
     {% endcapture %}
-
     <div class="sidenav-section {% if forloop.last == false %}separator{% endif %}">
         {% assign filename = path | replace: '/', ' ' | strip | replace: ' ', '/' | append: '.md' %}
         {% if filename == page.path %}
@@ -18,9 +27,9 @@
             {% assign sidenav_selected = "" %}
         {% endif %}
         {% if item.section %}
-            <div data-title="{{item.title}}">
-                <div class="sidenav-topic {{sidenav_selected}}">
-                    <a data-title="{{item.title}}" href="{{path}}.html">{{item.title}}</a>
+            <div data-title="{{ item.title }}">
+                <div class="sidenav-topic {{ sidenav_selected }}">
+                    <a data-title="{{ item.title }}" href="{{ path }}.html">{{ item.title }}</a>
                 </div>
                 <div class="sidenav-subsection">
                     {% include toc_sub.html tree=item.section %}
@@ -28,10 +37,11 @@
             </div>
         {% else %}
             {% if path %}
-                <div class="sidenav-topic {{sidenav_selected}}">
-                    <a data-title="{{title}}" href="{{path}}">{{title}}</a>
+                <div class="sidenav-topic {{ sidenav_selected }}">
+                    <a data-title="{{ title }}" href="{{ path }}">{{ title }}</a>
                 </div>
             {% endif %}
         {% endif %}
     </div>
-{% endfor %}
+    {% endfor %}
+</div>

@@ -263,34 +263,80 @@ $layout-tab-font-size: 14px !default;
     border-bottom: 2px solid $primary;
 }
 
-.sidenav-section {
-    font-size: 13px;
-    line-height: 20px;
-    padding: 8px 0;
+.toc {
+    .sidenav-section {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 8px 0;
+    }
+
+    .sidenav-section.separator {
+        border-bottom: 1px solid rgba(0,0,0,.12);
+    }
+
+    .sidenav-section a {
+        font-weight: bold;
+    }
+
+    .sidenav-topic {
+        padding: 1px;
+    }
+
+    .sidenav-selected {
+        background: $accent1;
+    }
+
+    .sidenav-subsection {
+        padding: 8px 0 0 16px;
+    }
+
+    .sidenav-subsection a {
+        font-weight: normal;
+    }
 }
 
-.sidenav-section.separator {
-    border-bottom: 1px solid rgba(0,0,0,.12);
-}
+// The Table of Contents is displayed in a hamberger menu visible when on
+// a small screen. We style it very differently than the regular .toc
+// so that it matches the display of other items in the hamberger menu.
+.toc-in-nav {
+    // Copied from _header.scss .main-nav.
+    padding-bottom: 27px;
+    margin-bottom: 27px;
+    border-bottom: 1px solid $primary;
 
-.sidenav-section a {
-    font-weight: bold;
-}
+    color: #fff;
 
-.sidenav-topic {
-    padding: 1px;
-}
+    // Render links like headings.
+    a {
+        color: inherit !important;
+        text-decoration: none;
+    }
+    a:hover   {
+        color: inherit !important;
+        text-decoration: none;
+    }
+    a:visited {
+        color: inherit !important;
+        text-decoration: none;
+    }
 
-.sidenav-selected {
-    background: $accent1;
-}
+    .sidenav-section {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.357;
+    }
 
-.sidenav-subsection {
-    padding: 8px 0 0 16px;
-}
+    .sidenav-topic {
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 1.1;
+    }
 
-.sidenav-subsection a {
-    font-weight: normal;
+    .sidenav-selected {
+        background-color: inherit !important;
+        color: $primary4 !important;
+        font-weight: 700 !important;
+    }
 }
 
 .learn-box {
