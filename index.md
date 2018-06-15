@@ -10,7 +10,7 @@ layout: default
 
 <table width="100%">
     <tr>
-        <td width="60%" style="vertical-align: top">
+        <td width="60%" style="vertical-align: top; padding: 0">
             <h2 class="get-to-the-cloud">
                 Get Code to the Cloud. Faster. Together.
             </h2>

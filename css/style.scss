@@ -24,6 +24,7 @@ $primary4: #ee975c; // primary orange
 $accent1: #f6e5ff; // light purple
 $accent2: #e1f6ff; // light blue
 $accent3: #3EC2F8; // bright blue
+$accent4: #fbe5d7; // light orange
 
 // Generate via:
 // https://gist.github.com/chrsmith/692ea3833f2b48f121ad5515aff174ad
@@ -65,6 +66,10 @@ $accent3: #3EC2F8; // bright blue
     margin: 8px;
     border-radius: .3rem;
     padding: 8px;
+}
+
+.content-block {
+    padding-top: 60px !important;
 }
 
 // Don't have SVG icons default to black. Just use current text color.
@@ -153,6 +158,23 @@ $tab-active-text-color: unquote("rgba(#{$color-black}, 0.87)") !default;
 $tab-border-color: unquote("rgb(#{$palette-grey-300})") !default;
 
 $layout-tab-font-size: 14px !default;
+
+p {
+    margin-bottom: 16px;
+}
+
+blockquote, blockquote p {
+    font-size: 16px;
+}
+
+pre {
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+h2, h3, h4 {
+    margin-top: 24px;
+}
 
 .mdl-tabs {
     display: block;
@@ -292,14 +314,14 @@ $layout-tab-font-size: 14px !default;
     }
 
     .sidenav-topic {
-        padding: 1px;
+        padding: 2px 2px 2px 8px;
     }
 
     .sidenav-selected {
         a {
             font-weight: bold !important;
         }
-        background-color: $primary4;
+        background-color: $accent4;
     }
 
     .sidenav-subsection {
