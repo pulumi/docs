@@ -3,9 +3,14 @@ title: Welcome to Pulumi
 layout: default_index
 ---
 
-<span style="float: right; margin-top: -64px">
-    <a href="https://join.slack.com/t/pulumi-community/shared_invite/enQtMzc4MDEyMTk5NzAyLWIxYTEwZmM5ZGFiZTQwZDMzOTMzYWIyM2EyOWIwNDg5YzE1MTg5OGQ5NDQ1MjIzNjcxNDU3NzM0ZWI4NDY1ZGY" target="_blank"><i class="fab fa-slack fa-2x" style="color: #4A5960" aria-hidden="true"></i></a>
-    <a href="https://github.com/pulumi" target="_blank"><i class="fab fa-github fa-2x" style="color: #4A5960" aria-hidden="true"></i></a>
+<span class="github-stars-widget">
+    <a
+            href="https://github.com/pulumi/examples"
+            class="github-button"
+            data-size="large"
+            data-show-count="true"
+            aria-label="Star pulumi/examples on GitHub">
+        Star</a>
 </span>
 
 <div class="card-table">
