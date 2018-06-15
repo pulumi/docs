@@ -4,7 +4,6 @@ title: "Containers on AWS"
 
 In this tutorial, we'll use JavaScript to build and deploy a simple container to [AWS Fargate](https://aws.amazon.com/fargate/). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
 
-{% include aws-resource-note.md %}
 {% include aws-js-prereqs.md %}
 
 ## Serve an HTML file in an NGINX container

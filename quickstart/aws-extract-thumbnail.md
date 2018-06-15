@@ -12,8 +12,6 @@ We'll build an application that extracts a thumbnail from a video using AWS Lamb
 
 ## Create and deploy the project
 
-{% include aws-resource-note.md %}
-
 1.  Make sure [Docker](https://docs.docker.com/install/) is installed and running.
 
 1.  In a new folder `video-thumbnail`, run `pulumi new`:

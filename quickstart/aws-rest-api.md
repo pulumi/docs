@@ -6,7 +6,6 @@ With Pulumi, you can combine infrastructure definitions and application code in 
 
 In this tutorial, we'll show how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a key-value store, an API endpoint, and a Lambda function. 
 
-{% include aws-resource-note.md %}
 {% include aws-js-prereqs.md %}
 
 ## Create a simple REST API
