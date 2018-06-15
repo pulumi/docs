@@ -1,20 +1,24 @@
 nav_section: "Reference"
 toc:
-- title: Overview
+- title: Reference
   path: /reference/index
   section: 
-  - reference/stack.md
-  - reference/project.md
-  - reference/config.md
-  - reference/how.md
-- title: Cloud Resources
-  path: /reference/cloud-resources
-  section:
   - reference/aws.md
   - reference/azure.md
   - reference/gcp.md
   - reference/kubernetes.md
   - reference/cloud.md
+- title: Concepts
+  path: /reference/concepts
+  section:
+  - reference/programming-model.md
+  - reference/stack.md
+  - reference/project.md
+  - reference/config.md
+  - reference/javascript.md
+  - reference/python.md
+  - reference/component-tutorial.md
+  - reference/how.md
 - title: Packages
   path: /reference/pkg/index
   section:
@@ -36,12 +40,6 @@ toc:
       path: /reference/pkg/nodejs/@pulumi/cloud-aws/index.html
     - title: kubernetes
       path: /reference/pkg/nodejs/@pulumi/kubernetes/index.html
-- title: Programming Model
-  path: /reference/programming-model
-  section:
-  - reference/javascript.md
-  - reference/python.md
-  - reference/component-tutorial.md
 - title: Commands (CLI)
   path: /reference/commands
   section:
