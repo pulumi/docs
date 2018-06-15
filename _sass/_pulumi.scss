@@ -1,19 +1,7 @@
-// When we have a code snippet for our "lang chooser", remove the default border-radius.
-%no-border-radius { border-radius: 0 !important; }
-.language-javascript {
-    pre.highlight {
-        @extend %no-border-radius;
-    }
-}
-
-.language-typescript {
-    pre.highlight {
-        @extend %no-border-radius;
-    }
-}
-
-.language-python {
-    pre.highlight {
-        @extend %no-border-radius;
-    }
+// Drop the rounded corners for code snippets. Ideally we would just do this
+// for the code associated with our language chooser. However, there isn't a
+// way to associate the two. (Since the N language code blocks are siblings
+// to the lang chooser tabs.)
+pre.highlight {
+    border-radius: 0 !important;
 }
