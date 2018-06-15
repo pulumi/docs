@@ -20,6 +20,10 @@ relative_links:
   enabled: true
   collections: true
 
+github:
+  repository_url: https://github.com/pulumi/docs
+  branch: master
+
 # Files to not include when building.
 exclude:
   - .gitattributes

@@ -22,6 +22,12 @@
                                 {% include toc.html tree=toc.toc %}
                             </div>
                             <div class="col-md-9">
+                                <div class="edit-this-page">
+                                    <a href="{{site.github.repository_url}}/edit/{{site.github.branch}}/{{page.path}}">
+                                        <i class="fab fa-github"></i>
+                                        Edit This Page
+                                    </a>
+                                </div>
                                 <h1>{{ page.title }}</h1>
                                 {{ content }}
                             </div>
