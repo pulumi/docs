@@ -264,6 +264,22 @@ $layout-tab-font-size: 14px !default;
 }
 
 .toc {
+    margin-right: 16px;
+
+    // Render links like headings.
+    a {
+        color: inherit !important;
+        text-decoration: none;
+    }
+    a:hover   {
+        color: inherit !important;
+        text-decoration: none;
+    }
+    a:visited {
+        color: inherit !important;
+        text-decoration: none;
+    }
+
     .sidenav-section {
         font-size: 13px;
         line-height: 20px;
@@ -283,7 +299,10 @@ $layout-tab-font-size: 14px !default;
     }
 
     .sidenav-selected {
-        background: $accent1;
+        a {
+            font-weight: bold !important;
+        }
+        background-color: $primary4;
     }
 
     .sidenav-subsection {
@@ -304,21 +323,9 @@ $layout-tab-font-size: 14px !default;
     margin-bottom: 27px;
     border-bottom: 1px solid $primary;
 
-    color: #fff;
+    margin-right: 0 !important;
 
-    // Render links like headings.
-    a {
-        color: inherit !important;
-        text-decoration: none;
-    }
-    a:hover   {
-        color: inherit !important;
-        text-decoration: none;
-    }
-    a:visited {
-        color: inherit !important;
-        text-decoration: none;
-    }
+    color: #fff;
 
     .sidenav-section {
         font-weight: 500;
@@ -333,9 +340,8 @@ $layout-tab-font-size: 14px !default;
     }
 
     .sidenav-selected {
+        color: $primary4;
         background-color: inherit !important;
-        color: $primary4 !important;
-        font-weight: 700 !important;
     }
 }
 
