@@ -20,23 +20,8 @@ relative_links:
   enabled: true
   collections: true
 
-# Totally lame workaround until typedoc emits files withouty a leading
-# underscore or we have our own TypeScript documentation generation stack.
-# See: https://github.com/TypeStrong/typedoc/issues/149
-# TODO(pulumi/docs#3): Improving our typedoc story should obviate this.
-include:
-  - _*
-
-# Files to not include when building. Note that we need to explicitly filter
-# out unwanted files/directories prefixed with "_" because of our liberal
-# include list.
+# Files to not include when building.
 exclude:
-  - _data
-  - _drafts
-  - _includes
-  - _layouts
-  - _site
-  - _config.yml
   - .gitattributes
   - .gitignore
   - .travis.yml
@@ -48,6 +33,7 @@ exclude:
   - package.json
   - README.md
   - scripts
+  - tools
   - vendor
   - yarn.lock
 

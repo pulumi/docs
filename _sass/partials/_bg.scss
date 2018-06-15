@@ -1,0 +1,53 @@
+.bg-white {
+	background-color: white;
+}
+
+.bg-purple {
+	background-color: $purple;
+}
+
+.bg-purple-dark {
+	background-color: $purple-dark;
+}
+
+.bg-black {
+	background-color: black;
+}
+
+.bg-grey {
+	background-color: #F3F3F3;
+}
+
+.bg-orange {
+	background-color: $orange;
+}
+
+.bg-green {
+	background-color: $green;
+}
+
+
+//glare
+.with-glare-grey {
+	&:before {
+		content: "";
+		background-image: url(../assets/images/glare2.png);
+		width: 505px;
+		height: 505px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center center;
+	}
+	
+	> * {
+		position: relative;
+	}
+}
+
+.overflow-hidden { // apply to elements to hide the overflowing glare
+	overflow: hidden;
+}

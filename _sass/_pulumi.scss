@@ -1,0 +1,70 @@
+// Drop the rounded corners for code snippets. Ideally we would just do this
+// for the code associated with our language chooser. However, there isn't a
+// way to associate the two. (Since the N language code blocks are siblings
+// to the lang chooser tabs.)
+pre.highlight {
+    border-radius: 0 !important;
+}
+
+// Force code snippets to scroll horizontally rather than word wrapping.
+pre.highlight code {
+    white-space: pre;
+}
+
+// On MacOS the scrollbar is hidden by default. But without it there
+// isn't any clear indication that you can/should scroll.
+pre.highlight {
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        height: 7px;
+        width: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0,0,0,.1);
+        box-shadow: 0 0 1px rgba(255,255,255,.1);
+    }
+}
+
+// HACK: Unify _pulumi.scss (built with Bootstrap, etc.) and style.scss (standalone).
+$primary2: #00acf2; // primary blue
+
+// Styling for the search form at the top of the page.
+// Useful docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search
+#search-form {
+    @media(min-width: $screen-md){
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    
+    padding-left: 8px;
+
+    // Just make the two elements adjacent to each other.
+    display: flex;
+    height: 38px;
+    
+    input {
+        outline: 0;
+        border: 0;
+
+        padding-left: 8px;
+
+        // WebKit hijacks the size of search forms. Old blog post for context:
+        // http://tonibarrett.com/forcing-my-style-onto-input-typesearch/
+        -webkit-appearance: textfield;
+        box-sizing: content-box;
+    }
+
+    button {
+        i { color: white; }  // The FontAwesome icon.
+        outline: 0;
+        border: 0;
+
+        background-color: $primary2;
+
+        padding: 7px 21px;
+        width: 100px;
+    }
+}

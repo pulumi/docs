@@ -1,0 +1,73 @@
+.newsletter-bar {
+	&.bg-purple-dark {
+		padding: 18px 0;
+		border-bottom: 1px solid #512668;
+	}
+	
+}
+
+.footer-nav-block {
+	background-color: $purple-mid;
+	padding: 27px 0 0;
+	
+	@media(min-width: $screen-md){
+		padding: 47px 0 14px;
+	}
+	
+	.logo {
+		width: 111px;
+		opacity: 0.5;
+		margin-bottom: 27px;
+	}
+	
+	.email {
+		color: white;
+		display: inline-block;
+		text-decoration: none;
+	}
+	
+	.legal {
+		font-size: 14px;
+		line-height: 1.357;
+		color: white;
+	}
+	
+	.footer-info {
+		padding-bottom: 23px;
+		margin-bottom: 23px;
+		border-bottom: 1px solid $purple;
+		
+		@media(min-width: $screen-md){
+			padding-bottom: 0;
+			margin-bottom: 37px;
+			padding-right: 12.42%;
+			margin-right: 13.35%;
+			border-bottom: none;
+			border-right: 1px solid $purple;
+		}
+	}
+}
+
+.footer-nav {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 37px;
+	
+	li {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 10px;
+		
+		&:before {
+			display: none;
+		}
+		
+		a {
+			color: white;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 1.357;
+			text-decoration: none;
+		}
+	}
+}

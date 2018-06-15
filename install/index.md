@@ -25,77 +25,51 @@ To install Pulumi manually, follow the steps below for your platform.
 
 ## Pulumi SDK installation
 
-<div class="card-table">
-    <div class="mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">
-                <i class="material-icons">get_app</i>
-                &nbsp;
-                <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin-x64.tar.gz">macOS x64</a>
-            </h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            <span class="card-text">
-                macOS Sierra 10.12 or later is required.
-                More information is <a href="#mac">below</a>.
-            </span>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a
-                    id="macos-download-link"
-                    href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin-x64.tar.gz" role="button">
-                <button class="mdl-button mdl-js-button mdl-button--raised">
-                    {% octicon cloud-download height:24 %} DOWNLOAD
-                </button>
-            </a>
-        </div>
+<div class="downloads-container">
+    <div class="download-card">
+        <h2>
+            <i class="material-icons">get_app</i> macOS x64
+        </h2>
+        <p>macOS Sierra 10.12 or later is required. More information is <a href="#mac">below</a>.</p>
+        <a
+                id="macos-download-link"
+                class="download-button"
+                role="button"
+                href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin-x64.tar.gz">
+            <button class="button">
+                {% octicon cloud-download height:24 %} DOWNLOAD
+            </button>
+        </a>
     </div>
-    <div class="mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">
-                <i class="material-icons">get_app</i>
-                &nbsp;
-                <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz">Linux x64</a>
-            </h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            <span class="card-text">
-                More information is <a href="#linux">below</a>.
-            </span>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a
-                    id="linux-download-link"
-                    href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz" role="button">
-                <button class="mdl-button mdl-js-button mdl-button--raised">
-                    {% octicon cloud-download height:24 %} DOWNLOAD
-                </button>
-            </a>
-        </div>
+    <div class="download-card">
+        <h2>
+            <i class="material-icons">get_app</i> Linux x64
+        </h2>
+        <p>More information is <a href="#linux">below</a>.</p>
+        <a
+                id="linux-download-link"
+                class="download-button"
+                role="button"
+                href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz">
+            <button class="button">
+                {% octicon cloud-download height:24 %} DOWNLOAD
+            </button>
+        </a>
     </div>
-    <div class="mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">
-                <i class="material-icons">get_app</i>
-                &nbsp;
-                <a href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows-x64.zip">Windows x64</a>
-            </h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            <span class="card-text">
-                Windows 8 or 10 are supported.
-                More information is <a href="#windows">below</a>.
-            </span>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a
-                    id="windows-download-link"
-                    href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows-x64.zip" role="button">
-                <button class="mdl-button mdl-js-button mdl-button--raised">
-                    {% octicon cloud-download height:24 %} DOWNLOAD
-                </button>
-            </a>
-        </div>
+    <div class="download-card">
+        <h2>
+            <i class="material-icons">get_app</i> Windows x64
+        </h2>
+        <p>Windows 8 or 10 are supported. More information is <a href="#windows">below</a>.</p>
+        <a
+                id="windows-download-link"
+                class="download-button"
+                role="button"
+                href="https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows-x64.zip">
+            <button class="button">
+                {% octicon cloud-download height:24 %} DOWNLOAD
+            </button>
+        </a>
     </div>
 </div>
 

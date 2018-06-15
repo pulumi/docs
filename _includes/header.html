@@ -1,0 +1,66 @@
+<header class="main-header">
+    <div class="utility-bar hidden-xs hidden-sm">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="utility-nav">
+                        {% include utility-links.html %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-nav-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <div class="wrapper dropdown main-nav-wrapper-wrapper">
+                        <a href="/">
+                            <img src="/images/logo/logo-inv.svg" class="logo hidden-xs hidden-sm">
+                            <img src="/images/logo/logo-symbol-inv.svg" class="logo visible-xs-inline visible-sm-inline">
+                        </a>
+                        <div class="mobile-menu-bg"></div>
+                        <nav class="main-nav-wrapper dropdown-menu" aria-labelledby=".toggle-menu">
+
+                            <div class="toc-in-nav visible-xs-block visible-sm-block" style="text-align: right">
+                                {% if include.tree %}
+                                    {% include toc.html tree=include.tree %}
+                                {% endif %}
+                            </div>
+
+                            <ul class="main-nav">
+                                <li class="{% if toc.nav_section == "Install" %}current-page{% endif %}"><a href="/install">Install</a></li>
+                                <li class="{% if toc.nav_section == "Tutorials" %}current-page{% endif %}"><a href="/quickstart">Tutorials</a></li>
+                                <li class="{% if toc.nav_section == "Tour" %}current-page{% endif %}"><a href="/tour">Tour</a></li>
+                                <li class="{% if toc.nav_section == "Reference" %}current-page{% endif %}"><a href="/reference">Reference</a></li>
+                            </ul>
+
+                            <ul class="utility-nav visible-xs-block visible-sm-block">
+                                {% include utility-links.html %}
+                            </ul>
+                        </nav>
+
+                        <button class="toggle-menu visible-xs-block visible-sm-block" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+
+                        <span>
+                            <!-- TODO[pulumi/docs#296]: Enable search in docs. -->
+                            <form id="search-form">
+                                <input type="search" placeholder="Search...">
+                                <button><i class="fas fa-search"></i></button>
+                            </form>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

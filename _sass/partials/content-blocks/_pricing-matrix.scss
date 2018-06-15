@@ -1,0 +1,37 @@
+.pricing-item {
+    border-radius: 3px;
+    border: 1px solid #cecece;
+    overflow: hidden;
+    
+    header {
+        padding: 20px;
+    }
+    
+    footer {
+        padding: 0 20px;
+    }
+    .cell {
+        padding: 26px 20px;
+        
+        &:not(:first-child){
+            border-top: 1px solid #cecece;
+        }
+        
+        &.valign {
+            display: flex;
+            align-items: center;
+            
+            * {
+                width: 100%;
+            }
+        }
+        
+        &.no-line {
+            border-top: none;
+        }
+    }
+    
+    .button {
+        display: block;
+    }
+}

@@ -1,0 +1,26 @@
+.modal-team {
+    .logo-roll {
+        line-height: 42px; //make same as name lineheight
+        @media(max-width:  $screen-xs-max){
+            float: none;
+            display: block !important;
+            margin: 0 !important;
+        }
+        
+        @media(min-width:  $screen-md){
+            line-height: 65px; //make same as name lineheight
+        }
+        
+        li {
+            line-height: inherit;
+        }
+        
+        a {
+            font-size: 25px;
+        }
+    }
+    
+    h1 {
+        margin-bottom: 0;
+    }
+}
