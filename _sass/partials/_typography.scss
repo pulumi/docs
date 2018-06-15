@@ -1,3 +1,7 @@
+// If true, will increase the size of header elements on larger screens.
+// Set to false as the effect is too jarring on content-heavy pages.
+$increase-header-size-on-larger-screens: false;
+
 body {
 	@include font-smoothing();
     @include base-type();
@@ -31,8 +35,10 @@ h1, .h1 {
 	text-transform: none;
 	margin-bottom: 17px;
 	
-	@media(min-width: $screen-md){
-		font-size: 60px;
+	@if $increase-header-size-on-larger-screens {
+		@media(min-width: $screen-md) {
+			font-size: 60px;
+		}
 	}
 }
 
@@ -44,10 +50,12 @@ h2, .h2 {
 	text-transform: none;
 	margin-bottom: 14px;
 	
-	@media(min-width: $screen-md){
-		font-size: 50px;
-		line-height: 1.14;
-		margin-bottom: 19px;
+	@if $increase-header-size-on-larger-screens {
+		@media(min-width: $screen-md) {
+			font-size: 50px;
+			line-height: 1.14;
+			margin-bottom: 19px;
+		}
 	}
 }
 
@@ -59,10 +67,12 @@ h3, .h3 {
 	text-transform: normal;
 	margin-bottom: 16px;
 	
-	@media(min-width: $screen-md){
-		font-size: 40px;
-		line-height: 1.14;
-		margin-bottom: 20px;
+	@if $increase-header-size-on-larger-screens {
+		@media(min-width: $screen-md){
+			font-size: 40px;
+			line-height: 1.14;
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -74,9 +84,11 @@ h4, .h4 {
 	text-transform: none;
 	margin-bottom: 18px;
 	
-	@media(min-width: $screen-md){
-		font-size: 30px;
-		margin-bottom: 20px;
+	@if $increase-header-size-on-larger-screens {
+		@media(min-width: $screen-md){
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -88,10 +100,12 @@ h5, .h5 {
 	text-transform: none;
 	margin-bottom: 18px;
 	
-	@media(min-width: $screen-md){
-		font-size: 25px;
-		line-height: 1.16;
-		margin-bottom: 15px;
+	@if $increase-header-size-on-larger-screens {
+		@media(min-width: $screen-md){
+			font-size: 25px;
+			line-height: 1.16;
+			margin-bottom: 15px;
+		}
 	}
 }
 
@@ -103,9 +117,11 @@ h6, .h6, {
 	text-transform: none;
 	margin-bottom: 21px;
 	
-	@media(min-width: $screen-md){
-		font-size: 20px;
-		margin-bottom: 16px;
+	@if $increase-header-size-on-larger-screens {
+		@media(min-width: $screen-md){
+			font-size: 20px;
+			margin-bottom: 16px;
+		}
 	}
 }
 
