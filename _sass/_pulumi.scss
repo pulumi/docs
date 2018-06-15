@@ -1,0 +1,19 @@
+// When we have a code snippet for our "lang chooser", remove the default border-radius.
+%no-border-radius { border-radius: 0 !important; }
+.language-javascript {
+    pre.highlight {
+        @extend %no-border-radius;
+    }
+}
+
+.language-typescript {
+    pre.highlight {
+        @extend %no-border-radius;
+    }
+}
+
+.language-python {
+    pre.highlight {
+        @extend %no-border-radius;
+    }
+}
