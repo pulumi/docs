@@ -476,3 +476,37 @@ $layout-tab-font-size: 14px !default;
     padding: 8px;
     font-weight: normal;
 }
+
+//  Widget showing the downloads for Pulumi.
+.downloads-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.download-card {
+    // Establish a min size, so in the general case they all look
+    // the same despite having different amounts of text.
+    min-height: 240px;
+    min-width: 300px;
+    flex-basis: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $accent2;
+    margin: 12px 12px;
+    padding: 12px 12px;
+
+    // Push the download button the bottom of the widget (so all
+    // buttons are aligned.)
+    .download-button {
+        margin-top: auto;
+        text-align: center;
+    }
+
+    button {
+        margin-bottom: 0 !important;
+    }
+}
