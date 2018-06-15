@@ -10,7 +10,7 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
 
 ## Create a simple REST API
 
-1.  In a new folder `hello-http`, run `pulumi new javascript`.
+1.  In a new folder `hello-http`, run `pulumi new aws-javascript`.
 
 1.  Replace the contents of `index.js` with the following:
 
@@ -36,7 +36,7 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
         console.log(`Got count ${count} for '${route}'`);
     });
 
-    module.exports.endpoint = endpoint.publish().url;
+    exports.endpoint = endpoint.publish().url;
     ```
 
     The definition for `counterTable` stores a counter for each route, using [cloud.Table]. On AWS, this provisions a DynamoDB instance. To create a new API Gateway instance, we create an instance of [cloud.API]. New routes can be added to this endpoint using methods like `get`, `post`, `put` etc.
@@ -47,11 +47,6 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
 
     ```bash
     $ npm install --save @pulumi/cloud @pulumi/cloud-aws
-    ```
-
-1.  Set an AWS region to deploy our created resources into:
-    ```bash
-    $ pulumi config set aws:region us-east-1
     ```
 
 1.  Preview and deploy changes via `pulumi update`:
