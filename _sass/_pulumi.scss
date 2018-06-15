@@ -10,3 +10,18 @@ pre.highlight {
 pre.highlight code {
     white-space: pre;
 }
+
+// On MacOS the scrollbar is hidden by default. But without it there
+// isn't any clear indication that you can/should scroll.
+pre.highlight {
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        height: 7px;
+        width: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0,0,0,.1);
+        box-shadow: 0 0 1px rgba(255,255,255,.1);
+    }
+}
