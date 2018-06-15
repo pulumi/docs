@@ -379,6 +379,9 @@ $layout-tab-font-size: 14px !default;
 
 .version-table {
     margin-bottom: 24px;
+    // partials/content-blocks/_responsive-table.scss overrides the global
+    // width for all tables. So we need to reset it here.
+    width: auto;
 
     th {
         font-weight: 600;
