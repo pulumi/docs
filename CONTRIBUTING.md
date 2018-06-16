@@ -33,8 +33,8 @@
 
 ### Language and terminology styles
 
-- [Needs consensus] Top level headings use **Sentence case**. (Note: as of 3/21/18, we have a mix of **Title Case** and **Sentence case**.)
-- [Needs consensus] All other headings use **Sentence case**, where only the first word and any proper nouns have a capital letter. (Note: as of 3/21/18, we have a mix of **Title Case** and **Sentence case**.)
+- Top level headings use **Title Case**, where each word starts with a capital letter.
+- All other headings use **Sentence case**, where only the first word and any proper nouns have a capital letter. 
 - Use capitalization only for a proper noun, and use throughout. For example, "stack" should almost always be lowercase in text
 
 ### Referring to "things"

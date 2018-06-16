@@ -34,7 +34,7 @@ Next, add three things to your `travis.yml` file.
     ```yaml
     before_install:
         # Install the Pulumi SDK, add it to the $PATH, and initialize the workspace.
-        - curl -L https://get.pulumi.com | bash -s -- --version 0.14.0-rc1
+        - curl -L https://get.pulumi.com | bash -s -- --version 0.14.0
         - export PATH=$PATH:$HOME/.pulumi/bin
         - pulumi init
     ```
