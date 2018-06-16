@@ -18,6 +18,7 @@ toc:
   - reference/javascript.md
   - reference/python.md
   - reference/component-tutorial.md
+  - reference/terraform.md
   - reference/how.md
 - title: Packages
   path: /reference/pkg/index
