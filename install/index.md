@@ -13,21 +13,30 @@ The current Pulumi SDK version is <a href="./changelog.html#{{ page.installer_ve
 
 ## Easy Install
 
+### macOS and Linux
+
 Run the following command to install the latest version of Pulumi:
 
 ```bash
 curl -fsSL https://get.pulumi.com | sh
 ```
 
-## Windows easy install
+### Windows
 
-Run the following command (in cmd.exe) to install the latest version of Pulumi:
+Run the following command (in `cmd.exe`) to install the latest version of Pulumi:
 
 ```batch
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
 ```
 
-After running this command, Pulumi is installed, and you can move on to [Configure Pulumi for AWS](./aws.html).
+### Cloud Configuration
+
+After running this command, Pulumi is installed, and you can move on to configuring Pulumi for your cloud provider:
+
+* [AWS](./aws.html)
+* [Azure](./azure.html)
+* [GCP](./gcp.html)
+* [Kubernetes](./kubernetes.html)
 
 ## Manual Installation {#instructions}
 
