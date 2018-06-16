@@ -46,14 +46,14 @@ Permalink: https://app.pulumi.com/broomllc/ahoy-pulumi-dev/updates/3
 
 Although we have deleted the resources, our stack will still exist.  To remove it too, run `pulumi stack rm`:
 
+> Be extremely careful when doing this operation.  It will remove all history and is, at the moment, irrecoverable!
+
 ```bash
 $ pulumi stack rm
 This will permanently remove the 'ahoy-pulumi-dev' stack!
 Please confirm that this is what you'd like to do by typing ("ahoy-pulumi-dev"): ahoy-pulumi-dev
 Stack 'ahoy-pulumi-dev' has been removed!
 ```
-
-> Be extremely careful when doing this operation.  It will remove all history and is, at the moment, irrecoverable!
 
 ***
 

@@ -25,26 +25,13 @@ const bucket = new aws.s3.Bucket("my-bucket", { acl: "public-read" });
 ```
 
 ```python
-from pulumi_aws import s3
-buck = s3.Bucket('my-bucket', acl='public-read')
+bucket = s3.Bucket('my-bucket', acl='public-read')
 ```
 
 ```go
-package main
-
-import (
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
-)
-
-func main() {
-    pulumi.Run(func (ctx *pulumi.Context) error {
-        _, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
-            Acl: "public-read",
-        })
-        return err
-    })
-}
+_, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
+    Acl: "public-read",
+})
 ```
 
 This time, `pulumi update` will make a smaller, more targeted change:
@@ -72,7 +59,7 @@ Permalink: https://app.pulumi.com/broomllc/ahoy-pulumi-dev/updates/2
 We're almost done with the first lesson.  Before wrapping up, however, let's destroy everything we just created.
 
 <div class="tour-nav">
-    <a class="tour-button enabled" href="basics-previewing.html" title="Previewing updates">◀</a>
+    <a class="tour-button enabled" href="basics-up.html" title="Spinning up">◀</a>
     <span class="tour-index"><strong>7</strong>/8</span>
     <a class="tour-button enabled" href="basics-destroying.html" title="Destroying">▶</a>
 </div>

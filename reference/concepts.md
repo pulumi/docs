@@ -16,11 +16,21 @@ Pulumi is based on the concept of _immutable infrastructure_.  Pulumi programs a
 
 Pulumi supports all major clouds --- including AWS, Azure and Google Cloud, as well as Kubernetes clusters. There is also a higher level Pulumi Cloud Framework that makes it easy to configure resources in common patterns, such as a Docker container connected to a load balancer, a serverless API that has both static content and functions, or a standard network configuration for a VPC.
 
-## Better together: containers + serverless functions + infrastructure
+## Better together: CoLaDa
 
-Pulumi supports the full spectrum of cloud programs.  
+Pulumi supports the full spectrum of cloud programs.  For instance, you can use containers:
 
-You can use serverless functions and APIs:
+```javascript
+// Create a container with a stable, load balanced DNS name:
+let cache = new cloud.Service("my-web-app", {
+    // point to a local folder that contains a Dockerfile
+    build: "./app",
+    memory: 128,
+    ports: [ 80 ],
+});
+```
+
+Or serverless functions and APIs:
 
 ```javascript
 // Create a public HTTP endpoint (using AWS APIGateway)
@@ -36,19 +46,7 @@ endpoint.get("/source", (req, res) => res.json({name: "AWS"}))
 exports.url = endpoint.publish().url;
 ```
 
-Or containers:
-
-```javascript
-// Create a container with a stable, load balanced DNS name:
-let cache = new cloud.Service("my-web-app", {
-    // point to a local folder that contains a Dockerfile
-    build: "./app", 
-    memory: 128,
-    ports: [80],
-});
-```
-
-Or low-level cloud infrastructure:
+Or raw cloud infrastructure:
 
 ```javascript
 // Create a simple VM-based web server in AWS listening on port 80:

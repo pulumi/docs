@@ -1,5 +1,5 @@
 ---
-title: Tutorials and examples
+title: Tutorials
 ---
 
 To get started with Pulumi, [configure AWS](../install/aws.html). Then, run the following commands: 

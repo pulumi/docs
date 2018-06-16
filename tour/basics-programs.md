@@ -4,7 +4,8 @@ title: Programs
 
 To get code to the cloud, you write Pulumi programs in your language of choice.
 
-> Pulumi currently supports JavaScript and TypeScript, using Node.js, and Python.  More languages are on their way!
+> Pulumi currently supports JavaScript and TypeScript (using Node.js), Python, and Go.
+> More languages are on their way!
 
 Pulumi programs are just like normal programs, except for a few important details:
 

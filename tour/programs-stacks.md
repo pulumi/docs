@@ -4,7 +4,7 @@ title: Stacks
 
 A stack is an instance of your Pulumi program.
 
-Stacks are one of the most important concepts in Pulumi.  You'll create and manipulate them frequently.  We glossed over
+You'll create and manipulate them frequently, and are one of Pulumi's most fundamental concepts.  We glossed over
 them in the first lesson by simply using `pulumi new` to create our first stack, but we'll now learn more about them.
 
 There are many reasons we might want more than one stack for our program:
@@ -58,6 +58,6 @@ Now that we've seen how to manage our stacks, let's see how to use packages in o
 
 <div class="tour-nav">
     <a class="tour-button enabled" href="programs.html" title="Beyond the Basics">◀</a>
-    <span class="tour-index"><strong>2</strong>/9</span>
+    <span class="tour-index"><strong>2</strong>/8</span>
     <a class="tour-button enabled" href="programs-packages.html" title="Packages">▶</a>
 </div>

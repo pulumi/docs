@@ -53,6 +53,6 @@ let replicaCount: number = config.getNumber("replicaCount") || 4;
 
 <div class="tour-nav">
     <a class="tour-button enabled" href="programs-properties.html" title="Resource properties">◀</a>
-    <span class="tour-index"><strong>7</strong>/9</span>
+    <span class="tour-index"><strong>7</strong>/8</span>
     <a class="tour-button enabled" href="programs-exports.html" title="Stack exports">▶</a>
 </div>

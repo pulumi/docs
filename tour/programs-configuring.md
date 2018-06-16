@@ -18,7 +18,7 @@ $ pulumi config set aws:region us-west-2
 If the value is sensitive -- like a password or token -- pass `--secret` and it will be encrypted:
 
 ```bash
-$ pulumi config set ahoy-pulumi:launchDarklyKey a76db238fg9321 --secret
+$ pulumi config set ahoy-pulumi:launchDarklyKey a76dFAKEg9321 --secret
 ```
 
 To retrieve a variable's current value, use the `pulumi config get` subcommand:
@@ -50,6 +50,6 @@ with the most critical program concept of all -- resources.
 
 <div class="tour-nav">
     <a class="tour-button enabled" href="programs-packages.html" title="Packages">◀</a>
-    <span class="tour-index"><strong>4</strong>/9</span>
+    <span class="tour-index"><strong>4</strong>/8</span>
     <a class="tour-button enabled" href="programs-resources.html" title="Resources">▶</a>
 </div>
