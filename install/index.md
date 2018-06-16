@@ -19,6 +19,14 @@ Run the following command to install the latest version of Pulumi:
 curl -fsSL https://get.pulumi.com | sh
 ```
 
+## Windows easy install
+
+Run the following command (in cmd.exe) to install the latest version of Pulumi:
+
+```batch
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
+```
+
 After running this command, Pulumi is installed, and you can move on to [Configure Pulumi for AWS](./aws.html).
 
 ## Manual Installation {#instructions}
