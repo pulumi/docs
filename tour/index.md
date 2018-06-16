@@ -8,7 +8,7 @@ Welcome to a tour of Pulumi.
 This tour's goal is to teach you what Pulumi does and how it does it.  There are many examples that are meant to
 be starting points for your own experimentation.
 
-Make sure you've installed [the CLI](/reference/cli), and then you'll be ready to go:
+Make sure you've installed [the CLI](/reference/commands.html), and then you'll be ready to go:
 
 ```bash
 $ curl -fsSL https://get.pulumi.com/ | sh
