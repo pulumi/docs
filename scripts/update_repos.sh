@@ -9,6 +9,10 @@ TOOLS_REPOS=(
     "pulumi-azure"
     "pulumi-cloud"
     "pulumi-terraform"
+    "pulumi-kubernetes"
+    "pulumi-aws-serverless"
+    "pulumi-aws-infra"
+    "pulumi-gcp"
 )
 
 for repo in "${TOOLS_REPOS[@]}"

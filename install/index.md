@@ -1,6 +1,6 @@
 ---
 title: "Installation and Setup"
-installer_version: "0.12.2"
+installer_version: "0.14.0"
 ---
 
 <!-- 
