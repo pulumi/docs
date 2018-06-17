@@ -16,7 +16,7 @@ $ pulumi config set azure:environment public
 Alternative values include `usgovernment`, `german`, and `china`.
 
 The Azure provider is open source and available in the [pulumi/pulumi-azure](https://github.com/pulumi/pulumi-azure)
-repo.  Full API documentation is available at [here](./pkg/nodejs/@pulumi/azure/index.html).
+repo.  Full API documentation is available [here](./pkg/nodejs/@pulumi/azure/index.html).
 
 We also have a few interesting examples of using Azure in our examples repo:
 
