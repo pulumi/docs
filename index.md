@@ -5,11 +5,11 @@ layout: default_index
 
 <span class="github-stars-widget">
     <a
-            href="https://github.com/pulumi/examples"
+            href="https://github.com/pulumi/pulumi"
             class="github-button"
             data-size="large"
             data-show-count="true"
-            aria-label="Star pulumi/examples on GitHub">
+            aria-label="Star pulumi/pulumi on GitHub">
         Star</a>
 </span>
 
