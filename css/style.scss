@@ -643,3 +643,72 @@ h4 { font-size: 22px; font-weight: 500; }
         text-decoration: none;
     }
 }
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid $primary2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    box-sizing: content-box;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#search-results-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: auto;
+    width: auto;
+}
+
+@media (max-width: 480px) {
+    #search-results-container {
+        display: block;
+    }
+}
+
+.search-results ul li {
+    padding-left: 0px;
+}
+
+.search-results ul li.top {
+    font-weight: bold;
+}
+
+.search-results ul li:before {
+    content: '';
+}
+
+.symbol {
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+    width: 18px;
+    margin-right: 8px;
+}
+
+.symbol.module {
+    background: #2fc89f;
+}
+
+.symbol.module:before {
+    content: "M";
+}
+
+.symbol.package {
+    background: #512668;
+}
+
+.symbol.package:before {
+    content: "Pk";
+}
