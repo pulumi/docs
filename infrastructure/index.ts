@@ -88,6 +88,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     defaultCacheBehavior: {
         targetOriginId: contentBucket.arn,
+        compress: true,
 
         viewerProtocolPolicy: "redirect-to-https",
         allowedMethods: ["GET", "HEAD", "OPTIONS"],
