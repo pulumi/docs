@@ -200,5 +200,4 @@ To learn how to convert the raw AWS option to a high-level component, see the [P
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
 [Pulumi Cloud]: ../reference/cloud.html
-[HttpEndpoint]: ../reference/pkg/nodejs/@pulumi/cloud/index.html#HttpEndpoint
 <!-- End common links -->

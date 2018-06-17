@@ -34,7 +34,7 @@ Or serverless functions and APIs:
 
 ```javascript
 // Create a public HTTP endpoint (using AWS APIGateway)
-const endpoint = new cloud.HttpEndpoint("hello");
+const endpoint = new cloud.API("hello");
 
 // Serve static files from the `www` folder (using AWS S3)
 endpoint.static("/", "www");
