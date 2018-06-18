@@ -13,6 +13,8 @@ The current Pulumi SDK version is <a href="./changelog.html#{{ page.installer_ve
 
 ## Easy Install
 
+The easy install downloads the most recent version of Pulumi, extracts it into `~/.pulumi/bin` (Linux and macOS) or `%USERPROFILE%\.pulumi\bin` (Windows), and adds it to your path. If you have already installed Pulumi, the script will upgrade to the latest version. For the script source code, see [get.pulumi.com](https://get.pulumi.com). 
+
 ### macOS and Linux
 
 Run the following command to install the latest version of Pulumi:
