@@ -13,7 +13,7 @@ For instance, the following code creates a VM and exports its auto-assigned publ
 
 ```javascript
 var aws = require("@pulumi/aws");
-var server = ew aws.ec2.Instance("my-vm", {
+var server = new aws.ec2.Instance("my-vm", {
     ami: "ami-7172b611",
     instanceType: "t2.micro",
 });
@@ -23,7 +23,7 @@ exports.ipAddress = server.publicIp;
 ```typescript
 import * as aws from "@pulumi/aws";
 let aws = require("@pulumi/aws");
-let server = ew aws.ec2.Instance("my-vm", {
+let server = new aws.ec2.Instance("my-vm", {
     ami: "ami-7172b611",
     instanceType: "t2.micro",
 });
