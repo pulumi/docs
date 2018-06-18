@@ -11,7 +11,7 @@ Use [`pulumi new <template-name>`](/reference/cli/pulumi_new.html) to quickly sc
 
 {% include langchoose.html %}
 
-<span class="language-prologue-javascript"></span>
+<div class="language-prologue-javascript"></div>
 ```bash
 $ pulumi new aws-javascript --dir ahoy-pulumi
 This command will walk you through creating a new Pulumi project.
@@ -26,7 +26,7 @@ aws:region: (us-east-1)
 New project is configured and ready to deploy with 'pulumi update'.
 ```
 
-<span class="language-prologue-typescript"></span>
+<div class="language-prologue-typescript"></div>
 ```bash
 $ pulumi new aws-typescript --dir ahoy-pulumi
 This command will walk you through creating a new Pulumi project.
@@ -41,7 +41,7 @@ aws:region: (us-east-1)
 New project is configured and ready to deploy with 'pulumi update'.
 ```
 
-<span class="language-prologue-python"></span>
+<div class="language-prologue-python"></div>
 ```bash
 $ pulumi new aws-python --dir ahoy-pulumi
 This command will walk you through creating a new Pulumi project.
@@ -56,7 +56,7 @@ aws:region: (us-east-1)
 New project is configured and ready to deploy with 'pulumi update'.
 ```
 
-<span class="language-prologue-go"></span>
+<div class="language-prologue-go"></div>
 ```bash
 $ pulumi new aws-go --dir ahoy-pulumi
 This command will walk you through creating a new Pulumi project.

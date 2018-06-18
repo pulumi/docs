@@ -43,21 +43,16 @@ function selectLanguage(lang) {
             });
 
             // Any explicit prologue elements:
-            $("span").each(function (i, e) { 
+            $("div").each(function (i, e) {
                 var classes = getElemClasses(e);
                 for (var i = 0; i < classes.length; i++) {
                     if (classes[i].startsWith("language-prologue-")) {
-                        // A prologue, when used correctly, ends up in a <p/> block.  So, head up to that, and then
-                        // take the immediately following sibling, and either hide or show it.
-                        var p = $(e).parent();
-                        if (p) {
-                            var next = p.next();
-                            if (next) {
-                                if (classes[i] === "language-prologue-"+lang) {
-                                    $(next).show();
-                                } else {
-                                    $(next).hide();
-                                }
+                        var next = $(e).next();
+                        if (next) {
+                            if (classes[i] === "language-prologue-"+lang) {
+                                $(next).show();
+                            } else {
+                                $(next).hide();
                             }
                         }
                         break;
@@ -73,7 +68,7 @@ function selectLanguage(lang) {
 $(function() {
     // For every language tab, inject a handler and make the correct one hidden.
     $("a").each(function (i, e) {
-        var classes = ($(e).attr("class") || "").split(/\s+/);
+        var classes = getElemClasses(e);
         for (var i = 0; i < classes.length; i++) {
             if (classes[i] === "langtab") {
                 var lang = e.innerText.toLowerCase();

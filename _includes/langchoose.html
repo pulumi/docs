@@ -6,3 +6,9 @@
         <a class="mdl-tabs__tab langtab">Go</a>
     </div>
 </div>
+
+{% comment %}
+.mdl-tabs__tab uses floats, so we need to use clearfix to avoid
+wrapping/indenting the subsequent element containing the code snippet.
+{% endcomment %}
+<div class="clearfix"></div>
