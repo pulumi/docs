@@ -21,6 +21,8 @@ Run the following command to install the latest version of Pulumi:
 curl -fsSL https://get.pulumi.com | sh
 ```
 
+This will download the most recent version of Pulumi and extract it into `~/.pulumi/bin` (if you already have an existing version, it will replace it) and then try to add that directory to your shell's path. If you'd like, you can read the source of the script [online](https://get.pulumi.com) or download it and invoke it yourself. You can also follow the <a href="#instructions">manual instructions</a> if you prefer.
+
 ### Windows
 
 Run the following command (in `cmd.exe`) to install the latest version of Pulumi:
@@ -28,6 +30,8 @@ Run the following command (in `cmd.exe`) to install the latest version of Pulumi
 ```batch
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
 ```
+
+This will download the most recent version of Pulumi and extract it into `%USERPROFILE%\.pulumi\bin` (if you already have an existing version, it will replace it) and then try to add that directory to the %PATH%. If you'd like, you can read the source of the script [online](https://get.pulumi.com/install.ps1) or download it and invoke it yourself. You can also follow the <a href="#instructions">manual instructions</a> if you prefer.
 
 ### Cloud Configuration
 
