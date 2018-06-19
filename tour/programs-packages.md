@@ -16,22 +16,22 @@ These packages are installed as any ordinary package would be:
 
 {% include langchoose.html %}
 
-<span class="language-prologue-javascript"></span>
+<div class="language-prologue-javascript"></div>
 ```bash
 $ npm install @pulumi/aws --save
 ```
 
-<span class="language-prologue-typescript"></span>
+<div class="language-prologue-typescript"></div>
 ```bash
 $ npm install @pulumi/aws --save
 ```
 
-<span class="language-prologue-python"></span>
+<div class="language-prologue-python"></div>
 ```bash
 $ pip install pulumi_aws
 ```
 
-<span class="language-prologue-go"></span>
+<div class="language-prologue-go"></div>
 ```bash
 $ go get -u github.com/pulumi/pulumi-aws/sdk/go/aws/...
 ```
