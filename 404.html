@@ -1,40 +1,37 @@
 ---
-layout: welcome
+layout: 404
 ---
 
-{% comment %}
-Error pages and "welcome.html" share the same CSS, only differing in background color.
-{% endcomment %}
-{% raw %}
-<style>
-    body {
-        background-color: #300030 !important;
-    }
+<img src="/images/logo/logo-inv.svg" class="logo" alt="Pulumi">
 
-    .slight-top-padding {
-        padding-top: 8px;
-    }
-</style>
-{% endraw %}
-
-<img src="/images/404/logo-white-normal-shadow.svg" class="logo" alt="Pulumi">
-
-<div class="anim4">
-    <img src="/images/404/denied-cloud4.svg" class="cloud4">
+<div class="anim1">
+    <img src="/images/404/beam1.svg" class="beam1">
 </div>
 <div class="anim2">
-    <img src="/images/404/denied-cloud2.svg" class="cloud2">
+    <img src="/images/404/beam2.svg" class="beam2">
 </div>
 <div class="anim3">
-    <img src="/images/404/denied-cloud3.svg" class="cloud3">
-    <img *ngIf="type === 'denied'" src="/images/404/lightning.svg" class="lightning3">
+    <img src="/images/404/beam3.svg" class="beam3">
+</div>
+<div class="anim4">
+    <img src="/images/404/beam4.svg" class="beam4">
+</div>
+
+<div class="anim4">
+    <img src="/images/404/cloud4.svg" class="cloud4">
+</div>
+<div class="anim2">
+    <img src="/images/404/cloud2.svg" class="cloud2">
+</div>
+<div class="anim3">
+    <img src="/images/404/cloud3.svg" class="cloud3">
 </div>
 <div class="anim1">
-    <img src="/images/404/denied-cloud1.svg" class="cloud1">
+    <img src="/images/404/cloud1.svg" class="cloud1">
 </div>
 
 <div id="clouds-and-beams">
-    <p class="text heading1">Sorry, the page you're looking for</p>
-    <p class="text heading2 slight-top-padding">could not be found.</p>
-    <p class="text fineprint">Try heading back to the <a href="/">homepage</a>.</p>
+    <h1>404</h1>
+    <h2>Sorry, the page you're looking for could not be found.</h2>
+    <p>Please try visiting our <a class="link" href="/">homepage</a> instead.</p>
 </div>
