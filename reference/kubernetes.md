@@ -41,12 +41,12 @@ If you're using JavaScript and/or TypeScript, add your dependency to `package.js
 Install the package using `npm install` or `yarn install`.  This will download the latest version, and also install
 the associated Pulumi resource provider plugin.
 
-### Go
+### Python
 
-The Pulumi Kubernetes provider **currently does not support Go.** We are planning to support it eventually. To track
+The Pulumi Kubernetes provider **currently does not support Python.** We are planning to support it eventually. To track
 this work, see issue [#59](https://github.com/pulumi/pulumi-kubernetes/issues/59)
 
-### Python
+### Go
 
 The Pulumi Kubernetes provider **currently does not support Go.** We are planning to support it eventually. To track
 this work, see issue [#70](https://github.com/pulumi/pulumi-kubernetes/issues/70)
