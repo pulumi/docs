@@ -22,9 +22,9 @@ stdin.on("end", () => {
         for (var url in data) {
             const page = data[url];
             if (page.title || page.content) {
-                // We use '|' to separate the url and title in the ref, so
+                // We use '|' to separate the URL and title in the ref, so
                 // ensure we haven't inadvertently introduced a page that
-                // contains a '|' in its url.
+                // contains a '|' in its URL.
                 if (url.indexOf("|") !== -1) {
                     throw new Error(`unexpected '|' in url: ${url}`);
                 }

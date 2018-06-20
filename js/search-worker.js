@@ -6,8 +6,7 @@ var index;
 
 // Download the search index synchronously.
 var req = new XMLHttpRequest();
-var async = false;
-req.open("GET", "/search-index.json", async);
+req.open("GET", "/search-index.json", false /* async */);
 req.send();
 if (req.readyState === req.DONE && req.status === 200) {
     var data = JSON.parse(req.responseText);
@@ -24,6 +23,9 @@ function search(query) {
             return results.map(function(result) {
                 // Extract the url and title from the ref string (they're separated by "|").
                 var i = result.ref.indexOf("|");
+                if (i === -1) {
+                    throw new Error("'|' not found in ref: " + result.ref);
+                }
                 var url = result.ref.substring(0, i);
                 var title = result.ref.substring(i + 1);
                 return { url: url, title: title };
