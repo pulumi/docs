@@ -44,6 +44,12 @@ exclude:
   - vendor
   - yarn.lock
 
+# search-index.json is generated as part of `make build`. However, running `make serve` will delete
+# all files under /_site that aren't specified here. We specify it here to avoid deleting a previously
+# generated index when using `make serve`.
+keep_files:
+  - search-index.json
+
 # Tables of contents, stored in the _data folder, that control the sidebar nav
 # To add a new entry to the table of contents, create a new doc in the appropriate folder,
 # then add an entry in _data/<toc>.yaml. 

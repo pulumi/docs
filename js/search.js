@@ -1,60 +1,27 @@
 "use strict";
 
 (function () {
-    var searchForm = document.getElementById("search-form");
     var searchBox = document.getElementById("search-box");
     var spinner = document.getElementById("spinner");
     var searchResultsContainer = document.getElementById("search-results-container");
 
-    // Use a worker to create the index in the background.
+    // Use a worker to download and setup the index in the background.
     var worker = new Worker("/js/search-worker.js");
     worker.onmessage = function (message) {
         var payload = message.data.payload;
         displaySearchResults(payload.results);
     };
 
-    // Extract the query from the browser's URL, set the search-box to the query,
-    // and kick-off the search by sending a message to the worker.
+    // Extract the query from the browser's URL.
     var query = getQueryVariable("q");
     if (query) {
+        // Set the search-box's value to the query.
         searchBox.value = query;
-        sendSearchMessage(query);
+        // Kick-off the search by sending a message to the worker.
+        worker.postMessage({ type: "search", payload: query });
     } else {
+        // If no query, display empty results.
         displaySearchResults([]);
-    }
-
-    // To speed up subsequent searches on this page, if the browser supports pushState,
-    // add a listener to the search form's submit event that prevents the browser from
-    // doing an actual GET request navigation on searches. Instead, we just proceed with
-    // the new search without navigating and update the browser location with the new
-    // query string programmatically.
-    if (history.pushState) {
-        searchForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            var query = searchBox.value;
-            if (query) {
-                // Update the browser's location with the new query string.
-                var newurl = window.location.protocol + "//" + window.location.host +
-                    window.location.pathname + "?q=" + encodeURIComponent(query);
-                history.pushState({ path: newurl }, "", newurl);
-
-                // Kick-off the new search.
-                sendSearchMessage(query);
-            }
-
-            return false;
-        });
-    }
-
-    // If we're navigating back/forward from a history.pushState,
-    // then intercept and search for the term again.
-    window.onpopstate = function (event) {
-        var query = getQueryVariable("q");
-        if (query) {
-            searchBox.value = query;
-            sendSearchMessage(query);
-        }
     }
 
     // Extracts a query string variable from the browser's location.
@@ -69,11 +36,6 @@
                 return decodeURIComponent(pair[1].replace(/\+/g, "%20"));
             }
         }
-    }
-
-    // Sends a message to the worker to kick-off a search.
-    function sendSearchMessage(query) {
-        worker.postMessage({ type: "search", payload: query });
     }
 
     // Display the results of the search.
