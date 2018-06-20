@@ -18,8 +18,7 @@ Exclude some pages that we don't want to index.
   page.url == '/packages/pulumi-kubernetes/' or
   page.url == '/redirects.json' or
   page.url == '/search-data.json' or
-  page.url == '/search.html' or
-  page.url == '/welcome.html' -%}
+  page.url == '/search.html' -%}
     {%- continue -%}
 {%- endif -%}
 {%- if page.title == nil and page.content == '' -%}
