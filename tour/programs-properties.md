@@ -61,7 +61,7 @@ bucket.BucketDomainName.Apply(func (name string) error {
 A resource often has different output properties than input properties, because cloud providers may compute outputs.
 For instance, the URL for an API, the IP address of a load balancer, etc, are typically auto-assigned.
 
-A resource's output properties a promise-like in nature, because they aren't known until creation finishes.  Hence the
+A resource's output properties are promise-like in nature, because they aren't known until creation finishes.  Hence the
 use of the "apply"-style functions above.  Outputs will, in fact, not even resolve to a value during previews.
 
 Output properties also carry dependency information, so that if an output from one resource is supplied as input to
