@@ -1,5 +1,6 @@
 ---
 title: Creating a project
+redirect_from: "/tour/basics-templates.html"
 ---
 
 To get started with Pulumi, you'll need a project.
