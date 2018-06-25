@@ -18,3 +18,5 @@ Pulumi also supports some high level libraries to enable productivity and multi-
 For detailed CLI usage, please see [this index of all commands](./commands.html).
 
 For an overview of the programming model and relevant concepts, please visit [the concepts page](./concepts.html).
+
+For answers frequently asked questions, please visit the [FAQ](./faq.html).
