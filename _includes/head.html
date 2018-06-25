@@ -2,7 +2,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Pulumi Documentation</title>
+    <title>
+        {% if page.title != nil and page.title != '' %}
+            {{ page.title }} -
+        {% endif %}
+        Pulumi
+    </title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     {% if include.notfound %}
         <link rel="stylesheet" href="/css/404.css" media="all" />
