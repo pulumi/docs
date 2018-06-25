@@ -65,6 +65,10 @@ To generate a change log from closed pull requests, run the script `/scripts/gen
 
     You can also use the optional flags `--all-prs` to print out all PRs (not just ones with the relevant labels) and `--tab-output` to print in a format that can be pasted to a Google Sheet.
 
+## Deploying updates
+
+When changes are merged into `master` our staging website (https://staging.pulumi.io/) is automatically deployed. You can use the [Travis UI](https://travis-ci.com/pulumi/docs) to check on the status of the deployment. Once it has been deployed, browse around the staging website and ensure the changes you expected were made and render correctly. Then, open a Pull Request to merge `master` into `production`.
+
 ## Design Reference
 
 Web design is hard. Documentation is hard. Good web design for documentation is harder.
