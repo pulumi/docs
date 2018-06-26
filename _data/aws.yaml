@@ -1,0 +1,7 @@
+nav_section: "AWS"
+toc:
+- title: AWS Resources
+  path: /aws/index
+  section:
+  - aws/athena.md
+  - aws/s3.md

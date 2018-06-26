@@ -60,6 +60,7 @@ tocs:
   - quickstart
   - tour
   - reference
+  - aws
 
 # By default, use a `default_toc` layout, that shows a table of contents on the left
 defaults:
