@@ -13,22 +13,19 @@ brand: "aws"
 [Github @pulumi/aws]: https://github.com/pulumi/pulumi-aws 
 [Configure AWS]: ../install/aws.html
 
-This reference shows how to use Pulumi to define an {{ page.cloud }} {{ page.service }} resource using pure code which can then be deployed to {{ page.cloud }} and managed as infrastructure as code. 
+This reference shows how to use Pulumi to define an {{ page.cloud }} {{ page.service }} resource using pure code which can then be deployed to {{ page.cloud }} and managed as infrastructure as code.
 
 <div class="row">
-<div class="col-md-7" markdown="1">
+<div class="col-md-9" markdown="1">
 
 ## What is {{ page.cloud }} {{ page.service }}?
 
-<div class="row">
-<div class="col-md-3" style="padding:15px 15px 15px 15px;"><img src="../images/brand/{{ page.brand }}.png" alt="{{ page.brand }}"></div>
-<div class="col-md-9" style="padding:0px 0px 0px 15px;" markdown="1">
-{{ page.cloud }} {{ page.service }} {{ page.description }}. Find out more at [AWS here]. 
-</div>
-</div>
+<img class="how-to-logo" src="../images/brand/{{ page.brand }}.png" alt="{{ page.brand }}" width="100">
+
+{{ page.cloud }} {{ page.service }} {{ page.description }}. Find out more at [AWS here].
 
 </div>
-<div class="col-md-4 offset-md-1" markdown="1" style="background:#eee;border:1px solid #ccc;padding-left:20px;">
+<div class="col-md-3 find-out-more" markdown="1">
 
 ### Find out more
 
