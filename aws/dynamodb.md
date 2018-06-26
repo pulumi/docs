@@ -1,15 +1,15 @@
 ---
-title: "How to create an AWS Athena data service with Pulumi"
+title: "How to create an AWS DynamoDB data service with Pulumi"
 cloud: "AWS"
-service: "Athena"
-description: "is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL"
+service: "DynamoDB"
+description: "is a fast and flexible nonrelational database service for all applications that need consistent, single-digit millisecond latency at any scale"
 library: "@pulumi/aws"
 brand: "aws"
 og:description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-og:image: "../images/service/aws-athena.png"
+og:image: "../images/service/aws-dynamodb.png"
 ---
 <!-- Links -->
-[AWS here]: https://aws.amazon.com/athena/
+[AWS here]: https://aws.amazon.com/dynamodb/
 [Reference docs]: ../reference/aws.html
 [Example code]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder 
 [Github @pulumi/aws]: https://github.com/pulumi/pulumi-aws 
@@ -47,15 +47,12 @@ The `{{ page.library }}` library enables fine-grained control over the {{ page.c
 ```javascript
 var aws = require("@pulumi/aws");
 
-const databaseBucket = new aws.s3.Bucket("mydatabasebucket");
-
-const database = new aws.athena.Database("mydatabase", {
-    name: "mydatabase",
-    bucket: databaseBucket.bucket
-});
-
-const namedQuery = new aws.athena.NamedQuery("mynamedquery", {
-    database: database.id,
-    query: database.id.apply(n => `SELECT * FROM ${n} limit 10;`)
+const db = new aws.dynamodb.Table("mytable", {
+    attributes: [
+        { name: "Id", type: "S" },
+    ],
+    hashKey: "Id",
+    readCapacity: 1,
+    writeCapacity: 1,
 });
 ```

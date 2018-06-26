@@ -1,15 +1,15 @@
 ---
-title: "How to create an AWS Athena data service with Pulumi"
+title: "How to create an AWS Kinesis data service with Pulumi"
 cloud: "AWS"
-service: "Athena"
-description: "is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL"
+service: "Kinesis"
+description: "makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information"
 library: "@pulumi/aws"
 brand: "aws"
 og:description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-og:image: "../images/service/aws-athena.png"
+og:image: "../images/service/aws-kinesis.png"
 ---
 <!-- Links -->
-[AWS here]: https://aws.amazon.com/athena/
+[AWS here]: https://aws.amazon.com/kinesis/
 [Reference docs]: ../reference/aws.html
 [Example code]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder 
 [Github @pulumi/aws]: https://github.com/pulumi/pulumi-aws 
@@ -45,17 +45,7 @@ This reference shows how to use Pulumi to define an {{ page.cloud }} {{ page.ser
 The `{{ page.library }}` library enables fine-grained control over the {{ page.cloud }} {{ page.service }} resource meaning it can be coded, deployed, and managed entirely in code. 
 
 ```javascript
-var aws = require("@pulumi/aws");
-
-const databaseBucket = new aws.s3.Bucket("mydatabasebucket");
-
-const database = new aws.athena.Database("mydatabase", {
-    name: "mydatabase",
-    bucket: databaseBucket.bucket
-});
-
-const namedQuery = new aws.athena.NamedQuery("mynamedquery", {
-    database: database.id,
-    query: database.id.apply(n => `SELECT * FROM ${n} limit 10;`)
+const stream = new aws.kinesis.Stream("mystream", {
+    shardCount: 1
 });
 ```
