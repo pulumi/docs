@@ -1,15 +1,25 @@
 nav_section: "AWS"
 toc:
-- title: AWS Resources
+- title: AWS
   path: /aws/index
   section:
-  - aws/athena.md
-  - aws/cloudwatch.md
-  - aws/dynamodb.md
-  - aws/ec2.md
-  - aws/ecr.md
-  - aws/iam.md
-  - aws/kinesis.md
-  - aws/s3.md
-  - aws/sns.md
-  - aws/sqs.md
+    - title: Athena
+      path: /aws/athena.html
+    - title: CloudWatch
+      path: /aws/cloudwatch.html
+    - title: DynamoDB
+      path: /aws/dynamodb.html
+    - title: EC2
+      path: /aws/ec2.html
+    - title: ECR
+      path: /aws/ecr.html
+    - title: IAM
+      path: /aws/iam.html
+    - title: Kinesis
+      path: /aws/kinesis.html
+    - title: S3
+      path: /aws/s3.html
+    - title: SNS
+      path: /aws/sns.html
+    - title: SQS
+      path: /aws/sqs.html
