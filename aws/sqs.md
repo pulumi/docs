@@ -5,8 +5,9 @@ service: "SQS"
 description: "is a fully managed message queuing service that makes it easy to decouple and scale microservices, distributed systems, and serverless applications"
 library: "@pulumi/aws"
 brand: "aws"
-og:description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-og:image: "../images/service/aws-sqs.png"
+og:
+    description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+    image: "/images/service/aws-sqs.png"
 ---
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/sqs/

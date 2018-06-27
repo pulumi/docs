@@ -5,8 +5,9 @@ service: "SNS"
 description: "is a flexible, fully managed pub/sub messaging and mobile notifications service for coordinating the delivery of messages to subscribing endpoints and clients"
 library: "@pulumi/aws"
 brand: "aws"
-og:description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-og:image: "../images/service/aws-sns.png"
+og:
+    description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+    image: "/images/service/aws-sns.png"
 ---
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/sns/

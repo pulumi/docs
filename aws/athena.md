@@ -5,8 +5,9 @@ service: "Athena"
 description: "is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL"
 library: "@pulumi/aws"
 brand: "aws"
-og:description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-og:image: "../images/service/aws-athena.png"
+og:
+    description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+    image: "/images/service/aws-athena.png"
 ---
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/athena/

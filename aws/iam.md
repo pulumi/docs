@@ -5,8 +5,9 @@ service: "IAM"
 description: "enables you to manage access to AWS services and resources securely"
 library: "@pulumi/aws"
 brand: "aws"
-og:description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-og:image: "../images/service/aws-iam.png"
+og:
+    description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+    image: "/images/service/aws-iam.png"
 ---
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/iam/

@@ -5,8 +5,9 @@ service: "EC2"
 description: "is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers"
 library: "@pulumi/aws"
 brand: "aws"
-og:description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-og:image: "../images/service/aws-ec2.png"
+og:
+    description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+    image: "/images/service/aws-ec2.png"
 ---
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/ec2/

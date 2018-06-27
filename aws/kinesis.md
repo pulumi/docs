@@ -5,8 +5,9 @@ service: "Kinesis"
 description: "makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information"
 library: "@pulumi/aws"
 brand: "aws"
-og:description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-og:image: "../images/service/aws-kinesis.png"
+og:
+    description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+    image: "/images/service/aws-kinesis.png"
 ---
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/kinesis/

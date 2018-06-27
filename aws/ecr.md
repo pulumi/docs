@@ -5,8 +5,9 @@ service: "ECR"
 description: "is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images"
 library: "@pulumi/aws"
 brand: "aws"
-og:description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-og:image: "../images/service/aws-ecr.png"
+og:
+    description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+    image: "/images/service/aws-ecr.png"
 ---
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/ecr/

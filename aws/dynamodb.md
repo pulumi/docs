@@ -5,8 +5,9 @@ service: "DynamoDB"
 description: "is a fast and flexible nonrelational database service for all applications that need consistent, single-digit millisecond latency at any scale"
 library: "@pulumi/aws"
 brand: "aws"
-og:description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-og:image: "../images/service/aws-dynamodb.png"
+og:
+    description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+    image: "/images/service/aws-dynamodb.png"
 ---
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/dynamodb/
