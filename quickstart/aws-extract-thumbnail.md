@@ -2,7 +2,7 @@
 title: "Serverless and Containers on AWS"
 ---
 
-In this tutorial, we'll use JavaScript combine serverless, containers and cloud infrastructure together in a single application. We use serverless functions as event triggers and containers for longer-running tasks. 
+In this tutorial, we'll use JavaScript to combine serverless, containers and cloud infrastructure together in a single application. We use serverless functions as event triggers and containers for longer-running tasks. 
 
 We'll build an application that extracts a thumbnail from a video using AWS Lambda and [Fargate](https://aws.amazon.com/fargate/). Below is the architecture of the Pulumi application. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is available on GitHub. 
 
