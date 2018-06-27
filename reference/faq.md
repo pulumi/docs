@@ -16,7 +16,7 @@ If pulumi.com is down, you'll be unable to preview, update or destroy a stack us
 
 To enable a new cloud, you need to create a Pulumi Resource Provider.  This requires a gRPC interface, and can be implemented directly; see see https://github.com/pulumi/pulumi-kubernetes for an example of this.  
 
-If there is an existing Terraform Resource Provider for the target, you can also use Terraform Bridge, for an example of this approach, see https://github.com/pulumi/pulumi-aws/blob/master/resources.go.
+If there is an existing Terraform Resource Provider for the target, you can also use Terraform Bridge;  see https://github.com/pulumi/pulumi-terraform/blob/master/README.md for a description of the overall structure and process of adding a new provider using the bridge and https://github.com/pulumi/pulumi-aws/blob/master/resources.go for a specific example.
 
 ## How can I add support for my favorite language?
 
