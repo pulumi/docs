@@ -72,4 +72,5 @@ toc:
   path: /reference/cd
   section:
   - reference/cd-travis.md
+- reference/faq.md
 - reference/known-issues.md

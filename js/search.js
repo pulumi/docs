@@ -17,6 +17,8 @@
     if (query) {
         // Set the search-box's value to the query.
         searchBox.value = query;
+        // Update the page title to include the query.
+        document.title = query + " - Pulumi";
         // Kick-off the search by sending a message to the worker.
         worker.postMessage({ type: "search", payload: query });
     } else {

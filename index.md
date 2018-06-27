@@ -1,5 +1,4 @@
 ---
-title: Welcome to Pulumi
 layout: default_index
 ---
 

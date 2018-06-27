@@ -1,1 +1,5 @@
-<meta http-equiv="refresh" content="0; url=/reference/pkg/nodejs/@pulumi/pulumi">
+---
+layout: redirect
+redirect:
+  to: /reference/pkg/nodejs/@pulumi/pulumi
+---
