@@ -1,16 +1,26 @@
 ---
-title: "FAQ"
+Title: "FAQ"
 ---
 
 ## How does Pulumi depend on pulumi.com?
 
-Pulumi uses pulumi.com to store information about the current state of your application, which is used during updates, previews and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, pulumi.com ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, pulumi.com ensures that you both don't update the same stack at the same time). Once your stack has been deployed, it has no dependency on pulumi.com. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](https://pulumi.io/reference/how.html).
+Pulumi uses pulumi.com to store information about the current state of your application, which is used during updates, previews and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, pulumi.com ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, pulumi.com ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on pulumi.com. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](https://pulumi.io/reference/how.html).
 
 ## What happens if pulumi.com is down?
 
-If pulumi.com is down, you'll be unable to preview, update or destroy a stack. But, any infrastructure that you’ve deployed through Pulumi will continue working and can be managed with your cloud provider’s console or CLI. 
+Any infrastructure that you’ve deployed using Pulumi will continue working and can be managed with your cloud provider’s console or CLI, that is, pulumi.com should not effect any runtime behavior of your application.  
 
-Some commands, like `pulumi logs`, use pulumi.com to find the correct log stream. This command will not work if pulumi.com is down, but your cloud provider will still produce logs that you can view through a cloud console or CLI. 
+If pulumi.com is down, you'll be unable to preview, update or destroy a stack using Pulumi.  Some commands, like `pulumi logs`, use pulumi.com to find the correct log stream, so will function until pulumi.com recovers, however, your cloud provider will still produce logs that you can use for diagnostics and you can view these via your cloud console or CLI. 
+
+## How can I add support for my favorite cloud?
+
+To enable a new cloud, you need to create a Pulumi Resource Provider.  This requires a gRPC interface, and can be implemented directly; see see https://github.com/pulumi/pulumi-kubernetes for an example of this.  
+
+If there is an existing Terraform Resource Provider for the target, you can also use Terraform Bridge;  see https://github.com/pulumi/pulumi-terraform/blob/master/README.md for a description of the overall structure and process of adding a new provider using the bridge and https://github.com/pulumi/pulumi-aws/blob/master/resources.go for a specific example.
+
+## How can I add support for my favorite language?
+
+Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers.  The protocol definitions can be found at https://github.com/pulumi/pulumi/tree/master/sdk/proto along with the language providers themselves.  You can look at how we added support for Go at https://github.com/pulumi/pulumi/pull/1456, which should help with scoping.
 
 ## How does Pulumi manage secrets?
 
@@ -54,7 +64,6 @@ Some commands may behave slightly differently when using the local endpoint. For
 
 ## How can I go back to using the Pulumi service?
 
-
 Just run `pulumi login` and you’ll be back to using pulumi.com. If you have any existing stacks, see the instructions below for migrating them to pulumi.com.
 
 ## I've been using the local endpoint, can I migrate to Pulumi.com?
@@ -70,5 +79,3 @@ $ pulumi stack import --file my-app-production.checkpoint.json # import the new 
 ```
 
 In addition, if you have any encrypted configuration in your stack, you'll need to re-run `pulumi config set --secret <key> <value>` because pulumi.com uses a different key to encrypt your secrets than the local endpoint.
-
-
