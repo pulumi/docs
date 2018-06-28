@@ -1,5 +1,5 @@
 ---
-Title: "FAQ"
+title: "FAQ"
 ---
 
 ## How does Pulumi depend on pulumi.com?
