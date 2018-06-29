@@ -12,7 +12,6 @@ og:
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/kinesis/
 [Reference docs]: ../reference/aws.html
-[Example code]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder 
 [Github @pulumi/aws]: https://github.com/pulumi/pulumi-aws 
 [Configure AWS]: ../install/aws.html
 
@@ -46,6 +45,8 @@ This reference shows how to use Pulumi to define an {{ page.cloud }} {{ page.ser
 The `{{ page.library }}` library enables fine-grained control over the {{ page.cloud }} {{ page.service }} resource meaning it can be coded, deployed, and managed entirely in code. 
 
 ```javascript
+const aws = require("@pulumi/aws");
+
 const stream = new aws.kinesis.Stream("mystream", {
     shardCount: 1
 });

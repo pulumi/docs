@@ -1,5 +1,5 @@
 ---
-title: "How to create an AWS Identity and Access Management service with Pulumi"
+title: "How to create an AWS Identity and Access Management (IAM) service with Pulumi"
 cloud: "AWS"
 service: "IAM"
 description: "enables you to manage access to AWS services and resources securely"
@@ -12,7 +12,6 @@ og:
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/iam/
 [Reference docs]: ../reference/aws.html
-[Example code]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder 
 [Github @pulumi/aws]: https://github.com/pulumi/pulumi-aws 
 [Configure AWS]: ../install/aws.html
 
@@ -46,7 +45,7 @@ This reference shows how to use Pulumi to define an {{ page.cloud }} {{ page.ser
 The `{{ page.library }}` library enables fine-grained control over the {{ page.cloud }} {{ page.service }} resource meaning it can be coded, deployed, and managed entirely in code. 
 
 ```javascript
-var aws = require("@pulumi/aws");
+const aws = require("@pulumi/aws");
 
 const role = new aws.iam.Role("myrole", {
     assumeRolePolicy: JSON.stringify({

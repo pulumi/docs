@@ -1,5 +1,5 @@
 ---
-title: "How to create an AWS Simple Queue Service with Pulumi"
+title: "How to create an AWS Simple Queue Service (SQS) with Pulumi"
 cloud: "AWS"
 service: "SQS"
 description: "is a fully managed message queuing service that makes it easy to decouple and scale microservices, distributed systems, and serverless applications"
@@ -12,7 +12,6 @@ og:
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/sqs/
 [Reference docs]: ../reference/aws.html
-[Example code]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder 
 [Github @pulumi/aws]: https://github.com/pulumi/pulumi-aws 
 [Configure AWS]: ../install/aws.html
 
@@ -46,5 +45,7 @@ This reference shows how to use Pulumi to define an {{ page.cloud }} {{ page.ser
 The `{{ page.library }}` library enables fine-grained control over the {{ page.cloud }} {{ page.service }} resource meaning it can be coded, deployed, and managed entirely in code. 
 
 ```javascript
+const aws = require("@pulumi/aws");
+
 const queue = new aws.sqs.Queue("myqueue");
 ```

@@ -1,5 +1,5 @@
 ---
-title: "How to create an AWS Elastic Container Registry service with Pulumi"
+title: "How to create an AWS Elastic Container Registry (ECR) service with Pulumi"
 cloud: "AWS"
 service: "ECR"
 description: "is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images"
@@ -12,7 +12,6 @@ og:
 <!-- Links -->
 [AWS here]: https://aws.amazon.com/ecr/
 [Reference docs]: ../reference/aws.html
-[Example code]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder 
 [Github @pulumi/aws]: https://github.com/pulumi/pulumi-aws 
 [Configure AWS]: ../install/aws.html
 
@@ -46,6 +45,8 @@ This reference shows how to use Pulumi to define an {{ page.cloud }} {{ page.ser
 The `{{ page.library }}` library enables fine-grained control over the {{ page.cloud }} {{ page.service }} resource meaning it can be coded, deployed, and managed entirely in code. 
 
 ```javascript
+const aws = require("@pulumi/aws");
+
 const repository = new aws.ecr.Repository("myrepository");
 
 const repositoryPolicy = new aws.ecr.RepositoryPolicy("myrepositorypolicy", {

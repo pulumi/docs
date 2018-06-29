@@ -47,7 +47,7 @@ This reference shows how to use Pulumi to define an {{ page.cloud }} {{ page.ser
 The `{{ page.library }}` library enables fine-grained control over the {{ page.cloud }} {{ page.service }} resource meaning it can be coded, deployed, and managed entirely in code. 
 
 ```javascript
-var aws = require("@pulumi/aws");
+const aws = require("@pulumi/aws");
 
 const eip = new aws.ec2.Eip("myeip");
 

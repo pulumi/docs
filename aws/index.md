@@ -75,21 +75,21 @@ For a higher-level abstraction, and greater portability, the [`@pulumi\cloud-aws
 ```javascript
 var cloud = require("@pulumi/cloud-aws");
 
-//Create RestAPI and Lambda Functions
+// Create RestAPI and Lambda Functions
 const myLambda = new cloud.API("nameLambda");
 
-//Create an S3 Bucket
+// Create an S3 Bucket
 const myBucket = new cloud.Bucket("nameBucket");
 
-//Create container infrastructure using AWS Fargate
+// Create container infrastructure using AWS Fargate
 const myContainer = new cloud.Task("nameContainer");
 
-//Create container infrastructure using AWS ECS
+// Create container infrastructure using AWS ECS
 const myService = new cloud.Service("nameService");
 
-//Create DynamoDB table
+// Create DynamoDB table
 const myDatabase = new cloud.Table("nameTable");
 
-//Create AWS Cloudwatch event rule
+// Create AWS Cloudwatch event rule
 const myTimer = new cloud.Timer("nameTimer";)
 ```
