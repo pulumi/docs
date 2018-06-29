@@ -24,7 +24,7 @@ title: "Change Log"
     <tbody>
         <tr>
             <th scope="row"><a href="#v141">0.14.1</a></th>
-            <td>2018/06/15</td>
+            <td>2018/06/29</td>
             <td>{% include sdk-links.html version='0.14.1' %}</td>
         </tr>
         <tr>
