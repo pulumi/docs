@@ -23,6 +23,11 @@ title: "Change Log"
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v141">0.14.1</a></th>
+            <td>2018/06/15</td>
+            <td>{% include sdk-links.html version='0.14.1' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v140">0.14.0</a></th>
             <td>2018/06/15</td>
             <td>{% include sdk-links.html version='0.14.0' %}</td>
@@ -36,6 +41,31 @@ title: "Change Log"
 </table>
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## v0.14.1 {#v141}
+
+Released on June 29, 2018
+
+In addition to the 0.14.1 CLI release, the following packages have been updated:
+
+- [@pulumi/pulumi](https://www.npmjs.com/package/@pulumi/pulumi) v0.14.1
+
+### Pulumi CLI
+
+#### Added
+-  Add `pulumi whoami` ([pulumi/pulumi#1572](https://github.com/pulumi/pulumi/pull/1572)). `pulumi whoami` will report the account name of the current logged in user. In addition, we now display the name of the current user after `pulumi login`.
+
+#### Fixed
+-  Don't require `PULUMI_DEBUG_COMMANDS` to be set to use local backend ([pulumi/pulumi#1575](https://github.com/pulumi/pulumi/pull/1575)).
+
+-  Improve misleading `pulumi new` summary message ([pulumi/pulumi#1571](https://github.com/pulumi/pulumi/pull/1571)).
+
+-  Fix printing out outputs in a pulumi program ([pulumi/pulumi#1531](https://github.com/pulumi/pulumi/pull/1531)). Pulumi now shows the values of output properties after a `pulumi update` instead of requring you to run `pulumi stack output`.
+
+### @pulumi/pulumi v0.14.1
+
+#### Fixed
+-  Do a better job preventing serialization of unnecessary objects in closure serialization ([pulumi/pulumi#1543](https://github.com/pulumi/pulumi/pull/1543)).  We've improved our analysis when seralizing functions. This yeilds smaller code when a function is seralized and prevents errors around unused native code being captured in some cases.
 
 ## v0.14.0 {#v140}
 
