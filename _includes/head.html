@@ -8,6 +8,17 @@
         {% endif %}
         Pulumi
     </title>
+
+    {% if page.title != nil and page.title != '' %}
+        <meta property="og:title" content="{{ page.title }}" />
+    {% endif %}
+    {% if page.og.description != nil and page.og.description != '' %}
+        <meta property="og:description" content="{{ page.og.description }}" />
+    {% endif %}
+    {% if page.og.image != nil and page.og.image != '' %}
+        <meta property="og:image" content="{{ site.pulumi_url }}{{ page.og.image }}" />
+    {% endif %}
+
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     {% if include.notfound %}
         <link rel="stylesheet" href="/css/404.css" media="all" />
