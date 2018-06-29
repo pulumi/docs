@@ -14,7 +14,7 @@ layout: default_index
 
 <div class="card-table">
     <a href="https://www.pulumi.com"><img src="/images/logo/logo.svg" alt="Pulumi" width="350" style="margin-top: 32px"></a>
-    <h2 class="get-to-the-cloud">
+    <h2 class="get-to-the-cloud no-anchor">
         Get Code to the Cloud. Faster. Together.
     </h2>
     <div>
@@ -34,7 +34,7 @@ layout: default_index
         <img src="/images/icon-feature-containers.svg"
             style="margin-bottom: 30px" width="125">
         <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">
+            <h2 class="mdl-card__title-text no-anchor">
                 <a href="/quickstart/aws-containers.html">Containers</a>
             </h2>
         </div>
@@ -53,7 +53,7 @@ layout: default_index
         <img src="/images/icon-feature-serverless.svg"
             style="margin-bottom: 30px" width="125">
         <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">
+            <h2 class="mdl-card__title-text no-anchor">
                 <a href="/quickstart/aws-rest-api.html">Serverless</a>
             </h2>
         </div>
@@ -72,7 +72,7 @@ layout: default_index
         <img src="/images/icon-feature-data.svg"
             style="margin-bottom: 30px" width="125">
         <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">
+            <h2 class="mdl-card__title-text no-anchor">
                 <a href="/quickstart/aws-ec2.html">Infrastructure</a>
             </h2>
         </div>
@@ -91,7 +91,7 @@ layout: default_index
         <img src="/images/icon-feature-colada.svg"
             style="margin-bottom: 30px" width="125">
         <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">
+            <h2 class="mdl-card__title-text no-anchor">
                 <a href="/quickstart/aws-extract-thumbnail.html">CoLaDa</a>
             </h2>
         </div>
