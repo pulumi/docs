@@ -60,12 +60,12 @@ In addition to the 0.14.1 CLI release, the following packages have been updated:
 
 -  Improve misleading `pulumi new` summary message ([pulumi/pulumi#1571](https://github.com/pulumi/pulumi/pull/1571)).
 
--  Fix printing out outputs in a pulumi program ([pulumi/pulumi#1531](https://github.com/pulumi/pulumi/pull/1531)). Pulumi now shows the values of output properties after a `pulumi update` instead of requring you to run `pulumi stack output`.
+-  Fix printing out outputs in a pulumi program ([pulumi/pulumi#1531](https://github.com/pulumi/pulumi/pull/1531)). Pulumi now shows the values of output properties after a `pulumi update` instead of requiring you to run `pulumi stack output`.
 
 ### @pulumi/pulumi v0.14.1
 
 #### Fixed
--  Do a better job preventing serialization of unnecessary objects in closure serialization ([pulumi/pulumi#1543](https://github.com/pulumi/pulumi/pull/1543)).  We've improved our analysis when seralizing functions. This yeilds smaller code when a function is seralized and prevents errors around unused native code being captured in some cases.
+-  Do a better job preventing serialization of unnecessary objects in closure serialization ([pulumi/pulumi#1543](https://github.com/pulumi/pulumi/pull/1543)).  We've improved our analysis when serializing functions. This yeilds smaller code when a function is serialized and prevents errors around unused native code being captured in some cases.
 
 ## v0.14.0 {#v140}
 
