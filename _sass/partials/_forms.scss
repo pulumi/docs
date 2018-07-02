@@ -31,5 +31,5 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 input[type="submit"] {
-    @extend .button, .button.orange;
+    @extend .button, .orange;
 }

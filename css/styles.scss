@@ -1,7 +1,11 @@
+---
+comment1: These bars are super-important! Jekyll does some magic to run SASS behind
+comment2: the scenes. But in order for that to happen it needs to look like a
+comment3: prototypical Jekyll/Liquid template file.
+---
+
 @import "bootstrap-variables-override";
 @import "bootstrap-override";
-
-@import "vendor/slick/slick";
 
 @import "utils/mixins";
 @import "utils/variables";
@@ -11,7 +15,6 @@
 @import "partials/typography";
 @import "partials/buttons-cta";
 @import "partials/forms";
-@import "partials/hubspot-form";
 @import "partials/bg";
 @import "partials/modal";
 @import "partials/social";
@@ -19,7 +22,7 @@
 @import "partials/footer";
 @import "partials/hero";
 @import "partials/breadcrumbs";
-@import "partials/slick";
 @import "partials/content-blocks";
 
 @import "pulumi";
+@import "pygments";
