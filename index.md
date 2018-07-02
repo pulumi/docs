@@ -1,5 +1,6 @@
 ---
 layout: default_index
+searchindex: false
 ---
 
 <span class="github-stars-widget">
