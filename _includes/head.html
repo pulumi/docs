@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
     <title>
         {% if page.title != nil and page.title != '' %}
             {{ page.title }} -
@@ -16,7 +17,7 @@
         <meta property="og:description" content="{{ page.og.description }}" />
     {% endif %}
     {% if page.og.image != nil and page.og.image != '' %}
-        <meta property="og:image" content="{{ site.pulumi_url }}{{ page.og.image }}" />
+        <meta property="og:image" content="{{ site.url }}{{ page.og.image }}" />
     {% endif %}
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
