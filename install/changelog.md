@@ -23,6 +23,11 @@ title: "Change Log"
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v142">0.14.2</a></th>
+            <td>2018/07/03</td>
+            <td>{% include sdk-links.html version='0.14.2' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v141">0.14.1</a></th>
             <td>2018/06/29</td>
             <td>{% include sdk-links.html version='0.14.1' %}</td>
@@ -41,6 +46,46 @@ title: "Change Log"
 </table>
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## v0.14.2 {#v142}
+
+Release July 3, 2018
+
+In addition to the 0.14.2 CLI release, the following packages have been updated:
+
+- [@pulumi/pulumi](https://www.npmjs.com/package/@pulumi/pulumi) v0.14.2
+- [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws) v0.14.1
+- [@pulumi/azure](https://www.npmjs.com/package/@pulumi/azure) v0.14.1
+- [@pulumi/gcp](https://www.npmjs.com/package/@pulumi/gcp) v0.14.2
+
+### Pulumi CLI
+
+#### Added
+
+- Support -s in `stack {export, graph, import, output}` ([pulumi/pulumi#1572](https://github.com/pulumi/pulumi/pull/1574)). `pulumi stack export`, `pulumi stack graph`, `pulumi stack import` and `pulumi stack output` now support a `-s` or `--stack` flag, which allows them to operate on a different stack that the currently selected one.
+
+### @pulumi/pulumi v0.14.2
+
+There are no changes from the previous release, but the CLI and `@pulumi/pulumi` package share a version.
+
+### @pulumi/aws v0.14.1
+
+#### Added
+
+- The result of calls to data sources now include an `id` property. Special thanks to [@Frassle](https://github.com/Frassle) for adding this support in [pulumi/pulumi-terraform#189](https://github.com/pulumi/pulumi-terraform/pull/189).
+- We've relaxed some validation logic when creating an `aws.lambda.EventSourceMapping` resource to support SQS triggers for lambdas. This includes an enhancment to the underlying terraform provider [terraform-providers/terraform-provider-aws#5024](https://github.com/terraform-providers/terraform-provider-aws/pull/5024)
+
+### @pulumi/azure v0.14.1
+
+#### Added
+
+- The result of calls to data sources now include an `id` property. Special thanks to [@Frassle](https://github.com/Frassle) for adding this support in [pulumi/pulumi-terraform#189](https://github.com/pulumi/pulumi-terraform/pull/189).
+
+### @pulumi/gcp v0.14.1
+
+#### Added
+
+- The result of calls to data sources now include an `id` property. Special thanks to [@Frassle](https://github.com/Frassle) for adding this support in [pulumi/pulumi-terraform#189](https://github.com/pulumi/pulumi-terraform/pull/189).
 
 ## v0.14.1 {#v141}
 
