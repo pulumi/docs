@@ -55,6 +55,7 @@ In addition to the 0.14.2 CLI release, the following packages have been updated:
 
 - [@pulumi/pulumi](https://www.npmjs.com/package/@pulumi/pulumi) v0.14.2
 - [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws) v0.14.1
+- [@pulumi/aws-serverless](https://www.npmjs.com/package/@pulumi/aws-serverless) v0.14.2
 - [@pulumi/azure](https://www.npmjs.com/package/@pulumi/azure) v0.14.1
 - [@pulumi/gcp](https://www.npmjs.com/package/@pulumi/gcp) v0.14.2
 
@@ -74,6 +75,12 @@ There are no changes from the previous release, but the CLI and `@pulumi/pulumi`
 
 - The result of calls to data sources now include an `id` property. Special thanks to [@Frassle](https://github.com/Frassle) for adding this support in [pulumi/pulumi-terraform#189](https://github.com/pulumi/pulumi-terraform/pull/189).
 - We've relaxed some validation logic when creating an `aws.lambda.EventSourceMapping` resource to support SQS triggers for lambdas. This includes an enhancment to the underlying terraform provider [terraform-providers/terraform-provider-aws#5024](https://github.com/terraform-providers/terraform-provider-aws/pull/5024)
+
+### @pulumi/aws-serverless v0.14.1
+
+#### Added
+
+- Add support for triggering lambdas in response to SQS events. ([pulumi/pulumi-aws-serverless#17](https://github.com/pulumi/pulumi-aws-serverless/pull/17)). We now support triggering a lambda off of SQS events, using `serverless.queue.subscribe`. We have a [small example](https://github.com/pulumi/pulumi-aws-serverless/blob/f14db0886f91e9f38df2839bc5b7e6aa891c447c/nodejs/aws-serverless/examples/queue/index.ts) that shows how to use this new functionally.
 
 ### @pulumi/azure v0.14.1
 
