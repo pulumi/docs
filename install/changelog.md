@@ -94,6 +94,10 @@ There are no changes from the previous release, but the CLI and `@pulumi/pulumi`
 
 - The result of calls to data sources now include an `id` property. Special thanks to [@Frassle](https://github.com/Frassle) for adding this support in [pulumi/pulumi-terraform#189](https://github.com/pulumi/pulumi-terraform/pull/189).
 
+### Python
+
+We've added assets support to the Python runtime and our Python packages. It is now possible to create resources that need an asset like a AWS Lambda or AWS Bucket Object in Python.
+
 ## v0.14.1 {#v141}
 
 Released on June 29, 2018
