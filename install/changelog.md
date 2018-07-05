@@ -23,6 +23,11 @@ title: "Change Log"
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v142">0.14.2</a></th>
+            <td>2018/07/03</td>
+            <td>{% include sdk-links.html version='0.14.2' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v141">0.14.1</a></th>
             <td>2018/06/29</td>
             <td>{% include sdk-links.html version='0.14.1' %}</td>
@@ -41,6 +46,57 @@ title: "Change Log"
 </table>
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## v0.14.2 {#v142}
+
+Release July 3, 2018
+
+In addition to the 0.14.2 CLI release, the following packages have been updated:
+
+- [@pulumi/pulumi](https://www.npmjs.com/package/@pulumi/pulumi) v0.14.2
+- [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws) v0.14.2
+- [@pulumi/aws-serverless](https://www.npmjs.com/package/@pulumi/aws-serverless) v0.14.2
+- [@pulumi/azure](https://www.npmjs.com/package/@pulumi/azure) v0.14.1
+- [@pulumi/gcp](https://www.npmjs.com/package/@pulumi/gcp) v0.14.2
+
+### Pulumi CLI
+
+#### Added
+
+- Support -s in `stack {export, graph, import, output}` ([pulumi/pulumi#1572](https://github.com/pulumi/pulumi/pull/1574)). `pulumi stack export`, `pulumi stack graph`, `pulumi stack import` and `pulumi stack output` now support a `-s` or `--stack` flag, which allows them to operate on a different stack that the currently selected one.
+
+### @pulumi/pulumi v0.14.2
+
+There are no changes from the previous release, but the CLI and `@pulumi/pulumi` package share a version.
+
+### @pulumi/aws v0.14.2
+
+#### Added
+
+- The result of calls to data sources now include an `id` property. Special thanks to [@Frassle](https://github.com/Frassle) for adding this support in [pulumi/pulumi-terraform#189](https://github.com/pulumi/pulumi-terraform/pull/189).
+- Adopt [v1.26.0](https://github.com/terraform-providers/terraform-provider-aws/blob/master/CHANGELOG.md#1260-july-04-2018) of the AWS Terraform Provider.
+
+### @pulumi/aws-serverless v0.14.1
+
+#### Added
+
+- Add support for triggering lambdas in response to SQS events. ([pulumi/pulumi-aws-serverless#17](https://github.com/pulumi/pulumi-aws-serverless/pull/17)). We now support triggering a lambda off of SQS events, using `serverless.queue.subscribe`. We have a [small example](https://github.com/pulumi/pulumi-aws-serverless/blob/f14db0886f91e9f38df2839bc5b7e6aa891c447c/nodejs/aws-serverless/examples/queue/index.ts) that shows how to use this new functionally.
+
+### @pulumi/azure v0.14.1
+
+#### Added
+
+- The result of calls to data sources now include an `id` property. Special thanks to [@Frassle](https://github.com/Frassle) for adding this support in [pulumi/pulumi-terraform#189](https://github.com/pulumi/pulumi-terraform/pull/189).
+
+### @pulumi/gcp v0.14.1
+
+#### Added
+
+- The result of calls to data sources now include an `id` property. Special thanks to [@Frassle](https://github.com/Frassle) for adding this support in [pulumi/pulumi-terraform#189](https://github.com/pulumi/pulumi-terraform/pull/189).
+
+### Python
+
+We've added assets support to the Python runtime and our Python packages. It is now possible to create resources that need an asset like a AWS Lambda or AWS Bucket Object in Python.
 
 ## v0.14.1 {#v141}
 
