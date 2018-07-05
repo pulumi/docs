@@ -54,7 +54,7 @@ Release July 3, 2018
 In addition to the 0.14.2 CLI release, the following packages have been updated:
 
 - [@pulumi/pulumi](https://www.npmjs.com/package/@pulumi/pulumi) v0.14.2
-- [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws) v0.14.1
+- [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws) v0.14.2
 - [@pulumi/aws-serverless](https://www.npmjs.com/package/@pulumi/aws-serverless) v0.14.2
 - [@pulumi/azure](https://www.npmjs.com/package/@pulumi/azure) v0.14.1
 - [@pulumi/gcp](https://www.npmjs.com/package/@pulumi/gcp) v0.14.2
@@ -69,12 +69,12 @@ In addition to the 0.14.2 CLI release, the following packages have been updated:
 
 There are no changes from the previous release, but the CLI and `@pulumi/pulumi` package share a version.
 
-### @pulumi/aws v0.14.1
+### @pulumi/aws v0.14.2
 
 #### Added
 
 - The result of calls to data sources now include an `id` property. Special thanks to [@Frassle](https://github.com/Frassle) for adding this support in [pulumi/pulumi-terraform#189](https://github.com/pulumi/pulumi-terraform/pull/189).
-- We've relaxed some validation logic when creating an `aws.lambda.EventSourceMapping` resource to support SQS triggers for lambdas. This includes an enhancment to the underlying terraform provider [terraform-providers/terraform-provider-aws#5024](https://github.com/terraform-providers/terraform-provider-aws/pull/5024)
+- Adopt [v1.26.0](https://github.com/terraform-providers/terraform-provider-aws/blob/master/CHANGELOG.md#1260-july-04-2018) of the AWS Terraform Provider.
 
 ### @pulumi/aws-serverless v0.14.1
 
