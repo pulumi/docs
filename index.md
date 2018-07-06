@@ -31,8 +31,10 @@ layout: default_index
 
 <div class="card-table">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <img src="/images/icon-feature-containers.svg"
-            style="margin-bottom: 30px" width="125">
+        <a href="/quickstart/aws-containers.html">
+          <img src="/images/icon-feature-containers.svg"
+              style="margin-bottom: 30px" width="125">
+        </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
                 <a href="/quickstart/aws-containers.html">Containers</a>
@@ -50,8 +52,10 @@ layout: default_index
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <img src="/images/icon-feature-serverless.svg"
-            style="margin-bottom: 30px" width="125">
+        <a href="/quickstart/aws-rest-api.html">
+          <img src="/images/icon-feature-serverless.svg"
+              style="margin-bottom: 30px" width="125">
+        </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
                 <a href="/quickstart/aws-rest-api.html">Serverless</a>
@@ -69,8 +73,10 @@ layout: default_index
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <img src="/images/icon-feature-data.svg"
-            style="margin-bottom: 30px" width="125">
+        <a href="/quickstart/aws-ec2.html">
+          <img src="/images/icon-feature-data.svg"
+              style="margin-bottom: 30px" width="125">
+        </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
                 <a href="/quickstart/aws-ec2.html">Infrastructure</a>
@@ -88,8 +94,10 @@ layout: default_index
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <img src="/images/icon-feature-colada.svg"
-            style="margin-bottom: 30px" width="125">
+        <a href="/quickstart/aws-extract-thumbnail.html">
+          <img src="/images/icon-feature-colada.svg"
+              style="margin-bottom: 30px" width="125">
+        </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
                 <a href="/quickstart/aws-extract-thumbnail.html">CoLaDa</a>
