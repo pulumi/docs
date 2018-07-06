@@ -14,10 +14,11 @@ We'll build an application that extracts a thumbnail from a video using AWS Lamb
 
 1.  Make sure [Docker](https://docs.docker.com/install/) is installed and running.
 
-1.  In a new folder `video-thumbnail`, run `pulumi new`:
+1.  Run `pulumi new`:
 
     ```bash
-    $ pulumi new aws-javascript
+    $ pulumi new aws-javascript --dir video-thumbnail
+    $ cd video-thumbnail
     ```
 
 1.  Replace the contents of `index.js` with the following:

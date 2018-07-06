@@ -10,10 +10,11 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
 
 1.  Make sure [Docker](https://docs.docker.com/install/) is installed and running.
 
-1.  In a new folder `container-quickstart`, run `pulumi new`:
+1.  Run `pulumi new`:
 
     ```bash
-    $ pulumi new aws-javascript
+    $ pulumi new aws-javascript --dir container-quickstart
+    $ cd container-quickstart
     ```
 
 1.  Replace the contents of `index.js` with the following:
