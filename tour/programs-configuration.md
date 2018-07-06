@@ -4,7 +4,7 @@ title: Custom configuration
 
 Pulumi programs can be configurable.
 
-Configuration lets code conditionalize its logic easily based on CLI incantations without code edits.
+Configuration allows you to easily author code that is conditional on CLI incantations, without having to edit your code.
 
 Any code run by Pulumi -- packages included -- can define configuration variables.
 

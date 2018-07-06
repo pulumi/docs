@@ -9,7 +9,7 @@ At creation time, you supply *input* properties to control the desired state of 
 {% include langchoose.html %}
 
 ```javascript
-var bucket = new aws.s3.Bucket("photos", { versioning: { enable: true } });
+const bucket = new aws.s3.Bucket("photos", { versioning: { enable: true } });
 ```
 
 ```typescript
