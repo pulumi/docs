@@ -6,26 +6,21 @@ In this tutorial, we'll use Pulumi to create a serverless single-page app that u
 
 ## What we'll do
 
-- **Initialize** a new Pulumi project.
-- **Define** our stack in JavaScript.
-- **Deploy** our stack to AWS.
-- **Manage** our stack in the Pulumi dashboard.
-- Tear it down.
+- **Initialize** a new Pulumi project
+- **Define** our stack in JavaScript
+- **Deploy** our stack to AWS
+- **Manage** our stack in the Pulumi dashboard
+- Tear it down
 
 {% include aws-js-prereqs.md %}
 
 ## Initialize the project
 
-Create a new folder:
+Let's use the Pulumi CLI to initialize a new project:
 
 ```
-mkdir ahoy-pulumi && cd ahoy-pulumi
-```
-
-Now, let's use the Pulumi CLI to initialize a new project:
-
-```
-pulumi new hello-aws-javascript
+pulumi new hello-aws-javascript --dir ahoy-pulumi
+cd ahoy-pulumi
 ```
 
 You can accept the defaults for this command. For instance, you can change the AWS region to `us-west-2`.
@@ -48,7 +43,7 @@ Let's look at some of those.
 Normally, we'd write some code to define resources for our cloud stack, but in the quickstart this work is done for us. This is the content of `index.js`:
 
 ```javascript
-// Import the @pulumi/cloud-aws package
+// Import the [cloud-aws](https://pulumi.io/packages/pulumi-cloud/) package
 const cloud = require("@pulumi/cloud-aws");
     
 // Create a public HTTP REST API endpoint (using AWS APIGateway)
@@ -107,8 +102,6 @@ pulumi destroy
 ```
 
 Once confirmed, Pulumi will remove all of the resources you've created. The stack itself is preserved in the Pulumi dashboard and is ready to go again as needed.
-
-![](../images/quickstart/hello/Quickstart7.png){:width="700px"}
 
 ## Recap
 
