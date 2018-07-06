@@ -17,7 +17,7 @@ For instance, let's say we want to enable public read access to our S3 bucket, w
 {% include langchoose.html %}
 
 ```javascript
-var bucket = new aws.s3.Bucket("my-bucket", { acl: "public-read" });
+const bucket = new aws.s3.Bucket("my-bucket", { acl: "public-read" });
 ```
 
 ```typescript

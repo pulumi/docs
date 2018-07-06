@@ -23,7 +23,7 @@ communicates to Pulumi what cloud resources will be required by the program.  He
 
 ```javascript
 var aws = require("@pulumi/aws");
-var bucket = new aws.s3.Bucket("my-bucket");
+const bucket = new aws.s3.Bucket("my-bucket");
 ```
 
 ```typescript

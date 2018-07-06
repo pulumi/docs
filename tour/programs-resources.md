@@ -8,7 +8,7 @@ Cloud resources are just objects you will allocate in your program:
 
 ```javascript
 var aws = require("@pulumi/aws");
-var bucket = new aws.s3.Bucket("my-bucket");
+const bucket = new aws.s3.Bucket("my-bucket");
 ```
 
 ```typescript
