@@ -23,17 +23,19 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
     // Create an API endpoint
     let endpoint = new cloud.API("hello-world");
 
-    endpoint.get("/{route+}", async (req, res) => {
+    endpoint.get("/{route+}", (req, res) => {
         let route = req.params["route"];
         console.log(`Getting count for '${route}'`);
 
         // get previous value and increment
-        let value = await counterTable.get({ route }); // reference outer `counterTable` object
-        let count = (value && value.count) || 0;
-        await counterTable.insert( { route, count: ++count });
-
-        res.status(200).json({ route, count });
-        console.log(`Got count ${count} for '${route}'`);
+        // reference outer `counterTable` object
+        counterTable.get({ route }).then(value => {
+            let count = (value && value.count) || 0;
+            counterTable.insert({ route, count: ++count }).then(() => {
+                res.status(200).json({ route, count });
+                console.log(`Got count ${count} for '${route}'`);
+            });
+        });
     });
 
     exports.endpoint = endpoint.publish().url;
