@@ -10,7 +10,12 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
 
 ## Create a simple REST API
 
-1.  In a new folder `hello-http`, run `pulumi new aws-javascript`.
+1.  Run `pulumi new`:
+
+    ```bash
+    $ pulumi new aws-javascript --dir hello-http
+    $ cd hello-http
+    ```
 
 1.  Replace the contents of `index.js` with the following:
 

@@ -9,11 +9,11 @@ In this tutorial, we'll show how you can use [@pulumi/aws] to provision raw reso
 
 ## Create a bucket and upload files 
 
-1.  In a new folder `s3website`, create an empty project with `pulumi new`:
+1.  Create an empty project with `pulumi new`:
 
     ```bash
-    $ mkdir s3website; cd s3website
-    $ pulumi new javascript
+    $ pulumi new javascript --dir s3website
+    $ cd s3website
     ```
 
 1.  Edit `index.js` and replace with the following. The code creates a new S3 bucket, then iterates over the files in the `www` folder to create an S3 Object for each file.
