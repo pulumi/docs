@@ -33,6 +33,8 @@ A project file contains the following attributes:
 
 * `main`: (optional) an override for the main program's location. By default, the program's working directory is assumed to be the location of `Pulumi.yaml`. To choose a different location, use the `main` property. For example, if your Pulumi program is in a subdirectory `infra/`, use `main: infra/`.
 
+* `config`: (optional) directory to store stack-specific configuration files, relative to location of `Pulumi.yaml`.
+
 When using JavaScript, the working directory for the project should contain a `package.json` that points to a file such as `index.js`. In Python, there should either be a `__main__.py` file or a file `setup.py` that defines the entry point.
 
 ### Paths
