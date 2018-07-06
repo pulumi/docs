@@ -9,13 +9,12 @@ NOTE: To update this page with a new binary release, do the following:
 - Update changelog.md with the latest fixes in the release
 -->
 
-The current Pulumi SDK version is <a href="./changelog.html#{{ page.installer_version }}">{{ page.installer_version }}</a>.  For older SDK versions, please see <a href="./changelog.html#all-versions">Previous SDK Versions</a>.
+The current Pulumi SDK version is <a href="./changelog.html#{{ page.installer_version }}">{{ page.installer_version }}</a>.
+For older SDK versions, please see <a href="./changelog.html#all-versions">Previous SDK Versions</a>.
 
-## Easy Install
+The installer script downloads and installs Pulumi, or upgrades to the latest version if you've already installed it.
 
-The easy install downloads the most recent version of Pulumi, extracts it into `~/.pulumi/bin` (Linux and macOS) or `%USERPROFILE%\.pulumi\bin` (Windows), and adds it to your path. If you have already installed Pulumi, the script will upgrade to the latest version. For the script source code, see [get.pulumi.com](https://get.pulumi.com). 
-
-### macOS and Linux
+## macOS and Linux
 
 Run the following command to install the latest version of Pulumi:
 
@@ -23,7 +22,9 @@ Run the following command to install the latest version of Pulumi:
 curl -fsSL https://get.pulumi.com | sh
 ```
 
-### Windows
+This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path.
+
+## Windows
 
 Run the following command (in `cmd.exe`) to install the latest version of Pulumi:
 
@@ -31,9 +32,11 @@ Run the following command (in `cmd.exe`) to install the latest version of Pulumi
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
 ```
 
-### Cloud Configuration
+This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
 
-After running this command, Pulumi is installed, and you can move on to configuring Pulumi for your cloud provider:
+## Cloud Configuration
+
+After installation, you will want to configure Pulumi for your cloud provider:
 
 * [AWS](./aws.html)
 * [Azure](./azure.html)
@@ -42,7 +45,7 @@ After running this command, Pulumi is installed, and you can move on to configur
 
 ## Manual Installation {#instructions}
 
-If you prefer, you can download and install Pulumi manually.
+If you prefer, you can download and install Pulumi manually:
 
 <div class="downloads-container">
     <div class="download-card">
