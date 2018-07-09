@@ -50,7 +50,7 @@
                 "title": "Pulumi has launched!",
                 "url": "http://blog.pulumi.com/introducing-pulumi-a-cloud-development-platform",
                 "date": "2018-06-18"
-            },
+            }
         ],
         "actionItem": { "title": "Read all news", "url": "https://pulumi.io/install/changelog.html" }
     }
