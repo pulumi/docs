@@ -55,7 +55,7 @@ To generate a change log from closed pull requests, run the script `/scripts/gen
 
 1. Set the environment variable `GITHUB_TOKEN` to a token that has "repo" scope.
 
-1. [Will be improved] Clone the repo at https://github.com/lindydonna/github-pr-changelog and run `npm i -g` to globally install the command `gh-changelog`.
+1. [Will be improved] Clone the repo at https://github.com/pulumi/github-pr-changelog and run `npm i -g` to globally install the command `gh-changelog`.
 
 1. Generate a change log with the following command:
 
