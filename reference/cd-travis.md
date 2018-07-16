@@ -19,24 +19,25 @@ which Pulumi stacks.  You will want to customize this.
 
 First, add your Pulumi access token to your Travis settings as the `PULUMI_ACCESS_TOKEN` environment variable, either
 via the `travis.yml` file, Travis CLI, or the Travis Web UI, however you typically do it ([see here for more
-information](https://docs.travis-ci.com/user/environment-variables/)).  This ensures that you can login to the service.
+information](https://docs.travis-ci.com/user/environment-variables/)).  This ensures that you can login to the service. Your Pulumi Access Tokens are managed thorugh your account, and can be found [here](https://app.pulumi.com/account/tokens)
 
 > **Note:** You'll also need to configure your cloud provider credentials in the same way you do on your development
 > machines.  This most often means provisioning a key specifically for CI, and then setting the environment variables so
 > that the Travis machine can perform the necessary operations.  If you are using AWS, for example, you'll want to set
 > `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.  Please consult your cloud provider's documentation.
 
-Next, add three things to your `travis.yml` file.
+Next, add two things to your `travis.yml` file.
 
 1. In the `before_install` section, add a line to install the Pulumi version you're currently using, put it on the
-`$PATH`, initialize the workspace, and then login to the service:
+`$PATH`:
 
     ```yaml
     before_install:
         # Install the Pulumi SDK, add it to the $PATH, and initialize the workspace.
         - curl -L https://get.pulumi.com | bash -s -- --version 0.14.2
         - export PATH=$PATH:$HOME/.pulumi/bin
-        - pulumi init
+        # Enable update-stack script to be executable by TravisCI
+        - chmod +x ./scripts/update-stack.sh 
     ```
 
 1. Add the line to perform the Pulumi update to the `script` section:
