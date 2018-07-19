@@ -6,13 +6,13 @@ title: Package @pulumi/aws-infra
 Node.js:
 
 ```javascript
-var aws-infra = require("@pulumi/aws-infra");
+var awsInfra = require("@pulumi/aws-infra");
 ```
 
 ES6 modules:
 
 ```typescript
-import * as aws-infra from "@pulumi/aws-infra";
+import * as awsInfra from "@pulumi/aws-infra";
 ```
 
 <h2 class="pdoc-module-header">Index</h2>
