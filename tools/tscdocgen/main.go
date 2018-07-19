@@ -143,7 +143,7 @@ func camelCase(s string) string {
 
 	var prev rune
 	for _, curr := range s {
-		if !(curr == '-') {
+		if curr !== '-' {
 			if prev == '-' {
 				buffer = append(buffer, unicode.ToUpper(curr))
 			} else {
