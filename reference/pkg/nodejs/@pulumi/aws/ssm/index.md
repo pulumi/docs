@@ -376,7 +376,7 @@ or greater can update their content once created, see [SSM Schema Features][1]. 
 schema version you must recreate the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L90">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L94">constructor</a>
 </h3>
 
 ```typescript
@@ -609,6 +609,17 @@ public status: pulumi.Output<string>;
 
 
 "Creating", "Active" or "Deleting". The current status of the document.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L94">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A mapping of tags to assign to the object.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1920,13 +1931,13 @@ targets?: pulumi.Input<{ ... }[]>;
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 
 <h2 class="pdoc-module-header" id="DocumentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L225">interface DocumentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L235">interface DocumentArgs</a>
 </h2>
 
 The set of arguments for constructing a Document resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L229">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L239">property content</a>
 </h3>
 
 ```typescript
@@ -1937,7 +1948,7 @@ content: pulumi.Input<string>;
 The JSON or YAML content of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L233">property documentFormat</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L243">property documentFormat</a>
 </h3>
 
 ```typescript
@@ -1948,7 +1959,7 @@ documentFormat?: pulumi.Input<string>;
 The format of the document. Valid document types include: `JSON` and `YAML`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L237">property documentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L247">property documentType</a>
 </h3>
 
 ```typescript
@@ -1959,7 +1970,7 @@ documentType: pulumi.Input<string>;
 The type of the document. Valid document types include: `Command`, `Policy` and `Automation`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L241">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L251">property name</a>
 </h3>
 
 ```typescript
@@ -1970,7 +1981,7 @@ name?: pulumi.Input<string>;
 The name of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L245">property permissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L255">property permissions</a>
 </h3>
 
 ```typescript
@@ -1980,14 +1991,25 @@ permissions?: pulumi.Input<{ ... }>;
 
 Additional Permissions to attach to the document. See [Permissions](#permissions) below for details.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L259">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the object.
+
 <h2 class="pdoc-module-header" id="DocumentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L154">interface DocumentState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L160">interface DocumentState</a>
 </h2>
 
 Input properties used for looking up and filtering Document resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L155">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L161">property arn</a>
 </h3>
 
 ```typescript
@@ -1995,7 +2017,7 @@ arn?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L159">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L165">property content</a>
 </h3>
 
 ```typescript
@@ -2006,7 +2028,7 @@ content?: pulumi.Input<string>;
 The JSON or YAML content of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L163">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L169">property createdDate</a>
 </h3>
 
 ```typescript
@@ -2017,7 +2039,7 @@ createdDate?: pulumi.Input<string>;
 The date the document was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L167">property defaultVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L173">property defaultVersion</a>
 </h3>
 
 ```typescript
@@ -2028,7 +2050,7 @@ defaultVersion?: pulumi.Input<string>;
 The default version of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L171">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L177">property description</a>
 </h3>
 
 ```typescript
@@ -2039,7 +2061,7 @@ description?: pulumi.Input<string>;
 The description of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L175">property documentFormat</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L181">property documentFormat</a>
 </h3>
 
 ```typescript
@@ -2050,7 +2072,7 @@ documentFormat?: pulumi.Input<string>;
 The format of the document. Valid document types include: `JSON` and `YAML`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L179">property documentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L185">property documentType</a>
 </h3>
 
 ```typescript
@@ -2061,7 +2083,7 @@ documentType?: pulumi.Input<string>;
 The type of the document. Valid document types include: `Command`, `Policy` and `Automation`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L183">property hash</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L189">property hash</a>
 </h3>
 
 ```typescript
@@ -2072,7 +2094,7 @@ hash?: pulumi.Input<string>;
 The sha1 or sha256 of the document content
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L187">property hashType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L193">property hashType</a>
 </h3>
 
 ```typescript
@@ -2083,7 +2105,7 @@ hashType?: pulumi.Input<string>;
 "Sha1" "Sha256". The hashing algorithm used when hashing the content.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L191">property latestVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L197">property latestVersion</a>
 </h3>
 
 ```typescript
@@ -2094,7 +2116,7 @@ latestVersion?: pulumi.Input<string>;
 The latest version of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L195">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L201">property name</a>
 </h3>
 
 ```typescript
@@ -2105,7 +2127,7 @@ name?: pulumi.Input<string>;
 The name of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L199">property owner</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L205">property owner</a>
 </h3>
 
 ```typescript
@@ -2116,7 +2138,7 @@ owner?: pulumi.Input<string>;
 The AWS user account of the person who created the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L203">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L209">property parameters</a>
 </h3>
 
 ```typescript
@@ -2127,7 +2149,7 @@ parameters?: pulumi.Input<{ ... }[]>;
 The parameters that are available to this document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L207">property permissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L213">property permissions</a>
 </h3>
 
 ```typescript
@@ -2138,7 +2160,7 @@ permissions?: pulumi.Input<{ ... }>;
 Additional Permissions to attach to the document. See [Permissions](#permissions) below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L211">property platformTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L217">property platformTypes</a>
 </h3>
 
 ```typescript
@@ -2149,7 +2171,7 @@ platformTypes?: pulumi.Input<pulumi.Input<string>[]>;
 A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L215">property schemaVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L221">property schemaVersion</a>
 </h3>
 
 ```typescript
@@ -2160,7 +2182,7 @@ schemaVersion?: pulumi.Input<string>;
 The schema version of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L219">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L225">property status</a>
 </h3>
 
 ```typescript
@@ -2169,6 +2191,17 @@ status?: pulumi.Input<string>;
 
 
 "Creating", "Active" or "Deleting". The current status of the document.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L229">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the object.
 
 <h2 class="pdoc-module-header" id="GetParameterArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getParameter.ts#L19">interface GetParameterArgs</a>
@@ -2211,6 +2244,17 @@ A collection of values returned by getParameter.
 ```typescript
 arn: string;
 ```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getParameter.ts#L40">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getParameter.ts#L35">property type</a>

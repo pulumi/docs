@@ -6,13 +6,13 @@ title: Package @pulumi/aws-serverless
 Node.js:
 
 ```javascript
-var aws-serverless = require("@pulumi/aws-serverless");
+var awsServerless = require("@pulumi/aws-serverless");
 ```
 
 ES6 modules:
 
 ```typescript
-import * as aws-serverless from "@pulumi/aws-serverless";
+import * as awsServerless from "@pulumi/aws-serverless";
 ```
 
 <h2 class="pdoc-module-header">Index</h2>
@@ -194,7 +194,7 @@ const defaultComputePolicies: string[] =  [
 </h2>
 
 ```typescript
-createLambdaFunction<E,R>(name: string, handler: Handler<E, R>, opts?: ResourceOptions): aws.lambda.Function
+createLambdaFunction<E,R>(name: string, handler: Handler<E, R>, opts?: ResourceOptions, functionOptions?: aws.serverless.FunctionOptions): aws.lambda.Function
 ```
 
 <h2 class="pdoc-module-header" id="mapObject">

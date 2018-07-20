@@ -47,7 +47,7 @@ change immediately. Using `apply_immediately` can result in a brief downtime as 
 See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L158">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L162">constructor</a>
 </h3>
 
 ```typescript
@@ -108,7 +108,7 @@ public availabilityZone: pulumi.Output<string>;
 ```
 
 
-The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `availability_zones`
+The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L45">property availabilityZones</a>
@@ -119,7 +119,7 @@ public availabilityZones: pulumi.Output<string[] | undefined>;
 ```
 
 
-List of Availability Zones in which the cache nodes will be created. If you want to create cache nodes in single-az, use `availability_zone`
+Use `preferred_availability_zones` instead unless you want to create cache nodes in single-az, then use `availability_zone`. Set of Availability Zones in which the cache nodes will be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L49">property azMode</a>
@@ -292,7 +292,18 @@ public port: pulumi.Output<number | undefined>;
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L116">property replicationGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L116">property preferredAvailabilityZones</a>
+</h3>
+
+```typescript
+public preferredAvailabilityZones: pulumi.Output<string[] | undefined>;
+```
+
+
+A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L120">property replicationGroupId</a>
 </h3>
 
 ```typescript
@@ -303,7 +314,7 @@ public replicationGroupId: pulumi.Output<string>;
 The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L121">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L125">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -315,7 +326,7 @@ One or more VPC security groups associated
 with the cache cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L126">property securityGroupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L130">property securityGroupNames</a>
 </h3>
 
 ```typescript
@@ -327,7 +338,7 @@ List of security group
 names to associate with this cache cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L132">property snapshotArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L136">property snapshotArns</a>
 </h3>
 
 ```typescript
@@ -340,7 +351,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L136">property snapshotName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L140">property snapshotName</a>
 </h3>
 
 ```typescript
@@ -351,7 +362,7 @@ public snapshotName: pulumi.Output<string | undefined>;
 The name of a snapshot from which to restore data into the new node group.  Changing the `snapshot_name` forces a new resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L144">property snapshotRetentionLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L148">property snapshotRetentionLimit</a>
 </h3>
 
 ```typescript
@@ -366,7 +377,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L149">property snapshotWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L153">property snapshotWindow</a>
 </h3>
 
 ```typescript
@@ -378,7 +389,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L154">property subnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L158">property subnetGroupName</a>
 </h3>
 
 ```typescript
@@ -390,7 +401,7 @@ Name of the subnet group to be used
 for the cache cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L158">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L162">property tags</a>
 </h3>
 
 ```typescript
@@ -534,7 +545,7 @@ For working with Memcached or single primary Redis instances (Cluster Mode Disab
 [`aws_elasticache_cluster` resource](/docs/providers/aws/r/elasticache_cluster.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L146">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L150">constructor</a>
 </h3>
 
 ```typescript
@@ -708,7 +719,18 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L73">property nodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L73">property memberClusters</a>
+</h3>
+
+```typescript
+public memberClusters: pulumi.Output<string[]>;
+```
+
+
+The identifiers of all the nodes that are part of this replication group.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L77">property nodeType</a>
 </h3>
 
 ```typescript
@@ -719,7 +741,7 @@ public nodeType: pulumi.Output<string>;
 The compute and memory capacity of the nodes in the node group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L79">property notificationTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L83">property notificationTopicArn</a>
 </h3>
 
 ```typescript
@@ -732,7 +754,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L83">property numberCacheClusters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L87">property numberCacheClusters</a>
 </h3>
 
 ```typescript
@@ -743,7 +765,7 @@ public numberCacheClusters: pulumi.Output<number>;
 The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L87">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L91">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -754,7 +776,7 @@ public parameterGroupName: pulumi.Output<string>;
 The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L91">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L95">property port</a>
 </h3>
 
 ```typescript
@@ -765,7 +787,7 @@ public port: pulumi.Output<number | undefined>;
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L95">property primaryEndpointAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L99">property primaryEndpointAddress</a>
 </h3>
 
 ```typescript
@@ -776,7 +798,7 @@ public primaryEndpointAddress: pulumi.Output<string>;
 (Redis only) The address of the endpoint for the primary node in the replication group, if the cluster mode is disabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L99">property replicationGroupDescription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L103">property replicationGroupDescription</a>
 </h3>
 
 ```typescript
@@ -787,7 +809,7 @@ public replicationGroupDescription: pulumi.Output<string>;
 A user-created description for the replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L103">property replicationGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L107">property replicationGroupId</a>
 </h3>
 
 ```typescript
@@ -798,7 +820,7 @@ public replicationGroupId: pulumi.Output<string>;
 The replication group identifier. This parameter is stored as a lowercase string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L107">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L111">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -809,7 +831,7 @@ public securityGroupIds: pulumi.Output<string[]>;
 One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L111">property securityGroupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L115">property securityGroupNames</a>
 </h3>
 
 ```typescript
@@ -820,7 +842,7 @@ public securityGroupNames: pulumi.Output<string[]>;
 A list of cache security group names to associate with this replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L117">property snapshotArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L121">property snapshotArns</a>
 </h3>
 
 ```typescript
@@ -833,7 +855,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L121">property snapshotName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L125">property snapshotName</a>
 </h3>
 
 ```typescript
@@ -844,7 +866,7 @@ public snapshotName: pulumi.Output<string | undefined>;
 The name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L129">property snapshotRetentionLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L133">property snapshotRetentionLimit</a>
 </h3>
 
 ```typescript
@@ -859,7 +881,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L134">property snapshotWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L138">property snapshotWindow</a>
 </h3>
 
 ```typescript
@@ -871,7 +893,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L138">property subnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L142">property subnetGroupName</a>
 </h3>
 
 ```typescript
@@ -882,7 +904,7 @@ public subnetGroupName: pulumi.Output<string>;
 The name of the cache subnet group to be used for the replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L142">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L146">property tags</a>
 </h3>
 
 ```typescript
@@ -893,7 +915,7 @@ public tags: pulumi.Output<{ ... } | undefined>;
 A mapping of tags to assign to the resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L146">property transitEncryptionEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L150">property transitEncryptionEnabled</a>
 </h3>
 
 ```typescript
@@ -1152,13 +1174,13 @@ getReplicationGroup(args: GetReplicationGroupArgs): Promise<GetReplicationGroupR
 Use this data source to get information about an Elasticache Replication Group.
 
 <h2 class="pdoc-module-header" id="ClusterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L369">interface ClusterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L379">interface ClusterArgs</a>
 </h2>
 
 The set of arguments for constructing a Cluster resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L376">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L386">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -1172,7 +1194,7 @@ are applied immediately, or during the next maintenance window. Default is
 (Available since v0.6.0)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L380">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L390">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -1180,10 +1202,10 @@ availabilityZone?: pulumi.Input<string>;
 ```
 
 
-The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `availability_zones`
+The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L384">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L394">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -1191,10 +1213,10 @@ availabilityZones?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
-List of Availability Zones in which the cache nodes will be created. If you want to create cache nodes in single-az, use `availability_zone`
+Use `preferred_availability_zones` instead unless you want to create cache nodes in single-az, then use `availability_zone`. Set of Availability Zones in which the cache nodes will be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L388">property azMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L398">property azMode</a>
 </h3>
 
 ```typescript
@@ -1205,7 +1227,7 @@ azMode?: pulumi.Input<string>;
 Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L393">property clusterId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L403">property clusterId</a>
 </h3>
 
 ```typescript
@@ -1217,7 +1239,7 @@ Group identifier. ElastiCache converts
 this name to lowercase
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L398">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L408">property engine</a>
 </h3>
 
 ```typescript
@@ -1229,7 +1251,7 @@ Name of the cache engine to be used for this cache cluster.
 Valid values for this parameter are `memcached` or `redis`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L404">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L414">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -1242,7 +1264,7 @@ See [Selecting a Cache Engine and Version](https://docs.aws.amazon.com/AmazonEla
 in the AWS Documentation center for supported versions
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L410">property maintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L420">property maintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -1255,7 +1277,7 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L416">property nodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L426">property nodeType</a>
 </h3>
 
 ```typescript
@@ -1268,7 +1290,7 @@ The compute and memory capacity of the nodes. See
 supported node types
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L422">property notificationTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L432">property notificationTopicArn</a>
 </h3>
 
 ```typescript
@@ -1281,7 +1303,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L429">property numCacheNodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L439">property numCacheNodes</a>
 </h3>
 
 ```typescript
@@ -1295,7 +1317,7 @@ value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L434">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L444">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -1307,7 +1329,7 @@ Name of the parameter group to associate
 with this cache cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L438">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L448">property port</a>
 </h3>
 
 ```typescript
@@ -1318,7 +1340,18 @@ port?: pulumi.Input<number>;
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L442">property replicationGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L452">property preferredAvailabilityZones</a>
+</h3>
+
+```typescript
+preferredAvailabilityZones?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L456">property replicationGroupId</a>
 </h3>
 
 ```typescript
@@ -1329,7 +1362,7 @@ replicationGroupId?: pulumi.Input<string>;
 The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L447">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L461">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -1341,7 +1374,7 @@ One or more VPC security groups associated
 with the cache cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L452">property securityGroupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L466">property securityGroupNames</a>
 </h3>
 
 ```typescript
@@ -1353,7 +1386,7 @@ List of security group
 names to associate with this cache cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L458">property snapshotArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L472">property snapshotArns</a>
 </h3>
 
 ```typescript
@@ -1366,7 +1399,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L462">property snapshotName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L476">property snapshotName</a>
 </h3>
 
 ```typescript
@@ -1377,7 +1410,7 @@ snapshotName?: pulumi.Input<string>;
 The name of a snapshot from which to restore data into the new node group.  Changing the `snapshot_name` forces a new resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L470">property snapshotRetentionLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L484">property snapshotRetentionLimit</a>
 </h3>
 
 ```typescript
@@ -1392,7 +1425,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L475">property snapshotWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L489">property snapshotWindow</a>
 </h3>
 
 ```typescript
@@ -1404,7 +1437,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L480">property subnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L494">property subnetGroupName</a>
 </h3>
 
 ```typescript
@@ -1416,7 +1449,7 @@ Name of the subnet group to be used
 for the cache cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L484">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L498">property tags</a>
 </h3>
 
 ```typescript
@@ -1427,13 +1460,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource
 
 <h2 class="pdoc-module-header" id="ClusterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L235">interface ClusterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L241">interface ClusterState</a>
 </h2>
 
 Input properties used for looking up and filtering Cluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L242">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L248">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -1447,7 +1480,7 @@ are applied immediately, or during the next maintenance window. Default is
 (Available since v0.6.0)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L246">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L252">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -1455,10 +1488,10 @@ availabilityZone?: pulumi.Input<string>;
 ```
 
 
-The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `availability_zones`
+The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L250">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L256">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -1466,10 +1499,10 @@ availabilityZones?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
-List of Availability Zones in which the cache nodes will be created. If you want to create cache nodes in single-az, use `availability_zone`
+Use `preferred_availability_zones` instead unless you want to create cache nodes in single-az, then use `availability_zone`. Set of Availability Zones in which the cache nodes will be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L254">property azMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L260">property azMode</a>
 </h3>
 
 ```typescript
@@ -1480,7 +1513,7 @@ azMode?: pulumi.Input<string>;
 Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are `single-az` or `cross-az`, default is `single-az`. If you want to choose `cross-az`, `num_cache_nodes` must be greater than `1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L259">property cacheNodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L265">property cacheNodes</a>
 </h3>
 
 ```typescript
@@ -1492,7 +1525,7 @@ List of node objects including `id`, `address`, `port` and `availability_zone`.
 Referenceable e.g. as `${aws_elasticache_cluster.bar.cache_nodes.0.address}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L263">property clusterAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L269">property clusterAddress</a>
 </h3>
 
 ```typescript
@@ -1503,7 +1536,7 @@ clusterAddress?: pulumi.Input<string>;
 (Memcached only) The DNS name of the cache cluster without the port appended.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L268">property clusterId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L274">property clusterId</a>
 </h3>
 
 ```typescript
@@ -1515,7 +1548,7 @@ Group identifier. ElastiCache converts
 this name to lowercase
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L272">property configurationEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L278">property configurationEndpoint</a>
 </h3>
 
 ```typescript
@@ -1526,7 +1559,7 @@ configurationEndpoint?: pulumi.Input<string>;
 (Memcached only) The configuration endpoint to allow host discovery.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L277">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L283">property engine</a>
 </h3>
 
 ```typescript
@@ -1538,7 +1571,7 @@ Name of the cache engine to be used for this cache cluster.
 Valid values for this parameter are `memcached` or `redis`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L283">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L289">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -1551,7 +1584,7 @@ See [Selecting a Cache Engine and Version](https://docs.aws.amazon.com/AmazonEla
 in the AWS Documentation center for supported versions
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L289">property maintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L295">property maintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -1564,7 +1597,7 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L295">property nodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L301">property nodeType</a>
 </h3>
 
 ```typescript
@@ -1577,7 +1610,7 @@ The compute and memory capacity of the nodes. See
 supported node types
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L301">property notificationTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L307">property notificationTopicArn</a>
 </h3>
 
 ```typescript
@@ -1590,7 +1623,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L308">property numCacheNodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L314">property numCacheNodes</a>
 </h3>
 
 ```typescript
@@ -1604,7 +1637,7 @@ value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L313">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L319">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -1616,7 +1649,7 @@ Name of the parameter group to associate
 with this cache cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L317">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L323">property port</a>
 </h3>
 
 ```typescript
@@ -1627,7 +1660,18 @@ port?: pulumi.Input<number>;
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L321">property replicationGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L327">property preferredAvailabilityZones</a>
+</h3>
+
+```typescript
+preferredAvailabilityZones?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of `num_cache_nodes`. If you want all the nodes in the same Availability Zone, use `availability_zone` instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L331">property replicationGroupId</a>
 </h3>
 
 ```typescript
@@ -1638,7 +1682,7 @@ replicationGroupId?: pulumi.Input<string>;
 The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L326">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L336">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -1650,7 +1694,7 @@ One or more VPC security groups associated
 with the cache cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L331">property securityGroupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L341">property securityGroupNames</a>
 </h3>
 
 ```typescript
@@ -1662,7 +1706,7 @@ List of security group
 names to associate with this cache cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L337">property snapshotArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L347">property snapshotArns</a>
 </h3>
 
 ```typescript
@@ -1675,7 +1719,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L341">property snapshotName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L351">property snapshotName</a>
 </h3>
 
 ```typescript
@@ -1686,7 +1730,7 @@ snapshotName?: pulumi.Input<string>;
 The name of a snapshot from which to restore data into the new node group.  Changing the `snapshot_name` forces a new resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L349">property snapshotRetentionLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L359">property snapshotRetentionLimit</a>
 </h3>
 
 ```typescript
@@ -1701,7 +1745,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L354">property snapshotWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L364">property snapshotWindow</a>
 </h3>
 
 ```typescript
@@ -1713,7 +1757,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L359">property subnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L369">property subnetGroupName</a>
 </h3>
 
 ```typescript
@@ -1725,7 +1769,7 @@ Name of the subnet group to be used
 for the cache cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L363">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/cluster.ts#L373">property tags</a>
 </h3>
 
 ```typescript
@@ -1806,7 +1850,7 @@ clusterAddress: string;
 ```
 
 
-The DNS name of the cache cluster without the port appended.
+(Memcached only) The DNS name of the cache cluster without the port appended.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getCluster.ts#L48">property configurationEndpoint</a>
@@ -1817,7 +1861,7 @@ configurationEndpoint: string;
 ```
 
 
-The configuration endpoint to allow host discovery.
+(Memcached only) The configuration endpoint to allow host discovery.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getCluster.ts#L52">property engine</a>
@@ -1840,6 +1884,17 @@ engineVersion: string;
 
 
 Version number of the cache engine.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getCluster.ts#L117">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getCluster.ts#L61">property maintenanceWindow</a>
@@ -2046,7 +2101,29 @@ configurationEndpointAddress: string;
 The configuration endpoint address to allow host discovery.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L44">property nodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L76">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L44">property memberClusters</a>
+</h3>
+
+```typescript
+memberClusters: string[];
+```
+
+
+The identifiers of all the nodes that are part of this replication group.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L48">property nodeType</a>
 </h3>
 
 ```typescript
@@ -2057,7 +2134,7 @@ nodeType: string;
 The cluster node type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L48">property numberCacheClusters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L52">property numberCacheClusters</a>
 </h3>
 
 ```typescript
@@ -2068,7 +2145,7 @@ numberCacheClusters: number;
 The number of cache clusters that the replication group has.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L52">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L56">property port</a>
 </h3>
 
 ```typescript
@@ -2079,7 +2156,7 @@ port: number;
 The port number on which the configuration endpoint will accept connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L56">property primaryEndpointAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L60">property primaryEndpointAddress</a>
 </h3>
 
 ```typescript
@@ -2090,7 +2167,7 @@ primaryEndpointAddress: string;
 The endpoint of the primary node in this node group (shard).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L60">property replicationGroupDescription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L64">property replicationGroupDescription</a>
 </h3>
 
 ```typescript
@@ -2101,7 +2178,7 @@ replicationGroupDescription: string;
 The description of the replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L64">property snapshotRetentionLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L68">property snapshotRetentionLimit</a>
 </h3>
 
 ```typescript
@@ -2112,7 +2189,7 @@ snapshotRetentionLimit: number;
 The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L68">property snapshotWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/getReplicationGroup.ts#L72">property snapshotWindow</a>
 </h3>
 
 ```typescript
@@ -2223,13 +2300,13 @@ parameters?: pulumi.Input<{ ... }[]>;
 A list of ElastiCache parameters to apply.
 
 <h2 class="pdoc-module-header" id="ReplicationGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L361">interface ReplicationGroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L371">interface ReplicationGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a ReplicationGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L365">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L375">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -2240,7 +2317,7 @@ applyImmediately?: pulumi.Input<boolean>;
 Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L369">property atRestEncryptionEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L379">property atRestEncryptionEnabled</a>
 </h3>
 
 ```typescript
@@ -2251,7 +2328,7 @@ atRestEncryptionEnabled?: pulumi.Input<boolean>;
 Whether to enable encryption at rest.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L373">property authToken</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L383">property authToken</a>
 </h3>
 
 ```typescript
@@ -2262,7 +2339,7 @@ authToken?: pulumi.Input<string>;
 The password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L377">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L387">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -2273,7 +2350,7 @@ autoMinorVersionUpgrade?: pulumi.Input<boolean>;
 Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L381">property automaticFailoverEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L391">property automaticFailoverEnabled</a>
 </h3>
 
 ```typescript
@@ -2284,7 +2361,7 @@ automaticFailoverEnabled?: pulumi.Input<boolean>;
 Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L385">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L395">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -2295,7 +2372,7 @@ availabilityZones?: pulumi.Input<pulumi.Input<string>[]>;
 A list of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L389">property clusterMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L399">property clusterMode</a>
 </h3>
 
 ```typescript
@@ -2306,7 +2383,7 @@ clusterMode?: pulumi.Input<{ ... }>;
 Create a native redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L393">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L403">property engine</a>
 </h3>
 
 ```typescript
@@ -2317,7 +2394,7 @@ engine?: pulumi.Input<string>;
 The name of the cache engine to be used for the clusters in this replication group. e.g. `redis`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L397">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L407">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -2328,7 +2405,7 @@ engineVersion?: pulumi.Input<string>;
 The version number of the cache engine to be used for the cache clusters in this replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L403">property maintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L413">property maintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -2341,7 +2418,7 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L407">property nodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L417">property nodeType</a>
 </h3>
 
 ```typescript
@@ -2352,7 +2429,7 @@ nodeType?: pulumi.Input<string>;
 The compute and memory capacity of the nodes in the node group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L413">property notificationTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L423">property notificationTopicArn</a>
 </h3>
 
 ```typescript
@@ -2365,7 +2442,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L417">property numberCacheClusters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L427">property numberCacheClusters</a>
 </h3>
 
 ```typescript
@@ -2376,7 +2453,7 @@ numberCacheClusters?: pulumi.Input<number>;
 The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L421">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L431">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -2387,7 +2464,7 @@ parameterGroupName?: pulumi.Input<string>;
 The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L425">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L435">property port</a>
 </h3>
 
 ```typescript
@@ -2398,7 +2475,7 @@ port?: pulumi.Input<number>;
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L429">property replicationGroupDescription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L439">property replicationGroupDescription</a>
 </h3>
 
 ```typescript
@@ -2409,7 +2486,7 @@ replicationGroupDescription: pulumi.Input<string>;
 A user-created description for the replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L433">property replicationGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L443">property replicationGroupId</a>
 </h3>
 
 ```typescript
@@ -2420,7 +2497,7 @@ replicationGroupId: pulumi.Input<string>;
 The replication group identifier. This parameter is stored as a lowercase string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L437">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L447">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -2431,7 +2508,7 @@ securityGroupIds?: pulumi.Input<pulumi.Input<string>[]>;
 One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L441">property securityGroupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L451">property securityGroupNames</a>
 </h3>
 
 ```typescript
@@ -2442,7 +2519,7 @@ securityGroupNames?: pulumi.Input<pulumi.Input<string>[]>;
 A list of cache security group names to associate with this replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L447">property snapshotArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L457">property snapshotArns</a>
 </h3>
 
 ```typescript
@@ -2455,7 +2532,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L451">property snapshotName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L461">property snapshotName</a>
 </h3>
 
 ```typescript
@@ -2466,7 +2543,7 @@ snapshotName?: pulumi.Input<string>;
 The name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L459">property snapshotRetentionLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L469">property snapshotRetentionLimit</a>
 </h3>
 
 ```typescript
@@ -2481,7 +2558,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L464">property snapshotWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L474">property snapshotWindow</a>
 </h3>
 
 ```typescript
@@ -2493,7 +2570,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L468">property subnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L478">property subnetGroupName</a>
 </h3>
 
 ```typescript
@@ -2504,7 +2581,7 @@ subnetGroupName?: pulumi.Input<string>;
 The name of the cache subnet group to be used for the replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L472">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L482">property tags</a>
 </h3>
 
 ```typescript
@@ -2515,7 +2592,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L476">property transitEncryptionEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L486">property transitEncryptionEnabled</a>
 </h3>
 
 ```typescript
@@ -2526,13 +2603,13 @@ transitEncryptionEnabled?: pulumi.Input<boolean>;
 Whether to enable encryption in transit.
 
 <h2 class="pdoc-module-header" id="ReplicationGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L232">interface ReplicationGroupState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L238">interface ReplicationGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering ReplicationGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L236">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L242">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -2543,7 +2620,7 @@ applyImmediately?: pulumi.Input<boolean>;
 Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L240">property atRestEncryptionEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L246">property atRestEncryptionEnabled</a>
 </h3>
 
 ```typescript
@@ -2554,7 +2631,7 @@ atRestEncryptionEnabled?: pulumi.Input<boolean>;
 Whether to enable encryption at rest.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L244">property authToken</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L250">property authToken</a>
 </h3>
 
 ```typescript
@@ -2565,7 +2642,7 @@ authToken?: pulumi.Input<string>;
 The password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L248">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L254">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -2576,7 +2653,7 @@ autoMinorVersionUpgrade?: pulumi.Input<boolean>;
 Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L252">property automaticFailoverEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L258">property automaticFailoverEnabled</a>
 </h3>
 
 ```typescript
@@ -2587,7 +2664,7 @@ automaticFailoverEnabled?: pulumi.Input<boolean>;
 Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L256">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L262">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -2598,7 +2675,7 @@ availabilityZones?: pulumi.Input<pulumi.Input<string>[]>;
 A list of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L260">property clusterMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L266">property clusterMode</a>
 </h3>
 
 ```typescript
@@ -2609,7 +2686,7 @@ clusterMode?: pulumi.Input<{ ... }>;
 Create a native redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L264">property configurationEndpointAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L270">property configurationEndpointAddress</a>
 </h3>
 
 ```typescript
@@ -2620,7 +2697,7 @@ configurationEndpointAddress?: pulumi.Input<string>;
 The address of the replication group configuration endpoint when cluster mode is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L268">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L274">property engine</a>
 </h3>
 
 ```typescript
@@ -2631,7 +2708,7 @@ engine?: pulumi.Input<string>;
 The name of the cache engine to be used for the clusters in this replication group. e.g. `redis`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L272">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L278">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -2642,7 +2719,7 @@ engineVersion?: pulumi.Input<string>;
 The version number of the cache engine to be used for the cache clusters in this replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L278">property maintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L284">property maintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -2655,7 +2732,18 @@ on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H 
 The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L282">property nodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L288">property memberClusters</a>
+</h3>
+
+```typescript
+memberClusters?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+The identifiers of all the nodes that are part of this replication group.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L292">property nodeType</a>
 </h3>
 
 ```typescript
@@ -2666,7 +2754,7 @@ nodeType?: pulumi.Input<string>;
 The compute and memory capacity of the nodes in the node group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L288">property notificationTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L298">property notificationTopicArn</a>
 </h3>
 
 ```typescript
@@ -2679,7 +2767,7 @@ SNS topic to send ElastiCache notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L292">property numberCacheClusters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L302">property numberCacheClusters</a>
 </h3>
 
 ```typescript
@@ -2690,7 +2778,7 @@ numberCacheClusters?: pulumi.Input<number>;
 The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L296">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L306">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -2701,7 +2789,7 @@ parameterGroupName?: pulumi.Input<string>;
 The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L300">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L310">property port</a>
 </h3>
 
 ```typescript
@@ -2712,7 +2800,7 @@ port?: pulumi.Input<number>;
 The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L304">property primaryEndpointAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L314">property primaryEndpointAddress</a>
 </h3>
 
 ```typescript
@@ -2723,7 +2811,7 @@ primaryEndpointAddress?: pulumi.Input<string>;
 (Redis only) The address of the endpoint for the primary node in the replication group, if the cluster mode is disabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L308">property replicationGroupDescription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L318">property replicationGroupDescription</a>
 </h3>
 
 ```typescript
@@ -2734,7 +2822,7 @@ replicationGroupDescription?: pulumi.Input<string>;
 A user-created description for the replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L312">property replicationGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L322">property replicationGroupId</a>
 </h3>
 
 ```typescript
@@ -2745,7 +2833,7 @@ replicationGroupId?: pulumi.Input<string>;
 The replication group identifier. This parameter is stored as a lowercase string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L316">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L326">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -2756,7 +2844,7 @@ securityGroupIds?: pulumi.Input<pulumi.Input<string>[]>;
 One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L320">property securityGroupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L330">property securityGroupNames</a>
 </h3>
 
 ```typescript
@@ -2767,7 +2855,7 @@ securityGroupNames?: pulumi.Input<pulumi.Input<string>[]>;
 A list of cache security group names to associate with this replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L326">property snapshotArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L336">property snapshotArns</a>
 </h3>
 
 ```typescript
@@ -2780,7 +2868,7 @@ Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L330">property snapshotName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L340">property snapshotName</a>
 </h3>
 
 ```typescript
@@ -2791,7 +2879,7 @@ snapshotName?: pulumi.Input<string>;
 The name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L338">property snapshotRetentionLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L348">property snapshotRetentionLimit</a>
 </h3>
 
 ```typescript
@@ -2806,7 +2894,7 @@ before being deleted. If the value of SnapshotRetentionLimit is set to zero (0),
 Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro or cache.t2.* cache nodes
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L343">property snapshotWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L353">property snapshotWindow</a>
 </h3>
 
 ```typescript
@@ -2818,7 +2906,7 @@ The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L347">property subnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L357">property subnetGroupName</a>
 </h3>
 
 ```typescript
@@ -2829,7 +2917,7 @@ subnetGroupName?: pulumi.Input<string>;
 The name of the cache subnet group to be used for the replication group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L351">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L361">property tags</a>
 </h3>
 
 ```typescript
@@ -2840,7 +2928,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L355">property transitEncryptionEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/replicationGroup.ts#L365">property transitEncryptionEnabled</a>
 </h3>
 
 ```typescript

@@ -6,6 +6,7 @@ title: Module cmd
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#anyproto">const anyproto</a>
 * <a href="#emptyproto">const emptyproto</a>
 * <a href="#grpc">const grpc</a>
 * <a href="#plugproto">const plugproto</a>
@@ -13,7 +14,9 @@ title: Module cmd
 * <a href="#provproto">const provproto</a>
 * <a href="#provrpc">const provrpc</a>
 * <a href="#requireFromString">const requireFromString</a>
+* <a href="#statusproto">const statusproto</a>
 * <a href="#structproto">const structproto</a>
+* <a href="#cancelRPC">function cancelRPC</a>
 * <a href="#checkRPC">function checkRPC</a>
 * <a href="#configureRPC">function configureRPC</a>
 * <a href="#createRPC">function createRPC</a>
@@ -21,6 +24,7 @@ title: Module cmd
 * <a href="#diffRPC">function diffRPC</a>
 * <a href="#getPluginInfoRPC">function getPluginInfoRPC</a>
 * <a href="#getProvider">function getProvider</a>
+* <a href="#grpcResponseFromError">function grpcResponseFromError</a>
 * <a href="#invokeRPC">function invokeRPC</a>
 * <a href="#main">function main</a>
 * <a href="#printErrorUsageAndExit">function printErrorUsageAndExit</a>
@@ -33,8 +37,16 @@ title: Module cmd
 <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts">cmd/dynamic-provider/index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts">cmd/run/index.ts</a> 
 
 
+<h2 class="pdoc-module-header" id="anyproto">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L24">const anyproto</a>
+</h2>
+
+```typescript
+const anyproto: any =  require("google-protobuf/google/protobuf/any_pb.js");
+```
+
 <h2 class="pdoc-module-header" id="emptyproto">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L24">const emptyproto</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L25">const emptyproto</a>
 </h2>
 
 ```typescript
@@ -50,7 +62,7 @@ const grpc: any =  require("grpc");
 ```
 
 <h2 class="pdoc-module-header" id="plugproto">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L28">const plugproto</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L29">const plugproto</a>
 </h2>
 
 ```typescript
@@ -58,7 +70,7 @@ const plugproto: any =  require("../../proto/plugin_pb.js");
 ```
 
 <h2 class="pdoc-module-header" id="providerKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L30">const providerKey</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L32">const providerKey</a>
 </h2>
 
 ```typescript
@@ -66,7 +78,7 @@ const providerKey: string = "__provider";
 ```
 
 <h2 class="pdoc-module-header" id="provproto">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L26">const provproto</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L27">const provproto</a>
 </h2>
 
 ```typescript
@@ -74,7 +86,7 @@ const provproto: any =  require("../../proto/provider_pb.js");
 ```
 
 <h2 class="pdoc-module-header" id="provrpc">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L27">const provrpc</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L28">const provrpc</a>
 </h2>
 
 ```typescript
@@ -89,16 +101,32 @@ const provrpc: any =  require("../../proto/provider_grpc_pb.js");
 const requireFromString: any =  require("require-from-string");
 ```
 
+<h2 class="pdoc-module-header" id="statusproto">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L30">const statusproto</a>
+</h2>
+
+```typescript
+const statusproto: any =  require("../../proto/status_pb.js");
+```
+
 <h2 class="pdoc-module-header" id="structproto">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L25">const structproto</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L26">const structproto</a>
 </h2>
 
 ```typescript
 const structproto: any =  require("google-protobuf/google/protobuf/struct_pb.js");
 ```
 
+<h2 class="pdoc-module-header" id="cancelRPC">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L50">function cancelRPC</a>
+</h2>
+
+```typescript
+cancelRPC(call: any, callback: any): void
+```
+
 <h2 class="pdoc-module-header" id="checkRPC">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L59">function checkRPC</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L65">function checkRPC</a>
 </h2>
 
 ```typescript
@@ -106,7 +134,7 @@ checkRPC(call: any, callback: any): Promise<void>
 ```
 
 <h2 class="pdoc-module-header" id="configureRPC">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L48">function configureRPC</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L54">function configureRPC</a>
 </h2>
 
 ```typescript
@@ -114,7 +142,7 @@ configureRPC(call: any, callback: any): void
 ```
 
 <h2 class="pdoc-module-header" id="createRPC">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L142">function createRPC</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L148">function createRPC</a>
 </h2>
 
 ```typescript
@@ -122,7 +150,7 @@ createRPC(call: any, callback: any): Promise<void>
 ```
 
 <h2 class="pdoc-module-header" id="deleteRPC">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L213">function deleteRPC</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L219">function deleteRPC</a>
 </h2>
 
 ```typescript
@@ -130,7 +158,7 @@ deleteRPC(call: any, callback: any): Promise<void>
 ```
 
 <h2 class="pdoc-module-header" id="diffRPC">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L101">function diffRPC</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L107">function diffRPC</a>
 </h2>
 
 ```typescript
@@ -138,7 +166,7 @@ diffRPC(call: any, callback: any): Promise<void>
 ```
 
 <h2 class="pdoc-module-header" id="getPluginInfoRPC">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L228">function getPluginInfoRPC</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L234">function getPluginInfoRPC</a>
 </h2>
 
 ```typescript
@@ -146,15 +174,23 @@ getPluginInfoRPC(call: any, callback: any): Promise<void>
 ```
 
 <h2 class="pdoc-module-header" id="getProvider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L32">function getProvider</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L34">function getProvider</a>
 </h2>
 
 ```typescript
 getProvider(props: any): dynamic.ResourceProvider
 ```
 
+<h2 class="pdoc-module-header" id="grpcResponseFromError">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L251">function grpcResponseFromError</a>
+</h2>
+
+```typescript
+grpcResponseFromError(e: { ... }): any
+```
+
 <h2 class="pdoc-module-header" id="invokeRPC">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L52">function invokeRPC</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L58">function invokeRPC</a>
 </h2>
 
 ```typescript
@@ -162,7 +198,7 @@ invokeRPC(call: any, callback: any): Promise<void>
 ```
 
 <h2 class="pdoc-module-header" id="main">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L240">function main</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L285">function main</a>
 </h2>
 
 ```typescript
@@ -178,7 +214,7 @@ printErrorUsageAndExit(message: string): never
 ```
 
 <h2 class="pdoc-module-header" id="readRPC">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L161">function readRPC</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L166">function readRPC</a>
 </h2>
 
 ```typescript
@@ -198,7 +234,7 @@ Attempts to provide a detailed error message for module load failure if the
 module that failed to load is the top-level module.
 
 <h2 class="pdoc-module-header" id="resultIncludingProvider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L234">function resultIncludingProvider</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L240">function resultIncludingProvider</a>
 </h2>
 
 ```typescript
@@ -206,7 +242,7 @@ resultIncludingProvider(result: any, props: any): any
 ```
 
 <h2 class="pdoc-module-header" id="updateRPC">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L186">function updateRPC</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L191">function updateRPC</a>
 </h2>
 
 ```typescript

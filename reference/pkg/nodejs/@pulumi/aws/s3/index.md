@@ -11,6 +11,7 @@ title: Module s3
 * <a href="#BucketNotification">class BucketNotification</a>
 * <a href="#BucketObject">class BucketObject</a>
 * <a href="#BucketPolicy">class BucketPolicy</a>
+* <a href="#Inventory">class Inventory</a>
 * <a href="#getBucket">function getBucket</a>
 * <a href="#getBucketObject">function getBucketObject</a>
 * <a href="#BucketArgs">interface BucketArgs</a>
@@ -27,8 +28,10 @@ title: Module s3
 * <a href="#GetBucketObjectArgs">interface GetBucketObjectArgs</a>
 * <a href="#GetBucketObjectResult">interface GetBucketObjectResult</a>
 * <a href="#GetBucketResult">interface GetBucketResult</a>
+* <a href="#InventoryArgs">interface InventoryArgs</a>
+* <a href="#InventoryState">interface InventoryState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts">s3/bucket.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketMetric.ts">s3/bucketMetric.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketNotification.ts">s3/bucketNotification.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts">s3/bucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketPolicy.ts">s3/bucketPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucket.ts">s3/getBucket.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucketObject.ts">s3/getBucketObject.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts">s3/bucket.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketMetric.ts">s3/bucketMetric.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketNotification.ts">s3/bucketNotification.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts">s3/bucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketPolicy.ts">s3/bucketPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucket.ts">s3/getBucket.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucketObject.ts">s3/getBucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts">s3/inventory.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Bucket">
@@ -714,7 +717,7 @@ public etag: pulumi.Output<string>;
 
 
 Used to trigger updates. The only meaningful value is `${md5(file("path/to/file"))}`.
-This attribute is not compatible with `kms_key_id`.
+This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
@@ -911,6 +914,163 @@ public policy: pulumi.Output<string>;
 
 
 The text of the policy.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="Inventory">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L9">class Inventory</a>
+</h2>
+
+Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L53">constructor</a>
+</h3>
+
+```typescript
+new Inventory(name: string, args: InventoryArgs, opts?: pulumi.ResourceOptions)
+```
+
+
+Create a Inventory resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L18">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InventoryState): Inventory
+```
+
+
+Get an existing Inventory resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L25">property bucket</a>
+</h3>
+
+```typescript
+public bucket: pulumi.Output<string>;
+```
+
+
+The S3 bucket configuration where inventory results are published (documented below).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L29">property destination</a>
+</h3>
+
+```typescript
+public destination: pulumi.Output<{ ... }>;
+```
+
+
+Destination bucket where inventory list files are written (documented below).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L33">property enabled</a>
+</h3>
+
+```typescript
+public enabled: pulumi.Output<boolean | undefined>;
+```
+
+
+Specifies whether the inventory is enabled or disabled.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L37">property filter</a>
+</h3>
+
+```typescript
+public filter: pulumi.Output<{ ... } | undefined>;
+```
+
+
+Object filtering that accepts a prefix (documented below).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L41">property includedObjectVersions</a>
+</h3>
+
+```typescript
+public includedObjectVersions: pulumi.Output<string>;
+```
+
+
+Object filtering that accepts a prefix (documented below). Can be `All` or `Current`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L45">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Unique identifier of the inventory configuration for the bucket.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L49">property optionalFields</a>
+</h3>
+
+```typescript
+public optionalFields: pulumi.Output<string[] | undefined>;
+```
+
+
+Contains the optional fields that are included in the inventory results.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L53">property schedule</a>
+</h3>
+
+```typescript
+public schedule: pulumi.Output<{ ... }>;
+```
+
+
+Contains the frequency for generating inventory results (documented below).
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1474,7 +1634,7 @@ etag?: pulumi.Input<string>;
 
 
 Used to trigger updates. The only meaningful value is `${md5(file("path/to/file"))}`.
-This attribute is not compatible with `kms_key_id`.
+This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L293">property key</a>
@@ -1672,7 +1832,7 @@ etag?: pulumi.Input<string>;
 
 
 Used to trigger updates. The only meaningful value is `${md5(file("path/to/file"))}`.
-This attribute is not compatible with `kms_key_id`.
+This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L209">property key</a>
@@ -2263,6 +2423,17 @@ expires: string;
 The date and time at which the object is no longer cacheable.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucketObject.ts#L121">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucketObject.ts#L89">property lastModified</a>
 </h3>
 
@@ -2390,6 +2561,17 @@ hostedZoneId: string;
 The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucket.ts#L59">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucket.ts#L47">property region</a>
 </h3>
 
@@ -2421,4 +2603,192 @@ websiteEndpoint: string;
 
 
 The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
+
+<h2 class="pdoc-module-header" id="InventoryArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L143">interface InventoryArgs</a>
+</h2>
+
+The set of arguments for constructing a Inventory resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L147">property bucket</a>
+</h3>
+
+```typescript
+bucket: pulumi.Input<string>;
+```
+
+
+The S3 bucket configuration where inventory results are published (documented below).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L151">property destination</a>
+</h3>
+
+```typescript
+destination: pulumi.Input<{ ... }>;
+```
+
+
+Destination bucket where inventory list files are written (documented below).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L155">property enabled</a>
+</h3>
+
+```typescript
+enabled?: pulumi.Input<boolean>;
+```
+
+
+Specifies whether the inventory is enabled or disabled.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L159">property filter</a>
+</h3>
+
+```typescript
+filter?: pulumi.Input<{ ... }>;
+```
+
+
+Object filtering that accepts a prefix (documented below).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L163">property includedObjectVersions</a>
+</h3>
+
+```typescript
+includedObjectVersions: pulumi.Input<string>;
+```
+
+
+Object filtering that accepts a prefix (documented below). Can be `All` or `Current`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L167">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Unique identifier of the inventory configuration for the bucket.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L171">property optionalFields</a>
+</h3>
+
+```typescript
+optionalFields?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+Contains the optional fields that are included in the inventory results.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L175">property schedule</a>
+</h3>
+
+```typescript
+schedule: pulumi.Input<{ ... }>;
+```
+
+
+Contains the frequency for generating inventory results (documented below).
+
+<h2 class="pdoc-module-header" id="InventoryState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L105">interface InventoryState</a>
+</h2>
+
+Input properties used for looking up and filtering Inventory resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L109">property bucket</a>
+</h3>
+
+```typescript
+bucket?: pulumi.Input<string>;
+```
+
+
+The S3 bucket configuration where inventory results are published (documented below).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L113">property destination</a>
+</h3>
+
+```typescript
+destination?: pulumi.Input<{ ... }>;
+```
+
+
+Destination bucket where inventory list files are written (documented below).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L117">property enabled</a>
+</h3>
+
+```typescript
+enabled?: pulumi.Input<boolean>;
+```
+
+
+Specifies whether the inventory is enabled or disabled.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L121">property filter</a>
+</h3>
+
+```typescript
+filter?: pulumi.Input<{ ... }>;
+```
+
+
+Object filtering that accepts a prefix (documented below).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L125">property includedObjectVersions</a>
+</h3>
+
+```typescript
+includedObjectVersions?: pulumi.Input<string>;
+```
+
+
+Object filtering that accepts a prefix (documented below). Can be `All` or `Current`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L129">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Unique identifier of the inventory configuration for the bucket.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L133">property optionalFields</a>
+</h3>
+
+```typescript
+optionalFields?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+Contains the optional fields that are included in the inventory results.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts#L137">property schedule</a>
+</h3>
+
+```typescript
+schedule?: pulumi.Input<{ ... }>;
+```
+
+
+Contains the frequency for generating inventory results (documented below).
 

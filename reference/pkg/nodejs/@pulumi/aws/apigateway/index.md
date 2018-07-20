@@ -1851,7 +1851,7 @@ public authorization: pulumi.Output<string>;
 The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L43">property authorizationScopes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L35">property authorizationScopes</a>
 </h3>
 
 ```typescript
@@ -1860,17 +1860,9 @@ public authorizationScopes: pulumi.Output<string[] | undefined>;
 
 
 The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-For example:
-```hcl
-request_parameters = {
-"method.request.header.X-Some-Header" = true,
-"method.request.querystring.some-query-param"  = true,
-}
-```
-would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L47">property authorizerId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L39">property authorizerId</a>
 </h3>
 
 ```typescript
@@ -1881,7 +1873,7 @@ public authorizerId: pulumi.Output<string | undefined>;
 The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L51">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L43">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -1904,7 +1896,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L57">property requestModels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L49">property requestModels</a>
 </h3>
 
 ```typescript
@@ -1926,6 +1918,14 @@ public requestParameters: pulumi.Output<{ ... } | undefined>;
 
 
 A map of request query string parameters and headers that should be passed to the integration.
+For example:
+```hcl
+request_parameters = {
+"method.request.header.X-Some-Header" = true,
+"method.request.querystring.some-query-param"  = true,
+}
+```
+would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L65">property requestParametersInJson</a>
@@ -4708,6 +4708,17 @@ If multiple REST APIs are found with this name, an error will be returned.
 A collection of values returned by getRestApi.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L40">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L36">property rootResourceId</a>
 </h3>
 
@@ -5345,7 +5356,7 @@ authorization: pulumi.Input<string>;
 The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L215">property authorizationScopes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L207">property authorizationScopes</a>
 </h3>
 
 ```typescript
@@ -5354,17 +5365,9 @@ authorizationScopes?: pulumi.Input<pulumi.Input<string>[]>;
 
 
 The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-For example:
-```hcl
-request_parameters = {
-"method.request.header.X-Some-Header" = true,
-"method.request.querystring.some-query-param"  = true,
-}
-```
-would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L219">property authorizerId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L211">property authorizerId</a>
 </h3>
 
 ```typescript
@@ -5375,7 +5378,7 @@ authorizerId?: pulumi.Input<string>;
 The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L223">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L215">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -5386,7 +5389,7 @@ httpMethod: pulumi.Input<string>;
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L229">property requestModels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L221">property requestModels</a>
 </h3>
 
 ```typescript
@@ -5408,6 +5411,14 @@ requestParameters?: pulumi.Input<{ ... }>;
 
 
 A map of request query string parameters and headers that should be passed to the integration.
+For example:
+```hcl
+request_parameters = {
+"method.request.header.X-Some-Header" = true,
+"method.request.querystring.some-query-param"  = true,
+}
+```
+would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L237">property requestParametersInJson</a>
@@ -5752,7 +5763,7 @@ authorization?: pulumi.Input<string>;
 The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L155">property authorizationScopes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L147">property authorizationScopes</a>
 </h3>
 
 ```typescript
@@ -5761,17 +5772,9 @@ authorizationScopes?: pulumi.Input<pulumi.Input<string>[]>;
 
 
 The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-For example:
-```hcl
-request_parameters = {
-"method.request.header.X-Some-Header" = true,
-"method.request.querystring.some-query-param"  = true,
-}
-```
-would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L159">property authorizerId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L151">property authorizerId</a>
 </h3>
 
 ```typescript
@@ -5782,7 +5785,7 @@ authorizerId?: pulumi.Input<string>;
 The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L163">property httpMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L155">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -5793,7 +5796,7 @@ httpMethod?: pulumi.Input<string>;
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L169">property requestModels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L161">property requestModels</a>
 </h3>
 
 ```typescript
@@ -5815,6 +5818,14 @@ requestParameters?: pulumi.Input<{ ... }>;
 
 
 A map of request query string parameters and headers that should be passed to the integration.
+For example:
+```hcl
+request_parameters = {
+"method.request.header.X-Some-Header" = true,
+"method.request.querystring.some-query-param"  = true,
+}
+```
+would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts#L177">property requestParametersInJson</a>

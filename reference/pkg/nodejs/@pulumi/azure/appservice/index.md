@@ -1982,6 +1982,17 @@ The Name of the Resource Group where the App Service Plan exists.
 A collection of values returned by getAppServicePlan.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/getAppServicePlan.ts#L61">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/getAppServicePlan.ts#L37">property kind</a>
 </h3>
 
@@ -2126,6 +2137,17 @@ httpsOnly: boolean;
 
 
 Can the App Service only be accessed via HTTPS?
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/getAppService.ts#L79">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/getAppService.ts#L64">property location</a>

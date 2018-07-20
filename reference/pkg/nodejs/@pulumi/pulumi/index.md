@@ -271,7 +271,7 @@ public key: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/swgillespie/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L886">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L886">property message</a>
 </h3>
 
 ```typescript
@@ -279,7 +279,7 @@ static message: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/swgillespie/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L885">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L885">property name</a>
 </h3>
 
 ```typescript
@@ -287,7 +287,7 @@ static name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/swgillespie/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L887">property stack</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L887">property stack</a>
 </h3>
 
 ```typescript
@@ -321,7 +321,7 @@ Returns true if the given object is an instance of a RunError.  This is designed
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/swgillespie/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L886">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L886">property message</a>
 </h3>
 
 ```typescript
@@ -329,7 +329,7 @@ static message: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/swgillespie/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L885">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L885">property name</a>
 </h3>
 
 ```typescript
@@ -337,7 +337,7 @@ static name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/swgillespie/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L887">property stack</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L887">property stack</a>
 </h3>
 
 ```typescript
@@ -650,7 +650,7 @@ Returns true if the given object is an instance of a RunError.  This is designed
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/swgillespie/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L896">property Error</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L896">property Error</a>
 </h3>
 
 ```typescript
@@ -669,7 +669,7 @@ private __pulumiRunError: boolean = true;
 A private field to help with RTTI that works in SxS scenarios.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/swgillespie/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L886">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L886">property message</a>
 </h3>
 
 ```typescript
@@ -677,7 +677,7 @@ static message: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/swgillespie/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L885">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L885">property name</a>
 </h3>
 
 ```typescript
@@ -685,7 +685,7 @@ static name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/swgillespie/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L887">property stack</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L887">property stack</a>
 </h3>
 
 ```typescript

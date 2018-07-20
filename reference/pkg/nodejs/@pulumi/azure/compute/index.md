@@ -2113,6 +2113,17 @@ dataDisks: { ... }[];
 a collection of `data_disk` blocks as defined below.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getImage.ts#L63">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getImage.ts#L51">property location</a>
 </h3>
 
@@ -2205,6 +2216,17 @@ diskSizeGb: number;
 
 
 The size of the managed disk in gigabytes.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getManagedDisk.ts#L69">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getManagedDisk.ts#L45">property osType</a>
@@ -2329,6 +2351,17 @@ Specifies the SKU of the Platform Image.
 A collection of values returned by getPlatformImage.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getPlatformImage.ts#L51">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getPlatformImage.ts#L47">property version</a>
 </h3>
 
@@ -2399,6 +2432,17 @@ The size of the Snapshotted Disk in GB.
 ```typescript
 encryptionSettings: { ... }[];
 ```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSnapshot.ts#L57">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSnapshot.ts#L40">property osType</a>

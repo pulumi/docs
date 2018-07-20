@@ -7,13 +7,16 @@ title: Module cloudformation
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Stack">class Stack</a>
+* <a href="#getExport">function getExport</a>
 * <a href="#getStack">function getStack</a>
+* <a href="#GetExportArgs">interface GetExportArgs</a>
+* <a href="#GetExportResult">interface GetExportResult</a>
 * <a href="#GetStackArgs">interface GetStackArgs</a>
 * <a href="#GetStackResult">interface GetStackResult</a>
 * <a href="#StackArgs">interface StackArgs</a>
 * <a href="#StackState">interface StackState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts">cloudformation/getStack.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts">cloudformation/stack.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts">cloudformation/getExport.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts">cloudformation/getStack.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts">cloudformation/stack.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Stack">
@@ -244,6 +247,20 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="getExport">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L12">function getExport</a>
+</h2>
+
+```typescript
+getExport(args: GetExportArgs): Promise<GetExportResult>
+```
+
+
+The CloudFormation Export data source allows access to stack
+exports specified in the [Output](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html) section of the Cloudformation Template using the optional Export Property.
+
+ -> Note: If you are trying to use a value from a Cloudformation Stack in the same Terraform run please use normal interpolation or Cloudformation Outputs.
+
 <h2 class="pdoc-module-header" id="getStack">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L10">function getStack</a>
 </h2>
@@ -255,6 +272,62 @@ getStack(args: GetStackArgs): Promise<GetStackResult>
 
 The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.
+
+<h2 class="pdoc-module-header" id="GetExportArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L21">interface GetExportArgs</a>
+</h2>
+
+A collection of arguments for invoking getExport.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L25">property name</a>
+</h3>
+
+```typescript
+name: pulumi.Input<string>;
+```
+
+
+The name of the cross stack reference
+
+<h2 class="pdoc-module-header" id="GetExportResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L31">interface GetExportResult</a>
+</h2>
+
+A collection of values returned by getExport.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L35">property exportingStackId</a>
+</h3>
+
+```typescript
+exportingStackId: string;
+```
+
+
+The exporting_stack_id (AWS ARNs) equivalent `ExportingStackId` from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L43">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L39">property value</a>
+</h3>
+
+```typescript
+value: string;
+```
+
+
+The value from Cloudformation export identified by the export name found from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
 
 <h2 class="pdoc-module-header" id="GetStackArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L19">interface GetStackArgs</a>
@@ -322,6 +395,17 @@ iamRoleArn: string;
 
 
 The ARN of the IAM role used to create the stack.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L73">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L49">property notificationArns</a>

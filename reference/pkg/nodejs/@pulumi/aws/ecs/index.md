@@ -148,7 +148,7 @@ Provides an ECS service - effectively a task that is expected to run until an er
 See [ECS Services section in AWS developer guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L90">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L94">constructor</a>
 </h3>
 
 ```typescript
@@ -206,7 +206,7 @@ public deploymentMaximumPercent: pulumi.Output<number | undefined>;
 ```
 
 
-The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment.
+The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L37">property deploymentMinimumHealthyPercent</a>
@@ -217,7 +217,7 @@ public deploymentMinimumHealthyPercent: pulumi.Output<number | undefined>;
 ```
 
 
-The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
+The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L41">property desiredCount</a>
@@ -228,7 +228,7 @@ public desiredCount: pulumi.Output<number | undefined>;
 ```
 
 
-The number of instances of the task definition to place and keep running
+The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L45">property healthCheckGracePeriodSeconds</a>
@@ -343,7 +343,18 @@ public placementStrategies: pulumi.Output<{ ... }[] | undefined>;
 **Deprecated**, use `ordered_placement_strategy` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L82">property serviceRegistries</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L82">property schedulingStrategy</a>
+</h3>
+
+```typescript
+public schedulingStrategy: pulumi.Output<string | undefined>;
+```
+
+
+The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Fargate tasks do not support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L86">property serviceRegistries</a>
 </h3>
 
 ```typescript
@@ -354,7 +365,7 @@ public serviceRegistries: pulumi.Output<{ ... } | undefined>;
 The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L86">property taskDefinition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L90">property taskDefinition</a>
 </h3>
 
 ```typescript
@@ -377,7 +388,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L90">property waitForSteadyState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L94">property waitForSteadyState</a>
 </h3>
 
 ```typescript
@@ -967,6 +978,17 @@ arn: string;
 The ARN of the ECS Cluster
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getCluster.ts#L53">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getCluster.ts#L37">property pendingTasksCount</a>
 </h3>
 
@@ -1089,6 +1111,17 @@ environment: { ... };
 The environment in use
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getContainerDefinition.ts#L70">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getContainerDefinition.ts#L54">property image</a>
 </h3>
 
@@ -1189,6 +1222,17 @@ desiredCount: number;
 The number of tasks for the ECS Service
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getService.ts#L58">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getService.ts#L46">property launchType</a>
 </h3>
 
@@ -1200,7 +1244,18 @@ launchType: string;
 The launch type for the ECS Service
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getService.ts#L50">property taskDefinition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getService.ts#L50">property schedulingStrategy</a>
+</h3>
+
+```typescript
+schedulingStrategy: string;
+```
+
+
+The scheduling strategy for the ECS Service
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getService.ts#L54">property taskDefinition</a>
 </h3>
 
 ```typescript
@@ -1243,6 +1298,17 @@ family: string;
 
 
 The family of this task definition
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getTaskDefinition.ts#L54">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/getTaskDefinition.ts#L38">property networkMode</a>
@@ -1446,13 +1512,13 @@ protocol?: Protocol;
 ```
 
 <h2 class="pdoc-module-header" id="ServiceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L220">interface ServiceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L230">interface ServiceArgs</a>
 </h2>
 
 The set of arguments for constructing a Service resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L224">property cluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L234">property cluster</a>
 </h3>
 
 ```typescript
@@ -1463,7 +1529,7 @@ cluster?: pulumi.Input<string>;
 ARN of an ECS cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L228">property deploymentMaximumPercent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L238">property deploymentMaximumPercent</a>
 </h3>
 
 ```typescript
@@ -1471,10 +1537,10 @@ deploymentMaximumPercent?: pulumi.Input<number>;
 ```
 
 
-The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment.
+The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L232">property deploymentMinimumHealthyPercent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L242">property deploymentMinimumHealthyPercent</a>
 </h3>
 
 ```typescript
@@ -1482,10 +1548,10 @@ deploymentMinimumHealthyPercent?: pulumi.Input<number>;
 ```
 
 
-The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
+The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L236">property desiredCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L246">property desiredCount</a>
 </h3>
 
 ```typescript
@@ -1493,10 +1559,10 @@ desiredCount?: pulumi.Input<number>;
 ```
 
 
-The number of instances of the task definition to place and keep running
+The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L240">property healthCheckGracePeriodSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L250">property healthCheckGracePeriodSeconds</a>
 </h3>
 
 ```typescript
@@ -1507,7 +1573,7 @@ healthCheckGracePeriodSeconds?: pulumi.Input<number>;
 Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 7200. Only valid for services configured to use load balancers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L244">property iamRole</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L254">property iamRole</a>
 </h3>
 
 ```typescript
@@ -1518,7 +1584,7 @@ iamRole?: pulumi.Input<string>;
 ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L248">property launchType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L258">property launchType</a>
 </h3>
 
 ```typescript
@@ -1529,7 +1595,7 @@ launchType?: pulumi.Input<string>;
 The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L252">property loadBalancers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L262">property loadBalancers</a>
 </h3>
 
 ```typescript
@@ -1540,7 +1606,7 @@ loadBalancers?: pulumi.Input<{ ... }[]>;
 A load balancer block. Load balancers documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L256">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L266">property name</a>
 </h3>
 
 ```typescript
@@ -1551,7 +1617,7 @@ name?: pulumi.Input<string>;
 The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L260">property networkConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L270">property networkConfiguration</a>
 </h3>
 
 ```typescript
@@ -1562,7 +1628,7 @@ networkConfiguration?: pulumi.Input<{ ... }>;
 The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L264">property orderedPlacementStrategies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L274">property orderedPlacementStrategies</a>
 </h3>
 
 ```typescript
@@ -1573,7 +1639,7 @@ orderedPlacementStrategies?: pulumi.Input<{ ... }[]>;
 Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L269">property placementConstraints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L279">property placementConstraints</a>
 </h3>
 
 ```typescript
@@ -1585,7 +1651,7 @@ rules that are taken into consideration during task placement. Maximum number of
 `placement_constraints` is `10`. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L273">property placementStrategies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L283">property placementStrategies</a>
 </h3>
 
 ```typescript
@@ -1596,7 +1662,18 @@ placementStrategies?: pulumi.Input<{ ... }[]>;
 **Deprecated**, use `ordered_placement_strategy` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L277">property serviceRegistries</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L287">property schedulingStrategy</a>
+</h3>
+
+```typescript
+schedulingStrategy?: pulumi.Input<string>;
+```
+
+
+The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Fargate tasks do not support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L291">property serviceRegistries</a>
 </h3>
 
 ```typescript
@@ -1607,7 +1684,7 @@ serviceRegistries?: pulumi.Input<{ ... }>;
 The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L281">property taskDefinition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L295">property taskDefinition</a>
 </h3>
 
 ```typescript
@@ -1618,7 +1695,7 @@ taskDefinition: pulumi.Input<string>;
 The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L285">property waitForSteadyState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L299">property waitForSteadyState</a>
 </h3>
 
 ```typescript
@@ -1629,13 +1706,13 @@ waitForSteadyState?: pulumi.Input<boolean>;
 If `true`, Terraform will wait for the service to reach a steady state (like [`aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`.
 
 <h2 class="pdoc-module-header" id="ServiceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L149">interface ServiceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L155">interface ServiceState</a>
 </h2>
 
 Input properties used for looking up and filtering Service resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L153">property cluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L159">property cluster</a>
 </h3>
 
 ```typescript
@@ -1646,7 +1723,7 @@ cluster?: pulumi.Input<string>;
 ARN of an ECS cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L157">property deploymentMaximumPercent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L163">property deploymentMaximumPercent</a>
 </h3>
 
 ```typescript
@@ -1654,10 +1731,10 @@ deploymentMaximumPercent?: pulumi.Input<number>;
 ```
 
 
-The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment.
+The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L161">property deploymentMinimumHealthyPercent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L167">property deploymentMinimumHealthyPercent</a>
 </h3>
 
 ```typescript
@@ -1665,10 +1742,10 @@ deploymentMinimumHealthyPercent?: pulumi.Input<number>;
 ```
 
 
-The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
+The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L165">property desiredCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L171">property desiredCount</a>
 </h3>
 
 ```typescript
@@ -1676,10 +1753,10 @@ desiredCount?: pulumi.Input<number>;
 ```
 
 
-The number of instances of the task definition to place and keep running
+The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L169">property healthCheckGracePeriodSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L175">property healthCheckGracePeriodSeconds</a>
 </h3>
 
 ```typescript
@@ -1690,7 +1767,7 @@ healthCheckGracePeriodSeconds?: pulumi.Input<number>;
 Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 7200. Only valid for services configured to use load balancers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L173">property iamRole</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L179">property iamRole</a>
 </h3>
 
 ```typescript
@@ -1701,7 +1778,7 @@ iamRole?: pulumi.Input<string>;
 ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L177">property launchType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L183">property launchType</a>
 </h3>
 
 ```typescript
@@ -1712,7 +1789,7 @@ launchType?: pulumi.Input<string>;
 The launch type on which to run your service. The valid values are `EC2` and `FARGATE`. Defaults to `EC2`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L181">property loadBalancers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L187">property loadBalancers</a>
 </h3>
 
 ```typescript
@@ -1723,7 +1800,7 @@ loadBalancers?: pulumi.Input<{ ... }[]>;
 A load balancer block. Load balancers documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L185">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L191">property name</a>
 </h3>
 
 ```typescript
@@ -1734,7 +1811,7 @@ name?: pulumi.Input<string>;
 The name of the service (up to 255 letters, numbers, hyphens, and underscores)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L189">property networkConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L195">property networkConfiguration</a>
 </h3>
 
 ```typescript
@@ -1745,7 +1822,7 @@ networkConfiguration?: pulumi.Input<{ ... }>;
 The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L193">property orderedPlacementStrategies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L199">property orderedPlacementStrategies</a>
 </h3>
 
 ```typescript
@@ -1756,7 +1833,7 @@ orderedPlacementStrategies?: pulumi.Input<{ ... }[]>;
 Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L198">property placementConstraints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L204">property placementConstraints</a>
 </h3>
 
 ```typescript
@@ -1768,7 +1845,7 @@ rules that are taken into consideration during task placement. Maximum number of
 `placement_constraints` is `10`. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L202">property placementStrategies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L208">property placementStrategies</a>
 </h3>
 
 ```typescript
@@ -1779,7 +1856,18 @@ placementStrategies?: pulumi.Input<{ ... }[]>;
 **Deprecated**, use `ordered_placement_strategy` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L206">property serviceRegistries</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L212">property schedulingStrategy</a>
+</h3>
+
+```typescript
+schedulingStrategy?: pulumi.Input<string>;
+```
+
+
+The scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Fargate tasks do not support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L216">property serviceRegistries</a>
 </h3>
 
 ```typescript
@@ -1790,7 +1878,7 @@ serviceRegistries?: pulumi.Input<{ ... }>;
 The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L210">property taskDefinition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L220">property taskDefinition</a>
 </h3>
 
 ```typescript
@@ -1801,7 +1889,7 @@ taskDefinition?: pulumi.Input<string>;
 The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L214">property waitForSteadyState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/service.ts#L224">property waitForSteadyState</a>
 </h3>
 
 ```typescript

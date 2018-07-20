@@ -28,7 +28,7 @@ Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is
 For more details, see the [Amazon Kinesis Firehose Documentation][1].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L59">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L62">constructor</a>
 </h3>
 
 ```typescript
@@ -86,7 +86,7 @@ public destination: pulumi.Output<string>;
 ```
 
 
-This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, and `elasticsearch`.
+This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L32">property destinationId</a>
@@ -196,12 +196,15 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L59">property versionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L62">property versionId</a>
 </h3>
 
 ```typescript
 public versionId: pulumi.Output<string>;
 ```
+
+
+Specifies the table version for the output data schema. Defaults to `LATEST`.
 
 <h2 class="pdoc-module-header" id="Stream">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/stream.ts#L12">class Stream</a>
@@ -381,13 +384,13 @@ resources.
 For more details, see the [Amazon Kinesis Documentation][1].
 
 <h2 class="pdoc-module-header" id="FirehoseDeliveryStreamArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L150">interface FirehoseDeliveryStreamArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L156">interface FirehoseDeliveryStreamArgs</a>
 </h2>
 
 The set of arguments for constructing a FirehoseDeliveryStream resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L154">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L160">property arn</a>
 </h3>
 
 ```typescript
@@ -398,7 +401,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) specifying the Stream
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L158">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L164">property destination</a>
 </h3>
 
 ```typescript
@@ -406,10 +409,10 @@ destination: pulumi.Input<string>;
 ```
 
 
-This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, and `elasticsearch`.
+This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L159">property destinationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L165">property destinationId</a>
 </h3>
 
 ```typescript
@@ -417,7 +420,7 @@ destinationId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L160">property elasticsearchConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L166">property elasticsearchConfiguration</a>
 </h3>
 
 ```typescript
@@ -425,7 +428,7 @@ elasticsearchConfiguration?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L164">property extendedS3Configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L170">property extendedS3Configuration</a>
 </h3>
 
 ```typescript
@@ -436,7 +439,7 @@ extendedS3Configuration?: pulumi.Input<{ ... }>;
 Enhanced configuration options for the s3 destination. More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L168">property kinesisSourceConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L174">property kinesisSourceConfiguration</a>
 </h3>
 
 ```typescript
@@ -447,7 +450,7 @@ kinesisSourceConfiguration?: pulumi.Input<{ ... }>;
 Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L173">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L179">property name</a>
 </h3>
 
 ```typescript
@@ -459,7 +462,7 @@ A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L179">property redshiftConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L185">property redshiftConfiguration</a>
 </h3>
 
 ```typescript
@@ -472,7 +475,7 @@ Using `redshift_configuration` requires the user to also specify a
 `s3_configuration` block. More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L184">property s3Configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L190">property s3Configuration</a>
 </h3>
 
 ```typescript
@@ -484,7 +487,7 @@ Configuration options for the s3 destination (or the intermediate bucket if the 
 is redshift). More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L185">property splunkConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L191">property splunkConfiguration</a>
 </h3>
 
 ```typescript
@@ -492,21 +495,24 @@ splunkConfiguration?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L186">property versionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L195">property versionId</a>
 </h3>
 
 ```typescript
 versionId?: pulumi.Input<string>;
 ```
 
+
+Specifies the table version for the output data schema. Defaults to `LATEST`.
+
 <h2 class="pdoc-module-header" id="FirehoseDeliveryStreamState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L108">interface FirehoseDeliveryStreamState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L111">interface FirehoseDeliveryStreamState</a>
 </h2>
 
 Input properties used for looking up and filtering FirehoseDeliveryStream resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L112">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L115">property arn</a>
 </h3>
 
 ```typescript
@@ -517,7 +523,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) specifying the Stream
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L116">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L119">property destination</a>
 </h3>
 
 ```typescript
@@ -525,10 +531,10 @@ destination?: pulumi.Input<string>;
 ```
 
 
-This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, and `elasticsearch`.
+This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L117">property destinationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L120">property destinationId</a>
 </h3>
 
 ```typescript
@@ -536,7 +542,7 @@ destinationId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L118">property elasticsearchConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L121">property elasticsearchConfiguration</a>
 </h3>
 
 ```typescript
@@ -544,7 +550,7 @@ elasticsearchConfiguration?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L122">property extendedS3Configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L125">property extendedS3Configuration</a>
 </h3>
 
 ```typescript
@@ -555,7 +561,7 @@ extendedS3Configuration?: pulumi.Input<{ ... }>;
 Enhanced configuration options for the s3 destination. More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L126">property kinesisSourceConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L129">property kinesisSourceConfiguration</a>
 </h3>
 
 ```typescript
@@ -566,7 +572,7 @@ kinesisSourceConfiguration?: pulumi.Input<{ ... }>;
 Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L131">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L134">property name</a>
 </h3>
 
 ```typescript
@@ -578,7 +584,7 @@ A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L137">property redshiftConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L140">property redshiftConfiguration</a>
 </h3>
 
 ```typescript
@@ -591,7 +597,7 @@ Using `redshift_configuration` requires the user to also specify a
 `s3_configuration` block. More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L142">property s3Configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L145">property s3Configuration</a>
 </h3>
 
 ```typescript
@@ -603,7 +609,7 @@ Configuration options for the s3 destination (or the intermediate bucket if the 
 is redshift). More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L143">property splunkConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L146">property splunkConfiguration</a>
 </h3>
 
 ```typescript
@@ -611,12 +617,15 @@ splunkConfiguration?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L144">property versionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L150">property versionId</a>
 </h3>
 
 ```typescript
 versionId?: pulumi.Input<string>;
 ```
+
+
+Specifies the table version for the output data schema. Defaults to `LATEST`.
 
 <h2 class="pdoc-module-header" id="GetStreamArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/getStream.ts#L21">interface GetStreamArgs</a>
@@ -673,6 +682,17 @@ creationTimestamp: number;
 
 
 The approximate UNIX timestamp that the stream was created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/getStream.ts#L67">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/getStream.ts#L47">property openShards</a>

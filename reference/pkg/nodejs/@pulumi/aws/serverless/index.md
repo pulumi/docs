@@ -12,7 +12,6 @@ title: Module serverless
 * <a href="#allFoldersForPackages">function allFoldersForPackages</a>
 * <a href="#computeCodePaths">function computeCodePaths</a>
 * <a href="#findDependency">function findDependency</a>
-* <a href="#removeBuiltins">function removeBuiltins</a>
 * <a href="#sha1hash">function sha1hash</a>
 * <a href="#Context">interface Context</a>
 * <a href="#FunctionOptions">interface FunctionOptions</a>
@@ -23,14 +22,14 @@ title: Module serverless
 
 
 <h2 class="pdoc-module-header" id="Function">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L101">class Function</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L112">class Function</a>
 </h2>
 
 Function is a higher-level API for creating and managing AWS Lambda Function resources implemented
 by a Lumi lambda expression and with a set of attached policies.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L104">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L115">constructor</a>
 </h3>
 
 ```typescript
@@ -54,7 +53,7 @@ protected registerOutputs(outputs: Inputs | undefined): void
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L103">property lambda</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L114">property lambda</a>
 </h3>
 
 ```typescript
@@ -62,7 +61,7 @@ public lambda: lambda.Function;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L102">property options</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L113">property options</a>
 </h3>
 
 ```typescript
@@ -70,7 +69,7 @@ public options: FunctionOptions;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L104">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L115">property role</a>
 </h3>
 
 ```typescript
@@ -90,10 +89,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="lambdaRolePolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L223">const lambdaRolePolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L244">const lambdaRolePolicy</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L225">let Statement</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L246">let Statement</a>
 </h3>
 
 ```typescript
@@ -110,7 +109,7 @@ let Statement: { ... }[] =  [
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L224">let Version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L245">let Version</a>
 </h3>
 
 ```typescript
@@ -118,47 +117,39 @@ let Version: string = "2012-10-17";
 ```
 
 <h2 class="pdoc-module-header" id="addPackageAndDependenciesToSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L294">function addPackageAndDependenciesToSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L307">function addPackageAndDependenciesToSet</a>
 </h2>
 
 ```typescript
-addPackageAndDependenciesToSet(s: Set<string>, root: Package, pkg: string): void
+addPackageAndDependenciesToSet(root: Package, pkg: string, packagePaths: Set<string>, excludedPackages: Set<string>): void
 ```
 
 <h2 class="pdoc-module-header" id="allFoldersForPackages">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L257">function allFoldersForPackages</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L278">function allFoldersForPackages</a>
 </h2>
 
 ```typescript
-allFoldersForPackages(path: string, packages: string[]): Promise<Set<string>>
+allFoldersForPackages(includedPackages: Set<string>, excludedPackages: Set<string>): Promise<Set<string>>
 ```
 
 <h2 class="pdoc-module-header" id="computeCodePaths">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L174">function computeCodePaths</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L187">function computeCodePaths</a>
 </h2>
 
 ```typescript
-computeCodePaths(closure: Promise<pulumi.runtime.SerializedFunction>, serializedFileName: string, extraIncludePaths?: string[], extraPackages?: string[]): Promise<pulumi.asset.AssetMap>
+computeCodePaths(closure: Promise<pulumi.runtime.SerializedFunction>, serializedFileNameNoExtension: string, extraIncludePaths?: string[], extraIncludePackages?: string[], extraExcludePackages?: string[]): Promise<pulumi.asset.AssetMap>
 ```
 
 <h2 class="pdoc-module-header" id="findDependency">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L311">function findDependency</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L336">function findDependency</a>
 </h2>
 
 ```typescript
 findDependency(root: Package, name: string): Package
 ```
 
-<h2 class="pdoc-module-header" id="removeBuiltins">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L333">function removeBuiltins</a>
-</h2>
-
-```typescript
-removeBuiltins(packages: Set<string>): Set<string>
-```
-
 <h2 class="pdoc-module-header" id="sha1hash">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L238">function sha1hash</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L259">function sha1hash</a>
 </h2>
 
 ```typescript
@@ -277,7 +268,31 @@ deadLetterConfig?: { ... };
 A dead letter target ARN to send function invocation failures to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L94">property includePackages</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L89">property environment</a>
+</h3>
+
+```typescript
+environment?: pulumi.Input<{ ... }>;
+```
+
+
+The Lambda environment's configuration settings.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L105">property excludePackages</a>
+</h3>
+
+```typescript
+excludePackages?: string[];
+```
+
+
+The packages relative to the program folder to not include the Lambda upload. This can be
+used to override the default serialization logic that includes all packages referenced by
+project.json (except @pulumi packages).  Default is `[]`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L99">property includePackages</a>
 </h3>
 
 ```typescript
@@ -285,11 +300,12 @@ includePackages?: string[];
 ```
 
 
-The packages relative to the program folder to include in the Lambda upload.  The version of the package
-installed in the program folder and it's dependencies will all be included. Default is `[]`.
+The packages relative to the program folder to include in the Lambda upload.  The version of
+the package installed in the program folder and it's dependencies will all be included.
+Default is `[]`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L89">property includePaths</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L93">property includePaths</a>
 </h3>
 
 ```typescript
@@ -366,10 +382,10 @@ vpcConfig?: { ... };
 Configuration for a VPC to run the Function within.
 
 <h2 class="pdoc-module-header" id="Package">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L245">interface Package</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L266">interface Package</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L252">property children</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L273">property children</a>
 </h3>
 
 ```typescript
@@ -377,7 +393,7 @@ children: Package[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L246">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L267">property name</a>
 </h3>
 
 ```typescript
@@ -385,7 +401,7 @@ name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L248">property package</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L269">property package</a>
 </h3>
 
 ```typescript
@@ -393,7 +409,7 @@ package: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L251">property parent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L272">property parent</a>
 </h3>
 
 ```typescript
@@ -401,7 +417,7 @@ parent?: Package;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L247">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L268">property path</a>
 </h3>
 
 ```typescript

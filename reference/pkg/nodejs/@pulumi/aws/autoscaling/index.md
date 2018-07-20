@@ -24,8 +24,14 @@ title: Module autoscaling
 * <a href="#PolicyState">interface PolicyState</a>
 * <a href="#ScheduleArgs">interface ScheduleArgs</a>
 * <a href="#ScheduleState">interface ScheduleState</a>
+* <a href="#InstanceLaunchErrorNotification">let InstanceLaunchErrorNotification</a>
+* <a href="#InstanceLaunchNotification">let InstanceLaunchNotification</a>
+* <a href="#InstanceTerminateErrorNotification">let InstanceTerminateErrorNotification</a>
+* <a href="#InstanceTerminateNotification">let InstanceTerminateNotification</a>
+* <a href="#TestNotification">let TestNotification</a>
+* <a href="#NotificationType">type NotificationType</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts">autoscaling/attachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts">autoscaling/group.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts">autoscaling/lifecycleHook.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts">autoscaling/notification.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts">autoscaling/policy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts">autoscaling/schedule.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts">autoscaling/attachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts">autoscaling/group.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts">autoscaling/lifecycleHook.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts">autoscaling/notification.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts">autoscaling/notificationType.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts">autoscaling/policy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts">autoscaling/schedule.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Attachment">
@@ -725,7 +731,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Notification">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L11">class Notification</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L13">class Notification</a>
 </h2>
 
 Provides an AutoScaling Group with Notification support, via SNS Topics. Each of
@@ -733,7 +739,7 @@ the `notifications` map to a [Notification Configuration][2] inside Amazon Web
 Services, and are applied to each AutoScaling Group you supply.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L36">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -748,7 +754,7 @@ Create a Notification resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -772,7 +778,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L27">property groupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L29">property groupNames</a>
 </h3>
 
 ```typescript
@@ -795,11 +801,11 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L32">property notifications</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L34">property notifications</a>
 </h3>
 
 ```typescript
-public notifications: pulumi.Output<string[]>;
+public notifications: pulumi.Output<NotificationType[]>;
 ```
 
 
@@ -807,7 +813,7 @@ A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L36">property topicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L38">property topicArn</a>
 </h3>
 
 ```typescript
@@ -2177,13 +2183,13 @@ roleArn?: pulumi.Input<string>;
 The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 
 <h2 class="pdoc-module-header" id="NotificationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L94">interface NotificationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L96">interface NotificationArgs</a>
 </h2>
 
 The set of arguments for constructing a Notification resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L98">property groupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L100">property groupNames</a>
 </h3>
 
 ```typescript
@@ -2194,11 +2200,11 @@ groupNames: pulumi.Input<pulumi.Input<string>[]>;
 A list of AutoScaling Group Names
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L103">property notifications</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L105">property notifications</a>
 </h3>
 
 ```typescript
-notifications: pulumi.Input<pulumi.Input<string>[]>;
+notifications: pulumi.Input<pulumi.Input<NotificationType>[]>;
 ```
 
 
@@ -2206,7 +2212,7 @@ A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L107">property topicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L109">property topicArn</a>
 </h3>
 
 ```typescript
@@ -2217,13 +2223,13 @@ topicArn: pulumi.Input<string>;
 The Topic ARN for notifications to be sent through
 
 <h2 class="pdoc-module-header" id="NotificationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L75">interface NotificationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L77">interface NotificationState</a>
 </h2>
 
 Input properties used for looking up and filtering Notification resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L79">property groupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L81">property groupNames</a>
 </h3>
 
 ```typescript
@@ -2234,11 +2240,11 @@ groupNames?: pulumi.Input<pulumi.Input<string>[]>;
 A list of AutoScaling Group Names
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L84">property notifications</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L86">property notifications</a>
 </h3>
 
 ```typescript
-notifications?: pulumi.Input<pulumi.Input<string>[]>;
+notifications?: pulumi.Input<pulumi.Input<NotificationType>[]>;
 ```
 
 
@@ -2246,7 +2252,7 @@ A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L88">property topicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L90">property topicArn</a>
 </h3>
 
 ```typescript
@@ -2741,4 +2747,52 @@ startTime?: pulumi.Input<string>;
 
 The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
+
+<h2 class="pdoc-module-header" id="InstanceLaunchErrorNotification">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L24">let InstanceLaunchErrorNotification</a>
+</h2>
+
+```typescript
+let InstanceLaunchErrorNotification: NotificationType = "autoscaling:EC2_INSTANCE_LAUNCH_ERROR";
+```
+
+<h2 class="pdoc-module-header" id="InstanceLaunchNotification">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L22">let InstanceLaunchNotification</a>
+</h2>
+
+```typescript
+let InstanceLaunchNotification: NotificationType = "autoscaling:EC2_INSTANCE_LAUNCH";
+```
+
+<h2 class="pdoc-module-header" id="InstanceTerminateErrorNotification">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L25">let InstanceTerminateErrorNotification</a>
+</h2>
+
+```typescript
+let InstanceTerminateErrorNotification: NotificationType = "autoscaling:EC2_INSTANCE_TERMINATE_ERROR";
+```
+
+<h2 class="pdoc-module-header" id="InstanceTerminateNotification">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L23">let InstanceTerminateNotification</a>
+</h2>
+
+```typescript
+let InstanceTerminateNotification: NotificationType = "autoscaling:EC2_INSTANCE_TERMINATE";
+```
+
+<h2 class="pdoc-module-header" id="TestNotification">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L26">let TestNotification</a>
+</h2>
+
+```typescript
+let TestNotification: NotificationType = "autoscaling:TEST_NOTIFICATION";
+```
+
+<h2 class="pdoc-module-header" id="NotificationType">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L29">type NotificationType</a>
+</h2>
+
+```typescript
+type NotificationType = autoscaling:EC2_INSTANCE_LAUNCH | autoscaling:EC2_INSTANCE_TERMINATE | autoscaling:EC2_INSTANCE_LAUNCH_ERROR | autoscaling:EC2_INSTANCE_TERMINATE_ERROR | autoscaling:TEST_NOTIFICATION;
+```
 

@@ -32,7 +32,7 @@ const engproto: any =  require("../proto/engine_pb.js");
 </h2>
 
 ```typescript
-debug(msg: string, resource?: resourceTypes.Resource): Promise<void>
+debug(msg: string, resource?: resourceTypes.Resource, streamId?: undefined | number): Promise<void>
 ```
 
 
@@ -43,7 +43,7 @@ debug logs a debug-level message that is generally hidden from end-users.
 </h2>
 
 ```typescript
-error(msg: string, resource?: resourceTypes.Resource): Promise<void>
+error(msg: string, resource?: resourceTypes.Resource, streamId?: undefined | number): Promise<void>
 ```
 
 
@@ -65,7 +65,7 @@ hasErrors returns true if any errors have occurred in the program.
 </h2>
 
 ```typescript
-info(msg: string, resource?: resourceTypes.Resource): Promise<void>
+info(msg: string, resource?: resourceTypes.Resource, streamId?: undefined | number): Promise<void>
 ```
 
 
@@ -76,7 +76,7 @@ info logs an informational message that is generally printed to stdout during re
 </h2>
 
 ```typescript
-log(engine: any, sev: any, msg: string, resource: resourceTypes.Resource | undefined): Promise<void>
+log(engine: any, sev: any, msg: string, resource: resourceTypes.Resource | undefined, streamId: number | undefined): Promise<void>
 ```
 
 <h2 class="pdoc-module-header" id="warn">
@@ -84,7 +84,7 @@ log(engine: any, sev: any, msg: string, resource: resourceTypes.Resource | undef
 </h2>
 
 ```typescript
-warn(msg: string, resource?: resourceTypes.Resource): Promise<void>
+warn(msg: string, resource?: resourceTypes.Resource, streamId?: undefined | number): Promise<void>
 ```
 
 

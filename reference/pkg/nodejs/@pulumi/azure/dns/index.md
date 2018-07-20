@@ -1708,6 +1708,17 @@ in your subscription that matches `name` will be returned.
 A collection of values returned by getZone.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L56">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L39">property maxNumberOfRecordSets</a>
 </h3>
 

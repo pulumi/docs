@@ -3181,6 +3181,17 @@ defaultSecondaryKey: string;
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/getEventhubNamespace.ts#L79">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/getEventhubNamespace.ts#L63">property location</a>
 </h3>
 

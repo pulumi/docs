@@ -238,7 +238,7 @@ deployments.
 Provides a WAF Regional IPSet Resource for use with Application Load Balancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L29">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -277,6 +277,17 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L25">property arn</a>
+</h3>
+
+```typescript
+public arn: pulumi.Output<string>;
+```
+
+
+The ARN of the WAF IPSet.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
@@ -289,7 +300,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L25">property ipSetDescriptors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L29">property ipSetDescriptors</a>
 </h3>
 
 ```typescript
@@ -297,10 +308,10 @@ public ipSetDescriptors: pulumi.Output<{ ... }[] | undefined>;
 ```
 
 
-One or more pairs specifying the IP address type (IPV4 or IPV5) and the IP address range (in CIDR notation) from which web requests originate.
+One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L33">property name</a>
 </h3>
 
 ```typescript
@@ -1425,13 +1436,13 @@ name?: pulumi.Input<string>;
 The name or description of the Geo Match Set.
 
 <h2 class="pdoc-module-header" id="IpSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L71">interface IpSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L81">interface IpSetArgs</a>
 </h2>
 
 The set of arguments for constructing a IpSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L75">property ipSetDescriptors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L85">property ipSetDescriptors</a>
 </h3>
 
 ```typescript
@@ -1439,10 +1450,10 @@ ipSetDescriptors?: pulumi.Input<{ ... }[]>;
 ```
 
 
-One or more pairs specifying the IP address type (IPV4 or IPV5) and the IP address range (in CIDR notation) from which web requests originate.
+One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L79">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L89">property name</a>
 </h3>
 
 ```typescript
@@ -1453,13 +1464,24 @@ name?: pulumi.Input<string>;
 The name or description of the IPSet.
 
 <h2 class="pdoc-module-header" id="IpSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L57">interface IpSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L63">interface IpSetState</a>
 </h2>
 
 Input properties used for looking up and filtering IpSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L61">property ipSetDescriptors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L67">property arn</a>
+</h3>
+
+```typescript
+arn?: pulumi.Input<string>;
+```
+
+
+The ARN of the WAF IPSet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L71">property ipSetDescriptors</a>
 </h3>
 
 ```typescript
@@ -1467,10 +1489,10 @@ ipSetDescriptors?: pulumi.Input<{ ... }[]>;
 ```
 
 
-One or more pairs specifying the IP address type (IPV4 or IPV5) and the IP address range (in CIDR notation) from which web requests originate.
+One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L65">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L75">property name</a>
 </h3>
 
 ```typescript

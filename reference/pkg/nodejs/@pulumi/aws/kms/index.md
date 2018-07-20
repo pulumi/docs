@@ -22,6 +22,7 @@ title: Module kms
 * <a href="#GetKeyArgs">interface GetKeyArgs</a>
 * <a href="#GetKeyResult">interface GetKeyResult</a>
 * <a href="#GetSecretArgs">interface GetSecretArgs</a>
+* <a href="#GetSecretResult">interface GetSecretResult</a>
 * <a href="#GrantArgs">interface GrantArgs</a>
 * <a href="#GrantState">interface GrantState</a>
 * <a href="#KeyArgs">interface KeyArgs</a>
@@ -280,7 +281,7 @@ public keyId: pulumi.Output<string>;
 ```
 
 
-The unique identifier for the customer master key (CMK) that the grant applies to.
+The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/grant.ts#L51">property name</a>
@@ -550,7 +551,7 @@ without having to hard code the ARN as input.
 </h2>
 
 ```typescript
-getSecret(args: GetSecretArgs): Promise<void>
+getSecret(args: GetSecretArgs): Promise<GetSecretResult>
 ```
 
 
@@ -700,6 +701,17 @@ arn: string;
 The Amazon Resource Name(ARN) of the key alias.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getAlias.ts#L46">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getAlias.ts#L38">property targetKeyArn</a>
 </h3>
 
@@ -776,6 +788,17 @@ ciphertextBlob: string;
 
 
 Base64 encoded ciphertext
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getCipherText.ts#L50">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetKeyArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L22">interface GetKeyArgs</a>
@@ -872,6 +895,17 @@ expirationModel: string;
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L56">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L48">property keyManager</a>
 </h3>
 
@@ -937,6 +971,23 @@ secrets: pulumi.Input<{ ... }[]>;
 One or more encrypted payload definitions from the KMS
 service.  See the Secret Definitions below.
 
+<h2 class="pdoc-module-header" id="GetSecretResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L38">interface GetSecretResult</a>
+</h2>
+
+A collection of values returned by getSecret.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L42">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
 <h2 class="pdoc-module-header" id="GrantArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/grant.ts#L152">interface GrantArgs</a>
 </h2>
@@ -987,7 +1038,7 @@ keyId: pulumi.Input<string>;
 ```
 
 
-The unique identifier for the customer master key (CMK) that the grant applies to.
+The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/grant.ts#L174">property name</a>
@@ -1099,7 +1150,7 @@ keyId?: pulumi.Input<string>;
 ```
 
 
-The unique identifier for the customer master key (CMK) that the grant applies to.
+The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/grant.ts#L140">property name</a>
