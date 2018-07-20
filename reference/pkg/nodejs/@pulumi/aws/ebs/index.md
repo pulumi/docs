@@ -515,6 +515,17 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
 A collection of values returned by getSnapshotIds.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getSnapshotIds.ts#L47">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getSnapshotIds.ts#L43">property ids</a>
 </h3>
 
@@ -560,6 +571,17 @@ encrypted: boolean;
 
 
 Whether the snapshot is encrypted.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getSnapshot.ts#L101">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getSnapshot.ts#L69">property kmsKeyId</a>
@@ -726,6 +748,17 @@ encrypted: boolean;
 
 
 Whether the disk is encrypted.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getVolume.ts#L84">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getVolume.ts#L56">property iops</a>

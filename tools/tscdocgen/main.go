@@ -143,7 +143,7 @@ func camelCase(s string) string {
 
 	var prev rune
 	for _, curr := range s {
-		if curr !== '-' {
+		if curr != '-' {
 			if prev == '-' {
 				buffer = append(buffer, unicode.ToUpper(curr))
 			} else {
@@ -559,7 +559,7 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 			return fmt.Sprintf("let %s", node.Name)
 		}
 
-		// For others, we will generate a full signature.
+	// For others, we will generate a full signature.
 	case typeDocCallSigNode, typeDocConstructorSigNode:
 		var label string
 
@@ -606,7 +606,7 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 
 		return label
 
-		// If we don't recognize this node, fail.
+	// If we don't recognize this node, fail.
 	default:
 		log.Fatalf("unrecognized node kind: %v (%v)", node.Kind, node.Name)
 		return ""

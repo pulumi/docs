@@ -6,13 +6,13 @@ title: Package @pulumi/aws-infra
 Node.js:
 
 ```javascript
-var aws-infra = require("@pulumi/aws-infra");
+var awsInfra = require("@pulumi/aws-infra");
 ```
 
 ES6 modules:
 
 ```typescript
-import * as aws-infra from "@pulumi/aws-infra";
+import * as awsInfra from "@pulumi/aws-infra";
 ```
 
 <h2 class="pdoc-module-header">Index</h2>
@@ -51,7 +51,7 @@ new Cluster(name: string, args: ClusterArgs, opts?: pulumi.ResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L16">method isInstance</a>
 </h3>
 
 ```typescript
@@ -59,7 +59,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L100">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L108">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -112,7 +112,7 @@ public securityGroupId?: pulumi.Output<string>;
 The ECS Cluster's Security Group ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
 </h3>
 
 ```typescript
@@ -165,7 +165,7 @@ the default network will be lazily created, using whatever options are provided 
 All subsequent calls will return that same network even if different opts are provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L16">method isInstance</a>
 </h3>
 
 ```typescript
@@ -173,7 +173,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L100">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L108">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -223,7 +223,7 @@ The subnets in which compute should run.  These are the private subnets if [useP
 these are the public subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L15">property urn</a>
 </h3>
 
 ```typescript

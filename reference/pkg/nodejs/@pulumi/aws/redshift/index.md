@@ -1948,6 +1948,17 @@ iamRoles: string[];
 The IAM roles associated to the cluster
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/getCluster.ts#L143">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/getCluster.ts#L103">property kmsKeyId</a>
 </h3>
 
@@ -2091,6 +2102,17 @@ arn: string;
 
 
 The ARN of the AWS Redshift service account in the selected region.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/getServiceAccount.ts#L39">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="ParameterGroupArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/parameterGroup.ts#L94">interface ParameterGroupArgs</a>

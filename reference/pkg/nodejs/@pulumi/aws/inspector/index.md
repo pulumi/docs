@@ -540,6 +540,17 @@ arns: string[];
 
 A list of the AWS Inspector Rules Packages arns available in the AWS region.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/getRulesPackages.ts#L27">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
 <h2 class="pdoc-module-header" id="ResourceGroupArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L74">interface ResourceGroupArgs</a>
 </h2>

@@ -493,6 +493,17 @@ description: string;
 the Description of the built-in Role.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L48">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L40">property permissions</a>
 </h3>
 
@@ -569,6 +580,17 @@ description: string;
 
 
 the Description of the built-in Role.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/getRoleDefinition.ts#L54">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/getRoleDefinition.ts#L42">property name</a>

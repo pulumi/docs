@@ -524,6 +524,17 @@ certificateSigningRequest: string;
 The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acmpca/getCertificateAuthority.ts#L81">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acmpca/getCertificateAuthority.ts#L48">property notAfter</a>
 </h3>
 

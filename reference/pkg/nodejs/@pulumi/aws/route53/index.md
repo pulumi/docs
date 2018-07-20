@@ -588,7 +588,7 @@ public fqdn: pulumi.Output<string>;
 ```
 
 
-[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`
+[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L42">property geolocationRoutingPolicies</a>
@@ -1183,6 +1183,17 @@ comment: string;
 
 
 The comment field of the Hosted Zone.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L82">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L67">property name</a>
@@ -1936,7 +1947,7 @@ fqdn?: pulumi.Input<string>;
 ```
 
 
-[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`
+[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L163">property geolocationRoutingPolicies</a>

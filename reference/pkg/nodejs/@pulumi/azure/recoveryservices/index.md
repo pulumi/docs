@@ -186,6 +186,17 @@ The name of the resource group in which the Recovery Services Vault resides.
 A collection of values returned by getVault.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/getVault.ts#L49">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/getVault.ts#L37">property location</a>
 </h3>
 

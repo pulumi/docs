@@ -883,6 +883,17 @@ fqdn: string;
 The FQDN of the Azure Kubernetes Managed Cluster.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L81">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L57">property kubeConfigRaw</a>
 </h3>
 

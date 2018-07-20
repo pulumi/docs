@@ -8,12 +8,15 @@ title: Module codecommit
 
 * <a href="#Repository">class Repository</a>
 * <a href="#Trigger">class Trigger</a>
+* <a href="#getRepository">function getRepository</a>
+* <a href="#GetRepositoryArgs">interface GetRepositoryArgs</a>
+* <a href="#GetRepositoryResult">interface GetRepositoryResult</a>
 * <a href="#RepositoryArgs">interface RepositoryArgs</a>
 * <a href="#RepositoryState">interface RepositoryState</a>
 * <a href="#TriggerArgs">interface TriggerArgs</a>
 * <a href="#TriggerState">interface TriggerState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/repository.ts">codecommit/repository.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/trigger.ts">codecommit/trigger.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/getRepository.ts">codecommit/getRepository.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/repository.ts">codecommit/repository.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/trigger.ts">codecommit/trigger.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Repository">
@@ -265,6 +268,95 @@ urn: Output<URN>;
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
+
+<h2 class="pdoc-module-header" id="getRepository">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/getRepository.ts#L9">function getRepository</a>
+</h2>
+
+```typescript
+getRepository(args: GetRepositoryArgs): Promise<GetRepositoryResult>
+```
+
+
+The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.
+
+<h2 class="pdoc-module-header" id="GetRepositoryArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/getRepository.ts#L18">interface GetRepositoryArgs</a>
+</h2>
+
+A collection of arguments for invoking getRepository.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/getRepository.ts#L22">property repositoryName</a>
+</h3>
+
+```typescript
+repositoryName: pulumi.Input<string>;
+```
+
+
+The name for the repository. This needs to be less than 100 characters.
+
+<h2 class="pdoc-module-header" id="GetRepositoryResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/getRepository.ts#L28">interface GetRepositoryResult</a>
+</h2>
+
+A collection of values returned by getRepository.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/getRepository.ts#L32">property arn</a>
+</h3>
+
+```typescript
+arn: string;
+```
+
+
+The ARN of the repository
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/getRepository.ts#L36">property cloneUrlHttp</a>
+</h3>
+
+```typescript
+cloneUrlHttp: string;
+```
+
+
+The URL to use for cloning the repository over HTTPS.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/getRepository.ts#L40">property cloneUrlSsh</a>
+</h3>
+
+```typescript
+cloneUrlSsh: string;
+```
+
+
+The URL to use for cloning the repository over SSH.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/getRepository.ts#L48">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/getRepository.ts#L44">property repositoryId</a>
+</h3>
+
+```typescript
+repositoryId: string;
+```
+
+
+The ID of the repository
 
 <h2 class="pdoc-module-header" id="RepositoryArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codecommit/repository.ts#L128">interface RepositoryArgs</a>

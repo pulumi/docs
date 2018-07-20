@@ -822,6 +822,17 @@ The name of the resource group in which the CDN Profile exists.
 A collection of values returned by getProfile.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/cdn/getProfile.ts#L49">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/cdn/getProfile.ts#L37">property location</a>
 </h3>
 

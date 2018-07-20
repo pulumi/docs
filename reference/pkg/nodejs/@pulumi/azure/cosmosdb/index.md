@@ -711,6 +711,17 @@ geoLocations: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/cosmosdb/getAccount.ts#L91">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/cosmosdb/getAccount.ts#L47">property ipRangeFilter</a>
 </h3>
 

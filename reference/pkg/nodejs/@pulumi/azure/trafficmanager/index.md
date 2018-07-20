@@ -12,6 +12,7 @@ title: Module trafficmanager
 * <a href="#EndpointArgs">interface EndpointArgs</a>
 * <a href="#EndpointState">interface EndpointState</a>
 * <a href="#GetGeographicalLocationArgs">interface GetGeographicalLocationArgs</a>
+* <a href="#GetGeographicalLocationResult">interface GetGeographicalLocationResult</a>
 * <a href="#ProfileArgs">interface ProfileArgs</a>
 * <a href="#ProfileState">interface ProfileState</a>
 
@@ -423,7 +424,7 @@ deployments.
 </h2>
 
 ```typescript
-getGeographicalLocation(args: GetGeographicalLocationArgs): Promise<void>
+getGeographicalLocation(args: GetGeographicalLocationArgs): Promise<GetGeographicalLocationResult>
 ```
 
 
@@ -777,6 +778,23 @@ name: pulumi.Input<string>;
 
 
 Specifies the name of the Location, for example `World`, `Europe` or `Germany`.
+
+<h2 class="pdoc-module-header" id="GetGeographicalLocationResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/getGeographicalLocation.ts#L28">interface GetGeographicalLocationResult</a>
+</h2>
+
+A collection of values returned by getGeographicalLocation.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/getGeographicalLocation.ts#L32">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="ProfileArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/trafficmanager/profile.ts#L163">interface ProfileArgs</a>

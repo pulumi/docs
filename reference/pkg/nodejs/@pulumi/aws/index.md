@@ -129,8 +129,10 @@ import * as aws from "@pulumi/aws";
 * <a href="lightsail">lightsail</a>
 * <a href="mediastore">mediastore</a>
 * <a href="mq">mq</a>
+* <a href="neptune">neptune</a>
 * <a href="opsworks">opsworks</a>
 * <a href="organizations">organizations</a>
+* <a href="pricing">pricing</a>
 * <a href="rds">rds</a>
 * <a href="redshift">redshift</a>
 * <a href="route53">route53</a>
@@ -478,6 +480,17 @@ the numeric account ID, `amazon`, or `self`.
 A collection of values returned by getAmiIds.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L57">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L53">property ids</a>
 </h3>
 
@@ -560,6 +573,17 @@ hypervisor: string;
 
 
 The hypervisor type of the image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L188">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L100">property imageId</a>
@@ -817,6 +841,17 @@ account: string;
 The [ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of the AWS account that owns the resource, without the hyphens.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getArn.ts#L54">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getArn.ts#L36">property partition</a>
 </h3>
 
@@ -886,6 +921,17 @@ A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws
 A collection of values returned by getAutoscalingGroups.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAutoscalingGroups.ts#L38">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAutoscalingGroups.ts#L34">property names</a>
 </h3>
 
@@ -930,6 +976,17 @@ be any of `"available"`, `"information"` or `"impaired"`.
 </h2>
 
 A collection of values returned by getAvailabilityZone.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L68">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L49">property name</a>
@@ -1005,6 +1062,17 @@ to which the underlying AWS account has access, regardless of their state.
 A collection of values returned by getAvailabilityZones.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZones.ts#L45">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZones.ts#L41">property names</a>
 </h3>
 
@@ -1031,6 +1099,17 @@ arn: string;
 
 
 The ARN of the AWS billing service account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getBillingServiceAccount.ts#L25">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetCallerIdentityResult">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getCallerIdentity.ts#L18">interface GetCallerIdentityResult</a>
@@ -1061,6 +1140,17 @@ arn: string;
 The AWS ARN associated with the calling entity.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getCallerIdentity.ts#L34">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getCallerIdentity.ts#L30">property userId</a>
 </h3>
 
@@ -1087,6 +1177,17 @@ displayName: string;
 
 
 The human-friendly name linked to the canonical user ID.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getCanonicalUserId.ts#L26">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetElasticIpArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L23">interface GetElasticIpArgs</a>
@@ -1198,6 +1299,17 @@ createDate: string;
 The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L53">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L49">property syncToken</a>
 </h3>
 
@@ -1214,6 +1326,17 @@ The publication time of the IP ranges, in Unix epoch time format
 </h2>
 
 A collection of values returned by getPartition.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getPartition.ts#L22">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getPartition.ts#L18">property partition</a>
@@ -1268,6 +1391,17 @@ cidrBlocks: string[];
 
 The list of CIDR blocks for the AWS service associated
 with the prefix list.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getPrefixList.ts#L53">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getPrefixList.ts#L49">property name</a>
@@ -1344,6 +1478,17 @@ endpoint: string;
 
 
 The EC2 endpoint for the selected region.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts#L58">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts#L54">property name</a>

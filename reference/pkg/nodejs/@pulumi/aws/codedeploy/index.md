@@ -26,7 +26,7 @@ title: Module codedeploy
 Provides a CodeDeploy application to be used as a basis for deployments
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L26">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L30">constructor</a>
 </h3>
 
 ```typescript
@@ -65,6 +65,17 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L25">property computePlatform</a>
+</h3>
+
+```typescript
+public computePlatform: pulumi.Output<string | undefined>;
+```
+
+
+The compute platform can either be `Server` or `Lambda`. Default is `Server`.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
 </h3>
 
@@ -77,7 +88,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L29">property name</a>
 </h3>
 
 ```typescript
@@ -88,7 +99,7 @@ public name: pulumi.Output<string>;
 The name of the application.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L26">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L30">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -433,13 +444,24 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ApplicationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L65">interface ApplicationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L75">interface ApplicationArgs</a>
 </h2>
 
 The set of arguments for constructing a Application resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L69">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L79">property computePlatform</a>
+</h3>
+
+```typescript
+computePlatform?: pulumi.Input<string>;
+```
+
+
+The compute platform can either be `Server` or `Lambda`. Default is `Server`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L83">property name</a>
 </h3>
 
 ```typescript
@@ -450,7 +472,7 @@ name?: pulumi.Input<string>;
 The name of the application.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L70">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L84">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -458,13 +480,24 @@ uniqueId?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="ApplicationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L54">interface ApplicationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L60">interface ApplicationState</a>
 </h2>
 
 Input properties used for looking up and filtering Application resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L58">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L64">property computePlatform</a>
+</h3>
+
+```typescript
+computePlatform?: pulumi.Input<string>;
+```
+
+
+The compute platform can either be `Server` or `Lambda`. Default is `Server`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L68">property name</a>
 </h3>
 
 ```typescript
@@ -475,7 +508,7 @@ name?: pulumi.Input<string>;
 The name of the application.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L59">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codedeploy/application.ts#L69">property uniqueId</a>
 </h3>
 
 ```typescript

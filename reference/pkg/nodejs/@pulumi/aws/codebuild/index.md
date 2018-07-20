@@ -232,10 +232,10 @@ Configuration for the builds to run inside a VPC. VPC config blocks are document
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L9">class Webhook</a>
 </h2>
 
-Provides a CodeBuild Webhook resource.
+Manages a CodeBuild webhook, which is an endpoint accepted by the CodeBuild service to trigger builds from source code repositories. Depending on the source type of the CodeBuild project, the CodeBuild service may also automatically create and delete the actual repository webhook as well.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L38">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L41">constructor</a>
 </h3>
 
 ```typescript
@@ -308,15 +308,18 @@ public payloadUrl: pulumi.Output<string>;
 The CodeBuild endpoint where webhook events are sent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L30">property projectName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L33">property projectName</a>
 </h3>
 
 ```typescript
 public projectName: pulumi.Output<string>;
 ```
 
+
+The name of the build project.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L34">property secret</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L37">property secret</a>
 </h3>
 
 ```typescript
@@ -324,10 +327,10 @@ public secret: pulumi.Output<string>;
 ```
 
 
-The secret token of the associated repository. Not returned for all source types.
+The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L38">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L41">property url</a>
 </h3>
 
 ```typescript
@@ -637,13 +640,13 @@ vpcConfig?: pulumi.Input<{ ... }>;
 Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
 
 <h2 class="pdoc-module-header" id="WebhookArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L98">interface WebhookArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L104">interface WebhookArgs</a>
 </h2>
 
 The set of arguments for constructing a Webhook resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L102">property branchFilter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L108">property branchFilter</a>
 </h3>
 
 ```typescript
@@ -654,21 +657,24 @@ branchFilter?: pulumi.Input<string>;
 A regular expression used to determine which branches get built. Default is all branches are built.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L103">property projectName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L112">property projectName</a>
 </h3>
 
 ```typescript
 projectName: pulumi.Input<string>;
 ```
 
+
+The name of the build project.
+
 <h2 class="pdoc-module-header" id="WebhookState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L75">interface WebhookState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L78">interface WebhookState</a>
 </h2>
 
 Input properties used for looking up and filtering Webhook resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L79">property branchFilter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L82">property branchFilter</a>
 </h3>
 
 ```typescript
@@ -679,7 +685,7 @@ branchFilter?: pulumi.Input<string>;
 A regular expression used to determine which branches get built. Default is all branches are built.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L83">property payloadUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L86">property payloadUrl</a>
 </h3>
 
 ```typescript
@@ -690,15 +696,18 @@ payloadUrl?: pulumi.Input<string>;
 The CodeBuild endpoint where webhook events are sent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L84">property projectName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L90">property projectName</a>
 </h3>
 
 ```typescript
 projectName?: pulumi.Input<string>;
 ```
 
+
+The name of the build project.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L88">property secret</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L94">property secret</a>
 </h3>
 
 ```typescript
@@ -706,10 +715,10 @@ secret?: pulumi.Input<string>;
 ```
 
 
-The secret token of the associated repository. Not returned for all source types.
+The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L92">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/webhook.ts#L98">property url</a>
 </h3>
 
 ```typescript

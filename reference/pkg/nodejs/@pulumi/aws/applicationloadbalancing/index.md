@@ -1156,6 +1156,17 @@ defaultActions: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/getListener.ts#L56">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/getListener.ts#L49">property loadBalancerArn</a>
 </h3>
 
@@ -1268,6 +1279,17 @@ dnsName: string;
 ```typescript
 enableDeletionProtection: boolean;
 ```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/getLoadBalancer.ts#L61">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/getLoadBalancer.ts#L48">property idleTimeout</a>
@@ -1422,6 +1444,17 @@ deregistrationDelay: number;
 ```typescript
 healthCheck: { ... };
 ```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/getTargetGroup.ts#L57">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/getTargetGroup.ts#L47">property name</a>

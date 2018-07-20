@@ -193,7 +193,7 @@ public attributes: pulumi.Output<{ ... }[]>;
 ```
 
 
-Define an attribute (can be lists), has two properties:
+List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L37">property globalSecondaryIndexes</a>
@@ -592,6 +592,17 @@ hashKey: string;
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/getTable.ts#L51">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/getTable.ts#L37">property localSecondaryIndexes</a>
 </h3>
 
@@ -761,7 +772,7 @@ attributes: pulumi.Input<{ ... }[]>;
 ```
 
 
-Define an attribute (can be lists), has two properties:
+List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L261">property globalSecondaryIndexes</a>
@@ -1039,7 +1050,7 @@ attributes?: pulumi.Input<{ ... }[]>;
 ```
 
 
-Define an attribute (can be lists), has two properties:
+List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L183">property globalSecondaryIndexes</a>

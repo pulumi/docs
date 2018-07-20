@@ -47,10 +47,10 @@ title: Module lambda
 Creates a Lambda function alias. Creates an alias that points to the specified Lambda function version.
 
 For information about Lambda and how to use it, see [What is AWS Lambda?][1]
-For information about function aliases, see [CreateAlias][2] in the API docs.
+For information about function aliases, see [CreateAlias][2] and [AliasRoutingConfiguration][3] in the API docs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L44">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L48">constructor</a>
 </h3>
 
 ```typescript
@@ -156,6 +156,17 @@ public name: pulumi.Output<string>;
 Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L48">property routingConfig</a>
+</h3>
+
+```typescript
+public routingConfig: pulumi.Output<{ ... } | undefined>;
+```
+
+
+The Lambda alias' route configuration settings. Fields documented below
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
@@ -171,7 +182,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L12">class EventSourceMapping</a>
 </h2>
 
-Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis and DynamoDB.
+Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB and SQS
 
 For information about Lambda and how to use it, see [What is AWS Lambda?][1]
 For information about event source mappings, see [CreateEventSourceMapping][2] in the API docs.
@@ -224,7 +235,7 @@ public batchSize: pulumi.Output<number | undefined>;
 ```
 
 
-The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100`.
+The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB and Kinesis, `10` for SQS.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L32">property enabled</a>
@@ -309,11 +320,11 @@ The result of the last AWS Lambda invocation of your Lambda function.
 </h3>
 
 ```typescript
-public startingPosition: pulumi.Output<string>;
+public startingPosition: pulumi.Output<string | undefined>;
 ```
 
 
-The position in the stream where AWS Lambda should start reading. Can be one of either `TRIM_HORIZON` or `LATEST`.
+The position in the stream where AWS Lambda should start reading. Must be one of either `TRIM_HORIZON` or `LATEST` if getting events from Kinesis or DynamoDB.  Must not be provided if getting events from SQS.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L60">property state</a>
@@ -907,13 +918,13 @@ The lambda function is invoked with [RequestResponse](https://docs.aws.amazon.co
 invocation type.
 
 <h2 class="pdoc-module-header" id="AliasArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L110">interface AliasArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L120">interface AliasArgs</a>
 </h2>
 
 The set of arguments for constructing a Alias resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L114">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L124">property description</a>
 </h3>
 
 ```typescript
@@ -924,7 +935,7 @@ description?: pulumi.Input<string>;
 Description of the alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L118">property functionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L128">property functionName</a>
 </h3>
 
 ```typescript
@@ -935,7 +946,7 @@ functionName: pulumi.Input<string>;
 The function ARN of the Lambda function for which you want to create an alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L122">property functionVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L132">property functionVersion</a>
 </h3>
 
 ```typescript
@@ -946,7 +957,7 @@ functionVersion: pulumi.Input<string>;
 Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L126">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L136">property name</a>
 </h3>
 
 ```typescript
@@ -956,14 +967,25 @@ name?: pulumi.Input<string>;
 
 Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L140">property routingConfig</a>
+</h3>
+
+```typescript
+routingConfig?: pulumi.Input<{ ... }>;
+```
+
+
+The Lambda alias' route configuration settings. Fields documented below
+
 <h2 class="pdoc-module-header" id="AliasState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L84">interface AliasState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L90">interface AliasState</a>
 </h2>
 
 Input properties used for looking up and filtering Alias resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L88">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L94">property arn</a>
 </h3>
 
 ```typescript
@@ -974,7 +996,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) identifying your Lambda function alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L92">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L98">property description</a>
 </h3>
 
 ```typescript
@@ -985,7 +1007,7 @@ description?: pulumi.Input<string>;
 Description of the alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L96">property functionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L102">property functionName</a>
 </h3>
 
 ```typescript
@@ -996,7 +1018,7 @@ functionName?: pulumi.Input<string>;
 The function ARN of the Lambda function for which you want to create an alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L100">property functionVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L106">property functionVersion</a>
 </h3>
 
 ```typescript
@@ -1007,7 +1029,7 @@ functionVersion?: pulumi.Input<string>;
 Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L104">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L110">property name</a>
 </h3>
 
 ```typescript
@@ -1017,14 +1039,25 @@ name?: pulumi.Input<string>;
 
 Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L114">property routingConfig</a>
+</h3>
+
+```typescript
+routingConfig?: pulumi.Input<{ ... }>;
+```
+
+
+The Lambda alias' route configuration settings. Fields documented below
+
 <h2 class="pdoc-module-header" id="EventSourceMappingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L173">interface EventSourceMappingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L170">interface EventSourceMappingArgs</a>
 </h2>
 
 The set of arguments for constructing a EventSourceMapping resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L177">property batchSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L174">property batchSize</a>
 </h3>
 
 ```typescript
@@ -1032,10 +1065,10 @@ batchSize?: pulumi.Input<number>;
 ```
 
 
-The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100`.
+The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB and Kinesis, `10` for SQS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L181">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L178">property enabled</a>
 </h3>
 
 ```typescript
@@ -1046,7 +1079,7 @@ enabled?: pulumi.Input<boolean>;
 Determines if the mapping will be enabled on creation. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L185">property eventSourceArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L182">property eventSourceArn</a>
 </h3>
 
 ```typescript
@@ -1057,7 +1090,7 @@ eventSourceArn: pulumi.Input<string>;
 The event source ARN - can either be a Kinesis or DynamoDB stream.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L189">property functionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L186">property functionName</a>
 </h3>
 
 ```typescript
@@ -1068,24 +1101,24 @@ functionName: pulumi.Input<string>;
 The name or the ARN of the Lambda function that will be subscribing to events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L193">property startingPosition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L190">property startingPosition</a>
 </h3>
 
 ```typescript
-startingPosition: pulumi.Input<string>;
+startingPosition?: pulumi.Input<string>;
 ```
 
 
-The position in the stream where AWS Lambda should start reading. Can be one of either `TRIM_HORIZON` or `LATEST`.
+The position in the stream where AWS Lambda should start reading. Must be one of either `TRIM_HORIZON` or `LATEST` if getting events from Kinesis or DynamoDB.  Must not be provided if getting events from SQS.
 
 <h2 class="pdoc-module-header" id="EventSourceMappingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L123">interface EventSourceMappingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L120">interface EventSourceMappingState</a>
 </h2>
 
 Input properties used for looking up and filtering EventSourceMapping resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L127">property batchSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L124">property batchSize</a>
 </h3>
 
 ```typescript
@@ -1093,10 +1126,10 @@ batchSize?: pulumi.Input<number>;
 ```
 
 
-The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100`.
+The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB and Kinesis, `10` for SQS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L131">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L128">property enabled</a>
 </h3>
 
 ```typescript
@@ -1107,7 +1140,7 @@ enabled?: pulumi.Input<boolean>;
 Determines if the mapping will be enabled on creation. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L135">property eventSourceArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L132">property eventSourceArn</a>
 </h3>
 
 ```typescript
@@ -1118,7 +1151,7 @@ eventSourceArn?: pulumi.Input<string>;
 The event source ARN - can either be a Kinesis or DynamoDB stream.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L139">property functionArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L136">property functionArn</a>
 </h3>
 
 ```typescript
@@ -1129,7 +1162,7 @@ functionArn?: pulumi.Input<string>;
 The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from `function_name` above.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L143">property functionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L140">property functionName</a>
 </h3>
 
 ```typescript
@@ -1140,7 +1173,7 @@ functionName?: pulumi.Input<string>;
 The name or the ARN of the Lambda function that will be subscribing to events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L147">property lastModified</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L144">property lastModified</a>
 </h3>
 
 ```typescript
@@ -1151,7 +1184,7 @@ lastModified?: pulumi.Input<string>;
 The date this resource was last modified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L151">property lastProcessingResult</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L148">property lastProcessingResult</a>
 </h3>
 
 ```typescript
@@ -1162,7 +1195,7 @@ lastProcessingResult?: pulumi.Input<string>;
 The result of the last AWS Lambda invocation of your Lambda function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L155">property startingPosition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L152">property startingPosition</a>
 </h3>
 
 ```typescript
@@ -1170,10 +1203,10 @@ startingPosition?: pulumi.Input<string>;
 ```
 
 
-The position in the stream where AWS Lambda should start reading. Can be one of either `TRIM_HORIZON` or `LATEST`.
+The position in the stream where AWS Lambda should start reading. Must be one of either `TRIM_HORIZON` or `LATEST` if getting events from Kinesis or DynamoDB.  Must not be provided if getting events from SQS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L159">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L156">property state</a>
 </h3>
 
 ```typescript
@@ -1184,7 +1217,7 @@ state?: pulumi.Input<string>;
 The state of the event source mapping.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L163">property stateTransitionReason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L160">property stateTransitionReason</a>
 </h3>
 
 ```typescript
@@ -1195,7 +1228,7 @@ stateTransitionReason?: pulumi.Input<string>;
 The reason the event source mapping is in its current state.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L167">property uuid</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L164">property uuid</a>
 </h3>
 
 ```typescript
@@ -1808,6 +1841,17 @@ handler: string;
 The function entrypoint in your code.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/getFunction.ts#L113">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/getFunction.ts#L57">property invokeArn</a>
 </h3>
 
@@ -2006,6 +2050,17 @@ to `$LATEST`.
 </h2>
 
 A collection of values returned by getInvocation.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/getInvocation.ts#L53">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/getInvocation.ts#L45">property result</a>

@@ -924,6 +924,17 @@ certificatePermissions: string[];
 the certificate permissions for the access policy
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getAccessPolicy.ts#L46">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getAccessPolicy.ts#L38">property keyPermissions</a>
 </h3>
 
@@ -1024,6 +1035,17 @@ enabledForTemplateDeployment: boolean;
 Can Azure Resource Manager retrieve secrets from the Key Vault?
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L73">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L53">property location</a>
 </h3>
 
@@ -1122,6 +1144,17 @@ contentType: string;
 
 
 The content type for the Key Vault Secret.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getSecret.ts#L56">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getSecret.ts#L44">property tags</a>

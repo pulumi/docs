@@ -208,6 +208,17 @@ Specifies the name of the resource group in which the Scheduler Job Collection r
 A collection of values returned by getJobCollection.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/scheduler/getJobCollection.ts#L57">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/scheduler/getJobCollection.ts#L37">property location</a>
 </h3>
 

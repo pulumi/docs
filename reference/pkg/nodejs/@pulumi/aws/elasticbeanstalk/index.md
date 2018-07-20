@@ -21,6 +21,7 @@ title: Module elasticbeanstalk
 * <a href="#EnvironmentArgs">interface EnvironmentArgs</a>
 * <a href="#EnvironmentState">interface EnvironmentState</a>
 * <a href="#GetHostedZoneArgs">interface GetHostedZoneArgs</a>
+* <a href="#GetHostedZoneResult">interface GetHostedZoneResult</a>
 * <a href="#GetSolutionStackArgs">interface GetSolutionStackArgs</a>
 * <a href="#GetSolutionStackResult">interface GetSolutionStackResult</a>
 
@@ -746,7 +747,7 @@ out.
 </h2>
 
 ```typescript
-getHostedZone(args?: GetHostedZoneArgs): Promise<void>
+getHostedZone(args?: GetHostedZoneArgs): Promise<GetHostedZoneResult>
 ```
 
 
@@ -1552,6 +1553,23 @@ region?: pulumi.Input<string>;
 
 The region you'd like the zone for. By default, fetches the current region.
 
+<h2 class="pdoc-module-header" id="GetHostedZoneResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/getHostedZone.ts#L29">interface GetHostedZoneResult</a>
+</h2>
+
+A collection of values returned by getHostedZone.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/getHostedZone.ts#L33">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
 <h2 class="pdoc-module-header" id="GetSolutionStackArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L19">interface GetSolutionStackArgs</a>
 </h2>
@@ -1588,6 +1606,17 @@ AWS documentation for reference solution stack names.
 </h2>
 
 A collection of values returned by getSolutionStack.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L44">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L40">property name</a>

@@ -462,7 +462,7 @@ public deliveryPolicy: pulumi.Output<string | undefined>;
 ```
 
 
-The SNS delivery policy
+The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topic.ts#L47">property displayName</a>
@@ -947,6 +947,17 @@ arn: string;
 
 Set to the ARN of the found topic, suitable for referencing in other resources that support SNS topics.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/getTopic.ts#L38">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
 <h2 class="pdoc-module-header" id="PlatformApplicationArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/platformApplication.ts#L177">interface PlatformApplicationArgs</a>
 </h2>
@@ -1404,7 +1415,7 @@ deliveryPolicy?: pulumi.Input<string>;
 ```
 
 
-The SNS delivery policy
+The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topic.ts#L253">property displayName</a>
@@ -1664,7 +1675,7 @@ deliveryPolicy?: pulumi.Input<string>;
 ```
 
 
-The SNS delivery policy
+The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topic.ts#L179">property displayName</a>

@@ -2266,6 +2266,17 @@ Is traffic only allowed via HTTPS? See [here](https://docs.microsoft.com/en-us/a
 for more information.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccount.ts#L144">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccount.ts#L76">property location</a>
 </h3>
 
@@ -2537,6 +2548,17 @@ The starting time and date of validity of this SAS. Must be a valid ISO-8601 for
 </h2>
 
 A collection of values returned by getAccountSAS.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L68">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L64">property sas</a>

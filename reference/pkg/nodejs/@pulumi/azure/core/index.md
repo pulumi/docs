@@ -344,6 +344,17 @@ clientId: string;
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L27">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L20">property servicePrincipalApplicationId</a>
 </h3>
 
@@ -397,6 +408,17 @@ Specifies the name of the resource group.
 </h2>
 
 A collection of values returned by getResourceGroup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getResourceGroup.ts#L40">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getResourceGroup.ts#L32">property location</a>
@@ -455,6 +477,17 @@ displayName: string;
 The subscription display name.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscription.ts#L54">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscription.ts#L37">property locationPlacementId</a>
 </h3>
 
@@ -511,6 +544,17 @@ subscriptionId: string;
 </h2>
 
 A collection of values returned by getSubscriptions.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L25">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L21">property subscriptions</a>

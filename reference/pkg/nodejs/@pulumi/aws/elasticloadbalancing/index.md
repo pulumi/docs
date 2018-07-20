@@ -22,6 +22,7 @@ title: Module elasticloadbalancing
 * <a href="#AttachmentArgs">interface AttachmentArgs</a>
 * <a href="#AttachmentState">interface AttachmentState</a>
 * <a href="#GetHostedZoneIdArgs">interface GetHostedZoneIdArgs</a>
+* <a href="#GetHostedZoneIdResult">interface GetHostedZoneIdResult</a>
 * <a href="#GetLoadBalancerArgs">interface GetLoadBalancerArgs</a>
 * <a href="#GetLoadBalancerResult">interface GetLoadBalancerResult</a>
 * <a href="#GetServiceAccountArgs">interface GetServiceAccountArgs</a>
@@ -1115,7 +1116,7 @@ deployments.
 </h2>
 
 ```typescript
-getHostedZoneId(args?: GetHostedZoneIdArgs): Promise<void>
+getHostedZoneId(args?: GetHostedZoneIdArgs): Promise<GetHostedZoneIdResult>
 ```
 
 
@@ -1331,6 +1332,23 @@ region?: pulumi.Input<string>;
 Name of the region whose AWS ELB HostedZoneId is desired.
 Defaults to the region from the AWS provider configuration.
 
+<h2 class="pdoc-module-header" id="GetHostedZoneIdResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getHostedZoneId.ts#L31">interface GetHostedZoneIdResult</a>
+</h2>
+
+A collection of values returned by getHostedZoneId.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getHostedZoneId.ts#L35">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
 <h2 class="pdoc-module-header" id="GetLoadBalancerArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getLoadBalancer.ts#L25">interface GetLoadBalancerArgs</a>
 </h2>
@@ -1417,6 +1435,17 @@ dnsName: string;
 ```typescript
 healthCheck: { ... };
 ```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getLoadBalancer.ts#L57">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getLoadBalancer.ts#L44">property idleTimeout</a>
@@ -1532,6 +1561,17 @@ arn: string;
 
 
 The ARN of the AWS ELB service account in the selected region.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L39">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="ListenerPolicyArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L88">interface ListenerPolicyArgs</a>

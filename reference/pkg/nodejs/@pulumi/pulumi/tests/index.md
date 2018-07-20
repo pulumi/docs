@@ -110,7 +110,7 @@ asyncTest(test: { ... }): { ... }
 ```
 
 <h2 class="pdoc-module-header" id="compareErrorText">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L4145">function compareErrorText</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L4780">function compareErrorText</a>
 </h2>
 
 ```typescript

@@ -95,7 +95,7 @@ dynamodb-local.
 </h2>
 
 ```typescript
-let endpoints: { ... }[] | undefined =  __config.getObject<{ acm?: string, apigateway?: string, cloudformation?: string, cloudwatch?: string, cloudwatchevents?: string, cloudwatchlogs?: string, devicefarm?: string, dynamodb?: string, ec2?: string, ecr?: string, ecs?: string, efs?: string, elb?: string, es?: string, iam?: string, kinesis?: string, kms?: string, lambda?: string, r53?: string, rds?: string, s3?: string, sns?: string, sqs?: string, ssm?: string, sts?: string }[]>("endpoints");
+let endpoints: { ... }[] | undefined =  __config.getObject<{ acm?: string, apigateway?: string, autoscaling?: string, cloudformation?: string, cloudwatch?: string, cloudwatchevents?: string, cloudwatchlogs?: string, devicefarm?: string, dynamodb?: string, ec2?: string, ecr?: string, ecs?: string, efs?: string, elb?: string, es?: string, iam?: string, kinesis?: string, kms?: string, lambda?: string, r53?: string, rds?: string, s3?: string, sns?: string, sqs?: string, ssm?: string, sts?: string }[]>("endpoints");
 ```
 
 <h2 class="pdoc-module-header" id="forbiddenAccountIds">

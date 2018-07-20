@@ -4580,6 +4580,17 @@ The name of the resource group in which the Application Security Group exists.
 A collection of values returned by getApplicationSecurityGroup.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L47">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L39">property location</a>
 </h3>
 
@@ -4678,6 +4689,17 @@ enableIpForwarding: boolean;
 
 
 Indicate if IP forwarding is set on the specified network interface.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L93">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L53">property internalDnsNameLabel</a>
@@ -4824,6 +4846,17 @@ Specifies the Name of the Resource Group within which the Network Security Group
 A collection of values returned by getNetworkSecurityGroup.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L49">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L37">property location</a>
 </h3>
 
@@ -4921,6 +4954,17 @@ fqdn: string;
 Fully qualified domain name of the A DNS record associated with the public IP. This is the concatenation of the domainNameLabel and the regionalized DNS zone.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L59">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L47">property idleTimeoutInMinutes</a>
 </h3>
 
@@ -5010,6 +5054,17 @@ Specifies the name of the resource group.
 A collection of values returned by getPublicIPs.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L51">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L47">property publicIps</a>
 </h3>
 
@@ -5053,6 +5108,17 @@ The name of the Resource Group in which the Route Table exists.
 </h2>
 
 A collection of values returned by getRouteTable.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L53">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L37">property location</a>
@@ -5153,6 +5219,17 @@ addressPrefix: string;
 
 
 The address prefix used for the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L58">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L46">property ipConfigurations</a>
@@ -5295,6 +5372,17 @@ Will BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L82">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L54">property ipConfigurations</a>
 </h3>
 
@@ -5398,6 +5486,17 @@ dnsServers: string[];
 
 
 The list of DNS servers used by the virtual network.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L53">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L45">property subnets</a>
