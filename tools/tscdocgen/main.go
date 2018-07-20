@@ -25,6 +25,7 @@ import (
 	"path/filepath"
 	"sort"
 	"strings"
+	"unicode"
 )
 
 func main() {
@@ -136,6 +137,25 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 	})
 }
 
+// camelCase converts a string into camelCase starting with a lower case letter.
+func camelCase(s string) string {
+	buffer := make([]rune, 0, len(s))
+
+	var prev rune
+	for _, curr := range s {
+		if curr !== '-' {
+			if prev == '-' {
+				buffer = append(buffer, unicode.ToUpper(curr))
+			} else {
+				buffer = append(buffer, unicode.ToLower(curr))
+			}
+		}
+		prev = curr
+	}
+
+	return string(buffer)
+}
+
 // emitMarkdownModule emits a single markdown module into the given directory.
 func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error {
 	// Open the file we're about to write into.  Each module gets one.
@@ -159,7 +179,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	if root {
 		title = fmt.Sprintf("Package %s", e.pkg)
 		pkg = e.pkg
-		pkgvar = e.pkg[strings.IndexRune(e.pkg, '/')+1:]
+		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
 	} else {
 		title = fmt.Sprintf("Module %s", name)
 
@@ -539,7 +559,7 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 			return fmt.Sprintf("let %s", node.Name)
 		}
 
-	// For others, we will generate a full signature.
+		// For others, we will generate a full signature.
 	case typeDocCallSigNode, typeDocConstructorSigNode:
 		var label string
 
@@ -586,7 +606,7 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 
 		return label
 
-	// If we don't recognize this node, fail.
+		// If we don't recognize this node, fail.
 	default:
 		log.Fatalf("unrecognized node kind: %v (%v)", node.Kind, node.Name)
 		return ""
