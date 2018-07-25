@@ -37,6 +37,11 @@
         "icon": "radio",
         "items": [
             {
+                "title": "Pulumi 0.14.3 now available",
+                "url": "https://pulumi.io/install/changelog.html#v143",
+                "date": "2018-07-20"
+            },
+            {
                 "title": "Pulumi 0.14.2 now available",
                 "url": "https://pulumi.io/install/changelog.html#v142",
                 "date": "2018-07-03"
@@ -46,11 +51,6 @@
                 "url": "https://pulumi.io/install/changelog.html#v141",
                 "date": "2018-06-29"
             },
-            {
-                "title": "Pulumi has launched!",
-                "url": "http://blog.pulumi.com/introducing-pulumi-a-cloud-development-platform",
-                "date": "2018-06-18"
-            }
         ],
         "actionItem": { "title": "Read all news", "url": "https://pulumi.io/install/changelog.html" }
     }
