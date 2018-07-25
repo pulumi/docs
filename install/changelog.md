@@ -59,12 +59,12 @@ Released on July 20, 2018
 In addition to the 0.14.3 CLI release, the following packages have been updated:
 
 - [@pulumi/pulumi](https://www.npmjs.com/package/@pulumi/pulumi) v0.14.3
-- [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws) v0.14.4
+- [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws) v0.14.5
 - [@pulumi/aws-serverless](https://www.npmjs.com/package/@pulumi/aws-serverless) v0.14.2
 - [@pulumi/azure](https://www.npmjs.com/package/@pulumi/azure) v0.14.2
 - [@pulumi/cloud](https://www.npmjs.com/package/@pulumi/cloud) v0.14.1
 - [@pulumi/cloud-aws](https://www.npmjs.com/package/@pulumi/cloud-aws) v0.14.1
-- [@pulumi/gcp](https://www.npmjs.com/package/@pulumi/gcp) v0.14.2
+- [@pulumi/gcp](https://www.npmjs.com/package/@pulumi/gcp) v0.14.3
 
 ### Pulumi CLI
 
@@ -86,19 +86,21 @@ In addition to the 0.14.3 CLI release, the following packages have been updated:
 
 There are no user facing changes from the previous release. However, we've laid some of the initial groundwork to support running resource operations in parallel and other small improvements.
 
-### @pulumi/aws v0.14.4
+### @pulumi/aws v0.14.5
 
 #### Fixed
 
-- Only apply AutoName to inputs (([pulumi/pulumi-aws#265](https://github.com/pulumi/pulumi-aws/pull/265)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
+- Only apply AutoName to inputs ([pulumi/pulumi-aws#265](https://github.com/pulumi/pulumi-aws/pull/265)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
 
-- Switch package inclusion from whitelist to blacklist (([pulumi/pulumi-aws#268](https://github.com/pulumi/pulumi-aws/pull/265)). When seralizing a lambda, default to including all dependencies listed in the dependencies section of package.json (and their transitive dependencies) except for all `@pulumi/*` packages. Previously we tried to infer the set of packages by doing a more detailed analysis of the lambda implementation, but this failed in somewhat common cases.
+- Switch package inclusion from whitelist to blacklist ([pulumi/pulumi-aws#268](https://github.com/pulumi/pulumi-aws/pull/265)). When seralizing a lambda, default to including all dependencies listed in the dependencies section of package.json (and their transitive dependencies) except for all `@pulumi/*` packages. Previously we tried to infer the set of packages by doing a more detailed analysis of the lambda implementation, but this failed in somewhat common cases.
+
+- Fix null ref when walking packages ([pulumi/pulumi-aws#280](https://github.com/pulumi/pulumi-aws/pull/280)). Fix some issues that could arise when serializing lambdas when a depenent package had no dependencies itself.
 
 #### Added
 
-- Add autoscaling NotificationType union and overlay (([pulumi/pulumi-aws#251](https://github.com/pulumi/pulumi/pull/251)). Provide a more strongly typed expereince for setting autoscaling notification types. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
+- Add autoscaling NotificationType union and overlay ([pulumi/pulumi-aws#251](https://github.com/pulumi/pulumi/pull/251)). Provide a more strongly typed expereince for setting autoscaling notification types. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
 
-- Add iam.assumeRolePolicyForPrincipal function (([pulumi/pulumi-aws#273](https://github.com/pulumi/pulumi-aws/pull/273)). Add some helpers for authoring policy documents to assume a role. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
+- Add iam.assumeRolePolicyForPrincipal function ([pulumi/pulumi-aws#273](https://github.com/pulumi/pulumi-aws/pull/273)). Add some helpers for authoring policy documents to assume a role. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
 
 - Add `environment` to `aws.serverless.Function` ([pulumi/pulumi-aws#254](https://github.com/pulumi/pulumi-aws/pull/254). Expose the underlying `Environment` property to allow setting environment variables visible at runtime of a function when using `aws.serverless.Function`. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
 
@@ -110,13 +112,13 @@ There are no user facing changes from the previous release. However, we've laid 
 
 #### Fixed
 
-- Allow route handlers to be invoked by API Gateway console (([pulumi/pulumi-aws-serverless#30](https://github.com/pulumi/pulumi-aws/pull/30)). Support API Gateway's "Test" functionality from the AWS Console for lambdas created by Pulumi.
+- Allow route handlers to be invoked by API Gateway console ([pulumi/pulumi-aws-serverless#30](https://github.com/pulumi/pulumi-aws/pull/30)). Support API Gateway's "Test" functionality from the AWS Console for lambdas created by Pulumi.
 
 ### @pulumi/azure v0.14.2
 
 #### Fixed
 
-- Only apply AutoName to inputs (([pulumi/pulumi-azure#78](https://github.com/pulumi/pulumi-azure/pull/78)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
+- Only apply AutoName to inputs ([pulumi/pulumi-azure#78](https://github.com/pulumi/pulumi-azure/pull/78)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
 
 ### @pulumi/cloud v0.14.1
 
@@ -128,12 +130,15 @@ There were no changes to the API surface area for `@pulumi/cloud`, but it shares
 
 - Associate docker output with individual resources so it is clearer what is going on (([pulumi/pulumi-cloud#526](https://github.com/pulumi/pulumi-azure/pull/526)). When doing a `pulumi update` or `pulumi preview` output for the docker build for a cloud.Service is now assocated with the actual cloud.Service that is being updated, instead of just being in the general output stream in the CLI.
 
-### @pulumi/gcp v0.14.2
+### @pulumi/gcp v0.14.3
 
 #### Fixed
 
-- Only apply AutoName to inputs (([pulumi/pulumi-gcp#29](https://github.com/pulumi/pulumi-gcp/pull/29)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
+- Only apply AutoName to inputs ([pulumi/pulumi-gcp#29](https://github.com/pulumi/pulumi-gcp/pull/29)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
 
+#### Added
+
+- Add a serverless example ([pulumi/pulumi-gcp#12](https://github.com/pulumi/pulumi-gcp/pull/12)). The GCP provider now has better support for creating google cloud functions from code. We have an [example](https://github.com/pulumi/pulumi-gcp/tree/v0.14.3/examples/serverless) of how to use this support. We plan to add higher level support here (similar to what we have with AWS) in a future release.
 
 ## v0.14.2 {#v142}
 
