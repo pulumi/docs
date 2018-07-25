@@ -23,6 +23,11 @@ title: "Change Log"
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v143">0.14.3</a></th>
+            <td>2018/07/20</td>
+            <td>{% include sdk-links.html version='0.14.3' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v142">0.14.2</a></th>
             <td>2018/07/03</td>
             <td>{% include sdk-links.html version='0.14.2' %}</td>
@@ -47,9 +52,92 @@ title: "Change Log"
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
+## v0.14.3 {#v143}
+
+Released on July 20, 2018
+
+In addition to the 0.14.3 CLI release, the following packages have been updated:
+
+- [@pulumi/pulumi](https://www.npmjs.com/package/@pulumi/pulumi) v0.14.3
+- [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws) v0.14.4
+- [@pulumi/aws-serverless](https://www.npmjs.com/package/@pulumi/aws-serverless) v0.14.2
+- [@pulumi/azure](https://www.npmjs.com/package/@pulumi/azure) v0.14.2
+- [@pulumi/cloud](https://www.npmjs.com/package/@pulumi/cloud) v0.14.1
+- [@pulumi/cloud-aws](https://www.npmjs.com/package/@pulumi/cloud-aws) v0.14.1
+- [@pulumi/gcp](https://www.npmjs.com/package/@pulumi/gcp) v0.14.2
+
+### Pulumi CLI
+
+#### Fixed
+
+- Support empty text assets ([pulumi/pulumi#1599](https://github.com/pulumi/pulumi/pull/1599)).
+
+- When printing message in non-interactive mode, do not keep printing out the worst diagnostic ([pulumi/pulumi#1640](https://github.com/pulumi/pulumi/pull/1640)). When run in non interactive enviroments (e.g. docker) Pulumi would print duplicate messages to the screen related to a resource when the running Pulumi program was writing to standard out (e.g. if it was invoking a docker build). This no longer happens. The full output from the program continues to be printed at the end of execution.
+
+- Work around a potentially bad assert in the engine ([pulumi/pulumi#1640](https://github.com/pulumi/pulumi/pull/1644)). In some cases, when Pulumi failed to delete a resource as part of an update, future updates would crash with an assert message. This is no longer the case and Pulumi will try to delete the resource it had marked as should be deleted.
+
+#### Added
+
+- Print out a 'still working' message every 20 seconds when in non-interactive mode ([pulumi/pulumi#1616](https://github.com/pulumi/pulumi/pull/1616)). When Pulumi is waiting for a long running resource operation to create (e.g. waiting for an ECS serverice to become stable after creation), print some output to the console even when running non-interactively. This helps for cases like TravsCI where if output is not written for a while the job is assumed to have hung and is aborted.
+
+- Support the NO_COLOR env variable to suppres any colored output ([pulumi/pulumi#1594](https://github.com/pulumi/pulumi/pull/1594)). Pulumi now respects the `NO_COLOR` environment variable. When set to a truthy value, colors are supressed from the CLI. In addtion, the `--color` flag can now be passed to all `pulumi` commands.
+
+### @pulumi/pulumi v0.14.3
+
+There are no user facing changes from the previous release. However, we've laid some of the initial groundwork to support running resource operations in parallel and other small improvements.
+
+### @pulumi/aws v0.14.4
+
+#### Fixed
+
+- Only apply AutoName to inputs (([pulumi/pulumi-aws#265](https://github.com/pulumi/pulumi-aws/pull/265)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
+
+- Switch package inclusion from whitelist to blacklist (([pulumi/pulumi-aws#268](https://github.com/pulumi/pulumi-aws/pull/265)). When seralizing a lambda, default to including all dependencies listed in the dependencies section of package.json (and their transitive dependencies) except for all `@pulumi/*` packages. Previously we tried to infer the set of packages by doing a more detailed analysis of the lambda implementation, but this failed in somewhat common cases.
+
+#### Added
+
+- Add autoscaling NotificationType union and overlay (([pulumi/pulumi-aws#251](https://github.com/pulumi/pulumi/pull/251)). Provide a more strongly typed expereince for setting autoscaling notification types. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
+
+- Add iam.assumeRolePolicyForPrincipal function (([pulumi/pulumi-aws#273](https://github.com/pulumi/pulumi-aws/pull/273)). Add some helpers for authoring policy documents to assume a role. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
+
+- Add `environment` to `aws.serverless.Function` ([pulumi/pulumi-aws#254](https://github.com/pulumi/pulumi-aws/pull/254). Expose the underlying `Environment` property to allow setting environment variables visible at runtime of a function when using `aws.serverless.Function`. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
+
+- Override role on RolePolicy to accept a Role ([pulumi/pulumi-aws#278](https://github.com/pulumi/pulumi-aws/pull/278)). When constructing a `RolePolicy` object, allow the `Role` object to set as an argument instead of just a string which is the ARN of the role to use. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
+
+- Add the .js extension to our generate closure code file. ([pulumi/pulumi-aws#279](https://github.com/pulumi/pulumi-aws/pull/279)). Ensure the generated code uploaded to AWS has a `.js` extension when building a lambda function. This allows the code for the lambda to be viewed in the AWS console.
+
+### @pulumi/aws-serverless v0.14.2
+
+#### Fixed
+
+- Allow route handlers to be invoked by API Gateway console (([pulumi/pulumi-aws-serverless#30](https://github.com/pulumi/pulumi-aws/pull/30)). Support API Gateway's "Test" functionality from the AWS Console for lambdas created by Pulumi.
+
+### @pulumi/azure v0.14.2
+
+#### Fixed
+
+- Only apply AutoName to inputs (([pulumi/pulumi-azure#78](https://github.com/pulumi/pulumi-azure/pull/78)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
+
+### @pulumi/cloud v0.14.1
+
+There were no changes to the API surface area for `@pulumi/cloud`, but it shares a version number with the AWS implementation, which did have improvements.
+
+### @pulumi/cloud-aws v0.14.1
+
+#### Fixed
+
+- Associate docker output with individual resources so it is clearer what is going on (([pulumi/pulumi-cloud#526](https://github.com/pulumi/pulumi-azure/pull/526)). When doing a `pulumi update` or `pulumi preview` output for the docker build for a cloud.Service is now assocated with the actual cloud.Service that is being updated, instead of just being in the general output stream in the CLI.
+
+### @pulumi/gcp v0.14.2
+
+#### Fixed
+
+- Only apply AutoName to inputs (([pulumi/pulumi-gcp#29](https://github.com/pulumi/pulumi-gcp/pull/29)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
+
+
 ## v0.14.2 {#v142}
 
-Release July 3, 2018
+Released on July 3, 2018
 
 In addition to the 0.14.2 CLI release, the following packages have been updated:
 
@@ -131,7 +219,7 @@ With the v0.14.0 CLI release, the following packages are now available:
 - [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws) v0.14.0
 - [@pulumi/aws-infra](https://www.npmjs.com/package/@pulumi/aws-infra) v0.14.0
 - [@pulumi/aws-serverless](https://www.npmjs.com/package/@pulumi/aws-serverless) v0.14.0
-- [@pulumi/azure](https://www.npmjs.com/package/@pulumi/azure) v0.14.0 
+- [@pulumi/azure](https://www.npmjs.com/package/@pulumi/azure) v0.14.0
 - [@pulumi/cloud](https://www.npmjs.com/package/@pulumi/cloud) v0.14.0
 - [@pulumi/gcp](https://www.npmjs.com/package/@pulumi/gcp) v0.14.0
 - [@pulumi/kubernetes](https://www.npmjs.com/package/@pulumi/kubernetes) v0.14.0
@@ -151,7 +239,7 @@ With the v0.14.0 CLI release, the following packages are now available:
 
 -  Delete existing resources before replacing, for resources that must be singletons ([pulumi/pulumi#1365](https://github.com/pulumi/pulumi/pull/1365)). For resources where the cloud vendor does not allow multiple resources to exist, such as a mount target in EFS, Pulumi now deletes the existing resource before creating a replacement resource.
 
-#### Changed 
+#### Changed
 
 -  (**Breaking**) Smaller Lambda ZIP for `aws.serverless.Function` ([pulumi/pulumi-aws#222](https://github.com/pulumi/pulumi-aws/pull/222)). By default, compute only the required package dependencies, and then include the transitive dependencies of these into the Lambda ZIP. There is now a new option for explicitly adding additional package dependencies.
 
@@ -172,7 +260,7 @@ This package is new in this release! Use it to directly manage API Gateway and L
 
 ### @pulumi/cloud v0.14.0
 
--  Add Docker caching. ([pulumi/pulumi-cloud#499](https://github.com/pulumi/pulumi-cloud/pull/499)). Docker build caching is now supported with a new parameter `ContainerBuild.cacheFrom`. Setting this value causes the Docker build to first check the service's associated ECR repository (if it exists). 
+-  Add Docker caching. ([pulumi/pulumi-cloud#499](https://github.com/pulumi/pulumi-cloud/pull/499)). Docker build caching is now supported with a new parameter `ContainerBuild.cacheFrom`. Setting this value causes the Docker build to first check the service's associated ECR repository (if it exists).
 
 -  Rename HttpEndpoint to API  ([pulumi/pulumi-cloud#497](https://github.com/pulumi/pulumi-cloud/pull/497)). Use a simpler, better-suited name. A type/value with the name `HttpEndpoint` is still exported as aliases for `API`, but are marked as `@deprecated`. These will be removed in a later release. While this is not a breaking change, any existing `cloud.HttEndpoint` will be replaced with a new, identical resource with a different URL.
 
@@ -194,7 +282,7 @@ With the v0.12.2 CLI release, we have also released the following packages:
 - [@pulumi/kubernetes v0.13.0](https://www.npmjs.com/package/@pulumi/kubernetes)
 - [@pulumi/pulumi v0.12.2](https://www.npmjs.com/package/@pulumi/pulumi)
 
-### Pulumi CLI 
+### Pulumi CLI
 
 #### Fixed
 
@@ -206,7 +294,7 @@ With the v0.12.2 CLI release, we have also released the following packages:
 
 -  Allow passing an existing `Role` to `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). [FunctionOptions](../reference/pkg/nodejs/@pulumi/aws/serverless/index.html#FunctionOptions) now includes a `Role` property, for scenarios where you wish to use an existing `Role` or share one across multiple Lambda functions.
 
-#### Changed 
+#### Changed
 -  (**Breaking**) Support configuring the paths to include in `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). Previously, all files in the directory would be included in the Lambda deployment package. With this change, only the generated `__index.js` and `./node_modules` are included by default. To add other files, use the new `includePaths` property in [FunctionOptions](../reference/pkg/nodejs/@pulumi/aws/serverless/index.html#FunctionOptions).
 
 -  (**Breaking**) Rename `aws.s3.Bucket#websites` to the singular `aws.s3.Bucket#website`. ([pulumi/pulumi-aws#207](https://github.com/pulumi/pulumi-aws/pull/207)). Since this property contains only one element, it has been renamed to `website` (singular) and is no longer an array property.
@@ -225,7 +313,7 @@ Released on May 9, 2018
 
 -  A new `@pulumi/aws-infra` package is available which contains useful AWS infrastructure components for `Network` and `Cluster` ([pulumi/pulumi-cloud#472](https://github.com/pulumi/pulumi-cloud/pull/472)).
 
-### Changed 
+### Changed
 
 -  (**Breaking**) Removed the `LogCollector` and `onError` handler from `@pulumi-cloud` ([pulumi/pulumi-cloud#474](https://github.com/pulumi/pulumi-cloud/pull/474)).  These were previously created in all stacks using `@pulumi/cloud`, but in practice were not being used.
 
@@ -247,16 +335,16 @@ Released on April 26, 2018
 
 ### Added
 
--  Add a `pulumi cancel` command ([pulumi/pulumi#1230](https://github.com/pulumi/pulumi/pull/1230)). This command cancels any in-progress operation for the current stack. 
+-  Add a `pulumi cancel` command ([pulumi/pulumi#1230](https://github.com/pulumi/pulumi/pull/1230)). This command cancels any in-progress operation for the current stack.
 
-### Changed 
+### Changed
 -  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks](../reference/stack.html#create-stack).
 
 -  (**Breaking**) Remove the explicit 'pulumi preview' command ([pulumi/pulumi#1170](https://github.com/pulumi/pulumi/pull/1170)). The `pulumi preview` output has now been merged in to the `pulumi update` command. Before an update is run, the preview is shown and you can choose whether to proceed or see more update details. To see just the preview operation, run `pulumi update --preview`.
 
 -  (**Breaking**) Add support for Node 8.10 for AWS Lambda ([pulumi/pulumi-aws#195](https://github.com/pulumi/pulumi-aws/pull/195)). Lambdas created with `aws.serverless.Function` and via JavaScript callbacks in `@pulumi/cloud` now default to Node.js 8.10.
 
--  Switch to a more streamlined view for property diffs in `pulumi update` ([pulumi/pulumi#1212](https://github.com/pulumi/pulumi/pull/1212)). 
+-  Switch to a more streamlined view for property diffs in `pulumi update` ([pulumi/pulumi#1212](https://github.com/pulumi/pulumi/pull/1212)).
 
 -  Allow multiple versions of the `@pulumi/pulumi` package to be loaded ([pulumi/pulumi#1209](https://github.com/pulumi/pulumi/pull/1209)). This allows packages and dependencies to be versioned independently.
 
@@ -269,11 +357,11 @@ Released on April 26, 2018
 
 Released on April 13, 2018
 
-### Added 
+### Added
 
--  Add a static `get` method to all AWS resource classes. ([pulumi/pulumi-aws#189](https://github.com/pulumi/pulumi-aws/pull/189)). Each Pulumi resource class now has a static `get` method that construct an instance by reading existing resource state from your cloud provider.  For example, to read an existing EC2 VM, use `aws.ec2.Instance.get("vm", "i-01d7e1cddb70a2f0d")`. 
+-  Add a static `get` method to all AWS resource classes. ([pulumi/pulumi-aws#189](https://github.com/pulumi/pulumi-aws/pull/189)). Each Pulumi resource class now has a static `get` method that construct an instance by reading existing resource state from your cloud provider.  For example, to read an existing EC2 VM, use `aws.ec2.Instance.get("vm", "i-01d7e1cddb70a2f0d")`.
 
-### Changed 
+### Changed
 
 -  Switch to a resource-progress oriented view for pulumi preview, update, and destroy operations ([pulumi/pulumi#1116](https://github.com/pulumi/pulumi/pull/1116)). The operations `pulumi preview`, `update` and `destroy` have far simpler output by default, and show a progress view of ongoing operations. In addition, there is a structured component view, showing a parent operation as complete only when all child resources have been created.
 
@@ -295,7 +383,7 @@ Released on April 6, 2018
 
 ### Changed
 
--  (Breaking) Require `pulumi login` before commands that need a backend ([pulumi/pulumi#1114](https://github.com/pulumi/pulumi/pull/1114)). The `pulumi` CLI now requires you to log in to pulumi.com for most operations. 
+-  (Breaking) Require `pulumi login` before commands that need a backend ([pulumi/pulumi#1114](https://github.com/pulumi/pulumi/pull/1114)). The `pulumi` CLI now requires you to log in to pulumi.com for most operations.
 
 ### Fixed
 
@@ -481,7 +569,7 @@ Released on December 28, 2017
 #### Pulumi Console and managed stacks
 
 New in this release is the [Pulumi Console](https://beta.pulumi.com) and stacks that are managed by Pulumi. This is the recommended way to safely deploy cloud applications.
-- `pulumi stack init` now creates a Pulumi managed stack. For a local stack, use `--local`. 
+- `pulumi stack init` now creates a Pulumi managed stack. For a local stack, use `--local`.
 - All Pulumi CLI commands now work with managed stacks. Login to Pulumi via `pulumi login`.
 - The [Pulumi Console](https://beta.pulumi.com) provides a management experience for stacks. You can view the currently deployed resources (along with the AWS ARNs) and see logs from the last update operation.
 
