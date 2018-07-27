@@ -27,6 +27,8 @@ just check the resulting files directly into the repo under `./packages/`.
 - Install a recent version of Go
 - Install mustache:
   ```go get -u github.com/cbroglie/mustache```
+- Ensure `jq` is installed, e.g. on macOS:
+  ```brew install jq```
 
 Run `make configure` to get the required Gem dependencies. (Assuming you have a recent Ruby
 installation on your system.
