@@ -50,7 +50,7 @@
                 "title": "Pulumi 0.14.1 now available",
                 "url": "https://pulumi.io/install/changelog.html#v141",
                 "date": "2018-06-29"
-            },
+            }
         ],
         "actionItem": { "title": "Read all news", "url": "https://pulumi.io/install/changelog.html" }
     }
