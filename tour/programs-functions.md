@@ -2,7 +2,7 @@
 
 The Pulumi Node.js SDK provides a core API for converting a JavaScript function into all the code and files necessary to then have that function be used at runtime within some Cloud, for example in an [AWS Lambda](https://aws.amazon.com/lambda/).
 
-There are many cases where a small piece of runtime functionality must be defined as part of a Cloud Application, and it may make sense to define that runtime functionality directly inline as part of the Pulumi program. This can augment, or even replace, using runtime code and binaries defined outside of Pulumi in Lambda ZIPs, Docker images, VM images, etc.
+There are many cases where a small piece of runtime functionality must be defined as part of a Cloud application, and it may make sense to define that runtime functionality directly inline as part of the Pulumi program. This can augment, or even replace, using runtime code and binaries defined outside of Pulumi in Lambda ZIPs, Docker images, VM images, etc.
 
 Pulumi makes this easy by allowing JavaScript callbacks written in a Pulumi program to be serialized down into an artifact that can be used at runtime.  This function serialization feature moves code between stages of your application lifecycle - from 'deployment time' to 'run time'. 'deployment time' code runs during a `pulumi preview` or `pulumi update`, while 'run time' code runs when the corresponding Cloud artifact is triggered. It is thus important to understand how this is done, and some of the restrictions placed on code in a Pulumi program that is intended to be invoked at runtime.
 
@@ -19,7 +19,7 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
     });
 ```
 
-There are also many indirect ways this API is used.  Many Pulumi SDK APIs allow JavaScript functions to be passed that will be used to define the AWS Lambda that will end up responsible for the code at runtime.  For example:
+There are also many indirect ways this API is used.  Many Pulumi SDK APIs allow JavaScript functions to be passed that will be used to define the AWS Lambda that will end up responsible for the code at runtime.  These APIs normally provide a strongly-typed definition that helps TypeScript users ensure their JavaScript functions are properly typed and will execute properly at 'run time'.  For example:
 
 ```ts
 import * as aws from "@pulumi/aws";
@@ -64,7 +64,9 @@ function ztesch() {
 }
 ```
 
-The primary JavaScript function ends up calling both 'foo' and 'bar', so both these functions will be analyzed, transformed and included in the 'run time' code as well.  When 'foo' is transformed it will see that 'quux' is called, so that function will also be processed.  However, 'ztesch' is never called.  So it will not be included.  
+The primary JavaScript function ends up calling both 'foo' and 'bar', so both these functions will be analyzed, transformed and included in the 'run time' code as well.  When 'foo' is transformed it will see that 'quux' is called, so that function will also be processed.  However, 'ztesch' is never called.  So it will not be included.
+
+All functions that are needed for 'run time' execution will then be included in uploaded code included for the Lambda.  Generally speaking, this code is almost always included as originally written, ensuring that the serialized code behaves as close as possible to the original code definition.  It is a primary goal of Pulumi that the semantics of the 'run time' code match the semantics of the original program's code.
 
 ### 'Capturing' values in a JavaScript function.
 
@@ -90,7 +92,7 @@ In this code, the JavaScript function ends up capturing 'obj1', 'obj2', and 'obj
 
 The actual process of serialization is conceptually straightforward.  Because JavaScript itself allows unimpeded reflection over values, `pulumi` uses this to serialize the entire object graph for the referenced JavaScipt value, including the prototype chain, properties and methods on the object and any values those transitively reference.
 
-Because of this, almost all JavaScript values can be serialized with very few exceptions.  Importantly, Pulumi Resources themselves are captured in this fashion, allowing cloud-runtime code to simply references the defined Resources of a Pulumi Application and to use them when a Lambda is triggered.  
+Because of this, almost all JavaScript values can be serialized with very few exceptions.  Importantly, Pulumi Resources themselves are captured in this fashion, allowing cloud-runtime code to simply references the defined Resources of a Pulumi application and to use them when a Lambda is triggered.  
 
 Notes:
 1. One notable limitation of this system is that native-functions are not capturable.  This impacts capturing any value that is either itself a native function or which *transitively* references a native from being capturable.
@@ -110,7 +112,7 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
     });
 ```
 
-In this code, only the 'foo' property is used from 'obj'.  So Pulumi will serialize a value equivalent to `{ foo() { console.log("foo called"); } }`.  However, if the code where:
+In this code, only the 'foo' property is used from 'obj'.  So Pulumi will serialize a value equivalent to `{ foo() { console.log("foo called"); } }`.  However, if the code were:
 
 ```ts
 const obj = { foo() { console.log("foo called"); this.bar(); } bar() { console.log("bar called") } };
@@ -125,7 +127,7 @@ Then this would need to serialize the entire object value (because 'bar' itself 
 
 ### 'Capturing' modules in a JavaScript function.
 
-While capturing of most JavaScript values works by serializing the entire object graph to produce a representation which can then be rehydated into a replica instance, the process works differently when dealing with a JavaScript module.  For example, consider the following code:
+Capturing of most JavaScript values normally works by serializing the entire object graph to produce a representation which can then be rehydated into a replica instance.  However, this process works differently when the value being dealt with is a JavaScript module.  For example, consider the following code:
 
 ```ts
 import * as fs from "fs";
@@ -136,7 +138,7 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
     });
 ```
 
-In this example the 'fs' module is needed inside the cloud-runtime code.  Because a module is just a normal JavaScript function, it would be possible to serialize this value just like any other object.  However, for several reasons this is not done.
+In this example the 'fs' module is needed inside the cloud-runtime code.  Because a module is just a normal JavaScript function, it would be possible to serialize this value just like any other object.  However, for several reasons this is not done:
 
 1. It would generate an enormous amount of serialized code.  This code would then have quite an impact on the time necessary to execute the lambda each time.  
 2. It would be redundant to have this code serialized out given that the equivalent code will exist in the node_modules directory for the Lambda.
@@ -155,15 +157,15 @@ await fs.writeFile("example.txt", "data")
 This ensures that all modules can be referenced simply in application code, and then used simply in cloud-runtime code with expected semantics.
 
 Notes:
-1. this form of module capturing only applies to external modules that are referenced.  i.e. modules that are directly part of Node, or are in the node_modules directory.  The 'local' module (i.e. the module for the Pulumi Application) is not captured in this fashion.  That's because this code will not actually be part of the uploaded node_modules, and so would not be found.  The 'local' module is captured as if it was a normal 'value'.  This means, all its relevant variable and functions are serialized over in a uniform fashion to the Lambda, regardless of which actual file/module they are contained in.
+1. this form of module capturing only applies to external modules that are referenced.  i.e. modules that are directly part of Node, or are in the node_modules directory.  The 'local' module (i.e. the module for the Pulumi application itself) is not captured in this fashion.  That's because this code will not actually be part of the uploaded node_modules, and so would not be found.  The 'local' module is captured as if it was a normal 'value'.  This means, all its relevant variable and functions are serialized over in a uniform fashion to the Lambda, regardless of which actual file/module they are contained in. 
 
 ### Pulumi execution order.
 
-`pulumi` uses `node` to execute a pulumi-application.  During execution, when a call to `createLambdaFunction` is encountered, the function is converted to a Lambda at that point in execution.  That means that if the function captures any state, then the value that is captured will be whatever it was at the point in time.
+`pulumi` uses `node` to execute a Pulumi application.  During execution, when a call to `createLambdaFunction` is encountered, the function is converted to a Lambda at that point in execution.  That means that if the function captures any state, then the value that is captured will be whatever it was at the point in time.
 
 For this reason, it is highly recommended that code not capture values which are also mutated in code.  It is much safer and easier to reason about immutable values that are captured in code.
 
-For example consider the following two programs:
+To see the problems this avoids in practice, consider the following two programs:
 
 ```ts
 let obj = { a: 1, b: 2 };
@@ -207,7 +209,7 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
 obj = { a: 3, b: 4 };
 ```
 
-it may be the case that the value `{ a: 1, b: 2}` or `{ a: 3, b: 4}` is serialized depending on the order that things are serialized in.
+it may be the case that the value `{ a: 1, b: 2}` or `{ a: 3, b: 4}` is serialized depending on the order that things are serialized in.  As above, it is highly recommended to not mutate values that are captured *especially* in the presence of asynchronously executing code.
 
 ### Determining the appropriate node_modules packages to include with an AWS Lambda
 
