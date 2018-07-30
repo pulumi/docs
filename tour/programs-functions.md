@@ -139,9 +139,9 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
 
 In this example the 'fs' module is needed inside the cloud-runtime code.  Because a module is just a normal JavaScript function, it would be possible to serialize this value just like any other object.  However, for several reasons this is not done.
 
-1. it would generate an enormous amount of serialized code.  This code would then have quite an impact on the time necessary to execute the lambda each time.  
-2. it would be redundant to have this code serialized out given that the equivalent code will exist in the node_modules directory for the Lambda.
-3. it would fail on a native-code function.  These functions are relatively common in real-world modules, and would greatly limit the ability to use a module in practice.
+1. It would generate an enormous amount of serialized code.  This code would then have quite an impact on the time necessary to execute the lambda each time.  
+2. It would be redundant to have this code serialized out given that the equivalent code will exist in the node_modules directory for the Lambda.
+3. It would fail on a native-code function.  These functions are relatively common in real-world modules, and would greatly limit the ability to use a module in practice.
 
 Because of these reasons, Modules are captured in a special, but intuitive fashion.  When a module is captured in code, it is translated into a idiomatic `require` call in the serialized JavaScript code.  Using the above example, the code will then effectively contain:
 
