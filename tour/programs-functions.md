@@ -86,11 +86,13 @@ function foo(o) {
 }
 ```
 
-In this code, the JavaScript function ends up capturing 'obj1', 'obj2', and 'obj3' from outside the function. If the code `(input: MyInputType) => { foo(obj1); /*...*/ }` was captured 'as-is' inside the AWS Lambda, then it would simply fail to work properly when triggered in the cloud because the values for 'obj' and 'bucket' would not exist.  In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will "serialize" them into a form that can then be retrieved and used at cloud-runtime for use by the actual Lambda.
+In this code, the JavaScript function ends up capturing 'obj1', 'obj2', and 'obj3' from outside the function. If the code `(input: MyInputType) => { foo(obj1); /*...*/ }` was captured 'as-is' inside the AWS Lambda, then it would simply fail to work properly when triggered in the cloud because the values for 'obj1' and the rest would not exist.  In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will "serialize" them into a form that can then be retrieved and used at cloud-runtime for use by the actual Lambda.
 
-The actual process of serialization is conceptually straightforward.  Because JavaScript itself allows unimpeded reflection over values, `pulumi` uses this to introspect the value and produce as close a replica as it can in the cloud-runtime code.  This includes capturing all properties of a value, the prototype-chain, functions, symbols, generators and even Promises.
+The actual process of serialization is conceptually straightforward.  Because JavaScript itself allows unimpeded reflection over values, `pulumi` uses this to serialize the entire object graph for the referenced JavaScipt value, including the prototype chain, properties and methods on the object and any values those transitively reference.
 
-Because of this, almost all JavaScript values can be serialized with very few exceptions.  Importantly, Pulumi Resources themselves are captured in this fashion, allowing cloud-runtime code to simply references the defined Resources of a Pulumi Application and to use them when a Lambda is triggered.  One notable limitation of this system is that native-functions are not capturable.
+Because of this, almost all JavaScript values can be serialized with very few exceptions.  Importantly, Pulumi Resources themselves are captured in this fashion, allowing cloud-runtime code to simply references the defined Resources of a Pulumi Application and to use them when a Lambda is triggered.  
+
+Importantly: One notable limitation of this system is that native-functions are not capturable.  This impacts capturing any value that is either itself a native function or which *transitively* references a native from being capturable.
 
 Importantly: 
 1. Each time the AWS Lambda is triggered these values will be rehydrated.  This happens immediately before the code for the Lambda itself starts executing.
