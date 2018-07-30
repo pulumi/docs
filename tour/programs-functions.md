@@ -88,11 +88,11 @@ function foo(o) {
 }
 ```
 
-In this code, the JavaScript function ends up capturing 'obj1', 'obj2', and 'obj3' from outside the function. If the code `(input: MyInputType) => { foo(obj1); /*...*/ }` was captured 'as-is' inside the Lambda, then it would simply fail to work properly when triggered in the cloud because the values for 'obj1' and the rest would not exist.  In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will "serialize" them into a form that can then be retrieved and used at cloud-runtime for use by the actual Lambda.
+In this code, the JavaScript function ends up capturing 'obj1', 'obj2', and 'obj3' from outside the function. If the code `(input: MyInputType) => { foo(obj1); /*...*/ }` was captured 'as-is' inside the Lambda, then it would simply fail to work properly when triggered in the cloud because the values for 'obj1' and the rest would not exist.  In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will "serialize" them into a form that can then be retrieved and used at 'run time' for use by the actual Lambda.
 
 The actual process of serialization is conceptually straightforward.  Because JavaScript itself allows unimpeded reflection over values, `pulumi` uses this to serialize the entire object graph for the referenced JavaScipt value, including the prototype chain, properties and methods on the object and any values those transitively reference.
 
-Because of this, almost all JavaScript values can be serialized with very few exceptions.  Importantly, Pulumi Resources themselves are captured in this fashion, allowing cloud-runtime code to simply references the defined Resources of a Pulumi application and to use them when a Lambda is triggered.  
+Because of this, almost all JavaScript values can be serialized with very few exceptions.  Importantly, Pulumi Resources themselves are captured in this fashion, allowing 'run time' code to simply references the defined Resources of a Pulumi application and to use them when a Lambda is triggered.  
 
 Notes:
 1. One notable limitation of this system is that native-functions are not capturable.  This impacts capturing any value that is either itself a native function or which *transitively* references a native from being capturable.
@@ -138,7 +138,7 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
     });
 ```
 
-In this example the 'fs' module is needed inside the cloud-runtime code.  Because a module is just a normal JavaScript function, it would be possible to serialize this value just like any other object.  However, for several reasons this is not done:
+In this example the 'fs' module is needed inside the 'run time' code.  Because a module is just a normal JavaScript function, it would be possible to serialize this value just like any other object.  However, for several reasons this is not done:
 
 1. It would generate an enormous amount of serialized code.  This code would then have quite an impact on the time necessary to execute the lambda each time.  
 2. It would be redundant to have this code serialized out given that the equivalent code will exist in the node_modules directory for the Lambda.
@@ -154,7 +154,7 @@ var fs = require("fs");
 await fs.writeFile("example.txt", "data")
 ```
 
-This ensures that all modules can be referenced simply in application code, and then used simply in cloud-runtime code with expected semantics.
+This ensures that all modules can be referenced simply in application code, and then used simply in 'run time' code with expected semantics.
 
 Notes:
 1. this form of module capturing only applies to external modules that are referenced.  i.e. modules that are directly part of Node, or are in the node_modules directory.  The 'local' module (i.e. the module for the Pulumi application itself) is not captured in this fashion.  That's because this code will not actually be part of the uploaded node_modules, and so would not be found.  The 'local' module is captured as if it was a normal 'value'.  This means, all its relevant variable and functions are serialized over in a uniform fashion to the Lambda, regardless of which actual file/module they are contained in. 
@@ -189,7 +189,7 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
     });
 ```
 
-When `pulumi` starts executing `createLambdaFunction` it will analyze the JavaScript function code and will see that it uses the 'obj' value.  At that point in time it will use whatever the value is currently to serialize over.  So, in the first example, it will serialize the value `{ a: 1, b: 2 }`, even though right after executing createLambdaFunction the program code will update that value to `{ a: 3, b: 4}`.  In the second example, the code will see the `{ a: 3, b: 4 }` value and will serialize that into the cloud-runtime code.  
+When `pulumi` starts executing `createLambdaFunction` it will analyze the JavaScript function code and will see that it uses the 'obj' value.  At that point in time it will use whatever the value is currently to serialize over.  So, in the first example, it will serialize the value `{ a: 1, b: 2 }`, even though right after executing createLambdaFunction the program code will update that value to `{ a: 3, b: 4}`.  In the second example, the code will see the `{ a: 3, b: 4 }` value and will serialize that into the 'run time' code.  
 
 Notes:
 1. there are subtleties here with Promise-like values.  When `pulumi` encounters a Promise value that it needs to serialize into the code for a Lambda, it will actually 'await' that Promise.  During that 'await', 'node' can then execute more of the program application code.  This means that later code may execute which then changes a value which is captured by the JavaScript function.  If `pulumi` then serialized that value after serializing the Promise, then it may see the mutated value.
