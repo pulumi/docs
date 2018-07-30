@@ -39,14 +39,6 @@ serverless.s3.onObjectCreated("mytrigger", bucket, (eventInfo) => {
 
 This functionality provides a powerful and convenient way to create your AWS Lambdas, without needing to manually create the index.js file, package up all necessary node_modules directories, specify Roles or RolePolicyAttachments, upload s3 buckets, or do any of the normal work normally necessary.
 
-### Determining the appropriate node_modules packages to include with an AWS Lambda
-
-Because AWS Lambdas can now be defined using JavaScript functions, a Pulumi program now ends up defining two different regions of code.  Code that exists and will execute when the Pulumi itself runs (i.e. during a `pulumi preview` or `pulumi update` execution), and code that will be uploaded to the AWS cloud and will execute when the appropriate Lambda is invoked.  We call the former 'deployment time' code and the latter 'cloud runtime' code.  Because both of these exist within the same program, it is necessary for the program's `package.json` definition to specify all `dependencies` needed for both execution times.  In other words, `package.json`.  When `pulumi` then runs and produces an AWS Lambda from a user-provided function, it will transitively include all packages specified in the `dependencies` section of the application's `package.json` file.
-
-Importantly:
-1. It is optional to specify a reference to "aws-sdk" in your package.json.  AWS always includes this package with Lambdas, and so it is not necessary to explicitly include it yourself.
-2. `pulumi` will not include `@pulumi` or any `@pulumi/...` packages with the Lambda.  These packages exist solely to provide 'deployment time' functionality, and do not contain any code that can work properly at 'cloud runtime'.  They are automatically stripped from a Lambda both to prevent accidently usage, as well as to help reduce the size of the uploaded Lambda.
-
 ### JavaScript function transformation
 
 At a high-level, creating an AWS Lambda out of a JavaScript function involves several conceptual phases and transformation steps.  The first step is determining all the functions used by the function that is being converted.  For example, if the code was:
@@ -213,3 +205,11 @@ obj = { a: 3, b: 4 };
 ```
 
 it may be the case that the value `{ a: 1, b: 2}` or `{ a: 3, b: 4}` is serialized depending on the order that things are serialized in.
+
+### Determining the appropriate node_modules packages to include with an AWS Lambda
+
+Because AWS Lambdas can now be defined using JavaScript functions, a Pulumi program now ends up defining two different regions of code.  Code that exists and will execute when the Pulumi itself runs (i.e. during a `pulumi preview` or `pulumi update` execution), and code that will be uploaded to the AWS cloud and will execute when the appropriate Lambda is invoked.  We call the former 'deployment time' code and the latter 'cloud runtime' code.  Because both of these exist within the same program, it is necessary for the program's `package.json` definition to specify all `dependencies` needed for both execution times.  In other words, `package.json`.  When `pulumi` then runs and produces an AWS Lambda from a user-provided function, it will transitively include all packages specified in the `dependencies` section of the application's `package.json` file.
+
+Importantly:
+1. It is optional to specify a reference to "aws-sdk" in your package.json.  AWS always includes this package with Lambdas, and so it is not necessary to explicitly include it yourself.
+2. `pulumi` will not include `@pulumi` or any `@pulumi/...` packages with the Lambda.  These packages exist solely to provide 'deployment time' functionality, and do not contain any code that can work properly at 'cloud runtime'.  They are automatically stripped from a Lambda both to prevent accidently usage, as well as to help reduce the size of the uploaded Lambda.
