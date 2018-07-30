@@ -126,7 +126,7 @@ Then this would need to serialize the entire object value (because 'bar' itself 
 
 ### 'Capturing' modules in a JavaScript function.
 
-While capturing of most JavaScript values works by reflecting over the value in order to produce a replica instance, the process works differently when dealing with a JavaScript module.  For example, consider the following code:
+While capturing of most JavaScript values works by serializing the entire object graph to produce a representation which can then be rehydated into a replica instance, the process works differently when dealing with a JavaScript module.  For example, consider the following code:
 
 ```ts
 import * as fs from "fs";
