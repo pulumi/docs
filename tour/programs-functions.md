@@ -159,7 +159,11 @@ Importantly: this form of module capturing only applies to external modules that
 
 ### Pulumi execution order.
 
-`pulumi` uses `node` to execute a pulumi-application.  During execution, when a call to `createLambdaFunction` is encountered, the function is converted to a Lambda at that point in execution.  That means that if the function captures any state, then the value that is captured will be whatever it was at the point in time.  For example consider the following two programs:
+`pulumi` uses `node` to execute a pulumi-application.  During execution, when a call to `createLambdaFunction` is encountered, the function is converted to a Lambda at that point in execution.  That means that if the function captures any state, then the value that is captured will be whatever it was at the point in time.
+
+For this reason, it is highly recommended that code not capture values which are also mutated in code.  It is much safer and easier to reason about immutable values that are captured in code.
+
+For example consider the following two programs:
 
 ```ts
 let obj = { a: 1, b: 2 };
@@ -203,5 +207,3 @@ obj = { a: 3, b: 4 };
 ```
 
 it may be the case that the value `{ a: 1, b: 2}` or `{ a: 3, b: 4}` is serialized depending on the order that things are serialized in.
-
-For this reason, it is highly recommended that code not capture values which are also mutated in code.  It is much safer and easier to reason about immutable values that are captured in code.
