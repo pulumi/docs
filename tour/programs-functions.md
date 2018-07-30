@@ -2,9 +2,11 @@
 
 The Pulumi Node.js SDK provides a core API for converting a JavaScript function into all the code and files necessary to then have that function be used at runtime within some Cloud, for example in an [AWS Lambda](https://aws.amazon.com/lambda/).
 
-For the purposes of this walkthrough, AWS Lambda will be assumed.  But this information equally applies to all Cloud providers.
+There are many cases where a small piece of runtime functionality must be defined as part of a Cloud Application, and it may make sense to define that runtime functionality directly inline as part of the Pulumi program. This can augment, or even replace, using runtime code and binaries defined outside of Pulumi in Lambda ZIPs, Docker images, VM images, etc.
 
-Converting a JavaScript into a Lambda includes producing both the primary index.js file defining the entry-point for the Lambda, as well as packaging up all the node_module directories necessary for the Lambda to execute properly at runtime.  The API that exposes this functionality can be found in @pulumi/aws-serverless and can be accessed directly like so:
+Pulumi makes this easy by allowing JavaScript callbacks written in a Pulumi program to be serialized down into an artifact that can be used at runtime.  This function serialization feature moves code between stages of your application lifecycle - from 'deployment time' to 'run time'. It is thus important to understand how this is done, and some of the restrictions placed on code in a Pulumi program that is intended to be invoked at runtime.
+
+For the purposes of this walkthrough, and for the examples, AWS Lambda will be assumed.  But this information equally applies to all Cloud providers.  The API that exposes this functionality for AWS can be found in @pulumi/aws-serverless and can be accessed directly like so:
 
 ```ts
 import * as aws from "@pulumi/aws";
