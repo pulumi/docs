@@ -159,7 +159,7 @@ Importantly: this form of module capturing only applies to external modules that
 
 ### Pulumi execution order.
 
-`pulumi` uses `node` to executes a pulumi-application.  During execution, when a call to `createLambdaFunction` is encountered, the function is converted to a Lambda at that point in execution.  That means that if the function captures any state, then the value that is captured will be whatever it was at the point in time.  For example consider the following two programs:
+`pulumi` uses `node` to execute a pulumi-application.  During execution, when a call to `createLambdaFunction` is encountered, the function is converted to a Lambda at that point in execution.  That means that if the function captures any state, then the value that is captured will be whatever it was at the point in time.  For example consider the following two programs:
 
 ```ts
 let obj = { a: 1, b: 2 };
