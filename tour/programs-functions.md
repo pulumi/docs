@@ -1,13 +1,17 @@
 ### Converting JavaScript functions to an AWS Lambda.
 
-Pulumi provides a core API for converting a JavaScript function into all the code and files necessary to then have that function run as an [AWS Lambda](https://aws.amazon.com/lambda/).  This includes producing both the primary index.js file defining the entry-point for the Lambda, as well as packaging up all the node_module directories necessary for the Lambda to execute properly at runtime.  The API that exposes this functionality can be found in @pulumi/aws-serverless and can be accessed directly like so:
+The Pulumi Node.js SDK provides a core API for converting a JavaScript function into all the code and files necessary to then have that function be used at runtime within some Cloud, for example in an [AWS Lambda](https://aws.amazon.com/lambda/).
+
+For the purposes of this walkthrough, AWS Lambda will be assumed.  But this information equally applies to all Cloud providers.
+
+Converting a JavaScript into a Lambda includes producing both the primary index.js file defining the entry-point for the Lambda, as well as packaging up all the node_module directories necessary for the Lambda to execute properly at runtime.  The API that exposes this functionality can be found in @pulumi/aws-serverless and can be accessed directly like so:
 
 ```ts
 import * as aws from "@pulumi/aws";
 import * as serverless from "@pulumi/aws-serverless";
 
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
-    async (input: MyInputType) => {
+    (input: MyInputType) => {
         // your code here...
         return someOutput;
     });
@@ -24,7 +28,7 @@ const bucket = new aws.s3.Bucket("mybucket", { serverSideEncryptionConfiguration
 // Can provide a JS function here that will end up producing an AWS Lambda that will
 // be triggered in the cloud whenever an aws.s3.Object is created inside our Bucket.
 // This will create the lambda using the serverless.function.createLambdaFunction API.
-serverless.s3.onObjectCreated("mytrigger", bucket, async (eventInfo) => {
+serverless.s3.onObjectCreated("mytrigger", bucket, (eventInfo) => {
    for (const record of eventInfo.Records) {
        // process each record we're notified about.
    }
@@ -47,7 +51,7 @@ At a high-level, creating an AWS Lambda out of a JavaScript function involves se
 
 ```ts
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
-    async (input: MyInputType) => {
+    (input: MyInputType) => {
         foo(input);
         bar(input);
     });
@@ -78,7 +82,7 @@ const obj2 = new aws.s3.Bucket("mybucket", { serverSideEncryptionConfiguration: 
 const obj3 = SomeFunction();
 
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
-    async (input: MyInputType) => {
+    (input: MyInputType) => {
         foo(obj1);
         foo(obj2);
         foo(obj3);
@@ -88,7 +92,7 @@ function foo(o) {
 }
 ```
 
-In this code, the JavaScript function ends up capturing both 'obj' and 'bucket' from outside the function. If the code `async (input: MyInputType) => { foo(obj); bar(bucket); }` was captured 'as-is' inside the AWS Lambda, then it would simply fail to work properly when triggered in the cloud because the values for 'obj' and 'bucket' would not exist.  In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will "serialize" them into a form that can then be retrieved and used at cloud-runtime for use by the actual Lambda.
+In this code, the JavaScript function ends up capturing 'obj1', 'obj2', and 'obj3' from outside the function. If the code `(input: MyInputType) => { foo(obj1); /*...*/ }` was captured 'as-is' inside the AWS Lambda, then it would simply fail to work properly when triggered in the cloud because the values for 'obj' and 'bucket' would not exist.  In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will "serialize" them into a form that can then be retrieved and used at cloud-runtime for use by the actual Lambda.
 
 The actual process of serialization is conceptually straightforward.  Because JavaScript itself allows unimpeded reflection over values, `pulumi` uses this to introspect the value and produce as close a replica as it can in the cloud-runtime code.  This includes capturing all properties of a value, the prototype-chain, functions, symbols, generators and even Promises.
 
@@ -106,7 +110,7 @@ Pulumi will attempt to reduce the size of a serialized object by removing parts 
 const obj = { foo() { console.log("foo called"); } bar() { console.log("bar called") } };
 
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
-    async (input: MyInputType) => {
+    (input: MyInputType) => {
         obj.foo();
     });
 ```
@@ -117,7 +121,7 @@ In this code, only the 'foo' property is used from 'obj'.  So Pulumi will serial
 const obj = { foo() { console.log("foo called"); this.bar(); } bar() { console.log("bar called") } };
 
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
-    async (input: MyInputType) => {
+    (input: MyInputType) => {
         obj.foo();
     });
 ```
@@ -169,7 +173,7 @@ For example consider the following two programs:
 let obj = { a: 1, b: 2 };
 
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
-    async () => {
+    () => {
         console.log(obj);
     });
 
@@ -182,7 +186,7 @@ let obj = { a: 1, b: 2 };
 obj = { a: 3, b: 4 };
 
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
-    async () => {
+    () => {
         console.log(obj);
     });
 ```
@@ -198,7 +202,7 @@ let obj = { a: 1, b: 2 };
 let pr = new Promise((resolve, reject) => { /*...*/ });
 
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
-    async () => {
+    () => {
         console.log(pr);
         console.log(obj);
     });
