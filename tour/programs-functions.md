@@ -211,6 +211,21 @@ obj = { a: 3, b: 4 };
 
 it may be the case that the value `{ a: 1, b: 2}` or `{ a: 3, b: 4}` is serialized depending on the order that things are serialized in.  As above, it is highly recommended to not mutate values that are captured *especially* in the presence of asynchronously executing code.
 
+### Customizing the Cloud Lambda produced from a JavaScript function.
+
+By default, Pulumi will generate a Cloud Lambda for a given JavaScript function with reasonable defaults for many configurable properties.  For example, values are picked to define the default roles and permissions for the Lambda, the timeout it should have, how much memory it can use, which version of the Node runtime to use, and so on and so forth.  If these defaults are not desirable, any or all of them can be overridden by supplying desired values.  For example:
+
+```ts
+// Only let this Lambda run for a minute before forcefully terminating it.
+const options: serverless.function.FunctionOptions = { timeout: 60 };
+
+const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
+    (input: MyInputType) => {
+        // your code here...
+        return someOutput;
+    }, options);
+```
+
 ### Determining the appropriate node_modules packages to include with an AWS Lambda
 
 Because a Pulumi application contains both 'deployment time' code and 'run time' code, it is necessary for the program's `package.json` definition to have a `dependencies` section which specifies all necessary packages needed for both execution times.  When `pulumi` and produces an AWS Lambda from a user-provided function, it will transitively include all packages specified in that `dependencies` section in the final uploaded Lambda.
