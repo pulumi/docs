@@ -6,7 +6,7 @@ There are many cases where a small piece of runtime functionality must be define
 
 Pulumi makes this easy by allowing JavaScript callbacks written in a Pulumi program to be serialized down into an artifact that can be used at runtime.  This function serialization feature moves code between stages of your application lifecycle - from 'deployment time' to 'run time'. 'deployment time' code runs during a `pulumi preview` or `pulumi update`, while 'run time' code runs when the corresponding Cloud artifact is triggered. It is thus important to understand how this is done, and some of the restrictions placed on code in a Pulumi program that is intended to be invoked at runtime.
 
-For the purposes of this walkthrough, and for the examples, AWS Lambda will be assumed.  But this information equally applies to all Cloud providers.  In a similar vein, TypeScript will be used to help provide type annotation for clarity.  However, TypeScript is not required, and this functionality is exposed entirely to JavaScript.  The API that exposes this functionality for AWS can be found in @pulumi/aws-serverless and can be accessed directly like so:
+For the purposes of this walkthrough, and for the examples, AWS-Lambda will be assumed.  But this information equally applies to all Cloud providers.  In a similar vein, TypeScript will be used to help provide type annotation for clarity.  However, TypeScript is not required, and this functionality is exposed entirely to JavaScript.  The API that exposes this functionality for AWS can be found in @pulumi/aws-serverless and can be accessed directly like so:
 
 ```ts
 import * as aws from "@pulumi/aws";
@@ -19,7 +19,7 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
     });
 ```
 
-There are also many indirect ways this API is used.  Many Pulumi SDK APIs allow JavaScript functions to be passed that will be used to define the AWS Lambda that will end up responsible for the code at runtime.  These APIs normally provide a strongly-typed definition that helps TypeScript users ensure their JavaScript functions are properly typed and will execute properly at 'run time'.  For example:
+There are also many indirect ways this API is used.  Many Pulumi SDK APIs allow JavaScript functions to be passed that will be used to define the Lambda that will end up responsible for the code at runtime.  These APIs normally provide a strongly-typed definition that helps TypeScript users ensure their JavaScript functions are properly typed and will execute properly at 'run time'.  For example:
 
 ```ts
 import * as aws from "@pulumi/aws";
@@ -27,7 +27,7 @@ import * as serverless from "@pulumi/aws-serverless";
 
 const bucket = new aws.s3.Bucket("mybucket", { serverSideEncryptionConfiguration: ... });
 
-// Can provide a JS function here that will end up producing an AWS Lambda that will
+// Can provide a JS function here that will end up producing an Lambda that will
 // be triggered in the cloud whenever an aws.s3.Object is created inside our Bucket.
 // This will create the lambda using the serverless.function.createLambdaFunction API.
 serverless.s3.onObjectCreated("mytrigger", bucket, (eventInfo) => {
@@ -37,7 +37,7 @@ serverless.s3.onObjectCreated("mytrigger", bucket, (eventInfo) => {
 });
 ```
 
-This functionality provides a powerful and convenient way to create your AWS Lambdas, without needing to manually create the index.js file, package up all necessary node_modules directories, specify Roles or RolePolicyAttachments, upload S3 buckets, or do any of the normal work traditionally necessary.
+This functionality provides a powerful and convenient way to create your Lambdas, without needing to manually create the index.js file,  package up all necessary node_modules directories, specify Roles or RolePolicyAttachments, upload S3 buckets, or do any of the normal work traditionally necessary.
 
 ### JavaScript function transformation
 
@@ -70,7 +70,7 @@ All functions that are needed for 'run time' execution will then be included in 
 
 ### 'Capturing' values in a JavaScript function.
 
-For most functions, the code of the function can simply be included practically 'as is' in the code file for the AWS lambda.  The important exception to this are functions that 'capture' values defined outside of the function itself.  For example:
+For most functions, the code of the function can simply be included practically 'as is' in the code file for the Lambda.  The important exception to this are functions that 'capture' values defined outside of the function itself.  For example:
 
 ```ts
 const obj1 = { a: 1, b: 2 };
@@ -88,7 +88,7 @@ function foo(o) {
 }
 ```
 
-In this code, the JavaScript function ends up capturing 'obj1', 'obj2', and 'obj3' from outside the function. If the code `(input: MyInputType) => { foo(obj1); /*...*/ }` was captured 'as-is' inside the AWS Lambda, then it would simply fail to work properly when triggered in the cloud because the values for 'obj1' and the rest would not exist.  In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will "serialize" them into a form that can then be retrieved and used at cloud-runtime for use by the actual Lambda.
+In this code, the JavaScript function ends up capturing 'obj1', 'obj2', and 'obj3' from outside the function. If the code `(input: MyInputType) => { foo(obj1); /*...*/ }` was captured 'as-is' inside the Lambda, then it would simply fail to work properly when triggered in the cloud because the values for 'obj1' and the rest would not exist.  In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will "serialize" them into a form that can then be retrieved and used at cloud-runtime for use by the actual Lambda.
 
 The actual process of serialization is conceptually straightforward.  Because JavaScript itself allows unimpeded reflection over values, `pulumi` uses this to serialize the entire object graph for the referenced JavaScipt value, including the prototype chain, properties and methods on the object and any values those transitively reference.
 
@@ -226,9 +226,24 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
     }, options);
 ```
 
-### Determining the appropriate node_modules packages to include with an AWS Lambda
+When calling APIs that allow callbacks to be passed in, customization can be provided like so:
 
-Because a Pulumi application contains both 'deployment time' code and 'run time' code, it is necessary for the program's `package.json` definition to have a `dependencies` section which specifies all necessary packages needed for both execution times.  When `pulumi` and produces an AWS Lambda from a user-provided function, it will transitively include all packages specified in that `dependencies` section in the final uploaded Lambda.
+```ts
+// Only let this Lambda run for a minute before forcefully terminating it.
+const options: serverless.function.FunctionOptions = { timeout: 60 };
+
+serverless.s3.onObjectCreated("mytrigger", bucket, 
+    serverless.function.createLambdaFunction("mylambda" (eventInfo) => {
+       for (const record of eventInfo.Records) {
+           // process each record we're notified about.
+    }, options));
+```
+
+In other words, the Lambda will first be created with appropriate values overridden.  Then that Lambda itself can be passed in as the code to run for the specific API.
+
+### Determining the appropriate node_modules packages to include with an Lambda
+
+Because a Pulumi application contains both 'deployment time' code and 'run time' code, it is necessary for the program's `package.json` definition to have a `dependencies` section which specifies all necessary packages needed for both execution times.  When `pulumi` and produces an Lambda from a user-provided function, it will transitively include all packages specified in that `dependencies` section in the final uploaded Lambda.
 
 Notes:
 1. `pulumi` will not include `@pulumi/...` packages with the Lambda.  These packages exist solely to provide 'deployment time' functionality, and do not contain any code that can work properly at 'run time'.  They are automatically stripped from a Lambda both to prevent accidently usage, as well as to help reduce the size of the uploaded Lambda.
