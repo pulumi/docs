@@ -72,15 +72,15 @@ In addition to the 0.14.3 CLI release, the following packages have been updated:
 
 - Support empty text assets ([pulumi/pulumi#1599](https://github.com/pulumi/pulumi/pull/1599)).
 
-- When printing message in non-interactive mode, do not keep printing out the worst diagnostic ([pulumi/pulumi#1640](https://github.com/pulumi/pulumi/pull/1640)). When run in non interactive enviroments (e.g. docker) Pulumi would print duplicate messages to the screen related to a resource when the running Pulumi program was writing to standard out (e.g. if it was invoking a docker build). This no longer happens. The full output from the program continues to be printed at the end of execution.
+- When printing message in non-interactive mode, do not keep printing out the worst diagnostic ([pulumi/pulumi#1640](https://github.com/pulumi/pulumi/pull/1640)). When run in non interactive environments (e.g. docker) Pulumi would print duplicate messages to the screen related to a resource when the running Pulumi program was writing to standard out (e.g. if it was invoking a docker build). This no longer happens. The full output from the program continues to be printed at the end of execution.
 
 - Work around a potentially bad assert in the engine ([pulumi/pulumi#1640](https://github.com/pulumi/pulumi/pull/1644)). In some cases, when Pulumi failed to delete a resource as part of an update, future updates would crash with an assert message. This is no longer the case and Pulumi will try to delete the resource it had marked as should be deleted.
 
 #### Added
 
-- Print out a 'still working' message every 20 seconds when in non-interactive mode ([pulumi/pulumi#1616](https://github.com/pulumi/pulumi/pull/1616)). When Pulumi is waiting for a long running resource operation to create (e.g. waiting for an ECS serverice to become stable after creation), print some output to the console even when running non-interactively. This helps for cases like TravsCI where if output is not written for a while the job is assumed to have hung and is aborted.
+- Print out a 'still working' message every 20 seconds when in non-interactive mode ([pulumi/pulumi#1616](https://github.com/pulumi/pulumi/pull/1616)). When Pulumi is waiting for a long running resource operation to create (e.g. waiting for an ECS service to become stable after creation), print some output to the console even when running non-interactively. This helps for cases like TravsCI where if output is not written for a while the job is assumed to have hung and is aborted.
 
-- Support the NO_COLOR env variable to suppres any colored output ([pulumi/pulumi#1594](https://github.com/pulumi/pulumi/pull/1594)). Pulumi now respects the `NO_COLOR` environment variable. When set to a truthy value, colors are supressed from the CLI. In addtion, the `--color` flag can now be passed to all `pulumi` commands.
+- Support the NO_COLOR env variable to suppress any colored output ([pulumi/pulumi#1594](https://github.com/pulumi/pulumi/pull/1594)). Pulumi now respects the `NO_COLOR` environment variable. When set to a truthy value, colors are suppressed from the CLI. In addition, the `--color` flag can now be passed to all `pulumi` commands.
 
 ### @pulumi/pulumi v0.14.3
 
@@ -90,15 +90,15 @@ There are no user facing changes from the previous release. However, we've laid 
 
 #### Fixed
 
-- Only apply AutoName to inputs ([pulumi/pulumi-aws#265](https://github.com/pulumi/pulumi-aws/pull/265)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
+- Only apply AutoName to inputs ([pulumi/pulumi-aws#265](https://github.com/pulumi/pulumi-aws/pull/265)). Terraform properties named `name` but are not inputs do not have auto naming applied to them.
 
-- Switch package inclusion from whitelist to blacklist ([pulumi/pulumi-aws#268](https://github.com/pulumi/pulumi-aws/pull/265)). When seralizing a lambda, default to including all dependencies listed in the dependencies section of package.json (and their transitive dependencies) except for all `@pulumi/*` packages. Previously we tried to infer the set of packages by doing a more detailed analysis of the lambda implementation, but this failed in somewhat common cases.
+- Switch package inclusion from whitelist to blacklist ([pulumi/pulumi-aws#268](https://github.com/pulumi/pulumi-aws/pull/265)). When serializing a lambda, default to including all dependencies listed in the dependencies section of package.json (and their transitive dependencies) except for all `@pulumi/*` packages. Previously we tried to infer the set of packages by doing a more detailed analysis of the lambda implementation, but this failed in somewhat common cases.
 
-- Fix null ref when walking packages ([pulumi/pulumi-aws#280](https://github.com/pulumi/pulumi-aws/pull/280)). Fix some issues that could arise when serializing lambdas when a depenent package had no dependencies itself.
+- Fix null ref when walking packages ([pulumi/pulumi-aws#280](https://github.com/pulumi/pulumi-aws/pull/280)). Fix some issues that could arise when serializing lambdas when a dependent package had no dependencies itself.
 
 #### Added
 
-- Add autoscaling NotificationType union and overlay ([pulumi/pulumi-aws#251](https://github.com/pulumi/pulumi/pull/251)). Provide a more strongly typed expereince for setting autoscaling notification types. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
+- Add autoscaling NotificationType union and overlay ([pulumi/pulumi-aws#251](https://github.com/pulumi/pulumi/pull/251)). Provide a more strongly typed experience for setting autoscaling notification types. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
 
 - Add iam.assumeRolePolicyForPrincipal function ([pulumi/pulumi-aws#273](https://github.com/pulumi/pulumi-aws/pull/273)). Add some helpers for authoring policy documents to assume a role. Special thanks to [@jen20](https://github.com/jen20) for this improvement.
 
@@ -118,7 +118,7 @@ There are no user facing changes from the previous release. However, we've laid 
 
 #### Fixed
 
-- Only apply AutoName to inputs ([pulumi/pulumi-azure#78](https://github.com/pulumi/pulumi-azure/pull/78)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
+- Only apply AutoName to inputs ([pulumi/pulumi-azure#78](https://github.com/pulumi/pulumi-azure/pull/78)). Terraform properties named `name` but are not inputs do not have auto naming applied to them.
 
 ### @pulumi/cloud v0.14.1
 
@@ -128,13 +128,13 @@ There were no changes to the API surface area for `@pulumi/cloud`, but it shares
 
 #### Fixed
 
-- Associate docker output with individual resources so it is clearer what is going on (([pulumi/pulumi-cloud#526](https://github.com/pulumi/pulumi-azure/pull/526)). When doing a `pulumi update` or `pulumi preview` output for the docker build for a cloud.Service is now assocated with the actual cloud.Service that is being updated, instead of just being in the general output stream in the CLI.
+- Associate docker output with individual resources so it is clearer what is going on (([pulumi/pulumi-cloud#526](https://github.com/pulumi/pulumi-azure/pull/526)). When doing a `pulumi update` or `pulumi preview` output for the docker build for a cloud.Service is now associated with the actual cloud.Service that is being updated, instead of just being in the general output stream in the CLI.
 
 ### @pulumi/gcp v0.14.3
 
 #### Fixed
 
-- Only apply AutoName to inputs ([pulumi/pulumi-gcp#29](https://github.com/pulumi/pulumi-gcp/pull/29)). Terraform properties named `name` but are not inputs do not have autonaming applied to them.
+- Only apply AutoName to inputs ([pulumi/pulumi-gcp#29](https://github.com/pulumi/pulumi-gcp/pull/29)). Terraform properties named `name` but are not inputs do not have auto naming applied to them.
 
 #### Added
 
@@ -478,7 +478,7 @@ Released on February 27, 2018
 -  Show deployment history for a stack in Pulumi Console.
 
 -  Display AWS console links in the Pulumi Console.
-   Deep links to the AWS console are now displayed for the following types of resources: API Gateway, CloudWatch (event targets, log groups, and log subscription filter), Dynamo DB tables, IAM roles and role policy attachments, Lambda functions, S3 buckets, and SNS topics and subscriptions.
+   Deep links to the AWS console are now displayed for the following types of resources: API Gateway, CloudWatch (event targets, log groups, and log subscription filter), DynamoDB tables, IAM roles and role policy attachments, Lambda functions, S3 buckets, and SNS topics and subscriptions.
 
 ### Changed {#v10-changed}
 
