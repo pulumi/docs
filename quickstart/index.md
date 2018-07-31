@@ -1,56 +1,45 @@
 ---
-title: Tutorials
+title: Getting Started
 ---
 
-To get started with Pulumi, [configure AWS](../install/aws.html). Then, run the following commands: 
+To get started with Pulumi, [install it](../install) and choose from one of the following next steps:
 
-```bash
-# Step 1. Install Pulumi
-curl -fsSL https://get.pulumi.com | sh
+* [Take a Tour](../tour): Take a Tour of Pulumi, learning key programming model concepts, one at a time
+* [Hello World](aws-hello-world.html): Create a simple HTTP app that uses serverless functions (currently AWS-only)
+* [Tutorials](#tutorials): Take 5-minute tutorials for containers, serverless, or infrastructure (currently AWS-only)
+* [Examples](#examples): Explore examples across many clouds, languages, and scenarios (including AWS, Azure, GCP, and Kubernetes)
 
-# Step 2. Create a new project
-pulumi new hello-aws-javascript
+## <a name="tutorials"></a>Tutorials
 
-# Step 3. Deploy to the cloud
-pulumi update
-```
+Each tutorial walks through an end-to-end scenario in 5 minutes:
 
-## Featured tutorials
+* [Containers](aws-containers.html): Create a load-balanced, hosted NGINX container service
+* [Serverless](aws-rest-api.html): Create a REST API that uses serverless functions and Dynamo DB
+* [Infrastructure](aws-ec2.html): Create an EC2-based WebServer and associated infrastructure
+* [Everything Together (Colada)](aws-extract-thumbnail.html): Create a video thumbnail app that uses containers, serverless, and infrastructure together
 
-- [Hello World](aws-hello-world.html). A simple single-page app that uses serverless functions.
-- [Containers](aws-containers.html). Deploy an NGINX container to production in 5 minutes.
-- [Serverless REST API](aws-rest-api.html). In just 20 lines of code, create a REST API that uses serverless functions and Dynamo DB.
-- [Provision virtual machines on AWS](aws-ec2.html). Use JavaScript to create repeatable deployments of cloud infrastructure.
-- [Create an application with serverless functions and containers](aws-extract-thumbnail.html). Create a full application that extracts a thumbnail from a video, using AWS Lambda and FFmpeg running in a Docker container.
+> **Note:** Although Pulumi supports Azure, GCP, Kubernetes, and other cloud providers, these tutorials use AWS. If you
+> don't have an AWS account, [create one now](https://aws.amazon.com/free/). Tutorials for other clouds are on their way.
 
-## Featured examples
+## <a name="examples"></a>Examples
 
-Check out these examples in the [Pulumi examples repo](https://github.com/pulumi/examples) on GitHub. 
+Our [examples repo](https://github.com/pulumi/examples) on GitHub contains examples across many clouds -- AWS, Azure,
+GCP, and Kubernetes -- languages -- JavaScript, TypeScript, Python, and Go -- and scenarios -- containers, serverless,
+and infrastructure. Each example is self-contained and easily deployable with instructions in its README.
 
-### Containers
+These are good starting points for basic introductions across each cloud provider/scenario:
 
-- [Voting app with two containers (TypeScript)](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app). 
-A simple voting app that uses Redis for a data store and a Python Flask app for the frontend. 
+* **Containers**:
+    - [AWS ECS/Fargate](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
+    - [Kubernetes Guestbook](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook)
+* **Serverless**:
+    - [AWS Lambdas](https://github.com/pulumi/examples/tree/master/cloud-js-api)
+    - [Google Cloud Functions](https://github.com/pulumi/examples/tree/master/gcp-ts-functions)
+    - [Azure Functions](https://github.com/pulumi/examples/tree/master/azure-ts-functions)
+* **Infrastructure**:
+    - [AWS VM WebServer](https://github.com/pulumi/examples/tree/master/aws-js-webserver)
+    - [Azure VM WebServer](https://github.com/pulumi/examples/tree/master/azure-js-webserver)
+    - [GCP VM WebServer](https://github.com/pulumi/examples/tree/master/gcp-js-webserver)
 
-### Serverless functions
-
-- [URL Shortener (TypeScript)](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener/). A complete URL shortener web application using high-level `cloud.Table` and `cloud.API` components.
-- [Video Thumbnailer (JavaScript)](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer/). An end-to-end pipeline for generating keyframe thumbnails from videos uploaded to a bucket using containerized [FFmpeg](https://www.ffmpeg.org/).  
-- [Raw AWS Serverless (TypeScript)](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw). A complete serverless application using raw `aws.apigateway.RestAPI`, `aws.lambda.Function` and `aws.dynamodb.Table` resources from `@pulumi/aws`. 
-
-### Infrastructure
-
-- [AWS EC2 instance (Python)](https://github.com/pulumi/examples/tree/master/aws-py-webserver)
-- [Azure Virtual Machine (JavaScript)](https://github.com/pulumi/examples/tree/master/azure-js-webserver)
-- [Static website on AWS S3 (JavaScript)](https://github.com/pulumi/examples/tree/master/aws-js-s3-folder)
-
-### Kubernetes 
-
-- [Kubernetes Guestbook (TypeScript)](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook). A version of the Kubernetes Guestbook app using Pulumi and `@pulumi/kubernetes`.
-
-
-
-<!-- LINKS: -->
-[Pulumi examples repo]: https://github.com/pulumi/examples
-<!-- END LINKS: -->
-
+For more compete examples, please check out the index in
+[the example repo's README](https://github.com/pulumi/examples/blob/master/README.md).
