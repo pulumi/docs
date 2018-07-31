@@ -14,9 +14,9 @@ searchindex: false
 </span>
 
 <div class="card-table">
-    <a href="https://www.pulumi.com"><img src="/images/logo/logo.svg" alt="Pulumi" width="350" style="margin-top: 32px"></a>
+    <a href="https://www.pulumi.com"><img src="/images/logo/logo.svg" alt="Pulumi" width="350"></a>
     <h2 class="get-to-the-cloud no-anchor">
-        Get Code to the Cloud. Faster. Together.
+        Program the Cloud.
     </h2>
     <div>
         <p class="curl-install">

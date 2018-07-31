@@ -1,13 +1,16 @@
 ---
-title: Hello, World on AWS
+title: Hello World on AWS
 ---
 
-In this tutorial, we'll use Pulumi to create a serverless single-page app that uses a AWS Lambda to change the content that is served. We'll do this with 5 lines of JavaScript, a few lines of configuration, and whatever static content we wish to serve (in this case, a simple HTML page and a favicon).
+In this tutorial, we'll use Pulumi to create a serverless app that serves static content, in addition to dynamic routes
+in AWS Lambda. We'll do this with 5 lines of JavaScript, a few lines of configuration, and whatever static content we
+wish to serve (in this case, a simple HTML page and a favicon). After seeing this in action, we'll build on these basic
+concepts to explore additional containers, serverless, and infrastructure tutorials.
 
 ## What we'll do
 
 - **Initialize** a new Pulumi project
-- **Define** our stack in JavaScript
+- **Define** our program in JavaScript
 - **Deploy** our stack to AWS
 - **Manage** our stack in the Pulumi dashboard
 - Tear it down
@@ -115,8 +118,10 @@ In this example we've seen:
 
 From here, you can dive deeper:
 
+- Try out additional AWS tutorials:
+  - [Containers](./aws-rest-api.html): Create a load-balanced, hosted NGINX container service
+  - [Serverless](./aws-rest-api.html): Create a REST API that uses serverless functions and DynamoDB
+  - [Infrastructure](./aws-ec2.html): Create an EC2-based WebServer and associated infrastructure
+  - [Everything Together (Colada)](./aws-extract-thumbnail.html): Create a video thumbnail app that uses containers,
+      serverless, and infrastructure together
 - Take [a tour of Pulumi](../tour/index.html).
-- Try out these tutorials:
-  - [Create a serverless REST API](./aws-rest-api.html)
-  - [Host a static site on S3](./aws-s3-website.html)
-  - [Create EC2 instances on AWS](./aws-ec2.html)

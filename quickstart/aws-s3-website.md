@@ -1,5 +1,5 @@
 ---
-title: "Static Website on AWS S3"
+title: "Bonus! Static Website using AWS S3"
 redirect_from: "/quickstart/part2.html"
 ---
 
