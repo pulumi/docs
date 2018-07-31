@@ -1,4 +1,4 @@
-### Serializing JavaScript functions
+### Serializing JavaScript Functions
 
 The Pulumi Node.js SDK provides a core API for converting a JavaScript function into all the code and files necessary to then have that function be used at runtime within some Cloud, for example in an [AWS Lambda](https://aws.amazon.com/lambda/).
 
@@ -14,7 +14,7 @@ import * as serverless from "@pulumi/aws-serverless";
 
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
     (input: MyInputType) => {
-        // your code here...
+        // your code here ...
         return someOutput;
     });
 ```
@@ -39,7 +39,7 @@ serverless.s3.onObjectCreated("mytrigger", bucket, (eventInfo) => {
 
 This functionality provides a powerful and convenient way to create your Lambdas, without needing to manually create the index.js file,  package up all necessary node_modules directories, specify Roles or RolePolicyAttachments, upload S3 buckets, or do any of the normal work traditionally necessary.
 
-### JavaScript function transformation
+### JavaScript Function Transformation
 
 At a high-level, creating a Lambda out of a JavaScript function involves several conceptual phases and transformation steps.  The first step is determining all the functions used by the function that is being converted.  For example, if the code was:
 
@@ -68,7 +68,7 @@ The primary JavaScript function ends up calling both 'foo' and 'bar', so both th
 
 All functions that are needed for 'run time' execution will then be included in uploaded code included for the Lambda.  Generally speaking, this code is almost always included as originally written, ensuring that the serialized code behaves as close as possible to the original code definition.  It is a primary goal of Pulumi that the semantics of the 'run time' code match the semantics of the original program's code.
 
-### 'Capturing' values in a JavaScript function.
+### 'Capturing' Values in a JavaScript Function
 
 For most functions, the code of the function can simply be included practically 'as is' in the code file for the Lambda.  The important exception to this are functions that 'capture' values defined outside of the function itself.  For example:
 
@@ -99,7 +99,7 @@ Notes:
 2. Each time the Cloud Lambda is triggered these values will be rehydrated.  This happens immediately before the code for the Lambda itself starts executing.
 3. Any mutations made to those values will be seen across a single  invocation of that Lambda.  However, it will not be seen by subsequent invocations.  They will always start with the original value that was captured.  This behavior is similar to how a web-page works, where each client that visits the pages will get their own fresh copy of variables, and will not see mutations made by other clients on other machines.
 
-### Size of captured values.
+### Size of Captured Values
 
 Pulumi will attempt to reduce the size of a serialized object by removing parts of it that it can prove are not used in a program.  For example:
 
@@ -125,7 +125,7 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
 
 Then this would need to serialize the entire object value (because 'bar' itself is used from 'foo').  This process happens conservatively. By default objects are serialized in their entirety, and they are only trimmed down when it can be proved that it is totally safe to do so.
 
-### 'Capturing' modules in a JavaScript function.
+### 'Capturing' Modules in a JavaScript Function
 
 Capturing of most JavaScript values normally works by serializing the entire object graph to produce a representation which can then be rehydated into a replica instance.  However, this process works differently when the value being dealt with is a JavaScript module.  For example, consider the following code:
 
@@ -159,7 +159,7 @@ This ensures that all modules can be referenced simply in application code, and 
 Notes:
 1. this form of module capturing only applies to external modules that are referenced.  i.e. modules that are directly part of Node, or are in the node_modules directory.  The 'local' module (i.e. the module for the Pulumi application itself) is not captured in this fashion.  That's because this code will not actually be part of the uploaded node_modules, and so would not be found.  The 'local' module is captured as if it was a normal 'value'.  This means, all its relevant variable and functions are serialized over in a uniform fashion to the Lambda, regardless of which actual file/module they are contained in. 
 
-### Pulumi execution order.
+### Pulumi Execution Order
 
 `pulumi` uses `node` to execute a Pulumi application.  During execution, when a call to `createLambdaFunction` is encountered, the function is converted to a Lambda at that point in execution.  That means that if the function captures any state, then the value that is captured will be whatever it was at the point in time.
 
@@ -211,7 +211,7 @@ obj = { a: 3, b: 4 };
 
 it may be the case that the value `{ a: 1, b: 2}` or `{ a: 3, b: 4}` is serialized depending on the order that things are serialized in.  As above, it is highly recommended to not mutate values that are captured *especially* in the presence of asynchronously executing code.
 
-### Customizing the Cloud Lambda produced from a JavaScript function.
+### Customizing the Cloud Lambda Produced from a JavaScript Function
 
 By default, Pulumi will generate a Cloud Lambda for a given JavaScript function with reasonable defaults for many configurable properties.  For example, values are picked to define the default roles and permissions for the Lambda, the timeout it should have, how much memory it can use, which version of the Node runtime to use, and so on and so forth.  If these defaults are not desirable, any or all of them can be overridden by supplying desired values.  For example:
 
@@ -221,7 +221,7 @@ const options: serverless.function.FunctionOptions = { timeout: 60 };
 
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
     (input: MyInputType) => {
-        // your code here...
+        // your code here ...
         return someOutput;
     }, options);
 ```
@@ -241,7 +241,7 @@ serverless.s3.onObjectCreated("mytrigger", bucket,
 
 In other words, the Lambda will first be created with appropriate values overridden.  Then that Lambda itself can be passed in as the code to run for the specific API.
 
-### Determining the appropriate node_modules packages to include with an Lambda
+### Determining the Appropriate node_modules Packages to include with a Lambda
 
 Because a Pulumi application contains both 'deployment time' code and 'run time' code, it is necessary for the program's `package.json` definition to have a `dependencies` section which specifies all necessary packages needed for both execution times.  When `pulumi` and produces an Lambda from a user-provided function, it will transitively include all packages specified in that `dependencies` section in the final uploaded Lambda.
 
