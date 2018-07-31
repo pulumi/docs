@@ -2,7 +2,11 @@
 title: Getting Started
 ---
 
-To get started with Pulumi, [install it](../install) and choose from one of the following next steps:
+Welcome to the intro guide to Pulumi. This is the best place to get started using Pulumi to create cloud applications
+and infrastructure. Pulumi supports many languages and clouds, leverages package management for easy sharing and reuse,
+and is built atop an open source platform for creating and versioning your cloud software safely and in a team setting.
+
+[Install Pulumi](../install) and then choose from one of the following next steps:
 
 * [Take a Tour](../tour): Take a Tour of Pulumi, learning key programming model concepts, one at a time
 * [Hello World](aws-hello-world.html): Create a simple HTTP app that uses serverless functions (currently AWS-only)

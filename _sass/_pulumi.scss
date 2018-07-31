@@ -142,11 +142,26 @@ $accent4: #fbe5d7; // light orange
     min-width: 120px;
     font-size: 14px;
     font-weight: bold;
+    color: $primary2;
+    background-color: #fff;
+    border: 1px solid $primary2;
+}
+.button:hover {
+    background-color: $primary2;
 }
 
 .button.small {
     font-size: 12px;
     padding: 10px 12px;
+}
+
+.button.primary {
+    color: #fff;
+    background-color: $primary2;
+}
+.button.primary:hover {
+    border: 1px solid $primary;
+    background-color: $primary;
 }
 
 // Don't have SVG icons default to black. Just use current text color.
@@ -158,6 +173,18 @@ svg {
     color: #4a5960;
     font-size: 36px;
     margin-top: 48px !important;
+}
+
+.what-is-pulumi {
+    color: #333;
+    font-size: 18px;
+    margin: 48px auto 0px auto;
+    max-width: 960px;
+}
+
+.what-is-pulumi-cta {
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .learn {
