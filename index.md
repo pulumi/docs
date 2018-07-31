@@ -3,15 +3,17 @@ layout: default_index
 searchindex: false
 ---
 
-<span class="github-stars-widget">
-    <a
-            href="https://github.com/pulumi/pulumi"
-            class="github-button"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star pulumi/pulumi on GitHub">
-        Star</a>
-</span>
+<p style="margin-bottom: 0">
+    <span class="github-stars-widget">
+        <a
+                href="https://github.com/pulumi/pulumi"
+                class="github-button"
+                data-size="large"
+                data-show-count="true"
+                aria-label="Star pulumi/pulumi on GitHub">
+            Star</a>
+    </span>
+</p>
 
 <div class="card-table">
     <a href="https://www.pulumi.com"><img src="/images/logo/logo.svg" alt="Pulumi" width="350"></a>
@@ -25,8 +27,14 @@ searchindex: false
     </div>
     <p style="text-align: center; margin-bottom: 0">
         <a href="/install"><button class="button small">INSTALL</button></a>
+        <a href="/quickstart"><button class="button small primary">GET STARTED</button></a>
         <a href="/tour"><button class="button small">TAKE A TOUR</button></a>
         <a href="https://github.com/pulumi/examples"><button class="button small">EXAMPLES</button></a>
+    </p>
+    <p class="what-is-pulumi">
+        <span class="what-is-pulumi-cta">Define cloud applications and infrastructure</span>
+        in your favorite language, using an open source platform that enables sharing, reuse,
+        and safe and predictable changes in a team environment.
     </p>
 </div>
 
@@ -48,7 +56,7 @@ searchindex: false
         </div>
         <div class="mdl-card__actions">
             <a href="/quickstart/aws-containers.html">
-                <button class="button">GET STARTED</button>
+                <button class="button">START NOW</button>
             </a>
         </div>
     </div>
@@ -69,7 +77,7 @@ searchindex: false
         </div>
         <div class="mdl-card__actions">
             <a href="/quickstart/aws-rest-api.html">
-                <button class="button">GET STARTED</button>
+                <button class="button">START NOW</button>
             </a>
         </div>
     </div>
@@ -90,7 +98,7 @@ searchindex: false
         </div>
         <div class="mdl-card__actions">
             <a href="/quickstart/aws-ec2.html">
-                <button class="button">GET STARTED</button>
+                <button class="button">START NOW</button>
             </a>
         </div>
     </div>
@@ -111,7 +119,7 @@ searchindex: false
         </div>
         <div class="mdl-card__actions">
             <a href="/quickstart/aws-extract-thumbnail.html">
-                <button class="button">GET STARTED</button>
+                <button class="button">START NOW</button>
             </a>
         </div>
     </div>
