@@ -38,6 +38,8 @@ build:
 	bundler exec jekyll build
 	node ./scripts/build-search-index.js < ./_site/search-data.json > ./_site/search-index.json
 	rm ./_site/search-data.json
+	@# Verify dashboard.json is valid JSON (e.g. doesn't have any trailing commas).
+	jq -e . dashboard.json >/dev/null 2>&1
 
 .PHONY: test
 test:
