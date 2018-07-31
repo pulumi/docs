@@ -146,7 +146,7 @@ In this example the 'fs' module is needed inside the 'run time' code.  Because a
 
 Because of these reasons, Modules are captured in a special, but intuitive fashion.  When a module is captured in code, it is translated into a idiomatic `require` call in the serialized JavaScript code.  Using the above example, the code will then effectively contain:
 
-```
+```js
 var fs = require("fs");
 
 // ...
