@@ -24,7 +24,7 @@ $ pulumi config set ahoy-pulumi:launchDarklyKey a76dFAKEg9321 --secret
 To retrieve a variable's current value, use the `pulumi config get` subcommand:
 
 ```bash
-$ pulumi config get aws:config
+$ pulumi config get aws:region
 us-west-2
 ```
 
@@ -40,7 +40,7 @@ ahoy-pulumi:launchDarklyKey                [secret]
 Finally, to remove a variable's value altogether, use the `pulumi config rm` subcommand:
 
 ```bash
-$ pulumi config rm aws:config
+$ pulumi config rm aws:region
 ```
 
 ***
