@@ -40,7 +40,7 @@ Run `pulumi cancel` to cancel the update.
 ### [500] Internal Server Error
 
 The Pulumi command-line tool interacts with the Pulumi web service throughout the course of an update. If the
-service is experiencing an outage, it is possible that users of the command-line tool may see this error message
+service is unable to process an update, it is possible that users of the command-line tool may see this error message
 throughout the course of an update.
 
 We take great pride in service uptime and work rapidly to fix service interruption. You can follow our

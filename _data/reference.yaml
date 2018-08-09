@@ -20,6 +20,7 @@ toc:
   - reference/component-tutorial.md
   - reference/terraform.md
   - reference/how.md
+  - reference/troubleshooting.md
 - title: Packages
   path: /reference/pkg/index
   section:
