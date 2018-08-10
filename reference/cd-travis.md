@@ -2,11 +2,11 @@
 title: Travis CI
 ---
 
-This page details how to use [Travis CI](https://travis-ci.com/) to manage deploying separate
+This page details how to use [Travis CI](https://travis-ci.com/) to manage deploying
 staging and production stacks based on commits to specific Git branches. This is sometimes
 referred to as Push-to-Deploy.
 
-Pulumi doesn't require any particular arrangement of stacks or git workflow to work in a
+Pulumi doesn't require any particular arrangement of stacks or workflow to work in a
 continuous integration / continuous deployment system. So the steps described here can be
 altered to fit into any existing type of deployment setup.
 
@@ -17,7 +17,7 @@ The scripts below act on two hypothetical stacks: `acme/website-staging` and
 update the `website-staging` stack whenever code is pushed into the `master` branch, and update the
 `website-production` stack whenever code is pushed into the `production` branch.
 
-We will also run previews of infrastructure changes for pull requests into `master` and
+We will also run previews of infrastructure changes for pull requests into the `master` and
 `production` branches, to identify an potentially impactful changes before they get merged.
 
 ## Configuring Travis
@@ -53,12 +53,19 @@ With Travis configured, we then just need to add three files to the repository:
 `.travis.yml`, `scripts/travis_push.sh`, and `scripts/travis_pull_request.sh`. (Though of course
 you are free to rename and/or move these files to whatever makes sense in your repo.)
 
-The following is a minimal `.travis.yml`, which describes the steps Travis CI will perform as part
-of building the repository. Before the build begins, Travis will download the Pulumi CLI and then
-run `pulumi login`. (Which will use `PULUMI_ACCESS_TOKEN` mentioned earlier.)
+### Travis.yaml
 
-Then Travis runs whatever build script matches the job type, since we want to have different
-behavior for `push` jobs vs. `pull_request`.
+The following is a minimal `.travis.yml`, which describes the steps Travis CI will perform as part
+of building the repository.
+
+If you already have an existing Travis configuration file, the only thing you'll need to add are
+the steps to download and install the Pulumi CLI, and then login. (Which will use the
+`PULUMI_ACCESS_TOKEN` environment variable, described earlier.)
+
+The example `.travis.yml` file then calls either `scripts/travis_pull.sh` or
+`scripts/travis_pull_request.sh`, depending on the build type. However, if you already have a
+build script or `Makefile` target to deploy your software, you can simply add the commands
+to run Pulumi to that.
 
 ```yaml
 language: generic
@@ -70,10 +77,14 @@ script:
   - ./scripts/travis_${TRAVIS_EVENT_TYPE}.sh
 ```
 
+### scripts/travis_push.sh
+
 `scripts/travis_push.sh` is the script that is executed on `push` jobs. And for the push-to-deploy stategy,
 is when we will run `pulumi update`. For `push` jobs, the `TRAVIS_BRANCH` environment variable is the
 pushed branch. So we use that to determine which stack to update, e.g. pushes to `master` update the
 staging stack and `production` update the production stack.
+
+We can do this in Bash using a simple switch statement.
 
 ```bash
 echo "Travis push job"
@@ -93,10 +104,12 @@ case ${TRAVIS_BRANCH} in
         pulumi update --yes
         ;;
     *)
-        echo "Push to non-master branch. No stacks to update."
+        echo "No Pulumi stack associated with branch ${TRAVIS_BRANCH}."
         ;;
 esac
 ```
+
+### scripts/travis_pull_request.sh
 
 `scripts/travis_pull_request.sh` is triggered on pushes to a pull request branch. For these jobs
 the meaning of `TRAVIS_BRANCH` is the branch being _targeted_ by the pull request.
@@ -123,7 +136,7 @@ case ${TRAVIS_BRANCH} in
         pulumi preview
         ;;
     *)
-        echo "Pull Request to be merged into unknown branch. No stacks to preview."
+        echo "No Pulumi stack targeted by pull request branch ${TRAVIS_BRANCH}."
         ;;
 esac
 ```
@@ -136,18 +149,18 @@ happens if there are multiple commits merged into the `master` branch in rapid s
 Travis will trigger multiple `push` jobs, which will then both try to run `pulumi update` on the
 same stack at the same time.
 
-Pulumi prevents any stack updates while one is already in progress. (To avoid conflicting resource
-updates and/or corrupting resource state.) So the stack and its resources won't be harmed by the
+Pulumi blocks any stack updates while one is already in progress. (To avoid conflicting resource
+updates or corrupting resource state.) So the stack and its resources won't be harmed by the
 concurrent update, but it will likely fail your Travis build.
 
 There are a few ways to address this, such as preventing Travis from starting concurrent builds.
-However, the recommended way to deal with this is to use the [travisqueue](https://github.com/pulumi/travisqueue)
+However, the recommended way is to use the [travisqueue](https://github.com/pulumi/travisqueue)
 tool.
 
 `travisqueue` is a tool that you can add to your `.travis.yml` file to limit build concurrency on
 a per-branch basis. This allows you to limit the number of concurrent builds for any branches that
-are configured to perform a Pulumi update, for example.
+are configured to perform a Pulumi update. So Travis will only have one build for the `master`
+branch at a time, but could be running any number of conrrent builds for other branches.
 
 See the [README.md](https://github.com/pulumi/travisqueue/blob/master/README.md) file for more
-information on how it works, and will effectively queue / restart builds for a repo that were
-cancelled.
+information on how it works and how to add it to your Travis configuration file.
