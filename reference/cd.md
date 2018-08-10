@@ -11,10 +11,15 @@ Continuous integration (CI) encompasses the system you use for automatically tes
 commits to a particular branch.  This relates to, but is independent from, continuous deployment (CD), which deploys
 a subset of these code changes after specific gates have been passed (certain tests passing, approval, and so on).
 
-Pulumi is agnostic to what system you use for CI.  For instance, we are happy to plug into a range of systems including
-AWS CodePipeline/CodeDeploy, CircleCI, Travis, Jenkins, Microsoft VSTS, and Shippable.
+Pulumi can be used with any CI provider - including:
 
-### Provider-specific Examples
+- AWS CodePipeline
+- CircleCI
+- Travis
+- Jenkins
+- etc.
+
+### Provider-specific examples
 
 * [Travis](./cd-travis.html)
 

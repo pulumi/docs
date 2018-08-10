@@ -17,8 +17,8 @@ The scripts below act on two hypothetical stacks: `acme/website-staging` and
 update the `website-staging` stack whenever code is pushed into the `master` branch, and update the
 `website-production` stack whenever code is pushed into the `production` branch.
 
-We will also run previews of infrastructure changes on GitHub pull requests, so that we can
-identify an potentially impactful changes before they get merged.
+We will also run previews of infrastructure changes for pull requests into `master` and
+`production` branches, to identify an potentially impactful changes before they get merged.
 
 ## Configuring Travis
 
@@ -43,7 +43,7 @@ The first is `PULUMI_ACCESS_TOKEN`, which is required to authenticate with pulum
 perform the preview or update. You can create a new Pulumi access token specifically for your
 CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
 
-You will also need to set environment variables specific to your cloud resource provider as well.
+Next, you will also need to set environment variables specific to your cloud resource provider.
 For example, if your stack is managing resources on AWS, `AWS_ACCESS_KEY_ID` and
 `AWS_SECRET_ACCESS_KEY`.
 
@@ -78,14 +78,9 @@ staging stack and `production` update the production stack.
 ```bash
 echo "Travis push job"
 
-set -e -x
-
-cd ./infrastructure
-
 # Download dependencies and build
 npm install
 npm run build
-npm run lint
 
 # Update the stack
 case ${TRAVIS_BRANCH} in
@@ -113,14 +108,9 @@ preview the changes that would be made to the staging stack. For pull requests t
 ```bash
 echo "Travis pull_request job"
 
-set -e -x
-
-cd ./infrastructure/
-
 # Download dependencies and build
 npm install
 npm run build
-npm run lint
 
 # Preview changes that would be made if the PR were merged.
 case ${TRAVIS_BRANCH} in
