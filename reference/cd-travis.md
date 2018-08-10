@@ -59,8 +59,7 @@ The following is a minimal `.travis.yml`, which describes the steps Travis CI wi
 of building the repository.
 
 If you already have an existing Travis configuration file, the only thing you'll need to add are
-the steps to download and install the Pulumi CLI, and then login. (Which will use the
-`PULUMI_ACCESS_TOKEN` environment variable, described earlier.)
+the steps to download the Pulumi CLI and add it to the path.
 
 The example `.travis.yml` file then calls either `scripts/travis_pull.sh` or
 `scripts/travis_pull_request.sh`, depending on the build type. However, if you already have a
@@ -72,7 +71,6 @@ language: generic
 before_install:
   - curl -L https://get.pulumi.com/ | bash -s -- --version 0.14.3
   - export PATH=$PATH:$HOME/.pulumi/bin
-  - pulumi login
 script:
   - ./scripts/travis_${TRAVIS_EVENT_TYPE}.sh
 ```
