@@ -11,13 +11,15 @@ Continuous integration (CI) encompasses the system you use for automatically tes
 commits to a particular branch.  This relates to, but is independent from, continuous deployment (CD), which deploys
 a subset of these code changes after specific gates have been passed (certain tests passing, approval, and so on).
 
-Pulumi is agnostic to what system you use for CI.  For instance, we are happy to plug into a range of systems including
-AWS CodePipeline/CodeDeploy, CircleCI, Travis, Jenkins, Microsoft VSTS, and Shippable.
+Pulumi can be used with any CI provider - including:
 
-> **Note:** More content for this section is on its way.  Please let us know what specific systems and topics you'd like to know
-> more about.
+- AWS CodePipeline
+- CircleCI
+- Travis
+- Jenkins
+- etc.
 
-For help with specific CI systems, please see these links:
+### Provider-specific examples
 
 * [Travis](./cd-travis.html)
 
@@ -29,11 +31,13 @@ Pulumi is also agnostic to what sort of branching strategy you take.  Most custo
 
 Pulumi is designed to be entirely code-centric, including the way in which configuration and secrets are managed. Configuration values and secrets are stored safely inside of `Pulumi.<stack-name>.yaml` files, which you will commit. So, the source is effectively everything that Pulumi needs to for deployment, with minimal external dependencies.
 
+Secret configuration values are encrypted on pulumi.com, and are safe to check into your source code repository. The encrypted value can only be decrypted by someone with access to that stack.
+
 ## How to achieve Pulumi-based CD from CI
 
 The easiest way to achieve a Pulumi-based CD flow is to simply integrate it into your existing CI process.
 
-After running your usual CI processes upon merging a commit into a release branch, you can proceed to a Pulumi deployment.  This usually entails running `pulumi preview` followed by a `pulumi update --yes`. After the deployment completes, you may want to perform additional post-deployment verification.
+After running your usual CI processes upon merging a commit into a release branch, you can proceed to a Pulumi deployment.  This usually entails running `pulumi update --yes`. After the deployment completes, you may want to perform additional post-deployment verification.
 
 There are many variants of this. For instance, Pulumi makes easy to stand up new developer stacks, so you can create a one-off stack for a branch via `pulumi stack init testing-<branch>`, stand it up from scratch (using the flow above), test it out, and finally tear it down using `pulumi destroy` and `pulumi stack rm`.
 
