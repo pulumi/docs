@@ -52,35 +52,32 @@ The Cloud framework accepts the following configuration settings.  These can be 
 
 * `provider`: (Required) The provider to deploy cloud resources into. Currently only `aws` is supported.
 
-The AWS implementation of the Cloud framework accepts the following configuration settings.
+The AWS implementation of the Cloud framework accepts the following configuration settings.  These can be provded via `pulumi config set cloud-aws:<option>`.
 
-<!-- TODO: Flesh out below. -->
-
-* `functionMemorySize`: (Optional) 
-* `functionIncludePaths`: (Optional) 
-* `functionIncludePackages`: (Optional) 
-* `computeIAMRolePolicyARNs`: (Optional) 
-* `acmCertificateARN`: (Optional) 
-* `ecsClusterARN`: (Optional) 
-* `ecsClusterSecurityGroup`: (Optional) 
-* `ecsClusterEfsMountPath`: (Optional) 
-* `usePrivateNetwork`: (Optional) 
-* `externalVpcId`: (Optional) 
-* `externalSubnets`: (Optional) 
-* `externalPublicSubnets`: (Optional) 
-* `externalSecurityGroups`: (Optional) 
-* `useFargate`: (Optional) 
-* `ecsAutoCluster`: (Optional) 
-* `ecsAutoClusterNumberOfAZs`: (Optional) 
-* `ecsAutoClusterInstanceType`: (Optional) 
-* `ecsAutoClusterInstanceRolePolicyARNs`: (Optional) 
-* `ecsAutoClusterInstanceRootVolumeSize`: (Optional) 
-* `ecsAutoClusterInstanceDockerImageVolumeSize`: (Optional) 
-* `ecsAutoClusterInstanceSwapVolumeSize`: (Optional) 
-* `ecsAutoClusterMinSize`: (Optional) 
-* `ecsAutoClusterMaxSize`: (Optional) 
-* `ecsAutoClusterPublicKey`: (Optional) 
-* `ecsAutoClusterInstanceRolePolicyARNs`: (Optional) 
-* `ecsAutoClusterECSOptimizedAMIName`: (Optional) 
-* `ecsAutoClusterUseEFS`: (Optional) 
+* `functionMemorySize`: (Optional) Override the Lambda function memory size for all functions.
+* `functionIncludePaths`: (Optional) Comma-seperated list of additional paths (relative to the project root) to include in Lambda zip uploads for JavaScript callbacks.  E.g `./img.png,app/`.
+* `functionIncludePackages`: (Optional) Comma-seperated list of additional packages (relative to the project root) to include in Lambda zip uploads for JavaScript callbacks.  E.g `body-parser,typescript`.
+* `computeIAMRolePolicyARNs`: (Optional) Set the IAM role policies to apply to compute (both Lambda and ECS) within this Pulumi program. The default is: `arn:aws:iam::aws:policy/AWSLambdaFullAccess,arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess`.
+* `acmCertificateARN`: (Optional) ACM certificate ARN to support services HTTPS traffic.
+* `ecsClusterARN`: (Optional) ECS cluster ARN. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task.
+* `ecsClusterSecurityGroup`: (Optional) ECS cluster security group that all ALBs for services within the cluster will use.
+* `ecsClusterEfsMountPath`: (Optional) EFS mount path on the cluster hosts.  If not provided, `Volumes` cannot be used in `cloud.Service` and `cloud.Task`.
+* `usePrivateNetwork`: (Optional) Put all compute in a private network.
+* `externalVpcId`: (Optional) Use an existing VPC.  If both `usePrivateNetwork` and `externalVpcId` are provided, the VPC must be configured to run all compute in private subnets with Internet egress enabled via NAT Gateways. 
+* `externalSubnets`: (Optional) Provide subnets ids for the VPC as a comma-seperated string.  Required if using an existing VPC.
+* `externalPublicSubnets`: (Optional) Provide public subnets ids for the VPC as a comma-seperated string.  Required if using an existing VPC.
+* `externalSecurityGroups`: (Optional) Provide securityGroup ids for the VPC as a comma-seperated string.  Required if using an existing VPC.
+* `useFargate`: (Optional) Wse Fargate-based container compute. All tasks must be Fargate-compatible. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task.
+* `ecsAutoCluster`: (Optional) Auto-provision an ECS Cluster.  If set to true, parameters for the cluster can be provided via the other "ecsAutoCluster*" configuration variables. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task.
+* `ecsAutoClusterNumberOfAZs`: (Optional) The number of AZs to create subnets in as part of the cluster.  Defaults to `2`.
+* `ecsAutoClusterInstanceType`: (Optional) The EC2 instance type to use for the cluster.  Defaults to `t2.micro`.
+* `ecsAutoClusterInstanceRolePolicyARNs`: (Optional) The EC2 instance role policy ARN to use for the cluster.  Defaults to `arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role,arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess`.
+* `ecsAutoClusterInstanceRootVolumeSize`: (Optional) The size (in GiB) of the EBS volume to attach to each instance as the root volume.  Defaults to `8` GiB.
+* `ecsAutoClusterInstanceDockerImageVolumeSize`: (Optional) The size (in GiB) of the EBS volume to attach to each instance as Docker Image volume.  Defaults to `50` GiB.
+* `ecsAutoClusterInstanceSwapVolumeSize`: (Optional) The size (in GiB) of the EBS volume to attach to each instance as the swap volume.  Defaults to `5` GiB.
+* `ecsAutoClusterMinSize`: (Optional) The minimum size of the cluster. Defaults to `2`.
+* `ecsAutoClusterMaxSize`: (Optional) The maximum size of the cluster. Defaults to `100`.
+* `ecsAutoClusterPublicKey`: (Optional) Public key material for SSH access to the cluster. See [allowed formats](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). If not provided, no SSH access is enabled on VMs.
+* `ecsAutoClusterECSOptimizedAMIName`: (Optional) The name of the ECS-optimzed AMI to use for the Container Instances in this cluster, e.g. `amzn-ami-2017.09.l-amazon-ecs-optimized`. See [valid values](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html).
+* `ecsAutoClusterUseEFS`: (Optional) Optionally auto-provision an Elastic File System for the Cluster.  Defaults to `false`.
 
