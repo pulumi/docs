@@ -2,27 +2,85 @@
 title: "Cloud Framework"
 ---
 
-The `@pulumi/cloud` package lets you program infrastructure and application logic, side by side in harmony, using
-simple, high-level cloud building blocks.  This package has three key defining attributes:
+The Cloud framework for Pulumi lets you program infrastructure and application logic, side by side, using simple, high-level cloud building blocks.  This package has three key defining attributes:
 
 - **Easy Cloud Development**: Build robust and scalable cloud applications with just a few lines of code.
-- **Cloud Agnostic**: Not specific to any one particular cloud (AWS, Azure, Google Cloud, Kubernetes, and various on-premises clouds). Applications built using the high-level `@pulumi/cloud` components like [Service], [Table], [Topic] and [API] can be deployed to a variety of cloud platforms. Although Pulumi only support AWS today in this framework, our plan is to offer an implementation of this on all major clouds.
-* **Serverless**: The `@pulumi/cloud` makes it easy to build applications with minimal fixed infrastructure, event-driven application logic, and using resources that are charged based on actual consumption.
+- **Cloud Agnostic**: Not specific to any one particular cloud (AWS, Azure, Google Cloud, Kubernetes, and various on-premises clouds). Applications built using the high-level Cloud components like [`Service`], [`Table`], [`Topic`] and [`API`] can be deployed to a variety of cloud platforms. Although Pulumi only support AWS today in this framework, our plan is to offer an implementation of this on all major clouds.
+* **Serverless**: The Cloud framework makes it easy to build applications with minimal fixed infrastructure, event-driven application logic, and using resources that are charged based on actual consumption.
 
-This library is open source and available in the [pulumi/pulumi-cloud](https://github.com/pulumi/pulumi-cloud)
-repo.  Full API documentation is available [here](./pkg/nodejs/@pulumi/cloud/index.html).
+The Cloud framework must be configured with credentials to deploy and update resources in the target cloud platform.
 
-## Examples
+See the [full API documentation](./pkg/nodejs/@pulumi/cloud/index.html) for complete details of the available Cloud framework APIs.
 
-See the following examples of programs that use the Pulumi Cloud library:
+## Example
 
-- [URL Shortener](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener/). A complete URL shortener web application using high-level `cloud.Table` and `cloud.API` components.
-- [Video Thumnailer](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer/). An end-to-end pipeline for generating keyframe thumbnails from videos uploaded to a bucket using containerized [FFmpeg](https://www.ffmpeg.org/).  
-- [Voting App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app). A simple voting app example that uses two containers: Redis for the data store and Python Flask app for the frontend.
+```javascript
+const cloud = require("@pulumi/cloud");
 
-<!-- LINKS -->
+const api = new cloud.API("my-api");
+api.get("/hello", (req, res) => {
+    res.
+});
 
-[Service]: pkg/nodejs/@pulumi/cloud/index.html#Service
-[Table]: pkg/nodejs/@pulumi/cloud/index.html#Table
-[Topic]: pkg/nodejs/@pulumi/cloud/index.html#Topic
-[API]: pkg/nodejs/@pulumi/cloud/index.html#API
+exports.url = api.publish().url;
+```
+
+You can find additional examples of using the Cloud framework in [the Pulumi examples repo](https://github.com/pulumi/examples).
+* [HTTP API](https://github.com/pulumi/examples/tree/master/cloud-js-api)
+* [Containers](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
+* [Thumbnailer (buckets, containers, functions)](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer)
+* [URL Shortner (table, API)](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener)
+* [Voting App (table, API)](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app)
+
+## Libraries
+
+The following packages are available in package managers:
+* JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/cloud
+
+The provider-specific implementations of this library are also available for use directly when writing code that does not need to be portable:
+* JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/cloud-aws
+
+The Cloud framework is open source and available in the [pulumi/pulumi-cloud](https://github.com/pulumi/pulumi-cloud) repo. 
+
+## Authentication
+
+Authentication options must be set for the target cloud provider. See the [AWS installation page](/install/aws.html) for details (more providers for the Cloud framework coming soon).
+
+## Configuration
+
+The Cloud framework accepts the following configuration settings.  These can be provided via `pulumi config set cloud:<option>`.
+
+* `provider`: (Required) The provider to deploy cloud resources into. Currently only `aws` is supported.
+
+The AWS implementation of the Cloud framework accepts the following configuration settings.
+
+<!-- TODO: Flesh out below. -->
+
+* `functionMemorySize`: (Optional) 
+* `functionIncludePaths`: (Optional) 
+* `functionIncludePackages`: (Optional) 
+* `computeIAMRolePolicyARNs`: (Optional) 
+* `acmCertificateARN`: (Optional) 
+* `ecsClusterARN`: (Optional) 
+* `ecsClusterSecurityGroup`: (Optional) 
+* `ecsClusterEfsMountPath`: (Optional) 
+* `usePrivateNetwork`: (Optional) 
+* `externalVpcId`: (Optional) 
+* `externalSubnets`: (Optional) 
+* `externalPublicSubnets`: (Optional) 
+* `externalSecurityGroups`: (Optional) 
+* `useFargate`: (Optional) 
+* `ecsAutoCluster`: (Optional) 
+* `ecsAutoClusterNumberOfAZs`: (Optional) 
+* `ecsAutoClusterInstanceType`: (Optional) 
+* `ecsAutoClusterInstanceRolePolicyARNs`: (Optional) 
+* `ecsAutoClusterInstanceRootVolumeSize`: (Optional) 
+* `ecsAutoClusterInstanceDockerImageVolumeSize`: (Optional) 
+* `ecsAutoClusterInstanceSwapVolumeSize`: (Optional) 
+* `ecsAutoClusterMinSize`: (Optional) 
+* `ecsAutoClusterMaxSize`: (Optional) 
+* `ecsAutoClusterPublicKey`: (Optional) 
+* `ecsAutoClusterInstanceRolePolicyARNs`: (Optional) 
+* `ecsAutoClusterECSOptimizedAMIName`: (Optional) 
+* `ecsAutoClusterUseEFS`: (Optional) 
+
