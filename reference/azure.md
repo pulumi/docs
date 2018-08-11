@@ -25,7 +25,7 @@ You can find additional examples of using Azure in [the Pulumi examples repo](ht
 The following pacakges are available in pacakge managers:
 * JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/azure
 * Python: https://pypi.org/project/pulumi-azure/
-* Go: `github.com/pulumi/pulumi-aws/sdk/go/azure`
+* Go: `github.com/pulumi/pulumi-azure/sdk/go/azure`
 
 The Azure provider is open source and available in the [pulumi/pulumi-azure](https://github.com/pulumi/pulumi-azure) repo. 
 
@@ -35,7 +35,7 @@ The Azure provider supports several options for providing access to Azure creden
 
 ## Configuration
 
-The AWS provider accepts the following configuration settings.  These can be provided to the default Azure provider via `pulumi config set azure:<option>`, or passed to the constructor of `new azure.Provider` to construct a specific instance of the Azure provider.
+The Azure provider accepts the following configuration settings.  These can be provided to the default Azure provider via `pulumi config set azure:<option>`, or passed to the constructor of `new azure.Provider` to construct a specific instance of the Azure provider.
 
 * `environment`: (Required) The cloud environment to use. It can also be sourced from the ARM_ENVIRONMENT environment variable. Supported values are: `public` (default), `usgovernment`, `german`, `china`.
 * `clientId`: (Optional) The client ID to use. It can also be sourced from the `ARM_CLIENT_ID` environment variable.
