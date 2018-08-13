@@ -13,7 +13,7 @@ a subset of these code changes after specific gates have been passed (certain te
 
 Pulumi can be used with any CI provider - including:
 
-- AWS CodePipeline
+- AWS Code Services (CodePipeline, CodeBuild)
 - CircleCI
 - Travis
 - Jenkins
@@ -21,6 +21,7 @@ Pulumi can be used with any CI provider - including:
 
 ### Provider-specific examples
 
+* [AWS Code Services](./cd-aws-code-services.html)
 * [Travis](./cd-travis.html)
 
 ## Branching strategy for deployments
