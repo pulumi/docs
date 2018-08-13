@@ -8,7 +8,7 @@ branches:
 before_install:
 # Install required tools.
 # pulumi
-- curl -L https://get.pulumi.com/ | bash -s -- --version 0.12.3
+- curl -L https://get.pulumi.com/ | bash -s -- --version 0.15.0-rc2
 - export PATH=$PATH:$HOME/.pulumi/bin
 # yarn
 - npm i -g yarn
