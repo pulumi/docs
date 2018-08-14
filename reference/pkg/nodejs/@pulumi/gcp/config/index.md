@@ -6,7 +6,6 @@ title: Module config
 
 <h2 class="pdoc-module-header">Index</h2>
 
-* <a href="#__config">let __config</a>
 * <a href="#credentials">let credentials</a>
 * <a href="#project">let project</a>
 * <a href="#region">let region</a>
@@ -14,14 +13,6 @@ title: Module config
 
 <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 
-
-<h2 class="pdoc-module-header" id="__config">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/config/vars.ts#L6">let __config</a>
-</h2>
-
-```typescript
-let __config: Config =  new pulumi.Config("gcp");
-```
 
 <h2 class="pdoc-module-header" id="credentials">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/config/vars.ts#L8">let credentials</a>

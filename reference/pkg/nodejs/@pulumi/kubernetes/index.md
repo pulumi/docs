@@ -19,7 +19,6 @@ import * as kubernetes from "@pulumi/kubernetes";
 
 * <a href="#Provider">class Provider</a>
 * <a href="#fetch">function fetch</a>
-* <a href="#fromList">function fromList</a>
 * <a href="#FetchOpts">interface FetchOpts</a>
 * <a href="#ProviderArgs">interface ProviderArgs</a>
 
@@ -121,14 +120,6 @@ deployments.
 
 ```typescript
 fetch(chart: string, opts?: FetchOpts): void
-```
-
-<h2 class="pdoc-module-header" id="fromList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L164">function fromList</a>
-</h2>
-
-```typescript
-fromList(objs: any[], transforms?: { ... }[], opts?: pulumi.CustomResourceOptions): { ... }
 ```
 
 <h2 class="pdoc-module-header" id="FetchOpts">

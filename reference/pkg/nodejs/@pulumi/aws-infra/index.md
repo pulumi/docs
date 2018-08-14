@@ -19,19 +19,12 @@ import * as awsInfra from "@pulumi/aws-infra";
 
 * <a href="#Cluster">class Cluster</a>
 * <a href="#Network">class Network</a>
-* <a href="#defaultEfsMountPath">const defaultEfsMountPath</a>
-* <a href="#createAutoScalingGroup">function createAutoScalingGroup</a>
 * <a href="#getAwsAz">function getAwsAz</a>
-* <a href="#getCloudFormationAsgTemplate">function getCloudFormationAsgTemplate</a>
-* <a href="#getEcsAmiId">function getEcsAmiId</a>
-* <a href="#getInstanceUserData">function getInstanceUserData</a>
 * <a href="#sha1hash">function sha1hash</a>
 * <a href="#ClusterArgs">interface ClusterArgs</a>
 * <a href="#ClusterNetworkArgs">interface ClusterNetworkArgs</a>
 * <a href="#NetworkArgs">interface NetworkArgs</a>
 * <a href="#NetworkVpcArgs">interface NetworkVpcArgs</a>
-* <a href="#azs">let azs</a>
-* <a href="#defaultNetwork">let defaultNetwork</a>
 
 <a href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws.ts">aws.ts</a> <a href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts">cluster.ts</a> <a href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts">network.ts</a> <a href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/utils.ts">utils.ts</a> 
 
@@ -287,52 +280,12 @@ public vpcId: pulumi.Output<string>;
 
 The VPC id of the network.
 
-<h2 class="pdoc-module-header" id="defaultEfsMountPath">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L23">const defaultEfsMountPath</a>
-</h2>
-
-```typescript
-const defaultEfsMountPath: /mnt/efs = "/mnt/efs";
-```
-
-<h2 class="pdoc-module-header" id="createAutoScalingGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L226">function createAutoScalingGroup</a>
-</h2>
-
-```typescript
-createAutoScalingGroup(parent: Cluster, name: string, args: ClusterArgs, securityGroup: aws.ec2.SecurityGroup, cluster: aws.ecs.Cluster, filesystem: aws.efs.FileSystem | undefined): aws.cloudformation.Stack
-```
-
 <h2 class="pdoc-module-header" id="getAwsAz">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws.ts#L23">function getAwsAz</a>
 </h2>
 
 ```typescript
 getAwsAz(index: number): Promise<string>
-```
-
-<h2 class="pdoc-module-header" id="getCloudFormationAsgTemplate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L433">function getCloudFormationAsgTemplate</a>
-</h2>
-
-```typescript
-getCloudFormationAsgTemplate(instanceName: string, minSize: number, maxSize: number, instanceLaunchConfigurationId: pulumi.Output<string>, subnetIds: pulumi.Input<string>[]): pulumi.Output<string>
-```
-
-<h2 class="pdoc-module-header" id="getEcsAmiId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L330">function getEcsAmiId</a>
-</h2>
-
-```typescript
-getEcsAmiId(name?: undefined | string): Promise<any>
-```
-
-<h2 class="pdoc-module-header" id="getInstanceUserData">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L360">function getInstanceUserData</a>
-</h2>
-
-```typescript
-getInstanceUserData(cluster: aws.ecs.Cluster, fileSystem: aws.efs.FileSystem | undefined, mountPath: string | undefined, cloudFormationStackName: pulumi.Output<string>): Output<string>
 ```
 
 <h2 class="pdoc-module-header" id="sha1hash">
@@ -594,20 +547,4 @@ vpcId: pulumi.Input<string>;
 
 
 The VPC id of the network for the cluster
-
-<h2 class="pdoc-module-header" id="azs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws.ts#L20">let azs</a>
-</h2>
-
-```typescript
-let azs: Promise<aws.GetAvailabilityZonesResult> | undefined;
-```
-
-<h2 class="pdoc-module-header" id="defaultNetwork">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L56">let defaultNetwork</a>
-</h2>
-
-```typescript
-let defaultNetwork: Network;
-```
 

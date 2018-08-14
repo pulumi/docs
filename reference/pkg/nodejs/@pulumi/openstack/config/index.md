@@ -6,7 +6,6 @@ title: Module config
 
 <h2 class="pdoc-module-header">Index</h2>
 
-* <a href="#__config">let __config</a>
 * <a href="#authUrl">let authUrl</a>
 * <a href="#cacertFile">let cacertFile</a>
 * <a href="#cert">let cert</a>
@@ -33,14 +32,6 @@ title: Module config
 
 <a href="/config/vars.ts">config/vars.ts</a> 
 
-
-<h2 class="pdoc-module-header" id="__config">
-<a class="pdoc-member-name" href="/config/vars.ts#L6">let __config</a>
-</h2>
-
-```typescript
-let __config: Config =  new pulumi.Config("openstack");
-```
 
 <h2 class="pdoc-module-header" id="authUrl">
 <a class="pdoc-member-name" href="/config/vars.ts#L11">let authUrl</a>

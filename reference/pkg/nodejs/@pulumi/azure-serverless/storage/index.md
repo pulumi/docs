@@ -8,7 +8,6 @@ title: Module storage
 
 * <a href="#BlobEventSubscription">class BlobEventSubscription</a>
 * <a href="#onBlobEvent">function onBlobEvent</a>
-* <a href="#BlobBinding">interface BlobBinding</a>
 * <a href="#BlobContext">interface BlobContext</a>
 * <a href="#BlobEventSubscriptionArgs">interface BlobEventSubscriptionArgs</a>
 * <a href="#BlobCallback">type BlobCallback</a>
@@ -127,80 +126,6 @@ onBlobEvent(name: string, account: azure.storage.Account, callback: BlobCallback
 
 Creates a new subscription to the given blob using the callback provided, along with optional
 options to control the behavior of the subscription.
-
-<h2 class="pdoc-module-header" id="BlobBinding">
-<a class="pdoc-member-name" href="/storage/account.ts#L19">interface BlobBinding</a>
-</h2>
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storage/account.ts#L53">property connection</a>
-</h3>
-
-```typescript
-connection: string;
-```
-
-
-The storage connection string for the storage account containing the blob.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storage/account.ts#L43">property dataType</a>
-</h3>
-
-```typescript
-dataType: binary;
-```
-
-
-How we want the blob represented when passed into the callback.  We specify 'binary'
-so that all data is passed in as a buffer.  Otherwise, Azure will attempt to sniff
-the content and convert it accordingly.  This gives us a consistent way to know what
-data will be passed into the function.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storage/account.ts#L35">property direction</a>
-</h3>
-
-```typescript
-direction: in;
-```
-
-
-The direction of the binding.  We only 'support' blobs being inputs to functions.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storage/account.ts#L25">property name</a>
-</h3>
-
-```typescript
-name: string;
-```
-
-
-The name of the property in the context object to bind the actual blob value to. Not really
-important in our implementation as the blob value will be passed as the second argument to
-the callback function.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storage/account.ts#L48">property path</a>
-</h3>
-
-```typescript
-path: string;
-```
-
-
-The path to the blob we want to create a trigger for.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storage/account.ts#L30">property type</a>
-</h3>
-
-```typescript
-type: blobTrigger;
-```
-
-
-The type of a blob binding.  Must be 'blobTrigger'.
 
 <h2 class="pdoc-module-header" id="BlobContext">
 <a class="pdoc-member-name" href="/storage/account.ts#L59">interface BlobContext</a>

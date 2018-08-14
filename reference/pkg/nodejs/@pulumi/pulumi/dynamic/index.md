@@ -7,7 +7,6 @@ title: Module dynamic
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Resource">class Resource</a>
-* <a href="#serializeProvider">function serializeProvider</a>
 * <a href="#CheckFailure">interface CheckFailure</a>
 * <a href="#CheckResult">interface CheckResult</a>
 * <a href="#CreateResult">interface CreateResult</a>
@@ -85,14 +84,6 @@ public urn: Output<URN>;
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
-
-<h2 class="pdoc-module-header" id="serializeProvider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L159">function serializeProvider</a>
-</h2>
-
-```typescript
-serializeProvider(provider: ResourceProvider): Promise<string>
-```
 
 <h2 class="pdoc-module-header" id="CheckFailure">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L36">interface CheckFailure</a>

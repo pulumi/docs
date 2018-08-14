@@ -19,8 +19,6 @@ import * as pulumi from "@pulumi/pulumi";
 
 * <a href="#ComponentResource">class ComponentResource</a>
 * <a href="#Config">class Config</a>
-* <a href="#ConfigMissingError">class ConfigMissingError</a>
-* <a href="#ConfigTypeError">class ConfigTypeError</a>
 * <a href="#CustomResource">class CustomResource</a>
 * <a href="#Output">class Output</a>
 * <a href="#ProviderResource">class ProviderResource</a>
@@ -238,114 +236,6 @@ public name: string;
 
 name is the configuration bag's logical name and uniquely identifies it.  The default is the name of the current
 project.
-
-<h2 class="pdoc-module-header" id="ConfigMissingError">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L187">class ConfigMissingError</a>
-</h2>
-
-ConfigMissingError is used when a configuration value is completely missing.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L187">constructor</a>
-</h3>
-
-```typescript
-new ConfigMissingError(key: string)
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L30">method isInstance</a>
-</h3>
-
-```typescript
-public static isInstance(obj: any): boolean
-```
-
-
-Returns true if the given object is an instance of a RunError.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L188">property key</a>
-</h3>
-
-```typescript
-public key: string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es5.d.ts#L904">property message</a>
-</h3>
-
-```typescript
-message: string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es5.d.ts#L903">property name</a>
-</h3>
-
-```typescript
-name: string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es5.d.ts#L905">property stack</a>
-</h3>
-
-```typescript
-stack?: undefined | string;
-```
-
-<h2 class="pdoc-module-header" id="ConfigTypeError">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L178">class ConfigTypeError</a>
-</h2>
-
-ConfigTypeError is used when a configuration value is of the wrong type.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L178">constructor</a>
-</h3>
-
-```typescript
-new ConfigTypeError(key: string, v: any, expectedType: string)
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L30">method isInstance</a>
-</h3>
-
-```typescript
-public static isInstance(obj: any): boolean
-```
-
-
-Returns true if the given object is an instance of a RunError.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es5.d.ts#L904">property message</a>
-</h3>
-
-```typescript
-message: string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es5.d.ts#L903">property name</a>
-</h3>
-
-```typescript
-name: string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es5.d.ts#L905">property stack</a>
-</h3>
-
-```typescript
-stack?: undefined | string;
-```
 
 <h2 class="pdoc-module-header" id="CustomResource">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L188">class CustomResource</a>

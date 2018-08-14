@@ -19,16 +19,9 @@ import * as azureServerless from "@pulumi/azure-serverless";
 
 * <a href="#EventSubscription">class EventSubscription</a>
 * <a href="#HttpFunction">class HttpFunction</a>
-* <a href="#readPackageTree">const readPackageTree</a>
-* <a href="#addPackageAndDependenciesToSet">function addPackageAndDependenciesToSet</a>
-* <a href="#allFoldersForPackages">function allFoldersForPackages</a>
-* <a href="#blobContent">function blobContent</a>
-* <a href="#findDependency">function findDependency</a>
-* <a href="#serializeCallback">function serializeCallback</a>
 * <a href="#signedBlobReadUrl">function signedBlobReadUrl</a>
 * <a href="#Binding">interface Binding</a>
 * <a href="#EventSubscriptionArgs">interface EventSubscriptionArgs</a>
-* <a href="#Package">interface Package</a>
 * <a href="#AzureFunctionHandler">type AzureFunctionHandler</a>
 * <a href="#Callback">type Callback</a>
 * <a href="#Context">type Context</a>
@@ -246,58 +239,6 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
-<h2 class="pdoc-module-header" id="readPackageTree">
-<a class="pdoc-member-name" href="/subscription.ts#L144">const readPackageTree</a>
-</h2>
-
-```typescript
-const readPackageTree: any =  require("read-package-tree");
-```
-
-<h2 class="pdoc-module-header" id="addPackageAndDependenciesToSet">
-<a class="pdoc-member-name" href="/subscription.ts#L179">function addPackageAndDependenciesToSet</a>
-</h2>
-
-```typescript
-addPackageAndDependenciesToSet(root: Package, pkg: string, packagePaths: Set<string>, excludedPackages: Set<string>): void
-```
-
-<h2 class="pdoc-module-header" id="allFoldersForPackages">
-<a class="pdoc-member-name" href="/subscription.ts#L148">function allFoldersForPackages</a>
-</h2>
-
-```typescript
-allFoldersForPackages(includedPackages: Set<string>, excludedPackages: Set<string>): Promise<Set<string>>
-```
-
-<h2 class="pdoc-module-header" id="blobContent">
-<a class="pdoc-member-name" href="/functionApp.ts#L27">function blobContent</a>
-</h2>
-
-```typescript
-blobContent(name: string, handler: AzureFunctionHandler): Promise<pulumi.asset.AssetMap>
-```
-
-<h2 class="pdoc-module-header" id="findDependency">
-<a class="pdoc-member-name" href="/subscription.ts#L208">function findDependency</a>
-</h2>
-
-```typescript
-findDependency(root: Package, name: string): undefined | Package
-```
-
-<h2 class="pdoc-module-header" id="serializeCallback">
-<a class="pdoc-member-name" href="/subscription.ts#L89">function serializeCallback</a>
-</h2>
-
-```typescript
-serializeCallback<C,Data>(name: string, handler: Callback<C, Data>, bindingsOutput: pulumi.Input<Binding[]>): pulumi.Output<pulumi.asset.AssetMap>
-```
-
-
-Takes in a callback and a set of bindings, and produces the right AssetMap layout that Azure
-FunctionApps expect.
-
 <h2 class="pdoc-module-header" id="signedBlobReadUrl">
 <a class="pdoc-member-name" href="/util.ts#L19">function signedBlobReadUrl</a>
 </h2>
@@ -401,49 +342,6 @@ storageContainer?: azure.storage.Container;
 
 The container to use where the zip-file blob for the FunctionApp will be located. If not
 provided, the root container of the storage account will be used.
-
-<h2 class="pdoc-module-header" id="Package">
-<a class="pdoc-member-name" href="/subscription.ts#L134">interface Package</a>
-</h2>
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/subscription.ts#L141">property children</a>
-</h3>
-
-```typescript
-children: Package[];
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/subscription.ts#L135">property name</a>
-</h3>
-
-```typescript
-name: string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/subscription.ts#L137">property package</a>
-</h3>
-
-```typescript
-package: { ... };
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/subscription.ts#L140">property parent</a>
-</h3>
-
-```typescript
-parent?: Package;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/subscription.ts#L136">property path</a>
-</h3>
-
-```typescript
-path: string;
-```
 
 <h2 class="pdoc-module-header" id="AzureFunctionHandler">
 <a class="pdoc-member-name" href="/functionApp.ts#L25">type AzureFunctionHandler</a>

@@ -7,9 +7,6 @@ title: Module serverless
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Function">class Function</a>
-* <a href="#lambdaRolePolicy">const lambdaRolePolicy</a>
-* <a href="#computeCodePaths">function computeCodePaths</a>
-* <a href="#sha1hash">function sha1hash</a>
 * <a href="#Context">interface Context</a>
 * <a href="#FunctionOptions">interface FunctionOptions</a>
 * <a href="#Handler">type Handler</a>
@@ -91,50 +88,6 @@ urn: Output<URN>;
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
-
-<h2 class="pdoc-module-header" id="lambdaRolePolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L210">const lambdaRolePolicy</a>
-</h2>
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L212">let Statement</a>
-</h3>
-
-```typescript
-let Statement: { ... }[] =  [
-        {
-            "Action": "sts:AssumeRole",
-            "Principal": {
-                "Service": "lambda.amazonaws.com",
-            },
-            "Effect": "Allow",
-            "Sid": "",
-        },
-    ];
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L211">let Version</a>
-</h3>
-
-```typescript
-let Version: string = "2012-10-17";
-```
-
-<h2 class="pdoc-module-header" id="computeCodePaths">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L179">function computeCodePaths</a>
-</h2>
-
-```typescript
-computeCodePaths(closure: Promise<pulumi.runtime.SerializedFunction>, serializedFileNameNoExtension: string, extraIncludePaths?: string[], extraIncludePackages?: string[], extraExcludePackages?: string[]): Promise<pulumi.asset.AssetMap>
-```
-
-<h2 class="pdoc-module-header" id="sha1hash">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L225">function sha1hash</a>
-</h2>
-
-```typescript
-sha1hash(s: string): string
-```
 
 <h2 class="pdoc-module-header" id="Context">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/serverless/function.ts#L24">interface Context</a>

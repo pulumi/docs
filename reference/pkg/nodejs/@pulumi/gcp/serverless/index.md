@@ -7,8 +7,6 @@ title: Module serverless
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Function">class Function</a>
-* <a href="#computeCodePaths">function computeCodePaths</a>
-* <a href="#producePackageJson">function producePackageJson</a>
 * <a href="#FunctionOptions">interface FunctionOptions</a>
 * <a href="#Handler">type Handler</a>
 
@@ -97,22 +95,6 @@ urn: Output<URN>;
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
-
-<h2 class="pdoc-module-header" id="computeCodePaths">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serverless/function.ts#L127">function computeCodePaths</a>
-</h2>
-
-```typescript
-computeCodePaths(closure: Promise<pulumi.runtime.SerializedFunction>, serializedFileNameNoExtension: string, excludePackages?: string[]): Promise<pulumi.asset.AssetMap>
-```
-
-<h2 class="pdoc-module-header" id="producePackageJson">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serverless/function.ts#L155">function producePackageJson</a>
-</h2>
-
-```typescript
-producePackageJson(excludedPackages: Set<string>): Promise<string>
-```
 
 <h2 class="pdoc-module-header" id="FunctionOptions">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serverless/function.ts#L32">interface FunctionOptions</a>
