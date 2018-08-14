@@ -10,6 +10,11 @@ banner:
 	@echo -e "\033[1;37mPulumi Documentation Site\033[0m"
 	@echo -e "\033[1;37m=========================\033[0m"
 
+.PHONY: docker
+docker:
+	docker build . -t docs
+	docker run -it -p 4000:4000 docs
+
 .PHONY: configure
 configure:
 	@echo -e "\033[0;32mCONFIGURE:\033[0m"
