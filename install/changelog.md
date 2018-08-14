@@ -112,6 +112,22 @@ While a `tsconfig.json` file is no longer required, as Pulumi uses intelligent d
 - The CLI no longer emits warnings if it can't detect metadata about your git enlistement (for example, what GitHub project it coresponds to).
 - The CLI now only warns about adding a plaintext configuration in cases where it appears likely you may be storing a secret.
 
+### Pulumi Service
+
+Since the last release, the Pulumi Service made some key improvements around the handling of update logs. When viewing stack update logs that include the output of other
+programs, like `Docker`, the resulting logs should now render correctly as we as load much faster.
+
+The biggest new feature however, is the introduction of the new [Pulumi GitHub application](https://github.com/apps/pulumi).
+
+#### Pulumi GitHub App (preview)
+
+The Pulumi GitHub application bridges the gap between GitHub (source code, pull requests) and Pulumi (cloud resources, stack updates). By installing
+the Pulumi GitHub application into your GitHub organization, and then running Pulumi as part of your CI build process, you can now see the results of
+stack updates and previews as part of pull requests. This allows you to see the potential impact a change would have on your cloud infrastructure before
+merging the code.
+
+The Pulumi GitHub application is still in preview as we work to support more CI systems and provide richer output. For information on how to install the
+GitHub application and configure it with your CI system, please [visit our documentation](https://pulumi.io/reference/cd-github.html) page.
 
 ### @pulumi/pulumi 0.15.0
 
