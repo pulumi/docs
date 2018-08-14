@@ -37,7 +37,7 @@ Run `pulumi cancel` to cancel the update.
 
 > Warning! If you cancel another person's update, their update will fail immediately.
 
-### <a name="500"></a> [500] Internal Server Error
+### [500] Internal Server Error {#500}
 
 The Pulumi command-line tool interacts with the Pulumi web service throughout the course of an update. If the
 service is unable to process an update, it is possible that users of the command-line tool may see this error message
@@ -46,7 +46,7 @@ throughout the course of an update.
 We take great pride in service uptime and work rapidly to fix service interruption. You can follow our
 [official Twitter account](https://twitter.com/PulumiCorp) to keep up-to-date on service interruptions.
 
-### <a name="post-step-event"></a> post-step event returned an error
+### post-step event returned an error {#post-step-event}
 
 The Pulumi engine runs a small amount of code after every "step" that it performs. If this code fails for any reason,
 it will fail the entire update. One of the things that the Pulumi engine does before and after every step is
@@ -69,13 +69,13 @@ bug report on our [official bug tracker](https://github.com/pulumi/pulumi/issues
 recommend joining our [Pulumi Community Slack](https://slack.pulumi.io/) and sharing your problem
 if you experience this error message.
 
-### Quick Summary
+#### Quick Summary
 
 If you see an I/O error after "post-step event returned an error", you can safely re-start your
-update. If you see "after mutation of snapshot", you have hit a bug in Pulumi. You will likely
+update. If you see "after mutation of snapshot", you have hit a bug in Pulumi. You will possibly
 need to do some [manual intervention to repair your stack](#editing-your-deployment).
 
-## <a name="interrupted-update-recovery"></a> Recovering from an interrupted update
+## Recovering from an interrupted update {#interrupted-update-recovery}
 
 If the Pulumi CLI is interrupted when performing a deployment, you may see an error message
 that looks something like this on your next update:
@@ -90,7 +90,7 @@ error: the current deployment has 1 resource(s) with pending operations:
 error: refusing to proceed
 ```
 
-This occurs when the Pulumi CLI fails to shut down cleanly. There are a number of ways this
+This occurs when the Pulumi CLI fails to complete cleanly. There are a number of ways this
 can happen, such as:
 
 1. The CLI experiences a network partition when attempting to save your stack's state
@@ -99,9 +99,8 @@ can happen, such as:
 
 In any case, this error means that the Pulumi engine initiated an operation but was not able to
 see if this operation was successful. Because of this, the Pulumi engine has no way of knowing
-whether or not the operations it initated completed successfully or failed. This is a particularly
-troublesome situation for Pulumi because this means that resources may have been created that Pulumi
-does not know about.
+whether or not the operations it initated completed successfully or failed. This means that resources
+may have been created that Pulumi does not know about.
 
 To fix this situation, you should first cancel the last update. If the CLI was not able to save your
 stack's state, it was also likely unable to tell the Service that an update has completed.
@@ -109,7 +108,7 @@ stack's state, it was also likely unable to tell the Service that an update has 
 ```bash
 $ pulumi cancel
 ...
-The currently running update for 's3abuse' has been canceled!
+The currently running update for 'interruptedstack' has been canceled!
 ```
 
 > If `pulumi cancel` fails with `error: [400] Bad Request: the update has already completed`, you can safely ignore
@@ -125,7 +124,7 @@ Import successful.
 
 For every warning that this command prints out, you should verify with your cloud provider whether or not this
 operation was successful. If the operation was successful, and a resource was created, you should delete that
-resource.
+resource using your cloud provider's console, CLI, or SDK.
 
 Finally, you should run `pulumi refresh` to synchronize your stack's state with the true state of your cloud
 resources:
@@ -143,11 +142,13 @@ Performing changes:
 
 At this point your stack should be valid, up-to-date, and ready to accept future updates.
 
-## <a name="editing-your-deployment"> Manually Editing Your Deployment
+## Manually Editing Your Deployment {#editing-your-deployment}
 
-So, your stack is broken. You can't do an update without getting a bizarre error. You can't destroy
-the stack error because you get some *other* error. All attempts to fix your stack have failed.
-*Now* what do you do?
+Sometimes the only recourse for fixing a stack that is unable to do deployments is to edit the
+deployment directly. It is possible to do this, though it is a tactic of last resort. It is a goal of Pulumi
+to never require users to edit their state directly. We would love to hear about the issues you are experiencing
+that you can't resolve, both so we can assist you in fixing your stack and also to fix the issues in Pulumi
+that made it impossible for you to recover your stack in any other way.
 
 The Pulumi engine uses both your program and your stack's existing state to make decisions about what
 resources to create, read, update, or delete. The most common problem that makes it impossible to
@@ -220,7 +221,4 @@ Depending on the class of error that you are experiencing, you may need to edit 
 as well as potentially change the location of particular resources in the list. Since this is an advanced operation,
 we recommend you check-in with the [Pulumi Community Slack](https://slack.pulumi.io) first before editing your snapshot.
 
-It is a goal of Pulumi to never require users to edit their state directly. If you must do so, we have failed in our mission.
-We would love to hear about the issues you are experiencing that you can't resolve, both so we can assist you in fixing your
-stack and also to fix the issues in Pulumi that made it impossible for you to recover your stack in any other way.
 
