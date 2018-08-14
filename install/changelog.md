@@ -148,7 +148,7 @@ Kubernetes support has been brought to production-ready level of quality. Many f
 * Support for provisioning and deploying to clusters in a single program
 * Deploying Helm Charts using the `helm.v2.Chart` type
 
-To use Pulumi with Kubernetes, please [visit our Getting Started page on Kubernetes](/install/kubernetes.html).
+To use Pulumi with Kubernetes, please [visit our Getting Started page on Kubernetes](/reference/kubernetes.html).
 
 ### @pulumi/openstack 0.15.0
 
