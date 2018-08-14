@@ -133,23 +133,75 @@ api.get("/", async (req, res) => {
 
 The `pulumi.Config` object can now be created without an argument. When no argument is supplied, the value of the current project is used. This means that application level code can simply do `new pulumi.Confg()` without passing any argument. For library authors, you should continue to pass the name of your package as an argument.
 
-### @pulumi/aws 0.15.0
-
-### @pulumi/aws-infra 0.15.0
-
-### @pulumi/aws-serverless 0.15.0
-
-### @pulumi/azure 0.15.0
-
-### @pulumi/cloud 0.15.0
-
-### @pulumi/gcp 0.15.0
-
 ### @pulumi/kubernetes 0.15.0
 
 ### @pulumi/openstack 0.15.0
 
 We are releasing a new provider that allows Pulumi to work with OpenStack. A big thanks to **[@frassle](https://github.com/Frassle)** for the implementation of the OpenStack provider!
+
+### @pulumi/docker 0.15.0
+
+Added a new package to support building and pushing Docker images to a docker registry as part of a Pulumi program.  This has been part of the `cloud.Service` support in `@pulumi/cloud`, but is now available to be used with other containers services from cloud platforms like Azure, Kubernetes, and Google.
+
+### @pulumi/aws 0.15.0
+
+Adopted `terraform-provider-aws` version 1.30.0, with new support for Amazon Neptune, AWS Storage Gateway, Amazon Macie, and much more.
+
+### @pulumi/azure 0.15.0
+
+Adopted `terraform-provider-azurerm` version 1.12.0, with new support for Azure Service Fabric, Azure Notification Hubs, Azure Data Lake, and much more.
+
+### @pulumi/azure-serverless 0.15.0
+
+Added a new package with helpers to make it easy to build serverless applications on Azure.  In this initial release, `@pulumi/azure-serverless` includes support for serverless functions and blob storage.
+
+```typescript
+import * as azure from "@pulumi/azure";
+import * as serverless from "@pulumi/azure-serverless";
+
+const storageAccount = new azure.storage.Account("images-container", { /* ... */ });
+serverless.storage.onBlobEvent("newImage", storageAccount, (context, blob) => {
+    context.log(context);
+    context.log(blob);
+    context.done();
+}, { containerName: "folder", filterSuffix: ".png" });
+
+export let storageAccountName = storageAccount.name;
+```
+
+### @pulumi/cloud 0.15.0
+
+Added a simpler form for creating containerized `cloud.Service`s for the (common) case of deploying a single container.  What was previously this:
+
+```typescript
+let nginx = new cloud.Service("nginx", {
+    containers: {
+        nginx: {
+            image: "nginx",
+        },
+    },
+});
+```
+
+Can now be this:
+
+```typescript
+let nginx = new cloud.Service("nginx", {
+    image: "nginx",
+});
+```
+
+### @pulumi/gcp 0.15.0
+
+- Added support for `new gcp.serverless.Function` to create serverless functions defined inline in the Pulumi program in GCP using Google Cloud Functions.  A big thanks to **[@mikhailshilkov](https://github.com/mikhailshilkov)** for contributing this feature!
+
+```typescript
+import * as gcp from "@pulumi/gcp";
+let f = new gcp.serverless.Function("f", {}, (req, res) => {
+    res.send(`Hello ${req.body.name || 'World'}!`);
+});
+export let url = f.function.httpsTriggerUrl;
+```
 
 ## v0.14.3 {#v143}
 
