@@ -72,7 +72,7 @@ toc:
 - title: Continuous Deployment
   path: /reference/cd
   section:
-  - title: GitHub Workflow (preview)
+  - title: Pulumi GitHub App
     path: /reference/cd-github.html
   - title: AWS Code Services
     path: /reference/cd-aws-code-services.html

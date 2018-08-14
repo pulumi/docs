@@ -1,5 +1,5 @@
 ---
-title: GitHub Workflow (Preview)
+title: Pulumi GitHub App (preview)
 ---
 
 <style>
@@ -14,20 +14,27 @@ title: GitHub Workflow (Preview)
     }
 </style>
 
-Pulumi's GitHub workflow integration is a feature which shows the results of Pulumi stack
-updates on GitHub. Showing you any potential infrastructure changes on Pull Requests,
-as well as recording stack changes made with each push.
+Pulumi's GitHub app integrates the results of Pulumi stack updates with GitHub. Once installed and
+configured, it will show you any potential infrastructure changes on Pull Requests and commit Checks.
+[See below](https://github.com/apps/pulumi) for information on how to install the Pulumi GitHub app
+into your organization.
 
-> GitHub workflow integration is currently in preview, and we will be expanding the feature set
+
+> The Pulumi GitHub app is currently in preview, and we will be expanding the feature set
 > over the comming weeks and months. If you have any feedback, suggestions, or bug reports, please
 > let us know in the [Pulumi Community Slack](https://slack.pulumi.io/).
 
+## Features
 
-**Pull Request Comment**
+The Pulumi GitHub app will automatically add comments to Pull Requests with the results of any
+stack changes. This includes a summary of how many resources were created, updated, and/or deleted.
+This allows you to quickly see the changes caused by your Pulumi program without needing to leave
+GitHub's Pull Request view, with a link to the richer details available on [pulumi.com](https://pulumi.com).
 
 ![Comment on Pull Request](/images/github-app/pr-comment.png){:class="img-bordered"}{:class="move-right"}
 
-**Check Suite Result**
+Beyond Pull Request comments, the GitHub application also integrates with GitHub's new [Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/).
+This provides even more detail about any resource changes, including the full update log.
 
 ![Results on GitHub Check](/images/github-app/checks-detail.png){:width="600px"}{:class="img-bordered"}{:class="move-right"}
 
@@ -46,16 +53,15 @@ configure it to only be used by certain repositories.
 ![Installation Page](/images/github-app/installation.png){:width="450px"}{:class="img-bordered"}{:class="move-right"}
 ![Configuration Page](/images/github-app/org-configuration.png){:width="450px"}{:class="img-bordered"}{:class="move-right-small"}
 
-The Pulumi GitHub application does not have access to your source code. And will only report
-status on pushes / pull requests that happen for repositories it is configured to access.
-
-You can also uninstall the GitHub application at any time without impacting your stacks or
+The Pulumi GitHub application does not have access to your source code. It will only report
+status on pushes / pull requests that happen for repositories it is configured to access. You can
+also uninstall the GitHub application at any time without impacting your stacks or
 other Pulumi-managed resources.
 
 ## CI Integration
 
-Once the Pulumi GitHub application is installed in your organization, any `pulumi preview` or
-`pulumi update` that is ran in your CI system will have its results reported back to GitHub.
+Once installed in your organization, any `pulumi preview` or `pulumi update` that is run in your CI
+system will have its results reported back to GitHub.
 
 Currently, Pulumi's GitHub application only supports Travis CI. (For instructions on configuring
 Travis, see [our guide](https://pulumi.io/reference/cd-travis.html).) If you would like
