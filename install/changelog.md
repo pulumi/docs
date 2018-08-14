@@ -23,6 +23,11 @@ title: "Change Log"
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v150">0.15.0</a></th>
+            <td>2018/08/13</td>
+            <td>{% include sdk-links.html version='0.15.0' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v143">0.14.3</a></th>
             <td>2018/07/20</td>
             <td>{% include sdk-links.html version='0.14.3' %}</td>
@@ -51,6 +56,167 @@ title: "Change Log"
 </table>
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## v0.15.0 {#v150}
+
+Released on August 13, 2018
+
+In addition to the 0.15.0 CLI release, we've released new versions of all of our packages.
+
+### Pulumi CLI
+
+This release brings many large improvements to the Pulumi CLI. Major features include:
+
+#### Parallelism
+
+Pulumi now performs resource creates and updates in parallel, driven by dependencies in the resource graph. (Parallel deletes are coming in a future release.) If your program has implicit dependencies that Pulumi does not already see as dependencies, it's possible parallel will cause ordering issues. If this happens, you may set the `dependsOn` on property in the `resourceOptions` parameter to any resource. By default, Pulumi allows 10 parallel operations, but the `-p` flag can be used to override this. `-p=1` disables parallelism altogether. Parallelism is supported for Node.js and Go programs, and Python support will come in a future release.
+
+#### First Class Providers
+
+Pulumi now allows creation and configuration of resource providers programmatically. In addition to the default provider instance for each resource, you can also create an explicit version of the provider and configure it explicitly. This can be used to create some resources in a different region from your main deployment, or deploy resources to a programmatically configured Kubernetes cluster, for example. We have [a multi-region deployment example](https://github.com/pulumi/pulumi-aws/blob/master/examples/multiple-regions/index.ts) for illustrative purposes.
+
+#### Status Rich Updates
+
+The Pulumi CLI is now able to report more detailed information from individual resources during an update. This is used, for instance, in the Kubernetes provider, to provide incremental progress output for steps that may take a while to comeplete (such as deployment orchestration). We anticipate leveraging this feature in more places over time.
+
+#### Improved Templating Support
+
+You can now pass a URL to a Git repository to `pulumi new` to install a custom template, enabling you to share common templates across your team. If you pass a simple name, or omit arguments altogether, `pulumi new` behaves as before, using the [templates hosted by Pulumi](https://github.com/pulumi/templates).
+
+#### Native TypeScript support
+
+By default, Pulumi now natively supports TypeScript, so you do not need to run `tsc` explicitly before deploying. (We often forget to do this too!) Simply run `pulumi up`, and the program will be recompiled on the fly before running it.
+
+To use this new support, upgrade your `@pulumi/pulumi` version to 0.15.0, in addition to the CLI. Pulumi prefers JavaScript source to TypeScript source, so if you had been using TypeScript previously, we recommend you make the following changes:
+
+1. Remove the `main` and `typings` directives from `package.json`, as well as the `build` script.
+2. Remove the `bin` folder that contained your previously compiled code.
+3. You may remove the dependency on `typescript` from your `package.json` as well, since `@pulumi/pulumi` has one.
+
+While a `tsconfig.json` file is no longer required, as Pulumi uses intelligent defaults, other tools like VS Code behave better when it is present, so you'll probably want to keep it.
+
+#### Miscellaneous improvements
+
+- The CLI no longer emits warnings if it can't detect metadata about your git enlistement (for example, what GitHub project it coresponds to).
+- The CLI now only warns about adding a plaintext configuration in cases where it appears likely you may be storing a secret.
+
+### Pulumi Service
+
+The Pulumi Service made some key improvements around the handling of update logs. When viewing stack update logs that include the output of other
+programs, like `docker`, the resulting logs should now render correctly as we as load much faster.
+
+The biggest new feature however, is the introduction of the new [Pulumi GitHub application](https://github.com/apps/pulumi).
+
+#### Pulumi GitHub App (preview)
+
+The Pulumi GitHub application bridges the gap between GitHub (source code, pull requests) and Pulumi (cloud resources, stack updates). By installing
+the Pulumi GitHub application into your GitHub organization, and then running Pulumi as part of your CI build process, you can now see the results of
+stack updates and previews as part of pull requests. This allows you to see the potential impact a change would have on your cloud infrastructure before
+merging the code.
+
+The Pulumi GitHub application is still in preview as we work to support more CI systems and provide richer output. For information on how to install the
+GitHub application and configure it with your CI system, please [visit our documentation](https://pulumi.io/reference/cd-github.html) page.
+
+### @pulumi/pulumi 0.15.0
+
+#### Closure capturing improvements
+
+We've improved our closure capturing logic, which should allow you to write more idiomatic code in lambda functions that are uploaded to the cloud. Previously, if you wanted to use a module, we required you to write either `require('module')` or `await import('module')` inside your lambda function. In addition, if you wanted to use a helper you defined in another file, you had to require that module in your function as well. With these changes, the following code now works:
+
+```typescript
+import * as axios from "axios";
+import * as cloud from "@pulumi/cloud-aws";
+
+const api = new cloud.API("api");
+api.get("/", async (req, res) => {
+    const statusText = (await axios.default.get("https://pulumi.io")).statusText;
+    res.write(`GET https://pulumi.io/ == ${statusText}`).end();
+});
+```
+
+#### Default value for configuration package
+
+The `pulumi.Config` object can now be created without an argument. When no argument is supplied, the value of the current project is used. This means that application level code can simply do `new pulumi.Confg()` without passing any argument. For library authors, you should continue to pass the name of your package as an argument.
+
+### @pulumi/kubernetes 0.15.0
+
+Kubernetes support has been brought to production-ready level of quality. Many features in this release are in support of this outcome. This includes:
+
+* Full support for the entire Kubernetes API
+* Improved status reporting for deployment rollouts
+* Verified support for AWS EKS, Azure AKS, and GCP GKE, in addition to Minikube and manually hosted clusters
+* Support for provisioning and deploying to clusters in a single program
+* Deploying Helm Charts using the `helm.v2.Chart` type
+
+To use Pulumi with Kubernetes, please [visit our Getting Started page on Kubernetes](/install/kubernetes.html).
+
+### @pulumi/openstack 0.15.0
+
+We are releasing a new provider that allows Pulumi to work with OpenStack. A big thanks to **[@frassle](https://github.com/Frassle)** for the implementation of the OpenStack provider!
+
+### @pulumi/docker 0.15.0
+
+Added a new package to support building and pushing Docker images to a docker registry as part of a Pulumi program.  This has been part of the `cloud.Service` support in `@pulumi/cloud`, but is now available to be used with other containers services from cloud platforms like Azure, Kubernetes, and Google.
+
+### @pulumi/aws 0.15.0
+
+Adopted `terraform-provider-aws` version 1.30.0, with new support for Amazon Neptune, AWS Storage Gateway, Amazon Macie, and much more.
+
+### @pulumi/azure 0.15.0
+
+Adopted `terraform-provider-azurerm` version 1.12.0, with new support for Azure Service Fabric, Azure Notification Hubs, Azure Data Lake, and much more.
+
+### @pulumi/azure-serverless 0.15.0
+
+Added a new package with helpers to make it easy to build serverless applications on Azure.  In this initial release, `@pulumi/azure-serverless` includes support for serverless functions and blob storage.
+
+```typescript
+import * as azure from "@pulumi/azure";
+import * as serverless from "@pulumi/azure-serverless";
+
+const storageAccount = new azure.storage.Account("images-container", { /* ... */ });
+serverless.storage.onBlobEvent("newImage", storageAccount, (context, blob) => {
+    context.log(context);
+    context.log(blob);
+    context.done();
+}, { containerName: "folder", filterSuffix: ".png" });
+
+export let storageAccountName = storageAccount.name;
+```
+
+### @pulumi/cloud 0.15.0
+
+Added a simpler form for creating containerized `cloud.Service`s for the (common) case of deploying a single container.  What was previously this:
+
+```typescript
+let nginx = new cloud.Service("nginx", {
+    containers: {
+        nginx: {
+            image: "nginx",
+        },
+    },
+});
+```
+
+Can now be this:
+
+```typescript
+let nginx = new cloud.Service("nginx", {
+    image: "nginx",
+});
+```
+
+### @pulumi/gcp 0.15.0
+
+- Added support for `new gcp.serverless.Function` to create serverless functions defined inline in the Pulumi program in GCP using Google Cloud Functions.  A big thanks to **[@mikhailshilkov](https://github.com/mikhailshilkov)** for contributing this feature!
+
+```typescript
+import * as gcp from "@pulumi/gcp";
+let f = new gcp.serverless.Function("f", {}, (req, res) => {
+    res.send(`Hello ${req.body.name || 'World'}!`);
+});
+export let url = f.function.httpsTriggerUrl;
+```
 
 ## v0.14.3 {#v143}
 
