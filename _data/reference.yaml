@@ -78,6 +78,11 @@ toc:
 - title: Continuous Deployment
   path: /reference/cd
   section:
-  - reference/cd-travis.md
+  - title: Pulumi GitHub App
+    path: /reference/cd-github.html
+  - title: AWS Code Services
+    path: /reference/cd-aws-code-services.html
+  - title: Travis CI
+    path: /reference/cd-travis.html
 - reference/faq.md
 - reference/known-issues.md

@@ -19,6 +19,9 @@ Pulumi can be used with any CI provider - including:
 - Jenkins
 - etc.
 
+Pulumi can also bridge results from your CI system with GitHub, for example surfacing the results of stack
+updates on GitHub pull requests. See [Pulumi GitHub App](./cd-github.html) for more information.
+
 ### Provider-specific examples
 
 * [AWS Code Services](./cd-aws-code-services.html)
