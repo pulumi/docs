@@ -83,7 +83,7 @@ To use Pulumi with Kubernetes, please [visit our Getting Started page on Kuberne
 
 Pulumi now performs resource creates and updates in parallel, driven by dependencies in the resource graph. (Parallel deletes are coming in a future release.) If your program has implicit dependencies that Pulumi does not already see as dependencies, it's possible parallel will cause ordering issues. If this happens, you may set the `dependsOn` on property in the `resourceOptions` parameter to any resource. By default, Pulumi allows 10 parallel operations, but the `-p` flag can be used to override this. `-p=1` disables parallelism altogether. Parallelism is supported for Node.js and Go programs, and Python support will come in a future release.
 
-#### First class providers
+#### First Class Providers
 
 Pulumi now allows creation and configuration of resource providers programmatically. In addition to the default provider instance for each resource, you can also create an explicit version of the provider and configure it explicitly. This can be used to create some resources in a different region from your main deployment, or deploy resources to a programmatically configured Kubernetes cluster, for example. We have [a multi-region deployment example](https://github.com/pulumi/pulumi-aws/blob/master/examples/multiple-regions/index.ts) for illustrative purposes.
 
@@ -110,13 +110,14 @@ While a `tsconfig.json` file is no longer required, as Pulumi uses intelligent d
 #### Miscellaneous improvements
 
 - The CLI no longer emits warnings if it can't detect metadata about your git enlistement (for example, what GitHub project it coresponds to).
-- The CLI now only warns about adding a plaintext configuration in specific cases instead of for every value you add.
+- The CLI now only warns about adding a plaintext configuration in cases where it appears likely you may be storing a secret.
+
 
 ### @pulumi/pulumi 0.15.0
 
 #### Closure capturing improvements
 
-We've improved our closure capturing logic, which should allow you to write more idomatic code in lambda functions that are uploaded to the cloud. Previously, if you wanted to use a module, we required you to write either `require('module')` or `await import('module')` inside your lambda function. In addition, if you wanted to use a helper you defined in another file, you had to require that module in your function as well. With these changes, the following code now works:
+We've improved our closure capturing logic, which should allow you to write more idiomatic code in lambda functions that are uploaded to the cloud. Previously, if you wanted to use a module, we required you to write either `require('module')` or `await import('module')` inside your lambda function. In addition, if you wanted to use a helper you defined in another file, you had to require that module in your function as well. With these changes, the following code now works:
 
 ```typescript
 import * as axios from "axios";
