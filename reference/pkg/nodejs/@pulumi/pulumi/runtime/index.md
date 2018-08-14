@@ -20,13 +20,16 @@ title: Module runtime
 * <a href="#getSourcePosition">const getSourcePosition</a>
 * <a href="#grpc">const grpc</a>
 * <a href="#gstruct">const gstruct</a>
+* <a href="#isNodeV10">const isNodeV10</a>
 * <a href="#leakCandidates">const leakCandidates</a>
 * <a href="#legalNameRegex">const legalNameRegex</a>
 * <a href="#makeLegalRegex">const makeLegalRegex</a>
 * <a href="#nodeModuleGlobals">const nodeModuleGlobals</a>
+* <a href="#options">const options</a>
 * <a href="#resproto">const resproto</a>
 * <a href="#resrpc">const resrpc</a>
 * <a href="#rootPulumiStackTypeName">const rootPulumiStackTypeName</a>
+* <a href="#scriptPositionInfo">const scriptPositionInfo</a>
 * <a href="#specialArchiveSig">const specialArchiveSig</a>
 * <a href="#specialAssetSig">const specialAssetSig</a>
 * <a href="#specialSigKey">const specialSigKey</a>
@@ -45,15 +48,12 @@ title: Module runtime
 * <a href="#deserializeProperty">function deserializeProperty</a>
 * <a href="#disconnect">function disconnect</a>
 * <a href="#disconnectSync">function disconnectSync</a>
-* <a href="#ensureConfig">function ensureConfig</a>
 * <a href="#envObjToString">function envObjToString</a>
 * <a href="#errorString">function errorString</a>
 * <a href="#findModuleName">function findModuleName</a>
 * <a href="#getConfig">function getConfig</a>
 * <a href="#getEngine">function getEngine</a>
-* <a href="#getFunctionColumn">function getFunctionColumn</a>
 * <a href="#getFunctionFile">function getFunctionFile</a>
-* <a href="#getFunctionLine">function getFunctionLine</a>
 * <a href="#getFunctionLocation">function getFunctionLocation</a>
 * <a href="#getFunctionName">function getFunctionName</a>
 * <a href="#getMonitor">function getMonitor</a>
@@ -68,6 +68,7 @@ title: Module runtime
 * <a href="#hasNonNumericIndices">function hasNonNumericIndices</a>
 * <a href="#invoke">function invoke</a>
 * <a href="#isAwaiterCall">function isAwaiterCall</a>
+* <a href="#isComputed">function isComputed</a>
 * <a href="#isDefaultFunctionPrototype">function isDefaultFunctionPrototype</a>
 * <a href="#isDerivedNoCaptureConstructor">function isDerivedNoCaptureConstructor</a>
 * <a href="#isDryRun">function isDryRun</a>
@@ -79,7 +80,7 @@ title: Module runtime
 * <a href="#loadOptions">function loadOptions</a>
 * <a href="#lookupCapturedVariableValue">function lookupCapturedVariableValue</a>
 * <a href="#makeLegalJSName">function makeLegalJSName</a>
-* <a href="#options">function options</a>
+* <a href="#parseConfig">function parseConfig</a>
 * <a href="#parseFunction">function parseFunction</a>
 * <a href="#parseFunctionCode">function parseFunctionCode</a>
 * <a href="#prepareResource">function prepareResource</a>
@@ -102,7 +103,6 @@ title: Module runtime
 * <a href="#serializeProperty">function serializeProperty</a>
 * <a href="#serializeResourceProperties">function serializeResourceProperties</a>
 * <a href="#setConfig">function setConfig</a>
-* <a href="#setOptions">function setOptions</a>
 * <a href="#setRootResource">function setRootResource</a>
 * <a href="#throwSerializationError">function throwSerializationError</a>
 * <a href="#transferProperties">function transferProperties</a>
@@ -129,11 +129,9 @@ title: Module runtime
 * <a href="#V8Script">interface V8Script</a>
 * <a href="#V8SourceLocation">interface V8SourceLocation</a>
 * <a href="#V8SourcePosition">interface V8SourcePosition</a>
-* <a href="#_options">let _options</a>
 * <a href="#engine">let engine</a>
 * <a href="#excessiveDebugOutput">let excessiveDebugOutput</a>
 * <a href="#leakDetectorScheduled">let leakDetectorScheduled</a>
-* <a href="#loaded">let loaded</a>
 * <a href="#monitor">let monitor</a>
 * <a href="#resourceChain">let resourceChain</a>
 * <a href="#resourceChainLabel">let resourceChainLabel</a>
@@ -146,10 +144,10 @@ title: Module runtime
 
 
 <h2 class="pdoc-module-header" id="SerializedOutput">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L172">class SerializedOutput</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L177">class SerializedOutput</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L176">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L181">constructor</a>
 </h3>
 
 ```typescript
@@ -157,7 +155,7 @@ public new SerializedOutput(value: T)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L182">method apply</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L187">method apply</a>
 </h3>
 
 ```typescript
@@ -165,7 +163,7 @@ public apply<U>(func: { ... }): resource.Output<U>
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L187">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L192">method get</a>
 </h3>
 
 ```typescript
@@ -173,7 +171,7 @@ public get(): T
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L173">property isKnown</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L178">property isKnown</a>
 </h3>
 
 ```typescript
@@ -181,7 +179,7 @@ public isKnown: Promise<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L174">property promise</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L179">property promise</a>
 </h3>
 
 ```typescript
@@ -189,7 +187,7 @@ public promise: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L175">property resources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L180">property resources</a>
 </h3>
 
 ```typescript
@@ -197,7 +195,7 @@ public resources: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L176">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L181">property value</a>
 </h3>
 
 ```typescript
@@ -216,7 +214,15 @@ new Stack(init: { ... })
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L43">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L60">method getProvider</a>
+</h3>
+
+```typescript
+public getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L55">method isInstance</a>
 </h3>
 
 ```typescript
@@ -224,7 +230,7 @@ public static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L188">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L279">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -244,7 +250,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="builtInModuleNames">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1055">const builtInModuleNames</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1133">const builtInModuleNames</a>
 </h2>
 
 ```typescript
@@ -257,7 +263,7 @@ const builtInModuleNames: string[] =  [
 ```
 
 <h2 class="pdoc-module-header" id="builtInModules">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1061">const builtInModules</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1139">const builtInModules</a>
 </h2>
 
 ```typescript
@@ -269,7 +275,7 @@ const builtInModules: Map<any, string> =  new Map<any, string>();
 </h2>
 
 ```typescript
-const config: { ... };
+const config: { ... } =  parseConfig();
 ```
 
 <h2 class="pdoc-module-header" id="configEnvKey">
@@ -295,7 +301,7 @@ const debugPromiseLeaks: boolean =  !!process.env.PULUMI_DEBUG_PROMISE_LEAKS;
 debugPromiseLeaks can be set to enable promises leaks debugging.
 
 <h2 class="pdoc-module-header" id="engrpc">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L22">const engrpc</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L20">const engrpc</a>
 </h2>
 
 ```typescript
@@ -303,7 +309,7 @@ const engrpc: any =  require("../proto/engine_grpc_pb.js");
 ```
 
 <h2 class="pdoc-module-header" id="getFunctionScopeCount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L66">const getFunctionScopeCount</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L75">const getFunctionScopeCount</a>
 </h2>
 
 ```typescript
@@ -312,7 +318,7 @@ const getFunctionScopeCount: { ... } =
 ```
 
 <h2 class="pdoc-module-header" id="getFunctionScopeDetails">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L63">const getFunctionScopeDetails</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L72">const getFunctionScopeDetails</a>
 </h2>
 
 ```typescript
@@ -321,7 +327,7 @@ const getFunctionScopeDetails: { ... } =
 ```
 
 <h2 class="pdoc-module-header" id="getScript">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L28">const getScript</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L29">const getScript</a>
 </h2>
 
 ```typescript
@@ -333,7 +339,7 @@ const getScript: { ... } =
 ```
 
 <h2 class="pdoc-module-header" id="getSourcePosition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L45">const getSourcePosition</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L49">const getSourcePosition</a>
 </h2>
 
 ```typescript
@@ -342,7 +348,7 @@ const getSourcePosition: { ... } =
 ```
 
 <h2 class="pdoc-module-header" id="grpc">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L21">const grpc</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L19">const grpc</a>
 </h2>
 
 ```typescript
@@ -350,11 +356,19 @@ const grpc: any =  require("grpc");
 ```
 
 <h2 class="pdoc-module-header" id="gstruct">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L22">const gstruct</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L23">const gstruct</a>
 </h2>
 
 ```typescript
 const gstruct: any =  require("google-protobuf/google/protobuf/struct_pb.js");
+```
+
+<h2 class="pdoc-module-header" id="isNodeV10">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L44">const isNodeV10</a>
+</h2>
+
+```typescript
+const isNodeV10: boolean =  semver.gte(process.version, "10.0.0");
 ```
 
 <h2 class="pdoc-module-header" id="leakCandidates">
@@ -369,7 +383,7 @@ const leakCandidates: Set<Promise<any>> =  new Set<Promise<any>>();
 leakCandidates tracks the list of potential leak candidates.
 
 <h2 class="pdoc-module-header" id="legalNameRegex">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1092">const legalNameRegex</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1173">const legalNameRegex</a>
 </h2>
 
 ```typescript
@@ -377,7 +391,7 @@ const legalNameRegex: RegExp =  /^[a-zA-Z_][0-9a-zA-Z_]*$/;
 ```
 
 <h2 class="pdoc-module-header" id="makeLegalRegex">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L443">const makeLegalRegex</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L446">const makeLegalRegex</a>
 </h2>
 
 ```typescript
@@ -411,8 +425,19 @@ let __filename: true = true;
 let require: true = true;
 ```
 
+<h2 class="pdoc-module-header" id="options">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L43">const options</a>
+</h2>
+
+```typescript
+const options: Options =  loadOptions();
+```
+
+
+_options are the current deployment options being used for this entire session.
+
 <h2 class="pdoc-module-header" id="resproto">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L23">const resproto</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L24">const resproto</a>
 </h2>
 
 ```typescript
@@ -420,7 +445,7 @@ const resproto: any =  require("../proto/resource_pb.js");
 ```
 
 <h2 class="pdoc-module-header" id="resrpc">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L23">const resrpc</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L21">const resrpc</a>
 </h2>
 
 ```typescript
@@ -439,6 +464,17 @@ const rootPulumiStackTypeName: pulumi:pulumi:Stack = "pulumi:pulumi:Stack";
 rootPulumiStackTypeName is the type name that should be used to construct the root component in the tree of Pulumi
 resources allocated by a deployment.  This must be kept up to date with
 `github.com/pulumi/pulumi/pkg/resource/stack.RootPulumiStackTypeName`.
+
+<h2 class="pdoc-module-header" id="scriptPositionInfo">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L52">const scriptPositionInfo</a>
+</h2>
+
+```typescript
+const scriptPositionInfo: { ... } = 
+    isNodeV10
+        ? new Function("script", "pos", "return %ScriptPositionInfo(script, pos, false);") as any
+        : <any>undefined;
+```
 
 <h2 class="pdoc-module-header" id="specialArchiveSig">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L217">const specialArchiveSig</a>
@@ -485,25 +521,25 @@ const unknownValue: 04da6b54-80e4-46f7-96ec-b56ff0331ba9 = "04da6b54-80e4-46f7-9
 Unknown values are encoded as a distinguished string value.
 
 <h2 class="pdoc-module-header" id="V8ScopeDetailsFields">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L79">enum V8ScopeDetailsFields</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L88">enum V8ScopeDetailsFields</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L84">enum member kScopeDetailsEndPositionIndex</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L93">enum member kScopeDetailsEndPositionIndex</a>
 </h3>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L85">enum member kScopeDetailsFunctionIndex</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L94">enum member kScopeDetailsFunctionIndex</a>
 </h3>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L82">enum member kScopeDetailsNameIndex</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L91">enum member kScopeDetailsNameIndex</a>
 </h3>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L81">enum member kScopeDetailsObjectIndex</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L90">enum member kScopeDetailsObjectIndex</a>
 </h3>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L83">enum member kScopeDetailsStartPositionIndex</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L92">enum member kScopeDetailsStartPositionIndex</a>
 </h3>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L80">enum member kScopeDetailsTypeIndex</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L89">enum member kScopeDetailsTypeIndex</a>
 </h3>
 <h2 class="pdoc-module-header" id="allConfig">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L25">function allConfig</a>
@@ -517,7 +553,7 @@ allConfig(): { ... }
 allConfig returns a copy of the full config map.
 
 <h2 class="pdoc-module-header" id="cleanKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L74">function cleanKey</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L63">function cleanKey</a>
 </h2>
 
 ```typescript
@@ -525,14 +561,14 @@ cleanKey(key: string): string
 ```
 
 
-cleanKey takes a configuration key, and if it is of the form "<string>:config:<string>" removes the ":config:"
-portion. Previously, our keys always had the string ":config:" in them, and we'd like to remove it. However, the
-language host needs to continue to set it so we can be compatable with older versions of our packages. Once we
-stop supporting older packages, we can change the language host to not add this :config: thing and remove this
-function.
+cleanKey takes a configuration key, and if it is of the form "<string>:config:<string>" removes
+the ":config:" portion. Previously, our keys always had the string ":config:" in them, and we'd
+like to remove it. However, the language host needs to continue to set it so we can be compatible
+with older versions of our packages. Once we stop supporting older packages, we can change the
+language host to not add this :config: thing and remove this function.
 
 <h2 class="pdoc-module-header" id="computeCapturedVariableNames">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L382">function computeCapturedVariableNames</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L402">function computeCapturedVariableNames</a>
 </h2>
 
 ```typescript
@@ -544,7 +580,7 @@ computeCapturedVariableNames computes the set of free variables in a given funct
 expected to be the usual V8-serialized function expression text.
 
 <h2 class="pdoc-module-header" id="computeUsesNonLexicalThis">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L299">function computeUsesNonLexicalThis</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L319">function computeUsesNonLexicalThis</a>
 </h2>
 
 ```typescript
@@ -552,11 +588,11 @@ computeUsesNonLexicalThis(file: SourceFile): boolean
 ```
 
 <h2 class="pdoc-module-header" id="createFunctionInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L316">function createFunctionInfo</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L321">function createFunctionInfo</a>
 </h2>
 
 ```typescript
-createFunctionInfo(func: Function, context: Context, serialize: { ... }, logInfo?: undefined | true | false): FunctionInfo
+createFunctionInfo(func: Function, context: Context, serialize: { ... }, logInfo?: undefined | false | true): FunctionInfo
 ```
 
 
@@ -564,7 +600,7 @@ createFunctionInfo does the work to create an asynchronous dataflow graph that r
 final FunctionInfo.
 
 <h2 class="pdoc-module-header" id="createFunctionInfoAsync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L198">function createFunctionInfoAsync</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L203">function createFunctionInfoAsync</a>
 </h2>
 
 ```typescript
@@ -578,7 +614,7 @@ function's source code, suitable for execution. Unlike toString, it actually inc
 about the captured environment.
 
 <h2 class="pdoc-module-header" id="createSourceFile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L280">function createSourceFile</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L300">function createSourceFile</a>
 </h2>
 
 ```typescript
@@ -597,7 +633,7 @@ debuggablePromise<T>(p: Promise<T>, ctx?: any): Promise<T>
 debuggablePromise optionally wraps a promise with some goo to make it easier to debug common problems.
 
 <h2 class="pdoc-module-header" id="deepContainsObjOrArray">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L467">function deepContainsObjOrArray</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L470">function deepContainsObjOrArray</a>
 </h2>
 
 ```typescript
@@ -627,7 +663,7 @@ deserializeProperty(prop: any): any
 deserializeProperty unpacks some special types, reversing the above process.
 
 <h2 class="pdoc-module-header" id="disconnect">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L207">function disconnect</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L156">function disconnect</a>
 </h2>
 
 ```typescript
@@ -639,7 +675,7 @@ disconnect permanently disconnects from the server, closing the connections.  It
 queue to drain.  If any RPCs come in afterwards, however, they will crash the process.
 
 <h2 class="pdoc-module-header" id="disconnectSync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L225">function disconnectSync</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L174">function disconnectSync</a>
 </h2>
 
 ```typescript
@@ -650,19 +686,8 @@ disconnectSync(): void
 disconnectSync permanently disconnects from the server, closing the connections. Unlike `disconnect`. it does not
 wait for the existing RPC queue to drain. Any RPCs that come in after this call will crash the process.
 
-<h2 class="pdoc-module-header" id="ensureConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L54">function ensureConfig</a>
-</h2>
-
-```typescript
-ensureConfig(): void
-```
-
-
-ensureConfig populates the runtime.config object based on configuration set in the environment.
-
 <h2 class="pdoc-module-header" id="envObjToString">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L481">function envObjToString</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L484">function envObjToString</a>
 </h2>
 
 ```typescript
@@ -687,7 +712,7 @@ errorString(err: Error): string
 errorString produces a string from an error, conditionally including additional diagnostics.
 
 <h2 class="pdoc-module-header" id="findModuleName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1068">function findModuleName</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1149">function findModuleName</a>
 </h2>
 
 ```typescript
@@ -695,7 +720,7 @@ findModuleName(obj: any): string | undefined
 ```
 
 <h2 class="pdoc-module-header" id="getConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L41">function getConfig</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L39">function getConfig</a>
 </h2>
 
 ```typescript
@@ -706,7 +731,7 @@ getConfig(k: string): string | undefined
 getConfig returns a configuration variable's value or undefined if it is unset.
 
 <h2 class="pdoc-module-header" id="getEngine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L119">function getEngine</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L104">function getEngine</a>
 </h2>
 
 ```typescript
@@ -716,20 +741,8 @@ getEngine(): Object | undefined
 
 getEngine returns the current engine, if any, for RPC communications back to the resource engine.
 
-<h2 class="pdoc-module-header" id="getFunctionColumn">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L160">function getFunctionColumn</a>
-</h2>
-
-```typescript
-getFunctionColumn(func: Function): number
-```
-
-
-Given a function, returns the column in the file where this function was defined.
-Returns 0 if the given function has no script.
-
 <h2 class="pdoc-module-header" id="getFunctionFile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L136">function getFunctionFile</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L145">function getFunctionFile</a>
 </h2>
 
 ```typescript
@@ -740,20 +753,8 @@ getFunctionFile(func: Function): string
 Given a function, returns the name of the file where this function was defined.
 Returns the empty string if the given function has no Script. (e.g. a native function)
 
-<h2 class="pdoc-module-header" id="getFunctionLine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L145">function getFunctionLine</a>
-</h2>
-
-```typescript
-getFunctionLine(func: Function): number
-```
-
-
-Given a function, returns the line number in the file where this function was defined.
-Returns 0 if the given function has no Script.
-
 <h2 class="pdoc-module-header" id="getFunctionLocation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L653">function getFunctionLocation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L672">function getFunctionLocation</a>
 </h2>
 
 ```typescript
@@ -761,7 +762,7 @@ getFunctionLocation(loc: FunctionLocation): string
 ```
 
 <h2 class="pdoc-module-header" id="getFunctionName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L663">function getFunctionName</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L682">function getFunctionName</a>
 </h2>
 
 ```typescript
@@ -769,7 +770,7 @@ getFunctionName(loc: FunctionLocation): string
 ```
 
 <h2 class="pdoc-module-header" id="getMonitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L96">function getMonitor</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L81">function getMonitor</a>
 </h2>
 
 ```typescript
@@ -780,7 +781,7 @@ getMonitor(): Object
 getMonitor returns the current resource monitoring service client for RPC communications.
 
 <h2 class="pdoc-module-header" id="getOrCreateEntry">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L709">function getOrCreateEntry</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L728">function getOrCreateEntry</a>
 </h2>
 
 ```typescript
@@ -793,7 +794,7 @@ entry.  If propNames is provided, and is non-empty, then only attempt to seriali
 specific properties.  If propNames is not provided, or is empty, serialize out all properties.
 
 <h2 class="pdoc-module-header" id="getOwnPropertyNamesAndSymbols">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L564">function getOwnPropertyNamesAndSymbols</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L568">function getOwnPropertyNamesAndSymbols</a>
 </h2>
 
 ```typescript
@@ -801,7 +802,7 @@ getOwnPropertyNamesAndSymbols(obj: any): string | symbol[]
 ```
 
 <h2 class="pdoc-module-header" id="getProject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L70">function getProject</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L55">function getProject</a>
 </h2>
 
 ```typescript
@@ -812,11 +813,11 @@ getProject(): string | undefined
 Get the project being run by the current update.
 
 <h2 class="pdoc-module-header" id="getRootResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L269">function getRootResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L218">function getRootResource</a>
 </h2>
 
 ```typescript
-getRootResource(): Resource | undefined
+getRootResource(): ComponentResource | undefined
 ```
 
 
@@ -824,7 +825,7 @@ getRootResource returns a root resource that will automatically become the defau
 can be used to ensure that all resources without explicit parents are parented to a common parent resource.
 
 <h2 class="pdoc-module-header" id="getScopeForFunction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L97">function getScopeForFunction</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L106">function getScopeForFunction</a>
 </h2>
 
 ```typescript
@@ -832,7 +833,7 @@ getScopeForFunction(func: Function, index: number): V8ScopeDetails
 ```
 
 <h2 class="pdoc-module-header" id="getStack">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L77">function getStack</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L62">function getStack</a>
 </h2>
 
 ```typescript
@@ -843,7 +844,7 @@ getStack(): string | undefined
 Get the stack being targeted by the current update.
 
 <h2 class="pdoc-module-header" id="getTrimmedFunctionCode">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L635">function getTrimmedFunctionCode</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L654">function getTrimmedFunctionCode</a>
 </h2>
 
 ```typescript
@@ -851,7 +852,7 @@ getTrimmedFunctionCode(func: Function): string
 ```
 
 <h2 class="pdoc-module-header" id="hasMonitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L89">function hasMonitor</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L74">function hasMonitor</a>
 </h2>
 
 ```typescript
@@ -862,7 +863,7 @@ hasMonitor(): boolean
 hasMonitor returns true if we are currently connected to a resource monitoring service.
 
 <h2 class="pdoc-module-header" id="hasNonNumericIndices">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L455">function hasNonNumericIndices</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L458">function hasNonNumericIndices</a>
 </h2>
 
 ```typescript
@@ -870,11 +871,11 @@ hasNonNumericIndices<T>(arr: Array<T>): boolean
 ```
 
 <h2 class="pdoc-module-header" id="invoke">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L30">function invoke</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L31">function invoke</a>
 </h2>
 
 ```typescript
-invoke(tok: string, props: Inputs): Promise<any>
+invoke(tok: string, props: Inputs, opts?: InvokeOptions): Promise<any>
 ```
 
 
@@ -883,15 +884,23 @@ can be a bag of computed values (Ts or Promise<T>s), and the result is a Promise
 resolves when the invoke finishes.
 
 <h2 class="pdoc-module-header" id="isAwaiterCall">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L837">function isAwaiterCall</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L857">function isAwaiterCall</a>
 </h2>
 
 ```typescript
 isAwaiterCall(node: CallExpression): boolean
 ```
 
+<h2 class="pdoc-module-header" id="isComputed">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L286">function isComputed</a>
+</h2>
+
+```typescript
+isComputed(v: string, openParenIndex: number): boolean
+```
+
 <h2 class="pdoc-module-header" id="isDefaultFunctionPrototype">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L693">function isDefaultFunctionPrototype</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L712">function isDefaultFunctionPrototype</a>
 </h2>
 
 ```typescript
@@ -899,7 +908,7 @@ isDefaultFunctionPrototype(func: Function, prototypeProp: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isDerivedNoCaptureConstructor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1041">function isDerivedNoCaptureConstructor</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1119">function isDerivedNoCaptureConstructor</a>
 </h2>
 
 ```typescript
@@ -907,7 +916,7 @@ isDerivedNoCaptureConstructor(func: Function): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isDryRun">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L63">function isDryRun</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L48">function isDryRun</a>
 </h2>
 
 ```typescript
@@ -918,7 +927,7 @@ isDryRun(): boolean
 Returns true if we're currently performing a dry-run, or false if this is a true update.
 
 <h2 class="pdoc-module-header" id="isLegalFunctionName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1097">function isLegalFunctionName</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1178">function isLegalFunctionName</a>
 </h2>
 
 ```typescript
@@ -926,7 +935,7 @@ isLegalFunctionName(n: string): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isLegalMemberName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1093">function isLegalMemberName</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L1174">function isLegalMemberName</a>
 </h2>
 
 ```typescript
@@ -934,7 +943,7 @@ isLegalMemberName(n: string): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isNumeric">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L459">function isNumeric</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L462">function isNumeric</a>
 </h2>
 
 ```typescript
@@ -942,7 +951,7 @@ isNumeric(n: string): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isObjOrArray">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L463">function isObjOrArray</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L466">function isObjOrArray</a>
 </h2>
 
 ```typescript
@@ -950,7 +959,7 @@ isObjOrArray(env: closure.Entry): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isSparse">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L448">function isSparse</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L451">function isSparse</a>
 </h2>
 
 ```typescript
@@ -958,7 +967,7 @@ isSparse<T>(arr: Array<T>): boolean
 ```
 
 <h2 class="pdoc-module-header" id="loadOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L175">function loadOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L127">function loadOptions</a>
 </h2>
 
 ```typescript
@@ -966,11 +975,11 @@ loadOptions(): Options
 ```
 
 
-loadOptions recovers previously configured options in the case that a copy of the runtime SDK library
-is loaded without going through the entry point shim, as happens when multiple copies are loaded.
+loadOptions recovers the options from the environment, which is set before we begin executing. This ensures
+that even when multiple copies of this module are loaded, they all get the same values.
 
 <h2 class="pdoc-module-header" id="lookupCapturedVariableValue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L114">function lookupCapturedVariableValue</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L123">function lookupCapturedVariableValue</a>
 </h2>
 
 ```typescript
@@ -983,23 +992,20 @@ in the scope chain of the provided function. If the free variable is not found, 
 whether or not this function should throw or return `undefined.
 
 <h2 class="pdoc-module-header" id="makeLegalJSName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L444">function makeLegalJSName</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L447">function makeLegalJSName</a>
 </h2>
 
 ```typescript
 makeLegalJSName(n: string): string
 ```
 
-<h2 class="pdoc-module-header" id="options">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L50">function options</a>
+<h2 class="pdoc-module-header" id="parseConfig">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L43">function parseConfig</a>
 </h2>
 
 ```typescript
-options(): Options
+parseConfig(): { ... }
 ```
-
-
-options fetches the current configured options and, if required, lazily initializes them.
 
 <h2 class="pdoc-module-header" id="parseFunction">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L100">function parseFunction</a>
@@ -1018,7 +1024,7 @@ parseFunctionCode(funcString: string): [, string, ParsedFunctionCode]
 ```
 
 <h2 class="pdoc-module-header" id="prepareResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L165">function prepareResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L171">function prepareResource</a>
 </h2>
 
 ```typescript
@@ -1037,7 +1043,7 @@ promiseDebugString(p: Promise<any>): string
 ```
 
 <h2 class="pdoc-module-header" id="readResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L53">function readResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L56">function readResource</a>
 </h2>
 
 ```typescript
@@ -1049,7 +1055,7 @@ Reads an existing custom resource's state from the resource monitor.  Note that 
 will not be part of the resulting stack's state, as they are presumed to belong to another.
 
 <h2 class="pdoc-module-header" id="registerResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L105">function registerResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L110">function registerResource</a>
 </h2>
 
 ```typescript
@@ -1062,7 +1068,7 @@ URN and the ID that will resolve after the deployment has completed.  All proper
 objects that the registration operation will resolve at the right time (or remain unresolved for deployments).
 
 <h2 class="pdoc-module-header" id="registerResourceOutputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L265">function registerResourceOutputs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L285">function registerResourceOutputs</a>
 </h2>
 
 ```typescript
@@ -1073,7 +1079,7 @@ registerResourceOutputs(res: Resource, outputs: Inputs): void
 registerResourceOutputs completes the resource registration, attaching an optional set of computed outputs.
 
 <h2 class="pdoc-module-header" id="resolveOutputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L236">function resolveOutputs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L256">function resolveOutputs</a>
 </h2>
 
 ```typescript
@@ -1108,7 +1114,7 @@ rewriteSuperReferences(code: string, isStatic: boolean): string
 ```
 
 <h2 class="pdoc-module-header" id="rpcKeepAlive">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L256">function rpcKeepAlive</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L205">function rpcKeepAlive</a>
 </h2>
 
 ```typescript
@@ -1120,11 +1126,11 @@ rpcKeepAlive registers a pending call to ensure that we don't prematurely discon
 a function that, when invoked, signals that the RPC has completed.
 
 <h2 class="pdoc-module-header" id="runAsyncResourceOp">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L320">function runAsyncResourceOp</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L340">function runAsyncResourceOp</a>
 </h2>
 
 ```typescript
-runAsyncResourceOp(label: string, callback: { ... }, serial?: undefined | true | false): void
+runAsyncResourceOp(label: string, callback: { ... }, serial?: undefined | false | true): void
 ```
 
 <h2 class="pdoc-module-header" id="runInPulumiStack">
@@ -1140,7 +1146,7 @@ runInPulumiStack creates a new Pulumi stack resource and executes the callback i
 returned by the callback will be stored as output properties on this resulting Stack object.
 
 <h2 class="pdoc-module-header" id="serialize">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L133">function serialize</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L118">function serialize</a>
 </h2>
 
 ```typescript
@@ -1242,7 +1248,7 @@ serializeResourceProperties walks the props object passed in, awaiting all inter
 and `urn`, creating a reasonable POJO object that can be remoted over to registerResource.
 
 <h2 class="pdoc-module-header" id="setConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L33">function setConfig</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L32">function setConfig</a>
 </h2>
 
 ```typescript
@@ -1252,31 +1258,19 @@ setConfig(k: string, v: string): void
 
 setConfig sets a configuration variable.
 
-<h2 class="pdoc-module-header" id="setOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L142">function setOptions</a>
-</h2>
-
-```typescript
-setOptions(opts: Options): void
-```
-
-
-setOptions initializes the current runtime with information about whether we are performing a "dry
-run" (preview), versus a real deployment, RPC addresses, and so on.   It may only be called once.
-
 <h2 class="pdoc-module-header" id="setRootResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L276">function setRootResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L225">function setRootResource</a>
 </h2>
 
 ```typescript
-setRootResource(res: Resource | undefined): void
+setRootResource(res: ComponentResource | undefined): void
 ```
 
 
 setRootResource registers a resource that will become the default parent for all resources without explicit parents.
 
 <h2 class="pdoc-module-header" id="throwSerializationError">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L569">function throwSerializationError</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L573">function throwSerializationError</a>
 </h2>
 
 ```typescript
@@ -1304,7 +1298,7 @@ that the engine actualy produced will be used to resolve all the unresolved prom
 'onto'.
 
 <h2 class="pdoc-module-header" id="waitForDeath">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L85">function waitForDeath</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts#L102">function waitForDeath</a>
 </h2>
 
 ```typescript
@@ -1373,10 +1367,10 @@ requiredPackages: Set<string>;
 ```
 
 <h2 class="pdoc-module-header" id="Context">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L113">interface Context</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L118">interface Context</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L139">property asyncWorkQueue</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L144">property asyncWorkQueue</a>
 </h3>
 
 ```typescript
@@ -1384,7 +1378,7 @@ asyncWorkQueue: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L117">property cache</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L122">property cache</a>
 </h3>
 
 ```typescript
@@ -1392,7 +1386,7 @@ cache: Map<Object, Entry>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L131">property classInstanceMemberToSuperEntry</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L136">property classInstanceMemberToSuperEntry</a>
 </h3>
 
 ```typescript
@@ -1400,7 +1394,7 @@ classInstanceMemberToSuperEntry: Map<Function, Entry>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L132">property classStaticMemberToSuperEntry</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L137">property classStaticMemberToSuperEntry</a>
 </h3>
 
 ```typescript
@@ -1408,7 +1402,7 @@ classStaticMemberToSuperEntry: Map<Function, Entry>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L122">property frames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L127">property frames</a>
 </h3>
 
 ```typescript
@@ -1416,7 +1410,7 @@ frames: ContextFrame[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L147">property simpleFunctions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L152">property simpleFunctions</a>
 </h3>
 
 ```typescript
@@ -1424,10 +1418,10 @@ simpleFunctions: FunctionInfo[];
 ```
 
 <h2 class="pdoc-module-header" id="ContextFrame">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L159">interface ContextFrame</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L164">interface ContextFrame</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L161">property capturedFunctionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L166">property capturedFunctionName</a>
 </h3>
 
 ```typescript
@@ -1435,15 +1429,15 @@ capturedFunctionName?: undefined | string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L163">property capturedModuleName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L168">property capturedModule</a>
 </h3>
 
 ```typescript
-capturedModuleName?: undefined | string;
+capturedModule?: undefined | { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L162">property capturedVariableName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L167">property capturedVariableName</a>
 </h3>
 
 ```typescript
@@ -1451,7 +1445,7 @@ capturedVariableName?: undefined | string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L160">property functionLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L165">property functionLocation</a>
 </h3>
 
 ```typescript
@@ -1459,13 +1453,13 @@ functionLocation?: FunctionLocation;
 ```
 
 <h2 class="pdoc-module-header" id="Entry">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L87">interface Entry</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L89">interface Entry</a>
 </h2>
 
 Entry is the environment slot for a named lexically captured variable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L99">property array</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L101">property array</a>
 </h3>
 
 ```typescript
@@ -1473,7 +1467,7 @@ array?: Entry[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L110">property expr</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L115">property expr</a>
 </h3>
 
 ```typescript
@@ -1481,7 +1475,7 @@ expr?: undefined | string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L92">property function</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L94">property function</a>
 </h3>
 
 ```typescript
@@ -1489,7 +1483,7 @@ function?: FunctionInfo;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L89">property json</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L91">property json</a>
 </h3>
 
 ```typescript
@@ -1497,7 +1491,15 @@ json?: any;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L96">property object</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L104">property module</a>
+</h3>
+
+```typescript
+module?: undefined | string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L98">property object</a>
 </h3>
 
 ```typescript
@@ -1505,7 +1507,7 @@ object?: ObjectInfo;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L107">property output</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L112">property output</a>
 </h3>
 
 ```typescript
@@ -1513,7 +1515,7 @@ output?: Entry;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L103">property promise</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L108">property promise</a>
 </h3>
 
 ```typescript
@@ -1521,10 +1523,10 @@ promise?: Entry;
 ```
 
 <h2 class="pdoc-module-header" id="FunctionInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L37">interface FunctionInfo</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L39">interface FunctionInfo</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L42">property capturedValues</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L44">property capturedValues</a>
 </h3>
 
 ```typescript
@@ -1532,7 +1534,7 @@ capturedValues: PropertyMap;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L39">property code</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L41">property code</a>
 </h3>
 
 ```typescript
@@ -1540,7 +1542,7 @@ code: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L32">property env</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L34">property env</a>
 </h3>
 
 ```typescript
@@ -1548,7 +1550,7 @@ env: PropertyMap;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L49">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L51">property name</a>
 </h3>
 
 ```typescript
@@ -1556,7 +1558,7 @@ name: string | undefined;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L28">property proto</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L30">property proto</a>
 </h3>
 
 ```typescript
@@ -1564,7 +1566,7 @@ proto?: Entry;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L52">property requiredPackages</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L54">property requiredPackages</a>
 </h3>
 
 ```typescript
@@ -1572,7 +1574,7 @@ requiredPackages: Set<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L45">property usesNonLexicalThis</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L47">property usesNonLexicalThis</a>
 </h3>
 
 ```typescript
@@ -1580,10 +1582,10 @@ usesNonLexicalThis: boolean;
 ```
 
 <h2 class="pdoc-module-header" id="FunctionLocation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L150">interface FunctionLocation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L155">interface FunctionLocation</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L154">property column</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L159">property column</a>
 </h3>
 
 ```typescript
@@ -1591,7 +1593,7 @@ column: number;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L152">property file</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L157">property file</a>
 </h3>
 
 ```typescript
@@ -1599,7 +1601,7 @@ file: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L151">property func</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L156">property func</a>
 </h3>
 
 ```typescript
@@ -1607,7 +1609,7 @@ func: Function;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L155">property functionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L160">property functionString</a>
 </h3>
 
 ```typescript
@@ -1615,15 +1617,15 @@ functionString: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L156">property isArrowFunction</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L161">property isArrowFunction</a>
 </h3>
 
 ```typescript
-isArrowFunction?: undefined | true | false;
+isArrowFunction?: undefined | false | true;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L153">property line</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L158">property line</a>
 </h3>
 
 ```typescript
@@ -1631,10 +1633,10 @@ line: number;
 ```
 
 <h2 class="pdoc-module-header" id="ObjectInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L24">interface ObjectInfo</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L26">interface ObjectInfo</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L32">property env</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L34">property env</a>
 </h3>
 
 ```typescript
@@ -1642,7 +1644,7 @@ env: PropertyMap;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L28">property proto</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L30">property proto</a>
 </h3>
 
 ```typescript
@@ -1650,21 +1652,21 @@ proto?: Entry;
 ```
 
 <h2 class="pdoc-module-header" id="Options">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L33">interface Options</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L31">interface Options</a>
 </h2>
 
 Options is a bag of settings that controls the behavior of previews and deployments
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L36">property dryRun</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L34">property dryRun</a>
 </h3>
 
 ```typescript
-dryRun?: undefined | true | false;
+dryRun?: undefined | false | true;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L38">property engineAddr</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L36">property engineAddr</a>
 </h3>
 
 ```typescript
@@ -1672,7 +1674,7 @@ engineAddr?: undefined | string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L39">property monitorAddr</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L37">property monitorAddr</a>
 </h3>
 
 ```typescript
@@ -1680,7 +1682,7 @@ monitorAddr?: undefined | string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L37">property parallel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L35">property parallel</a>
 </h3>
 
 ```typescript
@@ -1688,7 +1690,7 @@ parallel?: undefined | number;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L34">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L32">property project</a>
 </h3>
 
 ```typescript
@@ -1696,7 +1698,7 @@ project?: undefined | string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L35">property stack</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L33">property stack</a>
 </h3>
 
 ```typescript
@@ -1798,26 +1800,26 @@ isArrowFunction: boolean;
 ```
 
 <h2 class="pdoc-module-header" id="PropertyInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L57">interface PropertyInfo</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L59">interface PropertyInfo</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L62">property configurable</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L64">property configurable</a>
 </h3>
 
 ```typescript
-configurable?: undefined | true | false;
+configurable?: undefined | false | true;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L63">property enumerable</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L65">property enumerable</a>
 </h3>
 
 ```typescript
-enumerable?: undefined | true | false;
+enumerable?: undefined | false | true;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L68">property get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L70">property get</a>
 </h3>
 
 ```typescript
@@ -1825,7 +1827,7 @@ get?: Entry;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L59">property hasValue</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L61">property hasValue</a>
 </h3>
 
 ```typescript
@@ -1833,7 +1835,7 @@ hasValue: boolean;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L69">property set</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L71">property set</a>
 </h3>
 
 ```typescript
@@ -1841,18 +1843,18 @@ set?: Entry;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L64">property writable</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L66">property writable</a>
 </h3>
 
 ```typescript
-writable?: undefined | true | false;
+writable?: undefined | false | true;
 ```
 
 <h2 class="pdoc-module-header" id="PropertyInfoAndValue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L74">interface PropertyInfoAndValue</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L76">interface PropertyInfoAndValue</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L76">property entry</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L78">property entry</a>
 </h3>
 
 ```typescript
@@ -1860,7 +1862,7 @@ entry: Entry;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L75">property info</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L77">property info</a>
 </h3>
 
 ```typescript
@@ -1868,10 +1870,10 @@ info?: PropertyInfo;
 ```
 
 <h2 class="pdoc-module-header" id="PropertyMap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">interface PropertyMap</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L83">interface PropertyMap</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4874">method __@iterator</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L113">method __@iterator</a>
 </h3>
 
 ```typescript
@@ -1882,7 +1884,7 @@ __@iterator(): IterableIterator<[, Entry, PropertyInfoAndValue]>
 Returns an iterable of entries in the map.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4655">method clear</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L22">method clear</a>
 </h3>
 
 ```typescript
@@ -1890,7 +1892,7 @@ clear(): void
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4656">method delete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L23">method delete</a>
 </h3>
 
 ```typescript
@@ -1898,7 +1900,7 @@ delete(key: Entry): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4879">method entries</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L118">method entries</a>
 </h3>
 
 ```typescript
@@ -1909,7 +1911,7 @@ entries(): IterableIterator<[, Entry, PropertyInfoAndValue]>
 Returns an iterable of key, value pairs for every entry in the map.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4657">method forEach</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L24">method forEach</a>
 </h3>
 
 ```typescript
@@ -1917,7 +1919,7 @@ forEach(callbackfn: { ... }, thisArg?: any): void
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4658">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -1925,7 +1927,7 @@ get(key: Entry): PropertyInfoAndValue | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4659">method has</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L26">method has</a>
 </h3>
 
 ```typescript
@@ -1933,7 +1935,7 @@ has(key: Entry): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4884">method keys</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L123">method keys</a>
 </h3>
 
 ```typescript
@@ -1944,7 +1946,7 @@ keys(): IterableIterator<Entry>
 Returns an iterable of keys in the map
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4660">method set</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L27">method set</a>
 </h3>
 
 ```typescript
@@ -1952,7 +1954,7 @@ set(key: Entry, value: PropertyInfoAndValue): this
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4889">method values</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L128">method values</a>
 </h3>
 
 ```typescript
@@ -1963,7 +1965,7 @@ values(): IterableIterator<PropertyInfoAndValue>
 Returns an iterable of values in the map
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4669">property Map</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L35">property Map</a>
 </h3>
 
 ```typescript
@@ -1971,7 +1973,7 @@ Map: MapConstructor;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L5648">property __@toStringTag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts#L130">property __@toStringTag</a>
 </h3>
 
 ```typescript
@@ -1979,7 +1981,7 @@ __@toStringTag: Map;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es6.d.ts#L4661">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L28">property size</a>
 </h3>
 
 ```typescript
@@ -1987,10 +1989,10 @@ size: number;
 ```
 
 <h2 class="pdoc-module-header" id="ResourceResolverOperation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L34">interface ResourceResolverOperation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L35">interface ResourceResolverOperation</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L46">property dependencies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L49">property dependencies</a>
 </h3>
 
 ```typescript
@@ -1998,7 +2000,7 @@ dependencies: Set<URN>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L42">property parentURN</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L43">property parentURN</a>
 </h3>
 
 ```typescript
@@ -2006,7 +2008,15 @@ parentURN: URN | undefined;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L38">property resolveID</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L45">property providerRef</a>
+</h3>
+
+```typescript
+providerRef: string | undefined;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L39">property resolveID</a>
 </h3>
 
 ```typescript
@@ -2014,7 +2024,7 @@ resolveID: { ... } | undefined;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L36">property resolveURN</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L37">property resolveURN</a>
 </h3>
 
 ```typescript
@@ -2022,7 +2032,7 @@ resolveURN: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L40">property resolvers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L41">property resolvers</a>
 </h3>
 
 ```typescript
@@ -2030,7 +2040,7 @@ resolvers: OutputResolvers;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L44">property serializedProps</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L47">property serializedProps</a>
 </h3>
 
 ```typescript
@@ -2109,10 +2119,10 @@ The text of a JavaScript module which exports a single name bound to a function 
 JavaScript function.
 
 <h2 class="pdoc-module-header" id="V8ScopeDetails">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L91">interface V8ScopeDetails</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L100">interface V8ScopeDetails</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L92">property scopeObject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L101">property scopeObject</a>
 </h3>
 
 ```typescript
@@ -2120,10 +2130,10 @@ scopeObject: Record<string, any>;
 ```
 
 <h2 class="pdoc-module-header" id="V8Script">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L37">interface V8Script</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L38">interface V8Script</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L39">method locationFromPosition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L40">method locationFromPosition</a>
 </h3>
 
 ```typescript
@@ -2131,7 +2141,7 @@ locationFromPosition(pos: V8SourcePosition): V8SourceLocation
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L38">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L39">property name</a>
 </h3>
 
 ```typescript
@@ -2139,10 +2149,10 @@ name: string;
 ```
 
 <h2 class="pdoc-module-header" id="V8SourceLocation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L54">interface V8SourceLocation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L63">interface V8SourceLocation</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L56">property column</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L65">property column</a>
 </h3>
 
 ```typescript
@@ -2150,7 +2160,7 @@ column: number;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L55">property line</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L64">property line</a>
 </h3>
 
 ```typescript
@@ -2158,21 +2168,10 @@ line: number;
 ```
 
 <h2 class="pdoc-module-header" id="V8SourcePosition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L50">interface V8SourcePosition</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L59">interface V8SourcePosition</a>
 </h2>
-<h2 class="pdoc-module-header" id="_options">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L45">let _options</a>
-</h2>
-
-```typescript
-let _options: Options | undefined;
-```
-
-
-_options are the current deployment options being used for this entire session.
-
 <h2 class="pdoc-module-header" id="engine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L114">let engine</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L99">let engine</a>
 </h2>
 
 ```typescript
@@ -2183,7 +2182,7 @@ let engine: any | undefined;
 engine is a live connection to the engine, used for logging, etc. (lazily initialized).
 
 <h2 class="pdoc-module-header" id="excessiveDebugOutput">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L28">let excessiveDebugOutput</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L26">let excessiveDebugOutput</a>
 </h2>
 
 ```typescript
@@ -2204,19 +2203,8 @@ let leakDetectorScheduled: boolean = false;
 
 leakDetectorScheduled is true when the promise leak detector is scheduled for process exit.
 
-<h2 class="pdoc-module-header" id="loaded">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L49">let loaded</a>
-</h2>
-
-```typescript
-let loaded: boolean = false;
-```
-
-
-loaded is set to true if and when we've attempted to load config from the environment.
-
 <h2 class="pdoc-module-header" id="monitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L84">let monitor</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L69">let monitor</a>
 </h2>
 
 ```typescript
@@ -2227,7 +2215,7 @@ let monitor: any | undefined;
 monitor is a live connection to the resource monitor that tracks deployments (lazily initialized).
 
 <h2 class="pdoc-module-header" id="resourceChain">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L316">let resourceChain</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L336">let resourceChain</a>
 </h2>
 
 ```typescript
@@ -2241,7 +2229,7 @@ causes problems with some resource providers, so for now we will serialize all o
 pulumi/pulumi#335 tracks coming up with a long-term solution here.
 
 <h2 class="pdoc-module-header" id="resourceChainLabel">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L317">let resourceChainLabel</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L337">let resourceChainLabel</a>
 </h2>
 
 ```typescript
@@ -2249,15 +2237,15 @@ let resourceChainLabel: string | undefined =  undefined;
 ```
 
 <h2 class="pdoc-module-header" id="rootResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L263">let rootResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L212">let rootResource</a>
 </h2>
 
 ```typescript
-let rootResource: Resource | undefined;
+let rootResource: ComponentResource | undefined;
 ```
 
 <h2 class="pdoc-module-header" id="rpcDone">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L250">let rpcDone</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L199">let rpcDone</a>
 </h2>
 
 ```typescript

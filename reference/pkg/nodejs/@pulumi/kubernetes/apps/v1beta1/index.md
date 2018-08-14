@@ -6,6 +6,14 @@ title: Module apps/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isControllerRevision">function isControllerRevision</a>
+* <a href="#isControllerRevisionList">function isControllerRevisionList</a>
+* <a href="#isDeployment">function isDeployment</a>
+* <a href="#isDeploymentList">function isDeploymentList</a>
+* <a href="#isDeploymentRollback">function isDeploymentRollback</a>
+* <a href="#isScale">function isScale</a>
+* <a href="#isStatefulSet">function isStatefulSet</a>
+* <a href="#isStatefulSetList">function isStatefulSetList</a>
 * <a href="#ControllerRevision">interface ControllerRevision</a>
 * <a href="#ControllerRevisionList">interface ControllerRevisionList</a>
 * <a href="#Deployment">interface Deployment</a>
@@ -28,8 +36,72 @@ title: Module apps/v1beta1
 * <a href="#StatefulSetStatus">interface StatefulSetStatus</a>
 * <a href="#StatefulSetUpdateStrategy">interface StatefulSetUpdateStrategy</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isControllerRevision">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L2194">function isControllerRevision</a>
+</h2>
+
+```typescript
+isControllerRevision(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isControllerRevisionList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L2230">function isControllerRevisionList</a>
+</h2>
+
+```typescript
+isControllerRevisionList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDeployment">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L2273">function isDeployment</a>
+</h2>
+
+```typescript
+isDeployment(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDeploymentList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L2346">function isDeploymentList</a>
+</h2>
+
+```typescript
+isDeploymentList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDeploymentRollback">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L2387">function isDeploymentRollback</a>
+</h2>
+
+```typescript
+isDeploymentRollback(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isScale">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L2620">function isScale</a>
+</h2>
+
+```typescript
+isScale(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isStatefulSet">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L2706">function isStatefulSet</a>
+</h2>
+
+```typescript
+isStatefulSet(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isStatefulSetList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L2770">function isStatefulSetList</a>
+</h2>
+
+```typescript
+isStatefulSetList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="ControllerRevision">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2038">interface ControllerRevision</a>
@@ -422,7 +494,7 @@ The config of this deployment rollback.
 </h3>
 
 ```typescript
-updatedAnnotations: object;
+updatedAnnotations: { ... };
 ```
 
 
@@ -858,7 +930,7 @@ actual number of observed instances of the scaled object.
 </h3>
 
 ```typescript
-selector: object;
+selector: { ... };
 ```
 
 

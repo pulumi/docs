@@ -6,6 +6,20 @@ title: Module extensions/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isDaemonSet">function isDaemonSet</a>
+* <a href="#isDaemonSetList">function isDaemonSetList</a>
+* <a href="#isDeployment">function isDeployment</a>
+* <a href="#isDeploymentList">function isDeploymentList</a>
+* <a href="#isDeploymentRollback">function isDeploymentRollback</a>
+* <a href="#isIngress">function isIngress</a>
+* <a href="#isIngressList">function isIngressList</a>
+* <a href="#isNetworkPolicy">function isNetworkPolicy</a>
+* <a href="#isNetworkPolicyList">function isNetworkPolicyList</a>
+* <a href="#isPodSecurityPolicy">function isPodSecurityPolicy</a>
+* <a href="#isPodSecurityPolicyList">function isPodSecurityPolicyList</a>
+* <a href="#isReplicaSet">function isReplicaSet</a>
+* <a href="#isReplicaSetList">function isReplicaSetList</a>
+* <a href="#isScale">function isScale</a>
 * <a href="#AllowedFlexVolume">interface AllowedFlexVolume</a>
 * <a href="#AllowedHostPath">interface AllowedHostPath</a>
 * <a href="#DaemonSet">interface DaemonSet</a>
@@ -59,8 +73,120 @@ title: Module extensions/v1beta1
 * <a href="#ScaleStatus">interface ScaleStatus</a>
 * <a href="#SupplementalGroupsStrategyOptions">interface SupplementalGroupsStrategyOptions</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isDaemonSet">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L12790">function isDaemonSet</a>
+</h2>
+
+```typescript
+isDaemonSet(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDaemonSetList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L12859">function isDaemonSetList</a>
+</h2>
+
+```typescript
+isDaemonSetList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDeployment">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13029">function isDeployment</a>
+</h2>
+
+```typescript
+isDeployment(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDeploymentList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13102">function isDeploymentList</a>
+</h2>
+
+```typescript
+isDeploymentList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDeploymentRollback">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13143">function isDeploymentRollback</a>
+</h2>
+
+```typescript
+isDeploymentRollback(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isIngress">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13434">function isIngress</a>
+</h2>
+
+```typescript
+isIngress(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isIngressList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13488">function isIngressList</a>
+</h2>
+
+```typescript
+isIngressList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isNetworkPolicy">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13615">function isNetworkPolicy</a>
+</h2>
+
+```typescript
+isNetworkPolicy(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isNetworkPolicyList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13707">function isNetworkPolicyList</a>
+</h2>
+
+```typescript
+isNetworkPolicyList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPodSecurityPolicy">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13843">function isPodSecurityPolicy</a>
+</h2>
+
+```typescript
+isPodSecurityPolicy(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPodSecurityPolicyList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13880">function isPodSecurityPolicyList</a>
+</h2>
+
+```typescript
+isPodSecurityPolicyList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isReplicaSet">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14040">function isReplicaSet</a>
+</h2>
+
+```typescript
+isReplicaSet(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isReplicaSetList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14110">function isReplicaSetList</a>
+</h2>
+
+```typescript
+isReplicaSetList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isScale">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14331">function isScale</a>
+</h2>
+
+```typescript
+isScale(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="AllowedFlexVolume">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12060">interface AllowedFlexVolume</a>
@@ -780,7 +906,7 @@ The config of this deployment rollback.
 </h3>
 
 ```typescript
-updatedAnnotations: object;
+updatedAnnotations: { ... };
 ```
 
 
@@ -2746,7 +2872,7 @@ actual number of observed instances of the scaled object.
 </h3>
 
 ```typescript
-selector: object;
+selector: { ... };
 ```
 
 

@@ -35,17 +35,17 @@ title: Module s3
 
 
 <h2 class="pdoc-module-header" id="Bucket">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L9">class Bucket</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L11">class Bucket</a>
 </h2>
 
 Provides a S3 bucket resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L112">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L114">constructor</a>
 </h3>
 
 ```typescript
-new Bucket(name: string, args?: BucketArgs, opts?: pulumi.ResourceOptions)
+new Bucket(name: string, args?: BucketArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -56,7 +56,7 @@ Create a Bucket resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -68,7 +68,15 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -80,7 +88,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L25">property accelerationStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L27">property accelerationStatus</a>
 </h3>
 
 ```typescript
@@ -91,7 +99,7 @@ public accelerationStatus: pulumi.Output<string>;
 Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L29">property acl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L31">property acl</a>
 </h3>
 
 ```typescript
@@ -102,7 +110,7 @@ public acl: pulumi.Output<string | undefined>;
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L33">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L35">property arn</a>
 </h3>
 
 ```typescript
@@ -113,7 +121,7 @@ public arn: pulumi.Output<string>;
 The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L37">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L39">property bucket</a>
 </h3>
 
 ```typescript
@@ -124,7 +132,7 @@ public bucket: pulumi.Output<string>;
 The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L41">property bucketDomainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L43">property bucketDomainName</a>
 </h3>
 
 ```typescript
@@ -135,7 +143,7 @@ public bucketDomainName: pulumi.Output<string>;
 The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L45">property bucketPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L47">property bucketPrefix</a>
 </h3>
 
 ```typescript
@@ -146,7 +154,7 @@ public bucketPrefix: pulumi.Output<string | undefined>;
 Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L49">property bucketRegionalDomainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L51">property bucketRegionalDomainName</a>
 </h3>
 
 ```typescript
@@ -157,7 +165,7 @@ public bucketRegionalDomainName: pulumi.Output<string>;
 The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L53">property corsRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L55">property corsRules</a>
 </h3>
 
 ```typescript
@@ -168,7 +176,7 @@ public corsRules: pulumi.Output<{ ... }[] | undefined>;
 A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L57">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L59">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -179,7 +187,7 @@ public forceDestroy: pulumi.Output<boolean | undefined>;
 A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L61">property hostedZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L63">property hostedZoneId</a>
 </h3>
 
 ```typescript
@@ -190,7 +198,7 @@ public hostedZoneId: pulumi.Output<string>;
 The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -202,7 +210,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L65">property lifecycleRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L67">property lifecycleRules</a>
 </h3>
 
 ```typescript
@@ -213,7 +221,7 @@ public lifecycleRules: pulumi.Output<{ ... }[] | undefined>;
 A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L69">property loggings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L71">property loggings</a>
 </h3>
 
 ```typescript
@@ -224,7 +232,7 @@ public loggings: pulumi.Output<{ ... }[] | undefined>;
 A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L73">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L75">property policy</a>
 </h3>
 
 ```typescript
@@ -235,7 +243,7 @@ public policy: pulumi.Output<string | undefined>;
 A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), Terraform may view the policy as constantly changing in a `terraform plan`. In this case, please make sure you use the verbose/specific version of the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L77">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L79">property region</a>
 </h3>
 
 ```typescript
@@ -246,7 +254,7 @@ public region: pulumi.Output<string>;
 If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L81">property replicationConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L83">property replicationConfiguration</a>
 </h3>
 
 ```typescript
@@ -257,7 +265,7 @@ public replicationConfiguration: pulumi.Output<{ ... } | undefined>;
 A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L88">property requestPayer</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L90">property requestPayer</a>
 </h3>
 
 ```typescript
@@ -271,7 +279,7 @@ the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.ama
 developer guide for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L92">property serverSideEncryptionConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L94">property serverSideEncryptionConfiguration</a>
 </h3>
 
 ```typescript
@@ -282,11 +290,11 @@ public serverSideEncryptionConfiguration: pulumi.Output<{ ... } | undefined>;
 A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L96">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L98">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -305,7 +313,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L100">property versioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L102">property versioning</a>
 </h3>
 
 ```typescript
@@ -316,7 +324,7 @@ public versioning: pulumi.Output<{ ... }>;
 A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L104">property website</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L106">property website</a>
 </h3>
 
 ```typescript
@@ -327,7 +335,7 @@ public website: pulumi.Output<{ ... } | undefined>;
 A website object (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L108">property websiteDomain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L110">property websiteDomain</a>
 </h3>
 
 ```typescript
@@ -338,7 +346,7 @@ public websiteDomain: pulumi.Output<string>;
 The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L112">property websiteEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L114">property websiteEndpoint</a>
 </h3>
 
 ```typescript
@@ -359,7 +367,7 @@ Provides a S3 bucket [metrics configuration](http://docs.aws.amazon.com/AmazonS3
 </h3>
 
 ```typescript
-new BucketMetric(name: string, args: BucketMetricArgs, opts?: pulumi.ResourceOptions)
+new BucketMetric(name: string, args: BucketMetricArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -382,7 +390,15 @@ Get an existing BucketMetric resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -416,7 +432,7 @@ public filter: pulumi.Output<{ ... } | undefined>;
 [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -461,7 +477,7 @@ Provides a S3 bucket notification resource.
 </h3>
 
 ```typescript
-new BucketNotification(name: string, args: BucketNotificationArgs, opts?: pulumi.ResourceOptions)
+new BucketNotification(name: string, args: BucketNotificationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -484,7 +500,15 @@ Get an existing BucketNotification resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -507,7 +531,7 @@ public bucket: pulumi.Output<string>;
 The name of the bucket to put notification configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -564,17 +588,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="BucketObject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L11">class BucketObject</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L12">class BucketObject</a>
 </h2>
 
 Provides a S3 bucket object resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L101">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L102">constructor</a>
 </h3>
 
 ```typescript
-new BucketObject(name: string, args: BucketObjectArgs, opts?: pulumi.ResourceOptions)
+new BucketObject(name: string, args: BucketObjectArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -585,7 +609,7 @@ Create a BucketObject resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -597,7 +621,15 @@ Get an existing BucketObject resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -609,7 +641,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L27">property acl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L28">property acl</a>
 </h3>
 
 ```typescript
@@ -620,18 +652,18 @@ public acl: pulumi.Output<string | undefined>;
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L31">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L32">property bucket</a>
 </h3>
 
 ```typescript
-public bucket: pulumi.Output<Bucket | string>;
+public bucket: pulumi.Output<string>;
 ```
 
 
 The name of the bucket to put the file in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L35">property cacheControl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L36">property cacheControl</a>
 </h3>
 
 ```typescript
@@ -642,7 +674,7 @@ public cacheControl: pulumi.Output<string | undefined>;
 Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L39">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L40">property content</a>
 </h3>
 
 ```typescript
@@ -653,7 +685,7 @@ public content: pulumi.Output<string | undefined>;
 Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L43">property contentBase64</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L44">property contentBase64</a>
 </h3>
 
 ```typescript
@@ -664,7 +696,7 @@ public contentBase64: pulumi.Output<string | undefined>;
 Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L47">property contentDisposition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L48">property contentDisposition</a>
 </h3>
 
 ```typescript
@@ -675,7 +707,7 @@ public contentDisposition: pulumi.Output<string | undefined>;
 Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L51">property contentEncoding</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L52">property contentEncoding</a>
 </h3>
 
 ```typescript
@@ -686,7 +718,7 @@ public contentEncoding: pulumi.Output<string | undefined>;
 Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L55">property contentLanguage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L56">property contentLanguage</a>
 </h3>
 
 ```typescript
@@ -697,7 +729,7 @@ public contentLanguage: pulumi.Output<string | undefined>;
 The language the content is in e.g. en-US or en-GB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L59">property contentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L60">property contentType</a>
 </h3>
 
 ```typescript
@@ -708,7 +740,7 @@ public contentType: pulumi.Output<string>;
 A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L64">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L65">property etag</a>
 </h3>
 
 ```typescript
@@ -720,7 +752,7 @@ Used to trigger updates. The only meaningful value is `${md5(file("path/to/file"
 This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -732,7 +764,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L68">property key</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L69">property key</a>
 </h3>
 
 ```typescript
@@ -743,7 +775,7 @@ public key: pulumi.Output<string>;
 The name of the object once it is in the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L75">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L76">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -757,7 +789,7 @@ use the exported `arn` attribute:
 `kms_key_id = "${aws_kms_key.foo.arn}"`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L79">property serverSideEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L80">property serverSideEncryption</a>
 </h3>
 
 ```typescript
@@ -768,7 +800,7 @@ public serverSideEncryption: pulumi.Output<string>;
 Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L83">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L84">property source</a>
 </h3>
 
 ```typescript
@@ -779,7 +811,7 @@ public source: pulumi.Output<pulumi.asset.Asset | undefined>;
 The path to a file that will be read and uploaded as raw bytes for the object content.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L88">property storageClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L89">property storageClass</a>
 </h3>
 
 ```typescript
@@ -791,11 +823,11 @@ Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest
 for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L92">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L93">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -814,7 +846,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L97">property versionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L98">property versionId</a>
 </h3>
 
 ```typescript
@@ -826,7 +858,7 @@ A unique version ID value for the object, if bucket versioning
 is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L101">property websiteRedirect</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L102">property websiteRedirect</a>
 </h3>
 
 ```typescript
@@ -847,7 +879,7 @@ Attaches a policy to an S3 bucket resource.
 </h3>
 
 ```typescript
-new BucketPolicy(name: string, args: BucketPolicyArgs, opts?: pulumi.ResourceOptions)
+new BucketPolicy(name: string, args: BucketPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -870,7 +902,15 @@ Get an existing BucketPolicy resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -893,7 +933,7 @@ public bucket: pulumi.Output<string>;
 The name of the bucket to which to apply the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -938,7 +978,7 @@ Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/Amazo
 </h3>
 
 ```typescript
-new Inventory(name: string, args: InventoryArgs, opts?: pulumi.ResourceOptions)
+new Inventory(name: string, args: InventoryArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -961,7 +1001,15 @@ Get an existing Inventory resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1017,7 +1065,7 @@ public filter: pulumi.Output<{ ... } | undefined>;
 Object filtering that accepts a prefix (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1089,7 +1137,7 @@ deployments.
 </h2>
 
 ```typescript
-getBucket(args: GetBucketArgs): Promise<GetBucketResult>
+getBucket(args: GetBucketArgs, opts?: pulumi.InvokeOptions): Promise<GetBucketResult>
 ```
 
 
@@ -1103,7 +1151,7 @@ Distribution.
 </h2>
 
 ```typescript
-getBucketObject(args: GetBucketObjectArgs): Promise<GetBucketObjectResult>
+getBucketObject(args: GetBucketObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetBucketObjectResult>
 ```
 
 
@@ -1113,13 +1161,13 @@ _optionally_ (see below) content of an object stored inside S3 bucket.
 ~> **Note:** The content of an object (`body` field) is available only for objects which have a human-readable `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.
 
 <h2 class="pdoc-module-header" id="BucketArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L277">interface BucketArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L279">interface BucketArgs</a>
 </h2>
 
 The set of arguments for constructing a Bucket resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L281">property accelerationStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L283">property accelerationStatus</a>
 </h3>
 
 ```typescript
@@ -1130,7 +1178,7 @@ accelerationStatus?: pulumi.Input<string>;
 Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L285">property acl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L287">property acl</a>
 </h3>
 
 ```typescript
@@ -1141,7 +1189,7 @@ acl?: pulumi.Input<string>;
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L289">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L291">property arn</a>
 </h3>
 
 ```typescript
@@ -1152,7 +1200,7 @@ arn?: pulumi.Input<string>;
 The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L293">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L295">property bucket</a>
 </h3>
 
 ```typescript
@@ -1163,7 +1211,7 @@ bucket?: pulumi.Input<string>;
 The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L297">property bucketPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L299">property bucketPrefix</a>
 </h3>
 
 ```typescript
@@ -1174,18 +1222,18 @@ bucketPrefix?: pulumi.Input<string>;
 Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L301">property corsRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L303">property corsRules</a>
 </h3>
 
 ```typescript
-corsRules?: pulumi.Input<{ ... }[]>;
+corsRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L305">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L307">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -1196,7 +1244,7 @@ forceDestroy?: pulumi.Input<boolean>;
 A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L309">property hostedZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L311">property hostedZoneId</a>
 </h3>
 
 ```typescript
@@ -1207,29 +1255,29 @@ hostedZoneId?: pulumi.Input<string>;
 The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L313">property lifecycleRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L315">property lifecycleRules</a>
 </h3>
 
 ```typescript
-lifecycleRules?: pulumi.Input<{ ... }[]>;
+lifecycleRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L317">property loggings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L319">property loggings</a>
 </h3>
 
 ```typescript
-loggings?: pulumi.Input<{ ... }[]>;
+loggings?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L321">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L323">property policy</a>
 </h3>
 
 ```typescript
@@ -1240,7 +1288,7 @@ policy?: pulumi.Input<string>;
 A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), Terraform may view the policy as constantly changing in a `terraform plan`. In this case, please make sure you use the verbose/specific version of the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L325">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L327">property region</a>
 </h3>
 
 ```typescript
@@ -1251,7 +1299,7 @@ region?: pulumi.Input<string>;
 If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L329">property replicationConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L331">property replicationConfiguration</a>
 </h3>
 
 ```typescript
@@ -1262,7 +1310,7 @@ replicationConfiguration?: pulumi.Input<{ ... }>;
 A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L336">property requestPayer</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L338">property requestPayer</a>
 </h3>
 
 ```typescript
@@ -1276,7 +1324,7 @@ the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.ama
 developer guide for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L340">property serverSideEncryptionConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L342">property serverSideEncryptionConfiguration</a>
 </h3>
 
 ```typescript
@@ -1287,18 +1335,18 @@ serverSideEncryptionConfiguration?: pulumi.Input<{ ... }>;
 A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L344">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L346">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 Specifies object tags key and value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L348">property versioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L350">property versioning</a>
 </h3>
 
 ```typescript
@@ -1309,7 +1357,7 @@ versioning?: pulumi.Input<{ ... }>;
 A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L352">property website</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L354">property website</a>
 </h3>
 
 ```typescript
@@ -1320,7 +1368,7 @@ website?: pulumi.Input<{ ... }>;
 A website object (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L356">property websiteDomain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L358">property websiteDomain</a>
 </h3>
 
 ```typescript
@@ -1331,7 +1379,7 @@ websiteDomain?: pulumi.Input<string>;
 The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L360">property websiteEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L362">property websiteEndpoint</a>
 </h3>
 
 ```typescript
@@ -1441,7 +1489,7 @@ The name of the bucket to put notification configuration.
 </h3>
 
 ```typescript
-lambdaFunctions?: pulumi.Input<{ ... }[]>;
+lambdaFunctions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1452,7 +1500,7 @@ Used to configure notifications to a Lambda Function (documented below).
 </h3>
 
 ```typescript
-queues?: pulumi.Input<{ ... }[]>;
+queues?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1463,7 +1511,7 @@ The notification configuration to SQS Queue (documented below).
 </h3>
 
 ```typescript
-topics?: pulumi.Input<{ ... }[]>;
+topics?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1491,7 +1539,7 @@ The name of the bucket to put notification configuration.
 </h3>
 
 ```typescript
-lambdaFunctions?: pulumi.Input<{ ... }[]>;
+lambdaFunctions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1502,7 +1550,7 @@ Used to configure notifications to a Lambda Function (documented below).
 </h3>
 
 ```typescript
-queues?: pulumi.Input<{ ... }[]>;
+queues?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1513,20 +1561,20 @@ The notification configuration to SQS Queue (documented below).
 </h3>
 
 ```typescript
-topics?: pulumi.Input<{ ... }[]>;
+topics?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 The notification configuration to SNS Topic (documented below).
 
 <h2 class="pdoc-module-header" id="BucketObjectArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L248">interface BucketObjectArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L249">interface BucketObjectArgs</a>
 </h2>
 
 The set of arguments for constructing a BucketObject resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L252">property acl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L253">property acl</a>
 </h3>
 
 ```typescript
@@ -1537,18 +1585,18 @@ acl?: pulumi.Input<string>;
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L256">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L257">property bucket</a>
 </h3>
 
 ```typescript
-bucket: pulumi.Input<Bucket | string>;
+bucket: pulumi.Input<string | Bucket>;
 ```
 
 
 The name of the bucket to put the file in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L260">property cacheControl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L261">property cacheControl</a>
 </h3>
 
 ```typescript
@@ -1559,7 +1607,7 @@ cacheControl?: pulumi.Input<string>;
 Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L264">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L265">property content</a>
 </h3>
 
 ```typescript
@@ -1570,7 +1618,7 @@ content?: pulumi.Input<string>;
 Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L268">property contentBase64</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L269">property contentBase64</a>
 </h3>
 
 ```typescript
@@ -1581,7 +1629,7 @@ contentBase64?: pulumi.Input<string>;
 Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L272">property contentDisposition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L273">property contentDisposition</a>
 </h3>
 
 ```typescript
@@ -1592,7 +1640,7 @@ contentDisposition?: pulumi.Input<string>;
 Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L276">property contentEncoding</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L277">property contentEncoding</a>
 </h3>
 
 ```typescript
@@ -1603,7 +1651,7 @@ contentEncoding?: pulumi.Input<string>;
 Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L280">property contentLanguage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L281">property contentLanguage</a>
 </h3>
 
 ```typescript
@@ -1614,7 +1662,7 @@ contentLanguage?: pulumi.Input<string>;
 The language the content is in e.g. en-US or en-GB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L284">property contentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L285">property contentType</a>
 </h3>
 
 ```typescript
@@ -1625,7 +1673,7 @@ contentType?: pulumi.Input<string>;
 A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L289">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L290">property etag</a>
 </h3>
 
 ```typescript
@@ -1637,7 +1685,7 @@ Used to trigger updates. The only meaningful value is `${md5(file("path/to/file"
 This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L293">property key</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L294">property key</a>
 </h3>
 
 ```typescript
@@ -1648,7 +1696,7 @@ key?: pulumi.Input<string>;
 The name of the object once it is in the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L300">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L301">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -1662,7 +1710,7 @@ use the exported `arn` attribute:
 `kms_key_id = "${aws_kms_key.foo.arn}"`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L304">property serverSideEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L305">property serverSideEncryption</a>
 </h3>
 
 ```typescript
@@ -1673,7 +1721,7 @@ serverSideEncryption?: pulumi.Input<string>;
 Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L308">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L309">property source</a>
 </h3>
 
 ```typescript
@@ -1684,7 +1732,7 @@ source?: pulumi.Input<pulumi.asset.Asset>;
 The path to a file that will be read and uploaded as raw bytes for the object content.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L313">property storageClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L314">property storageClass</a>
 </h3>
 
 ```typescript
@@ -1696,18 +1744,18 @@ Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest
 for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L317">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L318">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L321">property websiteRedirect</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L322">property websiteRedirect</a>
 </h3>
 
 ```typescript
@@ -1718,13 +1766,13 @@ websiteRedirect?: pulumi.Input<string>;
 Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 
 <h2 class="pdoc-module-header" id="BucketObjectState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L164">interface BucketObjectState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L165">interface BucketObjectState</a>
 </h2>
 
 Input properties used for looking up and filtering BucketObject resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L168">property acl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L169">property acl</a>
 </h3>
 
 ```typescript
@@ -1735,18 +1783,18 @@ acl?: pulumi.Input<string>;
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L172">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L173">property bucket</a>
 </h3>
 
 ```typescript
-bucket?: pulumi.Input<Bucket | string>;
+bucket?: pulumi.Input<string | Bucket>;
 ```
 
 
 The name of the bucket to put the file in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L176">property cacheControl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L177">property cacheControl</a>
 </h3>
 
 ```typescript
@@ -1757,7 +1805,7 @@ cacheControl?: pulumi.Input<string>;
 Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L180">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L181">property content</a>
 </h3>
 
 ```typescript
@@ -1768,7 +1816,7 @@ content?: pulumi.Input<string>;
 Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L184">property contentBase64</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L185">property contentBase64</a>
 </h3>
 
 ```typescript
@@ -1779,7 +1827,7 @@ contentBase64?: pulumi.Input<string>;
 Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L188">property contentDisposition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L189">property contentDisposition</a>
 </h3>
 
 ```typescript
@@ -1790,7 +1838,7 @@ contentDisposition?: pulumi.Input<string>;
 Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L192">property contentEncoding</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L193">property contentEncoding</a>
 </h3>
 
 ```typescript
@@ -1801,7 +1849,7 @@ contentEncoding?: pulumi.Input<string>;
 Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L196">property contentLanguage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L197">property contentLanguage</a>
 </h3>
 
 ```typescript
@@ -1812,7 +1860,7 @@ contentLanguage?: pulumi.Input<string>;
 The language the content is in e.g. en-US or en-GB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L200">property contentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L201">property contentType</a>
 </h3>
 
 ```typescript
@@ -1823,7 +1871,7 @@ contentType?: pulumi.Input<string>;
 A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L205">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L206">property etag</a>
 </h3>
 
 ```typescript
@@ -1835,7 +1883,7 @@ Used to trigger updates. The only meaningful value is `${md5(file("path/to/file"
 This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L209">property key</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L210">property key</a>
 </h3>
 
 ```typescript
@@ -1846,7 +1894,7 @@ key?: pulumi.Input<string>;
 The name of the object once it is in the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L216">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L217">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -1860,7 +1908,7 @@ use the exported `arn` attribute:
 `kms_key_id = "${aws_kms_key.foo.arn}"`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L220">property serverSideEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L221">property serverSideEncryption</a>
 </h3>
 
 ```typescript
@@ -1871,7 +1919,7 @@ serverSideEncryption?: pulumi.Input<string>;
 Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L224">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L225">property source</a>
 </h3>
 
 ```typescript
@@ -1882,7 +1930,7 @@ source?: pulumi.Input<pulumi.asset.Asset>;
 The path to a file that will be read and uploaded as raw bytes for the object content.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L229">property storageClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L230">property storageClass</a>
 </h3>
 
 ```typescript
@@ -1894,18 +1942,18 @@ Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest
 for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L233">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L234">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L238">property versionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L239">property versionId</a>
 </h3>
 
 ```typescript
@@ -1917,7 +1965,7 @@ A unique version ID value for the object, if bucket versioning
 is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L242">property websiteRedirect</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts#L243">property websiteRedirect</a>
 </h3>
 
 ```typescript
@@ -1984,13 +2032,13 @@ policy?: pulumi.Input<string>;
 The text of the policy.
 
 <h2 class="pdoc-module-header" id="BucketState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L180">interface BucketState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L182">interface BucketState</a>
 </h2>
 
 Input properties used for looking up and filtering Bucket resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L184">property accelerationStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L186">property accelerationStatus</a>
 </h3>
 
 ```typescript
@@ -2001,7 +2049,7 @@ accelerationStatus?: pulumi.Input<string>;
 Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L188">property acl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L190">property acl</a>
 </h3>
 
 ```typescript
@@ -2012,7 +2060,7 @@ acl?: pulumi.Input<string>;
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L192">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L194">property arn</a>
 </h3>
 
 ```typescript
@@ -2023,7 +2071,7 @@ arn?: pulumi.Input<string>;
 The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L196">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L198">property bucket</a>
 </h3>
 
 ```typescript
@@ -2034,7 +2082,7 @@ bucket?: pulumi.Input<string>;
 The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L200">property bucketDomainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L202">property bucketDomainName</a>
 </h3>
 
 ```typescript
@@ -2045,7 +2093,7 @@ bucketDomainName?: pulumi.Input<string>;
 The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L204">property bucketPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L206">property bucketPrefix</a>
 </h3>
 
 ```typescript
@@ -2056,7 +2104,7 @@ bucketPrefix?: pulumi.Input<string>;
 Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L208">property bucketRegionalDomainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L210">property bucketRegionalDomainName</a>
 </h3>
 
 ```typescript
@@ -2067,18 +2115,18 @@ bucketRegionalDomainName?: pulumi.Input<string>;
 The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L212">property corsRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L214">property corsRules</a>
 </h3>
 
 ```typescript
-corsRules?: pulumi.Input<{ ... }[]>;
+corsRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L216">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L218">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -2089,7 +2137,7 @@ forceDestroy?: pulumi.Input<boolean>;
 A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L220">property hostedZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L222">property hostedZoneId</a>
 </h3>
 
 ```typescript
@@ -2100,29 +2148,29 @@ hostedZoneId?: pulumi.Input<string>;
 The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L224">property lifecycleRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L226">property lifecycleRules</a>
 </h3>
 
 ```typescript
-lifecycleRules?: pulumi.Input<{ ... }[]>;
+lifecycleRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L228">property loggings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L230">property loggings</a>
 </h3>
 
 ```typescript
-loggings?: pulumi.Input<{ ... }[]>;
+loggings?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L232">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L234">property policy</a>
 </h3>
 
 ```typescript
@@ -2133,7 +2181,7 @@ policy?: pulumi.Input<string>;
 A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), Terraform may view the policy as constantly changing in a `terraform plan`. In this case, please make sure you use the verbose/specific version of the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L236">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L238">property region</a>
 </h3>
 
 ```typescript
@@ -2144,7 +2192,7 @@ region?: pulumi.Input<string>;
 If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L240">property replicationConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L242">property replicationConfiguration</a>
 </h3>
 
 ```typescript
@@ -2155,7 +2203,7 @@ replicationConfiguration?: pulumi.Input<{ ... }>;
 A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L247">property requestPayer</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L249">property requestPayer</a>
 </h3>
 
 ```typescript
@@ -2169,7 +2217,7 @@ the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.ama
 developer guide for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L251">property serverSideEncryptionConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L253">property serverSideEncryptionConfiguration</a>
 </h3>
 
 ```typescript
@@ -2180,18 +2228,18 @@ serverSideEncryptionConfiguration?: pulumi.Input<{ ... }>;
 A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L255">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L257">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 Specifies object tags key and value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L259">property versioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L261">property versioning</a>
 </h3>
 
 ```typescript
@@ -2202,7 +2250,7 @@ versioning?: pulumi.Input<{ ... }>;
 A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L263">property website</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L265">property website</a>
 </h3>
 
 ```typescript
@@ -2213,7 +2261,7 @@ website?: pulumi.Input<{ ... }>;
 A website object (documented below).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L267">property websiteDomain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L269">property websiteDomain</a>
 </h3>
 
 ```typescript
@@ -2224,7 +2272,7 @@ websiteDomain?: pulumi.Input<string>;
 The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L271">property websiteEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L273">property websiteEndpoint</a>
 </h3>
 
 ```typescript
@@ -2245,7 +2293,7 @@ A collection of arguments for invoking getBucket.
 </h3>
 
 ```typescript
-bucket: pulumi.Input<string>;
+bucket: string;
 ```
 
 
@@ -2262,7 +2310,7 @@ A collection of arguments for invoking getBucketObject.
 </h3>
 
 ```typescript
-bucket: pulumi.Input<string>;
+bucket: string;
 ```
 
 
@@ -2273,7 +2321,7 @@ The name of the bucket to read the object from
 </h3>
 
 ```typescript
-key: pulumi.Input<string>;
+key: string;
 ```
 
 
@@ -2284,7 +2332,7 @@ The full path to the object inside the bucket
 </h3>
 
 ```typescript
-range?: pulumi.Input<string>;
+range?: string;
 ```
 
 <h3 class="pdoc-member-header">
@@ -2292,7 +2340,7 @@ range?: pulumi.Input<string>;
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: { ... };
 ```
 
 <h3 class="pdoc-member-header">
@@ -2300,7 +2348,7 @@ tags?: pulumi.Input<{ ... }>;
 </h3>
 
 ```typescript
-versionId?: pulumi.Input<string>;
+versionId?: string;
 ```
 
 

@@ -6,6 +6,8 @@ title: Module apiregistration/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isAPIService">function isAPIService</a>
+* <a href="#isAPIServiceList">function isAPIServiceList</a>
 * <a href="#APIService">interface APIService</a>
 * <a href="#APIServiceCondition">interface APIServiceCondition</a>
 * <a href="#APIServiceList">interface APIServiceList</a>
@@ -13,8 +15,24 @@ title: Module apiregistration/v1beta1
 * <a href="#APIServiceStatus">interface APIServiceStatus</a>
 * <a href="#ServiceReference">interface ServiceReference</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isAPIService">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L908">function isAPIService</a>
+</h2>
+
+```typescript
+isAPIService(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isAPIServiceList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L970">function isAPIServiceList</a>
+</h2>
+
+```typescript
+isAPIServiceList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="APIService">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L825">interface APIService</a>

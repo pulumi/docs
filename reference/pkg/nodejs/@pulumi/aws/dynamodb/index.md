@@ -35,7 +35,7 @@ Provides a resource to manage a DynamoDB Global Table. These are layered on top 
 </h3>
 
 ```typescript
-new GlobalTable(name: string, args: GlobalTableArgs, opts?: pulumi.ResourceOptions)
+new GlobalTable(name: string, args: GlobalTableArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -58,7 +58,15 @@ Get an existing GlobalTable resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -81,7 +89,7 @@ public arn: pulumi.Output<string>;
 The ARN of the DynamoDB Global Table
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -139,7 +147,7 @@ Provides a DynamoDB table resource
 </h3>
 
 ```typescript
-new Table(name: string, args: TableArgs, opts?: pulumi.ResourceOptions)
+new Table(name: string, args: TableArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -162,7 +170,15 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -221,7 +237,7 @@ The name of the hash key in the index; must be
 defined as an attribute in the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -406,7 +422,7 @@ Provides a DynamoDB table item resource
 </h3>
 
 ```typescript
-new TableItem(name: string, args: TableItemArgs, opts?: pulumi.ResourceOptions)
+new TableItem(name: string, args: TableItemArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -429,7 +445,15 @@ Get an existing TableItem resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -452,7 +476,7 @@ public hashKey: pulumi.Output<string>;
 Hash key to use for lookups and identification of the item
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -514,7 +538,7 @@ deployments.
 </h2>
 
 ```typescript
-getTable(args: GetTableArgs): Promise<GetTableResult>
+getTable(args: GetTableArgs, opts?: pulumi.InvokeOptions): Promise<GetTableResult>
 ```
 
 
@@ -531,7 +555,7 @@ A collection of arguments for invoking getTable.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -542,7 +566,7 @@ The name of the DynamoDB table.
 </h3>
 
 ```typescript
-serverSideEncryption?: pulumi.Input<{ ... }>;
+serverSideEncryption?: { ... };
 ```
 
 <h3 class="pdoc-member-header">
@@ -550,7 +574,7 @@ serverSideEncryption?: pulumi.Input<{ ... }>;
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="GetTableResult">
@@ -712,7 +736,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
 </h3>
 
 ```typescript
-replicas: pulumi.Input<{ ... }[]>;
+replicas: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -751,7 +775,7 @@ The name of the global table. Must match underlying DynamoDB Table names in all 
 </h3>
 
 ```typescript
-replicas?: pulumi.Input<{ ... }[]>;
+replicas?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -768,7 +792,7 @@ The set of arguments for constructing a Table resource.
 </h3>
 
 ```typescript
-attributes: pulumi.Input<{ ... }[]>;
+attributes: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -779,7 +803,7 @@ List of nested attribute definitions. Only required for `hash_key` and `range_ke
 </h3>
 
 ```typescript
-globalSecondaryIndexes?: pulumi.Input<{ ... }[]>;
+globalSecondaryIndexes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -804,7 +828,7 @@ defined as an attribute in the resource.
 </h3>
 
 ```typescript
-localSecondaryIndexes?: pulumi.Input<{ ... }[]>;
+localSecondaryIndexes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1046,7 +1070,7 @@ The arn of the table
 </h3>
 
 ```typescript
-attributes?: pulumi.Input<{ ... }[]>;
+attributes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1057,7 +1081,7 @@ List of nested attribute definitions. Only required for `hash_key` and `range_ke
 </h3>
 
 ```typescript
-globalSecondaryIndexes?: pulumi.Input<{ ... }[]>;
+globalSecondaryIndexes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1082,7 +1106,7 @@ defined as an attribute in the resource.
 </h3>
 
 ```typescript
-localSecondaryIndexes?: pulumi.Input<{ ... }[]>;
+localSecondaryIndexes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

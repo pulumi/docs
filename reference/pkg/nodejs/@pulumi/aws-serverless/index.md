@@ -42,9 +42,7 @@ import * as awsServerless from "@pulumi/aws-serverless";
 * <a href="#BucketEventHandler">type BucketEventHandler</a>
 * <a href="#BucketPutArgs">type BucketPutArgs</a>
 * <a href="#Callback">type Callback</a>
-* <a href="#Diff">type Diff</a>
 * <a href="#Handler">type Handler</a>
-* <a href="#Omit">type Omit</a>
 * <a href="#TopicEventHandler">type TopicEventHandler</a>
 * <a href="#TopicSubscriptionArgs">type TopicSubscriptionArgs</a>
 
@@ -69,6 +67,14 @@ public new BucketEventSubscription(name: string, bucket: s3.Bucket, func: lambda
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
@@ -77,7 +83,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L100">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -124,6 +130,14 @@ public new TopicEventSubscription(name: string, topic: sns.Topic, func: lambda.F
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
@@ -132,7 +146,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L100">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -673,14 +687,6 @@ be returned, 'callback' parameter can be ignored, and AWS will appropriately han
 AWS lambda pre-8.10, a synchronous function must be provided.  The synchronous function should
 return nothing, and should instead invoke 'callback' when complete.
 
-<h2 class="pdoc-module-header" id="Diff">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/utils.ts#L44">type Diff</a>
-</h2>
-
-```typescript
-type Diff = ({ [P in T]: P; } & { [P in U]: never; } & { [x: string]: never; })[T];
-```
-
 <h2 class="pdoc-module-header" id="Handler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/function.ts#L32">type Handler</a>
 </h2>
@@ -692,14 +698,6 @@ type Handler = Callback<E, R> | aws.lambda.Function;
 
 Handler represents the appropriate type for functions that can take either an AWS lambda function
 instance, or a JS function object that will then be used to create the AWS lambda function.
-
-<h2 class="pdoc-module-header" id="Omit">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/utils.ts#L45">type Omit</a>
-</h2>
-
-```typescript
-type Omit = Pick<T, Diff<keyof T, K>>;
-```
 
 <h2 class="pdoc-module-header" id="TopicEventHandler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/topic.ts#L51">type TopicEventHandler</a>

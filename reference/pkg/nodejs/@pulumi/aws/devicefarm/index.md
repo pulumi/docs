@@ -29,7 +29,7 @@ For more information about Device Farm Projects, see the AWS Documentation on
 </h3>
 
 ```typescript
-new Project(name: string, args?: ProjectArgs, opts?: pulumi.ResourceOptions)
+new Project(name: string, args?: ProjectArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -52,7 +52,15 @@ Get an existing Project resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -75,7 +83,7 @@ public arn: pulumi.Output<string>;
 The Amazon Resource Name of this project
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript

@@ -9,6 +9,7 @@ title: Module dns
 * <a href="#ARecord">class ARecord</a>
 * <a href="#AaaaRecord">class AaaaRecord</a>
 * <a href="#CNameRecord">class CNameRecord</a>
+* <a href="#CaaRecord">class CaaRecord</a>
 * <a href="#MxRecord">class MxRecord</a>
 * <a href="#NsRecord">class NsRecord</a>
 * <a href="#PtrRecord">class PtrRecord</a>
@@ -22,6 +23,8 @@ title: Module dns
 * <a href="#AaaaRecordState">interface AaaaRecordState</a>
 * <a href="#CNameRecordArgs">interface CNameRecordArgs</a>
 * <a href="#CNameRecordState">interface CNameRecordState</a>
+* <a href="#CaaRecordArgs">interface CaaRecordArgs</a>
+* <a href="#CaaRecordState">interface CaaRecordState</a>
 * <a href="#GetZoneArgs">interface GetZoneArgs</a>
 * <a href="#GetZoneResult">interface GetZoneResult</a>
 * <a href="#MxRecordArgs">interface MxRecordArgs</a>
@@ -37,7 +40,7 @@ title: Module dns
 * <a href="#ZoneArgs">interface ZoneArgs</a>
 * <a href="#ZoneState">interface ZoneState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/aRecord.ts">dns/aRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/aaaaRecord.ts">dns/aaaaRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/cNameRecord.ts">dns/cNameRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts">dns/getZone.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/mxRecord.ts">dns/mxRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts">dns/nsRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/ptrRecord.ts">dns/ptrRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/srvRecord.ts">dns/srvRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/txtRecord.ts">dns/txtRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts">dns/zone.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/aRecord.ts">dns/aRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/aaaaRecord.ts">dns/aaaaRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/cNameRecord.ts">dns/cNameRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts">dns/caaRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts">dns/getZone.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/mxRecord.ts">dns/mxRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts">dns/nsRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/ptrRecord.ts">dns/ptrRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/srvRecord.ts">dns/srvRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/txtRecord.ts">dns/txtRecord.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts">dns/zone.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="ARecord">
@@ -51,7 +54,7 @@ Enables you to manage DNS A Records within Azure DNS.
 </h3>
 
 ```typescript
-new ARecord(name: string, args: ARecordArgs, opts?: pulumi.ResourceOptions)
+new ARecord(name: string, args: ARecordArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -74,7 +77,15 @@ Get an existing ARecord resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -86,7 +97,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -183,7 +194,7 @@ Enables you to manage DNS AAAA Records within Azure DNS.
 </h3>
 
 ```typescript
-new AaaaRecord(name: string, args: AaaaRecordArgs, opts?: pulumi.ResourceOptions)
+new AaaaRecord(name: string, args: AaaaRecordArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -206,7 +217,15 @@ Get an existing AaaaRecord resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -218,7 +237,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -315,7 +334,7 @@ Enables you to manage DNS CNAME Records within Azure DNS.
 </h3>
 
 ```typescript
-new CNameRecord(name: string, args: CNameRecordArgs, opts?: pulumi.ResourceOptions)
+new CNameRecord(name: string, args: CNameRecordArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -338,7 +357,15 @@ Get an existing CNameRecord resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -350,7 +377,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -436,6 +463,149 @@ public zoneName: pulumi.Output<string>;
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
+<h2 class="pdoc-module-header" id="CaaRecord">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L9">class CaaRecord</a>
+</h2>
+
+Enables you to manage DNS CAA Records within Azure DNS.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L45">constructor</a>
+</h3>
+
+```typescript
+new CaaRecord(name: string, args: CaaRecordArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a CaaRecord resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L18">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CaaRecordState): CaaRecord
+```
+
+
+Get an existing CaaRecord resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L25">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+The name of the DNS CAA Record.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L29">property records</a>
+</h3>
+
+```typescript
+public records: pulumi.Output<{ ... }[]>;
+```
+
+
+A list of values that make up the CAA record. Each `record` block supports fields documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L33">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L37">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L41">property ttl</a>
+</h3>
+
+```typescript
+public ttl: pulumi.Output<number>;
+```
+
+
+The Time To Live (TTL) of the DNS record.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L45">property zoneName</a>
+</h3>
+
+```typescript
+public zoneName: pulumi.Output<string>;
+```
+
+
+Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
+
 <h2 class="pdoc-module-header" id="MxRecord">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/mxRecord.ts#L9">class MxRecord</a>
 </h2>
@@ -447,7 +617,7 @@ Enables you to manage DNS MX Records within Azure DNS.
 </h3>
 
 ```typescript
-new MxRecord(name: string, args: MxRecordArgs, opts?: pulumi.ResourceOptions)
+new MxRecord(name: string, args: MxRecordArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -470,7 +640,15 @@ Get an existing MxRecord resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -482,7 +660,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -513,7 +691,7 @@ public records: pulumi.Output<{ ... }[]>;
 ```
 
 
-A list of values that make up the SRV record. Each `record` block supports fields documented below.
+A list of values that make up the MX record. Each `record` block supports fields documented below.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/mxRecord.ts#L33">property resourceGroupName</a>
@@ -578,11 +756,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 Enables you to manage DNS NS Records within Azure DNS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L45">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L49">constructor</a>
 </h3>
 
 ```typescript
-new NsRecord(name: string, args: NsRecordArgs, opts?: pulumi.ResourceOptions)
+new NsRecord(name: string, args: NsRecordArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -605,7 +783,15 @@ Get an existing NsRecord resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -617,7 +803,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -640,18 +826,29 @@ public name: pulumi.Output<string>;
 The name of the DNS NS Record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L29">property records</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L29">property record</a>
 </h3>
 
 ```typescript
-public records: pulumi.Output<{ ... }[]>;
+public record: pulumi.Output<{ ... }[]>;
 ```
 
 
-A list of values that make up the NS record. Each `record` block supports fields documented below.
+A list of values that make up the NS record. Each `record` block supports fields documented below. This field has been deprecated and will be removed in a future release.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L33">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L33">property records</a>
+</h3>
+
+```typescript
+public records: pulumi.Output<string[]>;
+```
+
+
+A list of values that make up the NS record. *WARNING*: Either `records` or `record` is required.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L37">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -662,7 +859,7 @@ public resourceGroupName: pulumi.Output<string>;
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L37">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L41">property tags</a>
 </h3>
 
 ```typescript
@@ -673,7 +870,7 @@ public tags: pulumi.Output<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L41">property ttl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L45">property ttl</a>
 </h3>
 
 ```typescript
@@ -696,7 +893,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L45">property zoneName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L49">property zoneName</a>
 </h3>
 
 ```typescript
@@ -717,7 +914,7 @@ Enables you to manage DNS PTR Records within Azure DNS.
 </h3>
 
 ```typescript
-new PtrRecord(name: string, args: PtrRecordArgs, opts?: pulumi.ResourceOptions)
+new PtrRecord(name: string, args: PtrRecordArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -740,7 +937,15 @@ Get an existing PtrRecord resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -752,7 +957,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -852,7 +1057,7 @@ Enables you to manage DNS SRV Records within Azure DNS.
 </h3>
 
 ```typescript
-new SrvRecord(name: string, args: SrvRecordArgs, opts?: pulumi.ResourceOptions)
+new SrvRecord(name: string, args: SrvRecordArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -875,7 +1080,15 @@ Get an existing SrvRecord resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -887,7 +1100,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -987,7 +1200,7 @@ Enables you to manage DNS TXT Records within Azure DNS.
 </h3>
 
 ```typescript
-new TxtRecord(name: string, args: TxtRecordArgs, opts?: pulumi.ResourceOptions)
+new TxtRecord(name: string, args: TxtRecordArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1010,7 +1223,15 @@ Get an existing TxtRecord resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1022,7 +1243,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1118,11 +1339,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azure's name servers to which you can delegate the zone from the parent domain.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L45">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L57">constructor</a>
 </h3>
 
 ```typescript
-new Zone(name: string, args: ZoneArgs, opts?: pulumi.ResourceOptions)
+new Zone(name: string, args: ZoneArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1145,7 +1366,15 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1157,7 +1386,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1213,7 +1442,29 @@ public numberOfRecordSets: pulumi.Output<string>;
 (Optional) The number of records already in the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L41">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L41">property registrationVirtualNetworkIds</a>
+</h3>
+
+```typescript
+public registrationVirtualNetworkIds: pulumi.Output<string[] | undefined>;
+```
+
+
+A list of Virtual Network ID's that register hostnames in this DNS zone. This field can only be set when `zone_type` is set to `Private`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L45">property resolutionVirtualNetworkIds</a>
+</h3>
+
+```typescript
+public resolutionVirtualNetworkIds: pulumi.Output<string[] | undefined>;
+```
+
+
+A list of Virtual Network ID's that resolve records in this DNS zone. This field can only be set when `zone_type` is set to `Private`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L49">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1224,7 +1475,7 @@ public resourceGroupName: pulumi.Output<string>;
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L45">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L53">property tags</a>
 </h3>
 
 ```typescript
@@ -1246,12 +1497,23 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L57">property zoneType</a>
+</h3>
+
+```typescript
+public zoneType: pulumi.Output<string | undefined>;
+```
+
+
+Specifies the type of this DNS zone. Possible values are `Public` or `Private` (Defaults to `Public`).
+
 <h2 class="pdoc-module-header" id="getZone">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L9">function getZone</a>
 </h2>
 
 ```typescript
-getZone(args: GetZoneArgs): Promise<GetZoneResult>
+getZone(args: GetZoneArgs, opts?: pulumi.InvokeOptions): Promise<GetZoneResult>
 ```
 
 
@@ -1671,6 +1933,150 @@ zoneName?: pulumi.Input<string>;
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
+<h2 class="pdoc-module-header" id="CaaRecordArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L123">interface CaaRecordArgs</a>
+</h2>
+
+The set of arguments for constructing a CaaRecord resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L127">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The name of the DNS CAA Record.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L131">property records</a>
+</h3>
+
+```typescript
+records: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+A list of values that make up the CAA record. Each `record` block supports fields documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L135">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L139">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L143">property ttl</a>
+</h3>
+
+```typescript
+ttl: pulumi.Input<number>;
+```
+
+
+The Time To Live (TTL) of the DNS record.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L147">property zoneName</a>
+</h3>
+
+```typescript
+zoneName: pulumi.Input<string>;
+```
+
+
+Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
+
+<h2 class="pdoc-module-header" id="CaaRecordState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L93">interface CaaRecordState</a>
+</h2>
+
+Input properties used for looking up and filtering CaaRecord resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L97">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The name of the DNS CAA Record.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L101">property records</a>
+</h3>
+
+```typescript
+records?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+A list of values that make up the CAA record. Each `record` block supports fields documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L105">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L109">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L113">property ttl</a>
+</h3>
+
+```typescript
+ttl?: pulumi.Input<number>;
+```
+
+
+The Time To Live (TTL) of the DNS record.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L117">property zoneName</a>
+</h3>
+
+```typescript
+zoneName?: pulumi.Input<string>;
+```
+
+
+Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
+
 <h2 class="pdoc-module-header" id="GetZoneArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L19">interface GetZoneArgs</a>
 </h2>
@@ -1682,7 +2088,7 @@ A collection of arguments for invoking getZone.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -1693,7 +2099,7 @@ The name of the DNS Zone.
 </h3>
 
 ```typescript
-resourceGroupName?: pulumi.Input<string>;
+resourceGroupName?: string;
 ```
 
 
@@ -1708,7 +2114,7 @@ in your subscription that matches `name` will be returned.
 A collection of values returned by getZone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L56">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L68">property id</a>
 </h3>
 
 ```typescript
@@ -1752,7 +2158,29 @@ numberOfRecordSets: string;
 The number of records already in the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L48">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L51">property registrationVirtualNetworkIds</a>
+</h3>
+
+```typescript
+registrationVirtualNetworkIds: string[];
+```
+
+
+A list of Virtual Network ID's that register hostnames in this DNS zone.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L55">property resolutionVirtualNetworkIds</a>
+</h3>
+
+```typescript
+resolutionVirtualNetworkIds: string[];
+```
+
+
+A list of Virtual Network ID's that resolve records in this DNS zone.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L56">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1760,7 +2188,7 @@ resourceGroupName: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L52">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L60">property tags</a>
 </h3>
 
 ```typescript
@@ -1769,6 +2197,17 @@ tags: { ... };
 
 
 A mapping of tags to assign to the EventHub Namespace.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/getZone.ts#L64">property zoneType</a>
+</h3>
+
+```typescript
+zoneType: string;
+```
+
+
+The type of this DNS zone, such as `Public` or `Private`.
 
 <h2 class="pdoc-module-header" id="MxRecordArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/mxRecord.ts#L123">interface MxRecordArgs</a>
@@ -1792,11 +2231,11 @@ The name of the DNS MX Record.
 </h3>
 
 ```typescript
-records: pulumi.Input<{ ... }[]>;
+records: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-A list of values that make up the SRV record. Each `record` block supports fields documented below.
+A list of values that make up the MX record. Each `record` block supports fields documented below.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/mxRecord.ts#L135">property resourceGroupName</a>
@@ -1864,11 +2303,11 @@ The name of the DNS MX Record.
 </h3>
 
 ```typescript
-records?: pulumi.Input<{ ... }[]>;
+records?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-A list of values that make up the SRV record. Each `record` block supports fields documented below.
+A list of values that make up the MX record. Each `record` block supports fields documented below.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/mxRecord.ts#L105">property resourceGroupName</a>
@@ -1915,13 +2354,13 @@ zoneName?: pulumi.Input<string>;
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="NsRecordArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L123">interface NsRecordArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L130">interface NsRecordArgs</a>
 </h2>
 
 The set of arguments for constructing a NsRecord resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L127">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L134">property name</a>
 </h3>
 
 ```typescript
@@ -1932,18 +2371,29 @@ name?: pulumi.Input<string>;
 The name of the DNS NS Record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L131">property records</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L138">property record</a>
 </h3>
 
 ```typescript
-records: pulumi.Input<{ ... }[]>;
+record?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-A list of values that make up the NS record. Each `record` block supports fields documented below.
+A list of values that make up the NS record. Each `record` block supports fields documented below. This field has been deprecated and will be removed in a future release.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L135">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L142">property records</a>
+</h3>
+
+```typescript
+records?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of values that make up the NS record. *WARNING*: Either `records` or `record` is required.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L146">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1954,7 +2404,7 @@ resourceGroupName: pulumi.Input<string>;
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L139">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L150">property tags</a>
 </h3>
 
 ```typescript
@@ -1965,7 +2415,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L143">property ttl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L154">property ttl</a>
 </h3>
 
 ```typescript
@@ -1976,7 +2426,7 @@ ttl: pulumi.Input<number>;
 The Time To Live (TTL) of the DNS record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L147">property zoneName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L158">property zoneName</a>
 </h3>
 
 ```typescript
@@ -1987,13 +2437,13 @@ zoneName: pulumi.Input<string>;
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="NsRecordState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L93">interface NsRecordState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L96">interface NsRecordState</a>
 </h2>
 
 Input properties used for looking up and filtering NsRecord resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L97">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L100">property name</a>
 </h3>
 
 ```typescript
@@ -2004,18 +2454,29 @@ name?: pulumi.Input<string>;
 The name of the DNS NS Record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L101">property records</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L104">property record</a>
 </h3>
 
 ```typescript
-records?: pulumi.Input<{ ... }[]>;
+record?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-A list of values that make up the NS record. Each `record` block supports fields documented below.
+A list of values that make up the NS record. Each `record` block supports fields documented below. This field has been deprecated and will be removed in a future release.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L105">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L108">property records</a>
+</h3>
+
+```typescript
+records?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of values that make up the NS record. *WARNING*: Either `records` or `record` is required.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L112">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2026,7 +2487,7 @@ resourceGroupName?: pulumi.Input<string>;
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L109">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L116">property tags</a>
 </h3>
 
 ```typescript
@@ -2037,7 +2498,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L113">property ttl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L120">property ttl</a>
 </h3>
 
 ```typescript
@@ -2048,7 +2509,7 @@ ttl?: pulumi.Input<number>;
 The Time To Live (TTL) of the DNS record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L117">property zoneName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L124">property zoneName</a>
 </h3>
 
 ```typescript
@@ -2224,7 +2685,7 @@ The name of the DNS SRV Record.
 </h3>
 
 ```typescript
-records: pulumi.Input<{ ... }[]>;
+records: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2296,7 +2757,7 @@ The name of the DNS SRV Record.
 </h3>
 
 ```typescript
-records?: pulumi.Input<{ ... }[]>;
+records?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2368,7 +2829,7 @@ The name of the DNS TXT Record.
 </h3>
 
 ```typescript
-records: pulumi.Input<{ ... }[]>;
+records: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2440,7 +2901,7 @@ The name of the DNS TXT Record.
 </h3>
 
 ```typescript
-records?: pulumi.Input<{ ... }[]>;
+records?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2491,13 +2952,13 @@ zoneName?: pulumi.Input<string>;
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ZoneArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L114">interface ZoneArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L144">interface ZoneArgs</a>
 </h2>
 
 The set of arguments for constructing a Zone resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L118">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L148">property name</a>
 </h3>
 
 ```typescript
@@ -2508,7 +2969,29 @@ name?: pulumi.Input<string>;
 The name of the DNS Zone. Must be a valid domain name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L122">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L152">property registrationVirtualNetworkIds</a>
+</h3>
+
+```typescript
+registrationVirtualNetworkIds?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of Virtual Network ID's that register hostnames in this DNS zone. This field can only be set when `zone_type` is set to `Private`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L156">property resolutionVirtualNetworkIds</a>
+</h3>
+
+```typescript
+resolutionVirtualNetworkIds?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of Virtual Network ID's that resolve records in this DNS zone. This field can only be set when `zone_type` is set to `Private`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L160">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2519,7 +3002,7 @@ resourceGroupName: pulumi.Input<string>;
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L126">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L164">property tags</a>
 </h3>
 
 ```typescript
@@ -2529,14 +3012,25 @@ tags?: pulumi.Input<{ ... }>;
 
 A mapping of tags to assign to the resource.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L168">property zoneType</a>
+</h3>
+
+```typescript
+zoneType?: pulumi.Input<string>;
+```
+
+
+Specifies the type of this DNS zone. Possible values are `Public` or `Private` (Defaults to `Public`).
+
 <h2 class="pdoc-module-header" id="ZoneState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L84">interface ZoneState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L102">interface ZoneState</a>
 </h2>
 
 Input properties used for looking up and filtering Zone resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L88">property maxNumberOfRecordSets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L106">property maxNumberOfRecordSets</a>
 </h3>
 
 ```typescript
@@ -2547,7 +3041,7 @@ maxNumberOfRecordSets?: pulumi.Input<string>;
 (Optional) Maximum number of Records in the zone. Defaults to `1000`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L92">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L110">property name</a>
 </h3>
 
 ```typescript
@@ -2558,7 +3052,7 @@ name?: pulumi.Input<string>;
 The name of the DNS Zone. Must be a valid domain name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L96">property nameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L114">property nameServers</a>
 </h3>
 
 ```typescript
@@ -2569,7 +3063,7 @@ nameServers?: pulumi.Input<pulumi.Input<string>[]>;
 (Optional) A list of values that make up the NS record for the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L100">property numberOfRecordSets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L118">property numberOfRecordSets</a>
 </h3>
 
 ```typescript
@@ -2580,7 +3074,29 @@ numberOfRecordSets?: pulumi.Input<string>;
 (Optional) The number of records already in the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L104">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L122">property registrationVirtualNetworkIds</a>
+</h3>
+
+```typescript
+registrationVirtualNetworkIds?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of Virtual Network ID's that register hostnames in this DNS zone. This field can only be set when `zone_type` is set to `Private`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L126">property resolutionVirtualNetworkIds</a>
+</h3>
+
+```typescript
+resolutionVirtualNetworkIds?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of Virtual Network ID's that resolve records in this DNS zone. This field can only be set when `zone_type` is set to `Private`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L130">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2591,7 +3107,7 @@ resourceGroupName?: pulumi.Input<string>;
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L108">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L134">property tags</a>
 </h3>
 
 ```typescript
@@ -2600,4 +3116,15 @@ tags?: pulumi.Input<{ ... }>;
 
 
 A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/zone.ts#L138">property zoneType</a>
+</h3>
+
+```typescript
+zoneType?: pulumi.Input<string>;
+```
+
+
+Specifies the type of this DNS zone. Possible values are `Public` or `Private` (Defaults to `Public`).
 

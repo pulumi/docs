@@ -31,7 +31,7 @@ Manages a zone within Google Cloud DNS. For more information see [the official d
 </h3>
 
 ```typescript
-new ManagedZone(name: string, args: ManagedZoneArgs, opts?: pulumi.ResourceOptions)
+new ManagedZone(name: string, args: ManagedZoneArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -54,7 +54,15 @@ Get an existing ManagedZone resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -88,7 +96,7 @@ public dnsName: pulumi.Output<string>;
 The fully qualified DNS name of this zone, e.g. `terraform.io.`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -166,7 +174,7 @@ report that it did.
 </h3>
 
 ```typescript
-new RecordSet(name: string, args: RecordSetArgs, opts?: pulumi.ResourceOptions)
+new RecordSet(name: string, args: RecordSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -189,7 +197,15 @@ Get an existing RecordSet resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -201,7 +217,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -298,7 +314,7 @@ deployments.
 </h2>
 
 ```typescript
-getManagedZone(args: GetManagedZoneArgs): Promise<GetManagedZoneResult>
+getManagedZone(args: GetManagedZoneArgs, opts?: pulumi.InvokeOptions): Promise<GetManagedZoneResult>
 ```
 
 
@@ -335,7 +351,7 @@ A collection of arguments for invoking getManagedZone.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -346,7 +362,7 @@ A unique name for the resource.
 </h3>
 
 ```typescript
-project?: pulumi.Input<string>;
+project?: string;
 ```
 
 
@@ -379,6 +395,17 @@ dnsName: string;
 
 
 The fully qualified DNS name of this zone, e.g. `terraform.io.`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/getManagedZone.ts#L71">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/getManagedZone.ts#L67">property nameServers</a>

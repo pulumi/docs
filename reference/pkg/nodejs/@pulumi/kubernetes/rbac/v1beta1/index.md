@@ -6,6 +6,14 @@ title: Module rbac/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isClusterRole">function isClusterRole</a>
+* <a href="#isClusterRoleBinding">function isClusterRoleBinding</a>
+* <a href="#isClusterRoleBindingList">function isClusterRoleBindingList</a>
+* <a href="#isClusterRoleList">function isClusterRoleList</a>
+* <a href="#isRole">function isRole</a>
+* <a href="#isRoleBinding">function isRoleBinding</a>
+* <a href="#isRoleBindingList">function isRoleBindingList</a>
+* <a href="#isRoleList">function isRoleList</a>
 * <a href="#AggregationRule">interface AggregationRule</a>
 * <a href="#ClusterRole">interface ClusterRole</a>
 * <a href="#ClusterRoleBinding">interface ClusterRoleBinding</a>
@@ -19,8 +27,72 @@ title: Module rbac/v1beta1
 * <a href="#RoleRef">interface RoleRef</a>
 * <a href="#Subject">interface Subject</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isClusterRole">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16662">function isClusterRole</a>
+</h2>
+
+```typescript
+isClusterRole(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isClusterRoleBinding">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16705">function isClusterRoleBinding</a>
+</h2>
+
+```typescript
+isClusterRoleBinding(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isClusterRoleBindingList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16741">function isClusterRoleBindingList</a>
+</h2>
+
+```typescript
+isClusterRoleBindingList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isClusterRoleList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16777">function isClusterRoleList</a>
+</h2>
+
+```typescript
+isClusterRoleList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isRole">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16857">function isRole</a>
+</h2>
+
+```typescript
+isRole(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isRoleBinding">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16902">function isRoleBinding</a>
+</h2>
+
+```typescript
+isRoleBinding(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isRoleBindingList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16938">function isRoleBindingList</a>
+</h2>
+
+```typescript
+isRoleBindingList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isRoleList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16974">function isRoleList</a>
+</h2>
+
+```typescript
+isRoleList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="AggregationRule">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15709">interface AggregationRule</a>

@@ -24,7 +24,7 @@ Create an Application Insights component.
 </h3>
 
 ```typescript
-new Insights(name: string, args: InsightsArgs, opts?: pulumi.ResourceOptions)
+new Insights(name: string, args: InsightsArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -47,7 +47,15 @@ Get an existing Insights resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -78,10 +86,10 @@ public applicationType: pulumi.Output<string>;
 ```
 
 
-Specifies the type of Application Insights to create. Valid values are `Web` and `Other`.
+Specifies the type of Application Insights to create. Valid values are `Web`, `Java`, `Phone`, `Store`, `iOS` and `Other`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -176,7 +184,7 @@ applicationType: pulumi.Input<string>;
 ```
 
 
-Specifies the type of Application Insights to create. Valid values are `Web` and `Other`.
+Specifies the type of Application Insights to create. Valid values are `Web`, `Java`, `Phone`, `Store`, `iOS` and `Other`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appinsights/insights.ts#L142">property location</a>
@@ -250,7 +258,7 @@ applicationType?: pulumi.Input<string>;
 ```
 
 
-Specifies the type of Application Insights to create. Valid values are `Web` and `Other`.
+Specifies the type of Application Insights to create. Valid values are `Web`, `Java`, `Phone`, `Store`, `iOS` and `Other`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appinsights/insights.ts#L110">property instrumentationKey</a>

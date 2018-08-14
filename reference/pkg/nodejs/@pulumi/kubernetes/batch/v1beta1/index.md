@@ -6,14 +6,32 @@ title: Module batch/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isCronJob">function isCronJob</a>
+* <a href="#isCronJobList">function isCronJobList</a>
 * <a href="#CronJob">interface CronJob</a>
 * <a href="#CronJobList">interface CronJobList</a>
 * <a href="#CronJobSpec">interface CronJobSpec</a>
 * <a href="#CronJobStatus">interface CronJobStatus</a>
 * <a href="#JobTemplateSpec">interface JobTemplateSpec</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isCronJob">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6126">function isCronJob</a>
+</h2>
+
+```typescript
+isCronJob(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isCronJobList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6163">function isCronJobList</a>
+</h2>
+
+```typescript
+isCronJobList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="CronJob">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5741">interface CronJob</a>

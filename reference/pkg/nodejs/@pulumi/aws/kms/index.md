@@ -13,6 +13,7 @@ title: Module kms
 * <a href="#getCipherText">function getCipherText</a>
 * <a href="#getKey">function getKey</a>
 * <a href="#getSecret">function getSecret</a>
+* <a href="#getSecrets">function getSecrets</a>
 * <a href="#AliasArgs">interface AliasArgs</a>
 * <a href="#AliasState">interface AliasState</a>
 * <a href="#GetAliasArgs">interface GetAliasArgs</a>
@@ -23,12 +24,14 @@ title: Module kms
 * <a href="#GetKeyResult">interface GetKeyResult</a>
 * <a href="#GetSecretArgs">interface GetSecretArgs</a>
 * <a href="#GetSecretResult">interface GetSecretResult</a>
+* <a href="#GetSecretsArgs">interface GetSecretsArgs</a>
+* <a href="#GetSecretsResult">interface GetSecretsResult</a>
 * <a href="#GrantArgs">interface GrantArgs</a>
 * <a href="#GrantState">interface GrantState</a>
 * <a href="#KeyArgs">interface KeyArgs</a>
 * <a href="#KeyState">interface KeyState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/alias.ts">kms/alias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getAlias.ts">kms/getAlias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getCipherText.ts">kms/getCipherText.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts">kms/getKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts">kms/getSecret.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/grant.ts">kms/grant.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts">kms/key.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/alias.ts">kms/alias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getAlias.ts">kms/getAlias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getCipherText.ts">kms/getCipherText.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts">kms/getKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts">kms/getSecret.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecrets.ts">kms/getSecrets.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/grant.ts">kms/grant.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts">kms/key.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Alias">
@@ -44,7 +47,7 @@ the [account limits](http://docs.aws.amazon.com/kms/latest/developerguide/limits
 </h3>
 
 ```typescript
-new Alias(name: string, args: AliasArgs, opts?: pulumi.ResourceOptions)
+new Alias(name: string, args: AliasArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -67,7 +70,15 @@ Get an existing Alias resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -90,7 +101,7 @@ public arn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) of the key alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -169,7 +180,7 @@ Provides a resource-based access control mechanism for a KMS customer master key
 </h3>
 
 ```typescript
-new Grant(name: string, args: GrantArgs, opts?: pulumi.ResourceOptions)
+new Grant(name: string, args: GrantArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -192,7 +203,15 @@ Get an existing Grant resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -261,7 +280,7 @@ public granteePrincipal: pulumi.Output<string>;
 The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, terraform's state may not always be refreshed to reflect what is true in AWS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -334,17 +353,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Key">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L9">class Key</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L11">class Key</a>
 </h2>
 
 Provides a KMS customer master key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L60">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L62">constructor</a>
 </h3>
 
 ```typescript
-new Key(name: string, args?: KeyArgs, opts?: pulumi.ResourceOptions)
+new Key(name: string, args?: KeyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -355,7 +374,7 @@ Create a Key resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -367,7 +386,15 @@ Get an existing Key resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -379,7 +406,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L27">property arn</a>
 </h3>
 
 ```typescript
@@ -390,7 +417,7 @@ public arn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) of the key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L30">property deletionWindowInDays</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L32">property deletionWindowInDays</a>
 </h3>
 
 ```typescript
@@ -402,7 +429,7 @@ Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L34">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L36">property description</a>
 </h3>
 
 ```typescript
@@ -413,7 +440,7 @@ public description: pulumi.Output<string>;
 The description of the key as viewed in AWS console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L39">property enableKeyRotation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L41">property enableKeyRotation</a>
 </h3>
 
 ```typescript
@@ -425,7 +452,7 @@ Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developer
 is enabled. Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -437,7 +464,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L43">property isEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L45">property isEnabled</a>
 </h3>
 
 ```typescript
@@ -448,7 +475,7 @@ public isEnabled: pulumi.Output<boolean | undefined>;
 Specifies whether the key is enabled. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L47">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L49">property keyId</a>
 </h3>
 
 ```typescript
@@ -459,7 +486,7 @@ public keyId: pulumi.Output<string>;
 The globally unique identifier for the key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L52">property keyUsage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L54">property keyUsage</a>
 </h3>
 
 ```typescript
@@ -471,7 +498,7 @@ Specifies the intended use of the key.
 Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L56">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L58">property policy</a>
 </h3>
 
 ```typescript
@@ -482,11 +509,11 @@ public policy: pulumi.Output<string>;
 A valid policy JSON document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L60">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L62">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -509,7 +536,7 @@ deployments.
 </h2>
 
 ```typescript
-getAlias(args: GetAliasArgs): Promise<GetAliasResult>
+getAlias(args: GetAliasArgs, opts?: pulumi.InvokeOptions): Promise<GetAliasResult>
 ```
 
 
@@ -522,7 +549,7 @@ without having to hard code the ARN as input.
 </h2>
 
 ```typescript
-getCipherText(args: GetCipherTextArgs): Promise<GetCipherTextResult>
+getCipherText(args: GetCipherTextArgs, opts?: pulumi.InvokeOptions): Promise<GetCipherTextResult>
 ```
 
 
@@ -537,7 +564,7 @@ by using an AWS KMS customer master key.
 </h2>
 
 ```typescript
-getKey(args: GetKeyArgs): Promise<GetKeyResult>
+getKey(args: GetKeyArgs, opts?: pulumi.InvokeOptions): Promise<GetKeyResult>
 ```
 
 
@@ -547,13 +574,15 @@ This can be useful to reference key alias
 without having to hard code the ARN as input.
 
 <h2 class="pdoc-module-header" id="getSecret">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L16">function getSecret</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L18">function getSecret</a>
 </h2>
 
 ```typescript
-getSecret(args: GetSecretArgs): Promise<GetSecretResult>
+getSecret(args: GetSecretArgs, opts?: pulumi.InvokeOptions): Promise<GetSecretResult>
 ```
 
+
+!> **WARNING:** This data source is deprecated and will be removed in the next major version. You can migrate existing configurations to the [`aws_kms_secrets` data source](/docs/providers/aws/d/kms_secrets.html) following instructions available in the [Version 2 Upgrade Guide](/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret).
 
 The KMS secret data source allows you to use data encrypted with the AWS KMS
 service within your resource definitions.
@@ -563,6 +592,19 @@ resource definitions but does not take care of protecting that data in the
 logging output, plan output or state output.
 
 Please take care to secure your secret data outside of resource definitions.
+
+<h2 class="pdoc-module-header" id="getSecrets">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecrets.ts#L11">function getSecrets</a>
+</h2>
+
+```typescript
+getSecrets(args: GetSecretsArgs, opts?: pulumi.InvokeOptions): Promise<GetSecretsResult>
+```
+
+
+Decrypt multiple secrets from data encrypted with the AWS KMS service.
+
+~> **NOTE**: Using this data provider will allow you to conceal secret data within your resource definitions but does not take care of protecting that data in all Terraform logging and state output. Please take care to secure your secret data beyond just the Terraform configuration.
 
 <h2 class="pdoc-module-header" id="AliasArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/alias.ts#L108">interface AliasArgs</a>
@@ -677,7 +719,7 @@ A collection of arguments for invoking getAlias.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -744,7 +786,7 @@ A collection of arguments for invoking getCipherText.
 </h3>
 
 ```typescript
-context?: pulumi.Input<{ ... }>;
+context?: { ... };
 ```
 
 
@@ -755,7 +797,7 @@ An optional mapping that makes up the encryption context.
 </h3>
 
 ```typescript
-keyId: pulumi.Input<string>;
+keyId: string;
 ```
 
 
@@ -766,7 +808,7 @@ Globally unique key ID for the customer master key.
 </h3>
 
 ```typescript
-plaintext: pulumi.Input<string>;
+plaintext: string;
 ```
 
 
@@ -811,7 +853,7 @@ A collection of arguments for invoking getKey.
 </h3>
 
 ```typescript
-grantTokens?: pulumi.Input<pulumi.Input<string>[]>;
+grantTokens?: string[];
 ```
 
 
@@ -822,7 +864,7 @@ List of grant tokens
 </h3>
 
 ```typescript
-keyId: pulumi.Input<string>;
+keyId: string;
 ```
 
 
@@ -946,25 +988,25 @@ validTo: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetSecretArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L26">interface GetSecretArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L28">interface GetSecretArgs</a>
 </h2>
 
 A collection of arguments for invoking getSecret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L27">property __hasDynamicAttributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L29">property __hasDynamicAttributes</a>
 </h3>
 
 ```typescript
-__hasDynamicAttributes?: pulumi.Input<string>;
+__hasDynamicAttributes?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L32">property secrets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L34">property secrets</a>
 </h3>
 
 ```typescript
-secrets: pulumi.Input<{ ... }[]>;
+secrets: { ... }[];
 ```
 
 
@@ -972,13 +1014,13 @@ One or more encrypted payload definitions from the KMS
 service.  See the Secret Definitions below.
 
 <h2 class="pdoc-module-header" id="GetSecretResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L38">interface GetSecretResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L40">interface GetSecretResult</a>
 </h2>
 
 A collection of values returned by getSecret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L42">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L44">property id</a>
 </h3>
 
 ```typescript
@@ -987,6 +1029,51 @@ id: string;
 
 
 id is the provider-assigned unique ID for this managed resource.
+
+<h2 class="pdoc-module-header" id="GetSecretsArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecrets.ts#L20">interface GetSecretsArgs</a>
+</h2>
+
+A collection of arguments for invoking getSecrets.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecrets.ts#L24">property secrets</a>
+</h3>
+
+```typescript
+secrets: { ... }[];
+```
+
+
+One or more encrypted payload definitions from the KMS service. See the Secret Definitions below.
+
+<h2 class="pdoc-module-header" id="GetSecretsResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecrets.ts#L30">interface GetSecretsResult</a>
+</h2>
+
+A collection of values returned by getSecrets.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecrets.ts#L38">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecrets.ts#L34">property plaintext</a>
+</h3>
+
+```typescript
+plaintext: { ... };
+```
+
+
+Map containing each `secret` `name` as the key with its decrypted plaintext value
 
 <h2 class="pdoc-module-header" id="GrantArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/grant.ts#L152">interface GrantArgs</a>
@@ -999,7 +1086,7 @@ The set of arguments for constructing a Grant resource.
 </h3>
 
 ```typescript
-constraints?: pulumi.Input<{ ... }[]>;
+constraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1089,7 +1176,7 @@ Input properties used for looking up and filtering Grant resources.
 </h3>
 
 ```typescript
-constraints?: pulumi.Input<{ ... }[]>;
+constraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1191,13 +1278,13 @@ retiringPrincipal?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="KeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L147">interface KeyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L149">interface KeyArgs</a>
 </h2>
 
 The set of arguments for constructing a Key resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L152">property deletionWindowInDays</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L154">property deletionWindowInDays</a>
 </h3>
 
 ```typescript
@@ -1209,7 +1296,7 @@ Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L156">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L158">property description</a>
 </h3>
 
 ```typescript
@@ -1220,7 +1307,7 @@ description?: pulumi.Input<string>;
 The description of the key as viewed in AWS console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L161">property enableKeyRotation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L163">property enableKeyRotation</a>
 </h3>
 
 ```typescript
@@ -1232,7 +1319,7 @@ Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developer
 is enabled. Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L165">property isEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L167">property isEnabled</a>
 </h3>
 
 ```typescript
@@ -1243,7 +1330,7 @@ isEnabled?: pulumi.Input<boolean>;
 Specifies whether the key is enabled. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L170">property keyUsage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L172">property keyUsage</a>
 </h3>
 
 ```typescript
@@ -1255,7 +1342,7 @@ Specifies the intended use of the key.
 Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L174">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L176">property policy</a>
 </h3>
 
 ```typescript
@@ -1266,24 +1353,24 @@ policy?: pulumi.Input<string>;
 A valid policy JSON document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L178">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L180">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the object.
 
 <h2 class="pdoc-module-header" id="KeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L102">interface KeyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L104">interface KeyState</a>
 </h2>
 
 Input properties used for looking up and filtering Key resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L106">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L108">property arn</a>
 </h3>
 
 ```typescript
@@ -1294,7 +1381,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) of the key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L111">property deletionWindowInDays</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L113">property deletionWindowInDays</a>
 </h3>
 
 ```typescript
@@ -1306,7 +1393,7 @@ Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L115">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L117">property description</a>
 </h3>
 
 ```typescript
@@ -1317,7 +1404,7 @@ description?: pulumi.Input<string>;
 The description of the key as viewed in AWS console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L120">property enableKeyRotation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L122">property enableKeyRotation</a>
 </h3>
 
 ```typescript
@@ -1329,7 +1416,7 @@ Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developer
 is enabled. Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L124">property isEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L126">property isEnabled</a>
 </h3>
 
 ```typescript
@@ -1340,7 +1427,7 @@ isEnabled?: pulumi.Input<boolean>;
 Specifies whether the key is enabled. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L128">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L130">property keyId</a>
 </h3>
 
 ```typescript
@@ -1351,7 +1438,7 @@ keyId?: pulumi.Input<string>;
 The globally unique identifier for the key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L133">property keyUsage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L135">property keyUsage</a>
 </h3>
 
 ```typescript
@@ -1363,7 +1450,7 @@ Specifies the intended use of the key.
 Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L137">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L139">property policy</a>
 </h3>
 
 ```typescript
@@ -1374,11 +1461,11 @@ policy?: pulumi.Input<string>;
 A valid policy JSON document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L141">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/key.ts#L143">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 

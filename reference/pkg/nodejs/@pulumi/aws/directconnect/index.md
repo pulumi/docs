@@ -47,17 +47,17 @@ title: Module directconnect
 
 
 <h2 class="pdoc-module-header" id="Connection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L9">class Connection</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L11">class Connection</a>
 </h2>
 
 Provides a Connection of Direct Connect.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L41">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L43">constructor</a>
 </h3>
 
 ```typescript
-new Connection(name: string, args: ConnectionArgs, opts?: pulumi.ResourceOptions)
+new Connection(name: string, args: ConnectionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -68,7 +68,7 @@ Create a Connection resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -80,7 +80,15 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -92,7 +100,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L27">property arn</a>
 </h3>
 
 ```typescript
@@ -103,7 +111,7 @@ public arn: pulumi.Output<string>;
 The ARN of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L29">property bandwidth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L31">property bandwidth</a>
 </h3>
 
 ```typescript
@@ -114,7 +122,7 @@ public bandwidth: pulumi.Output<string>;
 The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -126,7 +134,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L33">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L35">property location</a>
 </h3>
 
 ```typescript
@@ -137,7 +145,7 @@ public location: pulumi.Output<string>;
 The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L37">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L39">property name</a>
 </h3>
 
 ```typescript
@@ -148,11 +156,11 @@ public name: pulumi.Output<string>;
 The name of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L41">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L43">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -181,7 +189,7 @@ Associates a Direct Connect Connection with a LAG.
 </h3>
 
 ```typescript
-new ConnectionAssociation(name: string, args: ConnectionAssociationArgs, opts?: pulumi.ResourceOptions)
+new ConnectionAssociation(name: string, args: ConnectionAssociationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -204,7 +212,15 @@ Get an existing ConnectionAssociation resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -227,7 +243,7 @@ public connectionId: pulumi.Output<string>;
 The ID of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -272,7 +288,7 @@ Provides a Direct Connect Gateway.
 </h3>
 
 ```typescript
-new Gateway(name: string, args: GatewayArgs, opts?: pulumi.ResourceOptions)
+new Gateway(name: string, args: GatewayArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -295,7 +311,15 @@ Get an existing Gateway resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -318,7 +342,7 @@ public amazonSideAsn: pulumi.Output<string>;
 The ASN to be configured on the Amazon side of the connection. The ASN must be in the private range of 64,512 to 65,534 or 4,200,000,000 to 4,294,967,294.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -363,7 +387,7 @@ Associates a Direct Connect Gateway with a VGW.
 </h3>
 
 ```typescript
-new GatewayAssociation(name: string, args: GatewayAssociationArgs, opts?: pulumi.ResourceOptions)
+new GatewayAssociation(name: string, args: GatewayAssociationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -386,7 +410,15 @@ Get an existing GatewayAssociation resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -409,7 +441,7 @@ public dxGatewayId: pulumi.Output<string>;
 The ID of the Direct Connect Gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -455,7 +487,7 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 </h3>
 
 ```typescript
-new HostedPrivateVirtualInterface(name: string, args: HostedPrivateVirtualInterfaceArgs, opts?: pulumi.ResourceOptions)
+new HostedPrivateVirtualInterface(name: string, args: HostedPrivateVirtualInterfaceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -478,7 +510,15 @@ Get an existing HostedPrivateVirtualInterface resource's state with the given na
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -567,7 +607,7 @@ public customerAddress: pulumi.Output<string>;
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -624,18 +664,18 @@ public vlan: pulumi.Output<number>;
 The VLAN ID.
 
 <h2 class="pdoc-module-header" id="HostedPrivateVirtualInterfaceAccepter">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L10">class HostedPrivateVirtualInterfaceAccepter</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L12">class HostedPrivateVirtualInterfaceAccepter</a>
 </h2>
 
 Provides a resource to manage the accepter's side of a Direct Connect hosted private virtual interface.
 This resource accepts ownership of a private virtual interface created by another AWS account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L42">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L44">constructor</a>
 </h3>
 
 ```typescript
-new HostedPrivateVirtualInterfaceAccepter(name: string, args: HostedPrivateVirtualInterfaceAccepterArgs, opts?: pulumi.ResourceOptions)
+new HostedPrivateVirtualInterfaceAccepter(name: string, args: HostedPrivateVirtualInterfaceAccepterArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -646,7 +686,7 @@ Create a HostedPrivateVirtualInterfaceAccepter resource with the given unique na
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L19">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -658,7 +698,15 @@ Get an existing HostedPrivateVirtualInterfaceAccepter resource's state with the 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -670,7 +718,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L26">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L28">property arn</a>
 </h3>
 
 ```typescript
@@ -681,7 +729,7 @@ public arn: pulumi.Output<string>;
 The ARN of the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L30">property dxGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L32">property dxGatewayId</a>
 </h3>
 
 ```typescript
@@ -692,7 +740,7 @@ public dxGatewayId: pulumi.Output<string | undefined>;
 The ID of the Direct Connect gateway to which to connect the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -704,11 +752,11 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L34">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L36">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -727,7 +775,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L38">property virtualInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L40">property virtualInterfaceId</a>
 </h3>
 
 ```typescript
@@ -738,7 +786,7 @@ public virtualInterfaceId: pulumi.Output<string>;
 The ID of the Direct Connect virtual interface to accept.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L42">property vpnGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L44">property vpnGatewayId</a>
 </h3>
 
 ```typescript
@@ -760,7 +808,7 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 </h3>
 
 ```typescript
-new HostedPublicVirtualInterface(name: string, args: HostedPublicVirtualInterfaceArgs, opts?: pulumi.ResourceOptions)
+new HostedPublicVirtualInterface(name: string, args: HostedPublicVirtualInterfaceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -783,7 +831,15 @@ Get an existing HostedPublicVirtualInterface resource's state with the given nam
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -872,7 +928,7 @@ public customerAddress: pulumi.Output<string>;
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -940,18 +996,18 @@ public vlan: pulumi.Output<number>;
 The VLAN ID.
 
 <h2 class="pdoc-module-header" id="HostedPublicVirtualInterfaceAccepter">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L10">class HostedPublicVirtualInterfaceAccepter</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L12">class HostedPublicVirtualInterfaceAccepter</a>
 </h2>
 
 Provides a resource to manage the accepter's side of a Direct Connect hosted public virtual interface.
 This resource accepts ownership of a public virtual interface created by another AWS account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L34">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L36">constructor</a>
 </h3>
 
 ```typescript
-new HostedPublicVirtualInterfaceAccepter(name: string, args: HostedPublicVirtualInterfaceAccepterArgs, opts?: pulumi.ResourceOptions)
+new HostedPublicVirtualInterfaceAccepter(name: string, args: HostedPublicVirtualInterfaceAccepterArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -962,7 +1018,7 @@ Create a HostedPublicVirtualInterfaceAccepter resource with the given unique nam
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L19">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -974,7 +1030,15 @@ Get an existing HostedPublicVirtualInterfaceAccepter resource's state with the g
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -986,7 +1050,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L26">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L28">property arn</a>
 </h3>
 
 ```typescript
@@ -997,7 +1061,7 @@ public arn: pulumi.Output<string>;
 The ARN of the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1009,11 +1073,11 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L30">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L32">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -1032,7 +1096,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L34">property virtualInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L36">property virtualInterfaceId</a>
 </h3>
 
 ```typescript
@@ -1043,17 +1107,17 @@ public virtualInterfaceId: pulumi.Output<string>;
 The ID of the Direct Connect virtual interface to accept.
 
 <h2 class="pdoc-module-header" id="LinkAggregationGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L9">class LinkAggregationGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L11">class LinkAggregationGroup</a>
 </h2>
 
 Provides a Direct Connect LAG.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L51">constructor</a>
 </h3>
 
 ```typescript
-new LinkAggregationGroup(name: string, args: LinkAggregationGroupArgs, opts?: pulumi.ResourceOptions)
+new LinkAggregationGroup(name: string, args: LinkAggregationGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1064,7 +1128,7 @@ Create a LinkAggregationGroup resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -1076,7 +1140,15 @@ Get an existing LinkAggregationGroup resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1088,7 +1160,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L27">property arn</a>
 </h3>
 
 ```typescript
@@ -1099,7 +1171,7 @@ public arn: pulumi.Output<string>;
 The ARN of the LAG.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L29">property connectionsBandwidth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L31">property connectionsBandwidth</a>
 </h3>
 
 ```typescript
@@ -1110,7 +1182,7 @@ public connectionsBandwidth: pulumi.Output<string>;
 The bandwidth of the individual physical connections bundled by the LAG. Available values: 1Gbps, 10Gbps. Case sensitive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L33">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L35">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -1121,7 +1193,7 @@ public forceDestroy: pulumi.Output<boolean | undefined>;
 A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1133,7 +1205,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L37">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L39">property location</a>
 </h3>
 
 ```typescript
@@ -1144,7 +1216,7 @@ public location: pulumi.Output<string>;
 The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L41">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L43">property name</a>
 </h3>
 
 ```typescript
@@ -1155,7 +1227,7 @@ public name: pulumi.Output<string>;
 The name of the LAG.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L45">property numberOfConnections</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L47">property numberOfConnections</a>
 </h3>
 
 ```typescript
@@ -1166,11 +1238,11 @@ public numberOfConnections: pulumi.Output<number>;
 The number of physical connections initially provisioned and bundled by the LAG. Use `aws_dx_connection` and `aws_dx_connection_association` resources instead. Default connections will be removed as part of LAG creation automatically in future versions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L49">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L51">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -1189,17 +1261,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="PrivateVirtualInterface">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L9">class PrivateVirtualInterface</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L11">class PrivateVirtualInterface</a>
 </h2>
 
 Provides a Direct Connect private virtual interface resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L69">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L71">constructor</a>
 </h3>
 
 ```typescript
-new PrivateVirtualInterface(name: string, args: PrivateVirtualInterfaceArgs, opts?: pulumi.ResourceOptions)
+new PrivateVirtualInterface(name: string, args: PrivateVirtualInterfaceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1210,7 +1282,7 @@ Create a PrivateVirtualInterface resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -1222,7 +1294,15 @@ Get an existing PrivateVirtualInterface resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1234,7 +1314,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L25">property addressFamily</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L27">property addressFamily</a>
 </h3>
 
 ```typescript
@@ -1245,7 +1325,7 @@ public addressFamily: pulumi.Output<string>;
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L29">property amazonAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L31">property amazonAddress</a>
 </h3>
 
 ```typescript
@@ -1256,7 +1336,7 @@ public amazonAddress: pulumi.Output<string>;
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L33">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L35">property arn</a>
 </h3>
 
 ```typescript
@@ -1267,7 +1347,7 @@ public arn: pulumi.Output<string>;
 The ARN of the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L37">property bgpAsn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L39">property bgpAsn</a>
 </h3>
 
 ```typescript
@@ -1278,7 +1358,7 @@ public bgpAsn: pulumi.Output<number>;
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L41">property bgpAuthKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L43">property bgpAuthKey</a>
 </h3>
 
 ```typescript
@@ -1289,7 +1369,7 @@ public bgpAuthKey: pulumi.Output<string>;
 The authentication key for BGP configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L45">property connectionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L47">property connectionId</a>
 </h3>
 
 ```typescript
@@ -1300,7 +1380,7 @@ public connectionId: pulumi.Output<string>;
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L49">property customerAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L51">property customerAddress</a>
 </h3>
 
 ```typescript
@@ -1311,7 +1391,7 @@ public customerAddress: pulumi.Output<string>;
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L53">property dxGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L55">property dxGatewayId</a>
 </h3>
 
 ```typescript
@@ -1322,7 +1402,7 @@ public dxGatewayId: pulumi.Output<string | undefined>;
 The ID of the Direct Connect gateway to which to connect the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1334,7 +1414,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L57">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L59">property name</a>
 </h3>
 
 ```typescript
@@ -1345,11 +1425,11 @@ public name: pulumi.Output<string>;
 The name for the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L61">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L63">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -1368,7 +1448,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L65">property vlan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L67">property vlan</a>
 </h3>
 
 ```typescript
@@ -1379,7 +1459,7 @@ public vlan: pulumi.Output<number>;
 The VLAN ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L69">property vpnGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L71">property vpnGatewayId</a>
 </h3>
 
 ```typescript
@@ -1400,7 +1480,7 @@ Provides a Direct Connect public virtual interface resource.
 </h3>
 
 ```typescript
-new PublicVirtualInterface(name: string, args: PublicVirtualInterfaceArgs, opts?: pulumi.ResourceOptions)
+new PublicVirtualInterface(name: string, args: PublicVirtualInterfaceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1423,7 +1503,15 @@ Get an existing PublicVirtualInterface resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1512,7 +1600,7 @@ public customerAddress: pulumi.Output<string>;
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1584,20 +1672,20 @@ The VLAN ID.
 </h2>
 
 ```typescript
-getGateway(args: GetGatewayArgs): Promise<GetGatewayResult>
+getGateway(args: GetGatewayArgs, opts?: pulumi.InvokeOptions): Promise<GetGatewayResult>
 ```
 
 
 Retrieve information about a Direct Connect Gateway.
 
 <h2 class="pdoc-module-header" id="ConnectionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L107">interface ConnectionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L109">interface ConnectionArgs</a>
 </h2>
 
 The set of arguments for constructing a Connection resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L111">property bandwidth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L113">property bandwidth</a>
 </h3>
 
 ```typescript
@@ -1608,7 +1696,7 @@ bandwidth: pulumi.Input<string>;
 The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L115">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L117">property location</a>
 </h3>
 
 ```typescript
@@ -1619,7 +1707,7 @@ location: pulumi.Input<string>;
 The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L119">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L121">property name</a>
 </h3>
 
 ```typescript
@@ -1630,11 +1718,11 @@ name?: pulumi.Input<string>;
 The name of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L123">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L125">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
@@ -1697,13 +1785,13 @@ lagId?: pulumi.Input<string>;
 The ID of the LAG with which to associate the connection.
 
 <h2 class="pdoc-module-header" id="ConnectionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L81">interface ConnectionState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L83">interface ConnectionState</a>
 </h2>
 
 Input properties used for looking up and filtering Connection resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L85">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L87">property arn</a>
 </h3>
 
 ```typescript
@@ -1714,7 +1802,7 @@ arn?: pulumi.Input<string>;
 The ARN of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L89">property bandwidth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L91">property bandwidth</a>
 </h3>
 
 ```typescript
@@ -1725,7 +1813,7 @@ bandwidth?: pulumi.Input<string>;
 The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L93">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L95">property location</a>
 </h3>
 
 ```typescript
@@ -1736,7 +1824,7 @@ location?: pulumi.Input<string>;
 The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L97">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L99">property name</a>
 </h3>
 
 ```typescript
@@ -1747,11 +1835,11 @@ name?: pulumi.Input<string>;
 The name of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L101">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L103">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
@@ -1880,7 +1968,7 @@ A collection of arguments for invoking getGateway.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -1915,13 +2003,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="HostedPrivateVirtualInterfaceAccepterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L105">interface HostedPrivateVirtualInterfaceAccepterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L107">interface HostedPrivateVirtualInterfaceAccepterArgs</a>
 </h2>
 
 The set of arguments for constructing a HostedPrivateVirtualInterfaceAccepter resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L109">property dxGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L111">property dxGatewayId</a>
 </h3>
 
 ```typescript
@@ -1932,18 +2020,18 @@ dxGatewayId?: pulumi.Input<string>;
 The ID of the Direct Connect gateway to which to connect the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L113">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L115">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L117">property virtualInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L119">property virtualInterfaceId</a>
 </h3>
 
 ```typescript
@@ -1954,7 +2042,7 @@ virtualInterfaceId: pulumi.Input<string>;
 The ID of the Direct Connect virtual interface to accept.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L121">property vpnGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L123">property vpnGatewayId</a>
 </h3>
 
 ```typescript
@@ -1965,13 +2053,13 @@ vpnGatewayId?: pulumi.Input<string>;
 The ID of the [virtual private gateway](vpn_gateway.html) to which to connect the virtual interface.
 
 <h2 class="pdoc-module-header" id="HostedPrivateVirtualInterfaceAccepterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L79">interface HostedPrivateVirtualInterfaceAccepterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L81">interface HostedPrivateVirtualInterfaceAccepterState</a>
 </h2>
 
 Input properties used for looking up and filtering HostedPrivateVirtualInterfaceAccepter resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L83">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L85">property arn</a>
 </h3>
 
 ```typescript
@@ -1982,7 +2070,7 @@ arn?: pulumi.Input<string>;
 The ARN of the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L87">property dxGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L89">property dxGatewayId</a>
 </h3>
 
 ```typescript
@@ -1993,18 +2081,18 @@ dxGatewayId?: pulumi.Input<string>;
 The ID of the Direct Connect gateway to which to connect the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L91">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L93">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L95">property virtualInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L97">property virtualInterfaceId</a>
 </h3>
 
 ```typescript
@@ -2015,7 +2103,7 @@ virtualInterfaceId?: pulumi.Input<string>;
 The ID of the Direct Connect virtual interface to accept.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L99">property vpnGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L101">property vpnGatewayId</a>
 </h3>
 
 ```typescript
@@ -2247,24 +2335,24 @@ vlan?: pulumi.Input<number>;
 The VLAN ID.
 
 <h2 class="pdoc-module-header" id="HostedPublicVirtualInterfaceAccepterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L85">interface HostedPublicVirtualInterfaceAccepterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L87">interface HostedPublicVirtualInterfaceAccepterArgs</a>
 </h2>
 
 The set of arguments for constructing a HostedPublicVirtualInterfaceAccepter resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L89">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L91">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L93">property virtualInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L95">property virtualInterfaceId</a>
 </h3>
 
 ```typescript
@@ -2275,13 +2363,13 @@ virtualInterfaceId: pulumi.Input<string>;
 The ID of the Direct Connect virtual interface to accept.
 
 <h2 class="pdoc-module-header" id="HostedPublicVirtualInterfaceAccepterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L67">interface HostedPublicVirtualInterfaceAccepterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L69">interface HostedPublicVirtualInterfaceAccepterState</a>
 </h2>
 
 Input properties used for looking up and filtering HostedPublicVirtualInterfaceAccepter resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L71">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L73">property arn</a>
 </h3>
 
 ```typescript
@@ -2292,18 +2380,18 @@ arn?: pulumi.Input<string>;
 The ARN of the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L75">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L77">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L79">property virtualInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts#L81">property virtualInterfaceId</a>
 </h3>
 
 ```typescript
@@ -2557,13 +2645,13 @@ vlan?: pulumi.Input<number>;
 The VLAN ID.
 
 <h2 class="pdoc-module-header" id="LinkAggregationGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L127">interface LinkAggregationGroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L129">interface LinkAggregationGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a LinkAggregationGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L131">property connectionsBandwidth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L133">property connectionsBandwidth</a>
 </h3>
 
 ```typescript
@@ -2574,7 +2662,7 @@ connectionsBandwidth: pulumi.Input<string>;
 The bandwidth of the individual physical connections bundled by the LAG. Available values: 1Gbps, 10Gbps. Case sensitive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L135">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L137">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -2585,7 +2673,7 @@ forceDestroy?: pulumi.Input<boolean>;
 A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L139">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L141">property location</a>
 </h3>
 
 ```typescript
@@ -2596,7 +2684,7 @@ location: pulumi.Input<string>;
 The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L143">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L145">property name</a>
 </h3>
 
 ```typescript
@@ -2607,7 +2695,7 @@ name?: pulumi.Input<string>;
 The name of the LAG.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L147">property numberOfConnections</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L149">property numberOfConnections</a>
 </h3>
 
 ```typescript
@@ -2618,24 +2706,24 @@ numberOfConnections?: pulumi.Input<number>;
 The number of physical connections initially provisioned and bundled by the LAG. Use `aws_dx_connection` and `aws_dx_connection_association` resources instead. Default connections will be removed as part of LAG creation automatically in future versions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L151">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L153">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="LinkAggregationGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L93">interface LinkAggregationGroupState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L95">interface LinkAggregationGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering LinkAggregationGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L97">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L99">property arn</a>
 </h3>
 
 ```typescript
@@ -2646,7 +2734,7 @@ arn?: pulumi.Input<string>;
 The ARN of the LAG.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L101">property connectionsBandwidth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L103">property connectionsBandwidth</a>
 </h3>
 
 ```typescript
@@ -2657,7 +2745,7 @@ connectionsBandwidth?: pulumi.Input<string>;
 The bandwidth of the individual physical connections bundled by the LAG. Available values: 1Gbps, 10Gbps. Case sensitive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L105">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L107">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -2668,7 +2756,7 @@ forceDestroy?: pulumi.Input<boolean>;
 A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L109">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L111">property location</a>
 </h3>
 
 ```typescript
@@ -2679,7 +2767,7 @@ location?: pulumi.Input<string>;
 The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L113">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L115">property name</a>
 </h3>
 
 ```typescript
@@ -2690,7 +2778,7 @@ name?: pulumi.Input<string>;
 The name of the LAG.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L117">property numberOfConnections</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L119">property numberOfConnections</a>
 </h3>
 
 ```typescript
@@ -2701,24 +2789,24 @@ numberOfConnections?: pulumi.Input<number>;
 The number of physical connections initially provisioned and bundled by the LAG. Use `aws_dx_connection` and `aws_dx_connection_association` resources instead. Default connections will be removed as part of LAG creation automatically in future versions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L121">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts#L123">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="PrivateVirtualInterfaceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L183">interface PrivateVirtualInterfaceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L185">interface PrivateVirtualInterfaceArgs</a>
 </h2>
 
 The set of arguments for constructing a PrivateVirtualInterface resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L187">property addressFamily</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L189">property addressFamily</a>
 </h3>
 
 ```typescript
@@ -2729,7 +2817,7 @@ addressFamily: pulumi.Input<string>;
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L191">property amazonAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L193">property amazonAddress</a>
 </h3>
 
 ```typescript
@@ -2740,7 +2828,7 @@ amazonAddress?: pulumi.Input<string>;
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L195">property bgpAsn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L197">property bgpAsn</a>
 </h3>
 
 ```typescript
@@ -2751,7 +2839,7 @@ bgpAsn: pulumi.Input<number>;
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L199">property bgpAuthKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L201">property bgpAuthKey</a>
 </h3>
 
 ```typescript
@@ -2762,7 +2850,7 @@ bgpAuthKey?: pulumi.Input<string>;
 The authentication key for BGP configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L203">property connectionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L205">property connectionId</a>
 </h3>
 
 ```typescript
@@ -2773,7 +2861,7 @@ connectionId: pulumi.Input<string>;
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L207">property customerAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L209">property customerAddress</a>
 </h3>
 
 ```typescript
@@ -2784,7 +2872,7 @@ customerAddress?: pulumi.Input<string>;
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L211">property dxGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L213">property dxGatewayId</a>
 </h3>
 
 ```typescript
@@ -2795,7 +2883,7 @@ dxGatewayId?: pulumi.Input<string>;
 The ID of the Direct Connect gateway to which to connect the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L215">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L217">property name</a>
 </h3>
 
 ```typescript
@@ -2806,18 +2894,18 @@ name?: pulumi.Input<string>;
 The name for the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L219">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L221">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L223">property vlan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L225">property vlan</a>
 </h3>
 
 ```typescript
@@ -2828,7 +2916,7 @@ vlan: pulumi.Input<number>;
 The VLAN ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L227">property vpnGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L229">property vpnGatewayId</a>
 </h3>
 
 ```typescript
@@ -2839,13 +2927,13 @@ vpnGatewayId?: pulumi.Input<string>;
 The ID of the [virtual private gateway](vpn_gateway.html) to which to connect the virtual interface.
 
 <h2 class="pdoc-module-header" id="PrivateVirtualInterfaceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L129">interface PrivateVirtualInterfaceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L131">interface PrivateVirtualInterfaceState</a>
 </h2>
 
 Input properties used for looking up and filtering PrivateVirtualInterface resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L133">property addressFamily</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L135">property addressFamily</a>
 </h3>
 
 ```typescript
@@ -2856,7 +2944,7 @@ addressFamily?: pulumi.Input<string>;
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L137">property amazonAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L139">property amazonAddress</a>
 </h3>
 
 ```typescript
@@ -2867,7 +2955,7 @@ amazonAddress?: pulumi.Input<string>;
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L141">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L143">property arn</a>
 </h3>
 
 ```typescript
@@ -2878,7 +2966,7 @@ arn?: pulumi.Input<string>;
 The ARN of the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L145">property bgpAsn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L147">property bgpAsn</a>
 </h3>
 
 ```typescript
@@ -2889,7 +2977,7 @@ bgpAsn?: pulumi.Input<number>;
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L149">property bgpAuthKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L151">property bgpAuthKey</a>
 </h3>
 
 ```typescript
@@ -2900,7 +2988,7 @@ bgpAuthKey?: pulumi.Input<string>;
 The authentication key for BGP configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L153">property connectionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L155">property connectionId</a>
 </h3>
 
 ```typescript
@@ -2911,7 +2999,7 @@ connectionId?: pulumi.Input<string>;
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L157">property customerAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L159">property customerAddress</a>
 </h3>
 
 ```typescript
@@ -2922,7 +3010,7 @@ customerAddress?: pulumi.Input<string>;
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L161">property dxGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L163">property dxGatewayId</a>
 </h3>
 
 ```typescript
@@ -2933,7 +3021,7 @@ dxGatewayId?: pulumi.Input<string>;
 The ID of the Direct Connect gateway to which to connect the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L165">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L167">property name</a>
 </h3>
 
 ```typescript
@@ -2944,18 +3032,18 @@ name?: pulumi.Input<string>;
 The name for the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L169">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L171">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L173">property vlan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L175">property vlan</a>
 </h3>
 
 ```typescript
@@ -2966,7 +3054,7 @@ vlan?: pulumi.Input<number>;
 The VLAN ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L177">property vpnGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L179">property vpnGatewayId</a>
 </h3>
 
 ```typescript

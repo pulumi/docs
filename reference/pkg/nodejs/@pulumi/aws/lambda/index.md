@@ -54,7 +54,7 @@ For information about function aliases, see [CreateAlias][2] and [AliasRoutingCo
 </h3>
 
 ```typescript
-new Alias(name: string, args: AliasArgs, opts?: pulumi.ResourceOptions)
+new Alias(name: string, args: AliasArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -77,7 +77,15 @@ Get an existing Alias resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -133,7 +141,7 @@ public functionVersion: pulumi.Output<string>;
 Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -192,7 +200,7 @@ For information about event source mappings, see [CreateEventSourceMapping][2] i
 </h3>
 
 ```typescript
-new EventSourceMapping(name: string, args: EventSourceMappingArgs, opts?: pulumi.ResourceOptions)
+new EventSourceMapping(name: string, args: EventSourceMappingArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -215,7 +223,15 @@ Get an existing EventSourceMapping resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -282,7 +298,7 @@ public functionName: pulumi.Output<string>;
 The name or the ARN of the Lambda function that will be subscribing to events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -384,7 +400,7 @@ For information about Lambda and how to use it, see [What is AWS Lambda?][1]
 </h3>
 
 ```typescript
-new Function(name: string, args: FunctionArgs, opts?: pulumi.ResourceOptions)
+new Function(name: string, args: FunctionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -407,7 +423,15 @@ Get an existing Function resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -485,7 +509,7 @@ public handler: pulumi.Output<string>;
 The function [entrypoint][3] in your code.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -667,7 +691,7 @@ The size in bytes of the function .zip file.
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -734,11 +758,11 @@ Creates a Lambda permission to allow external sources invoking the Lambda functi
 (e.g. CloudWatch Event Rule, SNS or S3).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L65">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L69">constructor</a>
 </h3>
 
 ```typescript
-new Permission(name: string, args: PermissionArgs, opts?: pulumi.ResourceOptions)
+new Permission(name: string, args: PermissionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -761,7 +785,15 @@ Get an existing Permission resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -784,7 +816,18 @@ public action: pulumi.Output<string>;
 The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L32">property function</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L32">property eventSourceToken</a>
+</h3>
+
+```typescript
+public eventSourceToken: pulumi.Output<string | undefined>;
+```
+
+
+The Event Source Token to validate.  Used with [Alexa Skills][1].
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L36">property function</a>
 </h3>
 
 ```typescript
@@ -795,7 +838,7 @@ public function: pulumi.Output<Function>;
 Name of the Lambda function whose resource policy you are updating
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -807,7 +850,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L38">property principal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L42">property principal</a>
 </h3>
 
 ```typescript
@@ -820,7 +863,7 @@ e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L44">property qualifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L48">property qualifier</a>
 </h3>
 
 ```typescript
@@ -833,7 +876,7 @@ The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L48">property sourceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L52">property sourceAccount</a>
 </h3>
 
 ```typescript
@@ -844,7 +887,7 @@ public sourceAccount: pulumi.Output<string | undefined>;
 This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L57">property sourceArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L61">property sourceArn</a>
 </h3>
 
 ```typescript
@@ -860,7 +903,7 @@ API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L61">property statementId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L65">property statementId</a>
 </h3>
 
 ```typescript
@@ -871,7 +914,7 @@ public statementId: pulumi.Output<string>;
 A unique statement identifier. By default generated by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L65">property statementIdPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L69">property statementIdPrefix</a>
 </h3>
 
 ```typescript
@@ -898,7 +941,7 @@ deployments.
 </h2>
 
 ```typescript
-getFunction(args: GetFunctionArgs): Promise<GetFunctionResult>
+getFunction(args: GetFunctionArgs, opts?: pulumi.InvokeOptions): Promise<GetFunctionResult>
 ```
 
 
@@ -909,7 +952,7 @@ Provides information about a Lambda Function.
 </h2>
 
 ```typescript
-getInvocation(args: GetInvocationArgs): Promise<GetInvocationResult>
+getInvocation(args: GetInvocationArgs, opts?: pulumi.InvokeOptions): Promise<GetInvocationResult>
 ```
 
 
@@ -1425,7 +1468,7 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
@@ -1704,7 +1747,7 @@ The size in bytes of the function .zip file.
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
@@ -1762,7 +1805,7 @@ A collection of arguments for invoking getFunction.
 </h3>
 
 ```typescript
-functionName: pulumi.Input<string>;
+functionName: string;
 ```
 
 
@@ -1773,7 +1816,7 @@ Name of the lambda function.
 </h3>
 
 ```typescript
-qualifier?: pulumi.Input<string>;
+qualifier?: string;
 ```
 
 
@@ -2016,7 +2059,7 @@ A collection of arguments for invoking getInvocation.
 </h3>
 
 ```typescript
-functionName: pulumi.Input<string>;
+functionName: string;
 ```
 
 
@@ -2027,7 +2070,7 @@ The name of the lambda function.
 </h3>
 
 ```typescript
-input: pulumi.Input<string>;
+input: string;
 ```
 
 
@@ -2038,7 +2081,7 @@ A string in JSON format that is passed as payload to the lambda function.
 </h3>
 
 ```typescript
-qualifier?: pulumi.Input<string>;
+qualifier?: string;
 ```
 
 
@@ -2085,13 +2128,13 @@ resultMap: { ... };
 This field is set only if result is a map of primitive types.
 
 <h2 class="pdoc-module-header" id="PermissionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L161">interface PermissionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L171">interface PermissionArgs</a>
 </h2>
 
 The set of arguments for constructing a Permission resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L165">property action</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L175">property action</a>
 </h3>
 
 ```typescript
@@ -2102,7 +2145,18 @@ action: pulumi.Input<string>;
 The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L169">property function</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L179">property eventSourceToken</a>
+</h3>
+
+```typescript
+eventSourceToken?: pulumi.Input<string>;
+```
+
+
+The Event Source Token to validate.  Used with [Alexa Skills][1].
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L183">property function</a>
 </h3>
 
 ```typescript
@@ -2113,7 +2167,7 @@ function: pulumi.Input<Function>;
 Name of the Lambda function whose resource policy you are updating
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L175">property principal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L189">property principal</a>
 </h3>
 
 ```typescript
@@ -2126,7 +2180,7 @@ e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L181">property qualifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L195">property qualifier</a>
 </h3>
 
 ```typescript
@@ -2139,7 +2193,7 @@ The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L185">property sourceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L199">property sourceAccount</a>
 </h3>
 
 ```typescript
@@ -2150,7 +2204,7 @@ sourceAccount?: pulumi.Input<string>;
 This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L194">property sourceArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L208">property sourceArn</a>
 </h3>
 
 ```typescript
@@ -2166,7 +2220,7 @@ API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L198">property statementId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L212">property statementId</a>
 </h3>
 
 ```typescript
@@ -2177,7 +2231,7 @@ statementId?: pulumi.Input<string>;
 A unique statement identifier. By default generated by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L202">property statementIdPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L216">property statementIdPrefix</a>
 </h3>
 
 ```typescript
@@ -2188,13 +2242,13 @@ statementIdPrefix?: pulumi.Input<string>;
 A statement identifier prefix. Terraform will generate a unique suffix. Conflicts with `statement_id`.
 
 <h2 class="pdoc-module-header" id="PermissionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L114">interface PermissionState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L120">interface PermissionState</a>
 </h2>
 
 Input properties used for looking up and filtering Permission resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L118">property action</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L124">property action</a>
 </h3>
 
 ```typescript
@@ -2205,7 +2259,18 @@ action?: pulumi.Input<string>;
 The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L122">property function</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L128">property eventSourceToken</a>
+</h3>
+
+```typescript
+eventSourceToken?: pulumi.Input<string>;
+```
+
+
+The Event Source Token to validate.  Used with [Alexa Skills][1].
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L132">property function</a>
 </h3>
 
 ```typescript
@@ -2216,7 +2281,7 @@ function?: pulumi.Input<Function>;
 Name of the Lambda function whose resource policy you are updating
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L128">property principal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L138">property principal</a>
 </h3>
 
 ```typescript
@@ -2229,7 +2294,7 @@ e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L134">property qualifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L144">property qualifier</a>
 </h3>
 
 ```typescript
@@ -2242,7 +2307,7 @@ The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L138">property sourceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L148">property sourceAccount</a>
 </h3>
 
 ```typescript
@@ -2253,7 +2318,7 @@ sourceAccount?: pulumi.Input<string>;
 This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L147">property sourceArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L157">property sourceArn</a>
 </h3>
 
 ```typescript
@@ -2269,7 +2334,7 @@ API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L151">property statementId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L161">property statementId</a>
 </h3>
 
 ```typescript
@@ -2280,7 +2345,7 @@ statementId?: pulumi.Input<string>;
 A unique statement identifier. By default generated by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L155">property statementIdPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts#L165">property statementIdPrefix</a>
 </h3>
 
 ```typescript

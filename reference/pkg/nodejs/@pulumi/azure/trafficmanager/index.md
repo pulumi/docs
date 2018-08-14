@@ -30,7 +30,7 @@ Manages a Traffic Manager Endpoint.
 </h3>
 
 ```typescript
-new Endpoint(name: string, args: EndpointArgs, opts?: pulumi.ResourceOptions)
+new Endpoint(name: string, args: EndpointArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -53,7 +53,15 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -111,7 +119,7 @@ public geoMappings: pulumi.Output<string[] | undefined>;
 A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -263,7 +271,7 @@ Manages a Traffic Manager Profile to which multiple endpoints can be attached.
 </h3>
 
 ```typescript
-new Profile(name: string, args: ProfileArgs, opts?: pulumi.ResourceOptions)
+new Profile(name: string, args: ProfileArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -286,7 +294,15 @@ Get an existing Profile resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -321,7 +337,7 @@ public fqdn: pulumi.Output<string>;
 The FQDN of the created Profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -424,7 +440,7 @@ deployments.
 </h2>
 
 ```typescript
-getGeographicalLocation(args: GetGeographicalLocationArgs): Promise<GetGeographicalLocationResult>
+getGeographicalLocation(args: GetGeographicalLocationArgs, opts?: pulumi.InvokeOptions): Promise<GetGeographicalLocationResult>
 ```
 
 
@@ -773,7 +789,7 @@ A collection of arguments for invoking getGeographicalLocation.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -807,7 +823,7 @@ The set of arguments for constructing a Profile resource.
 </h3>
 
 ```typescript
-dnsConfigs: pulumi.Input<{ ... }[]>;
+dnsConfigs: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -819,7 +835,7 @@ Profile, it supports the fields documented below.
 </h3>
 
 ```typescript
-monitorConfigs: pulumi.Input<{ ... }[]>;
+monitorConfigs: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -900,7 +916,7 @@ Input properties used for looking up and filtering Profile resources.
 </h3>
 
 ```typescript
-dnsConfigs?: pulumi.Input<{ ... }[]>;
+dnsConfigs?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -923,7 +939,7 @@ The FQDN of the created Profile.
 </h3>
 
 ```typescript
-monitorConfigs?: pulumi.Input<{ ... }[]>;
+monitorConfigs?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

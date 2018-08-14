@@ -32,7 +32,7 @@ or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/databases)
 </h3>
 
 ```typescript
-new Database(name: string, args: DatabaseArgs, opts?: pulumi.ResourceOptions)
+new Database(name: string, args: DatabaseArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -55,7 +55,15 @@ Get an existing Database resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -97,7 +105,7 @@ for more details and supported values. Postgres databases are in [Beta](/docs/pr
 and have limited `collation` support; they only support a value of `en_US.UTF8` at creation time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -182,7 +190,7 @@ a restricted host and strong password.
 </h3>
 
 ```typescript
-new DatabaseInstance(name: string, args: DatabaseInstanceArgs, opts?: pulumi.ResourceOptions)
+new DatabaseInstance(name: string, args: DatabaseInstanceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -205,7 +213,15 @@ Get an existing DatabaseInstance resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -256,7 +272,7 @@ is to support accessing the [first address in the list in a terraform output](ht
 when the resource is configured with a `count`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -398,7 +414,7 @@ Creates a new Google SQL User on a Google SQL User Instance. For more informatio
 </h3>
 
 ```typescript
-new User(name: string, args: UserArgs, opts?: pulumi.ResourceOptions)
+new User(name: string, args: UserArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -421,7 +437,15 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -442,11 +466,11 @@ public host: pulumi.Output<string | undefined>;
 
 
 The host the user can connect from. This is only supported
-for first generation SQL instances. Don't set this field for second generation
-SQL instances. Can be an IP address. Changing this forces a new resource to be created.
+for MySQL instances. Don't set this field for PostgreSQL instances.
+Can be an IP address. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -734,7 +758,7 @@ when the resource is configured with a `count`.
 </h3>
 
 ```typescript
-ipAddresses?: pulumi.Input<{ ... }[]>;
+ipAddresses?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
@@ -930,8 +954,8 @@ host?: pulumi.Input<string>;
 
 
 The host the user can connect from. This is only supported
-for first generation SQL instances. Don't set this field for second generation
-SQL instances. Can be an IP address. Changing this forces a new resource to be created.
+for MySQL instances. Don't set this field for PostgreSQL instances.
+Can be an IP address. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/user.ts#L129">property instance</a>
@@ -996,8 +1020,8 @@ host?: pulumi.Input<string>;
 
 
 The host the user can connect from. This is only supported
-for first generation SQL instances. Don't set this field for second generation
-SQL instances. Can be an IP address. Changing this forces a new resource to be created.
+for MySQL instances. Don't set this field for PostgreSQL instances.
+Can be an IP address. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/user.ts#L98">property instance</a>

@@ -16,7 +16,7 @@ title: Module tests
 * <a href="#resrpc">const resrpc</a>
 * <a href="#assertAsyncThrows">function assertAsyncThrows</a>
 * <a href="#asyncTest">function asyncTest</a>
-* <a href="#compareErrorText">function compareErrorText</a>
+* <a href="#compareTextWithWildcards">function compareTextWithWildcards</a>
 * <a href="#createMockResourceMonitor">function createMockResourceMonitor</a>
 * <a href="#makeUrn">function makeUrn</a>
 * <a href="#mockRun">function mockRun</a>
@@ -30,7 +30,7 @@ title: Module tests
 
 
 <h2 class="pdoc-module-header" id="exportedValue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L34">const exportedValue</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L35">const exportedValue</a>
 </h2>
 
 ```typescript
@@ -109,12 +109,12 @@ assertAsyncThrows(test: { ... }): Promise<string>
 asyncTest(test: { ... }): { ... }
 ```
 
-<h2 class="pdoc-module-header" id="compareErrorText">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L4780">function compareErrorText</a>
+<h2 class="pdoc-module-header" id="compareTextWithWildcards">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L5121">function compareTextWithWildcards</a>
 </h2>
 
 ```typescript
-compareErrorText(expected: string, actual: string): void
+compareTextWithWildcards(expected: string, actual: string): void
 ```
 
 
@@ -132,7 +132,7 @@ error messages that are dependent on the environment:
 This is useful when testing error messages that you get when capturing bulit-in modules,
 because the specific error message differs between Node versions.
 <h2 class="pdoc-module-header" id="createMockResourceMonitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L543">function createMockResourceMonitor</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L603">function createMockResourceMonitor</a>
 </h2>
 
 ```typescript
@@ -140,7 +140,7 @@ createMockResourceMonitor(invokeCallback: { ... }, readResourceCallback: { ... }
 ```
 
 <h2 class="pdoc-module-header" id="makeUrn">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L48">function makeUrn</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L49">function makeUrn</a>
 </h2>
 
 ```typescript
@@ -148,7 +148,7 @@ makeUrn(t: string, name: string): URN
 ```
 
 <h2 class="pdoc-module-header" id="mockRun">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L509">function mockRun</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L569">function mockRun</a>
 </h2>
 
 ```typescript
@@ -156,7 +156,7 @@ mockRun(langHostClient: any, monitor: string, opts: RunCase, dryrun: boolean): P
 ```
 
 <h2 class="pdoc-module-header" id="serveLanguageHostProcess">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L561">function serveLanguageHostProcess</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L621">function serveLanguageHostProcess</a>
 </h2>
 
 ```typescript
@@ -164,7 +164,7 @@ serveLanguageHostProcess(): { ... }
 ```
 
 <h2 class="pdoc-module-header" id="stripEOL">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L594">function stripEOL</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L654">function stripEOL</a>
 </h2>
 
 ```typescript
@@ -172,10 +172,10 @@ stripEOL(data: string | Buffer): string
 ```
 
 <h2 class="pdoc-module-header" id="ClosureCase">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L24">interface ClosureCase</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L25">interface ClosureCase</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L31">property afters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L32">property afters</a>
 </h3>
 
 ```typescript
@@ -183,7 +183,7 @@ afters?: ClosureCase[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L30">property error</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L31">property error</a>
 </h3>
 
 ```typescript
@@ -191,7 +191,7 @@ error?: undefined | string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L29">property expectPackages</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L30">property expectPackages</a>
 </h3>
 
 ```typescript
@@ -199,7 +199,7 @@ expectPackages?: Set<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L28">property expectText</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L29">property expectText</a>
 </h3>
 
 ```typescript
@@ -207,7 +207,7 @@ expectText?: undefined | string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L27">property func</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L28">property func</a>
 </h3>
 
 ```typescript
@@ -215,7 +215,7 @@ func: Function;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L25">property pre</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L26">property pre</a>
 </h3>
 
 ```typescript
@@ -223,7 +223,7 @@ pre?: undefined | { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L26">property title</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L27">property title</a>
 </h3>
 
 ```typescript
@@ -314,7 +314,7 @@ registerResource?: undefined | { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L44">property registerResourceOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/langhost/run.spec.ts#L45">property registerResourceOutputs</a>
 </h3>
 
 ```typescript

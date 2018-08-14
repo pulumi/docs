@@ -27,7 +27,7 @@ Manages an EKS Cluster.
 </h3>
 
 ```typescript
-new Cluster(name: string, args: ClusterArgs, opts?: pulumi.ResourceOptions)
+new Cluster(name: string, args: ClusterArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -50,7 +50,15 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -103,7 +111,7 @@ public endpoint: pulumi.Output<string>;
 The endpoint for your Kubernetes API server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -175,7 +183,7 @@ Nested argument for the VPC associated with your cluster. Amazon EKS VPC resourc
 </h2>
 
 ```typescript
-getCluster(args: GetClusterArgs): Promise<GetClusterResult>
+getCluster(args: GetClusterArgs, opts?: pulumi.InvokeOptions): Promise<GetClusterResult>
 ```
 
 
@@ -333,7 +341,7 @@ A collection of arguments for invoking getCluster.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 

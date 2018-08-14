@@ -6,6 +6,13 @@ title: Module meta/v1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isAPIGroup">function isAPIGroup</a>
+* <a href="#isAPIGroupList">function isAPIGroupList</a>
+* <a href="#isAPIResourceList">function isAPIResourceList</a>
+* <a href="#isAPIVersions">function isAPIVersions</a>
+* <a href="#isDeleteOptions">function isDeleteOptions</a>
+* <a href="#isOwnerReference">function isOwnerReference</a>
+* <a href="#isStatus">function isStatus</a>
 * <a href="#APIGroup">interface APIGroup</a>
 * <a href="#APIGroupList">interface APIGroupList</a>
 * <a href="#APIResource">interface APIResource</a>
@@ -27,8 +34,64 @@ title: Module meta/v1
 * <a href="#StatusDetails">interface StatusDetails</a>
 * <a href="#WatchEvent">interface WatchEvent</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isAPIGroup">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14450">function isAPIGroup</a>
+</h2>
+
+```typescript
+isAPIGroup(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isAPIGroupList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14481">function isAPIGroupList</a>
+</h2>
+
+```typescript
+isAPIGroupList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isAPIResourceList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14576">function isAPIResourceList</a>
+</h2>
+
+```typescript
+isAPIResourceList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isAPIVersions">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14619">function isAPIVersions</a>
+</h2>
+
+```typescript
+isAPIVersions(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDeleteOptions">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14677">function isDeleteOptions</a>
+</h2>
+
+```typescript
+isDeleteOptions(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isOwnerReference">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L15018">function isOwnerReference</a>
+</h2>
+
+```typescript
+isOwnerReference(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isStatus">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L15112">function isStatus</a>
+</h2>
+
+```typescript
+isStatus(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="APIGroup">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13648">interface APIGroup</a>
@@ -584,7 +647,7 @@ matchExpressions is a list of label selector requirements. The requirements are 
 </h3>
 
 ```typescript
-matchLabels: object;
+matchLabels: { ... };
 ```
 
 
@@ -695,7 +758,7 @@ users must create.
 </h3>
 
 ```typescript
-annotations: object;
+annotations: { ... };
 ```
 
 
@@ -845,7 +908,7 @@ not be modified further by any user.
 </h3>
 
 ```typescript
-labels: object;
+labels: { ... };
 ```
 
 

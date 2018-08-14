@@ -16,6 +16,7 @@ title: Module cmd
 * <a href="#requireFromString">const requireFromString</a>
 * <a href="#statusproto">const statusproto</a>
 * <a href="#structproto">const structproto</a>
+* <a href="#addToEnvIfDefined">function addToEnvIfDefined</a>
 * <a href="#cancelRPC">function cancelRPC</a>
 * <a href="#checkRPC">function checkRPC</a>
 * <a href="#configureRPC">function configureRPC</a>
@@ -31,10 +32,11 @@ title: Module cmd
 * <a href="#readRPC">function readRPC</a>
 * <a href="#reportModuleLoadFailure">function reportModuleLoadFailure</a>
 * <a href="#resultIncludingProvider">function resultIncludingProvider</a>
+* <a href="#run">function run</a>
 * <a href="#updateRPC">function updateRPC</a>
 * <a href="#usage">function usage</a>
 
-<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts">cmd/dynamic-provider/index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts">cmd/run/index.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts">cmd/dynamic-provider/index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts">cmd/run/index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/run.ts">cmd/run/run.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="anyproto">
@@ -115,6 +117,14 @@ const statusproto: any =  require("../../proto/status_pb.js");
 
 ```typescript
 const structproto: any =  require("google-protobuf/google/protobuf/struct_pb.js");
+```
+
+<h2 class="pdoc-module-header" id="addToEnvIfDefined">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L85">function addToEnvIfDefined</a>
+</h2>
+
+```typescript
+addToEnvIfDefined(key: string, value: string | undefined): void
 ```
 
 <h2 class="pdoc-module-header" id="cancelRPC">
@@ -206,7 +216,7 @@ main(args: string[]): void
 ```
 
 <h2 class="pdoc-module-header" id="printErrorUsageAndExit">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L43">function printErrorUsageAndExit</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L35">function printErrorUsageAndExit</a>
 </h2>
 
 ```typescript
@@ -222,7 +232,7 @@ readRPC(call: any, callback: any): Promise<void>
 ```
 
 <h2 class="pdoc-module-header" id="reportModuleLoadFailure">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L55">function reportModuleLoadFailure</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/run.ts#L32">function reportModuleLoadFailure</a>
 </h2>
 
 ```typescript
@@ -241,6 +251,14 @@ module that failed to load is the top-level module.
 resultIncludingProvider(result: any, props: any): any
 ```
 
+<h2 class="pdoc-module-header" id="run">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/run.ts#L123">function run</a>
+</h2>
+
+```typescript
+run(argv: ParsedArgs): void
+```
+
 <h2 class="pdoc-module-header" id="updateRPC">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L191">function updateRPC</a>
 </h2>
@@ -250,7 +268,7 @@ updateRPC(call: any, callback: any): Promise<void>
 ```
 
 <h2 class="pdoc-module-header" id="usage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L26">function usage</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/index.ts#L18">function usage</a>
 </h2>
 
 ```typescript

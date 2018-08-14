@@ -27,7 +27,7 @@ Create an Recovery Services Vault.
 </h3>
 
 ```typescript
-new Vault(name: string, args: VaultArgs, opts?: pulumi.ResourceOptions)
+new Vault(name: string, args: VaultArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -50,7 +50,15 @@ Get an existing Vault resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -62,7 +70,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -145,7 +153,7 @@ deployments.
 </h2>
 
 ```typescript
-getVault(args: GetVaultArgs): Promise<GetVaultResult>
+getVault(args: GetVaultArgs, opts?: pulumi.InvokeOptions): Promise<GetVaultResult>
 ```
 
 
@@ -162,7 +170,7 @@ A collection of arguments for invoking getVault.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -173,7 +181,7 @@ Specifies the name of the Recovery Services Vault.
 </h3>
 
 ```typescript
-resourceGroupName: pulumi.Input<string>;
+resourceGroupName: string;
 ```
 
 

@@ -30,7 +30,7 @@ A CDN Endpoint is the entity within a CDN Profile containing configuration infor
 </h3>
 
 ```typescript
-new Endpoint(name: string, args: EndpointArgs, opts?: pulumi.ResourceOptions)
+new Endpoint(name: string, args: EndpointArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -53,7 +53,15 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -98,7 +106,7 @@ public hostName: pulumi.Output<string>;
 A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -286,7 +294,7 @@ Create a CDN Profile to create a collection of CDN Endpoints.
 </h3>
 
 ```typescript
-new Profile(name: string, args: ProfileArgs, opts?: pulumi.ResourceOptions)
+new Profile(name: string, args: ProfileArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -309,7 +317,15 @@ Get an existing Profile resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -321,7 +337,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -376,7 +392,7 @@ public sku: pulumi.Output<string>;
 ```
 
 
-The pricing related information of current CDN profile. Accepted values are `Standard_Verizon`, `Standard_Akamai` or `Premium_Verizon`.
+The pricing related information of current CDN profile. Accepted values are `Standard_Akamai`, `Standard_ChinaCdn`, `Standard_Microsoft`, `Standard_Verizon` or `Premium_Verizon`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/cdn/profile.ts#L43">property tags</a>
@@ -406,7 +422,7 @@ deployments.
 </h2>
 
 ```typescript
-getProfile(args: GetProfileArgs): Promise<GetProfileResult>
+getProfile(args: GetProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetProfileResult>
 ```
 
 
@@ -434,7 +450,7 @@ An array of strings that indicates a content types on which compression will be 
 </h3>
 
 ```typescript
-geoFilters?: pulumi.Input<{ ... }[]>;
+geoFilters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -533,7 +549,7 @@ The path used at for origin requests.
 </h3>
 
 ```typescript
-origins: pulumi.Input<{ ... }[]>;
+origins: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -616,7 +632,7 @@ An array of strings that indicates a content types on which compression will be 
 </h3>
 
 ```typescript
-geoFilters?: pulumi.Input<{ ... }[]>;
+geoFilters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -726,7 +742,7 @@ The path used at for origin requests.
 </h3>
 
 ```typescript
-origins?: pulumi.Input<{ ... }[]>;
+origins?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -798,7 +814,7 @@ A collection of arguments for invoking getProfile.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -809,7 +825,7 @@ The name of the CDN Profile.
 </h3>
 
 ```typescript
-resourceGroupName: pulumi.Input<string>;
+resourceGroupName: string;
 ```
 
 
@@ -915,7 +931,7 @@ sku: pulumi.Input<string>;
 ```
 
 
-The pricing related information of current CDN profile. Accepted values are `Standard_Verizon`, `Standard_Akamai` or `Premium_Verizon`.
+The pricing related information of current CDN profile. Accepted values are `Standard_Akamai`, `Standard_ChinaCdn`, `Standard_Microsoft`, `Standard_Verizon` or `Premium_Verizon`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/cdn/profile.ts#L136">property tags</a>
@@ -978,7 +994,7 @@ sku?: pulumi.Input<string>;
 ```
 
 
-The pricing related information of current CDN profile. Accepted values are `Standard_Verizon`, `Standard_Akamai` or `Premium_Verizon`.
+The pricing related information of current CDN profile. Accepted values are `Standard_Akamai`, `Standard_ChinaCdn`, `Standard_Microsoft`, `Standard_Verizon` or `Premium_Verizon`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/cdn/profile.ts#L108">property tags</a>

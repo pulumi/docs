@@ -39,7 +39,7 @@ Provides an SNS platform application resource
 </h3>
 
 ```typescript
-new PlatformApplication(name: string, args: PlatformApplicationArgs, opts?: pulumi.ResourceOptions)
+new PlatformApplication(name: string, args: PlatformApplicationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -62,7 +62,15 @@ Get an existing PlatformApplication resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -140,7 +148,7 @@ public failureFeedbackRoleArn: pulumi.Output<string | undefined>;
 The IAM role permitted to receive failure feedback for this application.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -240,7 +248,7 @@ Provides a way to set SNS SMS preferences.
 </h3>
 
 ```typescript
-new SmsPreferences(name: string, args?: SmsPreferencesArgs, opts?: pulumi.ResourceOptions)
+new SmsPreferences(name: string, args?: SmsPreferencesArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -263,7 +271,15 @@ Get an existing SmsPreferences resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -319,7 +335,7 @@ public deliveryStatusSuccessSamplingRate: pulumi.Output<string | undefined>;
 The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -375,7 +391,7 @@ Provides an SNS topic resource
 </h3>
 
 ```typescript
-new Topic(name: string, args?: TopicArgs, opts?: pulumi.ResourceOptions)
+new Topic(name: string, args?: TopicArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -398,7 +414,15 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -509,7 +533,7 @@ public httpSuccessFeedbackSampleRate: pulumi.Output<number | undefined>;
 Percentage of success to sample
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -644,7 +668,7 @@ Provides an SNS topic policy resource
 </h3>
 
 ```typescript
-new TopicPolicy(name: string, args: TopicPolicyArgs, opts?: pulumi.ResourceOptions)
+new TopicPolicy(name: string, args: TopicPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -667,7 +691,15 @@ Get an existing TopicPolicy resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -690,7 +722,7 @@ public arn: pulumi.Output<string>;
 The ARN of the SNS topic
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -746,7 +778,7 @@ probably be SQS queues.
 </h3>
 
 ```typescript
-new TopicSubscription(name: string, args: TopicSubscriptionArgs, opts?: pulumi.ResourceOptions)
+new TopicSubscription(name: string, args: TopicSubscriptionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -769,7 +801,15 @@ Get an existing TopicSubscription resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -844,7 +884,7 @@ public filterPolicy: pulumi.Output<string | undefined>;
 The text of a filter policy to the topic subscription.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -905,7 +945,7 @@ deployments.
 </h2>
 
 ```typescript
-getTopic(args: GetTopicArgs): Promise<GetTopicResult>
+getTopic(args: GetTopicArgs, opts?: pulumi.InvokeOptions): Promise<GetTopicResult>
 ```
 
 
@@ -924,7 +964,7 @@ A collection of arguments for invoking getTopic.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 

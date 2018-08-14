@@ -6,6 +6,42 @@ title: Module core/v1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isBinding">function isBinding</a>
+* <a href="#isComponentStatus">function isComponentStatus</a>
+* <a href="#isComponentStatusList">function isComponentStatusList</a>
+* <a href="#isConfigMap">function isConfigMap</a>
+* <a href="#isConfigMapList">function isConfigMapList</a>
+* <a href="#isEndpoints">function isEndpoints</a>
+* <a href="#isEndpointsList">function isEndpointsList</a>
+* <a href="#isEvent">function isEvent</a>
+* <a href="#isEventList">function isEventList</a>
+* <a href="#isLimitRange">function isLimitRange</a>
+* <a href="#isLimitRangeList">function isLimitRangeList</a>
+* <a href="#isNamespace">function isNamespace</a>
+* <a href="#isNamespaceList">function isNamespaceList</a>
+* <a href="#isNode">function isNode</a>
+* <a href="#isNodeConfigSource">function isNodeConfigSource</a>
+* <a href="#isNodeList">function isNodeList</a>
+* <a href="#isObjectFieldSelector">function isObjectFieldSelector</a>
+* <a href="#isObjectReference">function isObjectReference</a>
+* <a href="#isPersistentVolume">function isPersistentVolume</a>
+* <a href="#isPersistentVolumeClaim">function isPersistentVolumeClaim</a>
+* <a href="#isPersistentVolumeClaimList">function isPersistentVolumeClaimList</a>
+* <a href="#isPersistentVolumeList">function isPersistentVolumeList</a>
+* <a href="#isPod">function isPod</a>
+* <a href="#isPodList">function isPodList</a>
+* <a href="#isPodTemplate">function isPodTemplate</a>
+* <a href="#isPodTemplateList">function isPodTemplateList</a>
+* <a href="#isReplicationController">function isReplicationController</a>
+* <a href="#isReplicationControllerList">function isReplicationControllerList</a>
+* <a href="#isResourceQuota">function isResourceQuota</a>
+* <a href="#isResourceQuotaList">function isResourceQuotaList</a>
+* <a href="#isSecret">function isSecret</a>
+* <a href="#isSecretList">function isSecretList</a>
+* <a href="#isService">function isService</a>
+* <a href="#isServiceAccount">function isServiceAccount</a>
+* <a href="#isServiceAccountList">function isServiceAccountList</a>
+* <a href="#isServiceList">function isServiceList</a>
 * <a href="#AWSElasticBlockStoreVolumeSource">interface AWSElasticBlockStoreVolumeSource</a>
 * <a href="#Affinity">interface Affinity</a>
 * <a href="#AttachedVolume">interface AttachedVolume</a>
@@ -171,8 +207,296 @@ title: Module core/v1
 * <a href="#VsphereVirtualDiskVolumeSource">interface VsphereVirtualDiskVolumeSource</a>
 * <a href="#WeightedPodAffinityTerm">interface WeightedPodAffinityTerm</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isBinding">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6790">function isBinding</a>
+</h2>
+
+```typescript
+isBinding(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isComponentStatus">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L7026">function isComponentStatus</a>
+</h2>
+
+```typescript
+isComponentStatus(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isComponentStatusList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L7063">function isComponentStatusList</a>
+</h2>
+
+```typescript
+isComponentStatusList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isConfigMap">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L7101">function isConfigMap</a>
+</h2>
+
+```typescript
+isConfigMap(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isConfigMapList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L7181">function isConfigMapList</a>
+</h2>
+
+```typescript
+isConfigMapList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isEndpoints">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L7861">function isEndpoints</a>
+</h2>
+
+```typescript
+isEndpoints(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isEndpointsList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L7898">function isEndpointsList</a>
+</h2>
+
+```typescript
+isEndpointsList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isEvent">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8079">function isEvent</a>
+</h2>
+
+```typescript
+isEvent(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isEventList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8116">function isEventList</a>
+</h2>
+
+```typescript
+isEventList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isLimitRange">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8697">function isLimitRange</a>
+</h2>
+
+```typescript
+isLimitRange(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isLimitRangeList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8775">function isLimitRangeList</a>
+</h2>
+
+```typescript
+isLimitRangeList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isNamespace">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8917">function isNamespace</a>
+</h2>
+
+```typescript
+isNamespace(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isNamespaceList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8955">function isNamespaceList</a>
+</h2>
+
+```typescript
+isNamespaceList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isNode">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9026">function isNode</a>
+</h2>
+
+```typescript
+isNode(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isNodeConfigSource">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9136">function isNodeConfigSource</a>
+</h2>
+
+```typescript
+isNodeConfigSource(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isNodeList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9185">function isNodeList</a>
+</h2>
+
+```typescript
+isNodeList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isObjectFieldSelector">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9425">function isObjectFieldSelector</a>
+</h2>
+
+```typescript
+isObjectFieldSelector(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isObjectReference">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9481">function isObjectReference</a>
+</h2>
+
+```typescript
+isObjectReference(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPersistentVolume">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9528">function isPersistentVolume</a>
+</h2>
+
+```typescript
+isPersistentVolume(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPersistentVolumeClaim">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9573">function isPersistentVolumeClaim</a>
+</h2>
+
+```typescript
+isPersistentVolumeClaim(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPersistentVolumeClaimList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9646">function isPersistentVolumeClaimList</a>
+</h2>
+
+```typescript
+isPersistentVolumeClaimList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPersistentVolumeList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9778">function isPersistentVolumeList</a>
+</h2>
+
+```typescript
+isPersistentVolumeList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPod">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10050">function isPod</a>
+</h2>
+
+```typescript
+isPod(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPodList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10255">function isPodList</a>
+</h2>
+
+```typescript
+isPodList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPodTemplate">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10603">function isPodTemplate</a>
+</h2>
+
+```typescript
+isPodTemplate(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPodTemplateList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10640">function isPodTemplateList</a>
+</h2>
+
+```typescript
+isPodTemplateList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isReplicationController">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10975">function isReplicationController</a>
+</h2>
+
+```typescript
+isReplicationController(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isReplicationControllerList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11046">function isReplicationControllerList</a>
+</h2>
+
+```typescript
+isReplicationControllerList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isResourceQuota">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11190">function isResourceQuota</a>
+</h2>
+
+```typescript
+isResourceQuota(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isResourceQuotaList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11228">function isResourceQuotaList</a>
+</h2>
+
+```typescript
+isResourceQuotaList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isSecret">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11488">function isSecret</a>
+</h2>
+
+```typescript
+isSecret(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isSecretList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11570">function isSecretList</a>
+</h2>
+
+```typescript
+isSecretList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isService">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11765">function isService</a>
+</h2>
+
+```typescript
+isService(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isServiceAccount">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11820">function isServiceAccount</a>
+</h2>
+
+```typescript
+isServiceAccount(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isServiceAccountList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11858">function isServiceAccountList</a>
+</h2>
+
+```typescript
+isServiceAccountList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isServiceList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11895">function isServiceList</a>
+</h2>
+
+```typescript
+isServiceList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="AWSElasticBlockStoreVolumeSource">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6209">interface AWSElasticBlockStoreVolumeSource</a>
@@ -1012,7 +1336,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 </h3>
 
 ```typescript
-data: object;
+data: { ... };
 ```
 
 
@@ -2950,7 +3274,7 @@ Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
 </h3>
 
 ```typescript
-options: object;
+options: { ... };
 ```
 
 
@@ -6638,7 +6962,7 @@ requirements.
 </h3>
 
 ```typescript
-nodeSelector: object;
+nodeSelector: { ... };
 ```
 
 
@@ -7770,7 +8094,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#
 </h3>
 
 ```typescript
-selector: object;
+selector: { ... };
 ```
 
 
@@ -8483,7 +8807,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </h3>
 
 ```typescript
-stringData: object;
+stringData: { ... };
 ```
 
 
@@ -9360,7 +9684,7 @@ and all clients have been converted to use this field.
 </h3>
 
 ```typescript
-selector: object;
+selector: { ... };
 ```
 
 

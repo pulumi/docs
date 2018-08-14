@@ -54,7 +54,7 @@ Registers an on-premises server or virtual machine with Amazon EC2 so that it ca
 </h3>
 
 ```typescript
-new Activation(name: string, args: ActivationArgs, opts?: pulumi.ResourceOptions)
+new Activation(name: string, args: ActivationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -77,7 +77,15 @@ Get an existing Activation resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -144,7 +152,7 @@ public iamRole: pulumi.Output<string>;
 The IAM Role to attach to the managed instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -211,7 +219,7 @@ Associates an SSM Document to an instance or EC2 tag.
 </h3>
 
 ```typescript
-new Association(name: string, args?: AssociationArgs, opts?: pulumi.ResourceOptions)
+new Association(name: string, args?: AssociationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -234,7 +242,15 @@ Get an existing Association resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -276,7 +292,7 @@ public documentVersion: pulumi.Output<string>;
 The document version you want to associate with the target(s). Can be a specific version or the default version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -366,7 +382,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Document">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L13">class Document</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L15">class Document</a>
 </h2>
 
 Provides an SSM Document resource
@@ -376,11 +392,11 @@ or greater can update their content once created, see [SSM Schema Features][1]. 
 schema version you must recreate the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L94">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L96">constructor</a>
 </h3>
 
 ```typescript
-new Document(name: string, args: DocumentArgs, opts?: pulumi.ResourceOptions)
+new Document(name: string, args: DocumentArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -391,7 +407,7 @@ Create a Document resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L24">method get</a>
 </h3>
 
 ```typescript
@@ -403,7 +419,15 @@ Get an existing Document resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -415,7 +439,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L26">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L28">property arn</a>
 </h3>
 
 ```typescript
@@ -423,7 +447,7 @@ public arn: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L30">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L32">property content</a>
 </h3>
 
 ```typescript
@@ -434,7 +458,7 @@ public content: pulumi.Output<string>;
 The JSON or YAML content of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L34">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L36">property createdDate</a>
 </h3>
 
 ```typescript
@@ -445,7 +469,7 @@ public createdDate: pulumi.Output<string>;
 The date the document was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L38">property defaultVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L40">property defaultVersion</a>
 </h3>
 
 ```typescript
@@ -456,7 +480,7 @@ public defaultVersion: pulumi.Output<string>;
 The default version of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L42">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L44">property description</a>
 </h3>
 
 ```typescript
@@ -467,7 +491,7 @@ public description: pulumi.Output<string>;
 The description of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L46">property documentFormat</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L48">property documentFormat</a>
 </h3>
 
 ```typescript
@@ -478,7 +502,7 @@ public documentFormat: pulumi.Output<string | undefined>;
 The format of the document. Valid document types include: `JSON` and `YAML`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L50">property documentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L52">property documentType</a>
 </h3>
 
 ```typescript
@@ -489,7 +513,7 @@ public documentType: pulumi.Output<string>;
 The type of the document. Valid document types include: `Command`, `Policy` and `Automation`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L54">property hash</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L56">property hash</a>
 </h3>
 
 ```typescript
@@ -500,7 +524,7 @@ public hash: pulumi.Output<string>;
 The sha1 or sha256 of the document content
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L58">property hashType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L60">property hashType</a>
 </h3>
 
 ```typescript
@@ -511,7 +535,7 @@ public hashType: pulumi.Output<string>;
 "Sha1" "Sha256". The hashing algorithm used when hashing the content.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -523,7 +547,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L62">property latestVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L64">property latestVersion</a>
 </h3>
 
 ```typescript
@@ -534,7 +558,7 @@ public latestVersion: pulumi.Output<string>;
 The latest version of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L66">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L68">property name</a>
 </h3>
 
 ```typescript
@@ -545,7 +569,7 @@ public name: pulumi.Output<string>;
 The name of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L70">property owner</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L72">property owner</a>
 </h3>
 
 ```typescript
@@ -556,7 +580,7 @@ public owner: pulumi.Output<string>;
 The AWS user account of the person who created the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L74">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L76">property parameters</a>
 </h3>
 
 ```typescript
@@ -567,7 +591,7 @@ public parameters: pulumi.Output<{ ... }[]>;
 The parameters that are available to this document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L78">property permissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L80">property permissions</a>
 </h3>
 
 ```typescript
@@ -578,7 +602,7 @@ public permissions: pulumi.Output<{ ... } | undefined>;
 Additional Permissions to attach to the document. See [Permissions](#permissions) below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L82">property platformTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L84">property platformTypes</a>
 </h3>
 
 ```typescript
@@ -589,7 +613,7 @@ public platformTypes: pulumi.Output<string[]>;
 A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L86">property schemaVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L88">property schemaVersion</a>
 </h3>
 
 ```typescript
@@ -600,7 +624,7 @@ public schemaVersion: pulumi.Output<string>;
 The schema version of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L90">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L92">property status</a>
 </h3>
 
 ```typescript
@@ -611,11 +635,11 @@ public status: pulumi.Output<string>;
 "Creating", "Active" or "Deleting". The current status of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L94">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L96">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -644,7 +668,7 @@ Provides an SSM Maintenance Window resource
 </h3>
 
 ```typescript
-new MaintenanceWindow(name: string, args: MaintenanceWindowArgs, opts?: pulumi.ResourceOptions)
+new MaintenanceWindow(name: string, args: MaintenanceWindowArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -667,7 +691,15 @@ Get an existing MaintenanceWindow resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -720,7 +752,7 @@ public enabled: pulumi.Output<boolean | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -776,7 +808,7 @@ Provides an SSM Maintenance Window Target resource
 </h3>
 
 ```typescript
-new MaintenanceWindowTarget(name: string, args: MaintenanceWindowTargetArgs, opts?: pulumi.ResourceOptions)
+new MaintenanceWindowTarget(name: string, args: MaintenanceWindowTargetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -799,7 +831,15 @@ Get an existing MaintenanceWindowTarget resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -811,7 +851,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -889,7 +929,7 @@ Provides an SSM Maintenance Window Task resource
 </h3>
 
 ```typescript
-new MaintenanceWindowTask(name: string, args: MaintenanceWindowTaskArgs, opts?: pulumi.ResourceOptions)
+new MaintenanceWindowTask(name: string, args: MaintenanceWindowTaskArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -912,7 +952,15 @@ Get an existing MaintenanceWindowTask resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -924,7 +972,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1058,17 +1106,17 @@ public windowId: pulumi.Output<string>;
 The Id of the maintenance window to register the task with.
 
 <h2 class="pdoc-module-header" id="Parameter">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L9">class Parameter</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L11">class Parameter</a>
 </h2>
 
 Provides an SSM Parameter resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L57">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L59">constructor</a>
 </h3>
 
 ```typescript
-new Parameter(name: string, args: ParameterArgs, opts?: pulumi.ResourceOptions)
+new Parameter(name: string, args: ParameterArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1079,7 +1127,7 @@ Create a Parameter resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -1091,7 +1139,15 @@ Get an existing Parameter resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1103,7 +1159,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L25">property allowedPattern</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L27">property allowedPattern</a>
 </h3>
 
 ```typescript
@@ -1114,7 +1170,7 @@ public allowedPattern: pulumi.Output<string | undefined>;
 A regular expression used to validate the parameter value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L29">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L31">property arn</a>
 </h3>
 
 ```typescript
@@ -1125,7 +1181,7 @@ public arn: pulumi.Output<string>;
 The ARN of the parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L33">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L35">property description</a>
 </h3>
 
 ```typescript
@@ -1136,7 +1192,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1148,7 +1204,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L37">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L39">property keyId</a>
 </h3>
 
 ```typescript
@@ -1159,7 +1215,7 @@ public keyId: pulumi.Output<string>;
 The KMS key id or arn for encrypting a SecureString.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L41">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L43">property name</a>
 </h3>
 
 ```typescript
@@ -1170,7 +1226,7 @@ public name: pulumi.Output<string>;
 The name of the parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L45">property overwrite</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L47">property overwrite</a>
 </h3>
 
 ```typescript
@@ -1181,18 +1237,18 @@ public overwrite: pulumi.Output<boolean | undefined>;
 Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by terraform to avoid overwrite of existing resource and will default to `true` otherwise (terraform lifecycle rules should then be used to manage the update behavior).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L49">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L51">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
 A mapping of tags to assign to the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L53">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L55">property type</a>
 </h3>
 
 ```typescript
@@ -1215,7 +1271,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L57">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L59">property value</a>
 </h3>
 
 ```typescript
@@ -1240,7 +1296,7 @@ of them is specified.
 </h3>
 
 ```typescript
-new PatchBaseline(name: string, args?: PatchBaselineArgs, opts?: pulumi.ResourceOptions)
+new PatchBaseline(name: string, args?: PatchBaselineArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1263,7 +1319,15 @@ Get an existing PatchBaseline resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1330,7 +1394,7 @@ public globalFilters: pulumi.Output<{ ... }[] | undefined>;
 A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1361,7 +1425,7 @@ public operatingSystem: pulumi.Output<string | undefined>;
 ```
 
 
-Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
+Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/patchBaseline.ts#L57">property rejectedPatches</a>
@@ -1397,7 +1461,7 @@ Provides an SSM Patch Group resource
 </h3>
 
 ```typescript
-new PatchGroup(name: string, args: PatchGroupArgs, opts?: pulumi.ResourceOptions)
+new PatchGroup(name: string, args: PatchGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1420,7 +1484,15 @@ Get an existing PatchGroup resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1443,7 +1515,7 @@ public baselineId: pulumi.Output<string>;
 The ID of the patch baseline to register the patch group with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1488,7 +1560,7 @@ Provides a SSM resource data sync.
 </h3>
 
 ```typescript
-new ResourceDataSync(name: string, args: ResourceDataSyncArgs, opts?: pulumi.ResourceOptions)
+new ResourceDataSync(name: string, args: ResourceDataSyncArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1511,7 +1583,15 @@ Get an existing ResourceDataSync resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1523,7 +1603,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1573,7 +1653,7 @@ deployments.
 </h2>
 
 ```typescript
-getParameter(args: GetParameterArgs): Promise<GetParameterResult>
+getParameter(args: GetParameterArgs, opts?: pulumi.InvokeOptions): Promise<GetParameterResult>
 ```
 
 
@@ -1822,7 +1902,7 @@ A cron expression when the association will be applied to the target(s).
 </h3>
 
 ```typescript
-targets?: pulumi.Input<{ ... }[]>;
+targets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1924,20 +2004,20 @@ A cron expression when the association will be applied to the target(s).
 </h3>
 
 ```typescript
-targets?: pulumi.Input<{ ... }[]>;
+targets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 
 <h2 class="pdoc-module-header" id="DocumentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L235">interface DocumentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L237">interface DocumentArgs</a>
 </h2>
 
 The set of arguments for constructing a Document resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L239">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L241">property content</a>
 </h3>
 
 ```typescript
@@ -1948,7 +2028,7 @@ content: pulumi.Input<string>;
 The JSON or YAML content of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L243">property documentFormat</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L245">property documentFormat</a>
 </h3>
 
 ```typescript
@@ -1959,7 +2039,7 @@ documentFormat?: pulumi.Input<string>;
 The format of the document. Valid document types include: `JSON` and `YAML`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L247">property documentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L249">property documentType</a>
 </h3>
 
 ```typescript
@@ -1970,7 +2050,7 @@ documentType: pulumi.Input<string>;
 The type of the document. Valid document types include: `Command`, `Policy` and `Automation`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L251">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L253">property name</a>
 </h3>
 
 ```typescript
@@ -1981,7 +2061,7 @@ name?: pulumi.Input<string>;
 The name of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L255">property permissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L257">property permissions</a>
 </h3>
 
 ```typescript
@@ -1992,24 +2072,24 @@ permissions?: pulumi.Input<{ ... }>;
 Additional Permissions to attach to the document. See [Permissions](#permissions) below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L259">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L261">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the object.
 
 <h2 class="pdoc-module-header" id="DocumentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L160">interface DocumentState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L162">interface DocumentState</a>
 </h2>
 
 Input properties used for looking up and filtering Document resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L161">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L163">property arn</a>
 </h3>
 
 ```typescript
@@ -2017,7 +2097,7 @@ arn?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L165">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L167">property content</a>
 </h3>
 
 ```typescript
@@ -2028,7 +2108,7 @@ content?: pulumi.Input<string>;
 The JSON or YAML content of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L169">property createdDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L171">property createdDate</a>
 </h3>
 
 ```typescript
@@ -2039,7 +2119,7 @@ createdDate?: pulumi.Input<string>;
 The date the document was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L173">property defaultVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L175">property defaultVersion</a>
 </h3>
 
 ```typescript
@@ -2050,7 +2130,7 @@ defaultVersion?: pulumi.Input<string>;
 The default version of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L177">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L179">property description</a>
 </h3>
 
 ```typescript
@@ -2061,7 +2141,7 @@ description?: pulumi.Input<string>;
 The description of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L181">property documentFormat</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L183">property documentFormat</a>
 </h3>
 
 ```typescript
@@ -2072,7 +2152,7 @@ documentFormat?: pulumi.Input<string>;
 The format of the document. Valid document types include: `JSON` and `YAML`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L185">property documentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L187">property documentType</a>
 </h3>
 
 ```typescript
@@ -2083,7 +2163,7 @@ documentType?: pulumi.Input<string>;
 The type of the document. Valid document types include: `Command`, `Policy` and `Automation`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L189">property hash</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L191">property hash</a>
 </h3>
 
 ```typescript
@@ -2094,7 +2174,7 @@ hash?: pulumi.Input<string>;
 The sha1 or sha256 of the document content
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L193">property hashType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L195">property hashType</a>
 </h3>
 
 ```typescript
@@ -2105,7 +2185,7 @@ hashType?: pulumi.Input<string>;
 "Sha1" "Sha256". The hashing algorithm used when hashing the content.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L197">property latestVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L199">property latestVersion</a>
 </h3>
 
 ```typescript
@@ -2116,7 +2196,7 @@ latestVersion?: pulumi.Input<string>;
 The latest version of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L201">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L203">property name</a>
 </h3>
 
 ```typescript
@@ -2127,7 +2207,7 @@ name?: pulumi.Input<string>;
 The name of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L205">property owner</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L207">property owner</a>
 </h3>
 
 ```typescript
@@ -2138,18 +2218,18 @@ owner?: pulumi.Input<string>;
 The AWS user account of the person who created the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L209">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L211">property parameters</a>
 </h3>
 
 ```typescript
-parameters?: pulumi.Input<{ ... }[]>;
+parameters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 The parameters that are available to this document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L213">property permissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L215">property permissions</a>
 </h3>
 
 ```typescript
@@ -2160,7 +2240,7 @@ permissions?: pulumi.Input<{ ... }>;
 Additional Permissions to attach to the document. See [Permissions](#permissions) below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L217">property platformTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L219">property platformTypes</a>
 </h3>
 
 ```typescript
@@ -2171,7 +2251,7 @@ platformTypes?: pulumi.Input<pulumi.Input<string>[]>;
 A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L221">property schemaVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L223">property schemaVersion</a>
 </h3>
 
 ```typescript
@@ -2182,7 +2262,7 @@ schemaVersion?: pulumi.Input<string>;
 The schema version of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L225">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L227">property status</a>
 </h3>
 
 ```typescript
@@ -2193,11 +2273,11 @@ status?: pulumi.Input<string>;
 "Creating", "Active" or "Deleting". The current status of the document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L229">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L231">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
@@ -2214,7 +2294,7 @@ A collection of arguments for invoking getParameter.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -2225,7 +2305,7 @@ The name of the parameter.
 </h3>
 
 ```typescript
-withDecryption?: pulumi.Input<boolean>;
+withDecryption?: boolean;
 ```
 
 
@@ -2443,7 +2523,7 @@ The type of target being registered with the Maintenance Window. Possible values
 </h3>
 
 ```typescript
-targets: pulumi.Input<{ ... }[]>;
+targets: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2493,7 +2573,7 @@ The type of target being registered with the Maintenance Window. Possible values
 </h3>
 
 ```typescript
-targets?: pulumi.Input<{ ... }[]>;
+targets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2576,7 +2656,7 @@ The role that should be assumed when executing the task.
 </h3>
 
 ```typescript
-targets: pulumi.Input<{ ... }[]>;
+targets: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2598,7 +2678,7 @@ The ARN of the task to execute.
 </h3>
 
 ```typescript
-taskParameters?: pulumi.Input<{ ... }[]>;
+taskParameters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2692,7 +2772,7 @@ The role that should be assumed when executing the task.
 </h3>
 
 ```typescript
-targets?: pulumi.Input<{ ... }[]>;
+targets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2714,7 +2794,7 @@ The ARN of the task to execute.
 </h3>
 
 ```typescript
-taskParameters?: pulumi.Input<{ ... }[]>;
+taskParameters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2743,13 +2823,13 @@ windowId?: pulumi.Input<string>;
 The Id of the maintenance window to register the task with.
 
 <h2 class="pdoc-module-header" id="ParameterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L147">interface ParameterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L149">interface ParameterArgs</a>
 </h2>
 
 The set of arguments for constructing a Parameter resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L151">property allowedPattern</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L153">property allowedPattern</a>
 </h3>
 
 ```typescript
@@ -2760,7 +2840,7 @@ allowedPattern?: pulumi.Input<string>;
 A regular expression used to validate the parameter value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L155">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L157">property arn</a>
 </h3>
 
 ```typescript
@@ -2771,7 +2851,7 @@ arn?: pulumi.Input<string>;
 The ARN of the parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L159">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L161">property description</a>
 </h3>
 
 ```typescript
@@ -2782,7 +2862,7 @@ description?: pulumi.Input<string>;
 The description of the parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L163">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L165">property keyId</a>
 </h3>
 
 ```typescript
@@ -2793,7 +2873,7 @@ keyId?: pulumi.Input<string>;
 The KMS key id or arn for encrypting a SecureString.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L167">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L169">property name</a>
 </h3>
 
 ```typescript
@@ -2804,7 +2884,7 @@ name?: pulumi.Input<string>;
 The name of the parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L171">property overwrite</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L173">property overwrite</a>
 </h3>
 
 ```typescript
@@ -2815,18 +2895,18 @@ overwrite?: pulumi.Input<boolean>;
 Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by terraform to avoid overwrite of existing resource and will default to `true` otherwise (terraform lifecycle rules should then be used to manage the update behavior).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L175">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L177">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L179">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L181">property type</a>
 </h3>
 
 ```typescript
@@ -2837,7 +2917,7 @@ type: pulumi.Input<string>;
 The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L183">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L185">property value</a>
 </h3>
 
 ```typescript
@@ -2848,13 +2928,13 @@ value: pulumi.Input<string>;
 The value of the parameter.
 
 <h2 class="pdoc-module-header" id="ParameterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L105">interface ParameterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L107">interface ParameterState</a>
 </h2>
 
 Input properties used for looking up and filtering Parameter resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L109">property allowedPattern</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L111">property allowedPattern</a>
 </h3>
 
 ```typescript
@@ -2865,7 +2945,7 @@ allowedPattern?: pulumi.Input<string>;
 A regular expression used to validate the parameter value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L113">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L115">property arn</a>
 </h3>
 
 ```typescript
@@ -2876,7 +2956,7 @@ arn?: pulumi.Input<string>;
 The ARN of the parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L117">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L119">property description</a>
 </h3>
 
 ```typescript
@@ -2887,7 +2967,7 @@ description?: pulumi.Input<string>;
 The description of the parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L121">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L123">property keyId</a>
 </h3>
 
 ```typescript
@@ -2898,7 +2978,7 @@ keyId?: pulumi.Input<string>;
 The KMS key id or arn for encrypting a SecureString.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L125">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L127">property name</a>
 </h3>
 
 ```typescript
@@ -2909,7 +2989,7 @@ name?: pulumi.Input<string>;
 The name of the parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L129">property overwrite</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L131">property overwrite</a>
 </h3>
 
 ```typescript
@@ -2920,18 +3000,18 @@ overwrite?: pulumi.Input<boolean>;
 Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by terraform to avoid overwrite of existing resource and will default to `true` otherwise (terraform lifecycle rules should then be used to manage the update behavior).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L133">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L135">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L137">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L139">property type</a>
 </h3>
 
 ```typescript
@@ -2942,7 +3022,7 @@ type?: pulumi.Input<string>;
 The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L141">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts#L143">property value</a>
 </h3>
 
 ```typescript
@@ -2963,7 +3043,7 @@ The set of arguments for constructing a PatchBaseline resource.
 </h3>
 
 ```typescript
-approvalRules?: pulumi.Input<{ ... }[]>;
+approvalRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3007,7 +3087,7 @@ The description of the patch baseline.
 </h3>
 
 ```typescript
-globalFilters?: pulumi.Input<{ ... }[]>;
+globalFilters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3033,7 +3113,7 @@ operatingSystem?: pulumi.Input<string>;
 ```
 
 
-Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
+Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/patchBaseline.ts#L167">property rejectedPatches</a>
@@ -3057,7 +3137,7 @@ Input properties used for looking up and filtering PatchBaseline resources.
 </h3>
 
 ```typescript
-approvalRules?: pulumi.Input<{ ... }[]>;
+approvalRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3101,7 +3181,7 @@ The description of the patch baseline.
 </h3>
 
 ```typescript
-globalFilters?: pulumi.Input<{ ... }[]>;
+globalFilters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3127,7 +3207,7 @@ operatingSystem?: pulumi.Input<string>;
 ```
 
 
-Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
+Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/patchBaseline.ts#L129">property rejectedPatches</a>

@@ -36,7 +36,7 @@ Provides an ECR lifecycle policy.
 </h3>
 
 ```typescript
-new LifecyclePolicy(name: string, args: LifecyclePolicyArgs, opts?: pulumi.ResourceOptions)
+new LifecyclePolicy(name: string, args: LifecyclePolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -59,7 +59,15 @@ Get an existing LifecyclePolicy resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -71,7 +79,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -142,7 +150,7 @@ in all regions - available regions are listed
 </h3>
 
 ```typescript
-new Repository(name: string, args?: RepositoryArgs, opts?: pulumi.ResourceOptions)
+new Repository(name: string, args?: RepositoryArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -165,7 +173,15 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -188,7 +204,7 @@ public arn: pulumi.Output<string>;
 Full ARN of the repository.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -261,7 +277,7 @@ in all regions - available regions are listed
 </h3>
 
 ```typescript
-new RepositoryPolicy(name: string, args: RepositoryPolicyArgs, opts?: pulumi.ResourceOptions)
+new RepositoryPolicy(name: string, args: RepositoryPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -284,7 +300,15 @@ Get an existing RepositoryPolicy resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -296,7 +320,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -357,7 +381,7 @@ deployments.
 </h2>
 
 ```typescript
-getCredentials(args: GetCredentialsArgs): Promise<GetCredentialsResult>
+getCredentials(args: GetCredentialsArgs, opts?: pulumi.InvokeOptions): Promise<GetCredentialsResult>
 ```
 
 <h2 class="pdoc-module-header" id="getRepository">
@@ -365,7 +389,7 @@ getCredentials(args: GetCredentialsArgs): Promise<GetCredentialsResult>
 </h2>
 
 ```typescript
-getRepository(args: GetRepositoryArgs): Promise<GetRepositoryResult>
+getRepository(args: GetRepositoryArgs, opts?: pulumi.InvokeOptions): Promise<GetRepositoryResult>
 ```
 
 
@@ -382,7 +406,7 @@ A collection of arguments for invoking getCredentials.
 </h3>
 
 ```typescript
-registryId: pulumi.Input<string>;
+registryId: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetCredentialsResult">
@@ -437,7 +461,7 @@ A collection of arguments for invoking getRepository.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 

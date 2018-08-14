@@ -6,6 +6,8 @@ title: Module networking/v1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isNetworkPolicy">function isNetworkPolicy</a>
+* <a href="#isNetworkPolicyList">function isNetworkPolicyList</a>
 * <a href="#IPBlock">interface IPBlock</a>
 * <a href="#NetworkPolicy">interface NetworkPolicy</a>
 * <a href="#NetworkPolicyEgressRule">interface NetworkPolicyEgressRule</a>
@@ -15,8 +17,24 @@ title: Module networking/v1
 * <a href="#NetworkPolicyPort">interface NetworkPolicyPort</a>
 * <a href="#NetworkPolicySpec">interface NetworkPolicySpec</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isNetworkPolicy">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L15273">function isNetworkPolicy</a>
+</h2>
+
+```typescript
+isNetworkPolicy(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isNetworkPolicyList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L15362">function isNetworkPolicyList</a>
+</h2>
+
+```typescript
+isNetworkPolicyList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="IPBlock">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14428">interface IPBlock</a>

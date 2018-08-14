@@ -44,11 +44,11 @@ title: Module storage
 Create an Azure Storage Account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L143">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L147">constructor</a>
 </h3>
 
 ```typescript
-new Account(name: string, args: AccountArgs, opts?: pulumi.ResourceOptions)
+new Account(name: string, args: AccountArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -71,7 +71,15 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -91,7 +99,7 @@ public accessTier: pulumi.Output<string>;
 ```
 
 
-Defines the access tier for `BlobStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cold`, defaults to `Hot`.
+Defines the access tier for `BlobStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L29">property accountEncryptionSource</a>
@@ -159,33 +167,29 @@ public customDomain: pulumi.Output<{ ... } | undefined>;
 A `custom_domain` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L54">property enableBlobEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L52">property enableBlobEncryption</a>
 </h3>
 
 ```typescript
-public enableBlobEncryption: pulumi.Output<boolean>;
+public enableBlobEncryption: pulumi.Output<boolean | undefined>;
 ```
 
 
-Boolean flag which controls if Encryption
-Services are enabled for Blob storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)
-for more information.
+Boolean flag which controls if Encryption Services are enabled for Blob storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/) for more information. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L60">property enableFileEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L56">property enableFileEncryption</a>
 </h3>
 
 ```typescript
-public enableFileEncryption: pulumi.Output<boolean>;
+public enableFileEncryption: pulumi.Output<boolean | undefined>;
 ```
 
 
-Boolean flag which controls if Encryption
-Services are enabled for File storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)
-for more information.
+Boolean flag which controls if Encryption Services are enabled for File storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/) for more information. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L65">property enableHttpsTrafficOnly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L61">property enableHttpsTrafficOnly</a>
 </h3>
 
 ```typescript
@@ -197,7 +201,7 @@ Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.co
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -207,6 +211,17 @@ id: Output<ID>;
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L65">property identity</a>
+</h3>
+
+```typescript
+public identity: pulumi.Output<{ ... }>;
+```
+
+
+A Managed Service Identity block as defined below.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L70">property location</a>
@@ -232,7 +247,18 @@ public name: pulumi.Output<string>;
 The Custom Domain Name to use for the Storage Account, which will be validated by Azure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L78">property primaryAccessKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L78">property networkRules</a>
+</h3>
+
+```typescript
+public networkRules: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A `network_rules` block as documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L82">property primaryAccessKey</a>
 </h3>
 
 ```typescript
@@ -243,7 +269,7 @@ public primaryAccessKey: pulumi.Output<string>;
 The primary access key for the storage account
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L82">property primaryBlobConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L86">property primaryBlobConnectionString</a>
 </h3>
 
 ```typescript
@@ -254,7 +280,7 @@ public primaryBlobConnectionString: pulumi.Output<string>;
 The connection string associated with the primary blob location
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L86">property primaryBlobEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L90">property primaryBlobEndpoint</a>
 </h3>
 
 ```typescript
@@ -265,7 +291,7 @@ public primaryBlobEndpoint: pulumi.Output<string>;
 The endpoint URL for blob storage in the primary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L90">property primaryConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L94">property primaryConnectionString</a>
 </h3>
 
 ```typescript
@@ -276,7 +302,7 @@ public primaryConnectionString: pulumi.Output<string>;
 The connection string associated with the primary location
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L94">property primaryFileEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L98">property primaryFileEndpoint</a>
 </h3>
 
 ```typescript
@@ -287,7 +313,7 @@ public primaryFileEndpoint: pulumi.Output<string>;
 The endpoint URL for file storage in the primary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L98">property primaryLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L102">property primaryLocation</a>
 </h3>
 
 ```typescript
@@ -298,7 +324,7 @@ public primaryLocation: pulumi.Output<string>;
 The primary location of the storage account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L102">property primaryQueueEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L106">property primaryQueueEndpoint</a>
 </h3>
 
 ```typescript
@@ -309,7 +335,7 @@ public primaryQueueEndpoint: pulumi.Output<string>;
 The endpoint URL for queue storage in the primary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L106">property primaryTableEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L110">property primaryTableEndpoint</a>
 </h3>
 
 ```typescript
@@ -320,7 +346,7 @@ public primaryTableEndpoint: pulumi.Output<string>;
 The endpoint URL for table storage in the primary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L111">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L115">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -332,7 +358,7 @@ The name of the resource group in which to
 create the storage account. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L115">property secondaryAccessKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L119">property secondaryAccessKey</a>
 </h3>
 
 ```typescript
@@ -343,7 +369,7 @@ public secondaryAccessKey: pulumi.Output<string>;
 The secondary access key for the storage account
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L119">property secondaryBlobConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L123">property secondaryBlobConnectionString</a>
 </h3>
 
 ```typescript
@@ -354,7 +380,7 @@ public secondaryBlobConnectionString: pulumi.Output<string>;
 The connection string associated with the secondary blob location
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L123">property secondaryBlobEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L127">property secondaryBlobEndpoint</a>
 </h3>
 
 ```typescript
@@ -365,7 +391,7 @@ public secondaryBlobEndpoint: pulumi.Output<string>;
 The endpoint URL for blob storage in the secondary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L127">property secondaryConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L131">property secondaryConnectionString</a>
 </h3>
 
 ```typescript
@@ -376,7 +402,7 @@ public secondaryConnectionString: pulumi.Output<string>;
 The connection string associated with the secondary location
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L131">property secondaryLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L135">property secondaryLocation</a>
 </h3>
 
 ```typescript
@@ -387,7 +413,7 @@ public secondaryLocation: pulumi.Output<string>;
 The secondary location of the storage account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L135">property secondaryQueueEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L139">property secondaryQueueEndpoint</a>
 </h3>
 
 ```typescript
@@ -398,7 +424,7 @@ public secondaryQueueEndpoint: pulumi.Output<string>;
 The endpoint URL for queue storage in the secondary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L139">property secondaryTableEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L143">property secondaryTableEndpoint</a>
 </h3>
 
 ```typescript
@@ -409,7 +435,7 @@ public secondaryTableEndpoint: pulumi.Output<string>;
 The endpoint URL for table storage in the secondary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L143">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L147">property tags</a>
 </h3>
 
 ```typescript
@@ -438,11 +464,11 @@ deployments.
 Create an Azure Storage Blob.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L69">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L73">constructor</a>
 </h3>
 
 ```typescript
-new Blob(name: string, args: BlobArgs, opts?: pulumi.ResourceOptions)
+new Blob(name: string, args: BlobArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -465,7 +491,15 @@ Get an existing Blob resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -488,7 +522,18 @@ public attempts: pulumi.Output<number | undefined>;
 The number of attempts to make per page or block when uploading. Defaults to `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L29">property contentType</a>
+</h3>
+
+```typescript
+public contentType: pulumi.Output<string | undefined>;
+```
+
+
+The content type of the storage blob. Cannot be defined if `source_uri` is defined. Defaults to `application/octet-stream`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -500,7 +545,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L33">property name</a>
 </h3>
 
 ```typescript
@@ -511,7 +556,7 @@ public name: pulumi.Output<string>;
 The name of the storage blob. Must be unique within the storage container the blob is located.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L33">property parallelism</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L37">property parallelism</a>
 </h3>
 
 ```typescript
@@ -522,7 +567,7 @@ public parallelism: pulumi.Output<number | undefined>;
 The number of workers per CPU core to run for concurrent uploads. Defaults to `8`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L38">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L42">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -534,7 +579,7 @@ The name of the resource group in which to
 create the storage container. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L42">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L46">property size</a>
 </h3>
 
 ```typescript
@@ -545,7 +590,7 @@ public size: pulumi.Output<number | undefined>;
 Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L46">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L50">property source</a>
 </h3>
 
 ```typescript
@@ -556,7 +601,7 @@ public source: pulumi.Output<string | undefined>;
 An absolute path to a file on the local system. Cannot be defined if `source_uri` is defined.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L51">property sourceUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L55">property sourceUri</a>
 </h3>
 
 ```typescript
@@ -568,7 +613,7 @@ The URI of an existing blob, or a file in the Azure File service, to use as the 
 for the blob to be created. Changing this forces a new resource to be created. Cannot be defined if `source` is defined.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L56">property storageAccountName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L60">property storageAccountName</a>
 </h3>
 
 ```typescript
@@ -580,7 +625,7 @@ Specifies the storage account in which to create the storage container.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L60">property storageContainerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L64">property storageContainerName</a>
 </h3>
 
 ```typescript
@@ -591,7 +636,7 @@ public storageContainerName: pulumi.Output<string>;
 The name of the storage container in which this blob should be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L65">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L69">property type</a>
 </h3>
 
 ```typescript
@@ -603,7 +648,7 @@ The type of the storage blob to be created. One of either `block` or `page`. Whe
 this becomes required.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L69">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L73">property url</a>
 </h3>
 
 ```typescript
@@ -636,7 +681,7 @@ Create an Azure Storage Container.
 </h3>
 
 ```typescript
-new Container(name: string, args: ContainerArgs, opts?: pulumi.ResourceOptions)
+new Container(name: string, args: ContainerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -659,7 +704,15 @@ Get an existing Container resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -682,7 +735,7 @@ public containerAccessType: pulumi.Output<string | undefined>;
 The 'interface' for access the container provides. Can be either `blob`, `container` or `private`. Defaults to `private`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -762,7 +815,7 @@ Create an Azure Storage Queue.
 </h3>
 
 ```typescript
-new Queue(name: string, args: QueueArgs, opts?: pulumi.ResourceOptions)
+new Queue(name: string, args: QueueArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -785,7 +838,15 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -797,7 +858,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -866,7 +927,7 @@ Create an Azure Storage File Share.
 </h3>
 
 ```typescript
-new Share(name: string, args: ShareArgs, opts?: pulumi.ResourceOptions)
+new Share(name: string, args: ShareArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -889,7 +950,15 @@ Get an existing Share resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -901,7 +970,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -932,7 +1001,7 @@ public quota: pulumi.Output<number | undefined>;
 ```
 
 
-The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5 TB (5120 GB). Default this is set to 0 which results in setting the quota to 5 TB.
+The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5 TB (5120 GB). Default is 5120.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/share.ts#L34">property resourceGroupName</a>
@@ -992,7 +1061,7 @@ Create an Azure Storage Table.
 </h3>
 
 ```typescript
-new Table(name: string, args: TableArgs, opts?: pulumi.ResourceOptions)
+new Table(name: string, args: TableArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1015,7 +1084,15 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1027,7 +1104,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1089,11 +1166,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L6">class ZipBlob</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L29">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L30">constructor</a>
 </h3>
 
 ```typescript
-new ZipBlob(name: string, args: ZipBlobArgs, opts?: pulumi.ResourceOptions)
+new ZipBlob(name: string, args: ZipBlobArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1116,7 +1193,15 @@ Get an existing ZipBlob resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1136,7 +1221,7 @@ public attempts: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L24">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L25">property content</a>
 </h3>
 
 ```typescript
@@ -1144,7 +1229,15 @@ public content: pulumi.Output<pulumi.asset.Archive | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L20">property contentType</a>
+</h3>
+
+```typescript
+public contentType: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1156,7 +1249,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L20">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L21">property name</a>
 </h3>
 
 ```typescript
@@ -1164,7 +1257,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L21">property parallelism</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L22">property parallelism</a>
 </h3>
 
 ```typescript
@@ -1172,7 +1265,7 @@ public parallelism: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L22">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L23">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1180,7 +1273,7 @@ public resourceGroupName: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L23">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L24">property size</a>
 </h3>
 
 ```typescript
@@ -1188,7 +1281,7 @@ public size: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L25">property sourceUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L26">property sourceUri</a>
 </h3>
 
 ```typescript
@@ -1196,7 +1289,7 @@ public sourceUri: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L26">property storageAccountName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L27">property storageAccountName</a>
 </h3>
 
 ```typescript
@@ -1204,7 +1297,7 @@ public storageAccountName: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L27">property storageContainerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L28">property storageContainerName</a>
 </h3>
 
 ```typescript
@@ -1212,7 +1305,7 @@ public storageContainerName: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L28">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L29">property type</a>
 </h3>
 
 ```typescript
@@ -1220,7 +1313,7 @@ public type: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L29">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L30">property url</a>
 </h3>
 
 ```typescript
@@ -1244,7 +1337,7 @@ deployments.
 </h2>
 
 ```typescript
-getAccount(args: GetAccountArgs): Promise<GetAccountResult>
+getAccount(args: GetAccountArgs, opts?: pulumi.InvokeOptions): Promise<GetAccountResult>
 ```
 
 
@@ -1255,7 +1348,7 @@ Gets information about the specified Storage Account.
 </h2>
 
 ```typescript
-getAccountSAS(args: GetAccountSASArgs): Promise<GetAccountSASResult>
+getAccountSAS(args: GetAccountSASArgs, opts?: pulumi.InvokeOptions): Promise<GetAccountSASResult>
 ```
 
 
@@ -1267,13 +1360,13 @@ Note that this is an [Account SAS](https://docs.microsoft.com/en-us/rest/api/sto
 and *not* a [Service SAS](https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas).
 
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L365">interface AccountArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L377">interface AccountArgs</a>
 </h2>
 
 The set of arguments for constructing a Account resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L369">property accessTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L381">property accessTier</a>
 </h3>
 
 ```typescript
@@ -1281,10 +1374,10 @@ accessTier?: pulumi.Input<string>;
 ```
 
 
-Defines the access tier for `BlobStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cold`, defaults to `Hot`.
+Defines the access tier for `BlobStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L373">property accountEncryptionSource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L385">property accountEncryptionSource</a>
 </h3>
 
 ```typescript
@@ -1295,7 +1388,7 @@ accountEncryptionSource?: pulumi.Input<string>;
 The Encryption Source for this Storage Account. Possible values are `Microsoft.Keyvault` and `Microsoft.Storage`. Defaults to `Microsoft.Storage`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L379">property accountKind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L391">property accountKind</a>
 </h3>
 
 ```typescript
@@ -1308,7 +1401,7 @@ Defines the Kind of account. Valid options are `Storage`,
 Defaults to `Storage`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L383">property accountReplicationType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L395">property accountReplicationType</a>
 </h3>
 
 ```typescript
@@ -1319,7 +1412,7 @@ accountReplicationType: pulumi.Input<string>;
 Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS` and `ZRS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L387">property accountTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L399">property accountTier</a>
 </h3>
 
 ```typescript
@@ -1330,7 +1423,7 @@ accountTier: pulumi.Input<string>;
 Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. Changing this forces a new resource to be created
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L388">property accountType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L400">property accountType</a>
 </h3>
 
 ```typescript
@@ -1338,7 +1431,7 @@ accountType?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L392">property customDomain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L404">property customDomain</a>
 </h3>
 
 ```typescript
@@ -1349,7 +1442,7 @@ customDomain?: pulumi.Input<{ ... }>;
 A `custom_domain` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L398">property enableBlobEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L408">property enableBlobEncryption</a>
 </h3>
 
 ```typescript
@@ -1357,12 +1450,10 @@ enableBlobEncryption?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag which controls if Encryption
-Services are enabled for Blob storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)
-for more information.
+Boolean flag which controls if Encryption Services are enabled for Blob storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/) for more information. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L404">property enableFileEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L412">property enableFileEncryption</a>
 </h3>
 
 ```typescript
@@ -1370,12 +1461,10 @@ enableFileEncryption?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag which controls if Encryption
-Services are enabled for File storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)
-for more information.
+Boolean flag which controls if Encryption Services are enabled for File storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/) for more information. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L409">property enableHttpsTrafficOnly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L417">property enableHttpsTrafficOnly</a>
 </h3>
 
 ```typescript
@@ -1387,7 +1476,18 @@ Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.co
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L414">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L421">property identity</a>
+</h3>
+
+```typescript
+identity?: pulumi.Input<{ ... }>;
+```
+
+
+A Managed Service Identity block as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L426">property location</a>
 </h3>
 
 ```typescript
@@ -1399,7 +1499,7 @@ Specifies the supported Azure location where the
 resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L418">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L430">property name</a>
 </h3>
 
 ```typescript
@@ -1410,7 +1510,18 @@ name?: pulumi.Input<string>;
 The Custom Domain Name to use for the Storage Account, which will be validated by Azure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L423">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L434">property networkRules</a>
+</h3>
+
+```typescript
+networkRules?: pulumi.Input<{ ... }>;
+```
+
+
+A `network_rules` block as documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L439">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1422,7 +1533,7 @@ The name of the resource group in which to
 create the storage account. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L427">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L443">property tags</a>
 </h3>
 
 ```typescript
@@ -1433,13 +1544,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L237">interface AccountState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L245">interface AccountState</a>
 </h2>
 
 Input properties used for looking up and filtering Account resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L241">property accessTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L249">property accessTier</a>
 </h3>
 
 ```typescript
@@ -1447,10 +1558,10 @@ accessTier?: pulumi.Input<string>;
 ```
 
 
-Defines the access tier for `BlobStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cold`, defaults to `Hot`.
+Defines the access tier for `BlobStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L245">property accountEncryptionSource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L253">property accountEncryptionSource</a>
 </h3>
 
 ```typescript
@@ -1461,7 +1572,7 @@ accountEncryptionSource?: pulumi.Input<string>;
 The Encryption Source for this Storage Account. Possible values are `Microsoft.Keyvault` and `Microsoft.Storage`. Defaults to `Microsoft.Storage`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L251">property accountKind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L259">property accountKind</a>
 </h3>
 
 ```typescript
@@ -1474,7 +1585,7 @@ Defines the Kind of account. Valid options are `Storage`,
 Defaults to `Storage`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L255">property accountReplicationType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L263">property accountReplicationType</a>
 </h3>
 
 ```typescript
@@ -1485,7 +1596,7 @@ accountReplicationType?: pulumi.Input<string>;
 Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS` and `ZRS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L259">property accountTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L267">property accountTier</a>
 </h3>
 
 ```typescript
@@ -1496,7 +1607,7 @@ accountTier?: pulumi.Input<string>;
 Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. Changing this forces a new resource to be created
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L260">property accountType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L268">property accountType</a>
 </h3>
 
 ```typescript
@@ -1504,7 +1615,7 @@ accountType?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L264">property customDomain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L272">property customDomain</a>
 </h3>
 
 ```typescript
@@ -1515,7 +1626,7 @@ customDomain?: pulumi.Input<{ ... }>;
 A `custom_domain` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L270">property enableBlobEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L276">property enableBlobEncryption</a>
 </h3>
 
 ```typescript
@@ -1523,12 +1634,10 @@ enableBlobEncryption?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag which controls if Encryption
-Services are enabled for Blob storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)
-for more information.
+Boolean flag which controls if Encryption Services are enabled for Blob storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/) for more information. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L276">property enableFileEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L280">property enableFileEncryption</a>
 </h3>
 
 ```typescript
@@ -1536,12 +1645,10 @@ enableFileEncryption?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag which controls if Encryption
-Services are enabled for File storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)
-for more information.
+Boolean flag which controls if Encryption Services are enabled for File storage, see [here](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/) for more information. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L281">property enableHttpsTrafficOnly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L285">property enableHttpsTrafficOnly</a>
 </h3>
 
 ```typescript
@@ -1553,7 +1660,18 @@ Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.co
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L286">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L289">property identity</a>
+</h3>
+
+```typescript
+identity?: pulumi.Input<{ ... }>;
+```
+
+
+A Managed Service Identity block as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L294">property location</a>
 </h3>
 
 ```typescript
@@ -1565,7 +1683,7 @@ Specifies the supported Azure location where the
 resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L290">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L298">property name</a>
 </h3>
 
 ```typescript
@@ -1576,7 +1694,18 @@ name?: pulumi.Input<string>;
 The Custom Domain Name to use for the Storage Account, which will be validated by Azure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L294">property primaryAccessKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L302">property networkRules</a>
+</h3>
+
+```typescript
+networkRules?: pulumi.Input<{ ... }>;
+```
+
+
+A `network_rules` block as documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L306">property primaryAccessKey</a>
 </h3>
 
 ```typescript
@@ -1587,7 +1716,7 @@ primaryAccessKey?: pulumi.Input<string>;
 The primary access key for the storage account
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L298">property primaryBlobConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L310">property primaryBlobConnectionString</a>
 </h3>
 
 ```typescript
@@ -1598,7 +1727,7 @@ primaryBlobConnectionString?: pulumi.Input<string>;
 The connection string associated with the primary blob location
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L302">property primaryBlobEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L314">property primaryBlobEndpoint</a>
 </h3>
 
 ```typescript
@@ -1609,7 +1738,7 @@ primaryBlobEndpoint?: pulumi.Input<string>;
 The endpoint URL for blob storage in the primary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L306">property primaryConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L318">property primaryConnectionString</a>
 </h3>
 
 ```typescript
@@ -1620,7 +1749,7 @@ primaryConnectionString?: pulumi.Input<string>;
 The connection string associated with the primary location
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L310">property primaryFileEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L322">property primaryFileEndpoint</a>
 </h3>
 
 ```typescript
@@ -1631,7 +1760,7 @@ primaryFileEndpoint?: pulumi.Input<string>;
 The endpoint URL for file storage in the primary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L314">property primaryLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L326">property primaryLocation</a>
 </h3>
 
 ```typescript
@@ -1642,7 +1771,7 @@ primaryLocation?: pulumi.Input<string>;
 The primary location of the storage account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L318">property primaryQueueEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L330">property primaryQueueEndpoint</a>
 </h3>
 
 ```typescript
@@ -1653,7 +1782,7 @@ primaryQueueEndpoint?: pulumi.Input<string>;
 The endpoint URL for queue storage in the primary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L322">property primaryTableEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L334">property primaryTableEndpoint</a>
 </h3>
 
 ```typescript
@@ -1664,7 +1793,7 @@ primaryTableEndpoint?: pulumi.Input<string>;
 The endpoint URL for table storage in the primary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L327">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L339">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1676,7 +1805,7 @@ The name of the resource group in which to
 create the storage account. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L331">property secondaryAccessKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L343">property secondaryAccessKey</a>
 </h3>
 
 ```typescript
@@ -1687,7 +1816,7 @@ secondaryAccessKey?: pulumi.Input<string>;
 The secondary access key for the storage account
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L335">property secondaryBlobConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L347">property secondaryBlobConnectionString</a>
 </h3>
 
 ```typescript
@@ -1698,7 +1827,7 @@ secondaryBlobConnectionString?: pulumi.Input<string>;
 The connection string associated with the secondary blob location
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L339">property secondaryBlobEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L351">property secondaryBlobEndpoint</a>
 </h3>
 
 ```typescript
@@ -1709,7 +1838,7 @@ secondaryBlobEndpoint?: pulumi.Input<string>;
 The endpoint URL for blob storage in the secondary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L343">property secondaryConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L355">property secondaryConnectionString</a>
 </h3>
 
 ```typescript
@@ -1720,7 +1849,7 @@ secondaryConnectionString?: pulumi.Input<string>;
 The connection string associated with the secondary location
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L347">property secondaryLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L359">property secondaryLocation</a>
 </h3>
 
 ```typescript
@@ -1731,7 +1860,7 @@ secondaryLocation?: pulumi.Input<string>;
 The secondary location of the storage account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L351">property secondaryQueueEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L363">property secondaryQueueEndpoint</a>
 </h3>
 
 ```typescript
@@ -1742,7 +1871,7 @@ secondaryQueueEndpoint?: pulumi.Input<string>;
 The endpoint URL for queue storage in the secondary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L355">property secondaryTableEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L367">property secondaryTableEndpoint</a>
 </h3>
 
 ```typescript
@@ -1753,7 +1882,7 @@ secondaryTableEndpoint?: pulumi.Input<string>;
 The endpoint URL for table storage in the secondary location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L359">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L371">property tags</a>
 </h3>
 
 ```typescript
@@ -1764,13 +1893,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="BlobArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L178">interface BlobArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L188">interface BlobArgs</a>
 </h2>
 
 The set of arguments for constructing a Blob resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L182">property attempts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L192">property attempts</a>
 </h3>
 
 ```typescript
@@ -1781,7 +1910,18 @@ attempts?: pulumi.Input<number>;
 The number of attempts to make per page or block when uploading. Defaults to `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L186">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L196">property contentType</a>
+</h3>
+
+```typescript
+contentType?: pulumi.Input<string>;
+```
+
+
+The content type of the storage blob. Cannot be defined if `source_uri` is defined. Defaults to `application/octet-stream`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L200">property name</a>
 </h3>
 
 ```typescript
@@ -1792,7 +1932,7 @@ name?: pulumi.Input<string>;
 The name of the storage blob. Must be unique within the storage container the blob is located.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L190">property parallelism</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L204">property parallelism</a>
 </h3>
 
 ```typescript
@@ -1803,7 +1943,7 @@ parallelism?: pulumi.Input<number>;
 The number of workers per CPU core to run for concurrent uploads. Defaults to `8`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L195">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L209">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1815,7 +1955,7 @@ The name of the resource group in which to
 create the storage container. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L199">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L213">property size</a>
 </h3>
 
 ```typescript
@@ -1826,7 +1966,7 @@ size?: pulumi.Input<number>;
 Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L203">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L217">property source</a>
 </h3>
 
 ```typescript
@@ -1837,7 +1977,7 @@ source?: pulumi.Input<string>;
 An absolute path to a file on the local system. Cannot be defined if `source_uri` is defined.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L208">property sourceUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L222">property sourceUri</a>
 </h3>
 
 ```typescript
@@ -1849,7 +1989,7 @@ The URI of an existing blob, or a file in the Azure File service, to use as the 
 for the blob to be created. Changing this forces a new resource to be created. Cannot be defined if `source` is defined.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L213">property storageAccountName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L227">property storageAccountName</a>
 </h3>
 
 ```typescript
@@ -1861,7 +2001,7 @@ Specifies the storage account in which to create the storage container.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L217">property storageContainerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L231">property storageContainerName</a>
 </h3>
 
 ```typescript
@@ -1872,7 +2012,7 @@ storageContainerName: pulumi.Input<string>;
 The name of the storage container in which this blob should be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L222">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L236">property type</a>
 </h3>
 
 ```typescript
@@ -1884,13 +2024,13 @@ The type of the storage blob to be created. One of either `block` or `page`. Whe
 this becomes required.
 
 <h2 class="pdoc-module-header" id="BlobState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L124">interface BlobState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L130">interface BlobState</a>
 </h2>
 
 Input properties used for looking up and filtering Blob resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L128">property attempts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L134">property attempts</a>
 </h3>
 
 ```typescript
@@ -1901,7 +2041,18 @@ attempts?: pulumi.Input<number>;
 The number of attempts to make per page or block when uploading. Defaults to `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L132">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L138">property contentType</a>
+</h3>
+
+```typescript
+contentType?: pulumi.Input<string>;
+```
+
+
+The content type of the storage blob. Cannot be defined if `source_uri` is defined. Defaults to `application/octet-stream`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L142">property name</a>
 </h3>
 
 ```typescript
@@ -1912,7 +2063,7 @@ name?: pulumi.Input<string>;
 The name of the storage blob. Must be unique within the storage container the blob is located.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L136">property parallelism</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L146">property parallelism</a>
 </h3>
 
 ```typescript
@@ -1923,7 +2074,7 @@ parallelism?: pulumi.Input<number>;
 The number of workers per CPU core to run for concurrent uploads. Defaults to `8`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L141">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L151">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1935,7 +2086,7 @@ The name of the resource group in which to
 create the storage container. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L145">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L155">property size</a>
 </h3>
 
 ```typescript
@@ -1946,7 +2097,7 @@ size?: pulumi.Input<number>;
 Used only for `page` blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L149">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L159">property source</a>
 </h3>
 
 ```typescript
@@ -1957,7 +2108,7 @@ source?: pulumi.Input<string>;
 An absolute path to a file on the local system. Cannot be defined if `source_uri` is defined.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L154">property sourceUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L164">property sourceUri</a>
 </h3>
 
 ```typescript
@@ -1969,7 +2120,7 @@ The URI of an existing blob, or a file in the Azure File service, to use as the 
 for the blob to be created. Changing this forces a new resource to be created. Cannot be defined if `source` is defined.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L159">property storageAccountName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L169">property storageAccountName</a>
 </h3>
 
 ```typescript
@@ -1981,7 +2132,7 @@ Specifies the storage account in which to create the storage container.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L163">property storageContainerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L173">property storageContainerName</a>
 </h3>
 
 ```typescript
@@ -1992,7 +2143,7 @@ storageContainerName?: pulumi.Input<string>;
 The name of the storage container in which this blob should be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L168">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L178">property type</a>
 </h3>
 
 ```typescript
@@ -2004,7 +2155,7 @@ The type of the storage blob to be created. One of either `block` or `page`. Whe
 this becomes required.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L172">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L182">property url</a>
 </h3>
 
 ```typescript
@@ -2140,7 +2291,7 @@ A collection of arguments for invoking getAccount.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -2151,7 +2302,7 @@ Specifies the name of the Storage Account
 </h3>
 
 ```typescript
-resourceGroupName: pulumi.Input<string>;
+resourceGroupName: string;
 ```
 
 
@@ -2172,7 +2323,7 @@ accessTier: string;
 ```
 
 
-Defines the access tier for `BlobStorage` accounts.
+The access tier for `BlobStorage` accounts.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccount.ts#L41">property accountEncryptionSource</a>
@@ -2194,7 +2345,7 @@ accountKind: string;
 ```
 
 
-Defines the Kind of account, either `BlobStorage` or `Storage`.
+The Kind of account.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccount.ts#L49">property accountReplicationType</a>
@@ -2205,7 +2356,7 @@ accountReplicationType: string;
 ```
 
 
-Defines the type of replication used for this storage account.
+The type of replication used for this storage account.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccount.ts#L53">property accountTier</a>
@@ -2216,7 +2367,7 @@ accountTier: string;
 ```
 
 
-Defines the Tier of this storage account.
+The Tier of this storage account.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccount.ts#L57">property customDomain</a>
@@ -2474,7 +2625,7 @@ A collection of arguments for invoking getAccountSAS.
 </h3>
 
 ```typescript
-connectionString: pulumi.Input<string>;
+connectionString: string;
 ```
 
 
@@ -2485,7 +2636,7 @@ The connection string for the storage account to which this SAS applies. Typical
 </h3>
 
 ```typescript
-expiry: pulumi.Input<string>;
+expiry: string;
 ```
 
 
@@ -2496,7 +2647,7 @@ The expiration time and date of this SAS. Must be a valid ISO-8601 format time/d
 </h3>
 
 ```typescript
-httpsOnly?: pulumi.Input<boolean>;
+httpsOnly?: boolean;
 ```
 
 
@@ -2507,50 +2658,53 @@ Only permit `https` access. If `false`, both `http` and `https` are permitted. D
 </h3>
 
 ```typescript
-permissions: pulumi.Input<{ ... }>;
+permissions: { ... };
 ```
 
 
 A `permissions` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L46">property resourceTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L49">property resourceTypes</a>
 </h3>
 
 ```typescript
-resourceTypes: pulumi.Input<{ ... }>;
+resourceTypes: { ... };
 ```
 
+
+A `resource_types` block as defined below.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L50">property services</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L53">property services</a>
 </h3>
 
 ```typescript
-services: pulumi.Input<{ ... }>;
+services: { ... };
 ```
 
 
 A `services` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L54">property start</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L57">property start</a>
 </h3>
 
 ```typescript
-start: pulumi.Input<string>;
+start: string;
 ```
 
 
 The starting time and date of validity of this SAS. Must be a valid ISO-8601 format time/date string.
 
 <h2 class="pdoc-module-header" id="GetAccountSASResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L60">interface GetAccountSASResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L63">interface GetAccountSASResult</a>
 </h2>
 
 A collection of values returned by getAccountSAS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L68">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L71">property id</a>
 </h3>
 
 ```typescript
@@ -2561,7 +2715,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L64">property sas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L67">property sas</a>
 </h3>
 
 ```typescript
@@ -2679,7 +2833,7 @@ quota?: pulumi.Input<number>;
 ```
 
 
-The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5 TB (5120 GB). Default this is set to 0 which results in setting the quota to 5 TB.
+The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5 TB (5120 GB). Default is 5120.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/share.ts#L124">property resourceGroupName</a>
@@ -2731,7 +2885,7 @@ quota?: pulumi.Input<number>;
 ```
 
 
-The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5 TB (5120 GB). Default this is set to 0 which results in setting the quota to 5 TB.
+The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5 TB (5120 GB). Default is 5120.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/share.ts#L96">property resourceGroupName</a>
@@ -2851,13 +3005,13 @@ Specifies the storage account in which to create the storage table.
 Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ZipBlobArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L101">interface ZipBlobArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L105">interface ZipBlobArgs</a>
 </h2>
 
 The set of arguments for constructing a ZipBlob resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L102">property attempts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L106">property attempts</a>
 </h3>
 
 ```typescript
@@ -2865,7 +3019,7 @@ attempts?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L107">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L112">property content</a>
 </h3>
 
 ```typescript
@@ -2873,7 +3027,15 @@ content?: pulumi.Input<pulumi.asset.Archive>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L103">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L107">property contentType</a>
+</h3>
+
+```typescript
+contentType?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L108">property name</a>
 </h3>
 
 ```typescript
@@ -2881,7 +3043,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L104">property parallelism</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L109">property parallelism</a>
 </h3>
 
 ```typescript
@@ -2889,7 +3051,7 @@ parallelism?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L105">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L110">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2897,7 +3059,7 @@ resourceGroupName: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L106">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L111">property size</a>
 </h3>
 
 ```typescript
@@ -2905,7 +3067,7 @@ size?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L108">property sourceUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L113">property sourceUri</a>
 </h3>
 
 ```typescript
@@ -2913,7 +3075,7 @@ sourceUri?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L109">property storageAccountName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L114">property storageAccountName</a>
 </h3>
 
 ```typescript
@@ -2921,7 +3083,7 @@ storageAccountName: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L110">property storageContainerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L115">property storageContainerName</a>
 </h3>
 
 ```typescript
@@ -2929,7 +3091,7 @@ storageContainerName: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L111">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L116">property type</a>
 </h3>
 
 ```typescript
@@ -2937,13 +3099,13 @@ type?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="ZipBlobState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L84">interface ZipBlobState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L87">interface ZipBlobState</a>
 </h2>
 
 Input properties used for looking up and filtering ZipBlob resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L85">property attempts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L88">property attempts</a>
 </h3>
 
 ```typescript
@@ -2951,7 +3113,7 @@ attempts?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L90">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L94">property content</a>
 </h3>
 
 ```typescript
@@ -2959,7 +3121,15 @@ content?: pulumi.Input<pulumi.asset.Archive>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L86">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L89">property contentType</a>
+</h3>
+
+```typescript
+contentType?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L90">property name</a>
 </h3>
 
 ```typescript
@@ -2967,7 +3137,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L87">property parallelism</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L91">property parallelism</a>
 </h3>
 
 ```typescript
@@ -2975,7 +3145,7 @@ parallelism?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L88">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L92">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2983,7 +3153,7 @@ resourceGroupName?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L89">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L93">property size</a>
 </h3>
 
 ```typescript
@@ -2991,7 +3161,7 @@ size?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L91">property sourceUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L95">property sourceUri</a>
 </h3>
 
 ```typescript
@@ -2999,7 +3169,7 @@ sourceUri?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L92">property storageAccountName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L96">property storageAccountName</a>
 </h3>
 
 ```typescript
@@ -3007,7 +3177,7 @@ storageAccountName?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L93">property storageContainerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L97">property storageContainerName</a>
 </h3>
 
 ```typescript
@@ -3015,7 +3185,7 @@ storageContainerName?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L94">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L98">property type</a>
 </h3>
 
 ```typescript
@@ -3023,7 +3193,7 @@ type?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L95">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/zipBlob.ts#L99">property url</a>
 </h3>
 
 ```typescript

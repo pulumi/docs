@@ -10,6 +10,7 @@ title: Module storage
 * <a href="#BucketACL">class BucketACL</a>
 * <a href="#BucketIAMBinding">class BucketIAMBinding</a>
 * <a href="#BucketIAMMember">class BucketIAMMember</a>
+* <a href="#BucketIAMPolicy">class BucketIAMPolicy</a>
 * <a href="#BucketObject">class BucketObject</a>
 * <a href="#DefaultObjectACL">class DefaultObjectACL</a>
 * <a href="#Notification">class Notification</a>
@@ -23,6 +24,8 @@ title: Module storage
 * <a href="#BucketIAMBindingState">interface BucketIAMBindingState</a>
 * <a href="#BucketIAMMemberArgs">interface BucketIAMMemberArgs</a>
 * <a href="#BucketIAMMemberState">interface BucketIAMMemberState</a>
+* <a href="#BucketIAMPolicyArgs">interface BucketIAMPolicyArgs</a>
+* <a href="#BucketIAMPolicyState">interface BucketIAMPolicyState</a>
 * <a href="#BucketObjectArgs">interface BucketObjectArgs</a>
 * <a href="#BucketObjectState">interface BucketObjectState</a>
 * <a href="#BucketState">interface BucketState</a>
@@ -30,12 +33,14 @@ title: Module storage
 * <a href="#DefaultObjectACLState">interface DefaultObjectACLState</a>
 * <a href="#GetObjectSignedUrlArgs">interface GetObjectSignedUrlArgs</a>
 * <a href="#GetObjectSignedUrlResult">interface GetObjectSignedUrlResult</a>
+* <a href="#GetProjectServiceAccountArgs">interface GetProjectServiceAccountArgs</a>
+* <a href="#GetProjectServiceAccountResult">interface GetProjectServiceAccountResult</a>
 * <a href="#NotificationArgs">interface NotificationArgs</a>
 * <a href="#NotificationState">interface NotificationState</a>
 * <a href="#ObjectACLArgs">interface ObjectACLArgs</a>
 * <a href="#ObjectACLState">interface ObjectACLState</a>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts">storage/bucket.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketACL.ts">storage/bucketACL.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMBinding.ts">storage/bucketIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMMember.ts">storage/bucketIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketObject.ts">storage/bucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts">storage/defaultObjectACL.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getObjectSignedUrl.ts">storage/getObjectSignedUrl.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts">storage/getProjectServiceAccount.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts">storage/notification.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/objectACL.ts">storage/objectACL.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts">storage/bucket.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketACL.ts">storage/bucketACL.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMBinding.ts">storage/bucketIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMMember.ts">storage/bucketIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts">storage/bucketIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketObject.ts">storage/bucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts">storage/defaultObjectACL.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getObjectSignedUrl.ts">storage/getObjectSignedUrl.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts">storage/getProjectServiceAccount.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts">storage/notification.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/objectACL.ts">storage/objectACL.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Bucket">
@@ -55,7 +60,7 @@ and
 </h3>
 
 ```typescript
-new Bucket(name: string, args?: BucketArgs, opts?: pulumi.ResourceOptions)
+new Bucket(name: string, args?: BucketArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -78,7 +83,15 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -114,7 +127,7 @@ boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, Terraform will fail that run.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -273,7 +286,7 @@ and
 </h3>
 
 ```typescript
-new BucketACL(name: string, args: BucketACLArgs, opts?: pulumi.ResourceOptions)
+new BucketACL(name: string, args: BucketACLArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -296,7 +309,15 @@ Get an existing BucketACL resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -330,7 +351,7 @@ public defaultAcl: pulumi.Output<string | undefined>;
 Configure this ACL to be the default ACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -357,7 +378,7 @@ The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#
 </h3>
 
 ```typescript
-public roleEntities: pulumi.Output<string[] | undefined>;
+public roleEntities: pulumi.Output<string[]>;
 ```
 
 
@@ -393,7 +414,7 @@ Three different resources help you manage your IAM policy for storage bucket. Ea
 </h3>
 
 ```typescript
-new BucketIAMBinding(name: string, args: BucketIAMBindingArgs, opts?: pulumi.ResourceOptions)
+new BucketIAMBinding(name: string, args: BucketIAMBindingArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -416,7 +437,15 @@ Get an existing BucketIAMBinding resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -450,7 +479,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the storage bucket's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -511,7 +540,7 @@ Three different resources help you manage your IAM policy for storage bucket. Ea
 </h3>
 
 ```typescript
-new BucketIAMMember(name: string, args: BucketIAMMemberArgs, opts?: pulumi.ResourceOptions)
+new BucketIAMMember(name: string, args: BucketIAMMemberArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -534,7 +563,15 @@ Get an existing BucketIAMMember resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -568,7 +605,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the storage bucket's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -611,6 +648,120 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="BucketIAMPolicy">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L16">class BucketIAMPolicy</a>
+</h2>
+
+Three different resources help you manage your IAM policy for storage bucket. Each of these resources serves a different use case:
+
+* `google_storage_bucket_iam_binding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the storage bucket are preserved.
+* `google_storage_bucket_iam_member`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the storage bucket are preserved.
+* `google_storage_bucket_iam_policy`: Setting a policy removes all other permissions on the bucket, and if done incorrectly, there's a real chance you will lock yourself out of the bucket. If possible for your use case, using multiple google_storage_bucket_iam_binding resources will be much safer. See the usage example on how to work with policy correctly.
+
+
+~> **Note:** `google_storage_bucket_iam_binding` resources **can be** used in conjunction with `google_storage_bucket_iam_member` resources **only if** they do not grant privilege to the same role.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L37">constructor</a>
+</h3>
+
+```typescript
+new BucketIAMPolicy(name: string, args: BucketIAMPolicyArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a BucketIAMPolicy resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L25">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BucketIAMPolicyState): BucketIAMPolicy
+```
+
+
+Get an existing BucketIAMPolicy resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L32">property bucket</a>
+</h3>
+
+```typescript
+public bucket: pulumi.Output<string>;
+```
+
+
+The name of the bucket it applies to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L36">property etag</a>
+</h3>
+
+```typescript
+public etag: pulumi.Output<string>;
+```
+
+
+(Computed) The etag of the storage bucket's IAM policy.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L37">property policyData</a>
+</h3>
+
+```typescript
+public policyData: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="BucketObject">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketObject.ts#L15">class BucketObject</a>
 </h2>
@@ -627,7 +778,7 @@ and
 </h3>
 
 ```typescript
-new BucketObject(name: string, args: BucketObjectArgs, opts?: pulumi.ResourceOptions)
+new BucketObject(name: string, args: BucketObjectArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -650,7 +801,15 @@ Get an existing BucketObject resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -760,7 +919,7 @@ public detectMd5hash: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -798,7 +957,7 @@ The name of the object.
 </h3>
 
 ```typescript
-public source: pulumi.Output<string | undefined>;
+public source: pulumi.Output<pulumi.asset.Archive | undefined>;
 ```
 
 
@@ -844,7 +1003,7 @@ and
 </h3>
 
 ```typescript
-new DefaultObjectACL(name: string, args: DefaultObjectACLArgs, opts?: pulumi.ResourceOptions)
+new DefaultObjectACL(name: string, args: DefaultObjectACLArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -867,7 +1026,15 @@ Get an existing DefaultObjectACL resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -890,7 +1057,7 @@ public bucket: pulumi.Output<string>;
 The name of the bucket it applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -939,7 +1106,7 @@ and
 </h3>
 
 ```typescript
-new Notification(name: string, args: NotificationArgs, opts?: pulumi.ResourceOptions)
+new Notification(name: string, args: NotificationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -962,7 +1129,15 @@ Get an existing Notification resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1007,7 +1182,7 @@ public eventTypes: pulumi.Output<string[] | undefined>;
 List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1090,7 +1265,7 @@ and
 </h3>
 
 ```typescript
-new ObjectACL(name: string, args: ObjectACLArgs, opts?: pulumi.ResourceOptions)
+new ObjectACL(name: string, args: ObjectACLArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1113,7 +1288,15 @@ Get an existing ObjectACL resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1136,7 +1319,7 @@ public bucket: pulumi.Output<string>;
 The name of the bucket it applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1197,7 +1380,7 @@ deployments.
 </h2>
 
 ```typescript
-getObjectSignedUrl(args: GetObjectSignedUrlArgs): Promise<GetObjectSignedUrlResult>
+getObjectSignedUrl(args: GetObjectSignedUrlArgs, opts?: pulumi.InvokeOptions): Promise<GetObjectSignedUrlResult>
 ```
 
 
@@ -1210,7 +1393,7 @@ For more info about signed URL's is available [here](https://cloud.google.com/st
 </h2>
 
 ```typescript
-getProjectServiceAccount(): Promise<void>
+getProjectServiceAccount(args?: GetProjectServiceAccountArgs, opts?: pulumi.InvokeOptions): Promise<GetProjectServiceAccountResult>
 ```
 
 
@@ -1329,7 +1512,7 @@ The set of arguments for constructing a Bucket resource.
 </h3>
 
 ```typescript
-cors?: pulumi.Input<{ ... }[]>;
+cors?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1364,7 +1547,7 @@ A set of key/value label pairs to assign to the bucket.
 </h3>
 
 ```typescript
-lifecycleRules?: pulumi.Input<{ ... }[]>;
+lifecycleRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1442,7 +1625,7 @@ The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versionin
 </h3>
 
 ```typescript
-websites?: pulumi.Input<{ ... }[]>;
+websites?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1618,6 +1801,67 @@ role?: pulumi.Input<string>;
 The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
+<h2 class="pdoc-module-header" id="BucketIAMPolicyArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L88">interface BucketIAMPolicyArgs</a>
+</h2>
+
+The set of arguments for constructing a BucketIAMPolicy resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L92">property bucket</a>
+</h3>
+
+```typescript
+bucket: pulumi.Input<string>;
+```
+
+
+The name of the bucket it applies to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L93">property policyData</a>
+</h3>
+
+```typescript
+policyData: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="BucketIAMPolicyState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L73">interface BucketIAMPolicyState</a>
+</h2>
+
+Input properties used for looking up and filtering BucketIAMPolicy resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L77">property bucket</a>
+</h3>
+
+```typescript
+bucket?: pulumi.Input<string>;
+```
+
+
+The name of the bucket it applies to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L81">property etag</a>
+</h3>
+
+```typescript
+etag?: pulumi.Input<string>;
+```
+
+
+(Computed) The etag of the storage bucket's IAM policy.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts#L82">property policyData</a>
+</h3>
+
+```typescript
+policyData?: pulumi.Input<string>;
+```
+
 <h2 class="pdoc-module-header" id="BucketObjectArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketObject.ts#L194">interface BucketObjectArgs</a>
 </h2>
@@ -1727,7 +1971,7 @@ The name of the object.
 </h3>
 
 ```typescript
-source?: pulumi.Input<string>;
+source?: pulumi.Input<pulumi.asset.Archive>;
 ```
 
 
@@ -1878,7 +2122,7 @@ The name of the object.
 </h3>
 
 ```typescript
-source?: pulumi.Input<string>;
+source?: pulumi.Input<pulumi.asset.Archive>;
 ```
 
 
@@ -1909,7 +2153,7 @@ Input properties used for looking up and filtering Bucket resources.
 </h3>
 
 ```typescript
-cors?: pulumi.Input<{ ... }[]>;
+cors?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1944,7 +2188,7 @@ A set of key/value label pairs to assign to the bucket.
 </h3>
 
 ```typescript
-lifecycleRules?: pulumi.Input<{ ... }[]>;
+lifecycleRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2044,7 +2288,7 @@ The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versionin
 </h3>
 
 ```typescript
-websites?: pulumi.Input<{ ... }[]>;
+websites?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2117,7 +2361,7 @@ A collection of arguments for invoking getObjectSignedUrl.
 </h3>
 
 ```typescript
-bucket: pulumi.Input<string>;
+bucket: string;
 ```
 
 
@@ -2128,7 +2372,7 @@ The name of the bucket to read the object from
 </h3>
 
 ```typescript
-contentMd5?: pulumi.Input<string>;
+contentMd5?: string;
 ```
 
 
@@ -2141,7 +2385,7 @@ If you provide this in the datasource, the client (e.g. browser, curl) must prov
 </h3>
 
 ```typescript
-contentType?: pulumi.Input<string>;
+contentType?: string;
 ```
 
 
@@ -2152,7 +2396,7 @@ If you specify this in the datasource, the client must provide the `Content-Type
 </h3>
 
 ```typescript
-credentials?: pulumi.Input<string>;
+credentials?: string;
 ```
 
 
@@ -2164,7 +2408,7 @@ This data source checks the following locations for credentials, in order of pre
 </h3>
 
 ```typescript
-duration?: pulumi.Input<string>;
+duration?: string;
 ```
 
 
@@ -2176,7 +2420,7 @@ See [here](https://golang.org/pkg/time/#ParseDuration) for info on valid duratio
 </h3>
 
 ```typescript
-extensionHeaders?: pulumi.Input<{ ... }>;
+extensionHeaders?: { ... };
 ```
 
 
@@ -2188,7 +2432,7 @@ Any header starting with `x-goog-` is accepted but see the [Google Docs](https:/
 </h3>
 
 ```typescript
-httpMethod?: pulumi.Input<string>;
+httpMethod?: string;
 ```
 
 
@@ -2199,7 +2443,7 @@ What HTTP Method will the signed URL allow (defaults to `GET`)
 </h3>
 
 ```typescript
-path: pulumi.Input<string>;
+path: string;
 ```
 
 
@@ -2212,6 +2456,17 @@ The full path to the object inside the bucket
 A collection of values returned by getObjectSignedUrl.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getObjectSignedUrl.ts#L78">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getObjectSignedUrl.ts#L74">property signedUrl</a>
 </h3>
 
@@ -2221,6 +2476,48 @@ signedUrl: string;
 
 
 The signed URL that can be used to access the storage object without authentication.
+
+<h2 class="pdoc-module-header" id="GetProjectServiceAccountArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L21">interface GetProjectServiceAccountArgs</a>
+</h2>
+
+A collection of arguments for invoking getProjectServiceAccount.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L25">property project</a>
+</h3>
+
+```typescript
+project?: string;
+```
+
+
+The project in which the resource belongs. If it is not provided, the provider project is used.
+
+<h2 class="pdoc-module-header" id="GetProjectServiceAccountResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L31">interface GetProjectServiceAccountResult</a>
+</h2>
+
+A collection of values returned by getProjectServiceAccount.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L36">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L32">property project</a>
+</h3>
+
+```typescript
+project: string;
+```
 
 <h2 class="pdoc-module-header" id="NotificationArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L138">interface NotificationArgs</a>

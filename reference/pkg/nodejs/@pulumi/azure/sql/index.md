@@ -39,7 +39,7 @@ Allows you to set a user or group as the AD administrator for an Azure SQL serve
 </h3>
 
 ```typescript
-new ActiveDirectoryAdministrator(name: string, args: ActiveDirectoryAdministratorArgs, opts?: pulumi.ResourceOptions)
+new ActiveDirectoryAdministrator(name: string, args: ActiveDirectoryAdministratorArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -62,7 +62,15 @@ Get an existing ActiveDirectoryAdministrator resource's state with the given nam
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -74,7 +82,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -159,11 +167,11 @@ deployments.
 Allows you to manage an Azure SQL Database
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L88">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L95">constructor</a>
 </h3>
 
 ```typescript
-new Database(name: string, args: DatabaseArgs, opts?: pulumi.ResourceOptions)
+new Database(name: string, args: DatabaseArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -186,7 +194,15 @@ Get an existing Database resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -220,15 +236,18 @@ public createMode: pulumi.Output<string | undefined>;
 Specifies the type of database to create. Defaults to `Default`. See below for the accepted values/
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L30">property creationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L33">property creationDate</a>
 </h3>
 
 ```typescript
 public creationDate: pulumi.Output<string>;
 ```
 
+
+The creation date of the SQL Database.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L34">property defaultSecondaryLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L37">property defaultSecondaryLocation</a>
 </h3>
 
 ```typescript
@@ -239,7 +258,7 @@ public defaultSecondaryLocation: pulumi.Output<string>;
 The default secondary location of the SQL Database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L38">property edition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L41">property edition</a>
 </h3>
 
 ```typescript
@@ -250,7 +269,7 @@ public edition: pulumi.Output<string>;
 The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, or `DataWarehouse`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L42">property elasticPoolName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L45">property elasticPoolName</a>
 </h3>
 
 ```typescript
@@ -261,7 +280,7 @@ public elasticPoolName: pulumi.Output<string>;
 The name of the elastic database pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L43">property encryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L46">property encryption</a>
 </h3>
 
 ```typescript
@@ -269,7 +288,7 @@ public encryption: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -281,7 +300,18 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L47">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L50">property import</a>
+</h3>
+
+```typescript
+public import: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A Database Import block as documented below. `create_mode` must be set to `Default`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L54">property location</a>
 </h3>
 
 ```typescript
@@ -292,7 +322,7 @@ public location: pulumi.Output<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L51">property maxSizeBytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L58">property maxSizeBytes</a>
 </h3>
 
 ```typescript
@@ -303,7 +333,7 @@ public maxSizeBytes: pulumi.Output<string>;
 The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L55">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L62">property name</a>
 </h3>
 
 ```typescript
@@ -314,7 +344,7 @@ public name: pulumi.Output<string>;
 The name of the database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L60">property requestedServiceObjectiveId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L67">property requestedServiceObjectiveId</a>
 </h3>
 
 ```typescript
@@ -326,7 +356,7 @@ Use `requested_service_objective_id` or `requested_service_objective_name` to se
 Valid values are: `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L64">property requestedServiceObjectiveName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L71">property requestedServiceObjectiveName</a>
 </h3>
 
 ```typescript
@@ -337,7 +367,7 @@ public requestedServiceObjectiveName: pulumi.Output<string>;
 Use `requested_service_objective_name` or `requested_service_objective_id` to set the performance level for the database.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L68">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L75">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -348,7 +378,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L72">property restorePointInTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L79">property restorePointInTime</a>
 </h3>
 
 ```typescript
@@ -359,7 +389,7 @@ public restorePointInTime: pulumi.Output<string>;
 The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L76">property serverName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L83">property serverName</a>
 </h3>
 
 ```typescript
@@ -370,7 +400,7 @@ public serverName: pulumi.Output<string>;
 The name of the SQL Server on which to create the database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L80">property sourceDatabaseDeletionDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L87">property sourceDatabaseDeletionDate</a>
 </h3>
 
 ```typescript
@@ -381,7 +411,7 @@ public sourceDatabaseDeletionDate: pulumi.Output<string>;
 The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L84">property sourceDatabaseId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L91">property sourceDatabaseId</a>
 </h3>
 
 ```typescript
@@ -392,7 +422,7 @@ public sourceDatabaseId: pulumi.Output<string>;
 The URI of the source database if `create_mode` value is not `Default`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L88">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L95">property tags</a>
 </h3>
 
 ```typescript
@@ -425,7 +455,7 @@ Allows you to manage an Azure SQL Elastic Pool.
 </h3>
 
 ```typescript
-new ElasticPool(name: string, args: ElasticPoolArgs, opts?: pulumi.ResourceOptions)
+new ElasticPool(name: string, args: ElasticPoolArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -448,7 +478,15 @@ Get an existing ElasticPool resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -515,7 +553,7 @@ public edition: pulumi.Output<string>;
 The edition of the elastic pool to be created. Valid values are `Basic`, `Standard`, and `Premium`. Refer to [Azure SQL Database Service Tiers](https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus) for details. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -615,7 +653,7 @@ Allows you to manage an Azure SQL Firewall Rule
 </h3>
 
 ```typescript
-new FirewallRule(name: string, args: FirewallRuleArgs, opts?: pulumi.ResourceOptions)
+new FirewallRule(name: string, args: FirewallRuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -638,7 +676,15 @@ Get an existing FirewallRule resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -661,7 +707,7 @@ public endIpAddress: pulumi.Output<string>;
 The ending IP address to allow through the firewall for this rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -743,7 +789,7 @@ Manages a SQL Azure Database Server.
 </h3>
 
 ```typescript
-new SqlServer(name: string, args: SqlServerArgs, opts?: pulumi.ResourceOptions)
+new SqlServer(name: string, args: SqlServerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -766,7 +812,15 @@ Get an existing SqlServer resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -811,7 +865,7 @@ public fullyQualifiedDomainName: pulumi.Output<string>;
 The fully qualified domain name of the Azure SQL Server (e.g. myServerName.database.windows.net)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -900,7 +954,7 @@ Allows you to add, update, or remove an Azure SQL server to a subnet of a virtua
 </h3>
 
 ```typescript
-new VirtualNetworkRule(name: string, args: VirtualNetworkRuleArgs, opts?: pulumi.ResourceOptions)
+new VirtualNetworkRule(name: string, args: VirtualNetworkRuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -923,7 +977,15 @@ Get an existing VirtualNetworkRule resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -935,7 +997,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1136,13 +1198,13 @@ tenantId?: pulumi.Input<string>;
 The Azure Tenant ID
 
 <h2 class="pdoc-module-header" id="DatabaseArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L230">interface DatabaseArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L246">interface DatabaseArgs</a>
 </h2>
 
 The set of arguments for constructing a Database resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L234">property collation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L250">property collation</a>
 </h3>
 
 ```typescript
@@ -1153,7 +1215,7 @@ collation?: pulumi.Input<string>;
 The name of the collation. Applies only if `create_mode` is `Default`.  Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L238">property createMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L254">property createMode</a>
 </h3>
 
 ```typescript
@@ -1164,7 +1226,7 @@ createMode?: pulumi.Input<string>;
 Specifies the type of database to create. Defaults to `Default`. See below for the accepted values/
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L242">property edition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L258">property edition</a>
 </h3>
 
 ```typescript
@@ -1175,7 +1237,7 @@ edition?: pulumi.Input<string>;
 The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, or `DataWarehouse`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L246">property elasticPoolName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L262">property elasticPoolName</a>
 </h3>
 
 ```typescript
@@ -1186,7 +1248,18 @@ elasticPoolName?: pulumi.Input<string>;
 The name of the elastic database pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L250">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L266">property import</a>
+</h3>
+
+```typescript
+import?: pulumi.Input<{ ... }>;
+```
+
+
+A Database Import block as documented below. `create_mode` must be set to `Default`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L270">property location</a>
 </h3>
 
 ```typescript
@@ -1197,7 +1270,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L254">property maxSizeBytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L274">property maxSizeBytes</a>
 </h3>
 
 ```typescript
@@ -1208,7 +1281,7 @@ maxSizeBytes?: pulumi.Input<string>;
 The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L258">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L278">property name</a>
 </h3>
 
 ```typescript
@@ -1219,7 +1292,7 @@ name?: pulumi.Input<string>;
 The name of the database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L263">property requestedServiceObjectiveId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L283">property requestedServiceObjectiveId</a>
 </h3>
 
 ```typescript
@@ -1231,7 +1304,7 @@ Use `requested_service_objective_id` or `requested_service_objective_name` to se
 Valid values are: `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L267">property requestedServiceObjectiveName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L287">property requestedServiceObjectiveName</a>
 </h3>
 
 ```typescript
@@ -1242,7 +1315,7 @@ requestedServiceObjectiveName?: pulumi.Input<string>;
 Use `requested_service_objective_name` or `requested_service_objective_id` to set the performance level for the database.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L271">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L291">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1253,7 +1326,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L275">property restorePointInTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L295">property restorePointInTime</a>
 </h3>
 
 ```typescript
@@ -1264,7 +1337,7 @@ restorePointInTime?: pulumi.Input<string>;
 The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L279">property serverName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L299">property serverName</a>
 </h3>
 
 ```typescript
@@ -1275,7 +1348,7 @@ serverName: pulumi.Input<string>;
 The name of the SQL Server on which to create the database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L283">property sourceDatabaseDeletionDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L303">property sourceDatabaseDeletionDate</a>
 </h3>
 
 ```typescript
@@ -1286,7 +1359,7 @@ sourceDatabaseDeletionDate?: pulumi.Input<string>;
 The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L287">property sourceDatabaseId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L307">property sourceDatabaseId</a>
 </h3>
 
 ```typescript
@@ -1297,7 +1370,7 @@ sourceDatabaseId?: pulumi.Input<string>;
 The URI of the source database if `create_mode` value is not `Default`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L291">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L311">property tags</a>
 </h3>
 
 ```typescript
@@ -1308,13 +1381,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="DatabaseState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L157">interface DatabaseState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L166">interface DatabaseState</a>
 </h2>
 
 Input properties used for looking up and filtering Database resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L161">property collation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L170">property collation</a>
 </h3>
 
 ```typescript
@@ -1325,7 +1398,7 @@ collation?: pulumi.Input<string>;
 The name of the collation. Applies only if `create_mode` is `Default`.  Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L165">property createMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L174">property createMode</a>
 </h3>
 
 ```typescript
@@ -1336,15 +1409,18 @@ createMode?: pulumi.Input<string>;
 Specifies the type of database to create. Defaults to `Default`. See below for the accepted values/
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L166">property creationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L178">property creationDate</a>
 </h3>
 
 ```typescript
 creationDate?: pulumi.Input<string>;
 ```
 
+
+The creation date of the SQL Database.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L170">property defaultSecondaryLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L182">property defaultSecondaryLocation</a>
 </h3>
 
 ```typescript
@@ -1355,7 +1431,7 @@ defaultSecondaryLocation?: pulumi.Input<string>;
 The default secondary location of the SQL Database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L174">property edition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L186">property edition</a>
 </h3>
 
 ```typescript
@@ -1366,7 +1442,7 @@ edition?: pulumi.Input<string>;
 The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, or `DataWarehouse`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L178">property elasticPoolName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L190">property elasticPoolName</a>
 </h3>
 
 ```typescript
@@ -1377,7 +1453,7 @@ elasticPoolName?: pulumi.Input<string>;
 The name of the elastic database pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L179">property encryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L191">property encryption</a>
 </h3>
 
 ```typescript
@@ -1385,7 +1461,18 @@ encryption?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L183">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L195">property import</a>
+</h3>
+
+```typescript
+import?: pulumi.Input<{ ... }>;
+```
+
+
+A Database Import block as documented below. `create_mode` must be set to `Default`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L199">property location</a>
 </h3>
 
 ```typescript
@@ -1396,7 +1483,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L187">property maxSizeBytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L203">property maxSizeBytes</a>
 </h3>
 
 ```typescript
@@ -1407,7 +1494,7 @@ maxSizeBytes?: pulumi.Input<string>;
 The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L191">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L207">property name</a>
 </h3>
 
 ```typescript
@@ -1418,7 +1505,7 @@ name?: pulumi.Input<string>;
 The name of the database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L196">property requestedServiceObjectiveId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L212">property requestedServiceObjectiveId</a>
 </h3>
 
 ```typescript
@@ -1430,7 +1517,7 @@ Use `requested_service_objective_id` or `requested_service_objective_name` to se
 Valid values are: `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L200">property requestedServiceObjectiveName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L216">property requestedServiceObjectiveName</a>
 </h3>
 
 ```typescript
@@ -1441,7 +1528,7 @@ requestedServiceObjectiveName?: pulumi.Input<string>;
 Use `requested_service_objective_name` or `requested_service_objective_id` to set the performance level for the database.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L204">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L220">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1452,7 +1539,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L208">property restorePointInTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L224">property restorePointInTime</a>
 </h3>
 
 ```typescript
@@ -1463,7 +1550,7 @@ restorePointInTime?: pulumi.Input<string>;
 The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L212">property serverName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L228">property serverName</a>
 </h3>
 
 ```typescript
@@ -1474,7 +1561,7 @@ serverName?: pulumi.Input<string>;
 The name of the SQL Server on which to create the database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L216">property sourceDatabaseDeletionDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L232">property sourceDatabaseDeletionDate</a>
 </h3>
 
 ```typescript
@@ -1485,7 +1572,7 @@ sourceDatabaseDeletionDate?: pulumi.Input<string>;
 The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L220">property sourceDatabaseId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L236">property sourceDatabaseId</a>
 </h3>
 
 ```typescript
@@ -1496,7 +1583,7 @@ sourceDatabaseId?: pulumi.Input<string>;
 The URI of the source database if `create_mode` value is not `Default`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L224">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/database.ts#L240">property tags</a>
 </h3>
 
 ```typescript

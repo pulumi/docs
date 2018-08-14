@@ -6,6 +6,9 @@ title: Module autoscaling/v2beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isCrossVersionObjectReference">function isCrossVersionObjectReference</a>
+* <a href="#isHorizontalPodAutoscaler">function isHorizontalPodAutoscaler</a>
+* <a href="#isHorizontalPodAutoscalerList">function isHorizontalPodAutoscalerList</a>
 * <a href="#CrossVersionObjectReference">interface CrossVersionObjectReference</a>
 * <a href="#HorizontalPodAutoscaler">interface HorizontalPodAutoscaler</a>
 * <a href="#HorizontalPodAutoscalerCondition">interface HorizontalPodAutoscalerCondition</a>
@@ -21,8 +24,32 @@ title: Module autoscaling/v2beta1
 * <a href="#ResourceMetricSource">interface ResourceMetricSource</a>
 * <a href="#ResourceMetricStatus">interface ResourceMetricStatus</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isCrossVersionObjectReference">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5447">function isCrossVersionObjectReference</a>
+</h2>
+
+```typescript
+isCrossVersionObjectReference(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isHorizontalPodAutoscaler">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5492">function isHorizontalPodAutoscaler</a>
+</h2>
+
+```typescript
+isHorizontalPodAutoscaler(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isHorizontalPodAutoscalerList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5561">function isHorizontalPodAutoscalerList</a>
+</h2>
+
+```typescript
+isHorizontalPodAutoscalerList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="CrossVersionObjectReference">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5114">interface CrossVersionObjectReference</a>

@@ -17,14 +17,14 @@ title: Module iot
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/ioTHub.ts#L9">class IoTHub</a>
 </h2>
 
-Manages a new IotHub
+Manages a IotHub
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/ioTHub.ts#L50">constructor</a>
 </h3>
 
 ```typescript
-new IoTHub(name: string, args: IoTHubArgs, opts?: pulumi.ResourceOptions)
+new IoTHub(name: string, args: IoTHubArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -47,7 +47,15 @@ Get an existing IoTHub resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -70,7 +78,7 @@ public hostname: pulumi.Output<string>;
 The hostname of the IotHub Resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -283,7 +291,7 @@ The name of the resource group under which the IotHub resource has to be created
 </h3>
 
 ```typescript
-sharedAccessPolicies?: pulumi.Input<{ ... }[]>;
+sharedAccessPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

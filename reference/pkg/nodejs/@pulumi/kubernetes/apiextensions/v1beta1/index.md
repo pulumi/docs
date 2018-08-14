@@ -6,6 +6,8 @@ title: Module apiextensions/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isCustomResourceDefinition">function isCustomResourceDefinition</a>
+* <a href="#isCustomResourceDefinitionList">function isCustomResourceDefinitionList</a>
 * <a href="#CustomResourceDefinition">interface CustomResourceDefinition</a>
 * <a href="#CustomResourceDefinitionCondition">interface CustomResourceDefinitionCondition</a>
 * <a href="#CustomResourceDefinitionList">interface CustomResourceDefinitionList</a>
@@ -20,8 +22,24 @@ title: Module apiextensions/v1beta1
 * <a href="#JSONSchemaPropsOrBool">interface JSONSchemaPropsOrBool</a>
 * <a href="#JSONSchemaPropsOrStringArray">interface JSONSchemaPropsOrStringArray</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isCustomResourceDefinition">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L520">function isCustomResourceDefinition</a>
+</h2>
+
+```typescript
+isCustomResourceDefinition(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isCustomResourceDefinitionList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L586">function isCustomResourceDefinitionList</a>
+</h2>
+
+```typescript
+isCustomResourceDefinitionList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="CustomResourceDefinition">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L456">interface CustomResourceDefinition</a>

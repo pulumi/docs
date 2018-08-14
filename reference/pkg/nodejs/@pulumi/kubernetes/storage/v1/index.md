@@ -6,11 +6,29 @@ title: Module storage/v1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isStorageClass">function isStorageClass</a>
+* <a href="#isStorageClassList">function isStorageClassList</a>
 * <a href="#StorageClass">interface StorageClass</a>
 * <a href="#StorageClassList">interface StorageClassList</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isStorageClass">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17308">function isStorageClass</a>
+</h2>
+
+```typescript
+isStorageClass(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isStorageClassList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17345">function isStorageClassList</a>
+</h2>
+
+```typescript
+isStorageClassList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="StorageClass">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16292">interface StorageClass</a>
@@ -91,7 +109,7 @@ is invalid.
 </h3>
 
 ```typescript
-parameters: object;
+parameters: { ... };
 ```
 
 

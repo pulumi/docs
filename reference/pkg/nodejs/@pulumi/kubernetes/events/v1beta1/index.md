@@ -6,12 +6,30 @@ title: Module events/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isEvent">function isEvent</a>
+* <a href="#isEventList">function isEventList</a>
 * <a href="#Event">interface Event</a>
 * <a href="#EventList">interface EventList</a>
 * <a href="#EventSeries">interface EventSeries</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isEvent">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L12649">function isEvent</a>
+</h2>
+
+```typescript
+isEvent(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isEventList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L12686">function isEventList</a>
+</h2>
+
+```typescript
+isEventList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="Event">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11900">interface Event</a>

@@ -60,7 +60,7 @@ Provides a CloudWatch Dashboard resource.
 </h3>
 
 ```typescript
-new Dashboard(name: string, args: DashboardArgs, opts?: pulumi.ResourceOptions)
+new Dashboard(name: string, args: DashboardArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -83,7 +83,15 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -128,7 +136,7 @@ public dashboardName: pulumi.Output<string>;
 The name of the dashboard.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -162,7 +170,7 @@ Provides a resource to create a CloudWatch Events permission to support cross-ac
 </h3>
 
 ```typescript
-new EventPermission(name: string, args: EventPermissionArgs, opts?: pulumi.ResourceOptions)
+new EventPermission(name: string, args: EventPermissionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -185,7 +193,15 @@ Get an existing EventPermission resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -208,7 +224,7 @@ public action: pulumi.Output<string | undefined>;
 The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -264,7 +280,7 @@ Provides a CloudWatch Event Rule resource.
 </h3>
 
 ```typescript
-new EventRule(name: string, args?: EventRuleArgs, opts?: pulumi.ResourceOptions)
+new EventRule(name: string, args?: EventRuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -287,7 +303,15 @@ Get an existing EventRule resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -334,7 +358,7 @@ described a JSON object.
 See full documentation of [CloudWatch Events and Event Patterns](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CloudWatchEventsandEventPatterns.html) for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -424,7 +448,7 @@ Provides a CloudWatch Event Target resource.
 </h3>
 
 ```typescript
-new EventTarget(name: string, args: EventTargetArgs, opts?: pulumi.ResourceOptions)
+new EventTarget(name: string, args: EventTargetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -447,7 +471,15 @@ Get an existing EventTarget resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -492,7 +524,7 @@ public ecsTarget: pulumi.Output<{ ... } | undefined>;
 Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -626,7 +658,7 @@ Provides a CloudWatch Logs destination resource.
 </h3>
 
 ```typescript
-new LogDestination(name: string, args: LogDestinationArgs, opts?: pulumi.ResourceOptions)
+new LogDestination(name: string, args: LogDestinationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -649,7 +681,15 @@ Get an existing LogDestination resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -672,7 +712,7 @@ public arn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) specifying the log destination.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -739,7 +779,7 @@ Provides a CloudWatch Logs destination policy resource.
 </h3>
 
 ```typescript
-new LogDestinationPolicy(name: string, args: LogDestinationPolicyArgs, opts?: pulumi.ResourceOptions)
+new LogDestinationPolicy(name: string, args: LogDestinationPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -762,7 +802,15 @@ Get an existing LogDestinationPolicy resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -796,7 +844,7 @@ public destinationName: pulumi.Output<string>;
 A name for the subscription filter
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -820,17 +868,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="LogGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L9">class LogGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L11">class LogGroup</a>
 </h2>
 
 Provides a CloudWatch Log Group resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L48">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L50">constructor</a>
 </h3>
 
 ```typescript
-new LogGroup(name: string, args?: LogGroupArgs, opts?: pulumi.ResourceOptions)
+new LogGroup(name: string, args?: LogGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -841,7 +889,7 @@ Create a LogGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -853,7 +901,15 @@ Get an existing LogGroup resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -865,7 +921,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L27">property arn</a>
 </h3>
 
 ```typescript
@@ -876,7 +932,7 @@ public arn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) specifying the log group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -888,7 +944,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L31">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L33">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -901,7 +957,7 @@ AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All 
 permissions for the CMK whenever the encrypted data is requested.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L35">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L37">property name</a>
 </h3>
 
 ```typescript
@@ -912,7 +968,7 @@ public name: pulumi.Output<string>;
 The name of the log group. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L39">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L41">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -923,7 +979,7 @@ public namePrefix: pulumi.Output<string | undefined>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L44">property retentionInDays</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L46">property retentionInDays</a>
 </h3>
 
 ```typescript
@@ -935,11 +991,11 @@ Specifies the number of days
 you want to retain log events in the specified log group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L48">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L50">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -968,7 +1024,7 @@ Provides a CloudWatch Log Metric Filter resource.
 </h3>
 
 ```typescript
-new LogMetricFilter(name: string, args: LogMetricFilterArgs, opts?: pulumi.ResourceOptions)
+new LogMetricFilter(name: string, args: LogMetricFilterArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -991,7 +1047,15 @@ Get an existing LogMetricFilter resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1003,7 +1067,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1083,7 +1147,7 @@ Provides a resource to manage a CloudWatch log resource policy.
 </h3>
 
 ```typescript
-new LogResourcePolicy(name: string, args: LogResourcePolicyArgs, opts?: pulumi.ResourceOptions)
+new LogResourcePolicy(name: string, args: LogResourcePolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1106,7 +1170,15 @@ Get an existing LogResourcePolicy resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1118,7 +1190,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1174,7 +1246,7 @@ Provides a CloudWatch Log Stream resource.
 </h3>
 
 ```typescript
-new LogStream(name: string, args: LogStreamArgs, opts?: pulumi.ResourceOptions)
+new LogStream(name: string, args: LogStreamArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1197,7 +1269,15 @@ Get an existing LogStream resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1220,7 +1300,7 @@ public arn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) specifying the log stream.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1276,7 +1356,7 @@ Provides a CloudWatch Logs subscription filter resource.
 </h3>
 
 ```typescript
-new LogSubscriptionFilter(name: string, args: LogSubscriptionFilterArgs, opts?: pulumi.ResourceOptions)
+new LogSubscriptionFilter(name: string, args: LogSubscriptionFilterArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1299,7 +1379,15 @@ Get an existing LogSubscriptionFilter resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1344,7 +1432,7 @@ public filterPattern: pulumi.Output<string>;
 A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1411,7 +1499,7 @@ Provides a CloudWatch Metric Alarm resource.
 </h3>
 
 ```typescript
-new MetricAlarm(name: string, args: MetricAlarmArgs, opts?: pulumi.ResourceOptions)
+new MetricAlarm(name: string, args: MetricAlarmArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1434,7 +1522,15 @@ Get an existing MetricAlarm resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1461,7 +1557,7 @@ Indicates whether or not actions should be executed during any changes to the al
 </h3>
 
 ```typescript
-public alarmActions: pulumi.Output<string | Topic[] | undefined>;
+public alarmActions: pulumi.Output<string[] | undefined>;
 ```
 
 
@@ -1550,7 +1646,7 @@ public extendedStatistic: pulumi.Output<string | undefined>;
 The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1566,7 +1662,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 
 ```typescript
-public insufficientDataActions: pulumi.Output<string | Topic[] | undefined>;
+public insufficientDataActions: pulumi.Output<string[] | undefined>;
 ```
 
 
@@ -1612,7 +1708,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 </h3>
 
 ```typescript
-public okActions: pulumi.Output<string | Topic[] | undefined>;
+public okActions: pulumi.Output<string[] | undefined>;
 ```
 
 
@@ -1691,7 +1787,7 @@ deployments.
 </h2>
 
 ```typescript
-getLogGroup(args: GetLogGroupArgs): Promise<GetLogGroupResult>
+getLogGroup(args: GetLogGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetLogGroupResult>
 ```
 
 
@@ -2136,7 +2232,7 @@ The name of the rule you want to add targets to.
 </h3>
 
 ```typescript
-runCommandTargets?: pulumi.Input<{ ... }[]>;
+runCommandTargets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2275,7 +2371,7 @@ The name of the rule you want to add targets to.
 </h3>
 
 ```typescript
-runCommandTargets?: pulumi.Input<{ ... }[]>;
+runCommandTargets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2314,7 +2410,7 @@ A collection of arguments for invoking getLogGroup.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -2505,13 +2601,13 @@ targetArn?: pulumi.Input<string>;
 The ARN of the target Amazon Kinesis stream or Amazon Lambda resource for the destination
 
 <h2 class="pdoc-module-header" id="LogGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L117">interface LogGroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L119">interface LogGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a LogGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L123">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L125">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -2524,7 +2620,7 @@ AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All 
 permissions for the CMK whenever the encrypted data is requested.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L127">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L129">property name</a>
 </h3>
 
 ```typescript
@@ -2535,7 +2631,7 @@ name?: pulumi.Input<string>;
 The name of the log group. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L131">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L133">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -2546,7 +2642,7 @@ namePrefix?: pulumi.Input<string>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L136">property retentionInDays</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L138">property retentionInDays</a>
 </h3>
 
 ```typescript
@@ -2558,24 +2654,24 @@ Specifies the number of days
 you want to retain log events in the specified log group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L140">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L142">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="LogGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L84">interface LogGroupState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L86">interface LogGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering LogGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L88">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L90">property arn</a>
 </h3>
 
 ```typescript
@@ -2586,7 +2682,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) specifying the log group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L94">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L96">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -2599,7 +2695,7 @@ AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All 
 permissions for the CMK whenever the encrypted data is requested.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L98">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L100">property name</a>
 </h3>
 
 ```typescript
@@ -2610,7 +2706,7 @@ name?: pulumi.Input<string>;
 The name of the log group. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L102">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L104">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -2621,7 +2717,7 @@ namePrefix?: pulumi.Input<string>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L107">property retentionInDays</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L109">property retentionInDays</a>
 </h3>
 
 ```typescript
@@ -2633,11 +2729,11 @@ Specifies the number of days
 you want to retain log events in the specified log group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L111">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L113">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 

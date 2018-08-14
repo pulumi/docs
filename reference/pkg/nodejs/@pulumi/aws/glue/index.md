@@ -45,7 +45,7 @@ Provides a Glue Catalog Database Resource. You can refer to the [Glue Developer 
 </h3>
 
 ```typescript
-new CatalogDatabase(name: string, args?: CatalogDatabaseArgs, opts?: pulumi.ResourceOptions)
+new CatalogDatabase(name: string, args?: CatalogDatabaseArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -68,7 +68,15 @@ Get an existing CatalogDatabase resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -102,7 +110,7 @@ public description: pulumi.Output<string | undefined>;
 Description of the database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -169,7 +177,7 @@ Provides a Glue Catalog Table Resource. You can refer to the [Glue Developer Gui
 </h3>
 
 ```typescript
-new CatalogTable(name: string, args: CatalogTableArgs, opts?: pulumi.ResourceOptions)
+new CatalogTable(name: string, args: CatalogTableArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -192,7 +200,15 @@ Get an existing CatalogTable resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -237,7 +253,7 @@ public description: pulumi.Output<string | undefined>;
 Description of the table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -372,7 +388,7 @@ Provides a Glue Classifier resource.
 </h3>
 
 ```typescript
-new Classifier(name: string, args?: ClassifierArgs, opts?: pulumi.ResourceOptions)
+new Classifier(name: string, args?: ClassifierArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -395,7 +411,15 @@ Get an existing Classifier resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -418,7 +442,7 @@ public grokClassifier: pulumi.Output<{ ... } | undefined>;
 A classifier that uses grok patterns. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -485,7 +509,7 @@ Provides a Glue Connection resource.
 </h3>
 
 ```typescript
-new Connection(name: string, args: ConnectionArgs, opts?: pulumi.ResourceOptions)
+new Connection(name: string, args: ConnectionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -508,7 +532,15 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -564,7 +596,7 @@ public description: pulumi.Output<string | undefined>;
 Description of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -627,11 +659,11 @@ deployments.
 Manages a Glue Crawler. More information can be found in the [AWS Glue Develeper Guide](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L65">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L69">constructor</a>
 </h3>
 
 ```typescript
-new Crawler(name: string, args: CrawlerArgs, opts?: pulumi.ResourceOptions)
+new Crawler(name: string, args: CrawlerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -654,7 +686,15 @@ Get an existing Crawler resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -710,7 +750,18 @@ public description: pulumi.Output<string | undefined>;
 Description of the crawler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L41">property dynamodbTargets</a>
+</h3>
+
+```typescript
+public dynamodbTargets: pulumi.Output<{ ... }[] | undefined>;
+```
+
+
+List of nested DynamoDB target arguments. See below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -722,7 +773,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L41">property jdbcTargets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L45">property jdbcTargets</a>
 </h3>
 
 ```typescript
@@ -733,7 +784,7 @@ public jdbcTargets: pulumi.Output<{ ... }[] | undefined>;
 List of nested JBDC target arguments. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L45">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L49">property name</a>
 </h3>
 
 ```typescript
@@ -744,7 +795,7 @@ public name: pulumi.Output<string>;
 Name of the crawler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L49">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L53">property role</a>
 </h3>
 
 ```typescript
@@ -755,7 +806,7 @@ public role: pulumi.Output<string>;
 The IAM role (or ARN of an IAM role) used by the crawler to access other resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L53">property s3Targets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L57">property s3Targets</a>
 </h3>
 
 ```typescript
@@ -766,7 +817,7 @@ public s3Targets: pulumi.Output<{ ... }[] | undefined>;
 List nested Amazon S3 target arguments. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L57">property schedule</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L61">property schedule</a>
 </h3>
 
 ```typescript
@@ -777,7 +828,7 @@ public schedule: pulumi.Output<string | undefined>;
 A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L61">property schemaChangePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L65">property schemaChangePolicy</a>
 </h3>
 
 ```typescript
@@ -788,7 +839,7 @@ public schemaChangePolicy: pulumi.Output<{ ... } | undefined>;
 Policy for the crawler's update and deletion behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L65">property tablePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L69">property tablePrefix</a>
 </h3>
 
 ```typescript
@@ -821,7 +872,7 @@ Provides a Glue Job resource.
 </h3>
 
 ```typescript
-new Job(name: string, args: JobArgs, opts?: pulumi.ResourceOptions)
+new Job(name: string, args: JobArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -844,7 +895,15 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -922,7 +981,7 @@ public executionProperty: pulumi.Output<{ ... }>;
 Execution property of the job. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1000,7 +1059,7 @@ Manages a Glue Trigger resource.
 </h3>
 
 ```typescript
-new Trigger(name: string, args: TriggerArgs, opts?: pulumi.ResourceOptions)
+new Trigger(name: string, args: TriggerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1023,7 +1082,15 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1068,7 +1135,7 @@ public enabled: pulumi.Output<boolean | undefined>;
 Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1140,7 +1207,7 @@ deployments.
 </h2>
 
 ```typescript
-getScript(args: GetScriptArgs): Promise<GetScriptResult>
+getScript(args: GetScriptArgs, opts?: pulumi.InvokeOptions): Promise<GetScriptResult>
 ```
 
 
@@ -1345,7 +1412,7 @@ Usually the class that implements the SerDe. An example is: org.apache.hadoop.hi
 </h3>
 
 ```typescript
-partitionKeys?: pulumi.Input<{ ... }[]>;
+partitionKeys?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1483,7 +1550,7 @@ Usually the class that implements the SerDe. An example is: org.apache.hadoop.hi
 </h3>
 
 ```typescript
-partitionKeys?: pulumi.Input<{ ... }[]>;
+partitionKeys?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1811,13 +1878,13 @@ physicalConnectionRequirements?: pulumi.Input<{ ... }>;
 A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
 
 <h2 class="pdoc-module-header" id="CrawlerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L167">interface CrawlerArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L177">interface CrawlerArgs</a>
 </h2>
 
 The set of arguments for constructing a Crawler resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L171">property classifiers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L181">property classifiers</a>
 </h3>
 
 ```typescript
@@ -1828,7 +1895,7 @@ classifiers?: pulumi.Input<pulumi.Input<string>[]>;
 List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L175">property configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L185">property configuration</a>
 </h3>
 
 ```typescript
@@ -1839,7 +1906,7 @@ configuration?: pulumi.Input<string>;
 JSON string of configuration information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L179">property databaseName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L189">property databaseName</a>
 </h3>
 
 ```typescript
@@ -1850,7 +1917,7 @@ databaseName: pulumi.Input<string>;
 Glue database where results are written.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L183">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L193">property description</a>
 </h3>
 
 ```typescript
@@ -1861,18 +1928,29 @@ description?: pulumi.Input<string>;
 Description of the crawler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L187">property jdbcTargets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L197">property dynamodbTargets</a>
 </h3>
 
 ```typescript
-jdbcTargets?: pulumi.Input<{ ... }[]>;
+dynamodbTargets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+List of nested DynamoDB target arguments. See below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L201">property jdbcTargets</a>
+</h3>
+
+```typescript
+jdbcTargets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 List of nested JBDC target arguments. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L191">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L205">property name</a>
 </h3>
 
 ```typescript
@@ -1883,7 +1961,7 @@ name?: pulumi.Input<string>;
 Name of the crawler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L195">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L209">property role</a>
 </h3>
 
 ```typescript
@@ -1894,18 +1972,18 @@ role: pulumi.Input<string>;
 The IAM role (or ARN of an IAM role) used by the crawler to access other resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L199">property s3Targets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L213">property s3Targets</a>
 </h3>
 
 ```typescript
-s3Targets?: pulumi.Input<{ ... }[]>;
+s3Targets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 List nested Amazon S3 target arguments. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L203">property schedule</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L217">property schedule</a>
 </h3>
 
 ```typescript
@@ -1916,7 +1994,7 @@ schedule?: pulumi.Input<string>;
 A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L207">property schemaChangePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L221">property schemaChangePolicy</a>
 </h3>
 
 ```typescript
@@ -1927,7 +2005,7 @@ schemaChangePolicy?: pulumi.Input<{ ... }>;
 Policy for the crawler's update and deletion behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L211">property tablePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L225">property tablePrefix</a>
 </h3>
 
 ```typescript
@@ -1938,13 +2016,13 @@ tablePrefix?: pulumi.Input<string>;
 The table prefix used for catalog tables that are created.
 
 <h2 class="pdoc-module-header" id="CrawlerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L117">interface CrawlerState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L123">interface CrawlerState</a>
 </h2>
 
 Input properties used for looking up and filtering Crawler resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L121">property classifiers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L127">property classifiers</a>
 </h3>
 
 ```typescript
@@ -1955,7 +2033,7 @@ classifiers?: pulumi.Input<pulumi.Input<string>[]>;
 List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L125">property configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L131">property configuration</a>
 </h3>
 
 ```typescript
@@ -1966,7 +2044,7 @@ configuration?: pulumi.Input<string>;
 JSON string of configuration information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L129">property databaseName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L135">property databaseName</a>
 </h3>
 
 ```typescript
@@ -1977,7 +2055,7 @@ databaseName?: pulumi.Input<string>;
 Glue database where results are written.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L133">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L139">property description</a>
 </h3>
 
 ```typescript
@@ -1988,18 +2066,29 @@ description?: pulumi.Input<string>;
 Description of the crawler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L137">property jdbcTargets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L143">property dynamodbTargets</a>
 </h3>
 
 ```typescript
-jdbcTargets?: pulumi.Input<{ ... }[]>;
+dynamodbTargets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+List of nested DynamoDB target arguments. See below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L147">property jdbcTargets</a>
+</h3>
+
+```typescript
+jdbcTargets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 List of nested JBDC target arguments. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L141">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L151">property name</a>
 </h3>
 
 ```typescript
@@ -2010,7 +2099,7 @@ name?: pulumi.Input<string>;
 Name of the crawler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L145">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L155">property role</a>
 </h3>
 
 ```typescript
@@ -2021,18 +2110,18 @@ role?: pulumi.Input<string>;
 The IAM role (or ARN of an IAM role) used by the crawler to access other resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L149">property s3Targets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L159">property s3Targets</a>
 </h3>
 
 ```typescript
-s3Targets?: pulumi.Input<{ ... }[]>;
+s3Targets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 List nested Amazon S3 target arguments. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L153">property schedule</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L163">property schedule</a>
 </h3>
 
 ```typescript
@@ -2043,7 +2132,7 @@ schedule?: pulumi.Input<string>;
 A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L157">property schemaChangePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L167">property schemaChangePolicy</a>
 </h3>
 
 ```typescript
@@ -2054,7 +2143,7 @@ schemaChangePolicy?: pulumi.Input<{ ... }>;
 Policy for the crawler's update and deletion behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L161">property tablePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/crawler.ts#L171">property tablePrefix</a>
 </h3>
 
 ```typescript
@@ -2075,7 +2164,7 @@ A collection of arguments for invoking getScript.
 </h3>
 
 ```typescript
-dagEdges: pulumi.Input<{ ... }[]>;
+dagEdges: { ... }[];
 ```
 
 
@@ -2086,7 +2175,7 @@ A list of the edges in the DAG. Defined below.
 </h3>
 
 ```typescript
-dagNodes: pulumi.Input<{ ... }[]>;
+dagNodes: { ... }[];
 ```
 
 
@@ -2097,7 +2186,7 @@ A list of the nodes in the DAG. Defined below.
 </h3>
 
 ```typescript
-language?: pulumi.Input<string>;
+language?: string;
 ```
 
 
@@ -2385,7 +2474,7 @@ The set of arguments for constructing a Trigger resource.
 </h3>
 
 ```typescript
-actions: pulumi.Input<{ ... }[]>;
+actions: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2468,7 +2557,7 @@ Input properties used for looking up and filtering Trigger resources.
 </h3>
 
 ```typescript
-actions?: pulumi.Input<{ ... }[]>;
+actions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

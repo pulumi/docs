@@ -27,7 +27,7 @@ Provides an Elastic Transcoder pipeline resource.
 </h3>
 
 ```typescript
-new Pipeline(name: string, args: PipelineArgs, opts?: pulumi.ResourceOptions)
+new Pipeline(name: string, args: PipelineArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -50,7 +50,15 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -103,7 +111,7 @@ public contentConfigPermissions: pulumi.Output<{ ... }[] | undefined>;
 The permissions for the `content_config` object. (documented below)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -214,7 +222,7 @@ Provides an Elastic Transcoder preset resource.
 </h3>
 
 ```typescript
-new Preset(name: string, args: PresetArgs, opts?: pulumi.ResourceOptions)
+new Preset(name: string, args: PresetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -237,7 +245,15 @@ Get an existing Preset resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -301,7 +317,7 @@ public description: pulumi.Output<string | undefined>;
 A description of the preset (maximum 255 characters)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -418,7 +434,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
 </h3>
 
 ```typescript
-contentConfigPermissions?: pulumi.Input<{ ... }[]>;
+contentConfigPermissions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -495,7 +511,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
 </h3>
 
 ```typescript
-thumbnailConfigPermissions?: pulumi.Input<{ ... }[]>;
+thumbnailConfigPermissions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -542,7 +558,7 @@ The ContentConfig object specifies information about the Amazon S3 bucket in whi
 </h3>
 
 ```typescript
-contentConfigPermissions?: pulumi.Input<{ ... }[]>;
+contentConfigPermissions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -619,7 +635,7 @@ The ThumbnailConfig object specifies information about the Amazon S3 bucket in w
 </h3>
 
 ```typescript
-thumbnailConfigPermissions?: pulumi.Input<{ ... }[]>;
+thumbnailConfigPermissions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -729,7 +745,7 @@ videoCodecOptions?: pulumi.Input<{ ... }>;
 </h3>
 
 ```typescript
-videoWatermarks?: pulumi.Input<{ ... }[]>;
+videoWatermarks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -848,7 +864,7 @@ videoCodecOptions?: pulumi.Input<{ ... }>;
 </h3>
 
 ```typescript
-videoWatermarks?: pulumi.Input<{ ... }[]>;
+videoWatermarks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
