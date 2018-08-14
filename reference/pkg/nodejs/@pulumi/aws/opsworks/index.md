@@ -69,7 +69,7 @@ Provides an OpsWorks application resource.
 </h3>
 
 ```typescript
-new Application(name: string, args: ApplicationArgs, opts?: pulumi.ResourceOptions)
+new Application(name: string, args: ApplicationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -92,7 +92,15 @@ Get an existing Application resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -225,7 +233,7 @@ public environments: pulumi.Output<{ ... }[] | undefined>;
 Object to define environment variables.  Object is described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -325,7 +333,7 @@ Provides an OpsWorks custom layer resource.
 </h3>
 
 ```typescript
-new CustomLayer(name: string, args: CustomLayerArgs, opts?: pulumi.ResourceOptions)
+new CustomLayer(name: string, args: CustomLayerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -348,7 +356,15 @@ Get an existing CustomLayer resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -499,7 +515,7 @@ public elasticLoadBalancer: pulumi.Output<string | undefined>;
 Name of an Elastic Load Balancer to attach to this layer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -610,7 +626,7 @@ Provides an OpsWorks Ganglia layer resource.
 </h3>
 
 ```typescript
-new GangliaLayer(name: string, args: GangliaLayerArgs, opts?: pulumi.ResourceOptions)
+new GangliaLayer(name: string, args: GangliaLayerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -633,7 +649,15 @@ Get an existing GangliaLayer resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -784,7 +808,7 @@ public elasticLoadBalancer: pulumi.Output<string | undefined>;
 Name of an Elastic Load Balancer to attach to this layer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -917,7 +941,7 @@ Provides an OpsWorks haproxy layer resource.
 </h3>
 
 ```typescript
-new HaproxyLayer(name: string, args: HaproxyLayerArgs, opts?: pulumi.ResourceOptions)
+new HaproxyLayer(name: string, args: HaproxyLayerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -940,7 +964,15 @@ Get an existing HaproxyLayer resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1113,7 +1145,7 @@ public healthcheckUrl: pulumi.Output<string | undefined>;
 URL path to use for instance healthchecks. Defaults to "/".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1257,7 +1289,7 @@ Provides an OpsWorks instance resource.
 </h3>
 
 ```typescript
-new Instance(name: string, args: InstanceArgs, opts?: pulumi.ResourceOptions)
+new Instance(name: string, args: InstanceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1280,7 +1312,15 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1445,7 +1485,7 @@ public hostname: pulumi.Output<string>;
 The instance's host name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1775,7 +1815,7 @@ Provides an OpsWorks Java application layer resource.
 </h3>
 
 ```typescript
-new JavaAppLayer(name: string, args: JavaAppLayerArgs, opts?: pulumi.ResourceOptions)
+new JavaAppLayer(name: string, args: JavaAppLayerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1798,7 +1838,15 @@ Get an existing JavaAppLayer resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1971,7 +2019,7 @@ public elasticLoadBalancer: pulumi.Output<string | undefined>;
 Name of an Elastic Load Balancer to attach to this layer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -2104,7 +2152,7 @@ Provides an OpsWorks memcached layer resource.
 </h3>
 
 ```typescript
-new MemcachedLayer(name: string, args: MemcachedLayerArgs, opts?: pulumi.ResourceOptions)
+new MemcachedLayer(name: string, args: MemcachedLayerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -2127,7 +2175,15 @@ Get an existing MemcachedLayer resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2289,7 +2345,7 @@ public elasticLoadBalancer: pulumi.Output<string | undefined>;
 Name of an Elastic Load Balancer to attach to this layer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -2392,7 +2448,7 @@ Provides an OpsWorks MySQL layer resource.
 </h3>
 
 ```typescript
-new MysqlLayer(name: string, args: MysqlLayerArgs, opts?: pulumi.ResourceOptions)
+new MysqlLayer(name: string, args: MysqlLayerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -2415,7 +2471,15 @@ Get an existing MysqlLayer resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2566,7 +2630,7 @@ public elasticLoadBalancer: pulumi.Output<string | undefined>;
 Name of an Elastic Load Balancer to attach to this layer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -2688,7 +2752,7 @@ Provides an OpsWorks NodeJS application layer resource.
 </h3>
 
 ```typescript
-new NodejsAppLayer(name: string, args: NodejsAppLayerArgs, opts?: pulumi.ResourceOptions)
+new NodejsAppLayer(name: string, args: NodejsAppLayerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -2711,7 +2775,15 @@ Get an existing NodejsAppLayer resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2862,7 +2934,7 @@ public elasticLoadBalancer: pulumi.Output<string | undefined>;
 Name of an Elastic Load Balancer to attach to this layer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -2973,7 +3045,7 @@ Provides an OpsWorks permission resource.
 </h3>
 
 ```typescript
-new Permission(name: string, args: PermissionArgs, opts?: pulumi.ResourceOptions)
+new Permission(name: string, args: PermissionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -2996,7 +3068,15 @@ Get an existing Permission resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -3030,7 +3110,7 @@ public allowSudo: pulumi.Output<boolean>;
 Whether the user is allowed to use sudo to elevate privileges
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -3097,7 +3177,7 @@ Provides an OpsWorks PHP application layer resource.
 </h3>
 
 ```typescript
-new PhpAppLayer(name: string, args: PhpAppLayerArgs, opts?: pulumi.ResourceOptions)
+new PhpAppLayer(name: string, args: PhpAppLayerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -3120,7 +3200,15 @@ Get an existing PhpAppLayer resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -3271,7 +3359,7 @@ public elasticLoadBalancer: pulumi.Output<string | undefined>;
 Name of an Elastic Load Balancer to attach to this layer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -3371,7 +3459,7 @@ Provides an OpsWorks Ruby on Rails application layer resource.
 </h3>
 
 ```typescript
-new RailsAppLayer(name: string, args: RailsAppLayerArgs, opts?: pulumi.ResourceOptions)
+new RailsAppLayer(name: string, args: RailsAppLayerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -3394,7 +3482,15 @@ Get an existing RailsAppLayer resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -3567,7 +3663,7 @@ public elasticLoadBalancer: pulumi.Output<string | undefined>;
 Name of an Elastic Load Balancer to attach to this layer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -3714,7 +3810,7 @@ Provides an OpsWorks RDS DB Instance resource.
 </h3>
 
 ```typescript
-new RdsDbInstance(name: string, args: RdsDbInstanceArgs, opts?: pulumi.ResourceOptions)
+new RdsDbInstance(name: string, args: RdsDbInstanceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -3737,7 +3833,15 @@ Get an existing RdsDbInstance resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -3771,7 +3875,7 @@ public dbUser: pulumi.Output<string>;
 A db username
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -3817,17 +3921,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Stack">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L9">class Stack</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L11">class Stack</a>
 </h2>
 
 Provides an OpsWorks stack resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L118">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L120">constructor</a>
 </h3>
 
 ```typescript
-new Stack(name: string, args: StackArgs, opts?: pulumi.ResourceOptions)
+new Stack(name: string, args: StackArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -3838,7 +3942,7 @@ Create a Stack resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -3850,7 +3954,15 @@ Get an existing Stack resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -3862,7 +3974,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L25">property agentVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L27">property agentVersion</a>
 </h3>
 
 ```typescript
@@ -3873,7 +3985,7 @@ public agentVersion: pulumi.Output<string>;
 If set to `"LATEST"`, OpsWorks will automatically install the latest version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L26">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L28">property arn</a>
 </h3>
 
 ```typescript
@@ -3881,7 +3993,7 @@ public arn: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L30">property berkshelfVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L32">property berkshelfVersion</a>
 </h3>
 
 ```typescript
@@ -3892,7 +4004,7 @@ public berkshelfVersion: pulumi.Output<string | undefined>;
 If `manage_berkshelf` is enabled, the version of Berkshelf to use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L34">property color</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L36">property color</a>
 </h3>
 
 ```typescript
@@ -3903,7 +4015,7 @@ public color: pulumi.Output<string | undefined>;
 Color to paint next to the stack's resources in the OpsWorks console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L38">property configurationManagerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L40">property configurationManagerName</a>
 </h3>
 
 ```typescript
@@ -3914,7 +4026,7 @@ public configurationManagerName: pulumi.Output<string | undefined>;
 Name of the configuration manager to use. Defaults to "Chef".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L42">property configurationManagerVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L44">property configurationManagerVersion</a>
 </h3>
 
 ```typescript
@@ -3925,7 +4037,7 @@ public configurationManagerVersion: pulumi.Output<string | undefined>;
 Version of the configuration manager to use. Defaults to "11.4".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L47">property customCookbooksSources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L49">property customCookbooksSources</a>
 </h3>
 
 ```typescript
@@ -3937,7 +4049,7 @@ When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L51">property customJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L53">property customJson</a>
 </h3>
 
 ```typescript
@@ -3948,7 +4060,7 @@ public customJson: pulumi.Output<string | undefined>;
 Custom JSON attributes to apply to the entire stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L56">property defaultAvailabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L58">property defaultAvailabilityZone</a>
 </h3>
 
 ```typescript
@@ -3960,7 +4072,7 @@ Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L61">property defaultInstanceProfileArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L63">property defaultInstanceProfileArn</a>
 </h3>
 
 ```typescript
@@ -3972,7 +4084,7 @@ The ARN of an IAM Instance Profile that created instances
 will have by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L65">property defaultOs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L67">property defaultOs</a>
 </h3>
 
 ```typescript
@@ -3983,7 +4095,7 @@ public defaultOs: pulumi.Output<string | undefined>;
 Name of OS that will be installed on instances by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L69">property defaultRootDeviceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L71">property defaultRootDeviceType</a>
 </h3>
 
 ```typescript
@@ -3994,7 +4106,7 @@ public defaultRootDeviceType: pulumi.Output<string | undefined>;
 Name of the type of root device instances will have by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L73">property defaultSshKeyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L75">property defaultSshKeyName</a>
 </h3>
 
 ```typescript
@@ -4005,7 +4117,7 @@ public defaultSshKeyName: pulumi.Output<string | undefined>;
 Name of the SSH keypair that instances will have by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L78">property defaultSubnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L80">property defaultSubnetId</a>
 </h3>
 
 ```typescript
@@ -4017,7 +4129,7 @@ Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L83">property hostnameTheme</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L85">property hostnameTheme</a>
 </h3>
 
 ```typescript
@@ -4029,7 +4141,7 @@ Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -4041,7 +4153,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L87">property manageBerkshelf</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L89">property manageBerkshelf</a>
 </h3>
 
 ```typescript
@@ -4052,7 +4164,7 @@ public manageBerkshelf: pulumi.Output<boolean | undefined>;
 Boolean value controlling whether Opsworks will run Berkshelf for this stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L91">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L93">property name</a>
 </h3>
 
 ```typescript
@@ -4063,7 +4175,7 @@ public name: pulumi.Output<string>;
 The name of the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L95">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L97">property region</a>
 </h3>
 
 ```typescript
@@ -4074,7 +4186,7 @@ public region: pulumi.Output<string>;
 The name of the region where the stack will exist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L99">property serviceRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L101">property serviceRoleArn</a>
 </h3>
 
 ```typescript
@@ -4085,7 +4197,7 @@ public serviceRoleArn: pulumi.Output<string>;
 The ARN of an IAM role that the OpsWorks service will act as.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L100">property stackEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L102">property stackEndpoint</a>
 </h3>
 
 ```typescript
@@ -4093,11 +4205,11 @@ public stackEndpoint: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L104">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L106">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -4116,7 +4228,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L109">property useCustomCookbooks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L111">property useCustomCookbooks</a>
 </h3>
 
 ```typescript
@@ -4128,7 +4240,7 @@ Boolean value controlling whether the custom cookbook settings are
 enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L114">property useOpsworksSecurityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L116">property useOpsworksSecurityGroups</a>
 </h3>
 
 ```typescript
@@ -4140,7 +4252,7 @@ Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L118">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L120">property vpcId</a>
 </h3>
 
 ```typescript
@@ -4161,7 +4273,7 @@ Provides an OpsWorks static web server layer resource.
 </h3>
 
 ```typescript
-new StaticWebLayer(name: string, args: StaticWebLayerArgs, opts?: pulumi.ResourceOptions)
+new StaticWebLayer(name: string, args: StaticWebLayerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -4184,7 +4296,15 @@ Get an existing StaticWebLayer resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -4332,7 +4452,7 @@ public elasticLoadBalancer: pulumi.Output<string | undefined>;
 Name of an Elastic Load Balancer to attach to this layer
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -4432,7 +4552,7 @@ Provides an OpsWorks User Profile resource.
 </h3>
 
 ```typescript
-new UserProfile(name: string, args: UserProfileArgs, opts?: pulumi.ResourceOptions)
+new UserProfile(name: string, args: UserProfileArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -4455,7 +4575,15 @@ Get an existing UserProfile resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -4478,7 +4606,7 @@ public allowSelfManagement: pulumi.Output<boolean | undefined>;
 Whether users can specify their own SSH public key through the My Settings page
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -4545,7 +4673,7 @@ The set of arguments for constructing a Application resource.
 </h3>
 
 ```typescript
-appSources?: pulumi.Input<{ ... }[]>;
+appSources?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -4655,7 +4783,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
 </h3>
 
 ```typescript
-environments?: pulumi.Input<{ ... }[]>;
+environments?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -4699,7 +4827,7 @@ A short, machine-readable name for the application. This can only be defined on 
 </h3>
 
 ```typescript
-sslConfigurations?: pulumi.Input<{ ... }[]>;
+sslConfigurations?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -4738,7 +4866,7 @@ Input properties used for looking up and filtering Application resources.
 </h3>
 
 ```typescript
-appSources?: pulumi.Input<{ ... }[]>;
+appSources?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -4848,7 +4976,7 @@ Whether to enable SSL for the app. This must be set in order to let `ssl_configu
 </h3>
 
 ```typescript
-environments?: pulumi.Input<{ ... }[]>;
+environments?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -4892,7 +5020,7 @@ A short, machine-readable name for the application. This can only be defined on 
 </h3>
 
 ```typescript
-sslConfigurations?: pulumi.Input<{ ... }[]>;
+sslConfigurations?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -5048,7 +5176,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -5270,7 +5398,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -5492,7 +5620,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -5736,7 +5864,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -5980,7 +6108,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -6257,7 +6385,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -6497,7 +6625,7 @@ deleteEip?: pulumi.Input<boolean>;
 </h3>
 
 ```typescript
-ebsBlockDevices?: pulumi.Input<{ ... }[]>;
+ebsBlockDevices?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -6536,7 +6664,7 @@ elasticIp?: pulumi.Input<string>;
 </h3>
 
 ```typescript
-ephemeralBlockDevices?: pulumi.Input<{ ... }[]>;
+ephemeralBlockDevices?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -6722,7 +6850,7 @@ reportedOsVersion?: pulumi.Input<string>;
 </h3>
 
 ```typescript
-rootBlockDevices?: pulumi.Input<{ ... }[]>;
+rootBlockDevices?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -6941,7 +7069,7 @@ deleteEip?: pulumi.Input<boolean>;
 </h3>
 
 ```typescript
-ebsBlockDevices?: pulumi.Input<{ ... }[]>;
+ebsBlockDevices?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -6991,7 +7119,7 @@ elasticIp?: pulumi.Input<string>;
 </h3>
 
 ```typescript
-ephemeralBlockDevices?: pulumi.Input<{ ... }[]>;
+ephemeralBlockDevices?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -7177,7 +7305,7 @@ reportedOsVersion?: pulumi.Input<string>;
 </h3>
 
 ```typescript
-rootBlockDevices?: pulumi.Input<{ ... }[]>;
+rootBlockDevices?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -7455,7 +7583,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -7721,7 +7849,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -7976,7 +8104,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -8198,7 +8326,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -8409,7 +8537,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -8642,7 +8770,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -8875,7 +9003,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -9097,7 +9225,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -9441,7 +9569,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -9652,7 +9780,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -9885,7 +10013,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -10162,7 +10290,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -10390,13 +10518,13 @@ stackId?: pulumi.Input<string>;
 The stack to register a db inatance for. Changing this will force a new resource.
 
 <h2 class="pdoc-module-header" id="StackArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L302">interface StackArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L304">interface StackArgs</a>
 </h2>
 
 The set of arguments for constructing a Stack resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L306">property agentVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L308">property agentVersion</a>
 </h3>
 
 ```typescript
@@ -10407,7 +10535,7 @@ agentVersion?: pulumi.Input<string>;
 If set to `"LATEST"`, OpsWorks will automatically install the latest version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L310">property berkshelfVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L312">property berkshelfVersion</a>
 </h3>
 
 ```typescript
@@ -10418,7 +10546,7 @@ berkshelfVersion?: pulumi.Input<string>;
 If `manage_berkshelf` is enabled, the version of Berkshelf to use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L314">property color</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L316">property color</a>
 </h3>
 
 ```typescript
@@ -10429,7 +10557,7 @@ color?: pulumi.Input<string>;
 Color to paint next to the stack's resources in the OpsWorks console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L318">property configurationManagerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L320">property configurationManagerName</a>
 </h3>
 
 ```typescript
@@ -10440,7 +10568,7 @@ configurationManagerName?: pulumi.Input<string>;
 Name of the configuration manager to use. Defaults to "Chef".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L322">property configurationManagerVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L324">property configurationManagerVersion</a>
 </h3>
 
 ```typescript
@@ -10451,11 +10579,11 @@ configurationManagerVersion?: pulumi.Input<string>;
 Version of the configuration manager to use. Defaults to "11.4".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L327">property customCookbooksSources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L329">property customCookbooksSources</a>
 </h3>
 
 ```typescript
-customCookbooksSources?: pulumi.Input<{ ... }[]>;
+customCookbooksSources?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -10463,7 +10591,7 @@ When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L331">property customJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L333">property customJson</a>
 </h3>
 
 ```typescript
@@ -10474,7 +10602,7 @@ customJson?: pulumi.Input<string>;
 Custom JSON attributes to apply to the entire stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L336">property defaultAvailabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L338">property defaultAvailabilityZone</a>
 </h3>
 
 ```typescript
@@ -10486,7 +10614,7 @@ Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L341">property defaultInstanceProfileArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L343">property defaultInstanceProfileArn</a>
 </h3>
 
 ```typescript
@@ -10498,7 +10626,7 @@ The ARN of an IAM Instance Profile that created instances
 will have by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L345">property defaultOs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L347">property defaultOs</a>
 </h3>
 
 ```typescript
@@ -10509,7 +10637,7 @@ defaultOs?: pulumi.Input<string>;
 Name of OS that will be installed on instances by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L349">property defaultRootDeviceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L351">property defaultRootDeviceType</a>
 </h3>
 
 ```typescript
@@ -10520,7 +10648,7 @@ defaultRootDeviceType?: pulumi.Input<string>;
 Name of the type of root device instances will have by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L353">property defaultSshKeyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L355">property defaultSshKeyName</a>
 </h3>
 
 ```typescript
@@ -10531,7 +10659,7 @@ defaultSshKeyName?: pulumi.Input<string>;
 Name of the SSH keypair that instances will have by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L358">property defaultSubnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L360">property defaultSubnetId</a>
 </h3>
 
 ```typescript
@@ -10543,7 +10671,7 @@ Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L363">property hostnameTheme</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L365">property hostnameTheme</a>
 </h3>
 
 ```typescript
@@ -10555,7 +10683,7 @@ Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L367">property manageBerkshelf</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L369">property manageBerkshelf</a>
 </h3>
 
 ```typescript
@@ -10566,7 +10694,7 @@ manageBerkshelf?: pulumi.Input<boolean>;
 Boolean value controlling whether Opsworks will run Berkshelf for this stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L371">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L373">property name</a>
 </h3>
 
 ```typescript
@@ -10577,7 +10705,7 @@ name?: pulumi.Input<string>;
 The name of the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L375">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L377">property region</a>
 </h3>
 
 ```typescript
@@ -10588,7 +10716,7 @@ region: pulumi.Input<string>;
 The name of the region where the stack will exist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L379">property serviceRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L381">property serviceRoleArn</a>
 </h3>
 
 ```typescript
@@ -10599,18 +10727,18 @@ serviceRoleArn: pulumi.Input<string>;
 The ARN of an IAM role that the OpsWorks service will act as.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L383">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L385">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L388">property useCustomCookbooks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L390">property useCustomCookbooks</a>
 </h3>
 
 ```typescript
@@ -10622,7 +10750,7 @@ Boolean value controlling whether the custom cookbook settings are
 enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L393">property useOpsworksSecurityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L395">property useOpsworksSecurityGroups</a>
 </h3>
 
 ```typescript
@@ -10634,7 +10762,7 @@ Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L397">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L399">property vpcId</a>
 </h3>
 
 ```typescript
@@ -10645,13 +10773,13 @@ vpcId?: pulumi.Input<string>;
 The id of the VPC that this stack belongs to.
 
 <h2 class="pdoc-module-header" id="StackState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L199">interface StackState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L201">interface StackState</a>
 </h2>
 
 Input properties used for looking up and filtering Stack resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L203">property agentVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L205">property agentVersion</a>
 </h3>
 
 ```typescript
@@ -10662,7 +10790,7 @@ agentVersion?: pulumi.Input<string>;
 If set to `"LATEST"`, OpsWorks will automatically install the latest version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L204">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L206">property arn</a>
 </h3>
 
 ```typescript
@@ -10670,7 +10798,7 @@ arn?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L208">property berkshelfVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L210">property berkshelfVersion</a>
 </h3>
 
 ```typescript
@@ -10681,7 +10809,7 @@ berkshelfVersion?: pulumi.Input<string>;
 If `manage_berkshelf` is enabled, the version of Berkshelf to use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L212">property color</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L214">property color</a>
 </h3>
 
 ```typescript
@@ -10692,7 +10820,7 @@ color?: pulumi.Input<string>;
 Color to paint next to the stack's resources in the OpsWorks console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L216">property configurationManagerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L218">property configurationManagerName</a>
 </h3>
 
 ```typescript
@@ -10703,7 +10831,7 @@ configurationManagerName?: pulumi.Input<string>;
 Name of the configuration manager to use. Defaults to "Chef".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L220">property configurationManagerVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L222">property configurationManagerVersion</a>
 </h3>
 
 ```typescript
@@ -10714,11 +10842,11 @@ configurationManagerVersion?: pulumi.Input<string>;
 Version of the configuration manager to use. Defaults to "11.4".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L225">property customCookbooksSources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L227">property customCookbooksSources</a>
 </h3>
 
 ```typescript
-customCookbooksSources?: pulumi.Input<{ ... }[]>;
+customCookbooksSources?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -10726,7 +10854,7 @@ When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L229">property customJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L231">property customJson</a>
 </h3>
 
 ```typescript
@@ -10737,7 +10865,7 @@ customJson?: pulumi.Input<string>;
 Custom JSON attributes to apply to the entire stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L234">property defaultAvailabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L236">property defaultAvailabilityZone</a>
 </h3>
 
 ```typescript
@@ -10749,7 +10877,7 @@ Name of the availability zone where instances will be created
 by default. This is required unless you set `vpc_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L239">property defaultInstanceProfileArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L241">property defaultInstanceProfileArn</a>
 </h3>
 
 ```typescript
@@ -10761,7 +10889,7 @@ The ARN of an IAM Instance Profile that created instances
 will have by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L243">property defaultOs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L245">property defaultOs</a>
 </h3>
 
 ```typescript
@@ -10772,7 +10900,7 @@ defaultOs?: pulumi.Input<string>;
 Name of OS that will be installed on instances by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L247">property defaultRootDeviceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L249">property defaultRootDeviceType</a>
 </h3>
 
 ```typescript
@@ -10783,7 +10911,7 @@ defaultRootDeviceType?: pulumi.Input<string>;
 Name of the type of root device instances will have by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L251">property defaultSshKeyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L253">property defaultSshKeyName</a>
 </h3>
 
 ```typescript
@@ -10794,7 +10922,7 @@ defaultSshKeyName?: pulumi.Input<string>;
 Name of the SSH keypair that instances will have by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L256">property defaultSubnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L258">property defaultSubnetId</a>
 </h3>
 
 ```typescript
@@ -10806,7 +10934,7 @@ Id of the subnet in which instances will be created by default. Mandatory
 if `vpc_id` is set, and forbidden if it isn't.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L261">property hostnameTheme</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L263">property hostnameTheme</a>
 </h3>
 
 ```typescript
@@ -10818,7 +10946,7 @@ Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L265">property manageBerkshelf</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L267">property manageBerkshelf</a>
 </h3>
 
 ```typescript
@@ -10829,7 +10957,7 @@ manageBerkshelf?: pulumi.Input<boolean>;
 Boolean value controlling whether Opsworks will run Berkshelf for this stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L269">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L271">property name</a>
 </h3>
 
 ```typescript
@@ -10840,7 +10968,7 @@ name?: pulumi.Input<string>;
 The name of the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L273">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L275">property region</a>
 </h3>
 
 ```typescript
@@ -10851,7 +10979,7 @@ region?: pulumi.Input<string>;
 The name of the region where the stack will exist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L277">property serviceRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L279">property serviceRoleArn</a>
 </h3>
 
 ```typescript
@@ -10862,7 +10990,7 @@ serviceRoleArn?: pulumi.Input<string>;
 The ARN of an IAM role that the OpsWorks service will act as.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L278">property stackEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L280">property stackEndpoint</a>
 </h3>
 
 ```typescript
@@ -10870,18 +10998,18 @@ stackEndpoint?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L282">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L284">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L287">property useCustomCookbooks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L289">property useCustomCookbooks</a>
 </h3>
 
 ```typescript
@@ -10893,7 +11021,7 @@ Boolean value controlling whether the custom cookbook settings are
 enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L292">property useOpsworksSecurityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L294">property useOpsworksSecurityGroups</a>
 </h3>
 
 ```typescript
@@ -10905,7 +11033,7 @@ Boolean value controlling whether the standard OpsWorks
 security groups apply to created instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L296">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/opsworks/stack.ts#L298">property vpcId</a>
 </h3>
 
 ```typescript
@@ -11040,7 +11168,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -11248,7 +11376,7 @@ Whether to enable Elastic Load Balancing connection draining.
 </h3>
 
 ```typescript
-ebsVolumes?: pulumi.Input<{ ... }[]>;
+ebsVolumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

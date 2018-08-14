@@ -30,7 +30,7 @@ Provides a Service Discovery Private DNS Namespace resource.
 </h3>
 
 ```typescript
-new PrivateDnsNamespace(name: string, args: PrivateDnsNamespaceArgs, opts?: pulumi.ResourceOptions)
+new PrivateDnsNamespace(name: string, args: PrivateDnsNamespaceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -53,7 +53,15 @@ Get an existing PrivateDnsNamespace resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -98,7 +106,7 @@ public hostedZone: pulumi.Output<string>;
 The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -154,7 +162,7 @@ Provides a Service Discovery Public DNS Namespace resource.
 </h3>
 
 ```typescript
-new PublicDnsNamespace(name: string, args?: PublicDnsNamespaceArgs, opts?: pulumi.ResourceOptions)
+new PublicDnsNamespace(name: string, args?: PublicDnsNamespaceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -177,7 +185,15 @@ Get an existing PublicDnsNamespace resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -222,7 +238,7 @@ public hostedZone: pulumi.Output<string>;
 The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -267,7 +283,7 @@ Provides a Service Discovery Service resource.
 </h3>
 
 ```typescript
-new Service(name: string, args: ServiceArgs, opts?: pulumi.ResourceOptions)
+new Service(name: string, args: ServiceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -290,7 +306,15 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -357,7 +381,7 @@ public healthCheckCustomConfig: pulumi.Output<{ ... } | undefined>;
 A complex type that contains settings for ECS managed health checks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript

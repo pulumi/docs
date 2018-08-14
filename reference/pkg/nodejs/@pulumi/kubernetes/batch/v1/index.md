@@ -6,14 +6,32 @@ title: Module batch/v1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isJob">function isJob</a>
+* <a href="#isJobList">function isJobList</a>
 * <a href="#Job">interface Job</a>
 * <a href="#JobCondition">interface JobCondition</a>
 * <a href="#JobList">interface JobList</a>
 * <a href="#JobSpec">interface JobSpec</a>
 * <a href="#JobStatus">interface JobStatus</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isJob">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5902">function isJob</a>
+</h2>
+
+```typescript
+isJob(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isJobList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5976">function isJobList</a>
+</h2>
+
+```typescript
+isJobList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="Job">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5528">interface Job</a>

@@ -20,7 +20,7 @@ title: Module acm
 
 
 <h2 class="pdoc-module-header" id="Certificate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L25">class Certificate</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L27">class Certificate</a>
 </h2>
 
 The ACM certificate resource allows requesting and management of certificates
@@ -42,11 +42,11 @@ It's recommended to specify `create_before_destroy = true` in a [lifecycle][1] b
 which is currently in use (eg, by [`aws_lb_listener`](lb_listener.html)).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L65">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L67">constructor</a>
 </h3>
 
 ```typescript
-new Certificate(name: string, args: CertificateArgs, opts?: pulumi.ResourceOptions)
+new Certificate(name: string, args: CertificateArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -57,7 +57,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L34">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L36">method get</a>
 </h3>
 
 ```typescript
@@ -69,7 +69,15 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -81,7 +89,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L41">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L43">property arn</a>
 </h3>
 
 ```typescript
@@ -92,7 +100,7 @@ public arn: pulumi.Output<string>;
 The ARN of the certificate
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L45">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L47">property domainName</a>
 </h3>
 
 ```typescript
@@ -103,7 +111,7 @@ public domainName: pulumi.Output<string>;
 A domain name for which the certificate should be issued
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L49">property domainValidationOptions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L51">property domainValidationOptions</a>
 </h3>
 
 ```typescript
@@ -114,7 +122,7 @@ public domainValidationOptions: pulumi.Output<{ ... }[]>;
 A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -126,7 +134,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L53">property subjectAlternativeNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L55">property subjectAlternativeNames</a>
 </h3>
 
 ```typescript
@@ -137,11 +145,11 @@ public subjectAlternativeNames: pulumi.Output<string[] | undefined>;
 A list of domains that should be SANs in the issued certificate
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L57">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L59">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -160,7 +168,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L61">property validationEmails</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L63">property validationEmails</a>
 </h3>
 
 ```typescript
@@ -171,7 +179,7 @@ public validationEmails: pulumi.Output<string[]>;
 A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L65">property validationMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L67">property validationMethod</a>
 </h3>
 
 ```typescript
@@ -200,7 +208,7 @@ deploy the required validation records and wait for validation to complete.
 </h3>
 
 ```typescript
-new CertificateValidation(name: string, args: CertificateValidationArgs, opts?: pulumi.ResourceOptions)
+new CertificateValidation(name: string, args: CertificateValidationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -223,7 +231,15 @@ Get an existing CertificateValidation resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -246,7 +262,7 @@ public certificateArn: pulumi.Output<string>;
 The ARN of the certificate that is being validated.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -281,28 +297,26 @@ public validationRecordFqdns: pulumi.Output<string[] | undefined>;
 List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation
 
 <h2 class="pdoc-module-header" id="getCertificate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L13">function getCertificate</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L11">function getCertificate</a>
 </h2>
 
 ```typescript
-getCertificate(args: GetCertificateArgs): Promise<GetCertificateResult>
+getCertificate(args: GetCertificateArgs, opts?: pulumi.InvokeOptions): Promise<GetCertificateResult>
 ```
 
 
 Use this data source to get the ARN of a certificate in AWS Certificate
-Manager (ACM). The process of requesting and verifying a certificate in ACM
-requires some manual steps, which means that Terraform cannot automate the
-creation of ACM certificates. But using this data source, you can reference
-them by domain without having to hard code the ARNs as input.
+Manager (ACM), you can reference
+it by domain without having to hard code the ARNs as input.
 
 <h2 class="pdoc-module-header" id="CertificateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L143">interface CertificateArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L145">interface CertificateArgs</a>
 </h2>
 
 The set of arguments for constructing a Certificate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L147">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L149">property domainName</a>
 </h3>
 
 ```typescript
@@ -313,7 +327,7 @@ domainName: pulumi.Input<string>;
 A domain name for which the certificate should be issued
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L151">property subjectAlternativeNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L153">property subjectAlternativeNames</a>
 </h3>
 
 ```typescript
@@ -324,18 +338,18 @@ subjectAlternativeNames?: pulumi.Input<pulumi.Input<string>[]>;
 A list of domains that should be SANs in the issued certificate
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L155">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L157">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L159">property validationMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L161">property validationMethod</a>
 </h3>
 
 ```typescript
@@ -346,13 +360,13 @@ validationMethod: pulumi.Input<string>;
 Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into Terraform.
 
 <h2 class="pdoc-module-header" id="CertificateState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L109">interface CertificateState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L111">interface CertificateState</a>
 </h2>
 
 Input properties used for looking up and filtering Certificate resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L113">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L115">property arn</a>
 </h3>
 
 ```typescript
@@ -363,7 +377,7 @@ arn?: pulumi.Input<string>;
 The ARN of the certificate
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L117">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L119">property domainName</a>
 </h3>
 
 ```typescript
@@ -374,18 +388,18 @@ domainName?: pulumi.Input<string>;
 A domain name for which the certificate should be issued
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L121">property domainValidationOptions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L123">property domainValidationOptions</a>
 </h3>
 
 ```typescript
-domainValidationOptions?: pulumi.Input<{ ... }[]>;
+domainValidationOptions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L125">property subjectAlternativeNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L127">property subjectAlternativeNames</a>
 </h3>
 
 ```typescript
@@ -396,18 +410,18 @@ subjectAlternativeNames?: pulumi.Input<pulumi.Input<string>[]>;
 A list of domains that should be SANs in the issued certificate
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L129">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L131">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L133">property validationEmails</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L135">property validationEmails</a>
 </h3>
 
 ```typescript
@@ -418,7 +432,7 @@ validationEmails?: pulumi.Input<pulumi.Input<string>[]>;
 A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L137">property validationMethod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/certificate.ts#L139">property validationMethod</a>
 </h3>
 
 ```typescript
@@ -485,39 +499,39 @@ validationRecordFqdns?: pulumi.Input<pulumi.Input<string>[]>;
 List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation
 
 <h2 class="pdoc-module-header" id="GetCertificateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L25">interface GetCertificateArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L23">interface GetCertificateArgs</a>
 </h2>
 
 A collection of arguments for invoking getCertificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L29">property domain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L27">property domain</a>
 </h3>
 
 ```typescript
-domain: pulumi.Input<string>;
+domain: string;
 ```
 
 
 The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L33">property mostRecent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L31">property mostRecent</a>
 </h3>
 
 ```typescript
-mostRecent?: pulumi.Input<boolean>;
+mostRecent?: boolean;
 ```
 
 
 If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L39">property statuses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L37">property statuses</a>
 </h3>
 
 ```typescript
-statuses?: pulumi.Input<pulumi.Input<string>[]>;
+statuses?: string[];
 ```
 
 
@@ -526,24 +540,24 @@ A list of statuses on which to filter the returned list. Valid values are `PENDI
 are returned.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L43">property types</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L41">property types</a>
 </h3>
 
 ```typescript
-types?: pulumi.Input<pulumi.Input<string>[]>;
+types?: string[];
 ```
 
 
 A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
 
 <h2 class="pdoc-module-header" id="GetCertificateResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L49">interface GetCertificateResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L47">interface GetCertificateResult</a>
 </h2>
 
 A collection of values returned by getCertificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L53">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L51">property arn</a>
 </h3>
 
 ```typescript
@@ -554,7 +568,7 @@ arn: string;
 Set to the ARN of the found certificate, suitable for referencing in other resources that support ACM certificates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L57">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/acm/getCertificate.ts#L55">property id</a>
 </h3>
 
 ```typescript

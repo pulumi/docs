@@ -7,7 +7,6 @@ title: Module dynamic
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Resource">class Resource</a>
-* <a href="#serializeProvider">function serializeProvider</a>
 * <a href="#CheckFailure">interface CheckFailure</a>
 * <a href="#CheckResult">interface CheckResult</a>
 * <a href="#CreateResult">interface CreateResult</a>
@@ -30,7 +29,7 @@ Resource represents a Pulumi Resource that incorporates an inline implementation
 </h3>
 
 ```typescript
-new Resource(provider: ResourceProvider, name: string, props: resource.Inputs, opts?: resource.ResourceOptions)
+new Resource(provider: ResourceProvider, name: string, props: resource.Inputs, opts?: resource.CustomResourceOptions)
 ```
 
 
@@ -43,7 +42,15 @@ Creates a new dynamic resource.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L139">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L60">method getProvider</a>
+</h3>
+
+```typescript
+public getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L205">method isInstance</a>
 </h3>
 
 ```typescript
@@ -55,7 +62,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L133">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L199">property id</a>
 </h3>
 
 ```typescript
@@ -77,14 +84,6 @@ public urn: Output<URN>;
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
-
-<h2 class="pdoc-module-header" id="serializeProvider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L159">function serializeProvider</a>
-</h2>
-
-```typescript
-serializeProvider(provider: ResourceProvider): Promise<string>
-```
 
 <h2 class="pdoc-module-header" id="CheckFailure">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L36">interface CheckFailure</a>
@@ -181,7 +180,7 @@ DiffResult represents the results of a call to `ResourceProvider.diff`.
 </h3>
 
 ```typescript
-changes?: undefined | true | false;
+changes?: undefined | false | true;
 ```
 
 
@@ -192,7 +191,7 @@ If true, this diff detected changes and suggests an update.
 </h3>
 
 ```typescript
-deleteBeforeReplace?: undefined | true | false;
+deleteBeforeReplace?: undefined | false | true;
 ```
 
 

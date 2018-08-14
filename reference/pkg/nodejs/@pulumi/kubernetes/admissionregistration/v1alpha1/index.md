@@ -6,13 +6,31 @@ title: Module admissionregistration/v1alpha1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isInitializerConfiguration">function isInitializerConfiguration</a>
+* <a href="#isInitializerConfigurationList">function isInitializerConfigurationList</a>
 * <a href="#Initializer">interface Initializer</a>
 * <a href="#InitializerConfiguration">interface InitializerConfiguration</a>
 * <a href="#InitializerConfigurationList">interface InitializerConfigurationList</a>
 * <a href="#Rule">interface Rule</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isInitializerConfiguration">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L67">function isInitializerConfiguration</a>
+</h2>
+
+```typescript
+isInitializerConfiguration(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isInitializerConfigurationList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L104">function isInitializerConfigurationList</a>
+</h2>
+
+```typescript
+isInitializerConfigurationList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="Initializer">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10">interface Initializer</a>

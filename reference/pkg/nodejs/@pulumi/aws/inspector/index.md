@@ -32,7 +32,7 @@ Provides a Inspector assessment target
 </h3>
 
 ```typescript
-new AssessmentTarget(name: string, args: AssessmentTargetArgs, opts?: pulumi.ResourceOptions)
+new AssessmentTarget(name: string, args: AssessmentTargetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -55,7 +55,15 @@ Get an existing AssessmentTarget resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -78,7 +86,7 @@ public arn: pulumi.Output<string>;
 The target assessment ARN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -132,7 +140,7 @@ Provides a Inspector assessment template
 </h3>
 
 ```typescript
-new AssessmentTemplate(name: string, args: AssessmentTemplateArgs, opts?: pulumi.ResourceOptions)
+new AssessmentTemplate(name: string, args: AssessmentTemplateArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -155,7 +163,15 @@ Get an existing AssessmentTemplate resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -189,7 +205,7 @@ public duration: pulumi.Output<number>;
 The duration of the inspector run.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -246,17 +262,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ResourceGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L9">class ResourceGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L11">class ResourceGroup</a>
 </h2>
 
 Provides a Inspector resource group
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L29">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L31">constructor</a>
 </h3>
 
 ```typescript
-new ResourceGroup(name: string, args: ResourceGroupArgs, opts?: pulumi.ResourceOptions)
+new ResourceGroup(name: string, args: ResourceGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -267,7 +283,7 @@ Create a ResourceGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -279,7 +295,15 @@ Get an existing ResourceGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -291,7 +315,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L27">property arn</a>
 </h3>
 
 ```typescript
@@ -302,7 +326,7 @@ public arn: pulumi.Output<string>;
 The resource group ARN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -314,11 +338,11 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L29">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L31">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... }>;
+public tags: pulumi.Output<Tags>;
 ```
 
 
@@ -341,7 +365,7 @@ deployments.
 </h2>
 
 ```typescript
-getRulesPackages(): Promise<GetRulesPackagesResult>
+getRulesPackages(opts?: pulumi.InvokeOptions): Promise<GetRulesPackagesResult>
 ```
 
 
@@ -552,30 +576,30 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="ResourceGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L74">interface ResourceGroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L76">interface ResourceGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a ResourceGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L78">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L80">property tags</a>
 </h3>
 
 ```typescript
-tags: pulumi.Input<{ ... }>;
+tags: pulumi.Input<Tags>;
 ```
 
 
 The tags on your EC2 Instance.
 
 <h2 class="pdoc-module-header" id="ResourceGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L60">interface ResourceGroupState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L62">interface ResourceGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering ResourceGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L64">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L66">property arn</a>
 </h3>
 
 ```typescript
@@ -586,11 +610,11 @@ arn?: pulumi.Input<string>;
 The resource group ARN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L68">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/inspector/resourceGroup.ts#L70">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 

@@ -42,7 +42,7 @@ For information about compute environment, see [Compute Environments][2] .
 </h3>
 
 ```typescript
-new ComputeEnvironment(name: string, args: ComputeEnvironmentArgs, opts?: pulumi.ResourceOptions)
+new ComputeEnvironment(name: string, args: ComputeEnvironmentArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -65,7 +65,15 @@ Get an existing ComputeEnvironment resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -129,7 +137,7 @@ public ecsClusterArn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -218,7 +226,7 @@ Provides a Batch Job Definition resource.
 </h3>
 
 ```typescript
-new JobDefinition(name: string, args: JobDefinitionArgs, opts?: pulumi.ResourceOptions)
+new JobDefinition(name: string, args: JobDefinitionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -241,7 +249,15 @@ Get an existing JobDefinition resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -276,7 +292,7 @@ A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIRefere
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -377,7 +393,7 @@ Provides a Batch Job Queue resource.
 </h3>
 
 ```typescript
-new JobQueue(name: string, args: JobQueueArgs, opts?: pulumi.ResourceOptions)
+new JobQueue(name: string, args: JobQueueArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -400,7 +416,15 @@ Get an existing JobQueue resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -437,7 +461,7 @@ in the list will dictate the order. You can associate up to 3 compute environmen
 with a job queue.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -499,7 +523,7 @@ deployments.
 </h2>
 
 ```typescript
-getComputeEnvironment(args: GetComputeEnvironmentArgs): Promise<GetComputeEnvironmentResult>
+getComputeEnvironment(args: GetComputeEnvironmentArgs, opts?: pulumi.InvokeOptions): Promise<GetComputeEnvironmentResult>
 ```
 
 
@@ -511,7 +535,7 @@ compute environment within AWS Batch.
 </h2>
 
 ```typescript
-getJobQueue(args: GetJobQueueArgs): Promise<GetJobQueueResult>
+getJobQueue(args: GetJobQueueArgs, opts?: pulumi.InvokeOptions): Promise<GetJobQueueResult>
 ```
 
 
@@ -703,7 +727,7 @@ A collection of arguments for invoking getComputeEnvironment.
 </h3>
 
 ```typescript
-computeEnvironmentName: pulumi.Input<string>;
+computeEnvironmentName: string;
 ```
 
 
@@ -814,7 +838,7 @@ A collection of arguments for invoking getJobQueue.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 

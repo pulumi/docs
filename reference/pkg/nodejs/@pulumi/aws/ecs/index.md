@@ -57,7 +57,7 @@ Provides an ECS cluster.
 </h3>
 
 ```typescript
-new Cluster(name: string, args?: ClusterArgs, opts?: pulumi.ResourceOptions)
+new Cluster(name: string, args?: ClusterArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -80,7 +80,15 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -103,7 +111,7 @@ public arn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) that identifies the cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -152,7 +160,7 @@ See [ECS Services section in AWS developer guide](https://docs.aws.amazon.com/Am
 </h3>
 
 ```typescript
-new Service(name: string, args: ServiceArgs, opts?: pulumi.ResourceOptions)
+new Service(name: string, args: ServiceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -175,7 +183,15 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -253,7 +269,7 @@ public iamRole: pulumi.Output<string>;
 ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -409,7 +425,7 @@ Provides an ECS task definition to be used in `aws_ecs_service`.
 </h3>
 
 ```typescript
-new TaskDefinition(name: string, args: TaskDefinitionArgs, opts?: pulumi.ResourceOptions)
+new TaskDefinition(name: string, args: TaskDefinitionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -432,7 +448,15 @@ Get an existing TaskDefinition resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -504,7 +528,7 @@ public family: pulumi.Output<string>;
 A unique name for your task definition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -609,7 +633,7 @@ A set of [volume blocks](#volume-block-arguments) that containers in your task m
 </h2>
 
 ```typescript
-getCluster(args: GetClusterArgs): Promise<GetClusterResult>
+getCluster(args: GetClusterArgs, opts?: pulumi.InvokeOptions): Promise<GetClusterResult>
 ```
 
 
@@ -621,7 +645,7 @@ cluster within an AWS ECS service.
 </h2>
 
 ```typescript
-getContainerDefinition(args: GetContainerDefinitionArgs): Promise<GetContainerDefinitionResult>
+getContainerDefinition(args: GetContainerDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetContainerDefinitionResult>
 ```
 
 
@@ -633,7 +657,7 @@ a specific container within an AWS ECS service.
 </h2>
 
 ```typescript
-getService(args: GetServiceArgs): Promise<GetServiceResult>
+getService(args: GetServiceArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceResult>
 ```
 
 
@@ -645,7 +669,7 @@ Service within a AWS ECS Cluster.
 </h2>
 
 ```typescript
-getTaskDefinition(args: GetTaskDefinitionArgs): Promise<GetTaskDefinitionResult>
+getTaskDefinition(args: GetTaskDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetTaskDefinitionResult>
 ```
 
 
@@ -954,7 +978,7 @@ A collection of arguments for invoking getCluster.
 </h3>
 
 ```typescript
-clusterName: pulumi.Input<string>;
+clusterName: string;
 ```
 
 
@@ -1043,7 +1067,7 @@ A collection of arguments for invoking getContainerDefinition.
 </h3>
 
 ```typescript
-containerName: pulumi.Input<string>;
+containerName: string;
 ```
 
 
@@ -1054,7 +1078,7 @@ The name of the container definition
 </h3>
 
 ```typescript
-taskDefinition: pulumi.Input<string>;
+taskDefinition: string;
 ```
 
 
@@ -1176,7 +1200,7 @@ A collection of arguments for invoking getService.
 </h3>
 
 ```typescript
-clusterArn: pulumi.Input<string>;
+clusterArn: string;
 ```
 
 
@@ -1187,7 +1211,7 @@ The arn of the ECS Cluster
 </h3>
 
 ```typescript
-serviceName: pulumi.Input<string>;
+serviceName: string;
 ```
 
 
@@ -1276,7 +1300,7 @@ A collection of arguments for invoking getTaskDefinition.
 </h3>
 
 ```typescript
-taskDefinition: pulumi.Input<string>;
+taskDefinition: string;
 ```
 
 
@@ -1599,7 +1623,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
 </h3>
 
 ```typescript
-loadBalancers?: pulumi.Input<{ ... }[]>;
+loadBalancers?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1632,7 +1656,7 @@ The network configuration for the service. This parameter is required for task d
 </h3>
 
 ```typescript
-orderedPlacementStrategies?: pulumi.Input<{ ... }[]>;
+orderedPlacementStrategies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1643,7 +1667,7 @@ Service level strategy rules that are taken into consideration during task place
 </h3>
 
 ```typescript
-placementConstraints?: pulumi.Input<{ ... }[]>;
+placementConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1655,7 +1679,7 @@ rules that are taken into consideration during task placement. Maximum number of
 </h3>
 
 ```typescript
-placementStrategies?: pulumi.Input<{ ... }[]>;
+placementStrategies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1793,7 +1817,7 @@ The launch type on which to run your service. The valid values are `EC2` and `FA
 </h3>
 
 ```typescript
-loadBalancers?: pulumi.Input<{ ... }[]>;
+loadBalancers?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1826,7 +1850,7 @@ The network configuration for the service. This parameter is required for task d
 </h3>
 
 ```typescript
-orderedPlacementStrategies?: pulumi.Input<{ ... }[]>;
+orderedPlacementStrategies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1837,7 +1861,7 @@ Service level strategy rules that are taken into consideration during task place
 </h3>
 
 ```typescript
-placementConstraints?: pulumi.Input<{ ... }[]>;
+placementConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1849,7 +1873,7 @@ rules that are taken into consideration during task placement. Maximum number of
 </h3>
 
 ```typescript
-placementStrategies?: pulumi.Input<{ ... }[]>;
+placementStrategies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1981,7 +2005,7 @@ The Docker networking mode to use for the containers in the task. The valid valu
 </h3>
 
 ```typescript
-placementConstraints?: pulumi.Input<{ ... }[]>;
+placementConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2014,7 +2038,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
 </h3>
 
 ```typescript
-volumes?: pulumi.Input<{ ... }[]>;
+volumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2113,7 +2137,7 @@ The Docker networking mode to use for the containers in the task. The valid valu
 </h3>
 
 ```typescript
-placementConstraints?: pulumi.Input<{ ... }[]>;
+placementConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2157,7 +2181,7 @@ The ARN of IAM role that allows your Amazon ECS container task to make calls to 
 </h3>
 
 ```typescript
-volumes?: pulumi.Input<{ ... }[]>;
+volumes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

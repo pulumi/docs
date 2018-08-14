@@ -30,7 +30,7 @@ and
 </h3>
 
 ```typescript
-new Function(name: string, args: FunctionArgs, opts?: pulumi.ResourceOptions)
+new Function(name: string, args: FunctionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -53,7 +53,15 @@ Get an existing Function resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -109,7 +117,7 @@ public httpsTriggerUrl: pulumi.Output<string>;
 URL which triggers function execution. Returned only if `trigger_http` is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -258,7 +266,7 @@ deployments.
 </h2>
 
 ```typescript
-getFunction(args: GetFunctionArgs): Promise<GetFunctionResult>
+getFunction(args: GetFunctionArgs, opts?: pulumi.InvokeOptions): Promise<GetFunctionResult>
 ```
 
 
@@ -619,7 +627,7 @@ A collection of arguments for invoking getFunction.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -630,7 +638,7 @@ The name of a Cloud Function.
 </h3>
 
 ```typescript
-project?: pulumi.Input<string>;
+project?: string;
 ```
 
 
@@ -642,7 +650,7 @@ is not provided, the provider project is used.
 </h3>
 
 ```typescript
-region?: pulumi.Input<string>;
+region?: string;
 ```
 
 
@@ -698,6 +706,17 @@ httpsTriggerUrl: string;
 
 
 If function is triggered by HTTP, trigger URL is set here.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L91">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L62">property labels</a>

@@ -10,6 +10,7 @@ title: Module projects
 * <a href="#IAMCustomRole">class IAMCustomRole</a>
 * <a href="#IAMMember">class IAMMember</a>
 * <a href="#IAMPolicy">class IAMPolicy</a>
+* <a href="#OrganizationPolicy">class OrganizationPolicy</a>
 * <a href="#Service">class Service</a>
 * <a href="#Services">class Services</a>
 * <a href="#UsageExportBucket">class UsageExportBucket</a>
@@ -21,6 +22,8 @@ title: Module projects
 * <a href="#IAMMemberState">interface IAMMemberState</a>
 * <a href="#IAMPolicyArgs">interface IAMPolicyArgs</a>
 * <a href="#IAMPolicyState">interface IAMPolicyState</a>
+* <a href="#OrganizationPolicyArgs">interface OrganizationPolicyArgs</a>
+* <a href="#OrganizationPolicyState">interface OrganizationPolicyState</a>
 * <a href="#ServiceArgs">interface ServiceArgs</a>
 * <a href="#ServiceState">interface ServiceState</a>
 * <a href="#ServicesArgs">interface ServicesArgs</a>
@@ -28,18 +31,29 @@ title: Module projects
 * <a href="#UsageExportBucketArgs">interface UsageExportBucketArgs</a>
 * <a href="#UsageExportBucketState">interface UsageExportBucketState</a>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts">projects/iAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMCustomRole.ts">projects/iAMCustomRole.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts">projects/iAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts">projects/iAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/service.ts">projects/service.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts">projects/services.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/usageExportBucket.ts">projects/usageExportBucket.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts">projects/iAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMCustomRole.ts">projects/iAMCustomRole.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts">projects/iAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts">projects/iAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts">projects/organizationPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/service.ts">projects/service.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts">projects/services.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/usageExportBucket.ts">projects/usageExportBucket.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="IAMBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L6">class IAMBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L17">class IAMBinding</a>
 </h2>
+
+Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:
+
+* `google_project_iam_policy`: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.
+* `google_project_iam_binding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the project are preserved.
+* `google_project_iam_member`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the project are preserved.
+
+~> **Note:** `google_project_iam_policy` **cannot** be used in conjunction with `google_project_iam_binding` and `google_project_iam_member` or they will fight over what your policy should be.
+
+~> **Note:** `google_project_iam_binding` resources **can be** used in conjunction with `google_project_iam_member` resources **only if** they do not grant privilege to the same role.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L22">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L45">constructor</a>
 </h3>
 
 ```typescript
-new IAMBinding(name: string, args: IAMBindingArgs, opts?: pulumi.ResourceOptions)
+new IAMBinding(name: string, args: IAMBindingArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -50,7 +64,7 @@ Create a IAMBinding resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -62,7 +76,15 @@ Get an existing IAMBinding resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -74,15 +96,18 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L19">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L33">property etag</a>
 </h3>
 
 ```typescript
 public etag: pulumi.Output<string>;
 ```
 
+
+(Computed) The etag of the project's IAM policy.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -94,7 +119,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L20">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L34">property members</a>
 </h3>
 
 ```typescript
@@ -102,20 +127,29 @@ public members: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L21">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L39">property project</a>
 </h3>
 
 ```typescript
 public project: pulumi.Output<string | undefined>;
 ```
 
+
+The project ID. If not specified, uses the
+ID of the project configured with the provider.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L22">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L45">property role</a>
 </h3>
 
 ```typescript
 public role: pulumi.Output<string>;
 ```
+
+
+The role that should be applied. Only one
+`google_project_iam_binding` can be used per role. Note that custom roles must be of the format
+`[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -143,7 +177,7 @@ and
 </h3>
 
 ```typescript
-new IAMCustomRole(name: string, args: IAMCustomRoleArgs, opts?: pulumi.ResourceOptions)
+new IAMCustomRole(name: string, args: IAMCustomRoleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -166,7 +200,15 @@ Get an existing IAMCustomRole resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -200,7 +242,7 @@ public description: pulumi.Output<string | undefined>;
 A human-readable description for the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -282,14 +324,25 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IAMMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L6">class IAMMember</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L17">class IAMMember</a>
 </h2>
+
+Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:
+
+* `google_project_iam_policy`: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.
+* `google_project_iam_binding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the project are preserved.
+* `google_project_iam_member`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the project are preserved.
+
+~> **Note:** `google_project_iam_policy` **cannot** be used in conjunction with `google_project_iam_binding` and `google_project_iam_member` or they will fight over what your policy should be.
+
+~> **Note:** `google_project_iam_binding` resources **can be** used in conjunction with `google_project_iam_member` resources **only if** they do not grant privilege to the same role.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L22">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L45">constructor</a>
 </h3>
 
 ```typescript
-new IAMMember(name: string, args: IAMMemberArgs, opts?: pulumi.ResourceOptions)
+new IAMMember(name: string, args: IAMMemberArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -300,7 +353,7 @@ Create a IAMMember resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -312,7 +365,15 @@ Get an existing IAMMember resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -324,15 +385,18 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L19">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L33">property etag</a>
 </h3>
 
 ```typescript
 public etag: pulumi.Output<string>;
 ```
 
+
+(Computed) The etag of the project's IAM policy.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -344,7 +408,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L20">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L34">property member</a>
 </h3>
 
 ```typescript
@@ -352,20 +416,29 @@ public member: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L21">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L39">property project</a>
 </h3>
 
 ```typescript
 public project: pulumi.Output<string | undefined>;
 ```
 
+
+The project ID. If not specified, uses the
+ID of the project configured with the provider.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L22">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L45">property role</a>
 </h3>
 
 ```typescript
 public role: pulumi.Output<string>;
 ```
+
+
+The role that should be applied. Only one
+`google_project_iam_binding` can be used per role. Note that custom roles must be of the format
+`[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -380,14 +453,25 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IAMPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L6">class IAMPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L17">class IAMPolicy</a>
 </h2>
+
+Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:
+
+* `google_project_iam_policy`: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.
+* `google_project_iam_binding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the project are preserved.
+* `google_project_iam_member`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the project are preserved.
+
+~> **Note:** `google_project_iam_policy` **cannot** be used in conjunction with `google_project_iam_binding` and `google_project_iam_member` or they will fight over what your policy should be.
+
+~> **Note:** `google_project_iam_binding` resources **can be** used in conjunction with `google_project_iam_member` resources **only if** they do not grant privilege to the same role.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L24">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L70">constructor</a>
 </h3>
 
 ```typescript
-new IAMPolicy(name: string, args: IAMPolicyArgs, opts?: pulumi.ResourceOptions)
+new IAMPolicy(name: string, args: IAMPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -398,7 +482,7 @@ Create a IAMPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -410,7 +494,15 @@ Get an existing IAMPolicy resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -422,31 +514,52 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L19">property authoritative</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L43">property authoritative</a>
 </h3>
 
 ```typescript
 public authoritative: pulumi.Output<boolean | undefined>;
 ```
 
+
+(Optional, only for `google_project_iam_policy`)
+A boolean value indicating if this policy
+should overwrite any existing IAM policy on the project. When set to true,
+**any policies not in your config file will be removed**. This can **lock
+you out** of your project until an Organization Administrator grants you
+access again, so please exercise caution. If this argument is `true` and you
+want to delete the resource, you must set the `disable_project` argument to
+`true`, acknowledging that the project will be inaccessible to anyone but the
+Organization Admins, as it will no longer have an IAM policy. Rather than using
+this, you should use `google_project_iam_binding` and
+`google_project_iam_member`.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L20">property disableProject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L49">property disableProject</a>
 </h3>
 
 ```typescript
 public disableProject: pulumi.Output<boolean | undefined>;
 ```
 
+
+(Optional, only for `google_project_iam_policy`)
+A boolean value that must be set to `true`
+if you want to delete a `google_project_iam_policy` that is authoritative.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L21">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L53">property etag</a>
 </h3>
 
 ```typescript
 public etag: pulumi.Output<string>;
 ```
 
+
+(Computed) The etag of the project's IAM policy.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -458,28 +571,42 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L22">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L59">property policyData</a>
 </h3>
 
 ```typescript
 public policyData: pulumi.Output<string>;
 ```
 
+
+The `google_iam_policy` data source that represents
+the IAM policy that will be applied to the project. The policy will be
+merged with any existing policy applied to the project.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L23">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L64">property project</a>
 </h3>
 
 ```typescript
 public project: pulumi.Output<string>;
 ```
 
+
+The project ID. If not specified, uses the
+ID of the project configured with the provider.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L24">property restorePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L70">property restorePolicy</a>
 </h3>
 
 ```typescript
 public restorePolicy: pulumi.Output<string>;
 ```
+
+
+(DEPRECATED) (Computed, only for `google_project_iam_policy`)
+The IAM policy that will be restored when a
+non-authoritative policy resource is deleted.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -492,6 +619,174 @@ urn: Output<URN>;
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
+
+<h2 class="pdoc-module-header" id="OrganizationPolicy">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L12">class OrganizationPolicy</a>
+</h2>
+
+Allows management of Organization policies for a Google Project. For more information see
+[the official
+documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview) and
+[API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setOrgPolicy).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L56">constructor</a>
+</h3>
+
+```typescript
+new OrganizationPolicy(name: string, args: OrganizationPolicyArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a OrganizationPolicy resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L21">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: OrganizationPolicyState): OrganizationPolicy
+```
+
+
+Get an existing OrganizationPolicy resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L28">property booleanPolicy</a>
+</h3>
+
+```typescript
+public booleanPolicy: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L32">property constraint</a>
+</h3>
+
+```typescript
+public constraint: pulumi.Output<string>;
+```
+
+
+The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L36">property etag</a>
+</h3>
+
+```typescript
+public etag: pulumi.Output<string>;
+```
+
+
+(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L40">property listPolicy</a>
+</h3>
+
+```typescript
+public listPolicy: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L44">property project</a>
+</h3>
+
+```typescript
+public project: pulumi.Output<string>;
+```
+
+
+The project id of the project to set the policy for.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L48">property restorePolicy</a>
+</h3>
+
+```typescript
+public restorePolicy: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A restore policy is a constraint to restore the default policy. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L52">property updateTime</a>
+</h3>
+
+```typescript
+public updateTime: pulumi.Output<string>;
+```
+
+
+(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L56">property version</a>
+</h3>
+
+```typescript
+public version: pulumi.Output<number>;
+```
+
+
+Version of the Policy. Default version is 0.
 
 <h2 class="pdoc-module-header" id="Service">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/service.ts#L15">class Service</a>
@@ -510,7 +805,7 @@ For a list of services available, visit the
 </h3>
 
 ```typescript
-new Service(name: string, args: ServiceArgs, opts?: pulumi.ResourceOptions)
+new Service(name: string, args: ServiceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -533,7 +828,15 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -556,7 +859,7 @@ public disableOnDestroy: pulumi.Output<boolean | undefined>;
 If true, disable the service when the terraform resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -621,7 +924,7 @@ For a list of services available, visit the
 </h3>
 
 ```typescript
-new Services(name: string, args: ServicesArgs, opts?: pulumi.ResourceOptions)
+new Services(name: string, args: ServicesArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -644,7 +947,15 @@ Get an existing Services resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -664,7 +975,7 @@ public disableOnDestroy: pulumi.Output<boolean | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -749,7 +1060,7 @@ Terraform. Only newly added projects are affected.
 </h3>
 
 ```typescript
-new UsageExportBucket(name: string, args: UsageExportBucketArgs, opts?: pulumi.ResourceOptions)
+new UsageExportBucket(name: string, args: UsageExportBucketArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -772,7 +1083,15 @@ Get an existing UsageExportBucket resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -792,7 +1111,7 @@ public bucketName: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -832,13 +1151,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IAMBindingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L70">interface IAMBindingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L105">interface IAMBindingArgs</a>
 </h2>
 
 The set of arguments for constructing a IAMBinding resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L71">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L106">property members</a>
 </h3>
 
 ```typescript
@@ -846,37 +1165,49 @@ members: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L72">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L111">property project</a>
 </h3>
 
 ```typescript
 project?: pulumi.Input<string>;
 ```
 
+
+The project ID. If not specified, uses the
+ID of the project configured with the provider.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L73">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L117">property role</a>
 </h3>
 
 ```typescript
 role: pulumi.Input<string>;
 ```
 
+
+The role that should be applied. Only one
+`google_project_iam_binding` can be used per role. Note that custom roles must be of the format
+`[projects|organizations]/{parent-name}/roles/{role-name}`.
+
 <h2 class="pdoc-module-header" id="IAMBindingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L60">interface IAMBindingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L83">interface IAMBindingState</a>
 </h2>
 
 Input properties used for looking up and filtering IAMBinding resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L61">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L87">property etag</a>
 </h3>
 
 ```typescript
 etag?: pulumi.Input<string>;
 ```
 
+
+(Computed) The etag of the project's IAM policy.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L62">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L88">property members</a>
 </h3>
 
 ```typescript
@@ -884,20 +1215,29 @@ members?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L63">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L93">property project</a>
 </h3>
 
 ```typescript
 project?: pulumi.Input<string>;
 ```
 
+
+The project ID. If not specified, uses the
+ID of the project configured with the provider.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L64">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMBinding.ts#L99">property role</a>
 </h3>
 
 ```typescript
 role?: pulumi.Input<string>;
 ```
+
+
+The role that should be applied. Only one
+`google_project_iam_binding` can be used per role. Note that custom roles must be of the format
+`[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="IAMCustomRoleArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMCustomRole.ts#L139">interface IAMCustomRoleArgs</a>
@@ -1072,13 +1412,13 @@ title?: pulumi.Input<string>;
 A human-readable title for the role.
 
 <h2 class="pdoc-module-header" id="IAMMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L70">interface IAMMemberArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L105">interface IAMMemberArgs</a>
 </h2>
 
 The set of arguments for constructing a IAMMember resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L71">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L106">property member</a>
 </h3>
 
 ```typescript
@@ -1086,37 +1426,49 @@ member: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L72">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L111">property project</a>
 </h3>
 
 ```typescript
 project?: pulumi.Input<string>;
 ```
 
+
+The project ID. If not specified, uses the
+ID of the project configured with the provider.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L73">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L117">property role</a>
 </h3>
 
 ```typescript
 role: pulumi.Input<string>;
 ```
 
+
+The role that should be applied. Only one
+`google_project_iam_binding` can be used per role. Note that custom roles must be of the format
+`[projects|organizations]/{parent-name}/roles/{role-name}`.
+
 <h2 class="pdoc-module-header" id="IAMMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L60">interface IAMMemberState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L83">interface IAMMemberState</a>
 </h2>
 
 Input properties used for looking up and filtering IAMMember resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L61">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L87">property etag</a>
 </h3>
 
 ```typescript
 etag?: pulumi.Input<string>;
 ```
 
+
+(Computed) The etag of the project's IAM policy.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L62">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L88">property member</a>
 </h3>
 
 ```typescript
@@ -1124,112 +1476,349 @@ member?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L63">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L93">property project</a>
 </h3>
 
 ```typescript
 project?: pulumi.Input<string>;
 ```
 
+
+The project ID. If not specified, uses the
+ID of the project configured with the provider.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L64">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMMember.ts#L99">property role</a>
 </h3>
 
 ```typescript
 role?: pulumi.Input<string>;
 ```
 
+
+The role that should be applied. Only one
+`google_project_iam_binding` can be used per role. Note that custom roles must be of the format
+`[projects|organizations]/{parent-name}/roles/{role-name}`.
+
 <h2 class="pdoc-module-header" id="IAMPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L75">interface IAMPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L156">interface IAMPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a IAMPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L76">property authoritative</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L170">property authoritative</a>
 </h3>
 
 ```typescript
 authoritative?: pulumi.Input<boolean>;
 ```
 
+
+(Optional, only for `google_project_iam_policy`)
+A boolean value indicating if this policy
+should overwrite any existing IAM policy on the project. When set to true,
+**any policies not in your config file will be removed**. This can **lock
+you out** of your project until an Organization Administrator grants you
+access again, so please exercise caution. If this argument is `true` and you
+want to delete the resource, you must set the `disable_project` argument to
+`true`, acknowledging that the project will be inaccessible to anyone but the
+Organization Admins, as it will no longer have an IAM policy. Rather than using
+this, you should use `google_project_iam_binding` and
+`google_project_iam_member`.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L77">property disableProject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L176">property disableProject</a>
 </h3>
 
 ```typescript
 disableProject?: pulumi.Input<boolean>;
 ```
 
+
+(Optional, only for `google_project_iam_policy`)
+A boolean value that must be set to `true`
+if you want to delete a `google_project_iam_policy` that is authoritative.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L78">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L182">property policyData</a>
 </h3>
 
 ```typescript
 policyData: pulumi.Input<string>;
 ```
 
+
+The `google_iam_policy` data source that represents
+the IAM policy that will be applied to the project. The policy will be
+merged with any existing policy applied to the project.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L79">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L187">property project</a>
 </h3>
 
 ```typescript
 project?: pulumi.Input<string>;
 ```
 
+
+The project ID. If not specified, uses the
+ID of the project configured with the provider.
+
 <h2 class="pdoc-module-header" id="IAMPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L63">interface IAMPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L109">interface IAMPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering IAMPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L64">property authoritative</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L123">property authoritative</a>
 </h3>
 
 ```typescript
 authoritative?: pulumi.Input<boolean>;
 ```
 
+
+(Optional, only for `google_project_iam_policy`)
+A boolean value indicating if this policy
+should overwrite any existing IAM policy on the project. When set to true,
+**any policies not in your config file will be removed**. This can **lock
+you out** of your project until an Organization Administrator grants you
+access again, so please exercise caution. If this argument is `true` and you
+want to delete the resource, you must set the `disable_project` argument to
+`true`, acknowledging that the project will be inaccessible to anyone but the
+Organization Admins, as it will no longer have an IAM policy. Rather than using
+this, you should use `google_project_iam_binding` and
+`google_project_iam_member`.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L65">property disableProject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L129">property disableProject</a>
 </h3>
 
 ```typescript
 disableProject?: pulumi.Input<boolean>;
 ```
 
+
+(Optional, only for `google_project_iam_policy`)
+A boolean value that must be set to `true`
+if you want to delete a `google_project_iam_policy` that is authoritative.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L66">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L133">property etag</a>
 </h3>
 
 ```typescript
 etag?: pulumi.Input<string>;
 ```
 
+
+(Computed) The etag of the project's IAM policy.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L67">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L139">property policyData</a>
 </h3>
 
 ```typescript
 policyData?: pulumi.Input<string>;
 ```
 
+
+The `google_iam_policy` data source that represents
+the IAM policy that will be applied to the project. The policy will be
+merged with any existing policy applied to the project.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L68">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L144">property project</a>
 </h3>
 
 ```typescript
 project?: pulumi.Input<string>;
 ```
 
+
+The project ID. If not specified, uses the
+ID of the project configured with the provider.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L69">property restorePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/iAMPolicy.ts#L150">property restorePolicy</a>
 </h3>
 
 ```typescript
 restorePolicy?: pulumi.Input<string>;
 ```
+
+
+(DEPRECATED) (Computed, only for `google_project_iam_policy`)
+The IAM policy that will be restored when a
+non-authoritative policy resource is deleted.
+
+<h2 class="pdoc-module-header" id="OrganizationPolicyArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L140">interface OrganizationPolicyArgs</a>
+</h2>
+
+The set of arguments for constructing a OrganizationPolicy resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L144">property booleanPolicy</a>
+</h3>
+
+```typescript
+booleanPolicy?: pulumi.Input<{ ... }>;
+```
+
+
+A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L148">property constraint</a>
+</h3>
+
+```typescript
+constraint: pulumi.Input<string>;
+```
+
+
+The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L152">property listPolicy</a>
+</h3>
+
+```typescript
+listPolicy?: pulumi.Input<{ ... }>;
+```
+
+
+A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L156">property project</a>
+</h3>
+
+```typescript
+project: pulumi.Input<string>;
+```
+
+
+The project id of the project to set the policy for.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L160">property restorePolicy</a>
+</h3>
+
+```typescript
+restorePolicy?: pulumi.Input<{ ... }>;
+```
+
+
+A restore policy is a constraint to restore the default policy. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L164">property version</a>
+</h3>
+
+```typescript
+version?: pulumi.Input<number>;
+```
+
+
+Version of the Policy. Default version is 0.
+
+<h2 class="pdoc-module-header" id="OrganizationPolicyState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L102">interface OrganizationPolicyState</a>
+</h2>
+
+Input properties used for looking up and filtering OrganizationPolicy resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L106">property booleanPolicy</a>
+</h3>
+
+```typescript
+booleanPolicy?: pulumi.Input<{ ... }>;
+```
+
+
+A boolean policy is a constraint that is either enforced or not. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L110">property constraint</a>
+</h3>
+
+```typescript
+constraint?: pulumi.Input<string>;
+```
+
+
+The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L114">property etag</a>
+</h3>
+
+```typescript
+etag?: pulumi.Input<string>;
+```
+
+
+(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L118">property listPolicy</a>
+</h3>
+
+```typescript
+listPolicy?: pulumi.Input<{ ... }>;
+```
+
+
+A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L122">property project</a>
+</h3>
+
+```typescript
+project?: pulumi.Input<string>;
+```
+
+
+The project id of the project to set the policy for.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L126">property restorePolicy</a>
+</h3>
+
+```typescript
+restorePolicy?: pulumi.Input<{ ... }>;
+```
+
+
+A restore policy is a constraint to restore the default policy. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L130">property updateTime</a>
+</h3>
+
+```typescript
+updateTime?: pulumi.Input<string>;
+```
+
+
+(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/organizationPolicy.ts#L134">property version</a>
+</h3>
+
+```typescript
+version?: pulumi.Input<number>;
+```
+
+
+Version of the Policy. Default version is 0.
 
 <h2 class="pdoc-module-header" id="ServiceArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/service.ts#L90">interface ServiceArgs</a>
@@ -1310,13 +1899,13 @@ service?: pulumi.Input<string>;
 The service to enable.
 
 <h2 class="pdoc-module-header" id="ServicesArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L96">interface ServicesArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L93">interface ServicesArgs</a>
 </h2>
 
 The set of arguments for constructing a Services resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L97">property disableOnDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L94">property disableOnDestroy</a>
 </h3>
 
 ```typescript
@@ -1324,46 +1913,7 @@ disableOnDestroy?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L103">property project</a>
-</h3>
-
-```typescript
-project: pulumi.Input<string>;
-```
-
-
-The project ID.
-Changing this forces Terraform to attempt to disable all previously managed
-API services in the previous project.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L108">property services</a>
-</h3>
-
-```typescript
-services: pulumi.Input<pulumi.Input<string>[]>;
-```
-
-
-The list of services that are enabled. Supports
-update.
-
-<h2 class="pdoc-module-header" id="ServicesState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L78">interface ServicesState</a>
-</h2>
-
-Input properties used for looking up and filtering Services resources.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L79">property disableOnDestroy</a>
-</h3>
-
-```typescript
-disableOnDestroy?: pulumi.Input<boolean>;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L85">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L100">property project</a>
 </h3>
 
 ```typescript
@@ -1376,7 +1926,46 @@ Changing this forces Terraform to attempt to disable all previously managed
 API services in the previous project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L90">property services</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L105">property services</a>
+</h3>
+
+```typescript
+services: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+The list of services that are enabled. Supports
+update.
+
+<h2 class="pdoc-module-header" id="ServicesState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L75">interface ServicesState</a>
+</h2>
+
+Input properties used for looking up and filtering Services resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L76">property disableOnDestroy</a>
+</h3>
+
+```typescript
+disableOnDestroy?: pulumi.Input<boolean>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L82">property project</a>
+</h3>
+
+```typescript
+project?: pulumi.Input<string>;
+```
+
+
+The project ID.
+Changing this forces Terraform to attempt to disable all previously managed
+API services in the previous project.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/projects/services.ts#L87">property services</a>
 </h3>
 
 ```typescript

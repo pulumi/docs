@@ -54,7 +54,7 @@ Provides an application cookie stickiness policy, which allows an ELB to wed its
 </h3>
 
 ```typescript
-new AppCookieStickinessPolicy(name: string, args: AppCookieStickinessPolicyArgs, opts?: pulumi.ResourceOptions)
+new AppCookieStickinessPolicy(name: string, args: AppCookieStickinessPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -77,7 +77,15 @@ Get an existing AppCookieStickinessPolicy resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -100,7 +108,7 @@ public cookieName: pulumi.Output<string>;
 The application cookie whose lifetime the ELB's cookie should follow.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -177,7 +185,7 @@ conflict and will overwrite attachments.
 </h3>
 
 ```typescript
-new Attachment(name: string, args: AttachmentArgs, opts?: pulumi.ResourceOptions)
+new Attachment(name: string, args: AttachmentArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -200,7 +208,15 @@ Get an existing Attachment resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -223,7 +239,7 @@ public elb: pulumi.Output<string>;
 The name of the ELB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -268,7 +284,7 @@ Attaches a load balancer policy to an ELB Listener.
 </h3>
 
 ```typescript
-new ListenerPolicy(name: string, args: ListenerPolicyArgs, opts?: pulumi.ResourceOptions)
+new ListenerPolicy(name: string, args: ListenerPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -291,7 +307,15 @@ Get an existing ListenerPolicy resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -303,7 +327,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -360,7 +384,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="LoadBalancer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L18">class LoadBalancer</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L20">class LoadBalancer</a>
 </h2>
 
 Provides an Elastic Load Balancer resource, also known as a "Classic
@@ -375,11 +399,11 @@ instances in conjunction with a ELB Attachment resources. Doing so will cause a
 conflict and will overwrite attachments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L116">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L118">constructor</a>
 </h3>
 
 ```typescript
-new LoadBalancer(name: string, args: LoadBalancerArgs, opts?: pulumi.ResourceOptions)
+new LoadBalancer(name: string, args: LoadBalancerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -390,7 +414,7 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L27">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L29">method get</a>
 </h3>
 
 ```typescript
@@ -402,7 +426,15 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -414,7 +446,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L34">property accessLogs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L36">property accessLogs</a>
 </h3>
 
 ```typescript
@@ -425,7 +457,7 @@ public accessLogs: pulumi.Output<{ ... } | undefined>;
 An Access Logs block. Access Logs documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L38">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L40">property arn</a>
 </h3>
 
 ```typescript
@@ -436,7 +468,7 @@ public arn: pulumi.Output<string>;
 The ARN of the ELB
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L42">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L44">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -447,7 +479,7 @@ public availabilityZones: pulumi.Output<string[]>;
 The AZ's to serve traffic in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L46">property connectionDraining</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L48">property connectionDraining</a>
 </h3>
 
 ```typescript
@@ -458,7 +490,7 @@ public connectionDraining: pulumi.Output<boolean | undefined>;
 Boolean to enable connection draining. Default: `false`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L50">property connectionDrainingTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L52">property connectionDrainingTimeout</a>
 </h3>
 
 ```typescript
@@ -469,7 +501,7 @@ public connectionDrainingTimeout: pulumi.Output<number | undefined>;
 The time in seconds to allow for connections to drain. Default: `300`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L54">property crossZoneLoadBalancing</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L56">property crossZoneLoadBalancing</a>
 </h3>
 
 ```typescript
@@ -480,7 +512,7 @@ public crossZoneLoadBalancing: pulumi.Output<boolean | undefined>;
 Enable cross-zone load balancing. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L58">property dnsName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L60">property dnsName</a>
 </h3>
 
 ```typescript
@@ -491,7 +523,7 @@ public dnsName: pulumi.Output<string>;
 The DNS name of the ELB
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L62">property healthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L64">property healthCheck</a>
 </h3>
 
 ```typescript
@@ -502,7 +534,7 @@ public healthCheck: pulumi.Output<{ ... }>;
 A health_check block. Health Check documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -514,7 +546,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L66">property idleTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L68">property idleTimeout</a>
 </h3>
 
 ```typescript
@@ -525,7 +557,7 @@ public idleTimeout: pulumi.Output<number | undefined>;
 The time in seconds that the connection is allowed to be idle. Default: `60`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L70">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L72">property instances</a>
 </h3>
 
 ```typescript
@@ -536,7 +568,7 @@ public instances: pulumi.Output<string[]>;
 A list of instance ids to place in the ELB pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L74">property internal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L76">property internal</a>
 </h3>
 
 ```typescript
@@ -547,7 +579,7 @@ public internal: pulumi.Output<boolean>;
 If true, ELB will be an internal ELB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L78">property listeners</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L80">property listeners</a>
 </h3>
 
 ```typescript
@@ -558,7 +590,7 @@ public listeners: pulumi.Output<{ ... }[]>;
 A list of listener blocks. Listeners documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L82">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L84">property name</a>
 </h3>
 
 ```typescript
@@ -569,7 +601,7 @@ public name: pulumi.Output<string>;
 The name of the ELB. By default generated by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L87">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L89">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -581,7 +613,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L92">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L94">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -593,7 +625,7 @@ A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L98">property sourceSecurityGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L100">property sourceSecurityGroup</a>
 </h3>
 
 ```typescript
@@ -606,7 +638,7 @@ part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L104">property sourceSecurityGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L106">property sourceSecurityGroupId</a>
 </h3>
 
 ```typescript
@@ -619,7 +651,7 @@ part of your inbound rules for your load balancer's back-end application
 instances. Only available on ELBs launched in a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L108">property subnets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L110">property subnets</a>
 </h3>
 
 ```typescript
@@ -630,11 +662,11 @@ public subnets: pulumi.Output<string[]>;
 A list of subnet IDs to attach to the ELB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L112">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L114">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -653,7 +685,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L116">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L118">property zoneId</a>
 </h3>
 
 ```typescript
@@ -674,7 +706,7 @@ Attaches a load balancer policy to an ELB backend server.
 </h3>
 
 ```typescript
-new LoadBalancerBackendServerPolicy(name: string, args: LoadBalancerBackendServerPolicyArgs, opts?: pulumi.ResourceOptions)
+new LoadBalancerBackendServerPolicy(name: string, args: LoadBalancerBackendServerPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -697,7 +729,15 @@ Get an existing LoadBalancerBackendServerPolicy resource's state with the given 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -709,7 +749,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -776,7 +816,7 @@ Provides a load balancer cookie stickiness policy, which allows an ELB to contro
 </h3>
 
 ```typescript
-new LoadBalancerCookieStickinessPolicy(name: string, args: LoadBalancerCookieStickinessPolicyArgs, opts?: pulumi.ResourceOptions)
+new LoadBalancerCookieStickinessPolicy(name: string, args: LoadBalancerCookieStickinessPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -799,7 +839,15 @@ Get an existing LoadBalancerCookieStickinessPolicy resource's state with the giv
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -823,7 +871,7 @@ The time period after which
 the session cookie should be considered stale, expressed in seconds.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -893,7 +941,7 @@ Provides a load balancer policy, which can be attached to an ELB listener or bac
 </h3>
 
 ```typescript
-new LoadBalancerPolicy(name: string, args: LoadBalancerPolicyArgs, opts?: pulumi.ResourceOptions)
+new LoadBalancerPolicy(name: string, args: LoadBalancerPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -916,7 +964,15 @@ Get an existing LoadBalancerPolicy resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -928,7 +984,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1006,7 +1062,7 @@ Provides a load balancer SSL negotiation policy, which allows an ELB to control 
 </h3>
 
 ```typescript
-new SslNegotiationPolicy(name: string, args: SslNegotiationPolicyArgs, opts?: pulumi.ResourceOptions)
+new SslNegotiationPolicy(name: string, args: SslNegotiationPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1029,7 +1085,15 @@ Get an existing SslNegotiationPolicy resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1052,7 +1116,7 @@ public attributes: pulumi.Output<{ ... }[] | undefined>;
 An SSL Negotiation policy attribute. Each has two properties:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1116,7 +1180,7 @@ deployments.
 </h2>
 
 ```typescript
-getHostedZoneId(args?: GetHostedZoneIdArgs): Promise<GetHostedZoneIdResult>
+getHostedZoneId(args?: GetHostedZoneIdArgs, opts?: pulumi.InvokeOptions): Promise<GetHostedZoneIdResult>
 ```
 
 
@@ -1128,7 +1192,7 @@ in a given region for the purpose of using in an AWS Route53 Alias.
 </h2>
 
 ```typescript
-getLoadBalancer(args: GetLoadBalancerArgs): Promise<GetLoadBalancerResult>
+getLoadBalancer(args: GetLoadBalancerArgs, opts?: pulumi.InvokeOptions): Promise<GetLoadBalancerResult>
 ```
 
 
@@ -1145,7 +1209,7 @@ with it, etc.
 </h2>
 
 ```typescript
-getServiceAccount(args?: GetServiceAccountArgs): Promise<GetServiceAccountResult>
+getServiceAccount(args?: GetServiceAccountArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceAccountResult>
 ```
 
 
@@ -1325,7 +1389,7 @@ A collection of arguments for invoking getHostedZoneId.
 </h3>
 
 ```typescript
-region?: pulumi.Input<string>;
+region?: string;
 ```
 
 
@@ -1360,7 +1424,7 @@ A collection of arguments for invoking getLoadBalancer.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -1371,7 +1435,7 @@ The unique name of the load balancer.
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="GetLoadBalancerResult">
@@ -1538,7 +1602,7 @@ A collection of arguments for invoking getServiceAccount.
 </h3>
 
 ```typescript
-region?: pulumi.Input<string>;
+region?: string;
 ```
 
 
@@ -1652,13 +1716,13 @@ policyNames?: pulumi.Input<pulumi.Input<string>[]>;
 List of Policy Names to apply to the backend server.
 
 <h2 class="pdoc-module-header" id="LoadBalancerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L275">interface LoadBalancerArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L277">interface LoadBalancerArgs</a>
 </h2>
 
 The set of arguments for constructing a LoadBalancer resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L279">property accessLogs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L281">property accessLogs</a>
 </h3>
 
 ```typescript
@@ -1669,7 +1733,7 @@ accessLogs?: pulumi.Input<{ ... }>;
 An Access Logs block. Access Logs documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L283">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L285">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -1680,7 +1744,7 @@ availabilityZones?: pulumi.Input<pulumi.Input<string>[]>;
 The AZ's to serve traffic in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L287">property connectionDraining</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L289">property connectionDraining</a>
 </h3>
 
 ```typescript
@@ -1691,7 +1755,7 @@ connectionDraining?: pulumi.Input<boolean>;
 Boolean to enable connection draining. Default: `false`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L291">property connectionDrainingTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L293">property connectionDrainingTimeout</a>
 </h3>
 
 ```typescript
@@ -1702,7 +1766,7 @@ connectionDrainingTimeout?: pulumi.Input<number>;
 The time in seconds to allow for connections to drain. Default: `300`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L295">property crossZoneLoadBalancing</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L297">property crossZoneLoadBalancing</a>
 </h3>
 
 ```typescript
@@ -1713,7 +1777,7 @@ crossZoneLoadBalancing?: pulumi.Input<boolean>;
 Enable cross-zone load balancing. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L299">property healthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L301">property healthCheck</a>
 </h3>
 
 ```typescript
@@ -1724,7 +1788,7 @@ healthCheck?: pulumi.Input<{ ... }>;
 A health_check block. Health Check documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L303">property idleTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L305">property idleTimeout</a>
 </h3>
 
 ```typescript
@@ -1735,7 +1799,7 @@ idleTimeout?: pulumi.Input<number>;
 The time in seconds that the connection is allowed to be idle. Default: `60`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L307">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L309">property instances</a>
 </h3>
 
 ```typescript
@@ -1746,7 +1810,7 @@ instances?: pulumi.Input<pulumi.Input<string>[]>;
 A list of instance ids to place in the ELB pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L311">property internal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L313">property internal</a>
 </h3>
 
 ```typescript
@@ -1757,18 +1821,18 @@ internal?: pulumi.Input<boolean>;
 If true, ELB will be an internal ELB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L315">property listeners</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L317">property listeners</a>
 </h3>
 
 ```typescript
-listeners: pulumi.Input<{ ... }[]>;
+listeners: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 A list of listener blocks. Listeners documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L319">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L321">property name</a>
 </h3>
 
 ```typescript
@@ -1779,7 +1843,7 @@ name?: pulumi.Input<string>;
 The name of the ELB. By default generated by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L324">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L326">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -1791,7 +1855,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L329">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L331">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -1803,7 +1867,7 @@ A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L335">property sourceSecurityGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L337">property sourceSecurityGroup</a>
 </h3>
 
 ```typescript
@@ -1816,7 +1880,7 @@ part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L339">property subnets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L341">property subnets</a>
 </h3>
 
 ```typescript
@@ -1827,11 +1891,11 @@ subnets?: pulumi.Input<pulumi.Input<string>[]>;
 A list of subnet IDs to attach to the ELB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L343">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L345">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
@@ -2045,7 +2109,7 @@ The load balancer on which the policy is defined.
 </h3>
 
 ```typescript
-policyAttributes?: pulumi.Input<{ ... }[]>;
+policyAttributes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2095,7 +2159,7 @@ The load balancer on which the policy is defined.
 </h3>
 
 ```typescript
-policyAttributes?: pulumi.Input<{ ... }[]>;
+policyAttributes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2124,13 +2188,13 @@ policyTypeName?: pulumi.Input<string>;
 The policy type.
 
 <h2 class="pdoc-module-header" id="LoadBalancerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L183">interface LoadBalancerState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L185">interface LoadBalancerState</a>
 </h2>
 
 Input properties used for looking up and filtering LoadBalancer resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L187">property accessLogs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L189">property accessLogs</a>
 </h3>
 
 ```typescript
@@ -2141,7 +2205,7 @@ accessLogs?: pulumi.Input<{ ... }>;
 An Access Logs block. Access Logs documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L191">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L193">property arn</a>
 </h3>
 
 ```typescript
@@ -2152,7 +2216,7 @@ arn?: pulumi.Input<string>;
 The ARN of the ELB
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L195">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L197">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -2163,7 +2227,7 @@ availabilityZones?: pulumi.Input<pulumi.Input<string>[]>;
 The AZ's to serve traffic in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L199">property connectionDraining</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L201">property connectionDraining</a>
 </h3>
 
 ```typescript
@@ -2174,7 +2238,7 @@ connectionDraining?: pulumi.Input<boolean>;
 Boolean to enable connection draining. Default: `false`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L203">property connectionDrainingTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L205">property connectionDrainingTimeout</a>
 </h3>
 
 ```typescript
@@ -2185,7 +2249,7 @@ connectionDrainingTimeout?: pulumi.Input<number>;
 The time in seconds to allow for connections to drain. Default: `300`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L207">property crossZoneLoadBalancing</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L209">property crossZoneLoadBalancing</a>
 </h3>
 
 ```typescript
@@ -2196,7 +2260,7 @@ crossZoneLoadBalancing?: pulumi.Input<boolean>;
 Enable cross-zone load balancing. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L211">property dnsName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L213">property dnsName</a>
 </h3>
 
 ```typescript
@@ -2207,7 +2271,7 @@ dnsName?: pulumi.Input<string>;
 The DNS name of the ELB
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L215">property healthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L217">property healthCheck</a>
 </h3>
 
 ```typescript
@@ -2218,7 +2282,7 @@ healthCheck?: pulumi.Input<{ ... }>;
 A health_check block. Health Check documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L219">property idleTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L221">property idleTimeout</a>
 </h3>
 
 ```typescript
@@ -2229,7 +2293,7 @@ idleTimeout?: pulumi.Input<number>;
 The time in seconds that the connection is allowed to be idle. Default: `60`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L223">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L225">property instances</a>
 </h3>
 
 ```typescript
@@ -2240,7 +2304,7 @@ instances?: pulumi.Input<pulumi.Input<string>[]>;
 A list of instance ids to place in the ELB pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L227">property internal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L229">property internal</a>
 </h3>
 
 ```typescript
@@ -2251,18 +2315,18 @@ internal?: pulumi.Input<boolean>;
 If true, ELB will be an internal ELB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L231">property listeners</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L233">property listeners</a>
 </h3>
 
 ```typescript
-listeners?: pulumi.Input<{ ... }[]>;
+listeners?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
 A list of listener blocks. Listeners documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L235">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L237">property name</a>
 </h3>
 
 ```typescript
@@ -2273,7 +2337,7 @@ name?: pulumi.Input<string>;
 The name of the ELB. By default generated by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L240">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L242">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -2285,7 +2349,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L245">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L247">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -2297,7 +2361,7 @@ A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L251">property sourceSecurityGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L253">property sourceSecurityGroup</a>
 </h3>
 
 ```typescript
@@ -2310,7 +2374,7 @@ part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L257">property sourceSecurityGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L259">property sourceSecurityGroupId</a>
 </h3>
 
 ```typescript
@@ -2323,7 +2387,7 @@ part of your inbound rules for your load balancer's back-end application
 instances. Only available on ELBs launched in a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L261">property subnets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L263">property subnets</a>
 </h3>
 
 ```typescript
@@ -2334,18 +2398,18 @@ subnets?: pulumi.Input<pulumi.Input<string>[]>;
 A list of subnet IDs to attach to the ELB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L265">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L267">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L269">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancer.ts#L271">property zoneId</a>
 </h3>
 
 ```typescript
@@ -2366,7 +2430,7 @@ The set of arguments for constructing a SslNegotiationPolicy resource.
 </h3>
 
 ```typescript
-attributes?: pulumi.Input<{ ... }[]>;
+attributes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2419,7 +2483,7 @@ Input properties used for looking up and filtering SslNegotiationPolicy resource
 </h3>
 
 ```typescript
-attributes?: pulumi.Input<{ ... }[]>;
+attributes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

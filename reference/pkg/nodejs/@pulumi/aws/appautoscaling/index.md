@@ -30,7 +30,7 @@ Provides an Application AutoScaling Policy resource.
 </h3>
 
 ```typescript
-new Policy(name: string, args: PolicyArgs, opts?: pulumi.ResourceOptions)
+new Policy(name: string, args: PolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -53,7 +53,15 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -103,7 +111,7 @@ public cooldown: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -238,7 +246,7 @@ Provides an Application AutoScaling ScheduledAction resource.
 </h3>
 
 ```typescript
-new ScheduledAction(name: string, args: ScheduledActionArgs, opts?: pulumi.ResourceOptions)
+new ScheduledAction(name: string, args: ScheduledActionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -261,7 +269,15 @@ Get an existing ScheduledAction resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -295,7 +311,7 @@ public endTime: pulumi.Output<string | undefined>;
 The date and time for the scheduled action to end. Specify the following format: 2006-01-02T15:04:05Z
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -406,7 +422,7 @@ Provides an Application AutoScaling ScalableTarget resource. To manage policies 
 </h3>
 
 ```typescript
-new Target(name: string, args: TargetArgs, opts?: pulumi.ResourceOptions)
+new Target(name: string, args: TargetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -429,7 +445,15 @@ Get an existing Target resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -441,7 +465,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -640,7 +664,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
 </h3>
 
 ```typescript
-stepAdjustments?: pulumi.Input<{ ... }[]>;
+stepAdjustments?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
@@ -648,7 +672,7 @@ stepAdjustments?: pulumi.Input<{ ... }[]>;
 </h3>
 
 ```typescript
-stepScalingPolicyConfigurations?: pulumi.Input<{ ... }[]>;
+stepScalingPolicyConfigurations?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -785,7 +809,7 @@ The AWS service namespace of the scalable target. Documentation can be found in 
 </h3>
 
 ```typescript
-stepAdjustments?: pulumi.Input<{ ... }[]>;
+stepAdjustments?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
@@ -793,7 +817,7 @@ stepAdjustments?: pulumi.Input<{ ... }[]>;
 </h3>
 
 ```typescript
-stepScalingPolicyConfigurations?: pulumi.Input<{ ... }[]>;
+stepScalingPolicyConfigurations?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

@@ -19,9 +19,7 @@ import * as awsServerless from "@pulumi/aws-serverless";
 
 * <a href="#BucketEventSubscription">class BucketEventSubscription</a>
 * <a href="#TopicEventSubscription">class TopicEventSubscription</a>
-* <a href="#defaultComputePolicies">const defaultComputePolicies</a>
 * <a href="#createLambdaFunction">function createLambdaFunction</a>
-* <a href="#mapObject">function mapObject</a>
 * <a href="#onDelete">function onDelete</a>
 * <a href="#onEvent">function onEvent</a>
 * <a href="#onPut">function onPut</a>
@@ -34,17 +32,13 @@ import * as awsServerless from "@pulumi/aws-serverless";
 * <a href="#SNSItem">interface SNSItem</a>
 * <a href="#SNSMessageAttribute">interface SNSMessageAttribute</a>
 * <a href="#SimpleBucketSubscriptionArgs">interface SimpleBucketSubscriptionArgs</a>
-* <a href="#SubscriptionInfo">interface SubscriptionInfo</a>
 * <a href="#TopicEvent">interface TopicEvent</a>
 * <a href="#TopicRecord">interface TopicRecord</a>
-* <a href="#bucketSubscriptionInfos">let bucketSubscriptionInfos</a>
 * <a href="#BucketDeleteArgs">type BucketDeleteArgs</a>
 * <a href="#BucketEventHandler">type BucketEventHandler</a>
 * <a href="#BucketPutArgs">type BucketPutArgs</a>
 * <a href="#Callback">type Callback</a>
-* <a href="#Diff">type Diff</a>
 * <a href="#Handler">type Handler</a>
-* <a href="#Omit">type Omit</a>
 * <a href="#TopicEventHandler">type TopicEventHandler</a>
 * <a href="#TopicSubscriptionArgs">type TopicSubscriptionArgs</a>
 
@@ -69,6 +63,14 @@ public new BucketEventSubscription(name: string, bucket: s3.Bucket, func: lambda
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
@@ -77,7 +79,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L100">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -124,6 +126,14 @@ public new TopicEventSubscription(name: string, topic: sns.Topic, func: lambda.F
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
@@ -132,7 +142,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L100">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -178,31 +188,12 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
-<h2 class="pdoc-module-header" id="defaultComputePolicies">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/bucket.ts#L127">const defaultComputePolicies</a>
-</h2>
-
-```typescript
-const defaultComputePolicies: string[] =  [
-    aws.iam.AWSLambdaFullAccess,                 // Provides wide access to "serverless" services (Dynamo, S3, etc.)
-    aws.iam.AmazonEC2ContainerServiceFullAccess, // Required for lambda compute to be able to run Tasks
-];
-```
-
 <h2 class="pdoc-module-header" id="createLambdaFunction">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/function.ts#L38">function createLambdaFunction</a>
 </h2>
 
 ```typescript
 createLambdaFunction<E,R>(name: string, handler: Handler<E, R>, opts?: ResourceOptions, functionOptions?: aws.serverless.FunctionOptions): aws.lambda.Function
-```
-
-<h2 class="pdoc-module-header" id="mapObject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/utils.ts#L27">function mapObject</a>
-</h2>
-
-```typescript
-mapObject<T,U>(obj: Record<string, T>, func: { ... }): Record<string, U>
 ```
 
 <h2 class="pdoc-module-header" id="onDelete">
@@ -519,57 +510,6 @@ aws.s3.BucketNotification.lambdaFunctions for more details.
 filterSuffix?: undefined | string;
 ```
 
-<h2 class="pdoc-module-header" id="SubscriptionInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/bucket.ts#L146">interface SubscriptionInfo</a>
-</h2>
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/bucket.ts#L148">property events</a>
-</h3>
-
-```typescript
-events: string[];
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/bucket.ts#L149">property filterPrefix</a>
-</h3>
-
-```typescript
-filterPrefix?: undefined | string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/bucket.ts#L150">property filterSuffix</a>
-</h3>
-
-```typescript
-filterSuffix?: undefined | string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/bucket.ts#L151">property lambdaFunctionArn</a>
-</h3>
-
-```typescript
-lambdaFunctionArn: pulumi.Output<string>;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/bucket.ts#L147">property name</a>
-</h3>
-
-```typescript
-name: string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/bucket.ts#L152">property permission</a>
-</h3>
-
-```typescript
-permission: aws.lambda.Permission;
-```
-
 <h2 class="pdoc-module-header" id="TopicEvent">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/topic.ts#L21">interface TopicEvent</a>
 </h2>
@@ -614,14 +554,6 @@ EventVersion: string;
 
 ```typescript
 Sns: SNSItem;
-```
-
-<h2 class="pdoc-module-header" id="bucketSubscriptionInfos">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/bucket.ts#L155">let bucketSubscriptionInfos</a>
-</h2>
-
-```typescript
-let bucketSubscriptionInfos: Map<Bucket, SubscriptionInfo[]> =  new Map<s3.Bucket, SubscriptionInfo[]>();
 ```
 
 <h2 class="pdoc-module-header" id="BucketDeleteArgs">
@@ -673,14 +605,6 @@ be returned, 'callback' parameter can be ignored, and AWS will appropriately han
 AWS lambda pre-8.10, a synchronous function must be provided.  The synchronous function should
 return nothing, and should instead invoke 'callback' when complete.
 
-<h2 class="pdoc-module-header" id="Diff">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/utils.ts#L44">type Diff</a>
-</h2>
-
-```typescript
-type Diff = ({ [P in T]: P; } & { [P in U]: never; } & { [x: string]: never; })[T];
-```
-
 <h2 class="pdoc-module-header" id="Handler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/function.ts#L32">type Handler</a>
 </h2>
@@ -692,14 +616,6 @@ type Handler = Callback<E, R> | aws.lambda.Function;
 
 Handler represents the appropriate type for functions that can take either an AWS lambda function
 instance, or a JS function object that will then be used to create the AWS lambda function.
-
-<h2 class="pdoc-module-header" id="Omit">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/utils.ts#L45">type Omit</a>
-</h2>
-
-```typescript
-type Omit = Pick<T, Diff<keyof T, K>>;
-```
 
 <h2 class="pdoc-module-header" id="TopicEventHandler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs/topic.ts#L51">type TopicEventHandler</a>

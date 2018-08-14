@@ -6,6 +6,17 @@ title: Module apps/v1beta2
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isControllerRevision">function isControllerRevision</a>
+* <a href="#isControllerRevisionList">function isControllerRevisionList</a>
+* <a href="#isDaemonSet">function isDaemonSet</a>
+* <a href="#isDaemonSetList">function isDaemonSetList</a>
+* <a href="#isDeployment">function isDeployment</a>
+* <a href="#isDeploymentList">function isDeploymentList</a>
+* <a href="#isReplicaSet">function isReplicaSet</a>
+* <a href="#isReplicaSetList">function isReplicaSetList</a>
+* <a href="#isScale">function isScale</a>
+* <a href="#isStatefulSet">function isStatefulSet</a>
+* <a href="#isStatefulSetList">function isStatefulSetList</a>
 * <a href="#ControllerRevision">interface ControllerRevision</a>
 * <a href="#ControllerRevisionList">interface ControllerRevisionList</a>
 * <a href="#DaemonSet">interface DaemonSet</a>
@@ -38,8 +49,96 @@ title: Module apps/v1beta2
 * <a href="#StatefulSetStatus">interface StatefulSetStatus</a>
 * <a href="#StatefulSetUpdateStrategy">interface StatefulSetUpdateStrategy</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isControllerRevision">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L2974">function isControllerRevision</a>
+</h2>
+
+```typescript
+isControllerRevision(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isControllerRevisionList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3010">function isControllerRevisionList</a>
+</h2>
+
+```typescript
+isControllerRevisionList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDaemonSet">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3056">function isDaemonSet</a>
+</h2>
+
+```typescript
+isDaemonSet(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDaemonSetList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3125">function isDaemonSetList</a>
+</h2>
+
+```typescript
+isDaemonSetList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDeployment">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3291">function isDeployment</a>
+</h2>
+
+```typescript
+isDeployment(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isDeploymentList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3364">function isDeploymentList</a>
+</h2>
+
+```typescript
+isDeploymentList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isReplicaSet">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3539">function isReplicaSet</a>
+</h2>
+
+```typescript
+isReplicaSet(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isReplicaSetList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3609">function isReplicaSetList</a>
+</h2>
+
+```typescript
+isReplicaSetList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isScale">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3794">function isScale</a>
+</h2>
+
+```typescript
+isScale(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isStatefulSet">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3880">function isStatefulSet</a>
+</h2>
+
+```typescript
+isStatefulSet(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isStatefulSetList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3944">function isStatefulSetList</a>
+</h2>
+
+```typescript
+isStatefulSetList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="ControllerRevision">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2773">interface ControllerRevision</a>
@@ -1537,7 +1636,7 @@ actual number of observed instances of the scaled object.
 </h3>
 
 ```typescript
-selector: object;
+selector: { ... };
 ```
 
 

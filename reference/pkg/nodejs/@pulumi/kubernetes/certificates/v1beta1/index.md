@@ -6,14 +6,32 @@ title: Module certificates/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isCertificateSigningRequest">function isCertificateSigningRequest</a>
+* <a href="#isCertificateSigningRequestList">function isCertificateSigningRequestList</a>
 * <a href="#CertificateSigningRequest">interface CertificateSigningRequest</a>
 * <a href="#CertificateSigningRequestCondition">interface CertificateSigningRequestCondition</a>
 * <a href="#CertificateSigningRequestList">interface CertificateSigningRequestList</a>
 * <a href="#CertificateSigningRequestSpec">interface CertificateSigningRequestSpec</a>
 * <a href="#CertificateSigningRequestStatus">interface CertificateSigningRequestStatus</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isCertificateSigningRequest">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6462">function isCertificateSigningRequest</a>
+</h2>
+
+```typescript
+isCertificateSigningRequest(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isCertificateSigningRequestList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6517">function isCertificateSigningRequestList</a>
+</h2>
+
+```typescript
+isCertificateSigningRequestList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="CertificateSigningRequest">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6060">interface CertificateSigningRequest</a>

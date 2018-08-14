@@ -26,17 +26,17 @@ title: Module ebs
 
 
 <h2 class="pdoc-module-header" id="Snapshot">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L9">class Snapshot</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L11">class Snapshot</a>
 </h2>
 
 Creates a Snapshot of an EBS Volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L57">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L59">constructor</a>
 </h3>
 
 ```typescript
-new Snapshot(name: string, args: SnapshotArgs, opts?: pulumi.ResourceOptions)
+new Snapshot(name: string, args: SnapshotArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -47,7 +47,7 @@ Create a Snapshot resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -59,7 +59,15 @@ Get an existing Snapshot resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -71,7 +79,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L25">property dataEncryptionKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L27">property dataEncryptionKeyId</a>
 </h3>
 
 ```typescript
@@ -82,7 +90,7 @@ public dataEncryptionKeyId: pulumi.Output<string>;
 The data encryption key identifier for the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L29">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L31">property description</a>
 </h3>
 
 ```typescript
@@ -93,7 +101,7 @@ public description: pulumi.Output<string | undefined>;
 A description of what the snapshot is.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L33">property encrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L35">property encrypted</a>
 </h3>
 
 ```typescript
@@ -104,7 +112,7 @@ public encrypted: pulumi.Output<boolean>;
 Whether the snapshot is encrypted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -116,7 +124,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L37">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L39">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -127,7 +135,7 @@ public kmsKeyId: pulumi.Output<string>;
 The ARN for the KMS encryption key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L41">property ownerAlias</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L43">property ownerAlias</a>
 </h3>
 
 ```typescript
@@ -138,7 +146,7 @@ public ownerAlias: pulumi.Output<string>;
 Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L45">property ownerId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L47">property ownerId</a>
 </h3>
 
 ```typescript
@@ -149,11 +157,11 @@ public ownerId: pulumi.Output<string>;
 The AWS account ID of the EBS snapshot owner.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L49">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L51">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -172,7 +180,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L53">property volumeId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L55">property volumeId</a>
 </h3>
 
 ```typescript
@@ -183,7 +191,7 @@ public volumeId: pulumi.Output<string>;
 The Volume ID of which to make a snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L57">property volumeSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L59">property volumeSize</a>
 </h3>
 
 ```typescript
@@ -194,17 +202,17 @@ public volumeSize: pulumi.Output<number>;
 The size of the drive in GiBs.
 
 <h2 class="pdoc-module-header" id="Volume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L9">class Volume</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L11">class Volume</a>
 </h2>
 
 Manages a single EBS volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L57">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L59">constructor</a>
 </h3>
 
 ```typescript
-new Volume(name: string, args: VolumeArgs, opts?: pulumi.ResourceOptions)
+new Volume(name: string, args: VolumeArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -215,7 +223,7 @@ Create a Volume resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -227,7 +235,15 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -239,7 +255,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L27">property arn</a>
 </h3>
 
 ```typescript
@@ -250,7 +266,7 @@ public arn: pulumi.Output<string>;
 The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L29">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L31">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -261,7 +277,7 @@ public availabilityZone: pulumi.Output<string>;
 The AZ where the EBS volume will exist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L33">property encrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L35">property encrypted</a>
 </h3>
 
 ```typescript
@@ -272,7 +288,7 @@ public encrypted: pulumi.Output<boolean>;
 If true, the disk will be encrypted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -284,7 +300,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L37">property iops</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L39">property iops</a>
 </h3>
 
 ```typescript
@@ -295,7 +311,7 @@ public iops: pulumi.Output<number>;
 The amount of IOPS to provision for the disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L41">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L43">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -306,7 +322,7 @@ public kmsKeyId: pulumi.Output<string>;
 The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L45">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L47">property size</a>
 </h3>
 
 ```typescript
@@ -317,7 +333,7 @@ public size: pulumi.Output<number>;
 The size of the drive in GiBs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L49">property snapshotId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L51">property snapshotId</a>
 </h3>
 
 ```typescript
@@ -328,18 +344,18 @@ public snapshotId: pulumi.Output<string>;
 A snapshot to base the EBS volume off of.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L53">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L55">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L57">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L59">property type</a>
 </h3>
 
 ```typescript
@@ -366,7 +382,7 @@ deployments.
 </h2>
 
 ```typescript
-getSnapshot(args?: GetSnapshotArgs): Promise<GetSnapshotResult>
+getSnapshot(args?: GetSnapshotArgs, opts?: pulumi.InvokeOptions): Promise<GetSnapshotResult>
 ```
 
 
@@ -377,7 +393,7 @@ Use this data source to get information about an EBS Snapshot for use when provi
 </h2>
 
 ```typescript
-getSnapshotIds(args?: GetSnapshotIdsArgs): Promise<GetSnapshotIdsResult>
+getSnapshotIds(args?: GetSnapshotIdsArgs, opts?: pulumi.InvokeOptions): Promise<GetSnapshotIdsResult>
 ```
 
 
@@ -389,7 +405,7 @@ criteria.
 </h2>
 
 ```typescript
-getVolume(args?: GetVolumeArgs): Promise<GetVolumeResult>
+getVolume(args?: GetVolumeArgs, opts?: pulumi.InvokeOptions): Promise<GetVolumeResult>
 ```
 
 
@@ -407,7 +423,7 @@ A collection of arguments for invoking getSnapshot.
 </h3>
 
 ```typescript
-filters?: pulumi.Input<{ ... }[]>;
+filters?: { ... }[];
 ```
 
 
@@ -420,7 +436,7 @@ several valid keys, for a full reference, check out
 </h3>
 
 ```typescript
-mostRecent?: pulumi.Input<boolean>;
+mostRecent?: boolean;
 ```
 
 
@@ -431,7 +447,7 @@ If more than one result is returned, use the most recent snapshot.
 </h3>
 
 ```typescript
-owners?: pulumi.Input<pulumi.Input<string>[]>;
+owners?: string[];
 ```
 
 
@@ -442,7 +458,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
 </h3>
 
 ```typescript
-restorableByUserIds?: pulumi.Input<pulumi.Input<string>[]>;
+restorableByUserIds?: string[];
 ```
 
 
@@ -453,7 +469,7 @@ One or more AWS accounts IDs that can create volumes from the snapshot.
 </h3>
 
 ```typescript
-snapshotIds?: pulumi.Input<pulumi.Input<string>[]>;
+snapshotIds?: string[];
 ```
 
 
@@ -464,7 +480,7 @@ Returns information on a specific snapshot_id.
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="GetSnapshotIdsArgs">
@@ -478,7 +494,7 @@ A collection of arguments for invoking getSnapshotIds.
 </h3>
 
 ```typescript
-filters?: pulumi.Input<{ ... }[]>;
+filters?: { ... }[];
 ```
 
 
@@ -491,7 +507,7 @@ several valid keys, for a full reference, check out
 </h3>
 
 ```typescript
-owners?: pulumi.Input<pulumi.Input<string>[]>;
+owners?: string[];
 ```
 
 
@@ -502,7 +518,7 @@ Returns the snapshots owned by the specified owner id. Multiple owners can be sp
 </h3>
 
 ```typescript
-restorableByUserIds?: pulumi.Input<pulumi.Input<string>[]>;
+restorableByUserIds?: string[];
 ```
 
 
@@ -682,7 +698,7 @@ A collection of arguments for invoking getVolume.
 </h3>
 
 ```typescript
-filters?: pulumi.Input<{ ... }[]>;
+filters?: { ... }[];
 ```
 
 
@@ -695,7 +711,7 @@ several valid keys, for a full reference, check out
 </h3>
 
 ```typescript
-mostRecent?: pulumi.Input<boolean>;
+mostRecent?: boolean;
 ```
 
 
@@ -707,7 +723,7 @@ recent Volume.
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="GetVolumeResult">
@@ -838,13 +854,13 @@ volumeType: string;
 The type of EBS volume.
 
 <h2 class="pdoc-module-header" id="SnapshotArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L144">interface SnapshotArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L146">interface SnapshotArgs</a>
 </h2>
 
 The set of arguments for constructing a Snapshot resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L148">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L150">property description</a>
 </h3>
 
 ```typescript
@@ -855,18 +871,18 @@ description?: pulumi.Input<string>;
 A description of what the snapshot is.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L152">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L154">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the snapshot
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L156">property volumeId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L158">property volumeId</a>
 </h3>
 
 ```typescript
@@ -877,13 +893,13 @@ volumeId: pulumi.Input<string>;
 The Volume ID of which to make a snapshot.
 
 <h2 class="pdoc-module-header" id="SnapshotState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L102">interface SnapshotState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L104">interface SnapshotState</a>
 </h2>
 
 Input properties used for looking up and filtering Snapshot resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L106">property dataEncryptionKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L108">property dataEncryptionKeyId</a>
 </h3>
 
 ```typescript
@@ -894,7 +910,7 @@ dataEncryptionKeyId?: pulumi.Input<string>;
 The data encryption key identifier for the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L110">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L112">property description</a>
 </h3>
 
 ```typescript
@@ -905,7 +921,7 @@ description?: pulumi.Input<string>;
 A description of what the snapshot is.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L114">property encrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L116">property encrypted</a>
 </h3>
 
 ```typescript
@@ -916,7 +932,7 @@ encrypted?: pulumi.Input<boolean>;
 Whether the snapshot is encrypted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L118">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L120">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -927,7 +943,7 @@ kmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS encryption key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L122">property ownerAlias</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L124">property ownerAlias</a>
 </h3>
 
 ```typescript
@@ -938,7 +954,7 @@ ownerAlias?: pulumi.Input<string>;
 Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L126">property ownerId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L128">property ownerId</a>
 </h3>
 
 ```typescript
@@ -949,18 +965,18 @@ ownerId?: pulumi.Input<string>;
 The AWS account ID of the EBS snapshot owner.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L130">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L132">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the snapshot
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L134">property volumeId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L136">property volumeId</a>
 </h3>
 
 ```typescript
@@ -971,7 +987,7 @@ volumeId?: pulumi.Input<string>;
 The Volume ID of which to make a snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L138">property volumeSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L140">property volumeSize</a>
 </h3>
 
 ```typescript
@@ -982,13 +998,13 @@ volumeSize?: pulumi.Input<number>;
 The size of the drive in GiBs.
 
 <h2 class="pdoc-module-header" id="VolumeArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L144">interface VolumeArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L146">interface VolumeArgs</a>
 </h2>
 
 The set of arguments for constructing a Volume resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L148">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L150">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -999,7 +1015,7 @@ availabilityZone: pulumi.Input<string>;
 The AZ where the EBS volume will exist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L152">property encrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L154">property encrypted</a>
 </h3>
 
 ```typescript
@@ -1010,7 +1026,7 @@ encrypted?: pulumi.Input<boolean>;
 If true, the disk will be encrypted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L156">property iops</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L158">property iops</a>
 </h3>
 
 ```typescript
@@ -1021,7 +1037,7 @@ iops?: pulumi.Input<number>;
 The amount of IOPS to provision for the disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L160">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L162">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -1032,7 +1048,7 @@ kmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L164">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L166">property size</a>
 </h3>
 
 ```typescript
@@ -1043,7 +1059,7 @@ size?: pulumi.Input<number>;
 The size of the drive in GiBs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L168">property snapshotId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L170">property snapshotId</a>
 </h3>
 
 ```typescript
@@ -1054,18 +1070,18 @@ snapshotId?: pulumi.Input<string>;
 A snapshot to base the EBS volume off of.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L172">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L174">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L176">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L178">property type</a>
 </h3>
 
 ```typescript
@@ -1076,13 +1092,13 @@ type?: pulumi.Input<string>;
 The type of EBS volume. Can be "standard", "gp2", "io1", "sc1" or "st1" (Default: "standard").
 
 <h2 class="pdoc-module-header" id="VolumeState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L102">interface VolumeState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L104">interface VolumeState</a>
 </h2>
 
 Input properties used for looking up and filtering Volume resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L106">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L108">property arn</a>
 </h3>
 
 ```typescript
@@ -1093,7 +1109,7 @@ arn?: pulumi.Input<string>;
 The volume ARN (e.g. arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L110">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L112">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -1104,7 +1120,7 @@ availabilityZone?: pulumi.Input<string>;
 The AZ where the EBS volume will exist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L114">property encrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L116">property encrypted</a>
 </h3>
 
 ```typescript
@@ -1115,7 +1131,7 @@ encrypted?: pulumi.Input<boolean>;
 If true, the disk will be encrypted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L118">property iops</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L120">property iops</a>
 </h3>
 
 ```typescript
@@ -1126,7 +1142,7 @@ iops?: pulumi.Input<number>;
 The amount of IOPS to provision for the disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L122">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L124">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -1137,7 +1153,7 @@ kmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS encryption key. When specifying `kms_key_id`, `encrypted` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L126">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L128">property size</a>
 </h3>
 
 ```typescript
@@ -1148,7 +1164,7 @@ size?: pulumi.Input<number>;
 The size of the drive in GiBs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L130">property snapshotId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L132">property snapshotId</a>
 </h3>
 
 ```typescript
@@ -1159,18 +1175,18 @@ snapshotId?: pulumi.Input<string>;
 A snapshot to base the EBS volume off of.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L134">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L136">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L138">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L140">property type</a>
 </h3>
 
 ```typescript

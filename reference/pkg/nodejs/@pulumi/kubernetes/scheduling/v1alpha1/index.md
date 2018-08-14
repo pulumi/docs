@@ -6,11 +6,29 @@ title: Module scheduling/v1alpha1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isPriorityClass">function isPriorityClass</a>
+* <a href="#isPriorityClassList">function isPriorityClassList</a>
 * <a href="#PriorityClass">interface PriorityClass</a>
 * <a href="#PriorityClassList">interface PriorityClassList</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isPriorityClass">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17086">function isPriorityClass</a>
+</h2>
+
+```typescript
+isPriorityClass(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPriorityClassList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17123">function isPriorityClassList</a>
+</h2>
+
+```typescript
+isPriorityClassList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="PriorityClass">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16105">interface PriorityClass</a>

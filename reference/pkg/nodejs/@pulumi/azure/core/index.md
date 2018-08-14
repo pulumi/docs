@@ -30,14 +30,14 @@ title: Module core
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/resourceGroup.ts#L9">class ResourceGroup</a>
 </h2>
 
-Manages a new resource group on Azure.
+Manages a resource group on Azure.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/resourceGroup.ts#L35">constructor</a>
 </h3>
 
 ```typescript
-new ResourceGroup(name: string, args: ResourceGroupArgs, opts?: pulumi.ResourceOptions)
+new ResourceGroup(name: string, args: ResourceGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -60,7 +60,15 @@ Get an existing ResourceGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -72,7 +80,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -145,7 +153,7 @@ One workaround for this is to use a unique Resource Group for each ARM Template 
 </h3>
 
 ```typescript
-new TemplateDeployment(name: string, args: TemplateDeploymentArgs, opts?: pulumi.ResourceOptions)
+new TemplateDeployment(name: string, args: TemplateDeploymentArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -168,7 +176,15 @@ Get an existing TemplateDeployment resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -193,7 +209,7 @@ Note that you will almost *always* want this to be set to `Incremental` otherwis
 specified within the template, and Terraform will not be aware of this.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -289,7 +305,7 @@ deployments.
 </h2>
 
 ```typescript
-getClientConfig(): Promise<GetClientConfigResult>
+getClientConfig(opts?: pulumi.InvokeOptions): Promise<GetClientConfigResult>
 ```
 
 
@@ -301,7 +317,7 @@ provider.
 </h2>
 
 ```typescript
-getResourceGroup(args: GetResourceGroupArgs): Promise<GetResourceGroupResult>
+getResourceGroup(args: GetResourceGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetResourceGroupResult>
 ```
 
 
@@ -312,7 +328,7 @@ Use this data source to access the properties of an Azure resource group.
 </h2>
 
 ```typescript
-getSubscription(args?: GetSubscriptionArgs): Promise<GetSubscriptionResult>
+getSubscription(args?: GetSubscriptionArgs, opts?: pulumi.InvokeOptions): Promise<GetSubscriptionResult>
 ```
 
 
@@ -323,11 +339,11 @@ Use this data source to access the properties of an Azure subscription.
 </h2>
 
 ```typescript
-getSubscriptions(): Promise<GetSubscriptionsResult>
+getSubscriptions(opts?: pulumi.InvokeOptions): Promise<GetSubscriptionsResult>
 ```
 
 
-Use this data source to access a list of all Azure subscription currently available.
+Use this data source to access a list of all Azure subscriptions currently available.
 
 <h2 class="pdoc-module-header" id="GetClientConfigResult">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L18">interface GetClientConfigResult</a>
@@ -397,7 +413,7 @@ A collection of arguments for invoking getResourceGroup.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -453,7 +469,7 @@ A collection of arguments for invoking getSubscription.
 </h3>
 
 ```typescript
-subscriptionId?: pulumi.Input<string>;
+subscriptionId?: string;
 ```
 
 

@@ -6,6 +6,8 @@ title: Module storage/v1alpha1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isVolumeAttachment">function isVolumeAttachment</a>
+* <a href="#isVolumeAttachmentList">function isVolumeAttachmentList</a>
 * <a href="#VolumeAttachment">interface VolumeAttachment</a>
 * <a href="#VolumeAttachmentList">interface VolumeAttachmentList</a>
 * <a href="#VolumeAttachmentSource">interface VolumeAttachmentSource</a>
@@ -13,8 +15,24 @@ title: Module storage/v1alpha1
 * <a href="#VolumeAttachmentStatus">interface VolumeAttachmentStatus</a>
 * <a href="#VolumeError">interface VolumeError</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isVolumeAttachment">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17395">function isVolumeAttachment</a>
+</h2>
+
+```typescript
+isVolumeAttachment(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isVolumeAttachmentList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17432">function isVolumeAttachmentList</a>
+</h2>
+
+```typescript
+isVolumeAttachmentList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="VolumeAttachment">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16395">interface VolumeAttachment</a>
@@ -240,7 +258,7 @@ completing the attach operation, i.e. the external-attacher.
 </h3>
 
 ```typescript
-attachmentMetadata: object;
+attachmentMetadata: { ... };
 ```
 
 

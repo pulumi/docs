@@ -6,13 +6,22 @@ title: Module authentication/v1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isTokenReview">function isTokenReview</a>
 * <a href="#TokenReview">interface TokenReview</a>
 * <a href="#TokenReviewSpec">interface TokenReviewSpec</a>
 * <a href="#TokenReviewStatus">interface TokenReviewStatus</a>
 * <a href="#UserInfo">interface UserInfo</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isTokenReview">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4140">function isTokenReview</a>
+</h2>
+
+```typescript
+isTokenReview(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="TokenReview">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3878">interface TokenReview</a>

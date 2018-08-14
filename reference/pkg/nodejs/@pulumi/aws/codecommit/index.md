@@ -34,7 +34,7 @@ in all regions - available regions are listed
 </h3>
 
 ```typescript
-new Repository(name: string, args: RepositoryArgs, opts?: pulumi.ResourceOptions)
+new Repository(name: string, args: RepositoryArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -57,7 +57,15 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -124,7 +132,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the repository. This needs to be less than 1000 characters
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -184,7 +192,7 @@ in all regions - available regions are listed
 </h3>
 
 ```typescript
-new Trigger(name: string, args: TriggerArgs, opts?: pulumi.ResourceOptions)
+new Trigger(name: string, args: TriggerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -207,7 +215,15 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -227,7 +243,7 @@ public configurationId: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -274,7 +290,7 @@ deployments.
 </h2>
 
 ```typescript
-getRepository(args: GetRepositoryArgs): Promise<GetRepositoryResult>
+getRepository(args: GetRepositoryArgs, opts?: pulumi.InvokeOptions): Promise<GetRepositoryResult>
 ```
 
 
@@ -291,7 +307,7 @@ A collection of arguments for invoking getRepository.
 </h3>
 
 ```typescript
-repositoryName: pulumi.Input<string>;
+repositoryName: string;
 ```
 
 
@@ -502,7 +518,7 @@ The name for the repository. This needs to be less than 100 characters.
 </h3>
 
 ```typescript
-triggers: pulumi.Input<{ ... }[]>;
+triggers: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h2 class="pdoc-module-header" id="TriggerState">
@@ -535,6 +551,6 @@ The name for the repository. This needs to be less than 100 characters.
 </h3>
 
 ```typescript
-triggers?: pulumi.Input<{ ... }[]>;
+triggers?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 

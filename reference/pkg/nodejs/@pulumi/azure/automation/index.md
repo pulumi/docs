@@ -26,14 +26,14 @@ title: Module automation
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L9">class Account</a>
 </h2>
 
-Manages a new Automation Account.
+Manages a Automation Account.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L41">constructor</a>
 </h3>
 
 ```typescript
-new Account(name: string, args: AccountArgs, opts?: pulumi.ResourceOptions)
+new Account(name: string, args: AccountArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -56,7 +56,15 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -68,7 +76,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -150,14 +158,14 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/credential.ts#L9">class Credential</a>
 </h2>
 
-Manages a new Automation Credential.
+Manages a Automation Credential.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/credential.ts#L45">constructor</a>
 </h3>
 
 ```typescript
-new Credential(name: string, args: CredentialArgs, opts?: pulumi.ResourceOptions)
+new Credential(name: string, args: CredentialArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -180,7 +188,15 @@ Get an existing Credential resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -214,7 +230,7 @@ public description: pulumi.Output<string | undefined>;
 The description associated with this Automation Credential.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -285,14 +301,14 @@ The username associated with this Automation Credential.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L9">class RunBook</a>
 </h2>
 
-Manages a new Automation Runbook.
+Manages a Automation Runbook.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L58">constructor</a>
 </h3>
 
 ```typescript
-new RunBook(name: string, args: RunBookArgs, opts?: pulumi.ResourceOptions)
+new RunBook(name: string, args: RunBookArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -315,7 +331,15 @@ Get an existing RunBook resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -349,7 +373,7 @@ public description: pulumi.Output<string | undefined>;
 A description for this credential.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -461,14 +485,14 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L9">class Schedule</a>
 </h2>
 
-Manages a new Automation Schedule.
+Manages a Automation Schedule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L53">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L58">constructor</a>
 </h3>
 
 ```typescript
-new Schedule(name: string, args: ScheduleArgs, opts?: pulumi.ResourceOptions)
+new Schedule(name: string, args: ScheduleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -491,7 +515,15 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -503,29 +535,37 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L25">property accountName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L22">property accountName</a>
 </h3>
 
 ```typescript
 public accountName: pulumi.Output<string>;
 ```
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L26">property automationAccountName</a>
+</h3>
+
+```typescript
+public automationAccountName: pulumi.Output<string>;
+```
+
 
 The name of the automation account in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L29">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L30">property description</a>
 </h3>
 
 ```typescript
-public description: pulumi.Output<string>;
+public description: pulumi.Output<string | undefined>;
 ```
 
 
 A description for this Schedule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L33">property expiryTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L34">property expiryTime</a>
 </h3>
 
 ```typescript
@@ -536,7 +576,7 @@ public expiryTime: pulumi.Output<string>;
 The end time of the schedule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L37">property frequency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L38">property frequency</a>
 </h3>
 
 ```typescript
@@ -547,7 +587,7 @@ public frequency: pulumi.Output<string>;
 The frequency of the schedule. - can be either `OneTime`, `Day`, `Hour`, `Week`, or `Month`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -559,7 +599,18 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L41">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L42">property interval</a>
+</h3>
+
+```typescript
+public interval: pulumi.Output<number>;
+```
+
+
+The number of `frequency`s between runs. Only valid for `Day`, `Hour`, `Week`, or `Month` and defaults to `1`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L46">property name</a>
 </h3>
 
 ```typescript
@@ -570,7 +621,7 @@ public name: pulumi.Output<string>;
 Specifies the name of the Schedule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L45">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L50">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -581,7 +632,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L49">property startTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L54">property startTime</a>
 </h3>
 
 ```typescript
@@ -589,10 +640,10 @@ public startTime: pulumi.Output<string>;
 ```
 
 
-Start time of the schedule. Must be at least five minutes in the future.
+Start time of the schedule. Must be at least five minutes in the future. Defaults to seven minutes in the future from the time the resource is created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L53">property timezone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L58">property timezone</a>
 </h3>
 
 ```typescript
@@ -600,7 +651,7 @@ public timezone: pulumi.Output<string | undefined>;
 ```
 
 
-The timezone of the start time. For possible values see: https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx
+The timezone of the start time. Defaults to `UTC`. For possible values see: https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1107,24 +1158,32 @@ tags?: pulumi.Input<{ ... }>;
 ```
 
 <h2 class="pdoc-module-header" id="ScheduleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L143">interface ScheduleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L151">interface ScheduleArgs</a>
 </h2>
 
 The set of arguments for constructing a Schedule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L147">property accountName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L152">property accountName</a>
 </h3>
 
 ```typescript
-accountName: pulumi.Input<string>;
+accountName?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L156">property automationAccountName</a>
+</h3>
+
+```typescript
+automationAccountName?: pulumi.Input<string>;
 ```
 
 
 The name of the automation account in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L151">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L160">property description</a>
 </h3>
 
 ```typescript
@@ -1135,7 +1194,7 @@ description?: pulumi.Input<string>;
 A description for this Schedule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L155">property expiryTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L164">property expiryTime</a>
 </h3>
 
 ```typescript
@@ -1146,7 +1205,7 @@ expiryTime?: pulumi.Input<string>;
 The end time of the schedule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L159">property frequency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L168">property frequency</a>
 </h3>
 
 ```typescript
@@ -1157,7 +1216,18 @@ frequency: pulumi.Input<string>;
 The frequency of the schedule. - can be either `OneTime`, `Day`, `Hour`, `Week`, or `Month`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L163">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L172">property interval</a>
+</h3>
+
+```typescript
+interval?: pulumi.Input<number>;
+```
+
+
+The number of `frequency`s between runs. Only valid for `Day`, `Hour`, `Week`, or `Month` and defaults to `1`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L176">property name</a>
 </h3>
 
 ```typescript
@@ -1168,7 +1238,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Schedule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L167">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L180">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1179,18 +1249,18 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L171">property startTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L184">property startTime</a>
 </h3>
 
 ```typescript
-startTime: pulumi.Input<string>;
+startTime?: pulumi.Input<string>;
 ```
 
 
-Start time of the schedule. Must be at least five minutes in the future.
+Start time of the schedule. Must be at least five minutes in the future. Defaults to seven minutes in the future from the time the resource is created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L175">property timezone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L188">property timezone</a>
 </h3>
 
 ```typescript
@@ -1198,10 +1268,10 @@ timezone?: pulumi.Input<string>;
 ```
 
 
-The timezone of the start time. For possible values see: https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx
+The timezone of the start time. Defaults to `UTC`. For possible values see: https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx
 
 <h2 class="pdoc-module-header" id="ScheduleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L105">interface ScheduleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L108">interface ScheduleState</a>
 </h2>
 
 Input properties used for looking up and filtering Schedule resources.
@@ -1214,11 +1284,19 @@ Input properties used for looking up and filtering Schedule resources.
 accountName?: pulumi.Input<string>;
 ```
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L113">property automationAccountName</a>
+</h3>
+
+```typescript
+automationAccountName?: pulumi.Input<string>;
+```
+
 
 The name of the automation account in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L113">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L117">property description</a>
 </h3>
 
 ```typescript
@@ -1229,7 +1307,7 @@ description?: pulumi.Input<string>;
 A description for this Schedule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L117">property expiryTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L121">property expiryTime</a>
 </h3>
 
 ```typescript
@@ -1240,7 +1318,7 @@ expiryTime?: pulumi.Input<string>;
 The end time of the schedule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L121">property frequency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L125">property frequency</a>
 </h3>
 
 ```typescript
@@ -1251,7 +1329,18 @@ frequency?: pulumi.Input<string>;
 The frequency of the schedule. - can be either `OneTime`, `Day`, `Hour`, `Week`, or `Month`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L125">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L129">property interval</a>
+</h3>
+
+```typescript
+interval?: pulumi.Input<number>;
+```
+
+
+The number of `frequency`s between runs. Only valid for `Day`, `Hour`, `Week`, or `Month` and defaults to `1`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L133">property name</a>
 </h3>
 
 ```typescript
@@ -1262,7 +1351,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Schedule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L129">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L137">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1273,7 +1362,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which the Schedule is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L133">property startTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L141">property startTime</a>
 </h3>
 
 ```typescript
@@ -1281,10 +1370,10 @@ startTime?: pulumi.Input<string>;
 ```
 
 
-Start time of the schedule. Must be at least five minutes in the future.
+Start time of the schedule. Must be at least five minutes in the future. Defaults to seven minutes in the future from the time the resource is created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L137">property timezone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L145">property timezone</a>
 </h3>
 
 ```typescript
@@ -1292,5 +1381,5 @@ timezone?: pulumi.Input<string>;
 ```
 
 
-The timezone of the start time. For possible values see: https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx
+The timezone of the start time. Defaults to `UTC`. For possible values see: https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx
 

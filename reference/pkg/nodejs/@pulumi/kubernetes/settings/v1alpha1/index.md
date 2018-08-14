@@ -6,12 +6,30 @@ title: Module settings/v1alpha1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isPodPreset">function isPodPreset</a>
+* <a href="#isPodPresetList">function isPodPresetList</a>
 * <a href="#PodPreset">interface PodPreset</a>
 * <a href="#PodPresetList">interface PodPresetList</a>
 * <a href="#PodPresetSpec">interface PodPresetSpec</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isPodPreset">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17161">function isPodPreset</a>
+</h2>
+
+```typescript
+isPodPreset(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPodPresetList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17198">function isPodPresetList</a>
+</h2>
+
+```typescript
+isPodPresetList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="PodPreset">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16190">interface PodPreset</a>

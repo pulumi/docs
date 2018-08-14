@@ -20,17 +20,17 @@ title: Module dax
 
 
 <h2 class="pdoc-module-header" id="Cluster">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L9">class Cluster</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L11">class Cluster</a>
 </h2>
 
 Provides a DAX Cluster resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L107">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L109">constructor</a>
 </h3>
 
 ```typescript
-new Cluster(name: string, args: ClusterArgs, opts?: pulumi.ResourceOptions)
+new Cluster(name: string, args: ClusterArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -41,7 +41,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -53,7 +53,15 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -65,7 +73,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L27">property arn</a>
 </h3>
 
 ```typescript
@@ -76,7 +84,7 @@ public arn: pulumi.Output<string>;
 The ARN of the DAX cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L30">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L32">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -88,7 +96,7 @@ List of Availability Zones in which the
 nodes will be created
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L34">property clusterAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L36">property clusterAddress</a>
 </h3>
 
 ```typescript
@@ -99,7 +107,7 @@ public clusterAddress: pulumi.Output<string>;
 The DNS name of the DAX cluster without the port appended
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L39">property clusterName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L41">property clusterName</a>
 </h3>
 
 ```typescript
@@ -111,7 +119,7 @@ Group identifier. DAX converts this name to
 lowercase
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L44">property configurationEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L46">property configurationEndpoint</a>
 </h3>
 
 ```typescript
@@ -123,7 +131,7 @@ The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L48">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L50">property description</a>
 </h3>
 
 ```typescript
@@ -134,7 +142,7 @@ public description: pulumi.Output<string | undefined>;
 Description for the cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L54">property iamRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L56">property iamRoleArn</a>
 </h3>
 
 ```typescript
@@ -147,7 +155,7 @@ an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -159,7 +167,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L61">property maintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L63">property maintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -173,7 +181,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 `sun:05:00-sun:09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L66">property nodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L68">property nodeType</a>
 </h3>
 
 ```typescript
@@ -185,7 +193,7 @@ The compute and memory capacity of the nodes. See
 [Nodes][1] for supported node types
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L72">property nodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L74">property nodes</a>
 </h3>
 
 ```typescript
@@ -198,7 +206,7 @@ List of node objects including `id`, `address`, `port` and
 `${aws_dax_cluster.test.nodes.0.address}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L78">property notificationTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L80">property notificationTopicArn</a>
 </h3>
 
 ```typescript
@@ -211,7 +219,7 @@ SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L83">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L85">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -223,7 +231,7 @@ Name of the parameter group to associate
 with this DAX cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L87">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L89">property port</a>
 </h3>
 
 ```typescript
@@ -234,7 +242,7 @@ public port: pulumi.Output<number>;
 The port used by the configuration endpoint
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L93">property replicationFactor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L95">property replicationFactor</a>
 </h3>
 
 ```typescript
@@ -247,7 +255,7 @@ replication factor of 1 will create a single-node cluster, without any read
 replicas
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L98">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L100">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -259,7 +267,7 @@ One or more VPC security groups associated
 with the cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L103">property subnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L105">property subnetGroupName</a>
 </h3>
 
 ```typescript
@@ -271,11 +279,11 @@ Name of the subnet group to be used for the
 cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L107">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L109">property tags</a>
 </h3>
 
 ```typescript
-public tags: pulumi.Output<{ ... } | undefined>;
+public tags: pulumi.Output<Tags | undefined>;
 ```
 
 
@@ -304,7 +312,7 @@ Provides a DAX Parameter Group resource.
 </h3>
 
 ```typescript
-new ParameterGroup(name: string, args?: ParameterGroupArgs, opts?: pulumi.ResourceOptions)
+new ParameterGroup(name: string, args?: ParameterGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -327,7 +335,15 @@ Get an existing ParameterGroup resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -350,7 +366,7 @@ public description: pulumi.Output<string | undefined>;
 A description of the parameter group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -406,7 +422,7 @@ Provides a DAX Subnet Group resource.
 </h3>
 
 ```typescript
-new SubnetGroup(name: string, args: SubnetGroupArgs, opts?: pulumi.ResourceOptions)
+new SubnetGroup(name: string, args: SubnetGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -429,7 +445,15 @@ Get an existing SubnetGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -452,7 +476,7 @@ public description: pulumi.Output<string | undefined>;
 A description of the subnet group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -509,13 +533,13 @@ public vpcId: pulumi.Output<string>;
 VPC ID of the subnet group.
 
 <h2 class="pdoc-module-header" id="ClusterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L269">interface ClusterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L271">interface ClusterArgs</a>
 </h2>
 
 The set of arguments for constructing a Cluster resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L274">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L276">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -527,7 +551,7 @@ List of Availability Zones in which the
 nodes will be created
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L279">property clusterName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L281">property clusterName</a>
 </h3>
 
 ```typescript
@@ -539,7 +563,7 @@ Group identifier. DAX converts this name to
 lowercase
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L283">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L285">property description</a>
 </h3>
 
 ```typescript
@@ -550,7 +574,7 @@ description?: pulumi.Input<string>;
 Description for the cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L289">property iamRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L291">property iamRoleArn</a>
 </h3>
 
 ```typescript
@@ -563,7 +587,7 @@ an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L296">property maintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L298">property maintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -577,7 +601,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 `sun:05:00-sun:09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L301">property nodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L303">property nodeType</a>
 </h3>
 
 ```typescript
@@ -589,7 +613,7 @@ The compute and memory capacity of the nodes. See
 [Nodes][1] for supported node types
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L307">property notificationTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L309">property notificationTopicArn</a>
 </h3>
 
 ```typescript
@@ -602,7 +626,7 @@ SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L312">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L314">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -614,7 +638,7 @@ Name of the parameter group to associate
 with this DAX cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L318">property replicationFactor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L320">property replicationFactor</a>
 </h3>
 
 ```typescript
@@ -627,7 +651,7 @@ replication factor of 1 will create a single-node cluster, without any read
 replicas
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L323">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L325">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -639,7 +663,7 @@ One or more VPC security groups associated
 with the cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L328">property subnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L330">property subnetGroupName</a>
 </h3>
 
 ```typescript
@@ -651,24 +675,24 @@ Name of the subnet group to be used for the
 cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L332">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L334">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
 A mapping of tags to assign to the resource
 
 <h2 class="pdoc-module-header" id="ClusterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L177">interface ClusterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L179">interface ClusterState</a>
 </h2>
 
 Input properties used for looking up and filtering Cluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L181">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L183">property arn</a>
 </h3>
 
 ```typescript
@@ -679,7 +703,7 @@ arn?: pulumi.Input<string>;
 The ARN of the DAX cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L186">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L188">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -691,7 +715,7 @@ List of Availability Zones in which the
 nodes will be created
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L190">property clusterAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L192">property clusterAddress</a>
 </h3>
 
 ```typescript
@@ -702,7 +726,7 @@ clusterAddress?: pulumi.Input<string>;
 The DNS name of the DAX cluster without the port appended
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L195">property clusterName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L197">property clusterName</a>
 </h3>
 
 ```typescript
@@ -714,7 +738,7 @@ Group identifier. DAX converts this name to
 lowercase
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L200">property configurationEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L202">property configurationEndpoint</a>
 </h3>
 
 ```typescript
@@ -726,7 +750,7 @@ The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L204">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L206">property description</a>
 </h3>
 
 ```typescript
@@ -737,7 +761,7 @@ description?: pulumi.Input<string>;
 Description for the cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L210">property iamRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L212">property iamRoleArn</a>
 </h3>
 
 ```typescript
@@ -750,7 +774,7 @@ an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L217">property maintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L219">property maintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -764,7 +788,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 `sun:05:00-sun:09:00`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L222">property nodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L224">property nodeType</a>
 </h3>
 
 ```typescript
@@ -776,11 +800,11 @@ The compute and memory capacity of the nodes. See
 [Nodes][1] for supported node types
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L228">property nodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L230">property nodes</a>
 </h3>
 
 ```typescript
-nodes?: pulumi.Input<{ ... }[]>;
+nodes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -789,7 +813,7 @@ List of node objects including `id`, `address`, `port` and
 `${aws_dax_cluster.test.nodes.0.address}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L234">property notificationTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L236">property notificationTopicArn</a>
 </h3>
 
 ```typescript
@@ -802,7 +826,7 @@ SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L239">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L241">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -814,7 +838,7 @@ Name of the parameter group to associate
 with this DAX cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L243">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L245">property port</a>
 </h3>
 
 ```typescript
@@ -825,7 +849,7 @@ port?: pulumi.Input<number>;
 The port used by the configuration endpoint
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L249">property replicationFactor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L251">property replicationFactor</a>
 </h3>
 
 ```typescript
@@ -838,7 +862,7 @@ replication factor of 1 will create a single-node cluster, without any read
 replicas
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L254">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L256">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -850,7 +874,7 @@ One or more VPC security groups associated
 with the cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L259">property subnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L261">property subnetGroupName</a>
 </h3>
 
 ```typescript
@@ -862,11 +886,11 @@ Name of the subnet group to be used for the
 cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L263">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dax/cluster.ts#L265">property tags</a>
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: pulumi.Input<Tags>;
 ```
 
 
@@ -905,7 +929,7 @@ The name of the parameter group.
 </h3>
 
 ```typescript
-parameters?: pulumi.Input<{ ... }[]>;
+parameters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -944,7 +968,7 @@ The name of the parameter group.
 </h3>
 
 ```typescript
-parameters?: pulumi.Input<{ ... }[]>;
+parameters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

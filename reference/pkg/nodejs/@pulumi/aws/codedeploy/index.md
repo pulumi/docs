@@ -30,7 +30,7 @@ Provides a CodeDeploy application to be used as a basis for deployments
 </h3>
 
 ```typescript
-new Application(name: string, args?: ApplicationArgs, opts?: pulumi.ResourceOptions)
+new Application(name: string, args?: ApplicationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -53,7 +53,15 @@ Get an existing Application resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -76,7 +84,7 @@ public computePlatform: pulumi.Output<string | undefined>;
 The compute platform can either be `Server` or `Lambda`. Default is `Server`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -129,7 +137,7 @@ Provides a CodeDeploy deployment config for an application
 </h3>
 
 ```typescript
-new DeploymentConfig(name: string, args: DeploymentConfigArgs, opts?: pulumi.ResourceOptions)
+new DeploymentConfig(name: string, args: DeploymentConfigArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -152,7 +160,15 @@ Get an existing DeploymentConfig resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -186,7 +202,7 @@ public deploymentConfigName: pulumi.Output<string>;
 The name of the deployment config.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -231,7 +247,7 @@ Provides a CodeDeploy Deployment Group for a CodeDeploy Application
 </h3>
 
 ```typescript
-new DeploymentGroup(name: string, args: DeploymentGroupArgs, opts?: pulumi.ResourceOptions)
+new DeploymentGroup(name: string, args: DeploymentGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -254,7 +270,15 @@ Get an existing DeploymentGroup resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -376,7 +400,7 @@ public ec2TagSets: pulumi.Output<{ ... }[] | undefined>;
 Sets of Tag filters associated with the deployment group, which are referred to as *tag groups* in the document.  See the AWS docs for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -681,7 +705,7 @@ Information about the type of deployment, either in-place or blue/green, you wan
 </h3>
 
 ```typescript
-ec2TagFilters?: pulumi.Input<{ ... }[]>;
+ec2TagFilters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -692,7 +716,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
 </h3>
 
 ```typescript
-ec2TagSets?: pulumi.Input<{ ... }[]>;
+ec2TagSets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -714,7 +738,7 @@ Information about the load balancer to use in a blue/green deployment (documente
 </h3>
 
 ```typescript
-onPremisesInstanceTagFilters?: pulumi.Input<{ ... }[]>;
+onPremisesInstanceTagFilters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -736,7 +760,7 @@ The service role ARN that allows deployments.
 </h3>
 
 ```typescript
-triggerConfigurations?: pulumi.Input<{ ... }[]>;
+triggerConfigurations?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -841,7 +865,7 @@ Information about the type of deployment, either in-place or blue/green, you wan
 </h3>
 
 ```typescript
-ec2TagFilters?: pulumi.Input<{ ... }[]>;
+ec2TagFilters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -852,7 +876,7 @@ Tag filters associated with the deployment group. See the AWS docs for details.
 </h3>
 
 ```typescript
-ec2TagSets?: pulumi.Input<{ ... }[]>;
+ec2TagSets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -874,7 +898,7 @@ Information about the load balancer to use in a blue/green deployment (documente
 </h3>
 
 ```typescript
-onPremisesInstanceTagFilters?: pulumi.Input<{ ... }[]>;
+onPremisesInstanceTagFilters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -896,7 +920,7 @@ The service role ARN that allows deployments.
 </h3>
 
 ```typescript
-triggerConfigurations?: pulumi.Input<{ ... }[]>;
+triggerConfigurations?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

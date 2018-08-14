@@ -18,7 +18,7 @@ title: Module pricing
 </h2>
 
 ```typescript
-getProduct(args: GetProductArgs): Promise<GetProductResult>
+getProduct(args: GetProductArgs, opts?: pulumi.InvokeOptions): Promise<GetProductResult>
 ```
 
 
@@ -36,7 +36,7 @@ A collection of arguments for invoking getProduct.
 </h3>
 
 ```typescript
-filters: pulumi.Input<{ ... }[]>;
+filters: { ... }[];
 ```
 
 
@@ -47,7 +47,7 @@ A list of filters. Passed directly to the API (see GetProducts API reference). T
 </h3>
 
 ```typescript
-serviceCode: pulumi.Input<string>;
+serviceCode: string;
 ```
 
 

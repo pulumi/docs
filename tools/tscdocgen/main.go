@@ -317,6 +317,11 @@ func (e *emitter) gatherModules(doc *typeDocNode) *module {
 
 		// Add all exported children from this module to the export list.
 		for _, child := range modnode.Children {
+			// Skip unexported children.
+			if !child.Flags.IsExported {
+				continue
+			}
+
 			if child.Kind == typeDocModuleNode {
 				// If this is a module (namespace), we must explode it out into the top-level modules list.
 				// This may very well conflict, so we'll need to merge the new members in if so.

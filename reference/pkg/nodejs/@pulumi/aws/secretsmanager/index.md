@@ -29,11 +29,11 @@ title: Module secretsmanager
 Provides a resource to manage AWS Secrets Manager secret metadata. To manage a secret value, see the [`aws_secretsmanager_secret_version` resource](/docs/providers/aws/r/secretsmanager_secret_version.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L57">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L61">constructor</a>
 </h3>
 
 ```typescript
-new Secret(name: string, args?: SecretArgs, opts?: pulumi.ResourceOptions)
+new Secret(name: string, args?: SecretArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -56,7 +56,15 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -90,7 +98,7 @@ public description: pulumi.Output<string | undefined>;
 A description of the secret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -124,7 +132,18 @@ public name: pulumi.Output<string>;
 Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Spaces are not permitted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L41">property recoveryWindowInDays</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L41">property policy</a>
+</h3>
+
+```typescript
+public policy: pulumi.Output<string | undefined>;
+```
+
+
+A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L45">property recoveryWindowInDays</a>
 </h3>
 
 ```typescript
@@ -135,7 +154,7 @@ public recoveryWindowInDays: pulumi.Output<number | undefined>;
 Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can range from 7 to 30 days. The default value is 30.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L45">property rotationEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L49">property rotationEnabled</a>
 </h3>
 
 ```typescript
@@ -146,7 +165,7 @@ public rotationEnabled: pulumi.Output<boolean>;
 Specifies whether automatic rotation is enabled for this secret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L49">property rotationLambdaArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L53">property rotationLambdaArn</a>
 </h3>
 
 ```typescript
@@ -157,7 +176,7 @@ public rotationLambdaArn: pulumi.Output<string | undefined>;
 Specifies the ARN of the Lambda function that can rotate the secret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L53">property rotationRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L57">property rotationRules</a>
 </h3>
 
 ```typescript
@@ -168,7 +187,7 @@ public rotationRules: pulumi.Output<{ ... } | undefined>;
 A structure that defines the rotation configuration for this secret. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L57">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L61">property tags</a>
 </h3>
 
 ```typescript
@@ -203,7 +222,7 @@ Provides a resource to manage AWS Secrets Manager secret version including its s
 </h3>
 
 ```typescript
-new SecretVersion(name: string, args: SecretVersionArgs, opts?: pulumi.ResourceOptions)
+new SecretVersion(name: string, args: SecretVersionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -226,7 +245,15 @@ Get an existing SecretVersion resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -238,7 +265,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -310,7 +337,7 @@ Specifies a list of staging labels that are attached to this version of the secr
 </h2>
 
 ```typescript
-getSecret(args?: GetSecretArgs): Promise<GetSecretResult>
+getSecret(args?: GetSecretArgs, opts?: pulumi.InvokeOptions): Promise<GetSecretResult>
 ```
 
 
@@ -321,7 +348,7 @@ Retrieve metadata information about a Secrets Manager secret. To retrieve a secr
 </h2>
 
 ```typescript
-getSecretVersion(args: GetSecretVersionArgs): Promise<GetSecretVersionResult>
+getSecretVersion(args: GetSecretVersionArgs, opts?: pulumi.InvokeOptions): Promise<GetSecretVersionResult>
 ```
 
 
@@ -338,7 +365,7 @@ A collection of arguments for invoking getSecret.
 </h3>
 
 ```typescript
-arn?: pulumi.Input<string>;
+arn?: string;
 ```
 
 
@@ -349,7 +376,7 @@ The Amazon Resource Name (ARN) of the secret to retrieve.
 </h3>
 
 ```typescript
-name?: pulumi.Input<string>;
+name?: string;
 ```
 
 
@@ -468,7 +495,7 @@ A collection of arguments for invoking getSecretVersion.
 </h3>
 
 ```typescript
-secretId: pulumi.Input<string>;
+secretId: string;
 ```
 
 
@@ -479,7 +506,7 @@ Specifies the secret containing the version that you want to retrieve. You can s
 </h3>
 
 ```typescript
-versionId?: pulumi.Input<string>;
+versionId?: string;
 ```
 
 
@@ -490,7 +517,7 @@ Specifies the unique identifier of the version of the secret that you want to re
 </h3>
 
 ```typescript
-versionStage?: pulumi.Input<string>;
+versionStage?: string;
 ```
 
 
@@ -544,13 +571,13 @@ versionStages: string[];
 ```
 
 <h2 class="pdoc-module-header" id="SecretArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L141">interface SecretArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L151">interface SecretArgs</a>
 </h2>
 
 The set of arguments for constructing a Secret resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L145">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L155">property description</a>
 </h3>
 
 ```typescript
@@ -561,7 +588,7 @@ description?: pulumi.Input<string>;
 A description of the secret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L149">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L159">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -572,7 +599,7 @@ kmsKeyId?: pulumi.Input<string>;
 Specifies the ARN or alias of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L153">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L163">property name</a>
 </h3>
 
 ```typescript
@@ -583,7 +610,18 @@ name?: pulumi.Input<string>;
 Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Spaces are not permitted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L157">property recoveryWindowInDays</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L167">property policy</a>
+</h3>
+
+```typescript
+policy?: pulumi.Input<string>;
+```
+
+
+A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L171">property recoveryWindowInDays</a>
 </h3>
 
 ```typescript
@@ -594,7 +632,7 @@ recoveryWindowInDays?: pulumi.Input<number>;
 Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can range from 7 to 30 days. The default value is 30.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L161">property rotationLambdaArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L175">property rotationLambdaArn</a>
 </h3>
 
 ```typescript
@@ -605,7 +643,7 @@ rotationLambdaArn?: pulumi.Input<string>;
 Specifies the ARN of the Lambda function that can rotate the secret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L165">property rotationRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L179">property rotationRules</a>
 </h3>
 
 ```typescript
@@ -616,7 +654,7 @@ rotationRules?: pulumi.Input<{ ... }>;
 A structure that defines the rotation configuration for this secret. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L169">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L183">property tags</a>
 </h3>
 
 ```typescript
@@ -627,13 +665,13 @@ tags?: pulumi.Input<{ ... }>;
 Specifies a key-value map of user-defined tags that are attached to the secret.
 
 <h2 class="pdoc-module-header" id="SecretState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L99">interface SecretState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L105">interface SecretState</a>
 </h2>
 
 Input properties used for looking up and filtering Secret resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L103">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L109">property arn</a>
 </h3>
 
 ```typescript
@@ -644,7 +682,7 @@ arn?: pulumi.Input<string>;
 Amazon Resource Name (ARN) of the secret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L107">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L113">property description</a>
 </h3>
 
 ```typescript
@@ -655,7 +693,7 @@ description?: pulumi.Input<string>;
 A description of the secret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L111">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L117">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -666,7 +704,7 @@ kmsKeyId?: pulumi.Input<string>;
 Specifies the ARN or alias of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L115">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L121">property name</a>
 </h3>
 
 ```typescript
@@ -677,7 +715,18 @@ name?: pulumi.Input<string>;
 Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Spaces are not permitted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L119">property recoveryWindowInDays</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L125">property policy</a>
+</h3>
+
+```typescript
+policy?: pulumi.Input<string>;
+```
+
+
+A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L129">property recoveryWindowInDays</a>
 </h3>
 
 ```typescript
@@ -688,7 +737,7 @@ recoveryWindowInDays?: pulumi.Input<number>;
 Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can range from 7 to 30 days. The default value is 30.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L123">property rotationEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L133">property rotationEnabled</a>
 </h3>
 
 ```typescript
@@ -699,7 +748,7 @@ rotationEnabled?: pulumi.Input<boolean>;
 Specifies whether automatic rotation is enabled for this secret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L127">property rotationLambdaArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L137">property rotationLambdaArn</a>
 </h3>
 
 ```typescript
@@ -710,7 +759,7 @@ rotationLambdaArn?: pulumi.Input<string>;
 Specifies the ARN of the Lambda function that can rotate the secret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L131">property rotationRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L141">property rotationRules</a>
 </h3>
 
 ```typescript
@@ -721,7 +770,7 @@ rotationRules?: pulumi.Input<{ ... }>;
 A structure that defines the rotation configuration for this secret. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L135">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/secretsmanager/secret.ts#L145">property tags</a>
 </h3>
 
 ```typescript

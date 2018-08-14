@@ -11,8 +11,11 @@ title: Module eventhub
 * <a href="#EventHubAuthorizationRule">class EventHubAuthorizationRule</a>
 * <a href="#EventHubConsumerGroup">class EventHubConsumerGroup</a>
 * <a href="#EventHubNamespace">class EventHubNamespace</a>
+* <a href="#EventHubNamespaceAuthorizationRule">class EventHubNamespaceAuthorizationRule</a>
 * <a href="#Namespace">class Namespace</a>
+* <a href="#NamespaceAuthorizationRule">class NamespaceAuthorizationRule</a>
 * <a href="#Queue">class Queue</a>
+* <a href="#QueueAuthorizationRule">class QueueAuthorizationRule</a>
 * <a href="#Subscription">class Subscription</a>
 * <a href="#SubscriptionRule">class SubscriptionRule</a>
 * <a href="#Topic">class Topic</a>
@@ -26,13 +29,19 @@ title: Module eventhub
 * <a href="#EventHubConsumerGroupArgs">interface EventHubConsumerGroupArgs</a>
 * <a href="#EventHubConsumerGroupState">interface EventHubConsumerGroupState</a>
 * <a href="#EventHubNamespaceArgs">interface EventHubNamespaceArgs</a>
+* <a href="#EventHubNamespaceAuthorizationRuleArgs">interface EventHubNamespaceAuthorizationRuleArgs</a>
+* <a href="#EventHubNamespaceAuthorizationRuleState">interface EventHubNamespaceAuthorizationRuleState</a>
 * <a href="#EventHubNamespaceState">interface EventHubNamespaceState</a>
 * <a href="#EventHubState">interface EventHubState</a>
 * <a href="#GetEventhubNamespaceArgs">interface GetEventhubNamespaceArgs</a>
 * <a href="#GetEventhubNamespaceResult">interface GetEventhubNamespaceResult</a>
 * <a href="#NamespaceArgs">interface NamespaceArgs</a>
+* <a href="#NamespaceAuthorizationRuleArgs">interface NamespaceAuthorizationRuleArgs</a>
+* <a href="#NamespaceAuthorizationRuleState">interface NamespaceAuthorizationRuleState</a>
 * <a href="#NamespaceState">interface NamespaceState</a>
 * <a href="#QueueArgs">interface QueueArgs</a>
+* <a href="#QueueAuthorizationRuleArgs">interface QueueAuthorizationRuleArgs</a>
+* <a href="#QueueAuthorizationRuleState">interface QueueAuthorizationRuleState</a>
 * <a href="#QueueState">interface QueueState</a>
 * <a href="#SubscriptionArgs">interface SubscriptionArgs</a>
 * <a href="#SubscriptionRuleArgs">interface SubscriptionRuleArgs</a>
@@ -43,7 +52,7 @@ title: Module eventhub
 * <a href="#TopicAuthorizationRuleState">interface TopicAuthorizationRuleState</a>
 * <a href="#TopicState">interface TopicState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventGridTopic.ts">eventhub/eventGridTopic.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHub.ts">eventhub/eventHub.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubAuthorizationRule.ts">eventhub/eventHubAuthorizationRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubConsumerGroup.ts">eventhub/eventHubConsumerGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespace.ts">eventhub/eventHubNamespace.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/getEventhubNamespace.ts">eventhub/getEventhubNamespace.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespace.ts">eventhub/namespace.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts">eventhub/queue.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/subscription.ts">eventhub/subscription.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/subscriptionRule.ts">eventhub/subscriptionRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts">eventhub/topic.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts">eventhub/topicAuthorizationRule.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventGridTopic.ts">eventhub/eventGridTopic.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHub.ts">eventhub/eventHub.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubAuthorizationRule.ts">eventhub/eventHubAuthorizationRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubConsumerGroup.ts">eventhub/eventHubConsumerGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespace.ts">eventhub/eventHubNamespace.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts">eventhub/eventHubNamespaceAuthorizationRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/getEventhubNamespace.ts">eventhub/getEventhubNamespace.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespace.ts">eventhub/namespace.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts">eventhub/namespaceAuthorizationRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts">eventhub/queue.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts">eventhub/queueAuthorizationRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/subscription.ts">eventhub/subscription.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/subscriptionRule.ts">eventhub/subscriptionRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts">eventhub/topic.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts">eventhub/topicAuthorizationRule.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="EventGridTopic">
@@ -59,7 +68,7 @@ Manages an EventGrid Topic
 </h3>
 
 ```typescript
-new EventGridTopic(name: string, args: EventGridTopicArgs, opts?: pulumi.ResourceOptions)
+new EventGridTopic(name: string, args: EventGridTopicArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -82,7 +91,15 @@ Get an existing EventGridTopic resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -105,7 +122,7 @@ public endpoint: pulumi.Output<string>;
 The Endpoint associated with the EventGrid Topic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -198,14 +215,14 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHub.ts#L9">class EventHub</a>
 </h2>
 
-Manages a new Event Hubs as a nested resource within a Event Hubs namespace.
+Manages a Event Hubs as a nested resource within a Event Hubs namespace.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHub.ts#L50">constructor</a>
 </h3>
 
 ```typescript
-new EventHub(name: string, args: EventHubArgs, opts?: pulumi.ResourceOptions)
+new EventHub(name: string, args: EventHubArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -228,7 +245,15 @@ Get an existing EventHub resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -251,7 +276,7 @@ public captureDescription: pulumi.Output<{ ... } | undefined>;
 A `capture_description` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -352,14 +377,14 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubAuthorizationRule.ts#L9">class EventHubAuthorizationRule</a>
 </h2>
 
-Manages a new Event Hubs authorization Rule within an Event Hub.
+Manages a Event Hubs authorization Rule within an Event Hub.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubAuthorizationRule.ts#L66">constructor</a>
 </h3>
 
 ```typescript
-new EventHubAuthorizationRule(name: string, args: EventHubAuthorizationRuleArgs, opts?: pulumi.ResourceOptions)
+new EventHubAuthorizationRule(name: string, args: EventHubAuthorizationRuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -382,7 +407,15 @@ Get an existing EventHubAuthorizationRule resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -405,7 +438,7 @@ public eventhubName: pulumi.Output<string>;
 Specifies the name of the EventHub. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -550,14 +583,14 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubConsumerGroup.ts#L9">class EventHubConsumerGroup</a>
 </h2>
 
-Manages a new Event Hubs Consumer Group as a nested resource within an Event Hub.
+Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubConsumerGroup.ts#L42">constructor</a>
 </h3>
 
 ```typescript
-new EventHubConsumerGroup(name: string, args: EventHubConsumerGroupArgs, opts?: pulumi.ResourceOptions)
+new EventHubConsumerGroup(name: string, args: EventHubConsumerGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -580,7 +613,15 @@ Get an existing EventHubConsumerGroup resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -603,7 +644,7 @@ public eventhubName: pulumi.Output<string>;
 Specifies the name of the EventHub. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -689,7 +730,7 @@ Create an EventHub Namespace.
 </h3>
 
 ```typescript
-new EventHubNamespace(name: string, args: EventHubNamespaceArgs, opts?: pulumi.ResourceOptions)
+new EventHubNamespace(name: string, args: EventHubNamespaceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -712,7 +753,15 @@ Get an existing EventHubNamespace resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -792,7 +841,7 @@ public defaultSecondaryKey: pulumi.Output<string>;
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -881,6 +930,201 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="EventHubNamespaceAuthorizationRule">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L9">class EventHubNamespaceAuthorizationRule</a>
+</h2>
+
+Manages an Authorization Rule for an Event Hub Namespace.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L62">constructor</a>
+</h3>
+
+```typescript
+new EventHubNamespaceAuthorizationRule(name: string, args: EventHubNamespaceAuthorizationRuleArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a EventHubNamespaceAuthorizationRule resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L18">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubNamespaceAuthorizationRuleState): EventHubNamespaceAuthorizationRule
+```
+
+
+Get an existing EventHubNamespaceAuthorizationRule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L25">property listen</a>
+</h3>
+
+```typescript
+public listen: pulumi.Output<boolean | undefined>;
+```
+
+
+Grants listen access to this this Authorization Rule. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L26">property location</a>
+</h3>
+
+```typescript
+public location: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L30">property manage</a>
+</h3>
+
+```typescript
+public manage: pulumi.Output<boolean | undefined>;
+```
+
+
+Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L34">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L38">property namespaceName</a>
+</h3>
+
+```typescript
+public namespaceName: pulumi.Output<string>;
+```
+
+
+Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L42">property primaryConnectionString</a>
+</h3>
+
+```typescript
+public primaryConnectionString: pulumi.Output<string>;
+```
+
+
+The Primary Connection String for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L46">property primaryKey</a>
+</h3>
+
+```typescript
+public primaryKey: pulumi.Output<string>;
+```
+
+
+The Primary Key for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L50">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L54">property secondaryConnectionString</a>
+</h3>
+
+```typescript
+public secondaryConnectionString: pulumi.Output<string>;
+```
+
+
+The Secondary Connection String for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L58">property secondaryKey</a>
+</h3>
+
+```typescript
+public secondaryKey: pulumi.Output<string>;
+```
+
+
+The Secondary Key for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L62">property send</a>
+</h3>
+
+```typescript
+public send: pulumi.Output<boolean | undefined>;
+```
+
+
+Grants send access to this this Authorization Rule. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="Namespace">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespace.ts#L9">class Namespace</a>
 </h2>
@@ -892,7 +1136,7 @@ Create a ServiceBus Namespace.
 </h3>
 
 ```typescript
-new Namespace(name: string, args: NamespaceArgs, opts?: pulumi.ResourceOptions)
+new Namespace(name: string, args: NamespaceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -915,7 +1159,15 @@ Get an existing Namespace resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -935,7 +1187,7 @@ public capacity: pulumi.Output<number | undefined>;
 ```
 
 
-Specifies the capacity of a Premium namespace. Can be 1, 2 or 4.
+Specifies the capacity, can only be set when `sku` is `Premium` namespace. Can be `1`, `2` or `4`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespace.ts#L30">property defaultPrimaryConnectionString</a>
@@ -984,7 +1236,7 @@ public defaultSecondaryKey: pulumi.Output<string>;
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1064,6 +1316,193 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="NamespaceAuthorizationRule">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L9">class NamespaceAuthorizationRule</a>
+</h2>
+
+Manages a ServiceBus Namespace authorization Rule within a ServiceBus.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L61">constructor</a>
+</h3>
+
+```typescript
+new NamespaceAuthorizationRule(name: string, args: NamespaceAuthorizationRuleArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a NamespaceAuthorizationRule resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L18">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NamespaceAuthorizationRuleState): NamespaceAuthorizationRule
+```
+
+
+Get an existing NamespaceAuthorizationRule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L25">property listen</a>
+</h3>
+
+```typescript
+public listen: pulumi.Output<boolean | undefined>;
+```
+
+
+Grants listen access to this this Authorization Rule. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L29">property manage</a>
+</h3>
+
+```typescript
+public manage: pulumi.Output<boolean | undefined>;
+```
+
+
+Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L33">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Specifies the name of the ServiceBus Namespace Authorization Rule resource. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L37">property namespaceName</a>
+</h3>
+
+```typescript
+public namespaceName: pulumi.Output<string>;
+```
+
+
+Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L41">property primaryConnectionString</a>
+</h3>
+
+```typescript
+public primaryConnectionString: pulumi.Output<string>;
+```
+
+
+The Primary Connection String for the ServiceBus Namespace authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L45">property primaryKey</a>
+</h3>
+
+```typescript
+public primaryKey: pulumi.Output<string>;
+```
+
+
+The Primary Key for the ServiceBus Namespace authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L49">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L53">property secondaryConnectionString</a>
+</h3>
+
+```typescript
+public secondaryConnectionString: pulumi.Output<string>;
+```
+
+
+The Secondary Connection String for the ServiceBus Namespace authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L57">property secondaryKey</a>
+</h3>
+
+```typescript
+public secondaryKey: pulumi.Output<string>;
+```
+
+
+The Secondary Key for the ServiceBus Namespace authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L61">property send</a>
+</h3>
+
+```typescript
+public send: pulumi.Output<boolean | undefined>;
+```
+
+
+Grants send access to this this Authorization Rule. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="Queue">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L9">class Queue</a>
 </h2>
@@ -1071,11 +1510,11 @@ deployments.
 Create and manage a ServiceBus Queue.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L95">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L101">constructor</a>
 </h3>
 
 ```typescript
-new Queue(name: string, args: QueueArgs, opts?: pulumi.ResourceOptions)
+new Queue(name: string, args: QueueArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1098,7 +1537,15 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1123,15 +1570,18 @@ Queue is automatically deleted, minimum of 5 minutes. Provided in the [TimeSpan]
 format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L28">property deadLetteringOnMessageExpiration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L31">property deadLetteringOnMessageExpiration</a>
 </h3>
 
 ```typescript
 public deadLetteringOnMessageExpiration: pulumi.Output<boolean | undefined>;
 ```
 
+
+Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L34">property defaultMessageTtl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L37">property defaultMessageTtl</a>
 </h3>
 
 ```typescript
@@ -1144,7 +1594,7 @@ used when TTL is not set on message itself. Provided in the [TimeSpan](#timespan
 format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L39">property duplicateDetectionHistoryTimeWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L42">property duplicateDetectionHistoryTimeWindow</a>
 </h3>
 
 ```typescript
@@ -1156,7 +1606,7 @@ The duration during which
 duplicates can be detected. Default value is 10 minutes. Provided in the [TimeSpan](#timespan-format) format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L40">property enableBatchedOperations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L43">property enableBatchedOperations</a>
 </h3>
 
 ```typescript
@@ -1164,7 +1614,7 @@ public enableBatchedOperations: pulumi.Output<boolean | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L47">property enableExpress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L50">property enableExpress</a>
 </h3>
 
 ```typescript
@@ -1178,7 +1628,7 @@ it to persistent storage. Defaults to `false` for Basic and Standard. For Premiu
 be set to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L54">property enablePartitioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L57">property enablePartitioning</a>
 </h3>
 
 ```typescript
@@ -1192,7 +1642,7 @@ a new resource to be created. Defaults to `false` for Basic and Standard. For Pr
 be set to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1204,7 +1654,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L59">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L62">property location</a>
 </h3>
 
 ```typescript
@@ -1216,7 +1666,7 @@ Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L63">property lockDuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L66">property lockDuration</a>
 </h3>
 
 ```typescript
@@ -1227,7 +1677,7 @@ public lockDuration: pulumi.Output<string>;
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L69">property maxSizeInMegabytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L72">property maxSizeInMegabytes</a>
 </h3>
 
 ```typescript
@@ -1240,7 +1690,7 @@ memory allocated for the queue. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L74">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L77">property name</a>
 </h3>
 
 ```typescript
@@ -1252,7 +1702,7 @@ Specifies the name of the ServiceBus Queue resource. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L79">property namespaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L82">property namespaceName</a>
 </h3>
 
 ```typescript
@@ -1264,7 +1714,7 @@ The name of the ServiceBus Namespace to create
 this queue in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L85">property requiresDuplicateDetection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L88">property requiresDuplicateDetection</a>
 </h3>
 
 ```typescript
@@ -1277,7 +1727,7 @@ the Queue requires duplicate detection. Changing this forces
 a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L89">property requiresSession</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L95">property requiresSession</a>
 </h3>
 
 ```typescript
@@ -1285,10 +1735,13 @@ public requiresSession: pulumi.Output<boolean | undefined>;
 ```
 
 
-Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
+Boolean flag which controls whether the Queue requires sessions.
+This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
+a queue can guarantee first-in-first-out delivery of messages.
+Changing this forces a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L94">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L100">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1300,12 +1753,210 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L95">property supportOrdering</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L101">property supportOrdering</a>
 </h3>
 
 ```typescript
 public supportOrdering: pulumi.Output<boolean | undefined>;
 ```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="QueueAuthorizationRule">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L9">class QueueAuthorizationRule</a>
+</h2>
+
+Manages an Authorization Rule for a ServiceBus Queue.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L65">constructor</a>
+</h3>
+
+```typescript
+new QueueAuthorizationRule(name: string, args: QueueAuthorizationRuleArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a QueueAuthorizationRule resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L18">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: QueueAuthorizationRuleState): QueueAuthorizationRule
+```
+
+
+Get an existing QueueAuthorizationRule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L25">property listen</a>
+</h3>
+
+```typescript
+public listen: pulumi.Output<boolean | undefined>;
+```
+
+
+Does this Authorization Rule have Listen permissions to the ServiceBus Queue? Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L29">property manage</a>
+</h3>
+
+```typescript
+public manage: pulumi.Output<boolean | undefined>;
+```
+
+
+Does this Authorization Rule have Manage permissions to the ServiceBus Queue? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L33">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L37">property namespaceName</a>
+</h3>
+
+```typescript
+public namespaceName: pulumi.Output<string>;
+```
+
+
+Specifies the name of the ServiceBus Namespace in which the Queue exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L41">property primaryConnectionString</a>
+</h3>
+
+```typescript
+public primaryConnectionString: pulumi.Output<string>;
+```
+
+
+The Primary Connection String for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L45">property primaryKey</a>
+</h3>
+
+```typescript
+public primaryKey: pulumi.Output<string>;
+```
+
+
+The Primary Key for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L49">property queueName</a>
+</h3>
+
+```typescript
+public queueName: pulumi.Output<string>;
+```
+
+
+Specifies the name of the ServiceBus Queue. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L53">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the Resource Group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L57">property secondaryConnectionString</a>
+</h3>
+
+```typescript
+public secondaryConnectionString: pulumi.Output<string>;
+```
+
+
+The Secondary Connection String for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L61">property secondaryKey</a>
+</h3>
+
+```typescript
+public secondaryKey: pulumi.Output<string>;
+```
+
+
+The Secondary Key for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L65">property send</a>
+</h3>
+
+```typescript
+public send: pulumi.Output<boolean | undefined>;
+```
+
+
+Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1330,7 +1981,7 @@ Create a ServiceBus Subscription.
 </h3>
 
 ```typescript
-new Subscription(name: string, args: SubscriptionArgs, opts?: pulumi.ResourceOptions)
+new Subscription(name: string, args: SubscriptionArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1353,7 +2004,15 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1436,7 +2095,7 @@ The name of a Queue or Topic to automatically forward
 messages to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1566,7 +2225,7 @@ Create a ServiceBus Subscription Rule.
 </h3>
 
 ```typescript
-new SubscriptionRule(name: string, args: SubscriptionRuleArgs, opts?: pulumi.ResourceOptions)
+new SubscriptionRule(name: string, args: SubscriptionRuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1589,7 +2248,15 @@ Get an existing SubscriptionRule resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1634,7 +2301,7 @@ public filterType: pulumi.Output<string>;
 Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilter` and `CorrelationFilter`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1736,7 +2403,7 @@ Create a ServiceBus Topic.
 </h3>
 
 ```typescript
-new Topic(name: string, args: TopicArgs, opts?: pulumi.ResourceOptions)
+new Topic(name: string, args: TopicArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1759,7 +2426,15 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1855,7 +2530,7 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1979,14 +2654,14 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L9">class TopicAuthorizationRule</a>
 </h2>
 
-Manages a new ServiceBus Topic authorization Rule within a ServiceBus Topic.
+Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L65">constructor</a>
 </h3>
 
 ```typescript
-new TopicAuthorizationRule(name: string, args: TopicAuthorizationRuleArgs, opts?: pulumi.ResourceOptions)
+new TopicAuthorizationRule(name: string, args: TopicAuthorizationRuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -2009,7 +2684,15 @@ Get an existing TopicAuthorizationRule resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -2021,7 +2704,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -2041,7 +2724,7 @@ public listen: pulumi.Output<boolean | undefined>;
 ```
 
 
-Does this Authorization Rule have permissions to Listen to the ServiceBus Topic? Defaults to `false`.
+Grants listen access to this this Authorization Rule. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L29">property manage</a>
@@ -2052,7 +2735,7 @@ public manage: pulumi.Output<boolean | undefined>;
 ```
 
 
-Does this Authorization Rule have permissions to Manage to the ServiceBus Topic? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L33">property name</a>
@@ -2063,7 +2746,7 @@ public name: pulumi.Output<string>;
 ```
 
 
-Specifies the name of the erviceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
+Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L37">property namespaceName</a>
@@ -2140,7 +2823,7 @@ public send: pulumi.Output<boolean | undefined>;
 ```
 
 
-Does this Authorization Rule have permissions to Send to the ServiceBus Topic? Defaults to `false`.
+Grants send access to this this Authorization Rule. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L65">property topicName</a>
@@ -2170,7 +2853,7 @@ deployments.
 </h2>
 
 ```typescript
-getEventhubNamespace(args: GetEventhubNamespaceArgs): Promise<GetEventhubNamespaceResult>
+getEventhubNamespace(args: GetEventhubNamespaceArgs, opts?: pulumi.InvokeOptions): Promise<GetEventhubNamespaceResult>
 ```
 
 
@@ -2847,6 +3530,210 @@ tags?: pulumi.Input<{ ... }>;
 
 A mapping of tags to assign to the resource.
 
+<h2 class="pdoc-module-header" id="EventHubNamespaceAuthorizationRuleArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L161">interface EventHubNamespaceAuthorizationRuleArgs</a>
+</h2>
+
+The set of arguments for constructing a EventHubNamespaceAuthorizationRule resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L165">property listen</a>
+</h3>
+
+```typescript
+listen?: pulumi.Input<boolean>;
+```
+
+
+Grants listen access to this this Authorization Rule. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L166">property location</a>
+</h3>
+
+```typescript
+location?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L170">property manage</a>
+</h3>
+
+```typescript
+manage?: pulumi.Input<boolean>;
+```
+
+
+Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L174">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L178">property namespaceName</a>
+</h3>
+
+```typescript
+namespaceName: pulumi.Input<string>;
+```
+
+
+Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L182">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L186">property send</a>
+</h3>
+
+```typescript
+send?: pulumi.Input<boolean>;
+```
+
+
+Grants send access to this this Authorization Rule. Defaults to `false`.
+
+<h2 class="pdoc-module-header" id="EventHubNamespaceAuthorizationRuleState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L114">interface EventHubNamespaceAuthorizationRuleState</a>
+</h2>
+
+Input properties used for looking up and filtering EventHubNamespaceAuthorizationRule resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L118">property listen</a>
+</h3>
+
+```typescript
+listen?: pulumi.Input<boolean>;
+```
+
+
+Grants listen access to this this Authorization Rule. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L119">property location</a>
+</h3>
+
+```typescript
+location?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L123">property manage</a>
+</h3>
+
+```typescript
+manage?: pulumi.Input<boolean>;
+```
+
+
+Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L127">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L131">property namespaceName</a>
+</h3>
+
+```typescript
+namespaceName?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L135">property primaryConnectionString</a>
+</h3>
+
+```typescript
+primaryConnectionString?: pulumi.Input<string>;
+```
+
+
+The Primary Connection String for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L139">property primaryKey</a>
+</h3>
+
+```typescript
+primaryKey?: pulumi.Input<string>;
+```
+
+
+The Primary Key for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L143">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L147">property secondaryConnectionString</a>
+</h3>
+
+```typescript
+secondaryConnectionString?: pulumi.Input<string>;
+```
+
+
+The Secondary Connection String for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L151">property secondaryKey</a>
+</h3>
+
+```typescript
+secondaryKey?: pulumi.Input<string>;
+```
+
+
+The Secondary Key for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L155">property send</a>
+</h3>
+
+```typescript
+send?: pulumi.Input<boolean>;
+```
+
+
+Grants send access to this this Authorization Rule. Defaults to `false`.
+
 <h2 class="pdoc-module-header" id="EventHubNamespaceState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespace.ts#L128">interface EventHubNamespaceState</a>
 </h2>
@@ -3089,7 +3976,7 @@ A collection of arguments for invoking getEventhubNamespace.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -3100,7 +3987,7 @@ The name of the EventHub Namespace.
 </h3>
 
 ```typescript
-resourceGroupName: pulumi.Input<string>;
+resourceGroupName: string;
 ```
 
 
@@ -3250,7 +4137,7 @@ capacity?: pulumi.Input<number>;
 ```
 
 
-Specifies the capacity of a Premium namespace. Can be 1, 2 or 4.
+Specifies the capacity, can only be set when `sku` is `Premium` namespace. Can be `1`, `2` or `4`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespace.ts#L176">property location</a>
@@ -3309,6 +4196,194 @@ tags?: pulumi.Input<{ ... }>;
 
 A mapping of tags to assign to the resource.
 
+<h2 class="pdoc-module-header" id="NamespaceAuthorizationRuleArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L157">interface NamespaceAuthorizationRuleArgs</a>
+</h2>
+
+The set of arguments for constructing a NamespaceAuthorizationRule resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L161">property listen</a>
+</h3>
+
+```typescript
+listen?: pulumi.Input<boolean>;
+```
+
+
+Grants listen access to this this Authorization Rule. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L165">property manage</a>
+</h3>
+
+```typescript
+manage?: pulumi.Input<boolean>;
+```
+
+
+Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L169">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the ServiceBus Namespace Authorization Rule resource. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L173">property namespaceName</a>
+</h3>
+
+```typescript
+namespaceName: pulumi.Input<string>;
+```
+
+
+Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L177">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L181">property send</a>
+</h3>
+
+```typescript
+send?: pulumi.Input<boolean>;
+```
+
+
+Grants send access to this this Authorization Rule. Defaults to `false`.
+
+<h2 class="pdoc-module-header" id="NamespaceAuthorizationRuleState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L111">interface NamespaceAuthorizationRuleState</a>
+</h2>
+
+Input properties used for looking up and filtering NamespaceAuthorizationRule resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L115">property listen</a>
+</h3>
+
+```typescript
+listen?: pulumi.Input<boolean>;
+```
+
+
+Grants listen access to this this Authorization Rule. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L119">property manage</a>
+</h3>
+
+```typescript
+manage?: pulumi.Input<boolean>;
+```
+
+
+Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L123">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the ServiceBus Namespace Authorization Rule resource. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L127">property namespaceName</a>
+</h3>
+
+```typescript
+namespaceName?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L131">property primaryConnectionString</a>
+</h3>
+
+```typescript
+primaryConnectionString?: pulumi.Input<string>;
+```
+
+
+The Primary Connection String for the ServiceBus Namespace authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L135">property primaryKey</a>
+</h3>
+
+```typescript
+primaryKey?: pulumi.Input<string>;
+```
+
+
+The Primary Key for the ServiceBus Namespace authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L139">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L143">property secondaryConnectionString</a>
+</h3>
+
+```typescript
+secondaryConnectionString?: pulumi.Input<string>;
+```
+
+
+The Secondary Connection String for the ServiceBus Namespace authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L147">property secondaryKey</a>
+</h3>
+
+```typescript
+secondaryKey?: pulumi.Input<string>;
+```
+
+
+The Secondary Key for the ServiceBus Namespace authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L151">property send</a>
+</h3>
+
+```typescript
+send?: pulumi.Input<boolean>;
+```
+
+
+Grants send access to this this Authorization Rule. Defaults to `false`.
+
 <h2 class="pdoc-module-header" id="NamespaceState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespace.ts#L118">interface NamespaceState</a>
 </h2>
@@ -3324,7 +4399,7 @@ capacity?: pulumi.Input<number>;
 ```
 
 
-Specifies the capacity of a Premium namespace. Can be 1, 2 or 4.
+Specifies the capacity, can only be set when `sku` is `Premium` namespace. Can be `1`, `2` or `4`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespace.ts#L127">property defaultPrimaryConnectionString</a>
@@ -3430,13 +4505,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="QueueArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L237">interface QueueArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L249">interface QueueArgs</a>
 </h2>
 
 The set of arguments for constructing a Queue resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L243">property autoDeleteOnIdle</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L255">property autoDeleteOnIdle</a>
 </h3>
 
 ```typescript
@@ -3449,15 +4524,18 @@ Queue is automatically deleted, minimum of 5 minutes. Provided in the [TimeSpan]
 format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L244">property deadLetteringOnMessageExpiration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L259">property deadLetteringOnMessageExpiration</a>
 </h3>
 
 ```typescript
 deadLetteringOnMessageExpiration?: pulumi.Input<boolean>;
 ```
 
+
+Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L250">property defaultMessageTtl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L265">property defaultMessageTtl</a>
 </h3>
 
 ```typescript
@@ -3470,7 +4548,7 @@ used when TTL is not set on message itself. Provided in the [TimeSpan](#timespan
 format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L255">property duplicateDetectionHistoryTimeWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L270">property duplicateDetectionHistoryTimeWindow</a>
 </h3>
 
 ```typescript
@@ -3482,7 +4560,7 @@ The duration during which
 duplicates can be detected. Default value is 10 minutes. Provided in the [TimeSpan](#timespan-format) format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L256">property enableBatchedOperations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L271">property enableBatchedOperations</a>
 </h3>
 
 ```typescript
@@ -3490,7 +4568,7 @@ enableBatchedOperations?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L263">property enableExpress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L278">property enableExpress</a>
 </h3>
 
 ```typescript
@@ -3504,7 +4582,7 @@ it to persistent storage. Defaults to `false` for Basic and Standard. For Premiu
 be set to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L270">property enablePartitioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L285">property enablePartitioning</a>
 </h3>
 
 ```typescript
@@ -3518,7 +4596,7 @@ a new resource to be created. Defaults to `false` for Basic and Standard. For Pr
 be set to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L275">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L290">property location</a>
 </h3>
 
 ```typescript
@@ -3530,7 +4608,7 @@ Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L279">property lockDuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L294">property lockDuration</a>
 </h3>
 
 ```typescript
@@ -3541,7 +4619,7 @@ lockDuration?: pulumi.Input<string>;
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L285">property maxSizeInMegabytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L300">property maxSizeInMegabytes</a>
 </h3>
 
 ```typescript
@@ -3554,7 +4632,7 @@ memory allocated for the queue. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L290">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L305">property name</a>
 </h3>
 
 ```typescript
@@ -3566,7 +4644,7 @@ Specifies the name of the ServiceBus Queue resource. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L295">property namespaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L310">property namespaceName</a>
 </h3>
 
 ```typescript
@@ -3578,7 +4656,7 @@ The name of the ServiceBus Namespace to create
 this queue in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L301">property requiresDuplicateDetection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L316">property requiresDuplicateDetection</a>
 </h3>
 
 ```typescript
@@ -3591,7 +4669,7 @@ the Queue requires duplicate detection. Changing this forces
 a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L305">property requiresSession</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L323">property requiresSession</a>
 </h3>
 
 ```typescript
@@ -3599,10 +4677,13 @@ requiresSession?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
+Boolean flag which controls whether the Queue requires sessions.
+This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
+a queue can guarantee first-in-first-out delivery of messages.
+Changing this forces a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L310">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L328">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -3614,21 +4695,231 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L311">property supportOrdering</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L329">property supportOrdering</a>
 </h3>
 
 ```typescript
 supportOrdering?: pulumi.Input<boolean>;
 ```
 
+<h2 class="pdoc-module-header" id="QueueAuthorizationRuleArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L170">interface QueueAuthorizationRuleArgs</a>
+</h2>
+
+The set of arguments for constructing a QueueAuthorizationRule resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L174">property listen</a>
+</h3>
+
+```typescript
+listen?: pulumi.Input<boolean>;
+```
+
+
+Does this Authorization Rule have Listen permissions to the ServiceBus Queue? Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L178">property manage</a>
+</h3>
+
+```typescript
+manage?: pulumi.Input<boolean>;
+```
+
+
+Does this Authorization Rule have Manage permissions to the ServiceBus Queue? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L182">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L186">property namespaceName</a>
+</h3>
+
+```typescript
+namespaceName: pulumi.Input<string>;
+```
+
+
+Specifies the name of the ServiceBus Namespace in which the Queue exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L190">property queueName</a>
+</h3>
+
+```typescript
+queueName: pulumi.Input<string>;
+```
+
+
+Specifies the name of the ServiceBus Queue. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L194">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the Resource Group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L198">property send</a>
+</h3>
+
+```typescript
+send?: pulumi.Input<boolean>;
+```
+
+
+Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
+
+<h2 class="pdoc-module-header" id="QueueAuthorizationRuleState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L120">interface QueueAuthorizationRuleState</a>
+</h2>
+
+Input properties used for looking up and filtering QueueAuthorizationRule resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L124">property listen</a>
+</h3>
+
+```typescript
+listen?: pulumi.Input<boolean>;
+```
+
+
+Does this Authorization Rule have Listen permissions to the ServiceBus Queue? Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L128">property manage</a>
+</h3>
+
+```typescript
+manage?: pulumi.Input<boolean>;
+```
+
+
+Does this Authorization Rule have Manage permissions to the ServiceBus Queue? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L132">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L136">property namespaceName</a>
+</h3>
+
+```typescript
+namespaceName?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the ServiceBus Namespace in which the Queue exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L140">property primaryConnectionString</a>
+</h3>
+
+```typescript
+primaryConnectionString?: pulumi.Input<string>;
+```
+
+
+The Primary Connection String for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L144">property primaryKey</a>
+</h3>
+
+```typescript
+primaryKey?: pulumi.Input<string>;
+```
+
+
+The Primary Key for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L148">property queueName</a>
+</h3>
+
+```typescript
+queueName?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the ServiceBus Queue. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L152">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the Resource Group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L156">property secondaryConnectionString</a>
+</h3>
+
+```typescript
+secondaryConnectionString?: pulumi.Input<string>;
+```
+
+
+The Secondary Connection String for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L160">property secondaryKey</a>
+</h3>
+
+```typescript
+secondaryKey?: pulumi.Input<string>;
+```
+
+
+The Secondary Key for the Authorization Rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L164">property send</a>
+</h3>
+
+```typescript
+send?: pulumi.Input<boolean>;
+```
+
+
+Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
+
 <h2 class="pdoc-module-header" id="QueueState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L157">interface QueueState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L163">interface QueueState</a>
 </h2>
 
 Input properties used for looking up and filtering Queue resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L163">property autoDeleteOnIdle</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L169">property autoDeleteOnIdle</a>
 </h3>
 
 ```typescript
@@ -3641,15 +4932,18 @@ Queue is automatically deleted, minimum of 5 minutes. Provided in the [TimeSpan]
 format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L164">property deadLetteringOnMessageExpiration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L173">property deadLetteringOnMessageExpiration</a>
 </h3>
 
 ```typescript
 deadLetteringOnMessageExpiration?: pulumi.Input<boolean>;
 ```
 
+
+Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L170">property defaultMessageTtl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L179">property defaultMessageTtl</a>
 </h3>
 
 ```typescript
@@ -3662,7 +4956,7 @@ used when TTL is not set on message itself. Provided in the [TimeSpan](#timespan
 format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L175">property duplicateDetectionHistoryTimeWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L184">property duplicateDetectionHistoryTimeWindow</a>
 </h3>
 
 ```typescript
@@ -3674,7 +4968,7 @@ The duration during which
 duplicates can be detected. Default value is 10 minutes. Provided in the [TimeSpan](#timespan-format) format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L176">property enableBatchedOperations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L185">property enableBatchedOperations</a>
 </h3>
 
 ```typescript
@@ -3682,7 +4976,7 @@ enableBatchedOperations?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L183">property enableExpress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L192">property enableExpress</a>
 </h3>
 
 ```typescript
@@ -3696,7 +4990,7 @@ it to persistent storage. Defaults to `false` for Basic and Standard. For Premiu
 be set to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L190">property enablePartitioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L199">property enablePartitioning</a>
 </h3>
 
 ```typescript
@@ -3710,7 +5004,7 @@ a new resource to be created. Defaults to `false` for Basic and Standard. For Pr
 be set to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L195">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L204">property location</a>
 </h3>
 
 ```typescript
@@ -3722,7 +5016,7 @@ Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L199">property lockDuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L208">property lockDuration</a>
 </h3>
 
 ```typescript
@@ -3733,7 +5027,7 @@ lockDuration?: pulumi.Input<string>;
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L205">property maxSizeInMegabytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L214">property maxSizeInMegabytes</a>
 </h3>
 
 ```typescript
@@ -3746,7 +5040,7 @@ memory allocated for the queue. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L210">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L219">property name</a>
 </h3>
 
 ```typescript
@@ -3758,7 +5052,7 @@ Specifies the name of the ServiceBus Queue resource. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L215">property namespaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L224">property namespaceName</a>
 </h3>
 
 ```typescript
@@ -3770,7 +5064,7 @@ The name of the ServiceBus Namespace to create
 this queue in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L221">property requiresDuplicateDetection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L230">property requiresDuplicateDetection</a>
 </h3>
 
 ```typescript
@@ -3783,7 +5077,7 @@ the Queue requires duplicate detection. Changing this forces
 a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L225">property requiresSession</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L237">property requiresSession</a>
 </h3>
 
 ```typescript
@@ -3791,10 +5085,13 @@ requiresSession?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
+Boolean flag which controls whether the Queue requires sessions.
+This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
+a queue can guarantee first-in-first-out delivery of messages.
+Changing this forces a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L230">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L242">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -3806,7 +5103,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L231">property supportOrdering</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L243">property supportOrdering</a>
 </h3>
 
 ```typescript
@@ -4571,7 +5868,7 @@ listen?: pulumi.Input<boolean>;
 ```
 
 
-Does this Authorization Rule have permissions to Listen to the ServiceBus Topic? Defaults to `false`.
+Grants listen access to this this Authorization Rule. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L178">property manage</a>
@@ -4582,7 +5879,7 @@ manage?: pulumi.Input<boolean>;
 ```
 
 
-Does this Authorization Rule have permissions to Manage to the ServiceBus Topic? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L182">property name</a>
@@ -4593,7 +5890,7 @@ name?: pulumi.Input<string>;
 ```
 
 
-Specifies the name of the erviceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
+Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L186">property namespaceName</a>
@@ -4626,7 +5923,7 @@ send?: pulumi.Input<boolean>;
 ```
 
 
-Does this Authorization Rule have permissions to Send to the ServiceBus Topic? Defaults to `false`.
+Grants send access to this this Authorization Rule. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L198">property topicName</a>
@@ -4654,7 +5951,7 @@ listen?: pulumi.Input<boolean>;
 ```
 
 
-Does this Authorization Rule have permissions to Listen to the ServiceBus Topic? Defaults to `false`.
+Grants listen access to this this Authorization Rule. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L128">property manage</a>
@@ -4665,7 +5962,7 @@ manage?: pulumi.Input<boolean>;
 ```
 
 
-Does this Authorization Rule have permissions to Manage to the ServiceBus Topic? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L132">property name</a>
@@ -4676,7 +5973,7 @@ name?: pulumi.Input<string>;
 ```
 
 
-Specifies the name of the erviceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
+Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L136">property namespaceName</a>
@@ -4753,7 +6050,7 @@ send?: pulumi.Input<boolean>;
 ```
 
 
-Does this Authorization Rule have permissions to Send to the ServiceBus Topic? Defaults to `false`.
+Grants send access to this this Authorization Rule. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L164">property topicName</a>

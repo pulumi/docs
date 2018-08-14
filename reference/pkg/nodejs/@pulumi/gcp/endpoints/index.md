@@ -24,7 +24,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
 </h3>
 
 ```typescript
-new Service(name: string, args: ServiceArgs, opts?: pulumi.ResourceOptions)
+new Service(name: string, args: ServiceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -47,7 +47,15 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -99,7 +107,7 @@ public grpcConfig: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -227,7 +235,7 @@ Input properties used for looking up and filtering Service resources.
 </h3>
 
 ```typescript
-apis?: pulumi.Input<{ ... }[]>;
+apis?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
@@ -251,7 +259,7 @@ dnsAddress?: pulumi.Input<string>;
 </h3>
 
 ```typescript
-endpoints?: pulumi.Input<{ ... }[]>;
+endpoints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">

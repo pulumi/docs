@@ -6,7 +6,6 @@ title: Module config
 
 <h2 class="pdoc-module-header">Index</h2>
 
-* <a href="#__config">let __config</a>
 * <a href="#clientId">let clientId</a>
 * <a href="#clientSecret">let clientSecret</a>
 * <a href="#environment">let environment</a>
@@ -19,14 +18,6 @@ title: Module config
 
 <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 
-
-<h2 class="pdoc-module-header" id="__config">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L6">let __config</a>
-</h2>
-
-```typescript
-let __config: Config =  new pulumi.Config("azure");
-```
 
 <h2 class="pdoc-module-header" id="clientId">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L8">let clientId</a>

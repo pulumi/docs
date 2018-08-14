@@ -6,15 +6,139 @@ title: Module appsync
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#ApiKey">class ApiKey</a>
 * <a href="#DataSource">class DataSource</a>
 * <a href="#GraphQLApi">class GraphQLApi</a>
+* <a href="#ApiKeyArgs">interface ApiKeyArgs</a>
+* <a href="#ApiKeyState">interface ApiKeyState</a>
 * <a href="#DataSourceArgs">interface DataSourceArgs</a>
 * <a href="#DataSourceState">interface DataSourceState</a>
 * <a href="#GraphQLApiArgs">interface GraphQLApiArgs</a>
 * <a href="#GraphQLApiState">interface GraphQLApiState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts">appsync/dataSource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts">appsync/graphQLApi.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts">appsync/apiKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts">appsync/dataSource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts">appsync/graphQLApi.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="ApiKey">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L9">class ApiKey</a>
+</h2>
+
+Provides an AppSync API Key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L37">constructor</a>
+</h3>
+
+```typescript
+new ApiKey(name: string, args: ApiKeyArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a ApiKey resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L18">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApiKeyState): ApiKey
+```
+
+
+Get an existing ApiKey resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L25">property apiId</a>
+</h3>
+
+```typescript
+public apiId: pulumi.Output<string>;
+```
+
+
+The ID of the associated AppSync API
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L29">property description</a>
+</h3>
+
+```typescript
+public description: pulumi.Output<string | undefined>;
+```
+
+
+The API key description. Defaults to "Managed by Terraform".
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L33">property expires</a>
+</h3>
+
+```typescript
+public expires: pulumi.Output<string | undefined>;
+```
+
+
+RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L37">property key</a>
+</h3>
+
+```typescript
+public key: pulumi.Output<string>;
+```
+
+
+The API key
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 <h2 class="pdoc-module-header" id="DataSource">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L9">class DataSource</a>
@@ -27,7 +151,7 @@ Provides an AppSync DataSource.
 </h3>
 
 ```typescript
-new DataSource(name: string, args: DataSourceArgs, opts?: pulumi.ResourceOptions)
+new DataSource(name: string, args: DataSourceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -50,7 +174,15 @@ Get an existing DataSource resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -117,7 +249,7 @@ public elasticsearchConfig: pulumi.Output<{ ... } | undefined>;
 Amazon Elasticsearch settings. See [below](#elasticsearch_config)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -195,7 +327,7 @@ Provides an AppSync GraphQL API.
 </h3>
 
 ```typescript
-new GraphQLApi(name: string, args: GraphQLApiArgs, opts?: pulumi.ResourceOptions)
+new GraphQLApi(name: string, args: GraphQLApiArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -218,7 +350,15 @@ Get an existing GraphQLApi resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -252,7 +392,7 @@ public authenticationType: pulumi.Output<string>;
 The authentication type. Valid values: `API_KEY`, `AWS_IAM` and `AMAZON_COGNITO_USER_POOLS`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -296,6 +436,95 @@ public userPoolConfig: pulumi.Output<{ ... } | undefined>;
 
 
 The Amazon Cognito User Pool configuration. See [below](#user_pool_config)
+
+<h2 class="pdoc-module-header" id="ApiKeyArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L94">interface ApiKeyArgs</a>
+</h2>
+
+The set of arguments for constructing a ApiKey resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L98">property apiId</a>
+</h3>
+
+```typescript
+apiId: pulumi.Input<string>;
+```
+
+
+The ID of the associated AppSync API
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L102">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+The API key description. Defaults to "Managed by Terraform".
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L106">property expires</a>
+</h3>
+
+```typescript
+expires?: pulumi.Input<string>;
+```
+
+
+RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
+
+<h2 class="pdoc-module-header" id="ApiKeyState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L72">interface ApiKeyState</a>
+</h2>
+
+Input properties used for looking up and filtering ApiKey resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L76">property apiId</a>
+</h3>
+
+```typescript
+apiId?: pulumi.Input<string>;
+```
+
+
+The ID of the associated AppSync API
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L80">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+The API key description. Defaults to "Managed by Terraform".
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L84">property expires</a>
+</h3>
+
+```typescript
+expires?: pulumi.Input<string>;
+```
+
+
+RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L88">property key</a>
+</h3>
+
+```typescript
+key?: pulumi.Input<string>;
+```
+
+
+The API key
 
 <h2 class="pdoc-module-header" id="DataSourceArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L147">interface DataSourceArgs</a>

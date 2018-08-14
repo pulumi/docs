@@ -38,7 +38,7 @@ an existing Google Cloud Platform folder.
 </h3>
 
 ```typescript
-new IAMBinding(name: string, args: IAMBindingArgs, opts?: pulumi.ResourceOptions)
+new IAMBinding(name: string, args: IAMBindingArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -61,7 +61,15 @@ Get an existing IAMBinding resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -95,7 +103,7 @@ public folder: pulumi.Output<string>;
 The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -164,7 +172,7 @@ the IAM policy for an existing Google Cloud Platform folder.
 </h3>
 
 ```typescript
-new IAMMember(name: string, args: IAMMemberArgs, opts?: pulumi.ResourceOptions)
+new IAMMember(name: string, args: IAMMemberArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -187,7 +195,15 @@ Get an existing IAMMember resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -221,7 +237,7 @@ public folder: pulumi.Output<string>;
 The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -284,7 +300,7 @@ Platform folder.
 </h3>
 
 ```typescript
-new IAMPolicy(name: string, args: IAMPolicyArgs, opts?: pulumi.ResourceOptions)
+new IAMPolicy(name: string, args: IAMPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -307,7 +323,15 @@ Get an existing IAMPolicy resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -341,7 +365,7 @@ public folder: pulumi.Output<string>;
 The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -387,11 +411,11 @@ documentation](https://cloud.google.com/resource-manager/docs/organization-polic
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/folders/setOrgPolicy).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L52">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L57">constructor</a>
 </h3>
 
 ```typescript
-new OrganizationPolicy(name: string, args: OrganizationPolicyArgs, opts?: pulumi.ResourceOptions)
+new OrganizationPolicy(name: string, args: OrganizationPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -414,7 +438,15 @@ Get an existing OrganizationPolicy resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -470,7 +502,7 @@ public folder: pulumi.Output<string>;
 The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -482,7 +514,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L44">property listPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L45">property listPolicy</a>
 </h3>
 
 ```typescript
@@ -490,10 +522,22 @@ public listPolicy: pulumi.Output<{ ... } | undefined>;
 ```
 
 
-A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+A policy that can define specific values that are allowed or denied for the given constraint. It
+can also be used to allow or deny all values. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L48">property updateTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L49">property restorePolicy</a>
+</h3>
+
+```typescript
+public restorePolicy: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A restore policy is a constraint to restore the default policy. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L53">property updateTime</a>
 </h3>
 
 ```typescript
@@ -516,7 +560,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L52">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L57">property version</a>
 </h3>
 
 ```typescript
@@ -802,13 +846,13 @@ the IAM policy that will be applied to the folder. This policy overrides any exi
 policy applied to the folder.
 
 <h2 class="pdoc-module-header" id="OrganizationPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L130">interface OrganizationPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L142">interface OrganizationPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a OrganizationPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L134">property booleanPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L146">property booleanPolicy</a>
 </h3>
 
 ```typescript
@@ -819,7 +863,7 @@ booleanPolicy?: pulumi.Input<{ ... }>;
 A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L138">property constraint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L150">property constraint</a>
 </h3>
 
 ```typescript
@@ -830,7 +874,7 @@ constraint: pulumi.Input<string>;
 The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L142">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L154">property folder</a>
 </h3>
 
 ```typescript
@@ -841,7 +885,7 @@ folder: pulumi.Input<string>;
 The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L146">property listPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L159">property listPolicy</a>
 </h3>
 
 ```typescript
@@ -849,10 +893,22 @@ listPolicy?: pulumi.Input<{ ... }>;
 ```
 
 
-A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+A policy that can define specific values that are allowed or denied for the given constraint. It
+can also be used to allow or deny all values. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L150">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L163">property restorePolicy</a>
+</h3>
+
+```typescript
+restorePolicy?: pulumi.Input<{ ... }>;
+```
+
+
+A restore policy is a constraint to restore the default policy. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L167">property version</a>
 </h3>
 
 ```typescript
@@ -863,13 +919,13 @@ version?: pulumi.Input<number>;
 Version of the Policy. Default version is 0.
 
 <h2 class="pdoc-module-header" id="OrganizationPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L96">interface OrganizationPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L103">interface OrganizationPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering OrganizationPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L100">property booleanPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L107">property booleanPolicy</a>
 </h3>
 
 ```typescript
@@ -880,7 +936,7 @@ booleanPolicy?: pulumi.Input<{ ... }>;
 A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L104">property constraint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L111">property constraint</a>
 </h3>
 
 ```typescript
@@ -891,7 +947,7 @@ constraint?: pulumi.Input<string>;
 The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L108">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L115">property etag</a>
 </h3>
 
 ```typescript
@@ -902,7 +958,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L112">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L119">property folder</a>
 </h3>
 
 ```typescript
@@ -913,7 +969,7 @@ folder?: pulumi.Input<string>;
 The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L116">property listPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L124">property listPolicy</a>
 </h3>
 
 ```typescript
@@ -921,10 +977,22 @@ listPolicy?: pulumi.Input<{ ... }>;
 ```
 
 
-A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
+A policy that can define specific values that are allowed or denied for the given constraint. It
+can also be used to allow or deny all values. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L120">property updateTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L128">property restorePolicy</a>
+</h3>
+
+```typescript
+restorePolicy?: pulumi.Input<{ ... }>;
+```
+
+
+A restore policy is a constraint to restore the default policy. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L132">property updateTime</a>
 </h3>
 
 ```typescript
@@ -935,7 +1003,7 @@ updateTime?: pulumi.Input<string>;
 (Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L124">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L136">property version</a>
 </h3>
 
 ```typescript

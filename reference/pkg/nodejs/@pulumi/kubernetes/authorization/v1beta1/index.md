@@ -6,6 +6,10 @@ title: Module authorization/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isLocalSubjectAccessReview">function isLocalSubjectAccessReview</a>
+* <a href="#isSelfSubjectAccessReview">function isSelfSubjectAccessReview</a>
+* <a href="#isSelfSubjectRulesReview">function isSelfSubjectRulesReview</a>
+* <a href="#isSubjectAccessReview">function isSubjectAccessReview</a>
 * <a href="#LocalSubjectAccessReview">interface LocalSubjectAccessReview</a>
 * <a href="#NonResourceAttributes">interface NonResourceAttributes</a>
 * <a href="#NonResourceRule">interface NonResourceRule</a>
@@ -20,8 +24,40 @@ title: Module authorization/v1beta1
 * <a href="#SubjectAccessReviewStatus">interface SubjectAccessReviewStatus</a>
 * <a href="#SubjectRulesReviewStatus">interface SubjectRulesReviewStatus</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isLocalSubjectAccessReview">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4782">function isLocalSubjectAccessReview</a>
+</h2>
+
+```typescript
+isLocalSubjectAccessReview(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isSelfSubjectAccessReview">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4943">function isSelfSubjectAccessReview</a>
+</h2>
+
+```typescript
+isSelfSubjectAccessReview(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isSelfSubjectRulesReview">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5007">function isSelfSubjectRulesReview</a>
+</h2>
+
+```typescript
+isSelfSubjectRulesReview(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isSubjectAccessReview">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5056">function isSubjectAccessReview</a>
+</h2>
+
+```typescript
+isSubjectAccessReview(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="LocalSubjectAccessReview">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4480">interface LocalSubjectAccessReview</a>

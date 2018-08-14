@@ -7,7 +7,6 @@ title: Module config
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#requireRegion">function requireRegion</a>
-* <a href="#__config">let __config</a>
 * <a href="#accessKey">let accessKey</a>
 * <a href="#allowedAccountIds">let allowedAccountIds</a>
 * <a href="#assumeRole">let assumeRole</a>
@@ -42,14 +41,6 @@ requireRegion(): Region
 
 
 requireRegion fetches the AWS region, requiring that it exists; if it has not been configured, an error is thrown.
-
-<h2 class="pdoc-module-header" id="__config">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L8">let __config</a>
-</h2>
-
-```typescript
-let __config: Config =  new pulumi.Config("aws");
-```
 
 <h2 class="pdoc-module-header" id="accessKey">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L13">let accessKey</a>

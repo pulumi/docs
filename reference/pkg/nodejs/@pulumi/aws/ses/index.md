@@ -57,7 +57,7 @@ Provides a resource to designate the active SES receipt rule set
 </h3>
 
 ```typescript
-new ActiveReceiptRuleSet(name: string, args: ActiveReceiptRuleSetArgs, opts?: pulumi.ResourceOptions)
+new ActiveReceiptRuleSet(name: string, args: ActiveReceiptRuleSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -80,7 +80,15 @@ Get an existing ActiveReceiptRuleSet resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -92,7 +100,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -137,7 +145,7 @@ Provides an SES configuration set resource
 </h3>
 
 ```typescript
-new ConfgurationSet(name: string, args?: ConfgurationSetArgs, opts?: pulumi.ResourceOptions)
+new ConfgurationSet(name: string, args?: ConfgurationSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -160,7 +168,15 @@ Get an existing ConfgurationSet resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -172,7 +188,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -219,7 +235,7 @@ Domain ownership needs to be confirmed first using [ses_domain_identity Resource
 </h3>
 
 ```typescript
-new DomainDkim(name: string, args: DomainDkimArgs, opts?: pulumi.ResourceOptions)
+new DomainDkim(name: string, args: DomainDkimArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -242,7 +258,15 @@ Get an existing DomainDkim resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -281,7 +305,7 @@ public domain: pulumi.Output<string>;
 Verified domain name to generate DKIM tokens for.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -315,7 +339,7 @@ Provides an SES domain identity resource
 </h3>
 
 ```typescript
-new DomainIdentity(name: string, args: DomainIdentityArgs, opts?: pulumi.ResourceOptions)
+new DomainIdentity(name: string, args: DomainIdentityArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -338,7 +362,15 @@ Get an existing DomainIdentity resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -372,7 +404,7 @@ public domain: pulumi.Output<string>;
 The domain name to assign to SES
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -429,7 +461,7 @@ deploy the required DNS verification records, and wait for verification to compl
 </h3>
 
 ```typescript
-new DomainIdentityVerification(name: string, args: DomainIdentityVerificationArgs, opts?: pulumi.ResourceOptions)
+new DomainIdentityVerification(name: string, args: DomainIdentityVerificationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -452,7 +484,15 @@ Get an existing DomainIdentityVerification resource's state with the given name,
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -486,7 +526,7 @@ public domain: pulumi.Output<string>;
 The domain name of the SES domain identity to verify.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -520,7 +560,7 @@ Provides an SES event destination
 </h3>
 
 ```typescript
-new EventDestination(name: string, args: EventDestinationArgs, opts?: pulumi.ResourceOptions)
+new EventDestination(name: string, args: EventDestinationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -543,7 +583,15 @@ Get an existing EventDestination resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -588,7 +636,7 @@ public enabled: pulumi.Output<boolean | undefined>;
 If true, the event destination will be enabled
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -619,7 +667,7 @@ public matchingTypes: pulumi.Output<string[]>;
 ```
 
 
-A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, or `"click"`.
+A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/eventDestination.ts#L45">property name</a>
@@ -666,7 +714,7 @@ Resource for managing SES Identity Notification Topics
 </h3>
 
 ```typescript
-new IdentityNotificationTopic(name: string, args: IdentityNotificationTopicArgs, opts?: pulumi.ResourceOptions)
+new IdentityNotificationTopic(name: string, args: IdentityNotificationTopicArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -689,7 +737,15 @@ Get an existing IdentityNotificationTopic resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -701,7 +757,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -770,7 +826,7 @@ Provides an SES domain MAIL FROM resource.
 </h3>
 
 ```typescript
-new MailFrom(name: string, args: MailFromArgs, opts?: pulumi.ResourceOptions)
+new MailFrom(name: string, args: MailFromArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -793,7 +849,15 @@ Get an existing MailFrom resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -827,7 +891,7 @@ public domain: pulumi.Output<string>;
 Verified domain name to generate DKIM tokens for.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -872,7 +936,7 @@ Provides an SES receipt filter resource
 </h3>
 
 ```typescript
-new ReceiptFilter(name: string, args: ReceiptFilterArgs, opts?: pulumi.ResourceOptions)
+new ReceiptFilter(name: string, args: ReceiptFilterArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -895,7 +959,15 @@ Get an existing ReceiptFilter resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -918,7 +990,7 @@ public cidr: pulumi.Output<string>;
 The IP address or address range to filter, in CIDR notation
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -974,7 +1046,7 @@ Provides an SES receipt rule resource
 </h3>
 
 ```typescript
-new ReceiptRule(name: string, args: ReceiptRuleArgs, opts?: pulumi.ResourceOptions)
+new ReceiptRule(name: string, args: ReceiptRuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -997,7 +1069,15 @@ Get an existing ReceiptRule resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1053,7 +1133,7 @@ public enabled: pulumi.Output<boolean>;
 If true, the rule will be enabled
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1197,7 +1277,7 @@ Provides an SES receipt rule set resource
 </h3>
 
 ```typescript
-new ReceiptRuleSet(name: string, args: ReceiptRuleSetArgs, opts?: pulumi.ResourceOptions)
+new ReceiptRuleSet(name: string, args: ReceiptRuleSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1220,7 +1300,15 @@ Get an existing ReceiptRuleSet resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1232,7 +1320,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1277,7 +1365,7 @@ Provides a resource to create a SES template.
 </h3>
 
 ```typescript
-new Template(name: string, args?: TemplateArgs, opts?: pulumi.ResourceOptions)
+new Template(name: string, args?: TemplateArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1300,7 +1388,15 @@ Get an existing Template resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1323,7 +1419,7 @@ public html: pulumi.Output<string | undefined>;
 The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1663,7 +1759,7 @@ matchingTypes: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
-A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, or `"click"`.
+A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/eventDestination.ts#L151">property name</a>
@@ -1746,7 +1842,7 @@ matchingTypes?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
-A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, or `"click"`.
+A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/eventDestination.ts#L117">property name</a>
@@ -2015,7 +2111,7 @@ The set of arguments for constructing a ReceiptRule resource.
 </h3>
 
 ```typescript
-addHeaderActions?: pulumi.Input<{ ... }[]>;
+addHeaderActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2037,7 +2133,7 @@ The name of the rule to place this rule after
 </h3>
 
 ```typescript
-bounceActions?: pulumi.Input<{ ... }[]>;
+bounceActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2059,7 +2155,7 @@ If true, the rule will be enabled
 </h3>
 
 ```typescript
-lambdaActions?: pulumi.Input<{ ... }[]>;
+lambdaActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2103,7 +2199,7 @@ The name of the rule set
 </h3>
 
 ```typescript
-s3Actions?: pulumi.Input<{ ... }[]>;
+s3Actions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2125,7 +2221,7 @@ If true, incoming emails will be scanned for spam and viruses
 </h3>
 
 ```typescript
-snsActions?: pulumi.Input<{ ... }[]>;
+snsActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2136,7 +2232,7 @@ A list of SNS Action blocks. Documented below.
 </h3>
 
 ```typescript
-stopActions?: pulumi.Input<{ ... }[]>;
+stopActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2158,7 +2254,7 @@ Require or Optional
 </h3>
 
 ```typescript
-workmailActions?: pulumi.Input<{ ... }[]>;
+workmailActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2209,7 +2305,7 @@ Input properties used for looking up and filtering ReceiptRule resources.
 </h3>
 
 ```typescript
-addHeaderActions?: pulumi.Input<{ ... }[]>;
+addHeaderActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2231,7 +2327,7 @@ The name of the rule to place this rule after
 </h3>
 
 ```typescript
-bounceActions?: pulumi.Input<{ ... }[]>;
+bounceActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2253,7 +2349,7 @@ If true, the rule will be enabled
 </h3>
 
 ```typescript
-lambdaActions?: pulumi.Input<{ ... }[]>;
+lambdaActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2297,7 +2393,7 @@ The name of the rule set
 </h3>
 
 ```typescript
-s3Actions?: pulumi.Input<{ ... }[]>;
+s3Actions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2319,7 +2415,7 @@ If true, incoming emails will be scanned for spam and viruses
 </h3>
 
 ```typescript
-snsActions?: pulumi.Input<{ ... }[]>;
+snsActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2330,7 +2426,7 @@ A list of SNS Action blocks. Documented below.
 </h3>
 
 ```typescript
-stopActions?: pulumi.Input<{ ... }[]>;
+stopActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2352,7 +2448,7 @@ Require or Optional
 </h3>
 
 ```typescript
-workmailActions?: pulumi.Input<{ ... }[]>;
+workmailActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

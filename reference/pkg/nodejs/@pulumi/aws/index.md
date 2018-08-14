@@ -17,6 +17,7 @@ import * as aws from "@pulumi/aws";
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#Provider">class Provider</a>
 * <a href="#getAmi">function getAmi</a>
 * <a href="#getAmiIds">function getAmiIds</a>
 * <a href="#getArn">function getArn</a>
@@ -55,6 +56,8 @@ import * as aws from "@pulumi/aws";
 * <a href="#GetPrefixListResult">interface GetPrefixListResult</a>
 * <a href="#GetRegionArgs">interface GetRegionArgs</a>
 * <a href="#GetRegionResult">interface GetRegionResult</a>
+* <a href="#ProviderArgs">interface ProviderArgs</a>
+* <a href="#Tags">interface Tags</a>
 * <a href="#APNortheast1Region">let APNortheast1Region</a>
 * <a href="#APNortheast2Region">let APNortheast2Region</a>
 * <a href="#APSouth1Region">let APSouth1Region</a>
@@ -73,7 +76,7 @@ import * as aws from "@pulumi/aws";
 * <a href="#ARN">type ARN</a>
 * <a href="#Region">type Region</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/arn.ts">arn.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts">getAmi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts">getAmiIds.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getArn.ts">getArn.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAutoscalingGroups.ts">getAutoscalingGroups.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts">getAvailabilityZone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZones.ts">getAvailabilityZones.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getBillingServiceAccount.ts">getBillingServiceAccount.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getCallerIdentity.ts">getCallerIdentity.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getCanonicalUserId.ts">getCanonicalUserId.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts">getElasticIp.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts">getIpRanges.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getPartition.ts">getPartition.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getPrefixList.ts">getPrefixList.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts">getRegion.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts">region.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/arn.ts">arn.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts">getAmi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts">getAmiIds.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getArn.ts">getArn.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAutoscalingGroups.ts">getAutoscalingGroups.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts">getAvailabilityZone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZones.ts">getAvailabilityZones.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getBillingServiceAccount.ts">getBillingServiceAccount.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getCallerIdentity.ts">getCallerIdentity.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getCanonicalUserId.ts">getCanonicalUserId.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts">getElasticIp.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts">getIpRanges.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getPartition.ts">getPartition.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getPrefixList.ts">getPrefixList.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts">getRegion.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts">region.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/tags.ts">tags.ts</a> 
 
 <h2 class="pdoc-module-header">Modules</h2>
 
@@ -127,6 +130,7 @@ import * as aws from "@pulumi/aws";
 * <a href="kms">kms</a>
 * <a href="lambda">lambda</a>
 * <a href="lightsail">lightsail</a>
+* <a href="macie">macie</a>
 * <a href="mediastore">mediastore</a>
 * <a href="mq">mq</a>
 * <a href="neptune">neptune</a>
@@ -147,15 +151,82 @@ import * as aws from "@pulumi/aws";
 * <a href="sns">sns</a>
 * <a href="sqs">sqs</a>
 * <a href="ssm">ssm</a>
+* <a href="storagegateway">storagegateway</a>
+* <a href="swf">swf</a>
 * <a href="waf">waf</a>
 * <a href="wafregional">wafregional</a>
+
+<h2 class="pdoc-module-header" id="Provider">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L11">class Provider</a>
+</h2>
+
+The provider type for the aws package
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L11">constructor</a>
+</h3>
+
+```typescript
+new Provider(name: string, args: ProviderArgs, opts?: pulumi.ResourceOptions)
+```
+
+
+Create a Provider resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 <h2 class="pdoc-module-header" id="getAmi">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L10">function getAmi</a>
 </h2>
 
 ```typescript
-getAmi(args?: GetAmiArgs): Promise<GetAmiResult>
+getAmi(args?: GetAmiArgs, opts?: pulumi.InvokeOptions): Promise<GetAmiResult>
 ```
 
 
@@ -167,7 +238,7 @@ resources.
 </h2>
 
 ```typescript
-getAmiIds(args?: GetAmiIdsArgs): Promise<GetAmiIdsResult>
+getAmiIds(args?: GetAmiIdsArgs, opts?: pulumi.InvokeOptions): Promise<GetAmiIdsResult>
 ```
 
 
@@ -178,7 +249,7 @@ Use this data source to get a list of AMI IDs matching the specified criteria.
 </h2>
 
 ```typescript
-getArn(args: GetArnArgs): Promise<GetArnResult>
+getArn(args: GetArnArgs, opts?: pulumi.InvokeOptions): Promise<GetArnResult>
 ```
 
 
@@ -189,7 +260,7 @@ Parses an Amazon Resource Name (ARN) into its constituent parts.
 </h2>
 
 ```typescript
-getAutoscalingGroups(args?: GetAutoscalingGroupsArgs): Promise<GetAutoscalingGroupsResult>
+getAutoscalingGroups(args?: GetAutoscalingGroupsArgs, opts?: pulumi.InvokeOptions): Promise<GetAutoscalingGroupsResult>
 ```
 
 
@@ -201,7 +272,7 @@ ASGs within a specific region. This will allow you to pass a list of AutoScaling
 </h2>
 
 ```typescript
-getAvailabilityZone(args?: GetAvailabilityZoneArgs): Promise<GetAvailabilityZoneResult>
+getAvailabilityZone(args?: GetAvailabilityZoneArgs, opts?: pulumi.InvokeOptions): Promise<GetAvailabilityZoneResult>
 ```
 
 
@@ -222,7 +293,7 @@ which provides a list of the available zones.
 </h2>
 
 ```typescript
-getAvailabilityZones(args?: GetAvailabilityZonesArgs): Promise<GetAvailabilityZonesResult>
+getAvailabilityZones(args?: GetAvailabilityZonesArgs, opts?: pulumi.InvokeOptions): Promise<GetAvailabilityZonesResult>
 ```
 
 
@@ -238,7 +309,7 @@ which provides some details about a specific availability zone.
 </h2>
 
 ```typescript
-getBillingServiceAccount(): Promise<GetBillingServiceAccountResult>
+getBillingServiceAccount(opts?: pulumi.InvokeOptions): Promise<GetBillingServiceAccountResult>
 ```
 
 
@@ -249,7 +320,7 @@ Use this data source to get the Account ID of the [AWS Billing and Cost Manageme
 </h2>
 
 ```typescript
-getCallerIdentity(): Promise<GetCallerIdentityResult>
+getCallerIdentity(opts?: pulumi.InvokeOptions): Promise<GetCallerIdentityResult>
 ```
 
 
@@ -261,7 +332,7 @@ which Terraform is authorized.
 </h2>
 
 ```typescript
-getCanonicalUserId(): Promise<GetCanonicalUserIdResult>
+getCanonicalUserId(opts?: pulumi.InvokeOptions): Promise<GetCanonicalUserIdResult>
 ```
 
 
@@ -273,7 +344,7 @@ for the effective account in which Terraform is working.
 </h2>
 
 ```typescript
-getElasticIp(args?: GetElasticIpArgs): Promise<GetElasticIpResult>
+getElasticIp(args?: GetElasticIpArgs, opts?: pulumi.InvokeOptions): Promise<GetElasticIpResult>
 ```
 
 
@@ -287,7 +358,7 @@ public IP as an input variable and needs to determine the other.
 </h2>
 
 ```typescript
-getIpRanges(args: GetIpRangesArgs): Promise<GetIpRangesResult>
+getIpRanges(args: GetIpRangesArgs, opts?: pulumi.InvokeOptions): Promise<GetIpRangesResult>
 ```
 
 
@@ -298,7 +369,7 @@ Use this data source to get the [IP ranges][1] of various AWS products and servi
 </h2>
 
 ```typescript
-getPartition(): Promise<GetPartitionResult>
+getPartition(opts?: pulumi.InvokeOptions): Promise<GetPartitionResult>
 ```
 
 
@@ -309,7 +380,7 @@ Use this data source to lookup current AWS partition in which Terraform is worki
 </h2>
 
 ```typescript
-getPrefixList(args?: GetPrefixListArgs): Promise<GetPrefixListResult>
+getPrefixList(args?: GetPrefixListArgs, opts?: pulumi.InvokeOptions): Promise<GetPrefixListResult>
 ```
 
 
@@ -326,7 +397,7 @@ rules.
 </h2>
 
 ```typescript
-getRegion(args?: GetRegionArgs): Promise<GetRegionResult>
+getRegion(args?: GetRegionArgs, opts?: pulumi.InvokeOptions): Promise<GetRegionResult>
 ```
 
 
@@ -348,7 +419,7 @@ A collection of arguments for invoking getAmi.
 </h3>
 
 ```typescript
-executableUsers?: pulumi.Input<pulumi.Input<string>[]>;
+executableUsers?: string[];
 ```
 
 
@@ -360,7 +431,7 @@ the image. Valid items are the numeric account ID or `self`.
 </h3>
 
 ```typescript
-filters?: pulumi.Input<{ ... }[]>;
+filters?: { ... }[];
 ```
 
 
@@ -373,7 +444,7 @@ several valid keys, for a full reference, check out
 </h3>
 
 ```typescript
-mostRecent?: pulumi.Input<boolean>;
+mostRecent?: boolean;
 ```
 
 
@@ -385,7 +456,7 @@ recent AMI.
 </h3>
 
 ```typescript
-nameRegex?: pulumi.Input<string>;
+nameRegex?: string;
 ```
 
 
@@ -400,7 +471,7 @@ options to narrow down the list AWS returns.
 </h3>
 
 ```typescript
-owners?: pulumi.Input<pulumi.Input<string>[]>;
+owners?: string[];
 ```
 
 
@@ -412,7 +483,7 @@ account ID, `amazon`, or `self`.
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="GetAmiIdsArgs">
@@ -426,7 +497,7 @@ A collection of arguments for invoking getAmiIds.
 </h3>
 
 ```typescript
-executableUsers?: pulumi.Input<pulumi.Input<string>[]>;
+executableUsers?: string[];
 ```
 
 
@@ -438,7 +509,7 @@ permission on  the image. Valid items are the numeric account ID or `self`.
 </h3>
 
 ```typescript
-filters?: pulumi.Input<{ ... }[]>;
+filters?: { ... }[];
 ```
 
 
@@ -451,7 +522,7 @@ are several valid keys, for a full reference, check out
 </h3>
 
 ```typescript
-nameRegex?: pulumi.Input<string>;
+nameRegex?: string;
 ```
 
 
@@ -466,7 +537,7 @@ options to narrow down the list AWS returns.
 </h3>
 
 ```typescript
-owners?: pulumi.Input<pulumi.Input<string>[]>;
+owners?: string[];
 ```
 
 
@@ -817,7 +888,7 @@ A collection of arguments for invoking getArn.
 </h3>
 
 ```typescript
-arn: pulumi.Input<string>;
+arn: string;
 ```
 
 
@@ -908,7 +979,7 @@ A collection of arguments for invoking getAutoscalingGroups.
 </h3>
 
 ```typescript
-filters?: pulumi.Input<{ ... }[]>;
+filters?: { ... }[];
 ```
 
 
@@ -953,7 +1024,7 @@ A collection of arguments for invoking getAvailabilityZone.
 </h3>
 
 ```typescript
-name?: pulumi.Input<string>;
+name?: string;
 ```
 
 
@@ -964,7 +1035,7 @@ The full name of the availability zone to select.
 </h3>
 
 ```typescript
-state?: pulumi.Input<string>;
+state?: string;
 ```
 
 
@@ -1046,7 +1117,7 @@ A collection of arguments for invoking getAvailabilityZones.
 </h3>
 
 ```typescript
-state?: pulumi.Input<string>;
+state?: string;
 ```
 
 
@@ -1200,7 +1271,7 @@ A collection of arguments for invoking getElasticIp.
 </h3>
 
 ```typescript
-id?: pulumi.Input<string>;
+id?: string;
 ```
 
 
@@ -1211,7 +1282,7 @@ The allocation id of the specific EIP to retrieve.
 </h3>
 
 ```typescript
-publicIp?: pulumi.Input<string>;
+publicIp?: string;
 ```
 
 
@@ -1250,7 +1321,7 @@ A collection of arguments for invoking getIpRanges.
 </h3>
 
 ```typescript
-regions?: pulumi.Input<pulumi.Input<string>[]>;
+regions?: string[];
 ```
 
 
@@ -1263,7 +1334,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
 </h3>
 
 ```typescript
-services: pulumi.Input<pulumi.Input<string>[]>;
+services: string[];
 ```
 
 
@@ -1357,7 +1428,7 @@ A collection of arguments for invoking getPrefixList.
 </h3>
 
 ```typescript
-name?: pulumi.Input<string>;
+name?: string;
 ```
 
 
@@ -1368,7 +1439,7 @@ The name of the prefix list to select.
 </h3>
 
 ```typescript
-prefixListId?: pulumi.Input<string>;
+prefixListId?: string;
 ```
 
 
@@ -1425,7 +1496,7 @@ A collection of arguments for invoking getRegion.
 </h3>
 
 ```typescript
-current?: pulumi.Input<boolean>;
+current?: boolean;
 ```
 
 <h3 class="pdoc-member-header">
@@ -1433,7 +1504,7 @@ current?: pulumi.Input<boolean>;
 </h3>
 
 ```typescript
-endpoint?: pulumi.Input<string>;
+endpoint?: string;
 ```
 
 
@@ -1444,7 +1515,7 @@ The EC2 endpoint of the region to select.
 </h3>
 
 ```typescript
-name?: pulumi.Input<string>;
+name?: string;
 ```
 
 
@@ -1469,7 +1540,18 @@ current: boolean;
 provider, or `false` otherwise.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts#L50">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts#L50">property description</a>
+</h3>
+
+```typescript
+description: string;
+```
+
+
+The region's description in this format: "Location (Region name)".
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts#L54">property endpoint</a>
 </h3>
 
 ```typescript
@@ -1480,7 +1562,7 @@ endpoint: string;
 The EC2 endpoint for the selected region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts#L58">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts#L62">property id</a>
 </h3>
 
 ```typescript
@@ -1491,7 +1573,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts#L54">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getRegion.ts#L58">property name</a>
 </h3>
 
 ```typescript
@@ -1500,6 +1582,209 @@ name: string;
 
 
 The name of the selected region.
+
+<h2 class="pdoc-module-header" id="ProviderArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L52">interface ProviderArgs</a>
+</h2>
+
+The set of arguments for constructing a Provider resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L57">property accessKey</a>
+</h3>
+
+```typescript
+accessKey?: pulumi.Input<string>;
+```
+
+
+The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS
+console.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L58">property allowedAccountIds</a>
+</h3>
+
+```typescript
+allowedAccountIds?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L59">property assumeRole</a>
+</h3>
+
+```typescript
+assumeRole?: pulumi.Input<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L60">property endpoints</a>
+</h3>
+
+```typescript
+endpoints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L61">property forbiddenAccountIds</a>
+</h3>
+
+```typescript
+forbiddenAccountIds?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L65">property insecure</a>
+</h3>
+
+```typescript
+insecure?: pulumi.Input<boolean>;
+```
+
+
+Explicitly allow the provider to perform "insecure" SSL requests. If omitted,default value is `false`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L70">property maxRetries</a>
+</h3>
+
+```typescript
+maxRetries?: pulumi.Input<number>;
+```
+
+
+The maximum number of times an AWS API request is being executed. If the API request still fails, an error is
+thrown.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L74">property profile</a>
+</h3>
+
+```typescript
+profile?: pulumi.Input<string>;
+```
+
+
+The profile for API operations. If not set, the default profile created with `aws configure` will be used.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L78">property region</a>
+</h3>
+
+```typescript
+region: pulumi.Input<Region>;
+```
+
+
+The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L84">property s3ForcePathStyle</a>
+</h3>
+
+```typescript
+s3ForcePathStyle?: pulumi.Input<boolean>;
+```
+
+
+Set this to true to force the request to use path-style addressing, i.e., http://s3.amazonaws.com/BUCKET/KEY. By
+default, the S3 client will use virtual hosted bucket addressing when possible (http://BUCKET.s3.amazonaws.com/KEY).
+Specific to the Amazon S3 service.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L89">property secretKey</a>
+</h3>
+
+```typescript
+secretKey?: pulumi.Input<string>;
+```
+
+
+The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS
+console.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L93">property sharedCredentialsFile</a>
+</h3>
+
+```typescript
+sharedCredentialsFile?: pulumi.Input<string>;
+```
+
+
+The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L98">property skipCredentialsValidation</a>
+</h3>
+
+```typescript
+skipCredentialsValidation?: pulumi.Input<boolean>;
+```
+
+
+Skip the credentials validation via STS API. Used for AWS API implementations that do not have STS
+available/implemented.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L102">property skipGetEc2Platforms</a>
+</h3>
+
+```typescript
+skipGetEc2Platforms?: pulumi.Input<boolean>;
+```
+
+
+Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L103">property skipMetadataApiCheck</a>
+</h3>
+
+```typescript
+skipMetadataApiCheck?: pulumi.Input<boolean>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L108">property skipRegionValidation</a>
+</h3>
+
+```typescript
+skipRegionValidation?: pulumi.Input<boolean>;
+```
+
+
+Skip static validation of region name. Used by users of alternative AWS-like APIs or users w/ access to regions that
+are not public (yet).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L112">property skipRequestingAccountId</a>
+</h3>
+
+```typescript
+skipRequestingAccountId?: pulumi.Input<boolean>;
+```
+
+
+Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L116">property token</a>
+</h3>
+
+```typescript
+token?: pulumi.Input<string>;
+```
+
+
+session token. A session token is only required if you are using temporary security credentials.
+
+<h2 class="pdoc-module-header" id="Tags">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/tags.ts#L19">interface Tags</a>
+</h2>
+
+Tags represents a set of key-value string pairs to which can be applied
+to an AWS resource.
 
 <h2 class="pdoc-module-header" id="APNortheast1Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L15">let APNortheast1Region</a>

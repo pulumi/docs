@@ -50,7 +50,7 @@ Provides a Load Balancer Listener resource.
 </h3>
 
 ```typescript
-new Listener(name: string, args: ListenerArgs, opts?: pulumi.ResourceOptions)
+new Listener(name: string, args: ListenerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -73,7 +73,15 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -118,7 +126,7 @@ public defaultActions: pulumi.Output<{ ... }[]>;
 An Action block. Action blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -200,7 +208,7 @@ This resource is for additional certificates and does not replace the default ce
 </h3>
 
 ```typescript
-new ListenerCertificate(name: string, args: ListenerCertificateArgs, opts?: pulumi.ResourceOptions)
+new ListenerCertificate(name: string, args: ListenerCertificateArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -223,7 +231,15 @@ Get an existing ListenerCertificate resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -246,7 +262,7 @@ public certificateArn: pulumi.Output<string>;
 The ARN of the certificate to attach to the listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -293,7 +309,7 @@ Provides a Load Balancer Listener Rule resource.
 </h3>
 
 ```typescript
-new ListenerRule(name: string, args: ListenerRuleArgs, opts?: pulumi.ResourceOptions)
+new ListenerRule(name: string, args: ListenerRuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -316,7 +332,15 @@ Get an existing ListenerRule resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -361,7 +385,7 @@ public conditions: pulumi.Output<{ ... }[]>;
 A Condition block. Condition blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -419,7 +443,7 @@ Provides a Load Balancer resource.
 </h3>
 
 ```typescript
-new LoadBalancer(name: string, args?: LoadBalancerArgs, opts?: pulumi.ResourceOptions)
+new LoadBalancer(name: string, args?: LoadBalancerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -442,7 +466,15 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -533,7 +565,7 @@ public enableHttp2: pulumi.Output<boolean | undefined>;
 Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -702,7 +734,7 @@ Provides a Target Group resource for use with Load Balancer resources.
 </h3>
 
 ```typescript
-new TargetGroup(name: string, args: TargetGroupArgs, opts?: pulumi.ResourceOptions)
+new TargetGroup(name: string, args: TargetGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -725,7 +757,15 @@ Get an existing TargetGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -781,7 +821,7 @@ public healthCheck: pulumi.Output<{ ... }>;
 A Health Check block. Health Check blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -933,7 +973,7 @@ target group
 </h3>
 
 ```typescript
-new TargetGroupAttachment(name: string, args: TargetGroupAttachmentArgs, opts?: pulumi.ResourceOptions)
+new TargetGroupAttachment(name: string, args: TargetGroupAttachmentArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -956,7 +996,15 @@ Get an existing TargetGroupAttachment resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -979,7 +1027,7 @@ public availabilityZone: pulumi.Output<string | undefined>;
 The Availability Zone where the IP address of the target is to be registered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1040,7 +1088,7 @@ deployments.
 </h2>
 
 ```typescript
-getListener(args?: GetListenerArgs): Promise<GetListenerResult>
+getListener(args?: GetListenerArgs, opts?: pulumi.InvokeOptions): Promise<GetListenerResult>
 ```
 
 
@@ -1057,7 +1105,7 @@ information specific to the listener in question.
 </h2>
 
 ```typescript
-getLoadBalancer(args?: GetLoadBalancerArgs): Promise<GetLoadBalancerResult>
+getLoadBalancer(args?: GetLoadBalancerArgs, opts?: pulumi.InvokeOptions): Promise<GetLoadBalancerResult>
 ```
 
 
@@ -1074,7 +1122,7 @@ with it, etc.
 </h2>
 
 ```typescript
-getTargetGroup(args?: GetTargetGroupArgs): Promise<GetTargetGroupResult>
+getTargetGroup(args?: GetTargetGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetTargetGroupResult>
 ```
 
 
@@ -1097,7 +1145,7 @@ A collection of arguments for invoking getListener.
 </h3>
 
 ```typescript
-arn?: pulumi.Input<string>;
+arn?: string;
 ```
 
 
@@ -1108,7 +1156,7 @@ The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
 </h3>
 
 ```typescript
-loadBalancerArn?: pulumi.Input<string>;
+loadBalancerArn?: string;
 ```
 
 
@@ -1119,7 +1167,7 @@ The arn of the load balander. Required if `arn` is not set.
 </h3>
 
 ```typescript
-port?: pulumi.Input<number>;
+port?: number;
 ```
 
 
@@ -1209,7 +1257,7 @@ A collection of arguments for invoking getLoadBalancer.
 </h3>
 
 ```typescript
-arn?: pulumi.Input<string>;
+arn?: string;
 ```
 
 
@@ -1220,7 +1268,7 @@ The full ARN of the load balancer.
 </h3>
 
 ```typescript
-name?: pulumi.Input<string>;
+name?: string;
 ```
 
 
@@ -1231,7 +1279,7 @@ The unique name of the load balancer.
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="GetLoadBalancerResult">
@@ -1382,7 +1430,7 @@ A collection of arguments for invoking getTargetGroup.
 </h3>
 
 ```typescript
-arn?: pulumi.Input<string>;
+arn?: string;
 ```
 
 
@@ -1393,7 +1441,7 @@ The full ARN of the target group.
 </h3>
 
 ```typescript
-name?: pulumi.Input<string>;
+name?: string;
 ```
 
 
@@ -1404,7 +1452,7 @@ The unique name of the target group.
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="GetTargetGroupResult">
@@ -1534,7 +1582,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
 </h3>
 
 ```typescript
-defaultActions: pulumi.Input<{ ... }[]>;
+defaultActions: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1651,7 +1699,7 @@ The set of arguments for constructing a ListenerRule resource.
 </h3>
 
 ```typescript
-actions: pulumi.Input<{ ... }[]>;
+actions: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1662,7 +1710,7 @@ An Action block. Action blocks are documented below.
 </h3>
 
 ```typescript
-conditions: pulumi.Input<{ ... }[]>;
+conditions: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1701,7 +1749,7 @@ Input properties used for looking up and filtering ListenerRule resources.
 </h3>
 
 ```typescript
-actions?: pulumi.Input<{ ... }[]>;
+actions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1723,7 +1771,7 @@ The ARN of the rule (matches `id`)
 </h3>
 
 ```typescript
-conditions?: pulumi.Input<{ ... }[]>;
+conditions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1784,7 +1832,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
 </h3>
 
 ```typescript
-defaultActions?: pulumi.Input<{ ... }[]>;
+defaultActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1970,7 +2018,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
 </h3>
 
 ```typescript
-subnetMappings?: pulumi.Input<{ ... }[]>;
+subnetMappings?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2169,7 +2217,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
 </h3>
 
 ```typescript
-subnetMappings?: pulumi.Input<{ ... }[]>;
+subnetMappings?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

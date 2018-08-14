@@ -45,7 +45,7 @@ brief downtime as the broker reboots.
 </h3>
 
 ```typescript
-new Broker(name: string, args: BrokerArgs, opts?: pulumi.ResourceOptions)
+new Broker(name: string, args: BrokerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -68,7 +68,15 @@ Get an existing Broker resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -180,7 +188,7 @@ public hostInstanceType: pulumi.Output<string>;
 The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -289,7 +297,7 @@ For more information on Amazon MQ, see [Amazon MQ documentation](https://docs.aw
 </h3>
 
 ```typescript
-new Configuration(name: string, args: ConfigurationArgs, opts?: pulumi.ResourceOptions)
+new Configuration(name: string, args: ConfigurationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -312,7 +320,15 @@ Get an existing Configuration resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -381,7 +397,7 @@ public engineVersion: pulumi.Output<string>;
 The version of the broker engine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -431,7 +447,7 @@ deployments.
 </h2>
 
 ```typescript
-getBroker(args?: GetBrokerArgs): Promise<GetBrokerResult>
+getBroker(args?: GetBrokerArgs, opts?: pulumi.InvokeOptions): Promise<GetBrokerResult>
 ```
 
 
@@ -581,7 +597,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
 </h3>
 
 ```typescript
-users: pulumi.Input<{ ... }[]>;
+users: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -698,7 +714,7 @@ The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 </h3>
 
 ```typescript
-instances?: pulumi.Input<{ ... }[]>;
+instances?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -760,7 +776,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
 </h3>
 
 ```typescript
-users?: pulumi.Input<{ ... }[]>;
+users?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -925,7 +941,7 @@ A collection of arguments for invoking getBroker.
 </h3>
 
 ```typescript
-brokerId?: pulumi.Input<string>;
+brokerId?: string;
 ```
 
 
@@ -936,7 +952,7 @@ The unique id of the mq broker.
 </h3>
 
 ```typescript
-brokerName?: pulumi.Input<string>;
+brokerName?: string;
 ```
 
 

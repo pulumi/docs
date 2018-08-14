@@ -6,6 +6,10 @@ title: Module admissionregistration/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isMutatingWebhookConfiguration">function isMutatingWebhookConfiguration</a>
+* <a href="#isMutatingWebhookConfigurationList">function isMutatingWebhookConfigurationList</a>
+* <a href="#isValidatingWebhookConfiguration">function isValidatingWebhookConfiguration</a>
+* <a href="#isValidatingWebhookConfigurationList">function isValidatingWebhookConfigurationList</a>
 * <a href="#MutatingWebhookConfiguration">interface MutatingWebhookConfiguration</a>
 * <a href="#MutatingWebhookConfigurationList">interface MutatingWebhookConfigurationList</a>
 * <a href="#RuleWithOperations">interface RuleWithOperations</a>
@@ -15,8 +19,40 @@ title: Module admissionregistration/v1beta1
 * <a href="#Webhook">interface Webhook</a>
 * <a href="#WebhookClientConfig">interface WebhookClientConfig</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isMutatingWebhookConfiguration">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L179">function isMutatingWebhookConfiguration</a>
+</h2>
+
+```typescript
+isMutatingWebhookConfiguration(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isMutatingWebhookConfigurationList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L216">function isMutatingWebhookConfigurationList</a>
+</h2>
+
+```typescript
+isMutatingWebhookConfigurationList(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isValidatingWebhookConfiguration">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L316">function isValidatingWebhookConfiguration</a>
+</h2>
+
+```typescript
+isValidatingWebhookConfiguration(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isValidatingWebhookConfigurationList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L353">function isValidatingWebhookConfigurationList</a>
+</h2>
+
+```typescript
+isValidatingWebhookConfigurationList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="MutatingWebhookConfiguration">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L137">interface MutatingWebhookConfiguration</a>

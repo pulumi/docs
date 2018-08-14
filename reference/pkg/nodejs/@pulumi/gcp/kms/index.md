@@ -57,7 +57,7 @@ from state and delete all CryptoKeyVersions, rendering the key unusable, but **w
 </h3>
 
 ```typescript
-new CryptoKey(name: string, args: CryptoKeyArgs, opts?: pulumi.ResourceOptions)
+new CryptoKey(name: string, args: CryptoKeyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -80,7 +80,15 @@ Get an existing CryptoKey resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -92,7 +100,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -164,7 +172,7 @@ an existing Google Cloud KMS crypto key.
 </h3>
 
 ```typescript
-new CryptoKeyIAMBinding(name: string, args: CryptoKeyIAMBindingArgs, opts?: pulumi.ResourceOptions)
+new CryptoKeyIAMBinding(name: string, args: CryptoKeyIAMBindingArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -187,7 +195,15 @@ Get an existing CryptoKeyIAMBinding resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -224,7 +240,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the crypto key's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -288,7 +304,7 @@ the IAM policy for an existing Google Cloud KMS crypto key.
 </h3>
 
 ```typescript
-new CryptoKeyIAMMember(name: string, args: CryptoKeyIAMMemberArgs, opts?: pulumi.ResourceOptions)
+new CryptoKeyIAMMember(name: string, args: CryptoKeyIAMMemberArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -311,7 +327,15 @@ Get an existing CryptoKeyIAMMember resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -348,7 +372,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the project's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -414,7 +438,7 @@ from state but **will not delete the resource on the server**.
 </h3>
 
 ```typescript
-new KeyRing(name: string, args: KeyRingArgs, opts?: pulumi.ResourceOptions)
+new KeyRing(name: string, args: KeyRingArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -437,7 +461,15 @@ Get an existing KeyRing resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -449,7 +481,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -527,7 +559,7 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 </h3>
 
 ```typescript
-new KeyRingIAMBinding(name: string, args: KeyRingIAMBindingArgs, opts?: pulumi.ResourceOptions)
+new KeyRingIAMBinding(name: string, args: KeyRingIAMBindingArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -550,7 +582,15 @@ Get an existing KeyRingIAMBinding resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -573,7 +613,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the key ring's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -650,7 +690,7 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 </h3>
 
 ```typescript
-new KeyRingIAMMember(name: string, args: KeyRingIAMMemberArgs, opts?: pulumi.ResourceOptions)
+new KeyRingIAMMember(name: string, args: KeyRingIAMMemberArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -673,7 +713,15 @@ Get an existing KeyRingIAMMember resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -696,7 +744,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the key ring's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -773,7 +821,7 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 </h3>
 
 ```typescript
-new KeyRingIAMPolicy(name: string, args: KeyRingIAMPolicyArgs, opts?: pulumi.ResourceOptions)
+new KeyRingIAMPolicy(name: string, args: KeyRingIAMPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -796,7 +844,15 @@ Get an existing KeyRingIAMPolicy resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -819,7 +875,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the key ring's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -874,14 +930,14 @@ deployments.
 
  Creates a device registry in Google's Cloud IoT Core platform. For more information see
 [the official documentation](https://cloud.google.com/iot/docs/) and
-[API](https://cloud.google.com/iot/docs/reference/rest/v1/projects.locations.registries).
+[API](https://cloud.google.com/iot/docs/reference/cloudiot/rest/v1/projects.locations.registries).
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/registry.ts#L57">constructor</a>
 </h3>
 
 ```typescript
-new Registry(name: string, args?: RegistryArgs, opts?: pulumi.ResourceOptions)
+new Registry(name: string, args?: RegistryArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -904,7 +960,15 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -949,7 +1013,7 @@ public httpConfig: pulumi.Output<{ ... } | undefined>;
 Activate or deactivate HTTP. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1033,7 +1097,7 @@ deployments.
 </h2>
 
 ```typescript
-getKMSSecret(args: GetKMSSecretArgs): Promise<GetKMSSecretResult>
+getKMSSecret(args: GetKMSSecretArgs, opts?: pulumi.InvokeOptions): Promise<GetKMSSecretResult>
 ```
 
 
@@ -1341,7 +1405,7 @@ A collection of arguments for invoking getKMSSecret.
 </h3>
 
 ```typescript
-ciphertext: pulumi.Input<string>;
+ciphertext: string;
 ```
 
 
@@ -1352,7 +1416,7 @@ The ciphertext to be decrypted, encoded in base64
 </h3>
 
 ```typescript
-cryptoKey: pulumi.Input<string>;
+cryptoKey: string;
 ```
 
 
@@ -1365,6 +1429,17 @@ decrypt the provided ciphertext. This is represented by the format
 </h2>
 
 A collection of values returned by getKMSSecret.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/getKMSSecret.ts#L52">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/getKMSSecret.ts#L48">property plaintext</a>
@@ -1733,7 +1808,7 @@ The set of arguments for constructing a Registry resource.
 </h3>
 
 ```typescript
-credentials?: pulumi.Input<{ ... }[]>;
+credentials?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1828,7 +1903,7 @@ Input properties used for looking up and filtering Registry resources.
 </h3>
 
 ```typescript
-credentials?: pulumi.Input<{ ... }[]>;
+credentials?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

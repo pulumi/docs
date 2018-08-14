@@ -57,7 +57,7 @@ Provides a WAF Byte Match Set Resource
 </h3>
 
 ```typescript
-new ByteMatchSet(name: string, args?: ByteMatchSetArgs, opts?: pulumi.ResourceOptions)
+new ByteMatchSet(name: string, args?: ByteMatchSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -80,7 +80,15 @@ Get an existing ByteMatchSet resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -105,7 +113,7 @@ with ASCII characters) that you want to search for in web requests,
 the location in requests that you want to search, and other settings.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -150,7 +158,7 @@ Provides a WAF Geo Match Set Resource
 </h3>
 
 ```typescript
-new GeoMatchSet(name: string, args?: GeoMatchSetArgs, opts?: pulumi.ResourceOptions)
+new GeoMatchSet(name: string, args?: GeoMatchSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -173,7 +181,15 @@ Get an existing GeoMatchSet resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -196,7 +212,7 @@ public geoMatchConstraints: pulumi.Output<{ ... }[] | undefined>;
 The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -241,7 +257,7 @@ Provides a WAF IPSet Resource
 </h3>
 
 ```typescript
-new IpSet(name: string, args?: IpSetArgs, opts?: pulumi.ResourceOptions)
+new IpSet(name: string, args?: IpSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -264,7 +280,15 @@ Get an existing IpSet resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -287,7 +311,7 @@ public arn: pulumi.Output<string>;
 The ARN of the WAF IPSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -343,7 +367,7 @@ Provides a WAF Rate Based Rule Resource
 </h3>
 
 ```typescript
-new RateBasedRule(name: string, args: RateBasedRuleArgs, opts?: pulumi.ResourceOptions)
+new RateBasedRule(name: string, args: RateBasedRuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -366,7 +390,15 @@ Get an existing RateBasedRule resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -378,7 +410,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -467,7 +499,7 @@ Provides a WAF Regex Match Set Resource
 </h3>
 
 ```typescript
-new RegexMatchSet(name: string, args?: RegexMatchSetArgs, opts?: pulumi.ResourceOptions)
+new RegexMatchSet(name: string, args?: RegexMatchSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -490,7 +522,15 @@ Get an existing RegexMatchSet resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -502,7 +542,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -559,7 +599,7 @@ Provides a WAF Regex Pattern Set Resource
 </h3>
 
 ```typescript
-new RegexPatternSet(name: string, args?: RegexPatternSetArgs, opts?: pulumi.ResourceOptions)
+new RegexPatternSet(name: string, args?: RegexPatternSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -582,7 +622,15 @@ Get an existing RegexPatternSet resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -594,7 +642,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -650,7 +698,7 @@ Provides a WAF Rule Resource
 </h3>
 
 ```typescript
-new Rule(name: string, args: RuleArgs, opts?: pulumi.ResourceOptions)
+new Rule(name: string, args: RuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -673,7 +721,15 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -685,7 +741,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -752,7 +808,7 @@ Provides a WAF Rule Group Resource
 </h3>
 
 ```typescript
-new RuleGroup(name: string, args: RuleGroupArgs, opts?: pulumi.ResourceOptions)
+new RuleGroup(name: string, args: RuleGroupArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -775,7 +831,15 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -798,7 +862,7 @@ public activatedRules: pulumi.Output<{ ... }[] | undefined>;
 A list of activated rules, see below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -854,7 +918,7 @@ Provides a WAF Size Constraint Set Resource
 </h3>
 
 ```typescript
-new SizeConstraintSet(name: string, args?: SizeConstraintSetArgs, opts?: pulumi.ResourceOptions)
+new SizeConstraintSet(name: string, args?: SizeConstraintSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -877,7 +941,15 @@ Get an existing SizeConstraintSet resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -889,7 +961,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -945,7 +1017,7 @@ Provides a WAF SQL Injection Match Set Resource
 </h3>
 
 ```typescript
-new SqlInjectionMatchSet(name: string, args?: SqlInjectionMatchSetArgs, opts?: pulumi.ResourceOptions)
+new SqlInjectionMatchSet(name: string, args?: SqlInjectionMatchSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -968,7 +1040,15 @@ Get an existing SqlInjectionMatchSet resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -980,7 +1060,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1036,7 +1116,7 @@ Provides a WAF Web ACL Resource
 </h3>
 
 ```typescript
-new WebAcl(name: string, args: WebAclArgs, opts?: pulumi.ResourceOptions)
+new WebAcl(name: string, args: WebAclArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1059,7 +1139,15 @@ Get an existing WebAcl resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1082,7 +1170,7 @@ public defaultAction: pulumi.Output<{ ... }>;
 The action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1149,7 +1237,7 @@ Provides a WAF XSS Match Set Resource
 </h3>
 
 ```typescript
-new XssMatchSet(name: string, args?: XssMatchSetArgs, opts?: pulumi.ResourceOptions)
+new XssMatchSet(name: string, args?: XssMatchSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1172,7 +1260,15 @@ Get an existing XssMatchSet resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1184,7 +1280,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1240,7 +1336,7 @@ The set of arguments for constructing a ByteMatchSet resource.
 </h3>
 
 ```typescript
-byteMatchTuples?: pulumi.Input<{ ... }[]>;
+byteMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1270,7 +1366,7 @@ Input properties used for looking up and filtering ByteMatchSet resources.
 </h3>
 
 ```typescript
-byteMatchTuples?: pulumi.Input<{ ... }[]>;
+byteMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1300,7 +1396,7 @@ The set of arguments for constructing a GeoMatchSet resource.
 </h3>
 
 ```typescript
-geoMatchConstraints?: pulumi.Input<{ ... }[]>;
+geoMatchConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1328,7 +1424,7 @@ Input properties used for looking up and filtering GeoMatchSet resources.
 </h3>
 
 ```typescript
-geoMatchConstraints?: pulumi.Input<{ ... }[]>;
+geoMatchConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1356,7 +1452,7 @@ The set of arguments for constructing a IpSet resource.
 </h3>
 
 ```typescript
-ipSetDescriptors?: pulumi.Input<{ ... }[]>;
+ipSetDescriptors?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1395,7 +1491,7 @@ The ARN of the WAF IPSet.
 </h3>
 
 ```typescript
-ipSetDescriptors?: pulumi.Input<{ ... }[]>;
+ipSetDescriptors?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1445,7 +1541,7 @@ The name or description of the rule.
 </h3>
 
 ```typescript
-predicates?: pulumi.Input<{ ... }[]>;
+predicates?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1506,7 +1602,7 @@ The name or description of the rule.
 </h3>
 
 ```typescript
-predicates?: pulumi.Input<{ ... }[]>;
+predicates?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1556,7 +1652,7 @@ The name or description of the Regex Match Set.
 </h3>
 
 ```typescript
-regexMatchTuples?: pulumi.Input<{ ... }[]>;
+regexMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1585,7 +1681,7 @@ The name or description of the Regex Match Set.
 </h3>
 
 ```typescript
-regexMatchTuples?: pulumi.Input<{ ... }[]>;
+regexMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1681,7 +1777,7 @@ The name or description of the rule.
 </h3>
 
 ```typescript
-predicates?: pulumi.Input<{ ... }[]>;
+predicates?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1698,7 +1794,7 @@ The set of arguments for constructing a RuleGroup resource.
 </h3>
 
 ```typescript
-activatedRules?: pulumi.Input<{ ... }[]>;
+activatedRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1737,7 +1833,7 @@ Input properties used for looking up and filtering RuleGroup resources.
 </h3>
 
 ```typescript
-activatedRules?: pulumi.Input<{ ... }[]>;
+activatedRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1798,7 +1894,7 @@ The name or description of the rule.
 </h3>
 
 ```typescript
-predicates?: pulumi.Input<{ ... }[]>;
+predicates?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1826,7 +1922,7 @@ The name or description of the Size Constraint Set.
 </h3>
 
 ```typescript
-sizeConstraints?: pulumi.Input<{ ... }[]>;
+sizeConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1854,7 +1950,7 @@ The name or description of the Size Constraint Set.
 </h3>
 
 ```typescript
-sizeConstraints?: pulumi.Input<{ ... }[]>;
+sizeConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1882,7 +1978,7 @@ The name or description of the SizeConstraintSet.
 </h3>
 
 ```typescript
-sqlInjectionMatchTuples?: pulumi.Input<{ ... }[]>;
+sqlInjectionMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1910,7 +2006,7 @@ The name or description of the SizeConstraintSet.
 </h3>
 
 ```typescript
-sqlInjectionMatchTuples?: pulumi.Input<{ ... }[]>;
+sqlInjectionMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1960,7 +2056,7 @@ The name or description of the web ACL.
 </h3>
 
 ```typescript
-rules?: pulumi.Input<{ ... }[]>;
+rules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2010,7 +2106,7 @@ The name or description of the web ACL.
 </h3>
 
 ```typescript
-rules?: pulumi.Input<{ ... }[]>;
+rules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2038,7 +2134,7 @@ The name or description of the SizeConstraintSet.
 </h3>
 
 ```typescript
-xssMatchTuples?: pulumi.Input<{ ... }[]>;
+xssMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2066,7 +2162,7 @@ The name or description of the SizeConstraintSet.
 </h3>
 
 ```typescript
-xssMatchTuples?: pulumi.Input<{ ... }[]>;
+xssMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

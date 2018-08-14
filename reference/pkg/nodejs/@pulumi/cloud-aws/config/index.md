@@ -6,12 +6,6 @@ title: Module config
 
 <h2 class="pdoc-module-header">Index</h2>
 
-* <a href="#config">const config</a>
-* <a href="#externalPublicSubnetsString">const externalPublicSubnetsString</a>
-* <a href="#externalSecurityGroupsString">const externalSecurityGroupsString</a>
-* <a href="#externalSubnetsString">const externalSubnetsString</a>
-* <a href="#functionIncludePackagesString">const functionIncludePackagesString</a>
-* <a href="#functionIncludePathsString">const functionIncludePathsString</a>
 * <a href="#setEcsCluster">function setEcsCluster</a>
 * <a href="#acmCertificateARN">let acmCertificateARN</a>
 * <a href="#computeIAMRolePolicyARNs">let computeIAMRolePolicyARNs</a>
@@ -42,54 +36,6 @@ title: Module config
 
 <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts">config/index.ts</a> 
 
-
-<h2 class="pdoc-module-header" id="config">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L19">const config</a>
-</h2>
-
-```typescript
-const config: Config =  new pulumi.Config("cloud-aws");
-```
-
-<h2 class="pdoc-module-header" id="externalPublicSubnetsString">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L99">const externalPublicSubnetsString</a>
-</h2>
-
-```typescript
-const externalPublicSubnetsString: undefined | string =  config.get("externalPublicSubnets");
-```
-
-<h2 class="pdoc-module-header" id="externalSecurityGroupsString">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L108">const externalSecurityGroupsString</a>
-</h2>
-
-```typescript
-const externalSecurityGroupsString: undefined | string =  config.get("externalSecurityGroups");
-```
-
-<h2 class="pdoc-module-header" id="externalSubnetsString">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L90">const externalSubnetsString</a>
-</h2>
-
-```typescript
-const externalSubnetsString: undefined | string =  config.get("externalSubnets");
-```
-
-<h2 class="pdoc-module-header" id="functionIncludePackagesString">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L42">const functionIncludePackagesString</a>
-</h2>
-
-```typescript
-const functionIncludePackagesString: undefined | string =  config.get("functionIncludePackages");
-```
-
-<h2 class="pdoc-module-header" id="functionIncludePathsString">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L32">const functionIncludePathsString</a>
-</h2>
-
-```typescript
-const functionIncludePathsString: undefined | string =  config.get("functionIncludePaths");
-```
 
 <h2 class="pdoc-module-header" id="setEcsCluster">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L190">function setEcsCluster</a>

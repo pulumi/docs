@@ -6,14 +6,41 @@ title: Module policy/v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#isEviction">function isEviction</a>
+* <a href="#isPodDisruptionBudget">function isPodDisruptionBudget</a>
+* <a href="#isPodDisruptionBudgetList">function isPodDisruptionBudgetList</a>
 * <a href="#Eviction">interface Eviction</a>
 * <a href="#PodDisruptionBudget">interface PodDisruptionBudget</a>
 * <a href="#PodDisruptionBudgetList">interface PodDisruptionBudgetList</a>
 * <a href="#PodDisruptionBudgetSpec">interface PodDisruptionBudgetSpec</a>
 * <a href="#PodDisruptionBudgetStatus">interface PodDisruptionBudgetStatus</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="isEviction">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L15591">function isEviction</a>
+</h2>
+
+```typescript
+isEviction(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPodDisruptionBudget">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L15631">function isPodDisruptionBudget</a>
+</h2>
+
+```typescript
+isPodDisruptionBudget(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isPodDisruptionBudgetList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L15663">function isPodDisruptionBudgetList</a>
+</h2>
+
+```typescript
+isPodDisruptionBudgetList(o: any): boolean
+```
 
 <h2 class="pdoc-module-header" id="Eviction">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14749">interface Eviction</a>

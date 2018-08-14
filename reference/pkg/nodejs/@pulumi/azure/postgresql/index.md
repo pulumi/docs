@@ -33,7 +33,7 @@ Sets a PostgreSQL Configuration value on a PostgreSQL Server.
 </h3>
 
 ```typescript
-new Configuration(name: string, args: ConfigurationArgs, opts?: pulumi.ResourceOptions)
+new Configuration(name: string, args: ConfigurationArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -56,7 +56,15 @@ Get an existing Configuration resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -68,7 +76,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -146,7 +154,7 @@ Manages a PostgreSQL Database within a PostgreSQL Server
 </h3>
 
 ```typescript
-new Database(name: string, args: DatabaseArgs, opts?: pulumi.ResourceOptions)
+new Database(name: string, args: DatabaseArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -169,7 +177,15 @@ Get an existing Database resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -203,7 +219,7 @@ public collation: pulumi.Output<string>;
 Specifies the Collation for the PostgreSQL Database, which needs [to be a valid PostgreSQL Collation](https://www.postgresql.org/docs/current/static/collation.html). Note that Microsoft uses different [notation](https://msdn.microsoft.com/library/windows/desktop/dd373814.aspx) - en-US instead of en_US. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -271,7 +287,7 @@ Manages a Firewall Rule for a PostgreSQL Server
 </h3>
 
 ```typescript
-new FirewallRule(name: string, args: FirewallRuleArgs, opts?: pulumi.ResourceOptions)
+new FirewallRule(name: string, args: FirewallRuleArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -294,7 +310,15 @@ Get an existing FirewallRule resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -317,7 +341,7 @@ public endIpAddress: pulumi.Output<string>;
 Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -396,7 +420,7 @@ Create a PostgreSQL Server.
 </h3>
 
 ```typescript
-new Server(name: string, args: ServerArgs, opts?: pulumi.ResourceOptions)
+new Server(name: string, args: ServerArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -419,7 +443,15 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -464,7 +496,7 @@ public fqdn: pulumi.Output<string>;
 The FQDN of the PostgreSQL Server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -573,7 +605,7 @@ public version: pulumi.Output<string>;
 ```
 
 
-Specifies the version of PostgreSQL to use. Valid values are `9.5` and `9.6`. Changing this forces a new resource to be created.
+Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, and `10.0`. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ConfigurationArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/configuration.ts#L100">interface ConfigurationArgs</a>
@@ -1037,7 +1069,7 @@ version: pulumi.Input<string>;
 ```
 
 
-Specifies the version of PostgreSQL to use. Valid values are `9.5` and `9.6`. Changing this forces a new resource to be created.
+Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, and `10.0`. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ServerState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/server.ts#L135">interface ServerState</a>
@@ -1164,5 +1196,5 @@ version?: pulumi.Input<string>;
 ```
 
 
-Specifies the version of PostgreSQL to use. Valid values are `9.5` and `9.6`. Changing this forces a new resource to be created.
+Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, and `10.0`. Changing this forces a new resource to be created.
 

@@ -7,6 +7,7 @@ title: Module compute
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#AvailabilitySet">class AvailabilitySet</a>
+* <a href="#DataDiskAttachment">class DataDiskAttachment</a>
 * <a href="#Extension">class Extension</a>
 * <a href="#Image">class Image</a>
 * <a href="#ManagedDisk">class ManagedDisk</a>
@@ -19,6 +20,8 @@ title: Module compute
 * <a href="#getSnapshot">function getSnapshot</a>
 * <a href="#AvailabilitySetArgs">interface AvailabilitySetArgs</a>
 * <a href="#AvailabilitySetState">interface AvailabilitySetState</a>
+* <a href="#DataDiskAttachmentArgs">interface DataDiskAttachmentArgs</a>
+* <a href="#DataDiskAttachmentState">interface DataDiskAttachmentState</a>
 * <a href="#ExtensionArgs">interface ExtensionArgs</a>
 * <a href="#ExtensionState">interface ExtensionState</a>
 * <a href="#GetImageArgs">interface GetImageArgs</a>
@@ -40,7 +43,7 @@ title: Module compute
 * <a href="#VirtualMachineArgs">interface VirtualMachineArgs</a>
 * <a href="#VirtualMachineState">interface VirtualMachineState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/availabilitySet.ts">compute/availabilitySet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts">compute/extension.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getImage.ts">compute/getImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getManagedDisk.ts">compute/getManagedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getPlatformImage.ts">compute/getPlatformImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSnapshot.ts">compute/getSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/image.ts">compute/image.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/managedDisk.ts">compute/managedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts">compute/scaleSet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/snapshot.ts">compute/snapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts">compute/virtualMachine.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/availabilitySet.ts">compute/availabilitySet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts">compute/dataDiskAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts">compute/extension.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getImage.ts">compute/getImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getManagedDisk.ts">compute/getManagedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getPlatformImage.ts">compute/getPlatformImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSnapshot.ts">compute/getSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/image.ts">compute/image.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/managedDisk.ts">compute/managedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts">compute/scaleSet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/snapshot.ts">compute/snapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts">compute/virtualMachine.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="AvailabilitySet">
@@ -54,7 +57,7 @@ Manages an availability set for virtual machines.
 </h3>
 
 ```typescript
-new AvailabilitySet(name: string, args: AvailabilitySetArgs, opts?: pulumi.ResourceOptions)
+new AvailabilitySet(name: string, args: AvailabilitySetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -77,7 +80,15 @@ Get an existing AvailabilitySet resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -89,7 +100,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -189,44 +200,53 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
-<h2 class="pdoc-module-header" id="Extension">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L12">class Extension</a>
+<h2 class="pdoc-module-header" id="DataDiskAttachment">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L13">class DataDiskAttachment</a>
 </h2>
 
-Manages a new Virtual Machine Extension to provide post deployment configuration
-and run automated tasks.
+Manages attaching a Disk to a Virtual Machine.
 
-~> **Please Note:** The CustomScript extensions for Linux & Windows require that the `commandToExecute` returns a `0` exit code to be classified as successfully deployed. You can achieve this by appending `exit 0` to the end of your `commandToExecute`.
+~> **NOTE:** Data Disks can be attached either directly on the `azurerm_virtual_machine` resource, or using the `azurerm_virtual_machine_data_disk_attachment` resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.
+
+-> **Please Note:** only Managed Disks are supported via this separate resource, Unmanaged Disks can be attached using the `storage_data_disk` block in the `azurerm_virtual_machine` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L76">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L49">constructor</a>
 </h3>
 
 ```typescript
-new Extension(name: string, args: ExtensionArgs, opts?: pulumi.ResourceOptions)
+new DataDiskAttachment(name: string, args: DataDiskAttachmentArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
-Create a Extension resource with the given unique name, arguments, and options.
+Create a DataDiskAttachment resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L22">method get</a>
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ExtensionState): Extension
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DataDiskAttachmentState): DataDiskAttachment
 ```
 
 
-Get an existing Extension resource's state with the given name, ID, and optional extra
+Get an existing DataDiskAttachment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -238,19 +258,29 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L29">property autoUpgradeMinorVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L29">property caching</a>
 </h3>
 
 ```typescript
-public autoUpgradeMinorVersion: pulumi.Output<boolean | undefined>;
+public caching: pulumi.Output<string>;
 ```
 
 
-Specifies if the platform deploys
-the latest minor version update to the `type_handler_version` specified.
+Specifies the caching requirements for this Data Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L33">property createOption</a>
+</h3>
+
+```typescript
+public createOption: pulumi.Output<string | undefined>;
+```
+
+
+The Create Option of the Data Disk, such as `Empty` or `Attach`. Defaults to `Attach`. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -262,7 +292,145 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L34">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L37">property lun</a>
+</h3>
+
+```typescript
+public lun: pulumi.Output<number>;
+```
+
+
+The Logical Unit Number of the Data Disk, which needs to be unique within the Virtual Machine. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L41">property managedDiskId</a>
+</h3>
+
+```typescript
+public managedDiskId: pulumi.Output<string>;
+```
+
+
+The ID of an existing Managed Disk which should be attached. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L45">property virtualMachineId</a>
+</h3>
+
+```typescript
+public virtualMachineId: pulumi.Output<string>;
+```
+
+
+The ID of the Virtual Machine to which the Data Disk should be attached. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L49">property writeAcceleratorEnabled</a>
+</h3>
+
+```typescript
+public writeAcceleratorEnabled: pulumi.Output<boolean | undefined>;
+```
+
+
+Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
+
+<h2 class="pdoc-module-header" id="Extension">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L14">class Extension</a>
+</h2>
+
+Manages a Virtual Machine Extension to provide post deployment configuration
+and run automated tasks.
+
+~> **NOTE:** Custom Script Extensions for Linux & Windows require that the `commandToExecute` returns a `0` exit code to be classified as successfully deployed. You can achieve this by appending `exit 0` to the end of your `commandToExecute`.
+
+-> **NOTE:** Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L78">constructor</a>
+</h3>
+
+```typescript
+new Extension(name: string, args: ExtensionArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a Extension resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L23">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ExtensionState): Extension
+```
+
+
+Get an existing Extension resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L31">property autoUpgradeMinorVersion</a>
+</h3>
+
+```typescript
+public autoUpgradeMinorVersion: pulumi.Output<boolean | undefined>;
+```
+
+
+Specifies if the platform deploys
+the latest minor version update to the `type_handler_version` specified.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L36">property location</a>
 </h3>
 
 ```typescript
@@ -274,7 +442,7 @@ The location where the extension is created. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L39">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L41">property name</a>
 </h3>
 
 ```typescript
@@ -286,7 +454,7 @@ The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L44">property protectedSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L46">property protectedSettings</a>
 </h3>
 
 ```typescript
@@ -298,7 +466,7 @@ The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L49">property publisher</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L51">property publisher</a>
 </h3>
 
 ```typescript
@@ -310,7 +478,7 @@ The publisher of the extension, available publishers
 can be found by using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L55">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L57">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -323,7 +491,7 @@ create the virtual network. Changing this forces a new resource to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L60">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L62">property settings</a>
 </h3>
 
 ```typescript
@@ -335,7 +503,7 @@ The settings passed to the extension, these are
 specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L61">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L63">property tags</a>
 </h3>
 
 ```typescript
@@ -343,7 +511,7 @@ public tags: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L66">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L68">property type</a>
 </h3>
 
 ```typescript
@@ -355,7 +523,7 @@ The type of extension, available types for a publisher can
 be found using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L71">property typeHandlerVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L73">property typeHandlerVersion</a>
 </h3>
 
 ```typescript
@@ -379,7 +547,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L76">property virtualMachineName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L78">property virtualMachineName</a>
 </h3>
 
 ```typescript
@@ -401,7 +569,7 @@ Create a custom virtual machine image that can be used to create virtual machine
 </h3>
 
 ```typescript
-new Image(name: string, args: ImageArgs, opts?: pulumi.ResourceOptions)
+new Image(name: string, args: ImageArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -424,7 +592,15 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -447,7 +623,7 @@ public dataDisks: pulumi.Output<{ ... }[] | undefined>;
 One or more `data_disk` elements as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -550,7 +726,7 @@ Create a managed disk.
 </h3>
 
 ```typescript
-new ManagedDisk(name: string, args: ManagedDiskArgs, opts?: pulumi.ResourceOptions)
+new ManagedDisk(name: string, args: ManagedDiskArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -573,7 +749,15 @@ Get an existing ManagedDisk resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -619,7 +803,7 @@ public encryptionSettings: pulumi.Output<{ ... } | undefined>;
 an `encryption_settings` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -771,7 +955,7 @@ Create a virtual machine scale set.
 </h3>
 
 ```typescript
-new ScaleSet(name: string, args: ScaleSetArgs, opts?: pulumi.ResourceOptions)
+new ScaleSet(name: string, args: ScaleSetArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -794,7 +978,15 @@ Get an existing ScaleSet resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -828,7 +1020,7 @@ public extensions: pulumi.Output<{ ... }[] | undefined>;
 Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -944,7 +1136,7 @@ public overprovision: pulumi.Output<boolean | undefined>;
 ```
 
 
-Specifies whether the virtual machine scale set should be overprovisioned.
+Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L73">property plan</a>
@@ -988,7 +1180,7 @@ public singlePlacementGroup: pulumi.Output<boolean | undefined>;
 ```
 
 
-Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a
+Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Defaults to `true`. Changing this forces a
 new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 
 <h3 class="pdoc-member-header">
@@ -1091,7 +1283,7 @@ Manages a Disk Snapshot.
 </h3>
 
 ```typescript
-new Snapshot(name: string, args: SnapshotArgs, opts?: pulumi.ResourceOptions)
+new Snapshot(name: string, args: SnapshotArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1114,7 +1306,15 @@ Get an existing Snapshot resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1156,7 +1356,7 @@ public encryptionSettings: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1254,17 +1454,19 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="VirtualMachine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L9">class VirtualMachine</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L11">class VirtualMachine</a>
 </h2>
 
-Create a virtual machine.
+Manages a Virtual Machine.
+
+~> **NOTE:** Data Disks can be attached either directly on the `azurerm_virtual_machine` resource, or using the `azurerm_virtual_machine_data_disk_attachment` resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L110">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L111">constructor</a>
 </h3>
 
 ```typescript
-new VirtualMachine(name: string, args: VirtualMachineArgs, opts?: pulumi.ResourceOptions)
+new VirtualMachine(name: string, args: VirtualMachineArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -1275,7 +1477,7 @@ Create a VirtualMachine resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -1287,7 +1489,15 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L64">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
 </h3>
 
 ```typescript
@@ -1299,7 +1509,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L25">property availabilitySetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L27">property availabilitySetId</a>
 </h3>
 
 ```typescript
@@ -1307,10 +1517,10 @@ public availabilitySetId: pulumi.Output<string>;
 ```
 
 
-The Id of the Availability Set in which to create the virtual machine
+The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L29">property bootDiagnostics</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L31">property bootDiagnostics</a>
 </h3>
 
 ```typescript
@@ -1318,10 +1528,10 @@ public bootDiagnostics: pulumi.Output<{ ... } | undefined>;
 ```
 
 
-A boot diagnostics profile block as referenced below.
+A `boot_diagnostics` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L33">property deleteDataDisksOnTermination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L35">property deleteDataDisksOnTermination</a>
 </h3>
 
 ```typescript
@@ -1329,10 +1539,10 @@ public deleteDataDisksOnTermination: pulumi.Output<boolean | undefined>;
 ```
 
 
-Flag to enable deletion of storage data disk VHD blobs or managed disks when the VM is deleted, defaults to `false`
+Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L37">property deleteOsDiskOnTermination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L39">property deleteOsDiskOnTermination</a>
 </h3>
 
 ```typescript
@@ -1340,10 +1550,10 @@ public deleteOsDiskOnTermination: pulumi.Output<boolean | undefined>;
 ```
 
 
-Flag to enable deletion of the OS disk VHD blob or managed disk when the VM is deleted, defaults to `false`
+Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -1355,7 +1565,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L41">property identity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L43">property identity</a>
 </h3>
 
 ```typescript
@@ -1363,10 +1573,10 @@ public identity: pulumi.Output<{ ... }>;
 ```
 
 
-An identity block as documented below.
+A `identity` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L45">property licenseType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L47">property licenseType</a>
 </h3>
 
 ```typescript
@@ -1374,10 +1584,10 @@ public licenseType: pulumi.Output<string>;
 ```
 
 
-Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
+Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L49">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L51">property location</a>
 </h3>
 
 ```typescript
@@ -1385,10 +1595,10 @@ public location: pulumi.Output<string>;
 ```
 
 
-Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L53">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L55">property name</a>
 </h3>
 
 ```typescript
@@ -1396,10 +1606,10 @@ public name: pulumi.Output<string>;
 ```
 
 
-Specifies the name of the data disk.
+Specifies the name of the OS Disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L57">property networkInterfaceIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L59">property networkInterfaceIds</a>
 </h3>
 
 ```typescript
@@ -1407,10 +1617,10 @@ public networkInterfaceIds: pulumi.Output<string[]>;
 ```
 
 
-Specifies the list of resource IDs for the network interfaces associated with the virtual machine.
+A list of Network Interface ID's which should be associated with the Virtual Machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L61">property osProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L63">property osProfile</a>
 </h3>
 
 ```typescript
@@ -1418,10 +1628,10 @@ public osProfile: pulumi.Output<{ ... } | undefined>;
 ```
 
 
-An OS Profile block as documented below. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
+An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L65">property osProfileLinuxConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L67">property osProfileLinuxConfig</a>
 </h3>
 
 ```typescript
@@ -1429,10 +1639,10 @@ public osProfileLinuxConfig: pulumi.Output<{ ... } | undefined>;
 ```
 
 
-A Linux config block as documented below.
+A `os_profile_linux_config` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L69">property osProfileSecrets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L71">property osProfileSecrets</a>
 </h3>
 
 ```typescript
@@ -1440,10 +1650,10 @@ public osProfileSecrets: pulumi.Output<{ ... }[] | undefined>;
 ```
 
 
-A collection of Secret blocks as documented below.
+One or more `os_profile_secrets` blocks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L73">property osProfileWindowsConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L75">property osProfileWindowsConfig</a>
 </h3>
 
 ```typescript
@@ -1451,10 +1661,10 @@ public osProfileWindowsConfig: pulumi.Output<{ ... } | undefined>;
 ```
 
 
-A Windows config block as documented below.
+A `os_profile_windows_config` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L77">property plan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L79">property plan</a>
 </h3>
 
 ```typescript
@@ -1462,10 +1672,10 @@ public plan: pulumi.Output<{ ... } | undefined>;
 ```
 
 
-A plan block as documented below.
+A `plan` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L81">property primaryNetworkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L83">property primaryNetworkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -1473,10 +1683,10 @@ public primaryNetworkInterfaceId: pulumi.Output<string | undefined>;
 ```
 
 
-Specifies the resource ID for the primary network interface associated with the virtual machine.
+The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L86">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L87">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1484,22 +1694,21 @@ public resourceGroupName: pulumi.Output<string>;
 ```
 
 
-The name of the resource group in which to
-create the virtual machine.
+Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L90">property storageDataDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L91">property storageDataDisks</a>
 </h3>
 
 ```typescript
-public storageDataDisks: pulumi.Output<{ ... }[] | undefined>;
+public storageDataDisks: pulumi.Output<{ ... }[]>;
 ```
 
 
-A list of Storage Data disk blocks as referenced below.
+One or more `storage_data_disk` blocks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L94">property storageImageReference</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L95">property storageImageReference</a>
 </h3>
 
 ```typescript
@@ -1507,10 +1716,10 @@ public storageImageReference: pulumi.Output<{ ... }>;
 ```
 
 
-A Storage Image Reference block as documented below.
+A `storage_image_reference` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L98">property storageOsDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L99">property storageOsDisk</a>
 </h3>
 
 ```typescript
@@ -1518,10 +1727,10 @@ public storageOsDisk: pulumi.Output<{ ... }>;
 ```
 
 
-A Storage OS Disk block as referenced below.
+A `storage_os_disk` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L102">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L103">property tags</a>
 </h3>
 
 ```typescript
@@ -1529,7 +1738,7 @@ public tags: pulumi.Output<{ ... }>;
 ```
 
 
-A mapping of tags to assign to the resource.
+A mapping of tags to assign to the Virtual Machine.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1544,7 +1753,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L106">property vmSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L107">property vmSize</a>
 </h3>
 
 ```typescript
@@ -1552,10 +1761,10 @@ public vmSize: pulumi.Output<string>;
 ```
 
 
-Specifies the [size of the virtual machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/).
+Specifies the [size of the Virtual Machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L110">property zones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L111">property zones</a>
 </h3>
 
 ```typescript
@@ -1563,14 +1772,14 @@ public zones: pulumi.Output<string | undefined>;
 ```
 
 
-A collection containing the availability zone to allocate the Virtual Machine in.
+A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
 
 <h2 class="pdoc-module-header" id="getImage">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getImage.ts#L9">function getImage</a>
 </h2>
 
 ```typescript
-getImage(args: GetImageArgs): Promise<GetImageResult>
+getImage(args: GetImageArgs, opts?: pulumi.InvokeOptions): Promise<GetImageResult>
 ```
 
 
@@ -1581,7 +1790,7 @@ Use this data source to access information about an Image.
 </h2>
 
 ```typescript
-getManagedDisk(args: GetManagedDiskArgs): Promise<GetManagedDiskResult>
+getManagedDisk(args: GetManagedDiskArgs, opts?: pulumi.InvokeOptions): Promise<GetManagedDiskResult>
 ```
 
 
@@ -1592,7 +1801,7 @@ Use this data source to access the properties of an existing Azure Managed Disk.
 </h2>
 
 ```typescript
-getPlatformImage(args: GetPlatformImageArgs): Promise<GetPlatformImageResult>
+getPlatformImage(args: GetPlatformImageArgs, opts?: pulumi.InvokeOptions): Promise<GetPlatformImageResult>
 ```
 
 
@@ -1603,7 +1812,7 @@ Use this data source to access the properties of an Azure Platform Image.
 </h2>
 
 ```typescript
-getSnapshot(args: GetSnapshotArgs): Promise<GetSnapshotResult>
+getSnapshot(args: GetSnapshotArgs, opts?: pulumi.InvokeOptions): Promise<GetSnapshotResult>
 ```
 
 
@@ -1775,14 +1984,158 @@ tags?: pulumi.Input<{ ... }>;
 
 A mapping of tags to assign to the resource.
 
+<h2 class="pdoc-module-header" id="DataDiskAttachmentArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L127">interface DataDiskAttachmentArgs</a>
+</h2>
+
+The set of arguments for constructing a DataDiskAttachment resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L131">property caching</a>
+</h3>
+
+```typescript
+caching: pulumi.Input<string>;
+```
+
+
+Specifies the caching requirements for this Data Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L135">property createOption</a>
+</h3>
+
+```typescript
+createOption?: pulumi.Input<string>;
+```
+
+
+The Create Option of the Data Disk, such as `Empty` or `Attach`. Defaults to `Attach`. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L139">property lun</a>
+</h3>
+
+```typescript
+lun: pulumi.Input<number>;
+```
+
+
+The Logical Unit Number of the Data Disk, which needs to be unique within the Virtual Machine. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L143">property managedDiskId</a>
+</h3>
+
+```typescript
+managedDiskId: pulumi.Input<string>;
+```
+
+
+The ID of an existing Managed Disk which should be attached. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L147">property virtualMachineId</a>
+</h3>
+
+```typescript
+virtualMachineId: pulumi.Input<string>;
+```
+
+
+The ID of the Virtual Machine to which the Data Disk should be attached. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L151">property writeAcceleratorEnabled</a>
+</h3>
+
+```typescript
+writeAcceleratorEnabled?: pulumi.Input<boolean>;
+```
+
+
+Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
+
+<h2 class="pdoc-module-header" id="DataDiskAttachmentState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L97">interface DataDiskAttachmentState</a>
+</h2>
+
+Input properties used for looking up and filtering DataDiskAttachment resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L101">property caching</a>
+</h3>
+
+```typescript
+caching?: pulumi.Input<string>;
+```
+
+
+Specifies the caching requirements for this Data Disk. Possible values include `None`, `ReadOnly` and `ReadWrite`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L105">property createOption</a>
+</h3>
+
+```typescript
+createOption?: pulumi.Input<string>;
+```
+
+
+The Create Option of the Data Disk, such as `Empty` or `Attach`. Defaults to `Attach`. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L109">property lun</a>
+</h3>
+
+```typescript
+lun?: pulumi.Input<number>;
+```
+
+
+The Logical Unit Number of the Data Disk, which needs to be unique within the Virtual Machine. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L113">property managedDiskId</a>
+</h3>
+
+```typescript
+managedDiskId?: pulumi.Input<string>;
+```
+
+
+The ID of an existing Managed Disk which should be attached. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L117">property virtualMachineId</a>
+</h3>
+
+```typescript
+virtualMachineId?: pulumi.Input<string>;
+```
+
+
+The ID of the Virtual Machine to which the Data Disk should be attached. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts#L121">property writeAcceleratorEnabled</a>
+</h3>
+
+```typescript
+writeAcceleratorEnabled?: pulumi.Input<boolean>;
+```
+
+
+Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
+
 <h2 class="pdoc-module-header" id="ExtensionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L198">interface ExtensionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L200">interface ExtensionArgs</a>
 </h2>
 
 The set of arguments for constructing a Extension resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L203">property autoUpgradeMinorVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L205">property autoUpgradeMinorVersion</a>
 </h3>
 
 ```typescript
@@ -1794,7 +2147,7 @@ Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L208">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L210">property location</a>
 </h3>
 
 ```typescript
@@ -1806,7 +2159,7 @@ The location where the extension is created. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L213">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L215">property name</a>
 </h3>
 
 ```typescript
@@ -1818,7 +2171,7 @@ The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L218">property protectedSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L220">property protectedSettings</a>
 </h3>
 
 ```typescript
@@ -1830,7 +2183,7 @@ The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L223">property publisher</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L225">property publisher</a>
 </h3>
 
 ```typescript
@@ -1842,7 +2195,7 @@ The publisher of the extension, available publishers
 can be found by using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L229">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L231">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1855,7 +2208,7 @@ create the virtual network. Changing this forces a new resource to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L234">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L236">property settings</a>
 </h3>
 
 ```typescript
@@ -1867,7 +2220,7 @@ The settings passed to the extension, these are
 specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L235">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L237">property tags</a>
 </h3>
 
 ```typescript
@@ -1875,7 +2228,7 @@ tags?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L240">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L242">property type</a>
 </h3>
 
 ```typescript
@@ -1887,7 +2240,7 @@ The type of extension, available types for a publisher can
 be found using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L245">property typeHandlerVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L247">property typeHandlerVersion</a>
 </h3>
 
 ```typescript
@@ -1899,7 +2252,7 @@ Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L250">property virtualMachineName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L252">property virtualMachineName</a>
 </h3>
 
 ```typescript
@@ -1911,13 +2264,13 @@ The name of the virtual machine. Changing
 this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ExtensionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L140">interface ExtensionState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L142">interface ExtensionState</a>
 </h2>
 
 Input properties used for looking up and filtering Extension resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L145">property autoUpgradeMinorVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L147">property autoUpgradeMinorVersion</a>
 </h3>
 
 ```typescript
@@ -1929,7 +2282,7 @@ Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L150">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L152">property location</a>
 </h3>
 
 ```typescript
@@ -1941,7 +2294,7 @@ The location where the extension is created. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L155">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L157">property name</a>
 </h3>
 
 ```typescript
@@ -1953,7 +2306,7 @@ The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L160">property protectedSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L162">property protectedSettings</a>
 </h3>
 
 ```typescript
@@ -1965,7 +2318,7 @@ The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L165">property publisher</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L167">property publisher</a>
 </h3>
 
 ```typescript
@@ -1977,7 +2330,7 @@ The publisher of the extension, available publishers
 can be found by using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L171">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L173">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1990,7 +2343,7 @@ create the virtual network. Changing this forces a new resource to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L176">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L178">property settings</a>
 </h3>
 
 ```typescript
@@ -2002,7 +2355,7 @@ The settings passed to the extension, these are
 specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L177">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L179">property tags</a>
 </h3>
 
 ```typescript
@@ -2010,7 +2363,7 @@ tags?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L182">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L184">property type</a>
 </h3>
 
 ```typescript
@@ -2022,7 +2375,7 @@ The type of extension, available types for a publisher can
 be found using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L187">property typeHandlerVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L189">property typeHandlerVersion</a>
 </h3>
 
 ```typescript
@@ -2034,7 +2387,7 @@ Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L192">property virtualMachineName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L194">property virtualMachineName</a>
 </h3>
 
 ```typescript
@@ -2056,7 +2409,7 @@ A collection of arguments for invoking getImage.
 </h3>
 
 ```typescript
-name?: pulumi.Input<string>;
+name?: string;
 ```
 
 
@@ -2067,7 +2420,7 @@ The name of the Image.
 </h3>
 
 ```typescript
-nameRegex?: pulumi.Input<string>;
+nameRegex?: string;
 ```
 
 
@@ -2078,7 +2431,7 @@ Regex pattern of the image to match.
 </h3>
 
 ```typescript
-resourceGroupName: pulumi.Input<string>;
+resourceGroupName: string;
 ```
 
 
@@ -2089,7 +2442,7 @@ The Name of the Resource Group where this Image exists.
 </h3>
 
 ```typescript
-sortDescending?: pulumi.Input<boolean>;
+sortDescending?: boolean;
 ```
 
 
@@ -2167,7 +2520,7 @@ A collection of arguments for invoking getManagedDisk.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -2178,7 +2531,7 @@ Specifies the name of the Managed Disk.
 </h3>
 
 ```typescript
-resourceGroupName: pulumi.Input<string>;
+resourceGroupName: string;
 ```
 
 
@@ -2189,7 +2542,7 @@ Specifies the name of the resource group.
 </h3>
 
 ```typescript
-tags?: pulumi.Input<{ ... }>;
+tags?: { ... };
 ```
 
 <h3 class="pdoc-member-header">
@@ -2197,7 +2550,7 @@ tags?: pulumi.Input<{ ... }>;
 </h3>
 
 ```typescript
-zones?: pulumi.Input<pulumi.Input<string>[]>;
+zones?: string[];
 ```
 
 <h2 class="pdoc-module-header" id="GetManagedDiskResult">
@@ -2305,7 +2658,7 @@ A collection of arguments for invoking getPlatformImage.
 </h3>
 
 ```typescript
-location: pulumi.Input<string>;
+location: string;
 ```
 
 
@@ -2316,7 +2669,7 @@ Specifies the Location to pull information about this Platform Image from.
 </h3>
 
 ```typescript
-offer: pulumi.Input<string>;
+offer: string;
 ```
 
 
@@ -2327,7 +2680,7 @@ Specifies the Offer associated with the Platform Image.
 </h3>
 
 ```typescript
-publisher: pulumi.Input<string>;
+publisher: string;
 ```
 
 
@@ -2338,7 +2691,7 @@ Specifies the Publisher associated with the Platform Image.
 </h3>
 
 ```typescript
-sku: pulumi.Input<string>;
+sku: string;
 ```
 
 
@@ -2383,7 +2736,7 @@ A collection of arguments for invoking getSnapshot.
 </h3>
 
 ```typescript
-name: pulumi.Input<string>;
+name: string;
 ```
 
 
@@ -2394,7 +2747,7 @@ Specifies the name of the Snapshot.
 </h3>
 
 ```typescript
-resourceGroupName: pulumi.Input<string>;
+resourceGroupName: string;
 ```
 
 
@@ -2504,7 +2857,7 @@ The set of arguments for constructing a Image resource.
 </h3>
 
 ```typescript
-dataDisks?: pulumi.Input<{ ... }[]>;
+dataDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2590,7 +2943,7 @@ Input properties used for looking up and filtering Image resources.
 </h3>
 
 ```typescript
-dataDisks?: pulumi.Input<{ ... }[]>;
+dataDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -2814,7 +3167,7 @@ A mapping of tags to assign to the resource.
 </h3>
 
 ```typescript
-zones?: pulumi.Input<pulumi.Input<string>>;
+zones?: pulumi.Input<string>;
 ```
 
 
@@ -2969,7 +3322,7 @@ A mapping of tags to assign to the resource.
 </h3>
 
 ```typescript
-zones?: pulumi.Input<pulumi.Input<string>>;
+zones?: pulumi.Input<string>;
 ```
 
 
@@ -2997,7 +3350,7 @@ A boot diagnostics profile block as referenced below.
 </h3>
 
 ```typescript
-extensions?: pulumi.Input<{ ... }[]>;
+extensions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3049,7 +3402,7 @@ Specifies the name of the image from the marketplace.
 </h3>
 
 ```typescript
-networkProfiles: pulumi.Input<{ ... }[]>;
+networkProfiles: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3082,7 +3435,7 @@ A Linux config block as documented below.
 </h3>
 
 ```typescript
-osProfileSecrets?: pulumi.Input<{ ... }[]>;
+osProfileSecrets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3108,7 +3461,7 @@ overprovision?: pulumi.Input<boolean>;
 ```
 
 
-Specifies whether the virtual machine scale set should be overprovisioned.
+Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L350">property plan</a>
@@ -3152,7 +3505,7 @@ singlePlacementGroup?: pulumi.Input<boolean>;
 ```
 
 
-Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a
+Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Defaults to `true`. Changing this forces a
 new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 
 <h3 class="pdoc-member-header">
@@ -3171,7 +3524,7 @@ Specifies the SKU of the image used to create the virtual machines.
 </h3>
 
 ```typescript
-storageProfileDataDisks?: pulumi.Input<{ ... }[]>;
+storageProfileDataDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3254,7 +3607,7 @@ A boot diagnostics profile block as referenced below.
 </h3>
 
 ```typescript
-extensions?: pulumi.Input<{ ... }[]>;
+extensions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3306,7 +3659,7 @@ Specifies the name of the image from the marketplace.
 </h3>
 
 ```typescript
-networkProfiles?: pulumi.Input<{ ... }[]>;
+networkProfiles?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3339,7 +3692,7 @@ A Linux config block as documented below.
 </h3>
 
 ```typescript
-osProfileSecrets?: pulumi.Input<{ ... }[]>;
+osProfileSecrets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3365,7 +3718,7 @@ overprovision?: pulumi.Input<boolean>;
 ```
 
 
-Specifies whether the virtual machine scale set should be overprovisioned.
+Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L254">property plan</a>
@@ -3409,7 +3762,7 @@ singlePlacementGroup?: pulumi.Input<boolean>;
 ```
 
 
-Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a
+Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Defaults to `true`. Changing this forces a
 new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 
 <h3 class="pdoc-member-header">
@@ -3428,7 +3781,7 @@ Specifies the SKU of the image used to create the virtual machines.
 </h3>
 
 ```typescript
-storageProfileDataDisks?: pulumi.Input<{ ... }[]>;
+storageProfileDataDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -3724,7 +4077,7 @@ availabilitySetId?: pulumi.Input<string>;
 ```
 
 
-The Id of the Availability Set in which to create the virtual machine
+The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L296">property bootDiagnostics</a>
@@ -3735,7 +4088,7 @@ bootDiagnostics?: pulumi.Input<{ ... }>;
 ```
 
 
-A boot diagnostics profile block as referenced below.
+A `boot_diagnostics` block.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L300">property deleteDataDisksOnTermination</a>
@@ -3746,7 +4099,7 @@ deleteDataDisksOnTermination?: pulumi.Input<boolean>;
 ```
 
 
-Flag to enable deletion of storage data disk VHD blobs or managed disks when the VM is deleted, defaults to `false`
+Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L304">property deleteOsDiskOnTermination</a>
@@ -3757,7 +4110,7 @@ deleteOsDiskOnTermination?: pulumi.Input<boolean>;
 ```
 
 
-Flag to enable deletion of the OS disk VHD blob or managed disk when the VM is deleted, defaults to `false`
+Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L308">property identity</a>
@@ -3768,7 +4121,7 @@ identity?: pulumi.Input<{ ... }>;
 ```
 
 
-An identity block as documented below.
+A `identity` block.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L312">property licenseType</a>
@@ -3779,7 +4132,7 @@ licenseType?: pulumi.Input<string>;
 ```
 
 
-Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
+Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L316">property location</a>
@@ -3790,7 +4143,7 @@ location: pulumi.Input<string>;
 ```
 
 
-Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L320">property name</a>
@@ -3801,7 +4154,7 @@ name?: pulumi.Input<string>;
 ```
 
 
-Specifies the name of the data disk.
+Specifies the name of the OS Disk.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L324">property networkInterfaceIds</a>
@@ -3812,7 +4165,7 @@ networkInterfaceIds: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
-Specifies the list of resource IDs for the network interfaces associated with the virtual machine.
+A list of Network Interface ID's which should be associated with the Virtual Machine.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L328">property osProfile</a>
@@ -3823,7 +4176,7 @@ osProfile?: pulumi.Input<{ ... }>;
 ```
 
 
-An OS Profile block as documented below. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
+An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L332">property osProfileLinuxConfig</a>
@@ -3834,18 +4187,18 @@ osProfileLinuxConfig?: pulumi.Input<{ ... }>;
 ```
 
 
-A Linux config block as documented below.
+A `os_profile_linux_config` block.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L336">property osProfileSecrets</a>
 </h3>
 
 ```typescript
-osProfileSecrets?: pulumi.Input<{ ... }[]>;
+osProfileSecrets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-A collection of Secret blocks as documented below.
+One or more `os_profile_secrets` blocks.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L340">property osProfileWindowsConfig</a>
@@ -3856,7 +4209,7 @@ osProfileWindowsConfig?: pulumi.Input<{ ... }>;
 ```
 
 
-A Windows config block as documented below.
+A `os_profile_windows_config` block.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L344">property plan</a>
@@ -3867,7 +4220,7 @@ plan?: pulumi.Input<{ ... }>;
 ```
 
 
-A plan block as documented below.
+A `plan` block.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L348">property primaryNetworkInterfaceId</a>
@@ -3878,10 +4231,10 @@ primaryNetworkInterfaceId?: pulumi.Input<string>;
 ```
 
 
-Specifies the resource ID for the primary network interface associated with the virtual machine.
+The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L353">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L352">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -3889,22 +4242,21 @@ resourceGroupName: pulumi.Input<string>;
 ```
 
 
-The name of the resource group in which to
-create the virtual machine.
+Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L357">property storageDataDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L356">property storageDataDisks</a>
 </h3>
 
 ```typescript
-storageDataDisks?: pulumi.Input<{ ... }[]>;
+storageDataDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-A list of Storage Data disk blocks as referenced below.
+One or more `storage_data_disk` blocks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L361">property storageImageReference</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L360">property storageImageReference</a>
 </h3>
 
 ```typescript
@@ -3912,10 +4264,10 @@ storageImageReference?: pulumi.Input<{ ... }>;
 ```
 
 
-A Storage Image Reference block as documented below.
+A `storage_image_reference` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L365">property storageOsDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L364">property storageOsDisk</a>
 </h3>
 
 ```typescript
@@ -3923,10 +4275,10 @@ storageOsDisk: pulumi.Input<{ ... }>;
 ```
 
 
-A Storage OS Disk block as referenced below.
+A `storage_os_disk` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L369">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L368">property tags</a>
 </h3>
 
 ```typescript
@@ -3934,10 +4286,10 @@ tags?: pulumi.Input<{ ... }>;
 ```
 
 
-A mapping of tags to assign to the resource.
+A mapping of tags to assign to the Virtual Machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L373">property vmSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L372">property vmSize</a>
 </h3>
 
 ```typescript
@@ -3945,27 +4297,27 @@ vmSize: pulumi.Input<string>;
 ```
 
 
-Specifies the [size of the virtual machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/).
+Specifies the [size of the Virtual Machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L377">property zones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L376">property zones</a>
 </h3>
 
 ```typescript
-zones?: pulumi.Input<pulumi.Input<string>>;
+zones?: pulumi.Input<string>;
 ```
 
 
-A collection containing the availability zone to allocate the Virtual Machine in.
+A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
 
 <h2 class="pdoc-module-header" id="VirtualMachineState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L193">interface VirtualMachineState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L194">interface VirtualMachineState</a>
 </h2>
 
 Input properties used for looking up and filtering VirtualMachine resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L197">property availabilitySetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L198">property availabilitySetId</a>
 </h3>
 
 ```typescript
@@ -3973,10 +4325,10 @@ availabilitySetId?: pulumi.Input<string>;
 ```
 
 
-The Id of the Availability Set in which to create the virtual machine
+The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L201">property bootDiagnostics</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L202">property bootDiagnostics</a>
 </h3>
 
 ```typescript
@@ -3984,10 +4336,10 @@ bootDiagnostics?: pulumi.Input<{ ... }>;
 ```
 
 
-A boot diagnostics profile block as referenced below.
+A `boot_diagnostics` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L205">property deleteDataDisksOnTermination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L206">property deleteDataDisksOnTermination</a>
 </h3>
 
 ```typescript
@@ -3995,10 +4347,10 @@ deleteDataDisksOnTermination?: pulumi.Input<boolean>;
 ```
 
 
-Flag to enable deletion of storage data disk VHD blobs or managed disks when the VM is deleted, defaults to `false`
+Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L209">property deleteOsDiskOnTermination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L210">property deleteOsDiskOnTermination</a>
 </h3>
 
 ```typescript
@@ -4006,10 +4358,10 @@ deleteOsDiskOnTermination?: pulumi.Input<boolean>;
 ```
 
 
-Flag to enable deletion of the OS disk VHD blob or managed disk when the VM is deleted, defaults to `false`
+Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virtual Machine is destroyed? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L213">property identity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L214">property identity</a>
 </h3>
 
 ```typescript
@@ -4017,10 +4369,10 @@ identity?: pulumi.Input<{ ... }>;
 ```
 
 
-An identity block as documented below.
+A `identity` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L217">property licenseType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L218">property licenseType</a>
 </h3>
 
 ```typescript
@@ -4028,10 +4380,10 @@ licenseType?: pulumi.Input<string>;
 ```
 
 
-Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
+Specifies the BYOL Type for this Virtual Machine. This is only applicable to Windows Virtual Machines. Possible values are `Windows_Client` and `Windows_Server`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L221">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L222">property location</a>
 </h3>
 
 ```typescript
@@ -4039,10 +4391,10 @@ location?: pulumi.Input<string>;
 ```
 
 
-Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+Specifies the Azure Region where the Virtual Machine exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L225">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L226">property name</a>
 </h3>
 
 ```typescript
@@ -4050,10 +4402,10 @@ name?: pulumi.Input<string>;
 ```
 
 
-Specifies the name of the data disk.
+Specifies the name of the OS Disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L229">property networkInterfaceIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L230">property networkInterfaceIds</a>
 </h3>
 
 ```typescript
@@ -4061,10 +4413,10 @@ networkInterfaceIds?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
-Specifies the list of resource IDs for the network interfaces associated with the virtual machine.
+A list of Network Interface ID's which should be associated with the Virtual Machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L233">property osProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L234">property osProfile</a>
 </h3>
 
 ```typescript
@@ -4072,10 +4424,10 @@ osProfile?: pulumi.Input<{ ... }>;
 ```
 
 
-An OS Profile block as documented below. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
+An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L237">property osProfileLinuxConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L238">property osProfileLinuxConfig</a>
 </h3>
 
 ```typescript
@@ -4083,21 +4435,21 @@ osProfileLinuxConfig?: pulumi.Input<{ ... }>;
 ```
 
 
-A Linux config block as documented below.
+A `os_profile_linux_config` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L241">property osProfileSecrets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L242">property osProfileSecrets</a>
 </h3>
 
 ```typescript
-osProfileSecrets?: pulumi.Input<{ ... }[]>;
+osProfileSecrets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-A collection of Secret blocks as documented below.
+One or more `os_profile_secrets` blocks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L245">property osProfileWindowsConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L246">property osProfileWindowsConfig</a>
 </h3>
 
 ```typescript
@@ -4105,10 +4457,10 @@ osProfileWindowsConfig?: pulumi.Input<{ ... }>;
 ```
 
 
-A Windows config block as documented below.
+A `os_profile_windows_config` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L249">property plan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L250">property plan</a>
 </h3>
 
 ```typescript
@@ -4116,10 +4468,10 @@ plan?: pulumi.Input<{ ... }>;
 ```
 
 
-A plan block as documented below.
+A `plan` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L253">property primaryNetworkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L254">property primaryNetworkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -4127,7 +4479,7 @@ primaryNetworkInterfaceId?: pulumi.Input<string>;
 ```
 
 
-Specifies the resource ID for the primary network interface associated with the virtual machine.
+The ID of the Network Interface (which must be attached to the Virtual Machine) which should be the Primary Network Interface for this Virtual Machine.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L258">property resourceGroupName</a>
@@ -4138,19 +4490,18 @@ resourceGroupName?: pulumi.Input<string>;
 ```
 
 
-The name of the resource group in which to
-create the virtual machine.
+Specifies the name of the Resource Group in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L262">property storageDataDisks</a>
 </h3>
 
 ```typescript
-storageDataDisks?: pulumi.Input<{ ... }[]>;
+storageDataDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-A list of Storage Data disk blocks as referenced below.
+One or more `storage_data_disk` blocks.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L266">property storageImageReference</a>
@@ -4161,7 +4512,7 @@ storageImageReference?: pulumi.Input<{ ... }>;
 ```
 
 
-A Storage Image Reference block as documented below.
+A `storage_image_reference` block.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L270">property storageOsDisk</a>
@@ -4172,7 +4523,7 @@ storageOsDisk?: pulumi.Input<{ ... }>;
 ```
 
 
-A Storage OS Disk block as referenced below.
+A `storage_os_disk` block.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L274">property tags</a>
@@ -4183,7 +4534,7 @@ tags?: pulumi.Input<{ ... }>;
 ```
 
 
-A mapping of tags to assign to the resource.
+A mapping of tags to assign to the Virtual Machine.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L278">property vmSize</a>
@@ -4194,16 +4545,16 @@ vmSize?: pulumi.Input<string>;
 ```
 
 
-Specifies the [size of the virtual machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/).
+Specifies the [size of the Virtual Machine](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/).
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts#L282">property zones</a>
 </h3>
 
 ```typescript
-zones?: pulumi.Input<pulumi.Input<string>>;
+zones?: pulumi.Input<string>;
 ```
 
 
-A collection containing the availability zone to allocate the Virtual Machine in.
+A list of a single item of the Availability Zone which the Virtual Machine should be allocated in.
 

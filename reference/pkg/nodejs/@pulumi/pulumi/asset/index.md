@@ -37,17 +37,6 @@ public static isInstance(obj: any): boolean
 Returns true if the given object is an instance of an Archive.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/archive.ts#L26">property __pulumiArchive</a>
-</h3>
-
-```typescript
-private __pulumiArchive: boolean = true;
-```
-
-
-A private field to help with RTTI that works in SxS scenarios.
-
 <h2 class="pdoc-module-header" id="Asset">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/asset.ts#L20">class Asset</a>
 </h2>
@@ -65,17 +54,6 @@ public static isInstance(obj: any): boolean
 
 Returns true if the given object is an instance of an Asset.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/asset.ts#L25">property __pulumiAsset</a>
-</h3>
-
-```typescript
-private __pulumiAsset: boolean = true;
-```
-
-
-A private field to help with RTTI that works in SxS scenarios.
 
 <h2 class="pdoc-module-header" id="AssetArchive">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/archive.ts#L45">class AssetArchive</a>
