@@ -67,18 +67,6 @@ In addition to the 0.15.0 CLI release, we've released new versions of all of our
 
 This release brings many large improvements to the Pulumi CLI. Major features include:
 
-#### Kubernetes
-
-Kubernetes support has been brought to production-ready level of quality. Many features in this release are in support of this outcome. This includes:
-
-* Full support for the entire Kubernetes API
-* Improved status reporting for deployment rollouts
-* Verified support for AWS EKS, Azure AKS, and GCP GKE, in addition to Minikube and manually hosted clusters
-* Support for provisioning and deploying to clusters in a single program
-* Deploying Helm Charts using the `helm.v2.Chart` type
-
-To use Pulumi with Kubernetes, please [visit our Getting Started page on Kubernetes](/install/kubernetes.html).
-
 #### Parallelism
 
 Pulumi now performs resource creates and updates in parallel, driven by dependencies in the resource graph. (Parallel deletes are coming in a future release.) If your program has implicit dependencies that Pulumi does not already see as dependencies, it's possible parallel will cause ordering issues. If this happens, you may set the `dependsOn` on property in the `resourceOptions` parameter to any resource. By default, Pulumi allows 10 parallel operations, but the `-p` flag can be used to override this. `-p=1` disables parallelism altogether. Parallelism is supported for Node.js and Go programs, and Python support will come in a future release.
@@ -135,6 +123,16 @@ api.get("/", async (req, res) => {
 The `pulumi.Config` object can now be created without an argument. When no argument is supplied, the value of the current project is used. This means that application level code can simply do `new pulumi.Confg()` without passing any argument. For library authors, you should continue to pass the name of your package as an argument.
 
 ### @pulumi/kubernetes 0.15.0
+
+Kubernetes support has been brought to production-ready level of quality. Many features in this release are in support of this outcome. This includes:
+
+* Full support for the entire Kubernetes API
+* Improved status reporting for deployment rollouts
+* Verified support for AWS EKS, Azure AKS, and GCP GKE, in addition to Minikube and manually hosted clusters
+* Support for provisioning and deploying to clusters in a single program
+* Deploying Helm Charts using the `helm.v2.Chart` type
+
+To use Pulumi with Kubernetes, please [visit our Getting Started page on Kubernetes](/install/kubernetes.html).
 
 ### @pulumi/openstack 0.15.0
 
