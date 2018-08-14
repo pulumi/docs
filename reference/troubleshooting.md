@@ -11,7 +11,7 @@ right place.
 
 This section covers a few problems that can arise when working with Pulumi.
 
-### [409] Conflict: Another update is currently in progress.
+### [409] Conflict: Another update is currently in progress. {#conflict}
 
 One of the services that `pulumi.com` provides is *concurrency control*. The service will allow
 at most one user to update a particular stack at a time. This is accomplished by using "leases"; whenever a user
@@ -37,7 +37,7 @@ Run `pulumi cancel` to cancel the update.
 
 > Warning! If you cancel another person's update, their update will fail immediately.
 
-### [500] Internal Server Error {#500}
+### [500] Internal Server Error {#internal-server-error}
 
 The Pulumi command-line tool interacts with the Pulumi web service throughout the course of an update. If the
 service is unable to process an update, it is possible that users of the command-line tool may see this error message
