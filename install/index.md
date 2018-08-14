@@ -1,11 +1,11 @@
 ---
 title: "Installation and Setup"
-installer_version: "0.14.3"
+installer_version: "0.15.0"
 ---
 
-<!-- 
+<!--
 NOTE: To update this page with a new binary release, do the following:
-- Update `installer_version` in the YAML front matter above. 
+- Update `installer_version` in the YAML front matter above.
 - Update changelog.md with the latest fixes in the release
 -->
 
@@ -69,7 +69,7 @@ macOS Sierra (10.12) or later is required.
 
     ```bash
     $ tar -xzf pulumi-v{{page.installer_version}}-darwin-x64.tar.gz
-    $ ./pulumi/install.sh 
+    $ ./pulumi/install.sh
     ```
 
 3. Add `/usr/local/pulumi/bin` to your path:
@@ -84,7 +84,7 @@ We provide a pre-built binary for Linux.
 
 1. Download [Pulumi {{page.installer_version}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz).
 
-2. Unzip the tarball and run the install script. After installation, you may delete the extracted folder. 
+2. Unzip the tarball and run the install script. After installation, you may delete the extracted folder.
 
     ```bash
     $ tar -xzf pulumi-v{{page.installer_version}}-linux-x64.tar.gz

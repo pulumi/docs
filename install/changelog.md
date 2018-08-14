@@ -23,6 +23,11 @@ title: "Change Log"
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v150">0.15.0</a></th>
+            <td>2018/08/13</td>
+            <td>{% include sdk-links.html version='0.15.0' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v143">0.14.3</a></th>
             <td>2018/07/20</td>
             <td>{% include sdk-links.html version='0.14.3' %}</td>
@@ -51,6 +56,86 @@ title: "Change Log"
 </table>
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## v0.15.0 {#v150}
+
+Released on August 13, 2018
+
+In addition to the 0.15.0 CLI release, we've released new versions of all of our packages.
+
+### Pulumi CLI
+
+This release brings many large improvements to the Pulumi CLI. Major features include:
+
+#### Parallelism
+
+Pulumi now preforms resource operations in parallel, when possible. By default, Pulumi allows ten parallel operations, but this can be controlled with the `-p` flag to `pulumi`. Presently, deletes are still processed sequentaly, but this will be changed in a future release. It is possible that your program may have implicit dependencies between two resources and the change to preform operations in parallel by default will cause issues. If this happens, we recommend that you set dependsOn on property in `resourceOptions` parameter to any resource. You may also pass `-p=1` to disable parallelism. Parallelism is only supported for nodejs programs today.
+
+#### First class providers
+
+Pulumi now allows resource providers to be created and configured as part of your program. In addition to the ambiently available provider for each resource, you can also create an explicit version of the provider and configure it as you wish. This is helpful, for example, if you want to create some resources in a different region from your main deployment. We have an [example](https://github.com/pulumi/pulumi-aws/blob/master/examples/multiple-regions/index.ts) that shows how to use this feature and we are excited to see what you build with it.
+
+#### Status Rich Updates
+
+The Pulumi CLI is now able to report more detailed information from individual resources during an update.
+
+#### Improved Templating Support
+
+You can now pass a URL to a git repository to `pulumi new` which can contain a set of templates. This allows you to share common templates across your team. When run without any arguments, `pulumi new` behaves as before, using the templates hosted by Pulumi.
+
+#### Native TypeScript support
+
+By default, Pulumi now natively supports TypeScript, so you do not need to run `tsc` anymore before deploying. Pulumi prefers JavaScript source to TypeScript source, so if you had been using TypeScript previously, we recommend you make the following changes:
+
+1. Remove the `main` and `typings` directives from `package.json`, as well as the `build` script.
+2. Remove the `bin` folder that contained your previously compiled code.
+3. You may remove the dependency on `typescript` from your `package.json` as well.
+
+To use this new support, you must upgrade your `@pulumi/pulumi` version to 0.15.0 as well. While a `tsconfig.json` file is no longer required other tools like VS Code behave better when it is present, so you'll probably want to keep it.
+
+#### Miscellaneous improvements
+
+- The CLI no longer emits warnings if it can't detect metadata about your git enlistement (for example, what GitHub project it coresponds to).
+- The CLI now only warns about adding a plaintext configuration in specific cases instead of for every value you add.
+
+### @pulumi/pulumi 0.15.0
+
+#### Closure capturing improvements
+
+We've improved our closure capturing logic, which should allow you to write more idomatic code in lambda functions that are uploaded to the cloud. Previously, if you wanted to use a module, we required you to write either `require('module')` or `await import('module')` inside your lambda function. In addition, if you wanted to use a helper you defined in another file, you had to require that module in your function as well. With these changes, the following code now works:
+
+```typescript
+import * as axios from "axios";
+import * as cloud from "@pulumi/cloud-aws";
+
+const api = new cloud.API("api");
+api.get("/", async (req, res) => {
+    const statusText = (await axios.default.get("https://pulumi.io")).statusText;
+    res.write(`GET https://pulumi.io/ == ${statusText}`).end();
+});
+```
+
+#### Default value for configuration package
+
+The `pulumi.Config` object can now be created without an argument. When no argument is supplied, the value of the current project is used. This means that application level code can simply do `new pulumi.Confg()` without passing any argument. For library authors, you should continue to pass the name of your package as an argument.
+
+### @pulumi/aws 0.15.0
+
+### @pulumi/aws-infra 0.15.0
+
+### @pulumi/aws-serverless 0.15.0
+
+### @pulumi/azure 0.15.0
+
+### @pulumi/cloud 0.15.0
+
+### @pulumi/gcp 0.15.0
+
+### @pulumi/kubernetes 0.15.0
+
+### @pulumi/openstack 0.15.0
+
+We are releasing a new provider that allows Pulumi to work with OpenStack. A big thanks to **[@frassle](https://github.com/Frassle)** for the implementation of the OpenStack provider!
 
 ## v0.14.3 {#v143}
 
