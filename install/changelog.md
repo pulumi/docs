@@ -102,8 +102,8 @@ While a `tsconfig.json` file is no longer required, as Pulumi uses intelligent d
 
 ### Pulumi Service
 
-Since the last release, the Pulumi Service made some key improvements around the handling of update logs. When viewing stack update logs that include the output of other
-programs, like `Docker`, the resulting logs should now render correctly as we as load much faster.
+The Pulumi Service made some key improvements around the handling of update logs. When viewing stack update logs that include the output of other
+programs, like `docker`, the resulting logs should now render correctly as we as load much faster.
 
 The biggest new feature however, is the introduction of the new [Pulumi GitHub application](https://github.com/apps/pulumi).
 
