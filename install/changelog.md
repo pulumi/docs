@@ -67,31 +67,45 @@ In addition to the 0.15.0 CLI release, we've released new versions of all of our
 
 This release brings many large improvements to the Pulumi CLI. Major features include:
 
+#### Kubernetes
+
+Kubernetes support has been brought to production-ready level of quality. Many features in this release are in support of this outcome. This includes:
+
+* Full support for the entire Kubernetes API
+* Improved status reporting for deployment rollouts
+* Verified support for AWS EKS, Azure AKS, and GCP GKE, in addition to Minikube and manually hosted clusters
+* Support for provisioning and deploying to clusters in a single program
+* Deploying Helm Charts using the `helm.v2.Chart` type
+
+To use Pulumi with Kubernetes, please [visit our Getting Started page on Kubernetes](/install/kubernetes.html).
+
 #### Parallelism
 
-Pulumi now preforms resource operations in parallel, when possible. By default, Pulumi allows ten parallel operations, but this can be controlled with the `-p` flag to `pulumi`. Presently, deletes are still processed sequentaly, but this will be changed in a future release. It is possible that your program may have implicit dependencies between two resources and the change to preform operations in parallel by default will cause issues. If this happens, we recommend that you set dependsOn on property in `resourceOptions` parameter to any resource. You may also pass `-p=1` to disable parallelism. Parallelism is only supported for nodejs programs today.
+Pulumi now performs resource creates and updates in parallel, driven by dependencies in the resource graph. (Parallel deletes are coming in a future release.) If your program has implicit dependencies that Pulumi does not already see as dependencies, it's possible parallel will cause ordering issues. If this happens, you may set the `dependsOn` on property in the `resourceOptions` parameter to any resource. By default, Pulumi allows 10 parallel operations, but the `-p` flag can be used to override this. `-p=1` disables parallelism altogether. Parallelism is supported for Node.js and Go programs, and Python support will come in a future release.
 
 #### First class providers
 
-Pulumi now allows resource providers to be created and configured as part of your program. In addition to the ambiently available provider for each resource, you can also create an explicit version of the provider and configure it as you wish. This is helpful, for example, if you want to create some resources in a different region from your main deployment. We have an [example](https://github.com/pulumi/pulumi-aws/blob/master/examples/multiple-regions/index.ts) that shows how to use this feature and we are excited to see what you build with it.
+Pulumi now allows creation and configuration of resource providers programmatically. In addition to the default provider instance for each resource, you can also create an explicit version of the provider and configure it explicitly. This can be used to create some resources in a different region from your main deployment, or deploy resources to a programmatically configured Kubernetes cluster, for example. We have [a multi-region deployment example](https://github.com/pulumi/pulumi-aws/blob/master/examples/multiple-regions/index.ts) for illustrative purposes.
 
 #### Status Rich Updates
 
-The Pulumi CLI is now able to report more detailed information from individual resources during an update.
+The Pulumi CLI is now able to report more detailed information from individual resources during an update. This is used, for instance, in the Kubernetes provider, to provide incremental progress output for steps that may take a while to comeplete (such as deployment orchestration). We anticipate leveraging this feature in more places over time.
 
 #### Improved Templating Support
 
-You can now pass a URL to a git repository to `pulumi new` which can contain a set of templates. This allows you to share common templates across your team. When run without any arguments, `pulumi new` behaves as before, using the templates hosted by Pulumi.
+You can now pass a URL to a Git repository to `pulumi new` to install a custom template, enabling you to share common templates across your team. If you pass a simple name, or omit arguments altogether, `pulumi new` behaves as before, using the [templates hosted by Pulumi](https://github.com/pulumi/templates).
 
 #### Native TypeScript support
 
-By default, Pulumi now natively supports TypeScript, so you do not need to run `tsc` anymore before deploying. Pulumi prefers JavaScript source to TypeScript source, so if you had been using TypeScript previously, we recommend you make the following changes:
+By default, Pulumi now natively supports TypeScript, so you do not need to run `tsc` explicitly before deploying. (We often forget to do this too!) Simply run `pulumi up`, and the program will be recompiled on the fly before running it.
+
+To use this new support, upgrade your `@pulumi/pulumi` version to 0.15.0, in addition to the CLI. Pulumi prefers JavaScript source to TypeScript source, so if you had been using TypeScript previously, we recommend you make the following changes:
 
 1. Remove the `main` and `typings` directives from `package.json`, as well as the `build` script.
 2. Remove the `bin` folder that contained your previously compiled code.
-3. You may remove the dependency on `typescript` from your `package.json` as well.
+3. You may remove the dependency on `typescript` from your `package.json` as well, since `@pulumi/pulumi` has one.
 
-To use this new support, you must upgrade your `@pulumi/pulumi` version to 0.15.0 as well. While a `tsconfig.json` file is no longer required other tools like VS Code behave better when it is present, so you'll probably want to keep it.
+While a `tsconfig.json` file is no longer required, as Pulumi uses intelligent defaults, other tools like VS Code behave better when it is present, so you'll probably want to keep it.
 
 #### Miscellaneous improvements
 
