@@ -134,17 +134,6 @@ new Config(name?: undefined | string)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L170">method fullKey</a>
-</h3>
-
-```typescript
-private fullKey(key: string): string
-```
-
-
-fullKey turns a simple configuration key into a fully resolved one, by prepending the bag's name.
-
-<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L51">method get</a>
 </h3>
 
@@ -407,17 +396,6 @@ public static isInstance(obj: any): boolean
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L193">property __pulumiCustomResource</a>
-</h3>
-
-```typescript
-private __pulumiCustomResource: boolean = true;
-```
-
-
-A private field to help with RTTI that works in SxS scenarios.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L199">property id</a>
@@ -697,39 +675,6 @@ public static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L47">property __protect</a>
-</h3>
-
-```typescript
-private __protect: boolean;
-```
-
-
-When set to true, protect ensures this resource cannot be deleted.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L53">property __providers</a>
-</h3>
-
-```typescript
-private __providers: Record<string, ProviderResource>;
-```
-
-
-The set of providers to use for child resources. Keyed by package name (e.g. "aws").
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L35">property __pulumiResource</a>
-</h3>
-
-```typescript
-private __pulumiResource: boolean = true;
-```
-
-
-A private field to help with RTTI that works in SxS scenarios.
-
-<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L41">property urn</a>
 </h3>
 
@@ -775,17 +720,6 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 ```typescript
 static Error: ErrorConstructor;
 ```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L24">property __pulumiRunError</a>
-</h3>
-
-```typescript
-private __pulumiRunError: boolean = true;
-```
-
-
-A private field to help with RTTI that works in SxS scenarios.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es5.d.ts#L904">property message</a>

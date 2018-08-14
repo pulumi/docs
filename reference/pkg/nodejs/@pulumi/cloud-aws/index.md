@@ -212,51 +212,11 @@ public static(path: string, localPath: string, options?: cloud.ServeStaticOption
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L70">property customDomains</a>
-</h3>
-
-```typescript
-private customDomains: Domain[];
-```
-
-<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L71">property deployment</a>
 </h3>
 
 ```typescript
 public deployment?: HttpDeployment;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L66">property name</a>
-</h3>
-
-```typescript
-private name: string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L68">property proxyRoutes</a>
-</h3>
-
-```typescript
-private proxyRoutes: ProxyRoute[];
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L69">property routes</a>
-</h3>
-
-```typescript
-private routes: Route[];
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L67">property staticRoutes</a>
-</h3>
-
-```typescript
-private staticRoutes: StaticRoute[];
 ```
 
 <h2 class="pdoc-module-header" id="Function">
@@ -393,43 +353,11 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L365">method registerCustomDomains</a>
-</h3>
-
-```typescript
-private static registerCustomDomains(parent: pulumi.Resource, apiName: string, api: aws.apigateway.RestApi, domains: Domain[]): aws.apigateway.DomainName[]
-```
-
-<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
 protected registerOutputs(outputs: Inputs | undefined): void
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L278">method registerProxyRoutes</a>
-</h3>
-
-```typescript
-private static registerProxyRoutes(parent: pulumi.Resource, apiName: string, proxyRoutes: ProxyRoute[], swagger: SwaggerSpec): void
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L322">method registerRoutes</a>
-</h3>
-
-```typescript
-private static registerRoutes(parent: pulumi.Resource, apiName: string, routes: Route[], swagger: SwaggerSpec): { ... }
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L149">method registerStaticRoutes</a>
-</h3>
-
-```typescript
-private static registerStaticRoutes(parent: pulumi.Resource, apiName: string, staticRoutes: StaticRoute[], swagger: SwaggerSpec): void
 ```
 
 <h3 class="pdoc-member-header">
@@ -995,14 +923,6 @@ protected registerOutputs(outputs: Inputs | undefined): void
 
 ```typescript
 public subscribe(name: string, handler: { ... }): void
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/topic.ts#L21">property name</a>
-</h3>
-
-```typescript
-private name: string;
 ```
 
 <h3 class="pdoc-member-header">

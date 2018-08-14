@@ -19,63 +19,84 @@ PULUMI_DOCS=`mktemp -d`
 echo -e "\033[0;95mrunning typedoc on pulumi\033[0m"
 pushd .
 cd ../pulumi/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi.docs.json --mode modules --includeDeclarations --excludeExternals
+$TYPEDOC --json $PULUMI_DOCS/pulumi.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
 popd
 
 # pulumi-aws
 echo -e "\033[0;95mrunning typedoc on pulumi-aws\033[0m"
 pushd .
 cd ../pulumi-aws/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-aws.docs.json --mode modules --includeDeclarations --excludeExternals
+$TYPEDOC --json $PULUMI_DOCS/pulumi-aws.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
 popd
 
 # pulumi-cloud
 echo -e "\033[0;95mrunning typedoc on pulumi-cloud\033[0m"
 pushd .
 cd ../pulumi-cloud/api
-$TYPEDOC --json $PULUMI_DOCS/pulumi-cloud.docs.json --mode modules --includeDeclarations --excludeExternals
+$TYPEDOC --json $PULUMI_DOCS/pulumi-cloud.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
 popd
 
 # pulumi-cloud-aws
 echo -e "\033[0;95mrunning typedoc on pulumi-cloud-aws\033[0m"
 pushd .
 cd ../pulumi-cloud/aws
-$TYPEDOC --json $PULUMI_DOCS/pulumi-cloud-aws.docs.json --mode modules --includeDeclarations --excludeExternals
+$TYPEDOC --json $PULUMI_DOCS/pulumi-cloud-aws.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
 popd
 
 # pulumi-azure
 echo -e "\033[0;95mrunning typedoc on pulumi-azure\033[0m"
 pushd .
 cd ../pulumi-azure/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-azure.docs.json --mode modules --includeDeclarations --excludeExternals
+$TYPEDOC --json $PULUMI_DOCS/pulumi-azure.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
 popd
 
 # pulumi-kubernetes
 echo -e "\033[0;95mrunning typedoc on pulumi-kubernetes\033[0m"
 pushd .
 cd ../pulumi-kubernetes/pack/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-kubernetes.docs.json --mode modules --includeDeclarations --excludeExternals
+$TYPEDOC --json $PULUMI_DOCS/pulumi-kubernetes.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
 popd
 
 # pulumi-gcp
 echo -e "\033[0;95mrunning typedoc on pulumi-gcp\033[0m"
 pushd .
 cd ../pulumi-gcp/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-gcp.docs.json --mode modules --includeDeclarations --excludeExternals
+$TYPEDOC --json $PULUMI_DOCS/pulumi-gcp.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
 popd
 
 # pulumi-aws-infra
 echo -e "\033[0;95mrunning typedoc on pulumi-aws-infra\033[0m"
 pushd .
 cd ../pulumi-aws-infra/nodejs/aws-infra
-$TYPEDOC --json $PULUMI_DOCS/pulumi-aws-infra.docs.json --mode modules --includeDeclarations --excludeExternals
+$TYPEDOC --json $PULUMI_DOCS/pulumi-aws-infra.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
 popd
 
 # pulumi-aws-serverless
 echo -e "\033[0;95mrunning typedoc on pulumi-aws-serverless\033[0m"
 pushd .
 cd ../pulumi-aws-serverless/nodejs/aws-serverless
-$TYPEDOC --json $PULUMI_DOCS/pulumi-aws-serverless.docs.json --mode modules --includeDeclarations --excludeExternals
+$TYPEDOC --json $PULUMI_DOCS/pulumi-aws-serverless.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
+popd
+
+# pulumi-azure-serverless
+echo -e "\033[0;95mrunning typedoc on pulumi-azure-serverless\033[0m"
+pushd .
+cd ../pulumi-azure-serverless/nodejs/azure-serverless
+$TYPEDOC --json $PULUMI_DOCS/pulumi-azure-serverless.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
+popd
+
+# pulumi-docker
+echo -e "\033[0;95mrunning typedoc on pulumi-docker\033[0m"
+pushd .
+cd ../pulumi-docker/docker
+$TYPEDOC --json $PULUMI_DOCS/pulumi-docker.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
+popd
+
+# pulumi-openstack
+echo -e "\033[0;95mrunning typedoc on pulumi-openstack\033[0m"
+pushd .
+cd ../pulumi-openstack/sdk/nodejs
+$TYPEDOC --json $PULUMI_DOCS/pulumi-openstack.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
 popd
 
 
@@ -93,5 +114,8 @@ $TSC_DOCGEN $PULUMI_DOCS/pulumi-kubernetes.docs.json $PKG_DOCS/kubernetes
 $TSC_DOCGEN $PULUMI_DOCS/pulumi-gcp.docs.json $PKG_DOCS/gcp
 $TSC_DOCGEN $PULUMI_DOCS/pulumi-aws-infra.docs.json $PKG_DOCS/aws-infra
 $TSC_DOCGEN $PULUMI_DOCS/pulumi-aws-serverless.docs.json $PKG_DOCS/aws-serverless
+$TSC_DOCGEN $PULUMI_DOCS/pulumi-azure-serverless.docs.json $PKG_DOCS/azure-serverless
+$TSC_DOCGEN $PULUMI_DOCS/pulumi-docker.docs.json $PKG_DOCS/docker
+$TSC_DOCGEN $PULUMI_DOCS/pulumi-openstack.docs.json $PKG_DOCS/openstack
 
 echo "Done"

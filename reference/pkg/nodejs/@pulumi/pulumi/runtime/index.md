@@ -194,14 +194,6 @@ public promise: { ... };
 public resources: { ... };
 ```
 
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L181">property value</a>
-</h3>
-
-```typescript
-private value: T;
-```
-
 <h2 class="pdoc-module-header" id="Stack">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts#L35">class Stack</a>
 </h2>
