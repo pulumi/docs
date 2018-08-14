@@ -23,7 +23,7 @@ ensure:
 .PHONY: serve
 serve: 
 	@echo -e "\033[0;32mSERVE:\033[0m"
-	bundler exec jekyll serve --strict_front_matter --host 0.0.0.0 --incremental
+	bundle exec jekyll serve --strict_front_matter --host 0.0.0.0 --incremental
 
 .PHONY: generate
 generate:
