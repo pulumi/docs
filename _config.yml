@@ -63,8 +63,8 @@ tocs:
   - install
   - quickstart
   - tour
-  - aws
   - reference
+  - aws
 
 defaults:
   # By default, use a `default_toc` layout, that shows a table of contents on the left.
