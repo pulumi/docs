@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -o nounset -o errexit -o pipefail
+set -o errexit -o pipefail
 cd "$(dirname "${BASH_SOURCE}")/.."
 
 if [ -z ${1:-} ]; then
