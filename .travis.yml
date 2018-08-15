@@ -6,6 +6,10 @@ branches:
   - master
   - production
 before_install:
+# travisqueue, to limit practical concurrency per branch.
+- go get github.com/pulumi/travisqueue
+# Proceed or kill this current build.
+- travisqueue start
 # Install required tools.
 # pulumi
 - curl -L https://get.pulumi.com/ | bash -s -- --version 0.15.0
@@ -19,5 +23,9 @@ before_install:
 script:
 - echo "TRAVIS_EVENT_TYPE=${TRAVIS_EVENT_TYPE}"
 - make travis_${TRAVIS_EVENT_TYPE}
+after_script:
+# Start another build to restart any builds that were cancelled while
+# this one was being processed.
+- travisqueue finish
 notifications:
   webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis
