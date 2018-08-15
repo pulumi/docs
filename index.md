@@ -22,7 +22,7 @@ searchindex: false
     </h2>
     <div>
         <p class="curl-install">
-            <span style="user-select: none">$ </span>curl -fsSL https://get.pulumi.com/ | sh
+            <span style="user-select: none; -webkit-user-select: none;">$ </span>curl -fsSL https://get.pulumi.com/ | sh
         </p>
     </div>
     <p style="text-align: center; margin-bottom: 0">
