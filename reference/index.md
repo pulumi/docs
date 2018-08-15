@@ -8,6 +8,7 @@ Pulumi supports many cloud providers.  Please see below for additional informati
 * [Microsoft Azure](./azure.html)
 * [Google Cloud Platform](./gcp.html)
 * [Kubernetes](./kubernetes.html) for any cloud vendor
+* [OpenStack](./openstack.html)
 
 Pulumi also supports some high level libraries to enable productivity and multi-cloud scenarios:
 

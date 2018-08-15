@@ -37,6 +37,8 @@ installation on your system.
 
 `make serve` will build the website and serve it to http://localhost:4000.
 
+`make docker` will run `build` and `serve` in a docker container with all prerequisites installed.
+
 `make test` runs a broken link checker tool against http://localhost:4000.
 
 `make generate` will regenerate the TypeScript documentation if needed, as well as the CLI documentation in [references/cli](reference/cli). The generated API documentation is placed in the [packages](packages/) folder. This is extremely hacky.

@@ -9,8 +9,8 @@ in the usual means.
 
 Packages let you share and reuse your Pulumi creations with your team and/or the community.
 
-Packages are also how we distribute the foundational cloud resource definitions for AWS, Azure, Google Cloud, and
-Kubernetes, in addition to our frameworks that aggregate these resources into higher level abstractions.
+Packages are also how we distribute the foundational cloud resource definitions for AWS, Azure, Google Cloud, OpenStack,
+and Kubernetes, in addition to our frameworks that aggregate these resources into higher level abstractions.
 
 These packages are installed as any ordinary package would be:
 

@@ -50,7 +50,7 @@ More complex resource types require additional properties, as will soon see.  Re
 * `id` is the cloud provider allocated unique identifier, usually just its name or ID
 
 Although resources can be allocated by hand using the SDK directly, you will almost always create them using an
-appropriate language package, such as the AWS, Azure, GCP, or Kubernetes packages.
+appropriate language package, such as the AWS, Azure, GCP, OpenStack, or Kubernetes packages.
 
 A resource may be created with one of the following three properties:
 

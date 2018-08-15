@@ -14,7 +14,7 @@ From that point onward, any edits to your program result in the minimal incremen
 
 > Before deploying, you will need to configure your machine to access your cloud provider of choice.  In general, Pulumi
 > just uses standard client configuration.  Please see the following instructions for details: [AWS](/install/aws.html),
-> [Azure](/install/azure.html), [Google Cloud](/install/gcp.html), or [Kubernetes](/install/kubernetes.html).
+> [Azure](/install/azure.html), [Google Cloud](/install/gcp.html), [OpenStack](/install/openstack.html), or [Kubernetes](/install/kubernetes.html).
 
 ***
 
