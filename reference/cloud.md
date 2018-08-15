@@ -59,7 +59,7 @@ The AWS implementation of the Cloud framework accepts the following configuratio
 * `functionIncludePackages`: (Optional) Comma-seperated list of additional packages (relative to the project root) to include in Lambda zip uploads for JavaScript callbacks.  E.g `body-parser,typescript`.
 * `computeIAMRolePolicyARNs`: (Optional) Set the IAM role policies to apply to compute (both Lambda and ECS) within this Pulumi program. The default is: `arn:aws:iam::aws:policy/AWSLambdaFullAccess,arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess`.
 * `acmCertificateARN`: (Optional) ACM certificate ARN to support services HTTPS traffic.
-* `ecsClusterARN`: (Optional) ECS cluster ARN. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task.
+* `ecsClusterARN`: (Optional) ECS cluster ARN. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task`.
 * `ecsClusterSecurityGroup`: (Optional) ECS cluster security group that all ALBs for services within the cluster will use.
 * `ecsClusterEfsMountPath`: (Optional) EFS mount path on the cluster hosts.  If not provided, `Volumes` cannot be used in `cloud.Service` and `cloud.Task`.
 * `usePrivateNetwork`: (Optional) Put all compute in a private network.
