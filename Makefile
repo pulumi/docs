@@ -46,7 +46,7 @@ test:
 	./node_modules/.bin/blc http://localhost:4000 -r --exclude-external  --exclude '*/releases/pulumi*' --exclude '*/examples/*' --exclude '*/reference/pkg/*'
 
 .PHONY: preview
-deploy:
+preview:
 	@echo -e "\033[0;32mPREVIEW:\033[0m"
 ifeq ($(TRAVIS_BRANCH),master)
 	./scripts/preview.sh staging
