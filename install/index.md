@@ -36,6 +36,7 @@ After installation, you will want to configure Pulumi for your cloud provider:
 * [AWS](./aws.html)
 * [Azure](./azure.html)
 * [GCP](./gcp.html)
+* [OpenStack](./openstack.html)
 * [Kubernetes](./kubernetes.html)
 
 ## Verifying the Installation

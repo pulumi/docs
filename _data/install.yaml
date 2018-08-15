@@ -6,5 +6,6 @@ toc:
   - install/aws.md
   - install/azure.md
   - install/gcp.md
+  - install/openstack.md
   - install/kubernetes.md
   - install/changelog.md
