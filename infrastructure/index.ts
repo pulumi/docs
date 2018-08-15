@@ -19,8 +19,6 @@ const config = {
     certificateArn: stackConfig.require("certificateArn"),
 };
 
-const protectResource: pulumi.ResourceOptions = { protect: true };
-
 // contentBucket stores the static content to be served via the CDN.
 const contentBucket = new aws.s3.Bucket(
     "contentBucket",
@@ -44,7 +42,9 @@ const contentBucket = new aws.s3.Bucket(
             },
         ],
     },
-    protectResource);
+    {
+        protect: false,
+    });
 
 // logsBucket stores the request logs for incomming requests.
 const logsBucket = new aws.s3.Bucket(
@@ -53,7 +53,9 @@ const logsBucket = new aws.s3.Bucket(
         bucket: `${config.targetDomain}-logs`,
         acl: "private",
     },
-    protectResource);
+    {
+        protect: true,
+    });
 
 const oneMinute = 60;
 
