@@ -8,6 +8,7 @@
 # it when TRAVIS_TOKEN is not set.
 if [ -z ${TRAVIS_TOKEN:-} ]; then
     echo "Skipping travisqueue, TRAVIS_TOKEN is not set."
+    exit 0
 fi
 
 case ${1:-} in
