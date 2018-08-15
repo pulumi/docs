@@ -21,8 +21,8 @@ export AWS_ACCESS_KEY_ID="${!ACCESS_KEY_ENV_VAR}"
 export AWS_SECRET_ACCESS_KEY="${!SECRET_KEY_ENV_VAR}"
 
 if [ -z "${AWS_ACCESS_KEY_ID:-}" ] || [ -z "${AWS_SECRET_ACCESS_KEY:-}" ]; then
-    echo "Error: No AWS credentials found."
-    exit 1
+    echo "Skipping update, no AWS credentials found."
+    exit 0
 fi
 echo "Using AWS Access KEY ID ${AWS_ACCESS_KEY_ID}"
 

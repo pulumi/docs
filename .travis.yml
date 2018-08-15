@@ -6,17 +6,9 @@ branches:
   - master
   - production
 before_install:
-# travisqueue, to limit practical concurrency per branch. We
-# cannot run `go get` to install it because the Go runtime on
-# the ruby VM is too old. So instead we get it from
-# get.pulumi.com (which is definitely not recommended or
-# supported).
-- mkdir -p ~/.bin/
-- curl https://get.pulumi.com/internal/travisqueue > ~/.bin/travisqueue
-- chmod +x ~/.bin/travisqueue
-- export PATH=$PATH:$HOME/.bin
-# Proceed or kill this current build.
-- travisqueue start
+# Use travisqueue to manage build concurrency.
+- ./scripts/travisqueue.sh install
+- ./scripts/travisqueue.sh start
 # Install required tools.
 # pulumi
 - curl -L https://get.pulumi.com/ | bash -s -- --version 0.15.0
@@ -31,8 +23,6 @@ script:
 - echo "TRAVIS_EVENT_TYPE=${TRAVIS_EVENT_TYPE}"
 - make travis_${TRAVIS_EVENT_TYPE}
 after_script:
-# Start another build to restart any builds that were cancelled while
-# this one was being processed.
-- travisqueue finish
+- ./scripts/travisqueue.sh finish
 notifications:
   webhooks: https://ufci1w66n3.execute-api.us-west-2.amazonaws.com/stage/travis
