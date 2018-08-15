@@ -23,7 +23,7 @@ You can find additional examples of using Google Cloud in [the Pulumi examples r
 The following packages are available in packager managers:
 * JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/gcp
 * Python: https://pypi.org/project/pulumi-gcp/
-* Go: `github.com/pulumi/pulumi-aws/sdk/go/gcp`
+* Go: `github.com/pulumi/pulumi-gcp/sdk/go/gcp`
 
 The CGP provider is open source and available in the [pulumi/pulumi-gcp](https://github.com/pulumi/pulumi-gcp) repo. 
 
