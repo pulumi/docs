@@ -2,6 +2,7 @@ nav_section: "Getting Started"
 toc: 
 - title: Getting Started
   path: /quickstart/index
+  toplevel: true
 - title: AWS Tutorials
   path: /quickstart/aws-hello-world
   section:

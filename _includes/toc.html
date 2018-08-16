@@ -26,14 +26,19 @@ include.tree is the actual set of sections to render. It is an array with shape:
         {% else %}
             {% assign sidenav_selected = "" %}
         {% endif %}
-        {% if item.section %}
+        {% comment %}
+        `toplevel` is for items that don't have a `section` but should be rendered as a top-level item (with an href that includes the .html).
+        {% endcomment %}
+        {% if item.section or item.toplevel %}
             <div data-title="{{ item.title }}">
                 <div class="sidenav-topic {{ sidenav_selected }}">
                     <a data-title="{{ item.title }}" href="{{ path }}.html">{{ item.title }}</a>
                 </div>
-                <div class="sidenav-subsection">
-                    {% include toc_sub.html tree=item.section %}
-                </div>
+                {% if item.section %}
+                    <div class="sidenav-subsection">
+                        {% include toc_sub.html tree=item.section %}
+                    </div>
+                {% endif %}
             </div>
         {% else %}
             {% if path %}
