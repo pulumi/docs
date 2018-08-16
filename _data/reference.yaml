@@ -6,6 +6,7 @@ toc:
   - reference/aws.md
   - reference/azure.md
   - reference/gcp.md
+  - reference/openstack.md
   - reference/kubernetes.md
   - reference/cloud.md
 - title: Concepts
