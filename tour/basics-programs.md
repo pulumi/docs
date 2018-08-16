@@ -52,7 +52,7 @@ func main() {
 }
 ```
 
-The `Bucket` object allocated above is called a [resource](./basics-resources.html), and it describes your program's
+The `Bucket` object allocated above is called a [resource](./programs-resources.html), and it describes your program's
 cloud requirements so that Pulumi can create and manage them.  This is immutable infrastructure as code.
 
 ***

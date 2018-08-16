@@ -15,7 +15,7 @@ const bucket = new aws.s3.Bucket("mybucket", {});
 ```
 
 You can find additional examples of using AWS in [the Pulumi examples repo](https://github.com/pulumi/examples).
-The [Quickstart Tutorials](/quickstarts) also cover a lot of AWS concepts, including
+The [Quickstart Tutorials](/quickstart) also cover a lot of AWS concepts, including
 [containers](https://pulumi.io/quickstart/aws-containers.html),
 [serverless functions](https://pulumi.io/quickstart/aws-rest-api.html),
 [infrastructure](https://pulumi.io/quickstart/aws-ec2.html), and the

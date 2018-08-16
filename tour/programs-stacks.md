@@ -16,7 +16,7 @@ There are many reasons we might want more than one stack for our program:
 
 Each stack is entirely isolated from all other stacks, enabling concurrent deployments and fine-grained access controls.
 
-The [`pulumi stack`](/reference/cli/pulumi_stack) command manages everything about stacks.
+The [`pulumi stack`](/reference/cli/pulumi_stack.html) command manages everything about stacks.
 
 The `stack ls` command shows us the current project's stacks and some basic information about each one:
 

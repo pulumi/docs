@@ -37,7 +37,7 @@ After some dependency installations from NPM, you'll see a few files have been g
 Let's look at some of those.
 
 - `Pulumi.yaml` defines the [project](../reference/project.html).
-- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file](../tour/basics-configuring.html) for the stack we initialized.
+- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file](../tour/programs-configuring.html) for the stack we initialized.
 - `www` contains our sample static content.
 - The key file for defining our stack resources `index.js` so let's examine that.
 
