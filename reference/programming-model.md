@@ -47,7 +47,8 @@ A resource is created via `new Resource(name)` in JavaScript. All resources must
 All resource constructors take the following additional properties. 
 - `dependencies` - a list of explicit resource dependencies
 - `protect` - whether to mark a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.
-- `parent` - Optional parent for the resource. See [Components](#components).
+- `parent` - optional parent for the resource. See [Components](#components).
+- `provider` - optional provider for the resource. See [Providers](#providers).
 
 ## Resource outputs {#outputs}
 
@@ -102,7 +103,7 @@ To access configuration values that have been set with `pulumi config set`, use 
 
 ```js
 let config = new pulumi.Config("broome-proj"); // broome-proj is name defined in Pulumi.yaml
-console.log(`Hello, ${config.require("name")}!`);	    // prints "BroomeLLC"
+console.log(`Hello, ${config.require("name")}!`);        // prints "BroomeLLC"
 ```
 
 In the Pulumi CLI, configuration values are always created as string values. But, you can extract a strongly-typed form with methods such as `config.getNumber`, `config.getBoolean`, and so on.
@@ -143,15 +144,84 @@ this.registerOutputs({
 })
 ```
 
+In addition to the usual resource options, components accept a set of [providers](#providers) to use for their child resources. If a component is itself a child of another component, its set of providers is inherited from its parent by default.
+
+```js
+let component = new MyResource("component", { providers: { aws: useast1, kubernetes: myk8s } });
+```
+
 For more information about components, see the [Pulumi Components](component-tutorial.html) tutorial.
+
+## Providers {#providers}
+
+A [CustomResource][pulumi.CustomResource] needs an associated resource provider to manage its Create, Read, Update, and Delete (_CRUD_) operations. This is in contrast to a [ComponentResource][pulumi.ComponentResource], whose logic is authored entirely in a Pulumi program's source language (e.g. Javascript or Python). By default, a `CustomResource`'s provider is determined based on its [package](#packages). This default provider is automatically created by Pulumi, and is configured using its package's [config values](#config). For example, the configuration and program below will create a single EC2 instance in the `us-west-2` region.
+
+```js
+let aws = require("@pulumi/aws");
+
+let instance = new aws.ec2.Instance("myInstance", {
+    instanceType: "t2.micro",
+    ami: "myAMI",
+});
+```
+
+```bash
+$ pulumi config set aws:region us-west-2
+```
+
+While this works for the majority of Pulumi programs, some programs may have special requirements (e.g. the ability to deploy into multiple AWS regions simultaneously or to deploy into a Kubernetes cluster created earlier in the program) that require explicitly creating, configuring, and referencing providers. This is typically done by instantiating the relevant package's `Provider` type and passing it in the options for each `CustomResource` or `ComponentResource` that needs to use it. For example, the configuration and program below will create an ACM certificate in the `us-east-1` region and a load balancer listener in the `us-west-2` region.
+
+```js
+let pulumi = require("@pulumi/pulumi");
+let aws = require("@pulumi/aws");
+
+// Create an AWS provider for the us-east-1 region.
+let useast1 = new aws.Provider("useast1", { region: "us-east-1" });
+
+// Create an ACM certificate in us-east-1.
+let cert = new aws.acm.Certificate("cert", {
+    domainName: "foo.com",
+    validationMethod: "EMAIL",
+}, { provider: useast1 });
+
+// Create an ALB listener in the default region that references the ACM certificate created above.
+let listener = new aws.elasticloadbalancingv2.Listener("listener", {
+    loadBalancerArn: loadBalancerArn,
+    port: 443,
+    protocol: "HTTPS",
+    sslPolicy: "ELBSecurityPolicy-2016-08",
+    certificateArn: cert.arn,
+    defaultAction: {
+        targetGroupArn: targetGroupArn,
+        type: "forward",
+    },
+});
+```
+
+```
+$ pulumi config set aws:region us-west-2
+```
+
+Component resources also accept a set of providers to use with their child resources. For example, the EC2 instance parented to `myResource` in the program below will be created in `us-east-1`, and the Kubernetes pod parented to `myResource` will be created in the cluster targeted by the "test-ci" context.
+
+```js
+class MyResource extends pulumi.ComponentResource {
+    constructor(name, opts) {
+        let instance = new aws.ec2.Instance("instance", { ... }, { parent: this });
+        let pod = new kubernetes.core.v1.Pod("pod", { ... }, { parent: this });
+    }
+}
+
+let useast1 = new aws.Provider("useast1", { region: "us-east-1" });
+let myk8s = new kubernetes.Provider("myk8s", { context: "test-ci" });
+let myResource = new MyResource("myResource", { providers: { aws: useast1, kubernetes: myk8s } });
+```
 
 ## Packages {#packages}
 
 Pulumi packages are normal NPM or Python packages. They transitively depend on `@pulumi/pulumi` which defines how resources created by a Pulumi program will be communicated to the Pulumi engine.  This ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package.
 
-Some Pulumi packages have a dependency on a [Resource Provider plugin](../tour/advanced-plugins.html) which contains the implementation for how to Create, Read, Update and Delete resources defined by the package.  The [pulumi.CustomResource] base class is used to connect a JavaScript resource class with the resource provider it depends on for resource management.  Packages like [@pulumi/aws] and [@pulumi/kubernetes] define resources, such as `aws.ec2.Intance`, `kubernetes.Pod`, which are managed by the AWS and Kubernetes resource providers.
-
-A [CustomResource][pulumi.CustomResource] needs an associated CRUD provider, whereas a [ComponentResource][pulumi.ComponentResource] does not --- its logic is authored entirely in JavaScript in Python. Packages such as [@pulumi/cloud] and [@pulumi/aws-infra] contain only these higher-level component resources.
+Some Pulumi packages have a dependency on a [Resource Provider plugin](../tour/advanced-plugins.html) which contains the implementation for how to Create, Read, Update and Delete resources defined by the package.  The [pulumi.CustomResource] base class is used to connect a JavaScript resource class with the resource provider it depends on for resource management.  Packages like [@pulumi/aws] and [@pulumi/kubernetes] define resources, such as `aws.ec2.Intance`, `kubernetes.Pod`, which are managed by the AWS and Kubernetes resource providers. Packages such as [@pulumi/cloud] and [@pulumi/aws-infra] contain only higher-level component resources, which are not managed by a resource provider.
 
 ## Runtime code {#runtime}
 
