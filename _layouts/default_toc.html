@@ -1,12 +1,10 @@
-{% for current_toc in site.tocs %}
-    {% if found_toc %}
-        {% break %}
-    {% else %}
-        {% assign toc=site.data[current_toc] %}
-        {% include toc_select.html tree=toc.toc toc=toc %}
-    {% endif %}
-{% endfor %}
-
+{%- comment -%}
+Determine which file in `_data` to use for the table of contents based on the page's path.
+For example, a page with path "/install/aws.md" will use `_data/install.yaml` for its TOC,
+a page with path "/reference/faq.md" will use `_data/reference.yaml`, etc.
+{%- endcomment -%}
+{%- assign data_key = page.path | split: '/' | first -%}
+{%- assign toc = site.data[data_key] -%}
 <!doctype html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     {% include head.html %}

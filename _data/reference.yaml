@@ -2,26 +2,42 @@ nav_section: "Reference"
 toc:
 - title: Reference
   path: /reference/index
-  section: 
-  - reference/aws.md
-  - reference/azure.md
-  - reference/gcp.md
-  - reference/openstack.md
-  - reference/kubernetes.md
-  - reference/cloud.md
+  section:
+  - title: AWS
+    path: /reference/aws.html
+  - title: Azure
+    path: /reference/azure.html
+  - title: GCP
+    path: /reference/gcp.html
+  - title: OpenStack
+    path: /reference/openstack.html
+  - title: Kubernetes
+    path: /reference/kubernetes.html
+  - title: Cloud Framework
+    path: /reference/cloud.html
 - title: Concepts
   path: /reference/concepts
   section:
-  - reference/programming-model.md
-  - reference/stack.md
-  - reference/project.md
-  - reference/config.md
-  - reference/javascript.md
-  - reference/python.md
-  - reference/component-tutorial.md
-  - reference/terraform.md
-  - reference/how.md
-  - reference/troubleshooting.md
+  - title: Programming Model
+    path: /reference/programming-model.html
+  - title: Stacks
+    path: /reference/stack.html
+  - title: Projects
+    path: /reference/project.html
+  - title: Configuration
+    path: /reference/config.html
+  - title: JavaScript and TypeScript
+    path: /reference/javascript.html
+  - title: Python
+    path: /reference/python.html
+  - title: "Tutorial: Pulumi Components"
+    path: /reference/component-tutorial.html
+  - title: Terraform Providers
+    path: /reference/terraform.html
+  - title: How Pulumi Works
+    path: /reference/how.html
+  - title: Troubleshooting
+    path: /reference/troubleshooting.html
 - title: Packages
   path: /reference/pkg/index
   section:
@@ -75,7 +91,7 @@ toc:
   - title: Stack
     path: /reference/cli/pulumi_stack.html
   - title: Update
-    path: /reference/cli/pulumi_update.html  
+    path: /reference/cli/pulumi_update.html
 - title: Continuous Deployment
   path: /reference/cd
   section:
@@ -85,5 +101,9 @@ toc:
     path: /reference/cd-aws-code-services.html
   - title: Travis CI
     path: /reference/cd-travis.html
-- reference/faq.md
-- reference/known-issues.md
+- title: FAQ
+  path: /reference/faq
+  toplevel: true
+- title: Known issues
+  path: /reference/known-issues
+  toplevel: true
