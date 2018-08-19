@@ -3,7 +3,7 @@ title: "Kubernetes"
 ---
 
 The Kubernetes provider for Pulumi can be used to provision any of the resources specified by the
-API (_e.g._, [v1.10](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/). The
+Kubernetes API (_e.g._, [v1.10](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/). The
 Kubernetes provider uses the official Kubernetes Go client under the hood, and will automatically
 configure itself if a [kubeconfig
 file](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
@@ -56,7 +56,7 @@ them in this order:
 
 The following pacakges are available in pacakge managers:
 
-* JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/aws
+* JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/kubernetes
 
 Support will eventually expand to Python and Go as well.
 
@@ -89,11 +89,11 @@ $ kubectl config \
 ```
 
 If you have done this and are using the default context file, you will be able to set the
-configuration variable `kubernetes:config:context` to the given context name:
+configuration variable `kubernetes:context` to the given context name:
 
 ```
 $ pulumi stack init new-kube-stack
-$ pulumi config set kubernetes:config:context my-context
+$ pulumi config set kubernetes:context my-context
 ```
 
 If you don't want to need to select a context everywhere, you can always make it the default:
@@ -108,8 +108,8 @@ $ kubectl config \
 > that leads to unrepeatable deployments.
 
 Additionally, the Kubernetes provider accepts the following configuration settings. These can be
-provided to the default AWS provider via `pulumi config set kubernetes:config:<option>`, or passed
-to the constructor of `new aws.Provider` to construct a specific instance of the AWS provider.
+provided to the default Kubernetes provider via `pulumi config set kubernetes:<option>`, or passed
+to the constructor of `new kubernetes.Provider` to construct a specific instance of the Kubernetes provider.
 
 * `kubeconfig`: (Optional) The kubeconfig file to use for all resource operations.
 * `context`: (Optional) Override the context to use. This works with both kubeconfig files that are
