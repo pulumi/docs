@@ -1,12 +1,3 @@
-{% for current_toc in site.tocs %}
-    {% if found_toc %}
-        {% break %}
-    {% else %}
-        {% assign toc=site.data[current_toc] %}
-        {% include toc_select.html tree=toc.toc toc=toc %}
-    {% endif %}
-{% endfor %}
-
 <!doctype html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     {% include head.html %}

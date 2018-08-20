@@ -54,18 +54,6 @@ exclude:
 keep_files:
   - search-index.json
 
-# Tables of contents, stored in the _data folder, that control the sidebar nav
-# To add a new entry to the table of contents, create a new doc in the appropriate folder,
-# then add an entry in _data/<toc>.yaml. 
-# Ensure that the ordering matches the logical flow that customers expect
-tocs:
-  - home
-  - install
-  - quickstart
-  - tour
-  - reference
-  - aws
-
 defaults:
   # By default, use a `default_toc` layout, that shows a table of contents on the left.
   - values:
