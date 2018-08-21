@@ -32,7 +32,9 @@ searchindex: false
         <a href="https://github.com/pulumi/examples"><button class="button small">EXAMPLES</button></a>
     </p>
     <p class="what-is-pulumi">
-        <span class="what-is-pulumi-cta">Define cloud applications and infrastructure</span>
+        <span class="what-is-pulumi-cta">
+            Create, deploy, and manage cloud native applications and infrastructure
+        </span>
         in your favorite language, using an open source platform that enables sharing, reuse,
         and safe and predictable changes in a team environment.
     </p>
@@ -103,22 +105,22 @@ searchindex: false
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="/quickstart/aws-extract-thumbnail.html">
-          <img src="/images/icon-feature-colada.svg"
+        <a href="/quickstart/kubernetes.html">
+          <img src="/images/icon-feature-kubernetes.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="/quickstart/aws-extract-thumbnail.html">CoLaDa</a>
+                <a href="/quickstart/kubernetes.html">Kubernetes</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
             <span class="card-text">
-                <p>Embrace containers, lambdas, and data, using a modern, multi-cloud framework.</p>
+                <p>Deploy and orchestrate cloud native Kubernetes services in real code, no YAML needed.</p>
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="/quickstart/aws-extract-thumbnail.html">
+            <a href="/quickstart/kubernetes.html">
                 <button class="button">START NOW</button>
             </a>
         </div>

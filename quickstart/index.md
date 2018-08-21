@@ -20,6 +20,7 @@ Each tutorial walks through an end-to-end scenario in 5 minutes:
 * [Containers](aws-containers.html): Create a load-balanced, hosted NGINX container service
 * [Serverless](aws-rest-api.html): Create a REST API that uses serverless functions and Dynamo DB
 * [Infrastructure](aws-ec2.html): Create an EC2-based WebServer and associated infrastructure
+* [Kubernetes](kubernetes-guestbook.html): Deploy the Kubernetes Guestbook example to an existing cluster
 * [Everything Together (Colada)](aws-extract-thumbnail.html): Create a video thumbnail app that uses containers, serverless, and infrastructure together
 
 > **Note:** Although Pulumi supports Azure, GCP, Kubernetes, and other cloud providers, these tutorials use AWS. If you

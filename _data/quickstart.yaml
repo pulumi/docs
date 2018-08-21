@@ -11,3 +11,7 @@ toc:
    - quickstart/aws-ec2.md
    - quickstart/aws-extract-thumbnail.md
    - quickstart/aws-s3-website.md
+- title: Kubernetes Tutorials
+  path: /quickstart/kubernetes
+  section:
+  - quickstart/kubernetes-guestbook.md
