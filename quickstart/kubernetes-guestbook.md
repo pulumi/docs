@@ -8,8 +8,7 @@ In this tutorial, we'll build and deploy
 The guestbook is a simple, multi-tier web application that uses Redis and Nginx, powered by Docker containers and
 Kubernetes. The primary difference between this example and the standard Kubernetes one is that we'll be authoring it in
 TypeScript instead of YAML, and we'll deploy it using `pulumi` rather than `kubectl`. This gives us the full power of
-real languages, combined with immutable infrastructure with diffable updates, alongside reliable orchestration, status,
-and robust state management.
+real languages, combined with immutable infrastructure, delivering a robust and repeatable update experience.
 
 The code for this tutorial is
 [available on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook).
@@ -43,7 +42,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 1.  To create a new Pulumi project, let's use a template:
 
     ```shell
-    $ pulumi new kubernetes-typescript --dir guestbook && cd guestbook
+    $ pulumi new kubernetes-typescript --dir k8s-guestbook && cd k8s-guestbook
     ```
 
     There are a variety of ways to create a new project -- for instance, we could have started by cloning
@@ -51,10 +50,14 @@ To start, we'll need to create a project and stack (a deployment target) for our
     and allow us walk through the process of creating a new project from scratch. This command will have initialized
     a fresh project in the `guestbook` directory, and our command has `cd`'d into it.
 
-2.  Next, replace the minimal contents of the template's `index.js` file with the full guestbook:
+2.  Next, replace the minimal contents of the template's `index.ts` file with the full guestbook:
 
     ```js
     import * as k8s from "@pulumi/kubernetes";
+    import * as pulumi from "@pulumi/pulumi";
+
+    let config = new pulumi.Config();
+    let useLoadBalancer = config.getBoolean("useLoadBalancer");
 
     // REDIS MASTER
     let redisMasterLabels = { app: "redis", tier: "backend", role: "master"};
@@ -146,11 +149,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
             labels: frontendLabels,
         },
         spec: {
-            // Comment or delete the following line if you want to use a LoadBalancer:
-            type: "NodePort",
-            // If your cluster supports it, uncomment the following to automatically create
-            // an external load-balanced IP for the frontend service.
-            // type: "LoadBalancer",
+            type: useLoadBalancer ? "LoadBalancer" : "ClusterIP",
             ports: [{ port: 80 }],
             selector: frontendLabels,
         },
@@ -188,14 +187,34 @@ To start, we'll need to create a project and stack (a deployment target) for our
             },
         },
     });
+
+    export let frontendIP: pulumi.Output<string>;
+    if (useLoadBalancer) {
+        frontendIP = frontendService.status.apply(status => status.loadBalancer.ingress[0].ip);
+    } else {
+        frontendIP = frontendService.spec.apply(spec => spec.clusterIP);
+    }
     ```
 
-    This is a lot of code, but it just creates three Kubernetes Services, each with an associated Deployment. The full
-    Kubernetes object model is available to us. Programming directly against the raw object model is a great way to ease
-    into using Pulumi, and gives us the full power of Kubernetes right away; however, we will also soon see that real
-    languages can help greatly simplify examples like this, thanks to the added abstraction of classes and functions.
+    This code creates three Kubernetes Services, each with an associated Deployment. The full Kubernetes object model is
+    available to us. Programming directly against the raw object model gives us the full power of Kubernetes right away.
+    In future examples, we'll see that real languages can help greatly simplify examples like this, thanks to the added
+    abstraction of classes and functions.
 
-3.  Now we're ready to deploy our code. To do so, simply run `pulumi up`:
+3.  (Optional) By default, our frontend Service will be of type `ClusterIP`. This will work on Minikube, but for most
+    production Kubernetes clusters, we will want it to be of type `LoadBalancer`, ensuring that a load balancer in your
+    target cloud environment is allocated.
+
+    The above code uses [configuration](https://pulumi.io/tour/programs-configuring.html) to make this parameterizable.
+    If you'd like our program to use a load balancer, simply run:
+
+    ```shell
+    $ pulumi config set useLoadBalancer true
+    ```
+
+    If you're not sure, it's safe to skip this step.
+
+4.  Now we're ready to deploy our code. To do so, simply run `pulumi up`:
 
     ```
     $ pulumi up
@@ -261,7 +280,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
     Permalink: https://app.pulumi.com/joeduffy/k8s-guestbook-dev/updates/1
     ```
 
-4.  The application is now running in our Kubernetes cluster.
+5.  The application is now running in our cluster. Let's inspect our cluster state to validate the deployment.
 
     Use `kubectl` to see the deployed services:
 
@@ -291,6 +310,12 @@ To start, we'll need to create a project and stack (a deployment target) for our
     10.102.193.86
     ```
 
+5.  Now let's see our guestbook application in action.
+
+    ![Guestbook in browser](/images/quickstart/kubernetes/guestbook.png)
+
+    **No Load Balancer (Minikube):**
+
     Because Minikube doesn't support the `LoadBalancer` type, our example above uses `ClusterIP`. In order to
     browse to it, we will first need to forward a port on `localhost` to it. To do so, run:
 
@@ -298,13 +323,13 @@ To start, we'll need to create a project and stack (a deployment target) for our
     $ kubectl port-forward svc/frontend 8765:80
     ```
 
-    At this point, we can view our running Guestbook application:
+    At this point, we can view our running guestbook application:
 
     ```shell
     $ curl localhost:8765
     ```
 
-    The HTML from the Guestbook will be fetched and printed:
+    The HTML from the guestbook will be fetched and printed:
 
     ```
     <html ng-app="redis">
@@ -314,19 +339,27 @@ To start, we'll need to create a project and stack (a deployment target) for our
     </html>
     ```
 
-    If you are instead running this program in a real cluster, you can change `ClusterIP` to `LoadBalancer` above,
-    run `pulumi up` to update it, and then you can simply access your Guestbook application with:
+    **Using a Load Balancer:**
+
+    If you are instead running this program in a real cluster, and set `useLoadBalancer` to `true` in step 3,
+    then you can simply access your guestbook application with:
 
     ```shell
     $ curl $(pulumi stack output frontendIP)
     ```
 
-    If you navigate to this URL in a web browser, you will see the application in action:
+    The HTML from the guestbook will be fetched and printed:
 
-    ![Guestbook in browser](/images/quickstart/kubernetes/guestbook.png)
+    ```
+    <html ng-app="redis">
+      <head>
+      <title>Guestbook</title>
+      ...
+    </html>
+    ```
 
-5.  Let's make an update to our program to scale the frontend from 3 replicas to 5. The Pulumi engine handles
-    incremental rollouts of changes, including preview diffs. Find the line:
+6.  We're almost done. To demonstrate incremental updates, however, Let's make an update to our program to scale
+    the frontend from 3 replicas to 5. Find the line:
 
     ```typescript
             replicas: 3,
@@ -337,6 +370,8 @@ To start, we'll need to create a project and stack (a deployment target) for our
     ```typescript
             replicas: 5,
     ```
+
+    Or simply run `sed -i "s/replicas: 3/replicas: 5/g" index.ts`.
 
     Now all we need to do is run `pulumi up`, and Pulumi will figure out the minimal set of changes to make:
 
@@ -359,7 +394,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
           6 resources unchanged
     ```
 
-6.  Feel free to experiment. As soon as you're done, let's clean up and destroy the resources and remove our stack:
+7.  Feel free to experiment. As soon as you're done, let's clean up and destroy the resources and remove our stack:
 
     ```shell
     $ pulumi destroy --yes
@@ -371,3 +406,11 @@ To start, we'll need to create a project and stack (a deployment target) for our
     ```
     $ kubectl get pods
     ```
+
+    If your cluster is empty, you will see output along the following lines:
+
+    ```
+    No resources found.
+    ```
+
+    Of course, if you have other applications deployed, you should still see them, but not the guestbook.
