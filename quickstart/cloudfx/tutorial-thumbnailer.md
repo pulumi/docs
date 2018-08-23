@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Multi-Cloud Containers and Serverless"
-reference: /quickstart/aws-extract-thumbnail.html
+redirect_from: /quickstart/aws-extract-thumbnail.html
 ---
 
 In this tutorial, we'll use JavaScript to combine serverless, containers and cloud infrastructure together into a
