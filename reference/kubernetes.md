@@ -3,7 +3,7 @@ title: "Kubernetes"
 ---
 
 The Kubernetes provider for Pulumi can be used to provision any of the resources specified by the
-Kubernetes API (_e.g._, [v1.10](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/). The
+Kubernetes API (_e.g._, [v1.10](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/)). The
 Kubernetes provider uses the official Kubernetes Go client under the hood, and will automatically
 configure itself if a [kubeconfig
 file](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
@@ -54,7 +54,7 @@ them in this order:
 
 ## Libraries
 
-The following pacakges are available in pacakge managers:
+The following packages are available in package managers:
 
 * JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/kubernetes
 
