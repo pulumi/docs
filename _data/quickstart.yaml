@@ -3,15 +3,36 @@ toc:
 - title: Getting Started
   path: /quickstart/index
   toplevel: true
-- title: AWS Tutorials
-  path: /quickstart/aws-hello-world
   section:
-   - quickstart/aws-containers.md
-   - quickstart/aws-rest-api.md
-   - quickstart/aws-ec2.md
-   - quickstart/aws-extract-thumbnail.md
-   - quickstart/aws-s3-website.md
-- title: Kubernetes Tutorials
-  path: /quickstart/kubernetes
+   - quickstart/install.md
+   - quickstart/clouds.md
+- title: AWS
+  path: /quickstart/aws/index
   section:
-  - quickstart/kubernetes-guestbook.md
+   - quickstart/aws/setup.md
+   - quickstart/aws/tutorial-rest-api.md
+   - quickstart/aws/tutorial-containers-ecs-fargate.md
+   - quickstart/aws/tutorial-ec2-webserver.md
+   - quickstart/aws/tutorial-s3-website.md
+- title: Microsoft Azure
+  path: /quickstart/azure/index
+  section:
+   - quickstart/azure/setup.md
+- title: Google Cloud Platform
+  path: /quickstart/gcp/index
+  section:
+   - quickstart/gcp/setup.md
+- title: Kubernetes
+  path: /quickstart/kubernetes/index
+  section:
+   - quickstart/kubernetes/setup.md
+   - quickstart/kubernetes/tutorial-guestbook.md
+- title: Pulumi Cloud Framework
+  path: /quickstart/cloudfx/index
+  section:
+   - quickstart/cloudfx/tutorial-rest-api.md
+   - quickstart/cloudfx/tutorial-thumbnailer.md
+- title: OpenStack
+  path: /quickstart/openstack/index
+  section:
+   - quickstart/openstack/setup.md

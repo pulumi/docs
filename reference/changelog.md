@@ -1,5 +1,6 @@
 ---
 title: "Change Log"
+redirect_from: /install/changelog.html
 ---
 
 <!-- Common links -->

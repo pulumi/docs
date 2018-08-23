@@ -1,38 +1,56 @@
 ---
-title: "AWS"
+title: AWS
+redirect_from: /reference/aws.html
 ---
+
+<img src="/images/quickstart/aws-purple.png" align="right">
 
 The Amazon Web Services (AWS) provider for Pulumi can be used to provision any of the cloud resources available in [AWS](https://aws.amazon.com/).  The AWS provider must be configured with credentials to deploy and update resources in AWS. 
 
-See the [full API documentation](./pkg/nodejs/@pulumi/aws/index.html) for complete details of the available AWS provider APIs.
+See the [full API documentation](/reference/pkg/nodejs/@pulumi/aws/index.html) for complete details of the available AWS provider APIs.
+
+## Setup
+
+The AWS provider supports several options for providing access to AWS credentials.  See [AWS setup page](./setup.html) for details.
+
+## Getting Started
+
+The easiest way to start with AWS is to follow one of the tutorials:
+
+* [Serverless REST APIs using Lambda](./tutorial-rest-api.html): Create simple RESTful web server using AWS Lambdas
+* [Containers on ECS "Fargate"](./tutorial-containers-ecs-fargate.html): Deploy containers using Elastic Container Service (ECS)
+* [EC2 Linux WebServer VM](./tutorial-ec2-webserver.html): Create an EC2 Linux Web Server virtual machine
+* [Serve a Static Website from S3](./tutorial-s3-website.html): Serve a static website out of content in an S3 bucket
+
+In addition to the tutorials, several interesting examples are available complete with instructions:
+
+* [Ruby on Rails in EC2](https://github.com/pulumi/examples/tree/master/aws-ts-ruby-on-rails): Run a Ruby on Rails
+    WebServer using EC2 instances
+* [SQS-Triggered Lambdas](https://github.com/pulumi/examples/tree/master/aws-js-sqs-slack): Post to Slack using a Lambda
+    anytime a SQS message arrives
+* [Static Website in CloudFront and S3](https://github.com/pulumi/examples/tree/master/aws-ts-static-website): Create a
+    static website serving content out of S3, fronted by a CloudFront CDN
+* [Provision an Elastic Kubernetes Service Cluster](https://github.com/pulumi/examples/tree/master/aws-ts-eks): Stand up
+    a managed EKS cluster
 
 ## Example
 
 ```javascript
 const aws = require("@pulumi/aws");
 
-const bucket = new aws.s3.Bucket("mybucket", {});
+const bucket = new aws.s3.Bucket("mybucket");
 ```
 
 You can find additional examples of using AWS in [the Pulumi examples repo](https://github.com/pulumi/examples).
-The [Quickstart Tutorials](/quickstart) also cover a lot of AWS concepts, including
-[containers](https://pulumi.io/quickstart/aws-containers.html),
-[serverless functions](https://pulumi.io/quickstart/aws-rest-api.html),
-[infrastructure](https://pulumi.io/quickstart/aws-ec2.html), and the
-[intersection of all three](https://pulumi.io/quickstart/aws-extract-thumbnail.html).
 
 ## Libraries
 
 The following pacakges are available in pacakge managers:
-* JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/aws
-* Python: https://pypi.org/project/pulumi-aws/
-* Go: `github.com/pulumi/pulumi-aws/sdk/go/aws`
+* JavaScript/TypeScript: [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws)
+* Python: [`pulumi-aws`](https://pypi.org/project/pulumi-aws/)
+* Go: [`github.com/pulumi/pulumi-aws/sdk/go/aws`](https://github.com/pulumi/pulumi-aws)
 
 The AWS provider is open source and available in the [pulumi/pulumi-aws](https://github.com/pulumi/pulumi-aws) repo. 
-
-## Authentication
-
-The AWS provider supports several options for providing access to AWS credentials.  See [AWS installation page](/install/aws.html) for details.
 
 ## Configuration
 

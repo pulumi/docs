@@ -1,5 +1,6 @@
 ---
-title: "Create a Guestbook with Redis and PHP"
+title: "Tutorial: Guestbook App with Redis and Nginx"
+redirect_from: /quickstart/kubernetes-guestbook.html
 ---
 
 In this tutorial, we'll build and deploy

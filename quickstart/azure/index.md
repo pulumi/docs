@@ -1,10 +1,29 @@
 ---
-title: "Azure"
+title: Microsoft Azure
+redirect_from: /reference/azure.html
 ---
+
+<img src="/images/quickstart/azure-purple.png" align="right">
 
 The Azure provider for Pulumi can be used to provision any of the cloud resources available in [Azure](https://azure.microsoft.com/en-us/) via Azure Resource Manager (ARM).  The Azure provider must be configured with credentials to deploy and update resources in Azure. 
 
-See the [full API documentation](./pkg/nodejs/@pulumi/azure/index.html) for complete details of the available Azure provider APIs.
+See the [full API documentation](/reference/pkg/nodejs/@pulumi/azure/index.html) for complete details of the available Azure provider APIs.
+
+## Setup
+
+The Azure provider supports several options for providing access to Azure credentials.  See [Azure installation page](/install/azure.html) for details.
+
+## Getting Started
+
+The easiest way to start with Azure is to follow one of these examples:
+
+* [Azure VM Web Server](https://github.com/pulumi/examples/tree/master/azure-js-webserver): Stand up a simple virtual
+    machine-based webserver
+* [Azure Function Apps](https://github.com/pulumi/examples/tree/master/azure-ts-functions): Create a serverless function
+* [Azure AppService with SQL and AppInsights](https://github.com/pulumi/examples/tree/master/azure-ts-appservice): Build
+    an AppService web application that uses SQL and AppInsights
+* [Azure Kubernetes Service (AKS) Cluster](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm): Create an
+    AKS cluster and deploy a Helm Chart into it
 
 ## Example
 
@@ -16,22 +35,16 @@ const resourceGroupName = new azure.core.ResourceGroup("my-group", {
 });
 ```
 
-You can find additional examples of using Azure in [the Pulumi examples repo](https://github.com/pulumi/examples):
-* [Azure VM Web Server](https://github.com/pulumi/examples/tree/master/azure-js-webserver)
-* [Azure Function Apps](https://github.com/pulumi/examples/tree/master/azure-ts-functions)
+You can find additional examples of using Azure in [the Pulumi examples repo](https://github.com/pulumi/examples).
 
 ## Libraries
 
 The following pacakges are available in pacakge managers:
-* JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/azure
-* Python: https://pypi.org/project/pulumi-azure/
-* Go: `github.com/pulumi/pulumi-azure/sdk/go/azure`
+* JavaScript/TypeScript: [`@pulumi/azure`](https://www.npmjs.com/package/@pulumi/azure)
+* Python: [`pulumi-azure`](https://pypi.org/project/pulumi-azure/)
+* Go: [`github.com/pulumi/pulumi-azure/sdk/go/azure`](https://github.com/pulumi/pulumi-azure)
 
 The Azure provider is open source and available in the [pulumi/pulumi-azure](https://github.com/pulumi/pulumi-azure) repo. 
-
-## Authentication
-
-The Azure provider supports several options for providing access to Azure credentials.  See [Azure installation page](/install/azure.html) for details.
 
 ## Configuration
 

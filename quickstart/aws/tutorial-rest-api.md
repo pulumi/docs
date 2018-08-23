@@ -1,5 +1,6 @@
 ---
-title: Hello World on AWS
+title: "Tutorial: Serverless REST APIs using Lambda"
+redirect_from: /quickstart/aws-hello-world.html
 ---
 
 In this tutorial, we'll use Pulumi to create a serverless app that serves static content, in addition to dynamic routes
@@ -28,16 +29,16 @@ cd ahoy-pulumi
 
 You can accept the defaults for this command. For instance, you can change the AWS region to `us-west-2`.
 
-![Run Pulumi new](../images/quickstart/hello/Quickstart1.png){:width="700px"}
+![Run Pulumi new](/images/quickstart/hello/Quickstart1.png){:width="700px"}
 
 After some dependency installations from NPM, you'll see a few files have been generated from this initialization process. 
 
-![View files](../images/quickstart/hello/Quickstart2.png){:width="700px"}
+![View files](/images/quickstart/hello/Quickstart2.png){:width="700px"}
 
 Let's look at some of those.
 
-- `Pulumi.yaml` defines the [project](../reference/project.html).
-- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file](../tour/programs-configuring.html) for the stack we initialized.
+- `Pulumi.yaml` defines the [project](/reference/project.html).
+- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file](/tour/programs-configuring.html) for the stack we initialized.
 - `www` contains our sample static content.
 - The key file for defining our stack resources `index.js` so let's examine that.
 
@@ -62,7 +63,7 @@ endpoint.get("/source", (req, res) => res.json({name: "AWS"}))
 exports.url = endpoint.publish().url;
 ```
 
-See the [reference documentation](../reference/index.html) for details on the APIs we're using.
+See the [reference documentation](/reference/index.html) for details on the APIs we're using.
 
 ## Deploy the stack
 
@@ -74,11 +75,11 @@ pulumi update
 
 This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
 
-![Stack preview](../images/quickstart/hello/Quickstart3.png){:width="700px"}
+![Stack preview](/images/quickstart/hello/Quickstart3.png){:width="700px"}
 
 Choosing `yes` will create resources in AWS. This may take a minute or two.
 
-![Stack update](../images/quickstart/hello/Quickstart4.png){:width="700px"}
+![Stack update](/images/quickstart/hello/Quickstart4.png){:width="700px"}
 
 Since there was a stack export (via `exports.url` in the code), this is printed in the output of `pulumi update`. We can easily `curl` this URL via `pulumi stack output`:
 
@@ -88,13 +89,13 @@ curl $(pulumi stack output url)
 
 For a more interesting view that shows the result of calling a Lambda function, open the page in a browser:
 
-![Stack page in browser](../images/quickstart/hello/Quickstart5.png){:width="600px"}
+![Stack page in browser](/images/quickstart/hello/Quickstart5.png){:width="600px"}
 
 ## Manage the stack
 
 Our output also contained a permalink to the Pulumi dashboard. We can review the stack in the UI, and examine logs and resource usage, along with inviting friends and co-workers to collaborate on stacks. 
 
-![](../images/quickstart/hello/Quickstart6.png){:width="600px"}
+![](/images/quickstart/hello/Quickstart6.png){:width="600px"}
 
 ## Tear Down
 
@@ -119,9 +120,11 @@ In this example we've seen:
 From here, you can dive deeper:
 
 - Try out additional AWS tutorials:
-  - [Containers](./aws-rest-api.html): Create a load-balanced, hosted NGINX container service
-  - [Serverless](./aws-rest-api.html): Create a REST API that uses serverless functions and DynamoDB
-  - [Infrastructure](./aws-ec2.html): Create an EC2-based WebServer and associated infrastructure
-  - [Everything Together (Colada)](./aws-extract-thumbnail.html): Create a video thumbnail app that uses containers,
-      serverless, and infrastructure together
-- Take [a tour of Pulumi](../tour/index.html).
+  - [Containers](./tutorial-containers-ecs-fargate.html): Create a load-balanced, hosted NGINX container service
+  - [Infrastructure](./tutorial-ec2-webserver.html): Create an EC2-based WebServer and associated infrastructure
+- Try out some multi-cloud serverless and container tutorials (that also run on AWS):
+  - [Multi-cloud Serverless with Document Database](../cloudfx/tutorial-rest-api.html): Create multi-cloud serverless
+        REST APIs that use a document database
+  - [Multi-cloud Serverless plus Containers](../cloudfx/tutorial-thumbnailer.html): Create a multi-cloud video
+        thumbnail app that uses containers, serverless, and infrastructure together
+- Take [a tour of Pulumi](/tour/index.html).

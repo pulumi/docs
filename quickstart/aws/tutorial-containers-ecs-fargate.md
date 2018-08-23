@@ -1,5 +1,6 @@
 ---
-title: "Containers on AWS"
+title: "Tutorial: Containers on ECS Fargate"
+redirect_from: /quickstart/aws-containers.html
 ---
 
 In this tutorial, we'll use JavaScript to build and deploy a simple container to [AWS Fargate](https://aws.amazon.com/fargate/). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
@@ -132,6 +133,6 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
 
 ## Next steps
 
-For an end-to-end application also includes serverless functions, see the [Serverless and Containers](./aws-extract-thumbnail.html) tutorial.
+For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer](../cloudfx/tutorial-thumbnailer.html) tutorial.
 
 For an example application that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app) TypeScript sample.

@@ -13,8 +13,9 @@ these resources will be created for the first time.  Each stack has its own
 From that point onward, any edits to your program result in the minimal incremental changes to your resources.
 
 > Before deploying, you will need to configure your machine to access your cloud provider of choice.  In general, Pulumi
-> just uses standard client configuration.  Please see the following instructions for details: [AWS](/install/aws.html),
-> [Azure](/install/azure.html), [Google Cloud](/install/gcp.html), [OpenStack](/install/openstack.html), or [Kubernetes](/install/kubernetes.html).
+> just uses standard client configuration.  Please see the following instructions for details:
+> [AWS](/quickstart/aws/setup.html), [Azure](/quickstart/azure/setup.html), [Google Cloud](/quickstart/gcp/setup.html),
+> [OpenStack](/quickstart/openstack/setup.html), or [Kubernetes](/quickstart/kubernetes/setup.html).
 
 ***
 

@@ -1,6 +1,9 @@
 ---
-title: "Cloud Framework"
+title: Pulumi Cloud Framework
+redirect_from: /reference/cloud.html
 ---
+
+<img src="/images/quickstart/cloudfx-purple.png" align="right">
 
 The Cloud framework for Pulumi lets you program infrastructure and application logic, side by side, using simple, high-level cloud building blocks.  This package has three key defining attributes:
 
@@ -10,7 +13,7 @@ The Cloud framework for Pulumi lets you program infrastructure and application l
 
 The Cloud framework must be configured with credentials to deploy and update resources in the target cloud platform.
 
-See the [full API documentation](./pkg/nodejs/@pulumi/cloud/index.html) for complete details of the available Cloud framework APIs.
+See the [full API documentation](/reference/pkg/nodejs/@pulumi/cloud/index.html) for complete details of the available Cloud framework APIs.
 
 ## Example
 
