@@ -1,10 +1,26 @@
 ---
-title: "GCP"
+title: Google Cloud Platform
+redirect_from: /reference/gcp.html
 ---
 
-The GCP (Google Cloud Platform) provider for Pulumi can be used to provision any of the cloud resources available in [GCP](https://cloud.google.com/).  The GCP provider must be configured with credentials to deploy and update resources in Google Cloud.
+<img src="/images/quickstart/gcp-purple.png" align="right">
 
-See the [full API documentation](./pkg/nodejs/@pulumi/gcp/index.html) for complete details of the available GCP provider APIs.
+The Google Cloud Platform (GCP) provider for Pulumi can be used to provision any of the cloud resources available in [GCP](https://cloud.google.com/).  The GCP provider must be configured with credentials to deploy and update resources in Google Cloud.
+
+See the [full API documentation](/reference/pkg/nodejs/@pulumi/gcp/index.html) for complete details of the available GCP provider APIs.
+
+## Setup
+
+The GCP provider supports several options for providing access to Google Cloud credentials.  See [GCP setup page](./setup.html) for details.
+
+## Getting Started
+
+The easiest way to start with GCP is to follow one of these examples:
+
+* [Google Compute Engine](https://github.com/pulumi/examples/tree/master/gcp-js-webserver): Stand up a simple
+    virtual machine-based webserver in GCE
+* [Google Cloud Functions](https://github.com/pulumi/examples/tree/master/gcp-ts-functions): Create a serverless
+    function
 
 ## Example
 
@@ -14,22 +30,17 @@ const gcp = require("@pulumi/gcp")
 const bucket = new gcp.storage.Bucket("my-bucket");
 ```
 
-You can find additional examples of using Google Cloud in [the Pulumi examples repo](https://github.com/pulumi/examples):
-* [Google Compute Engine](https://github.com/pulumi/examples/tree/master/gcp-js-webserver)
-* [Google Cloud Functions](https://github.com/pulumi/examples/tree/master/gcp-ts-functions)
+You can find additional examples of using Google Cloud in
+[the Pulumi examples repo](https://github.com/pulumi/examples).
 
 ## Libraries
 
 The following packages are available in packager managers:
-* JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/gcp
-* Python: https://pypi.org/project/pulumi-gcp/
-* Go: `github.com/pulumi/pulumi-gcp/sdk/go/gcp`
+* JavaScript/TypeScript: [`@pulumi/gcp`](https://www.npmjs.com/package/@pulumi/gcp)
+* Python: [`pulumi-gcp`](https://pypi.org/project/pulumi-gcp/)
+* Go: [`github.com/pulumi/pulumi-gcp/sdk/go/gcp`](https://github.com/pulumi/pulumi-gcp)
 
 The CGP provider is open source and available in the [pulumi/pulumi-gcp](https://github.com/pulumi/pulumi-gcp) repo. 
-
-## Authentication
-
-The GCP provider supports several options for providing access to Google Cloud credentials.  See [GCP installation page](/install/gcp.html) for details.
 
 ## Configuration
 

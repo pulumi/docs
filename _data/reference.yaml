@@ -1,22 +1,7 @@
 nav_section: "Reference"
 toc:
-- title: Reference
-  path: /reference/index
-  section:
-  - title: AWS
-    path: /reference/aws.html
-  - title: Azure
-    path: /reference/azure.html
-  - title: GCP
-    path: /reference/gcp.html
-  - title: OpenStack
-    path: /reference/openstack.html
-  - title: Kubernetes
-    path: /reference/kubernetes.html
-  - title: Cloud Framework
-    path: /reference/cloud.html
 - title: Concepts
-  path: /reference/concepts
+  path: /reference/index
   section:
   - title: Programming Model
     path: /reference/programming-model.html
@@ -103,6 +88,9 @@ toc:
     path: /reference/cd-travis.html
 - title: FAQ
   path: /reference/faq
+  toplevel: true
+- title: Change Log
+  path: /reference/changelog
   toplevel: true
 - title: Known issues
   path: /reference/known-issues

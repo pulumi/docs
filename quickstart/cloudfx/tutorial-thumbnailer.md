@@ -1,5 +1,6 @@
 ---
-title: "Everything Together (Colada) on AWS"
+title: "Tutorial: Multi-Cloud Containers and Serverless"
+reference: /quickstart/aws-extract-thumbnail.html
 ---
 
 In this tutorial, we'll use JavaScript to combine serverless, containers and cloud infrastructure together into a
@@ -10,7 +11,7 @@ We'll build an application that extracts a thumbnail from a video using AWS Lamb
 code for this tutorial is [available on GitHub](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer),
 and a video walkthrough of this example is [available on YouTube](https://www.youtube.com/watch?v=Bofmh1qnNSE).
 
-![Video thumbnail diagram](../images/quickstart/video-thumbnail-diagram.png){:width="600px"}
+![Video thumbnail diagram](/images/quickstart/video-thumbnail-diagram.png){:width="600px"}
 
 {% include aws-js-prereqs.md %}
 
@@ -45,7 +46,7 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
     bucket.onPut("onNewVideo", bucketArgs => {
         console.log(`*** New video: file ${bucketArgs.key} was uploaded at ${bucketArgs.eventTime}.`);
         const file = bucketArgs.key;
-        
+
         const thumbnailFile = file.substring(0, file.indexOf('_')) + '.jpg';
         const framePos = file.substring(file.indexOf('_')+1, file.indexOf('.')).replace('-',':');
 
@@ -73,8 +74,8 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
 
     This code declares the following resources:
 
-    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property](../reference/stack.html#outputs) `bucketName`, to easily retrieve this value after the project has been deployed.
-    - **Containers**. Uses [cloud.Task](../reference/pkg/nodejs/@pulumi/cloud/#Task), which is a high-level, convenient component for working with containers. The component automatically provisions a container registry instance in ECR, runs a Docker build, and saves the Docker image to the provisioned ECR instance. It also defines an ECS task and configures it to use the built image.
+    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property](/reference/stack.html#outputs) `bucketName`, to easily retrieve this value after the project has been deployed.
+    - **Containers**. Uses [cloud.Task](/reference/pkg/nodejs/@pulumi/cloud/#Task), which is a high-level, convenient component for working with containers. The component automatically provisions a container registry instance in ECR, runs a Docker build, and saves the Docker image to the provisioned ECR instance. It also defines an ECS task and configures it to use the built image.
     - **Serverless functions**
       - The Lambda function `onNewVideo` is triggered whenever a new `.mp4` video file is uploaded to the S3 bucket. The Lambda extracts the time index that is encoded in the video filename (in the form `file_mm-ss`) and launches the container task.
       - The Lambda function `onNewThumbnail` is triggered when a new `.jpg` thumbnail file is uploaded to the S3 bucket, and prints a message to the log file.

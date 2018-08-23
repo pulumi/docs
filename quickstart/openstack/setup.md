@@ -1,8 +1,9 @@
 ---
-title: "Configure Pulumi for OpenStack"
+title: Setup
+redirect_from: /install/openstack.html
 ---
 
-[Pulumi OpenStack Provider]: ../reference/openstack.html
+[Pulumi OpenStack Provider]: ./index.html
 [Download your OpenStack credentials]: https://docs.openstack.org/newton/user-guide/common/cli-set-environment-variables-using-openstack-rc.html
 
 The [Pulumi OpenStack Provider] needs to be configured with OpenStack credentials

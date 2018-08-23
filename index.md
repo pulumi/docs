@@ -20,16 +20,10 @@ searchindex: false
     <h2 class="get-to-the-cloud no-anchor">
         Program the Cloud.
     </h2>
-    <div>
-        <p class="curl-install">
-            <span style="user-select: none; -webkit-user-select: none;">$ </span>curl -fsSL https://get.pulumi.com/ | sh
-        </p>
-    </div>
     <p style="text-align: center; margin-bottom: 0">
-        <a href="/install"><button class="button small">INSTALL</button></a>
-        <a href="/quickstart"><button class="button small primary">GET STARTED</button></a>
-        <a href="/tour"><button class="button small">TAKE A TOUR</button></a>
-        <a href="https://github.com/pulumi/examples"><button class="button small">EXAMPLES</button></a>
+        <a href="/quickstart"><button class="button primary">GET STARTED</button></a>
+        <a href="/tour"><button class="button">TAKE A TOUR</button></a>
+        <a href="https://github.com/pulumi/examples"><button class="button">EXAMPLES</button></a>
     </p>
     <p class="what-is-pulumi">
         <span class="what-is-pulumi-cta">
@@ -42,13 +36,13 @@ searchindex: false
 
 <div class="card-table">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="/quickstart/aws-containers.html">
+        <a href="/quickstart/aws/tutorial-containers-ecs-fargate.html">
           <img src="/images/icon-feature-containers.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="/quickstart/aws-containers.html">Containers</a>
+                <a href="/quickstart/aws/tutorial-containers-ecs-fargate.html">Containers</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -57,19 +51,19 @@ searchindex: false
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="/quickstart/aws-containers.html">
+            <a href="/quickstart/aws/tutorial-containers-ecs-fargate.html">
                 <button class="button">START NOW</button>
             </a>
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="/quickstart/aws-rest-api.html">
+        <a href="/quickstart/aws/tutorial-rest-api.html">
           <img src="/images/icon-feature-serverless.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="/quickstart/aws-rest-api.html">Serverless</a>
+                <a href="/quickstart/aws/tutorial-rest-api.html">Serverless</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -78,19 +72,19 @@ searchindex: false
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="/quickstart/aws-rest-api.html">
+            <a href="/quickstart/aws/tutorial-rest-api.html">
                 <button class="button">START NOW</button>
             </a>
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="/quickstart/aws-ec2.html">
+        <a href="/quickstart/aws/tutorial-ec2-webserver.html">
           <img src="/images/icon-feature-data.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="/quickstart/aws-ec2.html">Infrastructure</a>
+                <a href="/quickstart/aws/tutorial-ec2-webserver.html">Infrastructure</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -99,19 +93,19 @@ searchindex: false
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="/quickstart/aws-ec2.html">
+            <a href="/quickstart/aws/tutorial-ec2-webserver.html">
                 <button class="button">START NOW</button>
             </a>
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="/quickstart/kubernetes.html">
+        <a href="/quickstart/kubernetes/index.html">
           <img src="/images/icon-feature-kubernetes.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="/quickstart/kubernetes.html">Kubernetes</a>
+                <a href="/quickstart/kubernetes/index.html">Kubernetes</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -120,7 +114,7 @@ searchindex: false
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="/quickstart/kubernetes.html">
+            <a href="/quickstart/kubernetes/index.html">
                 <button class="button">START NOW</button>
             </a>
         </div>

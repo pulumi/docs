@@ -7,8 +7,8 @@ so, we will discovery many new ways to extend the basic Pulumi program.
 
 > If you'd like to take a break from the tour, head on over to [the Tutorials section](/quickstart) to see specific
 > example applications that use [containers](/quickstart/aws-containers.html),
-> [serverless](/quickstart/aws-rest-api.html), [infrastructure](/quickstart/aws-ec2.html), or
-> [a combination of all three](/quickstart/aws-extract-thumbnail.html).  Alternatively, check out
+> [serverless](/quickstart/aws/tutorial-rest-api.html), [infrastructure](/quickstart/aws/tutorial-ec2-webserver.html), or
+> [a combination of all three](/quickstart/cloudfx/tutorial-thumbnailer.html).  Alternatively, check out
 > [the detailed Reference material](/reference) to go deeper on certain concepts.
 
 ***
