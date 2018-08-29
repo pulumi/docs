@@ -18,7 +18,7 @@ searchindex: false
 <div class="card-table">
     <a href="https://www.pulumi.com"><img src="/images/logo/logo.svg" alt="Pulumi" width="350"></a>
     <h2 class="get-to-the-cloud no-anchor">
-        Program the Cloud.
+        Cloud Native Infrastructure as Code
     </h2>
     <p style="text-align: center; margin-bottom: 0">
         <a href="/quickstart"><button class="button primary">GET STARTED</button></a>
