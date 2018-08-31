@@ -36,3 +36,13 @@ toc:
   path: /quickstart/openstack/index
   section:
    - quickstart/openstack/setup.md
+- title: Comparisons
+  path: /quickstart/comparisons/index
+  section:
+  - quickstart/comparisons/terraform.md
+  - quickstart/comparisons/cloud_templates.md
+  - quickstart/comparisons/cloud_sdks.md
+  - quickstart/comparisons/serverless.md
+  - quickstart/comparisons/k8s_yaml_dsls.md
+  - quickstart/comparisons/chef_puppet_etc.md
+  - quickstart/comparisons/custom.md

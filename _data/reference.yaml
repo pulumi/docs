@@ -17,8 +17,6 @@ toc:
     path: /reference/python.html
   - title: "Tutorial: Pulumi Components"
     path: /reference/component-tutorial.html
-  - title: Terraform Providers
-    path: /reference/terraform.html
   - title: How Pulumi Works
     path: /reference/how.html
   - title: Troubleshooting
