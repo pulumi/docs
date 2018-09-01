@@ -17,8 +17,6 @@ toc:
     path: /reference/python.html
   - title: "Tutorial: Pulumi Components"
     path: /reference/component-tutorial.html
-  - title: Terraform Providers
-    path: /reference/terraform.html
   - title: How Pulumi Works
     path: /reference/how.html
   - title: Troubleshooting
@@ -86,6 +84,23 @@ toc:
     path: /reference/cd-aws-code-services.html
   - title: Travis CI
     path: /reference/cd-travis.html
+- title: Pulumi Vs. Others
+  path: /reference/vs/index
+  section:
+  - title: Terraform
+    path: /reference/vs/terraform.html
+  - title: Cloud Templates
+    path: /reference/vs/cloud_templates.html
+  - title: Cloud SDKs
+    path: /reference/vs/cloud_sdks.html
+  - title: Serverless
+    path: /reference/vs/serverless.html
+  - title: Kubernetes YAML
+    path: /reference/vs/k8s_yaml_dsls.html
+  - title: Chef, Puppet, etc.
+    path: /reference/vs/chef_puppet_etc.html
+  - title: Custom Solutions
+    path: /reference/vs/custom.html
 - title: FAQ
   path: /reference/faq
   toplevel: true
