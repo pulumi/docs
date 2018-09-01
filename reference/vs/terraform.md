@@ -3,7 +3,7 @@ title: Pulumi vs. Terraform
 redirect_from: /reference/terraform.html
 ---
 
-Terraform is the closest comparison to make to Pulumi. In Terraform, you write programs in a custom
+Terraform is the closest comparison to Pulumi. In Terraform, you write programs in a custom
 domain-specific-language (DSL) called Hashicorp Configuration Language (HCL), and the Terraform engine
 takes care of provisioning and updating resources, very similar to Pulumi. Just like Pulumi, Terraform
 supports many cloud providers. In fact, thanks to integration with Terraform, Pulumi is able to support a
@@ -26,7 +26,9 @@ The major differences between Terraform and Pulumi are as follows:
 
 4. Pulumi has deep support for cloud native technologies, like Kubernetes, and supports advanced deployment
    scenarios that cannot be expressed with Terraform. This includes Prometheus-based canaries, automatic Envoy
-   sidecar injection, and more.
+   sidecar injection, and more. Pulumi is a proud member of the Cloud Native Computing Foundation (CNCF).
+
+Pulumi is [open source](https://github.com/pulumi/pulumi) and available on GitHub.
 
 ## Integration with Terraform
 

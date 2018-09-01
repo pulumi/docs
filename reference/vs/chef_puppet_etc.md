@@ -2,12 +2,19 @@
 title: Pulumi vs. Chef, Puppet, etc.
 ---
 
-Chef, Puppet, Ansible, and Salt are all popular _configuration management tools_. These help you install and manage
-software on existing cloud infrastructure, either for bootstrapping a virtual machine, or patching one.
+Chef, Puppet, Ansible, and Salt are all popular _configuration management tools_. These tools help you install and
+manage software on existing cloud infrastructure, either for bootstrapping a virtual machine, or patching one. They do
+not attempt to solve the problem of provisioning or updating infrastructure, containers, or serverless resources.
 
-Pulumi is fundamentally different, and complements configuration management tools, because it focuses on the
-provisioning and update of infrastructure itself. This is often because users of Pulumi prefer [cattle over pets](
-https://www.engineyard.com/blog/pets-vs-cattle), tend to use more container-oriented systems where bootstrapping is
-handled by a `Dockerfile` where patching "in place" is unnecessary, and/or are either happy to do configuration
-management as a layer on top of Pulumi, or are moving away from it altogether as their shift to cloud native
-architectures.
+Pulumi is fundamentally different than these tools and works great alongside them. Pulumi manages provisioning and
+updating of your cloud infrastructure and applications, including virtual machines, containers, databases, hosted
+cloud services, and serverless functions.
+
+Pulumi uses real languages, much like these configuration management tools, to express your cloud requirements and
+desired infrastructure state. The Pulumi tool then takes these descriptions and can manage multiple environments to
+ensure that your infrastructure is always up to date, either through its CLI or in a hosted CI/CD scenario.
+
+Pulumi works well with modern "immutable infrastructure" architectures, where bootstrapping and patching are
+unnecessary. In such cases, configuration management is not needed in the usual sense. Pulumi also works well with
+classical approaches to infrastructure, however, which often entail virtual machines and where continuing to use a
+configuration tool in conjunction is easy. In either case, Pulumi will help on your path to cloud native architectures.

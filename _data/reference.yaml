@@ -88,19 +88,19 @@ toc:
   path: /reference/vs/index
   section:
   - title: Terraform
-    path: /reference/vs/terraform.md
+    path: /reference/vs/terraform.html
   - title: Cloud Templates
-    path: /referenve/vs/cloud_templates.md
+    path: /reference/vs/cloud_templates.html
   - title: Cloud SDKs
-    path: /reference/vs/cloud_sdks.md
+    path: /reference/vs/cloud_sdks.html
   - title: Serverless
-    path: /reference/vs/serverless.md
+    path: /reference/vs/serverless.html
   - title: Kubernetes YAML
-    path: /reference/vs/k8s_yaml_dsls.md
+    path: /reference/vs/k8s_yaml_dsls.html
   - title: Chef, Puppet, etc.
-    path: /reference/vs/chef_puppet_etc.md
+    path: /reference/vs/chef_puppet_etc.html
   - title: Custom Solutions
-    path: /reference/vs/custom.md
+    path: /reference/vs/custom.html
 - title: FAQ
   path: /reference/faq
   toplevel: true
