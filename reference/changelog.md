@@ -4,12 +4,12 @@ redirect_from: /install/changelog.html
 ---
 
 <!-- Common links -->
-[`Output`]: https://docs.pulumi.com/packages/pulumi/classes/_resource_.output.html
-[Python documentation]: ../reference/python.html
-[Defining and setting stack settings]: ../reference/config.html#config-stack
-[Configuration]: ../reference/config.html
-[Pulumi npm packages]: ../reference/javascript.html#npm-packages
-[Programming Model]: ../reference/programming-model.html
+[`Output`]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#Output
+[Python documentation]: ./python.html
+[Defining and setting stack settings]: ./config.html#config-stack
+[Configuration]: ./config.html
+[Pulumi npm packages]: ./javascript.html#npm-packages
+[Programming Model]: ./programming-model.html
 <!-- End common links -->
 
 ## Available versions {#all-versions}
@@ -740,10 +740,10 @@ Released on December 28, 2017
 
 #### Pulumi Console and managed stacks
 
-New in this release is the [Pulumi Console](https://beta.pulumi.com) and stacks that are managed by Pulumi. This is the recommended way to safely deploy cloud applications.
+New in this release is the [Pulumi Console](https://app.pulumi.com) and stacks that are managed by Pulumi. This is the recommended way to safely deploy cloud applications.
 - `pulumi stack init` now creates a Pulumi managed stack. For a local stack, use `--local`.
 - All Pulumi CLI commands now work with managed stacks. Login to Pulumi via `pulumi login`.
-- The [Pulumi Console](https://beta.pulumi.com) provides a management experience for stacks. You can view the currently deployed resources (along with the AWS ARNs) and see logs from the last update operation.
+- The [Pulumi Console](https://app.pulumi.com) provides a management experience for stacks. You can view the currently deployed resources (along with the AWS ARNs) and see logs from the last update operation.
 
 #### Components and output properties
 

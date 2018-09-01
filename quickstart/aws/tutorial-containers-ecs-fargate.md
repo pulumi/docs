@@ -38,7 +38,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
     exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
     ```    
 
-    This example uses [cloud.Service](../reference/pkg/nodejs/@pulumi/cloud/index.html#Service), which is a high-level, convenient interface for building containers and provisioning an AWS container service.
+    This example uses [cloud.Service](/reference/pkg/nodejs/@pulumi/cloud/index.html#Service), which is a high-level, convenient interface for building containers and provisioning an AWS container service.
 
 1.  Create a subfolder `app` with the following files:
 

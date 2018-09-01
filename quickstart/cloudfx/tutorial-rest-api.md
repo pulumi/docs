@@ -107,6 +107,6 @@ For an end-to-end application with a frontend, see the [URL shortener sample](ht
 
 <!-- LINKS -->
 [@pulumi/cloud]: ../cloudfx/index.html
-[cloud.API]: ../reference/pkg/nodejs/@pulumi/cloud-aws/index.html#API
-[cloud.Table]: ../reference/pkg/nodejs/@pulumi/cloud-aws/index.html#Table
+[cloud.API]: /reference/pkg/nodejs/@pulumi/cloud-aws/index.html#API
+[cloud.Table]: /reference/pkg/nodejs/@pulumi/cloud-aws/index.html#Table
 <!-- END LINKS -->

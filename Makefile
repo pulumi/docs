@@ -28,7 +28,7 @@ ensure:
 .PHONY: serve
 serve: 
 	@echo -e "\033[0;32mSERVE:\033[0m"
-	bundle exec jekyll serve --strict_front_matter --host 0.0.0.0 --incremental
+	@bundle exec jekyll serve --strict_front_matter --host 0.0.0.0 --incremental
 
 .PHONY: generate
 generate:
@@ -48,7 +48,21 @@ build:
 
 .PHONY: test
 test:
-	./node_modules/.bin/blc http://localhost:4000 -r --exclude-external  --exclude '*/releases/pulumi*' --exclude '*/examples/*' --exclude '*/reference/pkg/*'
+	# We exclude a few links:
+	#     - Our generated API docs have lots of broken links
+	#     - Our changelog includes links to private repos
+	#     - Our LinkedIn page, for some reason, returns an HTTP error (despite being valid)
+	# Fixes for the former two are tracked by https://github.com/pulumi/docs/issues/568.
+	./node_modules/.bin/blc http://localhost:4000 -r \
+		--exclude "/reference/pkg" \
+		--exclude "/reference/changelog.html" \
+		--exclude "https://www.linkedin.com/company/pulumi/"
+
+.PHONY: validate
+validate:
+	bundle exec jekyll serve --strict_front_matter --host 0.0.0.0 --incremental --detach >/dev/null 2>&1
+	$(MAKE) test
+	pkill -f jekyll
 
 .PHONY: preview
 preview:
@@ -74,7 +88,7 @@ endif
 travis_push:: banner ensure build deploy
 
 .PHONY: travis_pull_request
-travis_pull_request:: banner ensure build preview
+travis_pull_request:: banner ensure build validate preview
 
 .PHONY: travis_cron
 travis_cron:: banner ensure build
