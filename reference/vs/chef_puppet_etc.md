@@ -1,5 +1,5 @@
 ---
-title: Chef, Puppet, etc.
+title: Pulumi vs. Chef, Puppet, etc.
 ---
 
 Chef, Puppet, Ansible, and Salt are all popular _configuration management tools_. These help you install and manage

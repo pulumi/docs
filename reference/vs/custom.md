@@ -1,5 +1,5 @@
 ---
-title: Custom Solutions
+title: Pulumi vs. Custom Solutions
 ---
 
 Many organizations start out by manually managing infrastructure. This might begin by using your cloud provider's web

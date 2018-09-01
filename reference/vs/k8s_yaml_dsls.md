@@ -1,5 +1,5 @@
 ---
-title: Kubernetes YAML and DSLs
+title: Pulumi vs. Kubernetes YAML and DSLs
 ---
 
 Kubernetes offers YAML configuration out of the box. This is great as an "assembly language" for configuring

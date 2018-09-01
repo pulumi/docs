@@ -84,6 +84,23 @@ toc:
     path: /reference/cd-aws-code-services.html
   - title: Travis CI
     path: /reference/cd-travis.html
+- title: Pulumi Vs. Others
+  path: /reference/vs/index
+  section:
+  - title: Terraform
+    path: /reference/vs/terraform.md
+  - title: Cloud Templates
+    path: /referenve/vs/cloud_templates.md
+  - title: Cloud SDKs
+    path: /reference/vs/cloud_sdks.md
+  - title: Serverless
+    path: /reference/vs/serverless.md
+  - title: Kubernetes YAML
+    path: /reference/vs/k8s_yaml_dsls.md
+  - title: Chef, Puppet, etc.
+    path: /reference/vs/chef_puppet_etc.md
+  - title: Custom Solutions
+    path: /reference/vs/custom.md
 - title: FAQ
   path: /reference/faq
   toplevel: true

@@ -1,5 +1,5 @@
 ---
-title: Terraform
+title: Pulumi vs. Terraform
 redirect_from: /reference/terraform.html
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Cloud Templates (AWS CloudFormation, etc)
+title: Pulumi vs. Cloud Templates (AWS CloudFormation, etc)
 ---
 
 All major cloud providers offer their own form of infrastructure-as-"code" by way of JSON or YAML-based templating

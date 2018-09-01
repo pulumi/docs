@@ -1,5 +1,5 @@
 ---
-title: Serverless Framework
+title: Pulumi vs. Serverless Framework
 ---
 
 The Serverless Framework is a tool that makes programming AWS Lambda, Azure Functions, and Google Cloud Functions
