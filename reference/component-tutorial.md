@@ -71,7 +71,7 @@ In this tutorial, we'll create a simplified version of the example above, that j
     ```  
 
 <!-- LINKS -->
-[pulumi.ComponentResource]: pkg/nodejs/@pulumi/index.html#ComponentResource
+[pulumi.ComponentResource]: pkg/nodejs/@pulumi/pulumi/index.html#ComponentResource
 [Component]: ./programming-model.html#components
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component

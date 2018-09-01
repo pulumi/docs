@@ -136,6 +136,6 @@ runtime:
 ```
 
 <!-- LINKS -->
-[`pulumi.Config`]: pkg/nodejs/@pulumi/index.html#Config
+[`pulumi.Config`]: pkg/nodejs/@pulumi/pulumi/index.html#Config
 [Using configuration values in JavaScript]: ./config.html#javascript
 <!-- END LINKS -->
