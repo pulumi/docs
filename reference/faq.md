@@ -10,7 +10,7 @@ Pulumi uses pulumi.com to store information about the current state of your appl
 
 Any infrastructure that you’ve deployed using Pulumi will continue working and can be managed with your cloud provider’s console or CLI, that is, pulumi.com should not effect any runtime behavior of your application.  
 
-If pulumi.com is down, you'll be unable to preview, update or destroy a stack using Pulumi.  Some commands, like `pulumi logs`, use pulumi.com to find the correct log stream, so will function until pulumi.com recovers, however, your cloud provider will still produce logs that you can use for diagnostics and you can view these via your cloud console or CLI. 
+If pulumi.com is down, you'll be unable to preview, update or destroy a stack using Pulumi.  Some commands, like `pulumi logs`, use pulumi.com to find the correct log stream, so will not function until pulumi.com recovers, however, your cloud provider will still produce logs that you can use for diagnostics and you can view these via your cloud console or CLI. 
 
 ## How can I add support for my favorite cloud?
 
