@@ -51,11 +51,13 @@ test:
 	# We exclude a few links:
 	#     - Our generated API docs have lots of broken links
 	#     - Our changelog includes links to private repos
+	#     - GitHub Edit Links may be broken, because the page might not yet exist!
 	#     - Our LinkedIn page, for some reason, returns an HTTP error (despite being valid)
 	# Fixes for the former two are tracked by https://github.com/pulumi/docs/issues/568.
 	./node_modules/.bin/blc http://localhost:4000 -r \
 		--exclude "/reference/pkg" \
 		--exclude "/reference/changelog.html" \
+		--exclude "https://github.com/pulumi/docs/edit/master" \
 		--exclude "https://www.linkedin.com/company/pulumi/"
 
 .PHONY: validate
