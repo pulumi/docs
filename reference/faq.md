@@ -40,27 +40,9 @@ We are actively looking for ways to improve pulumi's secret management, see [pul
 
 We think that using the Pulumi service and the Pulumi tool together provides the right combination of usability, safety, and security for most users. However, for users with especially unique requirements, it is possible to use the Pulumi tool apart from the service.
 
-When you use Pulumi without pulumi.com, the checkpoint for your stack is stored locally. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, pulumi.com features, such as the deployment history and resource view, will not be available. 
+When you use Pulumi without pulumi.com, the checkpoint for your stack is stored locally. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, pulumi.com features, such as the deployment history and resource view, will not be available.
 
-To use Pulumi without pulumi.com, log out of the Pulumi service and login to the "local" endpoint.  To do so, run the following command:
-
-```sh
-$ pulumi login --cloud-url local://
-```
-
-You will not be prompted for a password.
-
-The checkpoints for your stacks will be stored in `~/.pulumi/stacks`. You may pass a path to this command as well which allows you to change the default root of `~/.pulumi`. For example, if you instead ran:
-
-```sh
-$ pulumi login --cloud-url local:///data/pulumi
-```
-
-Pulumi will store its checkpoint data in `/data/pulumi/stacks`.
-
-If you lose the checkpoint for your stack, Pulumi will be unable to manage any existing resources! Additionally, since Pulumi will believe your stack is empty, the next update will cause pulumi to re-create all of the resources in your stack.
-
-Some commands may behave slightly differently when using the local endpoint. For example, when connected to pulumi.com, `pulumi update` ensures there are no other updates in flight for a given stack, something that doesn't happen with the local endpoint. Secrets are also managed using a key encrypted with a passphrase and stored in `Pulumi.<stack-name>.yaml`. This requires you to enter the passphrase when you preview, update or delete your stack. If you want to collaborate with another person, you'll need to share this passphrase with them as well.
+To use Pulumi without pulumi.com, log in using `pulumi login --local`. For more information, read more at [State and Backends](./state.html).
 
 ## How can I go back to using the Pulumi service?
 
