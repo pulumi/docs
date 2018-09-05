@@ -36,16 +36,16 @@ The app.pulumi.com architecture can be visualized as follows:
 ![Pulumi SaaS Architecture](/images/reference/state_saas.png){:class="img-bordered"}
 
 The Pulumi Enterprise product offers self-hosting options for the web backend, if you wish to use these features
-without depending on app.pulumi.com. For more information, please [contact us](https://www.pulumi.com/pricing/#contact).
-
-The Enterprise web architecture looks like the following:
+without depending on app.pulumi.com. The Enterprise web architecture looks like the following:
 
 ![Pulumi Enterprise Architecture](/images/reference/state_enterprise.png){:class="img-bordered"}
+
+For more information on Pulumi Enterprise, please [contact us](https://www.pulumi.com/pricing/#contact).
 
 ## Logging In
 
 The `pulumi login` command lets you log into a backend. By default, anytime you try to do something that requires 
-tacks or state, you will be prompted to log in.
+stacks or state, you will be prompted to log in.
 
 ### To the Web Backend
 
