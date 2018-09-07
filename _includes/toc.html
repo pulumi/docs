@@ -20,11 +20,26 @@ include.tree is the actual set of sections to render. It is an array with shape:
         {% endif %}
     {% endcapture %}
     <div class="sidenav-section {% if forloop.last == false %}separator{% endif %}">
+        {% assign sidenav_expanded = false %}
         {% assign filename = path | replace: '/', ' ' | strip | replace: ' ', '/' | append: '.md' %}
-        {% if filename == page.path %}
+        {% if page.path == filename %}
+            {% assign sidenav_expanded = true %}
             {% assign sidenav_selected = "sidenav-selected" %}
         {% else %}
             {% assign sidenav_selected = "" %}
+            {% if item.section or item.toplevel %}
+                {% for section in item.section %}
+                    {% if section.path %}
+                        {% assign section_path = section.path %}
+                    {% else %}
+                        {% assign section_path = section %}
+                    {% endif %}
+                    {% assign section_filename = section_path | replace: '/', ' ' | strip | replace: ' ', '/' | replace: '.html', '.md' %}
+                    {% if page.path == section_filename %}
+                        {% assign sidenav_expanded = true %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
         {% endif %}
         {% comment %}
         `toplevel` is for items that don't have a `section` but should be rendered as a top-level item (with an href that includes the .html).
@@ -34,7 +49,7 @@ include.tree is the actual set of sections to render. It is an array with shape:
                 <div class="sidenav-topic {{ sidenav_selected }}">
                     <a data-title="{{ item.title }}" href="{{ path }}.html">{{ item.title }}</a>
                 </div>
-                {% if item.section %}
+                {% if item.section and sidenav_expanded %}
                     <div class="sidenav-subsection">
                         {% include toc_sub.html tree=item.section %}
                     </div>
