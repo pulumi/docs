@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Run a Stateless Application Deployment"
+title: "Tutorial: Run a Stateless App Deployment"
 ---
 
 In this tutorial, we'll run an application using a [Kubernetes
