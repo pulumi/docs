@@ -26,6 +26,7 @@ toc:
   path: /quickstart/kubernetes/index
   section:
    - quickstart/kubernetes/setup.md
+   - quickstart/kubernetes/tutorial-stateless-app.md
    - quickstart/kubernetes/tutorial-guestbook.md
 - title: Pulumi Cloud Framework
   path: /quickstart/cloudfx/index
