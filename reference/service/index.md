@@ -11,10 +11,9 @@ history, integrate with your CI/CD system, and more!
 To get started using the Pulumi Cloud Console, go to [app.pulumi.com](https://app.pulumi.com) and
 sign in with your GitHub account.
 
-> **NOTE**
->
-> Support for more kinds of identity providers is coming soon. If you require something
-> other than GitHub, please [let us know](https://www.pulumi.com/about/#contact-us).
+> Support for more kinds of identity providers is coming soon to the Team Edition, and available
+> for privately hosted Enterprise Edition instances. If you require an identity provider other than
+> GitHub, please [contact us](https://www.pulumi.com/about/#contact-us).
 
 ## Organizations
 
@@ -52,21 +51,23 @@ grant the Pulumi Cloud Console access to the GitHub organization.
 > requires this scope in order to only grant access to members of the GitHub
 > organization.
 >
-> Pulumi will not have access to any of your GitHub repositories.
+> Pulumi will not have access to any of your GitHub repositories, and will only
+> have access to organization membership information for the organizations to
+> which you've granted access.
 
-## Permissions
+## Roles and Access Controls
 
 Pulumi organizations allow managing member access to stacks. For examaple,
 enforcing policy on who can create new stacks within an organization, or who
 can update existing stacks.
 
 For more information about organization roles, stack permissions, and how they
-are managed in the Pulumi Cloud Console, see [Permissions](./permissions.html).
+are managed in the Pulumi Cloud Console, see [Roles and Access Controls](./roles-and-access-controls.html).
 
 ## Collaboration
 
 The Pulumi Cloud Console allows people to collaborate on stacks within
-an organization. Including role-based access using GitHub teams.
+an organization, including role-based access using GitHub teams.
 
 For more information on the types of collaobration supported, see
 [Collaboration](./collaboration.html).

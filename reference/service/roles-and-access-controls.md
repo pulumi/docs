@@ -1,11 +1,11 @@
 ---
-title: Permissions
+title: Roles and Access Controls
 ---
 
 The Pulumi Cloud Console provides fine-grained access controls for stacks.
 
-Pulumi stacks are "owned" by an organization, and the first level of access
-control is based on a user's role within that organization.
+For Organization-owned stacks, the first level of access control is based on a
+user's role within that organization. (Not applicable or User-owned stacks.)
 
 ## Organization Roles
 

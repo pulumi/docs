@@ -80,8 +80,8 @@ toc:
 - title: Cloud Console
   path: /reference/service/index
   section:
-  - title: Permissions
-    path: /reference/service/permissions.html
+  - title: Roles and Access Controls
+    path: /reference/service/roles-and-access-controls.html
   - title: Collaboration
     path: /reference/service/collaboration.html
 - title: Continuous Deployment

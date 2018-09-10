@@ -2,7 +2,7 @@
 title: Collaboration
 ---
 
-The Pulumi Cloud Console offers multiple that people can collaborate on a
+The Pulumi Cloud Console offers multiple ways for people to collaborate on a
 stack. However, some may not be available depending on the type of organization
 the stack resides in.
 
@@ -11,8 +11,9 @@ the stack resides in.
 Teams allow organization admins to assign permissions to access a group of stacks
 to a group of users.
 
-The ability to create teams is limited to Pulumi organizations imported from
-GitHub.
+The ability to create teams in the Community and Standard Editions of the Pulumi
+Cloud Console is limited to organizations imported from GitHub. The Enterprise
+Edition supports alternative identity providers.
 
 ### Adding a Team
 
@@ -33,8 +34,6 @@ permissions granted to team members is managed on the Pulumi Cloud Console.
 Stack collaborators are Pulumi users who have been explicitly invited to
 collaborate on a stack.
 
-> **NOTE**
->
 > The ability to add stack collaborators is limited to just user organizations.
 > When using organizations imported from GitHub, teams should be used instead.
 
