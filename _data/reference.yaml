@@ -77,6 +77,13 @@ toc:
     path: /reference/cli/pulumi_stack.html
   - title: Update
     path: /reference/cli/pulumi_update.html
+- title: Cloud Console
+  path: /reference/service/index
+  section:
+  - title: Roles and Access Controls
+    path: /reference/service/roles-and-access-controls.html
+  - title: Collaboration
+    path: /reference/service/collaboration.html
 - title: Continuous Deployment
   path: /reference/cd
   section:

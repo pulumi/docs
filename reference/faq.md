@@ -61,3 +61,12 @@ $ pulumi stack import --file my-app-production.checkpoint.json # import the new 
 ```
 
 In addition, if you have any encrypted configuration in your stack, you'll need to re-run `pulumi config set --secret <key> <value>` because pulumi.com uses a different key to encrypt your secrets than the local endpoint.
+
+## How do I create a stack inside an Organization instead of my User account?
+
+To create a stack in a different Pulumi organization, simply prefix the stack's
+name with the organization's login. For example:
+
+```sh
+$ pulumi stack init acme-corp/widget-server
+```
