@@ -85,9 +85,13 @@ The local backend (which stores your deployment's state file locally, instead of
 
 We've made a bunch of improvements in `pulumi refresh`. Some of these improve the UI during a refresh (for example, clarifying text about the underyling operations) as well fixing bugs with refreshing certain types of objects (for example CloudFront CDNs).
 
-#### `pulumi new` and `pulumi up`
+#### `pulumi up` and `pulumi new`
 
-**TODO: Jusin**
+You can now pass a URL to a Git repository to `pulumi up <url>` to deploy a project without having to manage its source code locally. This works like `pulumi new <url>`, but configures and deploys the project from a temporary directory that will be cleaned up automatically after the update.
+
+`pulumi new` now outputs an error when the current working directory (or directory specified explicitly via the `--dir` flag) is not empty. Additionally, `pulumi new` now runs a preview of an initial update at the end of its operation and asks if you would like to perform the update.
+
+Both `pulumi up` and `pulumi new` now support `-c` flags for specifying config values as arguments (e.g. `pulumi up <url> -c aws:region=us-east-1`).
 
 #### Miscellaneous Improvements
 
