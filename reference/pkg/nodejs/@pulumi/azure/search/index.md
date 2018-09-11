@@ -14,13 +14,13 @@ title: Module search
 
 
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L9">class Service</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L10">class Service</a>
 </h2>
 
 Allows you to manage an Azure Search Service
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -35,7 +35,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -79,7 +79,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L25">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L26">property location</a>
 </h3>
 
 ```typescript
@@ -90,7 +90,7 @@ public location: pulumi.Output<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -101,7 +101,7 @@ public name: pulumi.Output<string>;
 The name of the Search Service. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L33">property partitionCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L34">property partitionCount</a>
 </h3>
 
 ```typescript
@@ -112,7 +112,7 @@ public partitionCount: pulumi.Output<number>;
 Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when `sku` is `standard`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L37">property replicaCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L38">property replicaCount</a>
 </h3>
 
 ```typescript
@@ -123,7 +123,7 @@ public replicaCount: pulumi.Output<number>;
 Default is 1. Valid values include 1 through 12. Valid only when `sku` is `standard`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L41">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L42">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -134,7 +134,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which to create the Search Service. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L45">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L46">property sku</a>
 </h3>
 
 ```typescript
@@ -145,7 +145,7 @@ public sku: pulumi.Output<string>;
 Valid values are `free` and `standard`. `standard2` and `standard3` are also valid, but can only be used when it's enabled on the backend by Microsoft support. `free` provisions the service in shared clusters. `standard` provisions the service in dedicated clusters.  Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L49">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L50">property tags</a>
 </h3>
 
 ```typescript
@@ -168,13 +168,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ServiceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L130">interface ServiceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L131">interface ServiceArgs</a>
 </h2>
 
 The set of arguments for constructing a Service resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L134">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L135">property location</a>
 </h3>
 
 ```typescript
@@ -185,7 +185,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L138">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L139">property name</a>
 </h3>
 
 ```typescript
@@ -196,7 +196,7 @@ name?: pulumi.Input<string>;
 The name of the Search Service. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L142">property partitionCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L143">property partitionCount</a>
 </h3>
 
 ```typescript
@@ -207,7 +207,7 @@ partitionCount?: pulumi.Input<number>;
 Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when `sku` is `standard`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L146">property replicaCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L147">property replicaCount</a>
 </h3>
 
 ```typescript
@@ -218,7 +218,7 @@ replicaCount?: pulumi.Input<number>;
 Default is 1. Valid values include 1 through 12. Valid only when `sku` is `standard`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L150">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L151">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -229,7 +229,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the Search Service. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L154">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L155">property sku</a>
 </h3>
 
 ```typescript
@@ -240,7 +240,7 @@ sku: pulumi.Input<string>;
 Valid values are `free` and `standard`. `standard2` and `standard3` are also valid, but can only be used when it's enabled on the backend by Microsoft support. `free` provisions the service in shared clusters. `standard` provisions the service in dedicated clusters.  Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L158">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L159">property tags</a>
 </h3>
 
 ```typescript
@@ -251,13 +251,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ServiceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L96">interface ServiceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L97">interface ServiceState</a>
 </h2>
 
 Input properties used for looking up and filtering Service resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L100">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L101">property location</a>
 </h3>
 
 ```typescript
@@ -268,7 +268,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L104">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L105">property name</a>
 </h3>
 
 ```typescript
@@ -279,7 +279,7 @@ name?: pulumi.Input<string>;
 The name of the Search Service. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L108">property partitionCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L109">property partitionCount</a>
 </h3>
 
 ```typescript
@@ -290,7 +290,7 @@ partitionCount?: pulumi.Input<number>;
 Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when `sku` is `standard`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L112">property replicaCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L113">property replicaCount</a>
 </h3>
 
 ```typescript
@@ -301,7 +301,7 @@ replicaCount?: pulumi.Input<number>;
 Default is 1. Valid values include 1 through 12. Valid only when `sku` is `standard`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L116">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L117">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -312,7 +312,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the Search Service. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L120">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L121">property sku</a>
 </h3>
 
 ```typescript
@@ -323,7 +323,7 @@ sku?: pulumi.Input<string>;
 Valid values are `free` and `standard`. `standard2` and `standard3` are also valid, but can only be used when it's enabled on the backend by Microsoft support. `free` provisions the service in shared clusters. `standard` provisions the service in dedicated clusters.  Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L124">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/search/service.ts#L125">property tags</a>
 </h3>
 
 ```typescript

@@ -19,13 +19,13 @@ title: Module dynamic
 
 
 <h2 class="pdoc-module-header" id="Resource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L166">class Resource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L170">class Resource</a>
 </h2>
 
 Resource represents a Pulumi Resource that incorporates an inline implementation of the Resource's CRUD operations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L166">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L170">constructor</a>
 </h3>
 
 ```typescript
@@ -50,7 +50,7 @@ public getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L205">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L207">method isInstance</a>
 </h3>
 
 ```typescript
@@ -62,7 +62,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L199">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L201">property id</a>
 </h3>
 
 ```typescript
@@ -224,7 +224,18 @@ An optional list of properties that will not ever change.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L89">interface ReadResult</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L93">property props</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L93">property id</a>
+</h3>
+
+```typescript
+id?: resource.ID;
+```
+
+
+The ID of the resource ready back (or blank if missing).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L97">property props</a>
 </h3>
 
 ```typescript
@@ -235,13 +246,13 @@ props?: any;
 The current property state read from the live environment.
 
 <h2 class="pdoc-module-header" id="ResourceProvider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L109">interface ResourceProvider</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L113">interface ResourceProvider</a>
 </h2>
 
 ResourceProvider represents an object that provides CRUD operations for a particular type of resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L116">property check</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L120">property check</a>
 </h3>
 
 ```typescript
@@ -252,7 +263,7 @@ check?: undefined | { ... };
 Check validates that the given property bag is valid for a resource of the given type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L133">property create</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L137">property create</a>
 </h3>
 
 ```typescript
@@ -264,7 +275,7 @@ Create allocates a new instance of the provided resource and returns its unique 
 If this call fails, the resource must not have been created (i.e., it is "transacational").
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L156">property delete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L160">property delete</a>
 </h3>
 
 ```typescript
@@ -275,7 +286,7 @@ delete?: undefined | { ... };
 Delete tears down an existing resource with the given ID.  If it fails, the resource is assumed to still exist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L125">property diff</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L129">property diff</a>
 </h3>
 
 ```typescript
@@ -286,7 +297,7 @@ diff?: undefined | { ... };
 Diff checks what impacts a hypothetical update will have on the resource's properties.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L139">property read</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L143">property read</a>
 </h3>
 
 ```typescript
@@ -298,7 +309,7 @@ Reads the current live state associated with a resource.  Enough state must be i
 identify the resource; this is typically just the resource ID, but it may also include some properties.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L148">property update</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L152">property update</a>
 </h3>
 
 ```typescript
@@ -309,13 +320,13 @@ update?: undefined | { ... };
 Update updates an existing resource with new values.
 
 <h2 class="pdoc-module-header" id="UpdateResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L99">interface UpdateResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L103">interface UpdateResult</a>
 </h2>
 
 UpdateResult represents the results of a call to `ResourceProvider.update`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L103">property outs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/dynamic/index.ts#L107">property outs</a>
 </h3>
 
 ```typescript

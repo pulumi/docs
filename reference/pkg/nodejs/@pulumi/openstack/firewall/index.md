@@ -23,13 +23,13 @@ title: Module firewall
 
 
 <h2 class="pdoc-module-header" id="Firewall">
-<a class="pdoc-member-name" href="/firewall/firewall.ts#L9">class Firewall</a>
+<a class="pdoc-member-name" href="/firewall/firewall.ts#L10">class Firewall</a>
 </h2>
 
 Manages a v1 firewall resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L71">constructor</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L72">constructor</a>
 </h3>
 
 ```typescript
@@ -44,7 +44,7 @@ Create a Firewall resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -76,7 +76,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L27">property adminStateUp</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L28">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -89,7 +89,7 @@ Administrative up/down status for the firewall
 Changing this updates the `admin_state_up` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L33">property associatedRouters</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L34">property associatedRouters</a>
 </h3>
 
 ```typescript
@@ -102,7 +102,7 @@ with. Must be a list of strings. Changing this updates the associated routers
 of an existing firewall. Conflicts with `no_routers`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L38">property description</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L39">property description</a>
 </h3>
 
 ```typescript
@@ -126,7 +126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L43">property name</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L44">property name</a>
 </h3>
 
 ```typescript
@@ -138,7 +138,7 @@ A name for the firewall. Changing this
 updates the `name` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L49">property noRouters</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L50">property noRouters</a>
 </h3>
 
 ```typescript
@@ -151,7 +151,7 @@ Should this firewall not be associated with any routers
 Conflicts with `associated_routers`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L54">property policyId</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L55">property policyId</a>
 </h3>
 
 ```typescript
@@ -163,7 +163,7 @@ The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L61">property region</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L62">property region</a>
 </h3>
 
 ```typescript
@@ -177,7 +177,7 @@ A networking client is needed to create a firewall. If omitted, the
 firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L67">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L68">property tenantId</a>
 </h3>
 
 ```typescript
@@ -202,7 +202,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L71">property valueSpecs</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L72">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -213,13 +213,13 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="Policy">
-<a class="pdoc-member-name" href="/firewall/policy.ts#L9">class Policy</a>
+<a class="pdoc-member-name" href="/firewall/policy.ts#L10">class Policy</a>
 </h2>
 
 Manages a v1 firewall policy resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L65">constructor</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L66">constructor</a>
 </h3>
 
 ```typescript
@@ -234,7 +234,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -266,7 +266,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L29">property audited</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L30">property audited</a>
 </h3>
 
 ```typescript
@@ -281,7 +281,7 @@ rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L34">property description</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L35">property description</a>
 </h3>
 
 ```typescript
@@ -305,7 +305,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L39">property name</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L40">property name</a>
 </h3>
 
 ```typescript
@@ -317,7 +317,7 @@ A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L46">property region</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L47">property region</a>
 </h3>
 
 ```typescript
@@ -331,7 +331,7 @@ A networking client is needed to create a firewall policy. If omitted, the
 firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L52">property rules</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L53">property rules</a>
 </h3>
 
 ```typescript
@@ -344,7 +344,7 @@ the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L60">property shared</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L61">property shared</a>
 </h3>
 
 ```typescript
@@ -359,7 +359,7 @@ can be used in, firewalls in other tenants. Changing this updates the
 can specify if the policy should be shared.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L61">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L62">property tenantId</a>
 </h3>
 
 ```typescript
@@ -379,7 +379,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L65">property valueSpecs</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L66">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -390,13 +390,13 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="Rule">
-<a class="pdoc-member-name" href="/firewall/rule.ts#L9">class Rule</a>
+<a class="pdoc-member-name" href="/firewall/rule.ts#L10">class Rule</a>
 </h2>
 
 Manages a v1 firewall rule resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L95">constructor</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L96">constructor</a>
 </h3>
 
 ```typescript
@@ -411,7 +411,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -443,7 +443,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L27">property action</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L28">property action</a>
 </h3>
 
 ```typescript
@@ -456,7 +456,7 @@ firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L32">property description</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L33">property description</a>
 </h3>
 
 ```typescript
@@ -468,7 +468,7 @@ A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L38">property destinationIpAddress</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L39">property destinationIpAddress</a>
 </h3>
 
 ```typescript
@@ -481,7 +481,7 @@ firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L44">property destinationPort</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L45">property destinationPort</a>
 </h3>
 
 ```typescript
@@ -494,7 +494,7 @@ rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L50">property enabled</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L51">property enabled</a>
 </h3>
 
 ```typescript
@@ -519,7 +519,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L55">property ipVersion</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L56">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -531,7 +531,7 @@ IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L60">property name</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L61">property name</a>
 </h3>
 
 ```typescript
@@ -543,7 +543,7 @@ A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L66">property protocol</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L67">property protocol</a>
 </h3>
 
 ```typescript
@@ -556,7 +556,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L73">property region</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L74">property region</a>
 </h3>
 
 ```typescript
@@ -570,7 +570,7 @@ A Compute client is needed to create a firewall rule. If omitted, the
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L79">property sourceIpAddress</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L80">property sourceIpAddress</a>
 </h3>
 
 ```typescript
@@ -583,7 +583,7 @@ rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L85">property sourcePort</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L86">property sourcePort</a>
 </h3>
 
 ```typescript
@@ -596,7 +596,7 @@ rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L91">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L92">property tenantId</a>
 </h3>
 
 ```typescript
@@ -621,7 +621,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L95">property valueSpecs</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L96">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -632,7 +632,7 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="getPolicy">
-<a class="pdoc-member-name" href="/firewall/getPolicy.ts#L9">function getPolicy</a>
+<a class="pdoc-member-name" href="/firewall/getPolicy.ts#L10">function getPolicy</a>
 </h2>
 
 ```typescript
@@ -643,13 +643,13 @@ getPolicy(args?: GetPolicyArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyR
 Use this data source to get firewall policy information of an available OpenStack firewall policy.
 
 <h2 class="pdoc-module-header" id="FirewallArgs">
-<a class="pdoc-member-name" href="/firewall/firewall.ts#L172">interface FirewallArgs</a>
+<a class="pdoc-member-name" href="/firewall/firewall.ts#L173">interface FirewallArgs</a>
 </h2>
 
 The set of arguments for constructing a Firewall resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L178">property adminStateUp</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L179">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -662,7 +662,7 @@ Administrative up/down status for the firewall
 Changing this updates the `admin_state_up` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L184">property associatedRouters</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L185">property associatedRouters</a>
 </h3>
 
 ```typescript
@@ -675,7 +675,7 @@ with. Must be a list of strings. Changing this updates the associated routers
 of an existing firewall. Conflicts with `no_routers`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L189">property description</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L190">property description</a>
 </h3>
 
 ```typescript
@@ -687,7 +687,7 @@ A description for the firewall. Changing this
 updates the `description` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L194">property name</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L195">property name</a>
 </h3>
 
 ```typescript
@@ -699,7 +699,7 @@ A name for the firewall. Changing this
 updates the `name` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L200">property noRouters</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L201">property noRouters</a>
 </h3>
 
 ```typescript
@@ -712,7 +712,7 @@ Should this firewall not be associated with any routers
 Conflicts with `associated_routers`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L205">property policyId</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L206">property policyId</a>
 </h3>
 
 ```typescript
@@ -724,7 +724,7 @@ The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L212">property region</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L213">property region</a>
 </h3>
 
 ```typescript
@@ -738,7 +738,7 @@ A networking client is needed to create a firewall. If omitted, the
 firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L218">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L219">property tenantId</a>
 </h3>
 
 ```typescript
@@ -751,7 +751,7 @@ to create a firewall for another tenant. Changing this creates a new
 firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L222">property valueSpecs</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L223">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -762,13 +762,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="FirewallState">
-<a class="pdoc-member-name" href="/firewall/firewall.ts#L116">interface FirewallState</a>
+<a class="pdoc-member-name" href="/firewall/firewall.ts#L117">interface FirewallState</a>
 </h2>
 
 Input properties used for looking up and filtering Firewall resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L122">property adminStateUp</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L123">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -781,7 +781,7 @@ Administrative up/down status for the firewall
 Changing this updates the `admin_state_up` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L128">property associatedRouters</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L129">property associatedRouters</a>
 </h3>
 
 ```typescript
@@ -794,7 +794,7 @@ with. Must be a list of strings. Changing this updates the associated routers
 of an existing firewall. Conflicts with `no_routers`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L133">property description</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L134">property description</a>
 </h3>
 
 ```typescript
@@ -806,7 +806,7 @@ A description for the firewall. Changing this
 updates the `description` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L138">property name</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L139">property name</a>
 </h3>
 
 ```typescript
@@ -818,7 +818,7 @@ A name for the firewall. Changing this
 updates the `name` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L144">property noRouters</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L145">property noRouters</a>
 </h3>
 
 ```typescript
@@ -831,7 +831,7 @@ Should this firewall not be associated with any routers
 Conflicts with `associated_routers`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L149">property policyId</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L150">property policyId</a>
 </h3>
 
 ```typescript
@@ -843,7 +843,7 @@ The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L156">property region</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L157">property region</a>
 </h3>
 
 ```typescript
@@ -857,7 +857,7 @@ A networking client is needed to create a firewall. If omitted, the
 firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L162">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L163">property tenantId</a>
 </h3>
 
 ```typescript
@@ -870,7 +870,7 @@ to create a firewall for another tenant. Changing this creates a new
 firewall.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/firewall.ts#L166">property valueSpecs</a>
+<a class="pdoc-child-name" href="/firewall/firewall.ts#L167">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -881,13 +881,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="GetPolicyArgs">
-<a class="pdoc-member-name" href="/firewall/getPolicy.ts#L22">interface GetPolicyArgs</a>
+<a class="pdoc-member-name" href="/firewall/getPolicy.ts#L23">interface GetPolicyArgs</a>
 </h2>
 
 A collection of arguments for invoking getPolicy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L26">property name</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L27">property name</a>
 </h3>
 
 ```typescript
@@ -898,7 +898,7 @@ name?: string;
 The name of the firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L30">property policyId</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L31">property policyId</a>
 </h3>
 
 ```typescript
@@ -909,7 +909,7 @@ policyId?: string;
 The ID of the firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L36">property region</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L37">property region</a>
 </h3>
 
 ```typescript
@@ -922,7 +922,7 @@ A Neutron client is needed to retrieve firewall policy ids. If omitted, the
 `region` argument of the provider is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L40">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L41">property tenantId</a>
 </h3>
 
 ```typescript
@@ -933,13 +933,13 @@ tenantId?: string;
 The owner of the firewall policy.
 
 <h2 class="pdoc-module-header" id="GetPolicyResult">
-<a class="pdoc-member-name" href="/firewall/getPolicy.ts#L46">interface GetPolicyResult</a>
+<a class="pdoc-member-name" href="/firewall/getPolicy.ts#L47">interface GetPolicyResult</a>
 </h2>
 
 A collection of values returned by getPolicy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L50">property audited</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L51">property audited</a>
 </h3>
 
 ```typescript
@@ -950,7 +950,7 @@ audited: boolean;
 The audit status of the firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L54">property description</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L55">property description</a>
 </h3>
 
 ```typescript
@@ -961,7 +961,7 @@ description: string;
 The description of the firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L74">property id</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L75">property id</a>
 </h3>
 
 ```typescript
@@ -972,7 +972,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L58">property region</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L59">property region</a>
 </h3>
 
 ```typescript
@@ -983,7 +983,7 @@ region: string;
 See Argument Reference above.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L62">property rules</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L63">property rules</a>
 </h3>
 
 ```typescript
@@ -994,7 +994,7 @@ rules: string[];
 The array of one or more firewall rules that comprise the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L66">property shared</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L67">property shared</a>
 </h3>
 
 ```typescript
@@ -1005,7 +1005,7 @@ shared: boolean;
 The sharing status of the firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L70">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/getPolicy.ts#L71">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1016,13 +1016,13 @@ tenantId: string;
 See Argument Reference above.
 
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="/firewall/policy.ts#L155">interface PolicyArgs</a>
+<a class="pdoc-member-name" href="/firewall/policy.ts#L156">interface PolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a Policy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L163">property audited</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L164">property audited</a>
 </h3>
 
 ```typescript
@@ -1037,7 +1037,7 @@ rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L168">property description</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L169">property description</a>
 </h3>
 
 ```typescript
@@ -1049,7 +1049,7 @@ A description for the firewall policy. Changing
 this updates the `description` of an existing firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L173">property name</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L174">property name</a>
 </h3>
 
 ```typescript
@@ -1061,7 +1061,7 @@ A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L180">property region</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L181">property region</a>
 </h3>
 
 ```typescript
@@ -1075,7 +1075,7 @@ A networking client is needed to create a firewall policy. If omitted, the
 firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L186">property rules</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L187">property rules</a>
 </h3>
 
 ```typescript
@@ -1088,7 +1088,7 @@ the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L194">property shared</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L195">property shared</a>
 </h3>
 
 ```typescript
@@ -1103,7 +1103,7 @@ can be used in, firewalls in other tenants. Changing this updates the
 can specify if the policy should be shared.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L195">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L196">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1111,7 +1111,7 @@ tenantId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L199">property valueSpecs</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L200">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1122,13 +1122,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="/firewall/policy.ts#L105">interface PolicyState</a>
+<a class="pdoc-member-name" href="/firewall/policy.ts#L106">interface PolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering Policy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L113">property audited</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L114">property audited</a>
 </h3>
 
 ```typescript
@@ -1143,7 +1143,7 @@ rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L118">property description</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L119">property description</a>
 </h3>
 
 ```typescript
@@ -1155,7 +1155,7 @@ A description for the firewall policy. Changing
 this updates the `description` of an existing firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L123">property name</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L124">property name</a>
 </h3>
 
 ```typescript
@@ -1167,7 +1167,7 @@ A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L130">property region</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L131">property region</a>
 </h3>
 
 ```typescript
@@ -1181,7 +1181,7 @@ A networking client is needed to create a firewall policy. If omitted, the
 firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L136">property rules</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L137">property rules</a>
 </h3>
 
 ```typescript
@@ -1194,7 +1194,7 @@ the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L144">property shared</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L145">property shared</a>
 </h3>
 
 ```typescript
@@ -1209,7 +1209,7 @@ can be used in, firewalls in other tenants. Changing this updates the
 can specify if the policy should be shared.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L145">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L146">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1217,7 +1217,7 @@ tenantId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/policy.ts#L149">property valueSpecs</a>
+<a class="pdoc-child-name" href="/firewall/policy.ts#L150">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1228,13 +1228,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="RuleArgs">
-<a class="pdoc-member-name" href="/firewall/rule.ts#L231">interface RuleArgs</a>
+<a class="pdoc-member-name" href="/firewall/rule.ts#L232">interface RuleArgs</a>
 </h2>
 
 The set of arguments for constructing a Rule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L237">property action</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L238">property action</a>
 </h3>
 
 ```typescript
@@ -1247,7 +1247,7 @@ firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L242">property description</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L243">property description</a>
 </h3>
 
 ```typescript
@@ -1259,7 +1259,7 @@ A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L248">property destinationIpAddress</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L249">property destinationIpAddress</a>
 </h3>
 
 ```typescript
@@ -1272,7 +1272,7 @@ firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L254">property destinationPort</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L255">property destinationPort</a>
 </h3>
 
 ```typescript
@@ -1285,7 +1285,7 @@ rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L260">property enabled</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L261">property enabled</a>
 </h3>
 
 ```typescript
@@ -1298,7 +1298,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
 `enabled` status of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L265">property ipVersion</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L266">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -1310,7 +1310,7 @@ IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L270">property name</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L271">property name</a>
 </h3>
 
 ```typescript
@@ -1322,7 +1322,7 @@ A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L276">property protocol</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L277">property protocol</a>
 </h3>
 
 ```typescript
@@ -1335,7 +1335,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L283">property region</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L284">property region</a>
 </h3>
 
 ```typescript
@@ -1349,7 +1349,7 @@ A Compute client is needed to create a firewall rule. If omitted, the
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L289">property sourceIpAddress</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L290">property sourceIpAddress</a>
 </h3>
 
 ```typescript
@@ -1362,7 +1362,7 @@ rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L295">property sourcePort</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L296">property sourcePort</a>
 </h3>
 
 ```typescript
@@ -1375,7 +1375,7 @@ rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L301">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L302">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1388,7 +1388,7 @@ wants to create a firewall rule for another tenant. Changing this creates a
 new firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L305">property valueSpecs</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L306">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1399,13 +1399,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="RuleState">
-<a class="pdoc-member-name" href="/firewall/rule.ts#L151">interface RuleState</a>
+<a class="pdoc-member-name" href="/firewall/rule.ts#L152">interface RuleState</a>
 </h2>
 
 Input properties used for looking up and filtering Rule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L157">property action</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L158">property action</a>
 </h3>
 
 ```typescript
@@ -1418,7 +1418,7 @@ firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L162">property description</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L163">property description</a>
 </h3>
 
 ```typescript
@@ -1430,7 +1430,7 @@ A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L168">property destinationIpAddress</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L169">property destinationIpAddress</a>
 </h3>
 
 ```typescript
@@ -1443,7 +1443,7 @@ firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L174">property destinationPort</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L175">property destinationPort</a>
 </h3>
 
 ```typescript
@@ -1456,7 +1456,7 @@ rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L180">property enabled</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L181">property enabled</a>
 </h3>
 
 ```typescript
@@ -1469,7 +1469,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
 `enabled` status of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L185">property ipVersion</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L186">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -1481,7 +1481,7 @@ IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L190">property name</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L191">property name</a>
 </h3>
 
 ```typescript
@@ -1493,7 +1493,7 @@ A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L196">property protocol</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L197">property protocol</a>
 </h3>
 
 ```typescript
@@ -1506,7 +1506,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L203">property region</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L204">property region</a>
 </h3>
 
 ```typescript
@@ -1520,7 +1520,7 @@ A Compute client is needed to create a firewall rule. If omitted, the
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L209">property sourceIpAddress</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L210">property sourceIpAddress</a>
 </h3>
 
 ```typescript
@@ -1533,7 +1533,7 @@ rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L215">property sourcePort</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L216">property sourcePort</a>
 </h3>
 
 ```typescript
@@ -1546,7 +1546,7 @@ rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L221">property tenantId</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L222">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1559,7 +1559,7 @@ wants to create a firewall rule for another tenant. Changing this creates a
 new firewall rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/firewall/rule.ts#L225">property valueSpecs</a>
+<a class="pdoc-child-name" href="/firewall/rule.ts#L226">property valueSpecs</a>
 </h3>
 
 ```typescript

@@ -14,10 +14,10 @@ title: Module msi
 
 
 <h2 class="pdoc-module-header" id="UserAssignedIdentity">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L6">class UserAssignedIdentity</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L7">class UserAssignedIdentity</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L23">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L24">constructor</a>
 </h3>
 
 ```typescript
@@ -32,7 +32,7 @@ Create a UserAssignedIdentity resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -76,7 +76,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L19">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L20">property location</a>
 </h3>
 
 ```typescript
@@ -84,7 +84,7 @@ public location: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L20">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L21">property name</a>
 </h3>
 
 ```typescript
@@ -92,7 +92,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L21">property principalId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L22">property principalId</a>
 </h3>
 
 ```typescript
@@ -100,7 +100,7 @@ public principalId: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L22">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L23">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -108,7 +108,7 @@ public resourceGroupName: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L23">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L24">property tags</a>
 </h3>
 
 ```typescript
@@ -128,13 +128,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="UserAssignedIdentityArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L74">interface UserAssignedIdentityArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L75">interface UserAssignedIdentityArgs</a>
 </h2>
 
 The set of arguments for constructing a UserAssignedIdentity resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L75">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L76">property location</a>
 </h3>
 
 ```typescript
@@ -142,7 +142,7 @@ location: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L76">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L77">property name</a>
 </h3>
 
 ```typescript
@@ -150,7 +150,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L77">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L78">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -158,7 +158,7 @@ resourceGroupName: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L78">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L79">property tags</a>
 </h3>
 
 ```typescript
@@ -166,13 +166,13 @@ tags?: pulumi.Input<{ ... }>;
 ```
 
 <h2 class="pdoc-module-header" id="UserAssignedIdentityState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L63">interface UserAssignedIdentityState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L64">interface UserAssignedIdentityState</a>
 </h2>
 
 Input properties used for looking up and filtering UserAssignedIdentity resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L64">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L65">property location</a>
 </h3>
 
 ```typescript
@@ -180,7 +180,7 @@ location?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L65">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L66">property name</a>
 </h3>
 
 ```typescript
@@ -188,7 +188,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L66">property principalId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L67">property principalId</a>
 </h3>
 
 ```typescript
@@ -196,7 +196,7 @@ principalId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L67">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L68">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -204,7 +204,7 @@ resourceGroupName?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L68">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/msi/userAssignedIdentity.ts#L69">property tags</a>
 </h3>
 
 ```typescript

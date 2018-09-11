@@ -17,7 +17,7 @@ title: Module dataproc
 
 
 <h2 class="pdoc-module-header" id="Cluster">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L15">class Cluster</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L16">class Cluster</a>
 </h2>
 
 Manages a Cloud Dataproc cluster resource within GCP. For more information see
@@ -28,7 +28,7 @@ Manages a Cloud Dataproc cluster resource within GCP. For more information see
 whole cluster!
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L53">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L54">constructor</a>
 </h3>
 
 ```typescript
@@ -43,7 +43,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L24">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -75,7 +75,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L32">property clusterConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L33">property clusterConfig</a>
 </h3>
 
 ```typescript
@@ -99,7 +99,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L38">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L39">property labels</a>
 </h3>
 
 ```typescript
@@ -112,7 +112,7 @@ instances in the cluster. GCP generates some itself including `goog-dataproc-clu
 which is the name of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L43">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L44">property name</a>
 </h3>
 
 ```typescript
@@ -124,7 +124,7 @@ The name of the cluster, unique within the project and
 zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L48">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L49">property project</a>
 </h3>
 
 ```typescript
@@ -136,7 +136,7 @@ The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L53">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L54">property region</a>
 </h3>
 
 ```typescript
@@ -160,7 +160,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Job">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L12">class Job</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L13">class Job</a>
 </h2>
 
 Manages a job resource within a Dataproc cluster within GCE. For more information see
@@ -169,7 +169,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
 !> **Note:** This resource does not support 'update' and changing any attributes will cause the resource to be recreated.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L65">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L66">constructor</a>
 </h3>
 
 ```typescript
@@ -184,7 +184,7 @@ Create a Job resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -216,7 +216,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L28">property driverControlsFilesUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L29">property driverControlsFilesUri</a>
 </h3>
 
 ```typescript
@@ -227,7 +227,7 @@ public driverControlsFilesUri: pulumi.Output<string>;
 If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L32">property driverOutputResourceUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L33">property driverOutputResourceUri</a>
 </h3>
 
 ```typescript
@@ -238,7 +238,7 @@ public driverOutputResourceUri: pulumi.Output<string>;
 A URI pointing to the location of the stdout of the job's driver program.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L38">property forceDelete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L39">property forceDelete</a>
 </h3>
 
 ```typescript
@@ -251,7 +251,7 @@ Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L39">property hadoopConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L40">property hadoopConfig</a>
 </h3>
 
 ```typescript
@@ -259,7 +259,7 @@ public hadoopConfig: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L40">property hiveConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L41">property hiveConfig</a>
 </h3>
 
 ```typescript
@@ -279,7 +279,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L44">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L45">property labels</a>
 </h3>
 
 ```typescript
@@ -290,7 +290,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 The list of labels (key/value pairs) to add to the job.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L45">property pigConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L46">property pigConfig</a>
 </h3>
 
 ```typescript
@@ -298,7 +298,7 @@ public pigConfig: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L46">property placement</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L47">property placement</a>
 </h3>
 
 ```typescript
@@ -306,7 +306,7 @@ public placement: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L51">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L52">property project</a>
 </h3>
 
 ```typescript
@@ -318,7 +318,7 @@ The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L52">property pysparkConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L53">property pysparkConfig</a>
 </h3>
 
 ```typescript
@@ -326,7 +326,7 @@ public pysparkConfig: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L53">property reference</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L54">property reference</a>
 </h3>
 
 ```typescript
@@ -334,7 +334,7 @@ public reference: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L58">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L59">property region</a>
 </h3>
 
 ```typescript
@@ -346,7 +346,7 @@ The Cloud Dataproc region. This essentially determines which clusters are availa
 for this job to be submitted to. If not specified, defaults to `global`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L62">property scheduling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L63">property scheduling</a>
 </h3>
 
 ```typescript
@@ -357,7 +357,7 @@ public scheduling: pulumi.Output<{ ... } | undefined>;
 Optional. Job scheduling configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L63">property sparkConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L64">property sparkConfig</a>
 </h3>
 
 ```typescript
@@ -365,7 +365,7 @@ public sparkConfig: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L64">property sparksqlConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L65">property sparksqlConfig</a>
 </h3>
 
 ```typescript
@@ -373,7 +373,7 @@ public sparksqlConfig: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L65">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L66">property status</a>
 </h3>
 
 ```typescript
@@ -393,13 +393,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ClusterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L119">interface ClusterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L120">interface ClusterArgs</a>
 </h2>
 
 The set of arguments for constructing a Cluster resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L124">property clusterConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L125">property clusterConfig</a>
 </h3>
 
 ```typescript
@@ -411,7 +411,7 @@ Allows you to configure various aspects of the cluster.
 Structure defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L130">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L131">property labels</a>
 </h3>
 
 ```typescript
@@ -424,7 +424,7 @@ instances in the cluster. GCP generates some itself including `goog-dataproc-clu
 which is the name of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L135">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L136">property name</a>
 </h3>
 
 ```typescript
@@ -436,7 +436,7 @@ The name of the cluster, unique within the project and
 zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L140">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L141">property project</a>
 </h3>
 
 ```typescript
@@ -448,7 +448,7 @@ The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L145">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L146">property region</a>
 </h3>
 
 ```typescript
@@ -460,13 +460,13 @@ The region in which the cluster and associated nodes will be created in.
 Defaults to `global`.
 
 <h2 class="pdoc-module-header" id="ClusterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L87">interface ClusterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L88">interface ClusterState</a>
 </h2>
 
 Input properties used for looking up and filtering Cluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L92">property clusterConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L93">property clusterConfig</a>
 </h3>
 
 ```typescript
@@ -478,7 +478,7 @@ Allows you to configure various aspects of the cluster.
 Structure defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L98">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L99">property labels</a>
 </h3>
 
 ```typescript
@@ -491,7 +491,7 @@ instances in the cluster. GCP generates some itself including `goog-dataproc-clu
 which is the name of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L103">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L104">property name</a>
 </h3>
 
 ```typescript
@@ -503,7 +503,7 @@ The name of the cluster, unique within the project and
 zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L108">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L109">property project</a>
 </h3>
 
 ```typescript
@@ -515,7 +515,7 @@ The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L113">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/cluster.ts#L114">property region</a>
 </h3>
 
 ```typescript
@@ -527,13 +527,13 @@ The region in which the cluster and associated nodes will be created in.
 Defaults to `global`.
 
 <h2 class="pdoc-module-header" id="JobArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L171">interface JobArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L172">interface JobArgs</a>
 </h2>
 
 The set of arguments for constructing a Job resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L177">property forceDelete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L178">property forceDelete</a>
 </h3>
 
 ```typescript
@@ -546,7 +546,7 @@ Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L178">property hadoopConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L179">property hadoopConfig</a>
 </h3>
 
 ```typescript
@@ -554,7 +554,7 @@ hadoopConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L179">property hiveConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L180">property hiveConfig</a>
 </h3>
 
 ```typescript
@@ -562,7 +562,7 @@ hiveConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L183">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L184">property labels</a>
 </h3>
 
 ```typescript
@@ -573,7 +573,7 @@ labels?: pulumi.Input<{ ... }>;
 The list of labels (key/value pairs) to add to the job.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L184">property pigConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L185">property pigConfig</a>
 </h3>
 
 ```typescript
@@ -581,7 +581,7 @@ pigConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L185">property placement</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L186">property placement</a>
 </h3>
 
 ```typescript
@@ -589,7 +589,7 @@ placement: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L190">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L191">property project</a>
 </h3>
 
 ```typescript
@@ -601,7 +601,7 @@ The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L191">property pysparkConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L192">property pysparkConfig</a>
 </h3>
 
 ```typescript
@@ -609,7 +609,7 @@ pysparkConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L192">property reference</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L193">property reference</a>
 </h3>
 
 ```typescript
@@ -617,7 +617,7 @@ reference?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L197">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L198">property region</a>
 </h3>
 
 ```typescript
@@ -629,7 +629,7 @@ The Cloud Dataproc region. This essentially determines which clusters are availa
 for this job to be submitted to. If not specified, defaults to `global`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L201">property scheduling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L202">property scheduling</a>
 </h3>
 
 ```typescript
@@ -640,7 +640,7 @@ scheduling?: pulumi.Input<{ ... }>;
 Optional. Job scheduling configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L202">property sparkConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L203">property sparkConfig</a>
 </h3>
 
 ```typescript
@@ -648,7 +648,7 @@ sparkConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L203">property sparksqlConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L204">property sparksqlConfig</a>
 </h3>
 
 ```typescript
@@ -656,13 +656,13 @@ sparksqlConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h2 class="pdoc-module-header" id="JobState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L124">interface JobState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L125">interface JobState</a>
 </h2>
 
 Input properties used for looking up and filtering Job resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L128">property driverControlsFilesUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L129">property driverControlsFilesUri</a>
 </h3>
 
 ```typescript
@@ -673,7 +673,7 @@ driverControlsFilesUri?: pulumi.Input<string>;
 If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L132">property driverOutputResourceUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L133">property driverOutputResourceUri</a>
 </h3>
 
 ```typescript
@@ -684,7 +684,7 @@ driverOutputResourceUri?: pulumi.Input<string>;
 A URI pointing to the location of the stdout of the job's driver program.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L138">property forceDelete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L139">property forceDelete</a>
 </h3>
 
 ```typescript
@@ -697,7 +697,7 @@ Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L139">property hadoopConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L140">property hadoopConfig</a>
 </h3>
 
 ```typescript
@@ -705,7 +705,7 @@ hadoopConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L140">property hiveConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L141">property hiveConfig</a>
 </h3>
 
 ```typescript
@@ -713,7 +713,7 @@ hiveConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L144">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L145">property labels</a>
 </h3>
 
 ```typescript
@@ -724,7 +724,7 @@ labels?: pulumi.Input<{ ... }>;
 The list of labels (key/value pairs) to add to the job.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L145">property pigConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L146">property pigConfig</a>
 </h3>
 
 ```typescript
@@ -732,7 +732,7 @@ pigConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L146">property placement</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L147">property placement</a>
 </h3>
 
 ```typescript
@@ -740,7 +740,7 @@ placement?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L151">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L152">property project</a>
 </h3>
 
 ```typescript
@@ -752,7 +752,7 @@ The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L152">property pysparkConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L153">property pysparkConfig</a>
 </h3>
 
 ```typescript
@@ -760,7 +760,7 @@ pysparkConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L153">property reference</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L154">property reference</a>
 </h3>
 
 ```typescript
@@ -768,7 +768,7 @@ reference?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L158">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L159">property region</a>
 </h3>
 
 ```typescript
@@ -780,7 +780,7 @@ The Cloud Dataproc region. This essentially determines which clusters are availa
 for this job to be submitted to. If not specified, defaults to `global`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L162">property scheduling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L163">property scheduling</a>
 </h3>
 
 ```typescript
@@ -791,7 +791,7 @@ scheduling?: pulumi.Input<{ ... }>;
 Optional. Job scheduling configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L163">property sparkConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L164">property sparkConfig</a>
 </h3>
 
 ```typescript
@@ -799,7 +799,7 @@ sparkConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L164">property sparksqlConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L165">property sparksqlConfig</a>
 </h3>
 
 ```typescript
@@ -807,7 +807,7 @@ sparksqlConfig?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L165">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dataproc/job.ts#L166">property status</a>
 </h3>
 
 ```typescript

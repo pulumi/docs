@@ -20,13 +20,13 @@ title: Module cloudformation
 
 
 <h2 class="pdoc-module-header" id="Stack">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L11">class Stack</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L12">class Stack</a>
 </h2>
 
 Provides a CloudFormation Stack resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L84">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L85">constructor</a>
 </h3>
 
 ```typescript
@@ -41,7 +41,7 @@ Create a Stack resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -73,7 +73,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L28">property capabilities</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L29">property capabilities</a>
 </h3>
 
 ```typescript
@@ -85,7 +85,7 @@ A list of capabilities.
 Valid values: `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L33">property disableRollback</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L34">property disableRollback</a>
 </h3>
 
 ```typescript
@@ -97,7 +97,7 @@ Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L37">property iamRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L38">property iamRoleArn</a>
 </h3>
 
 ```typescript
@@ -120,7 +120,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L41">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -131,7 +131,7 @@ public name: pulumi.Output<string>;
 Stack name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L45">property notificationArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L46">property notificationArns</a>
 </h3>
 
 ```typescript
@@ -142,7 +142,7 @@ public notificationArns: pulumi.Output<string[] | undefined>;
 A list of SNS topic ARNs to publish stack related events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L50">property onFailure</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L51">property onFailure</a>
 </h3>
 
 ```typescript
@@ -154,7 +154,7 @@ Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L54">property outputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L55">property outputs</a>
 </h3>
 
 ```typescript
@@ -165,7 +165,7 @@ public outputs: pulumi.Output<{ ... }>;
 A map of outputs from the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L58">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L59">property parameters</a>
 </h3>
 
 ```typescript
@@ -176,7 +176,7 @@ public parameters: pulumi.Output<{ ... }>;
 A list of Parameter structures that specify input parameters for the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L63">property policyBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L64">property policyBody</a>
 </h3>
 
 ```typescript
@@ -188,7 +188,7 @@ Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L68">property policyUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L69">property policyUrl</a>
 </h3>
 
 ```typescript
@@ -200,7 +200,7 @@ Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L72">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L73">property tags</a>
 </h3>
 
 ```typescript
@@ -211,7 +211,7 @@ public tags: pulumi.Output<Tags | undefined>;
 A list of tags to associate with this stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L76">property templateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L77">property templateBody</a>
 </h3>
 
 ```typescript
@@ -222,7 +222,7 @@ public templateBody: pulumi.Output<string>;
 Structure containing the template body (max size: 51,200 bytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L80">property templateUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L81">property templateUrl</a>
 </h3>
 
 ```typescript
@@ -233,7 +233,7 @@ public templateUrl: pulumi.Output<string | undefined>;
 Location of a file containing the template body (max size: 460,800 bytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L84">property timeoutInMinutes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L85">property timeoutInMinutes</a>
 </h3>
 
 ```typescript
@@ -256,7 +256,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="getExport">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L12">function getExport</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L13">function getExport</a>
 </h2>
 
 ```typescript
@@ -270,7 +270,7 @@ exports specified in the [Output](http://docs.aws.amazon.com/AWSCloudFormation/l
  -> Note: If you are trying to use a value from a Cloudformation Stack in the same Terraform run please use normal interpolation or Cloudformation Outputs.
 
 <h2 class="pdoc-module-header" id="getStack">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L10">function getStack</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L11">function getStack</a>
 </h2>
 
 ```typescript
@@ -282,13 +282,13 @@ The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.
 
 <h2 class="pdoc-module-header" id="GetExportArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L21">interface GetExportArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L22">interface GetExportArgs</a>
 </h2>
 
 A collection of arguments for invoking getExport.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L26">property name</a>
 </h3>
 
 ```typescript
@@ -299,13 +299,13 @@ name: string;
 The name of the cross stack reference
 
 <h2 class="pdoc-module-header" id="GetExportResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L31">interface GetExportResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L32">interface GetExportResult</a>
 </h2>
 
 A collection of values returned by getExport.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L35">property exportingStackId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L36">property exportingStackId</a>
 </h3>
 
 ```typescript
@@ -316,7 +316,7 @@ exportingStackId: string;
 The exporting_stack_id (AWS ARNs) equivalent `ExportingStackId` from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L43">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L44">property id</a>
 </h3>
 
 ```typescript
@@ -327,7 +327,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L39">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L40">property value</a>
 </h3>
 
 ```typescript
@@ -338,13 +338,13 @@ value: string;
 The value from Cloudformation export identified by the export name found from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
 
 <h2 class="pdoc-module-header" id="GetStackArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L19">interface GetStackArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L20">interface GetStackArgs</a>
 </h2>
 
 A collection of arguments for invoking getStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L23">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L24">property name</a>
 </h3>
 
 ```typescript
@@ -355,13 +355,13 @@ name: string;
 The name of the stack
 
 <h2 class="pdoc-module-header" id="GetStackResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L29">interface GetStackResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L30">interface GetStackResult</a>
 </h2>
 
 A collection of values returned by getStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L33">property capabilities</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L34">property capabilities</a>
 </h3>
 
 ```typescript
@@ -372,7 +372,7 @@ capabilities: string[];
 A list of capabilities
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L37">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L38">property description</a>
 </h3>
 
 ```typescript
@@ -383,7 +383,7 @@ description: string;
 Description of the stack
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L41">property disableRollback</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L42">property disableRollback</a>
 </h3>
 
 ```typescript
@@ -394,7 +394,7 @@ disableRollback: boolean;
 Whether the rollback of the stack is disabled when stack creation fails
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L45">property iamRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L46">property iamRoleArn</a>
 </h3>
 
 ```typescript
@@ -405,7 +405,7 @@ iamRoleArn: string;
 The ARN of the IAM role used to create the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L73">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L74">property id</a>
 </h3>
 
 ```typescript
@@ -416,7 +416,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L49">property notificationArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L50">property notificationArns</a>
 </h3>
 
 ```typescript
@@ -427,7 +427,7 @@ notificationArns: string[];
 A list of SNS topic ARNs to publish stack related events
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L53">property outputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L54">property outputs</a>
 </h3>
 
 ```typescript
@@ -438,7 +438,7 @@ outputs: { ... };
 A map of outputs from the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L57">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L58">property parameters</a>
 </h3>
 
 ```typescript
@@ -449,7 +449,7 @@ parameters: { ... };
 A map of parameters that specify input parameters for the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L61">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L62">property tags</a>
 </h3>
 
 ```typescript
@@ -460,7 +460,7 @@ tags: { ... };
 A map of tags associated with this stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L65">property templateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L66">property templateBody</a>
 </h3>
 
 ```typescript
@@ -471,7 +471,7 @@ templateBody: string;
 Structure containing the template body.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L69">property timeoutInMinutes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getStack.ts#L70">property timeoutInMinutes</a>
 </h3>
 
 ```typescript
@@ -482,13 +482,13 @@ timeoutInMinutes: number;
 The amount of time that can pass before the stack status becomes `CREATE_FAILED`
 
 <h2 class="pdoc-module-header" id="StackArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L203">interface StackArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L204">interface StackArgs</a>
 </h2>
 
 The set of arguments for constructing a Stack resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L208">property capabilities</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L209">property capabilities</a>
 </h3>
 
 ```typescript
@@ -500,7 +500,7 @@ A list of capabilities.
 Valid values: `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L213">property disableRollback</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L214">property disableRollback</a>
 </h3>
 
 ```typescript
@@ -512,7 +512,7 @@ Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L217">property iamRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L218">property iamRoleArn</a>
 </h3>
 
 ```typescript
@@ -523,7 +523,7 @@ iamRoleArn?: pulumi.Input<string>;
 The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L221">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L222">property name</a>
 </h3>
 
 ```typescript
@@ -534,7 +534,7 @@ name?: pulumi.Input<string>;
 Stack name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L225">property notificationArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L226">property notificationArns</a>
 </h3>
 
 ```typescript
@@ -545,7 +545,7 @@ notificationArns?: pulumi.Input<pulumi.Input<string>[]>;
 A list of SNS topic ARNs to publish stack related events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L230">property onFailure</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L231">property onFailure</a>
 </h3>
 
 ```typescript
@@ -557,7 +557,7 @@ Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L234">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L235">property parameters</a>
 </h3>
 
 ```typescript
@@ -568,7 +568,7 @@ parameters?: pulumi.Input<{ ... }>;
 A list of Parameter structures that specify input parameters for the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L239">property policyBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L240">property policyBody</a>
 </h3>
 
 ```typescript
@@ -580,7 +580,7 @@ Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L244">property policyUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L245">property policyUrl</a>
 </h3>
 
 ```typescript
@@ -592,7 +592,7 @@ Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L248">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L249">property tags</a>
 </h3>
 
 ```typescript
@@ -603,7 +603,7 @@ tags?: pulumi.Input<Tags>;
 A list of tags to associate with this stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L252">property templateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L253">property templateBody</a>
 </h3>
 
 ```typescript
@@ -614,7 +614,7 @@ templateBody?: pulumi.Input<string>;
 Structure containing the template body (max size: 51,200 bytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L256">property templateUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L257">property templateUrl</a>
 </h3>
 
 ```typescript
@@ -625,7 +625,7 @@ templateUrl?: pulumi.Input<string>;
 Location of a file containing the template body (max size: 460,800 bytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L260">property timeoutInMinutes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L261">property timeoutInMinutes</a>
 </h3>
 
 ```typescript
@@ -636,13 +636,13 @@ timeoutInMinutes?: pulumi.Input<number>;
 The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
 
 <h2 class="pdoc-module-header" id="StackState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L136">interface StackState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L137">interface StackState</a>
 </h2>
 
 Input properties used for looking up and filtering Stack resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L141">property capabilities</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L142">property capabilities</a>
 </h3>
 
 ```typescript
@@ -654,7 +654,7 @@ A list of capabilities.
 Valid values: `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L146">property disableRollback</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L147">property disableRollback</a>
 </h3>
 
 ```typescript
@@ -666,7 +666,7 @@ Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L150">property iamRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L151">property iamRoleArn</a>
 </h3>
 
 ```typescript
@@ -677,7 +677,7 @@ iamRoleArn?: pulumi.Input<string>;
 The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L154">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L155">property name</a>
 </h3>
 
 ```typescript
@@ -688,7 +688,7 @@ name?: pulumi.Input<string>;
 Stack name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L158">property notificationArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L159">property notificationArns</a>
 </h3>
 
 ```typescript
@@ -699,7 +699,7 @@ notificationArns?: pulumi.Input<pulumi.Input<string>[]>;
 A list of SNS topic ARNs to publish stack related events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L163">property onFailure</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L164">property onFailure</a>
 </h3>
 
 ```typescript
@@ -711,7 +711,7 @@ Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L167">property outputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L168">property outputs</a>
 </h3>
 
 ```typescript
@@ -722,7 +722,7 @@ outputs?: pulumi.Input<{ ... }>;
 A map of outputs from the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L171">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L172">property parameters</a>
 </h3>
 
 ```typescript
@@ -733,7 +733,7 @@ parameters?: pulumi.Input<{ ... }>;
 A list of Parameter structures that specify input parameters for the stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L176">property policyBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L177">property policyBody</a>
 </h3>
 
 ```typescript
@@ -745,7 +745,7 @@ Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L181">property policyUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L182">property policyUrl</a>
 </h3>
 
 ```typescript
@@ -757,7 +757,7 @@ Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L185">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L186">property tags</a>
 </h3>
 
 ```typescript
@@ -768,7 +768,7 @@ tags?: pulumi.Input<Tags>;
 A list of tags to associate with this stack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L189">property templateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L190">property templateBody</a>
 </h3>
 
 ```typescript
@@ -779,7 +779,7 @@ templateBody?: pulumi.Input<string>;
 Structure containing the template body (max size: 51,200 bytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L193">property templateUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L194">property templateUrl</a>
 </h3>
 
 ```typescript
@@ -790,7 +790,7 @@ templateUrl?: pulumi.Input<string>;
 Location of a file containing the template body (max size: 460,800 bytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L197">property timeoutInMinutes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L198">property timeoutInMinutes</a>
 </h3>
 
 ```typescript

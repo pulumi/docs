@@ -371,13 +371,13 @@ title: Module iam
 
 
 <h2 class="pdoc-module-header" id="AccessKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L9">class AccessKey</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L10">class AccessKey</a>
 </h2>
 
 Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L58">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L59">constructor</a>
 </h3>
 
 ```typescript
@@ -392,7 +392,7 @@ Create a AccessKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -424,7 +424,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L27">property encryptedSecret</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L28">property encryptedSecret</a>
 </h3>
 
 ```typescript
@@ -449,7 +449,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L32">property keyFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L33">property keyFingerprint</a>
 </h3>
 
 ```typescript
@@ -461,7 +461,7 @@ The fingerprint of the PGP key used to encrypt
 the secret
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L37">property pgpKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L38">property pgpKey</a>
 </h3>
 
 ```typescript
@@ -473,7 +473,7 @@ Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L43">property secret</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L44">property secret</a>
 </h3>
 
 ```typescript
@@ -486,7 +486,7 @@ to the state file. Please supply a `pgp_key` instead, which will prevent the
 secret from being stored in plain text
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L49">property sesSmtpPassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L50">property sesSmtpPassword</a>
 </h3>
 
 ```typescript
@@ -499,7 +499,7 @@ password by applying [AWS's documented conversion
 algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L54">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L55">property status</a>
 </h3>
 
 ```typescript
@@ -523,7 +523,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L58">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L59">property user</a>
 </h3>
 
 ```typescript
@@ -534,7 +534,7 @@ public user: pulumi.Output<string>;
 The IAM user to associate with this access key.
 
 <h2 class="pdoc-module-header" id="AccountAlias">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L11">class AccountAlias</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L12">class AccountAlias</a>
 </h2>
 
 -> **Note:** There is only a single account alias per AWS account.
@@ -542,7 +542,7 @@ The IAM user to associate with this access key.
 Manages the account alias for the AWS Account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L27">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L28">constructor</a>
 </h3>
 
 ```typescript
@@ -557,7 +557,7 @@ Create a AccountAlias resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -589,7 +589,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L27">property accountAlias</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L28">property accountAlias</a>
 </h3>
 
 ```typescript
@@ -624,7 +624,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="AccountPasswordPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L13">class AccountPasswordPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L14">class AccountPasswordPolicy</a>
 </h2>
 
 -> **Note:** There is only a single policy allowed per AWS account. An existing policy will be lost when using this resource as an effect of this limitation.
@@ -634,7 +634,7 @@ See more about [Account Password Policy](http://docs.aws.amazon.com/IAM/latest/U
 in the official AWS docs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L68">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L69">constructor</a>
 </h3>
 
 ```typescript
@@ -649,7 +649,7 @@ Create a AccountPasswordPolicy resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -681,7 +681,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L29">property allowUsersToChangePassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L30">property allowUsersToChangePassword</a>
 </h3>
 
 ```typescript
@@ -692,7 +692,7 @@ public allowUsersToChangePassword: pulumi.Output<boolean | undefined>;
 Whether to allow users to change their own password
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L35">property expirePasswords</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L36">property expirePasswords</a>
 </h3>
 
 ```typescript
@@ -705,7 +705,7 @@ Returns `true` if `max_password_age` contains a value greater than `0`.
 Returns `false` if it is `0` or _not present_.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L40">property hardExpiry</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L41">property hardExpiry</a>
 </h3>
 
 ```typescript
@@ -729,7 +729,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L44">property maxPasswordAge</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L45">property maxPasswordAge</a>
 </h3>
 
 ```typescript
@@ -740,7 +740,7 @@ public maxPasswordAge: pulumi.Output<number>;
 The number of days that an user password is valid.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L48">property minimumPasswordLength</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L49">property minimumPasswordLength</a>
 </h3>
 
 ```typescript
@@ -751,7 +751,7 @@ public minimumPasswordLength: pulumi.Output<number | undefined>;
 Minimum length to require for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L52">property passwordReusePrevention</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L53">property passwordReusePrevention</a>
 </h3>
 
 ```typescript
@@ -762,7 +762,7 @@ public passwordReusePrevention: pulumi.Output<number>;
 The number of previous passwords that users are prevented from reusing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L56">property requireLowercaseCharacters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L57">property requireLowercaseCharacters</a>
 </h3>
 
 ```typescript
@@ -773,7 +773,7 @@ public requireLowercaseCharacters: pulumi.Output<boolean>;
 Whether to require lowercase characters for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L60">property requireNumbers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L61">property requireNumbers</a>
 </h3>
 
 ```typescript
@@ -784,7 +784,7 @@ public requireNumbers: pulumi.Output<boolean>;
 Whether to require numbers for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L64">property requireSymbols</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L65">property requireSymbols</a>
 </h3>
 
 ```typescript
@@ -795,7 +795,7 @@ public requireSymbols: pulumi.Output<boolean>;
 Whether to require symbols for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L68">property requireUppercaseCharacters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L69">property requireUppercaseCharacters</a>
 </h3>
 
 ```typescript
@@ -818,13 +818,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Group">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L9">class Group</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L10">class Group</a>
 </h2>
 
 Provides an IAM group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -839,7 +839,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -871,7 +871,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -894,7 +894,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -905,7 +905,7 @@ public name: pulumi.Output<string>;
 The group's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. Group names are not distinguished by case. For example, you cannot create groups named both "ADMINS" and "admins".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L33">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L34">property path</a>
 </h3>
 
 ```typescript
@@ -916,7 +916,7 @@ public path: pulumi.Output<string | undefined>;
 Path in which to create the group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L37">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L38">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -939,7 +939,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="GroupMembership">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L16">class GroupMembership</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L17">class GroupMembership</a>
 </h2>
 
 ~> **WARNING:** Multiple aws_iam_group_membership resources with the same group name will produce inconsistent behavior!
@@ -952,7 +952,7 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
 [`aws_iam_user_group_membership` resource][3].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L40">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L41">constructor</a>
 </h3>
 
 ```typescript
@@ -967,7 +967,7 @@ Create a GroupMembership resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L25">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -999,7 +999,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L32">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L33">property group</a>
 </h3>
 
 ```typescript
@@ -1022,7 +1022,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L36">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L37">property name</a>
 </h3>
 
 ```typescript
@@ -1045,7 +1045,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L40">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L41">property users</a>
 </h3>
 
 ```typescript
@@ -1056,13 +1056,13 @@ public users: pulumi.Output<string[]>;
 A list of IAM User names to associate with the Group
 
 <h2 class="pdoc-module-header" id="GroupPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L9">class GroupPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L12">class GroupPolicy</a>
 </h2>
 
 Provides an IAM policy attached to a group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L40">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L43">constructor</a>
 </h3>
 
 ```typescript
@@ -1077,7 +1077,7 @@ Create a GroupPolicy resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -1109,7 +1109,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L25">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L28">property group</a>
 </h3>
 
 ```typescript
@@ -1132,7 +1132,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L30">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L33">property name</a>
 </h3>
 
 ```typescript
@@ -1144,7 +1144,7 @@ The name of the policy. If omitted, Terraform will
 assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L35">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L38">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -1156,7 +1156,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L40">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L43">property policy</a>
 </h3>
 
 ```typescript
@@ -1180,13 +1180,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="GroupPolicyAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L12">class GroupPolicyAttachment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L13">class GroupPolicyAttachment</a>
 </h2>
 
 Attaches a Managed IAM Policy to an IAM group
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L32">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -1201,7 +1201,7 @@ Create a GroupPolicyAttachment resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -1233,7 +1233,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L28">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L29">property group</a>
 </h3>
 
 ```typescript
@@ -1256,7 +1256,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L32">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L33">property policyArn</a>
 </h3>
 
 ```typescript
@@ -1279,7 +1279,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="InstanceProfile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L13">class InstanceProfile</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L14">class InstanceProfile</a>
 </h2>
 
 Provides an IAM instance profile.
@@ -1287,7 +1287,7 @@ Provides an IAM instance profile.
 ~> **NOTE:** Either `role` or `roles` (**deprecated**) must be specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L59">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L60">constructor</a>
 </h3>
 
 ```typescript
@@ -1302,7 +1302,7 @@ Create a InstanceProfile resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -1334,7 +1334,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L29">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L30">property arn</a>
 </h3>
 
 ```typescript
@@ -1345,7 +1345,7 @@ public arn: pulumi.Output<string>;
 The ARN assigned by AWS to the instance profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L33">property createDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L34">property createDate</a>
 </h3>
 
 ```typescript
@@ -1368,7 +1368,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L37">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -1379,7 +1379,7 @@ public name: pulumi.Output<string>;
 The profile's name. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L41">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L42">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -1390,7 +1390,7 @@ public namePrefix: pulumi.Output<string | undefined>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L45">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L46">property path</a>
 </h3>
 
 ```typescript
@@ -1401,7 +1401,7 @@ public path: pulumi.Output<string | undefined>;
 Path in which to create the profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L49">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L50">property role</a>
 </h3>
 
 ```typescript
@@ -1412,7 +1412,7 @@ public role: pulumi.Output<Role>;
 The role name to include in the profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L55">property roles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L56">property roles</a>
 </h3>
 
 ```typescript
@@ -1424,7 +1424,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
 WARNING: This is deprecated since [version 0.9.3 (April 12, 2017)](https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md#093-april-12-2017), as >= 2 roles are not possible. See [issue #11575](https://github.com/hashicorp/terraform/issues/11575).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L59">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L60">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -1447,13 +1447,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="OpenIdConnectProvider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L9">class OpenIdConnectProvider</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L10">class OpenIdConnectProvider</a>
 </h2>
 
 Provides an IAM OpenID Connect provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -1468,7 +1468,7 @@ Create a OpenIdConnectProvider resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1500,7 +1500,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -1511,7 +1511,7 @@ public arn: pulumi.Output<string>;
 The ARN assigned by AWS for this provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L29">property clientIdLists</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L30">property clientIdLists</a>
 </h3>
 
 ```typescript
@@ -1534,7 +1534,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L33">property thumbprintLists</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L34">property thumbprintLists</a>
 </h3>
 
 ```typescript
@@ -1545,7 +1545,7 @@ public thumbprintLists: pulumi.Output<string[]>;
 A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L37">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L38">property url</a>
 </h3>
 
 ```typescript
@@ -1568,13 +1568,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Policy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L9">class Policy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L10">class Policy</a>
 </h2>
 
 Provides an IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -1589,7 +1589,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1621,7 +1621,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -1632,7 +1632,7 @@ public arn: pulumi.Output<string>;
 The ARN assigned by AWS to this policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L29">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L30">property description</a>
 </h3>
 
 ```typescript
@@ -1655,7 +1655,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -1666,7 +1666,7 @@ public name: pulumi.Output<string>;
 The name of the policy. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L37">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L38">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -1677,7 +1677,7 @@ public namePrefix: pulumi.Output<string | undefined>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L42">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L43">property path</a>
 </h3>
 
 ```typescript
@@ -1689,7 +1689,7 @@ Path in which to create the policy.
 See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L49">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L50">property policy</a>
 </h3>
 
 ```typescript
@@ -1699,7 +1699,7 @@ public policy: pulumi.Output<string>;
 
 The policy document. This is a JSON formatted string.
 The heredoc syntax, `file` function, or the [`aws_iam_policy_document` data
-source](/docs/providers/aws/d/iam_policy_document.html)
+source](https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html)
 are all helpful here.
 
 <h3 class="pdoc-member-header">
@@ -1715,7 +1715,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="PolicyAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L16">class PolicyAttachment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L17">class PolicyAttachment</a>
 </h2>
 
 Attaches a Managed IAM Policy to user(s), role(s), and/or group(s)
@@ -1723,7 +1723,7 @@ Attaches a Managed IAM Policy to user(s), role(s), and/or group(s)
 !> **WARNING:** The aws_iam_policy_attachment resource creates **exclusive** attachments of IAM policies. Across the entire AWS account, all of the users/roles/groups to which a single policy is attached must be declared by a single aws_iam_policy_attachment resource. This means that even any users/roles/groups that have the attached policy via some mechanism other than Terraform will have that attached policy revoked by Terraform. Consider `aws_iam_role_policy_attachment`, `aws_iam_user_policy_attachment`, or `aws_iam_group_policy_attachment` instead. These resources do not enforce exclusive attachment of an IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L48">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L49">constructor</a>
 </h3>
 
 ```typescript
@@ -1738,7 +1738,7 @@ Create a PolicyAttachment resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L25">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -1770,7 +1770,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L32">property groups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L33">property groups</a>
 </h3>
 
 ```typescript
@@ -1793,7 +1793,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L36">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L37">property name</a>
 </h3>
 
 ```typescript
@@ -1804,7 +1804,7 @@ public name: pulumi.Output<string>;
 The name of the attachment. This cannot be an empty string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L40">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L41">property policyArn</a>
 </h3>
 
 ```typescript
@@ -1815,7 +1815,7 @@ public policyArn: pulumi.Output<ARN>;
 The ARN of the policy you want to apply
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L44">property roles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L45">property roles</a>
 </h3>
 
 ```typescript
@@ -1838,7 +1838,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L48">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L49">property users</a>
 </h3>
 
 ```typescript
@@ -1849,13 +1849,13 @@ public users: pulumi.Output<User[] | undefined>;
 The user(s) the policy should be applied to
 
 <h2 class="pdoc-module-header" id="Role">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L9">class Role</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L12">class Role</a>
 </h2>
 
 Provides an IAM role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L66">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L69">constructor</a>
 </h3>
 
 ```typescript
@@ -1870,7 +1870,7 @@ Create a Role resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -1902,7 +1902,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L28">property arn</a>
 </h3>
 
 ```typescript
@@ -1913,7 +1913,7 @@ public arn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) specifying the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L29">property assumeRolePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L32">property assumeRolePolicy</a>
 </h3>
 
 ```typescript
@@ -1924,7 +1924,7 @@ public assumeRolePolicy: pulumi.Output<string>;
 The policy that grants an entity permission to assume the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L33">property createDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L36">property createDate</a>
 </h3>
 
 ```typescript
@@ -1935,7 +1935,7 @@ public createDate: pulumi.Output<string>;
 The creation date of the IAM role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L37">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L40">property description</a>
 </h3>
 
 ```typescript
@@ -1946,7 +1946,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L41">property forceDetachPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L44">property forceDetachPolicies</a>
 </h3>
 
 ```typescript
@@ -1969,7 +1969,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L45">property maxSessionDuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L48">property maxSessionDuration</a>
 </h3>
 
 ```typescript
@@ -1980,7 +1980,7 @@ public maxSessionDuration: pulumi.Output<number | undefined>;
 The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L49">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L52">property name</a>
 </h3>
 
 ```typescript
@@ -1991,7 +1991,7 @@ public name: pulumi.Output<string>;
 The name of the role. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L53">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L56">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -2002,7 +2002,7 @@ public namePrefix: pulumi.Output<string | undefined>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L58">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L61">property path</a>
 </h3>
 
 ```typescript
@@ -2014,7 +2014,7 @@ The path to the role.
 See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L62">property permissionsBoundary</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L65">property permissionsBoundary</a>
 </h3>
 
 ```typescript
@@ -2025,7 +2025,7 @@ public permissionsBoundary: pulumi.Output<string | undefined>;
 The ARN of the policy that is used to set the permissions boundary for the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L66">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L69">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -2048,13 +2048,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RolePolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L11">class RolePolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L13">class RolePolicy</a>
 </h2>
 
 Provides an IAM role policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L42">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L44">constructor</a>
 </h3>
 
 ```typescript
@@ -2069,7 +2069,7 @@ Create a RolePolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -2113,7 +2113,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L28">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -2125,7 +2125,7 @@ The name of the role policy. If omitted, Terraform will
 assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L33">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L35">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -2137,7 +2137,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L38">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L40">property policy</a>
 </h3>
 
 ```typescript
@@ -2149,7 +2149,7 @@ The policy document. This is a JSON formatted string.
 The heredoc syntax or `file` function is helpful here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L42">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L44">property role</a>
 </h3>
 
 ```typescript
@@ -2172,13 +2172,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RolePolicyAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L12">class RolePolicyAttachment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L13">class RolePolicyAttachment</a>
 </h2>
 
 Attaches a Managed IAM Policy to an IAM role
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L32">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -2193,7 +2193,7 @@ Create a RolePolicyAttachment resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -2237,7 +2237,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L28">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L29">property policyArn</a>
 </h3>
 
 ```typescript
@@ -2248,7 +2248,7 @@ public policyArn: pulumi.Output<ARN>;
 The ARN of the policy you want to apply
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L32">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L33">property role</a>
 </h3>
 
 ```typescript
@@ -2271,13 +2271,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SamlProvider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L9">class SamlProvider</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L10">class SamlProvider</a>
 </h2>
 
 Provides an IAM SAML provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -2292,7 +2292,7 @@ Create a SamlProvider resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -2324,7 +2324,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -2347,7 +2347,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -2358,7 +2358,7 @@ public name: pulumi.Output<string>;
 The name of the provider to create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L33">property samlMetadataDocument</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L34">property samlMetadataDocument</a>
 </h3>
 
 ```typescript
@@ -2381,7 +2381,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L37">property validUntil</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L38">property validUntil</a>
 </h3>
 
 ```typescript
@@ -2392,7 +2392,7 @@ public validUntil: pulumi.Output<string>;
 The expiration date and time for the SAML provider in RFC1123 format, e.g. `Mon, 02 Jan 2006 15:04:05 MST`.
 
 <h2 class="pdoc-module-header" id="ServerCertificate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L21">class ServerCertificate</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L22">class ServerCertificate</a>
 </h2>
 
 Provides an IAM Server Certificate resource to upload Server Certificates.
@@ -2407,10 +2407,10 @@ For information about server certificates in IAM, see [Managing Server
 Certificates][2] in AWS Documentation.
 
 ~> **Note:** All arguments including the private key will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](/docs/state/sensitive-data.html).
+[Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L69">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L70">constructor</a>
 </h3>
 
 ```typescript
@@ -2425,7 +2425,7 @@ Create a ServerCertificate resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L30">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L31">method get</a>
 </h3>
 
 ```typescript
@@ -2457,7 +2457,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L37">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L38">property arn</a>
 </h3>
 
 ```typescript
@@ -2468,7 +2468,7 @@ public arn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) specifying the server certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L42">property certificateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L43">property certificateBody</a>
 </h3>
 
 ```typescript
@@ -2480,7 +2480,7 @@ The contents of the public key certificate in
 PEM-encoded format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L48">property certificateChain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L49">property certificateChain</a>
 </h3>
 
 ```typescript
@@ -2505,7 +2505,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L53">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L54">property name</a>
 </h3>
 
 ```typescript
@@ -2517,7 +2517,7 @@ The name of the Server Certificate. Do not include the
 path in this value. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L58">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L59">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -2529,7 +2529,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L65">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L66">property path</a>
 </h3>
 
 ```typescript
@@ -2543,7 +2543,7 @@ AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
 See [IAM Identifiers][1] for more details on IAM Paths.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L69">property privateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L70">property privateKey</a>
 </h3>
 
 ```typescript
@@ -2566,13 +2566,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ServiceLinkedRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L9">class ServiceLinkedRole</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L10">class ServiceLinkedRole</a>
 </h2>
 
 Provides an [IAM service-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L53">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L54">constructor</a>
 </h3>
 
 ```typescript
@@ -2587,7 +2587,7 @@ Create a ServiceLinkedRole resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -2619,7 +2619,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -2630,7 +2630,7 @@ public arn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) specifying the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L29">property awsServiceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L30">property awsServiceName</a>
 </h3>
 
 ```typescript
@@ -2641,7 +2641,7 @@ public awsServiceName: pulumi.Output<string>;
 The AWS service to which this role is attached. You use a string similar to a URL but without the `http://` in front. For example: `elasticbeanstalk.amazonaws.com`. To find the full list of services that support service-linked roles, check [the docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L33">property createDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L34">property createDate</a>
 </h3>
 
 ```typescript
@@ -2652,7 +2652,7 @@ public createDate: pulumi.Output<string>;
 The creation date of the IAM role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L37">property customSuffix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L38">property customSuffix</a>
 </h3>
 
 ```typescript
@@ -2663,7 +2663,7 @@ public customSuffix: pulumi.Output<string | undefined>;
 Additional string appended to the role name. Not all AWS services support custom suffixes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L41">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L42">property description</a>
 </h3>
 
 ```typescript
@@ -2686,7 +2686,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L45">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L46">property name</a>
 </h3>
 
 ```typescript
@@ -2697,7 +2697,7 @@ public name: pulumi.Output<string>;
 The name of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L49">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L50">property path</a>
 </h3>
 
 ```typescript
@@ -2708,7 +2708,7 @@ public path: pulumi.Output<string>;
 The path of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L53">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L54">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -2731,13 +2731,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SshKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L9">class SshKey</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L10">class SshKey</a>
 </h2>
 
 Uploads an SSH public key and associates it with the specified IAM user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L45">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L46">constructor</a>
 </h3>
 
 ```typescript
@@ -2752,7 +2752,7 @@ Create a SshKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -2784,7 +2784,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L25">property encoding</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L26">property encoding</a>
 </h3>
 
 ```typescript
@@ -2795,7 +2795,7 @@ public encoding: pulumi.Output<string>;
 Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L29">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L30">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -2818,7 +2818,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L33">property publicKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L34">property publicKey</a>
 </h3>
 
 ```typescript
@@ -2829,7 +2829,7 @@ public publicKey: pulumi.Output<string>;
 The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L37">property sshPublicKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L38">property sshPublicKeyId</a>
 </h3>
 
 ```typescript
@@ -2840,7 +2840,7 @@ public sshPublicKeyId: pulumi.Output<string>;
 The unique identifier for the SSH public key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L41">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L42">property status</a>
 </h3>
 
 ```typescript
@@ -2863,7 +2863,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L45">property username</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L46">property username</a>
 </h3>
 
 ```typescript
@@ -2874,13 +2874,13 @@ public username: pulumi.Output<string>;
 The name of the IAM user to associate the SSH public key with.
 
 <h2 class="pdoc-module-header" id="User">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L9">class User</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L10">class User</a>
 </h2>
 
 Provides an IAM user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L47">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L48">constructor</a>
 </h3>
 
 ```typescript
@@ -2895,7 +2895,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -2927,7 +2927,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -2938,7 +2938,7 @@ public arn: pulumi.Output<string>;
 The ARN assigned by AWS for this user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L31">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L32">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -2963,7 +2963,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L35">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L36">property name</a>
 </h3>
 
 ```typescript
@@ -2974,7 +2974,7 @@ public name: pulumi.Output<string>;
 The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L39">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L40">property path</a>
 </h3>
 
 ```typescript
@@ -2985,7 +2985,7 @@ public path: pulumi.Output<string | undefined>;
 Path in which to create the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L43">property permissionsBoundary</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L44">property permissionsBoundary</a>
 </h3>
 
 ```typescript
@@ -2996,7 +2996,7 @@ public permissionsBoundary: pulumi.Output<string | undefined>;
 The ARN of the policy that is used to set the permissions boundary for the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L47">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L48">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -3019,7 +3019,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="UserGroupMembership">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L14">class UserGroupMembership</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L15">class UserGroupMembership</a>
 </h2>
 
 Provides a resource for adding an [IAM User][2] to [IAM Groups][1]. This
@@ -3030,7 +3030,7 @@ To exclusively manage the users in a group, see the
 [`aws_iam_group_membership` resource][3].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L34">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L35">constructor</a>
 </h3>
 
 ```typescript
@@ -3045,7 +3045,7 @@ Create a UserGroupMembership resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L23">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L24">method get</a>
 </h3>
 
 ```typescript
@@ -3077,7 +3077,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L30">property groups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L31">property groups</a>
 </h3>
 
 ```typescript
@@ -3112,7 +3112,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L34">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L35">property user</a>
 </h3>
 
 ```typescript
@@ -3123,7 +3123,7 @@ public user: pulumi.Output<string>;
 The name of the [IAM User][2] to add to groups
 
 <h2 class="pdoc-module-header" id="UserLoginProfile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L11">class UserLoginProfile</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L12">class UserLoginProfile</a>
 </h2>
 
 Provides one-time creation of a IAM user login profile, and uses PGP to
@@ -3131,7 +3131,7 @@ encrypt the password for safe transport to the user. PGP keys can be
 obtained from Keybase.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L51">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L52">constructor</a>
 </h3>
 
 ```typescript
@@ -3146,7 +3146,7 @@ Create a UserLoginProfile resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -3178,7 +3178,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L27">property encryptedPassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L28">property encryptedPassword</a>
 </h3>
 
 ```typescript
@@ -3201,7 +3201,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L32">property keyFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L33">property keyFingerprint</a>
 </h3>
 
 ```typescript
@@ -3213,7 +3213,7 @@ The fingerprint of the PGP key used to encrypt
 the password
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L37">property passwordLength</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L38">property passwordLength</a>
 </h3>
 
 ```typescript
@@ -3225,7 +3225,7 @@ The length of the generated
 password.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L42">property passwordResetRequired</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L43">property passwordResetRequired</a>
 </h3>
 
 ```typescript
@@ -3237,7 +3237,7 @@ Whether the
 user should be forced to reset the generated password on first login.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L47">property pgpKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L48">property pgpKey</a>
 </h3>
 
 ```typescript
@@ -3261,7 +3261,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L51">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L52">property user</a>
 </h3>
 
 ```typescript
@@ -3272,13 +3272,13 @@ public user: pulumi.Output<string>;
 The IAM user's name.
 
 <h2 class="pdoc-module-header" id="UserPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L9">class UserPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L12">class UserPolicy</a>
 </h2>
 
 Provides an IAM policy attached to a user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L38">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L41">constructor</a>
 </h3>
 
 ```typescript
@@ -3293,7 +3293,7 @@ Create a UserPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -3337,7 +3337,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L28">property name</a>
 </h3>
 
 ```typescript
@@ -3348,7 +3348,7 @@ public name: pulumi.Output<string>;
 The name of the policy. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L29">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L32">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -3359,7 +3359,7 @@ public namePrefix: pulumi.Output<string | undefined>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L34">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L37">property policy</a>
 </h3>
 
 ```typescript
@@ -3383,7 +3383,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L38">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L41">property user</a>
 </h3>
 
 ```typescript
@@ -3394,13 +3394,13 @@ public user: pulumi.Output<string>;
 IAM user to which to attach this policy.
 
 <h2 class="pdoc-module-header" id="UserPolicyAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L13">class UserPolicyAttachment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L14">class UserPolicyAttachment</a>
 </h2>
 
 Attaches a Managed IAM Policy to an IAM user
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -3415,7 +3415,7 @@ Create a UserPolicyAttachment resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -3459,7 +3459,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L29">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L30">property policyArn</a>
 </h3>
 
 ```typescript
@@ -3482,7 +3482,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L33">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L34">property user</a>
 </h3>
 
 ```typescript
@@ -5565,7 +5565,7 @@ const ViewOnlyAccess: ARN = "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
 ```
 
 <h2 class="pdoc-module-header" id="assumeRolePolicyForPrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L72">function assumeRolePolicyForPrincipal</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L178">function assumeRolePolicyForPrincipal</a>
 </h2>
 
 ```typescript
@@ -5578,7 +5578,7 @@ used to control which principals may assume an IAM Role, by granting the `sts:As
 action to those principals.
 
 <h2 class="pdoc-module-header" id="getAccountAlias">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getAccountAlias.ts#L10">function getAccountAlias</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getAccountAlias.ts#L11">function getAccountAlias</a>
 </h2>
 
 ```typescript
@@ -5590,7 +5590,7 @@ The IAM Account Alias data source allows access to the account alias
 for the effective account in which Terraform is working.
 
 <h2 class="pdoc-module-header" id="getGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L11">function getGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L12">function getGroup</a>
 </h2>
 
 ```typescript
@@ -5603,7 +5603,7 @@ IAM group. By using this data source, you can reference IAM group
 properties without having to hard code ARNs as input.
 
 <h2 class="pdoc-module-header" id="getInstanceProfile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L11">function getInstanceProfile</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L12">function getInstanceProfile</a>
 </h2>
 
 ```typescript
@@ -5616,7 +5616,7 @@ IAM instance profile. By using this data source, you can reference IAM
 instance profile properties without having to hard code ARNs as input.
 
 <h2 class="pdoc-module-header" id="getPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L10">function getPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L11">function getPolicy</a>
 </h2>
 
 ```typescript
@@ -5628,7 +5628,7 @@ This data source can be used to fetch information about a specific
 IAM policy.
 
 <h2 class="pdoc-module-header" id="getPolicyDocument">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L72">function getPolicyDocument</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L73">function getPolicyDocument</a>
 </h2>
 
 ```typescript
@@ -5702,7 +5702,7 @@ valid to use literal JSON strings within your configuration, or to use the
 `file` interpolation function to read a raw JSON policy document from a file.
 
 <h2 class="pdoc-module-header" id="getRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L11">function getRole</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L12">function getRole</a>
 </h2>
 
 ```typescript
@@ -5715,7 +5715,7 @@ IAM role. By using this data source, you can reference IAM role
 properties without having to hard code ARNs as input.
 
 <h2 class="pdoc-module-header" id="getServerCertificate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L9">function getServerCertificate</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L10">function getServerCertificate</a>
 </h2>
 
 ```typescript
@@ -5726,7 +5726,7 @@ getServerCertificate(args?: GetServerCertificateArgs, opts?: pulumi.InvokeOption
 Use this data source to lookup information about IAM Server Certificates.
 
 <h2 class="pdoc-module-header" id="getUser">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L11">function getUser</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L12">function getUser</a>
 </h2>
 
 ```typescript
@@ -5739,10 +5739,16 @@ IAM user. By using this data source, you can reference IAM user
 properties without having to hard code ARNs or unique IDs as input.
 
 <h2 class="pdoc-module-header" id="AWSPrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L52">interface AWSPrincipal</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L149">interface AWSPrincipal</a>
 </h2>
+
+When you use an AWS account identifier as the principal in a policy, the permissions in the policy statement can be
+granted to all identities contained in that account. This includes IAM users and roles in that account. When you
+specify an AWS account, you can use the account ARN (arn:aws:iam::AWS-account-ID:root), or a shortened form that
+consists of the AWS: prefix followed by the account ID.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L53">property AWS</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L150">property AWS</a>
 </h3>
 
 ```typescript
@@ -5750,13 +5756,13 @@ AWS: string | string[];
 ```
 
 <h2 class="pdoc-module-header" id="AccessKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L142">interface AccessKeyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L143">interface AccessKeyArgs</a>
 </h2>
 
 The set of arguments for constructing a AccessKey resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L147">property pgpKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L148">property pgpKey</a>
 </h3>
 
 ```typescript
@@ -5768,7 +5774,7 @@ Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L151">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L152">property user</a>
 </h3>
 
 ```typescript
@@ -5779,13 +5785,13 @@ user: pulumi.Input<string>;
 The IAM user to associate with this access key.
 
 <h2 class="pdoc-module-header" id="AccessKeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L99">interface AccessKeyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L100">interface AccessKeyState</a>
 </h2>
 
 Input properties used for looking up and filtering AccessKey resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L105">property encryptedSecret</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L106">property encryptedSecret</a>
 </h3>
 
 ```typescript
@@ -5798,7 +5804,7 @@ The encrypted secret, base64 encoded.
 for example: `terraform output encrypted_secret | base64 --decode | keybase pgp decrypt`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L110">property keyFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L111">property keyFingerprint</a>
 </h3>
 
 ```typescript
@@ -5810,7 +5816,7 @@ The fingerprint of the PGP key used to encrypt
 the secret
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L115">property pgpKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L116">property pgpKey</a>
 </h3>
 
 ```typescript
@@ -5822,7 +5828,7 @@ Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L121">property secret</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L122">property secret</a>
 </h3>
 
 ```typescript
@@ -5835,7 +5841,7 @@ to the state file. Please supply a `pgp_key` instead, which will prevent the
 secret from being stored in plain text
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L127">property sesSmtpPassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L128">property sesSmtpPassword</a>
 </h3>
 
 ```typescript
@@ -5848,7 +5854,7 @@ password by applying [AWS's documented conversion
 algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L132">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L133">property status</a>
 </h3>
 
 ```typescript
@@ -5860,7 +5866,7 @@ status?: pulumi.Input<string>;
 inactive by other means.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L136">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts#L137">property user</a>
 </h3>
 
 ```typescript
@@ -5871,13 +5877,13 @@ user?: pulumi.Input<string>;
 The IAM user to associate with this access key.
 
 <h2 class="pdoc-module-header" id="AccountAliasArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L66">interface AccountAliasArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L67">interface AccountAliasArgs</a>
 </h2>
 
 The set of arguments for constructing a AccountAlias resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L70">property accountAlias</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L71">property accountAlias</a>
 </h3>
 
 ```typescript
@@ -5888,13 +5894,13 @@ accountAlias: pulumi.Input<string>;
 The account alias
 
 <h2 class="pdoc-module-header" id="AccountAliasState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L56">interface AccountAliasState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L57">interface AccountAliasState</a>
 </h2>
 
 Input properties used for looking up and filtering AccountAlias resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L60">property accountAlias</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts#L61">property accountAlias</a>
 </h3>
 
 ```typescript
@@ -5905,13 +5911,13 @@ accountAlias?: pulumi.Input<string>;
 The account alias
 
 <h2 class="pdoc-module-header" id="AccountPasswordPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L161">interface AccountPasswordPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L162">interface AccountPasswordPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a AccountPasswordPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L165">property allowUsersToChangePassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L166">property allowUsersToChangePassword</a>
 </h3>
 
 ```typescript
@@ -5922,7 +5928,7 @@ allowUsersToChangePassword?: pulumi.Input<boolean>;
 Whether to allow users to change their own password
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L170">property hardExpiry</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L171">property hardExpiry</a>
 </h3>
 
 ```typescript
@@ -5934,7 +5940,7 @@ Whether users are prevented from setting a new password after their password has
 (i.e. require administrator reset)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L174">property maxPasswordAge</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L175">property maxPasswordAge</a>
 </h3>
 
 ```typescript
@@ -5945,7 +5951,7 @@ maxPasswordAge?: pulumi.Input<number>;
 The number of days that an user password is valid.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L178">property minimumPasswordLength</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L179">property minimumPasswordLength</a>
 </h3>
 
 ```typescript
@@ -5956,7 +5962,7 @@ minimumPasswordLength?: pulumi.Input<number>;
 Minimum length to require for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L182">property passwordReusePrevention</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L183">property passwordReusePrevention</a>
 </h3>
 
 ```typescript
@@ -5967,7 +5973,7 @@ passwordReusePrevention?: pulumi.Input<number>;
 The number of previous passwords that users are prevented from reusing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L186">property requireLowercaseCharacters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L187">property requireLowercaseCharacters</a>
 </h3>
 
 ```typescript
@@ -5978,7 +5984,7 @@ requireLowercaseCharacters?: pulumi.Input<boolean>;
 Whether to require lowercase characters for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L190">property requireNumbers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L191">property requireNumbers</a>
 </h3>
 
 ```typescript
@@ -5989,7 +5995,7 @@ requireNumbers?: pulumi.Input<boolean>;
 Whether to require numbers for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L194">property requireSymbols</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L195">property requireSymbols</a>
 </h3>
 
 ```typescript
@@ -6000,7 +6006,7 @@ requireSymbols?: pulumi.Input<boolean>;
 Whether to require symbols for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L198">property requireUppercaseCharacters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L199">property requireUppercaseCharacters</a>
 </h3>
 
 ```typescript
@@ -6011,13 +6017,13 @@ requireUppercaseCharacters?: pulumi.Input<boolean>;
 Whether to require uppercase characters for user passwords.
 
 <h2 class="pdoc-module-header" id="AccountPasswordPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L112">interface AccountPasswordPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L113">interface AccountPasswordPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering AccountPasswordPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L116">property allowUsersToChangePassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L117">property allowUsersToChangePassword</a>
 </h3>
 
 ```typescript
@@ -6028,7 +6034,7 @@ allowUsersToChangePassword?: pulumi.Input<boolean>;
 Whether to allow users to change their own password
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L122">property expirePasswords</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L123">property expirePasswords</a>
 </h3>
 
 ```typescript
@@ -6041,7 +6047,7 @@ Returns `true` if `max_password_age` contains a value greater than `0`.
 Returns `false` if it is `0` or _not present_.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L127">property hardExpiry</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L128">property hardExpiry</a>
 </h3>
 
 ```typescript
@@ -6053,7 +6059,7 @@ Whether users are prevented from setting a new password after their password has
 (i.e. require administrator reset)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L131">property maxPasswordAge</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L132">property maxPasswordAge</a>
 </h3>
 
 ```typescript
@@ -6064,7 +6070,7 @@ maxPasswordAge?: pulumi.Input<number>;
 The number of days that an user password is valid.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L135">property minimumPasswordLength</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L136">property minimumPasswordLength</a>
 </h3>
 
 ```typescript
@@ -6075,7 +6081,7 @@ minimumPasswordLength?: pulumi.Input<number>;
 Minimum length to require for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L139">property passwordReusePrevention</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L140">property passwordReusePrevention</a>
 </h3>
 
 ```typescript
@@ -6086,7 +6092,7 @@ passwordReusePrevention?: pulumi.Input<number>;
 The number of previous passwords that users are prevented from reusing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L143">property requireLowercaseCharacters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L144">property requireLowercaseCharacters</a>
 </h3>
 
 ```typescript
@@ -6097,7 +6103,7 @@ requireLowercaseCharacters?: pulumi.Input<boolean>;
 Whether to require lowercase characters for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L147">property requireNumbers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L148">property requireNumbers</a>
 </h3>
 
 ```typescript
@@ -6108,7 +6114,7 @@ requireNumbers?: pulumi.Input<boolean>;
 Whether to require numbers for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L151">property requireSymbols</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L152">property requireSymbols</a>
 </h3>
 
 ```typescript
@@ -6119,7 +6125,7 @@ requireSymbols?: pulumi.Input<boolean>;
 Whether to require symbols for user passwords.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L155">property requireUppercaseCharacters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts#L156">property requireUppercaseCharacters</a>
 </h3>
 
 ```typescript
@@ -6130,16 +6136,24 @@ requireUppercaseCharacters?: pulumi.Input<boolean>;
 Whether to require uppercase characters for user passwords.
 
 <h2 class="pdoc-module-header" id="ConditionArguments">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L45">interface ConditionArguments</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L111">interface ConditionArguments</a>
 </h2>
 <h2 class="pdoc-module-header" id="Conditions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L40">interface Conditions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L92">interface Conditions</a>
 </h2>
+
+The Condition element (or Condition block) lets you specify conditions for when a policy is in effect. The Condition
+element is optional. In the Condition element, you build expressions in which you use condition operators (equal,
+less than, etc.) to match the condition in the policy against values in the request. Condition values can include
+date, time, the IP address of the requester, the ARN of the request source, the user name, user ID, and the user
+agent of the requester. Some services let you specify additional values in conditions; for example, Amazon S3
+lets you write a condition using the s3:VersionId key, which is unique to that service.
+
 <h2 class="pdoc-module-header" id="FederatedPrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L60">interface FederatedPrincipal</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L166">interface FederatedPrincipal</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L61">property Federated</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L167">property Federated</a>
 </h3>
 
 ```typescript
@@ -6147,13 +6161,13 @@ Federated: string | string[];
 ```
 
 <h2 class="pdoc-module-header" id="GetAccountAliasResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getAccountAlias.ts#L18">interface GetAccountAliasResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getAccountAlias.ts#L19">interface GetAccountAliasResult</a>
 </h2>
 
 A collection of values returned by getAccountAlias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getAccountAlias.ts#L22">property accountAlias</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getAccountAlias.ts#L23">property accountAlias</a>
 </h3>
 
 ```typescript
@@ -6164,7 +6178,7 @@ accountAlias: string;
 The alias associated with the AWS account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getAccountAlias.ts#L26">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getAccountAlias.ts#L27">property id</a>
 </h3>
 
 ```typescript
@@ -6175,13 +6189,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L20">interface GetGroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L21">interface GetGroupArgs</a>
 </h2>
 
 A collection of arguments for invoking getGroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L24">property groupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L25">property groupName</a>
 </h3>
 
 ```typescript
@@ -6192,13 +6206,13 @@ groupName: string;
 The friendly IAM group name to match.
 
 <h2 class="pdoc-module-header" id="GetGroupResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L30">interface GetGroupResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L31">interface GetGroupResult</a>
 </h2>
 
 A collection of values returned by getGroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L34">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L35">property arn</a>
 </h3>
 
 ```typescript
@@ -6209,7 +6223,7 @@ arn: string;
 The Amazon Resource Name (ARN) specifying the group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L38">property groupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L39">property groupId</a>
 </h3>
 
 ```typescript
@@ -6220,7 +6234,7 @@ groupId: string;
 The stable and unique string identifying the group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L46">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L47">property id</a>
 </h3>
 
 ```typescript
@@ -6231,7 +6245,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L42">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts#L43">property path</a>
 </h3>
 
 ```typescript
@@ -6242,13 +6256,13 @@ path: string;
 The path to the group.
 
 <h2 class="pdoc-module-header" id="GetInstanceProfileArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L20">interface GetInstanceProfileArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L21">interface GetInstanceProfileArgs</a>
 </h2>
 
 A collection of arguments for invoking getInstanceProfile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L24">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L25">property name</a>
 </h3>
 
 ```typescript
@@ -6259,13 +6273,13 @@ name: string;
 The friendly IAM instance profile name to match.
 
 <h2 class="pdoc-module-header" id="GetInstanceProfileResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L30">interface GetInstanceProfileResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L31">interface GetInstanceProfileResult</a>
 </h2>
 
 A collection of values returned by getInstanceProfile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L34">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L35">property arn</a>
 </h3>
 
 ```typescript
@@ -6276,7 +6290,7 @@ arn: string;
 The Amazon Resource Name (ARN) specifying the instance profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L39">property createDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L40">property createDate</a>
 </h3>
 
 ```typescript
@@ -6288,7 +6302,7 @@ The string representation of the date the instance profile
 was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L60">property id</a>
 </h3>
 
 ```typescript
@@ -6299,7 +6313,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L43">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L44">property path</a>
 </h3>
 
 ```typescript
@@ -6310,7 +6324,7 @@ path: string;
 The path to the instance profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L47">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L48">property roleArn</a>
 </h3>
 
 ```typescript
@@ -6321,7 +6335,7 @@ roleArn: string;
 The role arn associated with this instance profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L51">property roleId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L52">property roleId</a>
 </h3>
 
 ```typescript
@@ -6332,7 +6346,7 @@ roleId: string;
 The role id associated with this instance profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L55">property roleName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts#L56">property roleName</a>
 </h3>
 
 ```typescript
@@ -6343,13 +6357,13 @@ roleName: string;
 The role name associated with this instance profile.
 
 <h2 class="pdoc-module-header" id="GetPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L19">interface GetPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L20">interface GetPolicyArgs</a>
 </h2>
 
 A collection of arguments for invoking getPolicy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L23">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L24">property arn</a>
 </h3>
 
 ```typescript
@@ -6360,13 +6374,13 @@ arn: string;
 ARN of the IAM policy.
 
 <h2 class="pdoc-module-header" id="GetPolicyDocumentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L84">interface GetPolicyDocumentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L85">interface GetPolicyDocumentArgs</a>
 </h2>
 
 A collection of arguments for invoking getPolicyDocument.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L91">property overrideJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L92">property overrideJson</a>
 </h3>
 
 ```typescript
@@ -6380,7 +6394,7 @@ document will overwrite statements with the same `sid` in the current document.
 Statements without an `sid` cannot be overwritten.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L95">property policyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L96">property policyId</a>
 </h3>
 
 ```typescript
@@ -6391,7 +6405,7 @@ policyId?: string;
 An ID for the policy document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L102">property sourceJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L103">property sourceJson</a>
 </h3>
 
 ```typescript
@@ -6405,7 +6419,7 @@ policy document will overwrite statements with the same `sid` in the source
 json.  Statements without an `sid` cannot be overwritten.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L107">property statements</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L108">property statements</a>
 </h3>
 
 ```typescript
@@ -6417,13 +6431,13 @@ A nested configuration block (described below)
 configuring one *statement* to be included in the policy document.
 
 <h2 class="pdoc-module-header" id="GetPolicyDocumentResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L113">interface GetPolicyDocumentResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L114">interface GetPolicyDocumentResult</a>
 </h2>
 
 A collection of values returned by getPolicyDocument.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L121">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L122">property id</a>
 </h3>
 
 ```typescript
@@ -6434,7 +6448,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L117">property json</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L118">property json</a>
 </h3>
 
 ```typescript
@@ -6445,13 +6459,13 @@ json: string;
 The above arguments serialized as a standard JSON policy document.
 
 <h2 class="pdoc-module-header" id="GetPolicyResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L29">interface GetPolicyResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L30">interface GetPolicyResult</a>
 </h2>
 
 A collection of values returned by getPolicy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L33">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L34">property description</a>
 </h3>
 
 ```typescript
@@ -6462,7 +6476,7 @@ description: string;
 The description of the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L49">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L50">property id</a>
 </h3>
 
 ```typescript
@@ -6473,7 +6487,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L37">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -6484,7 +6498,7 @@ name: string;
 The name of the IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L41">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L42">property path</a>
 </h3>
 
 ```typescript
@@ -6495,7 +6509,7 @@ path: string;
 The path to the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L45">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts#L46">property policy</a>
 </h3>
 
 ```typescript
@@ -6506,13 +6520,13 @@ policy: string;
 The policy document of the policy.
 
 <h2 class="pdoc-module-header" id="GetRoleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L22">interface GetRoleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L23">interface GetRoleArgs</a>
 </h2>
 
 A collection of arguments for invoking getRole.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L26">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L27">property name</a>
 </h3>
 
 ```typescript
@@ -6523,7 +6537,7 @@ name?: string;
 The friendly IAM role name to match.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L27">property roleName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L28">property roleName</a>
 </h3>
 
 ```typescript
@@ -6531,13 +6545,13 @@ roleName?: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetRoleResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L33">interface GetRoleResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L34">interface GetRoleResult</a>
 </h2>
 
 A collection of values returned by getRole.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L37">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L38">property arn</a>
 </h3>
 
 ```typescript
@@ -6548,7 +6562,7 @@ arn: string;
 The Amazon Resource Name (ARN) specifying the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L41">property assumeRolePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L42">property assumeRolePolicy</a>
 </h3>
 
 ```typescript
@@ -6559,7 +6573,7 @@ assumeRolePolicy: string;
 The policy document associated with the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L42">property assumeRolePolicyDocument</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L43">property assumeRolePolicyDocument</a>
 </h3>
 
 ```typescript
@@ -6567,7 +6581,7 @@ assumeRolePolicyDocument: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L43">property createDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L44">property createDate</a>
 </h3>
 
 ```typescript
@@ -6575,7 +6589,7 @@ createDate: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L44">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L45">property description</a>
 </h3>
 
 ```typescript
@@ -6583,7 +6597,7 @@ description: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L62">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L63">property id</a>
 </h3>
 
 ```typescript
@@ -6594,7 +6608,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L45">property maxSessionDuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L46">property maxSessionDuration</a>
 </h3>
 
 ```typescript
@@ -6602,7 +6616,7 @@ maxSessionDuration: number;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L49">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L50">property path</a>
 </h3>
 
 ```typescript
@@ -6613,7 +6627,7 @@ path: string;
 The path to the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L53">property permissionsBoundary</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L54">property permissionsBoundary</a>
 </h3>
 
 ```typescript
@@ -6624,7 +6638,7 @@ permissionsBoundary: string;
 The ARN of the policy that is used to set the permissions boundary for the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L54">property roleId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L55">property roleId</a>
 </h3>
 
 ```typescript
@@ -6632,7 +6646,7 @@ roleId: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L58">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts#L59">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -6643,13 +6657,13 @@ uniqueId: string;
 The stable and unique string identifying the role.
 
 <h2 class="pdoc-module-header" id="GetServerCertificateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L22">interface GetServerCertificateArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L23">interface GetServerCertificateArgs</a>
 </h2>
 
 A collection of arguments for invoking getServerCertificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L26">property latest</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L27">property latest</a>
 </h3>
 
 ```typescript
@@ -6660,7 +6674,7 @@ latest?: boolean;
 sort results by expiration date. returns the certificate with expiration date in furthest in the future.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L30">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L31">property name</a>
 </h3>
 
 ```typescript
@@ -6671,7 +6685,7 @@ name?: string;
 exact name of the cert to lookup
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L34">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L35">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -6682,7 +6696,7 @@ namePrefix?: string;
 prefix of cert to filter by
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L38">property pathPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L39">property pathPrefix</a>
 </h3>
 
 ```typescript
@@ -6693,13 +6707,13 @@ pathPrefix?: string;
 prefix of path to filter by
 
 <h2 class="pdoc-module-header" id="GetServerCertificateResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L44">interface GetServerCertificateResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L45">interface GetServerCertificateResult</a>
 </h2>
 
 A collection of values returned by getServerCertificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L45">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L46">property arn</a>
 </h3>
 
 ```typescript
@@ -6707,7 +6721,7 @@ arn: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L46">property certificateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L47">property certificateBody</a>
 </h3>
 
 ```typescript
@@ -6715,7 +6729,7 @@ certificateBody: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L47">property certificateChain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L48">property certificateChain</a>
 </h3>
 
 ```typescript
@@ -6723,7 +6737,7 @@ certificateChain: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L48">property expirationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L49">property expirationDate</a>
 </h3>
 
 ```typescript
@@ -6731,7 +6745,7 @@ expirationDate: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L55">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L56">property id</a>
 </h3>
 
 ```typescript
@@ -6742,7 +6756,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L49">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L50">property name</a>
 </h3>
 
 ```typescript
@@ -6750,7 +6764,7 @@ name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L50">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L51">property path</a>
 </h3>
 
 ```typescript
@@ -6758,7 +6772,7 @@ path: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L51">property uploadDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts#L52">property uploadDate</a>
 </h3>
 
 ```typescript
@@ -6766,13 +6780,13 @@ uploadDate: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetUserArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L20">interface GetUserArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L21">interface GetUserArgs</a>
 </h2>
 
 A collection of arguments for invoking getUser.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L24">property userName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L25">property userName</a>
 </h3>
 
 ```typescript
@@ -6783,13 +6797,13 @@ userName: string;
 The friendly IAM user name to match.
 
 <h2 class="pdoc-module-header" id="GetUserResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L30">interface GetUserResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L31">interface GetUserResult</a>
 </h2>
 
 A collection of values returned by getUser.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L34">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L35">property arn</a>
 </h3>
 
 ```typescript
@@ -6800,7 +6814,7 @@ arn: string;
 The Amazon Resource Name (ARN) assigned by AWS for this user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L50">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L51">property id</a>
 </h3>
 
 ```typescript
@@ -6811,7 +6825,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L38">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L39">property path</a>
 </h3>
 
 ```typescript
@@ -6822,7 +6836,7 @@ path: string;
 Path in which this user was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L42">property permissionsBoundary</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L43">property permissionsBoundary</a>
 </h3>
 
 ```typescript
@@ -6833,7 +6847,7 @@ permissionsBoundary: string;
 The ARN of the policy that is used to set the permissions boundary for the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L46">property userId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts#L47">property userId</a>
 </h3>
 
 ```typescript
@@ -6844,13 +6858,13 @@ userId: string;
 The unique ID assigned by AWS for this user.
 
 <h2 class="pdoc-module-header" id="GroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L91">interface GroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L92">interface GroupArgs</a>
 </h2>
 
 The set of arguments for constructing a Group resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L95">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L96">property name</a>
 </h3>
 
 ```typescript
@@ -6861,7 +6875,7 @@ name?: pulumi.Input<string>;
 The group's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. Group names are not distinguished by case. For example, you cannot create groups named both "ADMINS" and "admins".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L99">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L100">property path</a>
 </h3>
 
 ```typescript
@@ -6872,13 +6886,13 @@ path?: pulumi.Input<string>;
 Path in which to create the group.
 
 <h2 class="pdoc-module-header" id="GroupMembershipArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L94">interface GroupMembershipArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L95">interface GroupMembershipArgs</a>
 </h2>
 
 The set of arguments for constructing a GroupMembership resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L98">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L99">property group</a>
 </h3>
 
 ```typescript
@@ -6889,7 +6903,7 @@ group: pulumi.Input<string>;
 The IAM Group name to attach the list of `users` to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L102">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L103">property name</a>
 </h3>
 
 ```typescript
@@ -6900,7 +6914,7 @@ name?: pulumi.Input<string>;
 The name to identify the Group Membership
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L106">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L107">property users</a>
 </h3>
 
 ```typescript
@@ -6911,13 +6925,13 @@ users: pulumi.Input<pulumi.Input<string>[]>;
 A list of IAM User names to associate with the Group
 
 <h2 class="pdoc-module-header" id="GroupMembershipState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L76">interface GroupMembershipState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L77">interface GroupMembershipState</a>
 </h2>
 
 Input properties used for looking up and filtering GroupMembership resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L80">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L81">property group</a>
 </h3>
 
 ```typescript
@@ -6928,7 +6942,7 @@ group?: pulumi.Input<string>;
 The IAM Group name to attach the list of `users` to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L84">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L85">property name</a>
 </h3>
 
 ```typescript
@@ -6939,7 +6953,7 @@ name?: pulumi.Input<string>;
 The name to identify the Group Membership
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L88">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts#L89">property users</a>
 </h3>
 
 ```typescript
@@ -6950,13 +6964,13 @@ users?: pulumi.Input<pulumi.Input<string>[]>;
 A list of IAM User names to associate with the Group
 
 <h2 class="pdoc-module-header" id="GroupPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L103">interface GroupPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L106">interface GroupPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a GroupPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L107">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L110">property group</a>
 </h3>
 
 ```typescript
@@ -6967,7 +6981,7 @@ group: pulumi.Input<string>;
 The IAM group to attach to the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L112">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L115">property name</a>
 </h3>
 
 ```typescript
@@ -6979,7 +6993,7 @@ The name of the policy. If omitted, Terraform will
 assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L117">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L120">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -6991,11 +7005,11 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L122">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L125">property policy</a>
 </h3>
 
 ```typescript
-policy: pulumi.Input<string>;
+policy: pulumi.Input<string | PolicyDocument>;
 ```
 
 
@@ -7003,13 +7017,13 @@ The policy document. This is a JSON formatted string.
 The heredoc syntax or `file` function is helpful here.
 
 <h2 class="pdoc-module-header" id="GroupPolicyAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L80">interface GroupPolicyAttachmentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L81">interface GroupPolicyAttachmentArgs</a>
 </h2>
 
 The set of arguments for constructing a GroupPolicyAttachment resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L84">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L85">property group</a>
 </h3>
 
 ```typescript
@@ -7020,7 +7034,7 @@ group: pulumi.Input<Group>;
 The group the policy should be applied to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L88">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L89">property policyArn</a>
 </h3>
 
 ```typescript
@@ -7031,13 +7045,13 @@ policyArn: pulumi.Input<ARN>;
 The ARN of the policy you want to apply
 
 <h2 class="pdoc-module-header" id="GroupPolicyAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L66">interface GroupPolicyAttachmentState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L67">interface GroupPolicyAttachmentState</a>
 </h2>
 
 Input properties used for looking up and filtering GroupPolicyAttachment resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L70">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L71">property group</a>
 </h3>
 
 ```typescript
@@ -7048,7 +7062,7 @@ group?: pulumi.Input<Group>;
 The group the policy should be applied to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L74">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L75">property policyArn</a>
 </h3>
 
 ```typescript
@@ -7059,13 +7073,13 @@ policyArn?: pulumi.Input<ARN>;
 The ARN of the policy you want to apply
 
 <h2 class="pdoc-module-header" id="GroupPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L78">interface GroupPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L81">interface GroupPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering GroupPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L82">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L85">property group</a>
 </h3>
 
 ```typescript
@@ -7076,7 +7090,7 @@ group?: pulumi.Input<string>;
 The IAM group to attach to the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L87">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L90">property name</a>
 </h3>
 
 ```typescript
@@ -7088,7 +7102,7 @@ The name of the policy. If omitted, Terraform will
 assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L92">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L95">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -7100,11 +7114,11 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L97">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts#L100">property policy</a>
 </h3>
 
 ```typescript
-policy?: pulumi.Input<string>;
+policy?: pulumi.Input<string | PolicyDocument>;
 ```
 
 
@@ -7112,13 +7126,13 @@ The policy document. This is a JSON formatted string.
 The heredoc syntax or `file` function is helpful here.
 
 <h2 class="pdoc-module-header" id="GroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L69">interface GroupState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L70">interface GroupState</a>
 </h2>
 
 Input properties used for looking up and filtering Group resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L73">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L74">property arn</a>
 </h3>
 
 ```typescript
@@ -7129,7 +7143,7 @@ arn?: pulumi.Input<string>;
 The ARN assigned by AWS for this group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L77">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L78">property name</a>
 </h3>
 
 ```typescript
@@ -7140,7 +7154,7 @@ name?: pulumi.Input<string>;
 The group's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. Group names are not distinguished by case. For example, you cannot create groups named both "ADMINS" and "admins".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L81">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L82">property path</a>
 </h3>
 
 ```typescript
@@ -7151,7 +7165,7 @@ path?: pulumi.Input<string>;
 Path in which to create the group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L85">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts#L86">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -7162,13 +7176,13 @@ uniqueId?: pulumi.Input<string>;
 The [unique ID][1] assigned by AWS.
 
 <h2 class="pdoc-module-header" id="InstanceProfileArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L139">interface InstanceProfileArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L140">interface InstanceProfileArgs</a>
 </h2>
 
 The set of arguments for constructing a InstanceProfile resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L143">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L144">property name</a>
 </h3>
 
 ```typescript
@@ -7179,7 +7193,7 @@ name?: pulumi.Input<string>;
 The profile's name. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L147">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L148">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -7190,7 +7204,7 @@ namePrefix?: pulumi.Input<string>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L151">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L152">property path</a>
 </h3>
 
 ```typescript
@@ -7201,7 +7215,7 @@ path?: pulumi.Input<string>;
 Path in which to create the profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L155">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L156">property role</a>
 </h3>
 
 ```typescript
@@ -7212,7 +7226,7 @@ role?: pulumi.Input<Role>;
 The role name to include in the profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L161">property roles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L162">property roles</a>
 </h3>
 
 ```typescript
@@ -7224,13 +7238,13 @@ A list of role names to include in the profile.  The current default is 1.  If y
 WARNING: This is deprecated since [version 0.9.3 (April 12, 2017)](https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md#093-april-12-2017), as >= 2 roles are not possible. See [issue #11575](https://github.com/hashicorp/terraform/issues/11575).
 
 <h2 class="pdoc-module-header" id="InstanceProfileState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L99">interface InstanceProfileState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L100">interface InstanceProfileState</a>
 </h2>
 
 Input properties used for looking up and filtering InstanceProfile resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L103">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L104">property arn</a>
 </h3>
 
 ```typescript
@@ -7241,7 +7255,7 @@ arn?: pulumi.Input<string>;
 The ARN assigned by AWS to the instance profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L107">property createDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L108">property createDate</a>
 </h3>
 
 ```typescript
@@ -7252,7 +7266,7 @@ createDate?: pulumi.Input<string>;
 The creation timestamp of the instance profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L111">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L112">property name</a>
 </h3>
 
 ```typescript
@@ -7263,7 +7277,7 @@ name?: pulumi.Input<string>;
 The profile's name. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L115">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L116">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -7274,7 +7288,7 @@ namePrefix?: pulumi.Input<string>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L119">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L120">property path</a>
 </h3>
 
 ```typescript
@@ -7285,7 +7299,7 @@ path?: pulumi.Input<string>;
 Path in which to create the profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L123">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L124">property role</a>
 </h3>
 
 ```typescript
@@ -7296,7 +7310,7 @@ role?: pulumi.Input<Role>;
 The role name to include in the profile.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L129">property roles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L130">property roles</a>
 </h3>
 
 ```typescript
@@ -7308,7 +7322,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
 WARNING: This is deprecated since [version 0.9.3 (April 12, 2017)](https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md#093-april-12-2017), as >= 2 roles are not possible. See [issue #11575](https://github.com/hashicorp/terraform/issues/11575).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L133">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L134">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -7319,13 +7333,13 @@ uniqueId?: pulumi.Input<string>;
 The [unique ID][1] assigned by AWS.
 
 <h2 class="pdoc-module-header" id="OpenIdConnectProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L100">interface OpenIdConnectProviderArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L101">interface OpenIdConnectProviderArgs</a>
 </h2>
 
 The set of arguments for constructing a OpenIdConnectProvider resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L104">property clientIdLists</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L105">property clientIdLists</a>
 </h3>
 
 ```typescript
@@ -7336,7 +7350,7 @@ clientIdLists: pulumi.Input<pulumi.Input<string>[]>;
 A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L108">property thumbprintLists</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L109">property thumbprintLists</a>
 </h3>
 
 ```typescript
@@ -7347,7 +7361,7 @@ thumbprintLists: pulumi.Input<pulumi.Input<string>[]>;
 A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L112">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L113">property url</a>
 </h3>
 
 ```typescript
@@ -7358,13 +7372,13 @@ url: pulumi.Input<string>;
 The URL of the identity provider. Corresponds to the _iss_ claim.
 
 <h2 class="pdoc-module-header" id="OpenIdConnectProviderState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L78">interface OpenIdConnectProviderState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L79">interface OpenIdConnectProviderState</a>
 </h2>
 
 Input properties used for looking up and filtering OpenIdConnectProvider resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L82">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L83">property arn</a>
 </h3>
 
 ```typescript
@@ -7375,7 +7389,7 @@ arn?: pulumi.Input<string>;
 The ARN assigned by AWS for this provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L86">property clientIdLists</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L87">property clientIdLists</a>
 </h3>
 
 ```typescript
@@ -7386,7 +7400,7 @@ clientIdLists?: pulumi.Input<pulumi.Input<string>[]>;
 A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L90">property thumbprintLists</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L91">property thumbprintLists</a>
 </h3>
 
 ```typescript
@@ -7397,7 +7411,7 @@ thumbprintLists?: pulumi.Input<pulumi.Input<string>[]>;
 A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L94">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts#L95">property url</a>
 </h3>
 
 ```typescript
@@ -7408,13 +7422,13 @@ url?: pulumi.Input<string>;
 The URL of the identity provider. Corresponds to the _iss_ claim.
 
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L122">interface PolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L123">interface PolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a Policy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L126">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L127">property description</a>
 </h3>
 
 ```typescript
@@ -7425,7 +7439,7 @@ description?: pulumi.Input<string>;
 Description of the IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L130">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L131">property name</a>
 </h3>
 
 ```typescript
@@ -7436,7 +7450,7 @@ name?: pulumi.Input<string>;
 The name of the policy. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L134">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L135">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -7447,7 +7461,7 @@ namePrefix?: pulumi.Input<string>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L139">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L140">property path</a>
 </h3>
 
 ```typescript
@@ -7459,7 +7473,7 @@ Path in which to create the policy.
 See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L146">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L147">property policy</a>
 </h3>
 
 ```typescript
@@ -7469,17 +7483,17 @@ policy: pulumi.Input<string>;
 
 The policy document. This is a JSON formatted string.
 The heredoc syntax, `file` function, or the [`aws_iam_policy_document` data
-source](/docs/providers/aws/d/iam_policy_document.html)
+source](https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html)
 are all helpful here.
 
 <h2 class="pdoc-module-header" id="PolicyAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L111">interface PolicyAttachmentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L112">interface PolicyAttachmentArgs</a>
 </h2>
 
 The set of arguments for constructing a PolicyAttachment resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L115">property groups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L116">property groups</a>
 </h3>
 
 ```typescript
@@ -7490,7 +7504,7 @@ groups?: pulumi.Input<pulumi.Input<Group>[]>;
 The group(s) the policy should be applied to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L119">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L120">property name</a>
 </h3>
 
 ```typescript
@@ -7501,7 +7515,7 @@ name?: pulumi.Input<string>;
 The name of the attachment. This cannot be an empty string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L123">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L124">property policyArn</a>
 </h3>
 
 ```typescript
@@ -7512,7 +7526,7 @@ policyArn: pulumi.Input<ARN>;
 The ARN of the policy you want to apply
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L127">property roles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L128">property roles</a>
 </h3>
 
 ```typescript
@@ -7523,7 +7537,7 @@ roles?: pulumi.Input<pulumi.Input<Role>[]>;
 The role(s) the policy should be applied to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L131">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L132">property users</a>
 </h3>
 
 ```typescript
@@ -7534,13 +7548,13 @@ users?: pulumi.Input<pulumi.Input<User>[]>;
 The user(s) the policy should be applied to
 
 <h2 class="pdoc-module-header" id="PolicyAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L85">interface PolicyAttachmentState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L86">interface PolicyAttachmentState</a>
 </h2>
 
 Input properties used for looking up and filtering PolicyAttachment resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L89">property groups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L90">property groups</a>
 </h3>
 
 ```typescript
@@ -7551,7 +7565,7 @@ groups?: pulumi.Input<pulumi.Input<Group>[]>;
 The group(s) the policy should be applied to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L93">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L94">property name</a>
 </h3>
 
 ```typescript
@@ -7562,7 +7576,7 @@ name?: pulumi.Input<string>;
 The name of the attachment. This cannot be an empty string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L97">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L98">property policyArn</a>
 </h3>
 
 ```typescript
@@ -7573,7 +7587,7 @@ policyArn?: pulumi.Input<ARN>;
 The ARN of the policy you want to apply
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L101">property roles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L102">property roles</a>
 </h3>
 
 ```typescript
@@ -7584,7 +7598,7 @@ roles?: pulumi.Input<pulumi.Input<Role>[]>;
 The role(s) the policy should be applied to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L105">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L106">property users</a>
 </h3>
 
 ```typescript
@@ -7595,10 +7609,40 @@ users?: pulumi.Input<pulumi.Input<User>[]>;
 The user(s) the policy should be applied to
 
 <h2 class="pdoc-module-header" id="PolicyDocument">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L18">interface PolicyDocument</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L45">interface PolicyDocument</a>
 </h2>
+
+You manage access in AWS by creating policies and attaching them to IAM identities or AWS resources. A policy is an
+object in AWS that, when associated with an entity or resource, defines their permissions. AWS evaluates these
+policies when a principal, such as a user, makes a request. Permissions in the policies determine whether the
+request is allowed or denied.
+
+IAM policies define permissions for an action regardless of the method that you use to perform the operation. For
+example, if a policy allows the `GetUser` action, then a user with that policy can get user information from the
+AWS Management Console, the AWS CLI, or the AWS API. When you create an IAM user, you can set up the user to
+allow console or programmatic access. The IAM user can sign in to the console using a user name and password.
+Or they can use access keys to work with the CLI or API.
+
+Most policies are stored in AWS as JSON documents. Identity-based policies, policies used to set boundaries, or AWS
+STS boundary policies are JSON policy documents that you attach to a user or role. Resource-based policies are JSON
+policy documents that you attach to a resource. SCPs are JSON policy documents with restricted syntax that you
+attach to an AWS Organizations organizational unit (OU). ACLs are also attached to a resource, but you must use a
+different syntax.
+
+A JSON policy document includes these elements:
+
+    - Optional policywide information at the top of the document
+    - One or more individual statements
+
+Each statement includes information about a single permission. If a policy includes multiple statements, AWS applies
+a logical OR across the statements when evaluating them. If multiple policies apply to a request, AWS applies a
+logical OR across all of those policies when evaluating them.
+
+For more details about IAM policies, please refer to the AWS documentation online:
+https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L20">property Id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L49">property Id</a>
 </h3>
 
 ```typescript
@@ -7606,7 +7650,7 @@ Id?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L21">property Statement</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L51">property Statement</a>
 </h3>
 
 ```typescript
@@ -7614,7 +7658,7 @@ Statement: PolicyStatement[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L19">property Version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L47">property Version</a>
 </h3>
 
 ```typescript
@@ -7622,13 +7666,13 @@ Version: 2008-10-17 | 2012-10-17;
 ```
 
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L88">interface PolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L89">interface PolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering Policy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L92">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L93">property arn</a>
 </h3>
 
 ```typescript
@@ -7639,7 +7683,7 @@ arn?: pulumi.Input<string>;
 The ARN assigned by AWS to this policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L96">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L97">property description</a>
 </h3>
 
 ```typescript
@@ -7650,7 +7694,7 @@ description?: pulumi.Input<string>;
 Description of the IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L100">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L101">property name</a>
 </h3>
 
 ```typescript
@@ -7661,7 +7705,7 @@ name?: pulumi.Input<string>;
 The name of the policy. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L104">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L105">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -7672,7 +7716,7 @@ namePrefix?: pulumi.Input<string>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L109">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L110">property path</a>
 </h3>
 
 ```typescript
@@ -7684,7 +7728,7 @@ Path in which to create the policy.
 See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L116">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts#L117">property policy</a>
 </h3>
 
 ```typescript
@@ -7694,14 +7738,18 @@ policy?: pulumi.Input<string>;
 
 The policy document. This is a JSON formatted string.
 The heredoc syntax, `file` function, or the [`aws_iam_policy_document` data
-source](/docs/providers/aws/d/iam_policy_document.html)
+source](https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html)
 are all helpful here.
 
 <h2 class="pdoc-module-header" id="PolicyStatement">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L24">interface PolicyStatement</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L58">interface PolicyStatement</a>
 </h2>
+
+The Statement element is the main element for a policy. This element is required. It can include multiple elements
+(see the subsequent sections in this page). The Statement element contains an array of individual statements.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L31">property Action</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L71">property Action</a>
 </h3>
 
 ```typescript
@@ -7709,7 +7757,7 @@ Action?: string | string[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L37">property Condition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L81">property Condition</a>
 </h3>
 
 ```typescript
@@ -7717,7 +7765,7 @@ Condition?: Conditions;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L26">property Effect</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L62">property Effect</a>
 </h3>
 
 ```typescript
@@ -7725,7 +7773,7 @@ Effect: Allow | Deny;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L32">property NotAction</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L73">property NotAction</a>
 </h3>
 
 ```typescript
@@ -7733,7 +7781,7 @@ NotAction?: string | string[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L29">property NotPrincipal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L68">property NotPrincipal</a>
 </h3>
 
 ```typescript
@@ -7741,7 +7789,7 @@ NotPrincipal?: Principal;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L35">property NotResource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L78">property NotResource</a>
 </h3>
 
 ```typescript
@@ -7749,7 +7797,7 @@ NotResource?: string | string[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L28">property Principal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L66">property Principal</a>
 </h3>
 
 ```typescript
@@ -7757,7 +7805,7 @@ Principal?: Principal;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L34">property Resource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L76">property Resource</a>
 </h3>
 
 ```typescript
@@ -7765,7 +7813,7 @@ Resource?: string | string[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L25">property Sid</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L60">property Sid</a>
 </h3>
 
 ```typescript
@@ -7773,24 +7821,24 @@ Sid?: string;
 ```
 
 <h2 class="pdoc-module-header" id="RoleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L166">interface RoleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L169">interface RoleArgs</a>
 </h2>
 
 The set of arguments for constructing a Role resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L170">property assumeRolePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L173">property assumeRolePolicy</a>
 </h3>
 
 ```typescript
-assumeRolePolicy: pulumi.Input<string>;
+assumeRolePolicy: pulumi.Input<string | PolicyDocument>;
 ```
 
 
 The policy that grants an entity permission to assume the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L174">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L177">property description</a>
 </h3>
 
 ```typescript
@@ -7801,7 +7849,7 @@ description?: pulumi.Input<string>;
 The description of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L178">property forceDetachPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L181">property forceDetachPolicies</a>
 </h3>
 
 ```typescript
@@ -7812,7 +7860,7 @@ forceDetachPolicies?: pulumi.Input<boolean>;
 Specifies to force detaching any policies the role has before destroying it. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L182">property maxSessionDuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L185">property maxSessionDuration</a>
 </h3>
 
 ```typescript
@@ -7823,7 +7871,7 @@ maxSessionDuration?: pulumi.Input<number>;
 The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L186">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L189">property name</a>
 </h3>
 
 ```typescript
@@ -7834,7 +7882,7 @@ name?: pulumi.Input<string>;
 The name of the role. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L190">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L193">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -7845,7 +7893,7 @@ namePrefix?: pulumi.Input<string>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L195">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L198">property path</a>
 </h3>
 
 ```typescript
@@ -7857,7 +7905,7 @@ The path to the role.
 See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L199">property permissionsBoundary</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L202">property permissionsBoundary</a>
 </h3>
 
 ```typescript
@@ -7868,13 +7916,13 @@ permissionsBoundary?: pulumi.Input<string>;
 The ARN of the policy that is used to set the permissions boundary for the role.
 
 <h2 class="pdoc-module-header" id="RolePolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L105">interface RolePolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L107">interface RolePolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a RolePolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L110">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L112">property name</a>
 </h3>
 
 ```typescript
@@ -7886,7 +7934,7 @@ The name of the role policy. If omitted, Terraform will
 assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L115">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L117">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -7898,11 +7946,11 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L120">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L122">property policy</a>
 </h3>
 
 ```typescript
-policy: pulumi.Input<string>;
+policy: pulumi.Input<string | PolicyDocument>;
 ```
 
 
@@ -7910,7 +7958,7 @@ The policy document. This is a JSON formatted string.
 The heredoc syntax or `file` function is helpful here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L124">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L126">property role</a>
 </h3>
 
 ```typescript
@@ -7921,13 +7969,13 @@ role: pulumi.Input<string | Role>;
 The IAM role to attach to the policy.
 
 <h2 class="pdoc-module-header" id="RolePolicyAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L80">interface RolePolicyAttachmentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L81">interface RolePolicyAttachmentArgs</a>
 </h2>
 
 The set of arguments for constructing a RolePolicyAttachment resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L84">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L85">property policyArn</a>
 </h3>
 
 ```typescript
@@ -7938,7 +7986,7 @@ policyArn: pulumi.Input<ARN>;
 The ARN of the policy you want to apply
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L88">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L89">property role</a>
 </h3>
 
 ```typescript
@@ -7949,13 +7997,13 @@ role: pulumi.Input<Role>;
 The role the policy should be applied to
 
 <h2 class="pdoc-module-header" id="RolePolicyAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L66">interface RolePolicyAttachmentState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L67">interface RolePolicyAttachmentState</a>
 </h2>
 
 Input properties used for looking up and filtering RolePolicyAttachment resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L70">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L71">property policyArn</a>
 </h3>
 
 ```typescript
@@ -7966,7 +8014,7 @@ policyArn?: pulumi.Input<ARN>;
 The ARN of the policy you want to apply
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L74">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L75">property role</a>
 </h3>
 
 ```typescript
@@ -7977,13 +8025,13 @@ role?: pulumi.Input<Role>;
 The role the policy should be applied to
 
 <h2 class="pdoc-module-header" id="RolePolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L80">interface RolePolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L82">interface RolePolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering RolePolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L85">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L87">property name</a>
 </h3>
 
 ```typescript
@@ -7995,7 +8043,7 @@ The name of the role policy. If omitted, Terraform will
 assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L90">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L92">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -8007,11 +8055,11 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L95">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L97">property policy</a>
 </h3>
 
 ```typescript
-policy?: pulumi.Input<string>;
+policy?: pulumi.Input<string | PolicyDocument>;
 ```
 
 
@@ -8019,7 +8067,7 @@ The policy document. This is a JSON formatted string.
 The heredoc syntax or `file` function is helpful here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L99">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts#L101">property role</a>
 </h3>
 
 ```typescript
@@ -8030,13 +8078,13 @@ role?: pulumi.Input<string | Role>;
 The IAM role to attach to the policy.
 
 <h2 class="pdoc-module-header" id="RoleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L115">interface RoleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L118">interface RoleState</a>
 </h2>
 
 Input properties used for looking up and filtering Role resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L119">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L122">property arn</a>
 </h3>
 
 ```typescript
@@ -8047,18 +8095,18 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) specifying the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L123">property assumeRolePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L126">property assumeRolePolicy</a>
 </h3>
 
 ```typescript
-assumeRolePolicy?: pulumi.Input<string>;
+assumeRolePolicy?: pulumi.Input<string | PolicyDocument>;
 ```
 
 
 The policy that grants an entity permission to assume the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L127">property createDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L130">property createDate</a>
 </h3>
 
 ```typescript
@@ -8069,7 +8117,7 @@ createDate?: pulumi.Input<string>;
 The creation date of the IAM role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L131">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L134">property description</a>
 </h3>
 
 ```typescript
@@ -8080,7 +8128,7 @@ description?: pulumi.Input<string>;
 The description of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L135">property forceDetachPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L138">property forceDetachPolicies</a>
 </h3>
 
 ```typescript
@@ -8091,7 +8139,7 @@ forceDetachPolicies?: pulumi.Input<boolean>;
 Specifies to force detaching any policies the role has before destroying it. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L139">property maxSessionDuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L142">property maxSessionDuration</a>
 </h3>
 
 ```typescript
@@ -8102,7 +8150,7 @@ maxSessionDuration?: pulumi.Input<number>;
 The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L143">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L146">property name</a>
 </h3>
 
 ```typescript
@@ -8113,7 +8161,7 @@ name?: pulumi.Input<string>;
 The name of the role. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L147">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L150">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -8124,7 +8172,7 @@ namePrefix?: pulumi.Input<string>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L152">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L155">property path</a>
 </h3>
 
 ```typescript
@@ -8136,7 +8184,7 @@ The path to the role.
 See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L156">property permissionsBoundary</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L159">property permissionsBoundary</a>
 </h3>
 
 ```typescript
@@ -8147,7 +8195,7 @@ permissionsBoundary?: pulumi.Input<string>;
 The ARN of the policy that is used to set the permissions boundary for the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L160">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts#L163">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -8158,13 +8206,13 @@ uniqueId?: pulumi.Input<string>;
 The stable and unique string identifying the role.
 
 <h2 class="pdoc-module-header" id="SamlProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L94">interface SamlProviderArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L95">interface SamlProviderArgs</a>
 </h2>
 
 The set of arguments for constructing a SamlProvider resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L98">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L99">property name</a>
 </h3>
 
 ```typescript
@@ -8175,7 +8223,7 @@ name?: pulumi.Input<string>;
 The name of the provider to create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L102">property samlMetadataDocument</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L103">property samlMetadataDocument</a>
 </h3>
 
 ```typescript
@@ -8186,13 +8234,13 @@ samlMetadataDocument: pulumi.Input<string>;
 An XML document generated by an identity provider that supports SAML 2.0.
 
 <h2 class="pdoc-module-header" id="SamlProviderState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L72">interface SamlProviderState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L73">interface SamlProviderState</a>
 </h2>
 
 Input properties used for looking up and filtering SamlProvider resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L76">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L77">property arn</a>
 </h3>
 
 ```typescript
@@ -8203,7 +8251,7 @@ arn?: pulumi.Input<string>;
 The ARN assigned by AWS for this provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L80">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L81">property name</a>
 </h3>
 
 ```typescript
@@ -8214,7 +8262,7 @@ name?: pulumi.Input<string>;
 The name of the provider to create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L84">property samlMetadataDocument</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L85">property samlMetadataDocument</a>
 </h3>
 
 ```typescript
@@ -8225,7 +8273,7 @@ samlMetadataDocument?: pulumi.Input<string>;
 An XML document generated by an identity provider that supports SAML 2.0.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L88">property validUntil</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts#L89">property validUntil</a>
 </h3>
 
 ```typescript
@@ -8236,13 +8284,13 @@ validUntil?: pulumi.Input<string>;
 The expiration date and time for the SAML provider in RFC1123 format, e.g. `Mon, 02 Jan 2006 15:04:05 MST`.
 
 <h2 class="pdoc-module-header" id="ServerCertificateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L155">interface ServerCertificateArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L156">interface ServerCertificateArgs</a>
 </h2>
 
 The set of arguments for constructing a ServerCertificate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L159">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L160">property arn</a>
 </h3>
 
 ```typescript
@@ -8253,7 +8301,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) specifying the server certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L164">property certificateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L165">property certificateBody</a>
 </h3>
 
 ```typescript
@@ -8265,7 +8313,7 @@ The contents of the public key certificate in
 PEM-encoded format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L170">property certificateChain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L171">property certificateChain</a>
 </h3>
 
 ```typescript
@@ -8278,7 +8326,7 @@ This is typically a concatenation of the PEM-encoded public key certificates
 of the chain.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L175">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L176">property name</a>
 </h3>
 
 ```typescript
@@ -8290,7 +8338,7 @@ The name of the Server Certificate. Do not include the
 path in this value. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L180">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L181">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -8302,7 +8350,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L187">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L188">property path</a>
 </h3>
 
 ```typescript
@@ -8316,7 +8364,7 @@ AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
 See [IAM Identifiers][1] for more details on IAM Paths.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L191">property privateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L192">property privateKey</a>
 </h3>
 
 ```typescript
@@ -8327,13 +8375,13 @@ privateKey: pulumi.Input<string>;
 The contents of the private key in PEM-encoded format.
 
 <h2 class="pdoc-module-header" id="ServerCertificateState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L113">interface ServerCertificateState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L114">interface ServerCertificateState</a>
 </h2>
 
 Input properties used for looking up and filtering ServerCertificate resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L117">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L118">property arn</a>
 </h3>
 
 ```typescript
@@ -8344,7 +8392,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) specifying the server certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L122">property certificateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L123">property certificateBody</a>
 </h3>
 
 ```typescript
@@ -8356,7 +8404,7 @@ The contents of the public key certificate in
 PEM-encoded format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L128">property certificateChain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L129">property certificateChain</a>
 </h3>
 
 ```typescript
@@ -8369,7 +8417,7 @@ This is typically a concatenation of the PEM-encoded public key certificates
 of the chain.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L133">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L134">property name</a>
 </h3>
 
 ```typescript
@@ -8381,7 +8429,7 @@ The name of the Server Certificate. Do not include the
 path in this value. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L138">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L139">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -8393,7 +8441,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L145">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L146">property path</a>
 </h3>
 
 ```typescript
@@ -8407,7 +8455,7 @@ AWS CloudFront, the path must be in format `/cloudfront/your_path_here`.
 See [IAM Identifiers][1] for more details on IAM Paths.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L149">property privateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts#L150">property privateKey</a>
 </h3>
 
 ```typescript
@@ -8418,13 +8466,13 @@ privateKey?: pulumi.Input<string>;
 The contents of the private key in PEM-encoded format.
 
 <h2 class="pdoc-module-header" id="ServiceLinkedRoleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L134">interface ServiceLinkedRoleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L135">interface ServiceLinkedRoleArgs</a>
 </h2>
 
 The set of arguments for constructing a ServiceLinkedRole resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L138">property awsServiceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L139">property awsServiceName</a>
 </h3>
 
 ```typescript
@@ -8435,7 +8483,7 @@ awsServiceName: pulumi.Input<string>;
 The AWS service to which this role is attached. You use a string similar to a URL but without the `http://` in front. For example: `elasticbeanstalk.amazonaws.com`. To find the full list of services that support service-linked roles, check [the docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L142">property customSuffix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L143">property customSuffix</a>
 </h3>
 
 ```typescript
@@ -8446,7 +8494,7 @@ customSuffix?: pulumi.Input<string>;
 Additional string appended to the role name. Not all AWS services support custom suffixes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L146">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L147">property description</a>
 </h3>
 
 ```typescript
@@ -8457,13 +8505,13 @@ description?: pulumi.Input<string>;
 The description of the role.
 
 <h2 class="pdoc-module-header" id="ServiceLinkedRoleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L96">interface ServiceLinkedRoleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L97">interface ServiceLinkedRoleState</a>
 </h2>
 
 Input properties used for looking up and filtering ServiceLinkedRole resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L100">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L101">property arn</a>
 </h3>
 
 ```typescript
@@ -8474,7 +8522,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) specifying the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L104">property awsServiceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L105">property awsServiceName</a>
 </h3>
 
 ```typescript
@@ -8485,7 +8533,7 @@ awsServiceName?: pulumi.Input<string>;
 The AWS service to which this role is attached. You use a string similar to a URL but without the `http://` in front. For example: `elasticbeanstalk.amazonaws.com`. To find the full list of services that support service-linked roles, check [the docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L108">property createDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L109">property createDate</a>
 </h3>
 
 ```typescript
@@ -8496,7 +8544,7 @@ createDate?: pulumi.Input<string>;
 The creation date of the IAM role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L112">property customSuffix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L113">property customSuffix</a>
 </h3>
 
 ```typescript
@@ -8507,7 +8555,7 @@ customSuffix?: pulumi.Input<string>;
 Additional string appended to the role name. Not all AWS services support custom suffixes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L116">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L117">property description</a>
 </h3>
 
 ```typescript
@@ -8518,7 +8566,7 @@ description?: pulumi.Input<string>;
 The description of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L120">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L121">property name</a>
 </h3>
 
 ```typescript
@@ -8529,7 +8577,7 @@ name?: pulumi.Input<string>;
 The name of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L124">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L125">property path</a>
 </h3>
 
 ```typescript
@@ -8540,7 +8588,7 @@ path?: pulumi.Input<string>;
 The path of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L128">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts#L129">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -8551,10 +8599,19 @@ uniqueId?: pulumi.Input<string>;
 The stable and unique string identifying the role.
 
 <h2 class="pdoc-module-header" id="ServicePrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L56">interface ServicePrincipal</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L162">interface ServicePrincipal</a>
 </h2>
+
+IAM roles that can be assumed by an AWS service are called service roles. Service roles must include a trust policy.
+Trust policies are resource-based policies that are attached to a role that define which principals can assume the
+role. Some service role have predefined trust policies. However, in some cases, you must specify the service
+principal in the trust policy. A service principal is an identifier that is used to grant permissions to a service.
+The identifier includes the long version of a service name, e.g. `long_service_name.amazonaws.com`. The service
+principal is defined by the service. To learn the service principal for a service, see the documentation for that
+service.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L57">property Service</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L163">property Service</a>
 </h3>
 
 ```typescript
@@ -8562,13 +8619,13 @@ Service: string | string[];
 ```
 
 <h2 class="pdoc-module-header" id="SshKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L120">interface SshKeyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L121">interface SshKeyArgs</a>
 </h2>
 
 The set of arguments for constructing a SshKey resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L124">property encoding</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L125">property encoding</a>
 </h3>
 
 ```typescript
@@ -8579,7 +8636,7 @@ encoding: pulumi.Input<string>;
 Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L128">property publicKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L129">property publicKey</a>
 </h3>
 
 ```typescript
@@ -8590,7 +8647,7 @@ publicKey: pulumi.Input<string>;
 The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L132">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L133">property status</a>
 </h3>
 
 ```typescript
@@ -8601,7 +8658,7 @@ status?: pulumi.Input<string>;
 The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L136">property username</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L137">property username</a>
 </h3>
 
 ```typescript
@@ -8612,13 +8669,13 @@ username: pulumi.Input<string>;
 The name of the IAM user to associate the SSH public key with.
 
 <h2 class="pdoc-module-header" id="SshKeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L90">interface SshKeyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L91">interface SshKeyState</a>
 </h2>
 
 Input properties used for looking up and filtering SshKey resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L94">property encoding</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L95">property encoding</a>
 </h3>
 
 ```typescript
@@ -8629,7 +8686,7 @@ encoding?: pulumi.Input<string>;
 Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L98">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L99">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -8640,7 +8697,7 @@ fingerprint?: pulumi.Input<string>;
 The MD5 message digest of the SSH public key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L102">property publicKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L103">property publicKey</a>
 </h3>
 
 ```typescript
@@ -8651,7 +8708,7 @@ publicKey?: pulumi.Input<string>;
 The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L106">property sshPublicKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L107">property sshPublicKeyId</a>
 </h3>
 
 ```typescript
@@ -8662,7 +8719,7 @@ sshPublicKeyId?: pulumi.Input<string>;
 The unique identifier for the SSH public key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L110">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L111">property status</a>
 </h3>
 
 ```typescript
@@ -8673,7 +8730,7 @@ status?: pulumi.Input<string>;
 The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L114">property username</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts#L115">property username</a>
 </h3>
 
 ```typescript
@@ -8684,13 +8741,13 @@ username?: pulumi.Input<string>;
 The name of the IAM user to associate the SSH public key with.
 
 <h2 class="pdoc-module-header" id="UserArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L115">interface UserArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L116">interface UserArgs</a>
 </h2>
 
 The set of arguments for constructing a User resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L121">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L122">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -8703,7 +8760,7 @@ has non-Terraform-managed IAM access keys, login profile or MFA devices. Without
 a user with non-Terraform-managed access keys and login profile will fail to be destroyed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L125">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L126">property name</a>
 </h3>
 
 ```typescript
@@ -8714,7 +8771,7 @@ name?: pulumi.Input<string>;
 The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L129">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L130">property path</a>
 </h3>
 
 ```typescript
@@ -8725,7 +8782,7 @@ path?: pulumi.Input<string>;
 Path in which to create the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L133">property permissionsBoundary</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L134">property permissionsBoundary</a>
 </h3>
 
 ```typescript
@@ -8736,13 +8793,13 @@ permissionsBoundary?: pulumi.Input<string>;
 The ARN of the policy that is used to set the permissions boundary for the user.
 
 <h2 class="pdoc-module-header" id="UserGroupMembershipArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L82">interface UserGroupMembershipArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L83">interface UserGroupMembershipArgs</a>
 </h2>
 
 The set of arguments for constructing a UserGroupMembership resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L86">property groups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L87">property groups</a>
 </h3>
 
 ```typescript
@@ -8753,7 +8810,7 @@ groups: pulumi.Input<pulumi.Input<string>[]>;
 A list of [IAM Groups][1] to add the user to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L90">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L91">property user</a>
 </h3>
 
 ```typescript
@@ -8764,13 +8821,13 @@ user: pulumi.Input<string>;
 The name of the [IAM User][2] to add to groups
 
 <h2 class="pdoc-module-header" id="UserGroupMembershipState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L68">interface UserGroupMembershipState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L69">interface UserGroupMembershipState</a>
 </h2>
 
 Input properties used for looking up and filtering UserGroupMembership resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L72">property groups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L73">property groups</a>
 </h3>
 
 ```typescript
@@ -8781,7 +8838,7 @@ groups?: pulumi.Input<pulumi.Input<string>[]>;
 A list of [IAM Groups][1] to add the user to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L76">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts#L77">property user</a>
 </h3>
 
 ```typescript
@@ -8792,13 +8849,13 @@ user?: pulumi.Input<string>;
 The name of the [IAM User][2] to add to groups
 
 <h2 class="pdoc-module-header" id="UserLoginProfileArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L127">interface UserLoginProfileArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L128">interface UserLoginProfileArgs</a>
 </h2>
 
 The set of arguments for constructing a UserLoginProfile resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L132">property passwordLength</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L133">property passwordLength</a>
 </h3>
 
 ```typescript
@@ -8810,7 +8867,7 @@ The length of the generated
 password.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L137">property passwordResetRequired</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L138">property passwordResetRequired</a>
 </h3>
 
 ```typescript
@@ -8822,7 +8879,7 @@ Whether the
 user should be forced to reset the generated password on first login.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L142">property pgpKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L143">property pgpKey</a>
 </h3>
 
 ```typescript
@@ -8834,7 +8891,7 @@ Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:username`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L146">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L147">property user</a>
 </h3>
 
 ```typescript
@@ -8845,13 +8902,13 @@ user: pulumi.Input<string>;
 The IAM user's name.
 
 <h2 class="pdoc-module-header" id="UserLoginProfileState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L93">interface UserLoginProfileState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L94">interface UserLoginProfileState</a>
 </h2>
 
 Input properties used for looking up and filtering UserLoginProfile resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L97">property encryptedPassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L98">property encryptedPassword</a>
 </h3>
 
 ```typescript
@@ -8862,7 +8919,7 @@ encryptedPassword?: pulumi.Input<string>;
 The encrypted password, base64 encoded.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L102">property keyFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L103">property keyFingerprint</a>
 </h3>
 
 ```typescript
@@ -8874,7 +8931,7 @@ The fingerprint of the PGP key used to encrypt
 the password
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L107">property passwordLength</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L108">property passwordLength</a>
 </h3>
 
 ```typescript
@@ -8886,7 +8943,7 @@ The length of the generated
 password.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L112">property passwordResetRequired</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L113">property passwordResetRequired</a>
 </h3>
 
 ```typescript
@@ -8898,7 +8955,7 @@ Whether the
 user should be forced to reset the generated password on first login.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L117">property pgpKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L118">property pgpKey</a>
 </h3>
 
 ```typescript
@@ -8910,7 +8967,7 @@ Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:username`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L121">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts#L122">property user</a>
 </h3>
 
 ```typescript
@@ -8921,13 +8978,13 @@ user?: pulumi.Input<string>;
 The IAM user's name.
 
 <h2 class="pdoc-module-header" id="UserPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L99">interface UserPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L102">interface UserPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a UserPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L103">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L106">property name</a>
 </h3>
 
 ```typescript
@@ -8938,7 +8995,7 @@ name?: pulumi.Input<string>;
 The name of the policy. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L107">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L110">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -8949,11 +9006,11 @@ namePrefix?: pulumi.Input<string>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L112">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L115">property policy</a>
 </h3>
 
 ```typescript
-policy: pulumi.Input<string>;
+policy: pulumi.Input<string | PolicyDocument>;
 ```
 
 
@@ -8961,7 +9018,7 @@ The policy document. This is a JSON formatted string.
 The heredoc syntax or `file` function is helpful here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L116">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L119">property user</a>
 </h3>
 
 ```typescript
@@ -8972,13 +9029,13 @@ user: pulumi.Input<string>;
 IAM user to which to attach this policy.
 
 <h2 class="pdoc-module-header" id="UserPolicyAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L81">interface UserPolicyAttachmentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L82">interface UserPolicyAttachmentArgs</a>
 </h2>
 
 The set of arguments for constructing a UserPolicyAttachment resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L85">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L86">property policyArn</a>
 </h3>
 
 ```typescript
@@ -8989,7 +9046,7 @@ policyArn: pulumi.Input<ARN>;
 The ARN of the policy you want to apply
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L89">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L90">property user</a>
 </h3>
 
 ```typescript
@@ -9000,13 +9057,13 @@ user: pulumi.Input<User>;
 The user the policy should be applied to
 
 <h2 class="pdoc-module-header" id="UserPolicyAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L67">interface UserPolicyAttachmentState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L68">interface UserPolicyAttachmentState</a>
 </h2>
 
 Input properties used for looking up and filtering UserPolicyAttachment resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L71">property policyArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L72">property policyArn</a>
 </h3>
 
 ```typescript
@@ -9017,7 +9074,7 @@ policyArn?: pulumi.Input<ARN>;
 The ARN of the policy you want to apply
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L75">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L76">property user</a>
 </h3>
 
 ```typescript
@@ -9028,13 +9085,13 @@ user?: pulumi.Input<User>;
 The user the policy should be applied to
 
 <h2 class="pdoc-module-header" id="UserPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L76">interface UserPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L79">interface UserPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering UserPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L80">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L83">property name</a>
 </h3>
 
 ```typescript
@@ -9045,7 +9102,7 @@ name?: pulumi.Input<string>;
 The name of the policy. If omitted, Terraform will assign a random, unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L84">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L87">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -9056,11 +9113,11 @@ namePrefix?: pulumi.Input<string>;
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L89">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L92">property policy</a>
 </h3>
 
 ```typescript
-policy?: pulumi.Input<string>;
+policy?: pulumi.Input<string | PolicyDocument>;
 ```
 
 
@@ -9068,7 +9125,7 @@ The policy document. This is a JSON formatted string.
 The heredoc syntax or `file` function is helpful here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L93">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts#L96">property user</a>
 </h3>
 
 ```typescript
@@ -9079,13 +9136,13 @@ user?: pulumi.Input<string>;
 IAM user to which to attach this policy.
 
 <h2 class="pdoc-module-header" id="UserState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L83">interface UserState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L84">interface UserState</a>
 </h2>
 
 Input properties used for looking up and filtering User resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L87">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L88">property arn</a>
 </h3>
 
 ```typescript
@@ -9096,7 +9153,7 @@ arn?: pulumi.Input<string>;
 The ARN assigned by AWS for this user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L93">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L94">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -9109,7 +9166,7 @@ has non-Terraform-managed IAM access keys, login profile or MFA devices. Without
 a user with non-Terraform-managed access keys and login profile will fail to be destroyed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L97">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L98">property name</a>
 </h3>
 
 ```typescript
@@ -9120,7 +9177,7 @@ name?: pulumi.Input<string>;
 The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L101">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L102">property path</a>
 </h3>
 
 ```typescript
@@ -9131,7 +9188,7 @@ path?: pulumi.Input<string>;
 Path in which to create the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L105">property permissionsBoundary</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L106">property permissionsBoundary</a>
 </h3>
 
 ```typescript
@@ -9142,7 +9199,7 @@ permissionsBoundary?: pulumi.Input<string>;
 The ARN of the policy that is used to set the permissions boundary for the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L109">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts#L110">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -9153,10 +9210,35 @@ uniqueId?: pulumi.Input<string>;
 The [unique ID][1] assigned by AWS.
 
 <h2 class="pdoc-module-header" id="Principal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L50">type Principal</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts#L141">type Principal</a>
 </h2>
 
 ```typescript
 type Principal = * | AWSPrincipal | ServicePrincipal | FederatedPrincipal;
 ```
+
+
+Use the Principal element to specify the user (IAM user, federated user, or assumed-role user), AWS account, AWS
+service, or other principal entity that is allowed or denied access to a resource. You use the Principal element in
+the trust policies for IAM roles and in resource-based policies—that is, in policies that you embed directly in a
+resource. For example, you can embed such policies in an Amazon S3 bucket, an Amazon Glacier vault, an Amazon SNS
+topic, an Amazon SQS queue, or an AWS KMS customer master key (CMK).
+
+Use the Principal element in these ways:
+
+    - In IAM roles, use the Principal element in the role's trust policy to specify who can assume the role. For
+      cross-account access, you must specify the 12-digit identifier of the trusted account.
+
+      Note: After you create the role, you can change the account to "*" to allow everyone to assume the role. If
+      you do this, we strongly recommend that you limit who can access the role through other means, such as a
+      Condition element that limits access to only certain IP addresses. Do not leave your role accessible to
+      everyone!
+
+    - In resource-based policies, use the Principal element to specify the accounts or users who are allowed to
+      access the resource.
+
+Do not use the Principal element in policies that you attach to IAM users and groups. Similarly, you do not specify
+a principal in the permission policy for an IAM role. In those cases, the principal is implicitly the user that the
+policy is attached to (for IAM users) or the user who assumes the role (for role access policies). When the policy
+is attached to an IAM group, the principal is the IAM user in that group who is making the request.
 

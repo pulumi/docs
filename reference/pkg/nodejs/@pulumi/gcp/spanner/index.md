@@ -35,13 +35,13 @@ title: Module spanner
 
 
 <h2 class="pdoc-module-header" id="Database">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L9">class Database</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L10">class Database</a>
 </h2>
 
 Creates a Google Spanner Database within a Spanner Instance. For more information, see the [official documentation](https://cloud.google.com/spanner/), or the [JSON API](https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L45">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L46">constructor</a>
 </h3>
 
 ```typescript
@@ -56,7 +56,7 @@ Create a Database resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -88,7 +88,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L28">property ddls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L29">property ddls</a>
 </h3>
 
 ```typescript
@@ -114,7 +114,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L32">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L33">property instance</a>
 </h3>
 
 ```typescript
@@ -125,7 +125,7 @@ public instance: pulumi.Output<string>;
 The name of the instance that will serve the new database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L36">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L37">property name</a>
 </h3>
 
 ```typescript
@@ -136,7 +136,7 @@ public name: pulumi.Output<string>;
 The name of the database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L41">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L42">property project</a>
 </h3>
 
 ```typescript
@@ -148,7 +148,7 @@ The ID of the project in which to look for the `instance` specified. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L45">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L46">property state</a>
 </h3>
 
 ```typescript
@@ -171,7 +171,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="DatabaseIAMBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L20">class DatabaseIAMBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L21">class DatabaseIAMBinding</a>
 </h2>
 
 Three different resources help you manage your IAM policy for a Spanner database. Each of these resources serves a different use case:
@@ -188,7 +188,7 @@ Three different resources help you manage your IAM policy for a Spanner database
 ~> **Note:** `google_spanner_database_iam_binding` resources **can be** used in conjunction with `google_spanner_database_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L56">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L57">constructor</a>
 </h3>
 
 ```typescript
@@ -203,7 +203,7 @@ Create a DatabaseIAMBinding resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L29">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L30">method get</a>
 </h3>
 
 ```typescript
@@ -235,7 +235,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L36">property database</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L37">property database</a>
 </h3>
 
 ```typescript
@@ -246,7 +246,7 @@ public database: pulumi.Output<string>;
 The name of the Spanner database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L40">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L41">property etag</a>
 </h3>
 
 ```typescript
@@ -269,7 +269,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L44">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L45">property instance</a>
 </h3>
 
 ```typescript
@@ -280,7 +280,7 @@ public instance: pulumi.Output<string>;
 The name of the Spanner instance the database belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L45">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L46">property members</a>
 </h3>
 
 ```typescript
@@ -288,7 +288,7 @@ public members: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L50">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L51">property project</a>
 </h3>
 
 ```typescript
@@ -300,7 +300,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L56">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L57">property role</a>
 </h3>
 
 ```typescript
@@ -325,7 +325,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="DatabaseIAMMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L20">class DatabaseIAMMember</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L21">class DatabaseIAMMember</a>
 </h2>
 
 Three different resources help you manage your IAM policy for a Spanner database. Each of these resources serves a different use case:
@@ -342,7 +342,7 @@ Three different resources help you manage your IAM policy for a Spanner database
 ~> **Note:** `google_spanner_database_iam_binding` resources **can be** used in conjunction with `google_spanner_database_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L56">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L57">constructor</a>
 </h3>
 
 ```typescript
@@ -357,7 +357,7 @@ Create a DatabaseIAMMember resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L29">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L30">method get</a>
 </h3>
 
 ```typescript
@@ -389,7 +389,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L36">property database</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L37">property database</a>
 </h3>
 
 ```typescript
@@ -400,7 +400,7 @@ public database: pulumi.Output<string>;
 The name of the Spanner database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L40">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L41">property etag</a>
 </h3>
 
 ```typescript
@@ -423,7 +423,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L44">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L45">property instance</a>
 </h3>
 
 ```typescript
@@ -434,7 +434,7 @@ public instance: pulumi.Output<string>;
 The name of the Spanner instance the database belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L45">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L46">property member</a>
 </h3>
 
 ```typescript
@@ -442,7 +442,7 @@ public member: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L50">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L51">property project</a>
 </h3>
 
 ```typescript
@@ -454,7 +454,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L56">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L57">property role</a>
 </h3>
 
 ```typescript
@@ -479,7 +479,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="DatabaseIAMPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L20">class DatabaseIAMPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L21">class DatabaseIAMPolicy</a>
 </h2>
 
 Three different resources help you manage your IAM policy for a Spanner database. Each of these resources serves a different use case:
@@ -496,7 +496,7 @@ Three different resources help you manage your IAM policy for a Spanner database
 ~> **Note:** `google_spanner_database_iam_binding` resources **can be** used in conjunction with `google_spanner_database_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L54">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L55">constructor</a>
 </h3>
 
 ```typescript
@@ -511,7 +511,7 @@ Create a DatabaseIAMPolicy resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L29">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L30">method get</a>
 </h3>
 
 ```typescript
@@ -543,7 +543,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L36">property database</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L37">property database</a>
 </h3>
 
 ```typescript
@@ -554,7 +554,7 @@ public database: pulumi.Output<string>;
 The name of the Spanner database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L40">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L41">property etag</a>
 </h3>
 
 ```typescript
@@ -577,7 +577,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L44">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L45">property instance</a>
 </h3>
 
 ```typescript
@@ -588,7 +588,7 @@ public instance: pulumi.Output<string>;
 The name of the Spanner instance the database belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L49">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L50">property policyData</a>
 </h3>
 
 ```typescript
@@ -600,7 +600,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L54">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L55">property project</a>
 </h3>
 
 ```typescript
@@ -624,13 +624,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Instance">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L9">class Instance</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L10">class Instance</a>
 </h2>
 
 Creates and manages a Google Spanner Instance. For more information, see the [official documentation](https://cloud.google.com/spanner/), or the [JSON API](https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L59">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L60">constructor</a>
 </h3>
 
 ```typescript
@@ -645,7 +645,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -677,7 +677,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L30">property config</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L31">property config</a>
 </h3>
 
 ```typescript
@@ -693,7 +693,7 @@ In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L35">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L36">property displayName</a>
 </h3>
 
 ```typescript
@@ -717,7 +717,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L39">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L40">property labels</a>
 </h3>
 
 ```typescript
@@ -728,7 +728,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 A mapping (key/value pairs) of labels to assign to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L45">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L46">property name</a>
 </h3>
 
 ```typescript
@@ -741,7 +741,7 @@ blank, Terraform will randomly generate one when the instance is first
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L50">property numNodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L51">property numNodes</a>
 </h3>
 
 ```typescript
@@ -753,7 +753,7 @@ The number of nodes allocated to this instance.
 Defaults to `1`. This can be updated after creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L55">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L56">property project</a>
 </h3>
 
 ```typescript
@@ -765,7 +765,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L59">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L60">property state</a>
 </h3>
 
 ```typescript
@@ -788,7 +788,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="InstanceIAMBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L20">class InstanceIAMBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L21">class InstanceIAMBinding</a>
 </h2>
 
 Three different resources help you manage your IAM policy for a Spanner instance. Each of these resources serves a different use case:
@@ -805,7 +805,7 @@ Three different resources help you manage your IAM policy for a Spanner instance
 ~> **Note:** `google_spanner_instance_iam_binding` resources **can be** used in conjunction with `google_spanner_instance_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L52">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L53">constructor</a>
 </h3>
 
 ```typescript
@@ -820,7 +820,7 @@ Create a InstanceIAMBinding resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L29">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L30">method get</a>
 </h3>
 
 ```typescript
@@ -852,7 +852,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L36">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L37">property etag</a>
 </h3>
 
 ```typescript
@@ -875,7 +875,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L40">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L41">property instance</a>
 </h3>
 
 ```typescript
@@ -886,7 +886,7 @@ public instance: pulumi.Output<string>;
 The name of the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L41">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L42">property members</a>
 </h3>
 
 ```typescript
@@ -894,7 +894,7 @@ public members: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L46">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L47">property project</a>
 </h3>
 
 ```typescript
@@ -906,7 +906,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L52">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L53">property role</a>
 </h3>
 
 ```typescript
@@ -931,7 +931,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="InstanceIAMMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L20">class InstanceIAMMember</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L21">class InstanceIAMMember</a>
 </h2>
 
 Three different resources help you manage your IAM policy for a Spanner instance. Each of these resources serves a different use case:
@@ -948,7 +948,7 @@ Three different resources help you manage your IAM policy for a Spanner instance
 ~> **Note:** `google_spanner_instance_iam_binding` resources **can be** used in conjunction with `google_spanner_instance_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L52">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L53">constructor</a>
 </h3>
 
 ```typescript
@@ -963,7 +963,7 @@ Create a InstanceIAMMember resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L29">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L30">method get</a>
 </h3>
 
 ```typescript
@@ -995,7 +995,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L36">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L37">property etag</a>
 </h3>
 
 ```typescript
@@ -1018,7 +1018,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L40">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L41">property instance</a>
 </h3>
 
 ```typescript
@@ -1029,7 +1029,7 @@ public instance: pulumi.Output<string>;
 The name of the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L41">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L42">property member</a>
 </h3>
 
 ```typescript
@@ -1037,7 +1037,7 @@ public member: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L46">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L47">property project</a>
 </h3>
 
 ```typescript
@@ -1049,7 +1049,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L52">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L53">property role</a>
 </h3>
 
 ```typescript
@@ -1074,7 +1074,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="InstanceIAMPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L20">class InstanceIAMPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L21">class InstanceIAMPolicy</a>
 </h2>
 
 Three different resources help you manage your IAM policy for a Spanner instance. Each of these resources serves a different use case:
@@ -1091,7 +1091,7 @@ Three different resources help you manage your IAM policy for a Spanner instance
 ~> **Note:** `google_spanner_instance_iam_binding` resources **can be** used in conjunction with `google_spanner_instance_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L50">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L51">constructor</a>
 </h3>
 
 ```typescript
@@ -1106,7 +1106,7 @@ Create a InstanceIAMPolicy resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L29">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L30">method get</a>
 </h3>
 
 ```typescript
@@ -1138,7 +1138,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L36">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L37">property etag</a>
 </h3>
 
 ```typescript
@@ -1161,7 +1161,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L40">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L41">property instance</a>
 </h3>
 
 ```typescript
@@ -1172,7 +1172,7 @@ public instance: pulumi.Output<string>;
 The name of the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L45">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L46">property policyData</a>
 </h3>
 
 ```typescript
@@ -1184,7 +1184,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L50">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L51">property project</a>
 </h3>
 
 ```typescript
@@ -1208,13 +1208,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="DatabaseArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L112">interface DatabaseArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L113">interface DatabaseArgs</a>
 </h2>
 
 The set of arguments for constructing a Database resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L119">property ddls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L120">property ddls</a>
 </h3>
 
 ```typescript
@@ -1228,7 +1228,7 @@ with the creation of the database: if there is an error in any statement, the da
 is not created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L123">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L124">property instance</a>
 </h3>
 
 ```typescript
@@ -1239,7 +1239,7 @@ instance: pulumi.Input<string>;
 The name of the instance that will serve the new database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L127">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L128">property name</a>
 </h3>
 
 ```typescript
@@ -1250,7 +1250,7 @@ name?: pulumi.Input<string>;
 The name of the database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L132">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L133">property project</a>
 </h3>
 
 ```typescript
@@ -1262,13 +1262,13 @@ The ID of the project in which to look for the `instance` specified. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="DatabaseIAMBindingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L134">interface DatabaseIAMBindingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L135">interface DatabaseIAMBindingArgs</a>
 </h2>
 
 The set of arguments for constructing a DatabaseIAMBinding resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L138">property database</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L139">property database</a>
 </h3>
 
 ```typescript
@@ -1279,7 +1279,7 @@ database: pulumi.Input<string>;
 The name of the Spanner database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L142">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L143">property instance</a>
 </h3>
 
 ```typescript
@@ -1290,7 +1290,7 @@ instance: pulumi.Input<string>;
 The name of the Spanner instance the database belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L143">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L144">property members</a>
 </h3>
 
 ```typescript
@@ -1298,7 +1298,7 @@ members: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L148">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L149">property project</a>
 </h3>
 
 ```typescript
@@ -1310,7 +1310,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L154">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L155">property role</a>
 </h3>
 
 ```typescript
@@ -1323,13 +1323,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="DatabaseIAMBindingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L104">interface DatabaseIAMBindingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L105">interface DatabaseIAMBindingState</a>
 </h2>
 
 Input properties used for looking up and filtering DatabaseIAMBinding resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L108">property database</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L109">property database</a>
 </h3>
 
 ```typescript
@@ -1340,7 +1340,7 @@ database?: pulumi.Input<string>;
 The name of the Spanner database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L112">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L113">property etag</a>
 </h3>
 
 ```typescript
@@ -1351,7 +1351,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the database's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L116">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L117">property instance</a>
 </h3>
 
 ```typescript
@@ -1362,7 +1362,7 @@ instance?: pulumi.Input<string>;
 The name of the Spanner instance the database belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L117">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L118">property members</a>
 </h3>
 
 ```typescript
@@ -1370,7 +1370,7 @@ members?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L122">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L123">property project</a>
 </h3>
 
 ```typescript
@@ -1382,7 +1382,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L128">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMBinding.ts#L129">property role</a>
 </h3>
 
 ```typescript
@@ -1395,13 +1395,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="DatabaseIAMMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L134">interface DatabaseIAMMemberArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L135">interface DatabaseIAMMemberArgs</a>
 </h2>
 
 The set of arguments for constructing a DatabaseIAMMember resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L138">property database</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L139">property database</a>
 </h3>
 
 ```typescript
@@ -1412,7 +1412,7 @@ database: pulumi.Input<string>;
 The name of the Spanner database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L142">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L143">property instance</a>
 </h3>
 
 ```typescript
@@ -1423,7 +1423,7 @@ instance: pulumi.Input<string>;
 The name of the Spanner instance the database belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L143">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L144">property member</a>
 </h3>
 
 ```typescript
@@ -1431,7 +1431,7 @@ member: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L148">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L149">property project</a>
 </h3>
 
 ```typescript
@@ -1443,7 +1443,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L154">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L155">property role</a>
 </h3>
 
 ```typescript
@@ -1456,13 +1456,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="DatabaseIAMMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L104">interface DatabaseIAMMemberState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L105">interface DatabaseIAMMemberState</a>
 </h2>
 
 Input properties used for looking up and filtering DatabaseIAMMember resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L108">property database</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L109">property database</a>
 </h3>
 
 ```typescript
@@ -1473,7 +1473,7 @@ database?: pulumi.Input<string>;
 The name of the Spanner database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L112">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L113">property etag</a>
 </h3>
 
 ```typescript
@@ -1484,7 +1484,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the database's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L116">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L117">property instance</a>
 </h3>
 
 ```typescript
@@ -1495,7 +1495,7 @@ instance?: pulumi.Input<string>;
 The name of the Spanner instance the database belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L117">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L118">property member</a>
 </h3>
 
 ```typescript
@@ -1503,7 +1503,7 @@ member?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L122">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L123">property project</a>
 </h3>
 
 ```typescript
@@ -1515,7 +1515,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L128">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMMember.ts#L129">property role</a>
 </h3>
 
 ```typescript
@@ -1528,13 +1528,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="DatabaseIAMPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L125">interface DatabaseIAMPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L126">interface DatabaseIAMPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a DatabaseIAMPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L129">property database</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L130">property database</a>
 </h3>
 
 ```typescript
@@ -1545,7 +1545,7 @@ database: pulumi.Input<string>;
 The name of the Spanner database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L133">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L134">property instance</a>
 </h3>
 
 ```typescript
@@ -1556,7 +1556,7 @@ instance: pulumi.Input<string>;
 The name of the Spanner instance the database belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L138">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L139">property policyData</a>
 </h3>
 
 ```typescript
@@ -1568,7 +1568,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L143">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L144">property project</a>
 </h3>
 
 ```typescript
@@ -1580,13 +1580,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="DatabaseIAMPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L97">interface DatabaseIAMPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L98">interface DatabaseIAMPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering DatabaseIAMPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L101">property database</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L102">property database</a>
 </h3>
 
 ```typescript
@@ -1597,7 +1597,7 @@ database?: pulumi.Input<string>;
 The name of the Spanner database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L105">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L106">property etag</a>
 </h3>
 
 ```typescript
@@ -1608,7 +1608,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the database's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L109">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L110">property instance</a>
 </h3>
 
 ```typescript
@@ -1619,7 +1619,7 @@ instance?: pulumi.Input<string>;
 The name of the Spanner instance the database belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L114">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L115">property policyData</a>
 </h3>
 
 ```typescript
@@ -1631,7 +1631,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L119">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/databaseIAMPolicy.ts#L120">property project</a>
 </h3>
 
 ```typescript
@@ -1643,13 +1643,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="DatabaseState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L82">interface DatabaseState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L83">interface DatabaseState</a>
 </h2>
 
 Input properties used for looking up and filtering Database resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L89">property ddls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L90">property ddls</a>
 </h3>
 
 ```typescript
@@ -1663,7 +1663,7 @@ with the creation of the database: if there is an error in any statement, the da
 is not created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L93">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L94">property instance</a>
 </h3>
 
 ```typescript
@@ -1674,7 +1674,7 @@ instance?: pulumi.Input<string>;
 The name of the instance that will serve the new database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L97">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L98">property name</a>
 </h3>
 
 ```typescript
@@ -1685,7 +1685,7 @@ name?: pulumi.Input<string>;
 The name of the database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L102">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L103">property project</a>
 </h3>
 
 ```typescript
@@ -1697,7 +1697,7 @@ The ID of the project in which to look for the `instance` specified. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L106">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/database.ts#L107">property state</a>
 </h3>
 
 ```typescript
@@ -1708,13 +1708,13 @@ state?: pulumi.Input<string>;
 The current state of the database.
 
 <h2 class="pdoc-module-header" id="InstanceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L147">interface InstanceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L148">interface InstanceArgs</a>
 </h2>
 
 The set of arguments for constructing a Instance resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L156">property config</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L157">property config</a>
 </h3>
 
 ```typescript
@@ -1730,7 +1730,7 @@ In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L161">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L162">property displayName</a>
 </h3>
 
 ```typescript
@@ -1742,7 +1742,7 @@ The descriptive name for this instance as it appears
 in UIs. Can be updated, however should be kept globally unique to avoid confusion.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L165">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L166">property labels</a>
 </h3>
 
 ```typescript
@@ -1753,7 +1753,7 @@ labels?: pulumi.Input<{ ... }>;
 A mapping (key/value pairs) of labels to assign to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L171">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L172">property name</a>
 </h3>
 
 ```typescript
@@ -1766,7 +1766,7 @@ blank, Terraform will randomly generate one when the instance is first
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L176">property numNodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L177">property numNodes</a>
 </h3>
 
 ```typescript
@@ -1778,7 +1778,7 @@ The number of nodes allocated to this instance.
 Defaults to `1`. This can be updated after creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L181">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L182">property project</a>
 </h3>
 
 ```typescript
@@ -1790,13 +1790,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="InstanceIAMBindingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L121">interface InstanceIAMBindingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L122">interface InstanceIAMBindingArgs</a>
 </h2>
 
 The set of arguments for constructing a InstanceIAMBinding resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L125">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L126">property instance</a>
 </h3>
 
 ```typescript
@@ -1807,7 +1807,7 @@ instance: pulumi.Input<string>;
 The name of the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L126">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L127">property members</a>
 </h3>
 
 ```typescript
@@ -1815,7 +1815,7 @@ members: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L131">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L132">property project</a>
 </h3>
 
 ```typescript
@@ -1827,7 +1827,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L137">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L138">property role</a>
 </h3>
 
 ```typescript
@@ -1840,13 +1840,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="InstanceIAMBindingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L95">interface InstanceIAMBindingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L96">interface InstanceIAMBindingState</a>
 </h2>
 
 Input properties used for looking up and filtering InstanceIAMBinding resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L99">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L100">property etag</a>
 </h3>
 
 ```typescript
@@ -1857,7 +1857,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the instance's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L103">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L104">property instance</a>
 </h3>
 
 ```typescript
@@ -1868,7 +1868,7 @@ instance?: pulumi.Input<string>;
 The name of the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L104">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L105">property members</a>
 </h3>
 
 ```typescript
@@ -1876,7 +1876,7 @@ members?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L109">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L110">property project</a>
 </h3>
 
 ```typescript
@@ -1888,7 +1888,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L115">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMBinding.ts#L116">property role</a>
 </h3>
 
 ```typescript
@@ -1901,13 +1901,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="InstanceIAMMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L121">interface InstanceIAMMemberArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L122">interface InstanceIAMMemberArgs</a>
 </h2>
 
 The set of arguments for constructing a InstanceIAMMember resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L125">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L126">property instance</a>
 </h3>
 
 ```typescript
@@ -1918,7 +1918,7 @@ instance: pulumi.Input<string>;
 The name of the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L126">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L127">property member</a>
 </h3>
 
 ```typescript
@@ -1926,7 +1926,7 @@ member: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L131">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L132">property project</a>
 </h3>
 
 ```typescript
@@ -1938,7 +1938,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L137">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L138">property role</a>
 </h3>
 
 ```typescript
@@ -1951,13 +1951,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="InstanceIAMMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L95">interface InstanceIAMMemberState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L96">interface InstanceIAMMemberState</a>
 </h2>
 
 Input properties used for looking up and filtering InstanceIAMMember resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L99">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L100">property etag</a>
 </h3>
 
 ```typescript
@@ -1968,7 +1968,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the instance's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L103">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L104">property instance</a>
 </h3>
 
 ```typescript
@@ -1979,7 +1979,7 @@ instance?: pulumi.Input<string>;
 The name of the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L104">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L105">property member</a>
 </h3>
 
 ```typescript
@@ -1987,7 +1987,7 @@ member?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L109">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L110">property project</a>
 </h3>
 
 ```typescript
@@ -1999,7 +1999,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L115">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMMember.ts#L116">property role</a>
 </h3>
 
 ```typescript
@@ -2012,13 +2012,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="InstanceIAMPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L112">interface InstanceIAMPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L113">interface InstanceIAMPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a InstanceIAMPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L116">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L117">property instance</a>
 </h3>
 
 ```typescript
@@ -2029,7 +2029,7 @@ instance: pulumi.Input<string>;
 The name of the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L121">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L122">property policyData</a>
 </h3>
 
 ```typescript
@@ -2041,7 +2041,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L126">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L127">property project</a>
 </h3>
 
 ```typescript
@@ -2053,13 +2053,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="InstanceIAMPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L88">interface InstanceIAMPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L89">interface InstanceIAMPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering InstanceIAMPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L92">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L93">property etag</a>
 </h3>
 
 ```typescript
@@ -2070,7 +2070,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the instance's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L96">property instance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L97">property instance</a>
 </h3>
 
 ```typescript
@@ -2081,7 +2081,7 @@ instance?: pulumi.Input<string>;
 The name of the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L101">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L102">property policyData</a>
 </h3>
 
 ```typescript
@@ -2093,7 +2093,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L106">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instanceIAMPolicy.ts#L107">property project</a>
 </h3>
 
 ```typescript
@@ -2105,13 +2105,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="InstanceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L103">interface InstanceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L104">interface InstanceState</a>
 </h2>
 
 Input properties used for looking up and filtering Instance resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L112">property config</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L113">property config</a>
 </h3>
 
 ```typescript
@@ -2127,7 +2127,7 @@ In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L117">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L118">property displayName</a>
 </h3>
 
 ```typescript
@@ -2139,7 +2139,7 @@ The descriptive name for this instance as it appears
 in UIs. Can be updated, however should be kept globally unique to avoid confusion.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L121">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L122">property labels</a>
 </h3>
 
 ```typescript
@@ -2150,7 +2150,7 @@ labels?: pulumi.Input<{ ... }>;
 A mapping (key/value pairs) of labels to assign to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L127">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L128">property name</a>
 </h3>
 
 ```typescript
@@ -2163,7 +2163,7 @@ blank, Terraform will randomly generate one when the instance is first
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L132">property numNodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L133">property numNodes</a>
 </h3>
 
 ```typescript
@@ -2175,7 +2175,7 @@ The number of nodes allocated to this instance.
 Defaults to `1`. This can be updated after creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L137">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L138">property project</a>
 </h3>
 
 ```typescript
@@ -2187,7 +2187,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L141">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/spanner/instance.ts#L142">property state</a>
 </h3>
 
 ```typescript

@@ -38,13 +38,13 @@ title: Module loadbalancer
 
 
 <h2 class="pdoc-module-header" id="Listener">
-<a class="pdoc-member-name" href="/loadbalancer/listener.ts#L9">class Listener</a>
+<a class="pdoc-member-name" href="/loadbalancer/listener.ts#L10">class Listener</a>
 </h2>
 
 Manages a V2 listener resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L88">constructor</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L89">constructor</a>
 </h3>
 
 ```typescript
@@ -59,7 +59,7 @@ Create a Listener resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -91,7 +91,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L26">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L27">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -103,7 +103,7 @@ The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L31">property connectionLimit</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L32">property connectionLimit</a>
 </h3>
 
 ```typescript
@@ -115,7 +115,7 @@ The maximum number of connections allowed
 for the Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L36">property defaultPoolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L37">property defaultPoolId</a>
 </h3>
 
 ```typescript
@@ -127,7 +127,7 @@ The ID of the default pool with which the
 Listener is associated. Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L44">property defaultTlsContainerRef</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L45">property defaultTlsContainerRef</a>
 </h3>
 
 ```typescript
@@ -142,7 +142,7 @@ is `TERMINATED_HTTPS`. See
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L48">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L49">property description</a>
 </h3>
 
 ```typescript
@@ -165,7 +165,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L53">property loadbalancerId</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L54">property loadbalancerId</a>
 </h3>
 
 ```typescript
@@ -177,7 +177,7 @@ The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L58">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L59">property name</a>
 </h3>
 
 ```typescript
@@ -189,7 +189,7 @@ Human-readable name for the Listener. Does not have
 to be unique.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L63">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L64">property protocol</a>
 </h3>
 
 ```typescript
@@ -201,7 +201,7 @@ The protocol - can either be TCP, HTTP, HTTPS or TERMINATED_HTTPS.
 Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L68">property protocolPort</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L69">property protocolPort</a>
 </h3>
 
 ```typescript
@@ -213,7 +213,7 @@ The port on which to listen for client traffic.
 Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L75">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L76">property region</a>
 </h3>
 
 ```typescript
@@ -227,7 +227,7 @@ A Networking client is needed to create an . If omitted, the
 Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L82">property sniContainerRefs</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L83">property sniContainerRefs</a>
 </h3>
 
 ```typescript
@@ -241,7 +241,7 @@ containers which store SNI information. See
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L88">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L89">property tenantId</a>
 </h3>
 
 ```typescript
@@ -266,13 +266,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="LoadBalancer">
-<a class="pdoc-member-name" href="/loadbalancer/loadBalancer.ts#L9">class LoadBalancer</a>
+<a class="pdoc-member-name" href="/loadbalancer/loadBalancer.ts#L10">class LoadBalancer</a>
 </h2>
 
 Manages a V2 loadbalancer resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L80">constructor</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L81">constructor</a>
 </h3>
 
 ```typescript
@@ -287,7 +287,7 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -319,7 +319,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L26">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L27">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -331,7 +331,7 @@ The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L30">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L31">property description</a>
 </h3>
 
 ```typescript
@@ -342,7 +342,7 @@ public description: pulumi.Output<string | undefined>;
 Human-readable description for the Loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L35">property flavor</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L36">property flavor</a>
 </h3>
 
 ```typescript
@@ -366,7 +366,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L40">property loadbalancerProvider</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L41">property loadbalancerProvider</a>
 </h3>
 
 ```typescript
@@ -378,7 +378,7 @@ The name of the provider. Changing this
 creates a new loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L45">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L46">property name</a>
 </h3>
 
 ```typescript
@@ -390,7 +390,7 @@ Human-readable name for the Loadbalancer. Does not have
 to be unique.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L52">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L53">property region</a>
 </h3>
 
 ```typescript
@@ -404,7 +404,7 @@ A Networking client is needed to create an LB member. If omitted, the
 LB member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L58">property securityGroupIds</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L59">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -417,7 +417,7 @@ loadbalancer. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L64">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L65">property tenantId</a>
 </h3>
 
 ```typescript
@@ -442,7 +442,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L69">property vipAddress</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L70">property vipAddress</a>
 </h3>
 
 ```typescript
@@ -454,7 +454,7 @@ The ip address of the load balancer.
 Changing this creates a new loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L73">property vipPortId</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L74">property vipPortId</a>
 </h3>
 
 ```typescript
@@ -465,7 +465,7 @@ public vipPortId: pulumi.Output<string>;
 The Port ID of the Load Balancer IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L80">property vipSubnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L81">property vipSubnetId</a>
 </h3>
 
 ```typescript
@@ -479,13 +479,13 @@ authorized by policy (e.g. networks that belong to them or networks that
 are shared).  Changing this creates a new loadbalancer.
 
 <h2 class="pdoc-module-header" id="Member">
-<a class="pdoc-member-name" href="/loadbalancer/member.ts#L9">class Member</a>
+<a class="pdoc-member-name" href="/loadbalancer/member.ts#L10">class Member</a>
 </h2>
 
 Manages a V2 member resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L69">constructor</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L70">constructor</a>
 </h3>
 
 ```typescript
@@ -500,7 +500,7 @@ Create a Member resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -532,7 +532,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L26">property address</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L27">property address</a>
 </h3>
 
 ```typescript
@@ -544,7 +544,7 @@ The IP address of the member to receive traffic from
 the load balancer. Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L31">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L32">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -568,7 +568,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L35">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L36">property name</a>
 </h3>
 
 ```typescript
@@ -579,7 +579,7 @@ public name: pulumi.Output<string>;
 Human-readable name for the member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L40">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L41">property poolId</a>
 </h3>
 
 ```typescript
@@ -591,7 +591,7 @@ The id of the pool that this member will be
 assigned to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L45">property protocolPort</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L46">property protocolPort</a>
 </h3>
 
 ```typescript
@@ -603,7 +603,7 @@ The port on which to listen for client traffic.
 Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L52">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L53">property region</a>
 </h3>
 
 ```typescript
@@ -617,7 +617,7 @@ A Networking client is needed to create an . If omitted, the
 member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L56">property subnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L57">property subnetId</a>
 </h3>
 
 ```typescript
@@ -628,7 +628,7 @@ public subnetId: pulumi.Output<string | undefined>;
 The subnet in which to access the member
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L62">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L63">property tenantId</a>
 </h3>
 
 ```typescript
@@ -653,7 +653,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L69">property weight</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L70">property weight</a>
 </h3>
 
 ```typescript
@@ -667,13 +667,13 @@ example, a member with a weight of 10 receives five times as much traffic
 as a member with a weight of 2.
 
 <h2 class="pdoc-module-header" id="MemberV1">
-<a class="pdoc-member-name" href="/loadbalancer/memberV1.ts#L9">class MemberV1</a>
+<a class="pdoc-member-name" href="/loadbalancer/memberV1.ts#L10">class MemberV1</a>
 </h2>
 
 Manages a V1 load balancer member resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L59">constructor</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L60">constructor</a>
 </h3>
 
 ```typescript
@@ -688,7 +688,7 @@ Create a MemberV1 resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -720,7 +720,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L26">property address</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L27">property address</a>
 </h3>
 
 ```typescript
@@ -732,7 +732,7 @@ The IP address of the member. Changing this creates a
 new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L32">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L33">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -757,7 +757,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L37">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L38">property poolId</a>
 </h3>
 
 ```typescript
@@ -769,7 +769,7 @@ The ID of the LB pool. Changing this creates a new
 member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L42">property port</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L43">property port</a>
 </h3>
 
 ```typescript
@@ -781,7 +781,7 @@ An integer representing the port on which the member is
 hosted. Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L49">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L50">property region</a>
 </h3>
 
 ```typescript
@@ -795,7 +795,7 @@ A Networking client is needed to create an LB member. If omitted, the
 LB member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L54">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L55">property tenantId</a>
 </h3>
 
 ```typescript
@@ -819,7 +819,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L59">property weight</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L60">property weight</a>
 </h3>
 
 ```typescript
@@ -831,13 +831,13 @@ The load balancing weight of the member. This is currently unable
 to be set through Terraform.
 
 <h2 class="pdoc-module-header" id="Monitor">
-<a class="pdoc-member-name" href="/loadbalancer/monitor.ts#L9">class Monitor</a>
+<a class="pdoc-member-name" href="/loadbalancer/monitor.ts#L10">class Monitor</a>
 </h2>
 
 Manages a V2 monitor resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L86">constructor</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L87">constructor</a>
 </h3>
 
 ```typescript
@@ -852,7 +852,7 @@ Create a Monitor resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -884,7 +884,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L26">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L27">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -896,7 +896,7 @@ The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L30">property delay</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L31">property delay</a>
 </h3>
 
 ```typescript
@@ -907,7 +907,7 @@ public delay: pulumi.Output<number>;
 The time, in seconds, between sending probes to members.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L36">property expectedCodes</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L37">property expectedCodes</a>
 </h3>
 
 ```typescript
@@ -920,7 +920,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L42">property httpMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L43">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -945,7 +945,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L48">property maxRetries</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L49">property maxRetries</a>
 </h3>
 
 ```typescript
@@ -958,7 +958,7 @@ changing the member's status to INACTIVE. Must be a number between 1
 and 10..
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L52">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L53">property name</a>
 </h3>
 
 ```typescript
@@ -969,7 +969,7 @@ public name: pulumi.Output<string>;
 The Name of the Monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L56">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L57">property poolId</a>
 </h3>
 
 ```typescript
@@ -980,7 +980,7 @@ public poolId: pulumi.Output<string>;
 The id of the pool that this monitor will be assigned to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L63">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L64">property region</a>
 </h3>
 
 ```typescript
@@ -994,7 +994,7 @@ A Networking client is needed to create an . If omitted, the
 monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L69">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L70">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1007,7 +1007,7 @@ the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L75">property timeout</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L76">property timeout</a>
 </h3>
 
 ```typescript
@@ -1020,7 +1020,7 @@ ping reply before it times out. The value must be less than the delay
 value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L81">property type</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L82">property type</a>
 </h3>
 
 ```typescript
@@ -1033,7 +1033,7 @@ that is sent by the load balancer to verify the member state. Changing this
 creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L86">property urlPath</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L87">property urlPath</a>
 </h3>
 
 ```typescript
@@ -1057,13 +1057,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="MonitorV1">
-<a class="pdoc-member-name" href="/loadbalancer/monitorV1.ts#L9">class MonitorV1</a>
+<a class="pdoc-member-name" href="/loadbalancer/monitorV1.ts#L10">class MonitorV1</a>
 </h2>
 
 Manages a V1 load balancer monitor resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L81">constructor</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L82">constructor</a>
 </h3>
 
 ```typescript
@@ -1078,7 +1078,7 @@ Create a MonitorV1 resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1110,7 +1110,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L27">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L28">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -1123,7 +1123,7 @@ Acceptable values are "true" and "false". Changing this value updates the
 state of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L32">property delay</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L33">property delay</a>
 </h3>
 
 ```typescript
@@ -1135,7 +1135,7 @@ The time, in seconds, between sending probes to members.
 Changing this creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L39">property expectedCodes</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L40">property expectedCodes</a>
 </h3>
 
 ```typescript
@@ -1149,7 +1149,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
 of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L45">property httpMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L46">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -1174,7 +1174,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L51">property maxRetries</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L52">property maxRetries</a>
 </h3>
 
 ```typescript
@@ -1187,7 +1187,7 @@ the member's status to INACTIVE. Must be a number between 1 and 10. Changing
 this updates the max_retries of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L58">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L59">property region</a>
 </h3>
 
 ```typescript
@@ -1201,7 +1201,7 @@ A Networking client is needed to create an LB monitor. If omitted, the
 LB monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L63">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L64">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1213,7 +1213,7 @@ The owner of the monitor. Required if admin wants to
 create a monitor for another tenant. Changing this creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L69">property timeout</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L70">property timeout</a>
 </h3>
 
 ```typescript
@@ -1226,7 +1226,7 @@ ping reply before it times out. The value must be less than the delay value.
 Changing this updates the timeout of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L75">property type</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L76">property type</a>
 </h3>
 
 ```typescript
@@ -1239,7 +1239,7 @@ that is sent by the monitor to verify the member state. Changing this
 creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L81">property urlPath</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L82">property urlPath</a>
 </h3>
 
 ```typescript
@@ -1264,13 +1264,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Pool">
-<a class="pdoc-member-name" href="/loadbalancer/pool.ts#L9">class Pool</a>
+<a class="pdoc-member-name" href="/loadbalancer/pool.ts#L10">class Pool</a>
 </h2>
 
 Manages a V2 pool resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L75">constructor</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L76">constructor</a>
 </h3>
 
 ```typescript
@@ -1285,7 +1285,7 @@ Create a Pool resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1317,7 +1317,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L26">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L27">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -1329,7 +1329,7 @@ The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L30">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L31">property description</a>
 </h3>
 
 ```typescript
@@ -1352,7 +1352,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L36">property lbMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L37">property lbMethod</a>
 </h3>
 
 ```typescript
@@ -1365,7 +1365,7 @@ distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L42">property listenerId</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L43">property listenerId</a>
 </h3>
 
 ```typescript
@@ -1378,7 +1378,7 @@ will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L48">property loadbalancerId</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L49">property loadbalancerId</a>
 </h3>
 
 ```typescript
@@ -1391,7 +1391,7 @@ pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L52">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L53">property name</a>
 </h3>
 
 ```typescript
@@ -1402,7 +1402,7 @@ public name: pulumi.Output<string>;
 Human-readable name for the pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L58">property persistences</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L59">property persistences</a>
 </h3>
 
 ```typescript
@@ -1415,7 +1415,7 @@ whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L62">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L63">property protocol</a>
 </h3>
 
 ```typescript
@@ -1426,7 +1426,7 @@ public protocol: pulumi.Output<string>;
 See Argument Reference above.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L69">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L70">property region</a>
 </h3>
 
 ```typescript
@@ -1440,7 +1440,7 @@ A Networking client is needed to create an . If omitted, the
 pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L75">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L76">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1465,13 +1465,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="PoolV1">
-<a class="pdoc-member-name" href="/loadbalancer/poolV1.ts#L9">class PoolV1</a>
+<a class="pdoc-member-name" href="/loadbalancer/poolV1.ts#L10">class PoolV1</a>
 </h2>
 
 Manages a V1 load balancer pool resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L65">constructor</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L66">constructor</a>
 </h3>
 
 ```typescript
@@ -1486,7 +1486,7 @@ Create a PoolV1 resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1530,7 +1530,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L27">property lbMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L28">property lbMethod</a>
 </h3>
 
 ```typescript
@@ -1543,7 +1543,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L32">property lbProvider</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L33">property lbProvider</a>
 </h3>
 
 ```typescript
@@ -1555,7 +1555,7 @@ The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L37">property monitorIds</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L38">property monitorIds</a>
 </h3>
 
 ```typescript
@@ -1567,7 +1567,7 @@ A list of IDs of monitors to associate with the
 pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L42">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L43">property name</a>
 </h3>
 
 ```typescript
@@ -1579,7 +1579,7 @@ The name of the pool. Changing this updates the name of
 the existing pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L47">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L48">property protocol</a>
 </h3>
 
 ```typescript
@@ -1591,7 +1591,7 @@ The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L54">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L55">property region</a>
 </h3>
 
 ```typescript
@@ -1605,7 +1605,7 @@ A Networking client is needed to create an LB pool. If omitted, the
 LB pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L60">property subnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L61">property subnetId</a>
 </h3>
 
 ```typescript
@@ -1618,7 +1618,7 @@ located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L65">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L66">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1626,8 +1626,8 @@ public tenantId: pulumi.Output<string>;
 ```
 
 
-The owner of the member. Required if admin wants to
-create a pool member for another tenant. Changing this creates a new member.
+The owner of the pool. Required if admin wants to
+create a pool member for another tenant. Changing this creates a new pool.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1642,13 +1642,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Vip">
-<a class="pdoc-member-name" href="/loadbalancer/vip.ts#L9">class Vip</a>
+<a class="pdoc-member-name" href="/loadbalancer/vip.ts#L10">class Vip</a>
 </h2>
 
 Manages a V1 load balancer vip resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L97">constructor</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L98">constructor</a>
 </h3>
 
 ```typescript
@@ -1663,7 +1663,7 @@ Create a Vip resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1695,7 +1695,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L26">property address</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L27">property address</a>
 </h3>
 
 ```typescript
@@ -1707,7 +1707,7 @@ The IP address of the vip. Changing this creates a new
 vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L32">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L33">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -1720,7 +1720,7 @@ Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L38">property connLimit</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L39">property connLimit</a>
 </h3>
 
 ```typescript
@@ -1733,7 +1733,7 @@ vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L43">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L44">property description</a>
 </h3>
 
 ```typescript
@@ -1745,7 +1745,7 @@ Human-readable description for the vip. Changing
 this updates the description of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L48">property floatingIp</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L49">property floatingIp</a>
 </h3>
 
 ```typescript
@@ -1769,7 +1769,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L53">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L54">property name</a>
 </h3>
 
 ```typescript
@@ -1781,7 +1781,7 @@ The name of the vip. Changing this updates the name of
 the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L59">property persistence</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L60">property persistence</a>
 </h3>
 
 ```typescript
@@ -1794,7 +1794,7 @@ The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L64">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L65">property poolId</a>
 </h3>
 
 ```typescript
@@ -1806,7 +1806,7 @@ The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L69">property port</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L70">property port</a>
 </h3>
 
 ```typescript
@@ -1818,7 +1818,7 @@ The port on which to listen for client traffic. Changing
 this creates a new vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L73">property portId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L74">property portId</a>
 </h3>
 
 ```typescript
@@ -1829,7 +1829,7 @@ public portId: pulumi.Output<string>;
 Port UUID for this VIP at associated floating IP (if any).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L78">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L79">property protocol</a>
 </h3>
 
 ```typescript
@@ -1841,7 +1841,7 @@ The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L85">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L86">property region</a>
 </h3>
 
 ```typescript
@@ -1855,7 +1855,7 @@ A Networking client is needed to create a VIP. If omitted, the
 VIP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L92">property subnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L93">property subnetId</a>
 </h3>
 
 ```typescript
@@ -1869,7 +1869,7 @@ that belong to them or networks that are shared). Changing this creates a
 new vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L97">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L98">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1893,13 +1893,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ListenerArgs">
-<a class="pdoc-member-name" href="/loadbalancer/listener.ts#L218">interface ListenerArgs</a>
+<a class="pdoc-member-name" href="/loadbalancer/listener.ts#L219">interface ListenerArgs</a>
 </h2>
 
 The set of arguments for constructing a Listener resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L223">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L224">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -1911,7 +1911,7 @@ The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L228">property connectionLimit</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L229">property connectionLimit</a>
 </h3>
 
 ```typescript
@@ -1923,7 +1923,7 @@ The maximum number of connections allowed
 for the Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L233">property defaultPoolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L234">property defaultPoolId</a>
 </h3>
 
 ```typescript
@@ -1935,7 +1935,7 @@ The ID of the default pool with which the
 Listener is associated. Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L241">property defaultTlsContainerRef</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L242">property defaultTlsContainerRef</a>
 </h3>
 
 ```typescript
@@ -1950,7 +1950,7 @@ is `TERMINATED_HTTPS`. See
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L245">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L246">property description</a>
 </h3>
 
 ```typescript
@@ -1961,7 +1961,7 @@ description?: pulumi.Input<string>;
 Human-readable description for the Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L250">property loadbalancerId</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L251">property loadbalancerId</a>
 </h3>
 
 ```typescript
@@ -1973,7 +1973,7 @@ The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L255">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L256">property name</a>
 </h3>
 
 ```typescript
@@ -1985,7 +1985,7 @@ Human-readable name for the Listener. Does not have
 to be unique.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L260">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L261">property protocol</a>
 </h3>
 
 ```typescript
@@ -1997,7 +1997,7 @@ The protocol - can either be TCP, HTTP, HTTPS or TERMINATED_HTTPS.
 Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L265">property protocolPort</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L266">property protocolPort</a>
 </h3>
 
 ```typescript
@@ -2009,7 +2009,7 @@ The port on which to listen for client traffic.
 Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L272">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L273">property region</a>
 </h3>
 
 ```typescript
@@ -2023,7 +2023,7 @@ A Networking client is needed to create an . If omitted, the
 Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L279">property sniContainerRefs</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L280">property sniContainerRefs</a>
 </h3>
 
 ```typescript
@@ -2037,7 +2037,7 @@ containers which store SNI information. See
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L285">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L286">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2050,13 +2050,13 @@ the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.
 
 <h2 class="pdoc-module-header" id="ListenerState">
-<a class="pdoc-member-name" href="/loadbalancer/listener.ts#L145">interface ListenerState</a>
+<a class="pdoc-member-name" href="/loadbalancer/listener.ts#L146">interface ListenerState</a>
 </h2>
 
 Input properties used for looking up and filtering Listener resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L150">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L151">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -2068,7 +2068,7 @@ The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L155">property connectionLimit</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L156">property connectionLimit</a>
 </h3>
 
 ```typescript
@@ -2080,7 +2080,7 @@ The maximum number of connections allowed
 for the Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L160">property defaultPoolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L161">property defaultPoolId</a>
 </h3>
 
 ```typescript
@@ -2092,7 +2092,7 @@ The ID of the default pool with which the
 Listener is associated. Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L168">property defaultTlsContainerRef</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L169">property defaultTlsContainerRef</a>
 </h3>
 
 ```typescript
@@ -2107,7 +2107,7 @@ is `TERMINATED_HTTPS`. See
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L172">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L173">property description</a>
 </h3>
 
 ```typescript
@@ -2118,7 +2118,7 @@ description?: pulumi.Input<string>;
 Human-readable description for the Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L177">property loadbalancerId</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L178">property loadbalancerId</a>
 </h3>
 
 ```typescript
@@ -2130,7 +2130,7 @@ The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L182">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L183">property name</a>
 </h3>
 
 ```typescript
@@ -2142,7 +2142,7 @@ Human-readable name for the Listener. Does not have
 to be unique.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L187">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L188">property protocol</a>
 </h3>
 
 ```typescript
@@ -2154,7 +2154,7 @@ The protocol - can either be TCP, HTTP, HTTPS or TERMINATED_HTTPS.
 Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L192">property protocolPort</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L193">property protocolPort</a>
 </h3>
 
 ```typescript
@@ -2166,7 +2166,7 @@ The port on which to listen for client traffic.
 Changing this creates a new Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L199">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L200">property region</a>
 </h3>
 
 ```typescript
@@ -2180,7 +2180,7 @@ A Networking client is needed to create an . If omitted, the
 Listener.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L206">property sniContainerRefs</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L207">property sniContainerRefs</a>
 </h3>
 
 ```typescript
@@ -2194,7 +2194,7 @@ containers which store SNI information. See
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L212">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/listener.ts#L213">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2207,13 +2207,13 @@ the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.
 
 <h2 class="pdoc-module-header" id="LoadBalancerArgs">
-<a class="pdoc-member-name" href="/loadbalancer/loadBalancer.ts#L194">interface LoadBalancerArgs</a>
+<a class="pdoc-member-name" href="/loadbalancer/loadBalancer.ts#L195">interface LoadBalancerArgs</a>
 </h2>
 
 The set of arguments for constructing a LoadBalancer resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L199">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L200">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -2225,7 +2225,7 @@ The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L203">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L204">property description</a>
 </h3>
 
 ```typescript
@@ -2236,7 +2236,7 @@ description?: pulumi.Input<string>;
 Human-readable description for the Loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L208">property flavor</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L209">property flavor</a>
 </h3>
 
 ```typescript
@@ -2248,7 +2248,7 @@ The UUID of a flavor. Changing this creates a new
 loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L213">property loadbalancerProvider</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L214">property loadbalancerProvider</a>
 </h3>
 
 ```typescript
@@ -2260,7 +2260,7 @@ The name of the provider. Changing this
 creates a new loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L218">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L219">property name</a>
 </h3>
 
 ```typescript
@@ -2272,7 +2272,7 @@ Human-readable name for the Loadbalancer. Does not have
 to be unique.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L225">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L226">property region</a>
 </h3>
 
 ```typescript
@@ -2286,7 +2286,7 @@ A Networking client is needed to create an LB member. If omitted, the
 LB member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L231">property securityGroupIds</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L232">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -2299,7 +2299,7 @@ loadbalancer. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L237">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L238">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2312,7 +2312,7 @@ the Loadbalancer.  Only administrative users can specify a tenant UUID
 other than their own.  Changing this creates a new loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L242">property vipAddress</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L243">property vipAddress</a>
 </h3>
 
 ```typescript
@@ -2324,7 +2324,7 @@ The ip address of the load balancer.
 Changing this creates a new loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L249">property vipSubnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L250">property vipSubnetId</a>
 </h3>
 
 ```typescript
@@ -2338,13 +2338,13 @@ authorized by policy (e.g. networks that belong to them or networks that
 are shared).  Changing this creates a new loadbalancer.
 
 <h2 class="pdoc-module-header" id="LoadBalancerState">
-<a class="pdoc-member-name" href="/loadbalancer/loadBalancer.ts#L129">interface LoadBalancerState</a>
+<a class="pdoc-member-name" href="/loadbalancer/loadBalancer.ts#L130">interface LoadBalancerState</a>
 </h2>
 
 Input properties used for looking up and filtering LoadBalancer resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L134">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L135">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -2356,7 +2356,7 @@ The administrative state of the Loadbalancer.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L138">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L139">property description</a>
 </h3>
 
 ```typescript
@@ -2367,7 +2367,7 @@ description?: pulumi.Input<string>;
 Human-readable description for the Loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L143">property flavor</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L144">property flavor</a>
 </h3>
 
 ```typescript
@@ -2379,7 +2379,7 @@ The UUID of a flavor. Changing this creates a new
 loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L148">property loadbalancerProvider</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L149">property loadbalancerProvider</a>
 </h3>
 
 ```typescript
@@ -2391,7 +2391,7 @@ The name of the provider. Changing this
 creates a new loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L153">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L154">property name</a>
 </h3>
 
 ```typescript
@@ -2403,7 +2403,7 @@ Human-readable name for the Loadbalancer. Does not have
 to be unique.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L160">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L161">property region</a>
 </h3>
 
 ```typescript
@@ -2417,7 +2417,7 @@ A Networking client is needed to create an LB member. If omitted, the
 LB member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L166">property securityGroupIds</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L167">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -2430,7 +2430,7 @@ loadbalancer. The security groups must be specified by ID and not name (as
 opposed to how they are configured with the Compute Instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L172">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L173">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2443,7 +2443,7 @@ the Loadbalancer.  Only administrative users can specify a tenant UUID
 other than their own.  Changing this creates a new loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L177">property vipAddress</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L178">property vipAddress</a>
 </h3>
 
 ```typescript
@@ -2455,7 +2455,7 @@ The ip address of the load balancer.
 Changing this creates a new loadbalancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L181">property vipPortId</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L182">property vipPortId</a>
 </h3>
 
 ```typescript
@@ -2466,7 +2466,7 @@ vipPortId?: pulumi.Input<string>;
 The Port ID of the Load Balancer IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L188">property vipSubnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/loadBalancer.ts#L189">property vipSubnetId</a>
 </h3>
 
 ```typescript
@@ -2480,13 +2480,13 @@ authorized by policy (e.g. networks that belong to them or networks that
 are shared).  Changing this creates a new loadbalancer.
 
 <h2 class="pdoc-module-header" id="MemberArgs">
-<a class="pdoc-member-name" href="/loadbalancer/member.ts#L174">interface MemberArgs</a>
+<a class="pdoc-member-name" href="/loadbalancer/member.ts#L175">interface MemberArgs</a>
 </h2>
 
 The set of arguments for constructing a Member resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L179">property address</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L180">property address</a>
 </h3>
 
 ```typescript
@@ -2498,7 +2498,7 @@ The IP address of the member to receive traffic from
 the load balancer. Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L184">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L185">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -2510,7 +2510,7 @@ The administrative state of the member.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L188">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L189">property name</a>
 </h3>
 
 ```typescript
@@ -2521,7 +2521,7 @@ name?: pulumi.Input<string>;
 Human-readable name for the member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L193">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L194">property poolId</a>
 </h3>
 
 ```typescript
@@ -2533,7 +2533,7 @@ The id of the pool that this member will be
 assigned to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L198">property protocolPort</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L199">property protocolPort</a>
 </h3>
 
 ```typescript
@@ -2545,7 +2545,7 @@ The port on which to listen for client traffic.
 Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L205">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L206">property region</a>
 </h3>
 
 ```typescript
@@ -2559,7 +2559,7 @@ A Networking client is needed to create an . If omitted, the
 member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L209">property subnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L210">property subnetId</a>
 </h3>
 
 ```typescript
@@ -2570,7 +2570,7 @@ subnetId?: pulumi.Input<string>;
 The subnet in which to access the member
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L215">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L216">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2583,7 +2583,7 @@ the member.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L222">property weight</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L223">property weight</a>
 </h3>
 
 ```typescript
@@ -2597,13 +2597,13 @@ example, a member with a weight of 10 receives five times as much traffic
 as a member with a weight of 2.
 
 <h2 class="pdoc-module-header" id="MemberState">
-<a class="pdoc-member-name" href="/loadbalancer/member.ts#L120">interface MemberState</a>
+<a class="pdoc-member-name" href="/loadbalancer/member.ts#L121">interface MemberState</a>
 </h2>
 
 Input properties used for looking up and filtering Member resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L125">property address</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L126">property address</a>
 </h3>
 
 ```typescript
@@ -2615,7 +2615,7 @@ The IP address of the member to receive traffic from
 the load balancer. Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L130">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L131">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -2627,7 +2627,7 @@ The administrative state of the member.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L134">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L135">property name</a>
 </h3>
 
 ```typescript
@@ -2638,7 +2638,7 @@ name?: pulumi.Input<string>;
 Human-readable name for the member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L139">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L140">property poolId</a>
 </h3>
 
 ```typescript
@@ -2650,7 +2650,7 @@ The id of the pool that this member will be
 assigned to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L144">property protocolPort</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L145">property protocolPort</a>
 </h3>
 
 ```typescript
@@ -2662,7 +2662,7 @@ The port on which to listen for client traffic.
 Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L151">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L152">property region</a>
 </h3>
 
 ```typescript
@@ -2676,7 +2676,7 @@ A Networking client is needed to create an . If omitted, the
 member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L155">property subnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L156">property subnetId</a>
 </h3>
 
 ```typescript
@@ -2687,7 +2687,7 @@ subnetId?: pulumi.Input<string>;
 The subnet in which to access the member
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L161">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L162">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2700,7 +2700,7 @@ the member.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/member.ts#L168">property weight</a>
+<a class="pdoc-child-name" href="/loadbalancer/member.ts#L169">property weight</a>
 </h3>
 
 ```typescript
@@ -2714,13 +2714,13 @@ example, a member with a weight of 10 receives five times as much traffic
 as a member with a weight of 2.
 
 <h2 class="pdoc-module-header" id="MemberV1Args">
-<a class="pdoc-member-name" href="/loadbalancer/memberV1.ts#L150">interface MemberV1Args</a>
+<a class="pdoc-member-name" href="/loadbalancer/memberV1.ts#L151">interface MemberV1Args</a>
 </h2>
 
 The set of arguments for constructing a MemberV1 resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L155">property address</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L156">property address</a>
 </h3>
 
 ```typescript
@@ -2732,7 +2732,7 @@ The IP address of the member. Changing this creates a
 new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L161">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L162">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -2745,7 +2745,7 @@ Acceptable values are 'true' and 'false'. Changing this value updates the
 state of the existing member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L166">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L167">property poolId</a>
 </h3>
 
 ```typescript
@@ -2757,7 +2757,7 @@ The ID of the LB pool. Changing this creates a new
 member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L171">property port</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L172">property port</a>
 </h3>
 
 ```typescript
@@ -2769,7 +2769,7 @@ An integer representing the port on which the member is
 hosted. Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L178">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L179">property region</a>
 </h3>
 
 ```typescript
@@ -2783,7 +2783,7 @@ A Networking client is needed to create an LB member. If omitted, the
 LB member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L183">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L184">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2795,7 +2795,7 @@ The owner of the member. Required if admin wants to
 create a member for another tenant. Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L188">property weight</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L189">property weight</a>
 </h3>
 
 ```typescript
@@ -2807,13 +2807,13 @@ The load balancing weight of the member. This is currently unable
 to be set through Terraform.
 
 <h2 class="pdoc-module-header" id="MemberV1State">
-<a class="pdoc-member-name" href="/loadbalancer/memberV1.ts#L106">interface MemberV1State</a>
+<a class="pdoc-member-name" href="/loadbalancer/memberV1.ts#L107">interface MemberV1State</a>
 </h2>
 
 Input properties used for looking up and filtering MemberV1 resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L111">property address</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L112">property address</a>
 </h3>
 
 ```typescript
@@ -2825,7 +2825,7 @@ The IP address of the member. Changing this creates a
 new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L117">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L118">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -2838,7 +2838,7 @@ Acceptable values are 'true' and 'false'. Changing this value updates the
 state of the existing member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L122">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L123">property poolId</a>
 </h3>
 
 ```typescript
@@ -2850,7 +2850,7 @@ The ID of the LB pool. Changing this creates a new
 member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L127">property port</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L128">property port</a>
 </h3>
 
 ```typescript
@@ -2862,7 +2862,7 @@ An integer representing the port on which the member is
 hosted. Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L134">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L135">property region</a>
 </h3>
 
 ```typescript
@@ -2876,7 +2876,7 @@ A Networking client is needed to create an LB member. If omitted, the
 LB member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L139">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L140">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2888,7 +2888,7 @@ The owner of the member. Required if admin wants to
 create a member for another tenant. Changing this creates a new member.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L144">property weight</a>
+<a class="pdoc-child-name" href="/loadbalancer/memberV1.ts#L145">property weight</a>
 </h3>
 
 ```typescript
@@ -2900,13 +2900,13 @@ The load balancing weight of the member. This is currently unable
 to be set through Terraform.
 
 <h2 class="pdoc-module-header" id="MonitorArgs">
-<a class="pdoc-member-name" href="/loadbalancer/monitor.ts#L220">interface MonitorArgs</a>
+<a class="pdoc-member-name" href="/loadbalancer/monitor.ts#L221">interface MonitorArgs</a>
 </h2>
 
 The set of arguments for constructing a Monitor resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L225">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L226">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -2918,7 +2918,7 @@ The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L229">property delay</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L230">property delay</a>
 </h3>
 
 ```typescript
@@ -2929,7 +2929,7 @@ delay: pulumi.Input<number>;
 The time, in seconds, between sending probes to members.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L235">property expectedCodes</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L236">property expectedCodes</a>
 </h3>
 
 ```typescript
@@ -2942,7 +2942,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L241">property httpMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L242">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -2955,7 +2955,7 @@ for requests by the monitor. If this attribute is not specified, it
 defaults to "GET".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L247">property maxRetries</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L248">property maxRetries</a>
 </h3>
 
 ```typescript
@@ -2968,7 +2968,7 @@ changing the member's status to INACTIVE. Must be a number between 1
 and 10..
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L251">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L252">property name</a>
 </h3>
 
 ```typescript
@@ -2979,7 +2979,7 @@ name?: pulumi.Input<string>;
 The Name of the Monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L255">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L256">property poolId</a>
 </h3>
 
 ```typescript
@@ -2990,7 +2990,7 @@ poolId: pulumi.Input<string>;
 The id of the pool that this monitor will be assigned to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L262">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L263">property region</a>
 </h3>
 
 ```typescript
@@ -3004,7 +3004,7 @@ A Networking client is needed to create an . If omitted, the
 monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L268">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L269">property tenantId</a>
 </h3>
 
 ```typescript
@@ -3017,7 +3017,7 @@ the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L274">property timeout</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L275">property timeout</a>
 </h3>
 
 ```typescript
@@ -3030,7 +3030,7 @@ ping reply before it times out. The value must be less than the delay
 value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L280">property type</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L281">property type</a>
 </h3>
 
 ```typescript
@@ -3043,7 +3043,7 @@ that is sent by the load balancer to verify the member state. Changing this
 creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L285">property urlPath</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L286">property urlPath</a>
 </h3>
 
 ```typescript
@@ -3055,13 +3055,13 @@ Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
 
 <h2 class="pdoc-module-header" id="MonitorState">
-<a class="pdoc-member-name" href="/loadbalancer/monitor.ts#L149">interface MonitorState</a>
+<a class="pdoc-member-name" href="/loadbalancer/monitor.ts#L150">interface MonitorState</a>
 </h2>
 
 Input properties used for looking up and filtering Monitor resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L154">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L155">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -3073,7 +3073,7 @@ The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L158">property delay</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L159">property delay</a>
 </h3>
 
 ```typescript
@@ -3084,7 +3084,7 @@ delay?: pulumi.Input<number>;
 The time, in seconds, between sending probes to members.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L164">property expectedCodes</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L165">property expectedCodes</a>
 </h3>
 
 ```typescript
@@ -3097,7 +3097,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L170">property httpMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L171">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -3110,7 +3110,7 @@ for requests by the monitor. If this attribute is not specified, it
 defaults to "GET".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L176">property maxRetries</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L177">property maxRetries</a>
 </h3>
 
 ```typescript
@@ -3123,7 +3123,7 @@ changing the member's status to INACTIVE. Must be a number between 1
 and 10..
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L180">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L181">property name</a>
 </h3>
 
 ```typescript
@@ -3134,7 +3134,7 @@ name?: pulumi.Input<string>;
 The Name of the Monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L184">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L185">property poolId</a>
 </h3>
 
 ```typescript
@@ -3145,7 +3145,7 @@ poolId?: pulumi.Input<string>;
 The id of the pool that this monitor will be assigned to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L191">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L192">property region</a>
 </h3>
 
 ```typescript
@@ -3159,7 +3159,7 @@ A Networking client is needed to create an . If omitted, the
 monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L197">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L198">property tenantId</a>
 </h3>
 
 ```typescript
@@ -3172,7 +3172,7 @@ the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L203">property timeout</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L204">property timeout</a>
 </h3>
 
 ```typescript
@@ -3185,7 +3185,7 @@ ping reply before it times out. The value must be less than the delay
 value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L209">property type</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L210">property type</a>
 </h3>
 
 ```typescript
@@ -3198,7 +3198,7 @@ that is sent by the load balancer to verify the member state. Changing this
 creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L214">property urlPath</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitor.ts#L215">property urlPath</a>
 </h3>
 
 ```typescript
@@ -3210,13 +3210,13 @@ Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
 
 <h2 class="pdoc-module-header" id="MonitorV1Args">
-<a class="pdoc-member-name" href="/loadbalancer/monitorV1.ts#L203">interface MonitorV1Args</a>
+<a class="pdoc-member-name" href="/loadbalancer/monitorV1.ts#L204">interface MonitorV1Args</a>
 </h2>
 
 The set of arguments for constructing a MonitorV1 resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L209">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L210">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -3229,7 +3229,7 @@ Acceptable values are "true" and "false". Changing this value updates the
 state of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L214">property delay</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L215">property delay</a>
 </h3>
 
 ```typescript
@@ -3241,7 +3241,7 @@ The time, in seconds, between sending probes to members.
 Changing this creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L221">property expectedCodes</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L222">property expectedCodes</a>
 </h3>
 
 ```typescript
@@ -3255,7 +3255,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
 of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L227">property httpMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L228">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -3268,7 +3268,7 @@ for requests by the monitor. If this attribute is not specified, it defaults
 to "GET". Changing this updates the http_method of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L233">property maxRetries</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L234">property maxRetries</a>
 </h3>
 
 ```typescript
@@ -3281,7 +3281,7 @@ the member's status to INACTIVE. Must be a number between 1 and 10. Changing
 this updates the max_retries of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L240">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L241">property region</a>
 </h3>
 
 ```typescript
@@ -3295,7 +3295,7 @@ A Networking client is needed to create an LB monitor. If omitted, the
 LB monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L245">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L246">property tenantId</a>
 </h3>
 
 ```typescript
@@ -3307,7 +3307,7 @@ The owner of the monitor. Required if admin wants to
 create a monitor for another tenant. Changing this creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L251">property timeout</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L252">property timeout</a>
 </h3>
 
 ```typescript
@@ -3320,7 +3320,7 @@ ping reply before it times out. The value must be less than the delay value.
 Changing this updates the timeout of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L257">property type</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L258">property type</a>
 </h3>
 
 ```typescript
@@ -3333,7 +3333,7 @@ that is sent by the monitor to verify the member state. Changing this
 creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L263">property urlPath</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L264">property urlPath</a>
 </h3>
 
 ```typescript
@@ -3346,13 +3346,13 @@ accessed if monitor type is HTTP or HTTPS. Changing this updates the
 url_path of the existing monitor.
 
 <h2 class="pdoc-module-header" id="MonitorV1State">
-<a class="pdoc-member-name" href="/loadbalancer/monitorV1.ts#L137">interface MonitorV1State</a>
+<a class="pdoc-member-name" href="/loadbalancer/monitorV1.ts#L138">interface MonitorV1State</a>
 </h2>
 
 Input properties used for looking up and filtering MonitorV1 resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L143">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L144">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -3365,7 +3365,7 @@ Acceptable values are "true" and "false". Changing this value updates the
 state of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L148">property delay</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L149">property delay</a>
 </h3>
 
 ```typescript
@@ -3377,7 +3377,7 @@ The time, in seconds, between sending probes to members.
 Changing this creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L155">property expectedCodes</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L156">property expectedCodes</a>
 </h3>
 
 ```typescript
@@ -3391,7 +3391,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
 of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L161">property httpMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L162">property httpMethod</a>
 </h3>
 
 ```typescript
@@ -3404,7 +3404,7 @@ for requests by the monitor. If this attribute is not specified, it defaults
 to "GET". Changing this updates the http_method of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L167">property maxRetries</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L168">property maxRetries</a>
 </h3>
 
 ```typescript
@@ -3417,7 +3417,7 @@ the member's status to INACTIVE. Must be a number between 1 and 10. Changing
 this updates the max_retries of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L174">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L175">property region</a>
 </h3>
 
 ```typescript
@@ -3431,7 +3431,7 @@ A Networking client is needed to create an LB monitor. If omitted, the
 LB monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L179">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L180">property tenantId</a>
 </h3>
 
 ```typescript
@@ -3443,7 +3443,7 @@ The owner of the monitor. Required if admin wants to
 create a monitor for another tenant. Changing this creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L185">property timeout</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L186">property timeout</a>
 </h3>
 
 ```typescript
@@ -3456,7 +3456,7 @@ ping reply before it times out. The value must be less than the delay value.
 Changing this updates the timeout of the existing monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L191">property type</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L192">property type</a>
 </h3>
 
 ```typescript
@@ -3469,7 +3469,7 @@ that is sent by the monitor to verify the member state. Changing this
 creates a new monitor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L197">property urlPath</a>
+<a class="pdoc-child-name" href="/loadbalancer/monitorV1.ts#L198">property urlPath</a>
 </h3>
 
 ```typescript
@@ -3482,13 +3482,13 @@ accessed if monitor type is HTTP or HTTPS. Changing this updates the
 url_path of the existing monitor.
 
 <h2 class="pdoc-module-header" id="PoolArgs">
-<a class="pdoc-member-name" href="/loadbalancer/pool.ts#L185">interface PoolArgs</a>
+<a class="pdoc-member-name" href="/loadbalancer/pool.ts#L186">interface PoolArgs</a>
 </h2>
 
 The set of arguments for constructing a Pool resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L190">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L191">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -3500,7 +3500,7 @@ The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L194">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L195">property description</a>
 </h3>
 
 ```typescript
@@ -3511,7 +3511,7 @@ description?: pulumi.Input<string>;
 Human-readable description for the pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L200">property lbMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L201">property lbMethod</a>
 </h3>
 
 ```typescript
@@ -3524,7 +3524,7 @@ distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L206">property listenerId</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L207">property listenerId</a>
 </h3>
 
 ```typescript
@@ -3537,7 +3537,7 @@ will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L212">property loadbalancerId</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L213">property loadbalancerId</a>
 </h3>
 
 ```typescript
@@ -3550,7 +3550,7 @@ pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L216">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L217">property name</a>
 </h3>
 
 ```typescript
@@ -3561,7 +3561,7 @@ name?: pulumi.Input<string>;
 Human-readable name for the pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L222">property persistences</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L223">property persistences</a>
 </h3>
 
 ```typescript
@@ -3574,7 +3574,7 @@ whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L226">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L227">property protocol</a>
 </h3>
 
 ```typescript
@@ -3585,7 +3585,7 @@ protocol: pulumi.Input<string>;
 See Argument Reference above.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L233">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L234">property region</a>
 </h3>
 
 ```typescript
@@ -3599,7 +3599,7 @@ A Networking client is needed to create an . If omitted, the
 pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L239">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L240">property tenantId</a>
 </h3>
 
 ```typescript
@@ -3612,13 +3612,13 @@ the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.
 
 <h2 class="pdoc-module-header" id="PoolState">
-<a class="pdoc-member-name" href="/loadbalancer/pool.ts#L125">interface PoolState</a>
+<a class="pdoc-member-name" href="/loadbalancer/pool.ts#L126">interface PoolState</a>
 </h2>
 
 Input properties used for looking up and filtering Pool resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L130">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L131">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -3630,7 +3630,7 @@ The administrative state of the pool.
 A valid value is true (UP) or false (DOWN).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L134">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L135">property description</a>
 </h3>
 
 ```typescript
@@ -3641,7 +3641,7 @@ description?: pulumi.Input<string>;
 Human-readable description for the pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L140">property lbMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L141">property lbMethod</a>
 </h3>
 
 ```typescript
@@ -3654,7 +3654,7 @@ distribute traffic to the pool's members. Must be one of
 ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L146">property listenerId</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L147">property listenerId</a>
 </h3>
 
 ```typescript
@@ -3667,7 +3667,7 @@ will be associated with. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L152">property loadbalancerId</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L153">property loadbalancerId</a>
 </h3>
 
 ```typescript
@@ -3680,7 +3680,7 @@ pool. Changing this creates a new pool.
 Note:  One of LoadbalancerID or ListenerID must be provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L156">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L157">property name</a>
 </h3>
 
 ```typescript
@@ -3691,7 +3691,7 @@ name?: pulumi.Input<string>;
 Human-readable name for the pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L162">property persistences</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L163">property persistences</a>
 </h3>
 
 ```typescript
@@ -3704,7 +3704,7 @@ whether connections in the same session will be processed by the same Pool
 member or not. Changing this creates a new pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L166">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L167">property protocol</a>
 </h3>
 
 ```typescript
@@ -3715,7 +3715,7 @@ protocol?: pulumi.Input<string>;
 See Argument Reference above.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L173">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L174">property region</a>
 </h3>
 
 ```typescript
@@ -3729,7 +3729,7 @@ A Networking client is needed to create an . If omitted, the
 pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L179">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/pool.ts#L180">property tenantId</a>
 </h3>
 
 ```typescript
@@ -3742,13 +3742,13 @@ the pool.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new pool.
 
 <h2 class="pdoc-module-header" id="PoolV1Args">
-<a class="pdoc-member-name" href="/loadbalancer/poolV1.ts#L164">interface PoolV1Args</a>
+<a class="pdoc-member-name" href="/loadbalancer/poolV1.ts#L165">interface PoolV1Args</a>
 </h2>
 
 The set of arguments for constructing a PoolV1 resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L170">property lbMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L171">property lbMethod</a>
 </h3>
 
 ```typescript
@@ -3761,7 +3761,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L175">property lbProvider</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L176">property lbProvider</a>
 </h3>
 
 ```typescript
@@ -3773,7 +3773,7 @@ The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L180">property monitorIds</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L181">property monitorIds</a>
 </h3>
 
 ```typescript
@@ -3785,7 +3785,7 @@ A list of IDs of monitors to associate with the
 pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L185">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L186">property name</a>
 </h3>
 
 ```typescript
@@ -3797,7 +3797,7 @@ The name of the pool. Changing this updates the name of
 the existing pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L190">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L191">property protocol</a>
 </h3>
 
 ```typescript
@@ -3809,7 +3809,7 @@ The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L197">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L198">property region</a>
 </h3>
 
 ```typescript
@@ -3823,7 +3823,7 @@ A Networking client is needed to create an LB pool. If omitted, the
 LB pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L203">property subnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L204">property subnetId</a>
 </h3>
 
 ```typescript
@@ -3836,7 +3836,7 @@ located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L208">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L209">property tenantId</a>
 </h3>
 
 ```typescript
@@ -3844,17 +3844,17 @@ tenantId?: pulumi.Input<string>;
 ```
 
 
-The owner of the member. Required if admin wants to
-create a pool member for another tenant. Changing this creates a new member.
+The owner of the pool. Required if admin wants to
+create a pool member for another tenant. Changing this creates a new pool.
 
 <h2 class="pdoc-module-header" id="PoolV1State">
-<a class="pdoc-member-name" href="/loadbalancer/poolV1.ts#L114">interface PoolV1State</a>
+<a class="pdoc-member-name" href="/loadbalancer/poolV1.ts#L115">interface PoolV1State</a>
 </h2>
 
 Input properties used for looking up and filtering PoolV1 resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L120">property lbMethod</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L121">property lbMethod</a>
 </h3>
 
 ```typescript
@@ -3867,7 +3867,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L125">property lbProvider</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L126">property lbProvider</a>
 </h3>
 
 ```typescript
@@ -3879,7 +3879,7 @@ The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L130">property monitorIds</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L131">property monitorIds</a>
 </h3>
 
 ```typescript
@@ -3891,7 +3891,7 @@ A list of IDs of monitors to associate with the
 pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L135">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L136">property name</a>
 </h3>
 
 ```typescript
@@ -3903,7 +3903,7 @@ The name of the pool. Changing this updates the name of
 the existing pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L140">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L141">property protocol</a>
 </h3>
 
 ```typescript
@@ -3915,7 +3915,7 @@ The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L147">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L148">property region</a>
 </h3>
 
 ```typescript
@@ -3929,7 +3929,7 @@ A Networking client is needed to create an LB pool. If omitted, the
 LB pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L153">property subnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L154">property subnetId</a>
 </h3>
 
 ```typescript
@@ -3942,7 +3942,7 @@ located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L158">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/poolV1.ts#L159">property tenantId</a>
 </h3>
 
 ```typescript
@@ -3950,17 +3950,17 @@ tenantId?: pulumi.Input<string>;
 ```
 
 
-The owner of the member. Required if admin wants to
-create a pool member for another tenant. Changing this creates a new member.
+The owner of the pool. Required if admin wants to
+create a pool member for another tenant. Changing this creates a new pool.
 
 <h2 class="pdoc-module-header" id="VipArgs">
-<a class="pdoc-member-name" href="/loadbalancer/vip.ts#L243">interface VipArgs</a>
+<a class="pdoc-member-name" href="/loadbalancer/vip.ts#L244">interface VipArgs</a>
 </h2>
 
 The set of arguments for constructing a Vip resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L248">property address</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L249">property address</a>
 </h3>
 
 ```typescript
@@ -3972,7 +3972,7 @@ The IP address of the vip. Changing this creates a new
 vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L254">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L255">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -3985,7 +3985,7 @@ Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L260">property connLimit</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L261">property connLimit</a>
 </h3>
 
 ```typescript
@@ -3998,7 +3998,7 @@ vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L265">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L266">property description</a>
 </h3>
 
 ```typescript
@@ -4010,7 +4010,7 @@ Human-readable description for the vip. Changing
 this updates the description of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L270">property floatingIp</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L271">property floatingIp</a>
 </h3>
 
 ```typescript
@@ -4022,7 +4022,7 @@ A *Networking* Floating IP that will be associated
 with the vip. The Floating IP must be provisioned already.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L275">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L276">property name</a>
 </h3>
 
 ```typescript
@@ -4034,7 +4034,7 @@ The name of the vip. Changing this updates the name of
 the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L281">property persistence</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L282">property persistence</a>
 </h3>
 
 ```typescript
@@ -4047,7 +4047,7 @@ The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L286">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L287">property poolId</a>
 </h3>
 
 ```typescript
@@ -4059,7 +4059,7 @@ The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L291">property port</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L292">property port</a>
 </h3>
 
 ```typescript
@@ -4071,7 +4071,7 @@ The port on which to listen for client traffic. Changing
 this creates a new vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L296">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L297">property protocol</a>
 </h3>
 
 ```typescript
@@ -4083,7 +4083,7 @@ The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L303">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L304">property region</a>
 </h3>
 
 ```typescript
@@ -4097,7 +4097,7 @@ A Networking client is needed to create a VIP. If omitted, the
 VIP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L310">property subnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L311">property subnetId</a>
 </h3>
 
 ```typescript
@@ -4111,7 +4111,7 @@ that belong to them or networks that are shared). Changing this creates a
 new vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L315">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L316">property tenantId</a>
 </h3>
 
 ```typescript
@@ -4123,13 +4123,13 @@ The owner of the vip. Required if admin wants to
 create a vip member for another tenant. Changing this creates a new vip.
 
 <h2 class="pdoc-module-header" id="VipState">
-<a class="pdoc-member-name" href="/loadbalancer/vip.ts#L161">interface VipState</a>
+<a class="pdoc-member-name" href="/loadbalancer/vip.ts#L162">interface VipState</a>
 </h2>
 
 Input properties used for looking up and filtering Vip resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L166">property address</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L167">property address</a>
 </h3>
 
 ```typescript
@@ -4141,7 +4141,7 @@ The IP address of the vip. Changing this creates a new
 vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L172">property adminStateUp</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L173">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -4154,7 +4154,7 @@ Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L178">property connLimit</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L179">property connLimit</a>
 </h3>
 
 ```typescript
@@ -4167,7 +4167,7 @@ vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L183">property description</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L184">property description</a>
 </h3>
 
 ```typescript
@@ -4179,7 +4179,7 @@ Human-readable description for the vip. Changing
 this updates the description of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L188">property floatingIp</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L189">property floatingIp</a>
 </h3>
 
 ```typescript
@@ -4191,7 +4191,7 @@ A *Networking* Floating IP that will be associated
 with the vip. The Floating IP must be provisioned already.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L193">property name</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L194">property name</a>
 </h3>
 
 ```typescript
@@ -4203,7 +4203,7 @@ The name of the vip. Changing this updates the name of
 the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L199">property persistence</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L200">property persistence</a>
 </h3>
 
 ```typescript
@@ -4216,7 +4216,7 @@ The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L204">property poolId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L205">property poolId</a>
 </h3>
 
 ```typescript
@@ -4228,7 +4228,7 @@ The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L209">property port</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L210">property port</a>
 </h3>
 
 ```typescript
@@ -4240,7 +4240,7 @@ The port on which to listen for client traffic. Changing
 this creates a new vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L213">property portId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L214">property portId</a>
 </h3>
 
 ```typescript
@@ -4251,7 +4251,7 @@ portId?: pulumi.Input<string>;
 Port UUID for this VIP at associated floating IP (if any).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L218">property protocol</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L219">property protocol</a>
 </h3>
 
 ```typescript
@@ -4263,7 +4263,7 @@ The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L225">property region</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L226">property region</a>
 </h3>
 
 ```typescript
@@ -4277,7 +4277,7 @@ A Networking client is needed to create a VIP. If omitted, the
 VIP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L232">property subnetId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L233">property subnetId</a>
 </h3>
 
 ```typescript
@@ -4291,7 +4291,7 @@ that belong to them or networks that are shared). Changing this creates a
 new vip.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L237">property tenantId</a>
+<a class="pdoc-child-name" href="/loadbalancer/vip.ts#L238">property tenantId</a>
 </h3>
 
 ```typescript

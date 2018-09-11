@@ -20,13 +20,13 @@ title: Module dns
 
 
 <h2 class="pdoc-module-header" id="RecordSet">
-<a class="pdoc-member-name" href="/dns/recordSet.ts#L9">class RecordSet</a>
+<a class="pdoc-member-name" href="/dns/recordSet.ts#L10">class RecordSet</a>
 </h2>
 
 Manages a DNS record set in the OpenStack DNS Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L59">constructor</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L60">constructor</a>
 </h3>
 
 ```typescript
@@ -41,7 +41,7 @@ Create a RecordSet resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -73,7 +73,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L25">property description</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L26">property description</a>
 </h3>
 
 ```typescript
@@ -96,7 +96,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L30">property name</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L31">property name</a>
 </h3>
 
 ```typescript
@@ -108,7 +108,7 @@ The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L34">property records</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L35">property records</a>
 </h3>
 
 ```typescript
@@ -119,7 +119,7 @@ public records: pulumi.Output<string[] | undefined>;
 An array of DNS records.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L40">property region</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L41">property region</a>
 </h3>
 
 ```typescript
@@ -132,7 +132,7 @@ If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L44">property ttl</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L45">property ttl</a>
 </h3>
 
 ```typescript
@@ -143,7 +143,7 @@ public ttl: pulumi.Output<number>;
 The time to live (TTL) of the record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L49">property type</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L50">property type</a>
 </h3>
 
 ```typescript
@@ -167,7 +167,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L54">property valueSpecs</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L55">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -179,7 +179,7 @@ Map of additional options. Changing this creates a
 new record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L59">property zoneId</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L60">property zoneId</a>
 </h3>
 
 ```typescript
@@ -191,13 +191,13 @@ The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
 
 <h2 class="pdoc-module-header" id="Zone">
-<a class="pdoc-member-name" href="/dns/zone.ts#L9">class Zone</a>
+<a class="pdoc-member-name" href="/dns/zone.ts#L10">class Zone</a>
 </h2>
 
 Manages a DNS zone in the OpenStack DNS Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L65">constructor</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L66">constructor</a>
 </h3>
 
 ```typescript
@@ -212,7 +212,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -244,7 +244,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L26">property attributes</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L27">property attributes</a>
 </h3>
 
 ```typescript
@@ -256,7 +256,7 @@ Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L30">property description</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L31">property description</a>
 </h3>
 
 ```typescript
@@ -267,7 +267,7 @@ public description: pulumi.Output<string | undefined>;
 A description of the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L34">property email</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L35">property email</a>
 </h3>
 
 ```typescript
@@ -290,7 +290,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L39">property masters</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L40">property masters</a>
 </h3>
 
 ```typescript
@@ -302,7 +302,7 @@ An array of master DNS servers. For when `type` is
 `SECONDARY`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L44">property name</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L45">property name</a>
 </h3>
 
 ```typescript
@@ -314,7 +314,7 @@ The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L51">property region</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L52">property region</a>
 </h3>
 
 ```typescript
@@ -328,7 +328,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L55">property ttl</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L56">property ttl</a>
 </h3>
 
 ```typescript
@@ -339,7 +339,7 @@ public ttl: pulumi.Output<number>;
 The time to live (TTL) of the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L60">property type</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L61">property type</a>
 </h3>
 
 ```typescript
@@ -363,7 +363,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L65">property valueSpecs</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L66">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -375,7 +375,7 @@ Map of additional options. Changing this creates a
 new zone.
 
 <h2 class="pdoc-module-header" id="getDnsZone">
-<a class="pdoc-member-name" href="/dns/getDnsZone.ts#L9">function getDnsZone</a>
+<a class="pdoc-member-name" href="/dns/getDnsZone.ts#L10">function getDnsZone</a>
 </h2>
 
 ```typescript
@@ -386,13 +386,13 @@ getDnsZone(args?: GetDnsZoneArgs, opts?: pulumi.InvokeOptions): Promise<GetDnsZo
 Use this data source to get the ID of an available OpenStack DNS zone.
 
 <h2 class="pdoc-module-header" id="GetDnsZoneArgs">
-<a class="pdoc-member-name" href="/dns/getDnsZone.ts#L34">interface GetDnsZoneArgs</a>
+<a class="pdoc-member-name" href="/dns/getDnsZone.ts#L35">interface GetDnsZoneArgs</a>
 </h2>
 
 A collection of arguments for invoking getDnsZone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L35">property attributes</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L36">property attributes</a>
 </h3>
 
 ```typescript
@@ -400,7 +400,7 @@ attributes?: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L36">property createdAt</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L37">property createdAt</a>
 </h3>
 
 ```typescript
@@ -408,7 +408,7 @@ createdAt?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L40">property description</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L41">property description</a>
 </h3>
 
 ```typescript
@@ -419,7 +419,7 @@ description?: string;
 A description of the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L44">property email</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L45">property email</a>
 </h3>
 
 ```typescript
@@ -430,7 +430,7 @@ email?: string;
 The email contact for the zone record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L45">property masters</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L46">property masters</a>
 </h3>
 
 ```typescript
@@ -438,7 +438,7 @@ masters?: string[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L49">property name</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L50">property name</a>
 </h3>
 
 ```typescript
@@ -449,7 +449,7 @@ name?: string;
 The name of the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L50">property poolId</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L51">property poolId</a>
 </h3>
 
 ```typescript
@@ -457,7 +457,7 @@ poolId?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L51">property projectId</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L52">property projectId</a>
 </h3>
 
 ```typescript
@@ -465,7 +465,7 @@ projectId?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L57">property region</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L58">property region</a>
 </h3>
 
 ```typescript
@@ -478,7 +478,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
 `region` argument of the provider is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L58">property serial</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L59">property serial</a>
 </h3>
 
 ```typescript
@@ -486,7 +486,7 @@ serial?: number;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L62">property status</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L63">property status</a>
 </h3>
 
 ```typescript
@@ -497,7 +497,7 @@ status?: string;
 The zone's status.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L63">property transferredAt</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L64">property transferredAt</a>
 </h3>
 
 ```typescript
@@ -505,7 +505,7 @@ transferredAt?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L67">property ttl</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L68">property ttl</a>
 </h3>
 
 ```typescript
@@ -516,7 +516,7 @@ ttl?: number;
 The time to live (TTL) of the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L71">property type</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L72">property type</a>
 </h3>
 
 ```typescript
@@ -527,7 +527,7 @@ type?: string;
 The type of the zone. Can either be `PRIMARY` or `SECONDARY`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L72">property updatedAt</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L73">property updatedAt</a>
 </h3>
 
 ```typescript
@@ -535,7 +535,7 @@ updatedAt?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L73">property version</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L74">property version</a>
 </h3>
 
 ```typescript
@@ -543,13 +543,13 @@ version?: number;
 ```
 
 <h2 class="pdoc-module-header" id="GetDnsZoneResult">
-<a class="pdoc-member-name" href="/dns/getDnsZone.ts#L79">interface GetDnsZoneResult</a>
+<a class="pdoc-member-name" href="/dns/getDnsZone.ts#L80">interface GetDnsZoneResult</a>
 </h2>
 
 A collection of values returned by getDnsZone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L83">property attributes</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L84">property attributes</a>
 </h3>
 
 ```typescript
@@ -560,7 +560,7 @@ attributes: { ... };
 Attributes of the DNS Service scheduler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L87">property createdAt</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L88">property createdAt</a>
 </h3>
 
 ```typescript
@@ -571,7 +571,7 @@ createdAt: string;
 The time the zone was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L123">property id</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L124">property id</a>
 </h3>
 
 ```typescript
@@ -582,7 +582,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L91">property masters</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L92">property masters</a>
 </h3>
 
 ```typescript
@@ -593,7 +593,7 @@ masters: string[];
 An array of master DNS servers. When `type` is  `SECONDARY`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L95">property poolId</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L96">property poolId</a>
 </h3>
 
 ```typescript
@@ -604,7 +604,7 @@ poolId: string;
 The ID of the pool hosting the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L99">property projectId</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L100">property projectId</a>
 </h3>
 
 ```typescript
@@ -615,7 +615,7 @@ projectId: string;
 The project ID that owns the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L103">property region</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L104">property region</a>
 </h3>
 
 ```typescript
@@ -626,7 +626,7 @@ region: string;
 See Argument Reference above.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L107">property serial</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L108">property serial</a>
 </h3>
 
 ```typescript
@@ -637,7 +637,7 @@ serial: number;
 The serial number of the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L111">property transferredAt</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L112">property transferredAt</a>
 </h3>
 
 ```typescript
@@ -648,7 +648,7 @@ transferredAt: string;
 The time the zone was transferred.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L115">property updatedAt</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L116">property updatedAt</a>
 </h3>
 
 ```typescript
@@ -659,7 +659,7 @@ updatedAt: string;
 The time the zone was last updated.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L119">property version</a>
+<a class="pdoc-child-name" href="/dns/getDnsZone.ts#L120">property version</a>
 </h3>
 
 ```typescript
@@ -670,13 +670,13 @@ version: number;
 The version of the zone.
 
 <h2 class="pdoc-module-header" id="RecordSetArgs">
-<a class="pdoc-member-name" href="/dns/recordSet.ts#L146">interface RecordSetArgs</a>
+<a class="pdoc-member-name" href="/dns/recordSet.ts#L147">interface RecordSetArgs</a>
 </h2>
 
 The set of arguments for constructing a RecordSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L150">property description</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L151">property description</a>
 </h3>
 
 ```typescript
@@ -687,7 +687,7 @@ description?: pulumi.Input<string>;
 A description of the  record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L155">property name</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L156">property name</a>
 </h3>
 
 ```typescript
@@ -699,7 +699,7 @@ The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L159">property records</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L160">property records</a>
 </h3>
 
 ```typescript
@@ -710,7 +710,7 @@ records?: pulumi.Input<pulumi.Input<string>[]>;
 An array of DNS records.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L165">property region</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L166">property region</a>
 </h3>
 
 ```typescript
@@ -723,7 +723,7 @@ If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L169">property ttl</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L170">property ttl</a>
 </h3>
 
 ```typescript
@@ -734,7 +734,7 @@ ttl?: pulumi.Input<number>;
 The time to live (TTL) of the record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L174">property type</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L175">property type</a>
 </h3>
 
 ```typescript
@@ -746,7 +746,7 @@ The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L179">property valueSpecs</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L180">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -758,7 +758,7 @@ Map of additional options. Changing this creates a
 new record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L184">property zoneId</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L185">property zoneId</a>
 </h3>
 
 ```typescript
@@ -770,13 +770,13 @@ The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
 
 <h2 class="pdoc-module-header" id="RecordSetState">
-<a class="pdoc-member-name" href="/dns/recordSet.ts#L102">interface RecordSetState</a>
+<a class="pdoc-member-name" href="/dns/recordSet.ts#L103">interface RecordSetState</a>
 </h2>
 
 Input properties used for looking up and filtering RecordSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L106">property description</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L107">property description</a>
 </h3>
 
 ```typescript
@@ -787,7 +787,7 @@ description?: pulumi.Input<string>;
 A description of the  record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L111">property name</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L112">property name</a>
 </h3>
 
 ```typescript
@@ -799,7 +799,7 @@ The name of the record set. Note the `.` at the end of the name.
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L115">property records</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L116">property records</a>
 </h3>
 
 ```typescript
@@ -810,7 +810,7 @@ records?: pulumi.Input<pulumi.Input<string>[]>;
 An array of DNS records.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L121">property region</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L122">property region</a>
 </h3>
 
 ```typescript
@@ -823,7 +823,7 @@ If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L125">property ttl</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L126">property ttl</a>
 </h3>
 
 ```typescript
@@ -834,7 +834,7 @@ ttl?: pulumi.Input<number>;
 The time to live (TTL) of the record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L130">property type</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L131">property type</a>
 </h3>
 
 ```typescript
@@ -846,7 +846,7 @@ The type of record set. Examples: "A", "MX".
 Changing this creates a new DNS  record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L135">property valueSpecs</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L136">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -858,7 +858,7 @@ Map of additional options. Changing this creates a
 new record set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/recordSet.ts#L140">property zoneId</a>
+<a class="pdoc-child-name" href="/dns/recordSet.ts#L141">property zoneId</a>
 </h3>
 
 ```typescript
@@ -870,13 +870,13 @@ The ID of the zone in which to create the record set.
 Changing this creates a new DNS  record set.
 
 <h2 class="pdoc-module-header" id="ZoneArgs">
-<a class="pdoc-member-name" href="/dns/zone.ts#L157">interface ZoneArgs</a>
+<a class="pdoc-member-name" href="/dns/zone.ts#L158">interface ZoneArgs</a>
 </h2>
 
 The set of arguments for constructing a Zone resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L162">property attributes</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L163">property attributes</a>
 </h3>
 
 ```typescript
@@ -888,7 +888,7 @@ Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L166">property description</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L167">property description</a>
 </h3>
 
 ```typescript
@@ -899,7 +899,7 @@ description?: pulumi.Input<string>;
 A description of the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L170">property email</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L171">property email</a>
 </h3>
 
 ```typescript
@@ -910,7 +910,7 @@ email?: pulumi.Input<string>;
 The email contact for the zone record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L175">property masters</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L176">property masters</a>
 </h3>
 
 ```typescript
@@ -922,7 +922,7 @@ An array of master DNS servers. For when `type` is
 `SECONDARY`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L180">property name</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L181">property name</a>
 </h3>
 
 ```typescript
@@ -934,7 +934,7 @@ The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L187">property region</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L188">property region</a>
 </h3>
 
 ```typescript
@@ -948,7 +948,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L191">property ttl</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L192">property ttl</a>
 </h3>
 
 ```typescript
@@ -959,7 +959,7 @@ ttl?: pulumi.Input<number>;
 The time to live (TTL) of the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L196">property type</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L197">property type</a>
 </h3>
 
 ```typescript
@@ -971,7 +971,7 @@ The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L201">property valueSpecs</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L202">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -983,13 +983,13 @@ Map of additional options. Changing this creates a
 new zone.
 
 <h2 class="pdoc-module-header" id="ZoneState">
-<a class="pdoc-member-name" href="/dns/zone.ts#L107">interface ZoneState</a>
+<a class="pdoc-member-name" href="/dns/zone.ts#L108">interface ZoneState</a>
 </h2>
 
 Input properties used for looking up and filtering Zone resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L112">property attributes</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L113">property attributes</a>
 </h3>
 
 ```typescript
@@ -1001,7 +1001,7 @@ Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L116">property description</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L117">property description</a>
 </h3>
 
 ```typescript
@@ -1012,7 +1012,7 @@ description?: pulumi.Input<string>;
 A description of the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L120">property email</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L121">property email</a>
 </h3>
 
 ```typescript
@@ -1023,7 +1023,7 @@ email?: pulumi.Input<string>;
 The email contact for the zone record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L125">property masters</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L126">property masters</a>
 </h3>
 
 ```typescript
@@ -1035,7 +1035,7 @@ An array of master DNS servers. For when `type` is
 `SECONDARY`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L130">property name</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L131">property name</a>
 </h3>
 
 ```typescript
@@ -1047,7 +1047,7 @@ The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L137">property region</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L138">property region</a>
 </h3>
 
 ```typescript
@@ -1061,7 +1061,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L141">property ttl</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L142">property ttl</a>
 </h3>
 
 ```typescript
@@ -1072,7 +1072,7 @@ ttl?: pulumi.Input<number>;
 The time to live (TTL) of the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L146">property type</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L147">property type</a>
 </h3>
 
 ```typescript
@@ -1084,7 +1084,7 @@ The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dns/zone.ts#L151">property valueSpecs</a>
+<a class="pdoc-child-name" href="/dns/zone.ts#L152">property valueSpecs</a>
 </h3>
 
 ```typescript

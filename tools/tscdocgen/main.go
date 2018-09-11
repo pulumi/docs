@@ -697,6 +697,15 @@ func createTypeLabel(t typeDocType) string {
 			label += createTypeLabel(inner)
 		}
 		return label
+	case typeDocIntersectionType:
+		var label string
+		for i, inner := range t.Types {
+			if i > 0 {
+				label += " & "
+			}
+			label += createTypeLabel(inner)
+		}
+		return label
 	case typeDocTypeOperatorType:
 		targetStr := createTypeLabel(*t.Target)
 		return fmt.Sprintf("%s %s", t.Operator, targetStr)
@@ -757,6 +766,7 @@ type typeDocTypeType string
 const (
 	typeDocArrayType         typeDocTypeType = "array"
 	typeDocIntrinsicType     typeDocTypeType = "intrinsic"
+	typeDocIntersectionType  typeDocTypeType = "intersection"
 	typeDocParameterType     typeDocTypeType = "typeParameter"
 	typeDocReferenceType     typeDocTypeType = "reference"
 	typeDocReflectionType    typeDocTypeType = "reflection"

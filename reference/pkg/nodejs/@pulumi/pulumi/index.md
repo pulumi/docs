@@ -50,7 +50,7 @@ import * as pulumi from "@pulumi/pulumi";
 * <a href="tests">tests</a>
 
 <h2 class="pdoc-module-header" id="ComponentResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L256">class ComponentResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L258">class ComponentResource</a>
 </h2>
 
 ComponentResource is a resource that aggregates one or more other child resources into a higher
@@ -58,7 +58,7 @@ level abstraction. The component resource itself is a resource, but does not req
 operations for provisioning.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L256">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L258">constructor</a>
 </h3>
 
 ```typescript
@@ -94,11 +94,11 @@ public static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L279">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L281">method registerOutputs</a>
 </h3>
 
 ```typescript
-protected registerOutputs(outputs: Inputs | undefined): void
+protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
 ```
 
 <h3 class="pdoc-member-header">
@@ -132,18 +132,18 @@ new Config(name?: undefined | string)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L51">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L52">method get</a>
 </h3>
 
 ```typescript
-public get(key: string): string | undefined
+public get(key: string, opts?: StringConfigOptions): string | undefined
 ```
 
 
 get loads an optional configuration value by its key, or undefined if it doesn't exist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L61">method getBoolean</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L83">method getBoolean</a>
 </h3>
 
 ```typescript
@@ -155,11 +155,11 @@ getBoolean loads an optional configuration value, as a boolean, by its key, or u
 If the configuration value isn't a legal boolean, this function will throw an error.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L79">method getNumber</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L102">method getNumber</a>
 </h3>
 
 ```typescript
-public getNumber(key: string): number | undefined
+public getNumber(key: string, opts?: NumberConfigOptions): number | undefined
 ```
 
 
@@ -167,7 +167,7 @@ getNumber loads an optional configuration value, as a number, by its key, or und
 If the configuration value isn't a legal number, this function will throw an error.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L97">method getObject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L127">method getObject</a>
 </h3>
 
 ```typescript
@@ -179,18 +179,18 @@ getObject loads an optional configuration value, as an object, by its key, or un
 This routine simply JSON parses and doesn't validate the shape of the contents.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L115">method require</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L146">method require</a>
 </h3>
 
 ```typescript
-public require(key: string): string
+public require(key: string, opts?: StringConfigOptions): string
 ```
 
 
 require loads a configuration value by its given key.  If it doesn't exist, an error is thrown.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L129">method requireBoolean</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L160">method requireBoolean</a>
 </h3>
 
 ```typescript
@@ -202,11 +202,11 @@ requireBoolean loads a configuration value, as a boolean, by its given key.  If 
 configuration value is not a legal boolean, an error is thrown.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L143">method requireNumber</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L175">method requireNumber</a>
 </h3>
 
 ```typescript
-public requireNumber(key: string): number
+public requireNumber(key: string, opts?: NumberConfigOptions): number
 ```
 
 
@@ -214,7 +214,7 @@ requireNumber loads a configuration value, as a number, by its given key.  If it
 configuration value is not a legal number, an error is thrown.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L157">method requireObject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts#L189">method requireObject</a>
 </h3>
 
 ```typescript
@@ -238,7 +238,7 @@ name is the configuration bag's logical name and uniquely identifies it.  The de
 project.
 
 <h2 class="pdoc-module-header" id="CustomResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L188">class CustomResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L190">class CustomResource</a>
 </h2>
 
 CustomResource is a resource whose create, read, update, and delete (CRUD) operations are managed
@@ -247,7 +247,7 @@ and perform partial updates of them, and these CRUD operations are implemented i
 loaded plugin for the defining package.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L207">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L209">constructor</a>
 </h3>
 
 ```typescript
@@ -276,7 +276,7 @@ public getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L205">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L207">method isInstance</a>
 </h3>
 
 ```typescript
@@ -288,7 +288,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L199">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L201">property id</a>
 </h3>
 
 ```typescript
@@ -312,7 +312,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Output">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L296">class Output</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L298">class Output</a>
 </h2>
 
 Output helps encode the relationship between Resources in a Pulumi application. Specifically an
@@ -322,7 +322,7 @@ value as well as the Resource the value came from.  This allows for a precise 'R
 dependency graph' to be created, which properly tracks the relationship between resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L381">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L383">constructor</a>
 </h3>
 
 ```typescript
@@ -330,7 +330,7 @@ public new Output(resources: Set<Resource>, promise: Promise<T>, isKnown: Promis
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L378">method create</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L380">method create</a>
 </h3>
 
 ```typescript
@@ -338,7 +338,7 @@ public static create<T>(resource: Resource, promise: Promise<T>, isKnown: Promis
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L374">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L376">method isInstance</a>
 </h3>
 
 ```typescript
@@ -350,7 +350,7 @@ Returns true if the given object is an instance of Output<T>.  This is designed 
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L303">property __pulumiOutput</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L305">property __pulumiOutput</a>
 </h3>
 
 ```typescript
@@ -363,7 +363,7 @@ A private field to help with RTTI that works in SxS scenarios.
 This is internal instead of being truly private, to support mixins and our serialization model.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L355">property apply</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L357">property apply</a>
 </h3>
 
 ```typescript
@@ -397,7 +397,7 @@ available for functions that end up executing in the cloud during runtime.  To g
 of the Output during cloud runtime execution, use `get()`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L366">property get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L368">property get</a>
 </h3>
 
 ```typescript
@@ -414,7 +414,7 @@ would allow Output values to flow into Resources while losing the data that woul
 the dependency graph to be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L312">property isKnown</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L314">property isKnown</a>
 </h3>
 
 ```typescript
@@ -429,7 +429,7 @@ may not expect an undefined value.  So, instead, we just transition to another O
 value that itself knows it should not perform .apply calls.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L320">property promise</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L322">property promise</a>
 </h3>
 
 ```typescript
@@ -443,7 +443,7 @@ deployment-time set of resources this output depends on.
 Only callable on the outside.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L327">property resources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L329">property resources</a>
 </h3>
 
 ```typescript
@@ -456,14 +456,14 @@ The list of resource that this output value depends on.
 Only callable on the outside.
 
 <h2 class="pdoc-module-header" id="ProviderResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L233">class ProviderResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L235">class ProviderResource</a>
 </h2>
 
 ProviderResource is a resource that implements CRUD operations for other custom resources. These resources are
 managed similarly to other resources, including the usual diffing and update semantics.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L233">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L235">constructor</a>
 </h3>
 
 ```typescript
@@ -487,7 +487,7 @@ public getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L205">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L207">method isInstance</a>
 </h3>
 
 ```typescript
@@ -499,7 +499,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L199">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L201">property id</a>
 </h3>
 
 ```typescript
@@ -652,7 +652,7 @@ const version: ${VERSION} = "${VERSION}";
 ```
 
 <h2 class="pdoc-module-header" id="all">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L448">function all</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L450">function all</a>
 </h2>
 
 ```typescript
@@ -739,7 +739,7 @@ getStack(): string
 getStack returns the current stack name.  It throws an exception if none is registered.
 
 <h2 class="pdoc-module-header" id="output">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L422">function output</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L424">function output</a>
 </h2>
 
 ```typescript
@@ -752,13 +752,13 @@ output<T>(cv: Input<T> | undefined): Output<T | undefined>
 ```
 
 <h2 class="pdoc-module-header" id="ComponentResourceOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L175">interface ComponentResourceOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L177">interface ComponentResourceOptions</a>
 </h2>
 
 ComponentResourceOptions is a bag of optional settings that control a component resource's behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L153">property dependsOn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L155">property dependsOn</a>
 </h3>
 
 ```typescript
@@ -769,7 +769,7 @@ dependsOn?: Resource[] | Resource;
 An optional additional explicit dependencies on other resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L145">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L147">property id</a>
 </h3>
 
 ```typescript
@@ -780,7 +780,7 @@ id?: Input<ID>;
 An optional existing ID to load, rather than create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L149">property parent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L151">property parent</a>
 </h3>
 
 ```typescript
@@ -791,7 +791,7 @@ parent?: Resource;
 An optional parent resource to which this resource belongs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L157">property protect</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L159">property protect</a>
 </h3>
 
 ```typescript
@@ -802,7 +802,7 @@ protect?: undefined | false | true;
 When set to true, protect ensures this resource cannot be deleted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L179">property providers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L181">property providers</a>
 </h3>
 
 ```typescript
@@ -813,13 +813,13 @@ providers?: Record<string, ProviderResource>;
 An optional set of providers to use for child resources. Keyed by package name (e.g. "aws")
 
 <h2 class="pdoc-module-header" id="CustomResourceOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L163">interface CustomResourceOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L165">interface CustomResourceOptions</a>
 </h2>
 
 CustomResourceOptions is a bag of optional settings that control a custom resource's behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L153">property dependsOn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L155">property dependsOn</a>
 </h3>
 
 ```typescript
@@ -830,7 +830,7 @@ dependsOn?: Resource[] | Resource;
 An optional additional explicit dependencies on other resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L145">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L147">property id</a>
 </h3>
 
 ```typescript
@@ -841,7 +841,7 @@ id?: Input<ID>;
 An optional existing ID to load, rather than create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L149">property parent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L151">property parent</a>
 </h3>
 
 ```typescript
@@ -852,7 +852,7 @@ parent?: Resource;
 An optional parent resource to which this resource belongs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L157">property protect</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L159">property protect</a>
 </h3>
 
 ```typescript
@@ -863,7 +863,7 @@ protect?: undefined | false | true;
 When set to true, protect ensures this resource cannot be deleted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L169">property provider</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L171">property provider</a>
 </h3>
 
 ```typescript
@@ -876,13 +876,13 @@ provider for the resource's package will be used. The default provider is pulled
 provider bag (see also ComponentResourceOptions.providers).
 
 <h2 class="pdoc-module-header" id="ResourceOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L141">interface ResourceOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L143">interface ResourceOptions</a>
 </h2>
 
 ResourceOptions is a bag of optional settings that control a resource's behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L153">property dependsOn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L155">property dependsOn</a>
 </h3>
 
 ```typescript
@@ -893,7 +893,7 @@ dependsOn?: Resource[] | Resource;
 An optional additional explicit dependencies on other resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L145">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L147">property id</a>
 </h3>
 
 ```typescript
@@ -904,7 +904,7 @@ id?: Input<ID>;
 An optional existing ID to load, rather than create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L149">property parent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L151">property parent</a>
 </h3>
 
 ```typescript
@@ -915,7 +915,7 @@ parent?: Resource;
 An optional parent resource to which this resource belongs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L157">property protect</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L159">property protect</a>
 </h3>
 
 ```typescript
@@ -934,7 +934,7 @@ type ID = string;
 ```
 
 <h2 class="pdoc-module-header" id="Input">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L487">type Input</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L489">type Input</a>
 </h2>
 
 ```typescript
@@ -946,7 +946,7 @@ Input is a property input for a resource.  It may be a promptly available T, a p
 for one, or the output from a existing Resource.
 
 <h2 class="pdoc-module-header" id="Inputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L493">type Inputs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L495">type Inputs</a>
 </h2>
 
 ```typescript

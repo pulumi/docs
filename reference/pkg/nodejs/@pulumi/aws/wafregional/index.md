@@ -50,13 +50,13 @@ title: Module wafregional
 
 
 <h2 class="pdoc-module-header" id="ByteMatchSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L9">class ByteMatchSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L10">class ByteMatchSet</a>
 </h2>
 
 Provides a WAF Regional Byte Match Set Resource for use with Application Load Balancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -71,7 +71,7 @@ Create a ByteMatchSet resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -103,7 +103,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L29">property byteMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L30">property byteMatchTuples</a>
 </h3>
 
 ```typescript
@@ -114,7 +114,7 @@ public byteMatchTuples: pulumi.Output<{ ... }[] | undefined>;
 Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L25">property byte_match_tuple</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L26">property byte_match_tuple</a>
 </h3>
 
 ```typescript
@@ -137,7 +137,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -160,13 +160,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="GeoMatchSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L9">class GeoMatchSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L10">class GeoMatchSet</a>
 </h2>
 
 Provides a WAF Regional Geo Match Set Resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L29">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L30">constructor</a>
 </h3>
 
 ```typescript
@@ -181,7 +181,7 @@ Create a GeoMatchSet resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -213,7 +213,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L25">property geoMatchConstraints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L26">property geoMatchConstraints</a>
 </h3>
 
 ```typescript
@@ -236,7 +236,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -259,13 +259,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IpSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L9">class IpSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L10">class IpSet</a>
 </h2>
 
 Provides a WAF Regional IPSet Resource for use with Application Load Balancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -280,7 +280,7 @@ Create a IpSet resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -312,7 +312,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -335,7 +335,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L29">property ipSetDescriptors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L30">property ipSetDescriptors</a>
 </h3>
 
 ```typescript
@@ -346,7 +346,7 @@ public ipSetDescriptors: pulumi.Output<{ ... }[] | undefined>;
 One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -369,13 +369,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RateBasedRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L9">class RateBasedRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L10">class RateBasedRule</a>
 </h2>
 
 Provides a WAF Rate Based Rule Resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L41">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L42">constructor</a>
 </h3>
 
 ```typescript
@@ -390,7 +390,7 @@ Create a RateBasedRule resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -434,7 +434,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L25">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L26">property metricName</a>
 </h3>
 
 ```typescript
@@ -445,7 +445,7 @@ public metricName: pulumi.Output<string>;
 The name or description for the Amazon CloudWatch metric of this rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -456,7 +456,7 @@ public name: pulumi.Output<string>;
 The name or description of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L33">property predicates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L34">property predicates</a>
 </h3>
 
 ```typescript
@@ -467,7 +467,7 @@ public predicates: pulumi.Output<{ ... }[] | undefined>;
 One of ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L37">property rateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L38">property rateKey</a>
 </h3>
 
 ```typescript
@@ -478,7 +478,7 @@ public rateKey: pulumi.Output<string>;
 Valid value is IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L41">property rateLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L42">property rateLimit</a>
 </h3>
 
 ```typescript
@@ -501,13 +501,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RegexMatchSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L9">class RegexMatchSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L10">class RegexMatchSet</a>
 </h2>
 
 Provides a WAF Regional Regex Match Set Resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L30">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L31">constructor</a>
 </h3>
 
 ```typescript
@@ -522,7 +522,7 @@ Create a RegexMatchSet resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -566,7 +566,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L26">property name</a>
 </h3>
 
 ```typescript
@@ -577,7 +577,7 @@ public name: pulumi.Output<string>;
 The name or description of the Regex Match Set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L30">property regexMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L31">property regexMatchTuples</a>
 </h3>
 
 ```typescript
@@ -601,13 +601,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RegexPatternSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L9">class RegexPatternSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L10">class RegexPatternSet</a>
 </h2>
 
 Provides a WAF Regional Regex Pattern Set Resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L29">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L30">constructor</a>
 </h3>
 
 ```typescript
@@ -622,7 +622,7 @@ Create a RegexPatternSet resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -666,7 +666,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L26">property name</a>
 </h3>
 
 ```typescript
@@ -677,7 +677,7 @@ public name: pulumi.Output<string>;
 The name or description of the Regex Pattern Set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L29">property regexPatternStrings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L30">property regexPatternStrings</a>
 </h3>
 
 ```typescript
@@ -700,13 +700,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Rule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L9">class Rule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L10">class Rule</a>
 </h2>
 
 Provides an WAF Regional Rule Resource for use with Application Load Balancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -721,7 +721,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -765,7 +765,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L25">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L26">property metricName</a>
 </h3>
 
 ```typescript
@@ -776,7 +776,7 @@ public metricName: pulumi.Output<string>;
 The name or description for the Amazon CloudWatch metric of this rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -787,7 +787,7 @@ public name: pulumi.Output<string>;
 The name or description of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L33">property predicates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L34">property predicates</a>
 </h3>
 
 ```typescript
@@ -810,13 +810,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RuleGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L9">class RuleGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L10">class RuleGroup</a>
 </h2>
 
 Provides a WAF Regional Rule Group Resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -831,7 +831,7 @@ Create a RuleGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -863,7 +863,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L25">property activatedRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L26">property activatedRules</a>
 </h3>
 
 ```typescript
@@ -886,7 +886,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L29">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L30">property metricName</a>
 </h3>
 
 ```typescript
@@ -897,7 +897,7 @@ public metricName: pulumi.Output<string>;
 A friendly name for the metrics from the rule group
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -920,13 +920,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SizeConstraintSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L9">class SizeConstraintSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L10">class SizeConstraintSet</a>
 </h2>
 
 Provides a WAF Regional Size Constraint Set Resource for use with Application Load Balancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L29">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L30">constructor</a>
 </h3>
 
 ```typescript
@@ -941,7 +941,7 @@ Create a SizeConstraintSet resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -985,7 +985,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L26">property name</a>
 </h3>
 
 ```typescript
@@ -996,7 +996,7 @@ public name: pulumi.Output<string>;
 The name or description of the Size Constraint Set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L29">property sizeConstraints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L30">property sizeConstraints</a>
 </h3>
 
 ```typescript
@@ -1019,13 +1019,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SqlInjectionMatchSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L9">class SqlInjectionMatchSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L10">class SqlInjectionMatchSet</a>
 </h2>
 
 Provides a WAF Regional SQL Injection Match Set Resource for use with Application Load Balancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L29">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L30">constructor</a>
 </h3>
 
 ```typescript
@@ -1040,7 +1040,7 @@ Create a SqlInjectionMatchSet resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1084,7 +1084,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L26">property name</a>
 </h3>
 
 ```typescript
@@ -1095,7 +1095,7 @@ public name: pulumi.Output<string>;
 The name or description of the SizeConstraintSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L29">property sqlInjectionMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L30">property sqlInjectionMatchTuples</a>
 </h3>
 
 ```typescript
@@ -1118,13 +1118,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="WebAcl">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L9">class WebAcl</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L10">class WebAcl</a>
 </h2>
 
 Provides a WAF Regional Web ACL Resource for use with Application Load Balancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -1139,7 +1139,7 @@ Create a WebAcl resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1171,7 +1171,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L25">property defaultAction</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L26">property defaultAction</a>
 </h3>
 
 ```typescript
@@ -1194,7 +1194,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L29">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L30">property metricName</a>
 </h3>
 
 ```typescript
@@ -1205,7 +1205,7 @@ public metricName: pulumi.Output<string>;
 The name or description for the Amazon CloudWatch metric of this web ACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -1216,7 +1216,7 @@ public name: pulumi.Output<string>;
 The name or description of the web ACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L37">property rules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L38">property rules</a>
 </h3>
 
 ```typescript
@@ -1239,7 +1239,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="WebAclAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L11">class WebAclAssociation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L12">class WebAclAssociation</a>
 </h2>
 
 Provides a resource to create an association between a WAF Regional WebACL and Application Load Balancer.
@@ -1247,7 +1247,7 @@ Provides a resource to create an association between a WAF Regional WebACL and A
 -> **Note:** An Application Load Balancer can only be associated with one WAF Regional WebACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L31">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L32">constructor</a>
 </h3>
 
 ```typescript
@@ -1262,7 +1262,7 @@ Create a WebAclAssociation resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -1306,7 +1306,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L27">property resourceArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L28">property resourceArn</a>
 </h3>
 
 ```typescript
@@ -1329,7 +1329,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L31">property webAclId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L32">property webAclId</a>
 </h3>
 
 ```typescript
@@ -1340,13 +1340,13 @@ public webAclId: pulumi.Output<string>;
 The ID of the WAF Regional WebACL to create an association.
 
 <h2 class="pdoc-module-header" id="XssMatchSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L9">class XssMatchSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L10">class XssMatchSet</a>
 </h2>
 
 Provides a WAF Regional XSS Match Set Resource for use with Application Load Balancer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L29">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L30">constructor</a>
 </h3>
 
 ```typescript
@@ -1361,7 +1361,7 @@ Create a XssMatchSet resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1405,7 +1405,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L26">property name</a>
 </h3>
 
 ```typescript
@@ -1428,7 +1428,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L29">property xssMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L30">property xssMatchTuples</a>
 </h3>
 
 ```typescript
@@ -1439,13 +1439,13 @@ public xssMatchTuples: pulumi.Output<{ ... }[] | undefined>;
 The parts of web requests that you want to inspect for cross-site scripting attacks.
 
 <h2 class="pdoc-module-header" id="ByteMatchSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L81">interface ByteMatchSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L82">interface ByteMatchSetArgs</a>
 </h2>
 
 The set of arguments for constructing a ByteMatchSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L89">property byteMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L90">property byteMatchTuples</a>
 </h3>
 
 ```typescript
@@ -1456,7 +1456,7 @@ byteMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L85">property byte_match_tuple</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L86">property byte_match_tuple</a>
 </h3>
 
 ```typescript
@@ -1467,7 +1467,7 @@ byte_match_tuple?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 **Deprecated**, use `byte_match_tuples` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L93">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L94">property name</a>
 </h3>
 
 ```typescript
@@ -1478,13 +1478,13 @@ name?: pulumi.Input<string>;
 The name or description of the ByteMatchSet.
 
 <h2 class="pdoc-module-header" id="ByteMatchSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L63">interface ByteMatchSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L64">interface ByteMatchSetState</a>
 </h2>
 
 Input properties used for looking up and filtering ByteMatchSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L71">property byteMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L72">property byteMatchTuples</a>
 </h3>
 
 ```typescript
@@ -1495,7 +1495,7 @@ byteMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L67">property byte_match_tuple</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L68">property byte_match_tuple</a>
 </h3>
 
 ```typescript
@@ -1506,7 +1506,7 @@ byte_match_tuple?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 **Deprecated**, use `byte_match_tuples` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L75">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/byteMatchSet.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -1517,13 +1517,13 @@ name?: pulumi.Input<string>;
 The name or description of the ByteMatchSet.
 
 <h2 class="pdoc-module-header" id="GeoMatchSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L71">interface GeoMatchSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L72">interface GeoMatchSetArgs</a>
 </h2>
 
 The set of arguments for constructing a GeoMatchSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L75">property geoMatchConstraints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L76">property geoMatchConstraints</a>
 </h3>
 
 ```typescript
@@ -1534,7 +1534,7 @@ geoMatchConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L79">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L80">property name</a>
 </h3>
 
 ```typescript
@@ -1545,13 +1545,13 @@ name?: pulumi.Input<string>;
 The name or description of the Geo Match Set.
 
 <h2 class="pdoc-module-header" id="GeoMatchSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L57">interface GeoMatchSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L58">interface GeoMatchSetState</a>
 </h2>
 
 Input properties used for looking up and filtering GeoMatchSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L61">property geoMatchConstraints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L62">property geoMatchConstraints</a>
 </h3>
 
 ```typescript
@@ -1562,7 +1562,7 @@ geoMatchConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L65">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/geoMatchSet.ts#L66">property name</a>
 </h3>
 
 ```typescript
@@ -1573,13 +1573,13 @@ name?: pulumi.Input<string>;
 The name or description of the Geo Match Set.
 
 <h2 class="pdoc-module-header" id="IpSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L81">interface IpSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L82">interface IpSetArgs</a>
 </h2>
 
 The set of arguments for constructing a IpSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L85">property ipSetDescriptors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L86">property ipSetDescriptors</a>
 </h3>
 
 ```typescript
@@ -1590,7 +1590,7 @@ ipSetDescriptors?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L89">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L90">property name</a>
 </h3>
 
 ```typescript
@@ -1601,13 +1601,13 @@ name?: pulumi.Input<string>;
 The name or description of the IPSet.
 
 <h2 class="pdoc-module-header" id="IpSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L63">interface IpSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L64">interface IpSetState</a>
 </h2>
 
 Input properties used for looking up and filtering IpSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L67">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L68">property arn</a>
 </h3>
 
 ```typescript
@@ -1618,7 +1618,7 @@ arn?: pulumi.Input<string>;
 The ARN of the WAF IPSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L71">property ipSetDescriptors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L72">property ipSetDescriptors</a>
 </h3>
 
 ```typescript
@@ -1629,7 +1629,7 @@ ipSetDescriptors?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L75">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ipSet.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -1640,13 +1640,13 @@ name?: pulumi.Input<string>;
 The name or description of the IPSet.
 
 <h2 class="pdoc-module-header" id="RateBasedRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L110">interface RateBasedRuleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L111">interface RateBasedRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a RateBasedRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L114">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L115">property metricName</a>
 </h3>
 
 ```typescript
@@ -1657,7 +1657,7 @@ metricName: pulumi.Input<string>;
 The name or description for the Amazon CloudWatch metric of this rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L118">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L119">property name</a>
 </h3>
 
 ```typescript
@@ -1668,7 +1668,7 @@ name?: pulumi.Input<string>;
 The name or description of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L122">property predicates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L123">property predicates</a>
 </h3>
 
 ```typescript
@@ -1679,7 +1679,7 @@ predicates?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 One of ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L126">property rateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L127">property rateKey</a>
 </h3>
 
 ```typescript
@@ -1690,7 +1690,7 @@ rateKey: pulumi.Input<string>;
 Valid value is IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L130">property rateLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L131">property rateLimit</a>
 </h3>
 
 ```typescript
@@ -1701,13 +1701,13 @@ rateLimit: pulumi.Input<number>;
 The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 2000.
 
 <h2 class="pdoc-module-header" id="RateBasedRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L84">interface RateBasedRuleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L85">interface RateBasedRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering RateBasedRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L88">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L89">property metricName</a>
 </h3>
 
 ```typescript
@@ -1718,7 +1718,7 @@ metricName?: pulumi.Input<string>;
 The name or description for the Amazon CloudWatch metric of this rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L92">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L93">property name</a>
 </h3>
 
 ```typescript
@@ -1729,7 +1729,7 @@ name?: pulumi.Input<string>;
 The name or description of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L96">property predicates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L97">property predicates</a>
 </h3>
 
 ```typescript
@@ -1740,7 +1740,7 @@ predicates?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 One of ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L100">property rateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L101">property rateKey</a>
 </h3>
 
 ```typescript
@@ -1751,7 +1751,7 @@ rateKey?: pulumi.Input<string>;
 Valid value is IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L104">property rateLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rateBasedRule.ts#L105">property rateLimit</a>
 </h3>
 
 ```typescript
@@ -1762,13 +1762,13 @@ rateLimit?: pulumi.Input<number>;
 The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 2000.
 
 <h2 class="pdoc-module-header" id="RegexMatchSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L73">interface RegexMatchSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L74">interface RegexMatchSetArgs</a>
 </h2>
 
 The set of arguments for constructing a RegexMatchSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L77">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L78">property name</a>
 </h3>
 
 ```typescript
@@ -1779,7 +1779,7 @@ name?: pulumi.Input<string>;
 The name or description of the Regex Match Set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L82">property regexMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L83">property regexMatchTuples</a>
 </h3>
 
 ```typescript
@@ -1791,13 +1791,13 @@ The regular expression pattern that you want AWS WAF to search for in web reques
 the location in requests that you want AWS WAF to search, and other settings. See below.
 
 <h2 class="pdoc-module-header" id="RegexMatchSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L58">interface RegexMatchSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L59">interface RegexMatchSetState</a>
 </h2>
 
 Input properties used for looking up and filtering RegexMatchSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L62">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L63">property name</a>
 </h3>
 
 ```typescript
@@ -1808,7 +1808,7 @@ name?: pulumi.Input<string>;
 The name or description of the Regex Match Set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L67">property regexMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexMatchSet.ts#L68">property regexMatchTuples</a>
 </h3>
 
 ```typescript
@@ -1820,13 +1820,13 @@ The regular expression pattern that you want AWS WAF to search for in web reques
 the location in requests that you want AWS WAF to search, and other settings. See below.
 
 <h2 class="pdoc-module-header" id="RegexPatternSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L71">interface RegexPatternSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L72">interface RegexPatternSetArgs</a>
 </h2>
 
 The set of arguments for constructing a RegexPatternSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L75">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -1837,7 +1837,7 @@ name?: pulumi.Input<string>;
 The name or description of the Regex Pattern Set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L79">property regexPatternStrings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L80">property regexPatternStrings</a>
 </h3>
 
 ```typescript
@@ -1848,13 +1848,13 @@ regexPatternStrings?: pulumi.Input<pulumi.Input<string>[]>;
 A list of regular expression (regex) patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`.
 
 <h2 class="pdoc-module-header" id="RegexPatternSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L57">interface RegexPatternSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L58">interface RegexPatternSetState</a>
 </h2>
 
 Input properties used for looking up and filtering RegexPatternSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L61">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L62">property name</a>
 </h3>
 
 ```typescript
@@ -1865,7 +1865,7 @@ name?: pulumi.Input<string>;
 The name or description of the Regex Pattern Set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L65">property regexPatternStrings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/regexPatternSet.ts#L66">property regexPatternStrings</a>
 </h3>
 
 ```typescript
@@ -1876,13 +1876,13 @@ regexPatternStrings?: pulumi.Input<pulumi.Input<string>[]>;
 A list of regular expression (regex) patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`.
 
 <h2 class="pdoc-module-header" id="RuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L84">interface RuleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L85">interface RuleArgs</a>
 </h2>
 
 The set of arguments for constructing a Rule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L88">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L89">property metricName</a>
 </h3>
 
 ```typescript
@@ -1893,7 +1893,7 @@ metricName: pulumi.Input<string>;
 The name or description for the Amazon CloudWatch metric of this rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L92">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L93">property name</a>
 </h3>
 
 ```typescript
@@ -1904,7 +1904,7 @@ name?: pulumi.Input<string>;
 The name or description of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L96">property predicates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L97">property predicates</a>
 </h3>
 
 ```typescript
@@ -1915,13 +1915,13 @@ predicates?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The objects to include in a rule.
 
 <h2 class="pdoc-module-header" id="RuleGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L84">interface RuleGroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L85">interface RuleGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a RuleGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L88">property activatedRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L89">property activatedRules</a>
 </h3>
 
 ```typescript
@@ -1932,7 +1932,7 @@ activatedRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of activated rules, see below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L92">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L93">property metricName</a>
 </h3>
 
 ```typescript
@@ -1943,7 +1943,7 @@ metricName: pulumi.Input<string>;
 A friendly name for the metrics from the rule group
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L96">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L97">property name</a>
 </h3>
 
 ```typescript
@@ -1954,13 +1954,13 @@ name?: pulumi.Input<string>;
 A friendly name of the rule group
 
 <h2 class="pdoc-module-header" id="RuleGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L66">interface RuleGroupState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L67">interface RuleGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering RuleGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L70">property activatedRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L71">property activatedRules</a>
 </h3>
 
 ```typescript
@@ -1971,7 +1971,7 @@ activatedRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of activated rules, see below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L74">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L75">property metricName</a>
 </h3>
 
 ```typescript
@@ -1982,7 +1982,7 @@ metricName?: pulumi.Input<string>;
 A friendly name for the metrics from the rule group
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L78">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/ruleGroup.ts#L79">property name</a>
 </h3>
 
 ```typescript
@@ -1993,13 +1993,13 @@ name?: pulumi.Input<string>;
 A friendly name of the rule group
 
 <h2 class="pdoc-module-header" id="RuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L66">interface RuleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L67">interface RuleState</a>
 </h2>
 
 Input properties used for looking up and filtering Rule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L70">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L71">property metricName</a>
 </h3>
 
 ```typescript
@@ -2010,7 +2010,7 @@ metricName?: pulumi.Input<string>;
 The name or description for the Amazon CloudWatch metric of this rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L74">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L75">property name</a>
 </h3>
 
 ```typescript
@@ -2021,7 +2021,7 @@ name?: pulumi.Input<string>;
 The name or description of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L78">property predicates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/rule.ts#L79">property predicates</a>
 </h3>
 
 ```typescript
@@ -2032,13 +2032,13 @@ predicates?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The objects to include in a rule.
 
 <h2 class="pdoc-module-header" id="SizeConstraintSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L71">interface SizeConstraintSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L72">interface SizeConstraintSetArgs</a>
 </h2>
 
 The set of arguments for constructing a SizeConstraintSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L75">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -2049,7 +2049,7 @@ name?: pulumi.Input<string>;
 The name or description of the Size Constraint Set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L79">property sizeConstraints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L80">property sizeConstraints</a>
 </h3>
 
 ```typescript
@@ -2060,13 +2060,13 @@ sizeConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Specifies the parts of web requests that you want to inspect the size of.
 
 <h2 class="pdoc-module-header" id="SizeConstraintSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L57">interface SizeConstraintSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L58">interface SizeConstraintSetState</a>
 </h2>
 
 Input properties used for looking up and filtering SizeConstraintSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L61">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L62">property name</a>
 </h3>
 
 ```typescript
@@ -2077,7 +2077,7 @@ name?: pulumi.Input<string>;
 The name or description of the Size Constraint Set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L65">property sizeConstraints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sizeConstraintSet.ts#L66">property sizeConstraints</a>
 </h3>
 
 ```typescript
@@ -2088,13 +2088,13 @@ sizeConstraints?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Specifies the parts of web requests that you want to inspect the size of.
 
 <h2 class="pdoc-module-header" id="SqlInjectionMatchSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L71">interface SqlInjectionMatchSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L72">interface SqlInjectionMatchSetArgs</a>
 </h2>
 
 The set of arguments for constructing a SqlInjectionMatchSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L75">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -2105,7 +2105,7 @@ name?: pulumi.Input<string>;
 The name or description of the SizeConstraintSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L79">property sqlInjectionMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L80">property sqlInjectionMatchTuples</a>
 </h3>
 
 ```typescript
@@ -2116,13 +2116,13 @@ sqlInjectionMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
 
 <h2 class="pdoc-module-header" id="SqlInjectionMatchSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L57">interface SqlInjectionMatchSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L58">interface SqlInjectionMatchSetState</a>
 </h2>
 
 Input properties used for looking up and filtering SqlInjectionMatchSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L61">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L62">property name</a>
 </h3>
 
 ```typescript
@@ -2133,7 +2133,7 @@ name?: pulumi.Input<string>;
 The name or description of the SizeConstraintSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L65">property sqlInjectionMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/sqlInjectionMatchSet.ts#L66">property sqlInjectionMatchTuples</a>
 </h3>
 
 ```typescript
@@ -2144,13 +2144,13 @@ sqlInjectionMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
 
 <h2 class="pdoc-module-header" id="WebAclArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L97">interface WebAclArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L98">interface WebAclArgs</a>
 </h2>
 
 The set of arguments for constructing a WebAcl resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L101">property defaultAction</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L102">property defaultAction</a>
 </h3>
 
 ```typescript
@@ -2161,7 +2161,7 @@ defaultAction: pulumi.Input<{ ... }>;
 The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L105">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L106">property metricName</a>
 </h3>
 
 ```typescript
@@ -2172,7 +2172,7 @@ metricName: pulumi.Input<string>;
 The name or description for the Amazon CloudWatch metric of this web ACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L109">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L110">property name</a>
 </h3>
 
 ```typescript
@@ -2183,7 +2183,7 @@ name?: pulumi.Input<string>;
 The name or description of the web ACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L113">property rules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L114">property rules</a>
 </h3>
 
 ```typescript
@@ -2194,13 +2194,13 @@ rules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The rules to associate with the web ACL and the settings for each rule.
 
 <h2 class="pdoc-module-header" id="WebAclAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L79">interface WebAclAssociationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L80">interface WebAclAssociationArgs</a>
 </h2>
 
 The set of arguments for constructing a WebAclAssociation resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L83">property resourceArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L84">property resourceArn</a>
 </h3>
 
 ```typescript
@@ -2211,7 +2211,7 @@ resourceArn: pulumi.Input<string>;
 Application Load Balancer ARN to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L87">property webAclId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L88">property webAclId</a>
 </h3>
 
 ```typescript
@@ -2222,13 +2222,13 @@ webAclId: pulumi.Input<string>;
 The ID of the WAF Regional WebACL to create an association.
 
 <h2 class="pdoc-module-header" id="WebAclAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L65">interface WebAclAssociationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L66">interface WebAclAssociationState</a>
 </h2>
 
 Input properties used for looking up and filtering WebAclAssociation resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L69">property resourceArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L70">property resourceArn</a>
 </h3>
 
 ```typescript
@@ -2239,7 +2239,7 @@ resourceArn?: pulumi.Input<string>;
 Application Load Balancer ARN to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L73">property webAclId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAclAssociation.ts#L74">property webAclId</a>
 </h3>
 
 ```typescript
@@ -2250,13 +2250,13 @@ webAclId?: pulumi.Input<string>;
 The ID of the WAF Regional WebACL to create an association.
 
 <h2 class="pdoc-module-header" id="WebAclState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L75">interface WebAclState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L76">interface WebAclState</a>
 </h2>
 
 Input properties used for looking up and filtering WebAcl resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L79">property defaultAction</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L80">property defaultAction</a>
 </h3>
 
 ```typescript
@@ -2267,7 +2267,7 @@ defaultAction?: pulumi.Input<{ ... }>;
 The action that you want AWS WAF Regional to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L83">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L84">property metricName</a>
 </h3>
 
 ```typescript
@@ -2278,7 +2278,7 @@ metricName?: pulumi.Input<string>;
 The name or description for the Amazon CloudWatch metric of this web ACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L87">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L88">property name</a>
 </h3>
 
 ```typescript
@@ -2289,7 +2289,7 @@ name?: pulumi.Input<string>;
 The name or description of the web ACL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L91">property rules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/webAcl.ts#L92">property rules</a>
 </h3>
 
 ```typescript
@@ -2300,13 +2300,13 @@ rules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The rules to associate with the web ACL and the settings for each rule.
 
 <h2 class="pdoc-module-header" id="XssMatchSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L71">interface XssMatchSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L72">interface XssMatchSetArgs</a>
 </h2>
 
 The set of arguments for constructing a XssMatchSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L75">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -2317,7 +2317,7 @@ name?: pulumi.Input<string>;
 The name of the set
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L79">property xssMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L80">property xssMatchTuples</a>
 </h3>
 
 ```typescript
@@ -2328,13 +2328,13 @@ xssMatchTuples?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The parts of web requests that you want to inspect for cross-site scripting attacks.
 
 <h2 class="pdoc-module-header" id="XssMatchSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L57">interface XssMatchSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L58">interface XssMatchSetState</a>
 </h2>
 
 Input properties used for looking up and filtering XssMatchSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L61">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L62">property name</a>
 </h3>
 
 ```typescript
@@ -2345,7 +2345,7 @@ name?: pulumi.Input<string>;
 The name of the set
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L65">property xssMatchTuples</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/wafregional/xssMatchSet.ts#L66">property xssMatchTuples</a>
 </h3>
 
 ```typescript
