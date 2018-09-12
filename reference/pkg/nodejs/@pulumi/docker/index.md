@@ -18,6 +18,7 @@ import * as docker from "@pulumi/docker";
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#buildAndPushImage">function buildAndPushImage</a>
+* <a href="#buildAndPushImageAsync">function buildAndPushImageAsync</a>
 * <a href="#CacheFrom">interface CacheFrom</a>
 * <a href="#DockerBuild">interface DockerBuild</a>
 * <a href="#Registry">interface Registry</a>
@@ -26,22 +27,30 @@ import * as docker from "@pulumi/docker";
 
 
 <h2 class="pdoc-module-header" id="buildAndPushImage">
-<a class="pdoc-member-name" href="/docker.ts#L86">function buildAndPushImage</a>
+<a class="pdoc-member-name" href="/docker.ts#L118">function buildAndPushImage</a>
 </h2>
 
 ```typescript
 buildAndPushImage(imageName: string, pathOrBuild: string | DockerBuild, repositoryUrl: pulumi.Input<string>, logResource: pulumi.Resource, connectToRegistry: { ... }): pulumi.Output<string>
 ```
 
+<h2 class="pdoc-module-header" id="buildAndPushImageAsync">
+<a class="pdoc-member-name" href="/docker.ts#L131">function buildAndPushImageAsync</a>
+</h2>
+
+```typescript
+buildAndPushImageAsync(imageName: string, pathOrBuild: string | DockerBuild, repositoryUrl: string, logResource: pulumi.Resource, connectToRegistry: { ... }): Promise<string>
+```
+
 <h2 class="pdoc-module-header" id="CacheFrom">
-<a class="pdoc-member-name" href="/docker.ts#L41">interface CacheFrom</a>
+<a class="pdoc-member-name" href="/docker.ts#L32">interface CacheFrom</a>
 </h2>
 
 CacheFrom may be used to specify build stages to use for the Docker build cache. The final image
 is always implicitly included.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/docker.ts#L47">property stages</a>
+<a class="pdoc-child-name" href="/docker.ts#L38">property stages</a>
 </h3>
 
 ```typescript
@@ -54,13 +63,13 @@ built explicitly and pushed to the target repository. A given stage's image will
 "[stage-name]".
 
 <h2 class="pdoc-module-header" id="DockerBuild">
-<a class="pdoc-member-name" href="/docker.ts#L53">interface DockerBuild</a>
+<a class="pdoc-member-name" href="/docker.ts#L44">interface DockerBuild</a>
 </h2>
 
 DockerBuild may be used to specify detailed instructions about how to build a container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/docker.ts#L72">property args</a>
+<a class="pdoc-child-name" href="/docker.ts#L63">property args</a>
 </h3>
 
 ```typescript
@@ -73,7 +82,7 @@ flag allows you to pass built-time variables that can be accessed like environme
 inside the `RUN` instruction.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/docker.ts#L81">property cacheFrom</a>
+<a class="pdoc-child-name" href="/docker.ts#L72">property cacheFrom</a>
 </h3>
 
 ```typescript
@@ -87,7 +96,7 @@ parameter is `true`, only the final image will be pulled and passed to --cache-f
 a CacheFrom object, the stages named therein will also be pulled and passed to --cache-from.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/docker.ts#L61">property context</a>
+<a class="pdoc-child-name" href="/docker.ts#L52">property context</a>
 </h3>
 
 ```typescript
@@ -102,7 +111,7 @@ directory; if a relative path is used, it is relative to the current working dir
 Pulumi is evaluating.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/docker.ts#L66">property dockerfile</a>
+<a class="pdoc-child-name" href="/docker.ts#L57">property dockerfile</a>
 </h3>
 
 ```typescript
@@ -114,10 +123,10 @@ dockerfile may be used to override the default Dockerfile name and/or location. 
 it is assumed to be a file named Dockerfile in the root of the build context.
 
 <h2 class="pdoc-module-header" id="Registry">
-<a class="pdoc-member-name" href="/docker.ts#L26">interface Registry</a>
+<a class="pdoc-member-name" href="/docker.ts#L22">interface Registry</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/docker.ts#L29">property password</a>
+<a class="pdoc-child-name" href="/docker.ts#L25">property password</a>
 </h3>
 
 ```typescript
@@ -125,7 +134,7 @@ password: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/docker.ts#L27">property registry</a>
+<a class="pdoc-child-name" href="/docker.ts#L23">property registry</a>
 </h3>
 
 ```typescript
@@ -133,7 +142,7 @@ registry: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/docker.ts#L28">property username</a>
+<a class="pdoc-child-name" href="/docker.ts#L24">property username</a>
 </h3>
 
 ```typescript

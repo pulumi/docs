@@ -32,13 +32,13 @@ title: Module route53
 
 
 <h2 class="pdoc-module-header" id="DelegationSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L9">class DelegationSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L10">class DelegationSet</a>
 </h2>
 
 Provides a [Route53 Delegation Set](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html) resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L31">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L32">constructor</a>
 </h3>
 
 ```typescript
@@ -53,7 +53,7 @@ Create a DelegationSet resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -97,7 +97,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L26">property nameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L27">property nameServers</a>
 </h3>
 
 ```typescript
@@ -109,7 +109,7 @@ A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L31">property referenceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L32">property referenceName</a>
 </h3>
 
 ```typescript
@@ -133,13 +133,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="HealthCheck">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L11">class HealthCheck</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L12">class HealthCheck</a>
 </h2>
 
 Provides a Route53 health check.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L100">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L101">constructor</a>
 </h3>
 
 ```typescript
@@ -154,7 +154,7 @@ Create a HealthCheck resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -186,7 +186,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L27">property childHealthThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L28">property childHealthThreshold</a>
 </h3>
 
 ```typescript
@@ -197,7 +197,7 @@ public childHealthThreshold: pulumi.Output<number | undefined>;
 The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L31">property childHealthchecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L32">property childHealthchecks</a>
 </h3>
 
 ```typescript
@@ -208,7 +208,7 @@ public childHealthchecks: pulumi.Output<string[] | undefined>;
 For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L35">property cloudwatchAlarmName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L36">property cloudwatchAlarmName</a>
 </h3>
 
 ```typescript
@@ -219,7 +219,7 @@ public cloudwatchAlarmName: pulumi.Output<string | undefined>;
 The name of the CloudWatch alarm.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L39">property cloudwatchAlarmRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L40">property cloudwatchAlarmRegion</a>
 </h3>
 
 ```typescript
@@ -230,7 +230,7 @@ public cloudwatchAlarmRegion: pulumi.Output<string | undefined>;
 The CloudWatchRegion that the CloudWatch alarm was created in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L43">property enableSni</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L44">property enableSni</a>
 </h3>
 
 ```typescript
@@ -241,7 +241,7 @@ public enableSni: pulumi.Output<boolean>;
 A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L47">property failureThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L48">property failureThreshold</a>
 </h3>
 
 ```typescript
@@ -252,7 +252,7 @@ public failureThreshold: pulumi.Output<number | undefined>;
 The number of consecutive health checks that an endpoint must pass or fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L51">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L52">property fqdn</a>
 </h3>
 
 ```typescript
@@ -275,7 +275,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L55">property insufficientDataHealthStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L56">property insufficientDataHealthStatus</a>
 </h3>
 
 ```typescript
@@ -286,7 +286,7 @@ public insufficientDataHealthStatus: pulumi.Output<string | undefined>;
 The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L59">property invertHealthcheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L60">property invertHealthcheck</a>
 </h3>
 
 ```typescript
@@ -297,7 +297,7 @@ public invertHealthcheck: pulumi.Output<boolean | undefined>;
 A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L63">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L64">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -308,7 +308,7 @@ public ipAddress: pulumi.Output<string | undefined>;
 The IP address of the endpoint to be checked.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L67">property measureLatency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L68">property measureLatency</a>
 </h3>
 
 ```typescript
@@ -319,7 +319,7 @@ public measureLatency: pulumi.Output<boolean | undefined>;
 A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L71">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L72">property port</a>
 </h3>
 
 ```typescript
@@ -330,7 +330,7 @@ public port: pulumi.Output<number | undefined>;
 The port of the endpoint to be checked.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L76">property referenceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L77">property referenceName</a>
 </h3>
 
 ```typescript
@@ -342,7 +342,7 @@ This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L80">property regions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L81">property regions</a>
 </h3>
 
 ```typescript
@@ -353,7 +353,7 @@ public regions: pulumi.Output<string[] | undefined>;
 A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L84">property requestInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L85">property requestInterval</a>
 </h3>
 
 ```typescript
@@ -364,7 +364,7 @@ public requestInterval: pulumi.Output<number | undefined>;
 The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L88">property resourcePath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L89">property resourcePath</a>
 </h3>
 
 ```typescript
@@ -375,7 +375,7 @@ public resourcePath: pulumi.Output<string | undefined>;
 The path that you want Amazon Route 53 to request when performing health checks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L92">property searchString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L93">property searchString</a>
 </h3>
 
 ```typescript
@@ -386,7 +386,7 @@ public searchString: pulumi.Output<string | undefined>;
 String searched in the first 5120 bytes of the response body for check to be considered healthy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L96">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L97">property tags</a>
 </h3>
 
 ```typescript
@@ -397,7 +397,7 @@ public tags: pulumi.Output<Tags | undefined>;
 A mapping of tags to assign to the health check.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L100">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L101">property type</a>
 </h3>
 
 ```typescript
@@ -420,7 +420,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="QueryLog">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L15">class QueryLog</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L16">class QueryLog</a>
 </h2>
 
 Provides a Route53 query logging configuration resource.
@@ -432,7 +432,7 @@ the Route53 hosted zone must be public.
 See [Configuring Logging for DNS Queries](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html?console_help=true#query-logs-configuring) for additional details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L35">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L36">constructor</a>
 </h3>
 
 ```typescript
@@ -447,7 +447,7 @@ Create a QueryLog resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L24">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -479,7 +479,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L31">property cloudwatchLogGroupArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L32">property cloudwatchLogGroupArn</a>
 </h3>
 
 ```typescript
@@ -514,7 +514,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L35">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L36">property zoneId</a>
 </h3>
 
 ```typescript
@@ -525,13 +525,13 @@ public zoneId: pulumi.Output<string>;
 Route53 hosted zone ID to enable query logs.
 
 <h2 class="pdoc-module-header" id="Record">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L9">class Record</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L10">class Record</a>
 </h2>
 
 Provides a Route53 record resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L82">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L83">constructor</a>
 </h3>
 
 ```typescript
@@ -546,7 +546,7 @@ Create a Record resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -578,7 +578,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L26">property aliases</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L27">property aliases</a>
 </h3>
 
 ```typescript
@@ -590,7 +590,7 @@ An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L30">property allowOverwrite</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L31">property allowOverwrite</a>
 </h3>
 
 ```typescript
@@ -601,7 +601,7 @@ public allowOverwrite: pulumi.Output<boolean | undefined>;
 Allow creation of this record in Terraform to overwrite an existing record, if any. This does not prevent other resources within Terraform or manual Route53 changes from overwriting this record. `true` by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L34">property failoverRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L35">property failoverRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -612,7 +612,7 @@ public failoverRoutingPolicies: pulumi.Output<{ ... }[] | undefined>;
 A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L38">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L39">property fqdn</a>
 </h3>
 
 ```typescript
@@ -623,7 +623,7 @@ public fqdn: pulumi.Output<string>;
 [FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L42">property geolocationRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L43">property geolocationRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -634,7 +634,7 @@ public geolocationRoutingPolicies: pulumi.Output<{ ... }[] | undefined>;
 A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L46">property healthCheckId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L47">property healthCheckId</a>
 </h3>
 
 ```typescript
@@ -657,7 +657,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L50">property latencyRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L51">property latencyRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -668,7 +668,7 @@ public latencyRoutingPolicies: pulumi.Output<{ ... }[] | undefined>;
 A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L54">property multivalueAnswerRoutingPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L55">property multivalueAnswerRoutingPolicy</a>
 </h3>
 
 ```typescript
@@ -679,7 +679,7 @@ public multivalueAnswerRoutingPolicy: pulumi.Output<boolean | undefined>;
 Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L58">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L59">property name</a>
 </h3>
 
 ```typescript
@@ -690,7 +690,7 @@ public name: pulumi.Output<string>;
 DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L62">property records</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L63">property records</a>
 </h3>
 
 ```typescript
@@ -701,7 +701,7 @@ public records: pulumi.Output<string[] | undefined>;
 A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the Terraform configuration string (e.g. `"first255characters\"\"morecharacters"`).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L66">property setIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L67">property setIdentifier</a>
 </h3>
 
 ```typescript
@@ -712,7 +712,7 @@ public setIdentifier: pulumi.Output<string | undefined>;
 Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L70">property ttl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L71">property ttl</a>
 </h3>
 
 ```typescript
@@ -723,7 +723,7 @@ public ttl: pulumi.Output<number | undefined>;
 The TTL of the record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L74">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L75">property type</a>
 </h3>
 
 ```typescript
@@ -746,7 +746,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L78">property weightedRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L79">property weightedRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -757,7 +757,7 @@ public weightedRoutingPolicies: pulumi.Output<{ ... }[] | undefined>;
 A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L82">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L83">property zoneId</a>
 </h3>
 
 ```typescript
@@ -765,16 +765,16 @@ public zoneId: pulumi.Output<string>;
 ```
 
 
-Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See [`resource_elb.zone_id`](/docs/providers/aws/r/elb.html#zone_id) for example.
+Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See [`resource_elb.zone_id`](https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id) for example.
 
 <h2 class="pdoc-module-header" id="Zone">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L11">class Zone</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L12">class Zone</a>
 </h2>
 
 Provides a Route53 Hosted Zone resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L63">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L64">constructor</a>
 </h3>
 
 ```typescript
@@ -789,7 +789,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -821,7 +821,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L27">property comment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L28">property comment</a>
 </h3>
 
 ```typescript
@@ -832,7 +832,7 @@ public comment: pulumi.Output<string>;
 A comment for the hosted zone. Defaults to 'Managed by Terraform'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L32">property delegationSetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L33">property delegationSetId</a>
 </h3>
 
 ```typescript
@@ -844,7 +844,7 @@ The ID of the reusable delegation set whose NS records you want to assign to the
 Conflicts w/ `vpc_id` as delegation sets can only be used for public zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L37">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L38">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -868,7 +868,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L41">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -879,7 +879,7 @@ public name: pulumi.Output<string>;
 This is the name of the hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L46">property nameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L47">property nameServers</a>
 </h3>
 
 ```typescript
@@ -891,7 +891,7 @@ A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L50">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L51">property tags</a>
 </h3>
 
 ```typescript
@@ -914,7 +914,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L55">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L56">property vpcId</a>
 </h3>
 
 ```typescript
@@ -926,7 +926,7 @@ The VPC to associate with a private hosted zone. Specifying `vpc_id` will create
 Conflicts w/ `delegation_set_id` as delegation sets can only be used for public zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L59">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L60">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -937,7 +937,7 @@ public vpcRegion: pulumi.Output<string>;
 The VPC's region. Defaults to the region of the AWS provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L63">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L64">property zoneId</a>
 </h3>
 
 ```typescript
@@ -948,13 +948,13 @@ public zoneId: pulumi.Output<string>;
 The Hosted Zone ID. This can be referenced by zone records.
 
 <h2 class="pdoc-module-header" id="ZoneAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L9">class ZoneAssociation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L10">class ZoneAssociation</a>
 </h2>
 
 Provides a Route53 private Hosted Zone to VPC association resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -969,7 +969,7 @@ Create a ZoneAssociation resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1025,7 +1025,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L25">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L26">property vpcId</a>
 </h3>
 
 ```typescript
@@ -1036,7 +1036,7 @@ public vpcId: pulumi.Output<string>;
 The VPC to associate with the private hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L29">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L30">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -1047,7 +1047,7 @@ public vpcRegion: pulumi.Output<string>;
 The VPC's region. Defaults to the region of the AWS provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L33">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L34">property zoneId</a>
 </h3>
 
 ```typescript
@@ -1058,7 +1058,7 @@ public zoneId: pulumi.Output<string>;
 The private hosted zone to associate.
 
 <h2 class="pdoc-module-header" id="getZone">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L11">function getZone</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L12">function getZone</a>
 </h2>
 
 ```typescript
@@ -1071,13 +1071,13 @@ getZone(args?: GetZoneArgs, opts?: pulumi.InvokeOptions): Promise<GetZoneResult>
 This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.
 
 <h2 class="pdoc-module-header" id="DelegationSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L75">interface DelegationSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L76">interface DelegationSetArgs</a>
 </h2>
 
 The set of arguments for constructing a DelegationSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L80">property referenceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L81">property referenceName</a>
 </h3>
 
 ```typescript
@@ -1089,13 +1089,13 @@ This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
 
 <h2 class="pdoc-module-header" id="DelegationSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L59">interface DelegationSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L60">interface DelegationSetState</a>
 </h2>
 
 Input properties used for looking up and filtering DelegationSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L64">property nameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L65">property nameServers</a>
 </h3>
 
 ```typescript
@@ -1107,7 +1107,7 @@ A list of authoritative name servers for the hosted zone
 (effectively a list of NS records).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L69">property referenceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts#L70">property referenceName</a>
 </h3>
 
 ```typescript
@@ -1119,13 +1119,13 @@ This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
 
 <h2 class="pdoc-module-header" id="GetZoneArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L28">interface GetZoneArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L29">interface GetZoneArgs</a>
 </h2>
 
 A collection of arguments for invoking getZone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L29">property callerReference</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L30">property callerReference</a>
 </h3>
 
 ```typescript
@@ -1133,7 +1133,7 @@ callerReference?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L30">property comment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L31">property comment</a>
 </h3>
 
 ```typescript
@@ -1141,7 +1141,7 @@ comment?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L34">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L35">property name</a>
 </h3>
 
 ```typescript
@@ -1152,7 +1152,7 @@ name?: string;
 The Hosted Zone name of the desired Hosted Zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L38">property privateZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L39">property privateZone</a>
 </h3>
 
 ```typescript
@@ -1163,7 +1163,7 @@ privateZone?: boolean;
 Used with `name` field to get a private Hosted Zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L39">property resourceRecordSetCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L40">property resourceRecordSetCount</a>
 </h3>
 
 ```typescript
@@ -1171,7 +1171,7 @@ resourceRecordSetCount?: number;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L44">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L45">property tags</a>
 </h3>
 
 ```typescript
@@ -1183,7 +1183,7 @@ Used with `name` field. A mapping of tags, each pair of which must exactly match
 a pair on the desired Hosted Zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L48">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L49">property vpcId</a>
 </h3>
 
 ```typescript
@@ -1194,7 +1194,7 @@ vpcId?: string;
 Used with `name` field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L52">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L53">property zoneId</a>
 </h3>
 
 ```typescript
@@ -1205,13 +1205,13 @@ zoneId?: string;
 The Hosted Zone id of the desired Hosted Zone.
 
 <h2 class="pdoc-module-header" id="GetZoneResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L58">interface GetZoneResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L59">interface GetZoneResult</a>
 </h2>
 
 A collection of values returned by getZone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L62">property callerReference</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L63">property callerReference</a>
 </h3>
 
 ```typescript
@@ -1222,7 +1222,7 @@ callerReference: string;
 Caller Reference of the Hosted Zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L66">property comment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L67">property comment</a>
 </h3>
 
 ```typescript
@@ -1233,7 +1233,7 @@ comment: string;
 The comment field of the Hosted Zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L82">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L83">property id</a>
 </h3>
 
 ```typescript
@@ -1244,7 +1244,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L67">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L68">property name</a>
 </h3>
 
 ```typescript
@@ -1252,7 +1252,7 @@ name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L71">property nameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L72">property nameServers</a>
 </h3>
 
 ```typescript
@@ -1263,7 +1263,7 @@ nameServers: string[];
 The list of DNS name servers for the Hosted Zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L75">property resourceRecordSetCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L76">property resourceRecordSetCount</a>
 </h3>
 
 ```typescript
@@ -1274,7 +1274,7 @@ resourceRecordSetCount: number;
 the number of Record Set in the Hosted Zone
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L76">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L77">property tags</a>
 </h3>
 
 ```typescript
@@ -1282,7 +1282,7 @@ tags: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L77">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L78">property vpcId</a>
 </h3>
 
 ```typescript
@@ -1290,7 +1290,7 @@ vpcId: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L78">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L79">property zoneId</a>
 </h3>
 
 ```typescript
@@ -1298,13 +1298,13 @@ zoneId: string;
 ```
 
 <h2 class="pdoc-module-header" id="HealthCheckArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L248">interface HealthCheckArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L249">interface HealthCheckArgs</a>
 </h2>
 
 The set of arguments for constructing a HealthCheck resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L252">property childHealthThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L253">property childHealthThreshold</a>
 </h3>
 
 ```typescript
@@ -1315,7 +1315,7 @@ childHealthThreshold?: pulumi.Input<number>;
 The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L256">property childHealthchecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L257">property childHealthchecks</a>
 </h3>
 
 ```typescript
@@ -1326,7 +1326,7 @@ childHealthchecks?: pulumi.Input<pulumi.Input<string>[]>;
 For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L260">property cloudwatchAlarmName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L261">property cloudwatchAlarmName</a>
 </h3>
 
 ```typescript
@@ -1337,7 +1337,7 @@ cloudwatchAlarmName?: pulumi.Input<string>;
 The name of the CloudWatch alarm.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L264">property cloudwatchAlarmRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L265">property cloudwatchAlarmRegion</a>
 </h3>
 
 ```typescript
@@ -1348,7 +1348,7 @@ cloudwatchAlarmRegion?: pulumi.Input<string>;
 The CloudWatchRegion that the CloudWatch alarm was created in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L268">property enableSni</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L269">property enableSni</a>
 </h3>
 
 ```typescript
@@ -1359,7 +1359,7 @@ enableSni?: pulumi.Input<boolean>;
 A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L272">property failureThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L273">property failureThreshold</a>
 </h3>
 
 ```typescript
@@ -1370,7 +1370,7 @@ failureThreshold?: pulumi.Input<number>;
 The number of consecutive health checks that an endpoint must pass or fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L276">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L277">property fqdn</a>
 </h3>
 
 ```typescript
@@ -1381,7 +1381,7 @@ fqdn?: pulumi.Input<string>;
 The fully qualified domain name of the endpoint to be checked.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L280">property insufficientDataHealthStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L281">property insufficientDataHealthStatus</a>
 </h3>
 
 ```typescript
@@ -1392,7 +1392,7 @@ insufficientDataHealthStatus?: pulumi.Input<string>;
 The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L284">property invertHealthcheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L285">property invertHealthcheck</a>
 </h3>
 
 ```typescript
@@ -1403,7 +1403,7 @@ invertHealthcheck?: pulumi.Input<boolean>;
 A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L288">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L289">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -1414,7 +1414,7 @@ ipAddress?: pulumi.Input<string>;
 The IP address of the endpoint to be checked.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L292">property measureLatency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L293">property measureLatency</a>
 </h3>
 
 ```typescript
@@ -1425,7 +1425,7 @@ measureLatency?: pulumi.Input<boolean>;
 A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L296">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L297">property port</a>
 </h3>
 
 ```typescript
@@ -1436,7 +1436,7 @@ port?: pulumi.Input<number>;
 The port of the endpoint to be checked.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L301">property referenceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L302">property referenceName</a>
 </h3>
 
 ```typescript
@@ -1448,7 +1448,7 @@ This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L305">property regions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L306">property regions</a>
 </h3>
 
 ```typescript
@@ -1459,7 +1459,7 @@ regions?: pulumi.Input<pulumi.Input<string>[]>;
 A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L309">property requestInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L310">property requestInterval</a>
 </h3>
 
 ```typescript
@@ -1470,7 +1470,7 @@ requestInterval?: pulumi.Input<number>;
 The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L313">property resourcePath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L314">property resourcePath</a>
 </h3>
 
 ```typescript
@@ -1481,7 +1481,7 @@ resourcePath?: pulumi.Input<string>;
 The path that you want Amazon Route 53 to request when performing health checks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L317">property searchString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L318">property searchString</a>
 </h3>
 
 ```typescript
@@ -1492,7 +1492,7 @@ searchString?: pulumi.Input<string>;
 String searched in the first 5120 bytes of the response body for check to be considered healthy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L321">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L322">property tags</a>
 </h3>
 
 ```typescript
@@ -1503,7 +1503,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the health check.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L325">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L326">property type</a>
 </h3>
 
 ```typescript
@@ -1514,13 +1514,13 @@ type: pulumi.Input<string>;
 The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
 
 <h2 class="pdoc-module-header" id="HealthCheckState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L165">interface HealthCheckState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L166">interface HealthCheckState</a>
 </h2>
 
 Input properties used for looking up and filtering HealthCheck resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L169">property childHealthThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L170">property childHealthThreshold</a>
 </h3>
 
 ```typescript
@@ -1531,7 +1531,7 @@ childHealthThreshold?: pulumi.Input<number>;
 The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L173">property childHealthchecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L174">property childHealthchecks</a>
 </h3>
 
 ```typescript
@@ -1542,7 +1542,7 @@ childHealthchecks?: pulumi.Input<pulumi.Input<string>[]>;
 For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L177">property cloudwatchAlarmName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L178">property cloudwatchAlarmName</a>
 </h3>
 
 ```typescript
@@ -1553,7 +1553,7 @@ cloudwatchAlarmName?: pulumi.Input<string>;
 The name of the CloudWatch alarm.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L181">property cloudwatchAlarmRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L182">property cloudwatchAlarmRegion</a>
 </h3>
 
 ```typescript
@@ -1564,7 +1564,7 @@ cloudwatchAlarmRegion?: pulumi.Input<string>;
 The CloudWatchRegion that the CloudWatch alarm was created in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L185">property enableSni</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L186">property enableSni</a>
 </h3>
 
 ```typescript
@@ -1575,7 +1575,7 @@ enableSni?: pulumi.Input<boolean>;
 A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L189">property failureThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L190">property failureThreshold</a>
 </h3>
 
 ```typescript
@@ -1586,7 +1586,7 @@ failureThreshold?: pulumi.Input<number>;
 The number of consecutive health checks that an endpoint must pass or fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L193">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L194">property fqdn</a>
 </h3>
 
 ```typescript
@@ -1597,7 +1597,7 @@ fqdn?: pulumi.Input<string>;
 The fully qualified domain name of the endpoint to be checked.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L197">property insufficientDataHealthStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L198">property insufficientDataHealthStatus</a>
 </h3>
 
 ```typescript
@@ -1608,7 +1608,7 @@ insufficientDataHealthStatus?: pulumi.Input<string>;
 The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L201">property invertHealthcheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L202">property invertHealthcheck</a>
 </h3>
 
 ```typescript
@@ -1619,7 +1619,7 @@ invertHealthcheck?: pulumi.Input<boolean>;
 A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L205">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L206">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -1630,7 +1630,7 @@ ipAddress?: pulumi.Input<string>;
 The IP address of the endpoint to be checked.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L209">property measureLatency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L210">property measureLatency</a>
 </h3>
 
 ```typescript
@@ -1641,7 +1641,7 @@ measureLatency?: pulumi.Input<boolean>;
 A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L213">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L214">property port</a>
 </h3>
 
 ```typescript
@@ -1652,7 +1652,7 @@ port?: pulumi.Input<number>;
 The port of the endpoint to be checked.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L218">property referenceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L219">property referenceName</a>
 </h3>
 
 ```typescript
@@ -1664,7 +1664,7 @@ This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L222">property regions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L223">property regions</a>
 </h3>
 
 ```typescript
@@ -1675,7 +1675,7 @@ regions?: pulumi.Input<pulumi.Input<string>[]>;
 A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L226">property requestInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L227">property requestInterval</a>
 </h3>
 
 ```typescript
@@ -1686,7 +1686,7 @@ requestInterval?: pulumi.Input<number>;
 The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L230">property resourcePath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L231">property resourcePath</a>
 </h3>
 
 ```typescript
@@ -1697,7 +1697,7 @@ resourcePath?: pulumi.Input<string>;
 The path that you want Amazon Route 53 to request when performing health checks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L234">property searchString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L235">property searchString</a>
 </h3>
 
 ```typescript
@@ -1708,7 +1708,7 @@ searchString?: pulumi.Input<string>;
 String searched in the first 5120 bytes of the response body for check to be considered healthy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L238">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L239">property tags</a>
 </h3>
 
 ```typescript
@@ -1719,7 +1719,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the health check.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L242">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L243">property type</a>
 </h3>
 
 ```typescript
@@ -1730,13 +1730,13 @@ type?: pulumi.Input<string>;
 The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
 
 <h2 class="pdoc-module-header" id="QueryLogArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L83">interface QueryLogArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L84">interface QueryLogArgs</a>
 </h2>
 
 The set of arguments for constructing a QueryLog resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L87">property cloudwatchLogGroupArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L88">property cloudwatchLogGroupArn</a>
 </h3>
 
 ```typescript
@@ -1747,7 +1747,7 @@ cloudwatchLogGroupArn: pulumi.Input<string>;
 CloudWatch log group ARN to send query logs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L91">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L92">property zoneId</a>
 </h3>
 
 ```typescript
@@ -1758,13 +1758,13 @@ zoneId: pulumi.Input<string>;
 Route53 hosted zone ID to enable query logs.
 
 <h2 class="pdoc-module-header" id="QueryLogState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L69">interface QueryLogState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L70">interface QueryLogState</a>
 </h2>
 
 Input properties used for looking up and filtering QueryLog resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L73">property cloudwatchLogGroupArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L74">property cloudwatchLogGroupArn</a>
 </h3>
 
 ```typescript
@@ -1775,7 +1775,7 @@ cloudwatchLogGroupArn?: pulumi.Input<string>;
 CloudWatch log group ARN to send query logs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L77">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts#L78">property zoneId</a>
 </h3>
 
 ```typescript
@@ -1786,13 +1786,13 @@ zoneId?: pulumi.Input<string>;
 Route53 hosted zone ID to enable query logs.
 
 <h2 class="pdoc-module-header" id="RecordArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L209">interface RecordArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L210">interface RecordArgs</a>
 </h2>
 
 The set of arguments for constructing a Record resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L214">property aliases</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L215">property aliases</a>
 </h3>
 
 ```typescript
@@ -1804,7 +1804,7 @@ An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L218">property allowOverwrite</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L219">property allowOverwrite</a>
 </h3>
 
 ```typescript
@@ -1815,7 +1815,7 @@ allowOverwrite?: pulumi.Input<boolean>;
 Allow creation of this record in Terraform to overwrite an existing record, if any. This does not prevent other resources within Terraform or manual Route53 changes from overwriting this record. `true` by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L222">property failoverRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L223">property failoverRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -1826,7 +1826,7 @@ failoverRoutingPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L226">property geolocationRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L227">property geolocationRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -1837,7 +1837,7 @@ geolocationRoutingPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L230">property healthCheckId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L231">property healthCheckId</a>
 </h3>
 
 ```typescript
@@ -1848,7 +1848,7 @@ healthCheckId?: pulumi.Input<string>;
 The health check the record should be associated with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L234">property latencyRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L235">property latencyRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -1859,7 +1859,7 @@ latencyRoutingPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L238">property multivalueAnswerRoutingPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L239">property multivalueAnswerRoutingPolicy</a>
 </h3>
 
 ```typescript
@@ -1870,7 +1870,7 @@ multivalueAnswerRoutingPolicy?: pulumi.Input<boolean>;
 Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L242">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L243">property name</a>
 </h3>
 
 ```typescript
@@ -1881,7 +1881,7 @@ name?: pulumi.Input<string>;
 DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L246">property records</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L247">property records</a>
 </h3>
 
 ```typescript
@@ -1892,7 +1892,7 @@ records?: pulumi.Input<pulumi.Input<string>[]>;
 A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the Terraform configuration string (e.g. `"first255characters\"\"morecharacters"`).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L250">property setIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L251">property setIdentifier</a>
 </h3>
 
 ```typescript
@@ -1903,7 +1903,7 @@ setIdentifier?: pulumi.Input<string>;
 Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L254">property ttl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L255">property ttl</a>
 </h3>
 
 ```typescript
@@ -1914,7 +1914,7 @@ ttl?: pulumi.Input<number>;
 The TTL of the record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L258">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L259">property type</a>
 </h3>
 
 ```typescript
@@ -1925,7 +1925,7 @@ type: pulumi.Input<string>;
 `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L262">property weightedRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L263">property weightedRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -1936,7 +1936,7 @@ weightedRoutingPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L266">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L267">property zoneId</a>
 </h3>
 
 ```typescript
@@ -1944,16 +1944,16 @@ zoneId: pulumi.Input<string>;
 ```
 
 
-Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See [`resource_elb.zone_id`](/docs/providers/aws/r/elb.html#zone_id) for example.
+Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See [`resource_elb.zone_id`](https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id) for example.
 
 <h2 class="pdoc-module-header" id="RecordState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L142">interface RecordState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L143">interface RecordState</a>
 </h2>
 
 Input properties used for looking up and filtering Record resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L147">property aliases</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L148">property aliases</a>
 </h3>
 
 ```typescript
@@ -1965,7 +1965,7 @@ An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L151">property allowOverwrite</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L152">property allowOverwrite</a>
 </h3>
 
 ```typescript
@@ -1976,7 +1976,7 @@ allowOverwrite?: pulumi.Input<boolean>;
 Allow creation of this record in Terraform to overwrite an existing record, if any. This does not prevent other resources within Terraform or manual Route53 changes from overwriting this record. `true` by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L155">property failoverRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L156">property failoverRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -1987,7 +1987,7 @@ failoverRoutingPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L159">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L160">property fqdn</a>
 </h3>
 
 ```typescript
@@ -1998,7 +1998,7 @@ fqdn?: pulumi.Input<string>;
 [FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L163">property geolocationRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L164">property geolocationRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -2009,7 +2009,7 @@ geolocationRoutingPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L167">property healthCheckId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L168">property healthCheckId</a>
 </h3>
 
 ```typescript
@@ -2020,7 +2020,7 @@ healthCheckId?: pulumi.Input<string>;
 The health check the record should be associated with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L171">property latencyRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L172">property latencyRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -2031,7 +2031,7 @@ latencyRoutingPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L175">property multivalueAnswerRoutingPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L176">property multivalueAnswerRoutingPolicy</a>
 </h3>
 
 ```typescript
@@ -2042,7 +2042,7 @@ multivalueAnswerRoutingPolicy?: pulumi.Input<boolean>;
 Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L179">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L180">property name</a>
 </h3>
 
 ```typescript
@@ -2053,7 +2053,7 @@ name?: pulumi.Input<string>;
 DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L183">property records</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L184">property records</a>
 </h3>
 
 ```typescript
@@ -2064,7 +2064,7 @@ records?: pulumi.Input<pulumi.Input<string>[]>;
 A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the Terraform configuration string (e.g. `"first255characters\"\"morecharacters"`).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L187">property setIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L188">property setIdentifier</a>
 </h3>
 
 ```typescript
@@ -2075,7 +2075,7 @@ setIdentifier?: pulumi.Input<string>;
 Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L191">property ttl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L192">property ttl</a>
 </h3>
 
 ```typescript
@@ -2086,7 +2086,7 @@ ttl?: pulumi.Input<number>;
 The TTL of the record.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L195">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L196">property type</a>
 </h3>
 
 ```typescript
@@ -2097,7 +2097,7 @@ type?: pulumi.Input<string>;
 `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L199">property weightedRoutingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L200">property weightedRoutingPolicies</a>
 </h3>
 
 ```typescript
@@ -2108,7 +2108,7 @@ weightedRoutingPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L203">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts#L204">property zoneId</a>
 </h3>
 
 ```typescript
@@ -2116,16 +2116,16 @@ zoneId?: pulumi.Input<string>;
 ```
 
 
-Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See [`resource_elb.zone_id`](/docs/providers/aws/r/elb.html#zone_id) for example.
+Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See [`resource_elb.zone_id`](https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id) for example.
 
 <h2 class="pdoc-module-header" id="ZoneArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L151">interface ZoneArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L152">interface ZoneArgs</a>
 </h2>
 
 The set of arguments for constructing a Zone resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L155">property comment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L156">property comment</a>
 </h3>
 
 ```typescript
@@ -2136,7 +2136,7 @@ comment?: pulumi.Input<string>;
 A comment for the hosted zone. Defaults to 'Managed by Terraform'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L160">property delegationSetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L161">property delegationSetId</a>
 </h3>
 
 ```typescript
@@ -2148,7 +2148,7 @@ The ID of the reusable delegation set whose NS records you want to assign to the
 Conflicts w/ `vpc_id` as delegation sets can only be used for public zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L165">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L166">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -2160,7 +2160,7 @@ Whether to destroy all records (possibly managed outside of Terraform)
 in the zone when destroying the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L169">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L170">property name</a>
 </h3>
 
 ```typescript
@@ -2171,7 +2171,7 @@ name?: pulumi.Input<string>;
 This is the name of the hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L173">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L174">property tags</a>
 </h3>
 
 ```typescript
@@ -2182,7 +2182,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L178">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L179">property vpcId</a>
 </h3>
 
 ```typescript
@@ -2194,7 +2194,7 @@ The VPC to associate with a private hosted zone. Specifying `vpc_id` will create
 Conflicts w/ `delegation_set_id` as delegation sets can only be used for public zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L182">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L183">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -2205,13 +2205,13 @@ vpcRegion?: pulumi.Input<string>;
 The VPC's region. Defaults to the region of the AWS provider.
 
 <h2 class="pdoc-module-header" id="ZoneAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L87">interface ZoneAssociationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L88">interface ZoneAssociationArgs</a>
 </h2>
 
 The set of arguments for constructing a ZoneAssociation resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L91">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L92">property vpcId</a>
 </h3>
 
 ```typescript
@@ -2222,7 +2222,7 @@ vpcId: pulumi.Input<string>;
 The VPC to associate with the private hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L95">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L96">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -2233,7 +2233,7 @@ vpcRegion?: pulumi.Input<string>;
 The VPC's region. Defaults to the region of the AWS provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L99">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L100">property zoneId</a>
 </h3>
 
 ```typescript
@@ -2244,13 +2244,13 @@ zoneId: pulumi.Input<string>;
 The private hosted zone to associate.
 
 <h2 class="pdoc-module-header" id="ZoneAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L69">interface ZoneAssociationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L70">interface ZoneAssociationState</a>
 </h2>
 
 Input properties used for looking up and filtering ZoneAssociation resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L73">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L74">property vpcId</a>
 </h3>
 
 ```typescript
@@ -2261,7 +2261,7 @@ vpcId?: pulumi.Input<string>;
 The VPC to associate with the private hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L77">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L78">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -2272,7 +2272,7 @@ vpcRegion?: pulumi.Input<string>;
 The VPC's region. Defaults to the region of the AWS provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L81">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L82">property zoneId</a>
 </h3>
 
 ```typescript
@@ -2283,13 +2283,13 @@ zoneId?: pulumi.Input<string>;
 The private hosted zone to associate.
 
 <h2 class="pdoc-module-header" id="ZoneState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L105">interface ZoneState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L106">interface ZoneState</a>
 </h2>
 
 Input properties used for looking up and filtering Zone resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L109">property comment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L110">property comment</a>
 </h3>
 
 ```typescript
@@ -2300,7 +2300,7 @@ comment?: pulumi.Input<string>;
 A comment for the hosted zone. Defaults to 'Managed by Terraform'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L114">property delegationSetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L115">property delegationSetId</a>
 </h3>
 
 ```typescript
@@ -2312,7 +2312,7 @@ The ID of the reusable delegation set whose NS records you want to assign to the
 Conflicts w/ `vpc_id` as delegation sets can only be used for public zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L119">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L120">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -2324,7 +2324,7 @@ Whether to destroy all records (possibly managed outside of Terraform)
 in the zone when destroying the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L123">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L124">property name</a>
 </h3>
 
 ```typescript
@@ -2335,7 +2335,7 @@ name?: pulumi.Input<string>;
 This is the name of the hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L128">property nameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L129">property nameServers</a>
 </h3>
 
 ```typescript
@@ -2347,7 +2347,7 @@ A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L132">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L133">property tags</a>
 </h3>
 
 ```typescript
@@ -2358,7 +2358,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L137">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L138">property vpcId</a>
 </h3>
 
 ```typescript
@@ -2370,7 +2370,7 @@ The VPC to associate with a private hosted zone. Specifying `vpc_id` will create
 Conflicts w/ `delegation_set_id` as delegation sets can only be used for public zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L141">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L142">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -2381,7 +2381,7 @@ vpcRegion?: pulumi.Input<string>;
 The VPC's region. Defaults to the region of the AWS provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L145">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L146">property zoneId</a>
 </h3>
 
 ```typescript

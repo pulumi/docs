@@ -32,13 +32,13 @@ title: Module serviceAccount
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L9">class Account</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L10">class Account</a>
 </h2>
 
 Allows management of a [Google Cloud Platform service account](https://cloud.google.com/compute/docs/access/service-accounts)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L56">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L57">constructor</a>
 </h3>
 
 ```typescript
@@ -53,7 +53,7 @@ Create a Account resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -85,7 +85,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L26">property accountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L27">property accountId</a>
 </h3>
 
 ```typescript
@@ -97,7 +97,7 @@ The service account ID.
 Changing this forces a new service account to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L31">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L32">property displayName</a>
 </h3>
 
 ```typescript
@@ -109,7 +109,7 @@ The display name for the service account.
 Can be updated without creating a new resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L37">property email</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L38">property email</a>
 </h3>
 
 ```typescript
@@ -134,7 +134,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L41">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -145,7 +145,7 @@ public name: pulumi.Output<string>;
 The fully-qualified name of the service account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L47">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L48">property policyData</a>
 </h3>
 
 ```typescript
@@ -158,7 +158,7 @@ the IAM policy that will be applied to the service account. The policy will be
 merged with any existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L52">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L53">property project</a>
 </h3>
 
 ```typescript
@@ -170,7 +170,7 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L56">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L57">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -193,10 +193,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IAMBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L19">class IAMBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L20">class IAMBinding</a>
 </h2>
 
-When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource to configure permissions for who can edit the service account. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the [google_project_iam](google_project_iam.html) set of resources.
+When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource to configure permissions for who can edit the service account. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.
 
 Three different resources help you manage your IAM policy for a service account. Each of these resources serves a different use case:
 
@@ -209,7 +209,7 @@ Three different resources help you manage your IAM policy for a service account.
 ~> **Note:** `google_service_account_iam_binding` resources **can be** used in conjunction with `google_service_account_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L46">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L47">constructor</a>
 </h3>
 
 ```typescript
@@ -224,7 +224,7 @@ Create a IAMBinding resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L28">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L29">method get</a>
 </h3>
 
 ```typescript
@@ -256,7 +256,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L35">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L36">property etag</a>
 </h3>
 
 ```typescript
@@ -279,7 +279,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L36">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L37">property members</a>
 </h3>
 
 ```typescript
@@ -287,7 +287,7 @@ public members: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L42">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L43">property role</a>
 </h3>
 
 ```typescript
@@ -300,7 +300,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L46">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L47">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -323,10 +323,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IAMMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L19">class IAMMember</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L20">class IAMMember</a>
 </h2>
 
-When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource to configure permissions for who can edit the service account. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the [google_project_iam](google_project_iam.html) set of resources.
+When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource to configure permissions for who can edit the service account. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.
 
 Three different resources help you manage your IAM policy for a service account. Each of these resources serves a different use case:
 
@@ -339,7 +339,7 @@ Three different resources help you manage your IAM policy for a service account.
 ~> **Note:** `google_service_account_iam_binding` resources **can be** used in conjunction with `google_service_account_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L46">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L47">constructor</a>
 </h3>
 
 ```typescript
@@ -354,7 +354,7 @@ Create a IAMMember resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L28">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L29">method get</a>
 </h3>
 
 ```typescript
@@ -386,7 +386,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L35">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L36">property etag</a>
 </h3>
 
 ```typescript
@@ -409,7 +409,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L36">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L37">property member</a>
 </h3>
 
 ```typescript
@@ -417,7 +417,7 @@ public member: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L42">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L43">property role</a>
 </h3>
 
 ```typescript
@@ -430,7 +430,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L46">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L47">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -453,10 +453,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IAMPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L19">class IAMPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L20">class IAMPolicy</a>
 </h2>
 
-When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource to configure permissions for who can edit the service account. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the [google_project_iam](google_project_iam.html) set of resources.
+When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource to configure permissions for who can edit the service account. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.
 
 Three different resources help you manage your IAM policy for a service account. Each of these resources serves a different use case:
 
@@ -469,7 +469,7 @@ Three different resources help you manage your IAM policy for a service account.
 ~> **Note:** `google_service_account_iam_binding` resources **can be** used in conjunction with `google_service_account_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L44">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L45">constructor</a>
 </h3>
 
 ```typescript
@@ -484,7 +484,7 @@ Create a IAMPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L28">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L29">method get</a>
 </h3>
 
 ```typescript
@@ -516,7 +516,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L35">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L36">property etag</a>
 </h3>
 
 ```typescript
@@ -539,7 +539,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L40">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L41">property policyData</a>
 </h3>
 
 ```typescript
@@ -551,7 +551,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L44">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L45">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -574,13 +574,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Key">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L10">class Key</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L11">class Key</a>
 </h2>
 
 Creates and manages service account key-pairs, which allow the user to establish identity of a service account outside of GCP. For more information, see [the official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and [API](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L84">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L85">constructor</a>
 </h3>
 
 ```typescript
@@ -595,7 +595,7 @@ Create a Key resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L19">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -639,7 +639,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L29">property keyAlgorithm</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L30">property keyAlgorithm</a>
 </h3>
 
 ```typescript
@@ -653,7 +653,7 @@ Valid values are listed at
 (only used on create)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -664,7 +664,7 @@ public name: pulumi.Output<string>;
 The name used for this key pair
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L40">property pgpKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L41">property pgpKey</a>
 </h3>
 
 ```typescript
@@ -678,7 +678,7 @@ a base64-encoded public key or a `keybase:keybaseusername` string for looking up
 in Vault.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L46">property privateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L47">property privateKey</a>
 </h3>
 
 ```typescript
@@ -691,7 +691,7 @@ service account keys through the CLI or web console. This is only populated when
 `pgp_key` is provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L52">property privateKeyEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L53">property privateKeyEncrypted</a>
 </h3>
 
 ```typescript
@@ -704,7 +704,7 @@ encrypted with the given `pgp_key`. This is only populated when creating a new
 key and `pgp_key` is supplied
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L57">property privateKeyFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L58">property privateKeyFingerprint</a>
 </h3>
 
 ```typescript
@@ -716,7 +716,7 @@ The MD5 public key fingerprint for the encrypted
 private key. This is only populated when creating a new key and `pgp_key` is supplied
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L61">property privateKeyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L62">property privateKeyType</a>
 </h3>
 
 ```typescript
@@ -727,7 +727,7 @@ public privateKeyType: pulumi.Output<string | undefined>;
 The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L65">property publicKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L66">property publicKey</a>
 </h3>
 
 ```typescript
@@ -738,7 +738,7 @@ public publicKey: pulumi.Output<string>;
 The public key, base64 encoded
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L69">property publicKeyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L70">property publicKeyType</a>
 </h3>
 
 ```typescript
@@ -749,7 +749,7 @@ public publicKeyType: pulumi.Output<string | undefined>;
 The output format of the public key requested. X509_PEM is the default output format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L75">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L76">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -774,7 +774,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L79">property validAfter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L80">property validAfter</a>
 </h3>
 
 ```typescript
@@ -785,7 +785,7 @@ public validAfter: pulumi.Output<string>;
 The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L84">property validBefore</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L85">property validBefore</a>
 </h3>
 
 ```typescript
@@ -797,7 +797,7 @@ The key can be used before this timestamp.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 <h2 class="pdoc-module-header" id="getAccount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L10">function getAccount</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L11">function getAccount</a>
 </h2>
 
 ```typescript
@@ -809,7 +809,7 @@ Get the service account from a project. For more information see
 the official [API](https://cloud.google.com/compute/docs/access/service-accounts) documentation.
 
 <h2 class="pdoc-module-header" id="getAccountKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L10">function getAccountKey</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L11">function getAccountKey</a>
 </h2>
 
 ```typescript
@@ -820,13 +820,13 @@ getAccountKey(args: GetAccountKeyArgs, opts?: pulumi.InvokeOptions): Promise<Get
 Get service account public key. For more information, see [the official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and [API](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys/get).
 
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L138">interface AccountArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L139">interface AccountArgs</a>
 </h2>
 
 The set of arguments for constructing a Account resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L143">property accountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L144">property accountId</a>
 </h3>
 
 ```typescript
@@ -838,7 +838,7 @@ The service account ID.
 Changing this forces a new service account to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L148">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L149">property displayName</a>
 </h3>
 
 ```typescript
@@ -850,7 +850,7 @@ The display name for the service account.
 Can be updated without creating a new resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L154">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L155">property policyData</a>
 </h3>
 
 ```typescript
@@ -863,7 +863,7 @@ the IAM policy that will be applied to the service account. The policy will be
 merged with any existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L159">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L160">property project</a>
 </h3>
 
 ```typescript
@@ -875,13 +875,13 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L97">interface AccountState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L98">interface AccountState</a>
 </h2>
 
 Input properties used for looking up and filtering Account resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L102">property accountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L103">property accountId</a>
 </h3>
 
 ```typescript
@@ -893,7 +893,7 @@ The service account ID.
 Changing this forces a new service account to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L107">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L108">property displayName</a>
 </h3>
 
 ```typescript
@@ -905,7 +905,7 @@ The display name for the service account.
 Can be updated without creating a new resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L113">property email</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L114">property email</a>
 </h3>
 
 ```typescript
@@ -918,7 +918,7 @@ should be referenced from any `google_iam_policy` data sources
 that would grant the service account privileges.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L117">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L118">property name</a>
 </h3>
 
 ```typescript
@@ -929,7 +929,7 @@ name?: pulumi.Input<string>;
 The fully-qualified name of the service account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L123">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L124">property policyData</a>
 </h3>
 
 ```typescript
@@ -942,7 +942,7 @@ the IAM policy that will be applied to the service account. The policy will be
 merged with any existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L128">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L129">property project</a>
 </h3>
 
 ```typescript
@@ -954,7 +954,7 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L132">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/account.ts#L133">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -965,13 +965,13 @@ uniqueId?: pulumi.Input<string>;
 The unique id of the service account.
 
 <h2 class="pdoc-module-header" id="GetAccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L20">interface GetAccountArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L21">interface GetAccountArgs</a>
 </h2>
 
 A collection of arguments for invoking getAccount.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L24">property accountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L25">property accountId</a>
 </h3>
 
 ```typescript
@@ -982,7 +982,7 @@ accountId: string;
 The Service account id.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L29">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L30">property project</a>
 </h3>
 
 ```typescript
@@ -994,13 +994,13 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h2 class="pdoc-module-header" id="GetAccountKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L21">interface GetAccountKeyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L22">interface GetAccountKeyArgs</a>
 </h2>
 
 A collection of arguments for invoking getAccountKey.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L26">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L27">property project</a>
 </h3>
 
 ```typescript
@@ -1012,7 +1012,7 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L30">property publicKeyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L31">property publicKeyType</a>
 </h3>
 
 ```typescript
@@ -1023,7 +1023,7 @@ publicKeyType?: string;
 The output format of the public key requested. X509_PEM is the default output format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L36">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L37">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -1036,13 +1036,13 @@ The Service account id of the Key Pair. This can be a string in the format
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
 
 <h2 class="pdoc-module-header" id="GetAccountKeyResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L42">interface GetAccountKeyResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L43">interface GetAccountKeyResult</a>
 </h2>
 
 A collection of values returned by getAccountKey.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L55">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L56">property id</a>
 </h3>
 
 ```typescript
@@ -1053,7 +1053,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L43">property keyAlgorithm</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L44">property keyAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1061,7 +1061,7 @@ keyAlgorithm: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L47">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L48">property name</a>
 </h3>
 
 ```typescript
@@ -1072,7 +1072,7 @@ name: string;
 The name used for this key pair
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L51">property publicKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L52">property publicKey</a>
 </h3>
 
 ```typescript
@@ -1083,13 +1083,13 @@ publicKey: string;
 The public key, base64 encoded
 
 <h2 class="pdoc-module-header" id="GetAccountResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L35">interface GetAccountResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L36">interface GetAccountResult</a>
 </h2>
 
 A collection of values returned by getAccount.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L39">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L40">property displayName</a>
 </h3>
 
 ```typescript
@@ -1100,7 +1100,7 @@ displayName: string;
 The display name for the service account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L45">property email</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L46">property email</a>
 </h3>
 
 ```typescript
@@ -1113,7 +1113,7 @@ should be referenced from any `google_iam_policy` data sources
 that would grant the service account privileges.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L57">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L58">property id</a>
 </h3>
 
 ```typescript
@@ -1124,7 +1124,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L49">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L50">property name</a>
 </h3>
 
 ```typescript
@@ -1135,7 +1135,7 @@ name: string;
 The fully-qualified name of the service account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L53">property uniqueId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccount.ts#L54">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -1146,13 +1146,13 @@ uniqueId: string;
 The unique id of the service account.
 
 <h2 class="pdoc-module-header" id="IAMBindingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L108">interface IAMBindingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L109">interface IAMBindingArgs</a>
 </h2>
 
 The set of arguments for constructing a IAMBinding resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L109">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L110">property members</a>
 </h3>
 
 ```typescript
@@ -1160,7 +1160,7 @@ members: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L115">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L116">property role</a>
 </h3>
 
 ```typescript
@@ -1173,7 +1173,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L119">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L120">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -1184,13 +1184,13 @@ serviceAccountId: pulumi.Input<string>;
 The service account id to apply policy to.
 
 <h2 class="pdoc-module-header" id="IAMBindingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L87">interface IAMBindingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L88">interface IAMBindingState</a>
 </h2>
 
 Input properties used for looking up and filtering IAMBinding resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L91">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L92">property etag</a>
 </h3>
 
 ```typescript
@@ -1201,7 +1201,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the service account IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L92">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L93">property members</a>
 </h3>
 
 ```typescript
@@ -1209,7 +1209,7 @@ members?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L98">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L99">property role</a>
 </h3>
 
 ```typescript
@@ -1222,7 +1222,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L102">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMBinding.ts#L103">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -1233,13 +1233,13 @@ serviceAccountId?: pulumi.Input<string>;
 The service account id to apply policy to.
 
 <h2 class="pdoc-module-header" id="IAMMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L108">interface IAMMemberArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L109">interface IAMMemberArgs</a>
 </h2>
 
 The set of arguments for constructing a IAMMember resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L109">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L110">property member</a>
 </h3>
 
 ```typescript
@@ -1247,7 +1247,7 @@ member: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L115">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L116">property role</a>
 </h3>
 
 ```typescript
@@ -1260,7 +1260,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L119">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L120">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -1271,13 +1271,13 @@ serviceAccountId: pulumi.Input<string>;
 The service account id to apply policy to.
 
 <h2 class="pdoc-module-header" id="IAMMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L87">interface IAMMemberState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L88">interface IAMMemberState</a>
 </h2>
 
 Input properties used for looking up and filtering IAMMember resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L91">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L92">property etag</a>
 </h3>
 
 ```typescript
@@ -1288,7 +1288,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the service account IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L92">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L93">property member</a>
 </h3>
 
 ```typescript
@@ -1296,7 +1296,7 @@ member?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L98">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L99">property role</a>
 </h3>
 
 ```typescript
@@ -1309,7 +1309,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L102">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMMember.ts#L103">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -1320,13 +1320,13 @@ serviceAccountId?: pulumi.Input<string>;
 The service account id to apply policy to.
 
 <h2 class="pdoc-module-header" id="IAMPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L99">interface IAMPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L100">interface IAMPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a IAMPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L104">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L105">property policyData</a>
 </h3>
 
 ```typescript
@@ -1338,7 +1338,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L108">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L109">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -1349,13 +1349,13 @@ serviceAccountId: pulumi.Input<string>;
 The service account id to apply policy to.
 
 <h2 class="pdoc-module-header" id="IAMPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L80">interface IAMPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L81">interface IAMPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering IAMPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L84">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L85">property etag</a>
 </h3>
 
 ```typescript
@@ -1366,7 +1366,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the service account IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L89">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L90">property policyData</a>
 </h3>
 
 ```typescript
@@ -1378,7 +1378,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L93">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/iAMPolicy.ts#L94">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -1389,13 +1389,13 @@ serviceAccountId?: pulumi.Input<string>;
 The service account id to apply policy to.
 
 <h2 class="pdoc-module-header" id="KeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L203">interface KeyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L204">interface KeyArgs</a>
 </h2>
 
 The set of arguments for constructing a Key resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L210">property keyAlgorithm</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L211">property keyAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1409,7 +1409,7 @@ Valid values are listed at
 (only used on create)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L217">property pgpKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L218">property pgpKey</a>
 </h3>
 
 ```typescript
@@ -1423,7 +1423,7 @@ a base64-encoded public key or a `keybase:keybaseusername` string for looking up
 in Vault.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L221">property privateKeyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L222">property privateKeyType</a>
 </h3>
 
 ```typescript
@@ -1434,7 +1434,7 @@ privateKeyType?: pulumi.Input<string>;
 The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L225">property publicKeyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L226">property publicKeyType</a>
 </h3>
 
 ```typescript
@@ -1445,7 +1445,7 @@ publicKeyType?: pulumi.Input<string>;
 The output format of the public key requested. X509_PEM is the default output format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L231">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L232">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -1458,13 +1458,13 @@ The Service account id of the Key Pair. This can be a string in the format
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
 
 <h2 class="pdoc-module-header" id="KeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L135">interface KeyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L136">interface KeyState</a>
 </h2>
 
 Input properties used for looking up and filtering Key resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L142">property keyAlgorithm</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L143">property keyAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1478,7 +1478,7 @@ Valid values are listed at
 (only used on create)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L146">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L147">property name</a>
 </h3>
 
 ```typescript
@@ -1489,7 +1489,7 @@ name?: pulumi.Input<string>;
 The name used for this key pair
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L153">property pgpKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L154">property pgpKey</a>
 </h3>
 
 ```typescript
@@ -1503,7 +1503,7 @@ a base64-encoded public key or a `keybase:keybaseusername` string for looking up
 in Vault.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L159">property privateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L160">property privateKey</a>
 </h3>
 
 ```typescript
@@ -1516,7 +1516,7 @@ service account keys through the CLI or web console. This is only populated when
 `pgp_key` is provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L165">property privateKeyEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L166">property privateKeyEncrypted</a>
 </h3>
 
 ```typescript
@@ -1529,7 +1529,7 @@ encrypted with the given `pgp_key`. This is only populated when creating a new
 key and `pgp_key` is supplied
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L170">property privateKeyFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L171">property privateKeyFingerprint</a>
 </h3>
 
 ```typescript
@@ -1541,7 +1541,7 @@ The MD5 public key fingerprint for the encrypted
 private key. This is only populated when creating a new key and `pgp_key` is supplied
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L174">property privateKeyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L175">property privateKeyType</a>
 </h3>
 
 ```typescript
@@ -1552,7 +1552,7 @@ privateKeyType?: pulumi.Input<string>;
 The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L178">property publicKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L179">property publicKey</a>
 </h3>
 
 ```typescript
@@ -1563,7 +1563,7 @@ publicKey?: pulumi.Input<string>;
 The public key, base64 encoded
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L182">property publicKeyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L183">property publicKeyType</a>
 </h3>
 
 ```typescript
@@ -1574,7 +1574,7 @@ publicKeyType?: pulumi.Input<string>;
 The output format of the public key requested. X509_PEM is the default output format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L188">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L189">property serviceAccountId</a>
 </h3>
 
 ```typescript
@@ -1587,7 +1587,7 @@ The Service account id of the Key Pair. This can be a string in the format
 unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L192">property validAfter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L193">property validAfter</a>
 </h3>
 
 ```typescript
@@ -1598,7 +1598,7 @@ validAfter?: pulumi.Input<string>;
 The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L197">property validBefore</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/key.ts#L198">property validBefore</a>
 </h3>
 
 ```typescript

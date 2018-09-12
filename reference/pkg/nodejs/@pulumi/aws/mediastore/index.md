@@ -17,13 +17,13 @@ title: Module mediastore
 
 
 <h2 class="pdoc-module-header" id="Container">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L9">class Container</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L10">class Container</a>
 </h2>
 
 Provides a MediaStore Container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -38,7 +38,7 @@ Create a Container resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -70,7 +70,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -81,7 +81,7 @@ public arn: pulumi.Output<string>;
 The ARN of the container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L29">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L30">property endpoint</a>
 </h3>
 
 ```typescript
@@ -104,7 +104,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -127,13 +127,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ContainerPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L9">class ContainerPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L10">class ContainerPolicy</a>
 </h2>
 
 Provides a MediaStore Container Policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L29">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L30">constructor</a>
 </h3>
 
 ```typescript
@@ -148,7 +148,7 @@ Create a ContainerPolicy resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -180,7 +180,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L25">property containerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L26">property containerName</a>
 </h3>
 
 ```typescript
@@ -203,7 +203,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L29">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L30">property policy</a>
 </h3>
 
 ```typescript
@@ -226,13 +226,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ContainerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L81">interface ContainerArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L82">interface ContainerArgs</a>
 </h2>
 
 The set of arguments for constructing a Container resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L85">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L86">property name</a>
 </h3>
 
 ```typescript
@@ -243,13 +243,13 @@ name?: pulumi.Input<string>;
 The name of the container. Must contain alphanumeric characters or underscores.
 
 <h2 class="pdoc-module-header" id="ContainerPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L77">interface ContainerPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L78">interface ContainerPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a ContainerPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L81">property containerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L82">property containerName</a>
 </h3>
 
 ```typescript
@@ -260,7 +260,7 @@ containerName: pulumi.Input<string>;
 The name of the container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L85">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L86">property policy</a>
 </h3>
 
 ```typescript
@@ -271,13 +271,13 @@ policy: pulumi.Input<string>;
 The contents of the policy.
 
 <h2 class="pdoc-module-header" id="ContainerPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L63">interface ContainerPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L64">interface ContainerPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering ContainerPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L67">property containerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L68">property containerName</a>
 </h3>
 
 ```typescript
@@ -288,7 +288,7 @@ containerName?: pulumi.Input<string>;
 The name of the container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L71">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L72">property policy</a>
 </h3>
 
 ```typescript
@@ -299,13 +299,13 @@ policy?: pulumi.Input<string>;
 The contents of the policy.
 
 <h2 class="pdoc-module-header" id="ContainerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L63">interface ContainerState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L64">interface ContainerState</a>
 </h2>
 
 Input properties used for looking up and filtering Container resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L67">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L68">property arn</a>
 </h3>
 
 ```typescript
@@ -316,7 +316,7 @@ arn?: pulumi.Input<string>;
 The ARN of the container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L71">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L72">property endpoint</a>
 </h3>
 
 ```typescript
@@ -327,7 +327,7 @@ endpoint?: pulumi.Input<string>;
 The DNS endpoint of the container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L75">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L76">property name</a>
 </h3>
 
 ```typescript

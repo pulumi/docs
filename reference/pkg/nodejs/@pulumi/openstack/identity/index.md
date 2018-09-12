@@ -41,7 +41,7 @@ title: Module identity
 
 
 <h2 class="pdoc-module-header" id="Project">
-<a class="pdoc-member-name" href="/identity/project.ts#L12">class Project</a>
+<a class="pdoc-member-name" href="/identity/project.ts#L13">class Project</a>
 </h2>
 
 Manages a V3 Project resource within OpenStack Keystone.
@@ -50,7 +50,7 @@ Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L56">constructor</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L57">constructor</a>
 </h3>
 
 ```typescript
@@ -65,7 +65,7 @@ Create a Project resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L21">method get</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -97,7 +97,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L28">property description</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L29">property description</a>
 </h3>
 
 ```typescript
@@ -108,7 +108,7 @@ public description: pulumi.Output<string | undefined>;
 A description of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L32">property domainId</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L33">property domainId</a>
 </h3>
 
 ```typescript
@@ -119,7 +119,7 @@ public domainId: pulumi.Output<string>;
 The domain this project belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L37">property enabled</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L38">property enabled</a>
 </h3>
 
 ```typescript
@@ -143,7 +143,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L42">property isDomain</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L43">property isDomain</a>
 </h3>
 
 ```typescript
@@ -155,7 +155,7 @@ Whether this project is a domain. Valid values
 are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L46">property name</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L47">property name</a>
 </h3>
 
 ```typescript
@@ -166,7 +166,7 @@ public name: pulumi.Output<string>;
 The name of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L50">property parentId</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L51">property parentId</a>
 </h3>
 
 ```typescript
@@ -177,7 +177,7 @@ public parentId: pulumi.Output<string>;
 The parent of this project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L56">property region</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L57">property region</a>
 </h3>
 
 ```typescript
@@ -202,7 +202,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Role">
-<a class="pdoc-member-name" href="/identity/role.ts#L12">class Role</a>
+<a class="pdoc-member-name" href="/identity/role.ts#L13">class Role</a>
 </h2>
 
 Manages a V3 Role resource within OpenStack Keystone.
@@ -211,7 +211,7 @@ Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L38">constructor</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L39">constructor</a>
 </h3>
 
 ```typescript
@@ -226,7 +226,7 @@ Create a Role resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L21">method get</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -258,7 +258,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L28">property domainId</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L29">property domainId</a>
 </h3>
 
 ```typescript
@@ -281,7 +281,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L32">property name</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L33">property name</a>
 </h3>
 
 ```typescript
@@ -292,7 +292,7 @@ public name: pulumi.Output<string>;
 The name of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L38">property region</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L39">property region</a>
 </h3>
 
 ```typescript
@@ -317,7 +317,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RoleAssignment">
-<a class="pdoc-member-name" href="/identity/roleAssignment.ts#L12">class RoleAssignment</a>
+<a class="pdoc-member-name" href="/identity/roleAssignment.ts#L13">class RoleAssignment</a>
 </h2>
 
 Manages a V3 Role assignment within OpenStack Keystone.
@@ -326,7 +326,7 @@ Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L44">constructor</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L45">constructor</a>
 </h3>
 
 ```typescript
@@ -341,7 +341,7 @@ Create a RoleAssignment resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L21">method get</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -373,7 +373,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L28">property domainId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L29">property domainId</a>
 </h3>
 
 ```typescript
@@ -384,7 +384,7 @@ public domainId: pulumi.Output<string | undefined>;
 The domain to assign the role in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L32">property groupId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L33">property groupId</a>
 </h3>
 
 ```typescript
@@ -407,7 +407,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L36">property projectId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L37">property projectId</a>
 </h3>
 
 ```typescript
@@ -418,7 +418,7 @@ public projectId: pulumi.Output<string | undefined>;
 The project to assign the role in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L40">property roleId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L41">property roleId</a>
 </h3>
 
 ```typescript
@@ -441,7 +441,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L44">property userId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L45">property userId</a>
 </h3>
 
 ```typescript
@@ -452,7 +452,7 @@ public userId: pulumi.Output<string | undefined>;
 The user to assign the role to.
 
 <h2 class="pdoc-module-header" id="User">
-<a class="pdoc-member-name" href="/identity/user.ts#L12">class User</a>
+<a class="pdoc-member-name" href="/identity/user.ts#L13">class User</a>
 </h2>
 
 Manages a V3 User resource within OpenStack Keystone.
@@ -461,7 +461,7 @@ Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L86">constructor</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L87">constructor</a>
 </h3>
 
 ```typescript
@@ -476,7 +476,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L21">method get</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -508,7 +508,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L28">property defaultProjectId</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L29">property defaultProjectId</a>
 </h3>
 
 ```typescript
@@ -519,7 +519,7 @@ public defaultProjectId: pulumi.Output<string>;
 The default project this user belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L32">property description</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L33">property description</a>
 </h3>
 
 ```typescript
@@ -530,7 +530,7 @@ public description: pulumi.Output<string | undefined>;
 A description of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L36">property domainId</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L37">property domainId</a>
 </h3>
 
 ```typescript
@@ -541,7 +541,7 @@ public domainId: pulumi.Output<string>;
 The domain this user belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L41">property enabled</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L42">property enabled</a>
 </h3>
 
 ```typescript
@@ -553,7 +553,7 @@ Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L45">property extra</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L46">property extra</a>
 </h3>
 
 ```typescript
@@ -576,7 +576,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L50">property ignoreChangePasswordUponFirstUse</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L51">property ignoreChangePasswordUponFirstUse</a>
 </h3>
 
 ```typescript
@@ -588,7 +588,7 @@ User will not have to
 change their password upon first use. Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L55">property ignoreLockoutFailureAttempts</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L56">property ignoreLockoutFailureAttempts</a>
 </h3>
 
 ```typescript
@@ -600,7 +600,7 @@ User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L60">property ignorePasswordExpiry</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L61">property ignorePasswordExpiry</a>
 </h3>
 
 ```typescript
@@ -612,7 +612,7 @@ User's password will not expire.
 Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L65">property multiFactorAuthEnabled</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L66">property multiFactorAuthEnabled</a>
 </h3>
 
 ```typescript
@@ -624,7 +624,7 @@ Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L72">property multiFactorAuthRules</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L73">property multiFactorAuthRules</a>
 </h3>
 
 ```typescript
@@ -638,7 +638,7 @@ The structure is documented below. Please see the
 for more information on how to use mulit-factor rules.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L76">property name</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L77">property name</a>
 </h3>
 
 ```typescript
@@ -649,7 +649,7 @@ public name: pulumi.Output<string>;
 The name of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L80">property password</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L81">property password</a>
 </h3>
 
 ```typescript
@@ -660,7 +660,7 @@ public password: pulumi.Output<string | undefined>;
 The password for the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L86">property region</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L87">property region</a>
 </h3>
 
 ```typescript
@@ -685,7 +685,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="getAuthScope">
-<a class="pdoc-member-name" href="/identity/getAuthScope.ts#L11">function getAuthScope</a>
+<a class="pdoc-member-name" href="/identity/getAuthScope.ts#L12">function getAuthScope</a>
 </h2>
 
 ```typescript
@@ -698,7 +698,7 @@ auth scope in use. This can be used as self-discovery or introspection of
 the username or project name currently in use.
 
 <h2 class="pdoc-module-header" id="getEndpoint">
-<a class="pdoc-member-name" href="/identity/getEndpoint.ts#L11">function getEndpoint</a>
+<a class="pdoc-member-name" href="/identity/getEndpoint.ts#L12">function getEndpoint</a>
 </h2>
 
 ```typescript
@@ -711,7 +711,7 @@ Use this data source to get the ID of an OpenStack endpoint.
 Note: This usually requires admin privileges.
 
 <h2 class="pdoc-module-header" id="getGroup">
-<a class="pdoc-member-name" href="/identity/getGroup.ts#L11">function getGroup</a>
+<a class="pdoc-member-name" href="/identity/getGroup.ts#L12">function getGroup</a>
 </h2>
 
 ```typescript
@@ -724,7 +724,7 @@ Use this data source to get the ID of an OpenStack group.
 Note: This usually requires admin privileges.
 
 <h2 class="pdoc-module-header" id="getProject">
-<a class="pdoc-member-name" href="/identity/getProject.ts#L9">function getProject</a>
+<a class="pdoc-member-name" href="/identity/getProject.ts#L10">function getProject</a>
 </h2>
 
 ```typescript
@@ -735,7 +735,7 @@ getProject(args?: GetProjectArgs, opts?: pulumi.InvokeOptions): Promise<GetProje
 Use this data source to get the ID of an OpenStack project.
 
 <h2 class="pdoc-module-header" id="getRole">
-<a class="pdoc-member-name" href="/identity/getRole.ts#L9">function getRole</a>
+<a class="pdoc-member-name" href="/identity/getRole.ts#L10">function getRole</a>
 </h2>
 
 ```typescript
@@ -746,7 +746,7 @@ getRole(args: GetRoleArgs, opts?: pulumi.InvokeOptions): Promise<GetRoleResult>
 Use this data source to get the ID of an OpenStack role.
 
 <h2 class="pdoc-module-header" id="getUser">
-<a class="pdoc-member-name" href="/identity/getUser.ts#L9">function getUser</a>
+<a class="pdoc-member-name" href="/identity/getUser.ts#L10">function getUser</a>
 </h2>
 
 ```typescript
@@ -757,13 +757,13 @@ getUser(args?: GetUserArgs, opts?: pulumi.InvokeOptions): Promise<GetUserResult>
 Use this data source to get the ID of an OpenStack user.
 
 <h2 class="pdoc-module-header" id="GetAuthScopeArgs">
-<a class="pdoc-member-name" href="/identity/getAuthScope.ts#L21">interface GetAuthScopeArgs</a>
+<a class="pdoc-member-name" href="/identity/getAuthScope.ts#L22">interface GetAuthScopeArgs</a>
 </h2>
 
 A collection of arguments for invoking getAuthScope.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L26">property name</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L27">property name</a>
 </h3>
 
 ```typescript
@@ -775,7 +775,7 @@ The name of the scope. This is an arbitrary name which is
 only used as a unique identifier so an actual token isn't used as the ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L32">property region</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L33">property region</a>
 </h3>
 
 ```typescript
@@ -788,13 +788,13 @@ A Identity client is needed to retrieve tokens IDs. If omitted, the
 `region` argument of the provider is used.
 
 <h2 class="pdoc-module-header" id="GetAuthScopeResult">
-<a class="pdoc-member-name" href="/identity/getAuthScope.ts#L38">interface GetAuthScopeResult</a>
+<a class="pdoc-member-name" href="/identity/getAuthScope.ts#L39">interface GetAuthScopeResult</a>
 </h2>
 
 A collection of values returned by getAuthScope.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L79">property id</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -805,7 +805,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L42">property projectDomainId</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L43">property projectDomainId</a>
 </h3>
 
 ```typescript
@@ -816,7 +816,7 @@ projectDomainId: string;
 The domain ID of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L46">property projectDomainName</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L47">property projectDomainName</a>
 </h3>
 
 ```typescript
@@ -827,7 +827,7 @@ projectDomainName: string;
 The domain name of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L50">property projectId</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L51">property projectId</a>
 </h3>
 
 ```typescript
@@ -838,7 +838,7 @@ projectId: string;
 The project ID of the scope.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L54">property projectName</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L55">property projectName</a>
 </h3>
 
 ```typescript
@@ -849,7 +849,7 @@ projectName: string;
 The project name of the scope.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L55">property region</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L56">property region</a>
 </h3>
 
 ```typescript
@@ -857,7 +857,7 @@ region: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L59">property roles</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L60">property roles</a>
 </h3>
 
 ```typescript
@@ -868,7 +868,7 @@ roles: { ... }[];
 A list of roles in the current scope. See reference below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L63">property userDomainId</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L64">property userDomainId</a>
 </h3>
 
 ```typescript
@@ -879,7 +879,7 @@ userDomainId: string;
 The domain ID of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L67">property userDomainName</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L68">property userDomainName</a>
 </h3>
 
 ```typescript
@@ -890,7 +890,7 @@ userDomainName: string;
 The domain name of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L71">property userId</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L72">property userId</a>
 </h3>
 
 ```typescript
@@ -901,7 +901,7 @@ userId: string;
 The user ID the of the scope.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L75">property userName</a>
+<a class="pdoc-child-name" href="/identity/getAuthScope.ts#L76">property userName</a>
 </h3>
 
 ```typescript
@@ -912,13 +912,13 @@ userName: string;
 The username of the scope.
 
 <h2 class="pdoc-module-header" id="GetEndpointArgs">
-<a class="pdoc-member-name" href="/identity/getEndpoint.ts#L24">interface GetEndpointArgs</a>
+<a class="pdoc-member-name" href="/identity/getEndpoint.ts#L25">interface GetEndpointArgs</a>
 </h2>
 
 A collection of arguments for invoking getEndpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L29">property interface</a>
+<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L30">property interface</a>
 </h3>
 
 ```typescript
@@ -930,7 +930,7 @@ The endpoint interface. Valid values are `public`,
 `internal`, and `admin`. Default value is `public`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L33">property region</a>
+<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L34">property region</a>
 </h3>
 
 ```typescript
@@ -941,7 +941,7 @@ region?: string;
 The region the endpoint is located in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L37">property serviceId</a>
+<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L38">property serviceId</a>
 </h3>
 
 ```typescript
@@ -952,7 +952,7 @@ serviceId?: string;
 The service id this endpoint belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L41">property serviceName</a>
+<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L42">property serviceName</a>
 </h3>
 
 ```typescript
@@ -963,13 +963,13 @@ serviceName?: string;
 The service name of the endpoint.
 
 <h2 class="pdoc-module-header" id="GetEndpointResult">
-<a class="pdoc-member-name" href="/identity/getEndpoint.ts#L47">interface GetEndpointResult</a>
+<a class="pdoc-member-name" href="/identity/getEndpoint.ts#L48">interface GetEndpointResult</a>
 </h2>
 
 A collection of values returned by getEndpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L59">property id</a>
+<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L60">property id</a>
 </h3>
 
 ```typescript
@@ -980,7 +980,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L51">property region</a>
+<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L52">property region</a>
 </h3>
 
 ```typescript
@@ -991,7 +991,7 @@ region: string;
 The region the endpoint is located in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L55">property url</a>
+<a class="pdoc-child-name" href="/identity/getEndpoint.ts#L56">property url</a>
 </h3>
 
 ```typescript
@@ -1002,13 +1002,13 @@ url: string;
 The endpoint URL
 
 <h2 class="pdoc-module-header" id="GetGroupArgs">
-<a class="pdoc-member-name" href="/identity/getGroup.ts#L22">interface GetGroupArgs</a>
+<a class="pdoc-member-name" href="/identity/getGroup.ts#L23">interface GetGroupArgs</a>
 </h2>
 
 A collection of arguments for invoking getGroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getGroup.ts#L26">property domainId</a>
+<a class="pdoc-child-name" href="/identity/getGroup.ts#L27">property domainId</a>
 </h3>
 
 ```typescript
@@ -1019,7 +1019,7 @@ domainId?: string;
 The domain the group belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getGroup.ts#L30">property name</a>
+<a class="pdoc-child-name" href="/identity/getGroup.ts#L31">property name</a>
 </h3>
 
 ```typescript
@@ -1030,7 +1030,7 @@ name: string;
 The name of the group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getGroup.ts#L35">property region</a>
+<a class="pdoc-child-name" href="/identity/getGroup.ts#L36">property region</a>
 </h3>
 
 ```typescript
@@ -1042,13 +1042,13 @@ The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
 
 <h2 class="pdoc-module-header" id="GetGroupResult">
-<a class="pdoc-member-name" href="/identity/getGroup.ts#L41">interface GetGroupResult</a>
+<a class="pdoc-member-name" href="/identity/getGroup.ts#L42">interface GetGroupResult</a>
 </h2>
 
 A collection of values returned by getGroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getGroup.ts#L45">property domainId</a>
+<a class="pdoc-child-name" href="/identity/getGroup.ts#L46">property domainId</a>
 </h3>
 
 ```typescript
@@ -1059,7 +1059,7 @@ domainId: string;
 See Argument Reference above.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getGroup.ts#L53">property id</a>
+<a class="pdoc-child-name" href="/identity/getGroup.ts#L54">property id</a>
 </h3>
 
 ```typescript
@@ -1070,7 +1070,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getGroup.ts#L49">property region</a>
+<a class="pdoc-child-name" href="/identity/getGroup.ts#L50">property region</a>
 </h3>
 
 ```typescript
@@ -1081,13 +1081,13 @@ region: string;
 See Argument Reference above.
 
 <h2 class="pdoc-module-header" id="GetProjectArgs">
-<a class="pdoc-member-name" href="/identity/getProject.ts#L24">interface GetProjectArgs</a>
+<a class="pdoc-member-name" href="/identity/getProject.ts#L25">interface GetProjectArgs</a>
 </h2>
 
 A collection of arguments for invoking getProject.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getProject.ts#L28">property domainId</a>
+<a class="pdoc-child-name" href="/identity/getProject.ts#L29">property domainId</a>
 </h3>
 
 ```typescript
@@ -1098,7 +1098,7 @@ domainId?: string;
 The domain this project belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getProject.ts#L33">property enabled</a>
+<a class="pdoc-child-name" href="/identity/getProject.ts#L34">property enabled</a>
 </h3>
 
 ```typescript
@@ -1110,7 +1110,7 @@ Whether the project is enabled or disabled. Valid
 values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getProject.ts#L38">property isDomain</a>
+<a class="pdoc-child-name" href="/identity/getProject.ts#L39">property isDomain</a>
 </h3>
 
 ```typescript
@@ -1122,7 +1122,7 @@ Whether this project is a domain. Valid values
 are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getProject.ts#L42">property name</a>
+<a class="pdoc-child-name" href="/identity/getProject.ts#L43">property name</a>
 </h3>
 
 ```typescript
@@ -1133,7 +1133,7 @@ name?: string;
 The name of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getProject.ts#L46">property parentId</a>
+<a class="pdoc-child-name" href="/identity/getProject.ts#L47">property parentId</a>
 </h3>
 
 ```typescript
@@ -1144,7 +1144,7 @@ parentId?: string;
 The parent of this project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getProject.ts#L47">property region</a>
+<a class="pdoc-child-name" href="/identity/getProject.ts#L48">property region</a>
 </h3>
 
 ```typescript
@@ -1152,13 +1152,13 @@ region?: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetProjectResult">
-<a class="pdoc-member-name" href="/identity/getProject.ts#L53">interface GetProjectResult</a>
+<a class="pdoc-member-name" href="/identity/getProject.ts#L54">interface GetProjectResult</a>
 </h2>
 
 A collection of values returned by getProject.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getProject.ts#L57">property description</a>
+<a class="pdoc-child-name" href="/identity/getProject.ts#L58">property description</a>
 </h3>
 
 ```typescript
@@ -1169,7 +1169,7 @@ description: string;
 The description of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getProject.ts#L61">property domainId</a>
+<a class="pdoc-child-name" href="/identity/getProject.ts#L62">property domainId</a>
 </h3>
 
 ```typescript
@@ -1180,7 +1180,7 @@ domainId: string;
 See Argument Reference above.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getProject.ts#L69">property id</a>
+<a class="pdoc-child-name" href="/identity/getProject.ts#L70">property id</a>
 </h3>
 
 ```typescript
@@ -1191,7 +1191,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getProject.ts#L65">property region</a>
+<a class="pdoc-child-name" href="/identity/getProject.ts#L66">property region</a>
 </h3>
 
 ```typescript
@@ -1202,13 +1202,13 @@ region: string;
 The region the project is located in.
 
 <h2 class="pdoc-module-header" id="GetRoleArgs">
-<a class="pdoc-member-name" href="/identity/getRole.ts#L20">interface GetRoleArgs</a>
+<a class="pdoc-member-name" href="/identity/getRole.ts#L21">interface GetRoleArgs</a>
 </h2>
 
 A collection of arguments for invoking getRole.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getRole.ts#L24">property domainId</a>
+<a class="pdoc-child-name" href="/identity/getRole.ts#L25">property domainId</a>
 </h3>
 
 ```typescript
@@ -1219,7 +1219,7 @@ domainId?: string;
 The domain the role belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getRole.ts#L28">property name</a>
+<a class="pdoc-child-name" href="/identity/getRole.ts#L29">property name</a>
 </h3>
 
 ```typescript
@@ -1230,7 +1230,7 @@ name: string;
 The name of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getRole.ts#L33">property region</a>
+<a class="pdoc-child-name" href="/identity/getRole.ts#L34">property region</a>
 </h3>
 
 ```typescript
@@ -1242,13 +1242,13 @@ The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
 
 <h2 class="pdoc-module-header" id="GetRoleResult">
-<a class="pdoc-member-name" href="/identity/getRole.ts#L39">interface GetRoleResult</a>
+<a class="pdoc-member-name" href="/identity/getRole.ts#L40">interface GetRoleResult</a>
 </h2>
 
 A collection of values returned by getRole.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getRole.ts#L43">property domainId</a>
+<a class="pdoc-child-name" href="/identity/getRole.ts#L44">property domainId</a>
 </h3>
 
 ```typescript
@@ -1259,7 +1259,7 @@ domainId: string;
 See Argument Reference above.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getRole.ts#L51">property id</a>
+<a class="pdoc-child-name" href="/identity/getRole.ts#L52">property id</a>
 </h3>
 
 ```typescript
@@ -1270,7 +1270,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getRole.ts#L47">property region</a>
+<a class="pdoc-child-name" href="/identity/getRole.ts#L48">property region</a>
 </h3>
 
 ```typescript
@@ -1281,13 +1281,13 @@ region: string;
 See Argument Reference above.
 
 <h2 class="pdoc-module-header" id="GetUserArgs">
-<a class="pdoc-member-name" href="/identity/getUser.ts#L26">interface GetUserArgs</a>
+<a class="pdoc-member-name" href="/identity/getUser.ts#L27">interface GetUserArgs</a>
 </h2>
 
 A collection of arguments for invoking getUser.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L30">property domainId</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L31">property domainId</a>
 </h3>
 
 ```typescript
@@ -1298,7 +1298,7 @@ domainId?: string;
 The domain this user belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L35">property enabled</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L36">property enabled</a>
 </h3>
 
 ```typescript
@@ -1310,7 +1310,7 @@ Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L39">property idpId</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L40">property idpId</a>
 </h3>
 
 ```typescript
@@ -1321,7 +1321,7 @@ idpId?: string;
 The identity provider ID of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L43">property name</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L44">property name</a>
 </h3>
 
 ```typescript
@@ -1332,7 +1332,7 @@ name?: string;
 The name of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L47">property passwordExpiresAt</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L48">property passwordExpiresAt</a>
 </h3>
 
 ```typescript
@@ -1343,7 +1343,7 @@ passwordExpiresAt?: string;
 Query for expired passwords. See the [OpenStack API docs](https://developer.openstack.org/api-ref/identity/v3/#list-users) for more information on the query format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L51">property protocolId</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L52">property protocolId</a>
 </h3>
 
 ```typescript
@@ -1354,7 +1354,7 @@ protocolId?: string;
 The protocol ID of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L52">property region</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L53">property region</a>
 </h3>
 
 ```typescript
@@ -1362,7 +1362,7 @@ region?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L56">property uniqueId</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L57">property uniqueId</a>
 </h3>
 
 ```typescript
@@ -1373,13 +1373,13 @@ uniqueId?: string;
 The unique ID of the user.
 
 <h2 class="pdoc-module-header" id="GetUserResult">
-<a class="pdoc-member-name" href="/identity/getUser.ts#L62">interface GetUserResult</a>
+<a class="pdoc-member-name" href="/identity/getUser.ts#L63">interface GetUserResult</a>
 </h2>
 
 A collection of values returned by getUser.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L66">property defaultProjectId</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L67">property defaultProjectId</a>
 </h3>
 
 ```typescript
@@ -1390,7 +1390,7 @@ defaultProjectId: string;
 See Argument Reference above.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L70">property domainId</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L71">property domainId</a>
 </h3>
 
 ```typescript
@@ -1401,7 +1401,7 @@ domainId: string;
 See Argument Reference above.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L78">property id</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L79">property id</a>
 </h3>
 
 ```typescript
@@ -1412,7 +1412,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/getUser.ts#L74">property region</a>
+<a class="pdoc-child-name" href="/identity/getUser.ts#L75">property region</a>
 </h3>
 
 ```typescript
@@ -1423,13 +1423,13 @@ region: string;
 The region the user is located in.
 
 <h2 class="pdoc-module-header" id="ProjectArgs">
-<a class="pdoc-member-name" href="/identity/project.ts#L132">interface ProjectArgs</a>
+<a class="pdoc-member-name" href="/identity/project.ts#L133">interface ProjectArgs</a>
 </h2>
 
 The set of arguments for constructing a Project resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L136">property description</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L137">property description</a>
 </h3>
 
 ```typescript
@@ -1440,7 +1440,7 @@ description?: pulumi.Input<string>;
 A description of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L140">property domainId</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L141">property domainId</a>
 </h3>
 
 ```typescript
@@ -1451,7 +1451,7 @@ domainId?: pulumi.Input<string>;
 The domain this project belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L145">property enabled</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L146">property enabled</a>
 </h3>
 
 ```typescript
@@ -1463,7 +1463,7 @@ Whether the project is enabled or disabled. Valid
 values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L150">property isDomain</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L151">property isDomain</a>
 </h3>
 
 ```typescript
@@ -1475,7 +1475,7 @@ Whether this project is a domain. Valid values
 are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L154">property name</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L155">property name</a>
 </h3>
 
 ```typescript
@@ -1486,7 +1486,7 @@ name?: pulumi.Input<string>;
 The name of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L158">property parentId</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L159">property parentId</a>
 </h3>
 
 ```typescript
@@ -1497,7 +1497,7 @@ parentId?: pulumi.Input<string>;
 The parent of this project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L164">property region</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L165">property region</a>
 </h3>
 
 ```typescript
@@ -1510,13 +1510,13 @@ If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
 
 <h2 class="pdoc-module-header" id="ProjectState">
-<a class="pdoc-member-name" href="/identity/project.ts#L94">interface ProjectState</a>
+<a class="pdoc-member-name" href="/identity/project.ts#L95">interface ProjectState</a>
 </h2>
 
 Input properties used for looking up and filtering Project resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L98">property description</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L99">property description</a>
 </h3>
 
 ```typescript
@@ -1527,7 +1527,7 @@ description?: pulumi.Input<string>;
 A description of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L102">property domainId</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L103">property domainId</a>
 </h3>
 
 ```typescript
@@ -1538,7 +1538,7 @@ domainId?: pulumi.Input<string>;
 The domain this project belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L107">property enabled</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L108">property enabled</a>
 </h3>
 
 ```typescript
@@ -1550,7 +1550,7 @@ Whether the project is enabled or disabled. Valid
 values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L112">property isDomain</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L113">property isDomain</a>
 </h3>
 
 ```typescript
@@ -1562,7 +1562,7 @@ Whether this project is a domain. Valid values
 are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L116">property name</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L117">property name</a>
 </h3>
 
 ```typescript
@@ -1573,7 +1573,7 @@ name?: pulumi.Input<string>;
 The name of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L120">property parentId</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L121">property parentId</a>
 </h3>
 
 ```typescript
@@ -1584,7 +1584,7 @@ parentId?: pulumi.Input<string>;
 The parent of this project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/project.ts#L126">property region</a>
+<a class="pdoc-child-name" href="/identity/project.ts#L127">property region</a>
 </h3>
 
 ```typescript
@@ -1597,13 +1597,13 @@ If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
 
 <h2 class="pdoc-module-header" id="RoleArgs">
-<a class="pdoc-member-name" href="/identity/role.ts#L88">interface RoleArgs</a>
+<a class="pdoc-member-name" href="/identity/role.ts#L89">interface RoleArgs</a>
 </h2>
 
 The set of arguments for constructing a Role resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L92">property domainId</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L93">property domainId</a>
 </h3>
 
 ```typescript
@@ -1614,7 +1614,7 @@ domainId?: pulumi.Input<string>;
 The domain the role belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L96">property name</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L97">property name</a>
 </h3>
 
 ```typescript
@@ -1625,7 +1625,7 @@ name?: pulumi.Input<string>;
 The name of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L102">property region</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L103">property region</a>
 </h3>
 
 ```typescript
@@ -1638,13 +1638,13 @@ If omitted, the `region` argument of the provider is used. Changing this
 creates a new Role.
 
 <h2 class="pdoc-module-header" id="RoleAssignmentArgs">
-<a class="pdoc-member-name" href="/identity/roleAssignment.ts#L107">interface RoleAssignmentArgs</a>
+<a class="pdoc-member-name" href="/identity/roleAssignment.ts#L108">interface RoleAssignmentArgs</a>
 </h2>
 
 The set of arguments for constructing a RoleAssignment resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L111">property domainId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L112">property domainId</a>
 </h3>
 
 ```typescript
@@ -1655,7 +1655,7 @@ domainId?: pulumi.Input<string>;
 The domain to assign the role in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L115">property groupId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L116">property groupId</a>
 </h3>
 
 ```typescript
@@ -1666,7 +1666,7 @@ groupId?: pulumi.Input<string>;
 The group to assign the role to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L119">property projectId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L120">property projectId</a>
 </h3>
 
 ```typescript
@@ -1677,7 +1677,7 @@ projectId?: pulumi.Input<string>;
 The project to assign the role in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L123">property roleId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L124">property roleId</a>
 </h3>
 
 ```typescript
@@ -1688,7 +1688,7 @@ roleId: pulumi.Input<string>;
 The role to assign.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L127">property userId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L128">property userId</a>
 </h3>
 
 ```typescript
@@ -1699,13 +1699,13 @@ userId?: pulumi.Input<string>;
 The user to assign the role to.
 
 <h2 class="pdoc-module-header" id="RoleAssignmentState">
-<a class="pdoc-member-name" href="/identity/roleAssignment.ts#L81">interface RoleAssignmentState</a>
+<a class="pdoc-member-name" href="/identity/roleAssignment.ts#L82">interface RoleAssignmentState</a>
 </h2>
 
 Input properties used for looking up and filtering RoleAssignment resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L85">property domainId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L86">property domainId</a>
 </h3>
 
 ```typescript
@@ -1716,7 +1716,7 @@ domainId?: pulumi.Input<string>;
 The domain to assign the role in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L89">property groupId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L90">property groupId</a>
 </h3>
 
 ```typescript
@@ -1727,7 +1727,7 @@ groupId?: pulumi.Input<string>;
 The group to assign the role to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L93">property projectId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L94">property projectId</a>
 </h3>
 
 ```typescript
@@ -1738,7 +1738,7 @@ projectId?: pulumi.Input<string>;
 The project to assign the role in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L97">property roleId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L98">property roleId</a>
 </h3>
 
 ```typescript
@@ -1749,7 +1749,7 @@ roleId?: pulumi.Input<string>;
 The role to assign.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L101">property userId</a>
+<a class="pdoc-child-name" href="/identity/roleAssignment.ts#L102">property userId</a>
 </h3>
 
 ```typescript
@@ -1760,13 +1760,13 @@ userId?: pulumi.Input<string>;
 The user to assign the role to.
 
 <h2 class="pdoc-module-header" id="RoleState">
-<a class="pdoc-member-name" href="/identity/role.ts#L68">interface RoleState</a>
+<a class="pdoc-member-name" href="/identity/role.ts#L69">interface RoleState</a>
 </h2>
 
 Input properties used for looking up and filtering Role resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L72">property domainId</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L73">property domainId</a>
 </h3>
 
 ```typescript
@@ -1777,7 +1777,7 @@ domainId?: pulumi.Input<string>;
 The domain the role belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L76">property name</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L77">property name</a>
 </h3>
 
 ```typescript
@@ -1788,7 +1788,7 @@ name?: pulumi.Input<string>;
 The name of the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/role.ts#L82">property region</a>
+<a class="pdoc-child-name" href="/identity/role.ts#L83">property region</a>
 </h3>
 
 ```typescript
@@ -1801,13 +1801,13 @@ If omitted, the `region` argument of the provider is used. Changing this
 creates a new Role.
 
 <h2 class="pdoc-module-header" id="UserArgs">
-<a class="pdoc-member-name" href="/identity/user.ts#L204">interface UserArgs</a>
+<a class="pdoc-member-name" href="/identity/user.ts#L205">interface UserArgs</a>
 </h2>
 
 The set of arguments for constructing a User resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L208">property defaultProjectId</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L209">property defaultProjectId</a>
 </h3>
 
 ```typescript
@@ -1818,7 +1818,7 @@ defaultProjectId?: pulumi.Input<string>;
 The default project this user belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L212">property description</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L213">property description</a>
 </h3>
 
 ```typescript
@@ -1829,7 +1829,7 @@ description?: pulumi.Input<string>;
 A description of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L216">property domainId</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L217">property domainId</a>
 </h3>
 
 ```typescript
@@ -1840,7 +1840,7 @@ domainId?: pulumi.Input<string>;
 The domain this user belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L221">property enabled</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L222">property enabled</a>
 </h3>
 
 ```typescript
@@ -1852,7 +1852,7 @@ Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L225">property extra</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L226">property extra</a>
 </h3>
 
 ```typescript
@@ -1863,7 +1863,7 @@ extra?: pulumi.Input<{ ... }>;
 Free-form key/value pairs of extra information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L230">property ignoreChangePasswordUponFirstUse</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L231">property ignoreChangePasswordUponFirstUse</a>
 </h3>
 
 ```typescript
@@ -1875,7 +1875,7 @@ User will not have to
 change their password upon first use. Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L235">property ignoreLockoutFailureAttempts</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L236">property ignoreLockoutFailureAttempts</a>
 </h3>
 
 ```typescript
@@ -1887,7 +1887,7 @@ User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L240">property ignorePasswordExpiry</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L241">property ignorePasswordExpiry</a>
 </h3>
 
 ```typescript
@@ -1899,7 +1899,7 @@ User's password will not expire.
 Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L245">property multiFactorAuthEnabled</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L246">property multiFactorAuthEnabled</a>
 </h3>
 
 ```typescript
@@ -1911,7 +1911,7 @@ Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L252">property multiFactorAuthRules</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L253">property multiFactorAuthRules</a>
 </h3>
 
 ```typescript
@@ -1925,7 +1925,7 @@ The structure is documented below. Please see the
 for more information on how to use mulit-factor rules.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L256">property name</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L257">property name</a>
 </h3>
 
 ```typescript
@@ -1936,7 +1936,7 @@ name?: pulumi.Input<string>;
 The name of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L260">property password</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L261">property password</a>
 </h3>
 
 ```typescript
@@ -1947,7 +1947,7 @@ password?: pulumi.Input<string>;
 The password for the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L266">property region</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L267">property region</a>
 </h3>
 
 ```typescript
@@ -1960,13 +1960,13 @@ If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
 
 <h2 class="pdoc-module-header" id="UserState">
-<a class="pdoc-member-name" href="/identity/user.ts#L136">interface UserState</a>
+<a class="pdoc-member-name" href="/identity/user.ts#L137">interface UserState</a>
 </h2>
 
 Input properties used for looking up and filtering User resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L140">property defaultProjectId</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L141">property defaultProjectId</a>
 </h3>
 
 ```typescript
@@ -1977,7 +1977,7 @@ defaultProjectId?: pulumi.Input<string>;
 The default project this user belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L144">property description</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L145">property description</a>
 </h3>
 
 ```typescript
@@ -1988,7 +1988,7 @@ description?: pulumi.Input<string>;
 A description of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L148">property domainId</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L149">property domainId</a>
 </h3>
 
 ```typescript
@@ -1999,7 +1999,7 @@ domainId?: pulumi.Input<string>;
 The domain this user belongs to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L153">property enabled</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L154">property enabled</a>
 </h3>
 
 ```typescript
@@ -2011,7 +2011,7 @@ Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L157">property extra</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L158">property extra</a>
 </h3>
 
 ```typescript
@@ -2022,7 +2022,7 @@ extra?: pulumi.Input<{ ... }>;
 Free-form key/value pairs of extra information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L162">property ignoreChangePasswordUponFirstUse</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L163">property ignoreChangePasswordUponFirstUse</a>
 </h3>
 
 ```typescript
@@ -2034,7 +2034,7 @@ User will not have to
 change their password upon first use. Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L167">property ignoreLockoutFailureAttempts</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L168">property ignoreLockoutFailureAttempts</a>
 </h3>
 
 ```typescript
@@ -2046,7 +2046,7 @@ User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L172">property ignorePasswordExpiry</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L173">property ignorePasswordExpiry</a>
 </h3>
 
 ```typescript
@@ -2058,7 +2058,7 @@ User's password will not expire.
 Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L177">property multiFactorAuthEnabled</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L178">property multiFactorAuthEnabled</a>
 </h3>
 
 ```typescript
@@ -2070,7 +2070,7 @@ Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L184">property multiFactorAuthRules</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L185">property multiFactorAuthRules</a>
 </h3>
 
 ```typescript
@@ -2084,7 +2084,7 @@ The structure is documented below. Please see the
 for more information on how to use mulit-factor rules.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L188">property name</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L189">property name</a>
 </h3>
 
 ```typescript
@@ -2095,7 +2095,7 @@ name?: pulumi.Input<string>;
 The name of the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L192">property password</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L193">property password</a>
 </h3>
 
 ```typescript
@@ -2106,7 +2106,7 @@ password?: pulumi.Input<string>;
 The password for the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/identity/user.ts#L198">property region</a>
+<a class="pdoc-child-name" href="/identity/user.ts#L199">property region</a>
 </h3>
 
 ```typescript

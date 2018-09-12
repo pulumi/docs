@@ -444,14 +444,14 @@ size: number;
 The size, in bytes, of the blob that was [put].
 
 <h2 class="pdoc-module-header" id="CacheFrom">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L117">interface CacheFrom</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L126">interface CacheFrom</a>
 </h2>
 
 CacheFrom may be used to specify build stages to use for the Docker build cache. The final image is always
 implicitly included.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L122">property stages</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L131">property stages</a>
 </h3>
 
 ```typescript
@@ -482,7 +482,7 @@ Container, or a ContainerBuild object with more detailed build instructions.  If
 built container will be tagged with that name, but otherwise will get an auto-generated image name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L103">property command</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L112">property command</a>
 </h3>
 
 ```typescript
@@ -500,7 +500,19 @@ information about the Docker `CMD` parameter, go to
 https://docs.docker.com/engine/reference/builder/#cmd.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L110">property dockerLabels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L69">property cpu</a>
+</h3>
+
+```typescript
+cpu?: pulumi.Input<number>;
+```
+
+
+Number of CPUs for the container to use. Maps to the Docker `--cpus` option - see
+https://docs.docker.com/engine/reference/commandline/run.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L119">property dockerLabels</a>
 </h3>
 
 ```typescript
@@ -551,7 +563,7 @@ pulled from the Docker Hub.  If `image` *and* `build` are specified, the `image`
 resulting image tag for the build image that gets pushed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L70">property memory</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L77">property memory</a>
 </h3>
 
 ```typescript
@@ -563,8 +575,10 @@ The maximum amount of memory the container will be allowed to use. Maps to the D
 `--memory` option - see
 https://docs.docker.com/engine/reference/commandline/run.
 
+This should be supplied in MB. i.e. A value of 1024 would equal one gigabyte.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L78">property memoryReservation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L87">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -574,12 +588,14 @@ memoryReservation?: pulumi.Input<number>;
 
 The amount of memory to reserve for the container, but the container will
 be allowed to use more memory if it's available.  At least one of
-`memory` and `memorReservation` must be specified.  Maps to the Docker
+`memory` and `memoryReservation` must be specified.  Maps to the Docker
 `--memory-reservation` option - see
 https://docs.docker.com/engine/reference/commandline/run.
 
+This should be supplied in MB. i.e. A value of 1024 would equal one gigabyte.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L85">property ports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L94">property ports</a>
 </h3>
 
 ```typescript
@@ -593,7 +609,7 @@ Maps to the Docker `--publish` option - see
 https://docs.docker.com/engine/reference/commandline/run.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L92">property volumes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L101">property volumes</a>
 </h3>
 
 ```typescript
@@ -607,13 +623,13 @@ the container at which to moung the volume.  Maps to the Docker
 https://docs.docker.com/engine/reference/commandline/run.
 
 <h2 class="pdoc-module-header" id="ContainerBuild">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L128">interface ContainerBuild</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L137">interface ContainerBuild</a>
 </h2>
 
 ContainerBuild may be used to specify detailed instructions about how to build a container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L145">property args</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L154">property args</a>
 </h3>
 
 ```typescript
@@ -625,7 +641,7 @@ An optional map of named build-time argument variables to set during the Docker 
 to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L152">property cacheFrom</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L161">property cacheFrom</a>
 </h3>
 
 ```typescript
@@ -639,7 +655,7 @@ image will be pulled and passed to --cache-from; if it is a CacheFrom object, th
 also be pulled and passed to --cache-from.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L135">property context</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L144">property context</a>
 </h3>
 
 ```typescript
@@ -653,7 +669,7 @@ If not specified, the context defaults to the current working directory; if a re
 is relative to the current working directory that Pulumi is evaluating.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L140">property dockerfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L149">property dockerfile</a>
 </h3>
 
 ```typescript
@@ -665,13 +681,13 @@ dockerfile may be used to override the default Dockerfile name and/or location. 
 to be a file named Dockerfile in the root of the build context.
 
 <h2 class="pdoc-module-header" id="ContainerPort">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L157">interface ContainerPort</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L166">interface ContainerPort</a>
 </h2>
 
 ContainerPort represents the information about how to expose a container port on a [Service].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L169">property external</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L178">property external</a>
 </h3>
 
 ```typescript
@@ -682,7 +698,7 @@ external?: undefined | false | true;
 Whether the port should be exposed externally.  Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L161">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L170">property port</a>
 </h3>
 
 ```typescript
@@ -693,7 +709,7 @@ port: number;
 The incoming port where the service exposes the endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L177">property protocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L186">property protocol</a>
 </h3>
 
 ```typescript
@@ -708,7 +724,7 @@ The protocol to use for exposing the service:
 * `https`: Expose HTTPS externally and HTTP to the container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L165">property targetPort</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L174">property targetPort</a>
 </h3>
 
 ```typescript
@@ -719,10 +735,10 @@ targetPort?: undefined | number;
 The target port on the backing container.  Defaults to the value of [port].
 
 <h2 class="pdoc-module-header" id="ContainerVolumeMount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L182">interface ContainerVolumeMount</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L191">interface ContainerVolumeMount</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L183">property containerPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L192">property containerPath</a>
 </h3>
 
 ```typescript
@@ -730,7 +746,7 @@ containerPath: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L184">property sourceVolume</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L193">property sourceVolume</a>
 </h3>
 
 ```typescript
@@ -824,10 +840,10 @@ domainName: string;
 The domain name to associate with the API.
 
 <h2 class="pdoc-module-header" id="Endpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L265">interface Endpoint</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L274">interface Endpoint</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L266">property hostname</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L275">property hostname</a>
 </h3>
 
 ```typescript
@@ -835,7 +851,7 @@ hostname: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L267">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L276">property port</a>
 </h3>
 
 ```typescript
@@ -843,10 +859,10 @@ port: number;
 ```
 
 <h2 class="pdoc-module-header" id="Endpoints">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L270">interface Endpoints</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L279">interface Endpoints</a>
 </h2>
 <h2 class="pdoc-module-header" id="HostPathVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L222">interface HostPathVolume</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L231">interface HostPathVolume</a>
 </h2>
 
 A volume mounted from a path on the host machine.
@@ -856,7 +872,7 @@ across different hosts.  This is not something that most containers will need, b
 a powerful escape hatch for some applications.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L190">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L199">property kind</a>
 </h3>
 
 ```typescript
@@ -864,7 +880,7 @@ kind: VolumeKind;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L226">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L235">property path</a>
 </h3>
 
 ```typescript
@@ -872,10 +888,10 @@ path: string;
 ```
 
 <h2 class="pdoc-module-header" id="HostPathVolumeConstructor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L229">interface HostPathVolumeConstructor</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L238">interface HostPathVolumeConstructor</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L229">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L238">constructor</a>
 </h3>
 
 ```typescript
@@ -1244,7 +1260,7 @@ By default API.static will also serve 'index.html' in response to a request on a
 directory. To disable this set false or to supply a new index pass a string.
 
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L281">interface Service</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L290">interface Service</a>
 </h2>
 
 A persistent service running as part of the Pulumi Cloud application. A
@@ -1252,7 +1268,7 @@ collection of container specifications are provided to define the compute
 that will run inside this service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L307">method getEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L316">method getEndpoint</a>
 </h3>
 
 ```typescript
@@ -1268,7 +1284,7 @@ first exposed port is used.
 Only usable on the inside.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L297">property defaultEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L306">property defaultEndpoint</a>
 </h3>
 
 ```typescript
@@ -1281,7 +1297,7 @@ can also be retrieved by using the 'Service.endpoints' property.  Note: this val
 may not be present if the service does not actually expose any endpoints.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L290">property endpoints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L299">property endpoints</a>
 </h3>
 
 ```typescript
@@ -1293,7 +1309,7 @@ The exposed hostname and port for connecting to the given containerName
 on the given containerPort.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L282">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L291">property name</a>
 </h3>
 
 ```typescript
@@ -1301,7 +1317,7 @@ name: string;
 ```
 
 <h2 class="pdoc-module-header" id="ServiceArguments">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L243">interface ServiceArguments</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L252">interface ServiceArguments</a>
 </h2>
 
 The arguments to construct a Service object. These arguments may include container information, for simple
@@ -1322,7 +1338,7 @@ Container, or a ContainerBuild object with more detailed build instructions.  If
 built container will be tagged with that name, but otherwise will get an auto-generated image name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L103">property command</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L112">property command</a>
 </h3>
 
 ```typescript
@@ -1340,7 +1356,7 @@ information about the Docker `CMD` parameter, go to
 https://docs.docker.com/engine/reference/builder/#cmd.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L247">property containers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L256">property containers</a>
 </h3>
 
 ```typescript
@@ -1351,7 +1367,19 @@ containers?: Containers;
 A collection of containers that will be deployed as part of this Service, if there are multiple.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L110">property dockerLabels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L69">property cpu</a>
+</h3>
+
+```typescript
+cpu?: pulumi.Input<number>;
+```
+
+
+Number of CPUs for the container to use. Maps to the Docker `--cpus` option - see
+https://docs.docker.com/engine/reference/commandline/run.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L119">property dockerLabels</a>
 </h3>
 
 ```typescript
@@ -1389,7 +1417,7 @@ The function code to use as the implementation of the contaner.  If `function` i
 neither `image` nor `build` are legal.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L256">property host</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L265">property host</a>
 </h3>
 
 ```typescript
@@ -1413,7 +1441,7 @@ pulled from the Docker Hub.  If `image` *and* `build` are specified, the `image`
 resulting image tag for the build image that gets pushed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L70">property memory</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L77">property memory</a>
 </h3>
 
 ```typescript
@@ -1425,8 +1453,10 @@ The maximum amount of memory the container will be allowed to use. Maps to the D
 `--memory` option - see
 https://docs.docker.com/engine/reference/commandline/run.
 
+This should be supplied in MB. i.e. A value of 1024 would equal one gigabyte.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L78">property memoryReservation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L87">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -1436,12 +1466,14 @@ memoryReservation?: pulumi.Input<number>;
 
 The amount of memory to reserve for the container, but the container will
 be allowed to use more memory if it's available.  At least one of
-`memory` and `memorReservation` must be specified.  Maps to the Docker
+`memory` and `memoryReservation` must be specified.  Maps to the Docker
 `--memory-reservation` option - see
 https://docs.docker.com/engine/reference/commandline/run.
 
+This should be supplied in MB. i.e. A value of 1024 would equal one gigabyte.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L85">property ports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L94">property ports</a>
 </h3>
 
 ```typescript
@@ -1455,7 +1487,7 @@ Maps to the Docker `--publish` option - see
 https://docs.docker.com/engine/reference/commandline/run.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L252">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L261">property replicas</a>
 </h3>
 
 ```typescript
@@ -1467,7 +1499,7 @@ The number of copies of this Service's containers to deploy and maintain
 as part of the running service.  Defaults to `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L92">property volumes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L101">property volumes</a>
 </h3>
 
 ```typescript
@@ -1481,7 +1513,7 @@ the container at which to moung the volume.  Maps to the Docker
 https://docs.docker.com/engine/reference/commandline/run.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L262">property waitForSteadyState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L271">property waitForSteadyState</a>
 </h3>
 
 ```typescript
@@ -1493,10 +1525,10 @@ Determines whether the service should wait to fully transition to a new steady s
 set to false, the service may complete its deployment before it is fully ready to be used. Defaults to 'true'.
 
 <h2 class="pdoc-module-header" id="ServiceConstructor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L310">interface ServiceConstructor</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L319">interface ServiceConstructor</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L310">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L319">constructor</a>
 </h3>
 
 ```typescript
@@ -1510,13 +1542,13 @@ Construct a new Service, which is one or more managed replicas of a group of one
 * `opts` A bag of options that controls how this resource behaves.
 
 <h2 class="pdoc-module-header" id="SharedVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L196">interface SharedVolume</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L205">interface SharedVolume</a>
 </h2>
 
 A shared volume that can be mounted into one or more containers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L190">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L199">property kind</a>
 </h3>
 
 ```typescript
@@ -1524,7 +1556,7 @@ kind: VolumeKind;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L200">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L209">property name</a>
 </h3>
 
 ```typescript
@@ -1532,10 +1564,10 @@ name: string;
 ```
 
 <h2 class="pdoc-module-header" id="SharedVolumeConstructor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L203">interface SharedVolumeConstructor</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L212">interface SharedVolumeConstructor</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L203">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L212">constructor</a>
 </h3>
 
 ```typescript
@@ -1695,14 +1727,14 @@ Creates a new Table.
 * `opts` A bag of options that controls how this resource behaves.
 
 <h2 class="pdoc-module-header" id="Task">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L341">interface Task</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L350">interface Task</a>
 </h2>
 
 A Task represents a container which can be [run] dynamically whenever (and
 as many times as) needed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L345">method run</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L354">method run</a>
 </h3>
 
 ```typescript
@@ -1713,10 +1745,10 @@ run(options?: TaskRunOptions): Promise<void>
 Run the task, passing in additional task run options.
 
 <h2 class="pdoc-module-header" id="TaskConstructor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L348">interface TaskConstructor</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L357">interface TaskConstructor</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L348">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L357">constructor</a>
 </h3>
 
 ```typescript
@@ -1731,13 +1763,13 @@ Construct a new Task, which is a Container that can be run many times as individ
 * `opts` A bag of options that controls how this resource behaves.
 
 <h2 class="pdoc-module-header" id="TaskRunOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L326">interface TaskRunOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L335">interface TaskRunOptions</a>
 </h2>
 
 Arguments to use for initializing a single run of the Task
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L330">property environment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L339">property environment</a>
 </h3>
 
 ```typescript
@@ -1748,7 +1780,7 @@ environment?: Record<string, string>;
 Optional environment variables to override those set in the container definition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L334">property host</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L343">property host</a>
 </h3>
 
 ```typescript
@@ -1808,10 +1840,10 @@ Allocate a new Topic with a given name.
 * `opts` A bag of options that controls how this resource behaves.
 
 <h2 class="pdoc-module-header" id="Volume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L189">interface Volume</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L198">interface Volume</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L190">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L199">property kind</a>
 </h3>
 
 ```typescript
@@ -1841,7 +1873,7 @@ type BucketHandler = { ... };
 BucketHandler is the callback that handles an [onPut] or [onDelete] event.
 
 <h2 class="pdoc-module-header" id="ContainerProtocol">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L180">type ContainerProtocol</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L189">type ContainerProtocol</a>
 </h2>
 
 ```typescript
@@ -1892,7 +1924,7 @@ invoke `next` to pass control to the next available handler on the route for
 further processing.
 
 <h2 class="pdoc-module-header" id="VolumeKind">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L187">type VolumeKind</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L196">type VolumeKind</a>
 </h2>
 
 ```typescript

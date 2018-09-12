@@ -17,13 +17,13 @@ title: Module objectstorage
 
 
 <h2 class="pdoc-module-header" id="Container">
-<a class="pdoc-member-name" href="/objectstorage/container.ts#L9">class Container</a>
+<a class="pdoc-member-name" href="/objectstorage/container.ts#L10">class Container</a>
 </h2>
 
 Manages a V1 container resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L68">constructor</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L69">constructor</a>
 </h3>
 
 ```typescript
@@ -38,7 +38,7 @@ Create a Container resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -70,7 +70,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L28">property containerRead</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L29">property containerRead</a>
 </h3>
 
 ```typescript
@@ -84,7 +84,7 @@ can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L33">property containerSyncKey</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L34">property containerSyncKey</a>
 </h3>
 
 ```typescript
@@ -96,7 +96,7 @@ The secret key for container synchronization.
 Changing this updates container synchronization.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L38">property containerSyncTo</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L39">property containerSyncTo</a>
 </h3>
 
 ```typescript
@@ -108,7 +108,7 @@ The destination for container synchronization.
 Changing this updates container synchronization.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L43">property containerWrite</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L44">property containerWrite</a>
 </h3>
 
 ```typescript
@@ -120,7 +120,7 @@ Sets an ACL that grants write access.
 Changing this updates the access control list write access.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L48">property contentType</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L49">property contentType</a>
 </h3>
 
 ```typescript
@@ -132,7 +132,7 @@ The MIME type for the container. Changing this
 updates the MIME type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L52">property forceDestroy</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L53">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -155,7 +155,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L57">property metadata</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L58">property metadata</a>
 </h3>
 
 ```typescript
@@ -167,7 +167,7 @@ Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L62">property name</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L63">property name</a>
 </h3>
 
 ```typescript
@@ -179,7 +179,7 @@ A unique name for the container. Changing this creates a
 new container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L68">property region</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L69">property region</a>
 </h3>
 
 ```typescript
@@ -204,13 +204,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ContainerObject">
-<a class="pdoc-member-name" href="/objectstorage/containerObject.ts#L9">class ContainerObject</a>
+<a class="pdoc-member-name" href="/objectstorage/containerObject.ts#L10">class ContainerObject</a>
 </h2>
 
 Manages a V1 container object resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L128">constructor</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L129">constructor</a>
 </h3>
 
 ```typescript
@@ -225,7 +225,7 @@ Create a ContainerObject resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -257,7 +257,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L30">property containerName</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L31">property containerName</a>
 </h3>
 
 ```typescript
@@ -273,7 +273,7 @@ character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L35">property content</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L36">property content</a>
 </h3>
 
 ```typescript
@@ -285,7 +285,7 @@ A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L41">property contentDisposition</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L42">property contentDisposition</a>
 </h3>
 
 ```typescript
@@ -298,7 +298,7 @@ the browser. For example, this header might specify that the browser use a downl
 program to save this file rather than show the file, which is the default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L46">property contentEncoding</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L47">property contentEncoding</a>
 </h3>
 
 ```typescript
@@ -310,7 +310,7 @@ A string representing the value of the Content-Encoding
 metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L51">property contentLength</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L52">property contentLength</a>
 </h3>
 
 ```typescript
@@ -322,7 +322,7 @@ If the operation succeeds, this value is zero (0) or the
 length of informational or error text in the response body.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L55">property contentType</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L56">property contentType</a>
 </h3>
 
 ```typescript
@@ -333,7 +333,7 @@ public contentType: pulumi.Output<string>;
 A string which sets the MIME type for the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L63">property copyFrom</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L64">property copyFrom</a>
 </h3>
 
 ```typescript
@@ -348,7 +348,7 @@ container and object before you include them in the header. Conflicts with `sour
 `content`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L69">property date</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L70">property date</a>
 </h3>
 
 ```typescript
@@ -361,7 +361,7 @@ format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L75">property deleteAfter</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L76">property deleteAfter</a>
 </h3>
 
 ```typescript
@@ -374,7 +374,7 @@ system removes the object. Internally, the Object Storage system stores this val
 the X-Delete-At metadata item.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L80">property deleteAt</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L81">property deleteAt</a>
 </h3>
 
 ```typescript
@@ -386,7 +386,7 @@ An string representing the date when the system removes the object.
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L86">property detectContentType</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L87">property detectContentType</a>
 </h3>
 
 ```typescript
@@ -399,7 +399,7 @@ type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L90">property etag</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L91">property etag</a>
 </h3>
 
 ```typescript
@@ -422,7 +422,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L99">property lastModified</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L100">property lastModified</a>
 </h3>
 
 ```typescript
@@ -438,7 +438,7 @@ The ±hh:mm value, if included, is the time zone as an offset from UTC. In the p
 example, the offset value is -05:00.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L100">property metadata</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L101">property metadata</a>
 </h3>
 
 ```typescript
@@ -446,7 +446,7 @@ public metadata: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L104">property name</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L105">property name</a>
 </h3>
 
 ```typescript
@@ -457,7 +457,7 @@ public name: pulumi.Output<string>;
 A unique name for the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L112">property objectManifest</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L113">property objectManifest</a>
 </h3>
 
 ```typescript
@@ -472,7 +472,7 @@ URL-encode the names of the container and prefix before you include them in this
 header.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L118">property region</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L119">property region</a>
 </h3>
 
 ```typescript
@@ -485,7 +485,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L123">property source</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L124">property source</a>
 </h3>
 
 ```typescript
@@ -497,7 +497,7 @@ A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L128">property transId</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L129">property transId</a>
 </h3>
 
 ```typescript
@@ -521,13 +521,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ContainerArgs">
-<a class="pdoc-member-name" href="/objectstorage/container.ts#L163">interface ContainerArgs</a>
+<a class="pdoc-member-name" href="/objectstorage/container.ts#L164">interface ContainerArgs</a>
 </h2>
 
 The set of arguments for constructing a Container resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L170">property containerRead</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L171">property containerRead</a>
 </h3>
 
 ```typescript
@@ -541,7 +541,7 @@ can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L175">property containerSyncKey</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L176">property containerSyncKey</a>
 </h3>
 
 ```typescript
@@ -553,7 +553,7 @@ The secret key for container synchronization.
 Changing this updates container synchronization.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L180">property containerSyncTo</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L181">property containerSyncTo</a>
 </h3>
 
 ```typescript
@@ -565,7 +565,7 @@ The destination for container synchronization.
 Changing this updates container synchronization.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L185">property containerWrite</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L186">property containerWrite</a>
 </h3>
 
 ```typescript
@@ -577,7 +577,7 @@ Sets an ACL that grants write access.
 Changing this updates the access control list write access.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L190">property contentType</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L191">property contentType</a>
 </h3>
 
 ```typescript
@@ -589,7 +589,7 @@ The MIME type for the container. Changing this
 updates the MIME type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L194">property forceDestroy</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L195">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -600,7 +600,7 @@ forceDestroy?: pulumi.Input<boolean>;
 A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L199">property metadata</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L200">property metadata</a>
 </h3>
 
 ```typescript
@@ -612,7 +612,7 @@ Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L204">property name</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L205">property name</a>
 </h3>
 
 ```typescript
@@ -624,7 +624,7 @@ A unique name for the container. Changing this creates a
 new container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L210">property region</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L211">property region</a>
 </h3>
 
 ```typescript
@@ -637,13 +637,13 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
 
 <h2 class="pdoc-module-header" id="ContainerObjectArgs">
-<a class="pdoc-member-name" href="/objectstorage/containerObject.ts#L306">interface ContainerObjectArgs</a>
+<a class="pdoc-member-name" href="/objectstorage/containerObject.ts#L307">interface ContainerObjectArgs</a>
 </h2>
 
 The set of arguments for constructing a ContainerObject resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L315">property containerName</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L316">property containerName</a>
 </h3>
 
 ```typescript
@@ -659,7 +659,7 @@ character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L320">property content</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L321">property content</a>
 </h3>
 
 ```typescript
@@ -671,7 +671,7 @@ A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L326">property contentDisposition</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L327">property contentDisposition</a>
 </h3>
 
 ```typescript
@@ -684,7 +684,7 @@ the browser. For example, this header might specify that the browser use a downl
 program to save this file rather than show the file, which is the default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L331">property contentEncoding</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L332">property contentEncoding</a>
 </h3>
 
 ```typescript
@@ -696,7 +696,7 @@ A string representing the value of the Content-Encoding
 metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L335">property contentType</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L336">property contentType</a>
 </h3>
 
 ```typescript
@@ -707,7 +707,7 @@ contentType?: pulumi.Input<string>;
 A string which sets the MIME type for the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L343">property copyFrom</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L344">property copyFrom</a>
 </h3>
 
 ```typescript
@@ -722,7 +722,7 @@ container and object before you include them in the header. Conflicts with `sour
 `content`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L349">property deleteAfter</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L350">property deleteAfter</a>
 </h3>
 
 ```typescript
@@ -735,7 +735,7 @@ system removes the object. Internally, the Object Storage system stores this val
 the X-Delete-At metadata item.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L354">property deleteAt</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L355">property deleteAt</a>
 </h3>
 
 ```typescript
@@ -747,7 +747,7 @@ An string representing the date when the system removes the object.
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L360">property detectContentType</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L361">property detectContentType</a>
 </h3>
 
 ```typescript
@@ -760,7 +760,7 @@ type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L364">property etag</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L365">property etag</a>
 </h3>
 
 ```typescript
@@ -771,7 +771,7 @@ etag?: pulumi.Input<string>;
 Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L365">property metadata</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L366">property metadata</a>
 </h3>
 
 ```typescript
@@ -779,7 +779,7 @@ metadata?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L369">property name</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L370">property name</a>
 </h3>
 
 ```typescript
@@ -790,7 +790,7 @@ name?: pulumi.Input<string>;
 A unique name for the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L377">property objectManifest</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L378">property objectManifest</a>
 </h3>
 
 ```typescript
@@ -805,7 +805,7 @@ URL-encode the names of the container and prefix before you include them in this
 header.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L383">property region</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L384">property region</a>
 </h3>
 
 ```typescript
@@ -818,7 +818,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L388">property source</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L389">property source</a>
 </h3>
 
 ```typescript
@@ -830,13 +830,13 @@ A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
 
 <h2 class="pdoc-module-header" id="ContainerObjectState">
-<a class="pdoc-member-name" href="/objectstorage/containerObject.ts#L193">interface ContainerObjectState</a>
+<a class="pdoc-member-name" href="/objectstorage/containerObject.ts#L194">interface ContainerObjectState</a>
 </h2>
 
 Input properties used for looking up and filtering ContainerObject resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L202">property containerName</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L203">property containerName</a>
 </h3>
 
 ```typescript
@@ -852,7 +852,7 @@ character delimits the container and object name. For example, the path
 /v1/account/www/pages specifies the www container, not the www/pages container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L207">property content</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L208">property content</a>
 </h3>
 
 ```typescript
@@ -864,7 +864,7 @@ A string representing the content of the object. Conflicts with
 `source` and `copy_from`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L213">property contentDisposition</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L214">property contentDisposition</a>
 </h3>
 
 ```typescript
@@ -877,7 +877,7 @@ the browser. For example, this header might specify that the browser use a downl
 program to save this file rather than show the file, which is the default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L218">property contentEncoding</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L219">property contentEncoding</a>
 </h3>
 
 ```typescript
@@ -889,7 +889,7 @@ A string representing the value of the Content-Encoding
 metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L223">property contentLength</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L224">property contentLength</a>
 </h3>
 
 ```typescript
@@ -901,7 +901,7 @@ If the operation succeeds, this value is zero (0) or the
 length of informational or error text in the response body.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L227">property contentType</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L228">property contentType</a>
 </h3>
 
 ```typescript
@@ -912,7 +912,7 @@ contentType?: pulumi.Input<string>;
 A string which sets the MIME type for the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L235">property copyFrom</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L236">property copyFrom</a>
 </h3>
 
 ```typescript
@@ -927,7 +927,7 @@ container and object before you include them in the header. Conflicts with `sour
 `content`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L241">property date</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L242">property date</a>
 </h3>
 
 ```typescript
@@ -940,7 +940,7 @@ format of RFC 7231 as shown in this example Thu, 16 Jun 2016 15:10:38 GMT. The
 time is always in UTC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L247">property deleteAfter</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L248">property deleteAfter</a>
 </h3>
 
 ```typescript
@@ -953,7 +953,7 @@ system removes the object. Internally, the Object Storage system stores this val
 the X-Delete-At metadata item.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L252">property deleteAt</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L253">property deleteAt</a>
 </h3>
 
 ```typescript
@@ -965,7 +965,7 @@ An string representing the date when the system removes the object.
 For example, "2015-08-26" is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GMT.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L258">property detectContentType</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L259">property detectContentType</a>
 </h3>
 
 ```typescript
@@ -978,7 +978,7 @@ type based on the file extension and ignores the value sent in the Content-Type
 header, if present.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L262">property etag</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L263">property etag</a>
 </h3>
 
 ```typescript
@@ -989,7 +989,7 @@ etag?: pulumi.Input<string>;
 Used to trigger updates. The only meaningful value is ${md5(file("path/to/file"))}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L271">property lastModified</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L272">property lastModified</a>
 </h3>
 
 ```typescript
@@ -1005,7 +1005,7 @@ The ±hh:mm value, if included, is the time zone as an offset from UTC. In the p
 example, the offset value is -05:00.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L272">property metadata</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L273">property metadata</a>
 </h3>
 
 ```typescript
@@ -1013,7 +1013,7 @@ metadata?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L276">property name</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L277">property name</a>
 </h3>
 
 ```typescript
@@ -1024,7 +1024,7 @@ name?: pulumi.Input<string>;
 A unique name for the object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L284">property objectManifest</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L285">property objectManifest</a>
 </h3>
 
 ```typescript
@@ -1039,7 +1039,7 @@ URL-encode the names of the container and prefix before you include them in this
 header.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L290">property region</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L291">property region</a>
 </h3>
 
 ```typescript
@@ -1052,7 +1052,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L295">property source</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L296">property source</a>
 </h3>
 
 ```typescript
@@ -1064,7 +1064,7 @@ A string representing the local path of a file which will be used
 as the object's content. Conflicts with `source` and `copy_from`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L300">property transId</a>
+<a class="pdoc-child-name" href="/objectstorage/containerObject.ts#L301">property transId</a>
 </h3>
 
 ```typescript
@@ -1076,13 +1076,13 @@ A unique transaction ID for this request. Your service provider might
 need this value if you report a problem.
 
 <h2 class="pdoc-module-header" id="ContainerState">
-<a class="pdoc-member-name" href="/objectstorage/container.ts#L110">interface ContainerState</a>
+<a class="pdoc-member-name" href="/objectstorage/container.ts#L111">interface ContainerState</a>
 </h2>
 
 Input properties used for looking up and filtering Container resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L117">property containerRead</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L118">property containerRead</a>
 </h3>
 
 ```typescript
@@ -1096,7 +1096,7 @@ can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L122">property containerSyncKey</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L123">property containerSyncKey</a>
 </h3>
 
 ```typescript
@@ -1108,7 +1108,7 @@ The secret key for container synchronization.
 Changing this updates container synchronization.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L127">property containerSyncTo</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L128">property containerSyncTo</a>
 </h3>
 
 ```typescript
@@ -1120,7 +1120,7 @@ The destination for container synchronization.
 Changing this updates container synchronization.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L132">property containerWrite</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L133">property containerWrite</a>
 </h3>
 
 ```typescript
@@ -1132,7 +1132,7 @@ Sets an ACL that grants write access.
 Changing this updates the access control list write access.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L137">property contentType</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L138">property contentType</a>
 </h3>
 
 ```typescript
@@ -1144,7 +1144,7 @@ The MIME type for the container. Changing this
 updates the MIME type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L141">property forceDestroy</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L142">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -1155,7 +1155,7 @@ forceDestroy?: pulumi.Input<boolean>;
 A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L146">property metadata</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L147">property metadata</a>
 </h3>
 
 ```typescript
@@ -1167,7 +1167,7 @@ Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L151">property name</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L152">property name</a>
 </h3>
 
 ```typescript
@@ -1179,7 +1179,7 @@ A unique name for the container. Changing this creates a
 new container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/objectstorage/container.ts#L157">property region</a>
+<a class="pdoc-child-name" href="/objectstorage/container.ts#L158">property region</a>
 </h3>
 
 ```typescript

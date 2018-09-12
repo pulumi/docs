@@ -198,10 +198,10 @@ title: Module compute
 
 
 <h2 class="pdoc-module-header" id="Address">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L6">class Address</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L7">class Address</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L36">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L37">constructor</a>
 </h3>
 
 ```typescript
@@ -216,7 +216,7 @@ Create a Address resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -248,7 +248,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L19">property address</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L20">property address</a>
 </h3>
 
 ```typescript
@@ -256,7 +256,7 @@ public address: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L20">property addressType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L21">property addressType</a>
 </h3>
 
 ```typescript
@@ -264,7 +264,7 @@ public addressType: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L21">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L22">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -272,7 +272,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L22">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L23">property description</a>
 </h3>
 
 ```typescript
@@ -292,7 +292,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L23">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L24">property name</a>
 </h3>
 
 ```typescript
@@ -300,7 +300,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L24">property networkTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L25">property networkTier</a>
 </h3>
 
 ```typescript
@@ -308,7 +308,7 @@ public networkTier: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L29">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L30">property project</a>
 </h3>
 
 ```typescript
@@ -320,7 +320,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L30">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L31">property region</a>
 </h3>
 
 ```typescript
@@ -328,7 +328,7 @@ public region: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L34">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L35">property selfLink</a>
 </h3>
 
 ```typescript
@@ -339,7 +339,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L35">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L36">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -359,7 +359,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L36">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L37">property users</a>
 </h3>
 
 ```typescript
@@ -367,10 +367,10 @@ public users: pulumi.Output<string[]>;
 ```
 
 <h2 class="pdoc-module-header" id="Autoscalar">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L6">class Autoscalar</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L7">class Autoscalar</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L30">constructor</a>
 </h3>
 
 ```typescript
@@ -385,7 +385,7 @@ Create a Autoscalar resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -417,7 +417,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L19">property autoscalingPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L20">property autoscalingPolicy</a>
 </h3>
 
 ```typescript
@@ -425,7 +425,7 @@ public autoscalingPolicy: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L20">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L21">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -433,7 +433,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -453,7 +453,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L22">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L23">property name</a>
 </h3>
 
 ```typescript
@@ -461,19 +461,15 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L27">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L24">property project</a>
 </h3>
 
 ```typescript
 public project: pulumi.Output<string>;
 ```
 
-
-The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L31">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L28">property selfLink</a>
 </h3>
 
 ```typescript
@@ -484,7 +480,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L32">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L29">property target</a>
 </h3>
 
 ```typescript
@@ -504,7 +500,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L33">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L30">property zone</a>
 </h3>
 
 ```typescript
@@ -512,10 +508,10 @@ public zone: pulumi.Output<string>;
 ```
 
 <h2 class="pdoc-module-header" id="BackendBucket">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L6">class BackendBucket</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L7">class BackendBucket</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L32">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -530,7 +526,7 @@ Create a BackendBucket resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -562,7 +558,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L19">property bucketName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L20">property bucketName</a>
 </h3>
 
 ```typescript
@@ -570,7 +566,7 @@ public bucketName: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L20">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L21">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -578,7 +574,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -586,7 +582,7 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L22">property enableCdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L23">property enableCdn</a>
 </h3>
 
 ```typescript
@@ -606,7 +602,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L23">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L24">property name</a>
 </h3>
 
 ```typescript
@@ -614,7 +610,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L28">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L29">property project</a>
 </h3>
 
 ```typescript
@@ -626,7 +622,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L32">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L33">property selfLink</a>
 </h3>
 
 ```typescript
@@ -649,17 +645,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="BackendService">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L13">class BackendService</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L14">class BackendService</a>
 </h2>
 
 A Backend Service defines a group of virtual machines that will serve traffic for load balancing. For more information
 see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
 and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
 
-For internal load balancing, use a [google_compute_region_backend_service](/docs/providers/google/r/compute_region_backend_service.html).
+For internal load balancing, use a [google_compute_region_backend_service](https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L104">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L105">constructor</a>
 </h3>
 
 ```typescript
@@ -674,7 +670,7 @@ Create a BackendService resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -706,7 +702,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L29">property backends</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L30">property backends</a>
 </h3>
 
 ```typescript
@@ -717,7 +713,7 @@ public backends: pulumi.Output<{ ... }[] | undefined>;
 The list of backends that serve this BackendService. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L33">property cdnPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L34">property cdnPolicy</a>
 </h3>
 
 ```typescript
@@ -728,7 +724,7 @@ public cdnPolicy: pulumi.Output<{ ... }>;
 Cloud CDN configuration for this BackendService. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L38">property connectionDrainingTimeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L39">property connectionDrainingTimeoutSec</a>
 </h3>
 
 ```typescript
@@ -740,7 +736,7 @@ Time for which instance will be drained (not accept new connections,
 but still work to finish started ones). Defaults to `300`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L43">property customRequestHeaders</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L44">property customRequestHeaders</a>
 </h3>
 
 ```typescript
@@ -752,7 +748,7 @@ public customRequestHeaders: pulumi.Output<string[] | undefined>;
 HTTP/S load balancer should add to proxied requests. See [guide](https://cloud.google.com/compute/docs/load-balancing/http/backend-service#user-defined-request-headers) for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L47">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L48">property description</a>
 </h3>
 
 ```typescript
@@ -760,10 +756,10 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 
-Textual description for the backend.
+The textual description for the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L51">property enableCdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L52">property enableCdn</a>
 </h3>
 
 ```typescript
@@ -774,7 +770,7 @@ public enableCdn: pulumi.Output<boolean | undefined>;
 Whether or not to enable the Cloud CDN on the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L55">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L56">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -785,7 +781,7 @@ public fingerprint: pulumi.Output<string>;
 The fingerprint of the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L61">property healthChecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L62">property healthChecks</a>
 </h3>
 
 ```typescript
@@ -798,7 +794,7 @@ for checking the health of the backend service. Currently at most one health
 check can be specified, and a health check is required.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L65">property iap</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L66">property iap</a>
 </h3>
 
 ```typescript
@@ -821,7 +817,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L69">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L70">property name</a>
 </h3>
 
 ```typescript
@@ -832,7 +828,7 @@ public name: pulumi.Output<string>;
 The name of the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L74">property portName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L75">property portName</a>
 </h3>
 
 ```typescript
@@ -844,7 +840,7 @@ The name of a service that has been added to an
 instance group in this backend. See [related docs](https://cloud.google.com/compute/docs/instance-groups/#specifying_service_endpoints) for details. Defaults to http.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L79">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L80">property project</a>
 </h3>
 
 ```typescript
@@ -856,7 +852,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L84">property protocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L85">property protocol</a>
 </h3>
 
 ```typescript
@@ -868,7 +864,7 @@ The protocol for incoming requests. Defaults to
 `HTTP`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L89">property securityPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L90">property securityPolicy</a>
 </h3>
 
 ```typescript
@@ -880,7 +876,7 @@ public securityPolicy: pulumi.Output<string | undefined>;
 [security policy](https://cloud.google.com/armor/docs/security-policy-concepts) to add to the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L93">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L94">property selfLink</a>
 </h3>
 
 ```typescript
@@ -891,7 +887,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L99">property sessionAffinity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L100">property sessionAffinity</a>
 </h3>
 
 ```typescript
@@ -904,7 +900,7 @@ affinity), `CLIENT_IP` (hash of the source/dest addresses / ports), and
 `GENERATED_COOKIE` (distribute load using a generated session cookie).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L104">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L105">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -928,10 +924,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Disk">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L6">class Disk</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L7">class Disk</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L47">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L48">constructor</a>
 </h3>
 
 ```typescript
@@ -946,7 +942,7 @@ Create a Disk resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -978,7 +974,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L19">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L20">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -986,7 +982,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L20">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L21">property description</a>
 </h3>
 
 ```typescript
@@ -994,7 +990,7 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L21">property diskEncryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L22">property diskEncryptionKey</a>
 </h3>
 
 ```typescript
@@ -1002,7 +998,7 @@ public diskEncryptionKey: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L22">property diskEncryptionKeyRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L23">property diskEncryptionKeyRaw</a>
 </h3>
 
 ```typescript
@@ -1010,7 +1006,7 @@ public diskEncryptionKeyRaw: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L23">property diskEncryptionKeySha256</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L24">property diskEncryptionKeySha256</a>
 </h3>
 
 ```typescript
@@ -1030,7 +1026,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L24">property image</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L25">property image</a>
 </h3>
 
 ```typescript
@@ -1038,7 +1034,7 @@ public image: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L25">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L26">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -1046,7 +1042,7 @@ public labelFingerprint: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L26">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L27">property labels</a>
 </h3>
 
 ```typescript
@@ -1054,7 +1050,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L27">property lastAttachTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L28">property lastAttachTimestamp</a>
 </h3>
 
 ```typescript
@@ -1062,7 +1058,7 @@ public lastAttachTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L28">property lastDetachTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L29">property lastDetachTimestamp</a>
 </h3>
 
 ```typescript
@@ -1070,7 +1066,7 @@ public lastDetachTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -1078,7 +1074,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L34">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L35">property project</a>
 </h3>
 
 ```typescript
@@ -1090,7 +1086,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L38">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L39">property selfLink</a>
 </h3>
 
 ```typescript
@@ -1101,7 +1097,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L39">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L40">property size</a>
 </h3>
 
 ```typescript
@@ -1109,7 +1105,7 @@ public size: pulumi.Output<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L40">property snapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L41">property snapshot</a>
 </h3>
 
 ```typescript
@@ -1117,7 +1113,7 @@ public snapshot: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L41">property sourceImageEncryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L42">property sourceImageEncryptionKey</a>
 </h3>
 
 ```typescript
@@ -1125,7 +1121,7 @@ public sourceImageEncryptionKey: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L42">property sourceImageId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L43">property sourceImageId</a>
 </h3>
 
 ```typescript
@@ -1133,7 +1129,7 @@ public sourceImageId: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L43">property sourceSnapshotEncryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L44">property sourceSnapshotEncryptionKey</a>
 </h3>
 
 ```typescript
@@ -1141,7 +1137,7 @@ public sourceSnapshotEncryptionKey: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L44">property sourceSnapshotId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L45">property sourceSnapshotId</a>
 </h3>
 
 ```typescript
@@ -1149,7 +1145,7 @@ public sourceSnapshotId: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L45">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L46">property type</a>
 </h3>
 
 ```typescript
@@ -1169,7 +1165,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L46">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L47">property users</a>
 </h3>
 
 ```typescript
@@ -1177,7 +1173,7 @@ public users: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L47">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L48">property zone</a>
 </h3>
 
 ```typescript
@@ -1185,7 +1181,7 @@ public zone: pulumi.Output<string>;
 ```
 
 <h2 class="pdoc-module-header" id="Firewall">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L12">class Firewall</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L13">class Firewall</a>
 </h2>
 
 Manages a firewall resource within GCE. For more information see
@@ -1194,7 +1190,7 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/firewalls).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L110">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L111">constructor</a>
 </h3>
 
 ```typescript
@@ -1209,7 +1205,7 @@ Create a Firewall resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -1241,7 +1237,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L29">property allows</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L30">property allows</a>
 </h3>
 
 ```typescript
@@ -1253,7 +1249,7 @@ Can be specified multiple times for each allow
 rule. Each allow block supports fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L35">property denies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L36">property denies</a>
 </h3>
 
 ```typescript
@@ -1266,7 +1262,7 @@ rule. Each deny block supports fields documented below. Can be specified
 instead of allow.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L39">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L40">property description</a>
 </h3>
 
 ```typescript
@@ -1277,7 +1273,7 @@ public description: pulumi.Output<string | undefined>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L44">property destinationRanges</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L45">property destinationRanges</a>
 </h3>
 
 ```typescript
@@ -1289,7 +1285,7 @@ A list of destination CIDR ranges that this
 firewall applies to. Can't be used for `INGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L49">property direction</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L50">property direction</a>
 </h3>
 
 ```typescript
@@ -1301,7 +1297,7 @@ Direction of traffic to which this firewall applies;
 One of `INGRESS` or `EGRESS`. Defaults to `INGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L54">property disabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L55">property disabled</a>
 </h3>
 
 ```typescript
@@ -1325,7 +1321,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L59">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L60">property name</a>
 </h3>
 
 ```typescript
@@ -1337,7 +1333,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L63">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L64">property network</a>
 </h3>
 
 ```typescript
@@ -1348,7 +1344,7 @@ public network: pulumi.Output<string>;
 The name or self_link of the network to attach this firewall to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L69">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L70">property priority</a>
 </h3>
 
 ```typescript
@@ -1361,7 +1357,7 @@ resources with lower priority values have higher precedence (e.g. a firewall res
 takes effect over all other firewall rules with a non-zero priority).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L74">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L75">property project</a>
 </h3>
 
 ```typescript
@@ -1373,7 +1369,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L78">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L79">property selfLink</a>
 </h3>
 
 ```typescript
@@ -1384,7 +1380,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L83">property sourceRanges</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L84">property sourceRanges</a>
 </h3>
 
 ```typescript
@@ -1396,7 +1392,7 @@ A list of source CIDR ranges that this
 firewall applies to. Can't be used for `EGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L94">property sourceServiceAccounts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L95">property sourceServiceAccounts</a>
 </h3>
 
 ```typescript
@@ -1414,7 +1410,7 @@ traffic that has source IP address within `source_ranges` OR the source IP belon
 cannot be used at the same time as `source_tags` or `target_tags`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L98">property sourceTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L99">property sourceTags</a>
 </h3>
 
 ```typescript
@@ -1425,7 +1421,7 @@ public sourceTags: pulumi.Output<string[] | undefined>;
 A list of source tags for this firewall. Can't be used for `EGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L106">property targetServiceAccounts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L107">property targetServiceAccounts</a>
 </h3>
 
 ```typescript
@@ -1440,7 +1436,7 @@ firewall rule applies to all instances on the specified network.  Note that as o
 to a change in the way that these firewall rules are handled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L110">property targetTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L111">property targetTags</a>
 </h3>
 
 ```typescript
@@ -1463,10 +1459,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ForwardingRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L6">class ForwardingRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L7">class ForwardingRule</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L46">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L47">constructor</a>
 </h3>
 
 ```typescript
@@ -1481,7 +1477,7 @@ Create a ForwardingRule resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -1513,7 +1509,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L19">property backendService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L20">property backendService</a>
 </h3>
 
 ```typescript
@@ -1521,7 +1517,7 @@ public backendService: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L20">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L21">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -1529,7 +1525,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -1549,7 +1545,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L22">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L23">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -1557,7 +1553,7 @@ public ipAddress: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L23">property ipProtocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L24">property ipProtocol</a>
 </h3>
 
 ```typescript
@@ -1565,7 +1561,7 @@ public ipProtocol: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L24">property ipVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L25">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -1573,7 +1569,7 @@ public ipVersion: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L25">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L26">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -1581,7 +1577,7 @@ public labelFingerprint: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L26">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L27">property labels</a>
 </h3>
 
 ```typescript
@@ -1589,7 +1585,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L27">property loadBalancingScheme</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L28">property loadBalancingScheme</a>
 </h3>
 
 ```typescript
@@ -1597,7 +1593,7 @@ public loadBalancingScheme: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L28">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L29">property name</a>
 </h3>
 
 ```typescript
@@ -1605,7 +1601,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L29">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L30">property network</a>
 </h3>
 
 ```typescript
@@ -1613,7 +1609,7 @@ public network: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L30">property networkTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L31">property networkTier</a>
 </h3>
 
 ```typescript
@@ -1621,7 +1617,7 @@ public networkTier: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L31">property portRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L32">property portRange</a>
 </h3>
 
 ```typescript
@@ -1629,7 +1625,7 @@ public portRange: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L32">property ports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L33">property ports</a>
 </h3>
 
 ```typescript
@@ -1637,7 +1633,7 @@ public ports: pulumi.Output<string[] | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L37">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L38">property project</a>
 </h3>
 
 ```typescript
@@ -1649,7 +1645,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L38">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L39">property region</a>
 </h3>
 
 ```typescript
@@ -1657,7 +1653,7 @@ public region: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L42">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L43">property selfLink</a>
 </h3>
 
 ```typescript
@@ -1668,7 +1664,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L43">property serviceLabel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L44">property serviceLabel</a>
 </h3>
 
 ```typescript
@@ -1676,7 +1672,7 @@ public serviceLabel: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L44">property serviceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L45">property serviceName</a>
 </h3>
 
 ```typescript
@@ -1684,7 +1680,7 @@ public serviceName: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L45">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L46">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -1692,7 +1688,7 @@ public subnetwork: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L46">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L47">property target</a>
 </h3>
 
 ```typescript
@@ -1712,10 +1708,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="GlobalAddress">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L6">class GlobalAddress</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L7">class GlobalAddress</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L32">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -1730,7 +1726,7 @@ Create a GlobalAddress resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -1762,7 +1758,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L19">property address</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L20">property address</a>
 </h3>
 
 ```typescript
@@ -1770,7 +1766,7 @@ public address: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L20">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L21">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -1778,7 +1774,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -1798,7 +1794,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L22">property ipVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L23">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -1806,7 +1802,7 @@ public ipVersion: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L23">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L24">property name</a>
 </h3>
 
 ```typescript
@@ -1814,7 +1810,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L28">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L29">property project</a>
 </h3>
 
 ```typescript
@@ -1826,7 +1822,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L32">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L33">property selfLink</a>
 </h3>
 
 ```typescript
@@ -1849,7 +1845,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="GlobalForwardingRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L12">class GlobalForwardingRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L13">class GlobalForwardingRule</a>
 </h2>
 
 Manages a Global Forwarding Rule within GCE. This binds an ip and port to a target HTTP(s) proxy. For more
@@ -1858,7 +1854,7 @@ documentation](https://cloud.google.com/compute/docs/load-balancing/http/global-
 [API](https://cloud.google.com/compute/docs/reference/latest/globalForwardingRules).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L84">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L85">constructor</a>
 </h3>
 
 ```typescript
@@ -1873,7 +1869,7 @@ Create a GlobalForwardingRule resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -1905,7 +1901,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L28">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L29">property description</a>
 </h3>
 
 ```typescript
@@ -1928,7 +1924,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L35">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L36">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -1942,7 +1938,7 @@ to a `google_compute_global_address` resource. (If using a `google_compute_globa
 resource, use the `address` property instead of the `self_link` property.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L40">property ipProtocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L41">property ipProtocol</a>
 </h3>
 
 ```typescript
@@ -1954,7 +1950,7 @@ The IP protocol to route, one of "TCP" "UDP" "AH"
 "ESP" or "SCTP". (default "TCP").
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L46">property ipVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L47">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -1966,7 +1962,7 @@ The IP Version that will be used by this resource's address. One of `"IPV4"` or 
 You cannot provide this and `ip_address`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L50">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L51">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -1974,10 +1970,10 @@ public labelFingerprint: pulumi.Output<string>;
 ```
 
 
-([Beta](/docs/providers/google/index.html#beta-features)) The current label fingerprint.
+([Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features)) The current label fingerprint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L55">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L56">property labels</a>
 </h3>
 
 ```typescript
@@ -1989,7 +1985,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 A set of key/value label pairs to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L60">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L61">property name</a>
 </h3>
 
 ```typescript
@@ -2001,7 +1997,7 @@ A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L71">property portRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L72">property portRange</a>
 </h3>
 
 ```typescript
@@ -2019,7 +2015,7 @@ Some types of forwarding targets have constraints on the acceptable ports:
 * Target VPN gateway: 500, 4500
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L76">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L77">property project</a>
 </h3>
 
 ```typescript
@@ -2031,7 +2027,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L80">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L81">property selfLink</a>
 </h3>
 
 ```typescript
@@ -2042,7 +2038,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L84">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L85">property target</a>
 </h3>
 
 ```typescript
@@ -2065,7 +2061,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="HealthCheck">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L14">class HealthCheck</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L15">class HealthCheck</a>
 </h2>
 
 Manages a health check within GCE. This is used to monitor instances
@@ -2076,7 +2072,7 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/healthChecks).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L82">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L83">constructor</a>
 </h3>
 
 ```typescript
@@ -2091,7 +2087,7 @@ Create a HealthCheck resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L23">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L24">method get</a>
 </h3>
 
 ```typescript
@@ -2123,7 +2119,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L31">property checkIntervalSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L32">property checkIntervalSec</a>
 </h3>
 
 ```typescript
@@ -2135,7 +2131,7 @@ The number of seconds between each poll of
 the instance instance (default 5).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L35">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L36">property description</a>
 </h3>
 
 ```typescript
@@ -2146,7 +2142,7 @@ public description: pulumi.Output<string | undefined>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L39">property healthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L40">property healthyThreshold</a>
 </h3>
 
 ```typescript
@@ -2157,7 +2153,7 @@ public healthyThreshold: pulumi.Output<number | undefined>;
 Consecutive successes required (default 2).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L44">property httpHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L45">property httpHealthCheck</a>
 </h3>
 
 ```typescript
@@ -2169,7 +2165,7 @@ An HTTP Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L49">property httpsHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L50">property httpsHealthCheck</a>
 </h3>
 
 ```typescript
@@ -2193,7 +2189,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L54">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L55">property name</a>
 </h3>
 
 ```typescript
@@ -2205,7 +2201,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L59">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L60">property project</a>
 </h3>
 
 ```typescript
@@ -2217,7 +2213,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L63">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L64">property selfLink</a>
 </h3>
 
 ```typescript
@@ -2228,7 +2224,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L68">property sslHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L69">property sslHealthCheck</a>
 </h3>
 
 ```typescript
@@ -2240,7 +2236,7 @@ An SSL Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L73">property tcpHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L74">property tcpHealthCheck</a>
 </h3>
 
 ```typescript
@@ -2252,7 +2248,7 @@ A TCP Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L78">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L79">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -2264,7 +2260,7 @@ The number of seconds to wait before declaring
 failure (default 5).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L82">property unhealthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L83">property unhealthyThreshold</a>
 </h3>
 
 ```typescript
@@ -2287,10 +2283,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="HttpHealthCheck">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L6">class HttpHealthCheck</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L7">class HttpHealthCheck</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -2305,7 +2301,7 @@ Create a HttpHealthCheck resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -2337,7 +2333,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L19">property checkIntervalSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L20">property checkIntervalSec</a>
 </h3>
 
 ```typescript
@@ -2345,7 +2341,7 @@ public checkIntervalSec: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L20">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L21">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -2353,7 +2349,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -2361,7 +2357,7 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L22">property healthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L23">property healthyThreshold</a>
 </h3>
 
 ```typescript
@@ -2369,7 +2365,7 @@ public healthyThreshold: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L23">property host</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L24">property host</a>
 </h3>
 
 ```typescript
@@ -2389,7 +2385,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L24">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L25">property name</a>
 </h3>
 
 ```typescript
@@ -2397,7 +2393,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L25">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L26">property port</a>
 </h3>
 
 ```typescript
@@ -2405,7 +2401,7 @@ public port: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L30">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L31">property project</a>
 </h3>
 
 ```typescript
@@ -2417,7 +2413,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L31">property requestPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L32">property requestPath</a>
 </h3>
 
 ```typescript
@@ -2425,7 +2421,7 @@ public requestPath: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L35">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L36">property selfLink</a>
 </h3>
 
 ```typescript
@@ -2436,7 +2432,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L36">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L37">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -2444,7 +2440,7 @@ public timeoutSec: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L37">property unhealthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L38">property unhealthyThreshold</a>
 </h3>
 
 ```typescript
@@ -2464,10 +2460,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="HttpsHealthCheck">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L6">class HttpsHealthCheck</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L7">class HttpsHealthCheck</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -2482,7 +2478,7 @@ Create a HttpsHealthCheck resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -2514,7 +2510,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L19">property checkIntervalSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L20">property checkIntervalSec</a>
 </h3>
 
 ```typescript
@@ -2522,7 +2518,7 @@ public checkIntervalSec: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L20">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L21">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -2530,7 +2526,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -2538,7 +2534,7 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L22">property healthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L23">property healthyThreshold</a>
 </h3>
 
 ```typescript
@@ -2546,7 +2542,7 @@ public healthyThreshold: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L23">property host</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L24">property host</a>
 </h3>
 
 ```typescript
@@ -2566,7 +2562,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L24">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L25">property name</a>
 </h3>
 
 ```typescript
@@ -2574,7 +2570,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L25">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L26">property port</a>
 </h3>
 
 ```typescript
@@ -2582,7 +2578,7 @@ public port: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L30">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L31">property project</a>
 </h3>
 
 ```typescript
@@ -2594,7 +2590,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L31">property requestPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L32">property requestPath</a>
 </h3>
 
 ```typescript
@@ -2602,7 +2598,7 @@ public requestPath: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L35">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L36">property selfLink</a>
 </h3>
 
 ```typescript
@@ -2613,7 +2609,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L36">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L37">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -2621,7 +2617,7 @@ public timeoutSec: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L37">property unhealthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L38">property unhealthyThreshold</a>
 </h3>
 
 ```typescript
@@ -2641,7 +2637,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Image">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L12">class Image</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L13">class Image</a>
 </h2>
 
 Creates a bootable VM image resource for Google Compute Engine from an existing
@@ -2649,7 +2645,7 @@ tarball. For more information see [the official documentation](https://cloud.goo
 [API](https://cloud.google.com/compute/docs/reference/latest/images).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L74">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L75">constructor</a>
 </h3>
 
 ```typescript
@@ -2664,7 +2660,7 @@ Create a Image resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -2696,7 +2692,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L28">property createTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L29">property createTimeout</a>
 </h3>
 
 ```typescript
@@ -2707,7 +2703,7 @@ public createTimeout: pulumi.Output<number | undefined>;
 Configurable timeout in minutes for creating images. Default is 4 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L32">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L33">property description</a>
 </h3>
 
 ```typescript
@@ -2718,7 +2714,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the image to be created
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L36">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L37">property family</a>
 </h3>
 
 ```typescript
@@ -2741,7 +2737,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L40">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L41">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -2752,7 +2748,7 @@ public labelFingerprint: pulumi.Output<string>;
 The fingerprint of the assigned labels.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L44">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L45">property labels</a>
 </h3>
 
 ```typescript
@@ -2763,7 +2759,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 A set of key/value label pairs to assign to the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L49">property licenses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L50">property licenses</a>
 </h3>
 
 ```typescript
@@ -2775,7 +2771,7 @@ A list of license URIs to apply to this image. Changing this
 forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L54">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L55">property name</a>
 </h3>
 
 ```typescript
@@ -2787,7 +2783,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L59">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L60">property project</a>
 </h3>
 
 ```typescript
@@ -2799,7 +2795,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L65">property rawDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L66">property rawDisk</a>
 </h3>
 
 ```typescript
@@ -2812,7 +2808,7 @@ Changing this forces a new resource to be created. Structure is documented
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L69">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L70">property selfLink</a>
 </h3>
 
 ```typescript
@@ -2823,7 +2819,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L74">property sourceDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L75">property sourceDisk</a>
 </h3>
 
 ```typescript
@@ -2847,7 +2843,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Instance">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L13">class Instance</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L14">class Instance</a>
 </h2>
 
 Manages a VM instance resource within GCE. For more information see
@@ -2856,7 +2852,7 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/instances).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L154">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L155">constructor</a>
 </h3>
 
 ```typescript
@@ -2871,7 +2867,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -2903,7 +2899,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L30">property allowStoppingForUpdate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L31">property allowStoppingForUpdate</a>
 </h3>
 
 ```typescript
@@ -2915,7 +2911,7 @@ If true, allows Terraform to stop the instance to update its properties.
 If you try to update a property that requires stopping the instance without setting this field, the update will fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L34">property attachedDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L35">property attachedDisks</a>
 </h3>
 
 ```typescript
@@ -2926,7 +2922,7 @@ public attachedDisks: pulumi.Output<{ ... }[] | undefined>;
 List of disks to attach to the instance. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L39">property bootDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L40">property bootDisk</a>
 </h3>
 
 ```typescript
@@ -2938,7 +2934,7 @@ The boot disk for the instance.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L45">property canIpForward</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L46">property canIpForward</a>
 </h3>
 
 ```typescript
@@ -2951,7 +2947,7 @@ packets with non-matching source or destination IPs.
 This defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L49">property cpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L50">property cpuPlatform</a>
 </h3>
 
 ```typescript
@@ -2962,7 +2958,7 @@ public cpuPlatform: pulumi.Output<string>;
 The CPU platform used by this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L54">property createTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L55">property createTimeout</a>
 </h3>
 
 ```typescript
@@ -2974,7 +2970,7 @@ Configurable timeout in minutes for creating instances. Default is 4 minutes.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L59">property deletionProtection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L60">property deletionProtection</a>
 </h3>
 
 ```typescript
@@ -2986,7 +2982,7 @@ Enable deletion protection on this instance. Defaults to false.
 **Note:** you must disable deletion protection before removing the resource (e.g., via `terraform destroy`), or the instance cannot be deleted and the Terraform run will not complete successfully.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L63">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L64">property description</a>
 </h3>
 
 ```typescript
@@ -2997,7 +2993,7 @@ public description: pulumi.Output<string | undefined>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L68">property guestAccelerators</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L69">property guestAccelerators</a>
 </h3>
 
 ```typescript
@@ -3006,7 +3002,7 @@ public guestAccelerators: pulumi.Output<{ ... }[]>;
 
 
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
-**Note:** GPU accelerators can only be used with [`on_host_maintenance`](#on_host_maintenance) option set to TERMINATE.
+**Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -3021,7 +3017,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L72">property instanceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L73">property instanceId</a>
 </h3>
 
 ```typescript
@@ -3032,7 +3028,7 @@ public instanceId: pulumi.Output<string>;
 The server-assigned unique identifier of this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L76">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L77">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -3043,7 +3039,7 @@ public labelFingerprint: pulumi.Output<string>;
 The unique fingerprint of the labels.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L80">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L81">property labels</a>
 </h3>
 
 ```typescript
@@ -3054,7 +3050,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 A set of key/value label pairs to assign to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L84">property machineType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L85">property machineType</a>
 </h3>
 
 ```typescript
@@ -3065,7 +3061,7 @@ public machineType: pulumi.Output<string>;
 The machine type to create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L89">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L90">property metadata</a>
 </h3>
 
 ```typescript
@@ -3077,7 +3073,7 @@ Metadata key/value pairs to make available from
 within the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L93">property metadataFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L94">property metadataFingerprint</a>
 </h3>
 
 ```typescript
@@ -3088,7 +3084,7 @@ public metadataFingerprint: pulumi.Output<string>;
 The unique fingerprint of the metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L101">property metadataStartupScript</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L102">property metadataStartupScript</a>
 </h3>
 
 ```typescript
@@ -3103,7 +3099,7 @@ startup-script metadata key on the created instance and thus the two
 mechanisms are not allowed to be used simultaneously.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L107">property minCpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L108">property minCpuPlatform</a>
 </h3>
 
 ```typescript
@@ -3113,10 +3109,10 @@ public minCpuPlatform: pulumi.Output<string | undefined>;
 
 Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
-**Note**: [`allow_stopping_for_update`](#allow_stopping_for_update) must be set to true in order to update this field.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L112">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L113">property name</a>
 </h3>
 
 ```typescript
@@ -3128,7 +3124,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L117">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L118">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -3140,7 +3136,7 @@ Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L122">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L123">property project</a>
 </h3>
 
 ```typescript
@@ -3152,7 +3148,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L127">property scheduling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L128">property scheduling</a>
 </h3>
 
 ```typescript
@@ -3164,7 +3160,7 @@ The scheduling strategy to use. More details about
 this configuration option are detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L132">property scratchDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L133">property scratchDisks</a>
 </h3>
 
 ```typescript
@@ -3176,7 +3172,7 @@ Scratch disks to attach to the instance. This can be
 specified multiple times for multiple scratch disks. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L136">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L137">property selfLink</a>
 </h3>
 
 ```typescript
@@ -3187,7 +3183,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L142">property serviceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L143">property serviceAccount</a>
 </h3>
 
 ```typescript
@@ -3197,10 +3193,10 @@ public serviceAccount: pulumi.Output<{ ... } | undefined>;
 
 Service account to attach to the instance.
 Structure is documented below.
-**Note**: [`allow_stopping_for_update`](#allow_stopping_for_update) must be set to true in order to update this field.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L146">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L147">property tags</a>
 </h3>
 
 ```typescript
@@ -3211,7 +3207,7 @@ public tags: pulumi.Output<string[] | undefined>;
 A list of tags to attach to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L150">property tagsFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L151">property tagsFingerprint</a>
 </h3>
 
 ```typescript
@@ -3234,7 +3230,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L154">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L155">property zone</a>
 </h3>
 
 ```typescript
@@ -3245,7 +3241,7 @@ public zone: pulumi.Output<string>;
 The zone that the machine should be created in.
 
 <h2 class="pdoc-module-header" id="InstanceFromTemplate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L17">class InstanceFromTemplate</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L18">class InstanceFromTemplate</a>
 </h2>
 
 Manages a VM instance resource within GCE. For more information see
@@ -3259,7 +3255,7 @@ This resource is specifically to create a compute instance from a given
 
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L68">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L69">constructor</a>
 </h3>
 
 ```typescript
@@ -3274,7 +3270,7 @@ Create a InstanceFromTemplate resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L26">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -3306,7 +3302,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L30">property allowStoppingForUpdate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L31">property allowStoppingForUpdate</a>
 </h3>
 
 ```typescript
@@ -3314,7 +3310,7 @@ public allowStoppingForUpdate: pulumi.Output<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L31">property attachedDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L32">property attachedDisks</a>
 </h3>
 
 ```typescript
@@ -3322,7 +3318,7 @@ public attachedDisks: pulumi.Output<{ ... }[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L32">property bootDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L33">property bootDisk</a>
 </h3>
 
 ```typescript
@@ -3330,7 +3326,7 @@ public bootDisk: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L33">property canIpForward</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L34">property canIpForward</a>
 </h3>
 
 ```typescript
@@ -3338,7 +3334,7 @@ public canIpForward: pulumi.Output<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L34">property cpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L35">property cpuPlatform</a>
 </h3>
 
 ```typescript
@@ -3346,7 +3342,7 @@ public cpuPlatform: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L35">property deletionProtection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L36">property deletionProtection</a>
 </h3>
 
 ```typescript
@@ -3354,7 +3350,7 @@ public deletionProtection: pulumi.Output<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L36">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L37">property description</a>
 </h3>
 
 ```typescript
@@ -3362,7 +3358,7 @@ public description: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L37">property guestAccelerators</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L38">property guestAccelerators</a>
 </h3>
 
 ```typescript
@@ -3382,7 +3378,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L38">property instanceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L39">property instanceId</a>
 </h3>
 
 ```typescript
@@ -3390,7 +3386,7 @@ public instanceId: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L39">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L40">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -3398,7 +3394,7 @@ public labelFingerprint: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L40">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L41">property labels</a>
 </h3>
 
 ```typescript
@@ -3406,7 +3402,7 @@ public labels: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L41">property machineType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L42">property machineType</a>
 </h3>
 
 ```typescript
@@ -3414,7 +3410,7 @@ public machineType: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L42">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L43">property metadata</a>
 </h3>
 
 ```typescript
@@ -3422,7 +3418,7 @@ public metadata: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L43">property metadataFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L44">property metadataFingerprint</a>
 </h3>
 
 ```typescript
@@ -3430,7 +3426,7 @@ public metadataFingerprint: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L44">property metadataStartupScript</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L45">property metadataStartupScript</a>
 </h3>
 
 ```typescript
@@ -3438,7 +3434,7 @@ public metadataStartupScript: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L45">property minCpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L46">property minCpuPlatform</a>
 </h3>
 
 ```typescript
@@ -3446,7 +3442,7 @@ public minCpuPlatform: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L50">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L51">property name</a>
 </h3>
 
 ```typescript
@@ -3458,7 +3454,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L51">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L52">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -3466,7 +3462,7 @@ public networkInterfaces: pulumi.Output<{ ... }[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L52">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L53">property project</a>
 </h3>
 
 ```typescript
@@ -3474,7 +3470,7 @@ public project: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L53">property scheduling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L54">property scheduling</a>
 </h3>
 
 ```typescript
@@ -3482,7 +3478,7 @@ public scheduling: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L54">property scratchDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L55">property scratchDisks</a>
 </h3>
 
 ```typescript
@@ -3490,7 +3486,7 @@ public scratchDisks: pulumi.Output<{ ... }[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L55">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L56">property selfLink</a>
 </h3>
 
 ```typescript
@@ -3498,7 +3494,7 @@ public selfLink: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L56">property serviceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L57">property serviceAccount</a>
 </h3>
 
 ```typescript
@@ -3506,7 +3502,7 @@ public serviceAccount: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L61">property sourceInstanceTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L62">property sourceInstanceTemplate</a>
 </h3>
 
 ```typescript
@@ -3518,7 +3514,7 @@ Name or self link of an instance
 template to create the instance based on.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L62">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L63">property tags</a>
 </h3>
 
 ```typescript
@@ -3526,7 +3522,7 @@ public tags: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L63">property tagsFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L64">property tagsFingerprint</a>
 </h3>
 
 ```typescript
@@ -3546,7 +3542,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L68">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L69">property zone</a>
 </h3>
 
 ```typescript
@@ -3558,7 +3554,7 @@ The zone that the machine should be created in. If not
 set, the provider zone is used.
 
 <h2 class="pdoc-module-header" id="InstanceGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L11">class InstanceGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L12">class InstanceGroup</a>
 </h2>
 
 Creates a group of dissimilar Compute Engine virtual machine instances.
@@ -3566,7 +3562,7 @@ For more information, see [the official documentation](https://cloud.google.com/
 and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L67">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L71">constructor</a>
 </h3>
 
 ```typescript
@@ -3581,7 +3577,7 @@ Create a InstanceGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -3613,7 +3609,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L28">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L29">property description</a>
 </h3>
 
 ```typescript
@@ -3637,7 +3633,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L34">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L35">property instances</a>
 </h3>
 
 ```typescript
@@ -3650,7 +3646,7 @@ as self_link URLs. When adding instances they must all be in the same
 network and zone as the instance group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L38">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -3658,10 +3654,13 @@ public name: pulumi.Output<string>;
 ```
 
 
-The name which the port will be mapped to.
+The name of the instance group. Must be 1-63
+characters long and comply with
+[RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Supported characters
+include lowercase letters, numbers, and hyphens.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L43">property namedPorts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L47">property namedPorts</a>
 </h3>
 
 ```typescript
@@ -3673,7 +3672,7 @@ The named port configuration. See the section below
 for details on configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L50">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L54">property network</a>
 </h3>
 
 ```typescript
@@ -3687,7 +3686,7 @@ fails. Defaults to the network where the instances are in (if neither
 `network` nor `instances` is specified, this field will be blank).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L55">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L59">property project</a>
 </h3>
 
 ```typescript
@@ -3699,7 +3698,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L59">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L63">property selfLink</a>
 </h3>
 
 ```typescript
@@ -3710,7 +3709,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L63">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L67">property size</a>
 </h3>
 
 ```typescript
@@ -3733,7 +3732,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L67">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L71">property zone</a>
 </h3>
 
 ```typescript
@@ -3744,7 +3743,7 @@ public zone: pulumi.Output<string>;
 The zone that this instance group should be created in.
 
 <h2 class="pdoc-module-header" id="InstanceGroupManager">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L14">class InstanceGroupManager</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L15">class InstanceGroupManager</a>
 </h2>
 
 The Google Compute Engine Instance Group Manager API creates and manages pools
@@ -3752,10 +3751,10 @@ of homogeneous Compute Engine virtual machine instances from a common instance
 template. For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/manager)
 and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroupManagers)
 
-~> **Note:** Use [google_compute_region_instance_group_manager](/docs/providers/google/r/compute_region_instance_group_manager.html) to create a regional (multi-zone) instance group manager.
+~> **Note:** Use [google_compute_region_instance_group_manager](https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html) to create a regional (multi-zone) instance group manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L118">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L119">constructor</a>
 </h3>
 
 ```typescript
@@ -3770,7 +3769,7 @@ Create a InstanceGroupManager resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L23">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L24">method get</a>
 </h3>
 
 ```typescript
@@ -3802,7 +3801,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L31">property autoHealingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L32">property autoHealingPolicies</a>
 </h3>
 
 ```typescript
@@ -3814,7 +3813,7 @@ public autoHealingPolicies: pulumi.Output<{ ... } | undefined>;
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L40">property baseInstanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L41">property baseInstanceName</a>
 </h3>
 
 ```typescript
@@ -3830,7 +3829,7 @@ appending a hyphen and a random four-character string to the base instance
 name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L45">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L46">property description</a>
 </h3>
 
 ```typescript
@@ -3842,7 +3841,7 @@ An optional textual description of the instance
 group manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L49">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L50">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -3865,7 +3864,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L53">property instanceGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L54">property instanceGroup</a>
 </h3>
 
 ```typescript
@@ -3876,7 +3875,7 @@ public instanceGroup: pulumi.Output<string>;
 The full URL of the instance group created by the manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L57">property instanceTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L58">property instanceTemplate</a>
 </h3>
 
 ```typescript
@@ -3887,7 +3886,7 @@ public instanceTemplate: pulumi.Output<string | undefined>;
 - The full URL to an instance template from which all new instances of this version will be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L61">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L62">property name</a>
 </h3>
 
 ```typescript
@@ -3898,7 +3897,7 @@ public name: pulumi.Output<string>;
 - Version name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L66">property namedPorts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L67">property namedPorts</a>
 </h3>
 
 ```typescript
@@ -3910,7 +3909,7 @@ The named port configuration. See the section below
 for details on configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L71">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L72">property project</a>
 </h3>
 
 ```typescript
@@ -3922,7 +3921,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L76">property rollingUpdatePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L77">property rollingUpdatePolicy</a>
 </h3>
 
 ```typescript
@@ -3934,7 +3933,7 @@ public rollingUpdatePolicy: pulumi.Output<{ ... } | undefined>;
 - - -
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L80">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L81">property selfLink</a>
 </h3>
 
 ```typescript
@@ -3945,7 +3944,7 @@ public selfLink: pulumi.Output<string>;
 The URL of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L86">property targetPools</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L87">property targetPools</a>
 </h3>
 
 ```typescript
@@ -3958,7 +3957,7 @@ instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L90">property targetSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L91">property targetSize</a>
 </h3>
 
 ```typescript
@@ -3969,7 +3968,7 @@ public targetSize: pulumi.Output<number>;
 - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L98">property updateStrategy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L99">property updateStrategy</a>
 </h3>
 
 ```typescript
@@ -3996,7 +3995,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L107">property versions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L108">property versions</a>
 </h3>
 
 ```typescript
@@ -4012,7 +4011,7 @@ a target size will respect the setting, and the one without target size will
 be applied to all remaining Instances (top level target_size - each version target_size).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L113">property waitForInstances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L114">property waitForInstances</a>
 </h3>
 
 ```typescript
@@ -4025,7 +4024,7 @@ returning. Note that if this is set to true and the operation does not succeed, 
 continue trying until it times out.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L118">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L119">property zone</a>
 </h3>
 
 ```typescript
@@ -4037,7 +4036,7 @@ The zone that instances in this group should be created
 in.
 
 <h2 class="pdoc-module-header" id="InstanceTemplate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L13">class InstanceTemplate</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L14">class InstanceTemplate</a>
 </h2>
 
 Manages a VM instance template resource within GCE. For more information see
@@ -4046,7 +4045,7 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/instanceTemplates).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L130">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L131">constructor</a>
 </h3>
 
 ```typescript
@@ -4061,7 +4060,7 @@ Create a InstanceTemplate resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -4093,7 +4092,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L30">property canIpForward</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L31">property canIpForward</a>
 </h3>
 
 ```typescript
@@ -4105,7 +4104,7 @@ Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L34">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L35">property description</a>
 </h3>
 
 ```typescript
@@ -4116,7 +4115,7 @@ public description: pulumi.Output<string | undefined>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L40">property disks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L41">property disks</a>
 </h3>
 
 ```typescript
@@ -4129,7 +4128,7 @@ This can be specified multiple times for multiple disks. Structure is
 documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L44">property guestAccelerators</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L45">property guestAccelerators</a>
 </h3>
 
 ```typescript
@@ -4152,7 +4151,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L49">property instanceDescription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L50">property instanceDescription</a>
 </h3>
 
 ```typescript
@@ -4164,7 +4163,7 @@ A brief description to use for instances
 created from this template.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L54">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L55">property labels</a>
 </h3>
 
 ```typescript
@@ -4176,7 +4175,7 @@ A set of key/value label pairs to assign to instances
 created from this template,
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L58">property machineType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L59">property machineType</a>
 </h3>
 
 ```typescript
@@ -4187,7 +4186,7 @@ public machineType: pulumi.Output<string>;
 The machine type to create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L63">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L64">property metadata</a>
 </h3>
 
 ```typescript
@@ -4199,7 +4198,7 @@ Metadata key/value pairs to make available from
 within instances created from this template.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L67">property metadataFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L68">property metadataFingerprint</a>
 </h3>
 
 ```typescript
@@ -4210,7 +4209,7 @@ public metadataFingerprint: pulumi.Output<string>;
 The unique fingerprint of the metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L74">property metadataStartupScript</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L75">property metadataStartupScript</a>
 </h3>
 
 ```typescript
@@ -4224,7 +4223,7 @@ This replaces the startup-script metadata key on the created instance and
 thus the two mechanisms are not allowed to be used simultaneously.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L79">property minCpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L80">property minCpuPlatform</a>
 </h3>
 
 ```typescript
@@ -4236,7 +4235,7 @@ Specifies a minimum CPU platform. Applicable values are the friendly names of CP
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L84">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L85">property name</a>
 </h3>
 
 ```typescript
@@ -4248,7 +4247,7 @@ The name of the instance template. If you leave
 this blank, Terraform will auto-generate a unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L89">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L90">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -4260,7 +4259,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L95">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L96">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -4273,7 +4272,7 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L100">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L101">property project</a>
 </h3>
 
 ```typescript
@@ -4285,7 +4284,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L109">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L110">property region</a>
 </h3>
 
 ```typescript
@@ -4301,7 +4300,7 @@ resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L114">property schedulings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L115">property schedulings</a>
 </h3>
 
 ```typescript
@@ -4313,7 +4312,7 @@ The scheduling strategy to use. More details about
 this configuration option are detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L118">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L119">property selfLink</a>
 </h3>
 
 ```typescript
@@ -4324,7 +4323,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L122">property serviceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L123">property serviceAccount</a>
 </h3>
 
 ```typescript
@@ -4335,7 +4334,7 @@ public serviceAccount: pulumi.Output<{ ... } | undefined>;
 Service account to attach to the instance. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L126">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L127">property tags</a>
 </h3>
 
 ```typescript
@@ -4346,7 +4345,7 @@ public tags: pulumi.Output<string[] | undefined>;
 Tags to attach to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L130">property tagsFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L131">property tagsFingerprint</a>
 </h3>
 
 ```typescript
@@ -4369,7 +4368,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Network">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L12">class Network</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L13">class Network</a>
 </h2>
 
 Manages a network within GCE. For more information see
@@ -4378,7 +4377,7 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/networks).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L66">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L67">constructor</a>
 </h3>
 
 ```typescript
@@ -4393,7 +4392,7 @@ Create a Network resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -4425,7 +4424,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L31">property autoCreateSubnetworks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L32">property autoCreateSubnetworks</a>
 </h3>
 
 ```typescript
@@ -4439,7 +4438,7 @@ automatically. If set to false, a custom subnetted network will be created that
 can support `google_compute_subnetwork` resources. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L35">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L36">property description</a>
 </h3>
 
 ```typescript
@@ -4450,7 +4449,7 @@ public description: pulumi.Output<string | undefined>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L39">property gatewayIpv4</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L40">property gatewayIpv4</a>
 </h3>
 
 ```typescript
@@ -4473,7 +4472,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L45">property ipv4Range</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L46">property ipv4Range</a>
 </h3>
 
 ```typescript
@@ -4486,7 +4485,7 @@ specified range. This API is deprecated. If set, `auto_create_subnetworks` must 
 explicitly set to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L50">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L51">property name</a>
 </h3>
 
 ```typescript
@@ -4498,7 +4497,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L55">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L56">property project</a>
 </h3>
 
 ```typescript
@@ -4510,7 +4509,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L62">property routingMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L63">property routingMode</a>
 </h3>
 
 ```typescript
@@ -4524,7 +4523,7 @@ Refer to the [Cloud Router documentation](https://cloud.google.com/router/docs/c
 for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L66">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L67">property selfLink</a>
 </h3>
 
 ```typescript
@@ -4547,7 +4546,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="NetworkPeering">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L16">class NetworkPeering</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L17">class NetworkPeering</a>
 </h2>
 
 Manages a network peering within GCE. For more information see
@@ -4560,7 +4559,7 @@ and
 ~> **Note:** Subnets IP ranges across peered VPC networks cannot overlap.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L53">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L54">constructor</a>
 </h3>
 
 ```typescript
@@ -4575,7 +4574,7 @@ Create a NetworkPeering resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L25">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -4607,7 +4606,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L33">property autoCreateRoutes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L34">property autoCreateRoutes</a>
 </h3>
 
 ```typescript
@@ -4631,7 +4630,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L37">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -4642,7 +4641,7 @@ public name: pulumi.Output<string>;
 Name of the peering.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L41">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L42">property network</a>
 </h3>
 
 ```typescript
@@ -4653,7 +4652,7 @@ public network: pulumi.Output<string>;
 Resource link of the network to add a peering to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L45">property peerNetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L46">property peerNetwork</a>
 </h3>
 
 ```typescript
@@ -4664,7 +4663,7 @@ public peerNetwork: pulumi.Output<string>;
 Resource link of the peer network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L49">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L50">property state</a>
 </h3>
 
 ```typescript
@@ -4675,7 +4674,7 @@ public state: pulumi.Output<string>;
 State for the peering.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L53">property stateDetails</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L54">property stateDetails</a>
 </h3>
 
 ```typescript
@@ -4698,7 +4697,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ProjectMetadata">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L16">class ProjectMetadata</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L17">class ProjectMetadata</a>
 </h2>
 
 Manages metadata common to all instances for a project in GCE. For more information see
@@ -4708,10 +4707,10 @@ and
 
 ~> **Note:**  If you want to manage only single key/value pairs within the project metadata
 rather than the entire set, then use
-[google_compute_project_metadata_item](compute_project_metadata_item.html).
+google_compute_project_metadata_item.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L38">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L39">constructor</a>
 </h3>
 
 ```typescript
@@ -4726,7 +4725,7 @@ Create a ProjectMetadata resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L25">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -4770,7 +4769,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L33">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L34">property metadata</a>
 </h3>
 
 ```typescript
@@ -4782,7 +4781,7 @@ A series of key value pairs. Changing this resource
 updates the GCE state.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L38">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L39">property project</a>
 </h3>
 
 ```typescript
@@ -4806,7 +4805,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ProjectMetadataItem">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L12">class ProjectMetadataItem</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L13">class ProjectMetadataItem</a>
 </h2>
 
 Manages a single key/value pair on metadata common to all instances for
@@ -4815,7 +4814,7 @@ manage a single key/value setting in Terraform rather than the entire
 project metadata map.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -4830,7 +4829,7 @@ Create a ProjectMetadataItem resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -4874,7 +4873,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L28">property key</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L29">property key</a>
 </h3>
 
 ```typescript
@@ -4885,7 +4884,7 @@ public key: pulumi.Output<string>;
 The metadata key to set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L33">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L34">property project</a>
 </h3>
 
 ```typescript
@@ -4909,7 +4908,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L37">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L38">property value</a>
 </h3>
 
 ```typescript
@@ -4920,10 +4919,10 @@ public value: pulumi.Output<string>;
 The value to set for the given metadata key.
 
 <h2 class="pdoc-module-header" id="RegionAutoscaler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L6">class RegionAutoscaler</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L7">class RegionAutoscaler</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L30">constructor</a>
 </h3>
 
 ```typescript
@@ -4938,7 +4937,7 @@ Create a RegionAutoscaler resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -4970,7 +4969,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L19">property autoscalingPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L20">property autoscalingPolicy</a>
 </h3>
 
 ```typescript
@@ -4978,7 +4977,7 @@ public autoscalingPolicy: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L20">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L21">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -4986,7 +4985,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -5006,7 +5005,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L22">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L23">property name</a>
 </h3>
 
 ```typescript
@@ -5014,19 +5013,15 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L27">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L24">property project</a>
 </h3>
 
 ```typescript
 public project: pulumi.Output<string>;
 ```
 
-
-The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L28">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L25">property region</a>
 </h3>
 
 ```typescript
@@ -5034,7 +5029,7 @@ public region: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L32">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L29">property selfLink</a>
 </h3>
 
 ```typescript
@@ -5045,7 +5040,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L33">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L30">property target</a>
 </h3>
 
 ```typescript
@@ -5065,7 +5060,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RegionBackendService">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L14">class RegionBackendService</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L15">class RegionBackendService</a>
 </h2>
 
 A Region Backend Service defines a regionally-scoped group of virtual machines that will serve traffic for load balancing.
@@ -5073,10 +5068,10 @@ For more information see [the official documentation](https://cloud.google.com/c
 and [API](https://cloud.google.com/compute/docs/reference/latest/regionBackendServices).
 
 ~> **Note**: Region backend services can only be used when using internal load balancing. For external load balancing, use
-  [`google_compute_backend_service`](compute_backend_service.html) instead.
+  `google_compute_backend_service` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L84">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L85">constructor</a>
 </h3>
 
 ```typescript
@@ -5091,7 +5086,7 @@ Create a RegionBackendService resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L23">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L24">method get</a>
 </h3>
 
 ```typescript
@@ -5123,7 +5118,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L31">property backends</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L32">property backends</a>
 </h3>
 
 ```typescript
@@ -5135,7 +5130,7 @@ The list of backends that serve this BackendService.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L36">property connectionDrainingTimeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L37">property connectionDrainingTimeoutSec</a>
 </h3>
 
 ```typescript
@@ -5147,7 +5142,7 @@ Time for which instance will be drained
 (not accept new connections, but still work to finish started ones). Defaults to `0`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L40">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L41">property description</a>
 </h3>
 
 ```typescript
@@ -5155,10 +5150,10 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 
-Textual description for the backend.
+The textual description for the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L44">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L45">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -5169,7 +5164,7 @@ public fingerprint: pulumi.Output<string>;
 The fingerprint of the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L50">property healthChecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L51">property healthChecks</a>
 </h3>
 
 ```typescript
@@ -5194,7 +5189,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L54">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L55">property name</a>
 </h3>
 
 ```typescript
@@ -5205,7 +5200,7 @@ public name: pulumi.Output<string>;
 The name of the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L59">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L60">property project</a>
 </h3>
 
 ```typescript
@@ -5217,7 +5212,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L64">property protocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L65">property protocol</a>
 </h3>
 
 ```typescript
@@ -5229,7 +5224,7 @@ The protocol for incoming requests. Defaults to
 `TCP`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L69">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L70">property region</a>
 </h3>
 
 ```typescript
@@ -5241,7 +5236,7 @@ The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L73">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L74">property selfLink</a>
 </h3>
 
 ```typescript
@@ -5252,7 +5247,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L79">property sessionAffinity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L80">property sessionAffinity</a>
 </h3>
 
 ```typescript
@@ -5265,7 +5260,7 @@ affinity), `CLIENT_IP`, `CLIENT_IP_PROTO`, or `CLIENT_IP_PORT_PROTO`.
 Defaults to `NONE`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L84">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L85">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -5289,7 +5284,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RegionInstanceGroupManager">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L14">class RegionInstanceGroupManager</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L15">class RegionInstanceGroupManager</a>
 </h2>
 
 The Google Compute Engine Regional Instance Group Manager API creates and manages pools
@@ -5297,10 +5292,10 @@ of homogeneous Compute Engine virtual machine instances from a common instance
 template. For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups)
 and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroupManagers)
 
-~> **Note:** Use [google_compute_instance_group_manager](/docs/providers/google/r/compute_instance_group_manager.html) to create a single-zone instance group manager.
+~> **Note:** Use [google_compute_instance_group_manager](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html) to create a single-zone instance group manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L116">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L117">constructor</a>
 </h3>
 
 ```typescript
@@ -5315,7 +5310,7 @@ Create a RegionInstanceGroupManager resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L23">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L24">method get</a>
 </h3>
 
 ```typescript
@@ -5347,7 +5342,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L31">property autoHealingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L32">property autoHealingPolicies</a>
 </h3>
 
 ```typescript
@@ -5359,7 +5354,7 @@ public autoHealingPolicies: pulumi.Output<{ ... } | undefined>;
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L40">property baseInstanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L41">property baseInstanceName</a>
 </h3>
 
 ```typescript
@@ -5375,7 +5370,7 @@ appending a hyphen and a random four-character string to the base instance
 name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L45">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L46">property description</a>
 </h3>
 
 ```typescript
@@ -5387,7 +5382,7 @@ An optional textual description of the instance
 group manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L51">property distributionPolicyZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L52">property distributionPolicyZones</a>
 </h3>
 
 ```typescript
@@ -5400,7 +5395,7 @@ group. You can specify one or more values. For more information, see the [offici
 - - -
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L55">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L56">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -5423,7 +5418,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L59">property instanceGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L60">property instanceGroup</a>
 </h3>
 
 ```typescript
@@ -5434,7 +5429,7 @@ public instanceGroup: pulumi.Output<string>;
 The full URL of the instance group created by the manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L64">property instanceTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L65">property instanceTemplate</a>
 </h3>
 
 ```typescript
@@ -5446,7 +5441,7 @@ The full URL to an instance template from
 which all new instances will be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L68">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L69">property name</a>
 </h3>
 
 ```typescript
@@ -5457,7 +5452,7 @@ public name: pulumi.Output<string>;
 The name of the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L73">property namedPorts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L74">property namedPorts</a>
 </h3>
 
 ```typescript
@@ -5469,7 +5464,7 @@ The named port configuration. See the section below
 for details on configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L78">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L79">property project</a>
 </h3>
 
 ```typescript
@@ -5481,7 +5476,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L82">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L83">property region</a>
 </h3>
 
 ```typescript
@@ -5492,7 +5487,7 @@ public region: pulumi.Output<string>;
 The region where the managed instance group resides.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L86">property rollingUpdatePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L87">property rollingUpdatePolicy</a>
 </h3>
 
 ```typescript
@@ -5503,7 +5498,7 @@ public rollingUpdatePolicy: pulumi.Output<{ ... } | undefined>;
 ) The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L90">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L91">property selfLink</a>
 </h3>
 
 ```typescript
@@ -5514,7 +5509,7 @@ public selfLink: pulumi.Output<string>;
 The URL of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L96">property targetPools</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L97">property targetPools</a>
 </h3>
 
 ```typescript
@@ -5527,7 +5522,7 @@ instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L102">property targetSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L103">property targetSize</a>
 </h3>
 
 ```typescript
@@ -5540,7 +5535,7 @@ instance group. This value should always be explicitly set unless this resource 
 an autoscaler, in which case it should never be set. Defaults to `0`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L110">property updateStrategy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L111">property updateStrategy</a>
 </h3>
 
 ```typescript
@@ -5567,7 +5562,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L116">property waitForInstances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L117">property waitForInstances</a>
 </h3>
 
 ```typescript
@@ -5580,10 +5575,10 @@ returning. Note that if this is set to true and the operation does not succeed, 
 continue trying until it times out.
 
 <h2 class="pdoc-module-header" id="Route">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L6">class Route</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L7">class Route</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L45">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L46">constructor</a>
 </h3>
 
 ```typescript
@@ -5598,7 +5593,7 @@ Create a Route resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -5630,7 +5625,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L19">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L20">property description</a>
 </h3>
 
 ```typescript
@@ -5638,7 +5633,7 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L20">property destRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L21">property destRange</a>
 </h3>
 
 ```typescript
@@ -5658,7 +5653,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L21">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L22">property name</a>
 </h3>
 
 ```typescript
@@ -5666,7 +5661,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L22">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L23">property network</a>
 </h3>
 
 ```typescript
@@ -5674,7 +5669,7 @@ public network: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L23">property nextHopGateway</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L24">property nextHopGateway</a>
 </h3>
 
 ```typescript
@@ -5682,7 +5677,7 @@ public nextHopGateway: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L24">property nextHopInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L25">property nextHopInstance</a>
 </h3>
 
 ```typescript
@@ -5690,7 +5685,7 @@ public nextHopInstance: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L31">property nextHopInstanceZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L32">property nextHopInstanceZone</a>
 </h3>
 
 ```typescript
@@ -5704,7 +5699,7 @@ specified)  The zone of the instance specified in
 a URL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L32">property nextHopIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L33">property nextHopIp</a>
 </h3>
 
 ```typescript
@@ -5712,7 +5707,7 @@ public nextHopIp: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L33">property nextHopNetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L34">property nextHopNetwork</a>
 </h3>
 
 ```typescript
@@ -5720,7 +5715,7 @@ public nextHopNetwork: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L34">property nextHopVpnTunnel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L35">property nextHopVpnTunnel</a>
 </h3>
 
 ```typescript
@@ -5728,7 +5723,7 @@ public nextHopVpnTunnel: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L35">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L36">property priority</a>
 </h3>
 
 ```typescript
@@ -5736,7 +5731,7 @@ public priority: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L40">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L41">property project</a>
 </h3>
 
 ```typescript
@@ -5748,7 +5743,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L44">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L45">property selfLink</a>
 </h3>
 
 ```typescript
@@ -5759,7 +5754,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L45">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L46">property tags</a>
 </h3>
 
 ```typescript
@@ -5779,10 +5774,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Router">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L6">class Router</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L7">class Router</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -5797,7 +5792,7 @@ Create a Router resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -5829,7 +5824,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L19">property bgp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L20">property bgp</a>
 </h3>
 
 ```typescript
@@ -5837,7 +5832,7 @@ public bgp: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L20">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L21">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -5845,7 +5840,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -5865,7 +5860,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L22">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L23">property name</a>
 </h3>
 
 ```typescript
@@ -5873,7 +5868,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L23">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L24">property network</a>
 </h3>
 
 ```typescript
@@ -5881,7 +5876,7 @@ public network: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L28">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L29">property project</a>
 </h3>
 
 ```typescript
@@ -5893,7 +5888,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L29">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L30">property region</a>
 </h3>
 
 ```typescript
@@ -5901,7 +5896,7 @@ public region: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L33">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L34">property selfLink</a>
 </h3>
 
 ```typescript
@@ -5924,7 +5919,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RouterInterface">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L12">class RouterInterface</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L13">class RouterInterface</a>
 </h2>
 
 Manages a Cloud Router interface. For more information see
@@ -5933,7 +5928,7 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/routers).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L55">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L56">constructor</a>
 </h3>
 
 ```typescript
@@ -5948,7 +5943,7 @@ Create a RouterInterface resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -5992,7 +5987,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L29">property ipRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L30">property ipRange</a>
 </h3>
 
 ```typescript
@@ -6004,7 +5999,7 @@ IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L34">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L35">property name</a>
 </h3>
 
 ```typescript
@@ -6016,7 +6011,7 @@ A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L39">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L40">property project</a>
 </h3>
 
 ```typescript
@@ -6028,7 +6023,7 @@ The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L45">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L46">property region</a>
 </h3>
 
 ```typescript
@@ -6041,7 +6036,7 @@ the project region will be used. Changing this forces a new interface to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L50">property router</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L51">property router</a>
 </h3>
 
 ```typescript
@@ -6065,7 +6060,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L55">property vpnTunnel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L56">property vpnTunnel</a>
 </h3>
 
 ```typescript
@@ -6077,7 +6072,7 @@ The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created.
 
 <h2 class="pdoc-module-header" id="RouterPeer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L12">class RouterPeer</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L13">class RouterPeer</a>
 </h2>
 
 Manages a Cloud Router BGP peer. For more information see
@@ -6086,7 +6081,7 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/routers).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L69">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L70">constructor</a>
 </h3>
 
 ```typescript
@@ -6101,7 +6096,7 @@ Create a RouterPeer resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -6133,7 +6128,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L29">property advertisedRoutePriority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L30">property advertisedRoutePriority</a>
 </h3>
 
 ```typescript
@@ -6157,7 +6152,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L34">property interface</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L35">property interface</a>
 </h3>
 
 ```typescript
@@ -6169,7 +6164,7 @@ The name of the interface the BGP peer is associated with.
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L38">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L39">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -6180,7 +6175,7 @@ public ipAddress: pulumi.Output<string>;
 IP address of the interface inside Google Cloud Platform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L43">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L44">property name</a>
 </h3>
 
 ```typescript
@@ -6192,7 +6187,7 @@ A unique name for BGP peer, required by GCE. Changing
 this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L48">property peerAsn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L49">property peerAsn</a>
 </h3>
 
 ```typescript
@@ -6204,7 +6199,7 @@ Peer BGP Autonomous System Number (ASN).
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L53">property peerIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L54">property peerIpAddress</a>
 </h3>
 
 ```typescript
@@ -6216,7 +6211,7 @@ IP address of the BGP interface outside Google Cloud.
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L58">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L59">property project</a>
 </h3>
 
 ```typescript
@@ -6228,7 +6223,7 @@ The ID of the project in which this peer's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L64">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L65">property region</a>
 </h3>
 
 ```typescript
@@ -6241,7 +6236,7 @@ the project region will be used. Changing this forces a new peer to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L69">property router</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L70">property router</a>
 </h3>
 
 ```typescript
@@ -6265,7 +6260,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SSLCertificate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L13">class SSLCertificate</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L14">class SSLCertificate</a>
 </h2>
 
 Creates an SSL certificate resource necessary for HTTPS load balancing in GCE.
@@ -6274,7 +6269,7 @@ For more information see
 [API](https://cloud.google.com/compute/docs/reference/latest/sslCertificates).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L64">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L65">constructor</a>
 </h3>
 
 ```typescript
@@ -6289,7 +6284,7 @@ Create a SSLCertificate resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -6321,7 +6316,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L31">property certificate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L32">property certificate</a>
 </h3>
 
 ```typescript
@@ -6334,7 +6329,7 @@ may be at most 5 certs long, and must include at least one intermediate
 cert. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L35">property certificateId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L36">property certificateId</a>
 </h3>
 
 ```typescript
@@ -6345,7 +6340,7 @@ public certificateId: pulumi.Output<string>;
 A unique ID for the certificate, assigned by GCE.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L40">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L41">property description</a>
 </h3>
 
 ```typescript
@@ -6369,7 +6364,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L45">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L46">property name</a>
 </h3>
 
 ```typescript
@@ -6381,7 +6376,7 @@ A unique name for the SSL certificate. If you leave
 this blank, Terraform will auto-generate a unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L50">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L51">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -6393,7 +6388,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L55">property privateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L56">property privateKey</a>
 </h3>
 
 ```typescript
@@ -6405,7 +6400,7 @@ Write only private key in PEM format.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L60">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L61">property project</a>
 </h3>
 
 ```typescript
@@ -6417,7 +6412,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L64">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L65">property selfLink</a>
 </h3>
 
 ```typescript
@@ -6440,10 +6435,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SSLPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L6">class SSLPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L7">class SSLPolicy</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L35">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L36">constructor</a>
 </h3>
 
 ```typescript
@@ -6458,7 +6453,7 @@ Create a SSLPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -6490,7 +6485,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L19">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L20">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -6498,7 +6493,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L20">property customFeatures</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L21">property customFeatures</a>
 </h3>
 
 ```typescript
@@ -6506,7 +6501,7 @@ public customFeatures: pulumi.Output<string[] | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -6514,7 +6509,7 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L22">property enabledFeatures</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L23">property enabledFeatures</a>
 </h3>
 
 ```typescript
@@ -6522,7 +6517,7 @@ public enabledFeatures: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L23">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L24">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -6542,7 +6537,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L24">property minTlsVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L25">property minTlsVersion</a>
 </h3>
 
 ```typescript
@@ -6550,7 +6545,7 @@ public minTlsVersion: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L26">property name</a>
 </h3>
 
 ```typescript
@@ -6558,7 +6553,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L26">property profile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L27">property profile</a>
 </h3>
 
 ```typescript
@@ -6566,7 +6561,7 @@ public profile: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L31">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L32">property project</a>
 </h3>
 
 ```typescript
@@ -6578,7 +6573,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L35">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L36">property selfLink</a>
 </h3>
 
 ```typescript
@@ -6601,17 +6596,17 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SecurityPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L13">class SecurityPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L14">class SecurityPolicy</a>
 </h2>
 
 A Security Policy defines an IP blacklist or whitelist that protects load balanced Google Cloud services by denying or permitting traffic from specified IP ranges. For more information
 see the [official documentation](https://cloud.google.com/armor/docs/configure-security-policies)
 and the [API](https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies).
 
-~> **Note:** This entire resource is in [Beta](/docs/providers/google/index.html#beta-features)
+~> **Note:** This entire resource is in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L52">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L53">constructor</a>
 </h3>
 
 ```typescript
@@ -6626,7 +6621,7 @@ Create a SecurityPolicy resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -6658,7 +6653,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L29">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L30">property description</a>
 </h3>
 
 ```typescript
@@ -6666,10 +6661,10 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 
-An optional description of this rule. Max size is 64.
+An optional description of this security policy. Max size is 2048.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L33">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L34">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -6692,7 +6687,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L37">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -6703,7 +6698,7 @@ public name: pulumi.Output<string>;
 The name of the security policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L42">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L43">property project</a>
 </h3>
 
 ```typescript
@@ -6715,7 +6710,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L48">property rules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L49">property rules</a>
 </h3>
 
 ```typescript
@@ -6728,7 +6723,7 @@ rule (rule with priority 2147483647 and match "\*"). If no rules are provided wh
 security policy, a default rule with action "allow" will be added. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L52">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L53">property selfLink</a>
 </h3>
 
 ```typescript
@@ -6751,7 +6746,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SharedVPCHostProject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L15">class SharedVPCHostProject</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L16">class SharedVPCHostProject</a>
 </h2>
 
 Enables the Google Compute Engine
@@ -6763,7 +6758,7 @@ For more information, see,
 where the Shared VPC feature is referred to by its former name "XPN".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L31">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L32">constructor</a>
 </h3>
 
 ```typescript
@@ -6778,7 +6773,7 @@ Create a SharedVPCHostProject resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L24">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -6822,7 +6817,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L31">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L32">property project</a>
 </h3>
 
 ```typescript
@@ -6845,7 +6840,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SharedVPCServiceProject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L16">class SharedVPCServiceProject</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L17">class SharedVPCServiceProject</a>
 </h2>
 
 Enables the Google Compute Engine
@@ -6858,7 +6853,7 @@ For more information, see,
 where the Shared VPC feature is referred to by its former name "XPN".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L36">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L37">constructor</a>
 </h3>
 
 ```typescript
@@ -6873,7 +6868,7 @@ Create a SharedVPCServiceProject resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L25">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -6905,7 +6900,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L32">property hostProject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L33">property hostProject</a>
 </h3>
 
 ```typescript
@@ -6928,7 +6923,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L36">property serviceProject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L37">property serviceProject</a>
 </h3>
 
 ```typescript
@@ -6951,7 +6946,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Snapshot">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L12">class Snapshot</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L13">class Snapshot</a>
 </h2>
 
 Creates a new snapshot of a disk within GCE. For more information see
@@ -6960,7 +6955,7 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/snapshots).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L86">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L87">constructor</a>
 </h3>
 
 ```typescript
@@ -6975,7 +6970,7 @@ Create a Snapshot resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -7019,7 +7014,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L28">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L29">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -7030,7 +7025,7 @@ public labelFingerprint: pulumi.Output<string>;
 The unique fingerprint of the labels.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L32">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L33">property labels</a>
 </h3>
 
 ```typescript
@@ -7041,7 +7036,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 A set of key/value label pairs to assign to the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L37">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -7053,7 +7048,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L42">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L43">property project</a>
 </h3>
 
 ```typescript
@@ -7065,7 +7060,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L46">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L47">property selfLink</a>
 </h3>
 
 ```typescript
@@ -7076,7 +7071,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L53">property snapshotEncryptionKeyRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L54">property snapshotEncryptionKeyRaw</a>
 </h3>
 
 ```typescript
@@ -7090,7 +7085,7 @@ encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 to encrypt this snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L60">property snapshotEncryptionKeySha256</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L61">property snapshotEncryptionKeySha256</a>
 </h3>
 
 ```typescript
@@ -7104,7 +7099,7 @@ The [RFC 4648 base64]
 that protects this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L64">property sourceDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L65">property sourceDisk</a>
 </h3>
 
 ```typescript
@@ -7115,7 +7110,7 @@ public sourceDisk: pulumi.Output<string>;
 The disk which will be used as the source of the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L71">property sourceDiskEncryptionKeyRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L72">property sourceDiskEncryptionKeyRaw</a>
 </h3>
 
 ```typescript
@@ -7129,7 +7124,7 @@ encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 to decrypt the source disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L78">property sourceDiskEncryptionKeySha256</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L79">property sourceDiskEncryptionKeySha256</a>
 </h3>
 
 ```typescript
@@ -7143,7 +7138,7 @@ The [RFC 4648 base64]
 that protects the source disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L82">property sourceDiskLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L83">property sourceDiskLink</a>
 </h3>
 
 ```typescript
@@ -7166,7 +7161,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L86">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L87">property zone</a>
 </h3>
 
 ```typescript
@@ -7177,10 +7172,10 @@ public zone: pulumi.Output<string>;
 The zone where the source disk is located.
 
 <h2 class="pdoc-module-header" id="Subnetwork">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L6">class Subnetwork</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L7">class Subnetwork</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L38">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L39">constructor</a>
 </h3>
 
 ```typescript
@@ -7195,7 +7190,7 @@ Create a Subnetwork resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -7227,7 +7222,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L19">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L20">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -7235,7 +7230,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L20">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L21">property description</a>
 </h3>
 
 ```typescript
@@ -7243,7 +7238,7 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L21">property enableFlowLogs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L22">property enableFlowLogs</a>
 </h3>
 
 ```typescript
@@ -7251,7 +7246,7 @@ public enableFlowLogs: pulumi.Output<boolean | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L22">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L23">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -7259,7 +7254,7 @@ public fingerprint: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L23">property gatewayAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L24">property gatewayAddress</a>
 </h3>
 
 ```typescript
@@ -7279,7 +7274,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L24">property ipCidrRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L25">property ipCidrRange</a>
 </h3>
 
 ```typescript
@@ -7287,7 +7282,7 @@ public ipCidrRange: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L26">property name</a>
 </h3>
 
 ```typescript
@@ -7295,7 +7290,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L26">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L27">property network</a>
 </h3>
 
 ```typescript
@@ -7303,7 +7298,7 @@ public network: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L27">property privateIpGoogleAccess</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L28">property privateIpGoogleAccess</a>
 </h3>
 
 ```typescript
@@ -7311,7 +7306,7 @@ public privateIpGoogleAccess: pulumi.Output<boolean | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L32">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L33">property project</a>
 </h3>
 
 ```typescript
@@ -7323,7 +7318,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L33">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L34">property region</a>
 </h3>
 
 ```typescript
@@ -7331,7 +7326,7 @@ public region: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L34">property secondaryIpRanges</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L35">property secondaryIpRanges</a>
 </h3>
 
 ```typescript
@@ -7339,7 +7334,7 @@ public secondaryIpRanges: pulumi.Output<{ ... }[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L38">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L39">property selfLink</a>
 </h3>
 
 ```typescript
@@ -7362,7 +7357,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SubnetworkIAMBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L19">class SubnetworkIAMBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L20">class SubnetworkIAMBinding</a>
 </h2>
 
 Three different resources help you manage your IAM policy for GCE subnetwork. Each of these resources serves a different use case:
@@ -7375,10 +7370,10 @@ Three different resources help you manage your IAM policy for GCE subnetwork. Ea
 
 ~> **Note:** `google_compute_subnetwork_iam_binding` resources **can be** used in conjunction with `google_compute_subnetwork_iam_member` resources **only if** they do not grant privilege to the same role.
 
-~> **Note:** These entire resources are in [Beta](/docs/providers/google/index.html#beta-features)
+~> **Note:** These entire resources are in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L56">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L57">constructor</a>
 </h3>
 
 ```typescript
@@ -7393,7 +7388,7 @@ Create a SubnetworkIAMBinding resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L28">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L29">method get</a>
 </h3>
 
 ```typescript
@@ -7425,7 +7420,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L35">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L36">property etag</a>
 </h3>
 
 ```typescript
@@ -7448,7 +7443,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L36">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L37">property members</a>
 </h3>
 
 ```typescript
@@ -7456,7 +7451,7 @@ public members: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L41">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L42">property project</a>
 </h3>
 
 ```typescript
@@ -7468,7 +7463,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L46">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L47">property region</a>
 </h3>
 
 ```typescript
@@ -7480,7 +7475,7 @@ The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L52">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L53">property role</a>
 </h3>
 
 ```typescript
@@ -7493,7 +7488,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L56">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L57">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -7516,7 +7511,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SubnetworkIAMMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L19">class SubnetworkIAMMember</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L20">class SubnetworkIAMMember</a>
 </h2>
 
 Three different resources help you manage your IAM policy for GCE subnetwork. Each of these resources serves a different use case:
@@ -7529,10 +7524,10 @@ Three different resources help you manage your IAM policy for GCE subnetwork. Ea
 
 ~> **Note:** `google_compute_subnetwork_iam_binding` resources **can be** used in conjunction with `google_compute_subnetwork_iam_member` resources **only if** they do not grant privilege to the same role.
 
-~> **Note:** These entire resources are in [Beta](/docs/providers/google/index.html#beta-features)
+~> **Note:** These entire resources are in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L56">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L57">constructor</a>
 </h3>
 
 ```typescript
@@ -7547,7 +7542,7 @@ Create a SubnetworkIAMMember resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L28">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L29">method get</a>
 </h3>
 
 ```typescript
@@ -7579,7 +7574,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L35">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L36">property etag</a>
 </h3>
 
 ```typescript
@@ -7602,7 +7597,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L36">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L37">property member</a>
 </h3>
 
 ```typescript
@@ -7610,7 +7605,7 @@ public member: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L41">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L42">property project</a>
 </h3>
 
 ```typescript
@@ -7622,7 +7617,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L46">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L47">property region</a>
 </h3>
 
 ```typescript
@@ -7634,7 +7629,7 @@ The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L52">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L53">property role</a>
 </h3>
 
 ```typescript
@@ -7647,7 +7642,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L56">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L57">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -7670,7 +7665,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SubnetworkIAMPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L19">class SubnetworkIAMPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L20">class SubnetworkIAMPolicy</a>
 </h2>
 
 Three different resources help you manage your IAM policy for GCE subnetwork. Each of these resources serves a different use case:
@@ -7683,10 +7678,10 @@ Three different resources help you manage your IAM policy for GCE subnetwork. Ea
 
 ~> **Note:** `google_compute_subnetwork_iam_binding` resources **can be** used in conjunction with `google_compute_subnetwork_iam_member` resources **only if** they do not grant privilege to the same role.
 
-~> **Note:** These entire resources are in [Beta](/docs/providers/google/index.html#beta-features)
+~> **Note:** These entire resources are in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L54">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L55">constructor</a>
 </h3>
 
 ```typescript
@@ -7701,7 +7696,7 @@ Create a SubnetworkIAMPolicy resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L28">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L29">method get</a>
 </h3>
 
 ```typescript
@@ -7733,7 +7728,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L35">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L36">property etag</a>
 </h3>
 
 ```typescript
@@ -7756,7 +7751,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L40">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L41">property policyData</a>
 </h3>
 
 ```typescript
@@ -7768,7 +7763,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L45">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L46">property project</a>
 </h3>
 
 ```typescript
@@ -7780,7 +7775,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L50">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L51">property region</a>
 </h3>
 
 ```typescript
@@ -7792,7 +7787,7 @@ The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L54">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L55">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -7815,10 +7810,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TargetHttpProxy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L6">class TargetHttpProxy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L7">class TargetHttpProxy</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L32">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -7833,7 +7828,7 @@ Create a TargetHttpProxy resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -7865,7 +7860,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L19">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L20">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -7873,7 +7868,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L20">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L21">property description</a>
 </h3>
 
 ```typescript
@@ -7893,7 +7888,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L21">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L22">property name</a>
 </h3>
 
 ```typescript
@@ -7901,7 +7896,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L26">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L27">property project</a>
 </h3>
 
 ```typescript
@@ -7913,7 +7908,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L27">property proxyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L28">property proxyId</a>
 </h3>
 
 ```typescript
@@ -7921,7 +7916,7 @@ public proxyId: pulumi.Output<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L31">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L32">property selfLink</a>
 </h3>
 
 ```typescript
@@ -7932,7 +7927,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L32">property urlMap</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L33">property urlMap</a>
 </h3>
 
 ```typescript
@@ -7952,10 +7947,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TargetHttpsProxy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L6">class TargetHttpsProxy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L7">class TargetHttpsProxy</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L35">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L36">constructor</a>
 </h3>
 
 ```typescript
@@ -7970,7 +7965,7 @@ Create a TargetHttpsProxy resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -8002,7 +7997,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L19">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L20">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -8010,7 +8005,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L20">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L21">property description</a>
 </h3>
 
 ```typescript
@@ -8030,7 +8025,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L21">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L22">property name</a>
 </h3>
 
 ```typescript
@@ -8038,7 +8033,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L26">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L27">property project</a>
 </h3>
 
 ```typescript
@@ -8050,7 +8045,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L27">property proxyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L28">property proxyId</a>
 </h3>
 
 ```typescript
@@ -8058,7 +8053,7 @@ public proxyId: pulumi.Output<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L28">property quicOverride</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L29">property quicOverride</a>
 </h3>
 
 ```typescript
@@ -8066,7 +8061,7 @@ public quicOverride: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L32">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L33">property selfLink</a>
 </h3>
 
 ```typescript
@@ -8077,7 +8072,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L33">property sslCertificates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L34">property sslCertificates</a>
 </h3>
 
 ```typescript
@@ -8085,7 +8080,7 @@ public sslCertificates: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L34">property sslPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L35">property sslPolicy</a>
 </h3>
 
 ```typescript
@@ -8093,7 +8088,7 @@ public sslPolicy: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L35">property urlMap</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L36">property urlMap</a>
 </h3>
 
 ```typescript
@@ -8113,7 +8108,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TargetPool">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L14">class TargetPool</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L15">class TargetPool</a>
 </h2>
 
 Manages a Target Pool within GCE. This is a collection of instances used as
@@ -8123,7 +8118,7 @@ documentation](https://cloud.google.com/compute/docs/load-balancing/network/targ
 and [API](https://cloud.google.com/compute/docs/reference/latest/targetPools).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L78">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L79">constructor</a>
 </h3>
 
 ```typescript
@@ -8138,7 +8133,7 @@ Create a TargetPool resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L23">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L24">method get</a>
 </h3>
 
 ```typescript
@@ -8170,7 +8165,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L31">property backupPool</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L32">property backupPool</a>
 </h3>
 
 ```typescript
@@ -8182,7 +8177,7 @@ URL to the backup target pool. Must also set
 failover\_ratio.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L35">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L36">property description</a>
 </h3>
 
 ```typescript
@@ -8193,7 +8188,7 @@ public description: pulumi.Output<string | undefined>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L40">property failoverRatio</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L41">property failoverRatio</a>
 </h3>
 
 ```typescript
@@ -8205,7 +8200,7 @@ Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L45">property healthChecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L46">property healthChecks</a>
 </h3>
 
 ```typescript
@@ -8229,7 +8224,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L53">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L54">property instances</a>
 </h3>
 
 ```typescript
@@ -8244,7 +8239,7 @@ Terraform interpolators to create a dependency on the instances from the
 target pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L58">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L59">property name</a>
 </h3>
 
 ```typescript
@@ -8256,7 +8251,7 @@ A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L63">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L64">property project</a>
 </h3>
 
 ```typescript
@@ -8268,7 +8263,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L68">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L69">property region</a>
 </h3>
 
 ```typescript
@@ -8280,7 +8275,7 @@ Where the target pool resides. Defaults to project
 region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L72">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L73">property selfLink</a>
 </h3>
 
 ```typescript
@@ -8291,7 +8286,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L78">property sessionAffinity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L79">property sessionAffinity</a>
 </h3>
 
 ```typescript
@@ -8316,10 +8311,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TargetSSLProxy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L6">class TargetSSLProxy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L7">class TargetSSLProxy</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L35">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L36">constructor</a>
 </h3>
 
 ```typescript
@@ -8334,7 +8329,7 @@ Create a TargetSSLProxy resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -8366,7 +8361,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L19">property backendService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L20">property backendService</a>
 </h3>
 
 ```typescript
@@ -8374,7 +8369,7 @@ public backendService: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L20">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L21">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -8382,7 +8377,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -8402,7 +8397,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L22">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L23">property name</a>
 </h3>
 
 ```typescript
@@ -8410,7 +8405,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L27">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L28">property project</a>
 </h3>
 
 ```typescript
@@ -8422,7 +8417,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L28">property proxyHeader</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L29">property proxyHeader</a>
 </h3>
 
 ```typescript
@@ -8430,7 +8425,7 @@ public proxyHeader: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L29">property proxyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L30">property proxyId</a>
 </h3>
 
 ```typescript
@@ -8438,7 +8433,7 @@ public proxyId: pulumi.Output<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L33">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L34">property selfLink</a>
 </h3>
 
 ```typescript
@@ -8449,7 +8444,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L34">property sslCertificates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L35">property sslCertificates</a>
 </h3>
 
 ```typescript
@@ -8457,7 +8452,7 @@ public sslCertificates: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L35">property sslPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L36">property sslPolicy</a>
 </h3>
 
 ```typescript
@@ -8477,10 +8472,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TargetTCPProxy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L6">class TargetTCPProxy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L7">class TargetTCPProxy</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -8495,7 +8490,7 @@ Create a TargetTCPProxy resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -8527,7 +8522,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L19">property backendService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L20">property backendService</a>
 </h3>
 
 ```typescript
@@ -8535,7 +8530,7 @@ public backendService: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L20">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L21">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -8543,7 +8538,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L21">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L22">property description</a>
 </h3>
 
 ```typescript
@@ -8563,7 +8558,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L22">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L23">property name</a>
 </h3>
 
 ```typescript
@@ -8571,7 +8566,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L27">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L28">property project</a>
 </h3>
 
 ```typescript
@@ -8583,7 +8578,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L28">property proxyHeader</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L29">property proxyHeader</a>
 </h3>
 
 ```typescript
@@ -8591,7 +8586,7 @@ public proxyHeader: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L29">property proxyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L30">property proxyId</a>
 </h3>
 
 ```typescript
@@ -8599,7 +8594,7 @@ public proxyId: pulumi.Output<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L33">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L34">property selfLink</a>
 </h3>
 
 ```typescript
@@ -8622,7 +8617,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="URLMap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L13">class URLMap</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L14">class URLMap</a>
 </h2>
 
 Manages a URL Map resource within GCE. For more information see
@@ -8631,7 +8626,7 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/urlMaps).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L66">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L68">constructor</a>
 </h3>
 
 ```typescript
@@ -8646,7 +8641,7 @@ Create a URLMap resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -8678,7 +8673,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L29">property defaultService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L30">property defaultService</a>
 </h3>
 
 ```typescript
@@ -8686,10 +8681,10 @@ public defaultService: pulumi.Output<string>;
 ```
 
 
-The backend service or backend bucket to use if none of the given paths match.
+The backend service or backend bucket to use when none of the given rules match.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L33">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L34">property description</a>
 </h3>
 
 ```typescript
@@ -8697,10 +8692,10 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 
-An optional description of this test.
+A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L37">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L38">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -8711,7 +8706,7 @@ public fingerprint: pulumi.Output<string>;
 The unique fingerprint for this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L41">property hostRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L42">property hostRules</a>
 </h3>
 
 ```typescript
@@ -8734,7 +8729,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L45">property mapId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L46">property mapId</a>
 </h3>
 
 ```typescript
@@ -8745,7 +8740,7 @@ public mapId: pulumi.Output<string>;
 The GCE assigned ID of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L49">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L51">property name</a>
 </h3>
 
 ```typescript
@@ -8753,10 +8748,11 @@ public name: pulumi.Output<string>;
 ```
 
 
-The name of the `path_matcher` resource.
+A unique name for the resource, required by GCE.
+Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L53">property pathMatchers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L55">property pathMatchers</a>
 </h3>
 
 ```typescript
@@ -8764,10 +8760,10 @@ public pathMatchers: pulumi.Output<{ ... }[] | undefined>;
 ```
 
 
-The name of the `path_matcher` to apply this host rule to.
+A list of paths to match. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L58">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L60">property project</a>
 </h3>
 
 ```typescript
@@ -8779,7 +8775,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L62">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L64">property selfLink</a>
 </h3>
 
 ```typescript
@@ -8790,7 +8786,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L66">property tests</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L68">property tests</a>
 </h3>
 
 ```typescript
@@ -8813,10 +8809,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="VPNGateway">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L6">class VPNGateway</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L7">class VPNGateway</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L32">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L33">constructor</a>
 </h3>
 
 ```typescript
@@ -8831,7 +8827,7 @@ Create a VPNGateway resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -8863,7 +8859,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L19">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L20">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -8871,7 +8867,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L20">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L21">property description</a>
 </h3>
 
 ```typescript
@@ -8891,7 +8887,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L21">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L22">property name</a>
 </h3>
 
 ```typescript
@@ -8899,7 +8895,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L22">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L23">property network</a>
 </h3>
 
 ```typescript
@@ -8907,7 +8903,7 @@ public network: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L27">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L28">property project</a>
 </h3>
 
 ```typescript
@@ -8919,7 +8915,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L28">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L29">property region</a>
 </h3>
 
 ```typescript
@@ -8927,7 +8923,7 @@ public region: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L32">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L33">property selfLink</a>
 </h3>
 
 ```typescript
@@ -8950,10 +8946,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="VPNTunnel">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L6">class VPNTunnel</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L7">class VPNTunnel</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L42">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L43">constructor</a>
 </h3>
 
 ```typescript
@@ -8968,7 +8964,7 @@ Create a VPNTunnel resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -9000,7 +8996,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L19">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L20">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -9008,7 +9004,7 @@ public creationTimestamp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L20">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L21">property description</a>
 </h3>
 
 ```typescript
@@ -9016,7 +9012,7 @@ public description: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L21">property detailedStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L22">property detailedStatus</a>
 </h3>
 
 ```typescript
@@ -9036,7 +9032,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L22">property ikeVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L23">property ikeVersion</a>
 </h3>
 
 ```typescript
@@ -9044,7 +9040,7 @@ public ikeVersion: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L23">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L24">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -9052,7 +9048,7 @@ public labelFingerprint: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L24">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L25">property labels</a>
 </h3>
 
 ```typescript
@@ -9060,7 +9056,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L25">property localTrafficSelectors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L26">property localTrafficSelectors</a>
 </h3>
 
 ```typescript
@@ -9068,7 +9064,7 @@ public localTrafficSelectors: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L26">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L27">property name</a>
 </h3>
 
 ```typescript
@@ -9076,7 +9072,7 @@ public name: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L27">property peerIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L28">property peerIp</a>
 </h3>
 
 ```typescript
@@ -9084,7 +9080,7 @@ public peerIp: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L32">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L33">property project</a>
 </h3>
 
 ```typescript
@@ -9096,7 +9092,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L33">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L34">property region</a>
 </h3>
 
 ```typescript
@@ -9104,7 +9100,7 @@ public region: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L34">property remoteTrafficSelectors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L35">property remoteTrafficSelectors</a>
 </h3>
 
 ```typescript
@@ -9112,7 +9108,7 @@ public remoteTrafficSelectors: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L35">property router</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L36">property router</a>
 </h3>
 
 ```typescript
@@ -9120,7 +9116,7 @@ public router: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L39">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L40">property selfLink</a>
 </h3>
 
 ```typescript
@@ -9131,7 +9127,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L40">property sharedSecret</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L41">property sharedSecret</a>
 </h3>
 
 ```typescript
@@ -9139,7 +9135,7 @@ public sharedSecret: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L41">property sharedSecretHash</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L42">property sharedSecretHash</a>
 </h3>
 
 ```typescript
@@ -9147,7 +9143,7 @@ public sharedSecretHash: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L42">property targetVpnGateway</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L43">property targetVpnGateway</a>
 </h3>
 
 ```typescript
@@ -9167,7 +9163,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="getAddress">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L10">function getAddress</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L11">function getAddress</a>
 </h2>
 
 ```typescript
@@ -9179,7 +9175,7 @@ Get the IP address from a static address. For more information see
 the official [API](https://cloud.google.com/compute/docs/reference/latest/addresses/get) documentation.
 
 <h2 class="pdoc-module-header" id="getBackendService">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L11">function getBackendService</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L12">function getBackendService</a>
 </h2>
 
 ```typescript
@@ -9192,7 +9188,7 @@ see [the official documentation](https://cloud.google.com/compute/docs/load-bala
 and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).
 
 <h2 class="pdoc-module-header" id="getDefaultServiceAccount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L9">function getDefaultServiceAccount</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L10">function getDefaultServiceAccount</a>
 </h2>
 
 ```typescript
@@ -9203,7 +9199,7 @@ getDefaultServiceAccount(args?: GetDefaultServiceAccountArgs, opts?: pulumi.Invo
 Use this data source to retrieve default service account for this project
 
 <h2 class="pdoc-module-header" id="getForwardingRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L9">function getForwardingRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L10">function getForwardingRule</a>
 </h2>
 
 ```typescript
@@ -9214,7 +9210,7 @@ getForwardingRule(args: GetForwardingRuleArgs, opts?: pulumi.InvokeOptions): Pro
 Get a forwarding rule within GCE from its name.
 
 <h2 class="pdoc-module-header" id="getGlobalAddress">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L10">function getGlobalAddress</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L11">function getGlobalAddress</a>
 </h2>
 
 ```typescript
@@ -9226,7 +9222,7 @@ Get the IP address from a static address reserved for a Global Forwarding Rule w
 the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.
 
 <h2 class="pdoc-module-header" id="getImage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L10">function getImage</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L11">function getImage</a>
 </h2>
 
 ```typescript
@@ -9238,7 +9234,7 @@ Get information about a Google Compute Image. Check that your service account ha
 [the official documentation](https://cloud.google.com/compute/docs/images) and its [API](https://cloud.google.com/compute/docs/reference/latest/images).
 
 <h2 class="pdoc-module-header" id="getInstanceGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L18">function getInstanceGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L19">function getInstanceGroup</a>
 </h2>
 
 ```typescript
@@ -9258,7 +9254,7 @@ data "google_compute_instance_group" "all" {
 ```
 
 <h2 class="pdoc-module-header" id="getLBIPRanges">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getLBIPRanges.ts#L11">function getLBIPRanges</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getLBIPRanges.ts#L12">function getLBIPRanges</a>
 </h2>
 
 ```typescript
@@ -9271,7 +9267,7 @@ Use this data source to access IP ranges in your firewall rules.
 https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules
 
 <h2 class="pdoc-module-header" id="getNetblockIPRanges">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L11">function getNetblockIPRanges</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L12">function getNetblockIPRanges</a>
 </h2>
 
 ```typescript
@@ -9284,7 +9280,7 @@ Use this data source to get the IP ranges from the sender policy framework (SPF)
 https://cloud.google.com/compute/docs/faq#where_can_i_find_product_name_short_ip_ranges
 
 <h2 class="pdoc-module-header" id="getNetwork">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L9">function getNetwork</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L10">function getNetwork</a>
 </h2>
 
 ```typescript
@@ -9295,7 +9291,7 @@ getNetwork(args: GetNetworkArgs, opts?: pulumi.InvokeOptions): Promise<GetNetwor
 Get a network within GCE from its name.
 
 <h2 class="pdoc-module-header" id="getRegionInstanceGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L35">function getRegionInstanceGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L36">function getRegionInstanceGroup</a>
 </h2>
 
 ```typescript
@@ -9332,7 +9328,7 @@ data "google_compute_region_instance_group" "data_source" {
 ```
 
 <h2 class="pdoc-module-header" id="getRegions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L22">function getRegions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L23">function getRegions</a>
 </h2>
 
 ```typescript
@@ -9356,7 +9352,7 @@ resource "google_compute_subnetwork" "cluster" {
 ```
 
 <h2 class="pdoc-module-header" id="getSSLPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L10">function getSSLPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L11">function getSSLPolicy</a>
 </h2>
 
 ```typescript
@@ -9368,7 +9364,7 @@ Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Targe
     For more information see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies).
 
 <h2 class="pdoc-module-header" id="getSubnetwork">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L9">function getSubnetwork</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L10">function getSubnetwork</a>
 </h2>
 
 ```typescript
@@ -9379,7 +9375,7 @@ getSubnetwork(args: GetSubnetworkArgs, opts?: pulumi.InvokeOptions): Promise<Get
 Get a subnetwork within GCE from its name and region.
 
 <h2 class="pdoc-module-header" id="getVPNGateway">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L9">function getVPNGateway</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L10">function getVPNGateway</a>
 </h2>
 
 ```typescript
@@ -9390,7 +9386,7 @@ getVPNGateway(args: GetVPNGatewayArgs, opts?: pulumi.InvokeOptions): Promise<Get
 Get a VPN gateway within GCE from its name.
 
 <h2 class="pdoc-module-header" id="getZones">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L24">function getZones</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L25">function getZones</a>
 </h2>
 
 ```typescript
@@ -9416,13 +9412,13 @@ resource "google_compute_instance_group_manager" "foo" {
 ```
 
 <h2 class="pdoc-module-header" id="AddressArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L106">interface AddressArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L107">interface AddressArgs</a>
 </h2>
 
 The set of arguments for constructing a Address resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L107">property address</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L108">property address</a>
 </h3>
 
 ```typescript
@@ -9430,7 +9426,7 @@ address?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L108">property addressType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L109">property addressType</a>
 </h3>
 
 ```typescript
@@ -9438,7 +9434,7 @@ addressType?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L109">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L110">property description</a>
 </h3>
 
 ```typescript
@@ -9446,7 +9442,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L110">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L111">property name</a>
 </h3>
 
 ```typescript
@@ -9454,7 +9450,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L111">property networkTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L112">property networkTier</a>
 </h3>
 
 ```typescript
@@ -9462,7 +9458,7 @@ networkTier?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L116">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L117">property project</a>
 </h3>
 
 ```typescript
@@ -9474,7 +9470,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L117">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L118">property region</a>
 </h3>
 
 ```typescript
@@ -9482,7 +9478,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L118">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L119">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -9490,13 +9486,13 @@ subnetwork?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="AddressState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L82">interface AddressState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L83">interface AddressState</a>
 </h2>
 
 Input properties used for looking up and filtering Address resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L83">property address</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L84">property address</a>
 </h3>
 
 ```typescript
@@ -9504,7 +9500,7 @@ address?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L84">property addressType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L85">property addressType</a>
 </h3>
 
 ```typescript
@@ -9512,7 +9508,7 @@ addressType?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L85">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L86">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -9520,7 +9516,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L86">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L87">property description</a>
 </h3>
 
 ```typescript
@@ -9528,7 +9524,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L87">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L88">property name</a>
 </h3>
 
 ```typescript
@@ -9536,7 +9532,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L88">property networkTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L89">property networkTier</a>
 </h3>
 
 ```typescript
@@ -9544,7 +9540,7 @@ networkTier?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L93">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L94">property project</a>
 </h3>
 
 ```typescript
@@ -9556,7 +9552,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L94">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L95">property region</a>
 </h3>
 
 ```typescript
@@ -9564,7 +9560,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L98">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L99">property selfLink</a>
 </h3>
 
 ```typescript
@@ -9575,7 +9571,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L99">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L100">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -9583,7 +9579,7 @@ subnetwork?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L100">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/address.ts#L101">property users</a>
 </h3>
 
 ```typescript
@@ -9591,13 +9587,13 @@ users?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h2 class="pdoc-module-header" id="AutoscalarArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L100">interface AutoscalarArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L93">interface AutoscalarArgs</a>
 </h2>
 
 The set of arguments for constructing a Autoscalar resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L101">property autoscalingPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L94">property autoscalingPolicy</a>
 </h3>
 
 ```typescript
@@ -9605,7 +9601,7 @@ autoscalingPolicy: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L102">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L95">property description</a>
 </h3>
 
 ```typescript
@@ -9613,7 +9609,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L103">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L96">property name</a>
 </h3>
 
 ```typescript
@@ -9621,19 +9617,15 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L108">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L97">property project</a>
 </h3>
 
 ```typescript
 project?: pulumi.Input<string>;
 ```
 
-
-The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L109">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L98">property target</a>
 </h3>
 
 ```typescript
@@ -9641,7 +9633,7 @@ target: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L110">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L99">property zone</a>
 </h3>
 
 ```typescript
@@ -9649,13 +9641,13 @@ zone?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="AutoscalarState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L79">interface AutoscalarState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L76">interface AutoscalarState</a>
 </h2>
 
 Input properties used for looking up and filtering Autoscalar resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L80">property autoscalingPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L77">property autoscalingPolicy</a>
 </h3>
 
 ```typescript
@@ -9663,7 +9655,7 @@ autoscalingPolicy?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L81">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L78">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -9671,7 +9663,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L82">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L79">property description</a>
 </h3>
 
 ```typescript
@@ -9679,7 +9671,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L83">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L80">property name</a>
 </h3>
 
 ```typescript
@@ -9687,19 +9679,15 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L88">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L81">property project</a>
 </h3>
 
 ```typescript
 project?: pulumi.Input<string>;
 ```
 
-
-The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L92">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L85">property selfLink</a>
 </h3>
 
 ```typescript
@@ -9710,7 +9698,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L93">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L86">property target</a>
 </h3>
 
 ```typescript
@@ -9718,7 +9706,7 @@ target?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L94">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/autoscalar.ts#L87">property zone</a>
 </h3>
 
 ```typescript
@@ -9726,13 +9714,13 @@ zone?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="BackendBucketArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L93">interface BackendBucketArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L94">interface BackendBucketArgs</a>
 </h2>
 
 The set of arguments for constructing a BackendBucket resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L94">property bucketName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L95">property bucketName</a>
 </h3>
 
 ```typescript
@@ -9740,7 +9728,7 @@ bucketName: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L95">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L96">property description</a>
 </h3>
 
 ```typescript
@@ -9748,7 +9736,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L96">property enableCdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L97">property enableCdn</a>
 </h3>
 
 ```typescript
@@ -9756,7 +9744,7 @@ enableCdn?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L97">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L98">property name</a>
 </h3>
 
 ```typescript
@@ -9764,7 +9752,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L102">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L103">property project</a>
 </h3>
 
 ```typescript
@@ -9776,13 +9764,13 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="BackendBucketState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L73">interface BackendBucketState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L74">interface BackendBucketState</a>
 </h2>
 
 Input properties used for looking up and filtering BackendBucket resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L74">property bucketName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L75">property bucketName</a>
 </h3>
 
 ```typescript
@@ -9790,7 +9778,7 @@ bucketName?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L75">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L76">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -9798,7 +9786,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L76">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L77">property description</a>
 </h3>
 
 ```typescript
@@ -9806,7 +9794,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L77">property enableCdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L78">property enableCdn</a>
 </h3>
 
 ```typescript
@@ -9814,7 +9802,7 @@ enableCdn?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L78">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L79">property name</a>
 </h3>
 
 ```typescript
@@ -9822,7 +9810,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L83">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L84">property project</a>
 </h3>
 
 ```typescript
@@ -9834,7 +9822,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L87">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendBucket.ts#L88">property selfLink</a>
 </h3>
 
 ```typescript
@@ -9845,13 +9833,13 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="BackendServiceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L250">interface BackendServiceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L251">interface BackendServiceArgs</a>
 </h2>
 
 The set of arguments for constructing a BackendService resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L254">property backends</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L255">property backends</a>
 </h3>
 
 ```typescript
@@ -9862,7 +9850,7 @@ backends?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The list of backends that serve this BackendService. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L258">property cdnPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L259">property cdnPolicy</a>
 </h3>
 
 ```typescript
@@ -9873,7 +9861,7 @@ cdnPolicy?: pulumi.Input<{ ... }>;
 Cloud CDN configuration for this BackendService. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L263">property connectionDrainingTimeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L264">property connectionDrainingTimeoutSec</a>
 </h3>
 
 ```typescript
@@ -9885,7 +9873,7 @@ Time for which instance will be drained (not accept new connections,
 but still work to finish started ones). Defaults to `300`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L268">property customRequestHeaders</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L269">property customRequestHeaders</a>
 </h3>
 
 ```typescript
@@ -9897,7 +9885,7 @@ customRequestHeaders?: pulumi.Input<pulumi.Input<string>[]>;
 HTTP/S load balancer should add to proxied requests. See [guide](https://cloud.google.com/compute/docs/load-balancing/http/backend-service#user-defined-request-headers) for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L272">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L273">property description</a>
 </h3>
 
 ```typescript
@@ -9905,10 +9893,10 @@ description?: pulumi.Input<string>;
 ```
 
 
-Textual description for the backend.
+The textual description for the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L276">property enableCdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L277">property enableCdn</a>
 </h3>
 
 ```typescript
@@ -9919,7 +9907,7 @@ enableCdn?: pulumi.Input<boolean>;
 Whether or not to enable the Cloud CDN on the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L282">property healthChecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L283">property healthChecks</a>
 </h3>
 
 ```typescript
@@ -9932,7 +9920,7 @@ for checking the health of the backend service. Currently at most one health
 check can be specified, and a health check is required.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L286">property iap</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L287">property iap</a>
 </h3>
 
 ```typescript
@@ -9943,7 +9931,7 @@ iap?: pulumi.Input<{ ... }>;
 Specification for the Identity-Aware proxy. Disabled if not specified. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L290">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L291">property name</a>
 </h3>
 
 ```typescript
@@ -9954,7 +9942,7 @@ name?: pulumi.Input<string>;
 The name of the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L295">property portName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L296">property portName</a>
 </h3>
 
 ```typescript
@@ -9966,7 +9954,7 @@ The name of a service that has been added to an
 instance group in this backend. See [related docs](https://cloud.google.com/compute/docs/instance-groups/#specifying_service_endpoints) for details. Defaults to http.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L300">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L301">property project</a>
 </h3>
 
 ```typescript
@@ -9978,7 +9966,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L305">property protocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L306">property protocol</a>
 </h3>
 
 ```typescript
@@ -9990,7 +9978,7 @@ The protocol for incoming requests. Defaults to
 `HTTP`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L310">property securityPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L311">property securityPolicy</a>
 </h3>
 
 ```typescript
@@ -10002,7 +9990,7 @@ securityPolicy?: pulumi.Input<string>;
 [security policy](https://cloud.google.com/armor/docs/security-policy-concepts) to add to the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L316">property sessionAffinity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L317">property sessionAffinity</a>
 </h3>
 
 ```typescript
@@ -10015,7 +10003,7 @@ affinity), `CLIENT_IP` (hash of the source/dest addresses / ports), and
 `GENERATED_COOKIE` (distribute load using a generated session cookie).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L321">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L322">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -10027,13 +10015,13 @@ The number of secs to wait for a backend to respond
 to a request before considering the request failed. Defaults to `30`.
 
 <h2 class="pdoc-module-header" id="BackendServiceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L165">interface BackendServiceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L166">interface BackendServiceState</a>
 </h2>
 
 Input properties used for looking up and filtering BackendService resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L169">property backends</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L170">property backends</a>
 </h3>
 
 ```typescript
@@ -10044,7 +10032,7 @@ backends?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The list of backends that serve this BackendService. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L173">property cdnPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L174">property cdnPolicy</a>
 </h3>
 
 ```typescript
@@ -10055,7 +10043,7 @@ cdnPolicy?: pulumi.Input<{ ... }>;
 Cloud CDN configuration for this BackendService. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L178">property connectionDrainingTimeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L179">property connectionDrainingTimeoutSec</a>
 </h3>
 
 ```typescript
@@ -10067,7 +10055,7 @@ Time for which instance will be drained (not accept new connections,
 but still work to finish started ones). Defaults to `300`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L183">property customRequestHeaders</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L184">property customRequestHeaders</a>
 </h3>
 
 ```typescript
@@ -10079,7 +10067,7 @@ customRequestHeaders?: pulumi.Input<pulumi.Input<string>[]>;
 HTTP/S load balancer should add to proxied requests. See [guide](https://cloud.google.com/compute/docs/load-balancing/http/backend-service#user-defined-request-headers) for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L187">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L188">property description</a>
 </h3>
 
 ```typescript
@@ -10087,10 +10075,10 @@ description?: pulumi.Input<string>;
 ```
 
 
-Textual description for the backend.
+The textual description for the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L191">property enableCdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L192">property enableCdn</a>
 </h3>
 
 ```typescript
@@ -10101,7 +10089,7 @@ enableCdn?: pulumi.Input<boolean>;
 Whether or not to enable the Cloud CDN on the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L195">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L196">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -10112,7 +10100,7 @@ fingerprint?: pulumi.Input<string>;
 The fingerprint of the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L201">property healthChecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L202">property healthChecks</a>
 </h3>
 
 ```typescript
@@ -10125,7 +10113,7 @@ for checking the health of the backend service. Currently at most one health
 check can be specified, and a health check is required.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L205">property iap</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L206">property iap</a>
 </h3>
 
 ```typescript
@@ -10136,7 +10124,7 @@ iap?: pulumi.Input<{ ... }>;
 Specification for the Identity-Aware proxy. Disabled if not specified. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L209">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L210">property name</a>
 </h3>
 
 ```typescript
@@ -10147,7 +10135,7 @@ name?: pulumi.Input<string>;
 The name of the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L214">property portName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L215">property portName</a>
 </h3>
 
 ```typescript
@@ -10159,7 +10147,7 @@ The name of a service that has been added to an
 instance group in this backend. See [related docs](https://cloud.google.com/compute/docs/instance-groups/#specifying_service_endpoints) for details. Defaults to http.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L219">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L220">property project</a>
 </h3>
 
 ```typescript
@@ -10171,7 +10159,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L224">property protocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L225">property protocol</a>
 </h3>
 
 ```typescript
@@ -10183,7 +10171,7 @@ The protocol for incoming requests. Defaults to
 `HTTP`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L229">property securityPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L230">property securityPolicy</a>
 </h3>
 
 ```typescript
@@ -10195,7 +10183,7 @@ securityPolicy?: pulumi.Input<string>;
 [security policy](https://cloud.google.com/armor/docs/security-policy-concepts) to add to the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L233">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L234">property selfLink</a>
 </h3>
 
 ```typescript
@@ -10206,7 +10194,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L239">property sessionAffinity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L240">property sessionAffinity</a>
 </h3>
 
 ```typescript
@@ -10219,7 +10207,7 @@ affinity), `CLIENT_IP` (hash of the source/dest addresses / ports), and
 `GENERATED_COOKIE` (distribute load using a generated session cookie).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L244">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/backendService.ts#L245">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -10231,13 +10219,13 @@ The number of secs to wait for a backend to respond
 to a request before considering the request failed. Defaults to `30`.
 
 <h2 class="pdoc-module-header" id="DiskArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L150">interface DiskArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L151">interface DiskArgs</a>
 </h2>
 
 The set of arguments for constructing a Disk resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L151">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L152">property description</a>
 </h3>
 
 ```typescript
@@ -10245,7 +10233,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L152">property diskEncryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L153">property diskEncryptionKey</a>
 </h3>
 
 ```typescript
@@ -10253,7 +10241,7 @@ diskEncryptionKey?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L153">property diskEncryptionKeyRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L154">property diskEncryptionKeyRaw</a>
 </h3>
 
 ```typescript
@@ -10261,7 +10249,7 @@ diskEncryptionKeyRaw?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L154">property image</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L155">property image</a>
 </h3>
 
 ```typescript
@@ -10269,7 +10257,7 @@ image?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L155">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L156">property labels</a>
 </h3>
 
 ```typescript
@@ -10277,7 +10265,7 @@ labels?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L156">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L157">property name</a>
 </h3>
 
 ```typescript
@@ -10285,7 +10273,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L161">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L162">property project</a>
 </h3>
 
 ```typescript
@@ -10297,7 +10285,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L162">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L163">property size</a>
 </h3>
 
 ```typescript
@@ -10305,7 +10293,7 @@ size?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L163">property snapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L164">property snapshot</a>
 </h3>
 
 ```typescript
@@ -10313,7 +10301,7 @@ snapshot?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L164">property sourceImageEncryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L165">property sourceImageEncryptionKey</a>
 </h3>
 
 ```typescript
@@ -10321,7 +10309,7 @@ sourceImageEncryptionKey?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L165">property sourceSnapshotEncryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L166">property sourceSnapshotEncryptionKey</a>
 </h3>
 
 ```typescript
@@ -10329,7 +10317,7 @@ sourceSnapshotEncryptionKey?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L166">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L167">property type</a>
 </h3>
 
 ```typescript
@@ -10337,7 +10325,7 @@ type?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L167">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L168">property zone</a>
 </h3>
 
 ```typescript
@@ -10345,13 +10333,13 @@ zone?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="DiskState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L115">interface DiskState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L116">interface DiskState</a>
 </h2>
 
 Input properties used for looking up and filtering Disk resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L116">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L117">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -10359,7 +10347,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L117">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L118">property description</a>
 </h3>
 
 ```typescript
@@ -10367,7 +10355,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L118">property diskEncryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L119">property diskEncryptionKey</a>
 </h3>
 
 ```typescript
@@ -10375,7 +10363,7 @@ diskEncryptionKey?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L119">property diskEncryptionKeyRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L120">property diskEncryptionKeyRaw</a>
 </h3>
 
 ```typescript
@@ -10383,7 +10371,7 @@ diskEncryptionKeyRaw?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L120">property diskEncryptionKeySha256</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L121">property diskEncryptionKeySha256</a>
 </h3>
 
 ```typescript
@@ -10391,7 +10379,7 @@ diskEncryptionKeySha256?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L121">property image</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L122">property image</a>
 </h3>
 
 ```typescript
@@ -10399,7 +10387,7 @@ image?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L122">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L123">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -10407,7 +10395,7 @@ labelFingerprint?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L123">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L124">property labels</a>
 </h3>
 
 ```typescript
@@ -10415,7 +10403,7 @@ labels?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L124">property lastAttachTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L125">property lastAttachTimestamp</a>
 </h3>
 
 ```typescript
@@ -10423,7 +10411,7 @@ lastAttachTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L125">property lastDetachTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L126">property lastDetachTimestamp</a>
 </h3>
 
 ```typescript
@@ -10431,7 +10419,7 @@ lastDetachTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L126">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L127">property name</a>
 </h3>
 
 ```typescript
@@ -10439,7 +10427,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L131">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L132">property project</a>
 </h3>
 
 ```typescript
@@ -10451,7 +10439,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L135">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L136">property selfLink</a>
 </h3>
 
 ```typescript
@@ -10462,7 +10450,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L136">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L137">property size</a>
 </h3>
 
 ```typescript
@@ -10470,7 +10458,7 @@ size?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L137">property snapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L138">property snapshot</a>
 </h3>
 
 ```typescript
@@ -10478,7 +10466,7 @@ snapshot?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L138">property sourceImageEncryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L139">property sourceImageEncryptionKey</a>
 </h3>
 
 ```typescript
@@ -10486,7 +10474,7 @@ sourceImageEncryptionKey?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L139">property sourceImageId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L140">property sourceImageId</a>
 </h3>
 
 ```typescript
@@ -10494,7 +10482,7 @@ sourceImageId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L140">property sourceSnapshotEncryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L141">property sourceSnapshotEncryptionKey</a>
 </h3>
 
 ```typescript
@@ -10502,7 +10490,7 @@ sourceSnapshotEncryptionKey?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L141">property sourceSnapshotId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L142">property sourceSnapshotId</a>
 </h3>
 
 ```typescript
@@ -10510,7 +10498,7 @@ sourceSnapshotId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L142">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L143">property type</a>
 </h3>
 
 ```typescript
@@ -10518,7 +10506,7 @@ type?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L143">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L144">property users</a>
 </h3>
 
 ```typescript
@@ -10526,7 +10514,7 @@ users?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L144">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/disk.ts#L145">property zone</a>
 </h3>
 
 ```typescript
@@ -10534,13 +10522,13 @@ zone?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="FirewallArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L261">interface FirewallArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L262">interface FirewallArgs</a>
 </h2>
 
 The set of arguments for constructing a Firewall resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L266">property allows</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L267">property allows</a>
 </h3>
 
 ```typescript
@@ -10552,7 +10540,7 @@ Can be specified multiple times for each allow
 rule. Each allow block supports fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L272">property denies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L273">property denies</a>
 </h3>
 
 ```typescript
@@ -10565,7 +10553,7 @@ rule. Each deny block supports fields documented below. Can be specified
 instead of allow.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L276">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L277">property description</a>
 </h3>
 
 ```typescript
@@ -10576,7 +10564,7 @@ description?: pulumi.Input<string>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L281">property destinationRanges</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L282">property destinationRanges</a>
 </h3>
 
 ```typescript
@@ -10588,7 +10576,7 @@ A list of destination CIDR ranges that this
 firewall applies to. Can't be used for `INGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L286">property direction</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L287">property direction</a>
 </h3>
 
 ```typescript
@@ -10600,7 +10588,7 @@ Direction of traffic to which this firewall applies;
 One of `INGRESS` or `EGRESS`. Defaults to `INGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L291">property disabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L292">property disabled</a>
 </h3>
 
 ```typescript
@@ -10612,7 +10600,7 @@ Denotes whether the firewall rule is disabled, i.e not applied to the network it
 When set to true, the firewall rule is not enforced and the network behaves as if it did not exist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L296">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L297">property name</a>
 </h3>
 
 ```typescript
@@ -10624,7 +10612,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L300">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L301">property network</a>
 </h3>
 
 ```typescript
@@ -10635,7 +10623,7 @@ network: pulumi.Input<string>;
 The name or self_link of the network to attach this firewall to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L306">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L307">property priority</a>
 </h3>
 
 ```typescript
@@ -10648,7 +10636,7 @@ resources with lower priority values have higher precedence (e.g. a firewall res
 takes effect over all other firewall rules with a non-zero priority).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L311">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L312">property project</a>
 </h3>
 
 ```typescript
@@ -10660,7 +10648,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L316">property sourceRanges</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L317">property sourceRanges</a>
 </h3>
 
 ```typescript
@@ -10672,7 +10660,7 @@ A list of source CIDR ranges that this
 firewall applies to. Can't be used for `EGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L327">property sourceServiceAccounts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L328">property sourceServiceAccounts</a>
 </h3>
 
 ```typescript
@@ -10690,7 +10678,7 @@ traffic that has source IP address within `source_ranges` OR the source IP belon
 cannot be used at the same time as `source_tags` or `target_tags`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L331">property sourceTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L332">property sourceTags</a>
 </h3>
 
 ```typescript
@@ -10701,7 +10689,7 @@ sourceTags?: pulumi.Input<pulumi.Input<string>[]>;
 A list of source tags for this firewall. Can't be used for `EGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L339">property targetServiceAccounts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L340">property targetServiceAccounts</a>
 </h3>
 
 ```typescript
@@ -10716,7 +10704,7 @@ firewall rule applies to all instances on the specified network.  Note that as o
 to a change in the way that these firewall rules are handled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L343">property targetTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L344">property targetTags</a>
 </h3>
 
 ```typescript
@@ -10727,13 +10715,13 @@ targetTags?: pulumi.Input<pulumi.Input<string>[]>;
 A list of target tags for this firewall.
 
 <h2 class="pdoc-module-header" id="FirewallState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L169">interface FirewallState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L170">interface FirewallState</a>
 </h2>
 
 Input properties used for looking up and filtering Firewall resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L174">property allows</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L175">property allows</a>
 </h3>
 
 ```typescript
@@ -10745,7 +10733,7 @@ Can be specified multiple times for each allow
 rule. Each allow block supports fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L180">property denies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L181">property denies</a>
 </h3>
 
 ```typescript
@@ -10758,7 +10746,7 @@ rule. Each deny block supports fields documented below. Can be specified
 instead of allow.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L184">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L185">property description</a>
 </h3>
 
 ```typescript
@@ -10769,7 +10757,7 @@ description?: pulumi.Input<string>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L189">property destinationRanges</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L190">property destinationRanges</a>
 </h3>
 
 ```typescript
@@ -10781,7 +10769,7 @@ A list of destination CIDR ranges that this
 firewall applies to. Can't be used for `INGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L194">property direction</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L195">property direction</a>
 </h3>
 
 ```typescript
@@ -10793,7 +10781,7 @@ Direction of traffic to which this firewall applies;
 One of `INGRESS` or `EGRESS`. Defaults to `INGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L199">property disabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L200">property disabled</a>
 </h3>
 
 ```typescript
@@ -10805,7 +10793,7 @@ Denotes whether the firewall rule is disabled, i.e not applied to the network it
 When set to true, the firewall rule is not enforced and the network behaves as if it did not exist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L204">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L205">property name</a>
 </h3>
 
 ```typescript
@@ -10817,7 +10805,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L208">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L209">property network</a>
 </h3>
 
 ```typescript
@@ -10828,7 +10816,7 @@ network?: pulumi.Input<string>;
 The name or self_link of the network to attach this firewall to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L214">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L215">property priority</a>
 </h3>
 
 ```typescript
@@ -10841,7 +10829,7 @@ resources with lower priority values have higher precedence (e.g. a firewall res
 takes effect over all other firewall rules with a non-zero priority).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L219">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L220">property project</a>
 </h3>
 
 ```typescript
@@ -10853,7 +10841,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L223">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L224">property selfLink</a>
 </h3>
 
 ```typescript
@@ -10864,7 +10852,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L228">property sourceRanges</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L229">property sourceRanges</a>
 </h3>
 
 ```typescript
@@ -10876,7 +10864,7 @@ A list of source CIDR ranges that this
 firewall applies to. Can't be used for `EGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L239">property sourceServiceAccounts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L240">property sourceServiceAccounts</a>
 </h3>
 
 ```typescript
@@ -10894,7 +10882,7 @@ traffic that has source IP address within `source_ranges` OR the source IP belon
 cannot be used at the same time as `source_tags` or `target_tags`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L243">property sourceTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L244">property sourceTags</a>
 </h3>
 
 ```typescript
@@ -10905,7 +10893,7 @@ sourceTags?: pulumi.Input<pulumi.Input<string>[]>;
 A list of source tags for this firewall. Can't be used for `EGRESS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L251">property targetServiceAccounts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L252">property targetServiceAccounts</a>
 </h3>
 
 ```typescript
@@ -10920,7 +10908,7 @@ firewall rule applies to all instances on the specified network.  Note that as o
 to a change in the way that these firewall rules are handled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L255">property targetTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/firewall.ts#L256">property targetTags</a>
 </h3>
 
 ```typescript
@@ -10931,13 +10919,13 @@ targetTags?: pulumi.Input<pulumi.Input<string>[]>;
 A list of target tags for this firewall.
 
 <h2 class="pdoc-module-header" id="ForwardingRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L146">interface ForwardingRuleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L147">interface ForwardingRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a ForwardingRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L147">property backendService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L148">property backendService</a>
 </h3>
 
 ```typescript
@@ -10945,7 +10933,7 @@ backendService?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L148">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L149">property description</a>
 </h3>
 
 ```typescript
@@ -10953,7 +10941,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L149">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L150">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -10961,7 +10949,7 @@ ipAddress?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L150">property ipProtocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L151">property ipProtocol</a>
 </h3>
 
 ```typescript
@@ -10969,7 +10957,7 @@ ipProtocol?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L151">property ipVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L152">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -10977,7 +10965,7 @@ ipVersion?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L152">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L153">property labels</a>
 </h3>
 
 ```typescript
@@ -10985,7 +10973,7 @@ labels?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L153">property loadBalancingScheme</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L154">property loadBalancingScheme</a>
 </h3>
 
 ```typescript
@@ -10993,7 +10981,7 @@ loadBalancingScheme?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L154">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L155">property name</a>
 </h3>
 
 ```typescript
@@ -11001,7 +10989,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L155">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L156">property network</a>
 </h3>
 
 ```typescript
@@ -11009,7 +10997,7 @@ network?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L156">property networkTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L157">property networkTier</a>
 </h3>
 
 ```typescript
@@ -11017,7 +11005,7 @@ networkTier?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L157">property portRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L158">property portRange</a>
 </h3>
 
 ```typescript
@@ -11025,7 +11013,7 @@ portRange?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L158">property ports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L159">property ports</a>
 </h3>
 
 ```typescript
@@ -11033,7 +11021,7 @@ ports?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L163">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L164">property project</a>
 </h3>
 
 ```typescript
@@ -11045,7 +11033,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L164">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L165">property region</a>
 </h3>
 
 ```typescript
@@ -11053,7 +11041,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L165">property serviceLabel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L166">property serviceLabel</a>
 </h3>
 
 ```typescript
@@ -11061,7 +11049,7 @@ serviceLabel?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L166">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L167">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -11069,7 +11057,7 @@ subnetwork?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L167">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L168">property target</a>
 </h3>
 
 ```typescript
@@ -11077,13 +11065,13 @@ target?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="ForwardingRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L112">interface ForwardingRuleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L113">interface ForwardingRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering ForwardingRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L113">property backendService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L114">property backendService</a>
 </h3>
 
 ```typescript
@@ -11091,7 +11079,7 @@ backendService?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L114">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L115">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -11099,7 +11087,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L115">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L116">property description</a>
 </h3>
 
 ```typescript
@@ -11107,7 +11095,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L116">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L117">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -11115,7 +11103,7 @@ ipAddress?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L117">property ipProtocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L118">property ipProtocol</a>
 </h3>
 
 ```typescript
@@ -11123,7 +11111,7 @@ ipProtocol?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L118">property ipVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L119">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -11131,7 +11119,7 @@ ipVersion?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L119">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L120">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -11139,7 +11127,7 @@ labelFingerprint?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L120">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L121">property labels</a>
 </h3>
 
 ```typescript
@@ -11147,7 +11135,7 @@ labels?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L121">property loadBalancingScheme</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L122">property loadBalancingScheme</a>
 </h3>
 
 ```typescript
@@ -11155,7 +11143,7 @@ loadBalancingScheme?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L122">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L123">property name</a>
 </h3>
 
 ```typescript
@@ -11163,7 +11151,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L123">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L124">property network</a>
 </h3>
 
 ```typescript
@@ -11171,7 +11159,7 @@ network?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L124">property networkTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L125">property networkTier</a>
 </h3>
 
 ```typescript
@@ -11179,7 +11167,7 @@ networkTier?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L125">property portRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L126">property portRange</a>
 </h3>
 
 ```typescript
@@ -11187,7 +11175,7 @@ portRange?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L126">property ports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L127">property ports</a>
 </h3>
 
 ```typescript
@@ -11195,7 +11183,7 @@ ports?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L131">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L132">property project</a>
 </h3>
 
 ```typescript
@@ -11207,7 +11195,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L132">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L133">property region</a>
 </h3>
 
 ```typescript
@@ -11215,7 +11203,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L136">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L137">property selfLink</a>
 </h3>
 
 ```typescript
@@ -11226,7 +11214,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L137">property serviceLabel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L138">property serviceLabel</a>
 </h3>
 
 ```typescript
@@ -11234,7 +11222,7 @@ serviceLabel?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L138">property serviceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L139">property serviceName</a>
 </h3>
 
 ```typescript
@@ -11242,7 +11230,7 @@ serviceName?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L139">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L140">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -11250,7 +11238,7 @@ subnetwork?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L140">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/forwardingRule.ts#L141">property target</a>
 </h3>
 
 ```typescript
@@ -11258,13 +11246,13 @@ target?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="GetAddressArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L21">interface GetAddressArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L22">interface GetAddressArgs</a>
 </h2>
 
 A collection of arguments for invoking getAddress.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L26">property name</a>
 </h3>
 
 ```typescript
@@ -11275,7 +11263,7 @@ name: string;
 A unique name for the resource, required by GCE.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L30">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L31">property project</a>
 </h3>
 
 ```typescript
@@ -11287,7 +11275,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L35">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L36">property region</a>
 </h3>
 
 ```typescript
@@ -11299,13 +11287,13 @@ The Region in which the created address reside.
 If it is not provided, the provider region is used.
 
 <h2 class="pdoc-module-header" id="GetAddressResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L41">interface GetAddressResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L42">interface GetAddressResult</a>
 </h2>
 
 A collection of values returned by getAddress.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L45">property address</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L46">property address</a>
 </h3>
 
 ```typescript
@@ -11316,7 +11304,7 @@ address: string;
 The IP of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L59">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L60">property id</a>
 </h3>
 
 ```typescript
@@ -11327,7 +11315,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L46">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L47">property project</a>
 </h3>
 
 ```typescript
@@ -11335,7 +11323,7 @@ project: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L47">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L48">property region</a>
 </h3>
 
 ```typescript
@@ -11343,7 +11331,7 @@ region: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L51">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L52">property selfLink</a>
 </h3>
 
 ```typescript
@@ -11354,7 +11342,7 @@ selfLink: string;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L55">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getAddress.ts#L56">property status</a>
 </h3>
 
 ```typescript
@@ -11365,13 +11353,13 @@ status: string;
 Indicates if the address is used. Possible values are: RESERVED or IN_USE.
 
 <h2 class="pdoc-module-header" id="GetBackendServiceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L21">interface GetBackendServiceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L22">interface GetBackendServiceArgs</a>
 </h2>
 
 A collection of arguments for invoking getBackendService.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L25">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L26">property name</a>
 </h3>
 
 ```typescript
@@ -11382,7 +11370,7 @@ name: string;
 The name of the Backend Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L29">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L30">property project</a>
 </h3>
 
 ```typescript
@@ -11393,13 +11381,13 @@ project?: string;
 The project in which the resource belongs. If it is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="GetBackendServiceResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L35">interface GetBackendServiceResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L36">interface GetBackendServiceResult</a>
 </h2>
 
 A collection of values returned by getBackendService.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L39">property backends</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L40">property backends</a>
 </h3>
 
 ```typescript
@@ -11410,7 +11398,7 @@ backends: { ... }[];
 The list of backends that serve this Backend Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L40">property cdnPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L41">property cdnPolicies</a>
 </h3>
 
 ```typescript
@@ -11418,7 +11406,7 @@ cdnPolicies: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L44">property connectionDrainingTimeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L45">property connectionDrainingTimeoutSec</a>
 </h3>
 
 ```typescript
@@ -11429,7 +11417,7 @@ connectionDrainingTimeoutSec: number;
 Time for which instance will be drained (not accept new connections, but still work to finish started ones).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L45">property customRequestHeaders</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L46">property customRequestHeaders</a>
 </h3>
 
 ```typescript
@@ -11437,7 +11425,7 @@ customRequestHeaders: string[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L49">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L50">property description</a>
 </h3>
 
 ```typescript
@@ -11448,7 +11436,7 @@ description: string;
 Textual description for the Backend Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L53">property enableCdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L54">property enableCdn</a>
 </h3>
 
 ```typescript
@@ -11459,7 +11447,7 @@ enableCdn: boolean;
 Whether or not Cloud CDN is enabled on the Backend Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L57">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L58">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -11470,7 +11458,7 @@ fingerprint: string;
 The fingerprint of the Backend Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L61">property healthChecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L62">property healthChecks</a>
 </h3>
 
 ```typescript
@@ -11481,7 +11469,7 @@ healthChecks: string[];
 The list of HTTP/HTTPS health checks used by the Backend Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L62">property iaps</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L63">property iaps</a>
 </h3>
 
 ```typescript
@@ -11489,7 +11477,7 @@ iaps: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L88">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L89">property id</a>
 </h3>
 
 ```typescript
@@ -11500,7 +11488,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L66">property portName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L67">property portName</a>
 </h3>
 
 ```typescript
@@ -11511,7 +11499,7 @@ portName: string;
 The name of a service that has been added to an instance group in this backend.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L70">property protocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L71">property protocol</a>
 </h3>
 
 ```typescript
@@ -11522,7 +11510,7 @@ protocol: string;
 The protocol for incoming requests.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L71">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L72">property region</a>
 </h3>
 
 ```typescript
@@ -11530,7 +11518,7 @@ region: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L72">property securityPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L73">property securityPolicy</a>
 </h3>
 
 ```typescript
@@ -11538,7 +11526,7 @@ securityPolicy: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L76">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L77">property selfLink</a>
 </h3>
 
 ```typescript
@@ -11549,7 +11537,7 @@ selfLink: string;
 The URI of the Backend Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L80">property sessionAffinity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L81">property sessionAffinity</a>
 </h3>
 
 ```typescript
@@ -11560,7 +11548,7 @@ sessionAffinity: string;
 The Backend Service session stickyness configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L84">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getBackendService.ts#L85">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -11571,13 +11559,13 @@ timeoutSec: number;
 The number of seconds to wait for a backend to respond to a request before considering the request failed.
 
 <h2 class="pdoc-module-header" id="GetDefaultServiceAccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L19">interface GetDefaultServiceAccountArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L20">interface GetDefaultServiceAccountArgs</a>
 </h2>
 
 A collection of arguments for invoking getDefaultServiceAccount.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L23">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L24">property project</a>
 </h3>
 
 ```typescript
@@ -11588,13 +11576,13 @@ project?: string;
 The project ID. If it is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="GetDefaultServiceAccountResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L29">interface GetDefaultServiceAccountResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L30">interface GetDefaultServiceAccountResult</a>
 </h2>
 
 A collection of values returned by getDefaultServiceAccount.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L33">property email</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L34">property email</a>
 </h3>
 
 ```typescript
@@ -11605,7 +11593,7 @@ email: string;
 Email address of the default service account used by VMs running in this project
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L38">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L39">property id</a>
 </h3>
 
 ```typescript
@@ -11616,7 +11604,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L34">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getDefaultServiceAccount.ts#L35">property project</a>
 </h3>
 
 ```typescript
@@ -11624,13 +11612,13 @@ project: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetForwardingRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L20">interface GetForwardingRuleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L21">interface GetForwardingRuleArgs</a>
 </h2>
 
 A collection of arguments for invoking getForwardingRule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L24">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L25">property name</a>
 </h3>
 
 ```typescript
@@ -11641,7 +11629,7 @@ name: string;
 The name of the forwarding rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L29">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L30">property project</a>
 </h3>
 
 ```typescript
@@ -11653,7 +11641,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L34">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L35">property region</a>
 </h3>
 
 ```typescript
@@ -11665,13 +11653,13 @@ The region in which the resource belongs. If it
 is not provided, the project region is used.
 
 <h2 class="pdoc-module-header" id="GetForwardingRuleResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L40">interface GetForwardingRuleResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L41">interface GetForwardingRuleResult</a>
 </h2>
 
 A collection of values returned by getForwardingRule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L44">property backendService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L45">property backendService</a>
 </h3>
 
 ```typescript
@@ -11682,7 +11670,7 @@ backendService: string;
 Backend service, if this forwarding rule has one.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L48">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L49">property description</a>
 </h3>
 
 ```typescript
@@ -11693,7 +11681,7 @@ description: string;
 Description of this forwarding rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L93">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L94">property id</a>
 </h3>
 
 ```typescript
@@ -11704,7 +11692,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L52">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L53">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -11715,7 +11703,7 @@ ipAddress: string;
 IP address of this forwarding rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L56">property ipProtocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L57">property ipProtocol</a>
 </h3>
 
 ```typescript
@@ -11726,7 +11714,7 @@ ipProtocol: string;
 IP protocol of this forwarding rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L60">property loadBalancingScheme</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L61">property loadBalancingScheme</a>
 </h3>
 
 ```typescript
@@ -11737,7 +11725,7 @@ loadBalancingScheme: string;
 Type of load balancing of this forwarding rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L64">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L65">property network</a>
 </h3>
 
 ```typescript
@@ -11748,7 +11736,7 @@ network: string;
 Network of this forwarding rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L68">property portRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L69">property portRange</a>
 </h3>
 
 ```typescript
@@ -11759,7 +11747,7 @@ portRange: string;
 Port range, if this forwarding rule has one.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L72">property ports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L73">property ports</a>
 </h3>
 
 ```typescript
@@ -11770,7 +11758,7 @@ ports: string[];
 List of ports to use for internal load balancing, if this forwarding rule has any.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L73">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L74">property project</a>
 </h3>
 
 ```typescript
@@ -11778,7 +11766,7 @@ project: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L77">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L78">property region</a>
 </h3>
 
 ```typescript
@@ -11789,7 +11777,7 @@ region: string;
 Region of this forwarding rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L81">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L82">property selfLink</a>
 </h3>
 
 ```typescript
@@ -11800,7 +11788,7 @@ selfLink: string;
 The URI of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L85">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L86">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -11811,7 +11799,7 @@ subnetwork: string;
 Subnetwork of this forwarding rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L89">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getForwardingRule.ts#L90">property target</a>
 </h3>
 
 ```typescript
@@ -11822,13 +11810,13 @@ target: string;
 URL of the target pool, if this forwarding rule has one.
 
 <h2 class="pdoc-module-header" id="GetGlobalAddressArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L20">interface GetGlobalAddressArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L21">interface GetGlobalAddressArgs</a>
 </h2>
 
 A collection of arguments for invoking getGlobalAddress.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L24">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L25">property name</a>
 </h3>
 
 ```typescript
@@ -11839,7 +11827,7 @@ name: string;
 A unique name for the resource, required by GCE.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L29">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L30">property project</a>
 </h3>
 
 ```typescript
@@ -11851,13 +11839,13 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="GetGlobalAddressResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L35">interface GetGlobalAddressResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L36">interface GetGlobalAddressResult</a>
 </h2>
 
 A collection of values returned by getGlobalAddress.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L39">property address</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L40">property address</a>
 </h3>
 
 ```typescript
@@ -11868,7 +11856,7 @@ address: string;
 The IP of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L52">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L53">property id</a>
 </h3>
 
 ```typescript
@@ -11879,7 +11867,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L40">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L41">property project</a>
 </h3>
 
 ```typescript
@@ -11887,7 +11875,7 @@ project: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L44">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L45">property selfLink</a>
 </h3>
 
 ```typescript
@@ -11898,7 +11886,7 @@ selfLink: string;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L48">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getGlobalAddress.ts#L49">property status</a>
 </h3>
 
 ```typescript
@@ -11909,13 +11897,13 @@ status: string;
 Indicates if the address is used. Possible values are: RESERVED or IN_USE.
 
 <h2 class="pdoc-module-header" id="GetImageArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L22">interface GetImageArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L23">interface GetImageArgs</a>
 </h2>
 
 A collection of arguments for invoking getImage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L23">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L24">property family</a>
 </h3>
 
 ```typescript
@@ -11923,7 +11911,7 @@ family?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L24">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L25">property name</a>
 </h3>
 
 ```typescript
@@ -11931,7 +11919,7 @@ name?: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L30">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L31">property project</a>
 </h3>
 
 ```typescript
@@ -11944,13 +11932,13 @@ provided, the provider project is used. If you are using a
 [public base image][pubimg], be sure to specify the correct Image Project.
 
 <h2 class="pdoc-module-header" id="GetImageResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L36">interface GetImageResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L37">interface GetImageResult</a>
 </h2>
 
 A collection of values returned by getImage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L40">property archiveSizeBytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L41">property archiveSizeBytes</a>
 </h3>
 
 ```typescript
@@ -11961,7 +11949,7 @@ archiveSizeBytes: number;
 The size of the image tar.gz archive stored in Google Cloud Storage in bytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L44">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L45">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -11972,7 +11960,7 @@ creationTimestamp: string;
 The creation timestamp in RFC3339 text format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L48">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L49">property description</a>
 </h3>
 
 ```typescript
@@ -11983,7 +11971,7 @@ description: string;
 An optional description of this image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L52">property diskSizeGb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L53">property diskSizeGb</a>
 </h3>
 
 ```typescript
@@ -11994,7 +11982,7 @@ diskSizeGb: number;
 The size of the image when restored onto a persistent disk in gigabytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L56">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L57">property family</a>
 </h3>
 
 ```typescript
@@ -12005,7 +11993,7 @@ family: string;
 The family name of the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L113">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L114">property id</a>
 </h3>
 
 ```typescript
@@ -12016,7 +12004,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L62">property imageEncryptionKeySha256</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L63">property imageEncryptionKeySha256</a>
 </h3>
 
 ```typescript
@@ -12029,7 +12017,7 @@ encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.goo
 that protects this image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L66">property imageId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L67">property imageId</a>
 </h3>
 
 ```typescript
@@ -12040,7 +12028,7 @@ imageId: string;
 The unique identifier for the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L70">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L71">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -12051,7 +12039,7 @@ labelFingerprint: string;
 A fingerprint for the labels being applied to this image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L74">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L75">property labels</a>
 </h3>
 
 ```typescript
@@ -12062,7 +12050,7 @@ labels: { ... };
 A map of labels applied to this image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L78">property licenses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L79">property licenses</a>
 </h3>
 
 ```typescript
@@ -12073,7 +12061,7 @@ licenses: string[];
 A list of applicable license URI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L82">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L83">property name</a>
 </h3>
 
 ```typescript
@@ -12084,7 +12072,7 @@ name: string;
 The name of the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L83">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L84">property project</a>
 </h3>
 
 ```typescript
@@ -12092,7 +12080,7 @@ project: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L87">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L88">property selfLink</a>
 </h3>
 
 ```typescript
@@ -12103,7 +12091,7 @@ selfLink: string;
 The URI of the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L91">property sourceDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L92">property sourceDisk</a>
 </h3>
 
 ```typescript
@@ -12114,7 +12102,7 @@ sourceDisk: string;
 The URL of the source disk used to create this image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L97">property sourceDiskEncryptionKeySha256</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L98">property sourceDiskEncryptionKeySha256</a>
 </h3>
 
 ```typescript
@@ -12127,7 +12115,7 @@ encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.goo
 that protects this image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L101">property sourceDiskId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L102">property sourceDiskId</a>
 </h3>
 
 ```typescript
@@ -12138,7 +12126,7 @@ sourceDiskId: string;
 The ID value of the disk used to create this image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L105">property sourceImageId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L106">property sourceImageId</a>
 </h3>
 
 ```typescript
@@ -12149,7 +12137,7 @@ sourceImageId: string;
 The ID value of the image used to create this image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L109">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getImage.ts#L110">property status</a>
 </h3>
 
 ```typescript
@@ -12160,13 +12148,13 @@ status: string;
 The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
 
 <h2 class="pdoc-module-header" id="GetInstanceGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L31">interface GetInstanceGroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L32">interface GetInstanceGroupArgs</a>
 </h2>
 
 A collection of arguments for invoking getInstanceGroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L35">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L36">property name</a>
 </h3>
 
 ```typescript
@@ -12177,7 +12165,7 @@ name?: string;
 The name of the instance group. Either `name` or `self_link` must be provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L40">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L41">property project</a>
 </h3>
 
 ```typescript
@@ -12189,7 +12177,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L44">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L45">property selfLink</a>
 </h3>
 
 ```typescript
@@ -12200,7 +12188,7 @@ selfLink?: string;
 The self link of the instance group. Either `name` or `self_link` must be provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L49">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L50">property zone</a>
 </h3>
 
 ```typescript
@@ -12212,13 +12200,13 @@ The zone of the instance group. If referencing the instance group by name
 and `zone` is not provided, the provider zone is used.
 
 <h2 class="pdoc-module-header" id="GetInstanceGroupResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L55">interface GetInstanceGroupResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L56">interface GetInstanceGroupResult</a>
 </h2>
 
 A collection of values returned by getInstanceGroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L59">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L60">property description</a>
 </h3>
 
 ```typescript
@@ -12229,7 +12217,7 @@ description: string;
 Textual description of the instance group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L85">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L86">property id</a>
 </h3>
 
 ```typescript
@@ -12240,7 +12228,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L63">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L64">property instances</a>
 </h3>
 
 ```typescript
@@ -12251,7 +12239,7 @@ instances: string[];
 List of instances in the group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L67">property namedPorts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L68">property namedPorts</a>
 </h3>
 
 ```typescript
@@ -12262,7 +12250,7 @@ namedPorts: { ... }[];
 List of named ports in the group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L71">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L72">property network</a>
 </h3>
 
 ```typescript
@@ -12273,7 +12261,7 @@ network: string;
 The URL of the network the instance group is in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L72">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L73">property project</a>
 </h3>
 
 ```typescript
@@ -12281,7 +12269,7 @@ project: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L76">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L77">property selfLink</a>
 </h3>
 
 ```typescript
@@ -12292,7 +12280,7 @@ selfLink: string;
 The URI of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L80">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L81">property size</a>
 </h3>
 
 ```typescript
@@ -12303,7 +12291,7 @@ size: number;
 The number of instances in the group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L81">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getInstanceGroup.ts#L82">property zone</a>
 </h3>
 
 ```typescript
@@ -12311,13 +12299,13 @@ zone: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetLBIPRangesResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getLBIPRanges.ts#L19">interface GetLBIPRangesResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getLBIPRanges.ts#L20">interface GetLBIPRangesResult</a>
 </h2>
 
 A collection of values returned by getLBIPRanges.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getLBIPRanges.ts#L23">property httpSslTcpInternals</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getLBIPRanges.ts#L24">property httpSslTcpInternals</a>
 </h3>
 
 ```typescript
@@ -12328,7 +12316,7 @@ httpSslTcpInternals: string[];
 The IP ranges used for health checks when **HTTP(S), SSL proxy, TCP proxy, and Internal load balancing** is used
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getLBIPRanges.ts#L31">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getLBIPRanges.ts#L32">property id</a>
 </h3>
 
 ```typescript
@@ -12339,7 +12327,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getLBIPRanges.ts#L27">property networks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getLBIPRanges.ts#L28">property networks</a>
 </h3>
 
 ```typescript
@@ -12350,13 +12338,13 @@ networks: string[];
 The IP ranges used for health checks when **Network load balancing** is used
 
 <h2 class="pdoc-module-header" id="GetNetblockIPRangesResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L19">interface GetNetblockIPRangesResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L20">interface GetNetblockIPRangesResult</a>
 </h2>
 
 A collection of values returned by getNetblockIPRanges.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L23">property cidrBlocks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L24">property cidrBlocks</a>
 </h3>
 
 ```typescript
@@ -12367,7 +12355,7 @@ cidrBlocks: string[];
 Retrieve list of all CIDR blocks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L27">property cidrBlocksIpv4s</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L28">property cidrBlocksIpv4s</a>
 </h3>
 
 ```typescript
@@ -12378,7 +12366,7 @@ cidrBlocksIpv4s: string[];
 Retrieve list of the IP4 CIDR blocks
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L31">property cidrBlocksIpv6s</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L32">property cidrBlocksIpv6s</a>
 </h3>
 
 ```typescript
@@ -12389,7 +12377,7 @@ cidrBlocksIpv6s: string[];
 Retrieve list of the IP6 CIDR blocks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L35">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetblockIPRanges.ts#L36">property id</a>
 </h3>
 
 ```typescript
@@ -12400,13 +12388,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetNetworkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L19">interface GetNetworkArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L20">interface GetNetworkArgs</a>
 </h2>
 
 A collection of arguments for invoking getNetwork.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L23">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L24">property name</a>
 </h3>
 
 ```typescript
@@ -12417,7 +12405,7 @@ name: string;
 The name of the network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L28">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L29">property project</a>
 </h3>
 
 ```typescript
@@ -12429,13 +12417,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="GetNetworkResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L34">interface GetNetworkResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L35">interface GetNetworkResult</a>
 </h2>
 
 A collection of values returned by getNetwork.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L38">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L39">property description</a>
 </h3>
 
 ```typescript
@@ -12446,7 +12434,7 @@ description: string;
 Description of this network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L42">property gatewayIpv4</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L43">property gatewayIpv4</a>
 </h3>
 
 ```typescript
@@ -12457,7 +12445,7 @@ gatewayIpv4: string;
 The IP address of the gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L54">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L55">property id</a>
 </h3>
 
 ```typescript
@@ -12468,7 +12456,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L46">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L47">property selfLink</a>
 </h3>
 
 ```typescript
@@ -12479,7 +12467,7 @@ selfLink: string;
 The URI of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L50">property subnetworksSelfLinks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getNetwork.ts#L51">property subnetworksSelfLinks</a>
 </h3>
 
 ```typescript
@@ -12490,13 +12478,13 @@ subnetworksSelfLinks: string[];
 the list of subnetworks which belong to the network
 
 <h2 class="pdoc-module-header" id="GetRegionInstanceGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L48">interface GetRegionInstanceGroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L49">interface GetRegionInstanceGroupArgs</a>
 </h2>
 
 A collection of arguments for invoking getRegionInstanceGroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L52">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L53">property name</a>
 </h3>
 
 ```typescript
@@ -12507,7 +12495,7 @@ name?: string;
 The name of the instance group.  One of `name` or `self_link` must be provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L57">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L58">property project</a>
 </h3>
 
 ```typescript
@@ -12519,7 +12507,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L63">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L64">property region</a>
 </h3>
 
 ```typescript
@@ -12532,7 +12520,7 @@ is provided, this value is ignored.  If neither `self_link` nor `region` are
 provided, the provider region is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L67">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L68">property selfLink</a>
 </h3>
 
 ```typescript
@@ -12543,13 +12531,13 @@ selfLink?: string;
 The link to the instance group.  One of `name` or `self_link` must be provided.
 
 <h2 class="pdoc-module-header" id="GetRegionInstanceGroupResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L73">interface GetRegionInstanceGroupResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L74">interface GetRegionInstanceGroupResult</a>
 </h2>
 
 A collection of values returned by getRegionInstanceGroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L92">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L93">property id</a>
 </h3>
 
 ```typescript
@@ -12560,7 +12548,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L77">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L78">property instances</a>
 </h3>
 
 ```typescript
@@ -12571,7 +12559,7 @@ instances: { ... }[];
 List of instances in the group, as a list of resources, each containing:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L81">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L82">property name</a>
 </h3>
 
 ```typescript
@@ -12582,7 +12570,7 @@ name: string;
 String port name
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L82">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L83">property project</a>
 </h3>
 
 ```typescript
@@ -12590,7 +12578,7 @@ project: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L83">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L84">property region</a>
 </h3>
 
 ```typescript
@@ -12598,7 +12586,7 @@ region: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L84">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L85">property selfLink</a>
 </h3>
 
 ```typescript
@@ -12606,7 +12594,7 @@ selfLink: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L88">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegionInstanceGroup.ts#L89">property size</a>
 </h3>
 
 ```typescript
@@ -12617,13 +12605,13 @@ size: number;
 The number of instances in the group.
 
 <h2 class="pdoc-module-header" id="GetRegionsArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L33">interface GetRegionsArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L34">interface GetRegionsArgs</a>
 </h2>
 
 A collection of arguments for invoking getRegions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L37">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L38">property project</a>
 </h3>
 
 ```typescript
@@ -12634,7 +12622,7 @@ project?: string;
 Project from which to list available regions. Defaults to project declared in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L42">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L43">property status</a>
 </h3>
 
 ```typescript
@@ -12646,13 +12634,13 @@ Allows to filter list of regions based on their current status. Status can be ei
 Defaults to no filtering (all available regions - both `UP` and `DOWN`).
 
 <h2 class="pdoc-module-header" id="GetRegionsResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L48">interface GetRegionsResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L49">interface GetRegionsResult</a>
 </h2>
 
 A collection of values returned by getRegions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L57">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L58">property id</a>
 </h3>
 
 ```typescript
@@ -12663,7 +12651,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L52">property names</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L53">property names</a>
 </h3>
 
 ```typescript
@@ -12674,7 +12662,7 @@ names: string[];
 A list of regions available in the given project
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L53">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getRegions.ts#L54">property project</a>
 </h3>
 
 ```typescript
@@ -12682,13 +12670,13 @@ project: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetSSLPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L20">interface GetSSLPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L21">interface GetSSLPolicyArgs</a>
 </h2>
 
 A collection of arguments for invoking getSSLPolicy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L24">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L25">property name</a>
 </h3>
 
 ```typescript
@@ -12699,7 +12687,7 @@ name: string;
 The name of the SSL Policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L29">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L30">property project</a>
 </h3>
 
 ```typescript
@@ -12711,13 +12699,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="GetSSLPolicyResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L35">interface GetSSLPolicyResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L36">interface GetSSLPolicyResult</a>
 </h2>
 
 A collection of values returned by getSSLPolicy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L36">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L37">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -12725,7 +12713,7 @@ creationTimestamp: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L42">property customFeatures</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L43">property customFeatures</a>
 </h3>
 
 ```typescript
@@ -12738,7 +12726,7 @@ ciphers supported by the profile. If the `profile` is *not* `CUSTOM`, this
 attribute will be empty.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L46">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L47">property description</a>
 </h3>
 
 ```typescript
@@ -12749,7 +12737,7 @@ description: string;
 Description of this SSL Policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L50">property enabledFeatures</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L51">property enabledFeatures</a>
 </h3>
 
 ```typescript
@@ -12760,7 +12748,7 @@ enabledFeatures: string[];
 The set of enabled encryption ciphers as a result of the policy config
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L54">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L55">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -12771,7 +12759,7 @@ fingerprint: string;
 Fingerprint of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L70">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L71">property id</a>
 </h3>
 
 ```typescript
@@ -12782,7 +12770,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L58">property minTlsVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L59">property minTlsVersion</a>
 </h3>
 
 ```typescript
@@ -12793,7 +12781,7 @@ minTlsVersion: string;
 The minimum supported TLS version of this policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L62">property profile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L63">property profile</a>
 </h3>
 
 ```typescript
@@ -12804,7 +12792,7 @@ profile: string;
 The Google-curated or custom profile used by this policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L66">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSSLPolicy.ts#L67">property selfLink</a>
 </h3>
 
 ```typescript
@@ -12815,13 +12803,13 @@ selfLink: string;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="GetSubnetworkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L20">interface GetSubnetworkArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L21">interface GetSubnetworkArgs</a>
 </h2>
 
 A collection of arguments for invoking getSubnetwork.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L24">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L25">property name</a>
 </h3>
 
 ```typescript
@@ -12832,7 +12820,7 @@ name: string;
 The name of the subnetwork.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L29">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L30">property project</a>
 </h3>
 
 ```typescript
@@ -12844,7 +12832,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L34">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L35">property region</a>
 </h3>
 
 ```typescript
@@ -12856,13 +12844,13 @@ The region this subnetwork has been created in. If
 unspecified, this defaults to the region configured in the provider.
 
 <h2 class="pdoc-module-header" id="GetSubnetworkResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L40">interface GetSubnetworkResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L41">interface GetSubnetworkResult</a>
 </h2>
 
 A collection of values returned by getSubnetwork.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L44">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L45">property description</a>
 </h3>
 
 ```typescript
@@ -12873,7 +12861,7 @@ description: string;
 Description of this subnetwork.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L48">property gatewayAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L49">property gatewayAddress</a>
 </h3>
 
 ```typescript
@@ -12884,7 +12872,7 @@ gatewayAddress: string;
 The IP address of the gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L79">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -12895,7 +12883,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L53">property ipCidrRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L54">property ipCidrRange</a>
 </h3>
 
 ```typescript
@@ -12907,7 +12895,7 @@ The range of IP addresses belonging to this subnetwork
 secondary range.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L58">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L59">property network</a>
 </h3>
 
 ```typescript
@@ -12919,7 +12907,7 @@ The network name or resource link to the parent
 network of this subnetwork.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L64">property privateIpGoogleAccess</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L65">property privateIpGoogleAccess</a>
 </h3>
 
 ```typescript
@@ -12932,7 +12920,7 @@ can access Google services without assigned external IP
 addresses.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L65">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L66">property project</a>
 </h3>
 
 ```typescript
@@ -12940,7 +12928,7 @@ project: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L66">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L67">property region</a>
 </h3>
 
 ```typescript
@@ -12948,7 +12936,7 @@ region: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L71">property secondaryIpRanges</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L72">property secondaryIpRanges</a>
 </h3>
 
 ```typescript
@@ -12960,7 +12948,7 @@ An array of configurations for secondary IP ranges for
 VM instances contained in this subnetwork. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L75">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getSubnetwork.ts#L76">property selfLink</a>
 </h3>
 
 ```typescript
@@ -12971,13 +12959,13 @@ selfLink: string;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="GetVPNGatewayArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L20">interface GetVPNGatewayArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L21">interface GetVPNGatewayArgs</a>
 </h2>
 
 A collection of arguments for invoking getVPNGateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L24">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L25">property name</a>
 </h3>
 
 ```typescript
@@ -12988,7 +12976,7 @@ name: string;
 The name of the VPN gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L29">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L30">property project</a>
 </h3>
 
 ```typescript
@@ -13000,7 +12988,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L34">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L35">property region</a>
 </h3>
 
 ```typescript
@@ -13012,13 +13000,13 @@ The region in which the resource belongs. If it
 is not provided, the project region is used.
 
 <h2 class="pdoc-module-header" id="GetVPNGatewayResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L40">interface GetVPNGatewayResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L41">interface GetVPNGatewayResult</a>
 </h2>
 
 A collection of values returned by getVPNGateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L44">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L45">property description</a>
 </h3>
 
 ```typescript
@@ -13029,7 +13017,7 @@ description: string;
 Description of this VPN gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L61">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L62">property id</a>
 </h3>
 
 ```typescript
@@ -13040,7 +13028,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L48">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L49">property network</a>
 </h3>
 
 ```typescript
@@ -13051,7 +13039,7 @@ network: string;
 The network of this VPN gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L49">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L50">property project</a>
 </h3>
 
 ```typescript
@@ -13059,7 +13047,7 @@ project: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L53">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L54">property region</a>
 </h3>
 
 ```typescript
@@ -13070,7 +13058,7 @@ region: string;
 Region of this VPN gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L57">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getVPNGateway.ts#L58">property selfLink</a>
 </h3>
 
 ```typescript
@@ -13081,13 +13069,13 @@ selfLink: string;
 The URI of the resource.
 
 <h2 class="pdoc-module-header" id="GetZonesArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L36">interface GetZonesArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L37">interface GetZonesArgs</a>
 </h2>
 
 A collection of arguments for invoking getZones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L40">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L41">property project</a>
 </h3>
 
 ```typescript
@@ -13098,7 +13086,7 @@ project?: string;
 Project from which to list available zones. Defaults to project declared in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L44">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L45">property region</a>
 </h3>
 
 ```typescript
@@ -13109,7 +13097,7 @@ region?: string;
 Region from which to list available zones. Defaults to region declared in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L49">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L50">property status</a>
 </h3>
 
 ```typescript
@@ -13121,13 +13109,13 @@ Allows to filter list of zones based on their current status. Status can be eith
 Defaults to no filtering (all available zones - both `UP` and `DOWN`).
 
 <h2 class="pdoc-module-header" id="GetZonesResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L55">interface GetZonesResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L56">interface GetZonesResult</a>
 </h2>
 
 A collection of values returned by getZones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L64">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L65">property id</a>
 </h3>
 
 ```typescript
@@ -13138,7 +13126,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L59">property names</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L60">property names</a>
 </h3>
 
 ```typescript
@@ -13149,7 +13137,7 @@ names: string[];
 A list of zones available in the given region
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L60">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/getZones.ts#L61">property project</a>
 </h3>
 
 ```typescript
@@ -13157,13 +13145,13 @@ project: string;
 ```
 
 <h2 class="pdoc-module-header" id="GlobalAddressArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L90">interface GlobalAddressArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L91">interface GlobalAddressArgs</a>
 </h2>
 
 The set of arguments for constructing a GlobalAddress resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L91">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L92">property description</a>
 </h3>
 
 ```typescript
@@ -13171,7 +13159,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L92">property ipVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L93">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -13179,7 +13167,7 @@ ipVersion?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L93">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L94">property name</a>
 </h3>
 
 ```typescript
@@ -13187,7 +13175,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L98">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L99">property project</a>
 </h3>
 
 ```typescript
@@ -13199,13 +13187,13 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="GlobalAddressState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L70">interface GlobalAddressState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L71">interface GlobalAddressState</a>
 </h2>
 
 Input properties used for looking up and filtering GlobalAddress resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L71">property address</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L72">property address</a>
 </h3>
 
 ```typescript
@@ -13213,7 +13201,7 @@ address?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L72">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L73">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -13221,7 +13209,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L73">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L74">property description</a>
 </h3>
 
 ```typescript
@@ -13229,7 +13217,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L74">property ipVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L75">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -13237,7 +13225,7 @@ ipVersion?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L75">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -13245,7 +13233,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L80">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L81">property project</a>
 </h3>
 
 ```typescript
@@ -13257,7 +13245,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L84">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalAddress.ts#L85">property selfLink</a>
 </h3>
 
 ```typescript
@@ -13268,13 +13256,13 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="GlobalForwardingRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L199">interface GlobalForwardingRuleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L200">interface GlobalForwardingRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a GlobalForwardingRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L203">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L204">property description</a>
 </h3>
 
 ```typescript
@@ -13285,7 +13273,7 @@ description?: pulumi.Input<string>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L210">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L211">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -13299,7 +13287,7 @@ to a `google_compute_global_address` resource. (If using a `google_compute_globa
 resource, use the `address` property instead of the `self_link` property.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L215">property ipProtocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L216">property ipProtocol</a>
 </h3>
 
 ```typescript
@@ -13311,7 +13299,7 @@ The IP protocol to route, one of "TCP" "UDP" "AH"
 "ESP" or "SCTP". (default "TCP").
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L221">property ipVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L222">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -13323,7 +13311,7 @@ The IP Version that will be used by this resource's address. One of `"IPV4"` or 
 You cannot provide this and `ip_address`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L226">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L227">property labels</a>
 </h3>
 
 ```typescript
@@ -13335,7 +13323,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L231">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L232">property name</a>
 </h3>
 
 ```typescript
@@ -13347,7 +13335,7 @@ A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L242">property portRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L243">property portRange</a>
 </h3>
 
 ```typescript
@@ -13365,7 +13353,7 @@ Some types of forwarding targets have constraints on the acceptable ports:
 * Target VPN gateway: 500, 4500
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L247">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L248">property project</a>
 </h3>
 
 ```typescript
@@ -13377,7 +13365,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L251">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L252">property target</a>
 </h3>
 
 ```typescript
@@ -13388,13 +13376,13 @@ target: pulumi.Input<string>;
 URL of target HTTP or HTTPS proxy.
 
 <h2 class="pdoc-module-header" id="GlobalForwardingRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L133">interface GlobalForwardingRuleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L134">interface GlobalForwardingRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering GlobalForwardingRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L137">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L138">property description</a>
 </h3>
 
 ```typescript
@@ -13405,7 +13393,7 @@ description?: pulumi.Input<string>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L144">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L145">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -13419,7 +13407,7 @@ to a `google_compute_global_address` resource. (If using a `google_compute_globa
 resource, use the `address` property instead of the `self_link` property.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L149">property ipProtocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L150">property ipProtocol</a>
 </h3>
 
 ```typescript
@@ -13431,7 +13419,7 @@ The IP protocol to route, one of "TCP" "UDP" "AH"
 "ESP" or "SCTP". (default "TCP").
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L155">property ipVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L156">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -13443,7 +13431,7 @@ The IP Version that will be used by this resource's address. One of `"IPV4"` or 
 You cannot provide this and `ip_address`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L159">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L160">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -13451,10 +13439,10 @@ labelFingerprint?: pulumi.Input<string>;
 ```
 
 
-([Beta](/docs/providers/google/index.html#beta-features)) The current label fingerprint.
+([Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features)) The current label fingerprint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L164">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L165">property labels</a>
 </h3>
 
 ```typescript
@@ -13466,7 +13454,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L169">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L170">property name</a>
 </h3>
 
 ```typescript
@@ -13478,7 +13466,7 @@ A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L180">property portRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L181">property portRange</a>
 </h3>
 
 ```typescript
@@ -13496,7 +13484,7 @@ Some types of forwarding targets have constraints on the acceptable ports:
 * Target VPN gateway: 500, 4500
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L185">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L186">property project</a>
 </h3>
 
 ```typescript
@@ -13508,7 +13496,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L189">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L190">property selfLink</a>
 </h3>
 
 ```typescript
@@ -13519,7 +13507,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L193">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/globalForwardingRule.ts#L194">property target</a>
 </h3>
 
 ```typescript
@@ -13530,13 +13518,13 @@ target?: pulumi.Input<string>;
 URL of target HTTP or HTTPS proxy.
 
 <h2 class="pdoc-module-header" id="HealthCheckArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L192">interface HealthCheckArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L193">interface HealthCheckArgs</a>
 </h2>
 
 The set of arguments for constructing a HealthCheck resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L197">property checkIntervalSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L198">property checkIntervalSec</a>
 </h3>
 
 ```typescript
@@ -13548,7 +13536,7 @@ The number of seconds between each poll of
 the instance instance (default 5).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L201">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L202">property description</a>
 </h3>
 
 ```typescript
@@ -13559,7 +13547,7 @@ description?: pulumi.Input<string>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L205">property healthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L206">property healthyThreshold</a>
 </h3>
 
 ```typescript
@@ -13570,7 +13558,7 @@ healthyThreshold?: pulumi.Input<number>;
 Consecutive successes required (default 2).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L210">property httpHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L211">property httpHealthCheck</a>
 </h3>
 
 ```typescript
@@ -13582,7 +13570,7 @@ An HTTP Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L215">property httpsHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L216">property httpsHealthCheck</a>
 </h3>
 
 ```typescript
@@ -13594,7 +13582,7 @@ An HTTPS Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L220">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L221">property name</a>
 </h3>
 
 ```typescript
@@ -13606,7 +13594,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L225">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L226">property project</a>
 </h3>
 
 ```typescript
@@ -13618,7 +13606,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L230">property sslHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L231">property sslHealthCheck</a>
 </h3>
 
 ```typescript
@@ -13630,7 +13618,7 @@ An SSL Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L235">property tcpHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L236">property tcpHealthCheck</a>
 </h3>
 
 ```typescript
@@ -13642,7 +13630,7 @@ A TCP Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L240">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L241">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -13654,7 +13642,7 @@ The number of seconds to wait before declaring
 failure (default 5).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L244">property unhealthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L245">property unhealthyThreshold</a>
 </h3>
 
 ```typescript
@@ -13665,13 +13653,13 @@ unhealthyThreshold?: pulumi.Input<number>;
 Consecutive failures required (default 2).
 
 <h2 class="pdoc-module-header" id="HealthCheckState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L130">interface HealthCheckState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L131">interface HealthCheckState</a>
 </h2>
 
 Input properties used for looking up and filtering HealthCheck resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L135">property checkIntervalSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L136">property checkIntervalSec</a>
 </h3>
 
 ```typescript
@@ -13683,7 +13671,7 @@ The number of seconds between each poll of
 the instance instance (default 5).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L139">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L140">property description</a>
 </h3>
 
 ```typescript
@@ -13694,7 +13682,7 @@ description?: pulumi.Input<string>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L143">property healthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L144">property healthyThreshold</a>
 </h3>
 
 ```typescript
@@ -13705,7 +13693,7 @@ healthyThreshold?: pulumi.Input<number>;
 Consecutive successes required (default 2).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L148">property httpHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L149">property httpHealthCheck</a>
 </h3>
 
 ```typescript
@@ -13717,7 +13705,7 @@ An HTTP Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L153">property httpsHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L154">property httpsHealthCheck</a>
 </h3>
 
 ```typescript
@@ -13729,7 +13717,7 @@ An HTTPS Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L158">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L159">property name</a>
 </h3>
 
 ```typescript
@@ -13741,7 +13729,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L163">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L164">property project</a>
 </h3>
 
 ```typescript
@@ -13753,7 +13741,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L167">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L168">property selfLink</a>
 </h3>
 
 ```typescript
@@ -13764,7 +13752,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L172">property sslHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L173">property sslHealthCheck</a>
 </h3>
 
 ```typescript
@@ -13776,7 +13764,7 @@ An SSL Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L177">property tcpHealthCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L178">property tcpHealthCheck</a>
 </h3>
 
 ```typescript
@@ -13788,7 +13776,7 @@ A TCP Health Check. Only one kind of Health Check can be added.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L182">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L183">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -13800,7 +13788,7 @@ The number of seconds to wait before declaring
 failure (default 5).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L186">property unhealthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/healthCheck.ts#L187">property unhealthyThreshold</a>
 </h3>
 
 ```typescript
@@ -13811,13 +13799,13 @@ unhealthyThreshold?: pulumi.Input<number>;
 Consecutive failures required (default 2).
 
 <h2 class="pdoc-module-header" id="HttpHealthCheckArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L110">interface HttpHealthCheckArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L111">interface HttpHealthCheckArgs</a>
 </h2>
 
 The set of arguments for constructing a HttpHealthCheck resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L111">property checkIntervalSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L112">property checkIntervalSec</a>
 </h3>
 
 ```typescript
@@ -13825,7 +13813,7 @@ checkIntervalSec?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L112">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L113">property description</a>
 </h3>
 
 ```typescript
@@ -13833,7 +13821,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L113">property healthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L114">property healthyThreshold</a>
 </h3>
 
 ```typescript
@@ -13841,7 +13829,7 @@ healthyThreshold?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L114">property host</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L115">property host</a>
 </h3>
 
 ```typescript
@@ -13849,7 +13837,7 @@ host?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L115">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L116">property name</a>
 </h3>
 
 ```typescript
@@ -13857,7 +13845,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L116">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L117">property port</a>
 </h3>
 
 ```typescript
@@ -13865,7 +13853,7 @@ port?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L121">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L122">property project</a>
 </h3>
 
 ```typescript
@@ -13877,7 +13865,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L122">property requestPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L123">property requestPath</a>
 </h3>
 
 ```typescript
@@ -13885,7 +13873,7 @@ requestPath?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L123">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L124">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -13893,7 +13881,7 @@ timeoutSec?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L124">property unhealthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L125">property unhealthyThreshold</a>
 </h3>
 
 ```typescript
@@ -13901,13 +13889,13 @@ unhealthyThreshold?: pulumi.Input<number>;
 ```
 
 <h2 class="pdoc-module-header" id="HttpHealthCheckState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L85">interface HttpHealthCheckState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L86">interface HttpHealthCheckState</a>
 </h2>
 
 Input properties used for looking up and filtering HttpHealthCheck resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L86">property checkIntervalSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L87">property checkIntervalSec</a>
 </h3>
 
 ```typescript
@@ -13915,7 +13903,7 @@ checkIntervalSec?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L87">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L88">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -13923,7 +13911,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L88">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L89">property description</a>
 </h3>
 
 ```typescript
@@ -13931,7 +13919,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L89">property healthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L90">property healthyThreshold</a>
 </h3>
 
 ```typescript
@@ -13939,7 +13927,7 @@ healthyThreshold?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L90">property host</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L91">property host</a>
 </h3>
 
 ```typescript
@@ -13947,7 +13935,7 @@ host?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L91">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L92">property name</a>
 </h3>
 
 ```typescript
@@ -13955,7 +13943,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L92">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L93">property port</a>
 </h3>
 
 ```typescript
@@ -13963,7 +13951,7 @@ port?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L97">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L98">property project</a>
 </h3>
 
 ```typescript
@@ -13975,7 +13963,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L98">property requestPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L99">property requestPath</a>
 </h3>
 
 ```typescript
@@ -13983,7 +13971,7 @@ requestPath?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L102">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L103">property selfLink</a>
 </h3>
 
 ```typescript
@@ -13994,7 +13982,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L103">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L104">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -14002,7 +13990,7 @@ timeoutSec?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L104">property unhealthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpHealthCheck.ts#L105">property unhealthyThreshold</a>
 </h3>
 
 ```typescript
@@ -14010,13 +13998,13 @@ unhealthyThreshold?: pulumi.Input<number>;
 ```
 
 <h2 class="pdoc-module-header" id="HttpsHealthCheckArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L110">interface HttpsHealthCheckArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L111">interface HttpsHealthCheckArgs</a>
 </h2>
 
 The set of arguments for constructing a HttpsHealthCheck resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L111">property checkIntervalSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L112">property checkIntervalSec</a>
 </h3>
 
 ```typescript
@@ -14024,7 +14012,7 @@ checkIntervalSec?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L112">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L113">property description</a>
 </h3>
 
 ```typescript
@@ -14032,7 +14020,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L113">property healthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L114">property healthyThreshold</a>
 </h3>
 
 ```typescript
@@ -14040,7 +14028,7 @@ healthyThreshold?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L114">property host</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L115">property host</a>
 </h3>
 
 ```typescript
@@ -14048,7 +14036,7 @@ host?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L115">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L116">property name</a>
 </h3>
 
 ```typescript
@@ -14056,7 +14044,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L116">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L117">property port</a>
 </h3>
 
 ```typescript
@@ -14064,7 +14052,7 @@ port?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L121">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L122">property project</a>
 </h3>
 
 ```typescript
@@ -14076,7 +14064,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L122">property requestPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L123">property requestPath</a>
 </h3>
 
 ```typescript
@@ -14084,7 +14072,7 @@ requestPath?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L123">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L124">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -14092,7 +14080,7 @@ timeoutSec?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L124">property unhealthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L125">property unhealthyThreshold</a>
 </h3>
 
 ```typescript
@@ -14100,13 +14088,13 @@ unhealthyThreshold?: pulumi.Input<number>;
 ```
 
 <h2 class="pdoc-module-header" id="HttpsHealthCheckState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L85">interface HttpsHealthCheckState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L86">interface HttpsHealthCheckState</a>
 </h2>
 
 Input properties used for looking up and filtering HttpsHealthCheck resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L86">property checkIntervalSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L87">property checkIntervalSec</a>
 </h3>
 
 ```typescript
@@ -14114,7 +14102,7 @@ checkIntervalSec?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L87">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L88">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -14122,7 +14110,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L88">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L89">property description</a>
 </h3>
 
 ```typescript
@@ -14130,7 +14118,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L89">property healthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L90">property healthyThreshold</a>
 </h3>
 
 ```typescript
@@ -14138,7 +14126,7 @@ healthyThreshold?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L90">property host</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L91">property host</a>
 </h3>
 
 ```typescript
@@ -14146,7 +14134,7 @@ host?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L91">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L92">property name</a>
 </h3>
 
 ```typescript
@@ -14154,7 +14142,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L92">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L93">property port</a>
 </h3>
 
 ```typescript
@@ -14162,7 +14150,7 @@ port?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L97">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L98">property project</a>
 </h3>
 
 ```typescript
@@ -14174,7 +14162,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L98">property requestPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L99">property requestPath</a>
 </h3>
 
 ```typescript
@@ -14182,7 +14170,7 @@ requestPath?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L102">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L103">property selfLink</a>
 </h3>
 
 ```typescript
@@ -14193,7 +14181,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L103">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L104">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -14201,7 +14189,7 @@ timeoutSec?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L104">property unhealthyThreshold</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/httpsHealthCheck.ts#L105">property unhealthyThreshold</a>
 </h3>
 
 ```typescript
@@ -14209,13 +14197,13 @@ unhealthyThreshold?: pulumi.Input<number>;
 ```
 
 <h2 class="pdoc-module-header" id="ImageArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L176">interface ImageArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L177">interface ImageArgs</a>
 </h2>
 
 The set of arguments for constructing a Image resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L180">property createTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L181">property createTimeout</a>
 </h3>
 
 ```typescript
@@ -14226,7 +14214,7 @@ createTimeout?: pulumi.Input<number>;
 Configurable timeout in minutes for creating images. Default is 4 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L184">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L185">property description</a>
 </h3>
 
 ```typescript
@@ -14237,7 +14225,7 @@ description?: pulumi.Input<string>;
 The description of the image to be created
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L188">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L189">property family</a>
 </h3>
 
 ```typescript
@@ -14248,7 +14236,7 @@ family?: pulumi.Input<string>;
 The name of the image family to which this image belongs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L192">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L193">property labels</a>
 </h3>
 
 ```typescript
@@ -14259,7 +14247,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L197">property licenses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L198">property licenses</a>
 </h3>
 
 ```typescript
@@ -14271,7 +14259,7 @@ A list of license URIs to apply to this image. Changing this
 forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L202">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L203">property name</a>
 </h3>
 
 ```typescript
@@ -14283,7 +14271,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L207">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L208">property project</a>
 </h3>
 
 ```typescript
@@ -14295,7 +14283,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L213">property rawDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L214">property rawDisk</a>
 </h3>
 
 ```typescript
@@ -14308,7 +14296,7 @@ Changing this forces a new resource to be created. Structure is documented
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L218">property sourceDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L219">property sourceDisk</a>
 </h3>
 
 ```typescript
@@ -14320,13 +14308,13 @@ The URL of a disk that will be used as the source of the
 image. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ImageState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L120">interface ImageState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L121">interface ImageState</a>
 </h2>
 
 Input properties used for looking up and filtering Image resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L124">property createTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L125">property createTimeout</a>
 </h3>
 
 ```typescript
@@ -14337,7 +14325,7 @@ createTimeout?: pulumi.Input<number>;
 Configurable timeout in minutes for creating images. Default is 4 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L128">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L129">property description</a>
 </h3>
 
 ```typescript
@@ -14348,7 +14336,7 @@ description?: pulumi.Input<string>;
 The description of the image to be created
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L132">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L133">property family</a>
 </h3>
 
 ```typescript
@@ -14359,7 +14347,7 @@ family?: pulumi.Input<string>;
 The name of the image family to which this image belongs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L136">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L137">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -14370,7 +14358,7 @@ labelFingerprint?: pulumi.Input<string>;
 The fingerprint of the assigned labels.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L140">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L141">property labels</a>
 </h3>
 
 ```typescript
@@ -14381,7 +14369,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L145">property licenses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L146">property licenses</a>
 </h3>
 
 ```typescript
@@ -14393,7 +14381,7 @@ A list of license URIs to apply to this image. Changing this
 forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L150">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L151">property name</a>
 </h3>
 
 ```typescript
@@ -14405,7 +14393,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L155">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L156">property project</a>
 </h3>
 
 ```typescript
@@ -14417,7 +14405,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L161">property rawDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L162">property rawDisk</a>
 </h3>
 
 ```typescript
@@ -14430,7 +14418,7 @@ Changing this forces a new resource to be created. Structure is documented
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L165">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L166">property selfLink</a>
 </h3>
 
 ```typescript
@@ -14441,7 +14429,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L170">property sourceDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/image.ts#L171">property sourceDisk</a>
 </h3>
 
 ```typescript
@@ -14453,13 +14441,13 @@ The URL of a disk that will be used as the source of the
 image. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="InstanceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L376">interface InstanceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L377">interface InstanceArgs</a>
 </h2>
 
 The set of arguments for constructing a Instance resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L381">property allowStoppingForUpdate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L382">property allowStoppingForUpdate</a>
 </h3>
 
 ```typescript
@@ -14471,7 +14459,7 @@ If true, allows Terraform to stop the instance to update its properties.
 If you try to update a property that requires stopping the instance without setting this field, the update will fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L385">property attachedDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L386">property attachedDisks</a>
 </h3>
 
 ```typescript
@@ -14482,7 +14470,7 @@ attachedDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 List of disks to attach to the instance. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L390">property bootDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L391">property bootDisk</a>
 </h3>
 
 ```typescript
@@ -14494,7 +14482,7 @@ The boot disk for the instance.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L396">property canIpForward</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L397">property canIpForward</a>
 </h3>
 
 ```typescript
@@ -14507,7 +14495,7 @@ packets with non-matching source or destination IPs.
 This defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L401">property createTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L402">property createTimeout</a>
 </h3>
 
 ```typescript
@@ -14519,7 +14507,7 @@ Configurable timeout in minutes for creating instances. Default is 4 minutes.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L406">property deletionProtection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L407">property deletionProtection</a>
 </h3>
 
 ```typescript
@@ -14531,7 +14519,7 @@ Enable deletion protection on this instance. Defaults to false.
 **Note:** you must disable deletion protection before removing the resource (e.g., via `terraform destroy`), or the instance cannot be deleted and the Terraform run will not complete successfully.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L410">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L411">property description</a>
 </h3>
 
 ```typescript
@@ -14542,7 +14530,7 @@ description?: pulumi.Input<string>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L415">property guestAccelerators</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L416">property guestAccelerators</a>
 </h3>
 
 ```typescript
@@ -14551,10 +14539,10 @@ guestAccelerators?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 
 
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
-**Note:** GPU accelerators can only be used with [`on_host_maintenance`](#on_host_maintenance) option set to TERMINATE.
+**Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L419">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L420">property labels</a>
 </h3>
 
 ```typescript
@@ -14565,7 +14553,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L423">property machineType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L424">property machineType</a>
 </h3>
 
 ```typescript
@@ -14576,7 +14564,7 @@ machineType: pulumi.Input<string>;
 The machine type to create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L428">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L429">property metadata</a>
 </h3>
 
 ```typescript
@@ -14588,7 +14576,7 @@ Metadata key/value pairs to make available from
 within the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L436">property metadataStartupScript</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L437">property metadataStartupScript</a>
 </h3>
 
 ```typescript
@@ -14603,7 +14591,7 @@ startup-script metadata key on the created instance and thus the two
 mechanisms are not allowed to be used simultaneously.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L442">property minCpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L443">property minCpuPlatform</a>
 </h3>
 
 ```typescript
@@ -14613,10 +14601,10 @@ minCpuPlatform?: pulumi.Input<string>;
 
 Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
-**Note**: [`allow_stopping_for_update`](#allow_stopping_for_update) must be set to true in order to update this field.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L447">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L448">property name</a>
 </h3>
 
 ```typescript
@@ -14628,7 +14616,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L452">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L453">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -14640,7 +14628,7 @@ Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L457">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L458">property project</a>
 </h3>
 
 ```typescript
@@ -14652,7 +14640,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L462">property scheduling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L463">property scheduling</a>
 </h3>
 
 ```typescript
@@ -14664,7 +14652,7 @@ The scheduling strategy to use. More details about
 this configuration option are detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L467">property scratchDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L468">property scratchDisks</a>
 </h3>
 
 ```typescript
@@ -14676,7 +14664,7 @@ Scratch disks to attach to the instance. This can be
 specified multiple times for multiple scratch disks. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L473">property serviceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L474">property serviceAccount</a>
 </h3>
 
 ```typescript
@@ -14686,10 +14674,10 @@ serviceAccount?: pulumi.Input<{ ... }>;
 
 Service account to attach to the instance.
 Structure is documented below.
-**Note**: [`allow_stopping_for_update`](#allow_stopping_for_update) must be set to true in order to update this field.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L477">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L478">property tags</a>
 </h3>
 
 ```typescript
@@ -14700,7 +14688,7 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 A list of tags to attach to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L481">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L482">property zone</a>
 </h3>
 
 ```typescript
@@ -14711,13 +14699,13 @@ zone?: pulumi.Input<string>;
 The zone that the machine should be created in.
 
 <h2 class="pdoc-module-header" id="InstanceFromTemplateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L194">interface InstanceFromTemplateArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L195">interface InstanceFromTemplateArgs</a>
 </h2>
 
 The set of arguments for constructing a InstanceFromTemplate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L195">property allowStoppingForUpdate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L196">property allowStoppingForUpdate</a>
 </h3>
 
 ```typescript
@@ -14725,7 +14713,7 @@ allowStoppingForUpdate?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L196">property attachedDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L197">property attachedDisks</a>
 </h3>
 
 ```typescript
@@ -14733,7 +14721,7 @@ attachedDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L197">property canIpForward</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L198">property canIpForward</a>
 </h3>
 
 ```typescript
@@ -14741,7 +14729,7 @@ canIpForward?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L198">property deletionProtection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L199">property deletionProtection</a>
 </h3>
 
 ```typescript
@@ -14749,7 +14737,7 @@ deletionProtection?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L199">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L200">property description</a>
 </h3>
 
 ```typescript
@@ -14757,7 +14745,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L200">property guestAccelerators</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L201">property guestAccelerators</a>
 </h3>
 
 ```typescript
@@ -14765,7 +14753,7 @@ guestAccelerators?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L201">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L202">property labels</a>
 </h3>
 
 ```typescript
@@ -14773,7 +14761,7 @@ labels?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L202">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L203">property metadata</a>
 </h3>
 
 ```typescript
@@ -14781,7 +14769,7 @@ metadata?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L203">property metadataStartupScript</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L204">property metadataStartupScript</a>
 </h3>
 
 ```typescript
@@ -14789,7 +14777,7 @@ metadataStartupScript?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L204">property minCpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L205">property minCpuPlatform</a>
 </h3>
 
 ```typescript
@@ -14797,7 +14785,7 @@ minCpuPlatform?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L209">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L210">property name</a>
 </h3>
 
 ```typescript
@@ -14809,7 +14797,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L210">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L211">property project</a>
 </h3>
 
 ```typescript
@@ -14817,7 +14805,7 @@ project?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L211">property scheduling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L212">property scheduling</a>
 </h3>
 
 ```typescript
@@ -14825,7 +14813,7 @@ scheduling?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L212">property scratchDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L213">property scratchDisks</a>
 </h3>
 
 ```typescript
@@ -14833,7 +14821,7 @@ scratchDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L213">property serviceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L214">property serviceAccount</a>
 </h3>
 
 ```typescript
@@ -14841,7 +14829,7 @@ serviceAccount?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L218">property sourceInstanceTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L219">property sourceInstanceTemplate</a>
 </h3>
 
 ```typescript
@@ -14853,7 +14841,7 @@ Name or self link of an instance
 template to create the instance based on.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L219">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L220">property tags</a>
 </h3>
 
 ```typescript
@@ -14861,7 +14849,7 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L224">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L225">property zone</a>
 </h3>
 
 ```typescript
@@ -14873,13 +14861,13 @@ The zone that the machine should be created in. If not
 set, the provider zone is used.
 
 <h2 class="pdoc-module-header" id="InstanceFromTemplateState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L149">interface InstanceFromTemplateState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L150">interface InstanceFromTemplateState</a>
 </h2>
 
 Input properties used for looking up and filtering InstanceFromTemplate resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L150">property allowStoppingForUpdate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L151">property allowStoppingForUpdate</a>
 </h3>
 
 ```typescript
@@ -14887,7 +14875,7 @@ allowStoppingForUpdate?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L151">property attachedDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L152">property attachedDisks</a>
 </h3>
 
 ```typescript
@@ -14895,7 +14883,7 @@ attachedDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L152">property bootDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L153">property bootDisk</a>
 </h3>
 
 ```typescript
@@ -14903,7 +14891,7 @@ bootDisk?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L153">property canIpForward</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L154">property canIpForward</a>
 </h3>
 
 ```typescript
@@ -14911,7 +14899,7 @@ canIpForward?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L154">property cpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L155">property cpuPlatform</a>
 </h3>
 
 ```typescript
@@ -14919,7 +14907,7 @@ cpuPlatform?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L155">property deletionProtection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L156">property deletionProtection</a>
 </h3>
 
 ```typescript
@@ -14927,7 +14915,7 @@ deletionProtection?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L156">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L157">property description</a>
 </h3>
 
 ```typescript
@@ -14935,7 +14923,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L157">property guestAccelerators</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L158">property guestAccelerators</a>
 </h3>
 
 ```typescript
@@ -14943,7 +14931,7 @@ guestAccelerators?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L158">property instanceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L159">property instanceId</a>
 </h3>
 
 ```typescript
@@ -14951,7 +14939,7 @@ instanceId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L159">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L160">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -14959,7 +14947,7 @@ labelFingerprint?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L160">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L161">property labels</a>
 </h3>
 
 ```typescript
@@ -14967,7 +14955,7 @@ labels?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L161">property machineType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L162">property machineType</a>
 </h3>
 
 ```typescript
@@ -14975,7 +14963,7 @@ machineType?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L162">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L163">property metadata</a>
 </h3>
 
 ```typescript
@@ -14983,7 +14971,7 @@ metadata?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L163">property metadataFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L164">property metadataFingerprint</a>
 </h3>
 
 ```typescript
@@ -14991,7 +14979,7 @@ metadataFingerprint?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L164">property metadataStartupScript</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L165">property metadataStartupScript</a>
 </h3>
 
 ```typescript
@@ -14999,7 +14987,7 @@ metadataStartupScript?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L165">property minCpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L166">property minCpuPlatform</a>
 </h3>
 
 ```typescript
@@ -15007,7 +14995,7 @@ minCpuPlatform?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L170">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L171">property name</a>
 </h3>
 
 ```typescript
@@ -15019,7 +15007,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L171">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L172">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -15027,7 +15015,7 @@ networkInterfaces?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L172">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L173">property project</a>
 </h3>
 
 ```typescript
@@ -15035,7 +15023,7 @@ project?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L173">property scheduling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L174">property scheduling</a>
 </h3>
 
 ```typescript
@@ -15043,7 +15031,7 @@ scheduling?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L174">property scratchDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L175">property scratchDisks</a>
 </h3>
 
 ```typescript
@@ -15051,7 +15039,7 @@ scratchDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L175">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L176">property selfLink</a>
 </h3>
 
 ```typescript
@@ -15059,7 +15047,7 @@ selfLink?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L176">property serviceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L177">property serviceAccount</a>
 </h3>
 
 ```typescript
@@ -15067,7 +15055,7 @@ serviceAccount?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L181">property sourceInstanceTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L182">property sourceInstanceTemplate</a>
 </h3>
 
 ```typescript
@@ -15079,7 +15067,7 @@ Name or self link of an instance
 template to create the instance based on.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L182">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L183">property tags</a>
 </h3>
 
 ```typescript
@@ -15087,7 +15075,7 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L183">property tagsFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L184">property tagsFingerprint</a>
 </h3>
 
 ```typescript
@@ -15095,7 +15083,7 @@ tagsFingerprint?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L188">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceFromTemplate.ts#L189">property zone</a>
 </h3>
 
 ```typescript
@@ -15107,13 +15095,13 @@ The zone that the machine should be created in. If not
 set, the provider zone is used.
 
 <h2 class="pdoc-module-header" id="InstanceGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L159">interface InstanceGroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L166">interface InstanceGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a InstanceGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L164">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L171">property description</a>
 </h3>
 
 ```typescript
@@ -15125,7 +15113,7 @@ An optional textual description of the instance
 group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L170">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L177">property instances</a>
 </h3>
 
 ```typescript
@@ -15138,7 +15126,7 @@ as self_link URLs. When adding instances they must all be in the same
 network and zone as the instance group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L174">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L184">property name</a>
 </h3>
 
 ```typescript
@@ -15146,10 +15134,13 @@ name?: pulumi.Input<string>;
 ```
 
 
-The name which the port will be mapped to.
+The name of the instance group. Must be 1-63
+characters long and comply with
+[RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Supported characters
+include lowercase letters, numbers, and hyphens.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L179">property namedPorts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L189">property namedPorts</a>
 </h3>
 
 ```typescript
@@ -15161,7 +15152,7 @@ The named port configuration. See the section below
 for details on configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L186">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L196">property network</a>
 </h3>
 
 ```typescript
@@ -15175,7 +15166,7 @@ fails. Defaults to the network where the instances are in (if neither
 `network` nor `instances` is specified, this field will be blank).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L191">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L201">property project</a>
 </h3>
 
 ```typescript
@@ -15187,7 +15178,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L195">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L205">property zone</a>
 </h3>
 
 ```typescript
@@ -15198,13 +15189,13 @@ zone?: pulumi.Input<string>;
 The zone that this instance group should be created in.
 
 <h2 class="pdoc-module-header" id="InstanceGroupManagerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L277">interface InstanceGroupManagerArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L278">interface InstanceGroupManagerArgs</a>
 </h2>
 
 The set of arguments for constructing a InstanceGroupManager resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L282">property autoHealingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L283">property autoHealingPolicies</a>
 </h3>
 
 ```typescript
@@ -15216,7 +15207,7 @@ autoHealingPolicies?: pulumi.Input<{ ... }>;
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L291">property baseInstanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L292">property baseInstanceName</a>
 </h3>
 
 ```typescript
@@ -15232,7 +15223,7 @@ appending a hyphen and a random four-character string to the base instance
 name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L296">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L297">property description</a>
 </h3>
 
 ```typescript
@@ -15244,7 +15235,7 @@ An optional textual description of the instance
 group manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L300">property instanceTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L301">property instanceTemplate</a>
 </h3>
 
 ```typescript
@@ -15255,7 +15246,7 @@ instanceTemplate?: pulumi.Input<string>;
 - The full URL to an instance template from which all new instances of this version will be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L304">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L305">property name</a>
 </h3>
 
 ```typescript
@@ -15266,7 +15257,7 @@ name?: pulumi.Input<string>;
 - Version name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L309">property namedPorts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L310">property namedPorts</a>
 </h3>
 
 ```typescript
@@ -15278,7 +15269,7 @@ The named port configuration. See the section below
 for details on configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L314">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L315">property project</a>
 </h3>
 
 ```typescript
@@ -15290,7 +15281,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L319">property rollingUpdatePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L320">property rollingUpdatePolicy</a>
 </h3>
 
 ```typescript
@@ -15302,7 +15293,7 @@ rollingUpdatePolicy?: pulumi.Input<{ ... }>;
 - - -
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L325">property targetPools</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L326">property targetPools</a>
 </h3>
 
 ```typescript
@@ -15315,7 +15306,7 @@ instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L329">property targetSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L330">property targetSize</a>
 </h3>
 
 ```typescript
@@ -15326,7 +15317,7 @@ targetSize?: pulumi.Input<number>;
 - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L337">property updateStrategy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L338">property updateStrategy</a>
 </h3>
 
 ```typescript
@@ -15341,7 +15332,7 @@ restart all of the instances at once. `"ROLLING_UPDATE"` is supported as [Beta f
 A value of `"ROLLING_UPDATE"` requires `rolling_update_policy` block to be set
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L346">property versions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L347">property versions</a>
 </h3>
 
 ```typescript
@@ -15357,7 +15348,7 @@ a target size will respect the setting, and the one without target size will
 be applied to all remaining Instances (top level target_size - each version target_size).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L352">property waitForInstances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L353">property waitForInstances</a>
 </h3>
 
 ```typescript
@@ -15370,7 +15361,7 @@ returning. Note that if this is set to true and the operation does not succeed, 
 continue trying until it times out.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L357">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L358">property zone</a>
 </h3>
 
 ```typescript
@@ -15382,13 +15373,13 @@ The zone that instances in this group should be created
 in.
 
 <h2 class="pdoc-module-header" id="InstanceGroupManagerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L179">interface InstanceGroupManagerState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L180">interface InstanceGroupManagerState</a>
 </h2>
 
 Input properties used for looking up and filtering InstanceGroupManager resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L184">property autoHealingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L185">property autoHealingPolicies</a>
 </h3>
 
 ```typescript
@@ -15400,7 +15391,7 @@ autoHealingPolicies?: pulumi.Input<{ ... }>;
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L193">property baseInstanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L194">property baseInstanceName</a>
 </h3>
 
 ```typescript
@@ -15416,7 +15407,7 @@ appending a hyphen and a random four-character string to the base instance
 name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L198">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L199">property description</a>
 </h3>
 
 ```typescript
@@ -15428,7 +15419,7 @@ An optional textual description of the instance
 group manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L202">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L203">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -15439,7 +15430,7 @@ fingerprint?: pulumi.Input<string>;
 The fingerprint of the instance group manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L206">property instanceGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L207">property instanceGroup</a>
 </h3>
 
 ```typescript
@@ -15450,7 +15441,7 @@ instanceGroup?: pulumi.Input<string>;
 The full URL of the instance group created by the manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L210">property instanceTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L211">property instanceTemplate</a>
 </h3>
 
 ```typescript
@@ -15461,7 +15452,7 @@ instanceTemplate?: pulumi.Input<string>;
 - The full URL to an instance template from which all new instances of this version will be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L214">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L215">property name</a>
 </h3>
 
 ```typescript
@@ -15472,7 +15463,7 @@ name?: pulumi.Input<string>;
 - Version name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L219">property namedPorts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L220">property namedPorts</a>
 </h3>
 
 ```typescript
@@ -15484,7 +15475,7 @@ The named port configuration. See the section below
 for details on configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L224">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L225">property project</a>
 </h3>
 
 ```typescript
@@ -15496,7 +15487,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L229">property rollingUpdatePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L230">property rollingUpdatePolicy</a>
 </h3>
 
 ```typescript
@@ -15508,7 +15499,7 @@ rollingUpdatePolicy?: pulumi.Input<{ ... }>;
 - - -
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L233">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L234">property selfLink</a>
 </h3>
 
 ```typescript
@@ -15519,7 +15510,7 @@ selfLink?: pulumi.Input<string>;
 The URL of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L239">property targetPools</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L240">property targetPools</a>
 </h3>
 
 ```typescript
@@ -15532,7 +15523,7 @@ instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L243">property targetSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L244">property targetSize</a>
 </h3>
 
 ```typescript
@@ -15543,7 +15534,7 @@ targetSize?: pulumi.Input<number>;
 - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L251">property updateStrategy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L252">property updateStrategy</a>
 </h3>
 
 ```typescript
@@ -15558,7 +15549,7 @@ restart all of the instances at once. `"ROLLING_UPDATE"` is supported as [Beta f
 A value of `"ROLLING_UPDATE"` requires `rolling_update_policy` block to be set
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L260">property versions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L261">property versions</a>
 </h3>
 
 ```typescript
@@ -15574,7 +15565,7 @@ a target size will respect the setting, and the one without target size will
 be applied to all remaining Instances (top level target_size - each version target_size).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L266">property waitForInstances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L267">property waitForInstances</a>
 </h3>
 
 ```typescript
@@ -15587,7 +15578,7 @@ returning. Note that if this is set to true and the operation does not succeed, 
 continue trying until it times out.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L271">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroupManager.ts#L272">property zone</a>
 </h3>
 
 ```typescript
@@ -15599,13 +15590,13 @@ The zone that instances in this group should be created
 in.
 
 <h2 class="pdoc-module-header" id="InstanceGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L109">interface InstanceGroupState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L113">interface InstanceGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering InstanceGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L114">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L118">property description</a>
 </h3>
 
 ```typescript
@@ -15617,7 +15608,7 @@ An optional textual description of the instance
 group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L120">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L124">property instances</a>
 </h3>
 
 ```typescript
@@ -15630,7 +15621,7 @@ as self_link URLs. When adding instances they must all be in the same
 network and zone as the instance group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L124">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L131">property name</a>
 </h3>
 
 ```typescript
@@ -15638,10 +15629,13 @@ name?: pulumi.Input<string>;
 ```
 
 
-The name which the port will be mapped to.
+The name of the instance group. Must be 1-63
+characters long and comply with
+[RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Supported characters
+include lowercase letters, numbers, and hyphens.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L129">property namedPorts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L136">property namedPorts</a>
 </h3>
 
 ```typescript
@@ -15653,7 +15647,7 @@ The named port configuration. See the section below
 for details on configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L136">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L143">property network</a>
 </h3>
 
 ```typescript
@@ -15667,7 +15661,7 @@ fails. Defaults to the network where the instances are in (if neither
 `network` nor `instances` is specified, this field will be blank).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L141">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L148">property project</a>
 </h3>
 
 ```typescript
@@ -15679,7 +15673,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L145">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L152">property selfLink</a>
 </h3>
 
 ```typescript
@@ -15690,7 +15684,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L149">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L156">property size</a>
 </h3>
 
 ```typescript
@@ -15701,7 +15695,7 @@ size?: pulumi.Input<number>;
 The number of instances in the group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L153">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceGroup.ts#L160">property zone</a>
 </h3>
 
 ```typescript
@@ -15712,13 +15706,13 @@ zone?: pulumi.Input<string>;
 The zone that this instance group should be created in.
 
 <h2 class="pdoc-module-header" id="InstanceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L241">interface InstanceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L242">interface InstanceState</a>
 </h2>
 
 Input properties used for looking up and filtering Instance resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L246">property allowStoppingForUpdate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L247">property allowStoppingForUpdate</a>
 </h3>
 
 ```typescript
@@ -15730,7 +15724,7 @@ If true, allows Terraform to stop the instance to update its properties.
 If you try to update a property that requires stopping the instance without setting this field, the update will fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L250">property attachedDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L251">property attachedDisks</a>
 </h3>
 
 ```typescript
@@ -15741,7 +15735,7 @@ attachedDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 List of disks to attach to the instance. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L255">property bootDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L256">property bootDisk</a>
 </h3>
 
 ```typescript
@@ -15753,7 +15747,7 @@ The boot disk for the instance.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L261">property canIpForward</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L262">property canIpForward</a>
 </h3>
 
 ```typescript
@@ -15766,7 +15760,7 @@ packets with non-matching source or destination IPs.
 This defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L265">property cpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L266">property cpuPlatform</a>
 </h3>
 
 ```typescript
@@ -15777,7 +15771,7 @@ cpuPlatform?: pulumi.Input<string>;
 The CPU platform used by this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L270">property createTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L271">property createTimeout</a>
 </h3>
 
 ```typescript
@@ -15789,7 +15783,7 @@ Configurable timeout in minutes for creating instances. Default is 4 minutes.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L275">property deletionProtection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L276">property deletionProtection</a>
 </h3>
 
 ```typescript
@@ -15801,7 +15795,7 @@ Enable deletion protection on this instance. Defaults to false.
 **Note:** you must disable deletion protection before removing the resource (e.g., via `terraform destroy`), or the instance cannot be deleted and the Terraform run will not complete successfully.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L279">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L280">property description</a>
 </h3>
 
 ```typescript
@@ -15812,7 +15806,7 @@ description?: pulumi.Input<string>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L284">property guestAccelerators</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L285">property guestAccelerators</a>
 </h3>
 
 ```typescript
@@ -15821,10 +15815,10 @@ guestAccelerators?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 
 
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
-**Note:** GPU accelerators can only be used with [`on_host_maintenance`](#on_host_maintenance) option set to TERMINATE.
+**Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L288">property instanceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L289">property instanceId</a>
 </h3>
 
 ```typescript
@@ -15835,7 +15829,7 @@ instanceId?: pulumi.Input<string>;
 The server-assigned unique identifier of this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L292">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L293">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -15846,7 +15840,7 @@ labelFingerprint?: pulumi.Input<string>;
 The unique fingerprint of the labels.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L296">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L297">property labels</a>
 </h3>
 
 ```typescript
@@ -15857,7 +15851,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L300">property machineType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L301">property machineType</a>
 </h3>
 
 ```typescript
@@ -15868,7 +15862,7 @@ machineType?: pulumi.Input<string>;
 The machine type to create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L305">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L306">property metadata</a>
 </h3>
 
 ```typescript
@@ -15880,7 +15874,7 @@ Metadata key/value pairs to make available from
 within the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L309">property metadataFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L310">property metadataFingerprint</a>
 </h3>
 
 ```typescript
@@ -15891,7 +15885,7 @@ metadataFingerprint?: pulumi.Input<string>;
 The unique fingerprint of the metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L317">property metadataStartupScript</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L318">property metadataStartupScript</a>
 </h3>
 
 ```typescript
@@ -15906,7 +15900,7 @@ startup-script metadata key on the created instance and thus the two
 mechanisms are not allowed to be used simultaneously.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L323">property minCpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L324">property minCpuPlatform</a>
 </h3>
 
 ```typescript
@@ -15916,10 +15910,10 @@ minCpuPlatform?: pulumi.Input<string>;
 
 Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
-**Note**: [`allow_stopping_for_update`](#allow_stopping_for_update) must be set to true in order to update this field.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L328">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L329">property name</a>
 </h3>
 
 ```typescript
@@ -15931,7 +15925,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L333">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L334">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -15943,7 +15937,7 @@ Networks to attach to the instance. This can
 be specified multiple times. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L338">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L339">property project</a>
 </h3>
 
 ```typescript
@@ -15955,7 +15949,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L343">property scheduling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L344">property scheduling</a>
 </h3>
 
 ```typescript
@@ -15967,7 +15961,7 @@ The scheduling strategy to use. More details about
 this configuration option are detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L348">property scratchDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L349">property scratchDisks</a>
 </h3>
 
 ```typescript
@@ -15979,7 +15973,7 @@ Scratch disks to attach to the instance. This can be
 specified multiple times for multiple scratch disks. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L352">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L353">property selfLink</a>
 </h3>
 
 ```typescript
@@ -15990,7 +15984,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L358">property serviceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L359">property serviceAccount</a>
 </h3>
 
 ```typescript
@@ -16000,10 +15994,10 @@ serviceAccount?: pulumi.Input<{ ... }>;
 
 Service account to attach to the instance.
 Structure is documented below.
-**Note**: [`allow_stopping_for_update`](#allow_stopping_for_update) must be set to true in order to update this field.
+**Note**: `allow_stopping_for_update` must be set to true in order to update this field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L362">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L363">property tags</a>
 </h3>
 
 ```typescript
@@ -16014,7 +16008,7 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 A list of tags to attach to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L366">property tagsFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L367">property tagsFingerprint</a>
 </h3>
 
 ```typescript
@@ -16025,7 +16019,7 @@ tagsFingerprint?: pulumi.Input<string>;
 The unique fingerprint of the tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L370">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instance.ts#L371">property zone</a>
 </h3>
 
 ```typescript
@@ -16036,13 +16030,13 @@ zone?: pulumi.Input<string>;
 The zone that the machine should be created in.
 
 <h2 class="pdoc-module-header" id="InstanceTemplateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L313">interface InstanceTemplateArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L314">interface InstanceTemplateArgs</a>
 </h2>
 
 The set of arguments for constructing a InstanceTemplate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L318">property canIpForward</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L319">property canIpForward</a>
 </h3>
 
 ```typescript
@@ -16054,7 +16048,7 @@ Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L322">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L323">property description</a>
 </h3>
 
 ```typescript
@@ -16065,7 +16059,7 @@ description?: pulumi.Input<string>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L328">property disks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L329">property disks</a>
 </h3>
 
 ```typescript
@@ -16078,7 +16072,7 @@ This can be specified multiple times for multiple disks. Structure is
 documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L332">property guestAccelerators</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L333">property guestAccelerators</a>
 </h3>
 
 ```typescript
@@ -16089,7 +16083,7 @@ guestAccelerators?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L337">property instanceDescription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L338">property instanceDescription</a>
 </h3>
 
 ```typescript
@@ -16101,7 +16095,7 @@ A brief description to use for instances
 created from this template.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L342">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L343">property labels</a>
 </h3>
 
 ```typescript
@@ -16113,7 +16107,7 @@ A set of key/value label pairs to assign to instances
 created from this template,
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L346">property machineType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L347">property machineType</a>
 </h3>
 
 ```typescript
@@ -16124,7 +16118,7 @@ machineType: pulumi.Input<string>;
 The machine type to create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L351">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L352">property metadata</a>
 </h3>
 
 ```typescript
@@ -16136,7 +16130,7 @@ Metadata key/value pairs to make available from
 within instances created from this template.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L358">property metadataStartupScript</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L359">property metadataStartupScript</a>
 </h3>
 
 ```typescript
@@ -16150,7 +16144,7 @@ This replaces the startup-script metadata key on the created instance and
 thus the two mechanisms are not allowed to be used simultaneously.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L363">property minCpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L364">property minCpuPlatform</a>
 </h3>
 
 ```typescript
@@ -16162,7 +16156,7 @@ Specifies a minimum CPU platform. Applicable values are the friendly names of CP
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L368">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L369">property name</a>
 </h3>
 
 ```typescript
@@ -16174,7 +16168,7 @@ The name of the instance template. If you leave
 this blank, Terraform will auto-generate a unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L373">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L374">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -16186,7 +16180,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L379">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L380">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -16199,7 +16193,7 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L384">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L385">property project</a>
 </h3>
 
 ```typescript
@@ -16211,7 +16205,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L393">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L394">property region</a>
 </h3>
 
 ```typescript
@@ -16227,7 +16221,7 @@ resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L398">property schedulings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L399">property schedulings</a>
 </h3>
 
 ```typescript
@@ -16239,7 +16233,7 @@ The scheduling strategy to use. More details about
 this configuration option are detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L402">property serviceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L403">property serviceAccount</a>
 </h3>
 
 ```typescript
@@ -16250,7 +16244,7 @@ serviceAccount?: pulumi.Input<{ ... }>;
 Service account to attach to the instance. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L406">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L407">property tags</a>
 </h3>
 
 ```typescript
@@ -16261,13 +16255,13 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 Tags to attach to the instance.
 
 <h2 class="pdoc-module-header" id="InstanceTemplateState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L202">interface InstanceTemplateState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L203">interface InstanceTemplateState</a>
 </h2>
 
 Input properties used for looking up and filtering InstanceTemplate resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L207">property canIpForward</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L208">property canIpForward</a>
 </h3>
 
 ```typescript
@@ -16279,7 +16273,7 @@ Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L211">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L212">property description</a>
 </h3>
 
 ```typescript
@@ -16290,7 +16284,7 @@ description?: pulumi.Input<string>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L217">property disks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L218">property disks</a>
 </h3>
 
 ```typescript
@@ -16303,7 +16297,7 @@ This can be specified multiple times for multiple disks. Structure is
 documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L221">property guestAccelerators</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L222">property guestAccelerators</a>
 </h3>
 
 ```typescript
@@ -16314,7 +16308,7 @@ guestAccelerators?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 List of the type and count of accelerator cards attached to the instance. Structure documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L226">property instanceDescription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L227">property instanceDescription</a>
 </h3>
 
 ```typescript
@@ -16326,7 +16320,7 @@ A brief description to use for instances
 created from this template.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L231">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L232">property labels</a>
 </h3>
 
 ```typescript
@@ -16338,7 +16332,7 @@ A set of key/value label pairs to assign to instances
 created from this template,
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L235">property machineType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L236">property machineType</a>
 </h3>
 
 ```typescript
@@ -16349,7 +16343,7 @@ machineType?: pulumi.Input<string>;
 The machine type to create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L240">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L241">property metadata</a>
 </h3>
 
 ```typescript
@@ -16361,7 +16355,7 @@ Metadata key/value pairs to make available from
 within instances created from this template.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L244">property metadataFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L245">property metadataFingerprint</a>
 </h3>
 
 ```typescript
@@ -16372,7 +16366,7 @@ metadataFingerprint?: pulumi.Input<string>;
 The unique fingerprint of the metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L251">property metadataStartupScript</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L252">property metadataStartupScript</a>
 </h3>
 
 ```typescript
@@ -16386,7 +16380,7 @@ This replaces the startup-script metadata key on the created instance and
 thus the two mechanisms are not allowed to be used simultaneously.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L256">property minCpuPlatform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L257">property minCpuPlatform</a>
 </h3>
 
 ```typescript
@@ -16398,7 +16392,7 @@ Specifies a minimum CPU platform. Applicable values are the friendly names of CP
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L261">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L262">property name</a>
 </h3>
 
 ```typescript
@@ -16410,7 +16404,7 @@ The name of the instance template. If you leave
 this blank, Terraform will auto-generate a unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L266">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L267">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -16422,7 +16416,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L272">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L273">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -16435,7 +16429,7 @@ this template. This can be specified multiple times for multiple networks.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L277">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L278">property project</a>
 </h3>
 
 ```typescript
@@ -16447,7 +16441,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L286">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L287">property region</a>
 </h3>
 
 ```typescript
@@ -16463,7 +16457,7 @@ resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L291">property schedulings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L292">property schedulings</a>
 </h3>
 
 ```typescript
@@ -16475,7 +16469,7 @@ The scheduling strategy to use. More details about
 this configuration option are detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L295">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L296">property selfLink</a>
 </h3>
 
 ```typescript
@@ -16486,7 +16480,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L299">property serviceAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L300">property serviceAccount</a>
 </h3>
 
 ```typescript
@@ -16497,7 +16491,7 @@ serviceAccount?: pulumi.Input<{ ... }>;
 Service account to attach to the instance. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L303">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L304">property tags</a>
 </h3>
 
 ```typescript
@@ -16508,7 +16502,7 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 Tags to attach to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L307">property tagsFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/instanceTemplate.ts#L308">property tagsFingerprint</a>
 </h3>
 
 ```typescript
@@ -16519,13 +16513,13 @@ tagsFingerprint?: pulumi.Input<string>;
 The unique fingerprint of the tags.
 
 <h2 class="pdoc-module-header" id="NetworkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L154">interface NetworkArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L155">interface NetworkArgs</a>
 </h2>
 
 The set of arguments for constructing a Network resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L161">property autoCreateSubnetworks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L162">property autoCreateSubnetworks</a>
 </h3>
 
 ```typescript
@@ -16539,7 +16533,7 @@ automatically. If set to false, a custom subnetted network will be created that
 can support `google_compute_subnetwork` resources. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L165">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L166">property description</a>
 </h3>
 
 ```typescript
@@ -16550,7 +16544,7 @@ description?: pulumi.Input<string>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L171">property ipv4Range</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L172">property ipv4Range</a>
 </h3>
 
 ```typescript
@@ -16563,7 +16557,7 @@ specified range. This API is deprecated. If set, `auto_create_subnetworks` must 
 explicitly set to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L176">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L177">property name</a>
 </h3>
 
 ```typescript
@@ -16575,7 +16569,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L181">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L182">property project</a>
 </h3>
 
 ```typescript
@@ -16587,7 +16581,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L188">property routingMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L189">property routingMode</a>
 </h3>
 
 ```typescript
@@ -16601,13 +16595,13 @@ Refer to the [Cloud Router documentation](https://cloud.google.com/router/docs/c
 for more details.
 
 <h2 class="pdoc-module-header" id="NetworkPeeringArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L126">interface NetworkPeeringArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L127">interface NetworkPeeringArgs</a>
 </h2>
 
 The set of arguments for constructing a NetworkPeering resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L131">property autoCreateRoutes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L132">property autoCreateRoutes</a>
 </h3>
 
 ```typescript
@@ -16619,7 +16613,7 @@ If set to `true`, the routes between the two networks will
 be created and managed automatically. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L135">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L136">property name</a>
 </h3>
 
 ```typescript
@@ -16630,7 +16624,7 @@ name?: pulumi.Input<string>;
 Name of the peering.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L139">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L140">property network</a>
 </h3>
 
 ```typescript
@@ -16641,7 +16635,7 @@ network: pulumi.Input<string>;
 Resource link of the network to add a peering to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L143">property peerNetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L144">property peerNetwork</a>
 </h3>
 
 ```typescript
@@ -16652,13 +16646,13 @@ peerNetwork: pulumi.Input<string>;
 Resource link of the peer network.
 
 <h2 class="pdoc-module-header" id="NetworkPeeringState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L95">interface NetworkPeeringState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L96">interface NetworkPeeringState</a>
 </h2>
 
 Input properties used for looking up and filtering NetworkPeering resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L100">property autoCreateRoutes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L101">property autoCreateRoutes</a>
 </h3>
 
 ```typescript
@@ -16670,7 +16664,7 @@ If set to `true`, the routes between the two networks will
 be created and managed automatically. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L104">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L105">property name</a>
 </h3>
 
 ```typescript
@@ -16681,7 +16675,7 @@ name?: pulumi.Input<string>;
 Name of the peering.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L108">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L109">property network</a>
 </h3>
 
 ```typescript
@@ -16692,7 +16686,7 @@ network?: pulumi.Input<string>;
 Resource link of the network to add a peering to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L112">property peerNetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L113">property peerNetwork</a>
 </h3>
 
 ```typescript
@@ -16703,7 +16697,7 @@ peerNetwork?: pulumi.Input<string>;
 Resource link of the peer network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L116">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L117">property state</a>
 </h3>
 
 ```typescript
@@ -16714,7 +16708,7 @@ state?: pulumi.Input<string>;
 State for the peering.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L120">property stateDetails</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/networkPeering.ts#L121">property stateDetails</a>
 </h3>
 
 ```typescript
@@ -16725,13 +16719,13 @@ stateDetails?: pulumi.Input<string>;
 Details about the current state of the peering.
 
 <h2 class="pdoc-module-header" id="NetworkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L106">interface NetworkState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L107">interface NetworkState</a>
 </h2>
 
 Input properties used for looking up and filtering Network resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L113">property autoCreateSubnetworks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L114">property autoCreateSubnetworks</a>
 </h3>
 
 ```typescript
@@ -16745,7 +16739,7 @@ automatically. If set to false, a custom subnetted network will be created that
 can support `google_compute_subnetwork` resources. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L117">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L118">property description</a>
 </h3>
 
 ```typescript
@@ -16756,7 +16750,7 @@ description?: pulumi.Input<string>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L121">property gatewayIpv4</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L122">property gatewayIpv4</a>
 </h3>
 
 ```typescript
@@ -16767,7 +16761,7 @@ gatewayIpv4?: pulumi.Input<string>;
 The IPv4 address of the gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L127">property ipv4Range</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L128">property ipv4Range</a>
 </h3>
 
 ```typescript
@@ -16780,7 +16774,7 @@ specified range. This API is deprecated. If set, `auto_create_subnetworks` must 
 explicitly set to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L132">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L133">property name</a>
 </h3>
 
 ```typescript
@@ -16792,7 +16786,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L137">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L138">property project</a>
 </h3>
 
 ```typescript
@@ -16804,7 +16798,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L144">property routingMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L145">property routingMode</a>
 </h3>
 
 ```typescript
@@ -16818,7 +16812,7 @@ Refer to the [Cloud Router documentation](https://cloud.google.com/router/docs/c
 for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L148">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/network.ts#L149">property selfLink</a>
 </h3>
 
 ```typescript
@@ -16829,13 +16823,13 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="ProjectMetadataArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L85">interface ProjectMetadataArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L86">interface ProjectMetadataArgs</a>
 </h2>
 
 The set of arguments for constructing a ProjectMetadata resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L90">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L91">property metadata</a>
 </h3>
 
 ```typescript
@@ -16847,7 +16841,7 @@ A series of key value pairs. Changing this resource
 updates the GCE state.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L95">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L96">property project</a>
 </h3>
 
 ```typescript
@@ -16859,13 +16853,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="ProjectMetadataItemArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L92">interface ProjectMetadataItemArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L93">interface ProjectMetadataItemArgs</a>
 </h2>
 
 The set of arguments for constructing a ProjectMetadataItem resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L96">property key</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L97">property key</a>
 </h3>
 
 ```typescript
@@ -16876,7 +16870,7 @@ key: pulumi.Input<string>;
 The metadata key to set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L101">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L102">property project</a>
 </h3>
 
 ```typescript
@@ -16888,7 +16882,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L105">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L106">property value</a>
 </h3>
 
 ```typescript
@@ -16899,13 +16893,13 @@ value: pulumi.Input<string>;
 The value to set for the given metadata key.
 
 <h2 class="pdoc-module-header" id="ProjectMetadataItemState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L73">interface ProjectMetadataItemState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L74">interface ProjectMetadataItemState</a>
 </h2>
 
 Input properties used for looking up and filtering ProjectMetadataItem resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L77">property key</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L78">property key</a>
 </h3>
 
 ```typescript
@@ -16916,7 +16910,7 @@ key?: pulumi.Input<string>;
 The metadata key to set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L82">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L83">property project</a>
 </h3>
 
 ```typescript
@@ -16928,7 +16922,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L86">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadataItem.ts#L87">property value</a>
 </h3>
 
 ```typescript
@@ -16939,13 +16933,13 @@ value?: pulumi.Input<string>;
 The value to set for the given metadata key.
 
 <h2 class="pdoc-module-header" id="ProjectMetadataState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L69">interface ProjectMetadataState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L70">interface ProjectMetadataState</a>
 </h2>
 
 Input properties used for looking up and filtering ProjectMetadata resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L74">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L75">property metadata</a>
 </h3>
 
 ```typescript
@@ -16957,7 +16951,7 @@ A series of key value pairs. Changing this resource
 updates the GCE state.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L79">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/projectMetadata.ts#L80">property project</a>
 </h3>
 
 ```typescript
@@ -16969,13 +16963,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="RegionAutoscalerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L100">interface RegionAutoscalerArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L93">interface RegionAutoscalerArgs</a>
 </h2>
 
 The set of arguments for constructing a RegionAutoscaler resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L101">property autoscalingPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L94">property autoscalingPolicy</a>
 </h3>
 
 ```typescript
@@ -16983,7 +16977,7 @@ autoscalingPolicy: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L102">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L95">property description</a>
 </h3>
 
 ```typescript
@@ -16991,7 +16985,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L103">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L96">property name</a>
 </h3>
 
 ```typescript
@@ -16999,19 +16993,15 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L108">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L97">property project</a>
 </h3>
 
 ```typescript
 project?: pulumi.Input<string>;
 ```
 
-
-The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L109">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L98">property region</a>
 </h3>
 
 ```typescript
@@ -17019,7 +17009,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L110">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L99">property target</a>
 </h3>
 
 ```typescript
@@ -17027,13 +17017,13 @@ target: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="RegionAutoscalerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L79">interface RegionAutoscalerState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L76">interface RegionAutoscalerState</a>
 </h2>
 
 Input properties used for looking up and filtering RegionAutoscaler resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L80">property autoscalingPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L77">property autoscalingPolicy</a>
 </h3>
 
 ```typescript
@@ -17041,7 +17031,7 @@ autoscalingPolicy?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L81">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L78">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -17049,7 +17039,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L82">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L79">property description</a>
 </h3>
 
 ```typescript
@@ -17057,7 +17047,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L83">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L80">property name</a>
 </h3>
 
 ```typescript
@@ -17065,19 +17055,15 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L88">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L81">property project</a>
 </h3>
 
 ```typescript
 project?: pulumi.Input<string>;
 ```
 
-
-The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L89">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L82">property region</a>
 </h3>
 
 ```typescript
@@ -17085,7 +17071,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L93">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L86">property selfLink</a>
 </h3>
 
 ```typescript
@@ -17096,7 +17082,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L94">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionAutoscaler.ts#L87">property target</a>
 </h3>
 
 ```typescript
@@ -17104,13 +17090,13 @@ target?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="RegionBackendServiceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L199">interface RegionBackendServiceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L200">interface RegionBackendServiceArgs</a>
 </h2>
 
 The set of arguments for constructing a RegionBackendService resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L204">property backends</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L205">property backends</a>
 </h3>
 
 ```typescript
@@ -17122,7 +17108,7 @@ The list of backends that serve this BackendService.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L209">property connectionDrainingTimeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L210">property connectionDrainingTimeoutSec</a>
 </h3>
 
 ```typescript
@@ -17134,7 +17120,7 @@ Time for which instance will be drained
 (not accept new connections, but still work to finish started ones). Defaults to `0`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L213">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L214">property description</a>
 </h3>
 
 ```typescript
@@ -17142,10 +17128,10 @@ description?: pulumi.Input<string>;
 ```
 
 
-Textual description for the backend.
+The textual description for the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L219">property healthChecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L220">property healthChecks</a>
 </h3>
 
 ```typescript
@@ -17158,7 +17144,7 @@ for checking the health of the backend service. Currently at most
 one health check can be specified, and a health check is required.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L223">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L224">property name</a>
 </h3>
 
 ```typescript
@@ -17169,7 +17155,7 @@ name?: pulumi.Input<string>;
 The name of the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L228">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L229">property project</a>
 </h3>
 
 ```typescript
@@ -17181,7 +17167,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L233">property protocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L234">property protocol</a>
 </h3>
 
 ```typescript
@@ -17193,7 +17179,7 @@ The protocol for incoming requests. Defaults to
 `TCP`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L238">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L239">property region</a>
 </h3>
 
 ```typescript
@@ -17205,7 +17191,7 @@ The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L244">property sessionAffinity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L245">property sessionAffinity</a>
 </h3>
 
 ```typescript
@@ -17218,7 +17204,7 @@ affinity), `CLIENT_IP`, `CLIENT_IP_PROTO`, or `CLIENT_IP_PORT_PROTO`.
 Defaults to `NONE`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L249">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L250">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -17230,13 +17216,13 @@ The number of secs to wait for a backend to respond
 to a request before considering the request failed. Defaults to `30`.
 
 <h2 class="pdoc-module-header" id="RegionBackendServiceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L135">interface RegionBackendServiceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L136">interface RegionBackendServiceState</a>
 </h2>
 
 Input properties used for looking up and filtering RegionBackendService resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L140">property backends</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L141">property backends</a>
 </h3>
 
 ```typescript
@@ -17248,7 +17234,7 @@ The list of backends that serve this BackendService.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L145">property connectionDrainingTimeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L146">property connectionDrainingTimeoutSec</a>
 </h3>
 
 ```typescript
@@ -17260,7 +17246,7 @@ Time for which instance will be drained
 (not accept new connections, but still work to finish started ones). Defaults to `0`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L149">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L150">property description</a>
 </h3>
 
 ```typescript
@@ -17268,10 +17254,10 @@ description?: pulumi.Input<string>;
 ```
 
 
-Textual description for the backend.
+The textual description for the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L153">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L154">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -17282,7 +17268,7 @@ fingerprint?: pulumi.Input<string>;
 The fingerprint of the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L159">property healthChecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L160">property healthChecks</a>
 </h3>
 
 ```typescript
@@ -17295,7 +17281,7 @@ for checking the health of the backend service. Currently at most
 one health check can be specified, and a health check is required.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L163">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L164">property name</a>
 </h3>
 
 ```typescript
@@ -17306,7 +17292,7 @@ name?: pulumi.Input<string>;
 The name of the backend service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L168">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L169">property project</a>
 </h3>
 
 ```typescript
@@ -17318,7 +17304,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L173">property protocol</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L174">property protocol</a>
 </h3>
 
 ```typescript
@@ -17330,7 +17316,7 @@ The protocol for incoming requests. Defaults to
 `TCP`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L178">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L179">property region</a>
 </h3>
 
 ```typescript
@@ -17342,7 +17328,7 @@ The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L182">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L183">property selfLink</a>
 </h3>
 
 ```typescript
@@ -17353,7 +17339,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L188">property sessionAffinity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L189">property sessionAffinity</a>
 </h3>
 
 ```typescript
@@ -17366,7 +17352,7 @@ affinity), `CLIENT_IP`, `CLIENT_IP_PROTO`, or `CLIENT_IP_PORT_PROTO`.
 Defaults to `NONE`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L193">property timeoutSec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionBackendService.ts#L194">property timeoutSec</a>
 </h3>
 
 ```typescript
@@ -17378,13 +17364,13 @@ The number of secs to wait for a backend to respond
 to a request before considering the request failed. Defaults to `30`.
 
 <h2 class="pdoc-module-header" id="RegionInstanceGroupManagerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L279">interface RegionInstanceGroupManagerArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L280">interface RegionInstanceGroupManagerArgs</a>
 </h2>
 
 The set of arguments for constructing a RegionInstanceGroupManager resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L284">property autoHealingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L285">property autoHealingPolicies</a>
 </h3>
 
 ```typescript
@@ -17396,7 +17382,7 @@ autoHealingPolicies?: pulumi.Input<{ ... }>;
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L293">property baseInstanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L294">property baseInstanceName</a>
 </h3>
 
 ```typescript
@@ -17412,7 +17398,7 @@ appending a hyphen and a random four-character string to the base instance
 name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L298">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L299">property description</a>
 </h3>
 
 ```typescript
@@ -17424,7 +17410,7 @@ An optional textual description of the instance
 group manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L304">property distributionPolicyZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L305">property distributionPolicyZones</a>
 </h3>
 
 ```typescript
@@ -17437,7 +17423,7 @@ group. You can specify one or more values. For more information, see the [offici
 - - -
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L309">property instanceTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L310">property instanceTemplate</a>
 </h3>
 
 ```typescript
@@ -17449,7 +17435,7 @@ The full URL to an instance template from
 which all new instances will be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L313">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L314">property name</a>
 </h3>
 
 ```typescript
@@ -17460,7 +17446,7 @@ name?: pulumi.Input<string>;
 The name of the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L318">property namedPorts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L319">property namedPorts</a>
 </h3>
 
 ```typescript
@@ -17472,7 +17458,7 @@ The named port configuration. See the section below
 for details on configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L323">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L324">property project</a>
 </h3>
 
 ```typescript
@@ -17484,7 +17470,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L327">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L328">property region</a>
 </h3>
 
 ```typescript
@@ -17495,7 +17481,7 @@ region: pulumi.Input<string>;
 The region where the managed instance group resides.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L331">property rollingUpdatePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L332">property rollingUpdatePolicy</a>
 </h3>
 
 ```typescript
@@ -17506,7 +17492,7 @@ rollingUpdatePolicy?: pulumi.Input<{ ... }>;
 ) The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L337">property targetPools</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L338">property targetPools</a>
 </h3>
 
 ```typescript
@@ -17519,7 +17505,7 @@ instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L343">property targetSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L344">property targetSize</a>
 </h3>
 
 ```typescript
@@ -17532,7 +17518,7 @@ instance group. This value should always be explicitly set unless this resource 
 an autoscaler, in which case it should never be set. Defaults to `0`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L351">property updateStrategy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L352">property updateStrategy</a>
 </h3>
 
 ```typescript
@@ -17547,7 +17533,7 @@ is supported as [Beta feature]. A value of `"ROLLING_UPDATE"` requires
 `rolling_update_policy` block to be set
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L357">property waitForInstances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L358">property waitForInstances</a>
 </h3>
 
 ```typescript
@@ -17560,13 +17546,13 @@ returning. Note that if this is set to true and the operation does not succeed, 
 continue trying until it times out.
 
 <h2 class="pdoc-module-header" id="RegionInstanceGroupManagerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L183">interface RegionInstanceGroupManagerState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L184">interface RegionInstanceGroupManagerState</a>
 </h2>
 
 Input properties used for looking up and filtering RegionInstanceGroupManager resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L188">property autoHealingPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L189">property autoHealingPolicies</a>
 </h3>
 
 ```typescript
@@ -17578,7 +17564,7 @@ autoHealingPolicies?: pulumi.Input<{ ... }>;
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L197">property baseInstanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L198">property baseInstanceName</a>
 </h3>
 
 ```typescript
@@ -17594,7 +17580,7 @@ appending a hyphen and a random four-character string to the base instance
 name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L202">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L203">property description</a>
 </h3>
 
 ```typescript
@@ -17606,7 +17592,7 @@ An optional textual description of the instance
 group manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L208">property distributionPolicyZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L209">property distributionPolicyZones</a>
 </h3>
 
 ```typescript
@@ -17619,7 +17605,7 @@ group. You can specify one or more values. For more information, see the [offici
 - - -
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L212">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L213">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -17630,7 +17616,7 @@ fingerprint?: pulumi.Input<string>;
 The fingerprint of the instance group manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L216">property instanceGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L217">property instanceGroup</a>
 </h3>
 
 ```typescript
@@ -17641,7 +17627,7 @@ instanceGroup?: pulumi.Input<string>;
 The full URL of the instance group created by the manager.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L221">property instanceTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L222">property instanceTemplate</a>
 </h3>
 
 ```typescript
@@ -17653,7 +17639,7 @@ The full URL to an instance template from
 which all new instances will be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L225">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L226">property name</a>
 </h3>
 
 ```typescript
@@ -17664,7 +17650,7 @@ name?: pulumi.Input<string>;
 The name of the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L230">property namedPorts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L231">property namedPorts</a>
 </h3>
 
 ```typescript
@@ -17676,7 +17662,7 @@ The named port configuration. See the section below
 for details on configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L235">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L236">property project</a>
 </h3>
 
 ```typescript
@@ -17688,7 +17674,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L239">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L240">property region</a>
 </h3>
 
 ```typescript
@@ -17699,7 +17685,7 @@ region?: pulumi.Input<string>;
 The region where the managed instance group resides.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L243">property rollingUpdatePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L244">property rollingUpdatePolicy</a>
 </h3>
 
 ```typescript
@@ -17710,7 +17696,7 @@ rollingUpdatePolicy?: pulumi.Input<{ ... }>;
 ) The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L247">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L248">property selfLink</a>
 </h3>
 
 ```typescript
@@ -17721,7 +17707,7 @@ selfLink?: pulumi.Input<string>;
 The URL of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L253">property targetPools</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L254">property targetPools</a>
 </h3>
 
 ```typescript
@@ -17734,7 +17720,7 @@ instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L259">property targetSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L260">property targetSize</a>
 </h3>
 
 ```typescript
@@ -17747,7 +17733,7 @@ instance group. This value should always be explicitly set unless this resource 
 an autoscaler, in which case it should never be set. Defaults to `0`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L267">property updateStrategy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L268">property updateStrategy</a>
 </h3>
 
 ```typescript
@@ -17762,7 +17748,7 @@ is supported as [Beta feature]. A value of `"ROLLING_UPDATE"` requires
 `rolling_update_policy` block to be set
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L273">property waitForInstances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/regionInstanceGroupManager.ts#L274">property waitForInstances</a>
 </h3>
 
 ```typescript
@@ -17775,13 +17761,13 @@ returning. Note that if this is set to true and the operation does not succeed, 
 continue trying until it times out.
 
 <h2 class="pdoc-module-header" id="RouteArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L136">interface RouteArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L137">interface RouteArgs</a>
 </h2>
 
 The set of arguments for constructing a Route resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L137">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L138">property description</a>
 </h3>
 
 ```typescript
@@ -17789,7 +17775,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L138">property destRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L139">property destRange</a>
 </h3>
 
 ```typescript
@@ -17797,7 +17783,7 @@ destRange: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L139">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L140">property name</a>
 </h3>
 
 ```typescript
@@ -17805,7 +17791,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L140">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L141">property network</a>
 </h3>
 
 ```typescript
@@ -17813,7 +17799,7 @@ network: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L141">property nextHopGateway</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L142">property nextHopGateway</a>
 </h3>
 
 ```typescript
@@ -17821,7 +17807,7 @@ nextHopGateway?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L142">property nextHopInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L143">property nextHopInstance</a>
 </h3>
 
 ```typescript
@@ -17829,7 +17815,7 @@ nextHopInstance?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L149">property nextHopInstanceZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L150">property nextHopInstanceZone</a>
 </h3>
 
 ```typescript
@@ -17843,7 +17829,7 @@ specified)  The zone of the instance specified in
 a URL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L150">property nextHopIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L151">property nextHopIp</a>
 </h3>
 
 ```typescript
@@ -17851,7 +17837,7 @@ nextHopIp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L151">property nextHopVpnTunnel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L152">property nextHopVpnTunnel</a>
 </h3>
 
 ```typescript
@@ -17859,7 +17845,7 @@ nextHopVpnTunnel?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L152">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L153">property priority</a>
 </h3>
 
 ```typescript
@@ -17867,7 +17853,7 @@ priority?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L157">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L158">property project</a>
 </h3>
 
 ```typescript
@@ -17879,7 +17865,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L158">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L159">property tags</a>
 </h3>
 
 ```typescript
@@ -17887,13 +17873,13 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h2 class="pdoc-module-header" id="RouteState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L103">interface RouteState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L104">interface RouteState</a>
 </h2>
 
 Input properties used for looking up and filtering Route resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L104">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L105">property description</a>
 </h3>
 
 ```typescript
@@ -17901,7 +17887,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L105">property destRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L106">property destRange</a>
 </h3>
 
 ```typescript
@@ -17909,7 +17895,7 @@ destRange?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L106">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L107">property name</a>
 </h3>
 
 ```typescript
@@ -17917,7 +17903,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L107">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L108">property network</a>
 </h3>
 
 ```typescript
@@ -17925,7 +17911,7 @@ network?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L108">property nextHopGateway</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L109">property nextHopGateway</a>
 </h3>
 
 ```typescript
@@ -17933,7 +17919,7 @@ nextHopGateway?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L109">property nextHopInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L110">property nextHopInstance</a>
 </h3>
 
 ```typescript
@@ -17941,7 +17927,7 @@ nextHopInstance?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L116">property nextHopInstanceZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L117">property nextHopInstanceZone</a>
 </h3>
 
 ```typescript
@@ -17955,7 +17941,7 @@ specified)  The zone of the instance specified in
 a URL.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L117">property nextHopIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L118">property nextHopIp</a>
 </h3>
 
 ```typescript
@@ -17963,7 +17949,7 @@ nextHopIp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L118">property nextHopNetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L119">property nextHopNetwork</a>
 </h3>
 
 ```typescript
@@ -17971,7 +17957,7 @@ nextHopNetwork?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L119">property nextHopVpnTunnel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L120">property nextHopVpnTunnel</a>
 </h3>
 
 ```typescript
@@ -17979,7 +17965,7 @@ nextHopVpnTunnel?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L120">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L121">property priority</a>
 </h3>
 
 ```typescript
@@ -17987,7 +17973,7 @@ priority?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L125">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L126">property project</a>
 </h3>
 
 ```typescript
@@ -17999,7 +17985,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L129">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L130">property selfLink</a>
 </h3>
 
 ```typescript
@@ -18010,7 +17996,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L130">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/route.ts#L131">property tags</a>
 </h3>
 
 ```typescript
@@ -18018,13 +18004,13 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h2 class="pdoc-module-header" id="RouterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L97">interface RouterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L98">interface RouterArgs</a>
 </h2>
 
 The set of arguments for constructing a Router resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L98">property bgp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L99">property bgp</a>
 </h3>
 
 ```typescript
@@ -18032,7 +18018,7 @@ bgp?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L99">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L100">property description</a>
 </h3>
 
 ```typescript
@@ -18040,7 +18026,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L100">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L101">property name</a>
 </h3>
 
 ```typescript
@@ -18048,7 +18034,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L101">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L102">property network</a>
 </h3>
 
 ```typescript
@@ -18056,7 +18042,7 @@ network: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L106">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L107">property project</a>
 </h3>
 
 ```typescript
@@ -18068,7 +18054,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L107">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L108">property region</a>
 </h3>
 
 ```typescript
@@ -18076,13 +18062,13 @@ region?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="RouterInterfaceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L134">interface RouterInterfaceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L135">interface RouterInterfaceArgs</a>
 </h2>
 
 The set of arguments for constructing a RouterInterface resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L139">property ipRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L140">property ipRange</a>
 </h3>
 
 ```typescript
@@ -18094,7 +18080,7 @@ IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L144">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L145">property name</a>
 </h3>
 
 ```typescript
@@ -18106,7 +18092,7 @@ A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L149">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L150">property project</a>
 </h3>
 
 ```typescript
@@ -18118,7 +18104,7 @@ The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L155">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L156">property region</a>
 </h3>
 
 ```typescript
@@ -18131,7 +18117,7 @@ the project region will be used. Changing this forces a new interface to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L160">property router</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L161">property router</a>
 </h3>
 
 ```typescript
@@ -18143,7 +18129,7 @@ The name of the router this interface will be attached to.
 Changing this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L165">property vpnTunnel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L166">property vpnTunnel</a>
 </h3>
 
 ```typescript
@@ -18155,13 +18141,13 @@ The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created.
 
 <h2 class="pdoc-module-header" id="RouterInterfaceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L97">interface RouterInterfaceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L98">interface RouterInterfaceState</a>
 </h2>
 
 Input properties used for looking up and filtering RouterInterface resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L102">property ipRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L103">property ipRange</a>
 </h3>
 
 ```typescript
@@ -18173,7 +18159,7 @@ IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L107">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L108">property name</a>
 </h3>
 
 ```typescript
@@ -18185,7 +18171,7 @@ A unique name for the interface, required by GCE. Changing
 this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L112">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L113">property project</a>
 </h3>
 
 ```typescript
@@ -18197,7 +18183,7 @@ The ID of the project in which this interface's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L118">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L119">property region</a>
 </h3>
 
 ```typescript
@@ -18210,7 +18196,7 @@ the project region will be used. Changing this forces a new interface to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L123">property router</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L124">property router</a>
 </h3>
 
 ```typescript
@@ -18222,7 +18208,7 @@ The name of the router this interface will be attached to.
 Changing this forces a new interface to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L128">property vpnTunnel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerInterface.ts#L129">property vpnTunnel</a>
 </h3>
 
 ```typescript
@@ -18234,13 +18220,13 @@ The name or resource link to the VPN tunnel this
 interface will be linked to. Changing this forces a new interface to be created.
 
 <h2 class="pdoc-module-header" id="RouterPeerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L171">interface RouterPeerArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L172">interface RouterPeerArgs</a>
 </h2>
 
 The set of arguments for constructing a RouterPeer resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L176">property advertisedRoutePriority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L177">property advertisedRoutePriority</a>
 </h3>
 
 ```typescript
@@ -18252,7 +18238,7 @@ The priority of routes advertised to this BGP peer.
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L181">property interface</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L182">property interface</a>
 </h3>
 
 ```typescript
@@ -18264,7 +18250,7 @@ The name of the interface the BGP peer is associated with.
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L186">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L187">property name</a>
 </h3>
 
 ```typescript
@@ -18276,7 +18262,7 @@ A unique name for BGP peer, required by GCE. Changing
 this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L191">property peerAsn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L192">property peerAsn</a>
 </h3>
 
 ```typescript
@@ -18288,7 +18274,7 @@ Peer BGP Autonomous System Number (ASN).
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L196">property peerIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L197">property peerIpAddress</a>
 </h3>
 
 ```typescript
@@ -18300,7 +18286,7 @@ IP address of the BGP interface outside Google Cloud.
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L201">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L202">property project</a>
 </h3>
 
 ```typescript
@@ -18312,7 +18298,7 @@ The ID of the project in which this peer's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L207">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L208">property region</a>
 </h3>
 
 ```typescript
@@ -18325,7 +18311,7 @@ the project region will be used. Changing this forces a new peer to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L212">property router</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L213">property router</a>
 </h3>
 
 ```typescript
@@ -18337,13 +18323,13 @@ The name of the router in which this BGP peer will be configured.
 Changing this forces a new peer to be created.
 
 <h2 class="pdoc-module-header" id="RouterPeerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L120">interface RouterPeerState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L121">interface RouterPeerState</a>
 </h2>
 
 Input properties used for looking up and filtering RouterPeer resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L125">property advertisedRoutePriority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L126">property advertisedRoutePriority</a>
 </h3>
 
 ```typescript
@@ -18355,7 +18341,7 @@ The priority of routes advertised to this BGP peer.
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L130">property interface</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L131">property interface</a>
 </h3>
 
 ```typescript
@@ -18367,7 +18353,7 @@ The name of the interface the BGP peer is associated with.
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L134">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L135">property ipAddress</a>
 </h3>
 
 ```typescript
@@ -18378,7 +18364,7 @@ ipAddress?: pulumi.Input<string>;
 IP address of the interface inside Google Cloud Platform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L139">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L140">property name</a>
 </h3>
 
 ```typescript
@@ -18390,7 +18376,7 @@ A unique name for BGP peer, required by GCE. Changing
 this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L144">property peerAsn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L145">property peerAsn</a>
 </h3>
 
 ```typescript
@@ -18402,7 +18388,7 @@ Peer BGP Autonomous System Number (ASN).
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L149">property peerIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L150">property peerIpAddress</a>
 </h3>
 
 ```typescript
@@ -18414,7 +18400,7 @@ IP address of the BGP interface outside Google Cloud.
 Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L154">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L155">property project</a>
 </h3>
 
 ```typescript
@@ -18426,7 +18412,7 @@ The ID of the project in which this peer's router belongs. If it
 is not provided, the provider project is used. Changing this forces a new peer to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L160">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L161">property region</a>
 </h3>
 
 ```typescript
@@ -18439,7 +18425,7 @@ the project region will be used. Changing this forces a new peer to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L165">property router</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/routerPeer.ts#L166">property router</a>
 </h3>
 
 ```typescript
@@ -18451,13 +18437,13 @@ The name of the router in which this BGP peer will be configured.
 Changing this forces a new peer to be created.
 
 <h2 class="pdoc-module-header" id="RouterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L76">interface RouterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L77">interface RouterState</a>
 </h2>
 
 Input properties used for looking up and filtering Router resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L77">property bgp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L78">property bgp</a>
 </h3>
 
 ```typescript
@@ -18465,7 +18451,7 @@ bgp?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L78">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L79">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -18473,7 +18459,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L79">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L80">property description</a>
 </h3>
 
 ```typescript
@@ -18481,7 +18467,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L80">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L81">property name</a>
 </h3>
 
 ```typescript
@@ -18489,7 +18475,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L81">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L82">property network</a>
 </h3>
 
 ```typescript
@@ -18497,7 +18483,7 @@ network?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L86">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L87">property project</a>
 </h3>
 
 ```typescript
@@ -18509,7 +18495,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L87">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L88">property region</a>
 </h3>
 
 ```typescript
@@ -18517,7 +18503,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L91">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/router.ts#L92">property selfLink</a>
 </h3>
 
 ```typescript
@@ -18528,13 +18514,13 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="SSLCertificateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L155">interface SSLCertificateArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L156">interface SSLCertificateArgs</a>
 </h2>
 
 The set of arguments for constructing a SSLCertificate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L161">property certificate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L162">property certificate</a>
 </h3>
 
 ```typescript
@@ -18547,7 +18533,7 @@ may be at most 5 certs long, and must include at least one intermediate
 cert. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L166">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L167">property description</a>
 </h3>
 
 ```typescript
@@ -18559,7 +18545,7 @@ An optional description of this resource.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L171">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L172">property name</a>
 </h3>
 
 ```typescript
@@ -18571,7 +18557,7 @@ A unique name for the SSL certificate. If you leave
 this blank, Terraform will auto-generate a unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L176">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L177">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -18583,7 +18569,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L181">property privateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L182">property privateKey</a>
 </h3>
 
 ```typescript
@@ -18595,7 +18581,7 @@ Write only private key in PEM format.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L186">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L187">property project</a>
 </h3>
 
 ```typescript
@@ -18607,13 +18593,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="SSLCertificateState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L110">interface SSLCertificateState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L111">interface SSLCertificateState</a>
 </h2>
 
 Input properties used for looking up and filtering SSLCertificate resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L116">property certificate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L117">property certificate</a>
 </h3>
 
 ```typescript
@@ -18626,7 +18612,7 @@ may be at most 5 certs long, and must include at least one intermediate
 cert. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L120">property certificateId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L121">property certificateId</a>
 </h3>
 
 ```typescript
@@ -18637,7 +18623,7 @@ certificateId?: pulumi.Input<string>;
 A unique ID for the certificate, assigned by GCE.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L125">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L126">property description</a>
 </h3>
 
 ```typescript
@@ -18649,7 +18635,7 @@ An optional description of this resource.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L130">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L131">property name</a>
 </h3>
 
 ```typescript
@@ -18661,7 +18647,7 @@ A unique name for the SSL certificate. If you leave
 this blank, Terraform will auto-generate a unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L135">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L136">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -18673,7 +18659,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L140">property privateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L141">property privateKey</a>
 </h3>
 
 ```typescript
@@ -18685,7 +18671,7 @@ Write only private key in PEM format.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L145">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L146">property project</a>
 </h3>
 
 ```typescript
@@ -18697,7 +18683,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L149">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLCertificate.ts#L150">property selfLink</a>
 </h3>
 
 ```typescript
@@ -18708,13 +18694,13 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="SSLPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L102">interface SSLPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L103">interface SSLPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a SSLPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L103">property customFeatures</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L104">property customFeatures</a>
 </h3>
 
 ```typescript
@@ -18722,7 +18708,7 @@ customFeatures?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L104">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L105">property description</a>
 </h3>
 
 ```typescript
@@ -18730,7 +18716,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L105">property minTlsVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L106">property minTlsVersion</a>
 </h3>
 
 ```typescript
@@ -18738,7 +18724,7 @@ minTlsVersion?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L106">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L107">property name</a>
 </h3>
 
 ```typescript
@@ -18746,7 +18732,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L107">property profile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L108">property profile</a>
 </h3>
 
 ```typescript
@@ -18754,7 +18740,7 @@ profile?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L112">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L113">property project</a>
 </h3>
 
 ```typescript
@@ -18766,13 +18752,13 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="SSLPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L79">interface SSLPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L80">interface SSLPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering SSLPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L80">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L81">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -18780,7 +18766,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L81">property customFeatures</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L82">property customFeatures</a>
 </h3>
 
 ```typescript
@@ -18788,7 +18774,7 @@ customFeatures?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L82">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L83">property description</a>
 </h3>
 
 ```typescript
@@ -18796,7 +18782,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L83">property enabledFeatures</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L84">property enabledFeatures</a>
 </h3>
 
 ```typescript
@@ -18804,7 +18790,7 @@ enabledFeatures?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L84">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L85">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -18812,7 +18798,7 @@ fingerprint?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L85">property minTlsVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L86">property minTlsVersion</a>
 </h3>
 
 ```typescript
@@ -18820,7 +18806,7 @@ minTlsVersion?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L86">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L87">property name</a>
 </h3>
 
 ```typescript
@@ -18828,7 +18814,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L87">property profile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L88">property profile</a>
 </h3>
 
 ```typescript
@@ -18836,7 +18822,7 @@ profile?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L92">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L93">property project</a>
 </h3>
 
 ```typescript
@@ -18848,7 +18834,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L96">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sSLPolicy.ts#L97">property selfLink</a>
 </h3>
 
 ```typescript
@@ -18859,13 +18845,13 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="SecurityPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L121">interface SecurityPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L122">interface SecurityPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a SecurityPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L125">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L126">property description</a>
 </h3>
 
 ```typescript
@@ -18873,10 +18859,10 @@ description?: pulumi.Input<string>;
 ```
 
 
-An optional description of this rule. Max size is 64.
+An optional description of this security policy. Max size is 2048.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L129">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L130">property name</a>
 </h3>
 
 ```typescript
@@ -18887,7 +18873,7 @@ name?: pulumi.Input<string>;
 The name of the security policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L134">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L135">property project</a>
 </h3>
 
 ```typescript
@@ -18899,7 +18885,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L140">property rules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L141">property rules</a>
 </h3>
 
 ```typescript
@@ -18912,13 +18898,13 @@ rule (rule with priority 2147483647 and match "\*"). If no rules are provided wh
 security policy, a default rule with action "allow" will be added. Structure is documented below.
 
 <h2 class="pdoc-module-header" id="SecurityPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L88">interface SecurityPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L89">interface SecurityPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering SecurityPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L92">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L93">property description</a>
 </h3>
 
 ```typescript
@@ -18926,10 +18912,10 @@ description?: pulumi.Input<string>;
 ```
 
 
-An optional description of this rule. Max size is 64.
+An optional description of this security policy. Max size is 2048.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L96">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L97">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -18940,7 +18926,7 @@ fingerprint?: pulumi.Input<string>;
 Fingerprint of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L100">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L101">property name</a>
 </h3>
 
 ```typescript
@@ -18951,7 +18937,7 @@ name?: pulumi.Input<string>;
 The name of the security policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L105">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L106">property project</a>
 </h3>
 
 ```typescript
@@ -18963,7 +18949,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L111">property rules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L112">property rules</a>
 </h3>
 
 ```typescript
@@ -18976,7 +18962,7 @@ rule (rule with priority 2147483647 and match "\*"). If no rules are provided wh
 security policy, a default rule with action "allow" will be added. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L115">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/securityPolicy.ts#L116">property selfLink</a>
 </h3>
 
 ```typescript
@@ -18987,13 +18973,13 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="SharedVPCHostProjectArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L70">interface SharedVPCHostProjectArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L71">interface SharedVPCHostProjectArgs</a>
 </h2>
 
 The set of arguments for constructing a SharedVPCHostProject resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L74">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L75">property project</a>
 </h3>
 
 ```typescript
@@ -19004,13 +18990,13 @@ project: pulumi.Input<string>;
 The ID of the project that will serve as a Shared VPC host project
 
 <h2 class="pdoc-module-header" id="SharedVPCHostProjectState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L60">interface SharedVPCHostProjectState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L61">interface SharedVPCHostProjectState</a>
 </h2>
 
 Input properties used for looking up and filtering SharedVPCHostProject resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L64">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCHostProject.ts#L65">property project</a>
 </h3>
 
 ```typescript
@@ -19021,13 +19007,13 @@ project?: pulumi.Input<string>;
 The ID of the project that will serve as a Shared VPC host project
 
 <h2 class="pdoc-module-header" id="SharedVPCServiceProjectArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L84">interface SharedVPCServiceProjectArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L85">interface SharedVPCServiceProjectArgs</a>
 </h2>
 
 The set of arguments for constructing a SharedVPCServiceProject resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L88">property hostProject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L89">property hostProject</a>
 </h3>
 
 ```typescript
@@ -19038,7 +19024,7 @@ hostProject: pulumi.Input<string>;
 The ID of a host project to associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L92">property serviceProject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L93">property serviceProject</a>
 </h3>
 
 ```typescript
@@ -19049,13 +19035,13 @@ serviceProject: pulumi.Input<string>;
 The ID of the project that will serve as a Shared VPC service project.
 
 <h2 class="pdoc-module-header" id="SharedVPCServiceProjectState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L70">interface SharedVPCServiceProjectState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L71">interface SharedVPCServiceProjectState</a>
 </h2>
 
 Input properties used for looking up and filtering SharedVPCServiceProject resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L74">property hostProject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L75">property hostProject</a>
 </h3>
 
 ```typescript
@@ -19066,7 +19052,7 @@ hostProject?: pulumi.Input<string>;
 The ID of a host project to associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L78">property serviceProject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/sharedVPCServiceProject.ts#L79">property serviceProject</a>
 </h3>
 
 ```typescript
@@ -19077,13 +19063,13 @@ serviceProject?: pulumi.Input<string>;
 The ID of the project that will serve as a Shared VPC service project.
 
 <h2 class="pdoc-module-header" id="SnapshotArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L205">interface SnapshotArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L206">interface SnapshotArgs</a>
 </h2>
 
 The set of arguments for constructing a Snapshot resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L209">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L210">property labels</a>
 </h3>
 
 ```typescript
@@ -19094,7 +19080,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L214">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L215">property name</a>
 </h3>
 
 ```typescript
@@ -19106,7 +19092,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L219">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L220">property project</a>
 </h3>
 
 ```typescript
@@ -19118,7 +19104,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L226">property snapshotEncryptionKeyRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L227">property snapshotEncryptionKeyRaw</a>
 </h3>
 
 ```typescript
@@ -19132,7 +19118,7 @@ encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 to encrypt this snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L230">property sourceDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L231">property sourceDisk</a>
 </h3>
 
 ```typescript
@@ -19143,7 +19129,7 @@ sourceDisk: pulumi.Input<string>;
 The disk which will be used as the source of the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L237">property sourceDiskEncryptionKeyRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L238">property sourceDiskEncryptionKeyRaw</a>
 </h3>
 
 ```typescript
@@ -19157,7 +19143,7 @@ encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 to decrypt the source disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L241">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L242">property zone</a>
 </h3>
 
 ```typescript
@@ -19168,13 +19154,13 @@ zone?: pulumi.Input<string>;
 The zone where the source disk is located.
 
 <h2 class="pdoc-module-header" id="SnapshotState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L137">interface SnapshotState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L138">interface SnapshotState</a>
 </h2>
 
 Input properties used for looking up and filtering Snapshot resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L141">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L142">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -19185,7 +19171,7 @@ labelFingerprint?: pulumi.Input<string>;
 The unique fingerprint of the labels.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L145">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L146">property labels</a>
 </h3>
 
 ```typescript
@@ -19196,7 +19182,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L150">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L151">property name</a>
 </h3>
 
 ```typescript
@@ -19208,7 +19194,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L155">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L156">property project</a>
 </h3>
 
 ```typescript
@@ -19220,7 +19206,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L159">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L160">property selfLink</a>
 </h3>
 
 ```typescript
@@ -19231,7 +19217,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L166">property snapshotEncryptionKeyRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L167">property snapshotEncryptionKeyRaw</a>
 </h3>
 
 ```typescript
@@ -19245,7 +19231,7 @@ encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 to encrypt this snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L173">property snapshotEncryptionKeySha256</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L174">property snapshotEncryptionKeySha256</a>
 </h3>
 
 ```typescript
@@ -19259,7 +19245,7 @@ The [RFC 4648 base64]
 that protects this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L177">property sourceDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L178">property sourceDisk</a>
 </h3>
 
 ```typescript
@@ -19270,7 +19256,7 @@ sourceDisk?: pulumi.Input<string>;
 The disk which will be used as the source of the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L184">property sourceDiskEncryptionKeyRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L185">property sourceDiskEncryptionKeyRaw</a>
 </h3>
 
 ```typescript
@@ -19284,7 +19270,7 @@ encoded in [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 to decrypt the source disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L191">property sourceDiskEncryptionKeySha256</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L192">property sourceDiskEncryptionKeySha256</a>
 </h3>
 
 ```typescript
@@ -19298,7 +19284,7 @@ The [RFC 4648 base64]
 that protects the source disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L195">property sourceDiskLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L196">property sourceDiskLink</a>
 </h3>
 
 ```typescript
@@ -19309,7 +19295,7 @@ sourceDiskLink?: pulumi.Input<string>;
 The URI of the source disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L199">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/snapshot.ts#L200">property zone</a>
 </h3>
 
 ```typescript
@@ -19320,13 +19306,13 @@ zone?: pulumi.Input<string>;
 The zone where the source disk is located.
 
 <h2 class="pdoc-module-header" id="SubnetworkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L120">interface SubnetworkArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L121">interface SubnetworkArgs</a>
 </h2>
 
 The set of arguments for constructing a Subnetwork resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L121">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L122">property description</a>
 </h3>
 
 ```typescript
@@ -19334,7 +19320,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L122">property enableFlowLogs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L123">property enableFlowLogs</a>
 </h3>
 
 ```typescript
@@ -19342,7 +19328,7 @@ enableFlowLogs?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L123">property ipCidrRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L124">property ipCidrRange</a>
 </h3>
 
 ```typescript
@@ -19350,7 +19336,7 @@ ipCidrRange: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L124">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L125">property name</a>
 </h3>
 
 ```typescript
@@ -19358,7 +19344,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L125">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L126">property network</a>
 </h3>
 
 ```typescript
@@ -19366,7 +19352,7 @@ network: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L126">property privateIpGoogleAccess</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L127">property privateIpGoogleAccess</a>
 </h3>
 
 ```typescript
@@ -19374,7 +19360,7 @@ privateIpGoogleAccess?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L131">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L132">property project</a>
 </h3>
 
 ```typescript
@@ -19386,7 +19372,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L132">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L133">property region</a>
 </h3>
 
 ```typescript
@@ -19394,7 +19380,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L133">property secondaryIpRanges</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L134">property secondaryIpRanges</a>
 </h3>
 
 ```typescript
@@ -19402,13 +19388,13 @@ secondaryIpRanges?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h2 class="pdoc-module-header" id="SubnetworkIAMBindingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L132">interface SubnetworkIAMBindingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L133">interface SubnetworkIAMBindingArgs</a>
 </h2>
 
 The set of arguments for constructing a SubnetworkIAMBinding resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L133">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L134">property members</a>
 </h3>
 
 ```typescript
@@ -19416,7 +19402,7 @@ members: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L138">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L139">property project</a>
 </h3>
 
 ```typescript
@@ -19428,7 +19414,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L143">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L144">property region</a>
 </h3>
 
 ```typescript
@@ -19440,7 +19426,7 @@ The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L149">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L150">property role</a>
 </h3>
 
 ```typescript
@@ -19453,7 +19439,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L153">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L154">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -19464,13 +19450,13 @@ subnetwork: pulumi.Input<string>;
 The name of the subnetwork.
 
 <h2 class="pdoc-module-header" id="SubnetworkIAMBindingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L101">interface SubnetworkIAMBindingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L102">interface SubnetworkIAMBindingState</a>
 </h2>
 
 Input properties used for looking up and filtering SubnetworkIAMBinding resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L105">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L106">property etag</a>
 </h3>
 
 ```typescript
@@ -19481,7 +19467,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the subnetwork's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L106">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L107">property members</a>
 </h3>
 
 ```typescript
@@ -19489,7 +19475,7 @@ members?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L111">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L112">property project</a>
 </h3>
 
 ```typescript
@@ -19501,7 +19487,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L116">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L117">property region</a>
 </h3>
 
 ```typescript
@@ -19513,7 +19499,7 @@ The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L122">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L123">property role</a>
 </h3>
 
 ```typescript
@@ -19526,7 +19512,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L126">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMBinding.ts#L127">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -19537,13 +19523,13 @@ subnetwork?: pulumi.Input<string>;
 The name of the subnetwork.
 
 <h2 class="pdoc-module-header" id="SubnetworkIAMMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L132">interface SubnetworkIAMMemberArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L133">interface SubnetworkIAMMemberArgs</a>
 </h2>
 
 The set of arguments for constructing a SubnetworkIAMMember resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L133">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L134">property member</a>
 </h3>
 
 ```typescript
@@ -19551,7 +19537,7 @@ member: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L138">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L139">property project</a>
 </h3>
 
 ```typescript
@@ -19563,7 +19549,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L143">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L144">property region</a>
 </h3>
 
 ```typescript
@@ -19575,7 +19561,7 @@ The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L149">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L150">property role</a>
 </h3>
 
 ```typescript
@@ -19588,7 +19574,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L153">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L154">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -19599,13 +19585,13 @@ subnetwork: pulumi.Input<string>;
 The name of the subnetwork.
 
 <h2 class="pdoc-module-header" id="SubnetworkIAMMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L101">interface SubnetworkIAMMemberState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L102">interface SubnetworkIAMMemberState</a>
 </h2>
 
 Input properties used for looking up and filtering SubnetworkIAMMember resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L105">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L106">property etag</a>
 </h3>
 
 ```typescript
@@ -19616,7 +19602,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the subnetwork's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L106">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L107">property member</a>
 </h3>
 
 ```typescript
@@ -19624,7 +19610,7 @@ member?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L111">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L112">property project</a>
 </h3>
 
 ```typescript
@@ -19636,7 +19622,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L116">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L117">property region</a>
 </h3>
 
 ```typescript
@@ -19648,7 +19634,7 @@ The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L122">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L123">property role</a>
 </h3>
 
 ```typescript
@@ -19661,7 +19647,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L126">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMMember.ts#L127">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -19672,13 +19658,13 @@ subnetwork?: pulumi.Input<string>;
 The name of the subnetwork.
 
 <h2 class="pdoc-module-header" id="SubnetworkIAMPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L123">interface SubnetworkIAMPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L124">interface SubnetworkIAMPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a SubnetworkIAMPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L128">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L129">property policyData</a>
 </h3>
 
 ```typescript
@@ -19690,7 +19676,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L133">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L134">property project</a>
 </h3>
 
 ```typescript
@@ -19702,7 +19688,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L138">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L139">property region</a>
 </h3>
 
 ```typescript
@@ -19714,7 +19700,7 @@ The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L142">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L143">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -19725,13 +19711,13 @@ subnetwork: pulumi.Input<string>;
 The name of the subnetwork.
 
 <h2 class="pdoc-module-header" id="SubnetworkIAMPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L94">interface SubnetworkIAMPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L95">interface SubnetworkIAMPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering SubnetworkIAMPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L98">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L99">property etag</a>
 </h3>
 
 ```typescript
@@ -19742,7 +19728,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the subnetwork's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L103">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L104">property policyData</a>
 </h3>
 
 ```typescript
@@ -19754,7 +19740,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L108">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L109">property project</a>
 </h3>
 
 ```typescript
@@ -19766,7 +19752,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L113">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L114">property region</a>
 </h3>
 
 ```typescript
@@ -19778,7 +19764,7 @@ The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L117">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetworkIAMPolicy.ts#L118">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -19789,13 +19775,13 @@ subnetwork?: pulumi.Input<string>;
 The name of the subnetwork.
 
 <h2 class="pdoc-module-header" id="SubnetworkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L94">interface SubnetworkState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L95">interface SubnetworkState</a>
 </h2>
 
 Input properties used for looking up and filtering Subnetwork resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L95">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L96">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -19803,7 +19789,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L96">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L97">property description</a>
 </h3>
 
 ```typescript
@@ -19811,7 +19797,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L97">property enableFlowLogs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L98">property enableFlowLogs</a>
 </h3>
 
 ```typescript
@@ -19819,7 +19805,7 @@ enableFlowLogs?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L98">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L99">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -19827,7 +19813,7 @@ fingerprint?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L99">property gatewayAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L100">property gatewayAddress</a>
 </h3>
 
 ```typescript
@@ -19835,7 +19821,7 @@ gatewayAddress?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L100">property ipCidrRange</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L101">property ipCidrRange</a>
 </h3>
 
 ```typescript
@@ -19843,7 +19829,7 @@ ipCidrRange?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L101">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L102">property name</a>
 </h3>
 
 ```typescript
@@ -19851,7 +19837,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L102">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L103">property network</a>
 </h3>
 
 ```typescript
@@ -19859,7 +19845,7 @@ network?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L103">property privateIpGoogleAccess</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L104">property privateIpGoogleAccess</a>
 </h3>
 
 ```typescript
@@ -19867,7 +19853,7 @@ privateIpGoogleAccess?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L108">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L109">property project</a>
 </h3>
 
 ```typescript
@@ -19879,7 +19865,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L109">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L110">property region</a>
 </h3>
 
 ```typescript
@@ -19887,7 +19873,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L110">property secondaryIpRanges</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L111">property secondaryIpRanges</a>
 </h3>
 
 ```typescript
@@ -19895,7 +19881,7 @@ secondaryIpRanges?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L114">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/subnetwork.ts#L115">property selfLink</a>
 </h3>
 
 ```typescript
@@ -19906,13 +19892,13 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="TargetHttpProxyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L93">interface TargetHttpProxyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L94">interface TargetHttpProxyArgs</a>
 </h2>
 
 The set of arguments for constructing a TargetHttpProxy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L94">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L95">property description</a>
 </h3>
 
 ```typescript
@@ -19920,7 +19906,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L95">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L96">property name</a>
 </h3>
 
 ```typescript
@@ -19928,7 +19914,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L100">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L101">property project</a>
 </h3>
 
 ```typescript
@@ -19940,7 +19926,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L101">property urlMap</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L102">property urlMap</a>
 </h3>
 
 ```typescript
@@ -19948,13 +19934,13 @@ urlMap: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="TargetHttpProxyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L73">interface TargetHttpProxyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L74">interface TargetHttpProxyState</a>
 </h2>
 
 Input properties used for looking up and filtering TargetHttpProxy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L74">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L75">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -19962,7 +19948,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L75">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L76">property description</a>
 </h3>
 
 ```typescript
@@ -19970,7 +19956,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L76">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L77">property name</a>
 </h3>
 
 ```typescript
@@ -19978,7 +19964,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L81">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L82">property project</a>
 </h3>
 
 ```typescript
@@ -19990,7 +19976,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L82">property proxyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L83">property proxyId</a>
 </h3>
 
 ```typescript
@@ -19998,7 +19984,7 @@ proxyId?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L86">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L87">property selfLink</a>
 </h3>
 
 ```typescript
@@ -20009,7 +19995,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L87">property urlMap</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpProxy.ts#L88">property urlMap</a>
 </h3>
 
 ```typescript
@@ -20017,13 +20003,13 @@ urlMap?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="TargetHttpsProxyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L108">interface TargetHttpsProxyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L109">interface TargetHttpsProxyArgs</a>
 </h2>
 
 The set of arguments for constructing a TargetHttpsProxy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L109">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L110">property description</a>
 </h3>
 
 ```typescript
@@ -20031,7 +20017,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L110">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L111">property name</a>
 </h3>
 
 ```typescript
@@ -20039,7 +20025,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L115">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L116">property project</a>
 </h3>
 
 ```typescript
@@ -20051,7 +20037,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L116">property quicOverride</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L117">property quicOverride</a>
 </h3>
 
 ```typescript
@@ -20059,7 +20045,7 @@ quicOverride?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L117">property sslCertificates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L118">property sslCertificates</a>
 </h3>
 
 ```typescript
@@ -20067,7 +20053,7 @@ sslCertificates: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L118">property sslPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L119">property sslPolicy</a>
 </h3>
 
 ```typescript
@@ -20075,7 +20061,7 @@ sslPolicy?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L119">property urlMap</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L120">property urlMap</a>
 </h3>
 
 ```typescript
@@ -20083,13 +20069,13 @@ urlMap: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="TargetHttpsProxyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L85">interface TargetHttpsProxyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L86">interface TargetHttpsProxyState</a>
 </h2>
 
 Input properties used for looking up and filtering TargetHttpsProxy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L86">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L87">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -20097,7 +20083,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L87">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L88">property description</a>
 </h3>
 
 ```typescript
@@ -20105,7 +20091,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L88">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L89">property name</a>
 </h3>
 
 ```typescript
@@ -20113,7 +20099,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L93">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L94">property project</a>
 </h3>
 
 ```typescript
@@ -20125,7 +20111,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L94">property proxyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L95">property proxyId</a>
 </h3>
 
 ```typescript
@@ -20133,7 +20119,7 @@ proxyId?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L95">property quicOverride</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L96">property quicOverride</a>
 </h3>
 
 ```typescript
@@ -20141,7 +20127,7 @@ quicOverride?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L99">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L100">property selfLink</a>
 </h3>
 
 ```typescript
@@ -20152,7 +20138,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L100">property sslCertificates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L101">property sslCertificates</a>
 </h3>
 
 ```typescript
@@ -20160,7 +20146,7 @@ sslCertificates?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L101">property sslPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L102">property sslPolicy</a>
 </h3>
 
 ```typescript
@@ -20168,7 +20154,7 @@ sslPolicy?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L102">property urlMap</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetHttpsProxy.ts#L103">property urlMap</a>
 </h3>
 
 ```typescript
@@ -20176,13 +20162,13 @@ urlMap?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="TargetPoolArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L180">interface TargetPoolArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L181">interface TargetPoolArgs</a>
 </h2>
 
 The set of arguments for constructing a TargetPool resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L185">property backupPool</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L186">property backupPool</a>
 </h3>
 
 ```typescript
@@ -20194,7 +20180,7 @@ URL to the backup target pool. Must also set
 failover\_ratio.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L189">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L190">property description</a>
 </h3>
 
 ```typescript
@@ -20205,7 +20191,7 @@ description?: pulumi.Input<string>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L194">property failoverRatio</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L195">property failoverRatio</a>
 </h3>
 
 ```typescript
@@ -20217,7 +20203,7 @@ Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L199">property healthChecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L200">property healthChecks</a>
 </h3>
 
 ```typescript
@@ -20229,7 +20215,7 @@ List of zero or one health check name or self_link. Only
 legacy `google_compute_http_health_check` is supported.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L207">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L208">property instances</a>
 </h3>
 
 ```typescript
@@ -20244,7 +20230,7 @@ Terraform interpolators to create a dependency on the instances from the
 target pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L212">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L213">property name</a>
 </h3>
 
 ```typescript
@@ -20256,7 +20242,7 @@ A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L217">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L218">property project</a>
 </h3>
 
 ```typescript
@@ -20268,7 +20254,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L222">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L223">property region</a>
 </h3>
 
 ```typescript
@@ -20280,7 +20266,7 @@ Where the target pool resides. Defaults to project
 region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L228">property sessionAffinity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L229">property sessionAffinity</a>
 </h3>
 
 ```typescript
@@ -20293,13 +20279,13 @@ affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
 
 <h2 class="pdoc-module-header" id="TargetPoolState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L122">interface TargetPoolState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L123">interface TargetPoolState</a>
 </h2>
 
 Input properties used for looking up and filtering TargetPool resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L127">property backupPool</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L128">property backupPool</a>
 </h3>
 
 ```typescript
@@ -20311,7 +20297,7 @@ URL to the backup target pool. Must also set
 failover\_ratio.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L131">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L132">property description</a>
 </h3>
 
 ```typescript
@@ -20322,7 +20308,7 @@ description?: pulumi.Input<string>;
 Textual description field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L136">property failoverRatio</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L137">property failoverRatio</a>
 </h3>
 
 ```typescript
@@ -20334,7 +20320,7 @@ Ratio (0 to 1) of failed nodes before using the
 backup pool (which must also be set).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L141">property healthChecks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L142">property healthChecks</a>
 </h3>
 
 ```typescript
@@ -20346,7 +20332,7 @@ List of zero or one health check name or self_link. Only
 legacy `google_compute_http_health_check` is supported.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L149">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L150">property instances</a>
 </h3>
 
 ```typescript
@@ -20361,7 +20347,7 @@ Terraform interpolators to create a dependency on the instances from the
 target pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L154">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L155">property name</a>
 </h3>
 
 ```typescript
@@ -20373,7 +20359,7 @@ A unique name for the resource, required by GCE. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L159">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L160">property project</a>
 </h3>
 
 ```typescript
@@ -20385,7 +20371,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L164">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L165">property region</a>
 </h3>
 
 ```typescript
@@ -20397,7 +20383,7 @@ Where the target pool resides. Defaults to project
 region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L168">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L169">property selfLink</a>
 </h3>
 
 ```typescript
@@ -20408,7 +20394,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L174">property sessionAffinity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetPool.ts#L175">property sessionAffinity</a>
 </h3>
 
 ```typescript
@@ -20421,13 +20407,13 @@ affinity). "CLIENT\_IP" (hash of the source/dest addresses / ports), and
 "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
 
 <h2 class="pdoc-module-header" id="TargetSSLProxyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L108">interface TargetSSLProxyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L109">interface TargetSSLProxyArgs</a>
 </h2>
 
 The set of arguments for constructing a TargetSSLProxy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L109">property backendService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L110">property backendService</a>
 </h3>
 
 ```typescript
@@ -20435,7 +20421,7 @@ backendService: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L110">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L111">property description</a>
 </h3>
 
 ```typescript
@@ -20443,7 +20429,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L111">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L112">property name</a>
 </h3>
 
 ```typescript
@@ -20451,7 +20437,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L116">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L117">property project</a>
 </h3>
 
 ```typescript
@@ -20463,7 +20449,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L117">property proxyHeader</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L118">property proxyHeader</a>
 </h3>
 
 ```typescript
@@ -20471,7 +20457,7 @@ proxyHeader?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L118">property sslCertificates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L119">property sslCertificates</a>
 </h3>
 
 ```typescript
@@ -20479,7 +20465,7 @@ sslCertificates: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L119">property sslPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L120">property sslPolicy</a>
 </h3>
 
 ```typescript
@@ -20487,13 +20473,13 @@ sslPolicy?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="TargetSSLProxyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L85">interface TargetSSLProxyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L86">interface TargetSSLProxyState</a>
 </h2>
 
 Input properties used for looking up and filtering TargetSSLProxy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L86">property backendService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L87">property backendService</a>
 </h3>
 
 ```typescript
@@ -20501,7 +20487,7 @@ backendService?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L87">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L88">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -20509,7 +20495,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L88">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L89">property description</a>
 </h3>
 
 ```typescript
@@ -20517,7 +20503,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L89">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L90">property name</a>
 </h3>
 
 ```typescript
@@ -20525,7 +20511,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L94">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L95">property project</a>
 </h3>
 
 ```typescript
@@ -20537,7 +20523,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L95">property proxyHeader</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L96">property proxyHeader</a>
 </h3>
 
 ```typescript
@@ -20545,7 +20531,7 @@ proxyHeader?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L96">property proxyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L97">property proxyId</a>
 </h3>
 
 ```typescript
@@ -20553,7 +20539,7 @@ proxyId?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L100">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L101">property selfLink</a>
 </h3>
 
 ```typescript
@@ -20564,7 +20550,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L101">property sslCertificates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L102">property sslCertificates</a>
 </h3>
 
 ```typescript
@@ -20572,7 +20558,7 @@ sslCertificates?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L102">property sslPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetSSLProxy.ts#L103">property sslPolicy</a>
 </h3>
 
 ```typescript
@@ -20580,13 +20566,13 @@ sslPolicy?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="TargetTCPProxyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L97">interface TargetTCPProxyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L98">interface TargetTCPProxyArgs</a>
 </h2>
 
 The set of arguments for constructing a TargetTCPProxy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L98">property backendService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L99">property backendService</a>
 </h3>
 
 ```typescript
@@ -20594,7 +20580,7 @@ backendService: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L99">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L100">property description</a>
 </h3>
 
 ```typescript
@@ -20602,7 +20588,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L100">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L101">property name</a>
 </h3>
 
 ```typescript
@@ -20610,7 +20596,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L105">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L106">property project</a>
 </h3>
 
 ```typescript
@@ -20622,7 +20608,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L106">property proxyHeader</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L107">property proxyHeader</a>
 </h3>
 
 ```typescript
@@ -20630,13 +20616,13 @@ proxyHeader?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="TargetTCPProxyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L76">interface TargetTCPProxyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L77">interface TargetTCPProxyState</a>
 </h2>
 
 Input properties used for looking up and filtering TargetTCPProxy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L77">property backendService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L78">property backendService</a>
 </h3>
 
 ```typescript
@@ -20644,7 +20630,7 @@ backendService?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L78">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L79">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -20652,7 +20638,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L79">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L80">property description</a>
 </h3>
 
 ```typescript
@@ -20660,7 +20646,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L80">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L81">property name</a>
 </h3>
 
 ```typescript
@@ -20668,7 +20654,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L85">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L86">property project</a>
 </h3>
 
 ```typescript
@@ -20680,7 +20666,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L86">property proxyHeader</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L87">property proxyHeader</a>
 </h3>
 
 ```typescript
@@ -20688,7 +20674,7 @@ proxyHeader?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L87">property proxyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L88">property proxyId</a>
 </h3>
 
 ```typescript
@@ -20696,7 +20682,7 @@ proxyId?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L91">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/targetTCPProxy.ts#L92">property selfLink</a>
 </h3>
 
 ```typescript
@@ -20707,13 +20693,13 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="URLMapArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L160">interface URLMapArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L163">interface URLMapArgs</a>
 </h2>
 
 The set of arguments for constructing a URLMap resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L164">property defaultService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L167">property defaultService</a>
 </h3>
 
 ```typescript
@@ -20721,10 +20707,10 @@ defaultService: pulumi.Input<string>;
 ```
 
 
-The backend service or backend bucket to use if none of the given paths match.
+The backend service or backend bucket to use when none of the given rules match.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L168">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L171">property description</a>
 </h3>
 
 ```typescript
@@ -20732,10 +20718,10 @@ description?: pulumi.Input<string>;
 ```
 
 
-An optional description of this test.
+A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L172">property hostRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L175">property hostRules</a>
 </h3>
 
 ```typescript
@@ -20746,7 +20732,7 @@ hostRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of host rules. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L176">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L180">property name</a>
 </h3>
 
 ```typescript
@@ -20754,10 +20740,11 @@ name?: pulumi.Input<string>;
 ```
 
 
-The name of the `path_matcher` resource.
+A unique name for the resource, required by GCE.
+Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L180">property pathMatchers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L184">property pathMatchers</a>
 </h3>
 
 ```typescript
@@ -20765,10 +20752,10 @@ pathMatchers?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-The name of the `path_matcher` to apply this host rule to.
+A list of paths to match. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L185">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L189">property project</a>
 </h3>
 
 ```typescript
@@ -20780,7 +20767,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L189">property tests</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L193">property tests</a>
 </h3>
 
 ```typescript
@@ -20791,13 +20778,13 @@ tests?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The test to perform.  Multiple blocks of this type are permitted. Structure is documented below.
 
 <h2 class="pdoc-module-header" id="URLMapState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L113">interface URLMapState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L115">interface URLMapState</a>
 </h2>
 
 Input properties used for looking up and filtering URLMap resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L117">property defaultService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L119">property defaultService</a>
 </h3>
 
 ```typescript
@@ -20805,10 +20792,10 @@ defaultService?: pulumi.Input<string>;
 ```
 
 
-The backend service or backend bucket to use if none of the given paths match.
+The backend service or backend bucket to use when none of the given rules match.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L121">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L123">property description</a>
 </h3>
 
 ```typescript
@@ -20816,10 +20803,10 @@ description?: pulumi.Input<string>;
 ```
 
 
-An optional description of this test.
+A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L125">property fingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L127">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -20830,7 +20817,7 @@ fingerprint?: pulumi.Input<string>;
 The unique fingerprint for this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L129">property hostRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L131">property hostRules</a>
 </h3>
 
 ```typescript
@@ -20841,7 +20828,7 @@ hostRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of host rules. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L133">property mapId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L135">property mapId</a>
 </h3>
 
 ```typescript
@@ -20852,7 +20839,7 @@ mapId?: pulumi.Input<string>;
 The GCE assigned ID of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L137">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L140">property name</a>
 </h3>
 
 ```typescript
@@ -20860,10 +20847,11 @@ name?: pulumi.Input<string>;
 ```
 
 
-The name of the `path_matcher` resource.
+A unique name for the resource, required by GCE.
+Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L141">property pathMatchers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L144">property pathMatchers</a>
 </h3>
 
 ```typescript
@@ -20871,10 +20859,10 @@ pathMatchers?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-The name of the `path_matcher` to apply this host rule to.
+A list of paths to match. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L146">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L149">property project</a>
 </h3>
 
 ```typescript
@@ -20886,7 +20874,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L150">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L153">property selfLink</a>
 </h3>
 
 ```typescript
@@ -20897,7 +20885,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L154">property tests</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/uRLMap.ts#L157">property tests</a>
 </h3>
 
 ```typescript
@@ -20908,13 +20896,13 @@ tests?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The test to perform.  Multiple blocks of this type are permitted. Structure is documented below.
 
 <h2 class="pdoc-module-header" id="VPNGatewayArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L93">interface VPNGatewayArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L94">interface VPNGatewayArgs</a>
 </h2>
 
 The set of arguments for constructing a VPNGateway resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L94">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L95">property description</a>
 </h3>
 
 ```typescript
@@ -20922,7 +20910,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L95">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L96">property name</a>
 </h3>
 
 ```typescript
@@ -20930,7 +20918,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L96">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L97">property network</a>
 </h3>
 
 ```typescript
@@ -20938,7 +20926,7 @@ network: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L101">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L102">property project</a>
 </h3>
 
 ```typescript
@@ -20950,7 +20938,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L102">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L103">property region</a>
 </h3>
 
 ```typescript
@@ -20958,13 +20946,13 @@ region?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="VPNGatewayState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L73">interface VPNGatewayState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L74">interface VPNGatewayState</a>
 </h2>
 
 Input properties used for looking up and filtering VPNGateway resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L74">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L75">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -20972,7 +20960,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L75">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L76">property description</a>
 </h3>
 
 ```typescript
@@ -20980,7 +20968,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L76">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L77">property name</a>
 </h3>
 
 ```typescript
@@ -20988,7 +20976,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L77">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L78">property network</a>
 </h3>
 
 ```typescript
@@ -20996,7 +20984,7 @@ network?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L82">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L83">property project</a>
 </h3>
 
 ```typescript
@@ -21008,7 +20996,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L83">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L84">property region</a>
 </h3>
 
 ```typescript
@@ -21016,7 +21004,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L87">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNGateway.ts#L88">property selfLink</a>
 </h3>
 
 ```typescript
@@ -21027,13 +21015,13 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h2 class="pdoc-module-header" id="VPNTunnelArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L139">interface VPNTunnelArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L140">interface VPNTunnelArgs</a>
 </h2>
 
 The set of arguments for constructing a VPNTunnel resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L140">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L141">property description</a>
 </h3>
 
 ```typescript
@@ -21041,7 +21029,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L141">property ikeVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L142">property ikeVersion</a>
 </h3>
 
 ```typescript
@@ -21049,7 +21037,7 @@ ikeVersion?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L142">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L143">property labels</a>
 </h3>
 
 ```typescript
@@ -21057,7 +21045,7 @@ labels?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L143">property localTrafficSelectors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L144">property localTrafficSelectors</a>
 </h3>
 
 ```typescript
@@ -21065,7 +21053,7 @@ localTrafficSelectors?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L144">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L145">property name</a>
 </h3>
 
 ```typescript
@@ -21073,7 +21061,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L145">property peerIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L146">property peerIp</a>
 </h3>
 
 ```typescript
@@ -21081,7 +21069,7 @@ peerIp: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L150">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L151">property project</a>
 </h3>
 
 ```typescript
@@ -21093,7 +21081,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L151">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L152">property region</a>
 </h3>
 
 ```typescript
@@ -21101,7 +21089,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L152">property remoteTrafficSelectors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L153">property remoteTrafficSelectors</a>
 </h3>
 
 ```typescript
@@ -21109,7 +21097,7 @@ remoteTrafficSelectors?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L153">property router</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L154">property router</a>
 </h3>
 
 ```typescript
@@ -21117,7 +21105,7 @@ router?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L154">property sharedSecret</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L155">property sharedSecret</a>
 </h3>
 
 ```typescript
@@ -21125,7 +21113,7 @@ sharedSecret: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L155">property targetVpnGateway</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L156">property targetVpnGateway</a>
 </h3>
 
 ```typescript
@@ -21133,13 +21121,13 @@ targetVpnGateway: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="VPNTunnelState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L109">interface VPNTunnelState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L110">interface VPNTunnelState</a>
 </h2>
 
 Input properties used for looking up and filtering VPNTunnel resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L110">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L111">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -21147,7 +21135,7 @@ creationTimestamp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L111">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L112">property description</a>
 </h3>
 
 ```typescript
@@ -21155,7 +21143,7 @@ description?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L112">property detailedStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L113">property detailedStatus</a>
 </h3>
 
 ```typescript
@@ -21163,7 +21151,7 @@ detailedStatus?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L113">property ikeVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L114">property ikeVersion</a>
 </h3>
 
 ```typescript
@@ -21171,7 +21159,7 @@ ikeVersion?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L114">property labelFingerprint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L115">property labelFingerprint</a>
 </h3>
 
 ```typescript
@@ -21179,7 +21167,7 @@ labelFingerprint?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L115">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L116">property labels</a>
 </h3>
 
 ```typescript
@@ -21187,7 +21175,7 @@ labels?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L116">property localTrafficSelectors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L117">property localTrafficSelectors</a>
 </h3>
 
 ```typescript
@@ -21195,7 +21183,7 @@ localTrafficSelectors?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L117">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L118">property name</a>
 </h3>
 
 ```typescript
@@ -21203,7 +21191,7 @@ name?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L118">property peerIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L119">property peerIp</a>
 </h3>
 
 ```typescript
@@ -21211,7 +21199,7 @@ peerIp?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L123">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L124">property project</a>
 </h3>
 
 ```typescript
@@ -21223,7 +21211,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L124">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L125">property region</a>
 </h3>
 
 ```typescript
@@ -21231,7 +21219,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L125">property remoteTrafficSelectors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L126">property remoteTrafficSelectors</a>
 </h3>
 
 ```typescript
@@ -21239,7 +21227,7 @@ remoteTrafficSelectors?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L126">property router</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L127">property router</a>
 </h3>
 
 ```typescript
@@ -21247,7 +21235,7 @@ router?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L130">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L131">property selfLink</a>
 </h3>
 
 ```typescript
@@ -21258,7 +21246,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L131">property sharedSecret</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L132">property sharedSecret</a>
 </h3>
 
 ```typescript
@@ -21266,7 +21254,7 @@ sharedSecret?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L132">property sharedSecretHash</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L133">property sharedSecretHash</a>
 </h3>
 
 ```typescript
@@ -21274,7 +21262,7 @@ sharedSecretHash?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L133">property targetVpnGateway</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/compute/vPNTunnel.ts#L134">property targetVpnGateway</a>
 </h3>
 
 ```typescript

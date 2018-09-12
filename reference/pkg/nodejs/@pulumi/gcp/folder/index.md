@@ -23,7 +23,7 @@ title: Module folder
 
 
 <h2 class="pdoc-module-header" id="IAMBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L14">class IAMBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L15">class IAMBinding</a>
 </h2>
 
 Allows creation and management of a single binding within IAM policy for
@@ -34,7 +34,7 @@ an existing Google Cloud Platform folder.
    should be.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -49,7 +49,7 @@ Create a IAMBinding resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L23">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L24">method get</a>
 </h3>
 
 ```typescript
@@ -81,7 +81,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L30">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L31">property etag</a>
 </h3>
 
 ```typescript
@@ -92,7 +92,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the folder's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L34">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L35">property folder</a>
 </h3>
 
 ```typescript
@@ -115,7 +115,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L43">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L44">property members</a>
 </h3>
 
 ```typescript
@@ -131,7 +131,7 @@ Each entry can have one of the following values:
 * **domain:{domain}**: A Google Apps domain name that represents all the users of that domain. For example, google.com or example.com.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L49">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L50">property role</a>
 </h3>
 
 ```typescript
@@ -156,7 +156,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IAMMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L15">class IAMMember</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L16">class IAMMember</a>
 </h2>
 
 Allows creation and management of a single member for a single binding within
@@ -168,7 +168,7 @@ the IAM policy for an existing Google Cloud Platform folder.
    should not be assigned to using `google_folder_iam_member`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -183,7 +183,7 @@ Create a IAMMember resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L24">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -215,7 +215,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L31">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L32">property etag</a>
 </h3>
 
 ```typescript
@@ -226,7 +226,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the folder's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L35">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L36">property folder</a>
 </h3>
 
 ```typescript
@@ -249,7 +249,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L44">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L45">property member</a>
 </h3>
 
 ```typescript
@@ -265,7 +265,7 @@ This field can have one of the following values:
 * **domain:{domain}**: A Google Apps domain name that represents all the users of that domain. For example, google.com or example.com.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L49">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L50">property role</a>
 </h3>
 
 ```typescript
@@ -289,14 +289,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IAMPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L10">class IAMPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L11">class IAMPolicy</a>
 </h2>
 
 Allows creation and management of the IAM policy for an existing Google Cloud
 Platform folder.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L36">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L37">constructor</a>
 </h3>
 
 ```typescript
@@ -311,7 +311,7 @@ Create a IAMPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L19">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -343,7 +343,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L26">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L27">property etag</a>
 </h3>
 
 ```typescript
@@ -354,7 +354,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the folder's IAM policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L30">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L31">property folder</a>
 </h3>
 
 ```typescript
@@ -377,7 +377,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L36">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L37">property policyData</a>
 </h3>
 
 ```typescript
@@ -402,7 +402,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="OrganizationPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L12">class OrganizationPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L13">class OrganizationPolicy</a>
 </h2>
 
 Allows management of Organization policies for a Google Folder. For more information see
@@ -411,7 +411,7 @@ documentation](https://cloud.google.com/resource-manager/docs/organization-polic
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/folders/setOrgPolicy).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L57">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L58">constructor</a>
 </h3>
 
 ```typescript
@@ -426,7 +426,7 @@ Create a OrganizationPolicy resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -458,7 +458,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L28">property booleanPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L29">property booleanPolicy</a>
 </h3>
 
 ```typescript
@@ -469,7 +469,7 @@ public booleanPolicy: pulumi.Output<{ ... } | undefined>;
 A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L32">property constraint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L33">property constraint</a>
 </h3>
 
 ```typescript
@@ -480,7 +480,7 @@ public constraint: pulumi.Output<string>;
 The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L36">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L37">property etag</a>
 </h3>
 
 ```typescript
@@ -491,7 +491,7 @@ public etag: pulumi.Output<string>;
 (Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L40">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L41">property folder</a>
 </h3>
 
 ```typescript
@@ -514,7 +514,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L45">property listPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L46">property listPolicy</a>
 </h3>
 
 ```typescript
@@ -526,7 +526,7 @@ A policy that can define specific values that are allowed or denied for the give
 can also be used to allow or deny all values. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L49">property restorePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L50">property restorePolicy</a>
 </h3>
 
 ```typescript
@@ -537,7 +537,7 @@ public restorePolicy: pulumi.Output<{ ... } | undefined>;
 A restore policy is a constraint to restore the default policy. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L53">property updateTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L54">property updateTime</a>
 </h3>
 
 ```typescript
@@ -560,7 +560,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L57">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L58">property version</a>
 </h3>
 
 ```typescript
@@ -571,13 +571,13 @@ public version: pulumi.Output<number>;
 Version of the Policy. Default version is 0.
 
 <h2 class="pdoc-module-header" id="IAMBindingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L119">interface IAMBindingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L120">interface IAMBindingArgs</a>
 </h2>
 
 The set of arguments for constructing a IAMBinding resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L123">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L124">property folder</a>
 </h3>
 
 ```typescript
@@ -588,7 +588,7 @@ folder: pulumi.Input<string>;
 The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L132">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L133">property members</a>
 </h3>
 
 ```typescript
@@ -604,7 +604,7 @@ Each entry can have one of the following values:
 * **domain:{domain}**: A Google Apps domain name that represents all the users of that domain. For example, google.com or example.com.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L138">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L139">property role</a>
 </h3>
 
 ```typescript
@@ -617,13 +617,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="IAMBindingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L90">interface IAMBindingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L91">interface IAMBindingState</a>
 </h2>
 
 Input properties used for looking up and filtering IAMBinding resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L94">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L95">property etag</a>
 </h3>
 
 ```typescript
@@ -634,7 +634,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the folder's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L98">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L99">property folder</a>
 </h3>
 
 ```typescript
@@ -645,7 +645,7 @@ folder?: pulumi.Input<string>;
 The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L107">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L108">property members</a>
 </h3>
 
 ```typescript
@@ -661,7 +661,7 @@ Each entry can have one of the following values:
 * **domain:{domain}**: A Google Apps domain name that represents all the users of that domain. For example, google.com or example.com.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L113">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMBinding.ts#L114">property role</a>
 </h3>
 
 ```typescript
@@ -674,13 +674,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="IAMMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L118">interface IAMMemberArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L119">interface IAMMemberArgs</a>
 </h2>
 
 The set of arguments for constructing a IAMMember resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L122">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L123">property folder</a>
 </h3>
 
 ```typescript
@@ -691,7 +691,7 @@ folder: pulumi.Input<string>;
 The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L131">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L132">property member</a>
 </h3>
 
 ```typescript
@@ -707,7 +707,7 @@ This field can have one of the following values:
 * **domain:{domain}**: A Google Apps domain name that represents all the users of that domain. For example, google.com or example.com.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L136">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L137">property role</a>
 </h3>
 
 ```typescript
@@ -719,13 +719,13 @@ The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="IAMMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L90">interface IAMMemberState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L91">interface IAMMemberState</a>
 </h2>
 
 Input properties used for looking up and filtering IAMMember resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L94">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L95">property etag</a>
 </h3>
 
 ```typescript
@@ -736,7 +736,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the folder's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L98">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L99">property folder</a>
 </h3>
 
 ```typescript
@@ -747,7 +747,7 @@ folder?: pulumi.Input<string>;
 The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L107">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L108">property member</a>
 </h3>
 
 ```typescript
@@ -763,7 +763,7 @@ This field can have one of the following values:
 * **domain:{domain}**: A Google Apps domain name that represents all the users of that domain. For example, google.com or example.com.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L112">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMMember.ts#L113">property role</a>
 </h3>
 
 ```typescript
@@ -775,13 +775,13 @@ The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="IAMPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L92">interface IAMPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L93">interface IAMPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a IAMPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L96">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L97">property folder</a>
 </h3>
 
 ```typescript
@@ -792,7 +792,7 @@ folder: pulumi.Input<string>;
 The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L102">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L103">property policyData</a>
 </h3>
 
 ```typescript
@@ -805,13 +805,13 @@ the IAM policy that will be applied to the folder. This policy overrides any exi
 policy applied to the folder.
 
 <h2 class="pdoc-module-header" id="IAMPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L72">interface IAMPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L73">interface IAMPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering IAMPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L76">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L77">property etag</a>
 </h3>
 
 ```typescript
@@ -822,7 +822,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the folder's IAM policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L80">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L81">property folder</a>
 </h3>
 
 ```typescript
@@ -833,7 +833,7 @@ folder?: pulumi.Input<string>;
 The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L86">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/iAMPolicy.ts#L87">property policyData</a>
 </h3>
 
 ```typescript
@@ -846,13 +846,13 @@ the IAM policy that will be applied to the folder. This policy overrides any exi
 policy applied to the folder.
 
 <h2 class="pdoc-module-header" id="OrganizationPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L142">interface OrganizationPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L143">interface OrganizationPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a OrganizationPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L146">property booleanPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L147">property booleanPolicy</a>
 </h3>
 
 ```typescript
@@ -863,7 +863,7 @@ booleanPolicy?: pulumi.Input<{ ... }>;
 A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L150">property constraint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L151">property constraint</a>
 </h3>
 
 ```typescript
@@ -874,7 +874,7 @@ constraint: pulumi.Input<string>;
 The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L154">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L155">property folder</a>
 </h3>
 
 ```typescript
@@ -885,7 +885,7 @@ folder: pulumi.Input<string>;
 The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L159">property listPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L160">property listPolicy</a>
 </h3>
 
 ```typescript
@@ -897,7 +897,7 @@ A policy that can define specific values that are allowed or denied for the give
 can also be used to allow or deny all values. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L163">property restorePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L164">property restorePolicy</a>
 </h3>
 
 ```typescript
@@ -908,7 +908,7 @@ restorePolicy?: pulumi.Input<{ ... }>;
 A restore policy is a constraint to restore the default policy. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L167">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L168">property version</a>
 </h3>
 
 ```typescript
@@ -919,13 +919,13 @@ version?: pulumi.Input<number>;
 Version of the Policy. Default version is 0.
 
 <h2 class="pdoc-module-header" id="OrganizationPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L103">interface OrganizationPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L104">interface OrganizationPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering OrganizationPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L107">property booleanPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L108">property booleanPolicy</a>
 </h3>
 
 ```typescript
@@ -936,7 +936,7 @@ booleanPolicy?: pulumi.Input<{ ... }>;
 A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L111">property constraint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L112">property constraint</a>
 </h3>
 
 ```typescript
@@ -947,7 +947,7 @@ constraint?: pulumi.Input<string>;
 The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L115">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L116">property etag</a>
 </h3>
 
 ```typescript
@@ -958,7 +958,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L119">property folder</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L120">property folder</a>
 </h3>
 
 ```typescript
@@ -969,7 +969,7 @@ folder?: pulumi.Input<string>;
 The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L124">property listPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L125">property listPolicy</a>
 </h3>
 
 ```typescript
@@ -981,7 +981,7 @@ A policy that can define specific values that are allowed or denied for the give
 can also be used to allow or deny all values. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L128">property restorePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L129">property restorePolicy</a>
 </h3>
 
 ```typescript
@@ -992,7 +992,7 @@ restorePolicy?: pulumi.Input<{ ... }>;
 A restore policy is a constraint to restore the default policy. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L132">property updateTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L133">property updateTime</a>
 </h3>
 
 ```typescript
@@ -1003,7 +1003,7 @@ updateTime?: pulumi.Input<string>;
 (Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L136">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L137">property version</a>
 </h3>
 
 ```typescript

@@ -28,13 +28,13 @@ title: Module iot
 
 
 <h2 class="pdoc-module-header" id="Certificate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L9">class Certificate</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L10">class Certificate</a>
 </h2>
 
 Creates and manages an AWS IoT certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L35">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L36">constructor</a>
 </h3>
 
 ```typescript
@@ -49,7 +49,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -81,7 +81,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L25">property active</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L26">property active</a>
 </h3>
 
 ```typescript
@@ -92,7 +92,7 @@ public active: pulumi.Output<boolean>;
 Boolean flag to indicate if the certificate should be active
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L29">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L30">property arn</a>
 </h3>
 
 ```typescript
@@ -103,7 +103,7 @@ public arn: pulumi.Output<string>;
 The ARN of the created AWS IoT certificate
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L35">property csr</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L36">property csr</a>
 </h3>
 
 ```typescript
@@ -140,13 +140,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Policy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L9">class Policy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L10">class Policy</a>
 </h2>
 
 Provides an IoT policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L39">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L40">constructor</a>
 </h3>
 
 ```typescript
@@ -161,7 +161,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -193,7 +193,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -204,7 +204,7 @@ public arn: pulumi.Output<string>;
 The ARN assigned by AWS to this policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L29">property defaultVersionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L30">property defaultVersionId</a>
 </h3>
 
 ```typescript
@@ -227,7 +227,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -238,7 +238,7 @@ public name: pulumi.Output<string>;
 The name of the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L39">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L40">property policy</a>
 </h3>
 
 ```typescript
@@ -263,13 +263,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Thing">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L9">class Thing</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L10">class Thing</a>
 </h2>
 
 Creates and manages an AWS IoT Thing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L45">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L46">constructor</a>
 </h3>
 
 ```typescript
@@ -284,7 +284,7 @@ Create a Thing resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -316,7 +316,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -327,7 +327,7 @@ public arn: pulumi.Output<string>;
 The ARN of the thing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L29">property attributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L30">property attributes</a>
 </h3>
 
 ```typescript
@@ -338,7 +338,7 @@ public attributes: pulumi.Output<{ ... } | undefined>;
 Map of attributes of the thing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L33">property defaultClientId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L34">property defaultClientId</a>
 </h3>
 
 ```typescript
@@ -361,7 +361,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L37">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -372,7 +372,7 @@ public name: pulumi.Output<string>;
 The name of the thing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L41">property thingTypeName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L42">property thingTypeName</a>
 </h3>
 
 ```typescript
@@ -395,7 +395,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L45">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L46">property version</a>
 </h3>
 
 ```typescript
@@ -406,13 +406,13 @@ public version: pulumi.Output<number>;
 The current version of the thing record in the registry.
 
 <h2 class="pdoc-module-header" id="ThingType">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L9">class ThingType</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L10">class ThingType</a>
 </h2>
 
 Creates and manages an AWS IoT Thing Type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L34">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L35">constructor</a>
 </h3>
 
 ```typescript
@@ -427,7 +427,7 @@ Create a ThingType resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -459,7 +459,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -470,7 +470,7 @@ public arn: pulumi.Output<string>;
 The ARN of the created AWS IoT Thing Type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L29">property deprecated</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L30">property deprecated</a>
 </h3>
 
 ```typescript
@@ -493,7 +493,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -504,7 +504,7 @@ public name: pulumi.Output<string>;
 The name of the thing type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L34">property properties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L35">property properties</a>
 </h3>
 
 ```typescript
@@ -524,10 +524,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TopicRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L6">class TopicRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L7">class TopicRule</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L53">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L54">constructor</a>
 </h3>
 
 ```typescript
@@ -542,7 +542,7 @@ Create a TopicRule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L15">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L16">method get</a>
 </h3>
 
 ```typescript
@@ -574,7 +574,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L22">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L23">property arn</a>
 </h3>
 
 ```typescript
@@ -585,7 +585,7 @@ public arn: pulumi.Output<string>;
 The ARN of the topic rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L23">property cloudwatchAlarm</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L24">property cloudwatchAlarm</a>
 </h3>
 
 ```typescript
@@ -593,7 +593,7 @@ public cloudwatchAlarm: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L24">property cloudwatchMetric</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L25">property cloudwatchMetric</a>
 </h3>
 
 ```typescript
@@ -601,7 +601,7 @@ public cloudwatchMetric: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L28">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L29">property description</a>
 </h3>
 
 ```typescript
@@ -612,7 +612,7 @@ public description: pulumi.Output<string | undefined>;
 The description of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L29">property dynamodb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L30">property dynamodb</a>
 </h3>
 
 ```typescript
@@ -620,7 +620,7 @@ public dynamodb: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L30">property elasticsearch</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L31">property elasticsearch</a>
 </h3>
 
 ```typescript
@@ -628,7 +628,7 @@ public elasticsearch: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L34">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L35">property enabled</a>
 </h3>
 
 ```typescript
@@ -639,7 +639,7 @@ public enabled: pulumi.Output<boolean>;
 Specifies whether the rule is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L35">property firehose</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L36">property firehose</a>
 </h3>
 
 ```typescript
@@ -659,7 +659,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L36">property kinesis</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L37">property kinesis</a>
 </h3>
 
 ```typescript
@@ -667,7 +667,7 @@ public kinesis: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L37">property lambda</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L38">property lambda</a>
 </h3>
 
 ```typescript
@@ -675,7 +675,7 @@ public lambda: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L41">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -686,7 +686,7 @@ public name: pulumi.Output<string>;
 The name of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L42">property republish</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L43">property republish</a>
 </h3>
 
 ```typescript
@@ -694,7 +694,7 @@ public republish: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L43">property s3</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L44">property s3</a>
 </h3>
 
 ```typescript
@@ -702,7 +702,7 @@ public s3: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L44">property sns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L45">property sns</a>
 </h3>
 
 ```typescript
@@ -710,7 +710,7 @@ public sns: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L48">property sql</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L49">property sql</a>
 </h3>
 
 ```typescript
@@ -721,7 +721,7 @@ public sql: pulumi.Output<string>;
 The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L52">property sqlVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L53">property sqlVersion</a>
 </h3>
 
 ```typescript
@@ -732,7 +732,7 @@ public sqlVersion: pulumi.Output<string>;
 The version of the SQL rules engine to use when evaluating the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L53">property sqs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L54">property sqs</a>
 </h3>
 
 ```typescript
@@ -752,7 +752,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="getEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L9">function getEndpoint</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L10">function getEndpoint</a>
 </h2>
 
 ```typescript
@@ -763,13 +763,13 @@ getEndpoint(opts?: pulumi.InvokeOptions): Promise<GetEndpointResult>
 Returns a unique endpoint specific to the AWS account making the call.
 
 <h2 class="pdoc-module-header" id="CertificateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L91">interface CertificateArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L92">interface CertificateArgs</a>
 </h2>
 
 The set of arguments for constructing a Certificate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L95">property active</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L96">property active</a>
 </h3>
 
 ```typescript
@@ -780,7 +780,7 @@ active: pulumi.Input<boolean>;
 Boolean flag to indicate if the certificate should be active
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L101">property csr</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L102">property csr</a>
 </h3>
 
 ```typescript
@@ -793,13 +793,13 @@ The certificate signing request. Review the
 for more information on creating a certificate from a certificate signing request (CSR).
 
 <h2 class="pdoc-module-header" id="CertificateState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L71">interface CertificateState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L72">interface CertificateState</a>
 </h2>
 
 Input properties used for looking up and filtering Certificate resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L75">property active</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L76">property active</a>
 </h3>
 
 ```typescript
@@ -810,7 +810,7 @@ active?: pulumi.Input<boolean>;
 Boolean flag to indicate if the certificate should be active
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L79">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L80">property arn</a>
 </h3>
 
 ```typescript
@@ -821,7 +821,7 @@ arn?: pulumi.Input<string>;
 The ARN of the created AWS IoT certificate
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L85">property csr</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts#L86">property csr</a>
 </h3>
 
 ```typescript
@@ -834,13 +834,13 @@ The certificate signing request. Review the
 for more information on creating a certificate from a certificate signing request (CSR).
 
 <h2 class="pdoc-module-header" id="GetEndpointResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L17">interface GetEndpointResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L18">interface GetEndpointResult</a>
 </h2>
 
 A collection of values returned by getEndpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L21">property endpointAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L22">property endpointAddress</a>
 </h3>
 
 ```typescript
@@ -851,7 +851,7 @@ endpointAddress: string;
 The endpoint. The format of the endpoint is as follows: `IDENTIFIER.iot.REGION.amazonaws.com`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L25">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L26">property id</a>
 </h3>
 
 ```typescript
@@ -862,13 +862,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L98">interface PolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L99">interface PolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a Policy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L102">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L103">property name</a>
 </h3>
 
 ```typescript
@@ -879,7 +879,7 @@ name?: pulumi.Input<string>;
 The name of the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L108">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L109">property policy</a>
 </h3>
 
 ```typescript
@@ -892,13 +892,13 @@ The heredoc syntax or `file` function is helpful here. Use the [IoT Developer Gu
 (http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html) for more information on IoT Policies
 
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L74">interface PolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L75">interface PolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering Policy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L78">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L79">property arn</a>
 </h3>
 
 ```typescript
@@ -909,7 +909,7 @@ arn?: pulumi.Input<string>;
 The ARN assigned by AWS to this policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L82">property defaultVersionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L83">property defaultVersionId</a>
 </h3>
 
 ```typescript
@@ -920,7 +920,7 @@ defaultVersionId?: pulumi.Input<string>;
 The default version of this policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L86">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L87">property name</a>
 </h3>
 
 ```typescript
@@ -931,7 +931,7 @@ name?: pulumi.Input<string>;
 The name of the policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L92">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L93">property policy</a>
 </h3>
 
 ```typescript
@@ -944,13 +944,13 @@ The heredoc syntax or `file` function is helpful here. Use the [IoT Developer Gu
 (http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html) for more information on IoT Policies
 
 <h2 class="pdoc-module-header" id="ThingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L111">interface ThingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L112">interface ThingArgs</a>
 </h2>
 
 The set of arguments for constructing a Thing resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L115">property attributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L116">property attributes</a>
 </h3>
 
 ```typescript
@@ -961,7 +961,7 @@ attributes?: pulumi.Input<{ ... }>;
 Map of attributes of the thing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L119">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L120">property name</a>
 </h3>
 
 ```typescript
@@ -972,7 +972,7 @@ name?: pulumi.Input<string>;
 The name of the thing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L123">property thingTypeName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L124">property thingTypeName</a>
 </h3>
 
 ```typescript
@@ -983,13 +983,13 @@ thingTypeName?: pulumi.Input<string>;
 The thing type name.
 
 <h2 class="pdoc-module-header" id="ThingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L81">interface ThingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L82">interface ThingState</a>
 </h2>
 
 Input properties used for looking up and filtering Thing resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L85">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L86">property arn</a>
 </h3>
 
 ```typescript
@@ -1000,7 +1000,7 @@ arn?: pulumi.Input<string>;
 The ARN of the thing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L89">property attributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L90">property attributes</a>
 </h3>
 
 ```typescript
@@ -1011,7 +1011,7 @@ attributes?: pulumi.Input<{ ... }>;
 Map of attributes of the thing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L93">property defaultClientId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L94">property defaultClientId</a>
 </h3>
 
 ```typescript
@@ -1022,7 +1022,7 @@ defaultClientId?: pulumi.Input<string>;
 The default client ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L97">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L98">property name</a>
 </h3>
 
 ```typescript
@@ -1033,7 +1033,7 @@ name?: pulumi.Input<string>;
 The name of the thing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L101">property thingTypeName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L102">property thingTypeName</a>
 </h3>
 
 ```typescript
@@ -1044,7 +1044,7 @@ thingTypeName?: pulumi.Input<string>;
 The thing type name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L105">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L106">property version</a>
 </h3>
 
 ```typescript
@@ -1055,13 +1055,13 @@ version?: pulumi.Input<number>;
 The current version of the thing record in the registry.
 
 <h2 class="pdoc-module-header" id="ThingTypeArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L85">interface ThingTypeArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L86">interface ThingTypeArgs</a>
 </h2>
 
 The set of arguments for constructing a ThingType resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L89">property deprecated</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L90">property deprecated</a>
 </h3>
 
 ```typescript
@@ -1072,7 +1072,7 @@ deprecated?: pulumi.Input<boolean>;
 Whether the thing type is deprecated. If true, no new things could be associated with this type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L93">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L94">property name</a>
 </h3>
 
 ```typescript
@@ -1083,7 +1083,7 @@ name?: pulumi.Input<string>;
 The name of the thing type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L94">property properties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L95">property properties</a>
 </h3>
 
 ```typescript
@@ -1091,13 +1091,13 @@ properties?: pulumi.Input<{ ... }>;
 ```
 
 <h2 class="pdoc-module-header" id="ThingTypeState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L66">interface ThingTypeState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L67">interface ThingTypeState</a>
 </h2>
 
 Input properties used for looking up and filtering ThingType resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L70">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L71">property arn</a>
 </h3>
 
 ```typescript
@@ -1108,7 +1108,7 @@ arn?: pulumi.Input<string>;
 The ARN of the created AWS IoT Thing Type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L74">property deprecated</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L75">property deprecated</a>
 </h3>
 
 ```typescript
@@ -1119,7 +1119,7 @@ deprecated?: pulumi.Input<boolean>;
 Whether the thing type is deprecated. If true, no new things could be associated with this type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L78">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L79">property name</a>
 </h3>
 
 ```typescript
@@ -1130,7 +1130,7 @@ name?: pulumi.Input<string>;
 The name of the thing type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L79">property properties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L80">property properties</a>
 </h3>
 
 ```typescript
@@ -1138,13 +1138,13 @@ properties?: pulumi.Input<{ ... }>;
 ```
 
 <h2 class="pdoc-module-header" id="TopicRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L161">interface TopicRuleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L162">interface TopicRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a TopicRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L162">property cloudwatchAlarm</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L163">property cloudwatchAlarm</a>
 </h3>
 
 ```typescript
@@ -1152,7 +1152,7 @@ cloudwatchAlarm?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L163">property cloudwatchMetric</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L164">property cloudwatchMetric</a>
 </h3>
 
 ```typescript
@@ -1160,7 +1160,7 @@ cloudwatchMetric?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L167">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L168">property description</a>
 </h3>
 
 ```typescript
@@ -1171,7 +1171,7 @@ description?: pulumi.Input<string>;
 The description of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L168">property dynamodb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L169">property dynamodb</a>
 </h3>
 
 ```typescript
@@ -1179,7 +1179,7 @@ dynamodb?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L169">property elasticsearch</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L170">property elasticsearch</a>
 </h3>
 
 ```typescript
@@ -1187,7 +1187,7 @@ elasticsearch?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L173">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L174">property enabled</a>
 </h3>
 
 ```typescript
@@ -1198,7 +1198,7 @@ enabled: pulumi.Input<boolean>;
 Specifies whether the rule is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L174">property firehose</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L175">property firehose</a>
 </h3>
 
 ```typescript
@@ -1206,7 +1206,7 @@ firehose?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L175">property kinesis</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L176">property kinesis</a>
 </h3>
 
 ```typescript
@@ -1214,7 +1214,7 @@ kinesis?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L176">property lambda</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L177">property lambda</a>
 </h3>
 
 ```typescript
@@ -1222,7 +1222,7 @@ lambda?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L180">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L181">property name</a>
 </h3>
 
 ```typescript
@@ -1233,7 +1233,7 @@ name?: pulumi.Input<string>;
 The name of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L181">property republish</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L182">property republish</a>
 </h3>
 
 ```typescript
@@ -1241,7 +1241,7 @@ republish?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L182">property s3</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L183">property s3</a>
 </h3>
 
 ```typescript
@@ -1249,7 +1249,7 @@ s3?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L183">property sns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L184">property sns</a>
 </h3>
 
 ```typescript
@@ -1257,7 +1257,7 @@ sns?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L187">property sql</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L188">property sql</a>
 </h3>
 
 ```typescript
@@ -1268,7 +1268,7 @@ sql: pulumi.Input<string>;
 The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L191">property sqlVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L192">property sqlVersion</a>
 </h3>
 
 ```typescript
@@ -1279,7 +1279,7 @@ sqlVersion: pulumi.Input<string>;
 The version of the SQL rules engine to use when evaluating the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L192">property sqs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L193">property sqs</a>
 </h3>
 
 ```typescript
@@ -1287,13 +1287,13 @@ sqs?: pulumi.Input<{ ... }>;
 ```
 
 <h2 class="pdoc-module-header" id="TopicRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L120">interface TopicRuleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L121">interface TopicRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering TopicRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L124">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L125">property arn</a>
 </h3>
 
 ```typescript
@@ -1304,7 +1304,7 @@ arn?: pulumi.Input<string>;
 The ARN of the topic rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L125">property cloudwatchAlarm</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L126">property cloudwatchAlarm</a>
 </h3>
 
 ```typescript
@@ -1312,7 +1312,7 @@ cloudwatchAlarm?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L126">property cloudwatchMetric</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L127">property cloudwatchMetric</a>
 </h3>
 
 ```typescript
@@ -1320,7 +1320,7 @@ cloudwatchMetric?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L130">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L131">property description</a>
 </h3>
 
 ```typescript
@@ -1331,7 +1331,7 @@ description?: pulumi.Input<string>;
 The description of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L131">property dynamodb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L132">property dynamodb</a>
 </h3>
 
 ```typescript
@@ -1339,7 +1339,7 @@ dynamodb?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L132">property elasticsearch</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L133">property elasticsearch</a>
 </h3>
 
 ```typescript
@@ -1347,7 +1347,7 @@ elasticsearch?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L136">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L137">property enabled</a>
 </h3>
 
 ```typescript
@@ -1358,7 +1358,7 @@ enabled?: pulumi.Input<boolean>;
 Specifies whether the rule is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L137">property firehose</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L138">property firehose</a>
 </h3>
 
 ```typescript
@@ -1366,7 +1366,7 @@ firehose?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L138">property kinesis</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L139">property kinesis</a>
 </h3>
 
 ```typescript
@@ -1374,7 +1374,7 @@ kinesis?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L139">property lambda</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L140">property lambda</a>
 </h3>
 
 ```typescript
@@ -1382,7 +1382,7 @@ lambda?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L143">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L144">property name</a>
 </h3>
 
 ```typescript
@@ -1393,7 +1393,7 @@ name?: pulumi.Input<string>;
 The name of the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L144">property republish</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L145">property republish</a>
 </h3>
 
 ```typescript
@@ -1401,7 +1401,7 @@ republish?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L145">property s3</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L146">property s3</a>
 </h3>
 
 ```typescript
@@ -1409,7 +1409,7 @@ s3?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L146">property sns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L147">property sns</a>
 </h3>
 
 ```typescript
@@ -1417,7 +1417,7 @@ sns?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L150">property sql</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L151">property sql</a>
 </h3>
 
 ```typescript
@@ -1428,7 +1428,7 @@ sql?: pulumi.Input<string>;
 The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L154">property sqlVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L155">property sqlVersion</a>
 </h3>
 
 ```typescript
@@ -1439,7 +1439,7 @@ sqlVersion?: pulumi.Input<string>;
 The version of the SQL rules engine to use when evaluating the rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L155">property sqs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts#L156">property sqs</a>
 </h3>
 
 ```typescript

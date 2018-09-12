@@ -7,7 +7,7 @@ title: Module compute
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Flavor">class Flavor</a>
-* <a href="#FloatingIP">class FloatingIP</a>
+* <a href="#FloatingIp">class FloatingIp</a>
 * <a href="#FloatingIpAssociate">class FloatingIpAssociate</a>
 * <a href="#Instance">class Instance</a>
 * <a href="#Keypair">class Keypair</a>
@@ -18,10 +18,10 @@ title: Module compute
 * <a href="#getKeypair">function getKeypair</a>
 * <a href="#FlavorArgs">interface FlavorArgs</a>
 * <a href="#FlavorState">interface FlavorState</a>
-* <a href="#FloatingIPArgs">interface FloatingIPArgs</a>
-* <a href="#FloatingIPState">interface FloatingIPState</a>
+* <a href="#FloatingIpArgs">interface FloatingIpArgs</a>
 * <a href="#FloatingIpAssociateArgs">interface FloatingIpAssociateArgs</a>
 * <a href="#FloatingIpAssociateState">interface FloatingIpAssociateState</a>
+* <a href="#FloatingIpState">interface FloatingIpState</a>
 * <a href="#GetFlavorArgs">interface GetFlavorArgs</a>
 * <a href="#GetFlavorResult">interface GetFlavorResult</a>
 * <a href="#GetKeypairArgs">interface GetKeypairArgs</a>
@@ -37,17 +37,17 @@ title: Module compute
 * <a href="#VolumeAttachArgs">interface VolumeAttachArgs</a>
 * <a href="#VolumeAttachState">interface VolumeAttachState</a>
 
-<a href="/compute/flavor.ts">compute/flavor.ts</a> <a href="/compute/floatingIP.ts">compute/floatingIP.ts</a> <a href="/compute/floatingIpAssociate.ts">compute/floatingIpAssociate.ts</a> <a href="/compute/getFlavor.ts">compute/getFlavor.ts</a> <a href="/compute/getKeypair.ts">compute/getKeypair.ts</a> <a href="/compute/instance.ts">compute/instance.ts</a> <a href="/compute/keypair.ts">compute/keypair.ts</a> <a href="/compute/secGroup.ts">compute/secGroup.ts</a> <a href="/compute/serverGroup.ts">compute/serverGroup.ts</a> <a href="/compute/volumeAttach.ts">compute/volumeAttach.ts</a> 
+<a href="/compute/flavor.ts">compute/flavor.ts</a> <a href="/compute/floatingIp.ts">compute/floatingIp.ts</a> <a href="/compute/floatingIpAssociate.ts">compute/floatingIpAssociate.ts</a> <a href="/compute/getFlavor.ts">compute/getFlavor.ts</a> <a href="/compute/getKeypair.ts">compute/getKeypair.ts</a> <a href="/compute/instance.ts">compute/instance.ts</a> <a href="/compute/keypair.ts">compute/keypair.ts</a> <a href="/compute/secGroup.ts">compute/secGroup.ts</a> <a href="/compute/serverGroup.ts">compute/serverGroup.ts</a> <a href="/compute/volumeAttach.ts">compute/volumeAttach.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Flavor">
-<a class="pdoc-member-name" href="/compute/flavor.ts#L9">class Flavor</a>
+<a class="pdoc-member-name" href="/compute/flavor.ts#L10">class Flavor</a>
 </h2>
 
 Manages a V2 flavor resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L68">constructor</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L69">constructor</a>
 </h3>
 
 ```typescript
@@ -62,7 +62,7 @@ Create a Flavor resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -94,7 +94,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L26">property disk</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L27">property disk</a>
 </h3>
 
 ```typescript
@@ -106,7 +106,7 @@ The amount of disk space in gigabytes to use for the root
 (/) partition. Changing this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L27">property ephemeral</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L28">property ephemeral</a>
 </h3>
 
 ```typescript
@@ -114,7 +114,7 @@ public ephemeral: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L31">property extraSpecs</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L32">property extraSpecs</a>
 </h3>
 
 ```typescript
@@ -137,7 +137,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L36">property isPublic</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L37">property isPublic</a>
 </h3>
 
 ```typescript
@@ -149,7 +149,7 @@ Whether the flavor is public. Changing this creates
 a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L41">property name</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -161,7 +161,7 @@ A unique name for the flavor. Changing this creates a new
 flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L46">property ram</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L47">property ram</a>
 </h3>
 
 ```typescript
@@ -173,7 +173,7 @@ The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L53">property region</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L54">property region</a>
 </h3>
 
 ```typescript
@@ -187,7 +187,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L58">property rxTxFactor</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L59">property rxTxFactor</a>
 </h3>
 
 ```typescript
@@ -199,7 +199,7 @@ RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L63">property swap</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L64">property swap</a>
 </h3>
 
 ```typescript
@@ -223,7 +223,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L68">property vcpus</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L69">property vcpus</a>
 </h3>
 
 ```typescript
@@ -234,8 +234,8 @@ public vcpus: pulumi.Output<number>;
 The number of virtual CPUs to use. Changing this creates
 a new flavor.
 
-<h2 class="pdoc-module-header" id="FloatingIP">
-<a class="pdoc-member-name" href="/compute/floatingIP.ts#L15">class FloatingIP</a>
+<h2 class="pdoc-module-header" id="FloatingIp">
+<a class="pdoc-member-name" href="/compute/floatingIp.ts#L16">class FloatingIp</a>
 </h2>
 
 Manages a V2 floating IP resource within OpenStack Nova (compute)
@@ -243,34 +243,34 @@ that can be used for compute instances.
 
 Please note that managing floating IPs through the OpenStack Compute API has
 been deprecated. Unless you are using an older OpenStack environment, it is
-recommended to use the [`openstack_networking_floatingip_v2`](networking_floatingip_v2.html)
+recommended to use the `openstack_networking_floatingip_v2`
 resource instead, which uses the OpenStack Networking API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L52">constructor</a>
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L53">constructor</a>
 </h3>
 
 ```typescript
-new FloatingIP(name: string, args: FloatingIPArgs, opts?: pulumi.CustomResourceOptions)
+new FloatingIp(name: string, args: FloatingIpArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
-Create a FloatingIP resource with the given unique name, arguments, and options.
+Create a FloatingIp resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L24">method get</a>
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L25">method get</a>
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FloatingIPState): FloatingIP
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FloatingIpState): FloatingIp
 ```
 
 
-Get an existing FloatingIP resource's state with the given name, ID, and optional extra
+Get an existing FloatingIp resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
@@ -294,7 +294,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L31">property address</a>
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L32">property address</a>
 </h3>
 
 ```typescript
@@ -305,7 +305,7 @@ public address: pulumi.Output<string>;
 The actual floating IP address itself.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L35">property fixedIp</a>
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L36">property fixedIp</a>
 </h3>
 
 ```typescript
@@ -328,7 +328,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L39">property instanceId</a>
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L40">property instanceId</a>
 </h3>
 
 ```typescript
@@ -339,7 +339,7 @@ public instanceId: pulumi.Output<string>;
 UUID of the compute instance associated with the floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L44">property pool</a>
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L45">property pool</a>
 </h3>
 
 ```typescript
@@ -351,7 +351,7 @@ The name of the pool from which to obtain the floating
 IP. Changing this creates a new floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L52">property region</a>
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L53">property region</a>
 </h3>
 
 ```typescript
@@ -378,14 +378,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="FloatingIpAssociate">
-<a class="pdoc-member-name" href="/compute/floatingIpAssociate.ts#L10">class FloatingIpAssociate</a>
+<a class="pdoc-member-name" href="/compute/floatingIpAssociate.ts#L11">class FloatingIpAssociate</a>
 </h2>
 
 Associate a floating IP to an instance. This can be used instead of the
 `floating_ip` options in `openstack_compute_instance_v2`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L48">constructor</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L49">constructor</a>
 </h3>
 
 ```typescript
@@ -400,7 +400,7 @@ Create a FloatingIpAssociate resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L19">method get</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -432,7 +432,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L26">property fixedIp</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L27">property fixedIp</a>
 </h3>
 
 ```typescript
@@ -443,7 +443,7 @@ public fixedIp: pulumi.Output<string | undefined>;
 The specific IP address to direct traffic to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L30">property floatingIp</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L31">property floatingIp</a>
 </h3>
 
 ```typescript
@@ -466,7 +466,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L34">property instanceId</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L35">property instanceId</a>
 </h3>
 
 ```typescript
@@ -477,7 +477,7 @@ public instanceId: pulumi.Output<string>;
 The instance to associte the floating IP with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L41">property region</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L42">property region</a>
 </h3>
 
 ```typescript
@@ -503,7 +503,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L48">property waitUntilAssociated</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L49">property waitUntilAssociated</a>
 </h3>
 
 ```typescript
@@ -517,7 +517,7 @@ option to have Terraform poll the instance until the floating IP has been
 associated. Defaults to false.
 
 <h2 class="pdoc-module-header" id="Instance">
-<a class="pdoc-member-name" href="/compute/instance.ts#L9">class Instance</a>
+<a class="pdoc-member-name" href="/compute/instance.ts#L10">class Instance</a>
 </h2>
 
 Manages a V2 VM instance resource within OpenStack.
@@ -538,7 +538,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -570,7 +570,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L26">property accessIpV4</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L27">property accessIpV4</a>
 </h3>
 
 ```typescript
@@ -582,7 +582,7 @@ The first detected Fixed IPv4 address _or_ the
 Floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L30">property accessIpV6</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L31">property accessIpV6</a>
 </h3>
 
 ```typescript
@@ -593,7 +593,7 @@ public accessIpV6: pulumi.Output<string>;
 The first detected Fixed IPv6 address.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L35">property adminPass</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L36">property adminPass</a>
 </h3>
 
 ```typescript
@@ -605,7 +605,7 @@ The administrative password to assign to the server.
 Changing this changes the root password on the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L40">property allMetadata</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L41">property allMetadata</a>
 </h3>
 
 ```typescript
@@ -617,7 +617,7 @@ Contains all instance metadata, even metadata not set
 by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L45">property availabilityZone</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L46">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -629,7 +629,7 @@ The availability zone in which to create
 the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L54">property blockDevices</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L55">property blockDevices</a>
 </h3>
 
 ```typescript
@@ -645,7 +645,7 @@ following [reference](http://docs.openstack.org/developer/nova/block_device_mapp
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L59">property configDrive</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L60">property configDrive</a>
 </h3>
 
 ```typescript
@@ -657,7 +657,7 @@ Whether to use the config_drive feature to
 configure the instance. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L64">property flavorId</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L65">property flavorId</a>
 </h3>
 
 ```typescript
@@ -669,7 +669,7 @@ The flavor ID of
 the desired flavor for the server. Changing this resizes the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L69">property flavorName</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L70">property flavorName</a>
 </h3>
 
 ```typescript
@@ -681,7 +681,7 @@ The name of the
 desired flavor for the server. Changing this resizes the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L75">property forceDelete</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L76">property forceDelete</a>
 </h3>
 
 ```typescript
@@ -706,7 +706,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L81">property imageId</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L82">property imageId</a>
 </h3>
 
 ```typescript
@@ -719,7 +719,7 @@ from a volume. Do not specify if booting from a volume.) The image ID of
 the desired image for the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L87">property imageName</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L88">property imageName</a>
 </h3>
 
 ```typescript
@@ -732,7 +732,7 @@ from a volume. Do not specify if booting from a volume.) The name of the
 desired image for the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L93">property keyPair</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L94">property keyPair</a>
 </h3>
 
 ```typescript
@@ -745,7 +745,7 @@ pair must already be created and associated with the tenant's account.
 Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L98">property metadata</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L99">property metadata</a>
 </h3>
 
 ```typescript
@@ -765,8 +765,7 @@ public name: pulumi.Output<string>;
 ```
 
 
-The human-readable
-name of the network. Changing this creates a new server.
+A unique name for the resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="/compute/instance.ts#L109">property networks</a>
@@ -886,7 +885,7 @@ The user data to provide when launching the instance.
 Changing this creates a new server.
 
 <h2 class="pdoc-module-header" id="Keypair">
-<a class="pdoc-member-name" href="/compute/keypair.ts#L15">class Keypair</a>
+<a class="pdoc-member-name" href="/compute/keypair.ts#L16">class Keypair</a>
 </h2>
 
 Manages a V2 keypair resource within OpenStack.
@@ -898,7 +897,7 @@ a private key file outside of Terraform and distribute it securely
 to the system where Terraform will be run.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L59">constructor</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L60">constructor</a>
 </h3>
 
 ```typescript
@@ -913,7 +912,7 @@ Create a Keypair resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L24">method get</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -945,7 +944,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L31">property fingerprint</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L32">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -968,7 +967,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L36">property name</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L37">property name</a>
 </h3>
 
 ```typescript
@@ -980,7 +979,7 @@ A unique name for the keypair. Changing this creates a new
 keypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L40">property privateKey</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L41">property privateKey</a>
 </h3>
 
 ```typescript
@@ -991,7 +990,7 @@ public privateKey: pulumi.Output<string>;
 The generated private key when no public key is specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L48">property publicKey</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L49">property publicKey</a>
 </h3>
 
 ```typescript
@@ -1006,7 +1005,7 @@ created, then destroying this resource means you will lose access to that
 keypair forever.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L55">property region</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L56">property region</a>
 </h3>
 
 ```typescript
@@ -1032,7 +1031,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L59">property valueSpecs</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L60">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1043,19 +1042,19 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="SecGroup">
-<a class="pdoc-member-name" href="/compute/secGroup.ts#L15">class SecGroup</a>
+<a class="pdoc-member-name" href="/compute/secGroup.ts#L16">class SecGroup</a>
 </h2>
 
 Manages a V2 security group resource within OpenStack.
 
 Please note that managing security groups through the OpenStack Compute API
 has been deprecated. Unless you are using an older OpenStack environment, it is
-recommended to use the [`openstack_networking_secgroup_v2`](networking_secgroup_v2.html)
-and [`openstack_networking_secgroup_rule_v2`](networking_secgroup_rule_v2.html)
+recommended to use the `openstack_networking_secgroup_v2`
+and `openstack_networking_secgroup_rule_v2`
 resources instead, which uses the OpenStack Networking API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L51">constructor</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L52">constructor</a>
 </h3>
 
 ```typescript
@@ -1070,7 +1069,7 @@ Create a SecGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L24">method get</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -1102,7 +1101,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L32">property description</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L33">property description</a>
 </h3>
 
 ```typescript
@@ -1126,7 +1125,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L37">property name</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -1138,7 +1137,7 @@ A unique name for the security group. Changing this
 updates the `name` of an existing security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L44">property region</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L45">property region</a>
 </h3>
 
 ```typescript
@@ -1152,7 +1151,7 @@ A Compute client is needed to create a security group. If omitted, the
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L51">property rules</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L52">property rules</a>
 </h3>
 
 ```typescript
@@ -1178,13 +1177,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ServerGroup">
-<a class="pdoc-member-name" href="/compute/serverGroup.ts#L9">class ServerGroup</a>
+<a class="pdoc-member-name" href="/compute/serverGroup.ts#L10">class ServerGroup</a>
 </h2>
 
 Manages a V2 Server Group resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L47">constructor</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L48">constructor</a>
 </h3>
 
 ```typescript
@@ -1199,7 +1198,7 @@ Create a ServerGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1243,7 +1242,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L25">property members</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L26">property members</a>
 </h3>
 
 ```typescript
@@ -1254,7 +1253,7 @@ public members: pulumi.Output<string[]>;
 The instances that are part of this server group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L30">property name</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L31">property name</a>
 </h3>
 
 ```typescript
@@ -1266,7 +1265,7 @@ A unique name for the server group. Changing this creates
 a new server group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L37">property policies</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L38">property policies</a>
 </h3>
 
 ```typescript
@@ -1280,7 +1279,7 @@ the Policies section for more information. Changing this creates a new
 server group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L43">property region</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L44">property region</a>
 </h3>
 
 ```typescript
@@ -1305,7 +1304,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L47">property valueSpecs</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L48">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1316,14 +1315,14 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="VolumeAttach">
-<a class="pdoc-member-name" href="/compute/volumeAttach.ts#L10">class VolumeAttach</a>
+<a class="pdoc-member-name" href="/compute/volumeAttach.ts#L11">class VolumeAttach</a>
 </h2>
 
 Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L46">constructor</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L47">constructor</a>
 </h3>
 
 ```typescript
@@ -1338,7 +1337,7 @@ Create a VolumeAttach resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L19">method get</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -1370,7 +1369,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L31">property device</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L32">property device</a>
 </h3>
 
 ```typescript
@@ -1398,7 +1397,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L35">property instanceId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L36">property instanceId</a>
 </h3>
 
 ```typescript
@@ -1409,7 +1408,7 @@ public instanceId: pulumi.Output<string>;
 The ID of the Instance to attach the Volume to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L42">property region</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L43">property region</a>
 </h3>
 
 ```typescript
@@ -1435,7 +1434,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L46">property volumeId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L47">property volumeId</a>
 </h3>
 
 ```typescript
@@ -1446,7 +1445,7 @@ public volumeId: pulumi.Output<string>;
 The ID of the Volume to attach to an Instance.
 
 <h2 class="pdoc-module-header" id="getFlavor">
-<a class="pdoc-member-name" href="/compute/getFlavor.ts#L9">function getFlavor</a>
+<a class="pdoc-member-name" href="/compute/getFlavor.ts#L10">function getFlavor</a>
 </h2>
 
 ```typescript
@@ -1457,7 +1456,7 @@ getFlavor(args?: GetFlavorArgs, opts?: pulumi.InvokeOptions): Promise<GetFlavorR
 Use this data source to get the ID of an available OpenStack flavor.
 
 <h2 class="pdoc-module-header" id="getKeypair">
-<a class="pdoc-member-name" href="/compute/getKeypair.ts#L9">function getKeypair</a>
+<a class="pdoc-member-name" href="/compute/getKeypair.ts#L10">function getKeypair</a>
 </h2>
 
 ```typescript
@@ -1468,13 +1467,13 @@ getKeypair(args: GetKeypairArgs, opts?: pulumi.InvokeOptions): Promise<GetKeypai
 Use this data source to get the ID and public key of an OpenStack keypair.
 
 <h2 class="pdoc-module-header" id="FlavorArgs">
-<a class="pdoc-member-name" href="/compute/flavor.ts#L174">interface FlavorArgs</a>
+<a class="pdoc-member-name" href="/compute/flavor.ts#L175">interface FlavorArgs</a>
 </h2>
 
 The set of arguments for constructing a Flavor resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L179">property disk</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L180">property disk</a>
 </h3>
 
 ```typescript
@@ -1486,7 +1485,7 @@ The amount of disk space in gigabytes to use for the root
 (/) partition. Changing this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L180">property ephemeral</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L181">property ephemeral</a>
 </h3>
 
 ```typescript
@@ -1494,7 +1493,7 @@ ephemeral?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L184">property extraSpecs</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L185">property extraSpecs</a>
 </h3>
 
 ```typescript
@@ -1505,7 +1504,7 @@ extraSpecs?: pulumi.Input<{ ... }>;
 Key/Value pairs of metadata for the flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L189">property isPublic</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L190">property isPublic</a>
 </h3>
 
 ```typescript
@@ -1517,7 +1516,7 @@ Whether the flavor is public. Changing this creates
 a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L194">property name</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L195">property name</a>
 </h3>
 
 ```typescript
@@ -1529,7 +1528,7 @@ A unique name for the flavor. Changing this creates a new
 flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L199">property ram</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L200">property ram</a>
 </h3>
 
 ```typescript
@@ -1541,7 +1540,7 @@ The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L206">property region</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L207">property region</a>
 </h3>
 
 ```typescript
@@ -1555,7 +1554,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L211">property rxTxFactor</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L212">property rxTxFactor</a>
 </h3>
 
 ```typescript
@@ -1567,7 +1566,7 @@ RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L216">property swap</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L217">property swap</a>
 </h3>
 
 ```typescript
@@ -1579,7 +1578,7 @@ The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L221">property vcpus</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L222">property vcpus</a>
 </h3>
 
 ```typescript
@@ -1591,13 +1590,13 @@ The number of virtual CPUs to use. Changing this creates
 a new flavor.
 
 <h2 class="pdoc-module-header" id="FlavorState">
-<a class="pdoc-member-name" href="/compute/flavor.ts#L121">interface FlavorState</a>
+<a class="pdoc-member-name" href="/compute/flavor.ts#L122">interface FlavorState</a>
 </h2>
 
 Input properties used for looking up and filtering Flavor resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L126">property disk</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L127">property disk</a>
 </h3>
 
 ```typescript
@@ -1609,7 +1608,7 @@ The amount of disk space in gigabytes to use for the root
 (/) partition. Changing this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L127">property ephemeral</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L128">property ephemeral</a>
 </h3>
 
 ```typescript
@@ -1617,7 +1616,7 @@ ephemeral?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L131">property extraSpecs</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L132">property extraSpecs</a>
 </h3>
 
 ```typescript
@@ -1628,7 +1627,7 @@ extraSpecs?: pulumi.Input<{ ... }>;
 Key/Value pairs of metadata for the flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L136">property isPublic</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L137">property isPublic</a>
 </h3>
 
 ```typescript
@@ -1640,7 +1639,7 @@ Whether the flavor is public. Changing this creates
 a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L141">property name</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L142">property name</a>
 </h3>
 
 ```typescript
@@ -1652,7 +1651,7 @@ A unique name for the flavor. Changing this creates a new
 flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L146">property ram</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L147">property ram</a>
 </h3>
 
 ```typescript
@@ -1664,7 +1663,7 @@ The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L153">property region</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L154">property region</a>
 </h3>
 
 ```typescript
@@ -1678,7 +1677,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L158">property rxTxFactor</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L159">property rxTxFactor</a>
 </h3>
 
 ```typescript
@@ -1690,7 +1689,7 @@ RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L163">property swap</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L164">property swap</a>
 </h3>
 
 ```typescript
@@ -1702,7 +1701,7 @@ The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/flavor.ts#L168">property vcpus</a>
+<a class="pdoc-child-name" href="/compute/flavor.ts#L169">property vcpus</a>
 </h3>
 
 ```typescript
@@ -1713,14 +1712,14 @@ vcpus?: pulumi.Input<number>;
 The number of virtual CPUs to use. Changing this creates
 a new flavor.
 
-<h2 class="pdoc-module-header" id="FloatingIPArgs">
-<a class="pdoc-member-name" href="/compute/floatingIP.ts#L120">interface FloatingIPArgs</a>
+<h2 class="pdoc-module-header" id="FloatingIpArgs">
+<a class="pdoc-member-name" href="/compute/floatingIp.ts#L121">interface FloatingIpArgs</a>
 </h2>
 
-The set of arguments for constructing a FloatingIP resource.
+The set of arguments for constructing a FloatingIp resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L125">property pool</a>
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L126">property pool</a>
 </h3>
 
 ```typescript
@@ -1732,73 +1731,7 @@ The name of the pool from which to obtain the floating
 IP. Changing this creates a new floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L133">property region</a>
-</h3>
-
-```typescript
-region?: pulumi.Input<string>;
-```
-
-
-The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a floating IP that can be used with
-a compute instance. If omitted, the `region` argument of the provider
-is used. Changing this creates a new floating IP (which may or may not
-have a different address).
-
-<h2 class="pdoc-module-header" id="FloatingIPState">
-<a class="pdoc-member-name" href="/compute/floatingIP.ts#L89">interface FloatingIPState</a>
-</h2>
-
-Input properties used for looking up and filtering FloatingIP resources.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L93">property address</a>
-</h3>
-
-```typescript
-address?: pulumi.Input<string>;
-```
-
-
-The actual floating IP address itself.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L97">property fixedIp</a>
-</h3>
-
-```typescript
-fixedIp?: pulumi.Input<string>;
-```
-
-
-The fixed IP address corresponding to the floating IP.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L101">property instanceId</a>
-</h3>
-
-```typescript
-instanceId?: pulumi.Input<string>;
-```
-
-
-UUID of the compute instance associated with the floating IP.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L106">property pool</a>
-</h3>
-
-```typescript
-pool?: pulumi.Input<string>;
-```
-
-
-The name of the pool from which to obtain the floating
-IP. Changing this creates a new floating IP.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIP.ts#L114">property region</a>
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L134">property region</a>
 </h3>
 
 ```typescript
@@ -1813,13 +1746,13 @@ is used. Changing this creates a new floating IP (which may or may not
 have a different address).
 
 <h2 class="pdoc-module-header" id="FloatingIpAssociateArgs">
-<a class="pdoc-member-name" href="/compute/floatingIpAssociate.ts#L120">interface FloatingIpAssociateArgs</a>
+<a class="pdoc-member-name" href="/compute/floatingIpAssociate.ts#L121">interface FloatingIpAssociateArgs</a>
 </h2>
 
 The set of arguments for constructing a FloatingIpAssociate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L124">property fixedIp</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L125">property fixedIp</a>
 </h3>
 
 ```typescript
@@ -1830,7 +1763,7 @@ fixedIp?: pulumi.Input<string>;
 The specific IP address to direct traffic to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L128">property floatingIp</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L129">property floatingIp</a>
 </h3>
 
 ```typescript
@@ -1841,7 +1774,7 @@ floatingIp: pulumi.Input<string>;
 The floating IP to associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L132">property instanceId</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L133">property instanceId</a>
 </h3>
 
 ```typescript
@@ -1852,7 +1785,7 @@ instanceId: pulumi.Input<string>;
 The instance to associte the floating IP with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L139">property region</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L140">property region</a>
 </h3>
 
 ```typescript
@@ -1866,7 +1799,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new floatingip_associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L146">property waitUntilAssociated</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L147">property waitUntilAssociated</a>
 </h3>
 
 ```typescript
@@ -1880,13 +1813,13 @@ option to have Terraform poll the instance until the floating IP has been
 associated. Defaults to false.
 
 <h2 class="pdoc-module-header" id="FloatingIpAssociateState">
-<a class="pdoc-member-name" href="/compute/floatingIpAssociate.ts#L88">interface FloatingIpAssociateState</a>
+<a class="pdoc-member-name" href="/compute/floatingIpAssociate.ts#L89">interface FloatingIpAssociateState</a>
 </h2>
 
 Input properties used for looking up and filtering FloatingIpAssociate resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L92">property fixedIp</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L93">property fixedIp</a>
 </h3>
 
 ```typescript
@@ -1897,7 +1830,7 @@ fixedIp?: pulumi.Input<string>;
 The specific IP address to direct traffic to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L96">property floatingIp</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L97">property floatingIp</a>
 </h3>
 
 ```typescript
@@ -1908,7 +1841,7 @@ floatingIp?: pulumi.Input<string>;
 The floating IP to associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L100">property instanceId</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L101">property instanceId</a>
 </h3>
 
 ```typescript
@@ -1919,7 +1852,7 @@ instanceId?: pulumi.Input<string>;
 The instance to associte the floating IP with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L107">property region</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L108">property region</a>
 </h3>
 
 ```typescript
@@ -1933,7 +1866,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new floatingip_associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L114">property waitUntilAssociated</a>
+<a class="pdoc-child-name" href="/compute/floatingIpAssociate.ts#L115">property waitUntilAssociated</a>
 </h3>
 
 ```typescript
@@ -1946,14 +1879,80 @@ does not automatically wait until the association has finished, set this
 option to have Terraform poll the instance until the floating IP has been
 associated. Defaults to false.
 
+<h2 class="pdoc-module-header" id="FloatingIpState">
+<a class="pdoc-member-name" href="/compute/floatingIp.ts#L90">interface FloatingIpState</a>
+</h2>
+
+Input properties used for looking up and filtering FloatingIp resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L94">property address</a>
+</h3>
+
+```typescript
+address?: pulumi.Input<string>;
+```
+
+
+The actual floating IP address itself.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L98">property fixedIp</a>
+</h3>
+
+```typescript
+fixedIp?: pulumi.Input<string>;
+```
+
+
+The fixed IP address corresponding to the floating IP.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L102">property instanceId</a>
+</h3>
+
+```typescript
+instanceId?: pulumi.Input<string>;
+```
+
+
+UUID of the compute instance associated with the floating IP.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L107">property pool</a>
+</h3>
+
+```typescript
+pool?: pulumi.Input<string>;
+```
+
+
+The name of the pool from which to obtain the floating
+IP. Changing this creates a new floating IP.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/floatingIp.ts#L115">property region</a>
+</h3>
+
+```typescript
+region?: pulumi.Input<string>;
+```
+
+
+The region in which to obtain the V2 Compute client.
+A Compute client is needed to create a floating IP that can be used with
+a compute instance. If omitted, the `region` argument of the provider
+is used. Changing this creates a new floating IP (which may or may not
+have a different address).
+
 <h2 class="pdoc-module-header" id="GetFlavorArgs">
-<a class="pdoc-member-name" href="/compute/getFlavor.ts#L27">interface GetFlavorArgs</a>
+<a class="pdoc-member-name" href="/compute/getFlavor.ts#L28">interface GetFlavorArgs</a>
 </h2>
 
 A collection of arguments for invoking getFlavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L31">property disk</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L32">property disk</a>
 </h3>
 
 ```typescript
@@ -1964,7 +1963,7 @@ disk?: number;
 The exact amount of disk (in gigabytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L35">property minDisk</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L36">property minDisk</a>
 </h3>
 
 ```typescript
@@ -1975,7 +1974,7 @@ minDisk?: number;
 The minimum amount of disk (in gigabytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L39">property minRam</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L40">property minRam</a>
 </h3>
 
 ```typescript
@@ -1986,7 +1985,7 @@ minRam?: number;
 The minimum amount of RAM (in megabytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L43">property name</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L44">property name</a>
 </h3>
 
 ```typescript
@@ -1997,7 +1996,7 @@ name?: string;
 The name of the flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L47">property ram</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L48">property ram</a>
 </h3>
 
 ```typescript
@@ -2008,7 +2007,7 @@ ram?: number;
 The exact amount of RAM (in megabytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L52">property region</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L53">property region</a>
 </h3>
 
 ```typescript
@@ -2020,7 +2019,7 @@ The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L56">property rxTxFactor</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L57">property rxTxFactor</a>
 </h3>
 
 ```typescript
@@ -2031,7 +2030,7 @@ rxTxFactor?: number;
 The `rx_tx_factor` of the flavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L60">property swap</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L61">property swap</a>
 </h3>
 
 ```typescript
@@ -2042,7 +2041,7 @@ swap?: number;
 The amount of swap (in gigabytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L64">property vcpus</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L65">property vcpus</a>
 </h3>
 
 ```typescript
@@ -2053,13 +2052,13 @@ vcpus?: number;
 The amount of VCPUs.
 
 <h2 class="pdoc-module-header" id="GetFlavorResult">
-<a class="pdoc-member-name" href="/compute/getFlavor.ts#L70">interface GetFlavorResult</a>
+<a class="pdoc-member-name" href="/compute/getFlavor.ts#L71">interface GetFlavorResult</a>
 </h2>
 
 A collection of values returned by getFlavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L79">property id</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L80">property id</a>
 </h3>
 
 ```typescript
@@ -2070,7 +2069,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L74">property isPublic</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L75">property isPublic</a>
 </h3>
 
 ```typescript
@@ -2081,7 +2080,7 @@ isPublic: boolean;
 Whether the flavor is public or private.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L75">property region</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L76">property region</a>
 </h3>
 
 ```typescript
@@ -2089,13 +2088,13 @@ region: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetKeypairArgs">
-<a class="pdoc-member-name" href="/compute/getKeypair.ts#L19">interface GetKeypairArgs</a>
+<a class="pdoc-member-name" href="/compute/getKeypair.ts#L20">interface GetKeypairArgs</a>
 </h2>
 
 A collection of arguments for invoking getKeypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getKeypair.ts#L23">property name</a>
+<a class="pdoc-child-name" href="/compute/getKeypair.ts#L24">property name</a>
 </h3>
 
 ```typescript
@@ -2106,7 +2105,7 @@ name: string;
 The unique name of the keypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getKeypair.ts#L28">property region</a>
+<a class="pdoc-child-name" href="/compute/getKeypair.ts#L29">property region</a>
 </h3>
 
 ```typescript
@@ -2118,13 +2117,13 @@ The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used.
 
 <h2 class="pdoc-module-header" id="GetKeypairResult">
-<a class="pdoc-member-name" href="/compute/getKeypair.ts#L34">interface GetKeypairResult</a>
+<a class="pdoc-member-name" href="/compute/getKeypair.ts#L35">interface GetKeypairResult</a>
 </h2>
 
 A collection of values returned by getKeypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getKeypair.ts#L46">property id</a>
+<a class="pdoc-child-name" href="/compute/getKeypair.ts#L47">property id</a>
 </h3>
 
 ```typescript
@@ -2135,7 +2134,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getKeypair.ts#L38">property publicKey</a>
+<a class="pdoc-child-name" href="/compute/getKeypair.ts#L39">property publicKey</a>
 </h3>
 
 ```typescript
@@ -2146,7 +2145,7 @@ publicKey: string;
 The OpenSSH-formatted public key of the keypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getKeypair.ts#L42">property region</a>
+<a class="pdoc-child-name" href="/compute/getKeypair.ts#L43">property region</a>
 </h3>
 
 ```typescript
@@ -2157,13 +2156,13 @@ region: string;
 See Argument Reference above.
 
 <h2 class="pdoc-module-header" id="InstanceArgs">
-<a class="pdoc-member-name" href="/compute/instance.ts#L359">interface InstanceArgs</a>
+<a class="pdoc-member-name" href="/compute/instance.ts#L358">interface InstanceArgs</a>
 </h2>
 
 The set of arguments for constructing a Instance resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L364">property accessIpV4</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L363">property accessIpV4</a>
 </h3>
 
 ```typescript
@@ -2175,7 +2174,7 @@ The first detected Fixed IPv4 address _or_ the
 Floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L368">property accessIpV6</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L367">property accessIpV6</a>
 </h3>
 
 ```typescript
@@ -2186,7 +2185,7 @@ accessIpV6?: pulumi.Input<string>;
 The first detected Fixed IPv6 address.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L373">property adminPass</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L372">property adminPass</a>
 </h3>
 
 ```typescript
@@ -2198,7 +2197,7 @@ The administrative password to assign to the server.
 Changing this changes the root password on the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L378">property availabilityZone</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L377">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -2210,7 +2209,7 @@ The availability zone in which to create
 the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L387">property blockDevices</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L386">property blockDevices</a>
 </h3>
 
 ```typescript
@@ -2226,7 +2225,7 @@ following [reference](http://docs.openstack.org/developer/nova/block_device_mapp
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L392">property configDrive</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L391">property configDrive</a>
 </h3>
 
 ```typescript
@@ -2238,7 +2237,7 @@ Whether to use the config_drive feature to
 configure the instance. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L397">property flavorId</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L396">property flavorId</a>
 </h3>
 
 ```typescript
@@ -2250,7 +2249,7 @@ The flavor ID of
 the desired flavor for the server. Changing this resizes the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L402">property flavorName</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L401">property flavorName</a>
 </h3>
 
 ```typescript
@@ -2262,7 +2261,7 @@ The name of the
 desired flavor for the server. Changing this resizes the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L408">property forceDelete</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L407">property forceDelete</a>
 </h3>
 
 ```typescript
@@ -2275,7 +2274,7 @@ forcefully deleted. This is useful for environments that have reclaim / soft
 deletion enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L414">property imageId</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L413">property imageId</a>
 </h3>
 
 ```typescript
@@ -2288,7 +2287,7 @@ from a volume. Do not specify if booting from a volume.) The image ID of
 the desired image for the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L420">property imageName</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L419">property imageName</a>
 </h3>
 
 ```typescript
@@ -2301,7 +2300,7 @@ from a volume. Do not specify if booting from a volume.) The name of the
 desired image for the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L426">property keyPair</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L425">property keyPair</a>
 </h3>
 
 ```typescript
@@ -2314,7 +2313,7 @@ pair must already be created and associated with the tenant's account.
 Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L431">property metadata</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L430">property metadata</a>
 </h3>
 
 ```typescript
@@ -2326,7 +2325,7 @@ Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L436">property name</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L434">property name</a>
 </h3>
 
 ```typescript
@@ -2334,11 +2333,10 @@ name?: pulumi.Input<string>;
 ```
 
 
-The human-readable
-name of the network. Changing this creates a new server.
+A unique name for the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L442">property networks</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L440">property networks</a>
 </h3>
 
 ```typescript
@@ -2351,7 +2349,7 @@ instance. The network object structure is documented below. Changing this
 creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L448">property personalities</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L446">property personalities</a>
 </h3>
 
 ```typescript
@@ -2364,7 +2362,7 @@ defining one or more files and their contents. The personality structure
 is described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L455">property powerState</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L453">property powerState</a>
 </h3>
 
 ```typescript
@@ -2378,7 +2376,7 @@ the VM will be stopped immediately after build and the provisioners like
 remote-exec or files are not supported.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L461">property region</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L459">property region</a>
 </h3>
 
 ```typescript
@@ -2391,7 +2389,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L466">property schedulerHints</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L464">property schedulerHints</a>
 </h3>
 
 ```typescript
@@ -2403,7 +2401,7 @@ Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L474">property securityGroups</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L472">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -2418,7 +2416,7 @@ instance to networks using Ports, place the security groups on the Port
 and not the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L480">property stopBeforeDestroy</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L478">property stopBeforeDestroy</a>
 </h3>
 
 ```typescript
@@ -2431,7 +2429,7 @@ before destroying it, thus giving chance for guest OS daemons to stop correctly.
 If instance doesn't stop within timeout, it will be destroyed anyway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L485">property userData</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L483">property userData</a>
 </h3>
 
 ```typescript
@@ -2624,7 +2622,7 @@ Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L304">property name</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L303">property name</a>
 </h3>
 
 ```typescript
@@ -2632,11 +2630,10 @@ name?: pulumi.Input<string>;
 ```
 
 
-The human-readable
-name of the network. Changing this creates a new server.
+A unique name for the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L310">property networks</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L309">property networks</a>
 </h3>
 
 ```typescript
@@ -2649,7 +2646,7 @@ instance. The network object structure is documented below. Changing this
 creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L316">property personalities</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L315">property personalities</a>
 </h3>
 
 ```typescript
@@ -2662,7 +2659,7 @@ defining one or more files and their contents. The personality structure
 is described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L323">property powerState</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L322">property powerState</a>
 </h3>
 
 ```typescript
@@ -2676,7 +2673,7 @@ the VM will be stopped immediately after build and the provisioners like
 remote-exec or files are not supported.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L329">property region</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L328">property region</a>
 </h3>
 
 ```typescript
@@ -2689,7 +2686,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L334">property schedulerHints</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L333">property schedulerHints</a>
 </h3>
 
 ```typescript
@@ -2701,7 +2698,7 @@ Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L342">property securityGroups</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L341">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -2716,7 +2713,7 @@ instance to networks using Ports, place the security groups on the Port
 and not the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L348">property stopBeforeDestroy</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L347">property stopBeforeDestroy</a>
 </h3>
 
 ```typescript
@@ -2729,7 +2726,7 @@ before destroying it, thus giving chance for guest OS daemons to stop correctly.
 If instance doesn't stop within timeout, it will be destroyed anyway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L353">property userData</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L352">property userData</a>
 </h3>
 
 ```typescript
@@ -2741,13 +2738,13 @@ The user data to provide when launching the instance.
 Changing this creates a new server.
 
 <h2 class="pdoc-module-header" id="KeypairArgs">
-<a class="pdoc-member-name" href="/compute/keypair.ts#L133">interface KeypairArgs</a>
+<a class="pdoc-member-name" href="/compute/keypair.ts#L134">interface KeypairArgs</a>
 </h2>
 
 The set of arguments for constructing a Keypair resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L138">property name</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L139">property name</a>
 </h3>
 
 ```typescript
@@ -2759,7 +2756,7 @@ A unique name for the keypair. Changing this creates a new
 keypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L146">property publicKey</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L147">property publicKey</a>
 </h3>
 
 ```typescript
@@ -2774,7 +2771,7 @@ created, then destroying this resource means you will lose access to that
 keypair forever.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L153">property region</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L154">property region</a>
 </h3>
 
 ```typescript
@@ -2788,7 +2785,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new keypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L157">property valueSpecs</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L158">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -2799,13 +2796,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="KeypairState">
-<a class="pdoc-member-name" href="/compute/keypair.ts#L95">interface KeypairState</a>
+<a class="pdoc-member-name" href="/compute/keypair.ts#L96">interface KeypairState</a>
 </h2>
 
 Input properties used for looking up and filtering Keypair resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L99">property fingerprint</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L100">property fingerprint</a>
 </h3>
 
 ```typescript
@@ -2816,7 +2813,7 @@ fingerprint?: pulumi.Input<string>;
 The fingerprint of the public key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L104">property name</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L105">property name</a>
 </h3>
 
 ```typescript
@@ -2828,7 +2825,7 @@ A unique name for the keypair. Changing this creates a new
 keypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L108">property privateKey</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L109">property privateKey</a>
 </h3>
 
 ```typescript
@@ -2839,7 +2836,7 @@ privateKey?: pulumi.Input<string>;
 The generated private key when no public key is specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L116">property publicKey</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L117">property publicKey</a>
 </h3>
 
 ```typescript
@@ -2854,7 +2851,7 @@ created, then destroying this resource means you will lose access to that
 keypair forever.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L123">property region</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L124">property region</a>
 </h3>
 
 ```typescript
@@ -2868,7 +2865,7 @@ create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new keypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/keypair.ts#L127">property valueSpecs</a>
+<a class="pdoc-child-name" href="/compute/keypair.ts#L128">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -2879,13 +2876,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="SecGroupArgs">
-<a class="pdoc-member-name" href="/compute/secGroup.ts#L116">interface SecGroupArgs</a>
+<a class="pdoc-member-name" href="/compute/secGroup.ts#L117">interface SecGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a SecGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L121">property description</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L122">property description</a>
 </h3>
 
 ```typescript
@@ -2897,7 +2894,7 @@ A description for the security group. Changing this
 updates the `description` of an existing security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L126">property name</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L127">property name</a>
 </h3>
 
 ```typescript
@@ -2909,7 +2906,7 @@ A unique name for the security group. Changing this
 updates the `name` of an existing security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L133">property region</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L134">property region</a>
 </h3>
 
 ```typescript
@@ -2923,7 +2920,7 @@ A Compute client is needed to create a security group. If omitted, the
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L140">property rules</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L141">property rules</a>
 </h3>
 
 ```typescript
@@ -2937,13 +2934,13 @@ security group rules. As shown in the example above, multiple rule blocks
 may be used.
 
 <h2 class="pdoc-module-header" id="SecGroupState">
-<a class="pdoc-member-name" href="/compute/secGroup.ts#L86">interface SecGroupState</a>
+<a class="pdoc-member-name" href="/compute/secGroup.ts#L87">interface SecGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering SecGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L91">property description</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L92">property description</a>
 </h3>
 
 ```typescript
@@ -2955,7 +2952,7 @@ A description for the security group. Changing this
 updates the `description` of an existing security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L96">property name</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L97">property name</a>
 </h3>
 
 ```typescript
@@ -2967,7 +2964,7 @@ A unique name for the security group. Changing this
 updates the `name` of an existing security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L103">property region</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L104">property region</a>
 </h3>
 
 ```typescript
@@ -2981,7 +2978,7 @@ A Compute client is needed to create a security group. If omitted, the
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/secGroup.ts#L110">property rules</a>
+<a class="pdoc-child-name" href="/compute/secGroup.ts#L111">property rules</a>
 </h3>
 
 ```typescript
@@ -2995,13 +2992,13 @@ security group rules. As shown in the example above, multiple rule blocks
 may be used.
 
 <h2 class="pdoc-module-header" id="ServerGroupArgs">
-<a class="pdoc-member-name" href="/compute/serverGroup.ts#L113">interface ServerGroupArgs</a>
+<a class="pdoc-member-name" href="/compute/serverGroup.ts#L114">interface ServerGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a ServerGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L118">property name</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L119">property name</a>
 </h3>
 
 ```typescript
@@ -3013,7 +3010,7 @@ A unique name for the server group. Changing this creates
 a new server group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L125">property policies</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L126">property policies</a>
 </h3>
 
 ```typescript
@@ -3027,7 +3024,7 @@ the Policies section for more information. Changing this creates a new
 server group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L131">property region</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L132">property region</a>
 </h3>
 
 ```typescript
@@ -3040,7 +3037,7 @@ If omitted, the `region` argument of the provider is used. Changing
 this creates a new server group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L135">property valueSpecs</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L136">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -3051,13 +3048,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="ServerGroupState">
-<a class="pdoc-member-name" href="/compute/serverGroup.ts#L81">interface ServerGroupState</a>
+<a class="pdoc-member-name" href="/compute/serverGroup.ts#L82">interface ServerGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering ServerGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L85">property members</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L86">property members</a>
 </h3>
 
 ```typescript
@@ -3068,7 +3065,7 @@ members?: pulumi.Input<pulumi.Input<string>[]>;
 The instances that are part of this server group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L90">property name</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L91">property name</a>
 </h3>
 
 ```typescript
@@ -3080,7 +3077,7 @@ A unique name for the server group. Changing this creates
 a new server group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L97">property policies</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L98">property policies</a>
 </h3>
 
 ```typescript
@@ -3094,7 +3091,7 @@ the Policies section for more information. Changing this creates a new
 server group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L103">property region</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L104">property region</a>
 </h3>
 
 ```typescript
@@ -3107,7 +3104,7 @@ If omitted, the `region` argument of the provider is used. Changing
 this creates a new server group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/serverGroup.ts#L107">property valueSpecs</a>
+<a class="pdoc-child-name" href="/compute/serverGroup.ts#L108">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -3118,13 +3115,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="VolumeAttachArgs">
-<a class="pdoc-member-name" href="/compute/volumeAttach.ts#L114">interface VolumeAttachArgs</a>
+<a class="pdoc-member-name" href="/compute/volumeAttach.ts#L115">interface VolumeAttachArgs</a>
 </h2>
 
 The set of arguments for constructing a VolumeAttach resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L123">property device</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L124">property device</a>
 </h3>
 
 ```typescript
@@ -3140,7 +3137,7 @@ to update the device upon subsequent applying which will cause the volume
 to be detached and reattached indefinitely. Please use with caution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L127">property instanceId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L128">property instanceId</a>
 </h3>
 
 ```typescript
@@ -3151,7 +3148,7 @@ instanceId: pulumi.Input<string>;
 The ID of the Instance to attach the Volume to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L134">property region</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L135">property region</a>
 </h3>
 
 ```typescript
@@ -3165,7 +3162,7 @@ A Compute client is needed to create a volume attachment. If omitted, the
 new volume attachment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L138">property volumeId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L139">property volumeId</a>
 </h3>
 
 ```typescript
@@ -3176,13 +3173,13 @@ volumeId: pulumi.Input<string>;
 The ID of the Volume to attach to an Instance.
 
 <h2 class="pdoc-module-header" id="VolumeAttachState">
-<a class="pdoc-member-name" href="/compute/volumeAttach.ts#L84">interface VolumeAttachState</a>
+<a class="pdoc-member-name" href="/compute/volumeAttach.ts#L85">interface VolumeAttachState</a>
 </h2>
 
 Input properties used for looking up and filtering VolumeAttach resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L93">property device</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L94">property device</a>
 </h3>
 
 ```typescript
@@ -3198,7 +3195,7 @@ to update the device upon subsequent applying which will cause the volume
 to be detached and reattached indefinitely. Please use with caution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L97">property instanceId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L98">property instanceId</a>
 </h3>
 
 ```typescript
@@ -3209,7 +3206,7 @@ instanceId?: pulumi.Input<string>;
 The ID of the Instance to attach the Volume to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L104">property region</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L105">property region</a>
 </h3>
 
 ```typescript
@@ -3223,7 +3220,7 @@ A Compute client is needed to create a volume attachment. If omitted, the
 new volume attachment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L108">property volumeId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L109">property volumeId</a>
 </h3>
 
 ```typescript

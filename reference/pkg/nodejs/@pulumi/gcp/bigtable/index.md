@@ -17,7 +17,7 @@ title: Module bigtable
 
 
 <h2 class="pdoc-module-header" id="Instance">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L12">class Instance</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L13">class Instance</a>
 </h2>
 
 Creates a Google Bigtable instance. For more information see
@@ -25,7 +25,7 @@ Creates a Google Bigtable instance. For more information see
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L57">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L58">constructor</a>
 </h3>
 
 ```typescript
@@ -40,7 +40,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -72,7 +72,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L28">property clusterId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L29">property clusterId</a>
 </h3>
 
 ```typescript
@@ -83,7 +83,7 @@ public clusterId: pulumi.Output<string>;
 The ID of the Cloud Bigtable cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L32">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L33">property displayName</a>
 </h3>
 
 ```typescript
@@ -106,7 +106,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L36">property instanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L37">property instanceType</a>
 </h3>
 
 ```typescript
@@ -117,7 +117,7 @@ public instanceType: pulumi.Output<string | undefined>;
 The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L40">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L41">property name</a>
 </h3>
 
 ```typescript
@@ -128,7 +128,7 @@ public name: pulumi.Output<string>;
 The name of the Cloud Bigtable instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L44">property numNodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L45">property numNodes</a>
 </h3>
 
 ```typescript
@@ -139,7 +139,7 @@ public numNodes: pulumi.Output<number | undefined>;
 The number of nodes in your Cloud Bigtable cluster. Minimum of `3` for a `PRODUCTION` instance. Cannot be set for a `DEVELOPMENT` instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L49">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L50">property project</a>
 </h3>
 
 ```typescript
@@ -151,7 +151,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L53">property storageType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L54">property storageType</a>
 </h3>
 
 ```typescript
@@ -174,7 +174,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L57">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L58">property zone</a>
 </h3>
 
 ```typescript
@@ -185,7 +185,7 @@ public zone: pulumi.Output<string>;
 The zone to create the Cloud Bigtable cluster in. Zones that support Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
 
 <h2 class="pdoc-module-header" id="Table">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L12">class Table</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L13">class Table</a>
 </h2>
 
 Creates a Google Bigtable table inside an instance. For more information see
@@ -193,7 +193,7 @@ Creates a Google Bigtable table inside an instance. For more information see
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L41">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L42">constructor</a>
 </h3>
 
 ```typescript
@@ -208,7 +208,7 @@ Create a Table resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -252,7 +252,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L28">property instanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L29">property instanceName</a>
 </h3>
 
 ```typescript
@@ -263,7 +263,7 @@ public instanceName: pulumi.Output<string>;
 The name of the Bigtable instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L32">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L33">property name</a>
 </h3>
 
 ```typescript
@@ -274,7 +274,7 @@ public name: pulumi.Output<string>;
 The name of the table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L37">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L38">property project</a>
 </h3>
 
 ```typescript
@@ -286,7 +286,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L41">property splitKeys</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L42">property splitKeys</a>
 </h3>
 
 ```typescript
@@ -309,13 +309,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="InstanceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L139">interface InstanceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L140">interface InstanceArgs</a>
 </h2>
 
 The set of arguments for constructing a Instance resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L143">property clusterId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L144">property clusterId</a>
 </h3>
 
 ```typescript
@@ -326,7 +326,7 @@ clusterId: pulumi.Input<string>;
 The ID of the Cloud Bigtable cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L147">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L148">property displayName</a>
 </h3>
 
 ```typescript
@@ -337,7 +337,7 @@ displayName?: pulumi.Input<string>;
 The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L151">property instanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L152">property instanceType</a>
 </h3>
 
 ```typescript
@@ -348,7 +348,7 @@ instanceType?: pulumi.Input<string>;
 The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L155">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L156">property name</a>
 </h3>
 
 ```typescript
@@ -359,7 +359,7 @@ name?: pulumi.Input<string>;
 The name of the Cloud Bigtable instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L159">property numNodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L160">property numNodes</a>
 </h3>
 
 ```typescript
@@ -370,7 +370,7 @@ numNodes?: pulumi.Input<number>;
 The number of nodes in your Cloud Bigtable cluster. Minimum of `3` for a `PRODUCTION` instance. Cannot be set for a `DEVELOPMENT` instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L164">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L165">property project</a>
 </h3>
 
 ```typescript
@@ -382,7 +382,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L168">property storageType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L169">property storageType</a>
 </h3>
 
 ```typescript
@@ -393,7 +393,7 @@ storageType?: pulumi.Input<string>;
 The storage type to use. One of `"SSD"` or `"HDD"`. Defaults to `"SSD"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L172">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L173">property zone</a>
 </h3>
 
 ```typescript
@@ -404,13 +404,13 @@ zone?: pulumi.Input<string>;
 The zone to create the Cloud Bigtable cluster in. Zones that support Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
 
 <h2 class="pdoc-module-header" id="InstanceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L100">interface InstanceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L101">interface InstanceState</a>
 </h2>
 
 Input properties used for looking up and filtering Instance resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L104">property clusterId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L105">property clusterId</a>
 </h3>
 
 ```typescript
@@ -421,7 +421,7 @@ clusterId?: pulumi.Input<string>;
 The ID of the Cloud Bigtable cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L108">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L109">property displayName</a>
 </h3>
 
 ```typescript
@@ -432,7 +432,7 @@ displayName?: pulumi.Input<string>;
 The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L112">property instanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L113">property instanceType</a>
 </h3>
 
 ```typescript
@@ -443,7 +443,7 @@ instanceType?: pulumi.Input<string>;
 The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L116">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L117">property name</a>
 </h3>
 
 ```typescript
@@ -454,7 +454,7 @@ name?: pulumi.Input<string>;
 The name of the Cloud Bigtable instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L120">property numNodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L121">property numNodes</a>
 </h3>
 
 ```typescript
@@ -465,7 +465,7 @@ numNodes?: pulumi.Input<number>;
 The number of nodes in your Cloud Bigtable cluster. Minimum of `3` for a `PRODUCTION` instance. Cannot be set for a `DEVELOPMENT` instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L125">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L126">property project</a>
 </h3>
 
 ```typescript
@@ -477,7 +477,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L129">property storageType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L130">property storageType</a>
 </h3>
 
 ```typescript
@@ -488,7 +488,7 @@ storageType?: pulumi.Input<string>;
 The storage type to use. One of `"SSD"` or `"HDD"`. Defaults to `"SSD"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L133">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/instance.ts#L134">property zone</a>
 </h3>
 
 ```typescript
@@ -499,13 +499,13 @@ zone?: pulumi.Input<string>;
 The zone to create the Cloud Bigtable cluster in. Zones that support Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
 
 <h2 class="pdoc-module-header" id="TableArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L99">interface TableArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L100">interface TableArgs</a>
 </h2>
 
 The set of arguments for constructing a Table resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L103">property instanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L104">property instanceName</a>
 </h3>
 
 ```typescript
@@ -516,7 +516,7 @@ instanceName: pulumi.Input<string>;
 The name of the Bigtable instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L107">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L108">property name</a>
 </h3>
 
 ```typescript
@@ -527,7 +527,7 @@ name?: pulumi.Input<string>;
 The name of the table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L112">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L113">property project</a>
 </h3>
 
 ```typescript
@@ -539,7 +539,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L116">property splitKeys</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L117">property splitKeys</a>
 </h3>
 
 ```typescript
@@ -550,13 +550,13 @@ splitKeys?: pulumi.Input<pulumi.Input<string>[]>;
 A list of predefined keys to split the table on.
 
 <h2 class="pdoc-module-header" id="TableState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L76">interface TableState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L77">interface TableState</a>
 </h2>
 
 Input properties used for looking up and filtering Table resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L80">property instanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L81">property instanceName</a>
 </h3>
 
 ```typescript
@@ -567,7 +567,7 @@ instanceName?: pulumi.Input<string>;
 The name of the Bigtable instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L84">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L85">property name</a>
 </h3>
 
 ```typescript
@@ -578,7 +578,7 @@ name?: pulumi.Input<string>;
 The name of the table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L89">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L90">property project</a>
 </h3>
 
 ```typescript
@@ -590,7 +590,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L93">property splitKeys</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigtable/table.ts#L94">property splitKeys</a>
 </h3>
 
 ```typescript

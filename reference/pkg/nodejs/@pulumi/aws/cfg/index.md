@@ -29,13 +29,13 @@ title: Module cfg
 
 
 <h2 class="pdoc-module-header" id="AggregateAuthorization">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L9">class AggregateAuthorization</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L10">class AggregateAuthorization</a>
 </h2>
 
 Manages an AWS Config Aggregate Authorization
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -50,7 +50,7 @@ Create a AggregateAuthorization resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -82,7 +82,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L25">property accountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L26">property accountId</a>
 </h3>
 
 ```typescript
@@ -93,7 +93,7 @@ public accountId: pulumi.Output<string>;
 Account ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L29">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L30">property arn</a>
 </h3>
 
 ```typescript
@@ -116,7 +116,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L33">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L34">property region</a>
 </h3>
 
 ```typescript
@@ -139,13 +139,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ConfigurationAggregator">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L9">class ConfigurationAggregator</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L10">class ConfigurationAggregator</a>
 </h2>
 
 Manages an AWS Config Configuration Aggregator
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -160,7 +160,7 @@ Create a ConfigurationAggregator resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -192,7 +192,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L25">property accountAggregationSource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L26">property accountAggregationSource</a>
 </h3>
 
 ```typescript
@@ -203,7 +203,7 @@ public accountAggregationSource: pulumi.Output<{ ... } | undefined>;
 The account(s) to aggregate config data from as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L29">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L30">property arn</a>
 </h3>
 
 ```typescript
@@ -226,7 +226,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -237,7 +237,7 @@ public name: pulumi.Output<string>;
 The name of the configuration aggregator.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L37">property organizationAggregationSource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L38">property organizationAggregationSource</a>
 </h3>
 
 ```typescript
@@ -260,15 +260,15 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="DeliveryChannel">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L11">class DeliveryChannel</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L12">class DeliveryChannel</a>
 </h2>
 
 Provides an AWS Config Delivery Channel.
 
-~> **Note:** Delivery Channel requires a [Configuration Recorder](/docs/providers/aws/r/config_configuration_recorder.html) to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
+~> **Note:** Delivery Channel requires a [Configuration Recorder](https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html) to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L43">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L44">constructor</a>
 </h3>
 
 ```typescript
@@ -283,7 +283,7 @@ Create a DeliveryChannel resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -327,7 +327,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L27">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L28">property name</a>
 </h3>
 
 ```typescript
@@ -338,7 +338,7 @@ public name: pulumi.Output<string>;
 The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L31">property s3BucketName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L32">property s3BucketName</a>
 </h3>
 
 ```typescript
@@ -349,7 +349,7 @@ public s3BucketName: pulumi.Output<string>;
 The name of the S3 bucket used to store the configuration history.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L35">property s3KeyPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L36">property s3KeyPrefix</a>
 </h3>
 
 ```typescript
@@ -360,7 +360,7 @@ public s3KeyPrefix: pulumi.Output<string | undefined>;
 The prefix for the specified S3 bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L39">property snapshotDeliveryProperties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L40">property snapshotDeliveryProperties</a>
 </h3>
 
 ```typescript
@@ -371,7 +371,7 @@ public snapshotDeliveryProperties: pulumi.Output<{ ... } | undefined>;
 Options for how AWS Config delivers configuration snapshots. See below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L43">property snsTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L44">property snsTopicArn</a>
 </h3>
 
 ```typescript
@@ -394,15 +394,15 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Recorder">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L11">class Recorder</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L12">class Recorder</a>
 </h2>
 
 Provides an AWS Config Configuration Recorder. Please note that this resource **does not start** the created recorder automatically.
 
-~> **Note:** _Starting_ the Configuration Recorder requires a [delivery channel](/docs/providers/aws/r/config_delivery_channel.html) (while delivery channel creation requires Configuration Recorder). This is why [`aws_config_configuration_recorder_status`](/docs/providers/aws/r/config_configuration_recorder_status.html) is a separate resource.
+~> **Note:** _Starting_ the Configuration Recorder requires a [delivery channel](https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html) (while delivery channel creation requires Configuration Recorder). This is why [`aws_config_configuration_recorder_status`](https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder_status.html) is a separate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -417,7 +417,7 @@ Create a Recorder resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -461,7 +461,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L27">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L28">property name</a>
 </h3>
 
 ```typescript
@@ -472,7 +472,7 @@ public name: pulumi.Output<string>;
 The name of the recorder. Defaults to `default`. Changing it recreates the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L31">property recordingGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L32">property recordingGroup</a>
 </h3>
 
 ```typescript
@@ -483,7 +483,7 @@ public recordingGroup: pulumi.Output<{ ... }>;
 Recording group - see below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L37">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L38">property roleArn</a>
 </h3>
 
 ```typescript
@@ -508,15 +508,15 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="RecorderStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L11">class RecorderStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L12">class RecorderStatus</a>
 </h2>
 
 Manages status (recording / stopped) of an AWS Config Configuration Recorder.
 
-~> **Note:** Starting Configuration Recorder requires a [Delivery Channel](/docs/providers/aws/r/config_delivery_channel.html) to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
+~> **Note:** Starting Configuration Recorder requires a [Delivery Channel](https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html) to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L31">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L32">constructor</a>
 </h3>
 
 ```typescript
@@ -531,7 +531,7 @@ Create a RecorderStatus resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -575,7 +575,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L27">property isEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L28">property isEnabled</a>
 </h3>
 
 ```typescript
@@ -586,7 +586,7 @@ public isEnabled: pulumi.Output<boolean>;
 Whether the configuration recorder should be enabled or disabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L31">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L32">property name</a>
 </h3>
 
 ```typescript
@@ -609,15 +609,15 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Rule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L11">class Rule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L12">class Rule</a>
 </h2>
 
 Provides an AWS Config Rule.
 
-~> **Note:** Config Rule requires an existing [Configuration Recorder](/docs/providers/aws/r/config_configuration_recorder.html) to be present. Use of `depends_on` is recommended (as shown below) to avoid race conditions.
+~> **Note:** Config Rule requires an existing [Configuration Recorder](https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html) to be present. Use of `depends_on` is recommended (as shown below) to avoid race conditions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L57">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L58">constructor</a>
 </h3>
 
 ```typescript
@@ -632,7 +632,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -664,7 +664,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L27">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L28">property arn</a>
 </h3>
 
 ```typescript
@@ -675,7 +675,7 @@ public arn: pulumi.Output<string>;
 The ARN of the config rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L31">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L32">property description</a>
 </h3>
 
 ```typescript
@@ -698,7 +698,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L35">property inputParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L36">property inputParameters</a>
 </h3>
 
 ```typescript
@@ -709,7 +709,7 @@ public inputParameters: pulumi.Output<string | undefined>;
 A string in JSON format that is passed to the AWS Config rule Lambda function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L40">property maximumExecutionFrequency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L41">property maximumExecutionFrequency</a>
 </h3>
 
 ```typescript
@@ -721,7 +721,7 @@ The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L44">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L45">property name</a>
 </h3>
 
 ```typescript
@@ -732,7 +732,7 @@ public name: pulumi.Output<string>;
 The name of the rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L48">property ruleId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L49">property ruleId</a>
 </h3>
 
 ```typescript
@@ -743,7 +743,7 @@ public ruleId: pulumi.Output<string>;
 The ID of the config rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L52">property scope</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L53">property scope</a>
 </h3>
 
 ```typescript
@@ -754,7 +754,7 @@ public scope: pulumi.Output<{ ... } | undefined>;
 Scope defines which resources can trigger an evaluation for the rule as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L57">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L58">property source</a>
 </h3>
 
 ```typescript
@@ -778,13 +778,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="AggregateAuthorizationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L87">interface AggregateAuthorizationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L88">interface AggregateAuthorizationArgs</a>
 </h2>
 
 The set of arguments for constructing a AggregateAuthorization resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L91">property accountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L92">property accountId</a>
 </h3>
 
 ```typescript
@@ -795,7 +795,7 @@ accountId: pulumi.Input<string>;
 Account ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L95">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L96">property region</a>
 </h3>
 
 ```typescript
@@ -806,13 +806,13 @@ region: pulumi.Input<string>;
 Region
 
 <h2 class="pdoc-module-header" id="AggregateAuthorizationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L69">interface AggregateAuthorizationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L70">interface AggregateAuthorizationState</a>
 </h2>
 
 Input properties used for looking up and filtering AggregateAuthorization resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L73">property accountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L74">property accountId</a>
 </h3>
 
 ```typescript
@@ -823,7 +823,7 @@ accountId?: pulumi.Input<string>;
 Account ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L77">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L78">property arn</a>
 </h3>
 
 ```typescript
@@ -834,7 +834,7 @@ arn?: pulumi.Input<string>;
 The ARN of the authorization
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L81">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/aggregateAuthorization.ts#L82">property region</a>
 </h3>
 
 ```typescript
@@ -845,13 +845,13 @@ region?: pulumi.Input<string>;
 Region
 
 <h2 class="pdoc-module-header" id="ConfigurationAggregatorArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L91">interface ConfigurationAggregatorArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L92">interface ConfigurationAggregatorArgs</a>
 </h2>
 
 The set of arguments for constructing a ConfigurationAggregator resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L95">property accountAggregationSource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L96">property accountAggregationSource</a>
 </h3>
 
 ```typescript
@@ -862,7 +862,7 @@ accountAggregationSource?: pulumi.Input<{ ... }>;
 The account(s) to aggregate config data from as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L99">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L100">property name</a>
 </h3>
 
 ```typescript
@@ -873,7 +873,7 @@ name?: pulumi.Input<string>;
 The name of the configuration aggregator.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L103">property organizationAggregationSource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L104">property organizationAggregationSource</a>
 </h3>
 
 ```typescript
@@ -884,13 +884,13 @@ organizationAggregationSource?: pulumi.Input<{ ... }>;
 The organization to aggregate config data from as documented below.
 
 <h2 class="pdoc-module-header" id="ConfigurationAggregatorState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L69">interface ConfigurationAggregatorState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L70">interface ConfigurationAggregatorState</a>
 </h2>
 
 Input properties used for looking up and filtering ConfigurationAggregator resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L73">property accountAggregationSource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L74">property accountAggregationSource</a>
 </h3>
 
 ```typescript
@@ -901,7 +901,7 @@ accountAggregationSource?: pulumi.Input<{ ... }>;
 The account(s) to aggregate config data from as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L77">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L78">property arn</a>
 </h3>
 
 ```typescript
@@ -912,7 +912,7 @@ arn?: pulumi.Input<string>;
 The ARN of the aggregator
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L81">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L82">property name</a>
 </h3>
 
 ```typescript
@@ -923,7 +923,7 @@ name?: pulumi.Input<string>;
 The name of the configuration aggregator.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L85">property organizationAggregationSource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/configurationAggregator.ts#L86">property organizationAggregationSource</a>
 </h3>
 
 ```typescript
@@ -934,13 +934,13 @@ organizationAggregationSource?: pulumi.Input<{ ... }>;
 The organization to aggregate config data from as documented below.
 
 <h2 class="pdoc-module-header" id="DeliveryChannelArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L106">interface DeliveryChannelArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L107">interface DeliveryChannelArgs</a>
 </h2>
 
 The set of arguments for constructing a DeliveryChannel resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L110">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L111">property name</a>
 </h3>
 
 ```typescript
@@ -951,7 +951,7 @@ name?: pulumi.Input<string>;
 The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L114">property s3BucketName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L115">property s3BucketName</a>
 </h3>
 
 ```typescript
@@ -962,7 +962,7 @@ s3BucketName: pulumi.Input<string>;
 The name of the S3 bucket used to store the configuration history.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L118">property s3KeyPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L119">property s3KeyPrefix</a>
 </h3>
 
 ```typescript
@@ -973,7 +973,7 @@ s3KeyPrefix?: pulumi.Input<string>;
 The prefix for the specified S3 bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L122">property snapshotDeliveryProperties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L123">property snapshotDeliveryProperties</a>
 </h3>
 
 ```typescript
@@ -984,7 +984,7 @@ snapshotDeliveryProperties?: pulumi.Input<{ ... }>;
 Options for how AWS Config delivers configuration snapshots. See below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L126">property snsTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L127">property snsTopicArn</a>
 </h3>
 
 ```typescript
@@ -995,13 +995,13 @@ snsTopicArn?: pulumi.Input<string>;
 The ARN of the SNS topic that AWS Config delivers notifications to.
 
 <h2 class="pdoc-module-header" id="DeliveryChannelState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L80">interface DeliveryChannelState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L81">interface DeliveryChannelState</a>
 </h2>
 
 Input properties used for looking up and filtering DeliveryChannel resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L84">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L85">property name</a>
 </h3>
 
 ```typescript
@@ -1012,7 +1012,7 @@ name?: pulumi.Input<string>;
 The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L88">property s3BucketName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L89">property s3BucketName</a>
 </h3>
 
 ```typescript
@@ -1023,7 +1023,7 @@ s3BucketName?: pulumi.Input<string>;
 The name of the S3 bucket used to store the configuration history.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L92">property s3KeyPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L93">property s3KeyPrefix</a>
 </h3>
 
 ```typescript
@@ -1034,7 +1034,7 @@ s3KeyPrefix?: pulumi.Input<string>;
 The prefix for the specified S3 bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L96">property snapshotDeliveryProperties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L97">property snapshotDeliveryProperties</a>
 </h3>
 
 ```typescript
@@ -1045,7 +1045,7 @@ snapshotDeliveryProperties?: pulumi.Input<{ ... }>;
 Options for how AWS Config delivers configuration snapshots. See below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L100">property snsTopicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L101">property snsTopicArn</a>
 </h3>
 
 ```typescript
@@ -1056,13 +1056,13 @@ snsTopicArn?: pulumi.Input<string>;
 The ARN of the SNS topic that AWS Config delivers notifications to.
 
 <h2 class="pdoc-module-header" id="RecorderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L90">interface RecorderArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L91">interface RecorderArgs</a>
 </h2>
 
 The set of arguments for constructing a Recorder resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L94">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L95">property name</a>
 </h3>
 
 ```typescript
@@ -1073,7 +1073,7 @@ name?: pulumi.Input<string>;
 The name of the recorder. Defaults to `default`. Changing it recreates the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L98">property recordingGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L99">property recordingGroup</a>
 </h3>
 
 ```typescript
@@ -1084,7 +1084,7 @@ recordingGroup?: pulumi.Input<{ ... }>;
 Recording group - see below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L104">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L105">property roleArn</a>
 </h3>
 
 ```typescript
@@ -1097,13 +1097,13 @@ used to make read or write requests to the delivery channel and to describe the 
 See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) for more details.
 
 <h2 class="pdoc-module-header" id="RecorderState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L70">interface RecorderState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L71">interface RecorderState</a>
 </h2>
 
 Input properties used for looking up and filtering Recorder resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L74">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L75">property name</a>
 </h3>
 
 ```typescript
@@ -1114,7 +1114,7 @@ name?: pulumi.Input<string>;
 The name of the recorder. Defaults to `default`. Changing it recreates the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L78">property recordingGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L79">property recordingGroup</a>
 </h3>
 
 ```typescript
@@ -1125,7 +1125,7 @@ recordingGroup?: pulumi.Input<{ ... }>;
 Recording group - see below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L84">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorder.ts#L85">property roleArn</a>
 </h3>
 
 ```typescript
@@ -1138,13 +1138,13 @@ used to make read or write requests to the delivery channel and to describe the 
 See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) for more details.
 
 <h2 class="pdoc-module-header" id="RecorderStatusArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L76">interface RecorderStatusArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L77">interface RecorderStatusArgs</a>
 </h2>
 
 The set of arguments for constructing a RecorderStatus resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L80">property isEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L81">property isEnabled</a>
 </h3>
 
 ```typescript
@@ -1155,7 +1155,7 @@ isEnabled: pulumi.Input<boolean>;
 Whether the configuration recorder should be enabled or disabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L84">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L85">property name</a>
 </h3>
 
 ```typescript
@@ -1166,13 +1166,13 @@ name?: pulumi.Input<string>;
 The name of the recorder
 
 <h2 class="pdoc-module-header" id="RecorderStatusState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L62">interface RecorderStatusState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L63">interface RecorderStatusState</a>
 </h2>
 
 Input properties used for looking up and filtering RecorderStatus resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L66">property isEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L67">property isEnabled</a>
 </h3>
 
 ```typescript
@@ -1183,7 +1183,7 @@ isEnabled?: pulumi.Input<boolean>;
 Whether the configuration recorder should be enabled or disabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L70">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L71">property name</a>
 </h3>
 
 ```typescript
@@ -1194,13 +1194,13 @@ name?: pulumi.Input<string>;
 The name of the recorder
 
 <h2 class="pdoc-module-header" id="RuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L140">interface RuleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L141">interface RuleArgs</a>
 </h2>
 
 The set of arguments for constructing a Rule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L144">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L145">property description</a>
 </h3>
 
 ```typescript
@@ -1211,7 +1211,7 @@ description?: pulumi.Input<string>;
 Description of the rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L148">property inputParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L149">property inputParameters</a>
 </h3>
 
 ```typescript
@@ -1222,7 +1222,7 @@ inputParameters?: pulumi.Input<string>;
 A string in JSON format that is passed to the AWS Config rule Lambda function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L153">property maximumExecutionFrequency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L154">property maximumExecutionFrequency</a>
 </h3>
 
 ```typescript
@@ -1234,7 +1234,7 @@ The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L157">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L158">property name</a>
 </h3>
 
 ```typescript
@@ -1245,7 +1245,7 @@ name?: pulumi.Input<string>;
 The name of the rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L161">property scope</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L162">property scope</a>
 </h3>
 
 ```typescript
@@ -1256,7 +1256,7 @@ scope?: pulumi.Input<{ ... }>;
 Scope defines which resources can trigger an evaluation for the rule as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L166">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L167">property source</a>
 </h3>
 
 ```typescript
@@ -1268,13 +1268,13 @@ Source specifies the rule owner, the rule identifier, and the notifications that
 the function to evaluate your AWS resources as documented below.
 
 <h2 class="pdoc-module-header" id="RuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L100">interface RuleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L101">interface RuleState</a>
 </h2>
 
 Input properties used for looking up and filtering Rule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L104">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L105">property arn</a>
 </h3>
 
 ```typescript
@@ -1285,7 +1285,7 @@ arn?: pulumi.Input<string>;
 The ARN of the config rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L108">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L109">property description</a>
 </h3>
 
 ```typescript
@@ -1296,7 +1296,7 @@ description?: pulumi.Input<string>;
 Description of the rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L112">property inputParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L113">property inputParameters</a>
 </h3>
 
 ```typescript
@@ -1307,7 +1307,7 @@ inputParameters?: pulumi.Input<string>;
 A string in JSON format that is passed to the AWS Config rule Lambda function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L117">property maximumExecutionFrequency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L118">property maximumExecutionFrequency</a>
 </h3>
 
 ```typescript
@@ -1319,7 +1319,7 @@ The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L121">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L122">property name</a>
 </h3>
 
 ```typescript
@@ -1330,7 +1330,7 @@ name?: pulumi.Input<string>;
 The name of the rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L125">property ruleId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L126">property ruleId</a>
 </h3>
 
 ```typescript
@@ -1341,7 +1341,7 @@ ruleId?: pulumi.Input<string>;
 The ID of the config rule
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L129">property scope</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L130">property scope</a>
 </h3>
 
 ```typescript
@@ -1352,7 +1352,7 @@ scope?: pulumi.Input<{ ... }>;
 Scope defines which resources can trigger an evaluation for the rule as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L134">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/rule.ts#L135">property source</a>
 </h3>
 
 ```typescript

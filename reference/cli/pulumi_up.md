@@ -1,40 +1,45 @@
-## pulumi destroy
+## pulumi up
 
-Destroy an existing stack and its resources
+Create or update the resources in a stack
 
 ### Synopsis
 
 
-Destroy an existing stack and its resources
+Create or update the resources in a stack.
 
-This command deletes an entire existing stack by name.  The current state is
-loaded from the associated snapshot file in the workspace.  After running to completion,
-all of this stack's resources and associated state will be gone.
+This command creates or updates resources in a stack. The new desired goal state for the target stack
+is computed by running the current Pulumi program and observing all resource allocations to produce a
+resource graph. This goal state is then compared against the existing state to determine what create,
+read, update, and/or delete operations must take place to achieve the desired goal state, in the most
+minimally disruptive way. This command records a full transactional snapshot of the stack's new state
+afterwards so that the stack may be updated incrementally again later on.
 
-Warning: although old snapshots can be used to recreate a stack, this command
-is generally irreversible and should be used with great care.
+The program to run is loaded from the project in the current directory by default. Use the `-C` or
+`--cwd` flag to use a different directory.
 
 ```
-pulumi destroy [flags]
+pulumi up [url] [flags]
 ```
 
 ### Options
 
 ```
       --analyzer stringSlice     Run one or more analyzers as part of this update
+  -c, --config stringArray       Config to use during the update
   -d, --debug                    Print detailed debugging output during resource operations
       --diff                     Display operation as a rich diff showing the overall change
-  -h, --help                     help for destroy
-  -m, --message string           Optional message to associate with the destroy operation
+      --expect-no-changes        Return an error if any changes occur during this update
+  -h, --help                     help for up
+  -m, --message string           Optional message to associate with the update operation
       --non-interactive          Disable interactive mode
   -p, --parallel int             Allow P resource operations to run in parallel at once (<=1 for no parallelism) (default 10)
   -r, --refresh                  Refresh the state of the stack's resources before this update
       --show-config              Show configuration keys and variables
       --show-replacement-steps   Show detailed resource replacement creates and deletes instead of a single step
-      --show-sames               Show resources that don't need to be updated because they haven't changed, alongside those that do
-      --skip-preview             Do not perform a preview before performing the destroy
+      --show-sames               Show resources that don't need be updated because they haven't changed, alongside those that do
+      --skip-preview             Do not perform a preview before performing the update
   -s, --stack string             The name of the stack to operate on. Defaults to the current stack
-  -y, --yes                      Automatically approve and perform the destroy after previewing it
+  -y, --yes                      Automatically approve and perform the update after previewing it
 ```
 
 ### Options inherited from parent commands

@@ -43,7 +43,7 @@ requireRegion(): Region
 requireRegion fetches the AWS region, requiring that it exists; if it has not been configured, an error is thrown.
 
 <h2 class="pdoc-module-header" id="accessKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L13">let accessKey</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L14">let accessKey</a>
 </h2>
 
 ```typescript
@@ -54,7 +54,7 @@ let accessKey: string | undefined =  __config.get("accessKey");
 The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
 
 <h2 class="pdoc-module-header" id="allowedAccountIds">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L14">let allowedAccountIds</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L15">let allowedAccountIds</a>
 </h2>
 
 ```typescript
@@ -62,7 +62,7 @@ let allowedAccountIds: string[] | undefined =  __config.getObject<string[]>("all
 ```
 
 <h2 class="pdoc-module-header" id="assumeRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L15">let assumeRole</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L16">let assumeRole</a>
 </h2>
 
 ```typescript
@@ -70,7 +70,7 @@ let assumeRole: { ... } | undefined =  __config.getObject<{ externalId?: string,
 ```
 
 <h2 class="pdoc-module-header" id="dynamodbEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L20">let dynamodbEndpoint</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L21">let dynamodbEndpoint</a>
 </h2>
 
 ```typescript
@@ -82,7 +82,7 @@ Use this to override the default endpoint URL constructed from the `region`. It'
 dynamodb-local.
 
 <h2 class="pdoc-module-header" id="endpoints">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L21">let endpoints</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L22">let endpoints</a>
 </h2>
 
 ```typescript
@@ -90,7 +90,7 @@ let endpoints: { ... }[] | undefined =  __config.getObject<{ acm?: string, apiga
 ```
 
 <h2 class="pdoc-module-header" id="forbiddenAccountIds">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L22">let forbiddenAccountIds</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L23">let forbiddenAccountIds</a>
 </h2>
 
 ```typescript
@@ -98,7 +98,7 @@ let forbiddenAccountIds: string[] | undefined =  __config.getObject<string[]>("f
 ```
 
 <h2 class="pdoc-module-header" id="insecure">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L26">let insecure</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L27">let insecure</a>
 </h2>
 
 ```typescript
@@ -109,7 +109,7 @@ let insecure: boolean | undefined =  __config.getObject<boolean>("insecure");
 Explicitly allow the provider to perform "insecure" SSL requests. If omitted,default value is `false`
 
 <h2 class="pdoc-module-header" id="kinesisEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L31">let kinesisEndpoint</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L32">let kinesisEndpoint</a>
 </h2>
 
 ```typescript
@@ -121,7 +121,7 @@ Use this to override the default endpoint URL constructed from the `region`. It'
 kinesalite.
 
 <h2 class="pdoc-module-header" id="maxRetries">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L35">let maxRetries</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L36">let maxRetries</a>
 </h2>
 
 ```typescript
@@ -132,7 +132,7 @@ let maxRetries: number | undefined =  __config.getObject<number>("maxRetries");
 The maximum number of times an AWS API request is being executed. If the API request still fails, an error is thrown.
 
 <h2 class="pdoc-module-header" id="profile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L39">let profile</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L40">let profile</a>
 </h2>
 
 ```typescript
@@ -143,18 +143,18 @@ let profile: string | undefined =  __config.get("profile");
 The profile for API operations. If not set, the default profile created with `aws configure` will be used.
 
 <h2 class="pdoc-module-header" id="region">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L43">let region</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L44">let region</a>
 </h2>
 
 ```typescript
-let region: Region =  <any>__config.require("region");
+let region: Region =  <any>utilities.requireWithDefault(() => __config.require("region"), utilities.getEnv("AWS_REGION", "AWS_DEFAULT_REGION"));
 ```
 
 
 The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
 
 <h2 class="pdoc-module-header" id="s3ForcePathStyle">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L49">let s3ForcePathStyle</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L50">let s3ForcePathStyle</a>
 </h2>
 
 ```typescript
@@ -167,7 +167,7 @@ default, the S3 client will use virtual hosted bucket addressing when possible (
 Specific to the Amazon S3 service.
 
 <h2 class="pdoc-module-header" id="secretKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L53">let secretKey</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L54">let secretKey</a>
 </h2>
 
 ```typescript
@@ -178,7 +178,7 @@ let secretKey: string | undefined =  __config.get("secretKey");
 The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
 
 <h2 class="pdoc-module-header" id="sharedCredentialsFile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L57">let sharedCredentialsFile</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L58">let sharedCredentialsFile</a>
 </h2>
 
 ```typescript
@@ -189,7 +189,7 @@ let sharedCredentialsFile: string | undefined =  __config.get("sharedCredentials
 The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
 
 <h2 class="pdoc-module-header" id="skipCredentialsValidation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L62">let skipCredentialsValidation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L63">let skipCredentialsValidation</a>
 </h2>
 
 ```typescript
@@ -201,7 +201,7 @@ Skip the credentials validation via STS API. Used for AWS API implementations th
 available/implemented.
 
 <h2 class="pdoc-module-header" id="skipGetEc2Platforms">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L66">let skipGetEc2Platforms</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L67">let skipGetEc2Platforms</a>
 </h2>
 
 ```typescript
@@ -212,7 +212,7 @@ let skipGetEc2Platforms: boolean | undefined =  __config.getObject<boolean>("ski
 Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.
 
 <h2 class="pdoc-module-header" id="skipMetadataApiCheck">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L67">let skipMetadataApiCheck</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L68">let skipMetadataApiCheck</a>
 </h2>
 
 ```typescript
@@ -220,7 +220,7 @@ let skipMetadataApiCheck: boolean | undefined =  __config.getObject<boolean>("sk
 ```
 
 <h2 class="pdoc-module-header" id="skipRegionValidation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L72">let skipRegionValidation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L73">let skipRegionValidation</a>
 </h2>
 
 ```typescript
@@ -232,7 +232,7 @@ Skip static validation of region name. Used by users of alternative AWS-like API
 not public (yet).
 
 <h2 class="pdoc-module-header" id="skipRequestingAccountId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L76">let skipRequestingAccountId</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L77">let skipRequestingAccountId</a>
 </h2>
 
 ```typescript
@@ -243,7 +243,7 @@ let skipRequestingAccountId: boolean | undefined =  __config.getObject<boolean>(
 Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.
 
 <h2 class="pdoc-module-header" id="token">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L80">let token</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/config/vars.ts#L81">let token</a>
 </h2>
 
 ```typescript

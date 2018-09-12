@@ -18,9 +18,14 @@ import * as gcp from "@pulumi/gcp";
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Provider">class Provider</a>
+* <a href="#getEnv">function getEnv</a>
+* <a href="#getEnvBoolean">function getEnvBoolean</a>
+* <a href="#getEnvNumber">function getEnvNumber</a>
+* <a href="#requireWithDefault">function requireWithDefault</a>
+* <a href="#unwrap">function unwrap</a>
 * <a href="#ProviderArgs">interface ProviderArgs</a>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts">provider.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts">utilities.ts</a> 
 
 <h2 class="pdoc-module-header">Modules</h2>
 
@@ -52,13 +57,13 @@ import * as gcp from "@pulumi/gcp";
 * <a href="storage">storage</a>
 
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L9">class Provider</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L10">class Provider</a>
 </h2>
 
 The provider type for the google package
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L9">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L10">constructor</a>
 </h3>
 
 ```typescript
@@ -116,14 +121,54 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="getEnv">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts#L7">function getEnv</a>
+</h2>
+
+```typescript
+getEnv(vars: string[]): string | undefined
+```
+
+<h2 class="pdoc-module-header" id="getEnvBoolean">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts#L17">function getEnvBoolean</a>
+</h2>
+
+```typescript
+getEnvBoolean(vars: string[]): boolean | undefined
+```
+
+<h2 class="pdoc-module-header" id="getEnvNumber">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts#L32">function getEnvNumber</a>
+</h2>
+
+```typescript
+getEnvNumber(vars: string[]): number | undefined
+```
+
+<h2 class="pdoc-module-header" id="requireWithDefault">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts#L43">function requireWithDefault</a>
+</h2>
+
+```typescript
+requireWithDefault<T>(req: { ... }, def: T | undefined): T
+```
+
+<h2 class="pdoc-module-header" id="unwrap">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts#L54">function unwrap</a>
+</h2>
+
+```typescript
+unwrap(val: pulumi.Input<any>): pulumi.Output<any>
+```
+
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L33">interface ProviderArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L34">interface ProviderArgs</a>
 </h2>
 
 The set of arguments for constructing a Provider resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L34">property credentials</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L35">property credentials</a>
 </h3>
 
 ```typescript
@@ -131,7 +176,7 @@ credentials?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L35">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L36">property project</a>
 </h3>
 
 ```typescript
@@ -139,7 +184,7 @@ project?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L36">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L37">property region</a>
 </h3>
 
 ```typescript
@@ -147,7 +192,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L37">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L38">property zone</a>
 </h3>
 
 ```typescript

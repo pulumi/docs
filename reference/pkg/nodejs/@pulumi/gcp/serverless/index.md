@@ -49,7 +49,7 @@ static isInstance(obj: any): boolean
 </h3>
 
 ```typescript
-protected registerOutputs(outputs: Inputs | undefined): void
+protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
 ```
 
 <h3 class="pdoc-member-header">

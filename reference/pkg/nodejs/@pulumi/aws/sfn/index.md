@@ -17,13 +17,13 @@ title: Module sfn
 
 
 <h2 class="pdoc-module-header" id="Activity">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L9">class Activity</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L10">class Activity</a>
 </h2>
 
 Provides a Step Function Activity resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L29">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L30">constructor</a>
 </h3>
 
 ```typescript
@@ -38,7 +38,7 @@ Create a Activity resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -70,7 +70,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L25">property creationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L26">property creationDate</a>
 </h3>
 
 ```typescript
@@ -93,7 +93,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -116,13 +116,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="StateMachine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L9">class StateMachine</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L10">class StateMachine</a>
 </h2>
 
 Provides a Step Function State Machine resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L41">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L42">constructor</a>
 </h3>
 
 ```typescript
@@ -137,7 +137,7 @@ Create a StateMachine resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -169,7 +169,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L25">property creationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L26">property creationDate</a>
 </h3>
 
 ```typescript
@@ -180,7 +180,7 @@ public creationDate: pulumi.Output<string>;
 The date the state machine was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L29">property definition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L30">property definition</a>
 </h3>
 
 ```typescript
@@ -203,7 +203,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -214,7 +214,7 @@ public name: pulumi.Output<string>;
 The name of the state machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L37">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L38">property roleArn</a>
 </h3>
 
 ```typescript
@@ -225,7 +225,7 @@ public roleArn: pulumi.Output<string>;
 The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L41">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L42">property status</a>
 </h3>
 
 ```typescript
@@ -248,13 +248,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ActivityArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L71">interface ActivityArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L72">interface ActivityArgs</a>
 </h2>
 
 The set of arguments for constructing a Activity resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L75">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -265,13 +265,13 @@ name?: pulumi.Input<string>;
 The name of the activity to create.
 
 <h2 class="pdoc-module-header" id="ActivityState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L57">interface ActivityState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L58">interface ActivityState</a>
 </h2>
 
 Input properties used for looking up and filtering Activity resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L61">property creationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L62">property creationDate</a>
 </h3>
 
 ```typescript
@@ -282,7 +282,7 @@ creationDate?: pulumi.Input<string>;
 The date the activity was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L65">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/activity.ts#L66">property name</a>
 </h3>
 
 ```typescript
@@ -293,13 +293,13 @@ name?: pulumi.Input<string>;
 The name of the activity to create.
 
 <h2 class="pdoc-module-header" id="StateMachineArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L107">interface StateMachineArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L108">interface StateMachineArgs</a>
 </h2>
 
 The set of arguments for constructing a StateMachine resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L111">property definition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L112">property definition</a>
 </h3>
 
 ```typescript
@@ -310,7 +310,7 @@ definition: pulumi.Input<string>;
 The Amazon States Language definition of the state machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L115">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L116">property name</a>
 </h3>
 
 ```typescript
@@ -321,7 +321,7 @@ name?: pulumi.Input<string>;
 The name of the state machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L119">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L120">property roleArn</a>
 </h3>
 
 ```typescript
@@ -332,13 +332,13 @@ roleArn: pulumi.Input<string>;
 The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
 
 <h2 class="pdoc-module-header" id="StateMachineState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L81">interface StateMachineState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L82">interface StateMachineState</a>
 </h2>
 
 Input properties used for looking up and filtering StateMachine resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L85">property creationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L86">property creationDate</a>
 </h3>
 
 ```typescript
@@ -349,7 +349,7 @@ creationDate?: pulumi.Input<string>;
 The date the state machine was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L89">property definition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L90">property definition</a>
 </h3>
 
 ```typescript
@@ -360,7 +360,7 @@ definition?: pulumi.Input<string>;
 The Amazon States Language definition of the state machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L93">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L94">property name</a>
 </h3>
 
 ```typescript
@@ -371,7 +371,7 @@ name?: pulumi.Input<string>;
 The name of the state machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L97">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L98">property roleArn</a>
 </h3>
 
 ```typescript
@@ -382,7 +382,7 @@ roleArn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L101">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sfn/stateMachine.ts#L102">property status</a>
 </h3>
 
 ```typescript

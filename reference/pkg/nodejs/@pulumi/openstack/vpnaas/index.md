@@ -8,31 +8,31 @@ title: Module vpnaas
 
 * <a href="#EndpointGroup">class EndpointGroup</a>
 * <a href="#IkePolicy">class IkePolicy</a>
-* <a href="#IpsecPolicy">class IpsecPolicy</a>
+* <a href="#IpSecPolicy">class IpSecPolicy</a>
 * <a href="#Service">class Service</a>
 * <a href="#SiteConnection">class SiteConnection</a>
 * <a href="#EndpointGroupArgs">interface EndpointGroupArgs</a>
 * <a href="#EndpointGroupState">interface EndpointGroupState</a>
 * <a href="#IkePolicyArgs">interface IkePolicyArgs</a>
 * <a href="#IkePolicyState">interface IkePolicyState</a>
-* <a href="#IpsecPolicyArgs">interface IpsecPolicyArgs</a>
-* <a href="#IpsecPolicyState">interface IpsecPolicyState</a>
+* <a href="#IpSecPolicyArgs">interface IpSecPolicyArgs</a>
+* <a href="#IpSecPolicyState">interface IpSecPolicyState</a>
 * <a href="#ServiceArgs">interface ServiceArgs</a>
 * <a href="#ServiceState">interface ServiceState</a>
 * <a href="#SiteConnectionArgs">interface SiteConnectionArgs</a>
 * <a href="#SiteConnectionState">interface SiteConnectionState</a>
 
-<a href="/vpnaas/endpointGroup.ts">vpnaas/endpointGroup.ts</a> <a href="/vpnaas/ikePolicy.ts">vpnaas/ikePolicy.ts</a> <a href="/vpnaas/ipsecPolicy.ts">vpnaas/ipsecPolicy.ts</a> <a href="/vpnaas/service.ts">vpnaas/service.ts</a> <a href="/vpnaas/siteConnection.ts">vpnaas/siteConnection.ts</a> 
+<a href="/vpnaas/endpointGroup.ts">vpnaas/endpointGroup.ts</a> <a href="/vpnaas/ikePolicy.ts">vpnaas/ikePolicy.ts</a> <a href="/vpnaas/ipSecPolicy.ts">vpnaas/ipSecPolicy.ts</a> <a href="/vpnaas/service.ts">vpnaas/service.ts</a> <a href="/vpnaas/siteConnection.ts">vpnaas/siteConnection.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="EndpointGroup">
-<a class="pdoc-member-name" href="/vpnaas/endpointGroup.ts#L9">class EndpointGroup</a>
+<a class="pdoc-member-name" href="/vpnaas/endpointGroup.ts#L10">class EndpointGroup</a>
 </h2>
 
 Manages a V2 Neutron Endpoint Group resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L57">constructor</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L58">constructor</a>
 </h3>
 
 ```typescript
@@ -47,7 +47,7 @@ Create a EndpointGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -79,7 +79,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L26">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L27">property description</a>
 </h3>
 
 ```typescript
@@ -91,7 +91,7 @@ The human-readable description for the group.
 Changing this updates the description of the existing group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L31">property endpoints</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L32">property endpoints</a>
 </h3>
 
 ```typescript
@@ -115,7 +115,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L36">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L37">property name</a>
 </h3>
 
 ```typescript
@@ -127,7 +127,7 @@ The name of the group. Changing this updates the name of
 the existing group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L43">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L44">property region</a>
 </h3>
 
 ```typescript
@@ -141,7 +141,7 @@ A Networking client is needed to create an endpoint group. If omitted, the
 group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L48">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L49">property tenantId</a>
 </h3>
 
 ```typescript
@@ -153,7 +153,7 @@ The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L53">property type</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L54">property type</a>
 </h3>
 
 ```typescript
@@ -177,7 +177,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L57">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L58">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -188,13 +188,13 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="IkePolicy">
-<a class="pdoc-member-name" href="/vpnaas/ikePolicy.ts#L9">class IkePolicy</a>
+<a class="pdoc-member-name" href="/vpnaas/ikePolicy.ts#L10">class IkePolicy</a>
 </h2>
 
 Manages a V2 Neutron IKE policy resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L80">constructor</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L81">constructor</a>
 </h3>
 
 ```typescript
@@ -209,7 +209,7 @@ Create a IkePolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -241,7 +241,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L26">property authAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L27">property authAlgorithm</a>
 </h3>
 
 ```typescript
@@ -253,7 +253,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L31">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L32">property description</a>
 </h3>
 
 ```typescript
@@ -265,7 +265,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L36">property encryptionAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L37">property encryptionAlgorithm</a>
 </h3>
 
 ```typescript
@@ -289,7 +289,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L41">property ikeVersion</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L42">property ikeVersion</a>
 </h3>
 
 ```typescript
@@ -301,7 +301,7 @@ The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L49">property lifetimes</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L50">property lifetimes</a>
 </h3>
 
 ```typescript
@@ -316,7 +316,7 @@ Default is seconds.
 Default is 3600.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L54">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L55">property name</a>
 </h3>
 
 ```typescript
@@ -328,7 +328,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L59">property pfs</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L60">property pfs</a>
 </h3>
 
 ```typescript
@@ -340,7 +340,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L64">property phase1NegotiationMode</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L65">property phase1NegotiationMode</a>
 </h3>
 
 ```typescript
@@ -352,7 +352,7 @@ The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L71">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L72">property region</a>
 </h3>
 
 ```typescript
@@ -366,7 +366,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L76">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L77">property tenantId</a>
 </h3>
 
 ```typescript
@@ -390,7 +390,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L80">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L81">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -400,37 +400,37 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 
 Map of additional options.
 
-<h2 class="pdoc-module-header" id="IpsecPolicy">
-<a class="pdoc-member-name" href="/vpnaas/ipsecPolicy.ts#L9">class IpsecPolicy</a>
+<h2 class="pdoc-module-header" id="IpSecPolicy">
+<a class="pdoc-member-name" href="/vpnaas/ipSecPolicy.ts#L10">class IpSecPolicy</a>
 </h2>
 
 Manages a V2 Neutron IPSec policy resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L80">constructor</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L81">constructor</a>
 </h3>
 
 ```typescript
-new IpsecPolicy(name: string, args?: IpsecPolicyArgs, opts?: pulumi.CustomResourceOptions)
+new IpSecPolicy(name: string, args?: IpSecPolicyArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
-Create a IpsecPolicy resource with the given unique name, arguments, and options.
+Create a IpSecPolicy resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L19">method get</a>
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IpsecPolicyState): IpsecPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IpSecPolicyState): IpSecPolicy
 ```
 
 
-Get an existing IpsecPolicy resource's state with the given name, ID, and optional extra
+Get an existing IpSecPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h3 class="pdoc-member-header">
@@ -454,7 +454,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L26">property authAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L27">property authAlgorithm</a>
 </h3>
 
 ```typescript
@@ -466,7 +466,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L31">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L32">property description</a>
 </h3>
 
 ```typescript
@@ -478,7 +478,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L36">property encapsulationMode</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L37">property encapsulationMode</a>
 </h3>
 
 ```typescript
@@ -490,7 +490,7 @@ The encapsulation mode. Valid values are tunnel and transport. Default is tunnel
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L41">property encryptionAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L42">property encryptionAlgorithm</a>
 </h3>
 
 ```typescript
@@ -514,7 +514,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L49">property lifetimes</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L50">property lifetimes</a>
 </h3>
 
 ```typescript
@@ -529,7 +529,7 @@ Default is seconds.
 Default is 3600.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L54">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L55">property name</a>
 </h3>
 
 ```typescript
@@ -541,7 +541,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L59">property pfs</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L60">property pfs</a>
 </h3>
 
 ```typescript
@@ -553,7 +553,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L66">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L67">property region</a>
 </h3>
 
 ```typescript
@@ -567,7 +567,7 @@ A Networking client is needed to create an IPSec policy. If omitted, the
 policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L71">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L72">property tenantId</a>
 </h3>
 
 ```typescript
@@ -579,7 +579,7 @@ The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L76">property transformProtocol</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L77">property transformProtocol</a>
 </h3>
 
 ```typescript
@@ -603,7 +603,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L80">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L81">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -614,13 +614,13 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="/vpnaas/service.ts#L9">class Service</a>
+<a class="pdoc-member-name" href="/vpnaas/service.ts#L10">class Service</a>
 </h2>
 
 Manages a V2 Neutron VPN service resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L72">constructor</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L73">constructor</a>
 </h3>
 
 ```typescript
@@ -635,7 +635,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -667,7 +667,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L26">property adminStateUp</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L27">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -679,7 +679,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L31">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L32">property description</a>
 </h3>
 
 ```typescript
@@ -691,7 +691,7 @@ The human-readable description for the service.
 Changing this updates the description of the existing service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L35">property externalV4Ip</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L36">property externalV4Ip</a>
 </h3>
 
 ```typescript
@@ -702,7 +702,7 @@ public externalV4Ip: pulumi.Output<string>;
 The read-only external (public) IPv4 address that is used for the VPN service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L39">property externalV6Ip</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L40">property externalV6Ip</a>
 </h3>
 
 ```typescript
@@ -725,7 +725,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L44">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L45">property name</a>
 </h3>
 
 ```typescript
@@ -737,7 +737,7 @@ The name of the service. Changing this updates the name of
 the existing service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L51">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L52">property region</a>
 </h3>
 
 ```typescript
@@ -751,7 +751,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L55">property routerId</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L56">property routerId</a>
 </h3>
 
 ```typescript
@@ -762,7 +762,7 @@ public routerId: pulumi.Output<string>;
 The ID of the router. Changing this creates a new service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L59">property status</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L60">property status</a>
 </h3>
 
 ```typescript
@@ -773,7 +773,7 @@ public status: pulumi.Output<string>;
 Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L63">property subnetId</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L64">property subnetId</a>
 </h3>
 
 ```typescript
@@ -784,7 +784,7 @@ public subnetId: pulumi.Output<string | undefined>;
 SubnetID is the ID of the subnet. Default is null.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L68">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L69">property tenantId</a>
 </h3>
 
 ```typescript
@@ -808,7 +808,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L72">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L73">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -819,13 +819,13 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="SiteConnection">
-<a class="pdoc-member-name" href="/vpnaas/siteConnection.ts#L9">class SiteConnection</a>
+<a class="pdoc-member-name" href="/vpnaas/siteConnection.ts#L10">class SiteConnection</a>
 </h2>
 
 Manages a V2 Neutron IPSec site connection resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L117">constructor</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L118">constructor</a>
 </h3>
 
 ```typescript
@@ -840,7 +840,7 @@ Create a SiteConnection resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -872,7 +872,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L26">property adminStateUp</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L27">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -884,7 +884,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L31">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L32">property description</a>
 </h3>
 
 ```typescript
@@ -896,7 +896,7 @@ The human-readable description for the connection.
 Changing this updates the description of the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L38">property dpds</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L39">property dpds</a>
 </h3>
 
 ```typescript
@@ -922,7 +922,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L42">property ikepolicyId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L43">property ikepolicyId</a>
 </h3>
 
 ```typescript
@@ -933,7 +933,7 @@ public ikepolicyId: pulumi.Output<string>;
 The ID of the IKE policy. Changing this creates a new connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L46">property initiator</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L47">property initiator</a>
 </h3>
 
 ```typescript
@@ -944,7 +944,7 @@ public initiator: pulumi.Output<string>;
 A valid value is response-only or bi-directional. Default is bi-directional.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L50">property ipsecpolicyId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L51">property ipsecpolicyId</a>
 </h3>
 
 ```typescript
@@ -955,7 +955,7 @@ public ipsecpolicyId: pulumi.Output<string>;
 The ID of the IPsec policy. Changing this creates a new connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L57">property localEpGroupId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L58">property localEpGroupId</a>
 </h3>
 
 ```typescript
@@ -969,7 +969,7 @@ in backward- compatible mode where peer_cidrs is provided with a subnet_id for t
 Changing this updates the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L63">property localId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L64">property localId</a>
 </h3>
 
 ```typescript
@@ -982,7 +982,7 @@ Most often, local ID would be domain name, email address, etc.
 If this is not configured then the external IP address will be used as the ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L68">property mtu</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L69">property mtu</a>
 </h3>
 
 ```typescript
@@ -994,7 +994,7 @@ The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L73">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L74">property name</a>
 </h3>
 
 ```typescript
@@ -1006,7 +1006,7 @@ The name of the connection. Changing this updates the name of
 the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L77">property peerAddress</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L78">property peerAddress</a>
 </h3>
 
 ```typescript
@@ -1017,7 +1017,7 @@ public peerAddress: pulumi.Output<string>;
 The peer gateway public IPv4 or IPv6 address or FQDN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L81">property peerCidrs</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L82">property peerCidrs</a>
 </h3>
 
 ```typescript
@@ -1028,7 +1028,7 @@ public peerCidrs: pulumi.Output<string[] | undefined>;
 Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L87">property peerEpGroupId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L88">property peerEpGroupId</a>
 </h3>
 
 ```typescript
@@ -1041,7 +1041,7 @@ You must specify this parameter with the local_ep_group_id parameter unless in b
 where peer_cidrs is provided with a subnet_id for the VPN service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L93">property peerId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L94">property peerId</a>
 </h3>
 
 ```typescript
@@ -1054,7 +1054,7 @@ Typically, this value matches the peer_address value.
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L97">property psk</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L98">property psk</a>
 </h3>
 
 ```typescript
@@ -1065,7 +1065,7 @@ public psk: pulumi.Output<string>;
 The pre-shared key. A valid value is any string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L104">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L105">property region</a>
 </h3>
 
 ```typescript
@@ -1079,7 +1079,7 @@ A Networking client is needed to create an IPSec site connection. If omitted, th
 site connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L109">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L110">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1103,7 +1103,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L113">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L114">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1114,7 +1114,7 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 Map of additional options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L117">property vpnserviceId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L118">property vpnserviceId</a>
 </h3>
 
 ```typescript
@@ -1125,13 +1125,13 @@ public vpnserviceId: pulumi.Output<string>;
 The ID of the VPN service. Changing this creates a new connection.
 
 <h2 class="pdoc-module-header" id="EndpointGroupArgs">
-<a class="pdoc-member-name" href="/vpnaas/endpointGroup.ts#L137">interface EndpointGroupArgs</a>
+<a class="pdoc-member-name" href="/vpnaas/endpointGroup.ts#L138">interface EndpointGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a EndpointGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L142">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L143">property description</a>
 </h3>
 
 ```typescript
@@ -1143,7 +1143,7 @@ The human-readable description for the group.
 Changing this updates the description of the existing group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L147">property endpoints</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L148">property endpoints</a>
 </h3>
 
 ```typescript
@@ -1155,7 +1155,7 @@ List of endpoints of the same type, for the endpoint group. The values will depe
 Changing this creates a new group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L152">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L153">property name</a>
 </h3>
 
 ```typescript
@@ -1167,7 +1167,7 @@ The name of the group. Changing this updates the name of
 the existing group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L159">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L160">property region</a>
 </h3>
 
 ```typescript
@@ -1181,7 +1181,7 @@ A Networking client is needed to create an endpoint group. If omitted, the
 group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L164">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L165">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1193,7 +1193,7 @@ The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L169">property type</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L170">property type</a>
 </h3>
 
 ```typescript
@@ -1205,7 +1205,7 @@ The type of the endpoints in the group. A valid value is subnet, cidr, network, 
 Changing this creates a new group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L173">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L174">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1216,13 +1216,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="EndpointGroupState">
-<a class="pdoc-member-name" href="/vpnaas/endpointGroup.ts#L95">interface EndpointGroupState</a>
+<a class="pdoc-member-name" href="/vpnaas/endpointGroup.ts#L96">interface EndpointGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering EndpointGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L100">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L101">property description</a>
 </h3>
 
 ```typescript
@@ -1234,7 +1234,7 @@ The human-readable description for the group.
 Changing this updates the description of the existing group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L105">property endpoints</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L106">property endpoints</a>
 </h3>
 
 ```typescript
@@ -1246,7 +1246,7 @@ List of endpoints of the same type, for the endpoint group. The values will depe
 Changing this creates a new group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L110">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L111">property name</a>
 </h3>
 
 ```typescript
@@ -1258,7 +1258,7 @@ The name of the group. Changing this updates the name of
 the existing group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L117">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L118">property region</a>
 </h3>
 
 ```typescript
@@ -1272,7 +1272,7 @@ A Networking client is needed to create an endpoint group. If omitted, the
 group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L122">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L123">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1284,7 +1284,7 @@ The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L127">property type</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L128">property type</a>
 </h3>
 
 ```typescript
@@ -1296,7 +1296,7 @@ The type of the endpoints in the group. A valid value is subnet, cidr, network, 
 Changing this creates a new group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L131">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/endpointGroup.ts#L132">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1307,13 +1307,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="IkePolicyArgs">
-<a class="pdoc-member-name" href="/vpnaas/ikePolicy.ts#L191">interface IkePolicyArgs</a>
+<a class="pdoc-member-name" href="/vpnaas/ikePolicy.ts#L192">interface IkePolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a IkePolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L196">property authAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L197">property authAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1325,7 +1325,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L201">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L202">property description</a>
 </h3>
 
 ```typescript
@@ -1337,7 +1337,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L206">property encryptionAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L207">property encryptionAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1349,7 +1349,7 @@ The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L211">property ikeVersion</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L212">property ikeVersion</a>
 </h3>
 
 ```typescript
@@ -1361,7 +1361,7 @@ The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L219">property lifetimes</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L220">property lifetimes</a>
 </h3>
 
 ```typescript
@@ -1376,7 +1376,7 @@ Default is seconds.
 Default is 3600.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L224">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L225">property name</a>
 </h3>
 
 ```typescript
@@ -1388,7 +1388,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L229">property pfs</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L230">property pfs</a>
 </h3>
 
 ```typescript
@@ -1400,7 +1400,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L234">property phase1NegotiationMode</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L235">property phase1NegotiationMode</a>
 </h3>
 
 ```typescript
@@ -1412,7 +1412,7 @@ The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L241">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L242">property region</a>
 </h3>
 
 ```typescript
@@ -1426,7 +1426,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L246">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L247">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1438,7 +1438,7 @@ The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L250">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L251">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1449,13 +1449,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="IkePolicyState">
-<a class="pdoc-member-name" href="/vpnaas/ikePolicy.ts#L126">interface IkePolicyState</a>
+<a class="pdoc-member-name" href="/vpnaas/ikePolicy.ts#L127">interface IkePolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering IkePolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L131">property authAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L132">property authAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1467,7 +1467,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L136">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L137">property description</a>
 </h3>
 
 ```typescript
@@ -1479,7 +1479,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L141">property encryptionAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L142">property encryptionAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1491,7 +1491,7 @@ The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L146">property ikeVersion</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L147">property ikeVersion</a>
 </h3>
 
 ```typescript
@@ -1503,7 +1503,7 @@ The IKE mode. A valid value is v1 or v2. Default is v1.
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L154">property lifetimes</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L155">property lifetimes</a>
 </h3>
 
 ```typescript
@@ -1518,7 +1518,7 @@ Default is seconds.
 Default is 3600.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L159">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L160">property name</a>
 </h3>
 
 ```typescript
@@ -1530,7 +1530,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L164">property pfs</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L165">property pfs</a>
 </h3>
 
 ```typescript
@@ -1542,7 +1542,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L169">property phase1NegotiationMode</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L170">property phase1NegotiationMode</a>
 </h3>
 
 ```typescript
@@ -1554,7 +1554,7 @@ The IKE mode. A valid value is main, which is the default.
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L176">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L177">property region</a>
 </h3>
 
 ```typescript
@@ -1568,7 +1568,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L181">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L182">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1580,7 +1580,7 @@ The owner of the policy. Required if admin wants to
 create a service for another policy. Changing this creates a new policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L185">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/ikePolicy.ts#L186">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1590,14 +1590,14 @@ valueSpecs?: pulumi.Input<{ ... }>;
 
 Map of additional options.
 
-<h2 class="pdoc-module-header" id="IpsecPolicyArgs">
-<a class="pdoc-member-name" href="/vpnaas/ipsecPolicy.ts#L191">interface IpsecPolicyArgs</a>
+<h2 class="pdoc-module-header" id="IpSecPolicyArgs">
+<a class="pdoc-member-name" href="/vpnaas/ipSecPolicy.ts#L192">interface IpSecPolicyArgs</a>
 </h2>
 
-The set of arguments for constructing a IpsecPolicy resource.
+The set of arguments for constructing a IpSecPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L196">property authAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L197">property authAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1609,7 +1609,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L201">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L202">property description</a>
 </h3>
 
 ```typescript
@@ -1621,7 +1621,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L206">property encapsulationMode</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L207">property encapsulationMode</a>
 </h3>
 
 ```typescript
@@ -1633,7 +1633,7 @@ The encapsulation mode. Valid values are tunnel and transport. Default is tunnel
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L211">property encryptionAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L212">property encryptionAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1645,7 +1645,7 @@ The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L219">property lifetimes</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L220">property lifetimes</a>
 </h3>
 
 ```typescript
@@ -1660,7 +1660,7 @@ Default is seconds.
 Default is 3600.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L224">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L225">property name</a>
 </h3>
 
 ```typescript
@@ -1672,7 +1672,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L229">property pfs</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L230">property pfs</a>
 </h3>
 
 ```typescript
@@ -1684,7 +1684,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L236">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L237">property region</a>
 </h3>
 
 ```typescript
@@ -1698,7 +1698,7 @@ A Networking client is needed to create an IPSec policy. If omitted, the
 policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L241">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L242">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1710,7 +1710,7 @@ The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L246">property transformProtocol</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L247">property transformProtocol</a>
 </h3>
 
 ```typescript
@@ -1722,7 +1722,7 @@ The transform protocol. Valid values are ESP, AH and AH-ESP.
 Changing this updates the existing policy. Default is ESP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L250">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L251">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1732,14 +1732,14 @@ valueSpecs?: pulumi.Input<{ ... }>;
 
 Map of additional options.
 
-<h2 class="pdoc-module-header" id="IpsecPolicyState">
-<a class="pdoc-member-name" href="/vpnaas/ipsecPolicy.ts#L126">interface IpsecPolicyState</a>
+<h2 class="pdoc-module-header" id="IpSecPolicyState">
+<a class="pdoc-member-name" href="/vpnaas/ipSecPolicy.ts#L127">interface IpSecPolicyState</a>
 </h2>
 
-Input properties used for looking up and filtering IpsecPolicy resources.
+Input properties used for looking up and filtering IpSecPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L131">property authAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L132">property authAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1751,7 +1751,7 @@ The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512
 Default is sha1. Changing this updates the algorithm of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L136">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L137">property description</a>
 </h3>
 
 ```typescript
@@ -1763,7 +1763,7 @@ The human-readable description for the policy.
 Changing this updates the description of the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L141">property encapsulationMode</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L142">property encapsulationMode</a>
 </h3>
 
 ```typescript
@@ -1775,7 +1775,7 @@ The encapsulation mode. Valid values are tunnel and transport. Default is tunnel
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L146">property encryptionAlgorithm</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L147">property encryptionAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1787,7 +1787,7 @@ The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L154">property lifetimes</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L155">property lifetimes</a>
 </h3>
 
 ```typescript
@@ -1802,7 +1802,7 @@ Default is seconds.
 Default is 3600.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L159">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L160">property name</a>
 </h3>
 
 ```typescript
@@ -1814,7 +1814,7 @@ The name of the policy. Changing this updates the name of
 the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L164">property pfs</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L165">property pfs</a>
 </h3>
 
 ```typescript
@@ -1826,7 +1826,7 @@ The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. D
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L171">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L172">property region</a>
 </h3>
 
 ```typescript
@@ -1840,7 +1840,7 @@ A Networking client is needed to create an IPSec policy. If omitted, the
 policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L176">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L177">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1852,7 +1852,7 @@ The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L181">property transformProtocol</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L182">property transformProtocol</a>
 </h3>
 
 ```typescript
@@ -1864,7 +1864,7 @@ The transform protocol. Valid values are ESP, AH and AH-ESP.
 Changing this updates the existing policy. Default is ESP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/ipsecPolicy.ts#L185">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/ipSecPolicy.ts#L186">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1875,13 +1875,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="ServiceArgs">
-<a class="pdoc-member-name" href="/vpnaas/service.ts#L178">interface ServiceArgs</a>
+<a class="pdoc-member-name" href="/vpnaas/service.ts#L179">interface ServiceArgs</a>
 </h2>
 
 The set of arguments for constructing a Service resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L183">property adminStateUp</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L184">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -1893,7 +1893,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L188">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L189">property description</a>
 </h3>
 
 ```typescript
@@ -1905,7 +1905,7 @@ The human-readable description for the service.
 Changing this updates the description of the existing service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L193">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L194">property name</a>
 </h3>
 
 ```typescript
@@ -1917,7 +1917,7 @@ The name of the service. Changing this updates the name of
 the existing service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L200">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L201">property region</a>
 </h3>
 
 ```typescript
@@ -1931,7 +1931,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L204">property routerId</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L205">property routerId</a>
 </h3>
 
 ```typescript
@@ -1942,7 +1942,7 @@ routerId: pulumi.Input<string>;
 The ID of the router. Changing this creates a new service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L208">property subnetId</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L209">property subnetId</a>
 </h3>
 
 ```typescript
@@ -1953,7 +1953,7 @@ subnetId?: pulumi.Input<string>;
 SubnetID is the ID of the subnet. Default is null.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L213">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L214">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1965,7 +1965,7 @@ The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L217">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L218">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1976,13 +1976,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="ServiceState">
-<a class="pdoc-member-name" href="/vpnaas/service.ts#L121">interface ServiceState</a>
+<a class="pdoc-member-name" href="/vpnaas/service.ts#L122">interface ServiceState</a>
 </h2>
 
 Input properties used for looking up and filtering Service resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L126">property adminStateUp</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L127">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -1994,7 +1994,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L131">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L132">property description</a>
 </h3>
 
 ```typescript
@@ -2006,7 +2006,7 @@ The human-readable description for the service.
 Changing this updates the description of the existing service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L135">property externalV4Ip</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L136">property externalV4Ip</a>
 </h3>
 
 ```typescript
@@ -2017,7 +2017,7 @@ externalV4Ip?: pulumi.Input<string>;
 The read-only external (public) IPv4 address that is used for the VPN service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L139">property externalV6Ip</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L140">property externalV6Ip</a>
 </h3>
 
 ```typescript
@@ -2028,7 +2028,7 @@ externalV6Ip?: pulumi.Input<string>;
 The read-only external (public) IPv6 address that is used for the VPN service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L144">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L145">property name</a>
 </h3>
 
 ```typescript
@@ -2040,7 +2040,7 @@ The name of the service. Changing this updates the name of
 the existing service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L151">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L152">property region</a>
 </h3>
 
 ```typescript
@@ -2054,7 +2054,7 @@ A Networking client is needed to create a VPN service. If omitted, the
 service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L155">property routerId</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L156">property routerId</a>
 </h3>
 
 ```typescript
@@ -2065,7 +2065,7 @@ routerId?: pulumi.Input<string>;
 The ID of the router. Changing this creates a new service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L159">property status</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L160">property status</a>
 </h3>
 
 ```typescript
@@ -2076,7 +2076,7 @@ status?: pulumi.Input<string>;
 Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L163">property subnetId</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L164">property subnetId</a>
 </h3>
 
 ```typescript
@@ -2087,7 +2087,7 @@ subnetId?: pulumi.Input<string>;
 SubnetID is the ID of the subnet. Default is null.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L168">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L169">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2099,7 +2099,7 @@ The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/service.ts#L172">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/service.ts#L173">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -2110,13 +2110,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="SiteConnectionArgs">
-<a class="pdoc-member-name" href="/vpnaas/siteConnection.ts#L299">interface SiteConnectionArgs</a>
+<a class="pdoc-member-name" href="/vpnaas/siteConnection.ts#L300">interface SiteConnectionArgs</a>
 </h2>
 
 The set of arguments for constructing a SiteConnection resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L304">property adminStateUp</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L305">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -2128,7 +2128,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L309">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L310">property description</a>
 </h3>
 
 ```typescript
@@ -2140,7 +2140,7 @@ The human-readable description for the connection.
 Changing this updates the description of the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L316">property dpds</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L317">property dpds</a>
 </h3>
 
 ```typescript
@@ -2154,7 +2154,7 @@ A valid value is clear, hold, restart, disabled, or restart-by-peer.
 Default value is hold.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L320">property ikepolicyId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L321">property ikepolicyId</a>
 </h3>
 
 ```typescript
@@ -2165,7 +2165,7 @@ ikepolicyId: pulumi.Input<string>;
 The ID of the IKE policy. Changing this creates a new connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L324">property initiator</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L325">property initiator</a>
 </h3>
 
 ```typescript
@@ -2176,7 +2176,7 @@ initiator?: pulumi.Input<string>;
 A valid value is response-only or bi-directional. Default is bi-directional.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L328">property ipsecpolicyId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L329">property ipsecpolicyId</a>
 </h3>
 
 ```typescript
@@ -2187,7 +2187,7 @@ ipsecpolicyId: pulumi.Input<string>;
 The ID of the IPsec policy. Changing this creates a new connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L335">property localEpGroupId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L336">property localEpGroupId</a>
 </h3>
 
 ```typescript
@@ -2201,7 +2201,7 @@ in backward- compatible mode where peer_cidrs is provided with a subnet_id for t
 Changing this updates the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L341">property localId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L342">property localId</a>
 </h3>
 
 ```typescript
@@ -2214,7 +2214,7 @@ Most often, local ID would be domain name, email address, etc.
 If this is not configured then the external IP address will be used as the ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L346">property mtu</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L347">property mtu</a>
 </h3>
 
 ```typescript
@@ -2226,7 +2226,7 @@ The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L351">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L352">property name</a>
 </h3>
 
 ```typescript
@@ -2238,7 +2238,7 @@ The name of the connection. Changing this updates the name of
 the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L355">property peerAddress</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L356">property peerAddress</a>
 </h3>
 
 ```typescript
@@ -2249,7 +2249,7 @@ peerAddress: pulumi.Input<string>;
 The peer gateway public IPv4 or IPv6 address or FQDN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L359">property peerCidrs</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L360">property peerCidrs</a>
 </h3>
 
 ```typescript
@@ -2260,7 +2260,7 @@ peerCidrs?: pulumi.Input<pulumi.Input<string>[]>;
 Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L365">property peerEpGroupId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L366">property peerEpGroupId</a>
 </h3>
 
 ```typescript
@@ -2273,7 +2273,7 @@ You must specify this parameter with the local_ep_group_id parameter unless in b
 where peer_cidrs is provided with a subnet_id for the VPN service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L371">property peerId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L372">property peerId</a>
 </h3>
 
 ```typescript
@@ -2286,7 +2286,7 @@ Typically, this value matches the peer_address value.
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L375">property psk</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L376">property psk</a>
 </h3>
 
 ```typescript
@@ -2297,7 +2297,7 @@ psk: pulumi.Input<string>;
 The pre-shared key. A valid value is any string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L382">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L383">property region</a>
 </h3>
 
 ```typescript
@@ -2311,7 +2311,7 @@ A Networking client is needed to create an IPSec site connection. If omitted, th
 site connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L387">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L388">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2323,7 +2323,7 @@ The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L391">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L392">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -2334,7 +2334,7 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L395">property vpnserviceId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L396">property vpnserviceId</a>
 </h3>
 
 ```typescript
@@ -2345,13 +2345,13 @@ vpnserviceId: pulumi.Input<string>;
 The ID of the VPN service. Changing this creates a new connection.
 
 <h2 class="pdoc-module-header" id="SiteConnectionState">
-<a class="pdoc-member-name" href="/vpnaas/siteConnection.ts#L197">interface SiteConnectionState</a>
+<a class="pdoc-member-name" href="/vpnaas/siteConnection.ts#L198">interface SiteConnectionState</a>
 </h2>
 
 Input properties used for looking up and filtering SiteConnection resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L202">property adminStateUp</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L203">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -2363,7 +2363,7 @@ The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L207">property description</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L208">property description</a>
 </h3>
 
 ```typescript
@@ -2375,7 +2375,7 @@ The human-readable description for the connection.
 Changing this updates the description of the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L214">property dpds</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L215">property dpds</a>
 </h3>
 
 ```typescript
@@ -2389,7 +2389,7 @@ A valid value is clear, hold, restart, disabled, or restart-by-peer.
 Default value is hold.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L218">property ikepolicyId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L219">property ikepolicyId</a>
 </h3>
 
 ```typescript
@@ -2400,7 +2400,7 @@ ikepolicyId?: pulumi.Input<string>;
 The ID of the IKE policy. Changing this creates a new connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L222">property initiator</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L223">property initiator</a>
 </h3>
 
 ```typescript
@@ -2411,7 +2411,7 @@ initiator?: pulumi.Input<string>;
 A valid value is response-only or bi-directional. Default is bi-directional.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L226">property ipsecpolicyId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L227">property ipsecpolicyId</a>
 </h3>
 
 ```typescript
@@ -2422,7 +2422,7 @@ ipsecpolicyId?: pulumi.Input<string>;
 The ID of the IPsec policy. Changing this creates a new connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L233">property localEpGroupId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L234">property localEpGroupId</a>
 </h3>
 
 ```typescript
@@ -2436,7 +2436,7 @@ in backward- compatible mode where peer_cidrs is provided with a subnet_id for t
 Changing this updates the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L239">property localId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L240">property localId</a>
 </h3>
 
 ```typescript
@@ -2449,7 +2449,7 @@ Most often, local ID would be domain name, email address, etc.
 If this is not configured then the external IP address will be used as the ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L244">property mtu</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L245">property mtu</a>
 </h3>
 
 ```typescript
@@ -2461,7 +2461,7 @@ The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L249">property name</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L250">property name</a>
 </h3>
 
 ```typescript
@@ -2473,7 +2473,7 @@ The name of the connection. Changing this updates the name of
 the existing connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L253">property peerAddress</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L254">property peerAddress</a>
 </h3>
 
 ```typescript
@@ -2484,7 +2484,7 @@ peerAddress?: pulumi.Input<string>;
 The peer gateway public IPv4 or IPv6 address or FQDN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L257">property peerCidrs</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L258">property peerCidrs</a>
 </h3>
 
 ```typescript
@@ -2495,7 +2495,7 @@ peerCidrs?: pulumi.Input<pulumi.Input<string>[]>;
 Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L263">property peerEpGroupId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L264">property peerEpGroupId</a>
 </h3>
 
 ```typescript
@@ -2508,7 +2508,7 @@ You must specify this parameter with the local_ep_group_id parameter unless in b
 where peer_cidrs is provided with a subnet_id for the VPN service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L269">property peerId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L270">property peerId</a>
 </h3>
 
 ```typescript
@@ -2521,7 +2521,7 @@ Typically, this value matches the peer_address value.
 Changing this updates the existing policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L273">property psk</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L274">property psk</a>
 </h3>
 
 ```typescript
@@ -2532,7 +2532,7 @@ psk?: pulumi.Input<string>;
 The pre-shared key. A valid value is any string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L280">property region</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L281">property region</a>
 </h3>
 
 ```typescript
@@ -2546,7 +2546,7 @@ A Networking client is needed to create an IPSec site connection. If omitted, th
 site connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L285">property tenantId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L286">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2558,7 +2558,7 @@ The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L289">property valueSpecs</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L290">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -2569,7 +2569,7 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L293">property vpnserviceId</a>
+<a class="pdoc-child-name" href="/vpnaas/siteConnection.ts#L294">property vpnserviceId</a>
 </h3>
 
 ```typescript

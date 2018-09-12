@@ -20,74 +20,74 @@ title: Module config
 
 
 <h2 class="pdoc-module-header" id="clientId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L8">let clientId</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L9">let clientId</a>
 </h2>
 
 ```typescript
-let clientId: string | undefined =  __config.get("clientId");
+let clientId: string | undefined =  __config.get("clientId") || (utilities.getEnv("ARM_CLIENT_ID") || "");
 ```
 
 <h2 class="pdoc-module-header" id="clientSecret">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L9">let clientSecret</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L10">let clientSecret</a>
 </h2>
 
 ```typescript
-let clientSecret: string | undefined =  __config.get("clientSecret");
+let clientSecret: string | undefined =  __config.get("clientSecret") || (utilities.getEnv("ARM_CLIENT_SECRET") || "");
 ```
 
 <h2 class="pdoc-module-header" id="environment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L10">let environment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L11">let environment</a>
 </h2>
 
 ```typescript
-let environment: string =  __config.require("environment");
+let environment: string =  utilities.requireWithDefault(() => __config.require("environment"), (utilities.getEnv("ARM_ENVIRONMENT") || "public"));
 ```
 
 <h2 class="pdoc-module-header" id="msiEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L11">let msiEndpoint</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L12">let msiEndpoint</a>
 </h2>
 
 ```typescript
-let msiEndpoint: string | undefined =  __config.get("msiEndpoint");
+let msiEndpoint: string | undefined =  __config.get("msiEndpoint") || (utilities.getEnv("ARM_MSI_ENDPOINT") || "");
 ```
 
 <h2 class="pdoc-module-header" id="skipCredentialsValidation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L12">let skipCredentialsValidation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L13">let skipCredentialsValidation</a>
 </h2>
 
 ```typescript
-let skipCredentialsValidation: boolean | undefined =  __config.getObject<boolean>("skipCredentialsValidation");
+let skipCredentialsValidation: boolean | undefined =  __config.getObject<boolean>("skipCredentialsValidation") || (utilities.getEnvBoolean("ARM_SKIP_CREDENTIALS_VALIDATION") || false);
 ```
 
 <h2 class="pdoc-module-header" id="skipProviderRegistration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L13">let skipProviderRegistration</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L14">let skipProviderRegistration</a>
 </h2>
 
 ```typescript
-let skipProviderRegistration: boolean | undefined =  __config.getObject<boolean>("skipProviderRegistration");
+let skipProviderRegistration: boolean | undefined =  __config.getObject<boolean>("skipProviderRegistration") || (utilities.getEnvBoolean("ARM_SKIP_PROVIDER_REGISTRATION") || false);
 ```
 
 <h2 class="pdoc-module-header" id="subscriptionId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L14">let subscriptionId</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L15">let subscriptionId</a>
 </h2>
 
 ```typescript
-let subscriptionId: string | undefined =  __config.get("subscriptionId");
+let subscriptionId: string | undefined =  __config.get("subscriptionId") || (utilities.getEnv("ARM_SUBSCRIPTION_ID") || "");
 ```
 
 <h2 class="pdoc-module-header" id="tenantId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L15">let tenantId</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L16">let tenantId</a>
 </h2>
 
 ```typescript
-let tenantId: string | undefined =  __config.get("tenantId");
+let tenantId: string | undefined =  __config.get("tenantId") || (utilities.getEnv("ARM_TENANT_ID") || "");
 ```
 
 <h2 class="pdoc-module-header" id="useMsi">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L16">let useMsi</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L17">let useMsi</a>
 </h2>
 
 ```typescript
-let useMsi: boolean | undefined =  __config.getObject<boolean>("useMsi");
+let useMsi: boolean | undefined =  __config.getObject<boolean>("useMsi") || (utilities.getEnvBoolean("ARM_USE_MSI") || false);
 ```
 

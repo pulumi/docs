@@ -17,7 +17,7 @@ title: Module runtimeconfig
 
 
 <h2 class="pdoc-module-header" id="Config">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L12">class Config</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L13">class Config</a>
 </h2>
 
 Manages a RuntimeConfig resource in Google Cloud. For more information, see the
@@ -26,7 +26,7 @@ or the
 [JSON API](https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L38">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L39">constructor</a>
 </h3>
 
 ```typescript
@@ -41,7 +41,7 @@ Create a Config resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -73,7 +73,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L29">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L30">property description</a>
 </h3>
 
 ```typescript
@@ -97,7 +97,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -108,7 +108,7 @@ public name: pulumi.Output<string>;
 The name of the runtime config.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L38">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L39">property project</a>
 </h3>
 
 ```typescript
@@ -132,7 +132,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Variavble">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L12">class Variavble</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L13">class Variavble</a>
 </h2>
 
 Manages a RuntimeConfig variable in Google Cloud. For more information, see the
@@ -141,7 +141,7 @@ or the
 [JSON API](https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L47">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L48">constructor</a>
 </h3>
 
 ```typescript
@@ -156,7 +156,7 @@ Create a Variavble resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -200,7 +200,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -212,7 +212,7 @@ The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L34">property parent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L35">property parent</a>
 </h3>
 
 ```typescript
@@ -224,7 +224,7 @@ The name of the RuntimeConfig resource containing this
 variable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L39">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L40">property project</a>
 </h3>
 
 ```typescript
@@ -236,7 +236,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L40">property text</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L41">property text</a>
 </h3>
 
 ```typescript
@@ -244,7 +244,7 @@ public text: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L46">property updateTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L47">property updateTime</a>
 </h3>
 
 ```typescript
@@ -269,7 +269,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L47">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L48">property value</a>
 </h3>
 
 ```typescript
@@ -277,13 +277,13 @@ public value: pulumi.Output<string | undefined>;
 ```
 
 <h2 class="pdoc-module-header" id="ConfigArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L88">interface ConfigArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L89">interface ConfigArgs</a>
 </h2>
 
 The set of arguments for constructing a Config resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L93">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L94">property description</a>
 </h3>
 
 ```typescript
@@ -295,7 +295,7 @@ The description to associate with the runtime
 config.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L97">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L98">property name</a>
 </h3>
 
 ```typescript
@@ -306,7 +306,7 @@ name?: pulumi.Input<string>;
 The name of the runtime config.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L102">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L103">property project</a>
 </h3>
 
 ```typescript
@@ -318,13 +318,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="ConfigState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L68">interface ConfigState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L69">interface ConfigState</a>
 </h2>
 
 Input properties used for looking up and filtering Config resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L73">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L74">property description</a>
 </h3>
 
 ```typescript
@@ -336,7 +336,7 @@ The description to associate with the runtime
 config.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L77">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L78">property name</a>
 </h3>
 
 ```typescript
@@ -347,7 +347,7 @@ name?: pulumi.Input<string>;
 The name of the runtime config.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L82">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts#L83">property project</a>
 </h3>
 
 ```typescript
@@ -359,13 +359,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="VariavbleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L115">interface VariavbleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L116">interface VariavbleArgs</a>
 </h2>
 
 The set of arguments for constructing a Variavble resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L120">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L121">property name</a>
 </h3>
 
 ```typescript
@@ -377,7 +377,7 @@ The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L125">property parent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L126">property parent</a>
 </h3>
 
 ```typescript
@@ -389,7 +389,7 @@ The name of the RuntimeConfig resource containing this
 variable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L130">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L131">property project</a>
 </h3>
 
 ```typescript
@@ -401,7 +401,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L131">property text</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L132">property text</a>
 </h3>
 
 ```typescript
@@ -409,7 +409,7 @@ text?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L132">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L133">property value</a>
 </h3>
 
 ```typescript
@@ -417,13 +417,13 @@ value?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="VariavbleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L86">interface VariavbleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L87">interface VariavbleState</a>
 </h2>
 
 Input properties used for looking up and filtering Variavble resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L91">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L92">property name</a>
 </h3>
 
 ```typescript
@@ -435,7 +435,7 @@ The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L96">property parent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L97">property parent</a>
 </h3>
 
 ```typescript
@@ -447,7 +447,7 @@ The name of the RuntimeConfig resource containing this
 variable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L101">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L102">property project</a>
 </h3>
 
 ```typescript
@@ -459,7 +459,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L102">property text</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L103">property text</a>
 </h3>
 
 ```typescript
@@ -467,7 +467,7 @@ text?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L108">property updateTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L109">property updateTime</a>
 </h3>
 
 ```typescript
@@ -480,7 +480,7 @@ accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L109">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L110">property value</a>
 </h3>
 
 ```typescript

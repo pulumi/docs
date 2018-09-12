@@ -32,13 +32,13 @@ title: Module logicapps
 
 
 <h2 class="pdoc-module-header" id="ActionCustom">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L9">class ActionCustom</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L10">class ActionCustom</a>
 </h2>
 
 Manages a Custom Action within a Logic App Workflow
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -53,7 +53,7 @@ Create a ActionCustom resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -85,7 +85,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L25">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L26">property body</a>
 </h3>
 
 ```typescript
@@ -108,7 +108,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L29">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L30">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -119,7 +119,7 @@ public logicAppId: pulumi.Output<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -142,13 +142,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ActionHttp">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L9">class ActionHttp</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L10">class ActionHttp</a>
 </h2>
 
 Manages an HTTP Action within a Logic App Workflow
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L45">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L46">constructor</a>
 </h3>
 
 ```typescript
@@ -163,7 +163,7 @@ Create a ActionHttp resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -195,7 +195,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L25">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L26">property body</a>
 </h3>
 
 ```typescript
@@ -206,7 +206,7 @@ public body: pulumi.Output<string | undefined>;
 Specifies the HTTP Body that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L29">property headers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L30">property headers</a>
 </h3>
 
 ```typescript
@@ -229,7 +229,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L33">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L34">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -240,7 +240,7 @@ public logicAppId: pulumi.Output<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L37">property method</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L38">property method</a>
 </h3>
 
 ```typescript
@@ -251,7 +251,7 @@ public method: pulumi.Output<string>;
 Specifies the HTTP Method which should be used for this HTTP Action. Possible values include `DELETE`, `GET`, `PATCH`, `POST` and `PUT`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L41">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -262,7 +262,7 @@ public name: pulumi.Output<string>;
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L45">property uri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L46">property uri</a>
 </h3>
 
 ```typescript
@@ -285,13 +285,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TriggerCustom">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L9">class TriggerCustom</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L10">class TriggerCustom</a>
 </h2>
 
 Manages a Custom Trigger within a Logic App Workflow
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L33">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L34">constructor</a>
 </h3>
 
 ```typescript
@@ -306,7 +306,7 @@ Create a TriggerCustom resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -338,7 +338,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L25">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L26">property body</a>
 </h3>
 
 ```typescript
@@ -361,7 +361,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L29">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L30">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -372,7 +372,7 @@ public logicAppId: pulumi.Output<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -395,13 +395,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TriggerHttpRequest">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L9">class TriggerHttpRequest</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L10">class TriggerHttpRequest</a>
 </h2>
 
 Manages a HTTP Request Trigger within a Logic App Workflow
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L41">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L42">constructor</a>
 </h3>
 
 ```typescript
@@ -416,7 +416,7 @@ Create a TriggerHttpRequest resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -460,7 +460,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L25">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L26">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -471,7 +471,7 @@ public logicAppId: pulumi.Output<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L29">property method</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L30">property method</a>
 </h3>
 
 ```typescript
@@ -482,7 +482,7 @@ public method: pulumi.Output<string | undefined>;
 Specifies the HTTP Method which the request be using. Possible values include `DELETE`, `GET`, `PATCH`, `POST` or `PUT`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -493,7 +493,7 @@ public name: pulumi.Output<string>;
 Specifies the name of the HTTP Request Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L37">property relativePath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L38">property relativePath</a>
 </h3>
 
 ```typescript
@@ -504,7 +504,7 @@ public relativePath: pulumi.Output<string | undefined>;
 Specifies the Relative Path used for this Request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L41">property schema</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L42">property schema</a>
 </h3>
 
 ```typescript
@@ -527,13 +527,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TriggerRecurrence">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L9">class TriggerRecurrence</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L10">class TriggerRecurrence</a>
 </h2>
 
 Manages a Recurrence Trigger within a Logic App Workflow
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L37">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -548,7 +548,7 @@ Create a TriggerRecurrence resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -580,7 +580,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L25">property frequency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L26">property frequency</a>
 </h3>
 
 ```typescript
@@ -603,7 +603,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L29">property interval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L30">property interval</a>
 </h3>
 
 ```typescript
@@ -614,7 +614,7 @@ public interval: pulumi.Output<number>;
 Specifies interval used for the Frequency, for example a value of `4` for `interval` and `hour` for `frequency` would run the Trigger every 4 hours.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L33">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L34">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -625,7 +625,7 @@ public logicAppId: pulumi.Output<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L37">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -648,13 +648,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Workflow">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L9">class Workflow</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L10">class Workflow</a>
 </h2>
 
 Manages a Logic App Workflow.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L53">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L54">constructor</a>
 </h3>
 
 ```typescript
@@ -669,7 +669,7 @@ Create a Workflow resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -701,7 +701,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L25">property accessEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L26">property accessEndpoint</a>
 </h3>
 
 ```typescript
@@ -724,7 +724,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L29">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L30">property location</a>
 </h3>
 
 ```typescript
@@ -735,7 +735,7 @@ public location: pulumi.Output<string>;
 Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L33">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L34">property name</a>
 </h3>
 
 ```typescript
@@ -746,7 +746,7 @@ public name: pulumi.Output<string>;
 Specifies the name of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L37">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L38">property parameters</a>
 </h3>
 
 ```typescript
@@ -757,7 +757,7 @@ public parameters: pulumi.Output<{ ... } | undefined>;
 A map of Key-Value pairs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L41">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L42">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -768,7 +768,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L45">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L46">property tags</a>
 </h3>
 
 ```typescript
@@ -791,7 +791,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L49">property workflowSchema</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L50">property workflowSchema</a>
 </h3>
 
 ```typescript
@@ -802,7 +802,7 @@ public workflowSchema: pulumi.Output<string | undefined>;
 Specifies the Schema to use for this Logic App Workflow. Defaults to `https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L53">property workflowVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L54">property workflowVersion</a>
 </h3>
 
 ```typescript
@@ -813,7 +813,7 @@ public workflowVersion: pulumi.Output<string | undefined>;
 Specifies the version of the Schema used for this Logic App Workflow. Defaults to `1.0.0.0`. Changing this forces a new resource to be create.d
 
 <h2 class="pdoc-module-header" id="getWorkflow">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L9">function getWorkflow</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L10">function getWorkflow</a>
 </h2>
 
 ```typescript
@@ -824,13 +824,13 @@ getWorkflow(args: GetWorkflowArgs, opts?: pulumi.InvokeOptions): Promise<GetWork
 Gets information about a Logic App Workflow.
 
 <h2 class="pdoc-module-header" id="ActionCustomArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L87">interface ActionCustomArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L88">interface ActionCustomArgs</a>
 </h2>
 
 The set of arguments for constructing a ActionCustom resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L91">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L92">property body</a>
 </h3>
 
 ```typescript
@@ -841,7 +841,7 @@ body: pulumi.Input<string>;
 Specifies the JSON Blob defining the Body of this Custom Action.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L95">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L96">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -852,7 +852,7 @@ logicAppId: pulumi.Input<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L99">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L100">property name</a>
 </h3>
 
 ```typescript
@@ -863,13 +863,13 @@ name?: pulumi.Input<string>;
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ActionCustomState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L69">interface ActionCustomState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L70">interface ActionCustomState</a>
 </h2>
 
 Input properties used for looking up and filtering ActionCustom resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L73">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L74">property body</a>
 </h3>
 
 ```typescript
@@ -880,7 +880,7 @@ body?: pulumi.Input<string>;
 Specifies the JSON Blob defining the Body of this Custom Action.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L77">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L78">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -891,7 +891,7 @@ logicAppId?: pulumi.Input<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L81">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L82">property name</a>
 </h3>
 
 ```typescript
@@ -902,13 +902,13 @@ name?: pulumi.Input<string>;
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ActionHttpArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L120">interface ActionHttpArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L121">interface ActionHttpArgs</a>
 </h2>
 
 The set of arguments for constructing a ActionHttp resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L124">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L125">property body</a>
 </h3>
 
 ```typescript
@@ -919,7 +919,7 @@ body?: pulumi.Input<string>;
 Specifies the HTTP Body that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L128">property headers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L129">property headers</a>
 </h3>
 
 ```typescript
@@ -930,7 +930,7 @@ headers?: pulumi.Input<{ ... }>;
 Specifies a Map of Key-Value Pairs that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L132">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L133">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -941,7 +941,7 @@ logicAppId: pulumi.Input<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L136">property method</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L137">property method</a>
 </h3>
 
 ```typescript
@@ -952,7 +952,7 @@ method: pulumi.Input<string>;
 Specifies the HTTP Method which should be used for this HTTP Action. Possible values include `DELETE`, `GET`, `PATCH`, `POST` and `PUT`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L140">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L141">property name</a>
 </h3>
 
 ```typescript
@@ -963,7 +963,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L144">property uri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L145">property uri</a>
 </h3>
 
 ```typescript
@@ -974,13 +974,13 @@ uri: pulumi.Input<string>;
 Specifies the URI which will be called when this HTTP Action is triggered.
 
 <h2 class="pdoc-module-header" id="ActionHttpState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L90">interface ActionHttpState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L91">interface ActionHttpState</a>
 </h2>
 
 Input properties used for looking up and filtering ActionHttp resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L94">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L95">property body</a>
 </h3>
 
 ```typescript
@@ -991,7 +991,7 @@ body?: pulumi.Input<string>;
 Specifies the HTTP Body that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L98">property headers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L99">property headers</a>
 </h3>
 
 ```typescript
@@ -1002,7 +1002,7 @@ headers?: pulumi.Input<{ ... }>;
 Specifies a Map of Key-Value Pairs that should be sent to the `uri` when this HTTP Action is triggered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L102">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L103">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -1013,7 +1013,7 @@ logicAppId?: pulumi.Input<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L106">property method</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L107">property method</a>
 </h3>
 
 ```typescript
@@ -1024,7 +1024,7 @@ method?: pulumi.Input<string>;
 Specifies the HTTP Method which should be used for this HTTP Action. Possible values include `DELETE`, `GET`, `PATCH`, `POST` and `PUT`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L110">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L111">property name</a>
 </h3>
 
 ```typescript
@@ -1035,7 +1035,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L114">property uri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionHttp.ts#L115">property uri</a>
 </h3>
 
 ```typescript
@@ -1046,13 +1046,13 @@ uri?: pulumi.Input<string>;
 Specifies the URI which will be called when this HTTP Action is triggered.
 
 <h2 class="pdoc-module-header" id="GetWorkflowArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L19">interface GetWorkflowArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L20">interface GetWorkflowArgs</a>
 </h2>
 
 A collection of arguments for invoking getWorkflow.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L23">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L24">property name</a>
 </h3>
 
 ```typescript
@@ -1063,7 +1063,7 @@ name: string;
 The name of the Logic App Workflow.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L27">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L28">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1074,13 +1074,13 @@ resourceGroupName: string;
 The name of the Resource Group in which the Logic App Workflow exists.
 
 <h2 class="pdoc-module-header" id="GetWorkflowResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L33">interface GetWorkflowResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L34">interface GetWorkflowResult</a>
 </h2>
 
 A collection of values returned by getWorkflow.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L37">property accessEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L38">property accessEndpoint</a>
 </h3>
 
 ```typescript
@@ -1091,7 +1091,7 @@ accessEndpoint: string;
 The Access Endpoint for the Logic App Workflow
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L61">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L62">property id</a>
 </h3>
 
 ```typescript
@@ -1102,7 +1102,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L41">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L42">property location</a>
 </h3>
 
 ```typescript
@@ -1113,7 +1113,7 @@ location: string;
 The Azure location where the Logic App Workflow exists.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L45">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L46">property parameters</a>
 </h3>
 
 ```typescript
@@ -1124,7 +1124,7 @@ parameters: { ... };
 A map of Key-Value pairs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L49">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L50">property tags</a>
 </h3>
 
 ```typescript
@@ -1135,7 +1135,7 @@ tags: { ... };
 A mapping of tags assigned to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L53">property workflowSchema</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L54">property workflowSchema</a>
 </h3>
 
 ```typescript
@@ -1146,7 +1146,7 @@ workflowSchema: string;
 The Schema used for this Logic App Workflow.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L57">property workflowVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/getWorkflow.ts#L58">property workflowVersion</a>
 </h3>
 
 ```typescript
@@ -1157,13 +1157,13 @@ workflowVersion: string;
 The version of the Schema used for this Logic App Workflow. Defaults to `1.0.0.0`.
 
 <h2 class="pdoc-module-header" id="TriggerCustomArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L87">interface TriggerCustomArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L88">interface TriggerCustomArgs</a>
 </h2>
 
 The set of arguments for constructing a TriggerCustom resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L91">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L92">property body</a>
 </h3>
 
 ```typescript
@@ -1174,7 +1174,7 @@ body: pulumi.Input<string>;
 Specifies the JSON Blob defining the Body of this Custom Trigger.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L95">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L96">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -1185,7 +1185,7 @@ logicAppId: pulumi.Input<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L99">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L100">property name</a>
 </h3>
 
 ```typescript
@@ -1196,13 +1196,13 @@ name?: pulumi.Input<string>;
 Specifies the name of the HTTP Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="TriggerCustomState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L69">interface TriggerCustomState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L70">interface TriggerCustomState</a>
 </h2>
 
 Input properties used for looking up and filtering TriggerCustom resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L73">property body</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L74">property body</a>
 </h3>
 
 ```typescript
@@ -1213,7 +1213,7 @@ body?: pulumi.Input<string>;
 Specifies the JSON Blob defining the Body of this Custom Trigger.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L77">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L78">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -1224,7 +1224,7 @@ logicAppId?: pulumi.Input<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L81">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerCustom.ts#L82">property name</a>
 </h3>
 
 ```typescript
@@ -1235,13 +1235,13 @@ name?: pulumi.Input<string>;
 Specifies the name of the HTTP Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="TriggerHttpRequestArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L107">interface TriggerHttpRequestArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L108">interface TriggerHttpRequestArgs</a>
 </h2>
 
 The set of arguments for constructing a TriggerHttpRequest resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L111">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L112">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -1252,7 +1252,7 @@ logicAppId: pulumi.Input<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L115">property method</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L116">property method</a>
 </h3>
 
 ```typescript
@@ -1263,7 +1263,7 @@ method?: pulumi.Input<string>;
 Specifies the HTTP Method which the request be using. Possible values include `DELETE`, `GET`, `PATCH`, `POST` or `PUT`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L119">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L120">property name</a>
 </h3>
 
 ```typescript
@@ -1274,7 +1274,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the HTTP Request Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L123">property relativePath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L124">property relativePath</a>
 </h3>
 
 ```typescript
@@ -1285,7 +1285,7 @@ relativePath?: pulumi.Input<string>;
 Specifies the Relative Path used for this Request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L127">property schema</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L128">property schema</a>
 </h3>
 
 ```typescript
@@ -1296,13 +1296,13 @@ schema: pulumi.Input<string>;
 A JSON Blob defining the Schema of the incoming request. This needs to be valid JSON.
 
 <h2 class="pdoc-module-header" id="TriggerHttpRequestState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L81">interface TriggerHttpRequestState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L82">interface TriggerHttpRequestState</a>
 </h2>
 
 Input properties used for looking up and filtering TriggerHttpRequest resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L85">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L86">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -1313,7 +1313,7 @@ logicAppId?: pulumi.Input<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L89">property method</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L90">property method</a>
 </h3>
 
 ```typescript
@@ -1324,7 +1324,7 @@ method?: pulumi.Input<string>;
 Specifies the HTTP Method which the request be using. Possible values include `DELETE`, `GET`, `PATCH`, `POST` or `PUT`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L93">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L94">property name</a>
 </h3>
 
 ```typescript
@@ -1335,7 +1335,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the HTTP Request Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L97">property relativePath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L98">property relativePath</a>
 </h3>
 
 ```typescript
@@ -1346,7 +1346,7 @@ relativePath?: pulumi.Input<string>;
 Specifies the Relative Path used for this Request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L101">property schema</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerHttpRequest.ts#L102">property schema</a>
 </h3>
 
 ```typescript
@@ -1357,13 +1357,13 @@ schema?: pulumi.Input<string>;
 A JSON Blob defining the Schema of the incoming request. This needs to be valid JSON.
 
 <h2 class="pdoc-module-header" id="TriggerRecurrenceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L100">interface TriggerRecurrenceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L101">interface TriggerRecurrenceArgs</a>
 </h2>
 
 The set of arguments for constructing a TriggerRecurrence resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L104">property frequency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L105">property frequency</a>
 </h3>
 
 ```typescript
@@ -1374,7 +1374,7 @@ frequency: pulumi.Input<string>;
 Specifies the Frequency at which this Trigger should be run. Possible values include `Month`, `Week`, `Day`, `Hour`, `Minute` and `Second`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L108">property interval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L109">property interval</a>
 </h3>
 
 ```typescript
@@ -1385,7 +1385,7 @@ interval: pulumi.Input<number>;
 Specifies interval used for the Frequency, for example a value of `4` for `interval` and `hour` for `frequency` would run the Trigger every 4 hours.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L112">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L113">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -1396,7 +1396,7 @@ logicAppId: pulumi.Input<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L116">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L117">property name</a>
 </h3>
 
 ```typescript
@@ -1407,13 +1407,13 @@ name?: pulumi.Input<string>;
 Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="TriggerRecurrenceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L78">interface TriggerRecurrenceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L79">interface TriggerRecurrenceState</a>
 </h2>
 
 Input properties used for looking up and filtering TriggerRecurrence resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L82">property frequency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L83">property frequency</a>
 </h3>
 
 ```typescript
@@ -1424,7 +1424,7 @@ frequency?: pulumi.Input<string>;
 Specifies the Frequency at which this Trigger should be run. Possible values include `Month`, `Week`, `Day`, `Hour`, `Minute` and `Second`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L86">property interval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L87">property interval</a>
 </h3>
 
 ```typescript
@@ -1435,7 +1435,7 @@ interval?: pulumi.Input<number>;
 Specifies interval used for the Frequency, for example a value of `4` for `interval` and `hour` for `frequency` would run the Trigger every 4 hours.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L90">property logicAppId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L91">property logicAppId</a>
 </h3>
 
 ```typescript
@@ -1446,7 +1446,7 @@ logicAppId?: pulumi.Input<string>;
 Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L94">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/triggerRecurrence.ts#L95">property name</a>
 </h3>
 
 ```typescript
@@ -1457,13 +1457,13 @@ name?: pulumi.Input<string>;
 Specifies the name of the Recurrence Triggers to be created within the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="WorkflowArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L137">interface WorkflowArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L138">interface WorkflowArgs</a>
 </h2>
 
 The set of arguments for constructing a Workflow resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L141">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L142">property location</a>
 </h3>
 
 ```typescript
@@ -1474,7 +1474,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L145">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L146">property name</a>
 </h3>
 
 ```typescript
@@ -1485,7 +1485,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L149">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L150">property parameters</a>
 </h3>
 
 ```typescript
@@ -1496,7 +1496,7 @@ parameters?: pulumi.Input<{ ... }>;
 A map of Key-Value pairs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L153">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L154">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1507,7 +1507,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L157">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L158">property tags</a>
 </h3>
 
 ```typescript
@@ -1518,7 +1518,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L161">property workflowSchema</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L162">property workflowSchema</a>
 </h3>
 
 ```typescript
@@ -1529,7 +1529,7 @@ workflowSchema?: pulumi.Input<string>;
 Specifies the Schema to use for this Logic App Workflow. Defaults to `https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L165">property workflowVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L166">property workflowVersion</a>
 </h3>
 
 ```typescript
@@ -1540,13 +1540,13 @@ workflowVersion?: pulumi.Input<string>;
 Specifies the version of the Schema used for this Logic App Workflow. Defaults to `1.0.0.0`. Changing this forces a new resource to be create.d
 
 <h2 class="pdoc-module-header" id="WorkflowState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L99">interface WorkflowState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L100">interface WorkflowState</a>
 </h2>
 
 Input properties used for looking up and filtering Workflow resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L103">property accessEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L104">property accessEndpoint</a>
 </h3>
 
 ```typescript
@@ -1557,7 +1557,7 @@ accessEndpoint?: pulumi.Input<string>;
 The Access Endpoint for the Logic App Workflow
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L107">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L108">property location</a>
 </h3>
 
 ```typescript
@@ -1568,7 +1568,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L111">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L112">property name</a>
 </h3>
 
 ```typescript
@@ -1579,7 +1579,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Logic App Workflow. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L115">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L116">property parameters</a>
 </h3>
 
 ```typescript
@@ -1590,7 +1590,7 @@ parameters?: pulumi.Input<{ ... }>;
 A map of Key-Value pairs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L119">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L120">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1601,7 +1601,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L123">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L124">property tags</a>
 </h3>
 
 ```typescript
@@ -1612,7 +1612,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L127">property workflowSchema</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L128">property workflowSchema</a>
 </h3>
 
 ```typescript
@@ -1623,7 +1623,7 @@ workflowSchema?: pulumi.Input<string>;
 Specifies the Schema to use for this Logic App Workflow. Defaults to `https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L131">property workflowVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/workflow.ts#L132">property workflowVersion</a>
 </h3>
 
 ```typescript

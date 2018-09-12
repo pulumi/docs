@@ -35,20 +35,20 @@ title: Module autoscaling
 
 
 <h2 class="pdoc-module-header" id="Attachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L16">class Attachment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L17">class Attachment</a>
 </h2>
 
 Provides an AutoScaling Attachment resource.
 
 ~> **NOTE on AutoScaling Groups and ASG Attachments:** Terraform currently provides
 both a standalone ASG Attachment resource (describing an ASG attached to
-an ELB), and an [AutoScaling Group resource](autoscaling_group.html) with
+an ELB), and an AutoScaling Group resource with
 `load_balancers` defined in-line. At this time you cannot use an ASG with in-line
 load balancers in conjunction with an ASG Attachment resource. Doing so will cause a
 conflict and will overwrite attachments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L40">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L41">constructor</a>
 </h3>
 
 ```typescript
@@ -63,7 +63,7 @@ Create a Attachment resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L25">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -95,7 +95,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L32">property albTargetGroupArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L33">property albTargetGroupArn</a>
 </h3>
 
 ```typescript
@@ -106,7 +106,7 @@ public albTargetGroupArn: pulumi.Output<string | undefined>;
 The ARN of an ALB Target Group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L36">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L37">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -117,7 +117,7 @@ public autoscalingGroupName: pulumi.Output<string>;
 Name of ASG to associate with the ELB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L40">property elb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L41">property elb</a>
 </h3>
 
 ```typescript
@@ -152,7 +152,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Group">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L13">class Group</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L14">class Group</a>
 </h2>
 
 Provides an AutoScaling Group resource.
@@ -160,7 +160,7 @@ Provides an AutoScaling Group resource.
 -> **Note:** You must specify either `launch_configuration` or `launch_template`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L169">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L170">constructor</a>
 </h3>
 
 ```typescript
@@ -175,7 +175,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -207,7 +207,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L29">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L30">property arn</a>
 </h3>
 
 ```typescript
@@ -218,7 +218,7 @@ public arn: pulumi.Output<string>;
 The ARN for this AutoScaling Group
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L33">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L34">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -229,7 +229,7 @@ public availabilityZones: pulumi.Output<string[]>;
 A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L37">property defaultCooldown</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L38">property defaultCooldown</a>
 </h3>
 
 ```typescript
@@ -240,7 +240,7 @@ public defaultCooldown: pulumi.Output<number>;
 The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L43">property desiredCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L44">property desiredCapacity</a>
 </h3>
 
 ```typescript
@@ -249,11 +249,11 @@ public desiredCapacity: pulumi.Output<number>;
 
 
 The number of Amazon EC2 instances that
-should be running in the group. (See also [Waiting for
-Capacity](#waiting-for-capacity) below.)
+should be running in the group. (See also Waiting for
+Capacity below.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L52">property enabledMetrics</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L53">property enabledMetrics</a>
 </h3>
 
 ```typescript
@@ -264,12 +264,12 @@ public enabledMetrics: pulumi.Output<string[] | undefined>;
 A list of metrics to collect. The allowed values are `GroupMinSize`, `GroupMaxSize`, `GroupDesiredCapacity`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupTerminatingInstances`, `GroupTotalInstances`.
 * `wait_for_capacity_timeout` (Default: "10m") A maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that Terraform should
-wait for ASG instances to be healthy before timing out.  (See also [Waiting
-for Capacity](#waiting-for-capacity) below.) Setting this to "0" causes
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
 Terraform to skip all Capacity Waiting behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L60">property forceDelete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L61">property forceDelete</a>
 </h3>
 
 ```typescript
@@ -284,7 +284,7 @@ drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L64">property healthCheckGracePeriod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L65">property healthCheckGracePeriod</a>
 </h3>
 
 ```typescript
@@ -295,7 +295,7 @@ public healthCheckGracePeriod: pulumi.Output<number | undefined>;
 Time (in seconds) after instance comes into service before checking health.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L68">property healthCheckType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L69">property healthCheckType</a>
 </h3>
 
 ```typescript
@@ -318,7 +318,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L78">property initialLifecycleHooks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L79">property initialLifecycleHooks</a>
 </h3>
 
 ```typescript
@@ -330,12 +330,12 @@ One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws_autoscaling_lifecycle_hook`](/docs/providers/aws/r/autoscaling_lifecycle_hooks.html)
+[`aws_autoscaling_lifecycle_hook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hooks.html)
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws_autoscaling_lifecycle_hook` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L82">property launchConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L83">property launchConfiguration</a>
 </h3>
 
 ```typescript
@@ -346,7 +346,7 @@ public launchConfiguration: pulumi.Output<string | undefined>;
 The name of the launch configuration to use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L87">property launchTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L88">property launchTemplate</a>
 </h3>
 
 ```typescript
@@ -355,10 +355,10 @@ public launchTemplate: pulumi.Output<{ ... } | undefined>;
 
 
 Launch template specification to use to launch instances.
-See [Launch Template Specification](#launch-template-specification) below for more details.
+See Launch Template Specification below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L92">property loadBalancers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L93">property loadBalancers</a>
 </h3>
 
 ```typescript
@@ -370,7 +370,7 @@ A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L96">property maxSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L97">property maxSize</a>
 </h3>
 
 ```typescript
@@ -381,7 +381,7 @@ public maxSize: pulumi.Output<number>;
 The maximum size of the auto scale group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L100">property metricsGranularity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L101">property metricsGranularity</a>
 </h3>
 
 ```typescript
@@ -392,7 +392,7 @@ public metricsGranularity: pulumi.Output<string | undefined>;
 The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L107">property minElbCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L108">property minElbCapacity</a>
 </h3>
 
 ```typescript
@@ -403,10 +403,10 @@ public minElbCapacity: pulumi.Output<number | undefined>;
 Setting this causes Terraform to wait for
 this number of instances to show up healthy in the ELB only on creation.
 Updates will not wait on ELB instance number changes.
-(See also [Waiting for Capacity](#waiting-for-capacity) below.)
+(See also Waiting for Capacity below.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L112">property minSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L113">property minSize</a>
 </h3>
 
 ```typescript
@@ -415,10 +415,10 @@ public minSize: pulumi.Output<number>;
 
 
 The minimum size of the auto scale group.
-(See also [Waiting for Capacity](#waiting-for-capacity) below.)
+(See also Waiting for Capacity below.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L116">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L117">property name</a>
 </h3>
 
 ```typescript
@@ -426,10 +426,10 @@ public name: pulumi.Output<string>;
 ```
 
 
-The name of the launch template. Conflicts with `id`.
+The name of the auto scaling group. By default generated by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L121">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L122">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -441,7 +441,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L125">property placementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L126">property placementGroup</a>
 </h3>
 
 ```typescript
@@ -452,7 +452,7 @@ public placementGroup: pulumi.Output<string | undefined>;
 The name of the placement group into which you'll launch your instances, if any.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L131">property protectFromScaleIn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L132">property protectFromScaleIn</a>
 </h3>
 
 ```typescript
@@ -465,7 +465,7 @@ autoscaling group will not select instances with this setting for terminination
 during scale in events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L135">property serviceLinkedRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L136">property serviceLinkedRoleArn</a>
 </h3>
 
 ```typescript
@@ -476,7 +476,7 @@ public serviceLinkedRoleArn: pulumi.Output<string>;
 The ARN of the service-linked role that the ASG will use to call other AWS services
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L140">property suspendedProcesses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L141">property suspendedProcesses</a>
 </h3>
 
 ```typescript
@@ -488,7 +488,7 @@ A list of processes to suspend for the AutoScaling Group. The allowed values are
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L144">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L145">property tags</a>
 </h3>
 
 ```typescript
@@ -499,7 +499,7 @@ public tags: pulumi.Output<{ ... }[] | undefined>;
 A list of tag blocks. Tags documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L148">property tagsCollection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L149">property tagsCollection</a>
 </h3>
 
 ```typescript
@@ -510,7 +510,7 @@ public tagsCollection: pulumi.Output<Tags | undefined>;
 A list of tag blocks (maps). Tags documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L152">property targetGroupArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L153">property targetGroupArns</a>
 </h3>
 
 ```typescript
@@ -521,7 +521,7 @@ public targetGroupArns: pulumi.Output<string[]>;
 A list of `aws_alb_target_group` ARNs, for use with Application Load Balancing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L156">property terminationPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L157">property terminationPolicies</a>
 </h3>
 
 ```typescript
@@ -544,7 +544,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L160">property vpcZoneIdentifiers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L161">property vpcZoneIdentifiers</a>
 </h3>
 
 ```typescript
@@ -555,7 +555,7 @@ public vpcZoneIdentifiers: pulumi.Output<string[]>;
 A list of subnet IDs to launch resources in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L161">property waitForCapacityTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L162">property waitForCapacityTimeout</a>
 </h3>
 
 ```typescript
@@ -563,7 +563,7 @@ public waitForCapacityTimeout: pulumi.Output<string | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L169">property waitForElbCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L170">property waitForElbCapacity</a>
 </h3>
 
 ```typescript
@@ -575,28 +575,28 @@ Setting this will cause Terraform to wait
 for exactly this number of healthy instances in all attached load balancers
 on both create and update operations. (Takes precedence over
 `min_elb_capacity` behavior.)
-(See also [Waiting for Capacity](#waiting-for-capacity) below.)
+(See also Waiting for Capacity below.)
 
 <h2 class="pdoc-module-header" id="LifecycleHook">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L21">class LifecycleHook</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L22">class LifecycleHook</a>
 </h2>
 
 Provides an AutoScaling Lifecycle Hook resource.
 
 ~> **NOTE:** Terraform has two types of ways you can add lifecycle hooks - via
 the `initial_lifecycle_hook` attribute from the
-[`aws_autoscaling_group`](/docs/providers/aws/r/autoscaling_group.html)
+[`aws_autoscaling_group`](https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html)
 resource, or via this one. Hooks added via this resource will not be added
 until the autoscaling group has been created, and depending on your
-[capacity](/docs/providers/aws/r/autoscaling_group.html#waiting-for-capacity)
+[capacity](https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#waiting-for-capacity)
 settings, after the initial instances have been launched, creating unintended
 behavior. If you need hooks to run on all instances, add them with
 `initial_lifecycle_hook` in
-[`aws_autoscaling_group`](/docs/providers/aws/r/autoscaling_group.html),
+[`aws_autoscaling_group`](https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html),
 but take care to not duplicate those hooks with this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L65">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L66">constructor</a>
 </h3>
 
 ```typescript
@@ -611,7 +611,7 @@ Create a LifecycleHook resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L30">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L31">method get</a>
 </h3>
 
 ```typescript
@@ -643,7 +643,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L37">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L38">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -654,7 +654,7 @@ public autoscalingGroupName: pulumi.Output<string>;
 The name of the Auto Scaling group to which you want to assign the lifecycle hook
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L41">property defaultResult</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L42">property defaultResult</a>
 </h3>
 
 ```typescript
@@ -665,7 +665,7 @@ public defaultResult: pulumi.Output<string>;
 Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L45">property heartbeatTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L46">property heartbeatTimeout</a>
 </h3>
 
 ```typescript
@@ -688,7 +688,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L49">property lifecycleTransition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L50">property lifecycleTransition</a>
 </h3>
 
 ```typescript
@@ -699,7 +699,7 @@ public lifecycleTransition: pulumi.Output<string>;
 The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L53">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L54">property name</a>
 </h3>
 
 ```typescript
@@ -710,7 +710,7 @@ public name: pulumi.Output<string>;
 The name of the lifecycle hook.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L57">property notificationMetadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L58">property notificationMetadata</a>
 </h3>
 
 ```typescript
@@ -721,7 +721,7 @@ public notificationMetadata: pulumi.Output<string | undefined>;
 Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L61">property notificationTargetArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L62">property notificationTargetArn</a>
 </h3>
 
 ```typescript
@@ -732,7 +732,7 @@ public notificationTargetArn: pulumi.Output<string | undefined>;
 The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L65">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L66">property roleArn</a>
 </h3>
 
 ```typescript
@@ -755,7 +755,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Notification">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L13">class Notification</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L14">class Notification</a>
 </h2>
 
 Provides an AutoScaling Group with Notification support, via SNS Topics. Each of
@@ -763,7 +763,7 @@ the `notifications` map to a [Notification Configuration][2] inside Amazon Web
 Services, and are applied to each AutoScaling Group you supply.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L38">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L39">constructor</a>
 </h3>
 
 ```typescript
@@ -778,7 +778,7 @@ Create a Notification resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -810,7 +810,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L29">property groupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L30">property groupNames</a>
 </h3>
 
 ```typescript
@@ -833,7 +833,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L34">property notifications</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L35">property notifications</a>
 </h3>
 
 ```typescript
@@ -845,7 +845,7 @@ A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L38">property topicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L39">property topicArn</a>
 </h3>
 
 ```typescript
@@ -868,7 +868,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Policy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L15">class Policy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L16">class Policy</a>
 </h2>
 
 Provides an AutoScaling Scaling Policy resource.
@@ -880,7 +880,7 @@ or [dynamic](https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-sc
 (policy-based) scaling.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L75">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L76">constructor</a>
 </h3>
 
 ```typescript
@@ -895,7 +895,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L24">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -927,7 +927,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L31">property adjustmentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L32">property adjustmentType</a>
 </h3>
 
 ```typescript
@@ -938,7 +938,7 @@ public adjustmentType: pulumi.Output<string | undefined>;
 Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L35">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L36">property arn</a>
 </h3>
 
 ```typescript
@@ -949,7 +949,7 @@ public arn: pulumi.Output<string>;
 The ARN assigned by AWS to the scaling policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L39">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L40">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -960,7 +960,7 @@ public autoscalingGroupName: pulumi.Output<string>;
 The name of the autoscaling group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L43">property cooldown</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L44">property cooldown</a>
 </h3>
 
 ```typescript
@@ -971,7 +971,7 @@ public cooldown: pulumi.Output<number | undefined>;
 The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L47">property estimatedInstanceWarmup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L48">property estimatedInstanceWarmup</a>
 </h3>
 
 ```typescript
@@ -994,7 +994,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L51">property metricAggregationType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L52">property metricAggregationType</a>
 </h3>
 
 ```typescript
@@ -1005,7 +1005,7 @@ public metricAggregationType: pulumi.Output<string>;
 The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L52">property minAdjustmentMagnitude</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L53">property minAdjustmentMagnitude</a>
 </h3>
 
 ```typescript
@@ -1013,7 +1013,7 @@ public minAdjustmentMagnitude: pulumi.Output<number | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L56">property minAdjustmentStep</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L57">property minAdjustmentStep</a>
 </h3>
 
 ```typescript
@@ -1024,7 +1024,7 @@ public minAdjustmentStep: pulumi.Output<number | undefined>;
 Use `min_adjustment_magnitude` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L60">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L61">property name</a>
 </h3>
 
 ```typescript
@@ -1035,7 +1035,7 @@ public name: pulumi.Output<string>;
 The name of the dimension.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L64">property policyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L65">property policyType</a>
 </h3>
 
 ```typescript
@@ -1046,7 +1046,7 @@ public policyType: pulumi.Output<string | undefined>;
 The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L70">property scalingAdjustment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L71">property scalingAdjustment</a>
 </h3>
 
 ```typescript
@@ -1059,7 +1059,7 @@ scale, when the adjustment bounds are breached. A positive value scales
 up. A negative value scales down.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L71">property stepAdjustments</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L72">property stepAdjustments</a>
 </h3>
 
 ```typescript
@@ -1067,7 +1067,7 @@ public stepAdjustments: pulumi.Output<{ ... }[] | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L75">property targetTrackingConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L76">property targetTrackingConfiguration</a>
 </h3>
 
 ```typescript
@@ -1090,13 +1090,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Schedule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L9">class Schedule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L10">class Schedule</a>
 </h2>
 
 Provides an AutoScaling Schedule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L61">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L62">constructor</a>
 </h3>
 
 ```typescript
@@ -1111,7 +1111,7 @@ Create a Schedule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L18">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -1143,7 +1143,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L25">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L26">property arn</a>
 </h3>
 
 ```typescript
@@ -1154,7 +1154,7 @@ public arn: pulumi.Output<string>;
 The ARN assigned by AWS to the autoscaling schedule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L29">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L30">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -1165,7 +1165,7 @@ public autoscalingGroupName: pulumi.Output<string>;
 The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L33">property desiredCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L34">property desiredCapacity</a>
 </h3>
 
 ```typescript
@@ -1176,7 +1176,7 @@ public desiredCapacity: pulumi.Output<number>;
 The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L38">property endTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L39">property endTime</a>
 </h3>
 
 ```typescript
@@ -1200,7 +1200,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L43">property maxSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L44">property maxSize</a>
 </h3>
 
 ```typescript
@@ -1212,7 +1212,7 @@ The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L48">property minSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L49">property minSize</a>
 </h3>
 
 ```typescript
@@ -1224,7 +1224,7 @@ The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L52">property recurrence</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L53">property recurrence</a>
 </h3>
 
 ```typescript
@@ -1235,7 +1235,7 @@ public recurrence: pulumi.Output<string>;
 The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L56">property scheduledActionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L57">property scheduledActionName</a>
 </h3>
 
 ```typescript
@@ -1246,7 +1246,7 @@ public scheduledActionName: pulumi.Output<string>;
 The name of this scaling action.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L61">property startTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L62">property startTime</a>
 </h3>
 
 ```typescript
@@ -1270,13 +1270,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="AttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L91">interface AttachmentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L92">interface AttachmentArgs</a>
 </h2>
 
 The set of arguments for constructing a Attachment resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L95">property albTargetGroupArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L96">property albTargetGroupArn</a>
 </h3>
 
 ```typescript
@@ -1287,7 +1287,7 @@ albTargetGroupArn?: pulumi.Input<string>;
 The ARN of an ALB Target Group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L99">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L100">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -1298,7 +1298,7 @@ autoscalingGroupName: pulumi.Input<string>;
 Name of ASG to associate with the ELB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L103">property elb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L104">property elb</a>
 </h3>
 
 ```typescript
@@ -1309,13 +1309,13 @@ elb?: pulumi.Input<string>;
 The name of the ELB.
 
 <h2 class="pdoc-module-header" id="AttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L73">interface AttachmentState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L74">interface AttachmentState</a>
 </h2>
 
 Input properties used for looking up and filtering Attachment resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L77">property albTargetGroupArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L78">property albTargetGroupArn</a>
 </h3>
 
 ```typescript
@@ -1326,7 +1326,7 @@ albTargetGroupArn?: pulumi.Input<string>;
 The ARN of an ALB Target Group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L81">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L82">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -1337,7 +1337,7 @@ autoscalingGroupName?: pulumi.Input<string>;
 Name of ASG to associate with the ELB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L85">property elb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/attachment.ts#L86">property elb</a>
 </h3>
 
 ```typescript
@@ -1348,13 +1348,13 @@ elb?: pulumi.Input<string>;
 The name of the ELB.
 
 <h2 class="pdoc-module-header" id="GroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L407">interface GroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L408">interface GroupArgs</a>
 </h2>
 
 The set of arguments for constructing a Group resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L411">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L412">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -1365,7 +1365,7 @@ availabilityZones?: pulumi.Input<pulumi.Input<string>[]>;
 A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L415">property defaultCooldown</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L416">property defaultCooldown</a>
 </h3>
 
 ```typescript
@@ -1376,7 +1376,7 @@ defaultCooldown?: pulumi.Input<number>;
 The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L421">property desiredCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L422">property desiredCapacity</a>
 </h3>
 
 ```typescript
@@ -1385,11 +1385,11 @@ desiredCapacity?: pulumi.Input<number>;
 
 
 The number of Amazon EC2 instances that
-should be running in the group. (See also [Waiting for
-Capacity](#waiting-for-capacity) below.)
+should be running in the group. (See also Waiting for
+Capacity below.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L430">property enabledMetrics</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L431">property enabledMetrics</a>
 </h3>
 
 ```typescript
@@ -1400,12 +1400,12 @@ enabledMetrics?: pulumi.Input<pulumi.Input<string>[]>;
 A list of metrics to collect. The allowed values are `GroupMinSize`, `GroupMaxSize`, `GroupDesiredCapacity`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupTerminatingInstances`, `GroupTotalInstances`.
 * `wait_for_capacity_timeout` (Default: "10m") A maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that Terraform should
-wait for ASG instances to be healthy before timing out.  (See also [Waiting
-for Capacity](#waiting-for-capacity) below.) Setting this to "0" causes
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
 Terraform to skip all Capacity Waiting behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L438">property forceDelete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L439">property forceDelete</a>
 </h3>
 
 ```typescript
@@ -1420,7 +1420,7 @@ drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L442">property healthCheckGracePeriod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L443">property healthCheckGracePeriod</a>
 </h3>
 
 ```typescript
@@ -1431,7 +1431,7 @@ healthCheckGracePeriod?: pulumi.Input<number>;
 Time (in seconds) after instance comes into service before checking health.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L446">property healthCheckType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L447">property healthCheckType</a>
 </h3>
 
 ```typescript
@@ -1442,7 +1442,7 @@ healthCheckType?: pulumi.Input<string>;
 "EC2" or "ELB". Controls how health checking is done.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L456">property initialLifecycleHooks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L457">property initialLifecycleHooks</a>
 </h3>
 
 ```typescript
@@ -1454,12 +1454,12 @@ One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws_autoscaling_lifecycle_hook`](/docs/providers/aws/r/autoscaling_lifecycle_hooks.html)
+[`aws_autoscaling_lifecycle_hook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hooks.html)
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws_autoscaling_lifecycle_hook` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L460">property launchConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L461">property launchConfiguration</a>
 </h3>
 
 ```typescript
@@ -1470,7 +1470,7 @@ launchConfiguration?: pulumi.Input<string>;
 The name of the launch configuration to use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L465">property launchTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L466">property launchTemplate</a>
 </h3>
 
 ```typescript
@@ -1479,10 +1479,10 @@ launchTemplate?: pulumi.Input<{ ... }>;
 
 
 Launch template specification to use to launch instances.
-See [Launch Template Specification](#launch-template-specification) below for more details.
+See Launch Template Specification below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L470">property loadBalancers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L471">property loadBalancers</a>
 </h3>
 
 ```typescript
@@ -1494,7 +1494,7 @@ A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L474">property maxSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L475">property maxSize</a>
 </h3>
 
 ```typescript
@@ -1505,7 +1505,7 @@ maxSize: pulumi.Input<number>;
 The maximum size of the auto scale group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L478">property metricsGranularity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L479">property metricsGranularity</a>
 </h3>
 
 ```typescript
@@ -1516,7 +1516,7 @@ metricsGranularity?: pulumi.Input<string>;
 The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L485">property minElbCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L486">property minElbCapacity</a>
 </h3>
 
 ```typescript
@@ -1527,10 +1527,10 @@ minElbCapacity?: pulumi.Input<number>;
 Setting this causes Terraform to wait for
 this number of instances to show up healthy in the ELB only on creation.
 Updates will not wait on ELB instance number changes.
-(See also [Waiting for Capacity](#waiting-for-capacity) below.)
+(See also Waiting for Capacity below.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L490">property minSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L491">property minSize</a>
 </h3>
 
 ```typescript
@@ -1539,10 +1539,10 @@ minSize: pulumi.Input<number>;
 
 
 The minimum size of the auto scale group.
-(See also [Waiting for Capacity](#waiting-for-capacity) below.)
+(See also Waiting for Capacity below.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L494">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L495">property name</a>
 </h3>
 
 ```typescript
@@ -1550,10 +1550,10 @@ name?: pulumi.Input<string>;
 ```
 
 
-The name of the launch template. Conflicts with `id`.
+The name of the auto scaling group. By default generated by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L499">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L500">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -1565,7 +1565,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L503">property placementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L504">property placementGroup</a>
 </h3>
 
 ```typescript
@@ -1576,7 +1576,7 @@ placementGroup?: pulumi.Input<string>;
 The name of the placement group into which you'll launch your instances, if any.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L509">property protectFromScaleIn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L510">property protectFromScaleIn</a>
 </h3>
 
 ```typescript
@@ -1589,7 +1589,7 @@ autoscaling group will not select instances with this setting for terminination
 during scale in events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L513">property serviceLinkedRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L514">property serviceLinkedRoleArn</a>
 </h3>
 
 ```typescript
@@ -1600,7 +1600,7 @@ serviceLinkedRoleArn?: pulumi.Input<string>;
 The ARN of the service-linked role that the ASG will use to call other AWS services
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L518">property suspendedProcesses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L519">property suspendedProcesses</a>
 </h3>
 
 ```typescript
@@ -1612,7 +1612,7 @@ A list of processes to suspend for the AutoScaling Group. The allowed values are
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L522">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L523">property tags</a>
 </h3>
 
 ```typescript
@@ -1623,7 +1623,7 @@ tags?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of tag blocks. Tags documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L526">property tagsCollection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L527">property tagsCollection</a>
 </h3>
 
 ```typescript
@@ -1634,7 +1634,7 @@ tagsCollection?: pulumi.Input<Tags>;
 A list of tag blocks (maps). Tags documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L530">property targetGroupArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L531">property targetGroupArns</a>
 </h3>
 
 ```typescript
@@ -1645,7 +1645,7 @@ targetGroupArns?: pulumi.Input<pulumi.Input<string>[]>;
 A list of `aws_alb_target_group` ARNs, for use with Application Load Balancing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L534">property terminationPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L535">property terminationPolicies</a>
 </h3>
 
 ```typescript
@@ -1656,7 +1656,7 @@ terminationPolicies?: pulumi.Input<pulumi.Input<string>[]>;
 A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `Default`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L538">property vpcZoneIdentifiers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L539">property vpcZoneIdentifiers</a>
 </h3>
 
 ```typescript
@@ -1667,7 +1667,7 @@ vpcZoneIdentifiers?: pulumi.Input<pulumi.Input<string>[]>;
 A list of subnet IDs to launch resources in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L539">property waitForCapacityTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L540">property waitForCapacityTimeout</a>
 </h3>
 
 ```typescript
@@ -1675,7 +1675,7 @@ waitForCapacityTimeout?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L547">property waitForElbCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L548">property waitForElbCapacity</a>
 </h3>
 
 ```typescript
@@ -1687,16 +1687,16 @@ Setting this will cause Terraform to wait
 for exactly this number of healthy instances in all attached load balancers
 on both create and update operations. (Takes precedence over
 `min_elb_capacity` behavior.)
-(See also [Waiting for Capacity](#waiting-for-capacity) below.)
+(See also Waiting for Capacity below.)
 
 <h2 class="pdoc-module-header" id="GroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L257">interface GroupState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L258">interface GroupState</a>
 </h2>
 
 Input properties used for looking up and filtering Group resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L261">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L262">property arn</a>
 </h3>
 
 ```typescript
@@ -1707,7 +1707,7 @@ arn?: pulumi.Input<string>;
 The ARN for this AutoScaling Group
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L265">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L266">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -1718,7 +1718,7 @@ availabilityZones?: pulumi.Input<pulumi.Input<string>[]>;
 A list of one or more availability zones for the group. This parameter should not be specified when using `vpc_zone_identifier`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L269">property defaultCooldown</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L270">property defaultCooldown</a>
 </h3>
 
 ```typescript
@@ -1729,7 +1729,7 @@ defaultCooldown?: pulumi.Input<number>;
 The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L275">property desiredCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L276">property desiredCapacity</a>
 </h3>
 
 ```typescript
@@ -1738,11 +1738,11 @@ desiredCapacity?: pulumi.Input<number>;
 
 
 The number of Amazon EC2 instances that
-should be running in the group. (See also [Waiting for
-Capacity](#waiting-for-capacity) below.)
+should be running in the group. (See also Waiting for
+Capacity below.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L284">property enabledMetrics</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L285">property enabledMetrics</a>
 </h3>
 
 ```typescript
@@ -1753,12 +1753,12 @@ enabledMetrics?: pulumi.Input<pulumi.Input<string>[]>;
 A list of metrics to collect. The allowed values are `GroupMinSize`, `GroupMaxSize`, `GroupDesiredCapacity`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupTerminatingInstances`, `GroupTotalInstances`.
 * `wait_for_capacity_timeout` (Default: "10m") A maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that Terraform should
-wait for ASG instances to be healthy before timing out.  (See also [Waiting
-for Capacity](#waiting-for-capacity) below.) Setting this to "0" causes
+wait for ASG instances to be healthy before timing out.  (See also Waiting
+for Capacity below.) Setting this to "0" causes
 Terraform to skip all Capacity Waiting behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L292">property forceDelete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L293">property forceDelete</a>
 </h3>
 
 ```typescript
@@ -1773,7 +1773,7 @@ drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L296">property healthCheckGracePeriod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L297">property healthCheckGracePeriod</a>
 </h3>
 
 ```typescript
@@ -1784,7 +1784,7 @@ healthCheckGracePeriod?: pulumi.Input<number>;
 Time (in seconds) after instance comes into service before checking health.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L300">property healthCheckType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L301">property healthCheckType</a>
 </h3>
 
 ```typescript
@@ -1795,7 +1795,7 @@ healthCheckType?: pulumi.Input<string>;
 "EC2" or "ELB". Controls how health checking is done.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L310">property initialLifecycleHooks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L311">property initialLifecycleHooks</a>
 </h3>
 
 ```typescript
@@ -1807,12 +1807,12 @@ One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
 to attach to the autoscaling group **before** instances are launched. The
 syntax is exactly the same as the separate
-[`aws_autoscaling_lifecycle_hook`](/docs/providers/aws/r/autoscaling_lifecycle_hooks.html)
+[`aws_autoscaling_lifecycle_hook`](https://www.terraform.io/docs/providers/aws/r/autoscaling_lifecycle_hooks.html)
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use `aws_autoscaling_lifecycle_hook` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L314">property launchConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L315">property launchConfiguration</a>
 </h3>
 
 ```typescript
@@ -1823,7 +1823,7 @@ launchConfiguration?: pulumi.Input<string>;
 The name of the launch configuration to use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L319">property launchTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L320">property launchTemplate</a>
 </h3>
 
 ```typescript
@@ -1832,10 +1832,10 @@ launchTemplate?: pulumi.Input<{ ... }>;
 
 
 Launch template specification to use to launch instances.
-See [Launch Template Specification](#launch-template-specification) below for more details.
+See Launch Template Specification below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L324">property loadBalancers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L325">property loadBalancers</a>
 </h3>
 
 ```typescript
@@ -1847,7 +1847,7 @@ A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L328">property maxSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L329">property maxSize</a>
 </h3>
 
 ```typescript
@@ -1858,7 +1858,7 @@ maxSize?: pulumi.Input<number>;
 The maximum size of the auto scale group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L332">property metricsGranularity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L333">property metricsGranularity</a>
 </h3>
 
 ```typescript
@@ -1869,7 +1869,7 @@ metricsGranularity?: pulumi.Input<string>;
 The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L339">property minElbCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L340">property minElbCapacity</a>
 </h3>
 
 ```typescript
@@ -1880,10 +1880,10 @@ minElbCapacity?: pulumi.Input<number>;
 Setting this causes Terraform to wait for
 this number of instances to show up healthy in the ELB only on creation.
 Updates will not wait on ELB instance number changes.
-(See also [Waiting for Capacity](#waiting-for-capacity) below.)
+(See also Waiting for Capacity below.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L344">property minSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L345">property minSize</a>
 </h3>
 
 ```typescript
@@ -1892,10 +1892,10 @@ minSize?: pulumi.Input<number>;
 
 
 The minimum size of the auto scale group.
-(See also [Waiting for Capacity](#waiting-for-capacity) below.)
+(See also Waiting for Capacity below.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L348">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L349">property name</a>
 </h3>
 
 ```typescript
@@ -1903,10 +1903,10 @@ name?: pulumi.Input<string>;
 ```
 
 
-The name of the launch template. Conflicts with `id`.
+The name of the auto scaling group. By default generated by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L353">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L354">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -1918,7 +1918,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L357">property placementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L358">property placementGroup</a>
 </h3>
 
 ```typescript
@@ -1929,7 +1929,7 @@ placementGroup?: pulumi.Input<string>;
 The name of the placement group into which you'll launch your instances, if any.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L363">property protectFromScaleIn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L364">property protectFromScaleIn</a>
 </h3>
 
 ```typescript
@@ -1942,7 +1942,7 @@ autoscaling group will not select instances with this setting for terminination
 during scale in events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L367">property serviceLinkedRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L368">property serviceLinkedRoleArn</a>
 </h3>
 
 ```typescript
@@ -1953,7 +1953,7 @@ serviceLinkedRoleArn?: pulumi.Input<string>;
 The ARN of the service-linked role that the ASG will use to call other AWS services
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L372">property suspendedProcesses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L373">property suspendedProcesses</a>
 </h3>
 
 ```typescript
@@ -1965,7 +1965,7 @@ A list of processes to suspend for the AutoScaling Group. The allowed values are
 Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L376">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L377">property tags</a>
 </h3>
 
 ```typescript
@@ -1976,7 +1976,7 @@ tags?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of tag blocks. Tags documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L380">property tagsCollection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L381">property tagsCollection</a>
 </h3>
 
 ```typescript
@@ -1987,7 +1987,7 @@ tagsCollection?: pulumi.Input<Tags>;
 A list of tag blocks (maps). Tags documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L384">property targetGroupArns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L385">property targetGroupArns</a>
 </h3>
 
 ```typescript
@@ -1998,7 +1998,7 @@ targetGroupArns?: pulumi.Input<pulumi.Input<string>[]>;
 A list of `aws_alb_target_group` ARNs, for use with Application Load Balancing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L388">property terminationPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L389">property terminationPolicies</a>
 </h3>
 
 ```typescript
@@ -2009,7 +2009,7 @@ terminationPolicies?: pulumi.Input<pulumi.Input<string>[]>;
 A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `Default`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L392">property vpcZoneIdentifiers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L393">property vpcZoneIdentifiers</a>
 </h3>
 
 ```typescript
@@ -2020,7 +2020,7 @@ vpcZoneIdentifiers?: pulumi.Input<pulumi.Input<string>[]>;
 A list of subnet IDs to launch resources in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L393">property waitForCapacityTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L394">property waitForCapacityTimeout</a>
 </h3>
 
 ```typescript
@@ -2028,7 +2028,7 @@ waitForCapacityTimeout?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L401">property waitForElbCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/group.ts#L402">property waitForElbCapacity</a>
 </h3>
 
 ```typescript
@@ -2040,16 +2040,16 @@ Setting this will cause Terraform to wait
 for exactly this number of healthy instances in all attached load balancers
 on both create and update operations. (Takes precedence over
 `min_elb_capacity` behavior.)
-(See also [Waiting for Capacity](#waiting-for-capacity) below.)
+(See also Waiting for Capacity below.)
 
 <h2 class="pdoc-module-header" id="LifecycleHookArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L149">interface LifecycleHookArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L150">interface LifecycleHookArgs</a>
 </h2>
 
 The set of arguments for constructing a LifecycleHook resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L153">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L154">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -2060,7 +2060,7 @@ autoscalingGroupName: pulumi.Input<string>;
 The name of the Auto Scaling group to which you want to assign the lifecycle hook
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L157">property defaultResult</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L158">property defaultResult</a>
 </h3>
 
 ```typescript
@@ -2071,7 +2071,7 @@ defaultResult?: pulumi.Input<string>;
 Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L161">property heartbeatTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L162">property heartbeatTimeout</a>
 </h3>
 
 ```typescript
@@ -2082,7 +2082,7 @@ heartbeatTimeout?: pulumi.Input<number>;
 Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L165">property lifecycleTransition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L166">property lifecycleTransition</a>
 </h3>
 
 ```typescript
@@ -2093,7 +2093,7 @@ lifecycleTransition: pulumi.Input<string>;
 The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L169">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L170">property name</a>
 </h3>
 
 ```typescript
@@ -2104,7 +2104,7 @@ name?: pulumi.Input<string>;
 The name of the lifecycle hook.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L173">property notificationMetadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L174">property notificationMetadata</a>
 </h3>
 
 ```typescript
@@ -2115,7 +2115,7 @@ notificationMetadata?: pulumi.Input<string>;
 Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L177">property notificationTargetArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L178">property notificationTargetArn</a>
 </h3>
 
 ```typescript
@@ -2126,7 +2126,7 @@ notificationTargetArn?: pulumi.Input<string>;
 The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L181">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L182">property roleArn</a>
 </h3>
 
 ```typescript
@@ -2137,13 +2137,13 @@ roleArn?: pulumi.Input<string>;
 The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 
 <h2 class="pdoc-module-header" id="LifecycleHookState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L111">interface LifecycleHookState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L112">interface LifecycleHookState</a>
 </h2>
 
 Input properties used for looking up and filtering LifecycleHook resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L115">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L116">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -2154,7 +2154,7 @@ autoscalingGroupName?: pulumi.Input<string>;
 The name of the Auto Scaling group to which you want to assign the lifecycle hook
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L119">property defaultResult</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L120">property defaultResult</a>
 </h3>
 
 ```typescript
@@ -2165,7 +2165,7 @@ defaultResult?: pulumi.Input<string>;
 Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L123">property heartbeatTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L124">property heartbeatTimeout</a>
 </h3>
 
 ```typescript
@@ -2176,7 +2176,7 @@ heartbeatTimeout?: pulumi.Input<number>;
 Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L127">property lifecycleTransition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L128">property lifecycleTransition</a>
 </h3>
 
 ```typescript
@@ -2187,7 +2187,7 @@ lifecycleTransition?: pulumi.Input<string>;
 The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L131">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L132">property name</a>
 </h3>
 
 ```typescript
@@ -2198,7 +2198,7 @@ name?: pulumi.Input<string>;
 The name of the lifecycle hook.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L135">property notificationMetadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L136">property notificationMetadata</a>
 </h3>
 
 ```typescript
@@ -2209,7 +2209,7 @@ notificationMetadata?: pulumi.Input<string>;
 Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L139">property notificationTargetArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L140">property notificationTargetArn</a>
 </h3>
 
 ```typescript
@@ -2220,7 +2220,7 @@ notificationTargetArn?: pulumi.Input<string>;
 The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L143">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/lifecycleHook.ts#L144">property roleArn</a>
 </h3>
 
 ```typescript
@@ -2231,13 +2231,13 @@ roleArn?: pulumi.Input<string>;
 The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 
 <h2 class="pdoc-module-header" id="NotificationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L96">interface NotificationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L97">interface NotificationArgs</a>
 </h2>
 
 The set of arguments for constructing a Notification resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L100">property groupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L101">property groupNames</a>
 </h3>
 
 ```typescript
@@ -2248,7 +2248,7 @@ groupNames: pulumi.Input<pulumi.Input<string>[]>;
 A list of AutoScaling Group Names
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L105">property notifications</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L106">property notifications</a>
 </h3>
 
 ```typescript
@@ -2260,7 +2260,7 @@ A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L109">property topicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L110">property topicArn</a>
 </h3>
 
 ```typescript
@@ -2271,13 +2271,13 @@ topicArn: pulumi.Input<string>;
 The Topic ARN for notifications to be sent through
 
 <h2 class="pdoc-module-header" id="NotificationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L77">interface NotificationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L78">interface NotificationState</a>
 </h2>
 
 Input properties used for looking up and filtering Notification resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L81">property groupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L82">property groupNames</a>
 </h3>
 
 ```typescript
@@ -2288,7 +2288,7 @@ groupNames?: pulumi.Input<pulumi.Input<string>[]>;
 A list of AutoScaling Group Names
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L86">property notifications</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L87">property notifications</a>
 </h3>
 
 ```typescript
@@ -2300,7 +2300,7 @@ A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L90">property topicArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notification.ts#L91">property topicArn</a>
 </h3>
 
 ```typescript
@@ -2311,13 +2311,13 @@ topicArn?: pulumi.Input<string>;
 The Topic ARN for notifications to be sent through
 
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L182">interface PolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L183">interface PolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a Policy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L186">property adjustmentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L187">property adjustmentType</a>
 </h3>
 
 ```typescript
@@ -2328,7 +2328,7 @@ adjustmentType?: pulumi.Input<string>;
 Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L190">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L191">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -2339,7 +2339,7 @@ autoscalingGroupName: pulumi.Input<string>;
 The name of the autoscaling group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L194">property cooldown</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L195">property cooldown</a>
 </h3>
 
 ```typescript
@@ -2350,7 +2350,7 @@ cooldown?: pulumi.Input<number>;
 The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L198">property estimatedInstanceWarmup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L199">property estimatedInstanceWarmup</a>
 </h3>
 
 ```typescript
@@ -2361,7 +2361,7 @@ estimatedInstanceWarmup?: pulumi.Input<number>;
 The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L202">property metricAggregationType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L203">property metricAggregationType</a>
 </h3>
 
 ```typescript
@@ -2372,7 +2372,7 @@ metricAggregationType?: pulumi.Input<string>;
 The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L203">property minAdjustmentMagnitude</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L204">property minAdjustmentMagnitude</a>
 </h3>
 
 ```typescript
@@ -2380,7 +2380,7 @@ minAdjustmentMagnitude?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L207">property minAdjustmentStep</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L208">property minAdjustmentStep</a>
 </h3>
 
 ```typescript
@@ -2391,7 +2391,7 @@ minAdjustmentStep?: pulumi.Input<number>;
 Use `min_adjustment_magnitude` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L211">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L212">property name</a>
 </h3>
 
 ```typescript
@@ -2402,7 +2402,7 @@ name?: pulumi.Input<string>;
 The name of the dimension.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L215">property policyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L216">property policyType</a>
 </h3>
 
 ```typescript
@@ -2413,7 +2413,7 @@ policyType?: pulumi.Input<string>;
 The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L221">property scalingAdjustment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L222">property scalingAdjustment</a>
 </h3>
 
 ```typescript
@@ -2426,7 +2426,7 @@ scale, when the adjustment bounds are breached. A positive value scales
 up. A negative value scales down.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L222">property stepAdjustments</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L223">property stepAdjustments</a>
 </h3>
 
 ```typescript
@@ -2434,7 +2434,7 @@ stepAdjustments?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L226">property targetTrackingConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L227">property targetTrackingConfiguration</a>
 </h3>
 
 ```typescript
@@ -2445,13 +2445,13 @@ targetTrackingConfiguration?: pulumi.Input<{ ... }>;
 A target tracking policy. These have the following structure:
 
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L128">interface PolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L129">interface PolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering Policy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L132">property adjustmentType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L133">property adjustmentType</a>
 </h3>
 
 ```typescript
@@ -2462,7 +2462,7 @@ adjustmentType?: pulumi.Input<string>;
 Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L136">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L137">property arn</a>
 </h3>
 
 ```typescript
@@ -2473,7 +2473,7 @@ arn?: pulumi.Input<string>;
 The ARN assigned by AWS to the scaling policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L140">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L141">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -2484,7 +2484,7 @@ autoscalingGroupName?: pulumi.Input<string>;
 The name of the autoscaling group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L144">property cooldown</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L145">property cooldown</a>
 </h3>
 
 ```typescript
@@ -2495,7 +2495,7 @@ cooldown?: pulumi.Input<number>;
 The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L148">property estimatedInstanceWarmup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L149">property estimatedInstanceWarmup</a>
 </h3>
 
 ```typescript
@@ -2506,7 +2506,7 @@ estimatedInstanceWarmup?: pulumi.Input<number>;
 The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L152">property metricAggregationType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L153">property metricAggregationType</a>
 </h3>
 
 ```typescript
@@ -2517,7 +2517,7 @@ metricAggregationType?: pulumi.Input<string>;
 The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L153">property minAdjustmentMagnitude</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L154">property minAdjustmentMagnitude</a>
 </h3>
 
 ```typescript
@@ -2525,7 +2525,7 @@ minAdjustmentMagnitude?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L157">property minAdjustmentStep</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L158">property minAdjustmentStep</a>
 </h3>
 
 ```typescript
@@ -2536,7 +2536,7 @@ minAdjustmentStep?: pulumi.Input<number>;
 Use `min_adjustment_magnitude` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L161">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L162">property name</a>
 </h3>
 
 ```typescript
@@ -2547,7 +2547,7 @@ name?: pulumi.Input<string>;
 The name of the dimension.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L165">property policyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L166">property policyType</a>
 </h3>
 
 ```typescript
@@ -2558,7 +2558,7 @@ policyType?: pulumi.Input<string>;
 The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L171">property scalingAdjustment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L172">property scalingAdjustment</a>
 </h3>
 
 ```typescript
@@ -2571,7 +2571,7 @@ scale, when the adjustment bounds are breached. A positive value scales
 up. A negative value scales down.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L172">property stepAdjustments</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L173">property stepAdjustments</a>
 </h3>
 
 ```typescript
@@ -2579,7 +2579,7 @@ stepAdjustments?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L176">property targetTrackingConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/policy.ts#L177">property targetTrackingConfiguration</a>
 </h3>
 
 ```typescript
@@ -2590,13 +2590,13 @@ targetTrackingConfiguration?: pulumi.Input<{ ... }>;
 A target tracking policy. These have the following structure:
 
 <h2 class="pdoc-module-header" id="ScheduleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L155">interface ScheduleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L156">interface ScheduleArgs</a>
 </h2>
 
 The set of arguments for constructing a Schedule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L159">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L160">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -2607,7 +2607,7 @@ autoscalingGroupName: pulumi.Input<string>;
 The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L163">property desiredCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L164">property desiredCapacity</a>
 </h3>
 
 ```typescript
@@ -2618,7 +2618,7 @@ desiredCapacity?: pulumi.Input<number>;
 The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L168">property endTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L169">property endTime</a>
 </h3>
 
 ```typescript
@@ -2630,7 +2630,7 @@ The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT onl
 If you try to schedule your action in the past, Auto Scaling returns an error message.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L173">property maxSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L174">property maxSize</a>
 </h3>
 
 ```typescript
@@ -2642,7 +2642,7 @@ The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L178">property minSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L179">property minSize</a>
 </h3>
 
 ```typescript
@@ -2654,7 +2654,7 @@ The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L182">property recurrence</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L183">property recurrence</a>
 </h3>
 
 ```typescript
@@ -2665,7 +2665,7 @@ recurrence?: pulumi.Input<string>;
 The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L186">property scheduledActionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L187">property scheduledActionName</a>
 </h3>
 
 ```typescript
@@ -2676,7 +2676,7 @@ scheduledActionName: pulumi.Input<string>;
 The name of this scaling action.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L191">property startTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L192">property startTime</a>
 </h3>
 
 ```typescript
@@ -2688,13 +2688,13 @@ The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT o
 If you try to schedule your action in the past, Auto Scaling returns an error message.
 
 <h2 class="pdoc-module-header" id="ScheduleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L109">interface ScheduleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L110">interface ScheduleState</a>
 </h2>
 
 Input properties used for looking up and filtering Schedule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L113">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L114">property arn</a>
 </h3>
 
 ```typescript
@@ -2705,7 +2705,7 @@ arn?: pulumi.Input<string>;
 The ARN assigned by AWS to the autoscaling schedule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L117">property autoscalingGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L118">property autoscalingGroupName</a>
 </h3>
 
 ```typescript
@@ -2716,7 +2716,7 @@ autoscalingGroupName?: pulumi.Input<string>;
 The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L121">property desiredCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L122">property desiredCapacity</a>
 </h3>
 
 ```typescript
@@ -2727,7 +2727,7 @@ desiredCapacity?: pulumi.Input<number>;
 The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L126">property endTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L127">property endTime</a>
 </h3>
 
 ```typescript
@@ -2739,7 +2739,7 @@ The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT onl
 If you try to schedule your action in the past, Auto Scaling returns an error message.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L131">property maxSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L132">property maxSize</a>
 </h3>
 
 ```typescript
@@ -2751,7 +2751,7 @@ The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L136">property minSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L137">property minSize</a>
 </h3>
 
 ```typescript
@@ -2763,7 +2763,7 @@ The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L140">property recurrence</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L141">property recurrence</a>
 </h3>
 
 ```typescript
@@ -2774,7 +2774,7 @@ recurrence?: pulumi.Input<string>;
 The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L144">property scheduledActionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L145">property scheduledActionName</a>
 </h3>
 
 ```typescript
@@ -2785,7 +2785,7 @@ scheduledActionName?: pulumi.Input<string>;
 The name of this scaling action.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L149">property startTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/schedule.ts#L150">property startTime</a>
 </h3>
 
 ```typescript

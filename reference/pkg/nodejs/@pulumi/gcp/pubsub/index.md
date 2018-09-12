@@ -35,7 +35,7 @@ title: Module pubsub
 
 
 <h2 class="pdoc-module-header" id="Subscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L12">class Subscription</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L13">class Subscription</a>
 </h2>
 
 Creates a subscription in Google's pubsub queueing system. For more information see
@@ -43,7 +43,7 @@ Creates a subscription in Google's pubsub queueing system. For more information 
 [API](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.subscriptions).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L54">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L55">constructor</a>
 </h3>
 
 ```typescript
@@ -58,7 +58,7 @@ Create a Subscription resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -90,7 +90,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L30">property ackDeadlineSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L31">property ackDeadlineSeconds</a>
 </h3>
 
 ```typescript
@@ -115,7 +115,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L35">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L36">property name</a>
 </h3>
 
 ```typescript
@@ -127,7 +127,7 @@ A unique name for the resource, required by pubsub.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L39">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L40">property path</a>
 </h3>
 
 ```typescript
@@ -138,7 +138,7 @@ public path: pulumi.Output<string>;
 Path of the subscription in the format `projects/{project}/subscriptions/{sub}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L44">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L45">property project</a>
 </h3>
 
 ```typescript
@@ -150,7 +150,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L49">property pushConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L50">property pushConfig</a>
 </h3>
 
 ```typescript
@@ -162,7 +162,7 @@ Block configuration for push options. More
 configuration options are detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L54">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L55">property topic</a>
 </h3>
 
 ```typescript
@@ -186,7 +186,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SubscriptionIAMBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L17">class SubscriptionIAMBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L18">class SubscriptionIAMBinding</a>
 </h2>
 
 Three different resources help you manage your IAM policy for pubsub subscription. Each of these resources serves a different use case:
@@ -200,7 +200,7 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 ~> **Note:** `google_pubsub_subscription_iam_binding` resources **can be** used in conjunction with `google_pubsub_subscription_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -215,7 +215,7 @@ Create a SubscriptionIAMBinding resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L26">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -247,7 +247,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L33">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L34">property etag</a>
 </h3>
 
 ```typescript
@@ -270,7 +270,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L34">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L35">property members</a>
 </h3>
 
 ```typescript
@@ -278,7 +278,7 @@ public members: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L39">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L40">property project</a>
 </h3>
 
 ```typescript
@@ -290,7 +290,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L45">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L46">property role</a>
 </h3>
 
 ```typescript
@@ -303,7 +303,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L49">property subscription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L50">property subscription</a>
 </h3>
 
 ```typescript
@@ -326,7 +326,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SubscriptionIAMMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L17">class SubscriptionIAMMember</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L18">class SubscriptionIAMMember</a>
 </h2>
 
 Three different resources help you manage your IAM policy for pubsub subscription. Each of these resources serves a different use case:
@@ -340,7 +340,7 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 ~> **Note:** `google_pubsub_subscription_iam_binding` resources **can be** used in conjunction with `google_pubsub_subscription_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -355,7 +355,7 @@ Create a SubscriptionIAMMember resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L26">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -387,7 +387,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L33">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L34">property etag</a>
 </h3>
 
 ```typescript
@@ -410,7 +410,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L34">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L35">property member</a>
 </h3>
 
 ```typescript
@@ -418,7 +418,7 @@ public member: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L39">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L40">property project</a>
 </h3>
 
 ```typescript
@@ -430,7 +430,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L45">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L46">property role</a>
 </h3>
 
 ```typescript
@@ -443,7 +443,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L49">property subscription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L50">property subscription</a>
 </h3>
 
 ```typescript
@@ -466,7 +466,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SubscriptionIAMPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L17">class SubscriptionIAMPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L18">class SubscriptionIAMPolicy</a>
 </h2>
 
 Three different resources help you manage your IAM policy for pubsub subscription. Each of these resources serves a different use case:
@@ -480,7 +480,7 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 ~> **Note:** `google_pubsub_subscription_iam_binding` resources **can be** used in conjunction with `google_pubsub_subscription_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L47">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L48">constructor</a>
 </h3>
 
 ```typescript
@@ -495,7 +495,7 @@ Create a SubscriptionIAMPolicy resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L26">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -527,7 +527,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L33">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L34">property etag</a>
 </h3>
 
 ```typescript
@@ -550,7 +550,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L38">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L39">property policyData</a>
 </h3>
 
 ```typescript
@@ -562,7 +562,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L43">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L44">property project</a>
 </h3>
 
 ```typescript
@@ -574,7 +574,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L47">property subscription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L48">property subscription</a>
 </h3>
 
 ```typescript
@@ -597,7 +597,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Topic">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L12">class Topic</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L13">class Topic</a>
 </h2>
 
 Creates a topic in Google's pubsub queueing system. For more information see
@@ -605,7 +605,7 @@ Creates a topic in Google's pubsub queueing system. For more information see
 [API](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.topics).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L34">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L35">constructor</a>
 </h3>
 
 ```typescript
@@ -620,7 +620,7 @@ Create a Topic resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L21">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L22">method get</a>
 </h3>
 
 ```typescript
@@ -664,7 +664,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L29">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -676,7 +676,7 @@ A unique name for the pubsub topic.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L34">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L35">property project</a>
 </h3>
 
 ```typescript
@@ -700,7 +700,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TopicIAMBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L17">class TopicIAMBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L18">class TopicIAMBinding</a>
 </h2>
 
 Three different resources help you manage your IAM policy for pubsub topic. Each of these resources serves a different use case:
@@ -714,7 +714,7 @@ Three different resources help you manage your IAM policy for pubsub topic. Each
 ~> **Note:** `google_pubsub_topic_iam_binding` resources **can be** used in conjunction with `google_pubsub_topic_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -729,7 +729,7 @@ Create a TopicIAMBinding resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L26">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -761,7 +761,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L33">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L34">property etag</a>
 </h3>
 
 ```typescript
@@ -784,7 +784,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L34">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L35">property members</a>
 </h3>
 
 ```typescript
@@ -792,7 +792,7 @@ public members: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L39">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L40">property project</a>
 </h3>
 
 ```typescript
@@ -804,7 +804,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L45">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L46">property role</a>
 </h3>
 
 ```typescript
@@ -817,7 +817,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L49">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L50">property topic</a>
 </h3>
 
 ```typescript
@@ -840,7 +840,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TopicIAMMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L17">class TopicIAMMember</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L18">class TopicIAMMember</a>
 </h2>
 
 Three different resources help you manage your IAM policy for pubsub topic. Each of these resources serves a different use case:
@@ -854,7 +854,7 @@ Three different resources help you manage your IAM policy for pubsub topic. Each
 ~> **Note:** `google_pubsub_topic_iam_binding` resources **can be** used in conjunction with `google_pubsub_topic_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -869,7 +869,7 @@ Create a TopicIAMMember resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L26">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -901,7 +901,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L33">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L34">property etag</a>
 </h3>
 
 ```typescript
@@ -924,7 +924,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L34">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L35">property member</a>
 </h3>
 
 ```typescript
@@ -932,7 +932,7 @@ public member: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L39">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L40">property project</a>
 </h3>
 
 ```typescript
@@ -944,7 +944,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L45">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L46">property role</a>
 </h3>
 
 ```typescript
@@ -957,7 +957,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L49">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L50">property topic</a>
 </h3>
 
 ```typescript
@@ -980,7 +980,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TopicIAMPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L17">class TopicIAMPolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L18">class TopicIAMPolicy</a>
 </h2>
 
 Three different resources help you manage your IAM policy for pubsub topic. Each of these resources serves a different use case:
@@ -994,7 +994,7 @@ Three different resources help you manage your IAM policy for pubsub topic. Each
 ~> **Note:** `google_pubsub_topic_iam_binding` resources **can be** used in conjunction with `google_pubsub_topic_iam_member` resources **only if** they do not grant privilege to the same role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L47">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L48">constructor</a>
 </h3>
 
 ```typescript
@@ -1009,7 +1009,7 @@ Create a TopicIAMPolicy resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L26">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -1041,7 +1041,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L33">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L34">property etag</a>
 </h3>
 
 ```typescript
@@ -1064,7 +1064,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L38">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L39">property policyData</a>
 </h3>
 
 ```typescript
@@ -1076,7 +1076,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L43">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L44">property project</a>
 </h3>
 
 ```typescript
@@ -1088,7 +1088,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L47">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L48">property topic</a>
 </h3>
 
 ```typescript
@@ -1111,13 +1111,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SubscriptionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L129">interface SubscriptionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L130">interface SubscriptionArgs</a>
 </h2>
 
 The set of arguments for constructing a Subscription resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L135">property ackDeadlineSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L136">property ackDeadlineSeconds</a>
 </h3>
 
 ```typescript
@@ -1130,7 +1130,7 @@ subscriber has to acknowledge a received message, otherwise the message is
 redelivered. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L140">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L141">property name</a>
 </h3>
 
 ```typescript
@@ -1142,7 +1142,7 @@ A unique name for the resource, required by pubsub.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L145">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L146">property project</a>
 </h3>
 
 ```typescript
@@ -1154,7 +1154,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L150">property pushConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L151">property pushConfig</a>
 </h3>
 
 ```typescript
@@ -1166,7 +1166,7 @@ Block configuration for push options. More
 configuration options are detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L155">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L156">property topic</a>
 </h3>
 
 ```typescript
@@ -1178,13 +1178,13 @@ The topic name or id to bind this subscription to, required by pubsub.
 Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="SubscriptionIAMBindingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L118">interface SubscriptionIAMBindingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L119">interface SubscriptionIAMBindingArgs</a>
 </h2>
 
 The set of arguments for constructing a SubscriptionIAMBinding resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L119">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L120">property members</a>
 </h3>
 
 ```typescript
@@ -1192,7 +1192,7 @@ members: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L124">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L125">property project</a>
 </h3>
 
 ```typescript
@@ -1204,7 +1204,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L130">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L131">property role</a>
 </h3>
 
 ```typescript
@@ -1217,7 +1217,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L134">property subscription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L135">property subscription</a>
 </h3>
 
 ```typescript
@@ -1228,13 +1228,13 @@ subscription: pulumi.Input<string>;
 The subscription name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="SubscriptionIAMBindingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L92">interface SubscriptionIAMBindingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L93">interface SubscriptionIAMBindingState</a>
 </h2>
 
 Input properties used for looking up and filtering SubscriptionIAMBinding resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L96">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L97">property etag</a>
 </h3>
 
 ```typescript
@@ -1245,7 +1245,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the subscription's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L97">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L98">property members</a>
 </h3>
 
 ```typescript
@@ -1253,7 +1253,7 @@ members?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L102">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L103">property project</a>
 </h3>
 
 ```typescript
@@ -1265,7 +1265,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L108">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L109">property role</a>
 </h3>
 
 ```typescript
@@ -1278,7 +1278,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L112">property subscription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L113">property subscription</a>
 </h3>
 
 ```typescript
@@ -1289,13 +1289,13 @@ subscription?: pulumi.Input<string>;
 The subscription name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="SubscriptionIAMMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L118">interface SubscriptionIAMMemberArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L119">interface SubscriptionIAMMemberArgs</a>
 </h2>
 
 The set of arguments for constructing a SubscriptionIAMMember resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L119">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L120">property member</a>
 </h3>
 
 ```typescript
@@ -1303,7 +1303,7 @@ member: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L124">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L125">property project</a>
 </h3>
 
 ```typescript
@@ -1315,7 +1315,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L130">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L131">property role</a>
 </h3>
 
 ```typescript
@@ -1328,7 +1328,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L134">property subscription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L135">property subscription</a>
 </h3>
 
 ```typescript
@@ -1339,13 +1339,13 @@ subscription: pulumi.Input<string>;
 The subscription name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="SubscriptionIAMMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L92">interface SubscriptionIAMMemberState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L93">interface SubscriptionIAMMemberState</a>
 </h2>
 
 Input properties used for looking up and filtering SubscriptionIAMMember resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L96">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L97">property etag</a>
 </h3>
 
 ```typescript
@@ -1356,7 +1356,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the subscription's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L97">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L98">property member</a>
 </h3>
 
 ```typescript
@@ -1364,7 +1364,7 @@ member?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L102">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L103">property project</a>
 </h3>
 
 ```typescript
@@ -1376,7 +1376,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L108">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L109">property role</a>
 </h3>
 
 ```typescript
@@ -1389,7 +1389,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L112">property subscription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L113">property subscription</a>
 </h3>
 
 ```typescript
@@ -1400,13 +1400,13 @@ subscription?: pulumi.Input<string>;
 The subscription name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="SubscriptionIAMPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L109">interface SubscriptionIAMPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L110">interface SubscriptionIAMPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a SubscriptionIAMPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L114">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L115">property policyData</a>
 </h3>
 
 ```typescript
@@ -1418,7 +1418,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L119">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L120">property project</a>
 </h3>
 
 ```typescript
@@ -1430,7 +1430,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L123">property subscription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L124">property subscription</a>
 </h3>
 
 ```typescript
@@ -1441,13 +1441,13 @@ subscription: pulumi.Input<string>;
 The subscription name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="SubscriptionIAMPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L85">interface SubscriptionIAMPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L86">interface SubscriptionIAMPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering SubscriptionIAMPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L89">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L90">property etag</a>
 </h3>
 
 ```typescript
@@ -1458,7 +1458,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the subscription's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L94">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L95">property policyData</a>
 </h3>
 
 ```typescript
@@ -1470,7 +1470,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L99">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L100">property project</a>
 </h3>
 
 ```typescript
@@ -1482,7 +1482,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L103">property subscription</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L104">property subscription</a>
 </h3>
 
 ```typescript
@@ -1493,13 +1493,13 @@ subscription?: pulumi.Input<string>;
 The subscription name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="SubscriptionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L93">interface SubscriptionState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L94">interface SubscriptionState</a>
 </h2>
 
 Input properties used for looking up and filtering Subscription resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L99">property ackDeadlineSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L100">property ackDeadlineSeconds</a>
 </h3>
 
 ```typescript
@@ -1512,7 +1512,7 @@ subscriber has to acknowledge a received message, otherwise the message is
 redelivered. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L104">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L105">property name</a>
 </h3>
 
 ```typescript
@@ -1524,7 +1524,7 @@ A unique name for the resource, required by pubsub.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L108">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L109">property path</a>
 </h3>
 
 ```typescript
@@ -1535,7 +1535,7 @@ path?: pulumi.Input<string>;
 Path of the subscription in the format `projects/{project}/subscriptions/{sub}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L113">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L114">property project</a>
 </h3>
 
 ```typescript
@@ -1547,7 +1547,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L118">property pushConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L119">property pushConfig</a>
 </h3>
 
 ```typescript
@@ -1559,7 +1559,7 @@ Block configuration for push options. More
 configuration options are detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L123">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L124">property topic</a>
 </h3>
 
 ```typescript
@@ -1571,13 +1571,13 @@ The topic name or id to bind this subscription to, required by pubsub.
 Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="TopicArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L78">interface TopicArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L79">interface TopicArgs</a>
 </h2>
 
 The set of arguments for constructing a Topic resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L83">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L84">property name</a>
 </h3>
 
 ```typescript
@@ -1589,7 +1589,7 @@ A unique name for the pubsub topic.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L88">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L89">property project</a>
 </h3>
 
 ```typescript
@@ -1601,13 +1601,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="TopicIAMBindingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L118">interface TopicIAMBindingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L119">interface TopicIAMBindingArgs</a>
 </h2>
 
 The set of arguments for constructing a TopicIAMBinding resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L119">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L120">property members</a>
 </h3>
 
 ```typescript
@@ -1615,7 +1615,7 @@ members: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L124">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L125">property project</a>
 </h3>
 
 ```typescript
@@ -1627,7 +1627,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L130">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L131">property role</a>
 </h3>
 
 ```typescript
@@ -1640,7 +1640,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L134">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L135">property topic</a>
 </h3>
 
 ```typescript
@@ -1651,13 +1651,13 @@ topic: pulumi.Input<string>;
 The topic name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="TopicIAMBindingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L92">interface TopicIAMBindingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L93">interface TopicIAMBindingState</a>
 </h2>
 
 Input properties used for looking up and filtering TopicIAMBinding resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L96">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L97">property etag</a>
 </h3>
 
 ```typescript
@@ -1668,7 +1668,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the topic's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L97">property members</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L98">property members</a>
 </h3>
 
 ```typescript
@@ -1676,7 +1676,7 @@ members?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L102">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L103">property project</a>
 </h3>
 
 ```typescript
@@ -1688,7 +1688,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L108">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L109">property role</a>
 </h3>
 
 ```typescript
@@ -1701,7 +1701,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L112">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts#L113">property topic</a>
 </h3>
 
 ```typescript
@@ -1712,13 +1712,13 @@ topic?: pulumi.Input<string>;
 The topic name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="TopicIAMMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L118">interface TopicIAMMemberArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L119">interface TopicIAMMemberArgs</a>
 </h2>
 
 The set of arguments for constructing a TopicIAMMember resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L119">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L120">property member</a>
 </h3>
 
 ```typescript
@@ -1726,7 +1726,7 @@ member: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L124">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L125">property project</a>
 </h3>
 
 ```typescript
@@ -1738,7 +1738,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L130">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L131">property role</a>
 </h3>
 
 ```typescript
@@ -1751,7 +1751,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L134">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L135">property topic</a>
 </h3>
 
 ```typescript
@@ -1762,13 +1762,13 @@ topic: pulumi.Input<string>;
 The topic name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="TopicIAMMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L92">interface TopicIAMMemberState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L93">interface TopicIAMMemberState</a>
 </h2>
 
 Input properties used for looking up and filtering TopicIAMMember resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L96">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L97">property etag</a>
 </h3>
 
 ```typescript
@@ -1779,7 +1779,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the topic's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L97">property member</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L98">property member</a>
 </h3>
 
 ```typescript
@@ -1787,7 +1787,7 @@ member?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L102">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L103">property project</a>
 </h3>
 
 ```typescript
@@ -1799,7 +1799,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L108">property role</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L109">property role</a>
 </h3>
 
 ```typescript
@@ -1812,7 +1812,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L112">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts#L113">property topic</a>
 </h3>
 
 ```typescript
@@ -1823,13 +1823,13 @@ topic?: pulumi.Input<string>;
 The topic name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="TopicIAMPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L109">interface TopicIAMPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L110">interface TopicIAMPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a TopicIAMPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L114">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L115">property policyData</a>
 </h3>
 
 ```typescript
@@ -1841,7 +1841,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L119">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L120">property project</a>
 </h3>
 
 ```typescript
@@ -1853,7 +1853,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L123">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L124">property topic</a>
 </h3>
 
 ```typescript
@@ -1864,13 +1864,13 @@ topic: pulumi.Input<string>;
 The topic name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="TopicIAMPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L85">interface TopicIAMPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L86">interface TopicIAMPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering TopicIAMPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L89">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L90">property etag</a>
 </h3>
 
 ```typescript
@@ -1881,7 +1881,7 @@ etag?: pulumi.Input<string>;
 (Computed) The etag of the topic's IAM policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L94">property policyData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L95">property policyData</a>
 </h3>
 
 ```typescript
@@ -1893,7 +1893,7 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L99">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L100">property project</a>
 </h3>
 
 ```typescript
@@ -1905,7 +1905,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L103">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts#L104">property topic</a>
 </h3>
 
 ```typescript
@@ -1916,13 +1916,13 @@ topic?: pulumi.Input<string>;
 The topic name or id to bind to attach IAM policy to.
 
 <h2 class="pdoc-module-header" id="TopicState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L62">interface TopicState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L63">interface TopicState</a>
 </h2>
 
 Input properties used for looking up and filtering Topic resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L67">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L68">property name</a>
 </h3>
 
 ```typescript
@@ -1934,7 +1934,7 @@ A unique name for the pubsub topic.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L72">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L73">property project</a>
 </h3>
 
 ```typescript

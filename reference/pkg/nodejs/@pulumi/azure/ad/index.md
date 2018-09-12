@@ -26,7 +26,7 @@ title: Module ad
 
 
 <h2 class="pdoc-module-header" id="Application">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L11">class Application</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L12">class Application</a>
 </h2>
 
 Manages an Application within Azure Active Directory.
@@ -34,7 +34,7 @@ Manages an Application within Azure Active Directory.
 -> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L51">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L52">constructor</a>
 </h3>
 
 ```typescript
@@ -49,7 +49,7 @@ Create a Application resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -81,7 +81,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L27">property applicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L28">property applicationId</a>
 </h3>
 
 ```typescript
@@ -92,7 +92,7 @@ public applicationId: pulumi.Output<string>;
 The Application ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L31">property availableToOtherTenants</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L32">property availableToOtherTenants</a>
 </h3>
 
 ```typescript
@@ -103,7 +103,7 @@ public availableToOtherTenants: pulumi.Output<boolean | undefined>;
 Is this Azure AD Application available to other tenants? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L35">property homepage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L36">property homepage</a>
 </h3>
 
 ```typescript
@@ -126,7 +126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L39">property identifierUris</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L40">property identifierUris</a>
 </h3>
 
 ```typescript
@@ -137,7 +137,7 @@ public identifierUris: pulumi.Output<string[]>;
 A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L43">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L44">property name</a>
 </h3>
 
 ```typescript
@@ -148,7 +148,7 @@ public name: pulumi.Output<string>;
 The display name for the application.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L47">property oauth2AllowImplicitFlow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L48">property oauth2AllowImplicitFlow</a>
 </h3>
 
 ```typescript
@@ -159,7 +159,7 @@ public oauth2AllowImplicitFlow: pulumi.Output<boolean | undefined>;
 Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L51">property replyUrls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L52">property replyUrls</a>
 </h3>
 
 ```typescript
@@ -182,7 +182,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ServicePrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L11">class ServicePrincipal</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L12">class ServicePrincipal</a>
 </h2>
 
 Manages a Service Principal associated with an Application within Azure Active Directory.
@@ -190,7 +190,7 @@ Manages a Service Principal associated with an Application within Azure Active D
 -> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L31">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L32">constructor</a>
 </h3>
 
 ```typescript
@@ -205,7 +205,7 @@ Create a ServicePrincipal resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -237,7 +237,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L27">property applicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L28">property applicationId</a>
 </h3>
 
 ```typescript
@@ -248,7 +248,7 @@ public applicationId: pulumi.Output<string>;
 The ID of the Azure AD Application for which to create a Service Principal.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L31">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L32">property displayName</a>
 </h3>
 
 ```typescript
@@ -283,7 +283,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ServicePrincipalPassword">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L11">class ServicePrincipalPassword</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L12">class ServicePrincipalPassword</a>
 </h2>
 
 Manages a Password associated with a Service Principal within Azure Active Directory.
@@ -291,7 +291,7 @@ Manages a Password associated with a Service Principal within Azure Active Direc
 -> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L43">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L44">constructor</a>
 </h3>
 
 ```typescript
@@ -306,7 +306,7 @@ Create a ServicePrincipalPassword resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L20">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -338,7 +338,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L27">property endDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L28">property endDate</a>
 </h3>
 
 ```typescript
@@ -361,7 +361,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L31">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L32">property keyId</a>
 </h3>
 
 ```typescript
@@ -372,7 +372,7 @@ public keyId: pulumi.Output<string>;
 A GUID used to uniquely identify this Key. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L35">property servicePrincipalId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L36">property servicePrincipalId</a>
 </h3>
 
 ```typescript
@@ -383,7 +383,7 @@ public servicePrincipalId: pulumi.Output<string>;
 The ID of the Service Principal for which this password should be created. Changing this field forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L39">property startDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L40">property startDate</a>
 </h3>
 
 ```typescript
@@ -406,7 +406,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L43">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L44">property value</a>
 </h3>
 
 ```typescript
@@ -417,7 +417,7 @@ public value: pulumi.Output<string>;
 The Password for this Service Principal.
 
 <h2 class="pdoc-module-header" id="getApplication">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L11">function getApplication</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L12">function getApplication</a>
 </h2>
 
 ```typescript
@@ -430,7 +430,7 @@ Gets information about an Application within Azure Active Directory.
 -> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
 <h2 class="pdoc-module-header" id="getServicePrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L11">function getServicePrincipal</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L12">function getServicePrincipal</a>
 </h2>
 
 ```typescript
@@ -443,13 +443,13 @@ Gets information about a Service Principal associated with an Application within
 -> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
 <h2 class="pdoc-module-header" id="ApplicationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L123">interface ApplicationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L124">interface ApplicationArgs</a>
 </h2>
 
 The set of arguments for constructing a Application resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L127">property availableToOtherTenants</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L128">property availableToOtherTenants</a>
 </h3>
 
 ```typescript
@@ -460,7 +460,7 @@ availableToOtherTenants?: pulumi.Input<boolean>;
 Is this Azure AD Application available to other tenants? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L131">property homepage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L132">property homepage</a>
 </h3>
 
 ```typescript
@@ -471,7 +471,7 @@ homepage?: pulumi.Input<string>;
 The URL to the application's home page. If no homepage is specified this defaults to `http://{name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L135">property identifierUris</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L136">property identifierUris</a>
 </h3>
 
 ```typescript
@@ -482,7 +482,7 @@ identifierUris?: pulumi.Input<pulumi.Input<string>[]>;
 A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L139">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L140">property name</a>
 </h3>
 
 ```typescript
@@ -493,7 +493,7 @@ name?: pulumi.Input<string>;
 The display name for the application.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L143">property oauth2AllowImplicitFlow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L144">property oauth2AllowImplicitFlow</a>
 </h3>
 
 ```typescript
@@ -504,7 +504,7 @@ oauth2AllowImplicitFlow?: pulumi.Input<boolean>;
 Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L147">property replyUrls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L148">property replyUrls</a>
 </h3>
 
 ```typescript
@@ -515,13 +515,13 @@ replyUrls?: pulumi.Input<pulumi.Input<string>[]>;
 A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 
 <h2 class="pdoc-module-header" id="ApplicationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L89">interface ApplicationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L90">interface ApplicationState</a>
 </h2>
 
 Input properties used for looking up and filtering Application resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L93">property applicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L94">property applicationId</a>
 </h3>
 
 ```typescript
@@ -532,7 +532,7 @@ applicationId?: pulumi.Input<string>;
 The Application ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L97">property availableToOtherTenants</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L98">property availableToOtherTenants</a>
 </h3>
 
 ```typescript
@@ -543,7 +543,7 @@ availableToOtherTenants?: pulumi.Input<boolean>;
 Is this Azure AD Application available to other tenants? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L101">property homepage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L102">property homepage</a>
 </h3>
 
 ```typescript
@@ -554,7 +554,7 @@ homepage?: pulumi.Input<string>;
 The URL to the application's home page. If no homepage is specified this defaults to `http://{name}`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L105">property identifierUris</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L106">property identifierUris</a>
 </h3>
 
 ```typescript
@@ -565,7 +565,7 @@ identifierUris?: pulumi.Input<pulumi.Input<string>[]>;
 A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L109">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L110">property name</a>
 </h3>
 
 ```typescript
@@ -576,7 +576,7 @@ name?: pulumi.Input<string>;
 The display name for the application.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L113">property oauth2AllowImplicitFlow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L114">property oauth2AllowImplicitFlow</a>
 </h3>
 
 ```typescript
@@ -587,7 +587,7 @@ oauth2AllowImplicitFlow?: pulumi.Input<boolean>;
 Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L117">property replyUrls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L118">property replyUrls</a>
 </h3>
 
 ```typescript
@@ -598,13 +598,13 @@ replyUrls?: pulumi.Input<pulumi.Input<string>[]>;
 A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 
 <h2 class="pdoc-module-header" id="GetApplicationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L22">interface GetApplicationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L23">interface GetApplicationArgs</a>
 </h2>
 
 A collection of arguments for invoking getApplication.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L26">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L27">property name</a>
 </h3>
 
 ```typescript
@@ -615,7 +615,7 @@ name?: string;
 Specifies the name of the Application within Azure Active Directory.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L30">property objectId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L31">property objectId</a>
 </h3>
 
 ```typescript
@@ -626,13 +626,13 @@ objectId?: string;
 Specifies the Object ID of the Application within Azure Active Directory.
 
 <h2 class="pdoc-module-header" id="GetApplicationResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L36">interface GetApplicationResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L37">interface GetApplicationResult</a>
 </h2>
 
 A collection of values returned by getApplication.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L40">property applicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L41">property applicationId</a>
 </h3>
 
 ```typescript
@@ -643,7 +643,7 @@ applicationId: string;
 the Application ID of the Azure Active Directory Application.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L44">property availableToOtherTenants</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L45">property availableToOtherTenants</a>
 </h3>
 
 ```typescript
@@ -654,7 +654,7 @@ availableToOtherTenants: boolean;
 Is this Azure AD Application available to other tenants?
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L45">property homepage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L46">property homepage</a>
 </h3>
 
 ```typescript
@@ -662,7 +662,7 @@ homepage: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L66">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L67">property id</a>
 </h3>
 
 ```typescript
@@ -673,7 +673,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L49">property identifierUris</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L50">property identifierUris</a>
 </h3>
 
 ```typescript
@@ -684,7 +684,7 @@ identifierUris: string[];
 A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L50">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L51">property name</a>
 </h3>
 
 ```typescript
@@ -692,7 +692,7 @@ name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L54">property oauth2AllowImplicitFlow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L55">property oauth2AllowImplicitFlow</a>
 </h3>
 
 ```typescript
@@ -703,7 +703,7 @@ oauth2AllowImplicitFlow: boolean;
 Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L58">property objectId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L59">property objectId</a>
 </h3>
 
 ```typescript
@@ -714,7 +714,7 @@ objectId: string;
 the Object ID of the Azure Active Directory Application.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L62">property replyUrls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getApplication.ts#L63">property replyUrls</a>
 </h3>
 
 ```typescript
@@ -725,13 +725,13 @@ replyUrls: string[];
 A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 
 <h2 class="pdoc-module-header" id="GetServicePrincipalArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L23">interface GetServicePrincipalArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L24">interface GetServicePrincipalArgs</a>
 </h2>
 
 A collection of arguments for invoking getServicePrincipal.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L27">property applicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L28">property applicationId</a>
 </h3>
 
 ```typescript
@@ -742,7 +742,7 @@ applicationId?: string;
 The ID of the Azure AD Application for which to create a Service Principal.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L31">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L32">property displayName</a>
 </h3>
 
 ```typescript
@@ -753,7 +753,7 @@ displayName?: string;
 The Display Name of the Azure AD Application associated with this Service Principal.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L35">property objectId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L36">property objectId</a>
 </h3>
 
 ```typescript
@@ -764,13 +764,13 @@ objectId?: string;
 The ID of the Azure AD Service Principal.
 
 <h2 class="pdoc-module-header" id="GetServicePrincipalResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L41">interface GetServicePrincipalResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L42">interface GetServicePrincipalResult</a>
 </h2>
 
 A collection of values returned by getServicePrincipal.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L42">property applicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L43">property applicationId</a>
 </h3>
 
 ```typescript
@@ -778,7 +778,7 @@ applicationId: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L43">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L44">property displayName</a>
 </h3>
 
 ```typescript
@@ -786,7 +786,7 @@ displayName: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L48">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L49">property id</a>
 </h3>
 
 ```typescript
@@ -797,7 +797,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L44">property objectId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/getServicePrincipal.ts#L45">property objectId</a>
 </h3>
 
 ```typescript
@@ -805,13 +805,13 @@ objectId: string;
 ```
 
 <h2 class="pdoc-module-header" id="ServicePrincipalArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L76">interface ServicePrincipalArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L77">interface ServicePrincipalArgs</a>
 </h2>
 
 The set of arguments for constructing a ServicePrincipal resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L80">property applicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L81">property applicationId</a>
 </h3>
 
 ```typescript
@@ -822,13 +822,13 @@ applicationId: pulumi.Input<string>;
 The ID of the Azure AD Application for which to create a Service Principal.
 
 <h2 class="pdoc-module-header" id="ServicePrincipalPasswordArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L112">interface ServicePrincipalPasswordArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L113">interface ServicePrincipalPasswordArgs</a>
 </h2>
 
 The set of arguments for constructing a ServicePrincipalPassword resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L116">property endDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L117">property endDate</a>
 </h3>
 
 ```typescript
@@ -839,7 +839,7 @@ endDate: pulumi.Input<string>;
 The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L120">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L121">property keyId</a>
 </h3>
 
 ```typescript
@@ -850,7 +850,7 @@ keyId?: pulumi.Input<string>;
 A GUID used to uniquely identify this Key. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L124">property servicePrincipalId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L125">property servicePrincipalId</a>
 </h3>
 
 ```typescript
@@ -861,7 +861,7 @@ servicePrincipalId: pulumi.Input<string>;
 The ID of the Service Principal for which this password should be created. Changing this field forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L128">property startDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L129">property startDate</a>
 </h3>
 
 ```typescript
@@ -872,7 +872,7 @@ startDate?: pulumi.Input<string>;
 The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L132">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L133">property value</a>
 </h3>
 
 ```typescript
@@ -883,13 +883,13 @@ value: pulumi.Input<string>;
 The Password for this Service Principal.
 
 <h2 class="pdoc-module-header" id="ServicePrincipalPasswordState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L86">interface ServicePrincipalPasswordState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L87">interface ServicePrincipalPasswordState</a>
 </h2>
 
 Input properties used for looking up and filtering ServicePrincipalPassword resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L90">property endDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L91">property endDate</a>
 </h3>
 
 ```typescript
@@ -900,7 +900,7 @@ endDate?: pulumi.Input<string>;
 The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L94">property keyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L95">property keyId</a>
 </h3>
 
 ```typescript
@@ -911,7 +911,7 @@ keyId?: pulumi.Input<string>;
 A GUID used to uniquely identify this Key. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L98">property servicePrincipalId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L99">property servicePrincipalId</a>
 </h3>
 
 ```typescript
@@ -922,7 +922,7 @@ servicePrincipalId?: pulumi.Input<string>;
 The ID of the Service Principal for which this password should be created. Changing this field forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L102">property startDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L103">property startDate</a>
 </h3>
 
 ```typescript
@@ -933,7 +933,7 @@ startDate?: pulumi.Input<string>;
 The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L106">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipalPassword.ts#L107">property value</a>
 </h3>
 
 ```typescript
@@ -944,13 +944,13 @@ value?: pulumi.Input<string>;
 The Password for this Service Principal.
 
 <h2 class="pdoc-module-header" id="ServicePrincipalState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L62">interface ServicePrincipalState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L63">interface ServicePrincipalState</a>
 </h2>
 
 Input properties used for looking up and filtering ServicePrincipal resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L66">property applicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L67">property applicationId</a>
 </h3>
 
 ```typescript
@@ -961,7 +961,7 @@ applicationId?: pulumi.Input<string>;
 The ID of the Azure AD Application for which to create a Service Principal.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L70">property displayName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/servicePrincipal.ts#L71">property displayName</a>
 </h3>
 
 ```typescript
