@@ -127,10 +127,11 @@ In addition to the above features, we've made a handfull of day to day improveme
 - Fix name limit for azure container groups. `[pulumi/pulumi-azure#94](https://github.com/pulumi/pulumi-azure/pull/94)`
 - Support provider configuration and property values provided by environment variaibles. `[pulumi/pulumi-azure#98](https://github.com/pulumi/pulumi-azure/pull/98)`
 
-### @pulumi/azure-serverless 0.15.1
+### @pulumi/azure-serverless 0.15.2
 
 - Add support for hooking up FunctionApps to ServiceHub topics. `[pulumi/pulumi-azure-serverless#11](https://github.com/pulumi/pulumi-azure-serverless/pull/11)`
 - Allow include/exclude arguments to be passed from higher layers into FunctionApp creation. `[pulumi/pulumi-azure-serverless#15](https://github.com/pulumi/pulumi-azure-serverless/pull/15)`
+- Add Queue subscriptions (thanks to **[@mikhailshilkov](https://github.com/mikhailshilkov)**). `[pulumi/pulumi-azure-serverless#17](https://github.com/pulumi/pulumi-azure-serverless/pull/17)`
 
 ### @pulumi/cloud, @pulumi/cloud-aws, @pulumi/cloud-azure 0.15.1
 
@@ -155,8 +156,8 @@ As part of this release we are including a beta implementation of `@pulumi/cloud
 
 ### @pulumi/openstack 0.15.1
 
-- Normalize resource casing (thanks to **[@frassle](https://github.com/Frassle)**) `[pulumi/pulumi-openstack#7](https://github.com/pulumi/pulumi-openstack/pull/7)` 
-- Increase auto-name length to 255 (thanks to **[@frassle](https://github.com/Frassle)**) `[pulumi/pulumi-openstack#8](https://github.com/pulumi/pulumi-openstack/pull/8)` 
+- Normalize resource casing (thanks to **[@Frassle](https://github.com/Frassle)**) `[pulumi/pulumi-openstack#7](https://github.com/pulumi/pulumi-openstack/pull/7)` 
+- Increase auto-name length to 255 (thanks to **[@Frassle](https://github.com/Frassle)**) `[pulumi/pulumi-openstack#8](https://github.com/pulumi/pulumi-openstack/pull/8)` 
 - Support provider configuration and property values provided by environment variaibles. `[pulumi/pulumi-openstack#11](https://github.com/pulumi/pulumi-openstack/pull/11)`
 
 ## v0.15.0 {#v150}
