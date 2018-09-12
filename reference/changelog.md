@@ -152,7 +152,11 @@ As part of this release we are including a beta implementation of `@pulumi/cloud
 
 ### @pulumi/kubernetes 0.17.0
 
-**TODO: Alex**
+- Incremental updates for Kubernetes resources will no longer be printed at the end of a pulumi up. `[pulumi/pulumi-kubernetes#174](https://github.com/pulumi/pulumi-kubernetes/pull/174)`
+- More detailed explanations (and sometimes guidance) are now provided when an operation fails - for example, if the target Kubernetes cluster does not support services of type `LoadBalancer`.
+- Fixes and improvements to several APIs, including allowing `ConfigFile` to take a file, and making `CollectionComponentResource.getResource` well-typed. `[pulumi/pulumi-kubernetes#190](https://github.com/pulumi/pulumi-kubernetes/pull/190)`
+- Several bug fixes in await logic 
+- Windows support for Helm chart deployments. `[pulumi/pulumi-kubernetes#170](https://github.com/pulumi/pulumi-kubernetes/pull/170)`
 
 ### @pulumi/openstack 0.15.1
 
