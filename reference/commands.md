@@ -14,7 +14,7 @@ The most common commands in the CLI that you'll be using are as follows:
 * [`pulumi new`](./cli/pulumi_new.html): creates a new project using a template
 * [`pulumi stack`](./cli/pulumi_stack.html): manage your stacks (at least one is required to perform an update)
 * [`pulumi config`](./cli/pulumi_config.html): configure variables such as keys, regions, and so on
-* [`pulumi update`](./cli/pulumi_update.html): preview and deploy changes to your program and/or infrastructure
+* [`pulumi up`](./cli/pulumi_up.html): preview and deploy changes to your program and/or infrastructure
 * [`pulumi preview`](./cli/pulumi_preview.html): preview your changes explicitly before deploying
 * [`pulumi destroy`](./cli/pulumi_destroy.html): destroy your program and its infrastructure when you're done
 
