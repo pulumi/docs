@@ -37,21 +37,21 @@
         "icon": "radio",
         "items": [
             {
-                "title": "Pulumi 0.15.1 now available",
-                "url": "https://pulumi.io/install/changelog.html#v151",
+                "title": "Pulumi 0.15.2 now available",
+                "url": "https://pulumi.io/reference/changelog.html#v152",
                 "date": "2018-09-11"
             },
             {
                 "title": "Pulumi 0.15.0 now available",
-                "url": "https://pulumi.io/install/changelog.html#v150",
+                "url": "https://pulumi.io/reference/changelog.html#v150",
                 "date": "2018-08-13"
             },
             {
                 "title": "Pulumi 0.14.3 now available",
-                "url": "https://pulumi.io/install/changelog.html#v143",
+                "url": "https://pulumi.io/reference/changelog.html#v143",
                 "date": "2018-07-20"
             }
         ],
-        "actionItem": { "title": "Read all news", "url": "https://pulumi.io/install/changelog.html" }
+        "actionItem": { "title": "Read all news", "url": "https://pulumi.io/reference/changelog.html" }
     }
 }
