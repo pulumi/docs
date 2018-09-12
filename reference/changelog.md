@@ -24,9 +24,9 @@ redirect_from: /install/changelog.html
     </thead>
     <tbody>
         <tr>
-            <th scope="row"><a href="#v151">0.15.1</a></th>
+            <th scope="row"><a href="#v152">0.15.2</a></th>
             <td>2018/09/11</td>
-            <td>{% include sdk-links.html version='0.15.1' %}</td>
+            <td>{% include sdk-links.html version='0.15.2' %}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v150">0.15.0</a></th>
@@ -63,11 +63,11 @@ redirect_from: /install/changelog.html
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
 
-## v0.15.1 {#v151}
+## v0.15.2 {#v152}
 
 Released on September 11, 2018
 
-In addition to the 0.15.1 CLI release, we've released new versions of all of our packages.
+In addition to the 0.15.2 CLI release, we've released new versions of all of our packages.
 
 ### Pulumi CLI
 
@@ -101,7 +101,7 @@ In addition to the above features, we've made a handfull of day to day improveme
 - Improve error message when there are errors decrypting secret configuration values. `[pulumi/pulumi#1815](https://github.com/pulumi/pulumi/pull/1815)`
 - Don't fail `pulumi update` when plugin discovery fails. `[pulumi/pulumi#1745](https://github.com/pulumi/pulumi/pull/1745)`
 
-### @pulumi/pulumi 0.15.1
+### @pulumi/pulumi 0.15.2
 
 - New helpers for extracting and validating values from `pulumi.Config`. `[pulumi/pulumi#1843](https://github.com/pulumi/pulumi/pull/1843)`
 - Support serializng "factory" functions. `[pulumi/pulumi#1804](https://github.com/pulumi/pulumi/pull/1804)`
