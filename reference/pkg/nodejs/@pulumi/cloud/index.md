@@ -42,6 +42,8 @@ import * as cloud from "@pulumi/cloud";
 * <a href="#HostProperties">interface HostProperties</a>
 * <a href="#HourlySchedule">interface HourlySchedule</a>
 * <a href="#HttpDeployment">interface HttpDeployment</a>
+* <a href="#HttpServer">interface HttpServer</a>
+* <a href="#HttpServerConstructor">interface HttpServerConstructor</a>
 * <a href="#IntervalRate">interface IntervalRate</a>
 * <a href="#Request">interface Request</a>
 * <a href="#Response">interface Response</a>
@@ -66,10 +68,11 @@ import * as cloud from "@pulumi/cloud";
 * <a href="#HostOperatingSystem">type HostOperatingSystem</a>
 * <a href="#HttpEndpoint">type HttpEndpoint</a>
 * <a href="#PrimaryKeyType">type PrimaryKeyType</a>
+* <a href="#RequestListenerFactory">type RequestListenerFactory</a>
 * <a href="#RouteHandler">type RouteHandler</a>
 * <a href="#VolumeKind">type VolumeKind</a>
 
-<a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/api.ts">api.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/bucket.ts">bucket.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts">service.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts">table.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts">timer.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/topic.ts">topic.ts</a> 
+<a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/api.ts">api.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/bucket.ts">bucket.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts">httpServer.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts">service.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts">table.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts">timer.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/topic.ts">topic.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="cron">
@@ -967,6 +970,40 @@ url: pulumi.Output<string>;
 
 
 The URL at which the HttpDeployment is available to the Internet.
+
+<h2 class="pdoc-module-header" id="HttpServer">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts#L43">interface HttpServer</a>
+</h2>
+
+An HttpServer is used to listen and respond to http requests made to the exported [[url]].
+HttpServers can be constructed passing in a Function that with the same signature as the
+[[requestListener]] parameter in [[http.createServer]].  See:
+https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts#L44">property url</a>
+</h3>
+
+```typescript
+url: pulumi.Output<string>;
+```
+
+<h2 class="pdoc-module-header" id="HttpServerConstructor">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts#L23">interface HttpServerConstructor</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts#L23">constructor</a>
+</h3>
+
+```typescript
+new HttpServerConstructor(name: string, createRequestListener: RequestListenerFactory, opts?: pulumi.ResourceOptions)
+```
+
+* `createRequestListener` Function that, when called, will produce the [[requestListener]]
+function that will be called for each http request to the server.  The function will be
+called once when the module is loaded.  As such, it is a suitable place for expensive
+computation (like setting up a set of routes).  The function returned can then utilize the
+results of that computation.
 
 <h2 class="pdoc-module-header" id="IntervalRate">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L28">interface IntervalRate</a>
@@ -1907,6 +1944,14 @@ type PrimaryKeyType = string | number | boolean;
 
 The available types for primary keys. The default primary key type is
 `string`.
+
+<h2 class="pdoc-module-header" id="RequestListenerFactory">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts#L21">type RequestListenerFactory</a>
+</h2>
+
+```typescript
+type RequestListenerFactory = { ... };
+```
 
 <h2 class="pdoc-module-header" id="RouteHandler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/api.ts#L118">type RouteHandler</a>
