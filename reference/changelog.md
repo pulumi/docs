@@ -97,21 +97,21 @@ Both `pulumi up` and `pulumi new` now support `-c` flags for specifying config v
 
 In addition to the above features, we've made a handfull of day to day improvements in the CLI:
 
-- Support `pulumi` in a projects in a Yarn workspaces. `[pulumi/pulumi#1893](https://github.com/pulumi/pulumi/pull/1893)`
-- Improve error message when there are errors decrypting secret configuration values. `[pulumi/pulumi#1815](https://github.com/pulumi/pulumi/pull/1815)`
-- Don't fail `pulumi update` when plugin discovery fails. `[pulumi/pulumi#1745](https://github.com/pulumi/pulumi/pull/1745)`
+- Support `pulumi` in a projects in a Yarn workspaces. [pulumi/pulumi#1893](https://github.com/pulumi/pulumi/pull/1893)
+- Improve error message when there are errors decrypting secret configuration values. [pulumi/pulumi#1815](https://github.com/pulumi/pulumi/pull/1815)
+- Don't fail `pulumi update` when plugin discovery fails. [pulumi/pulumi#1745](https://github.com/pulumi/pulumi/pull/1745)
 
 ### @pulumi/pulumi 0.15.2
 
-- New helpers for extracting and validating values from `pulumi.Config`. `[pulumi/pulumi#1843](https://github.com/pulumi/pulumi/pull/1843)`
-- Support serializng "factory" functions. `[pulumi/pulumi#1804](https://github.com/pulumi/pulumi/pull/1804)`
+- New helpers for extracting and validating values from `pulumi.Config`. [pulumi/pulumi#1843](https://github.com/pulumi/pulumi/pull/1843)
+- Support serializng "factory" functions. [pulumi/pulumi#1804](https://github.com/pulumi/pulumi/pull/1804)
 
 ### @pulumi/aws 0.15.1
 
-- Add dotnetcore2.1 as a runtime for AWS lambdas (thanks to **[@Jtango18](https://github.com/Jtango18)**!). `[pulumi/pulumi-aws#302](https://github.com/pulumi/pulumi-aws/pull/302)`
-- Expose 'factory functions' from pulumi-aws. `[pulumi/pulumi-aws#304](https://github.com/pulumi/pulumi-aws/pull/304)`
-- Use stronger IAM doc types. `[pulumi/pulumi-aws#311](https://github.com/pulumi/pulumi-aws/pull/311)`
-- Auto-name aws.elasticache.Cluster#clusterId, `[pulumi/pulumi-aws#313](https://github.com/pulumi/pulumi-aws/pull/313)`
+- Add dotnetcore2.1 as a runtime for AWS lambdas (thanks to **[@Jtango18](https://github.com/Jtango18)**!). [pulumi/pulumi-aws#302](https://github.com/pulumi/pulumi-aws/pull/302)
+- Expose 'factory functions' from pulumi-aws. [pulumi/pulumi-aws#304](https://github.com/pulumi/pulumi-aws/pull/304)
+- Use stronger IAM doc types. [pulumi/pulumi-aws#311](https://github.com/pulumi/pulumi-aws/pull/311)
+- Auto-name aws.elasticache.Cluster#clusterId, [pulumi/pulumi-aws#313](https://github.com/pulumi/pulumi-aws/pull/313)
 
 ### @pulumi/aws-infra 0.15.1
 
@@ -123,48 +123,48 @@ In addition to the above features, we've made a handfull of day to day improveme
 
 ### @pulumi/azure 0.15.2
 
-- Consume newer terraform-provider from upstream. `[pulumi/pulumi-azure#93](https://github.com/pulumi/pulumi-azure/pull/93)`
-- Fix name limit for azure container groups. `[pulumi/pulumi-azure#94](https://github.com/pulumi/pulumi-azure/pull/94)`
-- Support provider configuration and property values provided by environment variaibles. `[pulumi/pulumi-azure#98](https://github.com/pulumi/pulumi-azure/pull/98)`
+- Consume newer terraform-provider from upstream. [pulumi/pulumi-azure#93](https://github.com/pulumi/pulumi-azure/pull/93)
+- Fix name limit for azure container groups. [pulumi/pulumi-azure#94](https://github.com/pulumi/pulumi-azure/pull/94)
+- Support provider configuration and property values provided by environment variaibles. [pulumi/pulumi-azure#98](https://github.com/pulumi/pulumi-azure/pull/98)
 
 ### @pulumi/azure-serverless 0.15.2
 
-- Add support for hooking up FunctionApps to ServiceHub topics. `[pulumi/pulumi-azure-serverless#11](https://github.com/pulumi/pulumi-azure-serverless/pull/11)`
-- Allow include/exclude arguments to be passed from higher layers into FunctionApp creation. `[pulumi/pulumi-azure-serverless#15](https://github.com/pulumi/pulumi-azure-serverless/pull/15)`
-- Add Queue subscriptions (thanks to **[@mikhailshilkov](https://github.com/mikhailshilkov)**). `[pulumi/pulumi-azure-serverless#17](https://github.com/pulumi/pulumi-azure-serverless/pull/17)`
+- Add support for hooking up FunctionApps to ServiceHub topics. [pulumi/pulumi-azure-serverless#11](https://github.com/pulumi/pulumi-azure-serverless/pull/11)
+- Allow include/exclude arguments to be passed from higher layers into FunctionApp creation. [pulumi/pulumi-azure-serverless#15](https://github.com/pulumi/pulumi-azure-serverless/pull/15)
+- Add Queue subscriptions (thanks to **[@mikhailshilkov](https://github.com/mikhailshilkov)**). [pulumi/pulumi-azure-serverless#17](https://github.com/pulumi/pulumi-azure-serverless/pull/17)
 
 ### @pulumi/cloud, @pulumi/cloud-aws, @pulumi/cloud-azure 0.15.1
 
 As part of this release we are including a beta implementation of `@pulumi/cloud` on Azure.  You can now set the `cloud:provider` configuration value to `azure` to deploy applications writing against `@pulumi/cloud` on Azure.
 
-- Add a default lifecycle policy for ECR repos. `[pulumi/pulumicloud#556](https://github.com/pulumi/pulumi-cloud/pull/556)`
-- Add `cloud.HttpServer` making it easy to run express style apps across clouds. `[pulumi/pulumi-azure-cloud#562](https://github.com/pulumi/pulumi-cloud/pull/562)`
-- Log docker messages to the Task/Service we're creating, not the Repository resource we're using. `[pulumi/pulumi-azure-cloud#563](https://github.com/pulumi/pulumi-cloud/pull/563)`
+- Add a default lifecycle policy for ECR repos. [pulumi/pulumicloud#556](https://github.com/pulumi/pulumi-cloud/pull/556)
+- Add `cloud.HttpServer` making it easy to run express style apps across clouds. [pulumi/pulumi-azure-cloud#562](https://github.com/pulumi/pulumi-cloud/pull/562)
+- Log docker messages to the Task/Service we're creating, not the Repository resource we're using. [pulumi/pulumi-azure-cloud#563](https://github.com/pulumi/pulumi-cloud/pull/563)
 
 ### @pulumi/docker
 
-- Pass logging messages to the right sink when doing docker operations. `[pulumi/pulumi-docker#7](https://github.com/pulumi/pulumi-docker/pull/7)`
-- Add `docker.Image` component. `[pulumi/pulumi-docker#10](https://github.com/pulumi/pulumi-docker/pull/10)` 
+- Pass logging messages to the right sink when doing docker operations. [pulumi/pulumi-docker#7](https://github.com/pulumi/pulumi-docker/pull/7)
+- Add `docker.Image` component. [pulumi/pulumi-docker#10](https://github.com/pulumi/pulumi-docker/pull/10)
 
 ### @pulumi/gcp 0.15.1
 
-- Support provider configuration and property values provided by environment variaibles. `[pulumi/pulumi-gcp#43](https://github.com/pulumi/pulumi-gcp/pull/43)`
+- Support provider configuration and property values provided by environment variaibles. [pulumi/pulumi-gcp#43](https://github.com/pulumi/pulumi-gcp/pull/43)
 
 ### @pulumi/kubernetes 0.17.0
 
 The [Cloud Native SDK for Kubernetes](https://blog.pulumi.com/cloud-native-infrastructure-with-kubernetes-and-pulumi) is available and recommended for production use
 
-- Incremental updates for Kubernetes resources will no longer be printed at the end of a pulumi up. `[pulumi/pulumi-kubernetes#174](https://github.com/pulumi/pulumi-kubernetes/pull/174)`
+- Incremental updates for Kubernetes resources will no longer be printed at the end of a pulumi up. [pulumi/pulumi-kubernetes#174](https://github.com/pulumi/pulumi-kubernetes/pull/174)
 - More detailed explanations (and sometimes guidance) are now provided when an operation fails - for example, if the target Kubernetes cluster does not support services of type `LoadBalancer`.
-- Fixes and improvements to several APIs, including allowing `ConfigFile` to take a file, and making `CollectionComponentResource.getResource` well-typed. `[pulumi/pulumi-kubernetes#190](https://github.com/pulumi/pulumi-kubernetes/pull/190)`
+- Fixes and improvements to several APIs, including allowing `ConfigFile` to take a file, and making `CollectionComponentResource.getResource` well-typed. [pulumi/pulumi-kubernetes#190](https://github.com/pulumi/pulumi-kubernetes/pull/190)
 - Several bug fixes in await logic 
-- Windows support for Helm chart deployments. `[pulumi/pulumi-kubernetes#170](https://github.com/pulumi/pulumi-kubernetes/pull/170)`
+- Windows support for Helm chart deployments. [pulumi/pulumi-kubernetes#170](https://github.com/pulumi/pulumi-kubernetes/pull/170)
 
 ### @pulumi/openstack 0.15.1
 
-- Normalize resource casing (thanks to **[@Frassle](https://github.com/Frassle)**) `[pulumi/pulumi-openstack#7](https://github.com/pulumi/pulumi-openstack/pull/7)` 
-- Increase auto-name length to 255 (thanks to **[@Frassle](https://github.com/Frassle)**) `[pulumi/pulumi-openstack#8](https://github.com/pulumi/pulumi-openstack/pull/8)` 
-- Support provider configuration and property values provided by environment variaibles. `[pulumi/pulumi-openstack#11](https://github.com/pulumi/pulumi-openstack/pull/11)`
+- Normalize resource casing (thanks to **[@Frassle](https://github.com/Frassle)**) [pulumi/pulumi-openstack#7](https://github.com/pulumi/pulumi-openstack/pull/7)
+- Increase auto-name length to 255 (thanks to **[@Frassle](https://github.com/Frassle)**) [pulumi/pulumi-openstack#8](https://github.com/pulumi/pulumi-openstack/pull/8)
+- Support provider configuration and property values provided by environment variaibles. [pulumi/pulumi-openstack#11](https://github.com/pulumi/pulumi-openstack/pull/11)
 
 ## v0.15.0 {#v150}
 
