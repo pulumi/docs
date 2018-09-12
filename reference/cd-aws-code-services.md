@@ -58,7 +58,7 @@ phases:
   install:
     commands:
       # pulumi
-      - curl -L https://get.pulumi.com/ | bash -s -- --version 0.15.0
+      - curl -L https://get.pulumi.com/ | bash -s -- --version 0.15.2
       - export PATH=$PATH:$HOME/.pulumi/bin
   build:
     commands:
