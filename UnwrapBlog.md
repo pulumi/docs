@@ -83,6 +83,8 @@ It's a bit of a doozy containing a bunch of type definitions and the final funct
 
 It amazes us how well this works and how amazing TypeScript is here.  As you can see here, TS completely understands what's going on and will give you all the great type-checking support and tooling that we know and love:
 
+![image](https://user-images.githubusercontent.com/4564579/45712608-9e6cd100-bb41-11e8-90dd-b4fe79d236fe.png)
+
 Since adding support for this, we've been able to start using this new function across our own codebase and we've seen things get dramatically simpler.  The pyramid-of-doom goes away and code becomes much cleaner and easier to read and maintain.  JavaScript helped us write this system easily, but thanks to TypeScript we can express these complex intents and have the safety and understanding to do this sort of thing with confidence.
 
 Also, a special thanks to @DanielRosenwasser over from the TypeScript team for putting up with my constant pestering on how to work through this and deal with some especially thorny areas!
