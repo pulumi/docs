@@ -1,6 +1,6 @@
 Advanced TypeScript type FTW!
 
-In Pulumi we have a data model that allows people to express complex data that may *eventually* be available. Traditional JS programming might expose that as a Promise<T>, but we've taken that one step further by introducing a type we call:
+In Pulumi we have a data model that allows people to express complex data that may *eventually* be available. Traditional JavaScript programming might expose that as a Promise<T>, but we've taken that one step further by introducing a type we call:
 
 ```ts
 type Input<T> = T | Promise<T> | Output<T>;
