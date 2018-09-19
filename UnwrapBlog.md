@@ -1,6 +1,6 @@
 Advanced TypeScript type FTW!
 
-We at Pulumi love TypeScript for cloud apps and infrastructure, because of its rich type system and great ahead-of-time typechecking -- making for a more productive inner loop and helping to find errors sooner. The typesystem magic behind how this works for infrastructure as code, however, can be fascinating!  
+We at Pulumi love TypeScript for cloud apps and infrastructure, because of its rich type system and great ahead-of-time typechecking -- making for a more productive inner loop and helping to find errors sooner. The typesystem magic behind how this works for infrastructure as code can be fascinating!  
 
 As core part of our programming model is that we allow people to express complex dependency data that may *eventually* be available. Traditional JavaScript programming might expose that as a Promise<T>, but we've taken that one step further by introducing a type we call:
 
@@ -35,7 +35,7 @@ It's super flexible, and let's people naturally produce the values in whatever w
 
 However, while easy to produce, this can sometimes be difficult to consume.  For example, if you wanted to take in that `Input<Input<string>[]>` and then check if there was a very specific value in it, you might have to go through and do a bunch of work.  You'd have to first deal with potentially getting a `Input<string>[]` or a `Promise<Input<string>[]>` or even an `Output<Input<string>[]>`. Then, once you even got to the underlying array, you'd have to deal with each potential element in it being a `string`... or a `Promise<string>`... or a... well... you get the idea.  It's not fun 😃
 
-Up till now, we'd supplied some simple helpers to make this more managable.  Our helpers would effectively 'unwrap' one layer of this sort of structure allowing you take the external value and deal with an internal value of a known shape.  So it effectively worked like this:
+Up until now, we'd supplied some simple helpers to make this more managable.  Our helpers would effectively 'unwrap' one layer of this sort of structure allowing you take the external value and deal with an internal value of a known shape.  So it effectively worked like this:
 
 ```ts
 function unwrap<T>(input: Input<T>): T { /* ... */ }
@@ -53,7 +53,7 @@ Our core goal was to change our 'unwrap' function from just peeling away one lay
 We knew that providing the implementation such a function itself was not going to the true hard part.  After all, we already had the code to peel back one layer.  So peeling back all the layers was more a matter of just having the function call itself recursively when encountering things like arrays (or other objects that themselves contained `Input`s).  The hard part came in when were trying figure out how would we even express this in TypeScript?.  After all, what's the type signature when you effectively to say:
 
 ```ts
-function unwrap(input: Input<...MaybeHasInputsOrPromisesOrOutputsArbitrarilyDeeper...>): SomeThingWithAllTheInputsPromisesAndOutputsErased;
+function unwrap(input: Input<...MaybeHasInputsOrPromisesOrOutputsArbitrarilyDeep...>): ThatThingWithAllTheDeepInputsPromisesAndOutputsErased;
 ```
 
 This was a big headscratcher for a while.  But after exploring some of the powerful new features that TypeScript has been bringing about in recent releases, we finally found a great way to manage it.  In the end, it ends up looking something like this:
@@ -81,14 +81,14 @@ type UnwrappedObject<T> = {
 function unwrap<T>(val: T): Unwrap<T>;
 ```
 
-It's a bit of a doozy containing a bunch of type definitions and the final function declaration that uses them.  It makes use of many advanced TypeScript typing features.  Including 'Union Types' (the 'primitive' type), 'Mapped Types' (which 'UnwrappedObject' is an example of), 'Conditional Types' (the types with `?` and `:` in them), 'Inferred Types' (the use of `infer U` in several places).  You can read more about these in the [Advanced Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html) documentation.
+It's a bit of a doozy containing a bunch of type definitions and the final function declaration that uses them.  It makes use of many advanced TypeScript typing features.  Including 'Union Types' (the 'primitive' type), 'Mapped Types' (which 'UnwrappedObject' is an example of), 'Conditional Types' (the types with `?` and `:` in them) and 'Inferred Types' (the use of `infer U` in several places).  You can read more about these in the [Advanced Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html) documentation.
 
-Put together, the `Unwrap<T>` is effectively itself a recursively defined structural pattern matching type.  You can see it reference itself once you walk into `UnwrappedArray<T>` and `UnwrappedObject<T>` types. As it recurses, it matches the type it has and then 'peels away' the wrappings that have been caused by `Promise<T>` and `Output<T>`.  As it hits Arrays and Objects, it dives deeper, unwrapping along the way.  This is all manageable in TypeScript because it does this sort of matching and unwrapping in a lazy fashion, allowing us to express what is effectively an infinitely large pattern-matching type, without it having any trouble understanding it or applying it!
+Put together, the `Unwrap<T>` itself is effectively a recursively defined structural pattern matching type.  You can see it reference itself once you walk into `UnwrappedArray<T>` and `UnwrappedObject<T>` types. As it recurses, it matches the type it has and then 'peels away' the wrappings that have been caused by `Promise<T>` and `Output<T>`.  As it hits Arrays and Objects, it dives deeper, unwrapping along the way.  This is all manageable in TypeScript because it does this sort of matching and unwrapping in a lazy fashion, allowing us to express what is effectively an infinitely large pattern-matching type, without it having any trouble understanding it or applying it!
 
-It amazes us how well this works and how amazing TypeScript is here.  As you can see here, TypeScript completely understands what's going on and will give you all the great type-checking support and tooling that we know and love:
+It amazes us how well this works and how expressive TypeScript is here.  As you can see here, TypeScript completely understands what's going on and will give you all the great type-checking support and tooling that we know and love:
 
 ![image](https://user-images.githubusercontent.com/4564579/45712608-9e6cd100-bb41-11e8-90dd-b4fe79d236fe.png)
 
 Since adding support for this, we've been able to start using this new function across our own codebase and we've seen things get dramatically simpler.  The pyramid-of-doom goes away and code becomes much cleaner and easier to read and maintain.  JavaScript helped us write this system easily, but thanks to TypeScript we can express these complex intents and have the safety and understanding to do this sort of thing with confidence.
 
-Also, a special thanks to @DanielRosenwasser over from the TypeScript team for putting up with my constant pestering on how to work through this and deal with some especially thorny areas!
+A special thanks to @DanielRosenwasser over from the TypeScript team for putting up with my constant pestering on how to work through this and deal with some especially thorny areas!
