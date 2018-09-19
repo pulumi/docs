@@ -83,7 +83,7 @@ It's a bit of a doozy containing a bunch of type definitions and the final funct
 
 Put together, the `Unwrap<T>` is effectively itself a recursively defined structural pattern matching type.  You can see it reference itself once you walk into `UnwrappedArray<T>` and `UnwrappedObject<T>` types. As it recurses, it matches the type it has and then 'peels away' the wrappings that have been caused by `Promise<T>` and `Output<T>`.  As it hits Arrays and Objects, it dives deeper, unwrapping along the way.  This is all manageable in TypeScript because it does this sort of matching and unwrapping in a lazy fashion, allowing us to express what is effectively an infinitely large pattern-matching type, without it having any trouble understanding it or applying it!
 
-It amazes us how well this works and how amazing TypeScript is here.  As you can see here, TS completely understands what's going on and will give you all the great type-checking support and tooling that we know and love:
+It amazes us how well this works and how amazing TypeScript is here.  As you can see here, TypeScript completely understands what's going on and will give you all the great type-checking support and tooling that we know and love:
 
 ![image](https://user-images.githubusercontent.com/4564579/45712608-9e6cd100-bb41-11e8-90dd-b4fe79d236fe.png)
 
