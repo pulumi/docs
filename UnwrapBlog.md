@@ -12,7 +12,7 @@ type Input<T> = T | Promise<T> | Output<T>;
 interface Output<T> { /* ... */ }
 ```
 
-This complex type can often show up in forms like:
+This complex type can often show up as inputs to all Pulumi objets like so:
 
 ```ts
 interface VpcInput {
@@ -20,7 +20,7 @@ interface VpcInput {
 }
 ```
 
-Breaking that down, it's basically saying "I'll take an array of strings.  But those actual string values can individually be strings, Promises-of-strings, or Strings-carrying-dependency information." It even goes one step beyond that, because the entire array itself could be just an array-of-those-things, or a Promise-of-array-of-those-things, or an Array-of-those-things-with-dependency information.  Whew...!
+Breaking that down, it's basically saying "I'll take an array of strings.  But those actual string values can individually be strings, promises-of-strings, or strings-carrying-dependency-information." It even goes one step beyond that, because the entire array itself could be just an array-of-those-things, or a promise-of-array-of-those-things, or an array-of-those-things-with-dependency-information.  Whew...!
 
 This approach is great for people producing the data.  As a producer I could do:
 
