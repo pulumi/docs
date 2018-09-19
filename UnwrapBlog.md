@@ -22,7 +22,7 @@ interface VpcInput {
 
 Breaking that down, it's basically saying "I'll take an array of strings.  But those actual string values can individually be strings, promises-of-strings, or strings-carrying-dependency-information." It even goes one step beyond that, because the entire array itself could be just an array-of-those-things, or a promise-of-array-of-those-things, or an array-of-those-things-with-dependency-information.  Whew...!
 
-This approach is great for people producing the data.  As a producer I could do:
+This approach is great for people producing the data.  As a producer I can do:
 
 ```ts
 new Vpc({ ipAddresses: ["an-address"] }); // or even 
