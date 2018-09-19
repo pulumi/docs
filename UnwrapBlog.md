@@ -50,7 +50,9 @@ complex domains, we started seeing code start to form the programming [Pyramid o
 
 Our core goal was to change our 'unwrap' function from just peeling away one layer of this onion, to peeling away *all* layers.  So, for example, if you started with an `Input<Input<string>[]>` you would just get back a plain old `string[]` that you could use completely naturally in all the ways you'd expect.  We were initially uncertain if we could make this work, but thanks to the power of JavaScript and the expressivity of TypeScript, we think we found a great solution here.
 
-We knew that providing the implementation such a function itself was not going to the true hard part.  After all, we already had the code to peel back one layer.  So peeling back all the layers was more a matter of just having the function call itself recursively when encountering things like arrays (or other objects that themselves contained `Input`s).  The hard part came in when were trying figure out how would we even express this in a type-safe manner TypeScript.  After all, what's the type signature when you effectively to say:
+We knew that providing the implementation such a function itself was not going to the true hard part.  After all, we already had the code to peel back one layer.  So peeling back all the layers was more a matter of just having the function call itself recursively when encountering things like arrays (or other objects that themselves contained `Input`s).  
+
+The real hard part came in when were trying figure out how would we even express this in a type-safe manner TypeScript.  After all, what's the type signature when you effectively want to say:
 
 ```ts
 function unwrap(input: Input<...MaybeHasInputsOrPromisesOrOutputsArbitrarilyDeep...>): ThatThingWithAllTheDeepInputsPromisesAndOutputsErased;
