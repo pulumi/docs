@@ -18,7 +18,7 @@ interface VpcInput {
 }
 ```
 
-Breaking that down, it's basically saying "I'll take an an array of strings.  But those actual string values can individually be strings, Promises-of-strings, or Strings-carrying-dependency information." It even goes one step beyond that, because the entire array itself could be just an array-of-those-things, or a Promise-of-array-of-those-things, or an Array-of-those-things-with-dependency information.  Whew...!
+Breaking that down, it's basically saying "I'll take an array of strings.  But those actual string values can individually be strings, Promises-of-strings, or Strings-carrying-dependency information." It even goes one step beyond that, because the entire array itself could be just an array-of-those-things, or a Promise-of-array-of-those-things, or an Array-of-those-things-with-dependency information.  Whew...!
 
 This approach is great for people producing the data.  As a producer I could do:
 
