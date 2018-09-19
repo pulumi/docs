@@ -31,7 +31,7 @@ new Vpc({ ipAddresses: computeAnArrayAnyOfTheAboveAsynchrousnously() }); // etc.
 
 It's super flexible, and let's people naturally produce the values in whatever way they want without having to work too hard to make it conform to some very narrow type.
 
-However, while easy to produce, this can sometimes be difficult to consume.  For example, if you wanted to take in that `Input<Input<string>[]>` and then check if there was a very specific value in it, you might have to go through and do a bunch of work.  You'd have to first deal with potentially getting a `Input<string>[]` or a `Promise<Input<string>[]>` or even an `Output<Input<string>[]>`. Then, once you even got to the underlying array, you'd have to deal with each potential element in it being a `string`... or a `Promise<string>`... or a... well... you get the idea.  It's not fun :)
+However, while easy to produce, this can sometimes be difficult to consume.  For example, if you wanted to take in that `Input<Input<string>[]>` and then check if there was a very specific value in it, you might have to go through and do a bunch of work.  You'd have to first deal with potentially getting a `Input<string>[]` or a `Promise<Input<string>[]>` or even an `Output<Input<string>[]>`. Then, once you even got to the underlying array, you'd have to deal with each potential element in it being a `string`... or a `Promise<string>`... or a... well... you get the idea.  It's not fun 😃
 
 Up till now, we'd supplied some simple helpers to make this more managable.  Our helpers would effectively 'unwrap' one layer of this sort of structure allowing you take the external value and deal with an internal value of a known shape.  So it effectively worked like this:
 
