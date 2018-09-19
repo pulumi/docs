@@ -25,7 +25,7 @@ Breaking that down, it's basically saying "I'll take an array of strings.  But t
 This approach is great for people producing the data.  As a producer I could do:
 
 ```ts
-new Vpc({ ipAddress: ["an-address"] }); // or even 
+new Vpc({ ipAddresses: ["an-address"] }); // or even 
 new Vpc({ ipAddresses: ["an-address", computeAddressAsynchronously() ]}); // or even
 new Vpc({ ipAddresses: ["an-address", computeAddressAsynchronously(), someDependency.address ]}); // or even
 new Vpc({ ipAddresses: computeAnArrayAnyOfTheAboveAsynchrousnously() }); // etc. etc.
