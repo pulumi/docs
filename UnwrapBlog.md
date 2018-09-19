@@ -1,12 +1,14 @@
 Advanced TypeScript type FTW!
 
-In Pulumi we have a data model that allows people to express complex data that may *eventually* be available. Traditional JavaScript programming might expose that as a Promise<T>, but we've taken that one step further by introducing a type we call:
+We at Pulumi love TypeScript for cloud apps and infrastructure, because of its rich type system and great ahead-of-time typechecking -- making for a more productive inner loop and helping to find errors sooner. The typesystem magic behind how this works for infrastructure as code, however, can be fascinating!  
+
+As core part of our programming model is that we allow people to express complex dependency data that may *eventually* be available. Traditional JavaScript programming might expose that as a Promise<T>, but we've taken that one step further by introducing a type we call:
 
 ```ts
 type Input<T> = T | Promise<T> | Output<T>;
 
-// Like a Promise<T>, but also keeps track of Dependency information so we can
-// figure out what the upstream/downstream impact is of any value change.
+// Like a Promise<T>, but also keeps track of dependency information so we can figure
+// out what the upstream/downstream impact is whenever any values change in the system
 interface Output<T> { /* ... */ }
 ```
 
