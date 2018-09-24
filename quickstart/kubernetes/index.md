@@ -28,6 +28,8 @@ By default, Pulumi uses the same configuration as `kubectl`, so if you're alread
 
 The easiest way to start with Kubernetes is to follow one of the tutorials:
 
+* [Run a Stateless App Deployment](./tutorial-stateless-app.html): Deploy a simple stateless Nginx web server backed
+    by a Docker container
 * [Create a Guestbook App with Redis and Nginx](./tutorial-guestbook.html): Create multi-tier web application using
     Redis and Nginx, and powered by Docker containers
 
