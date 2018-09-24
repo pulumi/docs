@@ -26,7 +26,7 @@ By default, Pulumi uses the same configuration as `kubectl`, so if you're alread
 
 ## Tutorials
 
-The easiest way to start with AWS is to follow one of the tutorials:
+The easiest way to start with Kubernetes is to follow one of the tutorials:
 
 * [Create a Guestbook App with Redis and Nginx](./tutorial-guestbook.html): Create multi-tier web application using
     Redis and Nginx, and powered by Docker containers
