@@ -32,7 +32,7 @@ The first thing you'll want to do is install the Pulumi SDK package, which is li
 
 The following Pulumi Python packages are available:
 
-- [pulumi](https://pypi.org/project/pulumi/): the core Pulumi JavaScript SDK package
+- [pulumi](https://pypi.org/project/pulumi/): the core Pulumi Python SDK package
 - [pulumi_aws](https://pypi.org/project/pulumi_aws/): the AWS resource provider package, for programming AWS directly
 - [pulumi_azure](https://pypi.org/project/pulumi_azure/): the Azure resource provider package, for programming Azure directly
 - [pulumi_gcp](https://pypi.org/project/pulumi_gcp/): the Google Cloud resource provider package, for programming Google Cloud directly
