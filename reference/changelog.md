@@ -24,7 +24,12 @@ redirect_from: /install/changelog.html
     </thead>
     <tbody>
         <tr>
-            <th scope="row"><a href="#v153">0.1532</a></th>
+            <th scope="row"><a href="#v154">0.15.4</a></th>
+            <td>2018/09/28</td>
+            <td>{% include sdk-links.html version='0.15.3' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v153">0.15.3</a></th>
             <td>2018/09/18</td>
             <td>{% include sdk-links.html version='0.15.3' %}</td>
         </tr>
@@ -67,6 +72,20 @@ redirect_from: /install/changelog.html
 </table>
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## v0.15.4 {#v154}
+
+Released on September 28, 2018
+
+This minor release contains a small bug fix for a crash in the CLI.
+
+### Pulumi CLI
+
+- Fix an assert in display code when a resource property transitions from an asset to an archive or the other way around
+
+### @pulumi/pulumi v0.15.4
+
+There are no changes from the previous release, but the CLI and `@pulumi/pulumi` package share a version.
 
 ## v0.15.3 {#v153}
 
