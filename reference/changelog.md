@@ -24,6 +24,16 @@ redirect_from: /install/changelog.html
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v154">0.15.4</a></th>
+            <td>2018/09/28</td>
+            <td>{% include sdk-links.html version='0.15.3' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v153">0.15.3</a></th>
+            <td>2018/09/18</td>
+            <td>{% include sdk-links.html version='0.15.3' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v152">0.15.2</a></th>
             <td>2018/09/11</td>
             <td>{% include sdk-links.html version='0.15.2' %}</td>
@@ -62,6 +72,35 @@ redirect_from: /install/changelog.html
 </table>
 
 > See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
+
+## v0.15.4 {#v154}
+
+Released on September 28, 2018
+
+This minor release contains a small bug fix for a crash in the CLI.
+
+### Pulumi CLI
+
+- Fix an assert in display code when a resource property transitions from an asset to an archive or the other way around
+
+### @pulumi/pulumi v0.15.4
+
+There are no changes from the previous release, but the CLI and `@pulumi/pulumi` package share a version.
+
+## v0.15.3 {#v153}
+
+Released on September 18, 2018
+
+This minor release contains two small bug fixes.
+
+### Pulumi CLI
+
+- Improved performance of `pulumi stack ls`
+- Fix build authoring so the dynamic provider works for the CLI built by Homebrew (thanks to **[@Tirke](https://github.com/Tirke)**!)
+
+### @pulumi/pulumi v0.15.3
+
+There are no changes from the previous release, but the CLI and `@pulumi/pulumi` package share a version.
 
 ## v0.15.2 {#v152}
 
@@ -157,7 +196,7 @@ The [Cloud Native SDK for Kubernetes](https://blog.pulumi.com/cloud-native-infra
 - Incremental updates for Kubernetes resources will no longer be printed at the end of a pulumi up. [pulumi/pulumi-kubernetes#174](https://github.com/pulumi/pulumi-kubernetes/pull/174)
 - More detailed explanations (and sometimes guidance) are now provided when an operation fails - for example, if the target Kubernetes cluster does not support services of type `LoadBalancer`.
 - Fixes and improvements to several APIs, including allowing `ConfigFile` to take a file, and making `CollectionComponentResource.getResource` well-typed. [pulumi/pulumi-kubernetes#190](https://github.com/pulumi/pulumi-kubernetes/pull/190)
-- Several bug fixes in await logic 
+- Several bug fixes in await logic
 - Windows support for Helm chart deployments. [pulumi/pulumi-kubernetes#170](https://github.com/pulumi/pulumi-kubernetes/pull/170)
 
 ### @pulumi/openstack 0.15.1

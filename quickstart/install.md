@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-installer_version: "0.15.2"
+installer_version: "0.15.4"
 redirect_from: install/index.html
 ---
 
@@ -74,7 +74,7 @@ First thing's first, let's install the Pulumi CLI on your machine.
     <option value="linux">Linux</option>
     <option value="macos">macOS</option>
     <option value="windows">Windows</option>
-    <option value="other">Alternatives</option>
+    <option value="other">Manual Install</option>
 </select>
 
 <div id="unknown_installation">
@@ -140,7 +140,7 @@ This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it
 </div>
 
 <div id="other_installation" markdown="1">
-## Alternatives
+## Manual Installation
 
 Raw binaries are available for all major operating systems if you prefer to install them manually.
 
@@ -150,18 +150,7 @@ macOS Sierra (10.12) or later is required.
 
 1. Download [Pulumi {{page.installer_version}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin-x64.tar.gz).
 
-2. Unzip the tarball and run the install script. After installation, you may delete the extracted folder.
-
-    ```bash
-    $ tar -xzf pulumi-v{{page.installer_version}}-darwin-x64.tar.gz
-    $ ./pulumi/install.sh
-    ```
-
-3. Add `/usr/local/pulumi/bin` to your path:
-
-    ```
-    echo "export PATH=\$PATH:/usr/local/pulumi/bin" >> ~/.profile
-    ```
+2. Unzip the tarball and either copy the binaries in the `pulumi` directory on your `$PATH`.
 
 ### Linux Binaries
 
@@ -169,18 +158,7 @@ We provide a pre-built binary for Linux.
 
 1. Download [Pulumi {{page.installer_version}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz).
 
-2. Unzip the tarball and run the install script. After installation, you may delete the extracted folder.
-
-    ```bash
-    $ tar -xzf pulumi-v{{page.installer_version}}-linux-x64.tar.gz
-    $ ./pulumi/install.sh
-    ```
-
-3. Add `/usr/local/pulumi/bin` to your path:
-
-    ```
-    echo "export PATH=\$PATH:/usr/local/pulumi/bin" >> ~/.profile
-    ```
+2. Unzip the tarball and either copy the binaries in the `pulumi` directory on your `$PATH`.
 
 ### Windows Binaries
 
@@ -195,7 +173,7 @@ Windows 8 and 10 are supported.
 ### Uninstalling Pulumi
 
 To uninstall Pulumi, delete the `.pulumi` folder in your home directory. If you used the manual installer, you should
-also delete the `pulumi` folder that was created.</div>
+also delete the `pulumi` folder that was created.
 
 The current stable version is **{{ page.installer_version }}**. For a full history of prior versions, including
 release notes, please visit <a href="/reference/changelog.html">the Change Log</a>.
