@@ -71,8 +71,6 @@ redirect_from: /install/changelog.html
     </tbody>
 </table>
 
-> See [known issues](../reference/known-issues.html) for currently known issues and workarounds.
-
 ## v0.15.4 {#v154}
 
 Released on September 28, 2018
