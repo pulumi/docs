@@ -58,4 +58,6 @@ So how does this all really work?  Well, if you want some of the more nitty grit
 
 With this approach the work to create a Lambdas gets dramatically simpler.  Any sorts of changes to the code in the JavaScript function (including anything it depends on) is properly tracked and understood by Pulumi, allowing an easy development model where FaaS code can be easily modified and republished without any extra hoops to jump through.  On top of all of that, because this is just code itself, and because these are normal APIs, other tooling (like your editor) knows exactly what is going on and can guide you through this.  For example:
 
+![image](https://user-images.githubusercontent.com/4564579/46366582-69847200-c649-11e8-8f97-6db5efadb978.png)
+
 While there's a lot of really cool tech going on under the covers here, we really hope that this ends up just feeling super-awesome to use for you.  Now that we have this functionality, we wouldn't want to ever write an AWS Lambda any other way!
