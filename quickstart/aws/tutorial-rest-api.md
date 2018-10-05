@@ -86,7 +86,7 @@ See the [reference documentation](/reference/index.html) for details on the APIs
 The stack is ready to deploy, which is done as follows:
 
 ```bash
-pulumi update
+pulumi up
 ```
 
 This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
