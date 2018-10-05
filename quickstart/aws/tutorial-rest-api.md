@@ -29,11 +29,11 @@ cd ahoy-pulumi
 
 You can accept the defaults for this command. For instance, you can change the AWS region to `us-west-2`.
 
-![Run Pulumi new](/images/quickstart/hello/Quickstart1.png)
+![Run Pulumi new](/images/quickstart/hello/Quickstart1.png){:width="700px"}
 
 After some dependency installations from NPM, you'll see a few files have been generated from this initialization process. 
 
-![View files](/images/quickstart/hello/Quickstart2.png)
+![View files](/images/quickstart/hello/Quickstart2.png){:width="700px"}
 
 Let's look at some of those.
 
@@ -91,11 +91,11 @@ pulumi up
 
 This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
 
-![Stack preview](https://user-images.githubusercontent.com/4564579/46554206-6f21c800-c894-11e8-9123-e2b11e3d1c2a.png)
+![Stack preview](https://user-images.githubusercontent.com/4564579/46554206-6f21c800-c894-11e8-9123-e2b11e3d1c2a.png){:width="700px"}
 
 Choosing `yes` will create resources in AWS. This may take a minute or two.
 
-![Stack update](https://user-images.githubusercontent.com/4564579/46554246-8cef2d00-c894-11e8-94c4-17f7985f3fc0.png)
+![Stack update](https://user-images.githubusercontent.com/4564579/46554246-8cef2d00-c894-11e8-94c4-17f7985f3fc0.png){:width="700px"}
 
 Since there was a stack export (via `exports.url` in the code), this is printed in the output of `pulumi update`. We can easily `curl` this URL via `pulumi stack output`:
 
@@ -105,13 +105,13 @@ curl $(pulumi stack output url)
 
 For a more interesting view that shows the result of calling a Lambda function, open the page in a browser:
 
-![Stack page in browser](/images/quickstart/hello/Quickstart5.png)
+![Stack page in browser](/images/quickstart/hello/Quickstart5.png){:width="600px"}
 
 ## Manage the stack
 
 Our output also contained a permalink to the Pulumi dashboard. We can review the stack in the UI, and examine logs and resource usage, along with inviting friends and co-workers to collaborate on stacks. 
 
-![](/images/quickstart/hello/Quickstart6.png)
+![](/images/quickstart/hello/Quickstart6.png){:width="600px"}
 
 ## Tear Down
 
