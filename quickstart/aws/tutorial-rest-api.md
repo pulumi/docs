@@ -91,7 +91,7 @@ pulumi up
 
 This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
 
-![Stack preview]((https://user-images.githubusercontent.com/4564579/46554206-6f21c800-c894-11e8-9123-e2b11e3d1c2a.png)
+![Stack preview](https://user-images.githubusercontent.com/4564579/46554206-6f21c800-c894-11e8-9123-e2b11e3d1c2a.png)
 
 Choosing `yes` will create resources in AWS. This may take a minute or two.
 
