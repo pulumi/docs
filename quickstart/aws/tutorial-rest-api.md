@@ -29,11 +29,11 @@ cd ahoy-pulumi
 
 You can accept the defaults for this command. For instance, you can change the AWS region to `us-west-2`.
 
-![Run Pulumi new](/images/quickstart/hello/Quickstart1.png){:width="700px"}
+![Run Pulumi new](/images/quickstart/hello/Quickstart1.png)
 
 After some dependency installations from NPM, you'll see a few files have been generated from this initialization process. 
 
-![View files](/images/quickstart/hello/Quickstart2.png){:width="700px"}
+![View files](/images/quickstart/hello/Quickstart2.png)
 
 Let's look at some of those.
 
@@ -69,10 +69,10 @@ const endpoint = new aws.apigateway.x.API("hello", {
                     body: Buffer.from(JSON.stringify({ name: "AWS" }), "utf8").toString("base64"),
                     isBase64Encoded: true,
                     headers: { "content-type": "application/json" },
-                });
-            },
-        },
-    ],
+                })
+            }
+        }
+    ]
 });
 
 // Export the public URL for the HTTP service
@@ -105,13 +105,13 @@ curl $(pulumi stack output url)
 
 For a more interesting view that shows the result of calling a Lambda function, open the page in a browser:
 
-![Stack page in browser](/images/quickstart/hello/Quickstart5.png){:width="600px"}
+![Stack page in browser](/images/quickstart/hello/Quickstart5.png)
 
 ## Manage the stack
 
 Our output also contained a permalink to the Pulumi dashboard. We can review the stack in the UI, and examine logs and resource usage, along with inviting friends and co-workers to collaborate on stacks. 
 
-![](/images/quickstart/hello/Quickstart6.png){:width="600px"}
+![](/images/quickstart/hello/Quickstart6.png)
 
 ## Tear Down
 
