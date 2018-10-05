@@ -91,11 +91,11 @@ pulumi up
 
 This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
 
-![Stack preview](https://user-images.githubusercontent.com/4564579/46554206-6f21c800-c894-11e8-9123-e2b11e3d1c2a.png){:width="700px"}
+![Stack preview](https://user-images.githubusercontent.com/4564579/46554998-da6c9980-c896-11e8-8530-6ca4c8db8123.png){:width="700px"}
 
 Choosing `yes` will create resources in AWS. This may take a minute or two.
 
-![Stack update](https://user-images.githubusercontent.com/4564579/46554246-8cef2d00-c894-11e8-94c4-17f7985f3fc0.png){:width="700px"}
+![Stack update](https://user-images.githubusercontent.com/4564579/46555042-fcfeb280-c896-11e8-8731-51c9ee78af23.png){:width="700px"}
 
 Since there was a stack export (via `exports.url` in the code), this is printed in the output of `pulumi update`. We can easily `curl` this URL via `pulumi stack output`:
 
