@@ -39,7 +39,7 @@ You can find additional examples of using Azure in [the Pulumi examples repo](ht
 
 ## Libraries
 
-The following pacakges are available in pacakge managers:
+The following packages are available in package managers:
 * JavaScript/TypeScript: [`@pulumi/azure`](https://www.npmjs.com/package/@pulumi/azure)
 * Python: [`pulumi-azure`](https://pypi.org/project/pulumi-azure/)
 * Go: [`github.com/pulumi/pulumi-azure/sdk/go/azure`](https://github.com/pulumi/pulumi-azure)
