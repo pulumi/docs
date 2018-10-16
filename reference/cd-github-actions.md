@@ -130,7 +130,9 @@ the usual GitHub Checks dialog, with a green checkmark if everything went as pla
 ![Action Checks](/images/reference/gh-actions-checks.png)
 
 Click the Logs pane to see the full output of the Pulumi CLI, along with a hyperlink to your deployment on
-Pulumi's Cloud Console with more details.
+Pulumi's Cloud Console with more details:
+
+![Action Logs](/images/reference/gh-actions-logs.png)
 
 For even better Pull Request integration, make sure to also [install our GitHub App](./cd-github.html)!
 
