@@ -43,7 +43,7 @@ These libraries help with common cloud programming patterns and practices:
 
 * [AWS Infrastructure Components (`@pulumi/aws-infra`)](nodejs/@pulumi/aws-infra): common AWS networking and
   infrastructure patterns
-* [AWS EKS Cluster (`@pulumi/es`)](nodejs/@pulumi/eks): simple creation and management of AWS EKS clusters
+* [AWS EKS Cluster (`@pulumi/eks`)](nodejs/@pulumi/eks): simple creation and management of AWS EKS clusters
 * [Azure Serverless Components (`@pulumi/azure-serverless`)](nodejs/@pulumi/azure-serverless): components for writing
   serverless applications on Azure
 
