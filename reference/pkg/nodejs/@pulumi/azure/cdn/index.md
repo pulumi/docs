@@ -284,7 +284,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/cdn/profile.ts#L10">class Profile</a>
 </h2>
 
-Create a CDN Profile to create a collection of CDN Endpoints.
+Manage a CDN Profile to create a collection of CDN Endpoints.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/cdn/profile.ts#L44">constructor</a>

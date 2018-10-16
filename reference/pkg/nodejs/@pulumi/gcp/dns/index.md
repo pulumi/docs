@@ -27,7 +27,7 @@ Manages a zone within Google Cloud DNS. For more information see [the official d
 [API](https://cloud.google.com/dns/api/v1/managedZones).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L47">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L51">constructor</a>
 </h3>
 
 ```typescript
@@ -108,7 +108,18 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L36">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L35">property labels</a>
+</h3>
+
+```typescript
+public labels: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A set of key/value label pairs to assign to the instance.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L40">property name</a>
 </h3>
 
 ```typescript
@@ -120,7 +131,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L42">property nameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L46">property nameServers</a>
 </h3>
 
 ```typescript
@@ -133,7 +144,7 @@ domain. Use NS records to redirect from your DNS provider to these names,
 thus making Google Cloud DNS authoritative for this zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L47">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L51">property project</a>
 </h3>
 
 ```typescript
@@ -421,13 +432,13 @@ domain. Use NS records to redirect from your DNS provider to these names,
 thus making Google Cloud DNS authoritative for this zone.
 
 <h2 class="pdoc-module-header" id="ManagedZoneArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L114">interface ManagedZoneArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L124">interface ManagedZoneArgs</a>
 </h2>
 
 The set of arguments for constructing a ManagedZone resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L118">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L128">property description</a>
 </h3>
 
 ```typescript
@@ -438,7 +449,7 @@ description?: pulumi.Input<string>;
 A textual description field. Defaults to 'Managed by Terraform'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L122">property dnsName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L132">property dnsName</a>
 </h3>
 
 ```typescript
@@ -449,7 +460,18 @@ dnsName: pulumi.Input<string>;
 The fully qualified DNS name of this zone, e.g. `terraform.io.`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L127">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L136">property labels</a>
+</h3>
+
+```typescript
+labels?: pulumi.Input<{ ... }>;
+```
+
+
+A set of key/value label pairs to assign to the instance.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L141">property name</a>
 </h3>
 
 ```typescript
@@ -461,7 +483,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L132">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L146">property project</a>
 </h3>
 
 ```typescript
@@ -473,13 +495,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="ManagedZoneState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L84">interface ManagedZoneState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L90">interface ManagedZoneState</a>
 </h2>
 
 Input properties used for looking up and filtering ManagedZone resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L88">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L94">property description</a>
 </h3>
 
 ```typescript
@@ -490,7 +512,7 @@ description?: pulumi.Input<string>;
 A textual description field. Defaults to 'Managed by Terraform'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L92">property dnsName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L98">property dnsName</a>
 </h3>
 
 ```typescript
@@ -501,7 +523,18 @@ dnsName?: pulumi.Input<string>;
 The fully qualified DNS name of this zone, e.g. `terraform.io.`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L97">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L102">property labels</a>
+</h3>
+
+```typescript
+labels?: pulumi.Input<{ ... }>;
+```
+
+
+A set of key/value label pairs to assign to the instance.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L107">property name</a>
 </h3>
 
 ```typescript
@@ -513,7 +546,7 @@ A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L103">property nameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L113">property nameServers</a>
 </h3>
 
 ```typescript
@@ -526,7 +559,7 @@ domain. Use NS records to redirect from your DNS provider to these names,
 thus making Google Cloud DNS authoritative for this zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L108">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/dns/managedZone.ts#L118">property project</a>
 </h3>
 
 ```typescript

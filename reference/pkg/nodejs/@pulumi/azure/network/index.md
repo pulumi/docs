@@ -316,7 +316,7 @@ public wafConfiguration: pulumi.Output<{ ... } | undefined>;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L10">class ApplicationSecurityGroup</a>
 </h2>
 
-Create an Application Security Group.
+Manage an Application Security Group.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L38">constructor</a>
@@ -2101,7 +2101,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L10">class PublicIp</a>
 </h2>
 
-Create a Public IP Address.
+Manage a Public IP Address.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L72">constructor</a>

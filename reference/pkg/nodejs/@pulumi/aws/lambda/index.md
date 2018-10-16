@@ -7,13 +7,17 @@ title: Module lambda
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Alias">class Alias</a>
+* <a href="#CallbackFunction">class CallbackFunction</a>
 * <a href="#EventSourceMapping">class EventSourceMapping</a>
+* <a href="#EventSubscription">class EventSubscription</a>
 * <a href="#Function">class Function</a>
 * <a href="#Permission">class Permission</a>
+* <a href="#createFunctionFromEventHandler">function createFunctionFromEventHandler</a>
 * <a href="#getFunction">function getFunction</a>
 * <a href="#getInvocation">function getInvocation</a>
 * <a href="#AliasArgs">interface AliasArgs</a>
 * <a href="#AliasState">interface AliasState</a>
+* <a href="#Context">interface Context</a>
 * <a href="#EventSourceMappingArgs">interface EventSourceMappingArgs</a>
 * <a href="#EventSourceMappingState">interface EventSourceMappingState</a>
 * <a href="#FunctionArgs">interface FunctionArgs</a>
@@ -36,9 +40,13 @@ title: Module lambda
 * <a href="#NodeJSRuntime">let NodeJSRuntime</a>
 * <a href="#Python2d7Runtime">let Python2d7Runtime</a>
 * <a href="#Python3d6Runtime">let Python3d6Runtime</a>
+* <a href="#Callback">type Callback</a>
+* <a href="#CallbackFactory">type CallbackFactory</a>
+* <a href="#CallbackFunctionArgs">type CallbackFunctionArgs</a>
+* <a href="#EventHandler">type EventHandler</a>
 * <a href="#Runtime">type Runtime</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts">lambda/alias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts">lambda/eventSourceMapping.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts">lambda/function.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/getFunction.ts">lambda/getFunction.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/getInvocation.ts">lambda/getInvocation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts">lambda/permission.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts">lambda/runtimes.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts">lambda/alias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts">lambda/eventSourceMapping.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts">lambda/function.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/getFunction.ts">lambda/getFunction.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/getInvocation.ts">lambda/getInvocation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts">lambda/lambdaMixins.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/permission.ts">lambda/permission.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts">lambda/runtimes.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Alias">
@@ -186,6 +194,372 @@ urn: Output<URN>;
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
+
+<h2 class="pdoc-module-header" id="CallbackFunction">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L245">class CallbackFunction</a>
+</h2>
+
+A CallbackFunction is a special type of aws.lambda.Function that can be created out of an actual
+JavaScript function instance.  The function instance will be analyzed and packaged up (including
+dependencies) into a form that can be used by AWS Lambda.  See
+https://github.com/pulumi/docs/blob/master/reference/serializing-functions.md for additional
+details on this process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L245">constructor</a>
+</h3>
+
+```typescript
+public new CallbackFunction(name: string, args: CallbackFunctionArgs<E, R>, opts?: pulumi.ResourceOptions)
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L23">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FunctionState): Function
+```
+
+
+Get an existing Function resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L30">property arn</a>
+</h3>
+
+```typescript
+public arn: pulumi.Output<string>;
+```
+
+
+The Amazon Resource Name (ARN) identifying your Lambda Function.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L46">property code</a>
+</h3>
+
+```typescript
+public code: pulumi.Output<pulumi.asset.Archive | undefined>;
+```
+
+
+The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L34">property deadLetterConfig</a>
+</h3>
+
+```typescript
+public deadLetterConfig: pulumi.Output<{ ... } | undefined>;
+```
+
+
+Nested block to configure the function's *dead letter queue*. See details below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L38">property description</a>
+</h3>
+
+```typescript
+public description: pulumi.Output<string | undefined>;
+```
+
+
+Description of what your Lambda Function does.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L42">property environment</a>
+</h3>
+
+```typescript
+public environment: pulumi.Output<{ ... } | undefined>;
+```
+
+
+The Lambda environment's configuration settings. Fields documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L54">property handler</a>
+</h3>
+
+```typescript
+public handler: pulumi.Output<string>;
+```
+
+
+The function [entrypoint][3] in your code.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L58">property invokeArn</a>
+</h3>
+
+```typescript
+public invokeArn: pulumi.Output<string>;
+```
+
+
+The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws_api_gateway_integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L62">property kmsKeyArn</a>
+</h3>
+
+```typescript
+public kmsKeyArn: pulumi.Output<string | undefined>;
+```
+
+
+The ARN for the KMS encryption key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L66">property lastModified</a>
+</h3>
+
+```typescript
+public lastModified: pulumi.Output<string>;
+```
+
+
+The date this resource was last modified.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L70">property memorySize</a>
+</h3>
+
+```typescript
+public memorySize: pulumi.Output<number | undefined>;
+```
+
+
+Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits][5]
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L50">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+A unique name for your Lambda Function.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L74">property publish</a>
+</h3>
+
+```typescript
+public publish: pulumi.Output<boolean | undefined>;
+```
+
+
+Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L79">property qualifiedArn</a>
+</h3>
+
+```typescript
+public qualifiedArn: pulumi.Output<string>;
+```
+
+
+The Amazon Resource Name (ARN) identifying your Lambda Function Version
+(if versioning is enabled via `publish = true`).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L83">property reservedConcurrentExecutions</a>
+</h3>
+
+```typescript
+public reservedConcurrentExecutions: pulumi.Output<number | undefined>;
+```
+
+
+The amount of reserved concurrent executions for this lambda function. Defaults to Unreserved Concurrency Limits. See [Managing Concurrency][9]
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L87">property role</a>
+</h3>
+
+```typescript
+public role: pulumi.Output<ARN>;
+```
+
+
+IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L367">property roleInstance</a>
+</h3>
+
+```typescript
+roleInstance?: iam.Role;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L91">property runtime</a>
+</h3>
+
+```typescript
+public runtime: pulumi.Output<string>;
+```
+
+
+See [Runtimes][6] for valid values.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L95">property s3Bucket</a>
+</h3>
+
+```typescript
+public s3Bucket: pulumi.Output<string | undefined>;
+```
+
+
+The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L99">property s3Key</a>
+</h3>
+
+```typescript
+public s3Key: pulumi.Output<string | undefined>;
+```
+
+
+The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L103">property s3ObjectVersion</a>
+</h3>
+
+```typescript
+public s3ObjectVersion: pulumi.Output<string | undefined>;
+```
+
+
+The object version containing the function's deployment package. Conflicts with `filename`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L107">property sourceCodeHash</a>
+</h3>
+
+```typescript
+public sourceCodeHash: pulumi.Output<string>;
+```
+
+
+Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `${base64sha256(file("file.zip"))}`, where "file.zip" is the local filename of the lambda function source archive.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L111">property sourceCodeSize</a>
+</h3>
+
+```typescript
+public sourceCodeSize: pulumi.Output<number>;
+```
+
+
+The size in bytes of the function .zip file.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L115">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<Tags | undefined>;
+```
+
+
+A mapping of tags to assign to the object.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L119">property timeout</a>
+</h3>
+
+```typescript
+public timeout: pulumi.Output<number | undefined>;
+```
+
+
+The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits][5]
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L120">property tracingConfig</a>
+</h3>
+
+```typescript
+public tracingConfig: pulumi.Output<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L124">property version</a>
+</h3>
+
+```typescript
+public version: pulumi.Output<string>;
+```
+
+
+Latest published version of your Lambda Function.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L128">property vpcConfig</a>
+</h3>
+
+```typescript
+public vpcConfig: pulumi.Output<{ ... } | undefined>;
+```
+
+
+Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]
 
 <h2 class="pdoc-module-header" id="EventSourceMapping">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L13">class EventSourceMapping</a>
@@ -387,6 +761,73 @@ public uuid: pulumi.Output<string>;
 
 
 The UUID of the created event source mapping.
+
+<h2 class="pdoc-module-header" id="EventSubscription">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L216">class EventSubscription</a>
+</h2>
+
+Base type for all subscription types.  An event subscription represents a connection between some
+AWS resource an an AWS lambda that will be triggered when something happens to that resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L218">constructor</a>
+</h3>
+
+```typescript
+public new EventSubscription(type: string, name: string, props: Record<string, any>, opts?: pulumi.ResourceOptions)
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+</h3>
+
+```typescript
+protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L218">property func</a>
+</h3>
+
+```typescript
+public func: LambdaFunction;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L217">property permission</a>
+</h3>
+
+```typescript
+public permission: permission.Permission;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 <h2 class="pdoc-module-header" id="Function">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L14">class Function</a>
@@ -937,6 +1378,14 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="createFunctionFromEventHandler">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L227">function createFunctionFromEventHandler</a>
+</h2>
+
+```typescript
+createFunctionFromEventHandler<E,R>(name: string, handler: EventHandler<E, R>, opts?: pulumi.ResourceOptions): LambdaFunction
+```
+
 <h2 class="pdoc-module-header" id="getFunction">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/getFunction.ts#L10">function getFunction</a>
 </h2>
@@ -1093,6 +1542,160 @@ routingConfig?: pulumi.Input<{ ... }>;
 
 
 The Lambda alias' route configuration settings. Fields documented below
+
+<h2 class="pdoc-module-header" id="Context">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L29">interface Context</a>
+</h2>
+
+Context is the shape of the context object passed to a Function callback.  For more information,
+see: https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-context.html
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L109">method getRemainingTimeInMillis</a>
+</h3>
+
+```typescript
+getRemainingTimeInMillis(): string
+```
+
+
+Returns the approximate remaining execution time (before timeout occurs) of the Lambda
+function that is currently executing. The timeout is one of the Lambda function
+configuration. When the timeout reaches, AWS Lambda terminates your Lambda function.
+
+You can use this method to check the remaining time during your function execution and take
+appropriate corrective action at run time.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L72">property awsRequestId</a>
+</h3>
+
+```typescript
+awsRequestId: string;
+```
+
+
+AWS request ID associated with the request. This is the ID returned to the client that called
+the invoke method.
+
+If AWS Lambda retries the invocation (for example, in a situation where the Lambda function
+that is processing Kinesis records throws an exception), the request ID remains the same.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L39">property callbackWaitsForEmptyEventLoop</a>
+</h3>
+
+```typescript
+callbackWaitsForEmptyEventLoop: boolean;
+```
+
+
+The default value is true. This property is useful only to modify the default behavior of the
+callback. By default, the callback will wait until the event loop is empty before freezing
+the process and returning the results to the caller. You can set this property to false to
+request AWS Lambda to freeze the process soon after the callback is called, even if there are
+events in the event loop. AWS Lambda will freeze the process, any state data and the events
+in the event loop (any remaining events in the event loop processed when the Lambda function
+is called next and if AWS Lambda chooses to use the frozen process).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L99">property clientContext</a>
+</h3>
+
+```typescript
+clientContext: any;
+```
+
+
+Information about the client application and device when invoked through the AWS Mobile SDK.
+It can be null.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L44">property functionName</a>
+</h3>
+
+```typescript
+functionName: string;
+```
+
+
+Name of the Lambda function that is executing.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L50">property functionVersion</a>
+</h3>
+
+```typescript
+functionVersion: string;
+```
+
+
+The Lambda function version that is executing. If an alias is used to invoke the function,
+then function_version will be the version the alias points to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L93">property identity</a>
+</h3>
+
+```typescript
+identity: any;
+```
+
+
+Information about the Amazon Cognito identity provider when invoked through the AWS Mobile
+SDK. It can be null.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L57">property invokedFunctionArn</a>
+</h3>
+
+```typescript
+invokedFunctionArn: string;
+```
+
+
+The ARN used to invoke this function. It can be a function ARN or an alias ARN. An
+unqualified ARN executes the $LATEST version and aliases execute the function version it is
+pointing to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L77">property logGroupName</a>
+</h3>
+
+```typescript
+logGroupName: string;
+```
+
+
+The name of the CloudWatch log group where you can find logs written by your Lambda function.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L87">property logStreamName</a>
+</h3>
+
+```typescript
+logStreamName: string;
+```
+
+
+The name of the CloudWatch log group where you can find logs written by your Lambda function.
+The log stream may or may not change for each invocation of the Lambda function.
+
+The value is null if your Lambda function is unable to create a log stream, which can happen
+if the execution role that grants necessary permissions to the Lambda function does not
+include permissions for the CloudWatch actions.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L63">property memoryLimitInMB</a>
+</h3>
+
+```typescript
+memoryLimitInMB: string;
+```
+
+
+Memory limit, in MB, you configured for the Lambda function. You set the memory limit at the
+time you create a Lambda function and you can change it later.
 
 <h2 class="pdoc-module-header" id="EventSourceMappingArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L171">interface EventSourceMappingArgs</a>
@@ -2451,6 +3054,77 @@ let Python2d7Runtime: Runtime = "python2.7";
 ```typescript
 let Python3d6Runtime: Runtime = "python3.6";
 ```
+
+<h2 class="pdoc-module-header" id="Callback">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L131">type Callback</a>
+</h2>
+
+```typescript
+type Callback = { ... };
+```
+
+
+Callback is the signature for an AWS Lambda function entrypoint.
+
+[event] is the data passed in by specific services calling the Lambda (like s3, or kinesis).  The
+shape of it will be specific to individual services.
+
+[context] AWS Lambda uses this parameter to provide details of your Lambda function's execution.
+For more information, see
+https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-context.html
+
+[callback] See https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html#nodejs-prog-model-handler-callback
+for details.
+
+This function can be synchronous or asynchronous function, though async is only supported with an
+AWS Lambda runtime of 8.10 or higher.  On those runtimes a Promise can be returned, 'callback'
+parameter can be ignored, and AWS will appropriately handle things. For AWS lambda pre-8.10, a
+synchronous function must be provided.  The synchronous function should return nothing, and
+should instead invoke 'callback' when complete.
+
+<h2 class="pdoc-module-header" id="CallbackFactory">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L139">type CallbackFactory</a>
+</h2>
+
+```typescript
+type CallbackFactory = { ... };
+```
+
+
+CallbackFactory is the signature for a function that will be called once to produce the
+entrypoint function that AWS Lambda will invoke.  It can be used to initialize expensive state
+once that can then be used across all invocations of the Lambda (as long as the Lambda is using
+the same warm node instance).
+
+<h2 class="pdoc-module-header" id="CallbackFunctionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L157">type CallbackFunctionArgs</a>
+</h2>
+
+```typescript
+type CallbackFunctionArgs = utils.Overwrite<FunctionArgs, { ... }>;
+```
+
+
+CallbackFunctionArgs provides configuration options for the serverless Function.  It is
+effectively equivalent to [aws.lambda.FunctionArgs] except with a few important differences
+documented at the property level.  For example, [role] is an actual iam.Role instance, and not an
+ARN. Properties like [runtime] are now optional.  And some properties (like [code]) are entirely
+disallowed.
+
+<h2 class="pdoc-module-header" id="EventHandler">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L148">type EventHandler</a>
+</h2>
+
+```typescript
+type EventHandler = Callback<E, R> | LambdaFunction;
+```
+
+
+An EventHandler is either a JavaScript callback or an aws.lambda.Function that can be used to
+handle an event triggered by some resource.  If just a JavaScript callback is provided the AWS
+Lambda will be created by calling [createCallbackFunction] on it.  If more control over the
+resultant AWS Lambda is required, clients can call [createCallbackFunction] directly and pass the
+result of that to any code that needs an EventHandler.
 
 <h2 class="pdoc-module-header" id="Runtime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L18">type Runtime</a>

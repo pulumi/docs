@@ -20,6 +20,7 @@ title: Module organizations
 * <a href="#getIAMPolicy">function getIAMPolicy</a>
 * <a href="#getOrganization">function getOrganization</a>
 * <a href="#getProject">function getProject</a>
+* <a href="#getProjectServices">function getProjectServices</a>
 * <a href="#FolderArgs">interface FolderArgs</a>
 * <a href="#FolderState">interface FolderState</a>
 * <a href="#GetActiveFolderArgs">interface GetActiveFolderArgs</a>
@@ -35,6 +36,8 @@ title: Module organizations
 * <a href="#GetOrganizationResult">interface GetOrganizationResult</a>
 * <a href="#GetProjectArgs">interface GetProjectArgs</a>
 * <a href="#GetProjectResult">interface GetProjectResult</a>
+* <a href="#GetProjectServicesArgs">interface GetProjectServicesArgs</a>
+* <a href="#GetProjectServicesResult">interface GetProjectServicesResult</a>
 * <a href="#IAMBindingArgs">interface IAMBindingArgs</a>
 * <a href="#IAMBindingState">interface IAMBindingState</a>
 * <a href="#IAMCustomRoleArgs">interface IAMCustomRoleArgs</a>
@@ -48,7 +51,7 @@ title: Module organizations
 * <a href="#ProjectArgs">interface ProjectArgs</a>
 * <a href="#ProjectState">interface ProjectState</a>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/folder.ts">organizations/folder.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getActiveFolder.ts">organizations/getActiveFolder.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getBillingAccount.ts">organizations/getBillingAccount.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getClientConfig.ts">organizations/getClientConfig.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getFolder.ts">organizations/getFolder.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getIAMPolicy.ts">organizations/getIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getOrganization.ts">organizations/getOrganization.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getProject.ts">organizations/getProject.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMBinding.ts">organizations/iAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts">organizations/iAMCustomRole.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMMember.ts">organizations/iAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMPolicy.ts">organizations/iAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/policy.ts">organizations/policy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/project.ts">organizations/project.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/folder.ts">organizations/folder.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getActiveFolder.ts">organizations/getActiveFolder.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getBillingAccount.ts">organizations/getBillingAccount.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getClientConfig.ts">organizations/getClientConfig.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getFolder.ts">organizations/getFolder.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getIAMPolicy.ts">organizations/getIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getOrganization.ts">organizations/getOrganization.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getProject.ts">organizations/getProject.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getProjectServices.ts">organizations/getProjectServices.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMBinding.ts">organizations/iAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts">organizations/iAMCustomRole.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMMember.ts">organizations/iAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMPolicy.ts">organizations/iAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/policy.ts">organizations/policy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/project.ts">organizations/project.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Folder">
@@ -327,7 +330,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="IAMCustomRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L13">class IAMCustomRole</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L20">class IAMCustomRole</a>
 </h2>
 
 Allows management of a customized Cloud IAM organization role. For more information see
@@ -335,8 +338,15 @@ Allows management of a customized Cloud IAM organization role. For more informat
 and
 [API](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
 
+~> **Warning:** Note that custom roles in GCP have the concept of a soft-delete. There are two issues that may arise
+ from this and how roles are propagated. 1) creating a role may involve undeleting and then updating a role with the
+ same name, possibly causing confusing behavior between undelete and update. 2) A deleted role is permanently deleted
+ after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days after deletion) before the role name is
+ made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
+ by Terraform, and new roles cannot share that name.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L55">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L62">constructor</a>
 </h3>
 
 ```typescript
@@ -351,7 +361,7 @@ Create a IAMCustomRole resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L29">method get</a>
 </h3>
 
 ```typescript
@@ -383,7 +393,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L29">property deleted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L36">property deleted</a>
 </h3>
 
 ```typescript
@@ -394,7 +404,7 @@ public deleted: pulumi.Output<boolean | undefined>;
 The current deleted state of the role. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L33">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L40">property description</a>
 </h3>
 
 ```typescript
@@ -417,7 +427,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L37">property orgId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L44">property orgId</a>
 </h3>
 
 ```typescript
@@ -428,7 +438,7 @@ public orgId: pulumi.Output<string>;
 The numeric ID of the organization in which you want to create a custom role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L41">property permissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L48">property permissions</a>
 </h3>
 
 ```typescript
@@ -439,7 +449,7 @@ public permissions: pulumi.Output<string[]>;
 The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L45">property roleId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L52">property roleId</a>
 </h3>
 
 ```typescript
@@ -450,7 +460,7 @@ public roleId: pulumi.Output<string>;
 The role id to use for this role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L51">property stage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L58">property stage</a>
 </h3>
 
 ```typescript
@@ -463,7 +473,7 @@ Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L55">property title</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L62">property title</a>
 </h3>
 
 ```typescript
@@ -1270,6 +1280,20 @@ Use this data source to get project details.
 For more information see
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project)
 
+<h2 class="pdoc-module-header" id="getProjectServices">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getProjectServices.ts#L13">function getProjectServices</a>
+</h2>
+
+```typescript
+getProjectServices(args?: GetProjectServicesArgs, opts?: pulumi.InvokeOptions): Promise<GetProjectServicesResult>
+```
+
+
+Use this data source to get details on the enabled project services.
+
+For a list of services available, visit the
+[API library page](https://console.cloud.google.com/apis/library) or run `gcloud services list`.
+
 <h2 class="pdoc-module-header" id="FolderArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/folder.ts#L126">interface FolderArgs</a>
 </h2>
@@ -1942,6 +1966,56 @@ policyEtag: string;
 skipDelete: boolean;
 ```
 
+<h2 class="pdoc-module-header" id="GetProjectServicesArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getProjectServices.ts#L23">interface GetProjectServicesArgs</a>
+</h2>
+
+A collection of arguments for invoking getProjectServices.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getProjectServices.ts#L27">property project</a>
+</h3>
+
+```typescript
+project?: string;
+```
+
+
+The project ID.
+
+<h2 class="pdoc-module-header" id="GetProjectServicesResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getProjectServices.ts#L33">interface GetProjectServicesResult</a>
+</h2>
+
+A collection of values returned by getProjectServices.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getProjectServices.ts#L34">property disableOnDestroy</a>
+</h3>
+
+```typescript
+disableOnDestroy: boolean;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getProjectServices.ts#L39">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/getProjectServices.ts#L35">property services</a>
+</h3>
+
+```typescript
+services: string[];
+```
+
 <h2 class="pdoc-module-header" id="IAMBindingArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMBinding.ts#L110">interface IAMBindingArgs</a>
 </h2>
@@ -2036,13 +2110,13 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="IAMCustomRoleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L141">interface IAMCustomRoleArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L148">interface IAMCustomRoleArgs</a>
 </h2>
 
 The set of arguments for constructing a IAMCustomRole resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L145">property deleted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L152">property deleted</a>
 </h3>
 
 ```typescript
@@ -2053,7 +2127,7 @@ deleted?: pulumi.Input<boolean>;
 The current deleted state of the role. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L149">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L156">property description</a>
 </h3>
 
 ```typescript
@@ -2064,7 +2138,7 @@ description?: pulumi.Input<string>;
 A human-readable description for the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L153">property orgId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L160">property orgId</a>
 </h3>
 
 ```typescript
@@ -2075,7 +2149,7 @@ orgId: pulumi.Input<string>;
 The numeric ID of the organization in which you want to create a custom role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L157">property permissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L164">property permissions</a>
 </h3>
 
 ```typescript
@@ -2086,7 +2160,7 @@ permissions: pulumi.Input<pulumi.Input<string>[]>;
 The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L161">property roleId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L168">property roleId</a>
 </h3>
 
 ```typescript
@@ -2097,7 +2171,7 @@ roleId: pulumi.Input<string>;
 The role id to use for this role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L167">property stage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L174">property stage</a>
 </h3>
 
 ```typescript
@@ -2110,7 +2184,7 @@ Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L171">property title</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L178">property title</a>
 </h3>
 
 ```typescript
@@ -2121,13 +2195,13 @@ title: pulumi.Input<string>;
 A human-readable title for the role.
 
 <h2 class="pdoc-module-header" id="IAMCustomRoleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L105">interface IAMCustomRoleState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L112">interface IAMCustomRoleState</a>
 </h2>
 
 Input properties used for looking up and filtering IAMCustomRole resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L109">property deleted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L116">property deleted</a>
 </h3>
 
 ```typescript
@@ -2138,7 +2212,7 @@ deleted?: pulumi.Input<boolean>;
 The current deleted state of the role. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L113">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L120">property description</a>
 </h3>
 
 ```typescript
@@ -2149,7 +2223,7 @@ description?: pulumi.Input<string>;
 A human-readable description for the role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L117">property orgId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L124">property orgId</a>
 </h3>
 
 ```typescript
@@ -2160,7 +2234,7 @@ orgId?: pulumi.Input<string>;
 The numeric ID of the organization in which you want to create a custom role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L121">property permissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L128">property permissions</a>
 </h3>
 
 ```typescript
@@ -2171,7 +2245,7 @@ permissions?: pulumi.Input<pulumi.Input<string>[]>;
 The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L125">property roleId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L132">property roleId</a>
 </h3>
 
 ```typescript
@@ -2182,7 +2256,7 @@ roleId?: pulumi.Input<string>;
 The role id to use for this role.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L131">property stage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L138">property stage</a>
 </h3>
 
 ```typescript
@@ -2195,7 +2269,7 @@ Defaults to `GA`.
 List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L135">property title</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/organizations/iAMCustomRole.ts#L142">property title</a>
 </h3>
 
 ```typescript

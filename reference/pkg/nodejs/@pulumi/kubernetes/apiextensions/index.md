@@ -7,6 +7,7 @@ title: Module apiextensions
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#CustomResource">class CustomResource</a>
+* <a href="#CustomResourceArgs">interface CustomResourceArgs</a>
 
 <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts">provider.ts</a> 
 
@@ -15,14 +16,20 @@ title: Module apiextensions
 * <a href="v1beta1">apiextensions/v1beta1</a>
 
 <h2 class="pdoc-module-header" id="CustomResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1316">class CustomResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1364">class CustomResource</a>
 </h2>
+
+CustomResource represents an instance of a CustomResourceDefinition (CRD). For example, the
+CoreOS Prometheus operator exposes a CRD `monitoring.coreos.com/ServiceMonitor`; to
+instantiate this as a Pulumi resource, one could call `new CustomResource`, passing the
+`ServiceMonitor` resource definition as an argument.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1341">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1389">constructor</a>
 </h3>
 
 ```typescript
-new CustomResource(name: string, args: { ... }, opts?: pulumi.CustomResourceOptions)
+new CustomResource(name: string, args: CustomResourceArgs, opts?: pulumi.CustomResourceOptions)
 ```
 
 
@@ -33,7 +40,7 @@ Create a CustomResource resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1340">method getInputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1388">method getInputs</a>
 </h3>
 
 ```typescript
@@ -61,7 +68,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1323">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1371">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -87,7 +94,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1331">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1379">property kind</a>
 </h3>
 
 ```typescript
@@ -101,7 +108,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1337">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1385">property metadata</a>
 </h3>
 
 ```typescript
@@ -123,4 +130,41 @@ urn: Output<URN>;
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
+
+<h2 class="pdoc-module-header" id="CustomResourceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1351">interface CustomResourceArgs</a>
+</h2>
+
+CustomResourceArgs represents a resource definiton we'd use to create an instance of a
+Kubernetes CustomResourceDefinition (CRD). For example, the CoreOS Prometheus operator
+exposes a CRD `monitoring.coreos.com/ServiceMonitor`; to create a `ServiceMonitor`, we'd
+pass a `CustomResourceArgs` containing the `ServiceMonitor` definition to
+`apiextensions.CustomResource`.
+
+NOTE: This type is fairly loose, since other than `apiVersion` and `kind`, there are no
+fields required across all CRDs.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1352">property apiVersion</a>
+</h3>
+
+```typescript
+apiVersion: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1353">property kind</a>
+</h3>
+
+```typescript
+kind: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1354">property metadata</a>
+</h3>
+
+```typescript
+metadata?: pulumi.Input<outputApi.meta.v1.ListMeta>;
+```
 

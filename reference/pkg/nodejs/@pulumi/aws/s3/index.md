@@ -7,6 +7,7 @@ title: Module s3
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Bucket">class Bucket</a>
+* <a href="#BucketEventSubscription">class BucketEventSubscription</a>
 * <a href="#BucketMetric">class BucketMetric</a>
 * <a href="#BucketNotification">class BucketNotification</a>
 * <a href="#BucketObject">class BucketObject</a>
@@ -15,6 +16,8 @@ title: Module s3
 * <a href="#getBucket">function getBucket</a>
 * <a href="#getBucketObject">function getBucketObject</a>
 * <a href="#BucketArgs">interface BucketArgs</a>
+* <a href="#BucketEvent">interface BucketEvent</a>
+* <a href="#BucketEventSubscriptionArgs">interface BucketEventSubscriptionArgs</a>
 * <a href="#BucketMetricArgs">interface BucketMetricArgs</a>
 * <a href="#BucketMetricState">interface BucketMetricState</a>
 * <a href="#BucketNotificationArgs">interface BucketNotificationArgs</a>
@@ -23,15 +26,20 @@ title: Module s3
 * <a href="#BucketObjectState">interface BucketObjectState</a>
 * <a href="#BucketPolicyArgs">interface BucketPolicyArgs</a>
 * <a href="#BucketPolicyState">interface BucketPolicyState</a>
+* <a href="#BucketRecord">interface BucketRecord</a>
 * <a href="#BucketState">interface BucketState</a>
+* <a href="#CommonBucketSubscriptionArgs">interface CommonBucketSubscriptionArgs</a>
 * <a href="#GetBucketArgs">interface GetBucketArgs</a>
 * <a href="#GetBucketObjectArgs">interface GetBucketObjectArgs</a>
 * <a href="#GetBucketObjectResult">interface GetBucketObjectResult</a>
 * <a href="#GetBucketResult">interface GetBucketResult</a>
 * <a href="#InventoryArgs">interface InventoryArgs</a>
 * <a href="#InventoryState">interface InventoryState</a>
+* <a href="#ObjectCreatedSubscriptionArgs">interface ObjectCreatedSubscriptionArgs</a>
+* <a href="#ObjectRemovedSubscriptionArgs">interface ObjectRemovedSubscriptionArgs</a>
+* <a href="#BucketEventHandler">type BucketEventHandler</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts">s3/bucket.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketMetric.ts">s3/bucketMetric.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketNotification.ts">s3/bucketNotification.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts">s3/bucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketPolicy.ts">s3/bucketPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucket.ts">s3/getBucket.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucketObject.ts">s3/getBucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts">s3/inventory.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts">s3/bucket.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketMetric.ts">s3/bucketMetric.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketNotification.ts">s3/bucketNotification.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketObject.ts">s3/bucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketPolicy.ts">s3/bucketPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucket.ts">s3/getBucket.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucketObject.ts">s3/getBucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/inventory.ts">s3/inventory.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts">s3/s3Mixins.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Bucket">
@@ -355,6 +363,83 @@ public websiteEndpoint: pulumi.Output<string>;
 
 
 The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
+
+<h2 class="pdoc-module-header" id="BucketEventSubscription">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L124">class BucketEventSubscription</a>
+</h2>
+
+A component corresponding to a single underlying aws.s3.BucketNotification created for a bucket.
+Note: due to the AWS requirement that all notifications for a bucket be defined at once, the
+actual aws.s3.BucketNotification instances will only be created once the pulumi program runs to
+completion and all subscriptions have been heard about.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L125">constructor</a>
+</h3>
+
+```typescript
+public new BucketEventSubscription(name: string, bucket: Bucket, handler: BucketEventHandler, args: BucketEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+</h3>
+
+```typescript
+protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L125">property bucket</a>
+</h3>
+
+```typescript
+public bucket: pulumi.Output<Bucket>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L218">property func</a>
+</h3>
+
+```typescript
+public func: LambdaFunction;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L217">property permission</a>
+</h3>
+
+```typescript
+public permission: permission.Permission;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 <h2 class="pdoc-module-header" id="BucketMetric">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketMetric.ts#L10">class BucketMetric</a>
@@ -1389,6 +1474,55 @@ websiteEndpoint?: pulumi.Input<string>;
 
 The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 
+<h2 class="pdoc-module-header" id="BucketEvent">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L65">interface BucketEvent</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L66">property Records</a>
+</h3>
+
+```typescript
+Records?: BucketRecord[];
+```
+
+<h2 class="pdoc-module-header" id="BucketEventSubscriptionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L37">interface BucketEventSubscriptionArgs</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L41">property events</a>
+</h3>
+
+```typescript
+events: string[];
+```
+
+
+Events to subscribe to. For example: "[s3:ObjectCreated:*]".  Cannot be empty.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L28">property filterPrefix</a>
+</h3>
+
+```typescript
+filterPrefix?: string;
+```
+
+
+An optional prefix to filter down notifications.  See
+aws.s3.BucketNotification.lambdaFunctions for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L34">property filterSuffix</a>
+</h3>
+
+```typescript
+filterSuffix?: string;
+```
+
+
+An optional suffix to filter down notifications.  See
+aws.s3.BucketNotification.lambdaFunctions for more details.
+
 <h2 class="pdoc-module-header" id="BucketMetricArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucketMetric.ts#L85">interface BucketMetricArgs</a>
 </h2>
@@ -2031,6 +2165,81 @@ policy?: pulumi.Input<string | PolicyDocument>;
 
 The text of the policy.
 
+<h2 class="pdoc-module-header" id="BucketRecord">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L69">interface BucketRecord</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L72">property awsRegion</a>
+</h3>
+
+```typescript
+awsRegion: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L74">property eventName</a>
+</h3>
+
+```typescript
+eventName: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L71">property eventSource</a>
+</h3>
+
+```typescript
+eventSource: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L73">property eventTime</a>
+</h3>
+
+```typescript
+eventTime: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L70">property eventVersion</a>
+</h3>
+
+```typescript
+eventVersion: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L78">property requestParameters</a>
+</h3>
+
+```typescript
+requestParameters: { ... };
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L81">property responseElements</a>
+</h3>
+
+```typescript
+responseElements: { ... };
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L85">property s3</a>
+</h3>
+
+```typescript
+s3: { ... };
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L75">property userIdentity</a>
+</h3>
+
+```typescript
+userIdentity: { ... };
+```
+
 <h2 class="pdoc-module-header" id="BucketState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/bucket.ts#L183">interface BucketState</a>
 </h2>
@@ -2281,6 +2490,36 @@ websiteEndpoint?: pulumi.Input<string>;
 
 
 The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
+
+<h2 class="pdoc-module-header" id="CommonBucketSubscriptionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L23">interface CommonBucketSubscriptionArgs</a>
+</h2>
+
+Arguments to help customize a notification subscription for a bucket.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L28">property filterPrefix</a>
+</h3>
+
+```typescript
+filterPrefix?: string;
+```
+
+
+An optional prefix to filter down notifications.  See
+aws.s3.BucketNotification.lambdaFunctions for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L34">property filterSuffix</a>
+</h3>
+
+```typescript
+filterSuffix?: string;
+```
+
+
+An optional suffix to filter down notifications.  See
+aws.s3.BucketNotification.lambdaFunctions for more details.
 
 <h2 class="pdoc-module-header" id="GetBucketArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/getBucket.ts#L22">interface GetBucketArgs</a>
@@ -2839,4 +3078,92 @@ schedule?: pulumi.Input<{ ... }>;
 
 
 Contains the frequency for generating inventory results (documented below).
+
+<h2 class="pdoc-module-header" id="ObjectCreatedSubscriptionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L49">interface ObjectCreatedSubscriptionArgs</a>
+</h2>
+
+Arguments to specifically control a subscription to 'ObjectCreated' notifications on a bucket.If
+more events than just 'ObjectCreated' events are desired, the 'subscribe' function should be used
+instead.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L51">property event</a>
+</h3>
+
+```typescript
+event?: * | Put | Post | Copy | CompleteMultipartUpload;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L28">property filterPrefix</a>
+</h3>
+
+```typescript
+filterPrefix?: string;
+```
+
+
+An optional prefix to filter down notifications.  See
+aws.s3.BucketNotification.lambdaFunctions for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L34">property filterSuffix</a>
+</h3>
+
+```typescript
+filterSuffix?: string;
+```
+
+
+An optional suffix to filter down notifications.  See
+aws.s3.BucketNotification.lambdaFunctions for more details.
+
+<h2 class="pdoc-module-header" id="ObjectRemovedSubscriptionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L59">interface ObjectRemovedSubscriptionArgs</a>
+</h2>
+
+Arguments to specifically control a subscription to 'ObjectRemoved' notifications on a bucket. If
+more events than just 'ObjectRemoved' events are desired, the 'subscribe' function should be used
+instead.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L61">property event</a>
+</h3>
+
+```typescript
+event?: * | Delete | DeleteMarkerCreated;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L28">property filterPrefix</a>
+</h3>
+
+```typescript
+filterPrefix?: string;
+```
+
+
+An optional prefix to filter down notifications.  See
+aws.s3.BucketNotification.lambdaFunctions for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L34">property filterSuffix</a>
+</h3>
+
+```typescript
+filterSuffix?: string;
+```
+
+
+An optional suffix to filter down notifications.  See
+aws.s3.BucketNotification.lambdaFunctions for more details.
+
+<h2 class="pdoc-module-header" id="BucketEventHandler">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L105">type BucketEventHandler</a>
+</h2>
+
+```typescript
+type BucketEventHandler = lambda.EventHandler<BucketEvent, void>;
+```
 

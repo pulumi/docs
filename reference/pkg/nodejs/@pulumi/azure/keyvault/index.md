@@ -222,7 +222,7 @@ forces a new resource to be created.
 Manages a Key Vault Certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L54">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L58">constructor</a>
 </h3>
 
 ```typescript
@@ -288,7 +288,7 @@ public certificateData: pulumi.Output<string>;
 ```
 
 
-The raw Key Vault Certificate
+The raw Key Vault Certificate.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L34">property certificatePolicy</a>
@@ -347,6 +347,17 @@ public tags: pulumi.Output<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L50">property thumbprint</a>
+</h3>
+
+```typescript
+public thumbprint: pulumi.Output<string>;
+```
+
+
+The X509 Thumbprint of the Key Vault Certificate returned as hex string.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
@@ -359,7 +370,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L50">property vaultUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L54">property vaultUri</a>
 </h3>
 
 ```typescript
@@ -370,7 +381,7 @@ public vaultUri: pulumi.Output<string>;
 Specifies the URI used to access the Key Vault instance, available on the `azurerm_key_vault` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L54">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L58">property version</a>
 </h3>
 
 ```typescript
@@ -1163,13 +1174,13 @@ Specifies the name of the Key Vault resource. Changing this
 forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="CertifiateArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L138">interface CertifiateArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L148">interface CertifiateArgs</a>
 </h2>
 
 The set of arguments for constructing a Certifiate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L142">property certificate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L152">property certificate</a>
 </h3>
 
 ```typescript
@@ -1180,7 +1191,7 @@ certificate?: pulumi.Input<{ ... }>;
 A `certificate` block as defined below, used to Import an existing certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L146">property certificatePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L156">property certificatePolicy</a>
 </h3>
 
 ```typescript
@@ -1191,7 +1202,7 @@ certificatePolicy: pulumi.Input<{ ... }>;
 A `certificate_policy` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L150">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L160">property name</a>
 </h3>
 
 ```typescript
@@ -1202,7 +1213,7 @@ name?: pulumi.Input<string>;
 The name of the Certificate Issuer. Possible values include `Self`, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L154">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L164">property tags</a>
 </h3>
 
 ```typescript
@@ -1213,7 +1224,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L158">property vaultUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L168">property vaultUri</a>
 </h3>
 
 ```typescript
@@ -1224,13 +1235,13 @@ vaultUri: pulumi.Input<string>;
 Specifies the URI used to access the Key Vault instance, available on the `azurerm_key_vault` resource.
 
 <h2 class="pdoc-module-header" id="CertifiateState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L100">interface CertifiateState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L106">interface CertifiateState</a>
 </h2>
 
 Input properties used for looking up and filtering Certifiate resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L104">property certificate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L110">property certificate</a>
 </h3>
 
 ```typescript
@@ -1241,7 +1252,7 @@ certificate?: pulumi.Input<{ ... }>;
 A `certificate` block as defined below, used to Import an existing certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L108">property certificateData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L114">property certificateData</a>
 </h3>
 
 ```typescript
@@ -1249,10 +1260,10 @@ certificateData?: pulumi.Input<string>;
 ```
 
 
-The raw Key Vault Certificate
+The raw Key Vault Certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L112">property certificatePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L118">property certificatePolicy</a>
 </h3>
 
 ```typescript
@@ -1263,7 +1274,7 @@ certificatePolicy?: pulumi.Input<{ ... }>;
 A `certificate_policy` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L116">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L122">property name</a>
 </h3>
 
 ```typescript
@@ -1274,7 +1285,7 @@ name?: pulumi.Input<string>;
 The name of the Certificate Issuer. Possible values include `Self`, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L120">property secretId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L126">property secretId</a>
 </h3>
 
 ```typescript
@@ -1285,7 +1296,7 @@ secretId?: pulumi.Input<string>;
 The ID of the associated Key Vault Secret.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L124">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L130">property tags</a>
 </h3>
 
 ```typescript
@@ -1296,7 +1307,18 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L128">property vaultUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L134">property thumbprint</a>
+</h3>
+
+```typescript
+thumbprint?: pulumi.Input<string>;
+```
+
+
+The X509 Thumbprint of the Key Vault Certificate returned as hex string.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L138">property vaultUri</a>
 </h3>
 
 ```typescript
@@ -1307,7 +1329,7 @@ vaultUri?: pulumi.Input<string>;
 Specifies the URI used to access the Key Vault instance, available on the `azurerm_key_vault` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L132">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts#L142">property version</a>
 </h3>
 
 ```typescript

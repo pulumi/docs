@@ -562,7 +562,7 @@ this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/image.ts#L10">class Image</a>
 </h2>
 
-Create a custom virtual machine image that can be used to create virtual machines.
+Manage a custom virtual machine image that can be used to create virtual machines.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/image.ts#L53">constructor</a>
@@ -719,7 +719,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/managedDisk.ts#L10">class ManagedDisk</a>
 </h2>
 
-Create a managed disk.
+Manage a managed disk.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/managedDisk.ts#L80">constructor</a>
@@ -945,7 +945,7 @@ A collection containing the availability zone to allocate the Managed Disk in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L13">class ScaleSet</a>
 </h2>
 
-Create a virtual machine scale set.
+Manage a virtual machine scale set.
 
 ~> **Note:** All arguments including the administrator login and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).

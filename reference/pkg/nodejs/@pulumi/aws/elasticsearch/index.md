@@ -163,7 +163,7 @@ public elasticsearchVersion: pulumi.Output<string | undefined>;
 ```
 
 
-The version of ElasticSearch to deploy. Defaults to `1.5`
+The version of Elasticsearch to deploy. Defaults to `1.5`
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticsearch/domain.ts#L61">property encryptAtRest</a>
@@ -272,7 +272,7 @@ VPC related options, see below. Adding or removing this configuration forces a n
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticsearch/domainPolicy.ts#L10">class DomainPolicy</a>
 </h2>
 
-Allows setting policy to an ElasticSearch domain while referencing domain attributes (e.g. ARN)
+Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticsearch/domainPolicy.ts#L30">constructor</a>
@@ -448,7 +448,7 @@ elasticsearchVersion?: pulumi.Input<string>;
 ```
 
 
-The version of ElasticSearch to deploy. Defaults to `1.5`
+The version of Elasticsearch to deploy. Defaults to `1.5`
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticsearch/domain.ts#L247">property encryptAtRest</a>
@@ -664,7 +664,7 @@ elasticsearchVersion?: pulumi.Input<string>;
 ```
 
 
-The version of ElasticSearch to deploy. Defaults to `1.5`
+The version of Elasticsearch to deploy. Defaults to `1.5`
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticsearch/domain.ts#L183">property encryptAtRest</a>

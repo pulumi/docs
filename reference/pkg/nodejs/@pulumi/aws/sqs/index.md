@@ -7,17 +7,22 @@ title: Module sqs
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Queue">class Queue</a>
+* <a href="#QueueEventSubscription">class QueueEventSubscription</a>
 * <a href="#QueuePolicy">class QueuePolicy</a>
 * <a href="#getQueue">function getQueue</a>
 * <a href="#GetQueueArgs">interface GetQueueArgs</a>
 * <a href="#GetQueueResult">interface GetQueueResult</a>
 * <a href="#QueueArgs">interface QueueArgs</a>
+* <a href="#QueueEvent">interface QueueEvent</a>
 * <a href="#QueuePolicyArgs">interface QueuePolicyArgs</a>
 * <a href="#QueuePolicyState">interface QueuePolicyState</a>
+* <a href="#QueueRecord">interface QueueRecord</a>
 * <a href="#QueueState">interface QueueState</a>
 * <a href="#RedrivePolicy">interface RedrivePolicy</a>
+* <a href="#QueueEventHandler">type QueueEventHandler</a>
+* <a href="#QueueEventSubscriptionArgs">type QueueEventSubscriptionArgs</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/getQueue.ts">sqs/getQueue.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/queue.ts">sqs/queue.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/queuePolicy.ts">sqs/queuePolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/redrive.ts">sqs/redrive.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/getQueue.ts">sqs/getQueue.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/queue.ts">sqs/queue.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/queuePolicy.ts">sqs/queuePolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/redrive.ts">sqs/redrive.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts">sqs/sqsMixins.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Queue">
@@ -258,6 +263,88 @@ public visibilityTimeoutSeconds: pulumi.Output<number | undefined>;
 
 
 The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see [AWS docs](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/AboutVT.html).
+
+<h2 class="pdoc-module-header" id="QueueEventSubscription">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L57">class QueueEventSubscription</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L63">constructor</a>
+</h3>
+
+```typescript
+public new QueueEventSubscription(name: string, queue: queue.Queue, handler: QueueEventHandler, args: QueueEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+</h3>
+
+```typescript
+protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L63">property eventSourceMapping</a>
+</h3>
+
+```typescript
+public eventSourceMapping: lambda.EventSourceMapping;
+```
+
+
+The underlying sns object created for the subscription.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L218">property func</a>
+</h3>
+
+```typescript
+public func: LambdaFunction;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L217">property permission</a>
+</h3>
+
+```typescript
+public permission: permission.Permission;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L58">property queue</a>
+</h3>
+
+```typescript
+public queue: queue.Queue;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 <h2 class="pdoc-module-header" id="QueuePolicy">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/queuePolicy.ts#L11">class QueuePolicy</a>
@@ -588,6 +675,17 @@ visibilityTimeoutSeconds?: pulumi.Input<number>;
 
 The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see [AWS docs](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/AboutVT.html).
 
+<h2 class="pdoc-module-header" id="QueueEvent">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L20">interface QueueEvent</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L21">property Records</a>
+</h3>
+
+```typescript
+Records: QueueRecord[];
+```
+
 <h2 class="pdoc-module-header" id="QueuePolicyArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/queuePolicy.ts#L79">interface QueuePolicyArgs</a>
 </h2>
@@ -643,6 +741,81 @@ queueUrl?: pulumi.Input<string>;
 
 
 The URL of the SQS Queue to which to attach the policy
+
+<h2 class="pdoc-module-header" id="QueueRecord">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L24">interface QueueRecord</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L28">property attributes</a>
+</h3>
+
+```typescript
+attributes: { ... };
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L38">property awsRegion</a>
+</h3>
+
+```typescript
+awsRegion: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L27">property body</a>
+</h3>
+
+```typescript
+body: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L36">property eventSource</a>
+</h3>
+
+```typescript
+eventSource: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L37">property eventSourceARN</a>
+</h3>
+
+```typescript
+eventSourceARN: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L35">property md5OfBody</a>
+</h3>
+
+```typescript
+md5OfBody: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L34">property messageAttributes</a>
+</h3>
+
+```typescript
+messageAttributes: Record<string, any>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L25">property messageId</a>
+</h3>
+
+```typescript
+messageId: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L26">property receiptHandle</a>
+</h3>
+
+```typescript
+receiptHandle: string;
+```
 
 <h2 class="pdoc-module-header" id="QueueState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/queue.ts#L135">interface QueueState</a>
@@ -849,4 +1022,23 @@ The number of times a message is delivered to the source queue before being move
 
 Note: The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter queue of a
 standard queue must also be a standard queue.
+
+<h2 class="pdoc-module-header" id="QueueEventHandler">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L41">type QueueEventHandler</a>
+</h2>
+
+```typescript
+type QueueEventHandler = lambda.EventHandler<QueueEvent, void>;
+```
+
+<h2 class="pdoc-module-header" id="QueueEventSubscriptionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L46">type QueueEventSubscriptionArgs</a>
+</h2>
+
+```typescript
+type QueueEventSubscriptionArgs = { ... };
+```
+
+
+Arguments to control the sqs subscription.
 

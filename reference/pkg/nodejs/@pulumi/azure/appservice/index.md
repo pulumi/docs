@@ -773,13 +773,13 @@ public version: pulumi.Output<string | undefined>;
 ```
 
 
-The runtime version associated with the Function App. Possible values are `~1` and `beta`. Defaults to `~1`.
+The runtime version associated with the Function App. Defaults to `~1`.
 
 <h2 class="pdoc-module-header" id="Plan">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L10">class Plan</a>
 </h2>
 
-Create an App Service Plan component.
+Manage an App Service Plan component.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L54">constructor</a>
@@ -1830,7 +1830,7 @@ version?: pulumi.Input<string>;
 ```
 
 
-The runtime version associated with the Function App. Possible values are `~1` and `beta`. Defaults to `~1`.
+The runtime version associated with the Function App. Defaults to `~1`.
 
 <h2 class="pdoc-module-header" id="FunctionAppState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L160">interface FunctionAppState</a>
@@ -2023,7 +2023,7 @@ version?: pulumi.Input<string>;
 ```
 
 
-The runtime version associated with the Function App. Possible values are `~1` and `beta`. Defaults to `~1`.
+The runtime version associated with the Function App. Defaults to `~1`.
 
 <h2 class="pdoc-module-header" id="GetAppServiceArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/getAppService.ts#L21">interface GetAppServiceArgs</a>

@@ -38,7 +38,7 @@ title: Module kms
 
 
 <h2 class="pdoc-module-header" id="CryptoKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L19">class CryptoKey</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L24">class CryptoKey</a>
 </h2>
 
 Allows creation of a Google Cloud Platform KMS CryptoKey. For more information see
@@ -49,11 +49,16 @@ and
 A CryptoKey is an interface to key material which can be used to encrypt and decrypt data. A CryptoKey belongs to a
 Google Cloud KMS KeyRing.
 
-~> Note: CryptoKeys cannot be deleted from Google Cloud Platform. Destroying a Terraform-managed CryptoKey will remove it
-from state and delete all CryptoKeyVersions, rendering the key unusable, but **will not delete the resource on the server**.
+~> Note: CryptoKeys cannot be deleted from Google Cloud Platform. Destroying a
+Terraform-managed CryptoKey will remove it from state and delete all
+CryptoKeyVersions, rendering the key unusable, but **will not delete the
+resource on the server**. When Terraform destroys these keys, any data
+previously encrypted with these keys will be irrecoverable. For this reason, it
+is strongly recommended that you add lifecycle hooks to the resource to prevent
+accidental destruction.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L47">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L56">constructor</a>
 </h3>
 
 ```typescript
@@ -68,7 +73,7 @@ Create a CryptoKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L28">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L33">method get</a>
 </h3>
 
 ```typescript
@@ -112,7 +117,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L35">property keyRing</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L40">property keyRing</a>
 </h3>
 
 ```typescript
@@ -123,7 +128,7 @@ public keyRing: pulumi.Output<string>;
 The id of the Google Cloud Platform KeyRing to which the key shall belong.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L40">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L45">property name</a>
 </h3>
 
 ```typescript
@@ -135,7 +140,7 @@ The CryptoKey's name.
 A CryptoKey’s name must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L47">property rotationPeriod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L52">property rotationPeriod</a>
 </h3>
 
 ```typescript
@@ -146,7 +151,18 @@ public rotationPeriod: pulumi.Output<string | undefined>;
 Every time this period passes, generate a new CryptoKeyVersion and set it as
 the primary. The first rotation will take place after the specified period. The rotation period has the format
 of a decimal number with up to 9 fractional digits, followed by the letter s (seconds). It must be greater than
-a day (ie, 83400).
+a day (ie, 86400).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L56">property selfLink</a>
+</h3>
+
+```typescript
+public selfLink: pulumi.Output<string>;
+```
+
+
+The self link of the created CryptoKey. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -434,7 +450,7 @@ and resides in a specific location.
 from state but **will not delete the resource on the server**.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L46">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -527,6 +543,17 @@ public project: pulumi.Output<string>;
 
 The project in which the resource belongs. If it
 is not provided, the provider project is used.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L50">property selfLink</a>
+</h3>
+
+```typescript
+public selfLink: pulumi.Output<string>;
+```
+
+
+The self link of the created KeyRing. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1113,13 +1140,13 @@ logging output, plan output, or state output.  Please take care to secure your s
 data outside of resource definitions.
 
 <h2 class="pdoc-module-header" id="CryptoKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L102">interface CryptoKeyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L117">interface CryptoKeyArgs</a>
 </h2>
 
 The set of arguments for constructing a CryptoKey resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L106">property keyRing</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L121">property keyRing</a>
 </h3>
 
 ```typescript
@@ -1130,7 +1157,7 @@ keyRing: pulumi.Input<string>;
 The id of the Google Cloud Platform KeyRing to which the key shall belong.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L111">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L126">property name</a>
 </h3>
 
 ```typescript
@@ -1142,7 +1169,7 @@ The CryptoKey's name.
 A CryptoKey’s name must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L118">property rotationPeriod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L133">property rotationPeriod</a>
 </h3>
 
 ```typescript
@@ -1153,7 +1180,7 @@ rotationPeriod?: pulumi.Input<string>;
 Every time this period passes, generate a new CryptoKeyVersion and set it as
 the primary. The first rotation will take place after the specified period. The rotation period has the format
 of a decimal number with up to 9 fractional digits, followed by the letter s (seconds). It must be greater than
-a day (ie, 83400).
+a day (ie, 86400).
 
 <h2 class="pdoc-module-header" id="CryptoKeyIAMBindingArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L112">interface CryptoKeyIAMBindingArgs</a>
@@ -1352,13 +1379,13 @@ The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h2 class="pdoc-module-header" id="CryptoKeyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L80">interface CryptoKeyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L91">interface CryptoKeyState</a>
 </h2>
 
 Input properties used for looking up and filtering CryptoKey resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L84">property keyRing</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L95">property keyRing</a>
 </h3>
 
 ```typescript
@@ -1369,7 +1396,7 @@ keyRing?: pulumi.Input<string>;
 The id of the Google Cloud Platform KeyRing to which the key shall belong.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L89">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L100">property name</a>
 </h3>
 
 ```typescript
@@ -1381,7 +1408,7 @@ The CryptoKey's name.
 A CryptoKey’s name must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L96">property rotationPeriod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L107">property rotationPeriod</a>
 </h3>
 
 ```typescript
@@ -1392,7 +1419,18 @@ rotationPeriod?: pulumi.Input<string>;
 Every time this period passes, generate a new CryptoKeyVersion and set it as
 the primary. The first rotation will take place after the specified period. The rotation period has the format
 of a decimal number with up to 9 fractional digits, followed by the letter s (seconds). It must be greater than
-a day (ie, 83400).
+a day (ie, 86400).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/cryptoKey.ts#L111">property selfLink</a>
+</h3>
+
+```typescript
+selfLink?: pulumi.Input<string>;
+```
+
+
+The self link of the created CryptoKey. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}`.
 
 <h2 class="pdoc-module-header" id="GetKMSSecretArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/getKMSSecret.ts#L29">interface GetKMSSecretArgs</a>
@@ -1453,13 +1491,13 @@ plaintext: string;
 Contains the result of decrypting the provided ciphertext.
 
 <h2 class="pdoc-module-header" id="KeyRingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L100">interface KeyRingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L110">interface KeyRingArgs</a>
 </h2>
 
 The set of arguments for constructing a KeyRing resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L105">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L115">property location</a>
 </h3>
 
 ```typescript
@@ -1471,7 +1509,7 @@ The Google Cloud Platform location for the KeyRing.
 A full list of valid locations can be found by running `gcloud kms locations list`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L110">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L120">property name</a>
 </h3>
 
 ```typescript
@@ -1483,7 +1521,7 @@ The KeyRing's name.
 A KeyRing’s name must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L115">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L125">property project</a>
 </h3>
 
 ```typescript
@@ -1756,13 +1794,13 @@ The policy data generated by
 a `google_iam_policy` data source.
 
 <h2 class="pdoc-module-header" id="KeyRingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L79">interface KeyRingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L85">interface KeyRingState</a>
 </h2>
 
 Input properties used for looking up and filtering KeyRing resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L84">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L90">property location</a>
 </h3>
 
 ```typescript
@@ -1774,7 +1812,7 @@ The Google Cloud Platform location for the KeyRing.
 A full list of valid locations can be found by running `gcloud kms locations list`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L89">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L95">property name</a>
 </h3>
 
 ```typescript
@@ -1786,7 +1824,7 @@ The KeyRing's name.
 A KeyRing’s name must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L94">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L100">property project</a>
 </h3>
 
 ```typescript
@@ -1796,6 +1834,17 @@ project?: pulumi.Input<string>;
 
 The project in which the resource belongs. If it
 is not provided, the provider project is used.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/keyRing.ts#L104">property selfLink</a>
+</h3>
+
+```typescript
+selfLink?: pulumi.Input<string>;
+```
+
+
+The self link of the created KeyRing. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}`.
 
 <h2 class="pdoc-module-header" id="RegistryArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/kms/registry.ts#L137">interface RegistryArgs</a>

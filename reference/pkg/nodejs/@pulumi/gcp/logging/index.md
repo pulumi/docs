@@ -175,18 +175,20 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="BillingAccountSink">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L15">class BillingAccountSink</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L17">class BillingAccountSink</a>
 </h2>
 
 Manages a billing account logging sink. For more information see
 [the official documentation](https://cloud.google.com/logging/docs/) and
 [Exporting Logs in the API](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
 
-Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
-granted to the credentials used with terraform.
+~> **Note** You must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
+[granted on the billing account](https://cloud.google.com/billing/reference/rest/v1/billingAccounts/getIamPolicy) to
+the credentials used with Terraform. [IAM roles granted on a billing account](https://cloud.google.com/billing/docs/how-to/billing-access) are separate from the
+typical IAM roles granted on a project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L57">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L59">constructor</a>
 </h3>
 
 ```typescript
@@ -201,7 +203,7 @@ Create a BillingAccountSink resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L24">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -233,7 +235,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L31">property billingAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L33">property billingAccount</a>
 </h3>
 
 ```typescript
@@ -244,7 +246,7 @@ public billingAccount: pulumi.Output<string>;
 The billing account exported to the sink.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L42">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L44">property destination</a>
 </h3>
 
 ```typescript
@@ -262,7 +264,7 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 The writer associated with the sink must have access to write to the above resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L48">property filter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L50">property filter</a>
 </h3>
 
 ```typescript
@@ -287,7 +289,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L52">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L54">property name</a>
 </h3>
 
 ```typescript
@@ -310,7 +312,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L57">property writerIdentity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L59">property writerIdentity</a>
 </h3>
 
 ```typescript
@@ -1063,7 +1065,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ProjectSink">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L17">class ProjectSink</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L18">class ProjectSink</a>
 </h2>
 
 Manages a project-level logging sink. For more information see
@@ -1072,11 +1074,12 @@ Manages a project-level logging sink. For more information see
 and
 [API](https://cloud.google.com/logging/docs/reference/v2/rest/).
 
-Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
-granted to the credentials used with terraform.
+~> **Note:** You must have [granted the "Logs Configuration Writer"](https://cloud.google.com/logging/docs/access-control) IAM role (`roles/logging.configWriter`) to the credentials used with terraform.
+
+~> **Note** You must [enable the Cloud Resource Manager API](https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L67">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L68">constructor</a>
 </h3>
 
 ```typescript
@@ -1091,7 +1094,7 @@ Create a ProjectSink resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L26">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -1123,7 +1126,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L40">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L41">property destination</a>
 </h3>
 
 ```typescript
@@ -1141,7 +1144,7 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 The writer associated with the sink must have access to write to the above resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L46">property filter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L47">property filter</a>
 </h3>
 
 ```typescript
@@ -1166,7 +1169,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L50">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L51">property name</a>
 </h3>
 
 ```typescript
@@ -1177,7 +1180,7 @@ public name: pulumi.Output<string>;
 The name of the logging sink.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L55">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L56">property project</a>
 </h3>
 
 ```typescript
@@ -1189,7 +1192,7 @@ The ID of the project to create the sink in. If omitted, the project associated 
 used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L62">property uniqueWriterIdentity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L63">property uniqueWriterIdentity</a>
 </h3>
 
 ```typescript
@@ -1215,7 +1218,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L67">property writerIdentity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L68">property writerIdentity</a>
 </h3>
 
 ```typescript
@@ -1355,13 +1358,13 @@ name?: pulumi.Input<string>;
 The name of the logging exclusion.
 
 <h2 class="pdoc-module-header" id="BillingAccountSinkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L133">interface BillingAccountSinkArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L135">interface BillingAccountSinkArgs</a>
 </h2>
 
 The set of arguments for constructing a BillingAccountSink resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L137">property billingAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L139">property billingAccount</a>
 </h3>
 
 ```typescript
@@ -1372,7 +1375,7 @@ billingAccount: pulumi.Input<string>;
 The billing account exported to the sink.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L148">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L150">property destination</a>
 </h3>
 
 ```typescript
@@ -1390,7 +1393,7 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 The writer associated with the sink must have access to write to the above resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L154">property filter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L156">property filter</a>
 </h3>
 
 ```typescript
@@ -1403,7 +1406,7 @@ See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_f
 write a filter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L158">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L160">property name</a>
 </h3>
 
 ```typescript
@@ -1414,13 +1417,13 @@ name?: pulumi.Input<string>;
 The name of the logging sink.
 
 <h2 class="pdoc-module-header" id="BillingAccountSinkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L97">interface BillingAccountSinkState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L99">interface BillingAccountSinkState</a>
 </h2>
 
 Input properties used for looking up and filtering BillingAccountSink resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L101">property billingAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L103">property billingAccount</a>
 </h3>
 
 ```typescript
@@ -1431,7 +1434,7 @@ billingAccount?: pulumi.Input<string>;
 The billing account exported to the sink.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L112">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L114">property destination</a>
 </h3>
 
 ```typescript
@@ -1449,7 +1452,7 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 The writer associated with the sink must have access to write to the above resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L118">property filter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L120">property filter</a>
 </h3>
 
 ```typescript
@@ -1462,7 +1465,7 @@ See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_f
 write a filter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L122">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L124">property name</a>
 </h3>
 
 ```typescript
@@ -1473,7 +1476,7 @@ name?: pulumi.Input<string>;
 The name of the logging sink.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L127">property writerIdentity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L129">property writerIdentity</a>
 </h3>
 
 ```typescript
@@ -2183,13 +2186,13 @@ The project to create the exclusion in. If omitted, the project associated with 
 used.
 
 <h2 class="pdoc-module-header" id="ProjectSinkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L150">interface ProjectSinkArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L151">interface ProjectSinkArgs</a>
 </h2>
 
 The set of arguments for constructing a ProjectSink resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L161">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L162">property destination</a>
 </h3>
 
 ```typescript
@@ -2207,7 +2210,7 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 The writer associated with the sink must have access to write to the above resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L167">property filter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L168">property filter</a>
 </h3>
 
 ```typescript
@@ -2220,7 +2223,7 @@ See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_f
 write a filter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L171">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L172">property name</a>
 </h3>
 
 ```typescript
@@ -2231,7 +2234,7 @@ name?: pulumi.Input<string>;
 The name of the logging sink.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L176">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L177">property project</a>
 </h3>
 
 ```typescript
@@ -2243,7 +2246,7 @@ The ID of the project to create the sink in. If omitted, the project associated 
 used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L183">property uniqueWriterIdentity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L184">property uniqueWriterIdentity</a>
 </h3>
 
 ```typescript
@@ -2257,13 +2260,13 @@ then a unique service account is created and used for this sink. If you wish to 
 must set `unique_writer_identity` to true.
 
 <h2 class="pdoc-module-header" id="ProjectSinkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L106">interface ProjectSinkState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L107">interface ProjectSinkState</a>
 </h2>
 
 Input properties used for looking up and filtering ProjectSink resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L117">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L118">property destination</a>
 </h3>
 
 ```typescript
@@ -2281,7 +2284,7 @@ Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
 The writer associated with the sink must have access to write to the above resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L123">property filter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L124">property filter</a>
 </h3>
 
 ```typescript
@@ -2294,7 +2297,7 @@ See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_f
 write a filter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L127">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L128">property name</a>
 </h3>
 
 ```typescript
@@ -2305,7 +2308,7 @@ name?: pulumi.Input<string>;
 The name of the logging sink.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L132">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L133">property project</a>
 </h3>
 
 ```typescript
@@ -2317,7 +2320,7 @@ The ID of the project to create the sink in. If omitted, the project associated 
 used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L139">property uniqueWriterIdentity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L140">property uniqueWriterIdentity</a>
 </h3>
 
 ```typescript
@@ -2331,7 +2334,7 @@ then a unique service account is created and used for this sink. If you wish to 
 must set `unique_writer_identity` to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L144">property writerIdentity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L145">property writerIdentity</a>
 </h3>
 
 ```typescript

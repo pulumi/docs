@@ -20,7 +20,7 @@ title: Module recoveryservices
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/vault.ts#L10">class Vault</a>
 </h2>
 
-Create an Recovery Services Vault.
+Manage an Recovery Services Vault.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/vault.ts#L42">constructor</a>

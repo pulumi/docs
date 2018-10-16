@@ -22,7 +22,6 @@ import * as gcp from "@pulumi/gcp";
 * <a href="#getEnvBoolean">function getEnvBoolean</a>
 * <a href="#getEnvNumber">function getEnvNumber</a>
 * <a href="#requireWithDefault">function requireWithDefault</a>
-* <a href="#unwrap">function unwrap</a>
 * <a href="#ProviderArgs">interface ProviderArgs</a>
 
 <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts">utilities.ts</a> 
@@ -31,11 +30,14 @@ import * as gcp from "@pulumi/gcp";
 
 * <a href="bigquery">bigquery</a>
 * <a href="bigtable">bigtable</a>
+* <a href="binaryauthorization">binaryauthorization</a>
 * <a href="cloudbuild">cloudbuild</a>
 * <a href="cloudfunctions">cloudfunctions</a>
+* <a href="composer">composer</a>
 * <a href="compute">compute</a>
 * <a href="config">config</a>
 * <a href="container">container</a>
+* <a href="containeranalysis">containeranalysis</a>
 * <a href="dataflow">dataflow</a>
 * <a href="dataproc">dataproc</a>
 * <a href="dns">dns</a>
@@ -151,14 +153,6 @@ getEnvNumber(vars: string[]): number | undefined
 
 ```typescript
 requireWithDefault<T>(req: { ... }, def: T | undefined): T
-```
-
-<h2 class="pdoc-module-header" id="unwrap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts#L54">function unwrap</a>
-</h2>
-
-```typescript
-unwrap(val: pulumi.Input<any>): pulumi.Output<any>
 ```
 
 <h2 class="pdoc-module-header" id="ProviderArgs">

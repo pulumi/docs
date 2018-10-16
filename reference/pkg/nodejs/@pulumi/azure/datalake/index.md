@@ -310,7 +310,7 @@ deployments.
 Manage an Azure Data Lake Store.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L58">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L62">constructor</a>
 </h3>
 
 ```typescript
@@ -379,7 +379,18 @@ public encryptionType: pulumi.Output<string>;
 The Encryption Type used for this Data Lake Store Account. Currently can be set to `SystemManaged` when `encryption_state` is `Enabled` - and must be a blank string when it's Disabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L34">property firewallAllowAzureIps</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L34">property endpoint</a>
+</h3>
+
+```typescript
+public endpoint: pulumi.Output<string>;
+```
+
+
+The Endpoint for the Data Lake Store.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L38">property firewallAllowAzureIps</a>
 </h3>
 
 ```typescript
@@ -390,7 +401,7 @@ public firewallAllowAzureIps: pulumi.Output<string | undefined>;
 are Azure Service IP's allowed through the firewall? Possible values are `Enabled` and `Disabled`. Defaults to `Enabled.`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L38">property firewallState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L42">property firewallState</a>
 </h3>
 
 ```typescript
@@ -413,7 +424,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L42">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L46">property location</a>
 </h3>
 
 ```typescript
@@ -424,7 +435,7 @@ public location: pulumi.Output<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L46">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L50">property name</a>
 </h3>
 
 ```typescript
@@ -435,7 +446,7 @@ public name: pulumi.Output<string>;
 Specifies the name of the Data Lake Store. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L50">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L54">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -446,7 +457,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which to create the Data Lake Store.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L54">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L58">property tags</a>
 </h3>
 
 ```typescript
@@ -457,7 +468,7 @@ public tags: pulumi.Output<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L58">property tier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L62">property tier</a>
 </h3>
 
 ```typescript
@@ -1121,13 +1132,13 @@ tier: string;
 Current monthly commitment tier for the account.
 
 <h2 class="pdoc-module-header" id="StoreArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L148">interface StoreArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L158">interface StoreArgs</a>
 </h2>
 
 The set of arguments for constructing a Store resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L152">property encryptionState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L162">property encryptionState</a>
 </h3>
 
 ```typescript
@@ -1138,7 +1149,7 @@ encryptionState?: pulumi.Input<string>;
 Is Encryption enabled on this Data Lake Store Account? Possible values are `Enabled` or `Disabled`. Defaults to `Enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L156">property encryptionType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L166">property encryptionType</a>
 </h3>
 
 ```typescript
@@ -1149,7 +1160,7 @@ encryptionType?: pulumi.Input<string>;
 The Encryption Type used for this Data Lake Store Account. Currently can be set to `SystemManaged` when `encryption_state` is `Enabled` - and must be a blank string when it's Disabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L160">property firewallAllowAzureIps</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L170">property firewallAllowAzureIps</a>
 </h3>
 
 ```typescript
@@ -1160,7 +1171,7 @@ firewallAllowAzureIps?: pulumi.Input<string>;
 are Azure Service IP's allowed through the firewall? Possible values are `Enabled` and `Disabled`. Defaults to `Enabled.`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L164">property firewallState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L174">property firewallState</a>
 </h3>
 
 ```typescript
@@ -1171,7 +1182,7 @@ firewallState?: pulumi.Input<string>;
 the state of the Firewall. Possible values are `Enabled` and `Disabled`. Defaults to `Enabled.`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L168">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L178">property location</a>
 </h3>
 
 ```typescript
@@ -1182,7 +1193,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L172">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L182">property name</a>
 </h3>
 
 ```typescript
@@ -1193,7 +1204,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Data Lake Store. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L176">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L186">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1204,7 +1215,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the Data Lake Store.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L180">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L190">property tags</a>
 </h3>
 
 ```typescript
@@ -1215,7 +1226,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L184">property tier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L194">property tier</a>
 </h3>
 
 ```typescript
@@ -1426,13 +1437,13 @@ startIpAddress?: pulumi.Input<string>;
 The Start IP address for the firewall rule.
 
 <h2 class="pdoc-module-header" id="StoreState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L106">interface StoreState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L112">interface StoreState</a>
 </h2>
 
 Input properties used for looking up and filtering Store resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L110">property encryptionState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L116">property encryptionState</a>
 </h3>
 
 ```typescript
@@ -1443,7 +1454,7 @@ encryptionState?: pulumi.Input<string>;
 Is Encryption enabled on this Data Lake Store Account? Possible values are `Enabled` or `Disabled`. Defaults to `Enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L114">property encryptionType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L120">property encryptionType</a>
 </h3>
 
 ```typescript
@@ -1454,7 +1465,18 @@ encryptionType?: pulumi.Input<string>;
 The Encryption Type used for this Data Lake Store Account. Currently can be set to `SystemManaged` when `encryption_state` is `Enabled` - and must be a blank string when it's Disabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L118">property firewallAllowAzureIps</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L124">property endpoint</a>
+</h3>
+
+```typescript
+endpoint?: pulumi.Input<string>;
+```
+
+
+The Endpoint for the Data Lake Store.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L128">property firewallAllowAzureIps</a>
 </h3>
 
 ```typescript
@@ -1465,7 +1487,7 @@ firewallAllowAzureIps?: pulumi.Input<string>;
 are Azure Service IP's allowed through the firewall? Possible values are `Enabled` and `Disabled`. Defaults to `Enabled.`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L122">property firewallState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L132">property firewallState</a>
 </h3>
 
 ```typescript
@@ -1476,7 +1498,7 @@ firewallState?: pulumi.Input<string>;
 the state of the Firewall. Possible values are `Enabled` and `Disabled`. Defaults to `Enabled.`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L126">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L136">property location</a>
 </h3>
 
 ```typescript
@@ -1487,7 +1509,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L130">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L140">property name</a>
 </h3>
 
 ```typescript
@@ -1498,7 +1520,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Data Lake Store. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L134">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L144">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1509,7 +1531,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the Data Lake Store.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L138">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L148">property tags</a>
 </h3>
 
 ```typescript
@@ -1520,7 +1542,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L142">property tier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/store.ts#L152">property tier</a>
 </h3>
 
 ```typescript

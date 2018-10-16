@@ -9,21 +9,27 @@ title: Module cloudwatch
 * <a href="#Dashboard">class Dashboard</a>
 * <a href="#EventPermission">class EventPermission</a>
 * <a href="#EventRule">class EventRule</a>
+* <a href="#EventRuleEventSubscription">class EventRuleEventSubscription</a>
 * <a href="#EventTarget">class EventTarget</a>
 * <a href="#LogDestination">class LogDestination</a>
 * <a href="#LogDestinationPolicy">class LogDestinationPolicy</a>
 * <a href="#LogGroup">class LogGroup</a>
+* <a href="#LogGroupEventSubscription">class LogGroupEventSubscription</a>
 * <a href="#LogMetricFilter">class LogMetricFilter</a>
 * <a href="#LogResourcePolicy">class LogResourcePolicy</a>
 * <a href="#LogStream">class LogStream</a>
 * <a href="#LogSubscriptionFilter">class LogSubscriptionFilter</a>
 * <a href="#MetricAlarm">class MetricAlarm</a>
 * <a href="#getLogGroup">function getLogGroup</a>
+* <a href="#onSchedule">function onSchedule</a>
 * <a href="#DashboardArgs">interface DashboardArgs</a>
 * <a href="#DashboardState">interface DashboardState</a>
+* <a href="#DecodedLogGroupEvent">interface DecodedLogGroupEvent</a>
 * <a href="#EventPermissionArgs">interface EventPermissionArgs</a>
 * <a href="#EventPermissionState">interface EventPermissionState</a>
 * <a href="#EventRuleArgs">interface EventRuleArgs</a>
+* <a href="#EventRuleEvent">interface EventRuleEvent</a>
+* <a href="#EventRuleEventSubscriptionArgs">interface EventRuleEventSubscriptionArgs</a>
 * <a href="#EventRuleState">interface EventRuleState</a>
 * <a href="#EventTargetArgs">interface EventTargetArgs</a>
 * <a href="#EventTargetState">interface EventTargetState</a>
@@ -34,6 +40,9 @@ title: Module cloudwatch
 * <a href="#LogDestinationPolicyState">interface LogDestinationPolicyState</a>
 * <a href="#LogDestinationState">interface LogDestinationState</a>
 * <a href="#LogGroupArgs">interface LogGroupArgs</a>
+* <a href="#LogGroupEvent">interface LogGroupEvent</a>
+* <a href="#LogGroupEventRecord">interface LogGroupEventRecord</a>
+* <a href="#LogGroupEventSubscriptionArgs">interface LogGroupEventSubscriptionArgs</a>
 * <a href="#LogGroupState">interface LogGroupState</a>
 * <a href="#LogMetricFilterArgs">interface LogMetricFilterArgs</a>
 * <a href="#LogMetricFilterState">interface LogMetricFilterState</a>
@@ -45,8 +54,10 @@ title: Module cloudwatch
 * <a href="#LogSubscriptionFilterState">interface LogSubscriptionFilterState</a>
 * <a href="#MetricAlarmArgs">interface MetricAlarmArgs</a>
 * <a href="#MetricAlarmState">interface MetricAlarmState</a>
+* <a href="#EventRuleEventHandler">type EventRuleEventHandler</a>
+* <a href="#LogGroupEventHandler">type LogGroupEventHandler</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/dashboard.ts">cloudwatch/dashboard.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts">cloudwatch/eventPermission.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRule.ts">cloudwatch/eventRule.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventTarget.ts">cloudwatch/eventTarget.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/getLogGroup.ts">cloudwatch/getLogGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logDestination.ts">cloudwatch/logDestination.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logDestinationPolicy.ts">cloudwatch/logDestinationPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts">cloudwatch/logGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logMetricFilter.ts">cloudwatch/logMetricFilter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logResourcePolicy.ts">cloudwatch/logResourcePolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logStream.ts">cloudwatch/logStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts">cloudwatch/logSubscriptionFilter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/metricAlarm.ts">cloudwatch/metricAlarm.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/cloudwatchMixins.ts">cloudwatch/cloudwatchMixins.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/dashboard.ts">cloudwatch/dashboard.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts">cloudwatch/eventPermission.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRule.ts">cloudwatch/eventRule.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts">cloudwatch/eventRuleMixins.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventTarget.ts">cloudwatch/eventTarget.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/getLogGroup.ts">cloudwatch/getLogGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logDestination.ts">cloudwatch/logDestination.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logDestinationPolicy.ts">cloudwatch/logDestinationPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts">cloudwatch/logGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts">cloudwatch/logGroupMixins.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logMetricFilter.ts">cloudwatch/logMetricFilter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logResourcePolicy.ts">cloudwatch/logResourcePolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logStream.ts">cloudwatch/logStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logSubscriptionFilter.ts">cloudwatch/logSubscriptionFilter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/metricAlarm.ts">cloudwatch/metricAlarm.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Dashboard">
@@ -424,6 +435,85 @@ public scheduleExpression: pulumi.Output<string | undefined>;
 
 The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="EventRuleEventSubscription">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L68">class EventRuleEventSubscription</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">constructor</a>
+</h3>
+
+```typescript
+public new EventRuleEventSubscription(name: string, eventRuleOrSchedule: eventRule.EventRule | string, handler: EventRuleEventHandler, args: EventRuleEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+</h3>
+
+```typescript
+protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L69">property eventRule</a>
+</h3>
+
+```typescript
+public eventRule: eventRule.EventRule;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L218">property func</a>
+</h3>
+
+```typescript
+public func: LambdaFunction;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L217">property permission</a>
+</h3>
+
+```typescript
+public permission: permission.Permission;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L70">property target</a>
+</h3>
+
+```typescript
+public target: eventTarget.EventTarget;
+```
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1000,6 +1090,85 @@ public tags: pulumi.Output<Tags | undefined>;
 
 
 A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="LogGroupEventSubscription">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L71">class LogGroupEventSubscription</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">constructor</a>
+</h3>
+
+```typescript
+new LogGroupEventSubscription(name: string, logGroup: logGroup.LogGroup, handler: LogGroupEventHandler, args: LogGroupEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+</h3>
+
+```typescript
+protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L218">property func</a>
+</h3>
+
+```typescript
+public func: LambdaFunction;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L72">property logGroup</a>
+</h3>
+
+```typescript
+public logGroup: pulumi.Output<logGroup.LogGroup>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L73">property logSubscriptionFilter</a>
+</h3>
+
+```typescript
+public logSubscriptionFilter: logSubscriptionFilter.LogSubscriptionFilter;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L217">property permission</a>
+</h3>
+
+```typescript
+public permission: permission.Permission;
+```
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1804,6 +1973,18 @@ getLogGroup(args: GetLogGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetLogG
 
 Use this data source to get information about an AWS Cloudwatch Log Group
 
+<h2 class="pdoc-module-header" id="onSchedule">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/cloudwatchMixins.ts#L22">function onSchedule</a>
+</h2>
+
+```typescript
+onSchedule(name: string, schedule: string, handler: eventRule.EventRuleEventHandler, args?: eventRule.EventRuleEventSubscriptionArgs, opts?: pulumi.ResourceOptions): eventRule.EventRuleEventSubscription
+```
+
+
+Creates a CloudWatch event that will fire based on the specified schedule.  This will create
+an EventRule which will then invoke the provided handler every time it fires.
+
 <h2 class="pdoc-module-header" id="DashboardArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/dashboard.ts#L88">interface DashboardArgs</a>
 </h2>
@@ -1870,6 +2051,57 @@ dashboardName?: pulumi.Input<string>;
 
 
 The name of the dashboard.
+
+<h2 class="pdoc-module-header" id="DecodedLogGroupEvent">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L41">interface DecodedLogGroupEvent</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L60">property logEvents</a>
+</h3>
+
+```typescript
+logEvents: LogGroupEventRecord[];
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L46">property logGroup</a>
+</h3>
+
+```typescript
+logGroup: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L49">property logStream</a>
+</h3>
+
+```typescript
+logStream: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L56">property messageType</a>
+</h3>
+
+```typescript
+messageType: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L43">property owner</a>
+</h3>
+
+```typescript
+owner: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L52">property subscriptionFilters</a>
+</h3>
+
+```typescript
+subscriptionFilters: string[];
+```
 
 <h2 class="pdoc-module-header" id="EventPermissionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L88">interface EventPermissionArgs</a>
@@ -2034,6 +2266,88 @@ scheduleExpression?: pulumi.Input<string>;
 
 The scheduling expression.
 For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
+
+<h2 class="pdoc-module-header" id="EventRuleEvent">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L27">interface EventRuleEvent</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L32">property account</a>
+</h3>
+
+```typescript
+account: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L63">property detail</a>
+</h3>
+
+```typescript
+detail: Record<string, any>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L39">property detail-type</a>
+</h3>
+
+```typescript
+detail-type: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L53">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L35">property region</a>
+</h3>
+
+```typescript
+region: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L60">property resources</a>
+</h3>
+
+```typescript
+resources: string[];
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L44">property source</a>
+</h3>
+
+```typescript
+source: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L49">property time</a>
+</h3>
+
+```typescript
+time: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L29">property version</a>
+</h3>
+
+```typescript
+version: string;
+```
+
+<h2 class="pdoc-module-header" id="EventRuleEventSubscriptionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L24">interface EventRuleEventSubscriptionArgs</a>
+</h2>
+
+Arguments to control the event rule subscription.  Currently empty, but still defined in case of
+future need.
 
 <h2 class="pdoc-module-header" id="EventRuleState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRule.ts#L97">interface EventRuleState</a>
@@ -2674,6 +2988,63 @@ tags?: pulumi.Input<Tags>;
 
 
 A mapping of tags to assign to the resource.
+
+<h2 class="pdoc-module-header" id="LogGroupEvent">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L33">interface LogGroupEvent</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L34">property awslogs</a>
+</h3>
+
+```typescript
+awslogs: { ... };
+```
+
+<h2 class="pdoc-module-header" id="LogGroupEventRecord">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L63">interface LogGroupEventRecord</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L64">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L66">property message</a>
+</h3>
+
+```typescript
+message: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L65">property timestamp</a>
+</h3>
+
+```typescript
+timestamp: number;
+```
+
+<h2 class="pdoc-module-header" id="LogGroupEventSubscriptionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L25">interface LogGroupEventSubscriptionArgs</a>
+</h2>
+
+Arguments to control the event rule subscription.  Currently empty, but still defined in case of
+future need.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L30">property filterPattern</a>
+</h3>
+
+```typescript
+filterPattern?: string;
+```
+
+
+A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.
+If not provided, the empty-string pattern will be used.
 
 <h2 class="pdoc-module-header" id="LogGroupState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroup.ts#L87">interface LogGroupState</a>
@@ -3577,4 +3948,20 @@ unit?: pulumi.Input<string>;
 
 
 The unit for the alarm's associated metric.
+
+<h2 class="pdoc-module-header" id="EventRuleEventHandler">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L66">type EventRuleEventHandler</a>
+</h2>
+
+```typescript
+type EventRuleEventHandler = lambda.EventHandler<EventRuleEvent, void>;
+```
+
+<h2 class="pdoc-module-header" id="LogGroupEventHandler">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L69">type LogGroupEventHandler</a>
+</h2>
+
+```typescript
+type LogGroupEventHandler = lambda.EventHandler<LogGroupEvent, void>;
+```
 

@@ -395,7 +395,7 @@ public startIpAddress: pulumi.Output<string>;
 ```
 
 
-Specifies the Charset for the PostgreSQL Database. Changing this forces a new resource to be created.
+Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -413,7 +413,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/server.ts#L10">class Server</a>
 </h2>
 
-Create a PostgreSQL Server.
+Manage a PostgreSQL Server.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/server.ts#L66">constructor</a>
@@ -891,7 +891,7 @@ startIpAddress: pulumi.Input<string>;
 ```
 
 
-Specifies the Charset for the PostgreSQL Database. Changing this forces a new resource to be created.
+Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="FirewallRuleState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/firewallRule.ts#L89">interface FirewallRuleState</a>
@@ -953,7 +953,7 @@ startIpAddress?: pulumi.Input<string>;
 ```
 
 
-Specifies the Charset for the PostgreSQL Database. Changing this forces a new resource to be created.
+Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ServerArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/server.ts#L186">interface ServerArgs</a>

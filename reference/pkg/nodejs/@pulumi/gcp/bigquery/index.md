@@ -25,7 +25,7 @@ Creates a dataset resource for Google BigQuery. For more information see
 [API](https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L75">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L79">constructor</a>
 </h3>
 
 ```typescript
@@ -72,7 +72,19 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L29">property creationTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L30">property accesses</a>
+</h3>
+
+```typescript
+public accesses: pulumi.Output<{ ... }[]>;
+```
+
+
+An array of objects that define dataset access for
+one or more entities. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L34">property creationTime</a>
 </h3>
 
 ```typescript
@@ -83,7 +95,7 @@ public creationTime: pulumi.Output<number>;
 The time when this dataset was created, in milliseconds since the epoch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L34">property datasetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L38">property datasetId</a>
 </h3>
 
 ```typescript
@@ -91,11 +103,10 @@ public datasetId: pulumi.Output<string>;
 ```
 
 
-A unique ID for the resource.
-Changing this forces a new resource to be created.
+The ID of the dataset containing this table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L40">property defaultTableExpirationMs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L44">property defaultTableExpirationMs</a>
 </h3>
 
 ```typescript
@@ -108,7 +119,7 @@ tables in the dataset, in milliseconds. The minimum value is 3600000
 milliseconds (one hour).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L44">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L48">property description</a>
 </h3>
 
 ```typescript
@@ -119,7 +130,7 @@ public description: pulumi.Output<string | undefined>;
 A user-friendly description of the dataset.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L48">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L52">property etag</a>
 </h3>
 
 ```typescript
@@ -130,7 +141,7 @@ public etag: pulumi.Output<string>;
 A hash of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L52">property friendlyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L56">property friendlyName</a>
 </h3>
 
 ```typescript
@@ -153,7 +164,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L56">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L60">property labels</a>
 </h3>
 
 ```typescript
@@ -164,7 +175,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 A mapping of labels to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L61">property lastModifiedTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L65">property lastModifiedTime</a>
 </h3>
 
 ```typescript
@@ -176,7 +187,7 @@ The date when this dataset or any of its tables was last modified,
 in milliseconds since the epoch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L66">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L70">property location</a>
 </h3>
 
 ```typescript
@@ -188,7 +199,7 @@ The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L71">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L75">property project</a>
 </h3>
 
 ```typescript
@@ -200,7 +211,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L75">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L79">property selfLink</a>
 </h3>
 
 ```typescript
@@ -519,13 +530,25 @@ If specified, configures this table as a view.
 Structure is documented below.
 
 <h2 class="pdoc-module-header" id="DatasetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L180">interface DatasetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L190">interface DatasetArgs</a>
 </h2>
 
 The set of arguments for constructing a Dataset resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L185">property datasetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L195">property accesses</a>
+</h3>
+
+```typescript
+accesses?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+An array of objects that define dataset access for
+one or more entities. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L199">property datasetId</a>
 </h3>
 
 ```typescript
@@ -533,11 +556,10 @@ datasetId: pulumi.Input<string>;
 ```
 
 
-A unique ID for the resource.
-Changing this forces a new resource to be created.
+The ID of the dataset containing this table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L191">property defaultTableExpirationMs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L205">property defaultTableExpirationMs</a>
 </h3>
 
 ```typescript
@@ -550,7 +572,7 @@ tables in the dataset, in milliseconds. The minimum value is 3600000
 milliseconds (one hour).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L195">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L209">property description</a>
 </h3>
 
 ```typescript
@@ -561,7 +583,7 @@ description?: pulumi.Input<string>;
 A user-friendly description of the dataset.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L199">property friendlyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L213">property friendlyName</a>
 </h3>
 
 ```typescript
@@ -572,7 +594,7 @@ friendlyName?: pulumi.Input<string>;
 A descriptive name for the dataset.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L203">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L217">property labels</a>
 </h3>
 
 ```typescript
@@ -583,7 +605,7 @@ labels?: pulumi.Input<{ ... }>;
 A mapping of labels to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L208">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L222">property location</a>
 </h3>
 
 ```typescript
@@ -595,7 +617,7 @@ The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L213">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L227">property project</a>
 </h3>
 
 ```typescript
@@ -607,13 +629,25 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="DatasetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L124">interface DatasetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L130">interface DatasetState</a>
 </h2>
 
 Input properties used for looking up and filtering Dataset resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L128">property creationTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L135">property accesses</a>
+</h3>
+
+```typescript
+accesses?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+An array of objects that define dataset access for
+one or more entities. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L139">property creationTime</a>
 </h3>
 
 ```typescript
@@ -624,7 +658,7 @@ creationTime?: pulumi.Input<number>;
 The time when this dataset was created, in milliseconds since the epoch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L133">property datasetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L143">property datasetId</a>
 </h3>
 
 ```typescript
@@ -632,11 +666,10 @@ datasetId?: pulumi.Input<string>;
 ```
 
 
-A unique ID for the resource.
-Changing this forces a new resource to be created.
+The ID of the dataset containing this table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L139">property defaultTableExpirationMs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L149">property defaultTableExpirationMs</a>
 </h3>
 
 ```typescript
@@ -649,7 +682,7 @@ tables in the dataset, in milliseconds. The minimum value is 3600000
 milliseconds (one hour).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L143">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L153">property description</a>
 </h3>
 
 ```typescript
@@ -660,7 +693,7 @@ description?: pulumi.Input<string>;
 A user-friendly description of the dataset.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L147">property etag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L157">property etag</a>
 </h3>
 
 ```typescript
@@ -671,7 +704,7 @@ etag?: pulumi.Input<string>;
 A hash of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L151">property friendlyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L161">property friendlyName</a>
 </h3>
 
 ```typescript
@@ -682,7 +715,7 @@ friendlyName?: pulumi.Input<string>;
 A descriptive name for the dataset.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L155">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L165">property labels</a>
 </h3>
 
 ```typescript
@@ -693,7 +726,7 @@ labels?: pulumi.Input<{ ... }>;
 A mapping of labels to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L160">property lastModifiedTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L170">property lastModifiedTime</a>
 </h3>
 
 ```typescript
@@ -705,7 +738,7 @@ The date when this dataset or any of its tables was last modified,
 in milliseconds since the epoch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L165">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L175">property location</a>
 </h3>
 
 ```typescript
@@ -717,7 +750,7 @@ The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L170">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L180">property project</a>
 </h3>
 
 ```typescript
@@ -729,7 +762,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L174">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/bigquery/dataset.ts#L184">property selfLink</a>
 </h3>
 
 ```typescript

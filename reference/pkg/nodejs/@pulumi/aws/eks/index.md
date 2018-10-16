@@ -23,7 +23,7 @@ title: Module eks
 Manages an EKS Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L51">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L55">constructor</a>
 </h3>
 
 ```typescript
@@ -134,7 +134,18 @@ public name: pulumi.Output<string>;
 Name of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L43">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L43">property platformVersion</a>
+</h3>
+
+```typescript
+public platformVersion: pulumi.Output<string>;
+```
+
+
+The platform version for the cluster.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L47">property roleArn</a>
 </h3>
 
 ```typescript
@@ -157,7 +168,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L47">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L51">property version</a>
 </h3>
 
 ```typescript
@@ -168,7 +179,7 @@ public version: pulumi.Output<string>;
 Desired Kubernetes master version. If you do not specify a value, the latest available version is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L51">property vpcConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L55">property vpcConfig</a>
 </h3>
 
 ```typescript
@@ -190,13 +201,13 @@ getCluster(args: GetClusterArgs, opts?: pulumi.InvokeOptions): Promise<GetCluste
 Retrieve information about an EKS Cluster.
 
 <h2 class="pdoc-module-header" id="ClusterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L132">interface ClusterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L142">interface ClusterArgs</a>
 </h2>
 
 The set of arguments for constructing a Cluster resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L136">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L146">property name</a>
 </h3>
 
 ```typescript
@@ -207,7 +218,7 @@ name?: pulumi.Input<string>;
 Name of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L140">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L150">property roleArn</a>
 </h3>
 
 ```typescript
@@ -218,7 +229,7 @@ roleArn: pulumi.Input<string>;
 The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L144">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L154">property version</a>
 </h3>
 
 ```typescript
@@ -229,7 +240,7 @@ version?: pulumi.Input<string>;
 Desired Kubernetes master version. If you do not specify a value, the latest available version is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L148">property vpcConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L158">property vpcConfig</a>
 </h3>
 
 ```typescript
@@ -240,13 +251,13 @@ vpcConfig: pulumi.Input<{ ... }>;
 Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
 
 <h2 class="pdoc-module-header" id="ClusterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L97">interface ClusterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L103">interface ClusterState</a>
 </h2>
 
 Input properties used for looking up and filtering Cluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L101">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L107">property arn</a>
 </h3>
 
 ```typescript
@@ -257,7 +268,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L105">property certificateAuthority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L111">property certificateAuthority</a>
 </h3>
 
 ```typescript
@@ -268,7 +279,7 @@ certificateAuthority?: pulumi.Input<{ ... }>;
 Nested attribute containing `certificate-authority-data` for your cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L106">property createdAt</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L112">property createdAt</a>
 </h3>
 
 ```typescript
@@ -276,7 +287,7 @@ createdAt?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L110">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L116">property endpoint</a>
 </h3>
 
 ```typescript
@@ -287,7 +298,7 @@ endpoint?: pulumi.Input<string>;
 The endpoint for your Kubernetes API server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L114">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L120">property name</a>
 </h3>
 
 ```typescript
@@ -298,7 +309,18 @@ name?: pulumi.Input<string>;
 Name of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L118">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L124">property platformVersion</a>
+</h3>
+
+```typescript
+platformVersion?: pulumi.Input<string>;
+```
+
+
+The platform version for the cluster.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L128">property roleArn</a>
 </h3>
 
 ```typescript
@@ -309,7 +331,7 @@ roleArn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L122">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L132">property version</a>
 </h3>
 
 ```typescript
@@ -320,7 +342,7 @@ version?: pulumi.Input<string>;
 Desired Kubernetes master version. If you do not specify a value, the latest available version is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L126">property vpcConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/cluster.ts#L136">property vpcConfig</a>
 </h3>
 
 ```typescript
@@ -398,7 +420,7 @@ endpoint: string;
 The endpoint for your Kubernetes API server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/getCluster.ts#L61">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/getCluster.ts#L65">property id</a>
 </h3>
 
 ```typescript
@@ -409,7 +431,18 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/getCluster.ts#L49">property roleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/getCluster.ts#L49">property platformVersion</a>
+</h3>
+
+```typescript
+platformVersion: string;
+```
+
+
+The platform version for the cluster.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/getCluster.ts#L53">property roleArn</a>
 </h3>
 
 ```typescript
@@ -420,7 +453,7 @@ roleArn: string;
 The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/getCluster.ts#L53">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/getCluster.ts#L57">property version</a>
 </h3>
 
 ```typescript
@@ -431,7 +464,7 @@ version: string;
 The Kubernetes server version for the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/getCluster.ts#L57">property vpcConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/eks/getCluster.ts#L61">property vpcConfig</a>
 </h3>
 
 ```typescript
