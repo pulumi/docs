@@ -1,5 +1,5 @@
 ---
-title: Pulumi GitHub App (preview)
+title: Pulumi GitHub App
 ---
 
 <style>
@@ -18,11 +18,6 @@ Pulumi's GitHub app integrates the results of Pulumi stack updates with GitHub. 
 configured, it will show you any potential infrastructure changes on Pull Requests and commit Checks.
 [See below](https://github.com/apps/pulumi) for information on how to install the Pulumi GitHub app
 into your organization.
-
-
-> The Pulumi GitHub app is currently in preview, and we will be expanding the feature set
-> over the comming weeks and months. If you have any feedback, suggestions, or bug reports, please
-> let us know in the [Pulumi Community Slack](https://slack.pulumi.io/).
 
 ## Features
 
