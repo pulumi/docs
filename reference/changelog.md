@@ -90,7 +90,7 @@ Major features of this release include:
 
 Default colors that fit better for both light and dark terminals.  Overall updates to rendering of previews/updates for consistentcy and simplicity of the display. 
 
-#### Parallelized ressource deletion
+#### Parallelized resource deletion
 
 Parallel resource creation and updates were added in `0.15`.  In `0.16`, this has been extended to include deletions, which are now conservatively parallelized based on dependency information. [pulumi/pulumi#1963](https://github.com/pulumi/pulumi/pull/1963)
 
@@ -127,7 +127,7 @@ In addition to the above features, we've made a handfull of day to day improveme
 
 ### @pulumi/aws-serverless 0.16.0
 
-- This library is now deprecated.  All features of this library are now avaiable directly in `@pulumi/aws`.
+- This library is now deprecated.  All features of this library are now avaiable directly in `@pulumi/aws` (see above).  In a future update the same change will be made for `@pulumi/azure-serverless` moving similar functionality into `@pulumi/azure`.
 
 ### @pulumi/azure 0.16.0
 
@@ -148,14 +148,6 @@ In addition to the above features, we've made a handfull of day to day improveme
 ### @pulumi/gcp 0.16.0
 
 - Adopted `v1.15.0` of the Google Terraform Provider. [pulumi/pulumi-gcp#51](https://github.com/pulumi/pulumi-gcp/pull/51)
-
-### @pulumi/kubernetes 0.17.0
-
-TODO: @hausdroff
-
-### @pulumi/vsphere 0.15.0
-
-Added a new provider for VMware vSphere, enabling deployment and management of resources in vCenter Server and ESXi. Thanks [@Smithx10](https://github.com/Smithx10)!
 
 ### @pulumi/vsphere 0.15.0
 
