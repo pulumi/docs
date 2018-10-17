@@ -28,19 +28,20 @@ Below is the complete documentation for all available commands:
 ## Command-line Completion
 
 The Pulumi CLI also has a command to generate a [command-line completion script](
-https://en.wikipedia.org/wiki/Command-line_completion) for Bash.  This gives you tab completion for all commands,
+https://en.wikipedia.org/wiki/Command-line_completion) for Bash and Zsh.  This gives you tab completion for all commands,
 sub-commands, and flags, which can make it easier to remember what to type and where.
+
+### Bash
 
 To use this, you'll first need to ensure bash completion is installed:
 
 * On most current Linux distros, bash completion should be available.
 * On a Mac, install with `brew install bash-completion`.
 
-The `pulumi gen-bash-completion <FILE>` command self-generates its own CLI script, and saves it to the given
-`<FILE>`.  The location of this file also differs based on whether you're using Linux or Mac:
+The `pulumi gen-completion bash` command self-generates its own CLI script. You can save the output to a file.
 
-* On Linux, save to `/etc/bash_completion.d/pulumi`.
-* On macOS, save to `/usr/local/etc/bash_completion.d/pulumi`.
+* On Linux, save to `pulumi gen-completion bash > /etc/bash_completion.d/pulumi`.
+* On macOS, save to `pulumi gen-completion bash > /usr/local/etc/bash_completion.d/pulumi`.
 
 Ensure that bash completion is run when you launch a new terminal by adding it to `~/.bash_profile`.
 
@@ -62,3 +63,32 @@ fi
 
 Finally, after saving the `pulumi` bash completion script, either reopen your terminal or source your profile
 in order to reload the bash completion scripts in your current terminal session (`. ~/.bash_profile`).
+
+
+### Zsh
+
+The `pulumi gen-completion zsh` command self-generates its own CLI script. You can save the output to a file inside a directory listed in the `$fpath` variable.
+
+You can list your `$fpath` directories and pick one of them:
+
+```shell
+echo $fpath
+```
+
+You can also use an arbitrary directory like `~/.zsh/completion/` and then add it to your `fpath` in `~/.zshrc` :
+
+```shell
+fpath=(~/.zsh/completion $fpath)
+```
+
+Make sure compinit is loaded or do it by adding in ~/.zshrc:
+
+```shell
+autoload -Uz compinit && compinit -i
+```
+
+Then reload your shell:
+
+```shell
+exec $SHELL -l
+```
