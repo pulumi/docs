@@ -127,7 +127,7 @@ In addition to the above features, we've made a handfull of day to day improveme
 
 ### @pulumi/aws-serverless 0.16.0
 
-- This library is now deprecated.  All features of this library are now avaiable directly in `@pulumi/aws` (see above).  In a future update the same change will be made for `@pulumi/azure-serverless` moving similar functionality into `@pulumi/azure`.
+- This library is now deprecated.  All features of this library are now available directly in `@pulumi/aws` (see above).  In a future update the same change will be made for `@pulumi/azure-serverless` moving similar functionality into `@pulumi/azure`.
 
 ### @pulumi/azure 0.16.0
 
