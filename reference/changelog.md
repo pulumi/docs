@@ -140,14 +140,15 @@ In addition to the above features, we've made a handfull of day to day improveme
 
 - Implementations of many `@pulumi/cloud-aws` APIs moved over to build on top of higher-level APIs in `@pulumi/aws`.  This may cause some resources, such as `aws.lambda.Function` and `aws.apigateway.RestAPI` to be recreated on updates from previous versions.
 
-### @pulumi/docker
-
-- Pass logging messages to the right sink when doing docker operations. [pulumi/pulumi-docker#7](https://github.com/pulumi/pulumi-docker/pull/7)
-- Add `docker.Image` component. [pulumi/pulumi-docker#10](https://github.com/pulumi/pulumi-docker/pull/10)
-
 ### @pulumi/gcp 0.16.0
 
 - Adopted `v1.15.0` of the Google Terraform Provider. [pulumi/pulumi-gcp#51](https://github.com/pulumi/pulumi-gcp/pull/51)
+
+### @pulumi/kubernetes 0.17.2
+
+- Kubernetes resources created outside Pulumi can now be read into a Pulumi program with `CustomResource#get`. [pulumi/pulumi-kubernetes#230](https://github.com/pulumi/pulumi-kubernetes/pull/230)
+- Service can now be refreshed with `pulumi refresh` to pick up changes to the state of the service that occured outside of a Pulumi deployment. [pulumi/pulumi-kubernetes#230](https://github.com/pulumi/pulumi-kubernetes/pull/230)
+- Added ability to retrieve CRDs resources objects from a Helm chart deployment. [pulumi/pulumi-kubernetes#225](https://github.com/pulumi/pulumi-kubernetes/pull/225)
 
 ### @pulumi/vsphere 0.16.0
 
@@ -158,6 +159,10 @@ Added a new provider for VMware vSphere, enabling deployment and management of r
 Added a new package for deploying a complete AWS Elastic Kubernetes Service (EKS) cluster.  
 
 ### @pulumi/openstack 0.16.0
+
+- Updated to latest `@pulumi/pulumi` dependencies.
+
+### @pulumi/docker 0.16.0
 
 - Updated to latest `@pulumi/pulumi` dependencies.
 
