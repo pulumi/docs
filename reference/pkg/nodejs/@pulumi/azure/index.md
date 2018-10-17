@@ -22,7 +22,6 @@ import * as azure from "@pulumi/azure";
 * <a href="#getEnvBoolean">function getEnvBoolean</a>
 * <a href="#getEnvNumber">function getEnvNumber</a>
 * <a href="#requireWithDefault">function requireWithDefault</a>
-* <a href="#unwrap">function unwrap</a>
 * <a href="#ProviderArgs">interface ProviderArgs</a>
 
 <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/utilities.ts">utilities.ts</a> 
@@ -162,14 +161,6 @@ getEnvNumber(vars: string[]): number | undefined
 
 ```typescript
 requireWithDefault<T>(req: { ... }, def: T | undefined): T
-```
-
-<h2 class="pdoc-module-header" id="unwrap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/utilities.ts#L54">function unwrap</a>
-</h2>
-
-```typescript
-unwrap(val: pulumi.Input<any>): pulumi.Output<any>
 ```
 
 <h2 class="pdoc-module-header" id="ProviderArgs">

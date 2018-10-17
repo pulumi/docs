@@ -24,6 +24,8 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [Microsoft Azure (`@pulumi/azure`)](nodejs/@pulumi/azure)
 * [Google Cloud Platform (`@pulumi/gcp`)](nodejs/@pulumi/gcp)
 * [Kubernetes (`@pulumi/kubernetes`)](nodejs/@pulumi/kubernetes)
+* [OpenStack (`@pulumi/openstack`)](nodejs/@pulumi/openstack)
+* [vSphere (`@pulumi/vsphere`)](nodejs/@pulumi/vsphere)
 
 ### Cloud-Agnostic Packages
 
@@ -33,6 +35,7 @@ cloud-specific behavior, in addition to extensions for accessing more cloud-spec
 
 * [Pulumi Cloud Framework (`@pulumi/cloud`)](nodejs/@pulumi/cloud)
 * [Pulumi Cloud Framework on AWS (`@pulumi/cloud-aws`)](nodejs/@pulumi/cloud-aws)
+* [Pulumi Cloud Framework on Azure (`@pulumi/cloud-azure`)](nodejs/@pulumi/cloud-azure)
 
 ### Helper Libraries
 
@@ -40,8 +43,9 @@ These libraries help with common cloud programming patterns and practices:
 
 * [AWS Infrastructure Components (`@pulumi/aws-infra`)](nodejs/@pulumi/aws-infra): common AWS networking and
   infrastructure patterns
-* [AWS Serverless Components (`@pulumi/aws-serverless`)](nodejs/@pulumi/aws-serverless): components for writing
-  serverless applications on AWS
+* [AWS EKS Cluster (`@pulumi/eks`)](nodejs/@pulumi/eks): simple creation and management of AWS EKS clusters
+* [Azure Serverless Components (`@pulumi/azure-serverless`)](nodejs/@pulumi/azure-serverless): components for writing
+  serverless applications on Azure
 
 
 ## Python

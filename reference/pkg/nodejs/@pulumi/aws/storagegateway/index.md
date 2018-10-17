@@ -1757,24 +1757,35 @@ tapeDriveType?: pulumi.Input<string>;
 Type of tape drive to use for tape gateway. Terraform cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
 
 <h2 class="pdoc-module-header" id="GetLocalDiskArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L20">interface GetLocalDiskArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L21">interface GetLocalDiskArgs</a>
 </h2>
 
 A collection of arguments for invoking getLocalDisk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L24">property diskPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L25">property diskNode</a>
 </h3>
 
 ```typescript
-diskPath: string;
+diskNode?: string;
 ```
 
 
-The device path of the local disk to retrieve. For example, `/dev/sdb` or `/dev/xvdb`.
+The device node of the local disk to retrieve. For example, `/dev/sdb`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L28">property gatewayArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L29">property diskPath</a>
+</h3>
+
+```typescript
+diskPath?: string;
+```
+
+
+The device path of the local disk to retrieve. For example, `/dev/xvdb` or `/dev/nvme1n1`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L33">property gatewayArn</a>
 </h3>
 
 ```typescript
@@ -1785,13 +1796,13 @@ gatewayArn: string;
 The Amazon Resource Name (ARN) of the gateway.
 
 <h2 class="pdoc-module-header" id="GetLocalDiskResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L34">interface GetLocalDiskResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L39">interface GetLocalDiskResult</a>
 </h2>
 
 A collection of values returned by getLocalDisk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L38">property diskId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L43">property diskId</a>
 </h3>
 
 ```typescript
@@ -1802,7 +1813,7 @@ diskId: string;
 The disk identifier. e.g. `pci-0000:03:00.0-scsi-0:0:0:0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L42">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/getLocalDisk.ts#L47">property id</a>
 </h3>
 
 ```typescript

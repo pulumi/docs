@@ -132,6 +132,7 @@ title: Module iam
 * <a href="#AWSXrayFullAccess">const AWSXrayFullAccess</a>
 * <a href="#AWSXrayReadOnlyAccess">const AWSXrayReadOnlyAccess</a>
 * <a href="#AWSXrayWriteOnlyAccess">const AWSXrayWriteOnlyAccess</a>
+* <a href="#AcmServicePrincipal">const AcmServicePrincipal</a>
 * <a href="#AdministratorAccess">const AdministratorAccess</a>
 * <a href="#AmazonAPIGatewayAdministrator">const AmazonAPIGatewayAdministrator</a>
 * <a href="#AmazonAPIGatewayInvokeFullAccess">const AmazonAPIGatewayInvokeFullAccess</a>
@@ -243,16 +244,21 @@ title: Module iam
 * <a href="#AmazonWorkSpacesApplicationManagerAdminAccess">const AmazonWorkSpacesApplicationManagerAdminAccess</a>
 * <a href="#AmazonZocaloFullAccess">const AmazonZocaloFullAccess</a>
 * <a href="#AmazonZocaloReadOnlyAccess">const AmazonZocaloReadOnlyAccess</a>
+* <a href="#ApiGatewayPrincipal">const ApiGatewayPrincipal</a>
 * <a href="#ApplicationAutoScalingForAmazonAppStreamAccess">const ApplicationAutoScalingForAmazonAppStreamAccess</a>
+* <a href="#AthenaPrincipal">const AthenaPrincipal</a>
 * <a href="#AutoScalingConsoleFullAccess">const AutoScalingConsoleFullAccess</a>
 * <a href="#AutoScalingConsoleReadOnlyAccess">const AutoScalingConsoleReadOnlyAccess</a>
 * <a href="#AutoScalingFullAccess">const AutoScalingFullAccess</a>
 * <a href="#AutoScalingNotificationAccessRole">const AutoScalingNotificationAccessRole</a>
 * <a href="#AutoScalingReadOnlyAccess">const AutoScalingReadOnlyAccess</a>
+* <a href="#AutoscalingPrincipal">const AutoscalingPrincipal</a>
 * <a href="#Billing">const Billing</a>
+* <a href="#CloudDirectoryPrincipal">const CloudDirectoryPrincipal</a>
 * <a href="#CloudFrontFullAccess">const CloudFrontFullAccess</a>
 * <a href="#CloudFrontReadOnlyAccess">const CloudFrontReadOnlyAccess</a>
 * <a href="#CloudSearchFullAccess">const CloudSearchFullAccess</a>
+* <a href="#CloudSearchPrincipal">const CloudSearchPrincipal</a>
 * <a href="#CloudSearchReadOnlyAccess">const CloudSearchReadOnlyAccess</a>
 * <a href="#CloudWatchActionsEC2Access">const CloudWatchActionsEC2Access</a>
 * <a href="#CloudWatchEventsBuiltInTargetExecutionAccess">const CloudWatchEventsBuiltInTargetExecutionAccess</a>
@@ -263,19 +269,55 @@ title: Module iam
 * <a href="#CloudWatchLogsFullAccess">const CloudWatchLogsFullAccess</a>
 * <a href="#CloudWatchLogsReadOnlyAccess">const CloudWatchLogsReadOnlyAccess</a>
 * <a href="#CloudWatchReadOnlyAccess">const CloudWatchReadOnlyAccess</a>
+* <a href="#CloudformationPrincipal">const CloudformationPrincipal</a>
+* <a href="#CloudfrontPrincipal">const CloudfrontPrincipal</a>
+* <a href="#CloudtrailPrincipal">const CloudtrailPrincipal</a>
+* <a href="#CodeCommitPrincipal">const CodeCommitPrincipal</a>
+* <a href="#CodeDeployPrincipal">const CodeDeployPrincipal</a>
+* <a href="#CodePipelinePrincipal">const CodePipelinePrincipal</a>
+* <a href="#ConfigPrincipal">const ConfigPrincipal</a>
+* <a href="#DataPipelinePrincipal">const DataPipelinePrincipal</a>
 * <a href="#DataScientist">const DataScientist</a>
 * <a href="#DatabaseAdministrator">const DatabaseAdministrator</a>
+* <a href="#DirectConnectPrincipal">const DirectConnectPrincipal</a>
+* <a href="#DirectoryServicesPrincipal">const DirectoryServicesPrincipal</a>
+* <a href="#DynamoDbPrincipal">const DynamoDbPrincipal</a>
+* <a href="#Ec2Principal">const Ec2Principal</a>
+* <a href="#EcrPrincipal">const EcrPrincipal</a>
+* <a href="#EcsPrincipal">const EcsPrincipal</a>
+* <a href="#EdgeLambdaPrincipal">const EdgeLambdaPrincipal</a>
+* <a href="#ElasticBeanstalkPrincipal">const ElasticBeanstalkPrincipal</a>
+* <a href="#ElasticFileSystemPrincipal">const ElasticFileSystemPrincipal</a>
+* <a href="#ElasticLoadBalancingPrincipal">const ElasticLoadBalancingPrincipal</a>
+* <a href="#ElasticMapReducePrincipal">const ElasticMapReducePrincipal</a>
+* <a href="#ElasticachePrincipal">const ElasticachePrincipal</a>
+* <a href="#EventsPrincipal">const EventsPrincipal</a>
+* <a href="#HealthPrincipal">const HealthPrincipal</a>
 * <a href="#IAMFullAccess">const IAMFullAccess</a>
 * <a href="#IAMReadOnlyAccess">const IAMReadOnlyAccess</a>
 * <a href="#IAMSelfManageServiceSpecificCredentials">const IAMSelfManageServiceSpecificCredentials</a>
 * <a href="#IAMUserChangePassword">const IAMUserChangePassword</a>
 * <a href="#IAMUserSSHKeys">const IAMUserSSHKeys</a>
+* <a href="#IamPrincipal">const IamPrincipal</a>
+* <a href="#InspectorPrincipal">const InspectorPrincipal</a>
+* <a href="#KinesisPrincipal">const KinesisPrincipal</a>
+* <a href="#KmsPrincipal">const KmsPrincipal</a>
+* <a href="#LambdaPrincipal">const LambdaPrincipal</a>
+* <a href="#LightsailPrincipal">const LightsailPrincipal</a>
+* <a href="#LogsPrincipal">const LogsPrincipal</a>
+* <a href="#MonitoringPrincipal">const MonitoringPrincipal</a>
 * <a href="#NetworkAdministrator">const NetworkAdministrator</a>
+* <a href="#OpsworksPrincipal">const OpsworksPrincipal</a>
+* <a href="#OrganizationsPrincipal">const OrganizationsPrincipal</a>
 * <a href="#PowerUserAccess">const PowerUserAccess</a>
 * <a href="#RDSCloudHsmAuthorizationRole">const RDSCloudHsmAuthorizationRole</a>
+* <a href="#RdsPrincipal">const RdsPrincipal</a>
 * <a href="#ReadOnlyAccess">const ReadOnlyAccess</a>
+* <a href="#RedshiftPrincipal">const RedshiftPrincipal</a>
 * <a href="#ResourceGroupsandTagEditorFullAccess">const ResourceGroupsandTagEditorFullAccess</a>
 * <a href="#ResourceGroupsandTagEditorReadOnlyAccess">const ResourceGroupsandTagEditorReadOnlyAccess</a>
+* <a href="#Route53Principal">const Route53Principal</a>
+* <a href="#S3Principal">const S3Principal</a>
 * <a href="#SecurityAudit">const SecurityAudit</a>
 * <a href="#ServerMigrationConnector">const ServerMigrationConnector</a>
 * <a href="#ServerMigrationServiceRole">const ServerMigrationServiceRole</a>
@@ -283,11 +325,25 @@ title: Module iam
 * <a href="#ServiceCatalogAdminReadOnlyAccess">const ServiceCatalogAdminReadOnlyAccess</a>
 * <a href="#ServiceCatalogEndUserAccess">const ServiceCatalogEndUserAccess</a>
 * <a href="#ServiceCatalogEndUserFullAccess">const ServiceCatalogEndUserFullAccess</a>
+* <a href="#ServiceCatalogPrincipal">const ServiceCatalogPrincipal</a>
+* <a href="#SesPrincipal">const SesPrincipal</a>
+* <a href="#SigninPrincipal">const SigninPrincipal</a>
 * <a href="#SimpleWorkflowFullAccess">const SimpleWorkflowFullAccess</a>
+* <a href="#SnsPrincipal">const SnsPrincipal</a>
+* <a href="#SqsPrincipal">const SqsPrincipal</a>
+* <a href="#SsmPrincipal">const SsmPrincipal</a>
+* <a href="#StorageGatewayPrincipal">const StorageGatewayPrincipal</a>
+* <a href="#StsPrincipal">const StsPrincipal</a>
+* <a href="#SupportPrincipal">const SupportPrincipal</a>
 * <a href="#SupportUser">const SupportUser</a>
 * <a href="#SystemAdministrator">const SystemAdministrator</a>
 * <a href="#VMImportExportRoleForAWSConnector">const VMImportExportRoleForAWSConnector</a>
 * <a href="#ViewOnlyAccess">const ViewOnlyAccess</a>
+* <a href="#VmiePrincipal">const VmiePrincipal</a>
+* <a href="#VpcFlowLogsPrincipal">const VpcFlowLogsPrincipal</a>
+* <a href="#WafPrincipal">const WafPrincipal</a>
+* <a href="#WorkDocsPrincipal">const WorkDocsPrincipal</a>
+* <a href="#WorkspacesPrincipal">const WorkspacesPrincipal</a>
 * <a href="#assumeRolePolicyForPrincipal">function assumeRolePolicyForPrincipal</a>
 * <a href="#getAccountAlias">function getAccountAlias</a>
 * <a href="#getGroup">function getGroup</a>
@@ -367,7 +423,7 @@ title: Module iam
 * <a href="#UserState">interface UserState</a>
 * <a href="#Principal">type Principal</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts">iam/accessKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts">iam/accountAlias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts">iam/accountPasswordPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts">iam/documents.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getAccountAlias.ts">iam/getAccountAlias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts">iam/getGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts">iam/getInstanceProfile.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts">iam/getPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts">iam/getPolicyDocument.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts">iam/getRole.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts">iam/getServerCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts">iam/getUser.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts">iam/group.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts">iam/groupMembership.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts">iam/groupPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts">iam/groupPolicyAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts">iam/instanceProfile.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts">iam/managedPolicies.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts">iam/openIdConnectProvider.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts">iam/policy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts">iam/policyAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts">iam/role.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts">iam/rolePolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts">iam/rolePolicyAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts">iam/samlProvider.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts">iam/serverCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts">iam/serviceLinkedRole.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts">iam/sshKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts">iam/user.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts">iam/userGroupMembership.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts">iam/userLoginProfile.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts">iam/userPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts">iam/userPolicyAttachment.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accessKey.ts">iam/accessKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountAlias.ts">iam/accountAlias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/accountPasswordPolicy.ts">iam/accountPasswordPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/documents.ts">iam/documents.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getAccountAlias.ts">iam/getAccountAlias.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getGroup.ts">iam/getGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getInstanceProfile.ts">iam/getInstanceProfile.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicy.ts">iam/getPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts">iam/getPolicyDocument.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getRole.ts">iam/getRole.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getServerCertificate.ts">iam/getServerCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getUser.ts">iam/getUser.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/group.ts">iam/group.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupMembership.ts">iam/groupMembership.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicy.ts">iam/groupPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts">iam/groupPolicyAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts">iam/instanceProfile.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts">iam/managedPolicies.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/openIdConnectProvider.ts">iam/openIdConnectProvider.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policy.ts">iam/policy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts">iam/policyAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts">iam/principals.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/role.ts">iam/role.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicy.ts">iam/rolePolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts">iam/rolePolicyAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/samlProvider.ts">iam/samlProvider.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serverCertificate.ts">iam/serverCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/serviceLinkedRole.ts">iam/serviceLinkedRole.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/sshKey.ts">iam/sshKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/user.ts">iam/user.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userGroupMembership.ts">iam/userGroupMembership.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userLoginProfile.ts">iam/userLoginProfile.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicy.ts">iam/userPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts">iam/userPolicyAttachment.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="AccessKey">
@@ -4316,6 +4372,20 @@ const AWSXrayReadOnlyAccess: ARN = "arn:aws:iam::aws:policy/AWSXrayReadOnlyAcces
 const AWSXrayWriteOnlyAccess: ARN = "arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess";
 ```
 
+<h2 class="pdoc-module-header" id="AcmServicePrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L20">const AcmServicePrincipal</a>
+</h2>
+
+Service Principal for Amazon Certificate Manager
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L20">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "acm.amazonaws.com";
+```
+
 <h2 class="pdoc-module-header" id="AdministratorAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L121">const AdministratorAccess</a>
 </h2>
@@ -5204,12 +5274,40 @@ const AmazonZocaloFullAccess: ARN = "arn:aws:iam::aws:policy/AmazonZocaloFullAcc
 const AmazonZocaloReadOnlyAccess: ARN = "arn:aws:iam::aws:policy/AmazonZocaloReadOnlyAccess";
 ```
 
+<h2 class="pdoc-module-header" id="ApiGatewayPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L25">const ApiGatewayPrincipal</a>
+</h2>
+
+Service Principal for API Gateway
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L25">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "apigateway.amazonaws.com";
+```
+
 <h2 class="pdoc-module-header" id="ApplicationAutoScalingForAmazonAppStreamAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L232">const ApplicationAutoScalingForAmazonAppStreamAccess</a>
 </h2>
 
 ```typescript
 const ApplicationAutoScalingForAmazonAppStreamAccess: ARN = "arn:aws:iam::aws:policy/service-role/ApplicationAutoScalingForAmazonAppStreamAccess";
+```
+
+<h2 class="pdoc-module-header" id="AthenaPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L30">const AthenaPrincipal</a>
+</h2>
+
+Service Principal for Athena
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L30">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "athena.amazonaws.com";
 ```
 
 <h2 class="pdoc-module-header" id="AutoScalingConsoleFullAccess">
@@ -5252,12 +5350,40 @@ const AutoScalingNotificationAccessRole: ARN = "arn:aws:iam::aws:policy/service-
 const AutoScalingReadOnlyAccess: ARN = "arn:aws:iam::aws:policy/AutoScalingReadOnlyAccess";
 ```
 
+<h2 class="pdoc-module-header" id="AutoscalingPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L35">const AutoscalingPrincipal</a>
+</h2>
+
+Service Principal for Autoscaling
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L35">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "autoscaling.amazonaws.com";
+```
+
 <h2 class="pdoc-module-header" id="Billing">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L238">const Billing</a>
 </h2>
 
 ```typescript
 const Billing: ARN = "arn:aws:iam::aws:policy/job-function/Billing";
+```
+
+<h2 class="pdoc-module-header" id="CloudDirectoryPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L40">const CloudDirectoryPrincipal</a>
+</h2>
+
+Service Principal for Cloud Directory
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L40">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "clouddirectory.amazonaws.com";
 ```
 
 <h2 class="pdoc-module-header" id="CloudFrontFullAccess">
@@ -5282,6 +5408,20 @@ const CloudFrontReadOnlyAccess: ARN = "arn:aws:iam::aws:policy/CloudFrontReadOnl
 
 ```typescript
 const CloudSearchFullAccess: ARN = "arn:aws:iam::aws:policy/CloudSearchFullAccess";
+```
+
+<h2 class="pdoc-module-header" id="CloudSearchPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L55">const CloudSearchPrincipal</a>
+</h2>
+
+Service Principal for Cloud Search
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L55">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "cloudsearch.amazonaws.com";
 ```
 
 <h2 class="pdoc-module-header" id="CloudSearchReadOnlyAccess">
@@ -5364,6 +5504,118 @@ const CloudWatchLogsReadOnlyAccess: ARN = "arn:aws:iam::aws:policy/CloudWatchLog
 const CloudWatchReadOnlyAccess: ARN = "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess";
 ```
 
+<h2 class="pdoc-module-header" id="CloudformationPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L45">const CloudformationPrincipal</a>
+</h2>
+
+Service Principal for Cloudformation
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L45">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "cloudformation.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="CloudfrontPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L50">const CloudfrontPrincipal</a>
+</h2>
+
+Service Principal for Cloudfront
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L50">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "cloudfront.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="CloudtrailPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L60">const CloudtrailPrincipal</a>
+</h2>
+
+Service Principal for Cloudtrail
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L60">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "cloudtrail.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="CodeCommitPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L65">const CodeCommitPrincipal</a>
+</h2>
+
+Service Principal for CodeCommit
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L65">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "codecommit.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="CodeDeployPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L70">const CodeDeployPrincipal</a>
+</h2>
+
+Service Principal for CodeDeploy
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L70">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "codedeploy.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="CodePipelinePrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L75">const CodePipelinePrincipal</a>
+</h2>
+
+Service Principal for CodePipeline
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L75">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "codepipeline.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="ConfigPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L80">const ConfigPrincipal</a>
+</h2>
+
+Service Principal for EC2 Config Service
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L80">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "config.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="DataPipelinePrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L85">const DataPipelinePrincipal</a>
+</h2>
+
+Service Principal for Data Pipeline
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L85">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "datapipeline.amazonaws.com";
+```
+
 <h2 class="pdoc-module-header" id="DataScientist">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L252">const DataScientist</a>
 </h2>
@@ -5378,6 +5630,202 @@ const DataScientist: ARN = "arn:aws:iam::aws:policy/job-function/DataScientist";
 
 ```typescript
 const DatabaseAdministrator: ARN = "arn:aws:iam::aws:policy/job-function/DatabaseAdministrator";
+```
+
+<h2 class="pdoc-module-header" id="DirectConnectPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L90">const DirectConnectPrincipal</a>
+</h2>
+
+Service Principal for DirectConnect
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L90">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "directconnect.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="DirectoryServicesPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L95">const DirectoryServicesPrincipal</a>
+</h2>
+
+Service Principal for Directory Services
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L95">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "ds.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="DynamoDbPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L100">const DynamoDbPrincipal</a>
+</h2>
+
+Service Principal for DynamoDB
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L100">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "dynamodb.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="Ec2Principal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L105">const Ec2Principal</a>
+</h2>
+
+Service Principal for EC2
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L105">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "ec2.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="EcrPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L110">const EcrPrincipal</a>
+</h2>
+
+Service Principal for Elastic Container Registry
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L110">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "ecr.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="EcsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L115">const EcsPrincipal</a>
+</h2>
+
+Service Principal for Elastic Container Service
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L115">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "ecs.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="EdgeLambdaPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L120">const EdgeLambdaPrincipal</a>
+</h2>
+
+Service Principal for Edge Lambda
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L120">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "edgelambda.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="ElasticBeanstalkPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L130">const ElasticBeanstalkPrincipal</a>
+</h2>
+
+Service Principal for Elastic Beanstalk
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L130">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "elasticbeanstalk.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="ElasticFileSystemPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L135">const ElasticFileSystemPrincipal</a>
+</h2>
+
+Service Principal for Elastic File System
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L135">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "elasticfilesystem.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="ElasticLoadBalancingPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L140">const ElasticLoadBalancingPrincipal</a>
+</h2>
+
+Service Principal for Elastic Load Balancing
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L140">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "elasticloadbalancing.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="ElasticMapReducePrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L145">const ElasticMapReducePrincipal</a>
+</h2>
+
+Service Principal for Elastic MapReduce
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L145">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "elasticmapreduce.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="ElasticachePrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L125">const ElasticachePrincipal</a>
+</h2>
+
+Service Principal for Elasticache
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L125">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "elasticache.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="EventsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L150">const EventsPrincipal</a>
+</h2>
+
+Service Principal for Events
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L150">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "events.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="HealthPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L155">const HealthPrincipal</a>
+</h2>
+
+Service Principal for Health
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L155">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "health.amazonaws.com";
 ```
 
 <h2 class="pdoc-module-header" id="IAMFullAccess">
@@ -5420,12 +5868,152 @@ const IAMUserChangePassword: ARN = "arn:aws:iam::aws:policy/IAMUserChangePasswor
 const IAMUserSSHKeys: ARN = "arn:aws:iam::aws:policy/IAMUserSSHKeys";
 ```
 
+<h2 class="pdoc-module-header" id="IamPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L160">const IamPrincipal</a>
+</h2>
+
+Service Principal for IAM
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L160">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "iam.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="InspectorPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L165">const InspectorPrincipal</a>
+</h2>
+
+Service Principal for AWS Inspector
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L165">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "inspector.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="KinesisPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L170">const KinesisPrincipal</a>
+</h2>
+
+Service Principal for Kinesis
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L170">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "kinesis.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="KmsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L175">const KmsPrincipal</a>
+</h2>
+
+Service Principal for Key Mangaement Service
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L175">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "kms.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="LambdaPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L180">const LambdaPrincipal</a>
+</h2>
+
+Service Principal for Lambda
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L180">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "lambda.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="LightsailPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L185">const LightsailPrincipal</a>
+</h2>
+
+Service Principal for Lightsail
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L185">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "lightsail.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="LogsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L190">const LogsPrincipal</a>
+</h2>
+
+Service Principal for Cloudwatch Logs
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L190">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "logs.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="MonitoringPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L195">const MonitoringPrincipal</a>
+</h2>
+
+Service Principal for Cloudwatch Monitoring
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L195">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "monitoring.amazonaws.com";
+```
+
 <h2 class="pdoc-module-header" id="NetworkAdministrator">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L259">const NetworkAdministrator</a>
 </h2>
 
 ```typescript
 const NetworkAdministrator: ARN = "arn:aws:iam::aws:policy/job-function/NetworkAdministrator";
+```
+
+<h2 class="pdoc-module-header" id="OpsworksPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L200">const OpsworksPrincipal</a>
+</h2>
+
+Service Principal for Opsworks
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L200">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "opsworks.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="OrganizationsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L205">const OrganizationsPrincipal</a>
+</h2>
+
+Service Principal for Organizations
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L205">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "organizations.amazonaws.com";
 ```
 
 <h2 class="pdoc-module-header" id="PowerUserAccess">
@@ -5444,12 +6032,40 @@ const PowerUserAccess: ARN = "arn:aws:iam::aws:policy/PowerUserAccess";
 const RDSCloudHsmAuthorizationRole: ARN = "arn:aws:iam::aws:policy/service-role/RDSCloudHsmAuthorizationRole";
 ```
 
+<h2 class="pdoc-module-header" id="RdsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L210">const RdsPrincipal</a>
+</h2>
+
+Service Principal for Relational Database Service
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L210">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "rds.amazonaws.com";
+```
+
 <h2 class="pdoc-module-header" id="ReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L262">const ReadOnlyAccess</a>
 </h2>
 
 ```typescript
 const ReadOnlyAccess: ARN = "arn:aws:iam::aws:policy/ReadOnlyAccess";
+```
+
+<h2 class="pdoc-module-header" id="RedshiftPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L215">const RedshiftPrincipal</a>
+</h2>
+
+Service Principal for Redshift
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L215">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "redshift.amazonaws.com";
 ```
 
 <h2 class="pdoc-module-header" id="ResourceGroupsandTagEditorFullAccess">
@@ -5466,6 +6082,34 @@ const ResourceGroupsandTagEditorFullAccess: ARN = "arn:aws:iam::aws:policy/Resou
 
 ```typescript
 const ResourceGroupsandTagEditorReadOnlyAccess: ARN = "arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess";
+```
+
+<h2 class="pdoc-module-header" id="Route53Principal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L220">const Route53Principal</a>
+</h2>
+
+Service Principal for Route 53
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L220">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "route53.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="S3Principal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L225">const S3Principal</a>
+</h2>
+
+Service Principal for S3
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L225">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "s3.amazonaws.com";
 ```
 
 <h2 class="pdoc-module-header" id="SecurityAudit">
@@ -5524,12 +6168,138 @@ const ServiceCatalogEndUserAccess: ARN = "arn:aws:iam::aws:policy/ServiceCatalog
 const ServiceCatalogEndUserFullAccess: ARN = "arn:aws:iam::aws:policy/ServiceCatalogEndUserFullAccess";
 ```
 
+<h2 class="pdoc-module-header" id="ServiceCatalogPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L230">const ServiceCatalogPrincipal</a>
+</h2>
+
+Service Principal for Service Catalog
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L230">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "servicecatalog.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="SesPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L235">const SesPrincipal</a>
+</h2>
+
+Service Principal for Simple Email Service
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L235">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "ses.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="SigninPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L240">const SigninPrincipal</a>
+</h2>
+
+Service Principal for Signin Service
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L240">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "signin.amazonaws.com";
+```
+
 <h2 class="pdoc-module-header" id="SimpleWorkflowFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L272">const SimpleWorkflowFullAccess</a>
 </h2>
 
 ```typescript
 const SimpleWorkflowFullAccess: ARN = "arn:aws:iam::aws:policy/SimpleWorkflowFullAccess";
+```
+
+<h2 class="pdoc-module-header" id="SnsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L245">const SnsPrincipal</a>
+</h2>
+
+Service Principal for Simple Notification Service
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L245">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "sns.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="SqsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L250">const SqsPrincipal</a>
+</h2>
+
+Service Principal for Simple Queue Service
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L250">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "sqs.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="SsmPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L255">const SsmPrincipal</a>
+</h2>
+
+Service Principal for Systems Manager
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L255">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "ssm.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="StorageGatewayPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L260">const StorageGatewayPrincipal</a>
+</h2>
+
+Service Principal for Storage Gateway
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L260">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "storagegateway.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="StsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L265">const StsPrincipal</a>
+</h2>
+
+Service Principal for Security Token Service
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L265">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "sts.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="SupportPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L270">const SupportPrincipal</a>
+</h2>
+
+Service Principal for AWS Support
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L270">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "support.amazonaws.com";
 ```
 
 <h2 class="pdoc-module-header" id="SupportUser">
@@ -5562,6 +6332,76 @@ const VMImportExportRoleForAWSConnector: ARN = "arn:aws:iam::aws:policy/service-
 
 ```typescript
 const ViewOnlyAccess: ARN = "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess";
+```
+
+<h2 class="pdoc-module-header" id="VmiePrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L275">const VmiePrincipal</a>
+</h2>
+
+Service Principal for VM Import/Export
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L275">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "vmie.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="VpcFlowLogsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L280">const VpcFlowLogsPrincipal</a>
+</h2>
+
+Service Principal for VPC Flow Logs
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L280">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "vpc-flow-logs.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="WafPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L285">const WafPrincipal</a>
+</h2>
+
+Service Principal for Web Application Firewall
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L285">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "waf.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="WorkDocsPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L290">const WorkDocsPrincipal</a>
+</h2>
+
+Service Principal for WorkDocs
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L290">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "workdocs.amazonaws.com";
+```
+
+<h2 class="pdoc-module-header" id="WorkspacesPrincipal">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L295">const WorkspacesPrincipal</a>
+</h2>
+
+Service Principal for Workspaces
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L295">let Service</a>
+</h3>
+
+```typescript
+let Service: string = "workspaces.amazonaws.com";
 ```
 
 <h2 class="pdoc-module-header" id="assumeRolePolicyForPrincipal">

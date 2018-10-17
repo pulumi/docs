@@ -23,7 +23,7 @@ title: Module codebuild
 Provides a CodeBuild Project resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L76">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L88">constructor</a>
 </h3>
 
 ```typescript
@@ -70,7 +70,18 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L28">property artifacts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L28">property arn</a>
+</h3>
+
+```typescript
+public arn: pulumi.Output<string>;
+```
+
+
+The ARN of the CodeBuild project.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L32">property artifacts</a>
 </h3>
 
 ```typescript
@@ -81,7 +92,7 @@ public artifacts: pulumi.Output<{ ... }>;
 Information about the project's build output artifacts. Artifact blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L32">property badgeEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L36">property badgeEnabled</a>
 </h3>
 
 ```typescript
@@ -92,7 +103,7 @@ public badgeEnabled: pulumi.Output<boolean | undefined>;
 Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L36">property badgeUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L40">property badgeUrl</a>
 </h3>
 
 ```typescript
@@ -103,7 +114,7 @@ public badgeUrl: pulumi.Output<string>;
 The URL of the build badge when `badge_enabled` is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L40">property buildTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L44">property buildTimeout</a>
 </h3>
 
 ```typescript
@@ -114,7 +125,7 @@ public buildTimeout: pulumi.Output<number | undefined>;
 How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L44">property cache</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L48">property cache</a>
 </h3>
 
 ```typescript
@@ -125,7 +136,7 @@ public cache: pulumi.Output<{ ... } | undefined>;
 Information about the cache storage for the project. Cache blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L48">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L52">property description</a>
 </h3>
 
 ```typescript
@@ -136,7 +147,7 @@ public description: pulumi.Output<string>;
 A short description of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L52">property encryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L56">property encryptionKey</a>
 </h3>
 
 ```typescript
@@ -147,7 +158,7 @@ public encryptionKey: pulumi.Output<string>;
 The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L56">property environment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L60">property environment</a>
 </h3>
 
 ```typescript
@@ -170,7 +181,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L60">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L64">property name</a>
 </h3>
 
 ```typescript
@@ -178,10 +189,32 @@ public name: pulumi.Output<string>;
 ```
 
 
-The environment variable's name or key.
+The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L64">property serviceRole</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L68">property secondaryArtifacts</a>
+</h3>
+
+```typescript
+public secondaryArtifacts: pulumi.Output<{ ... }[] | undefined>;
+```
+
+
+A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L72">property secondarySources</a>
+</h3>
+
+```typescript
+public secondarySources: pulumi.Output<{ ... }[] | undefined>;
+```
+
+
+A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L76">property serviceRole</a>
 </h3>
 
 ```typescript
@@ -192,7 +225,7 @@ public serviceRole: pulumi.Output<string>;
 The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L68">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L80">property source</a>
 </h3>
 
 ```typescript
@@ -203,7 +236,7 @@ public source: pulumi.Output<{ ... }>;
 Information about the project's input source code. Source blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L72">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L84">property tags</a>
 </h3>
 
 ```typescript
@@ -226,7 +259,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L76">property vpcConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L88">property vpcConfig</a>
 </h3>
 
 ```typescript
@@ -369,13 +402,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ProjectArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L196">interface ProjectArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L226">interface ProjectArgs</a>
 </h2>
 
 The set of arguments for constructing a Project resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L200">property artifacts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L230">property artifacts</a>
 </h3>
 
 ```typescript
@@ -386,7 +419,7 @@ artifacts: pulumi.Input<{ ... }>;
 Information about the project's build output artifacts. Artifact blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L204">property badgeEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L234">property badgeEnabled</a>
 </h3>
 
 ```typescript
@@ -397,7 +430,7 @@ badgeEnabled?: pulumi.Input<boolean>;
 Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L208">property buildTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L238">property buildTimeout</a>
 </h3>
 
 ```typescript
@@ -408,7 +441,7 @@ buildTimeout?: pulumi.Input<number>;
 How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L212">property cache</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L242">property cache</a>
 </h3>
 
 ```typescript
@@ -419,7 +452,7 @@ cache?: pulumi.Input<{ ... }>;
 Information about the cache storage for the project. Cache blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L216">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L246">property description</a>
 </h3>
 
 ```typescript
@@ -430,7 +463,7 @@ description?: pulumi.Input<string>;
 A short description of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L220">property encryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L250">property encryptionKey</a>
 </h3>
 
 ```typescript
@@ -441,7 +474,7 @@ encryptionKey?: pulumi.Input<string>;
 The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L224">property environment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L254">property environment</a>
 </h3>
 
 ```typescript
@@ -452,7 +485,7 @@ environment: pulumi.Input<{ ... }>;
 Information about the project's build environment. Environment blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L228">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L258">property name</a>
 </h3>
 
 ```typescript
@@ -460,10 +493,32 @@ name?: pulumi.Input<string>;
 ```
 
 
-The environment variable's name or key.
+The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L232">property serviceRole</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L262">property secondaryArtifacts</a>
+</h3>
+
+```typescript
+secondaryArtifacts?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L266">property secondarySources</a>
+</h3>
+
+```typescript
+secondarySources?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L270">property serviceRole</a>
 </h3>
 
 ```typescript
@@ -474,7 +529,7 @@ serviceRole: pulumi.Input<string>;
 The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L236">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L274">property source</a>
 </h3>
 
 ```typescript
@@ -485,7 +540,7 @@ source: pulumi.Input<{ ... }>;
 Information about the project's input source code. Source blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L240">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L278">property tags</a>
 </h3>
 
 ```typescript
@@ -496,7 +551,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L244">property vpcConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L282">property vpcConfig</a>
 </h3>
 
 ```typescript
@@ -507,13 +562,24 @@ vpcConfig?: pulumi.Input<{ ... }>;
 Configuration for the builds to run inside a VPC. VPC config blocks are documented below.
 
 <h2 class="pdoc-module-header" id="ProjectState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L138">interface ProjectState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L156">interface ProjectState</a>
 </h2>
 
 Input properties used for looking up and filtering Project resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L142">property artifacts</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L160">property arn</a>
+</h3>
+
+```typescript
+arn?: pulumi.Input<string>;
+```
+
+
+The ARN of the CodeBuild project.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L164">property artifacts</a>
 </h3>
 
 ```typescript
@@ -524,7 +590,7 @@ artifacts?: pulumi.Input<{ ... }>;
 Information about the project's build output artifacts. Artifact blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L146">property badgeEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L168">property badgeEnabled</a>
 </h3>
 
 ```typescript
@@ -535,7 +601,7 @@ badgeEnabled?: pulumi.Input<boolean>;
 Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L150">property badgeUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L172">property badgeUrl</a>
 </h3>
 
 ```typescript
@@ -546,7 +612,7 @@ badgeUrl?: pulumi.Input<string>;
 The URL of the build badge when `badge_enabled` is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L154">property buildTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L176">property buildTimeout</a>
 </h3>
 
 ```typescript
@@ -557,7 +623,7 @@ buildTimeout?: pulumi.Input<number>;
 How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L158">property cache</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L180">property cache</a>
 </h3>
 
 ```typescript
@@ -568,7 +634,7 @@ cache?: pulumi.Input<{ ... }>;
 Information about the cache storage for the project. Cache blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L162">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L184">property description</a>
 </h3>
 
 ```typescript
@@ -579,7 +645,7 @@ description?: pulumi.Input<string>;
 A short description of the project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L166">property encryptionKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L188">property encryptionKey</a>
 </h3>
 
 ```typescript
@@ -590,7 +656,7 @@ encryptionKey?: pulumi.Input<string>;
 The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L170">property environment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L192">property environment</a>
 </h3>
 
 ```typescript
@@ -601,7 +667,7 @@ environment?: pulumi.Input<{ ... }>;
 Information about the project's build environment. Environment blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L174">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L196">property name</a>
 </h3>
 
 ```typescript
@@ -609,10 +675,32 @@ name?: pulumi.Input<string>;
 ```
 
 
-The environment variable's name or key.
+The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L178">property serviceRole</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L200">property secondaryArtifacts</a>
+</h3>
+
+```typescript
+secondaryArtifacts?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+A set of secondary artifacts to be used inside the build. Secondary artifacts blocks are documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L204">property secondarySources</a>
+</h3>
+
+```typescript
+secondarySources?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+A set of secondary sources to be used inside the build. Secondary sources blocks are documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L208">property serviceRole</a>
 </h3>
 
 ```typescript
@@ -623,7 +711,7 @@ serviceRole?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L182">property source</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L212">property source</a>
 </h3>
 
 ```typescript
@@ -634,7 +722,7 @@ source?: pulumi.Input<{ ... }>;
 Information about the project's input source code. Source blocks are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L186">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L216">property tags</a>
 </h3>
 
 ```typescript
@@ -645,7 +733,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L190">property vpcConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codebuild/project.ts#L220">property vpcConfig</a>
 </h3>
 
 ```typescript

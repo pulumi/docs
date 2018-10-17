@@ -723,7 +723,7 @@ Specifies the user metadata.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespace.ts#L10">class EventHubNamespace</a>
 </h2>
 
-Create an EventHub Namespace.
+Manage an EventHub Namespace.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHubNamespace.ts#L72">constructor</a>
@@ -1129,7 +1129,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespace.ts#L10">class Namespace</a>
 </h2>
 
-Create a ServiceBus Namespace.
+Manage a ServiceBus Namespace.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/namespace.ts#L66">constructor</a>
@@ -1507,10 +1507,10 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L10">class Queue</a>
 </h2>
 
-Create and manage a ServiceBus Queue.
+Manage and manage a ServiceBus Queue.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L102">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L100">constructor</a>
 </h3>
 
 ```typescript
@@ -1557,7 +1557,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L28">property autoDeleteOnIdle</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L27">property autoDeleteOnIdle</a>
 </h3>
 
 ```typescript
@@ -1565,12 +1565,11 @@ public autoDeleteOnIdle: pulumi.Output<string>;
 ```
 
 
-The idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of the idle interval after which the
+Queue is automatically deleted, minimum of 5 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L32">property deadLetteringOnMessageExpiration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L31">property deadLetteringOnMessageExpiration</a>
 </h3>
 
 ```typescript
@@ -1581,7 +1580,7 @@ public deadLetteringOnMessageExpiration: pulumi.Output<boolean | undefined>;
 Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L38">property defaultMessageTtl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L36">property defaultMessageTtl</a>
 </h3>
 
 ```typescript
@@ -1589,12 +1588,11 @@ public defaultMessageTtl: pulumi.Output<string>;
 ```
 
 
-The TTL of messages sent to this queue. This is the default value
-used when TTL is not set on message itself. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of the TTL of messages sent to this
+queue. This is the default value used when TTL is not set on message itself.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L43">property duplicateDetectionHistoryTimeWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L41">property duplicateDetectionHistoryTimeWindow</a>
 </h3>
 
 ```typescript
@@ -1602,11 +1600,11 @@ public duplicateDetectionHistoryTimeWindow: pulumi.Output<string>;
 ```
 
 
-The duration during which
-duplicates can be detected. Default value is 10 minutes. Provided in the TimeSpan format.
+The ISO 8601 timespan duration during which
+duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L44">property enableBatchedOperations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L42">property enableBatchedOperations</a>
 </h3>
 
 ```typescript
@@ -1614,7 +1612,7 @@ public enableBatchedOperations: pulumi.Output<boolean | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L51">property enableExpress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L49">property enableExpress</a>
 </h3>
 
 ```typescript
@@ -1628,7 +1626,7 @@ it to persistent storage. Defaults to `false` for Basic and Standard. For Premiu
 be set to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L58">property enablePartitioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L56">property enablePartitioning</a>
 </h3>
 
 ```typescript
@@ -1654,7 +1652,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L63">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L61">property location</a>
 </h3>
 
 ```typescript
@@ -1666,7 +1664,7 @@ Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L67">property lockDuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L65">property lockDuration</a>
 </h3>
 
 ```typescript
@@ -1677,7 +1675,7 @@ public lockDuration: pulumi.Output<string>;
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L73">property maxSizeInMegabytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L71">property maxSizeInMegabytes</a>
 </h3>
 
 ```typescript
@@ -1690,7 +1688,7 @@ memory allocated for the queue. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L78">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -1702,7 +1700,7 @@ Specifies the name of the ServiceBus Queue resource. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L83">property namespaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L81">property namespaceName</a>
 </h3>
 
 ```typescript
@@ -1714,7 +1712,7 @@ The name of the ServiceBus Namespace to create
 this queue in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L89">property requiresDuplicateDetection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L87">property requiresDuplicateDetection</a>
 </h3>
 
 ```typescript
@@ -1727,7 +1725,7 @@ the Queue requires duplicate detection. Changing this forces
 a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L96">property requiresSession</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L94">property requiresSession</a>
 </h3>
 
 ```typescript
@@ -1741,7 +1739,7 @@ a queue can guarantee first-in-first-out delivery of messages.
 Changing this forces a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L101">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L99">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1753,7 +1751,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L102">property supportOrdering</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L100">property supportOrdering</a>
 </h3>
 
 ```typescript
@@ -1974,7 +1972,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/subscription.ts#L10">class Subscription</a>
 </h2>
 
-Create a ServiceBus Subscription.
+Manage a ServiceBus Subscription.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/subscription.ts#L91">constructor</a>
@@ -2218,7 +2216,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/subscriptionRule.ts#L10">class SubscriptionRule</a>
 </h2>
 
-Create a ServiceBus Subscription Rule.
+Manage a ServiceBus Subscription Rule.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/subscriptionRule.ts#L58">constructor</a>
@@ -2394,12 +2392,12 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L12">class Topic</a>
 </h2>
 
-Create a ServiceBus Topic.
+Manage a ServiceBus Topic.
 
 **Note** Topics can only be created in Namespaces with an SKU of `standard` or higher.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L100">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L98">constructor</a>
 </h3>
 
 ```typescript
@@ -2446,7 +2444,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L30">property autoDeleteOnIdle</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L29">property autoDeleteOnIdle</a>
 </h3>
 
 ```typescript
@@ -2454,12 +2452,11 @@ public autoDeleteOnIdle: pulumi.Output<string>;
 ```
 
 
-The idle interval after which the
-Topic is automatically deleted, minimum of 5 minutes. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of the idle interval after which the
+Topic is automatically deleted, minimum of 5 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L36">property defaultMessageTtl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L34">property defaultMessageTtl</a>
 </h3>
 
 ```typescript
@@ -2467,12 +2464,11 @@ public defaultMessageTtl: pulumi.Output<string>;
 ```
 
 
-The TTL of messages sent to this topic if no
-TTL value is set on the message itself. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of TTL of messages sent to this topic if no
+TTL value is set on the message itself.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L41">property duplicateDetectionHistoryTimeWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L39">property duplicateDetectionHistoryTimeWindow</a>
 </h3>
 
 ```typescript
@@ -2480,11 +2476,11 @@ public duplicateDetectionHistoryTimeWindow: pulumi.Output<string>;
 ```
 
 
-The duration during which
-duplicates can be detected. Provided in the TimeSpan format. Defaults to 10 minutes (`00:10:00`)
+The ISO 8601 timespan duration during which
+duplicates can be detected. Defaults to 10 minutes. (`PT10M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L46">property enableBatchedOperations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L44">property enableBatchedOperations</a>
 </h3>
 
 ```typescript
@@ -2496,7 +2492,7 @@ Boolean flag which controls if server-side
 batched operations are enabled. Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L52">property enableExpress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L50">property enableExpress</a>
 </h3>
 
 ```typescript
@@ -2509,7 +2505,7 @@ are enabled. An express topic holds a message in memory temporarily before writi
 it to persistent storage. Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L53">property enableFilteringMessagesBeforePublishing</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L51">property enableFilteringMessagesBeforePublishing</a>
 </h3>
 
 ```typescript
@@ -2517,7 +2513,7 @@ public enableFilteringMessagesBeforePublishing: pulumi.Output<boolean | undefine
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L59">property enablePartitioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L57">property enablePartitioning</a>
 </h3>
 
 ```typescript
@@ -2542,7 +2538,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L64">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L62">property location</a>
 </h3>
 
 ```typescript
@@ -2554,7 +2550,7 @@ Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L70">property maxSizeInMegabytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L68">property maxSizeInMegabytes</a>
 </h3>
 
 ```typescript
@@ -2567,7 +2563,7 @@ memory allocated for the topic. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L75">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L73">property name</a>
 </h3>
 
 ```typescript
@@ -2579,7 +2575,7 @@ Specifies the name of the ServiceBus Topic resource. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L80">property namespaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L78">property namespaceName</a>
 </h3>
 
 ```typescript
@@ -2591,7 +2587,7 @@ The name of the ServiceBus Namespace to create
 this topic in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L86">property requiresDuplicateDetection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L84">property requiresDuplicateDetection</a>
 </h3>
 
 ```typescript
@@ -2604,7 +2600,7 @@ the Topic requires duplicate detection. Defaults to false. Changing this forces
 a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L91">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L89">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2616,7 +2612,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L95">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L93">property status</a>
 </h3>
 
 ```typescript
@@ -2627,7 +2623,7 @@ public status: pulumi.Output<string | undefined>;
 The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled`. Defaults to `Active`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L100">property supportOrdering</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L98">property supportOrdering</a>
 </h3>
 
 ```typescript
@@ -4505,13 +4501,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="QueueArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L250">interface QueueArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L246">interface QueueArgs</a>
 </h2>
 
 The set of arguments for constructing a Queue resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L256">property autoDeleteOnIdle</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L251">property autoDeleteOnIdle</a>
 </h3>
 
 ```typescript
@@ -4519,12 +4515,11 @@ autoDeleteOnIdle?: pulumi.Input<string>;
 ```
 
 
-The idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of the idle interval after which the
+Queue is automatically deleted, minimum of 5 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L260">property deadLetteringOnMessageExpiration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L255">property deadLetteringOnMessageExpiration</a>
 </h3>
 
 ```typescript
@@ -4535,7 +4530,7 @@ deadLetteringOnMessageExpiration?: pulumi.Input<boolean>;
 Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L266">property defaultMessageTtl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L260">property defaultMessageTtl</a>
 </h3>
 
 ```typescript
@@ -4543,12 +4538,11 @@ defaultMessageTtl?: pulumi.Input<string>;
 ```
 
 
-The TTL of messages sent to this queue. This is the default value
-used when TTL is not set on message itself. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of the TTL of messages sent to this
+queue. This is the default value used when TTL is not set on message itself.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L271">property duplicateDetectionHistoryTimeWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L265">property duplicateDetectionHistoryTimeWindow</a>
 </h3>
 
 ```typescript
@@ -4556,11 +4550,11 @@ duplicateDetectionHistoryTimeWindow?: pulumi.Input<string>;
 ```
 
 
-The duration during which
-duplicates can be detected. Default value is 10 minutes. Provided in the TimeSpan format.
+The ISO 8601 timespan duration during which
+duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L272">property enableBatchedOperations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L266">property enableBatchedOperations</a>
 </h3>
 
 ```typescript
@@ -4568,7 +4562,7 @@ enableBatchedOperations?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L279">property enableExpress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L273">property enableExpress</a>
 </h3>
 
 ```typescript
@@ -4582,7 +4576,7 @@ it to persistent storage. Defaults to `false` for Basic and Standard. For Premiu
 be set to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L286">property enablePartitioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L280">property enablePartitioning</a>
 </h3>
 
 ```typescript
@@ -4596,7 +4590,7 @@ a new resource to be created. Defaults to `false` for Basic and Standard. For Pr
 be set to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L291">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L285">property location</a>
 </h3>
 
 ```typescript
@@ -4608,7 +4602,7 @@ Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L295">property lockDuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L289">property lockDuration</a>
 </h3>
 
 ```typescript
@@ -4619,7 +4613,7 @@ lockDuration?: pulumi.Input<string>;
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L301">property maxSizeInMegabytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L295">property maxSizeInMegabytes</a>
 </h3>
 
 ```typescript
@@ -4632,7 +4626,7 @@ memory allocated for the queue. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L306">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L300">property name</a>
 </h3>
 
 ```typescript
@@ -4644,7 +4638,7 @@ Specifies the name of the ServiceBus Queue resource. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L311">property namespaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L305">property namespaceName</a>
 </h3>
 
 ```typescript
@@ -4656,7 +4650,7 @@ The name of the ServiceBus Namespace to create
 this queue in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L317">property requiresDuplicateDetection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L311">property requiresDuplicateDetection</a>
 </h3>
 
 ```typescript
@@ -4669,7 +4663,7 @@ the Queue requires duplicate detection. Changing this forces
 a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L324">property requiresSession</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L318">property requiresSession</a>
 </h3>
 
 ```typescript
@@ -4683,7 +4677,7 @@ a queue can guarantee first-in-first-out delivery of messages.
 Changing this forces a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L329">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L323">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -4695,7 +4689,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L330">property supportOrdering</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L324">property supportOrdering</a>
 </h3>
 
 ```typescript
@@ -4913,13 +4907,13 @@ send?: pulumi.Input<boolean>;
 Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
 
 <h2 class="pdoc-module-header" id="QueueState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L164">interface QueueState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L162">interface QueueState</a>
 </h2>
 
 Input properties used for looking up and filtering Queue resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L170">property autoDeleteOnIdle</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L167">property autoDeleteOnIdle</a>
 </h3>
 
 ```typescript
@@ -4927,12 +4921,11 @@ autoDeleteOnIdle?: pulumi.Input<string>;
 ```
 
 
-The idle interval after which the
-Queue is automatically deleted, minimum of 5 minutes. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of the idle interval after which the
+Queue is automatically deleted, minimum of 5 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L174">property deadLetteringOnMessageExpiration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L171">property deadLetteringOnMessageExpiration</a>
 </h3>
 
 ```typescript
@@ -4943,7 +4936,7 @@ deadLetteringOnMessageExpiration?: pulumi.Input<boolean>;
 Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L180">property defaultMessageTtl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L176">property defaultMessageTtl</a>
 </h3>
 
 ```typescript
@@ -4951,12 +4944,11 @@ defaultMessageTtl?: pulumi.Input<string>;
 ```
 
 
-The TTL of messages sent to this queue. This is the default value
-used when TTL is not set on message itself. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of the TTL of messages sent to this
+queue. This is the default value used when TTL is not set on message itself.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L185">property duplicateDetectionHistoryTimeWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L181">property duplicateDetectionHistoryTimeWindow</a>
 </h3>
 
 ```typescript
@@ -4964,11 +4956,11 @@ duplicateDetectionHistoryTimeWindow?: pulumi.Input<string>;
 ```
 
 
-The duration during which
-duplicates can be detected. Default value is 10 minutes. Provided in the TimeSpan format.
+The ISO 8601 timespan duration during which
+duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L186">property enableBatchedOperations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L182">property enableBatchedOperations</a>
 </h3>
 
 ```typescript
@@ -4976,7 +4968,7 @@ enableBatchedOperations?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L193">property enableExpress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L189">property enableExpress</a>
 </h3>
 
 ```typescript
@@ -4990,7 +4982,7 @@ it to persistent storage. Defaults to `false` for Basic and Standard. For Premiu
 be set to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L200">property enablePartitioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L196">property enablePartitioning</a>
 </h3>
 
 ```typescript
@@ -5004,7 +4996,7 @@ a new resource to be created. Defaults to `false` for Basic and Standard. For Pr
 be set to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L205">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L201">property location</a>
 </h3>
 
 ```typescript
@@ -5016,7 +5008,7 @@ Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L209">property lockDuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L205">property lockDuration</a>
 </h3>
 
 ```typescript
@@ -5027,7 +5019,7 @@ lockDuration?: pulumi.Input<string>;
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L215">property maxSizeInMegabytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L211">property maxSizeInMegabytes</a>
 </h3>
 
 ```typescript
@@ -5040,7 +5032,7 @@ memory allocated for the queue. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L220">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L216">property name</a>
 </h3>
 
 ```typescript
@@ -5052,7 +5044,7 @@ Specifies the name of the ServiceBus Queue resource. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L225">property namespaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L221">property namespaceName</a>
 </h3>
 
 ```typescript
@@ -5064,7 +5056,7 @@ The name of the ServiceBus Namespace to create
 this queue in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L231">property requiresDuplicateDetection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L227">property requiresDuplicateDetection</a>
 </h3>
 
 ```typescript
@@ -5077,7 +5069,7 @@ the Queue requires duplicate detection. Changing this forces
 a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L238">property requiresSession</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L234">property requiresSession</a>
 </h3>
 
 ```typescript
@@ -5091,7 +5083,7 @@ a queue can guarantee first-in-first-out delivery of messages.
 Changing this forces a new resource to be created. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L243">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L239">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -5103,7 +5095,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L244">property supportOrdering</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/queue.ts#L240">property supportOrdering</a>
 </h3>
 
 ```typescript
@@ -5667,13 +5659,13 @@ The name of the ServiceBus Topic to create
 this Subscription in. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="TopicArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L242">interface TopicArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L238">interface TopicArgs</a>
 </h2>
 
 The set of arguments for constructing a Topic resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L248">property autoDeleteOnIdle</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L243">property autoDeleteOnIdle</a>
 </h3>
 
 ```typescript
@@ -5681,12 +5673,11 @@ autoDeleteOnIdle?: pulumi.Input<string>;
 ```
 
 
-The idle interval after which the
-Topic is automatically deleted, minimum of 5 minutes. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of the idle interval after which the
+Topic is automatically deleted, minimum of 5 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L254">property defaultMessageTtl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L248">property defaultMessageTtl</a>
 </h3>
 
 ```typescript
@@ -5694,12 +5685,11 @@ defaultMessageTtl?: pulumi.Input<string>;
 ```
 
 
-The TTL of messages sent to this topic if no
-TTL value is set on the message itself. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of TTL of messages sent to this topic if no
+TTL value is set on the message itself.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L259">property duplicateDetectionHistoryTimeWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L253">property duplicateDetectionHistoryTimeWindow</a>
 </h3>
 
 ```typescript
@@ -5707,11 +5697,11 @@ duplicateDetectionHistoryTimeWindow?: pulumi.Input<string>;
 ```
 
 
-The duration during which
-duplicates can be detected. Provided in the TimeSpan format. Defaults to 10 minutes (`00:10:00`)
+The ISO 8601 timespan duration during which
+duplicates can be detected. Defaults to 10 minutes. (`PT10M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L264">property enableBatchedOperations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L258">property enableBatchedOperations</a>
 </h3>
 
 ```typescript
@@ -5723,7 +5713,7 @@ Boolean flag which controls if server-side
 batched operations are enabled. Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L270">property enableExpress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L264">property enableExpress</a>
 </h3>
 
 ```typescript
@@ -5736,7 +5726,7 @@ are enabled. An express topic holds a message in memory temporarily before writi
 it to persistent storage. Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L271">property enableFilteringMessagesBeforePublishing</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L265">property enableFilteringMessagesBeforePublishing</a>
 </h3>
 
 ```typescript
@@ -5744,7 +5734,7 @@ enableFilteringMessagesBeforePublishing?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L277">property enablePartitioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L271">property enablePartitioning</a>
 </h3>
 
 ```typescript
@@ -5757,7 +5747,7 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L282">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L276">property location</a>
 </h3>
 
 ```typescript
@@ -5769,7 +5759,7 @@ Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L288">property maxSizeInMegabytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L282">property maxSizeInMegabytes</a>
 </h3>
 
 ```typescript
@@ -5782,7 +5772,7 @@ memory allocated for the topic. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L293">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L287">property name</a>
 </h3>
 
 ```typescript
@@ -5794,7 +5784,7 @@ Specifies the name of the ServiceBus Topic resource. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L298">property namespaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L292">property namespaceName</a>
 </h3>
 
 ```typescript
@@ -5806,7 +5796,7 @@ The name of the ServiceBus Namespace to create
 this topic in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L304">property requiresDuplicateDetection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L298">property requiresDuplicateDetection</a>
 </h3>
 
 ```typescript
@@ -5819,7 +5809,7 @@ the Topic requires duplicate detection. Defaults to false. Changing this forces
 a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L309">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L303">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -5831,7 +5821,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L313">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L307">property status</a>
 </h3>
 
 ```typescript
@@ -5842,7 +5832,7 @@ status?: pulumi.Input<string>;
 The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled`. Defaults to `Active`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L318">property supportOrdering</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L312">property supportOrdering</a>
 </h3>
 
 ```typescript
@@ -6064,13 +6054,13 @@ topicName?: pulumi.Input<string>;
 Specifies the name of the ServiceBus Topic. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="TopicState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L160">interface TopicState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L158">interface TopicState</a>
 </h2>
 
 Input properties used for looking up and filtering Topic resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L166">property autoDeleteOnIdle</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L163">property autoDeleteOnIdle</a>
 </h3>
 
 ```typescript
@@ -6078,12 +6068,11 @@ autoDeleteOnIdle?: pulumi.Input<string>;
 ```
 
 
-The idle interval after which the
-Topic is automatically deleted, minimum of 5 minutes. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of the idle interval after which the
+Topic is automatically deleted, minimum of 5 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L172">property defaultMessageTtl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L168">property defaultMessageTtl</a>
 </h3>
 
 ```typescript
@@ -6091,12 +6080,11 @@ defaultMessageTtl?: pulumi.Input<string>;
 ```
 
 
-The TTL of messages sent to this topic if no
-TTL value is set on the message itself. Provided in the TimeSpan
-format.
+The ISO 8601 timespan duration of TTL of messages sent to this topic if no
+TTL value is set on the message itself.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L177">property duplicateDetectionHistoryTimeWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L173">property duplicateDetectionHistoryTimeWindow</a>
 </h3>
 
 ```typescript
@@ -6104,11 +6092,11 @@ duplicateDetectionHistoryTimeWindow?: pulumi.Input<string>;
 ```
 
 
-The duration during which
-duplicates can be detected. Provided in the TimeSpan format. Defaults to 10 minutes (`00:10:00`)
+The ISO 8601 timespan duration during which
+duplicates can be detected. Defaults to 10 minutes. (`PT10M`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L182">property enableBatchedOperations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L178">property enableBatchedOperations</a>
 </h3>
 
 ```typescript
@@ -6120,7 +6108,7 @@ Boolean flag which controls if server-side
 batched operations are enabled. Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L188">property enableExpress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L184">property enableExpress</a>
 </h3>
 
 ```typescript
@@ -6133,7 +6121,7 @@ are enabled. An express topic holds a message in memory temporarily before writi
 it to persistent storage. Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L189">property enableFilteringMessagesBeforePublishing</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L185">property enableFilteringMessagesBeforePublishing</a>
 </h3>
 
 ```typescript
@@ -6141,7 +6129,7 @@ enableFilteringMessagesBeforePublishing?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L195">property enablePartitioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L191">property enablePartitioning</a>
 </h3>
 
 ```typescript
@@ -6154,7 +6142,7 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L200">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L196">property location</a>
 </h3>
 
 ```typescript
@@ -6166,7 +6154,7 @@ Specifies the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L206">property maxSizeInMegabytes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L202">property maxSizeInMegabytes</a>
 </h3>
 
 ```typescript
@@ -6179,7 +6167,7 @@ memory allocated for the topic. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L211">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L207">property name</a>
 </h3>
 
 ```typescript
@@ -6191,7 +6179,7 @@ Specifies the name of the ServiceBus Topic resource. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L216">property namespaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L212">property namespaceName</a>
 </h3>
 
 ```typescript
@@ -6203,7 +6191,7 @@ The name of the ServiceBus Namespace to create
 this topic in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L222">property requiresDuplicateDetection</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L218">property requiresDuplicateDetection</a>
 </h3>
 
 ```typescript
@@ -6216,7 +6204,7 @@ the Topic requires duplicate detection. Defaults to false. Changing this forces
 a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L227">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L223">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -6228,7 +6216,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L231">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L227">property status</a>
 </h3>
 
 ```typescript
@@ -6239,7 +6227,7 @@ status?: pulumi.Input<string>;
 The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled`. Defaults to `Active`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L236">property supportOrdering</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/topic.ts#L232">property supportOrdering</a>
 </h3>
 
 ```typescript

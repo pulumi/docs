@@ -23,7 +23,7 @@ and
 [API](https://godoc.org/google.golang.org/api/cloudbuild/v1#BuildTrigger).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L58">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L59">constructor</a>
 </h3>
 
 ```typescript
@@ -138,7 +138,15 @@ public project: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L58">property triggerTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L54">property substitutions</a>
+</h3>
+
+```typescript
+public substitutions: pulumi.Output<{ ... } | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L59">property triggerTemplate</a>
 </h3>
 
 ```typescript
@@ -162,13 +170,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TriggerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L131">interface TriggerArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L135">interface TriggerArgs</a>
 </h2>
 
 The set of arguments for constructing a Trigger resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L148">property build</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L152">property build</a>
 </h3>
 
 ```typescript
@@ -192,7 +200,7 @@ or resolved from the specified branch or tag.
 * `$SHORT_SHA`: first 7 characters of `$REVISION_ID` or `$COMMIT_SHA`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L152">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L156">property description</a>
 </h3>
 
 ```typescript
@@ -203,7 +211,7 @@ description?: pulumi.Input<string>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L158">property filename</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L162">property filename</a>
 </h3>
 
 ```typescript
@@ -216,7 +224,7 @@ in the Git repo. This is mutually exclusive with `build`. This is typically
 `cloudbuild.yaml` however it can be specified by the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L159">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L163">property project</a>
 </h3>
 
 ```typescript
@@ -224,7 +232,15 @@ project?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L164">property triggerTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L164">property substitutions</a>
+</h3>
+
+```typescript
+substitutions?: pulumi.Input<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L169">property triggerTemplate</a>
 </h3>
 
 ```typescript
@@ -236,13 +252,13 @@ Location of the source in a Google
 Cloud Source Repository. Structure is documented below.
 
 <h2 class="pdoc-module-header" id="TriggerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L92">interface TriggerState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L95">interface TriggerState</a>
 </h2>
 
 Input properties used for looking up and filtering Trigger resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L109">property build</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L112">property build</a>
 </h3>
 
 ```typescript
@@ -266,7 +282,7 @@ or resolved from the specified branch or tag.
 * `$SHORT_SHA`: first 7 characters of `$REVISION_ID` or `$COMMIT_SHA`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L113">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L116">property description</a>
 </h3>
 
 ```typescript
@@ -277,7 +293,7 @@ description?: pulumi.Input<string>;
 A brief description of this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L119">property filename</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L122">property filename</a>
 </h3>
 
 ```typescript
@@ -290,7 +306,7 @@ in the Git repo. This is mutually exclusive with `build`. This is typically
 `cloudbuild.yaml` however it can be specified by the user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L120">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L123">property project</a>
 </h3>
 
 ```typescript
@@ -298,7 +314,15 @@ project?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L125">property triggerTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L124">property substitutions</a>
+</h3>
+
+```typescript
+substitutions?: pulumi.Input<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L129">property triggerTemplate</a>
 </h3>
 
 ```typescript

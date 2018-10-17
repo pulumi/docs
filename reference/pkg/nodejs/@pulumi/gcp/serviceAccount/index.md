@@ -813,7 +813,7 @@ the official [API](https://cloud.google.com/compute/docs/access/service-accounts
 </h2>
 
 ```typescript
-getAccountKey(args: GetAccountKeyArgs, opts?: pulumi.InvokeOptions): Promise<GetAccountKeyResult>
+getAccountKey(args?: GetAccountKeyArgs, opts?: pulumi.InvokeOptions): Promise<GetAccountKeyResult>
 ```
 
 
@@ -994,13 +994,26 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h2 class="pdoc-module-header" id="GetAccountKeyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L22">interface GetAccountKeyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L24">interface GetAccountKeyArgs</a>
 </h2>
 
 A collection of arguments for invoking getAccountKey.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L27">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L30">property name</a>
+</h3>
+
+```typescript
+name?: string;
+```
+
+
+The name of the service account key. This must have format
+`projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{KEYID}`, where `{ACCOUNT}`
+is the email address or unique id of the service account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L35">property project</a>
 </h3>
 
 ```typescript
@@ -1012,7 +1025,7 @@ The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L31">property publicKeyType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L39">property publicKeyType</a>
 </h3>
 
 ```typescript
@@ -1023,20 +1036,15 @@ publicKeyType?: string;
 The output format of the public key requested. X509_PEM is the default output format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L37">property serviceAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L40">property serviceAccountId</a>
 </h3>
 
 ```typescript
-serviceAccountId: string;
+serviceAccountId?: string;
 ```
 
-
-The Service account id of the Key Pair. This can be a string in the format
-`{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
-unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
-
 <h2 class="pdoc-module-header" id="GetAccountKeyResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L43">interface GetAccountKeyResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L46">interface GetAccountKeyResult</a>
 </h2>
 
 A collection of values returned by getAccountKey.
@@ -1053,7 +1061,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L44">property keyAlgorithm</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L47">property keyAlgorithm</a>
 </h3>
 
 ```typescript
@@ -1067,9 +1075,6 @@ keyAlgorithm: string;
 ```typescript
 name: string;
 ```
-
-
-The name used for this key pair
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/serviceAccount/getAccountKey.ts#L52">property publicKey</a>

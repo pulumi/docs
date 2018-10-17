@@ -19,6 +19,7 @@ import * as docker from "@pulumi/docker";
 
 * <a href="#buildAndPushImage">function buildAndPushImage</a>
 * <a href="#buildAndPushImageAsync">function buildAndPushImageAsync</a>
+* <a href="#getDigest">function getDigest</a>
 * <a href="#CacheFrom">interface CacheFrom</a>
 * <a href="#DockerBuild">interface DockerBuild</a>
 * <a href="#Registry">interface Registry</a>
@@ -39,7 +40,15 @@ buildAndPushImage(imageName: string, pathOrBuild: string | DockerBuild, reposito
 </h2>
 
 ```typescript
-buildAndPushImageAsync(imageName: string, pathOrBuild: string | DockerBuild, repositoryUrl: string, logResource: pulumi.Resource, connectToRegistry: { ... }): Promise<string>
+buildAndPushImageAsync(imageName: string, pathOrBuild: string | DockerBuild, repositoryUrl: string, logResource: pulumi.Resource, connectToRegistry?: undefined | { ... }): Promise<string>
+```
+
+<h2 class="pdoc-module-header" id="getDigest">
+<a class="pdoc-member-name" href="/docker.ts#L368">function getDigest</a>
+</h2>
+
+```typescript
+getDigest(targetImage: string, logResource: pulumi.Resource): Promise<string | undefined>
 ```
 
 <h2 class="pdoc-module-header" id="CacheFrom">

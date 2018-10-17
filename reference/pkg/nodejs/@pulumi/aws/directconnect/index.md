@@ -6,6 +6,7 @@ title: Module directconnect
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#BgpPeer">class BgpPeer</a>
 * <a href="#Connection">class Connection</a>
 * <a href="#ConnectionAssociation">class ConnectionAssociation</a>
 * <a href="#Gateway">class Gateway</a>
@@ -18,6 +19,8 @@ title: Module directconnect
 * <a href="#PrivateVirtualInterface">class PrivateVirtualInterface</a>
 * <a href="#PublicVirtualInterface">class PublicVirtualInterface</a>
 * <a href="#getGateway">function getGateway</a>
+* <a href="#BgpPeerArgs">interface BgpPeerArgs</a>
+* <a href="#BgpPeerState">interface BgpPeerState</a>
 * <a href="#ConnectionArgs">interface ConnectionArgs</a>
 * <a href="#ConnectionAssociationArgs">interface ConnectionAssociationArgs</a>
 * <a href="#ConnectionAssociationState">interface ConnectionAssociationState</a>
@@ -43,8 +46,164 @@ title: Module directconnect
 * <a href="#PublicVirtualInterfaceArgs">interface PublicVirtualInterfaceArgs</a>
 * <a href="#PublicVirtualInterfaceState">interface PublicVirtualInterfaceState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts">directconnect/connection.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connectionAssociation.ts">directconnect/connectionAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/gateway.ts">directconnect/gateway.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/gatewayAssociation.ts">directconnect/gatewayAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/getGateway.ts">directconnect/getGateway.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts">directconnect/hostedPrivateVirtualInterface.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts">directconnect/hostedPrivateVirtualInterfaceAccepter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterface.ts">directconnect/hostedPublicVirtualInterface.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts">directconnect/hostedPublicVirtualInterfaceAccepter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts">directconnect/linkAggregationGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts">directconnect/privateVirtualInterface.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/publicVirtualInterface.ts">directconnect/publicVirtualInterface.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts">directconnect/bgpPeer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts">directconnect/connection.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connectionAssociation.ts">directconnect/connectionAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/gateway.ts">directconnect/gateway.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/gatewayAssociation.ts">directconnect/gatewayAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/getGateway.ts">directconnect/getGateway.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts">directconnect/hostedPrivateVirtualInterface.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterfaceAccepter.ts">directconnect/hostedPrivateVirtualInterfaceAccepter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterface.ts">directconnect/hostedPublicVirtualInterface.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPublicVirtualInterfaceAccepter.ts">directconnect/hostedPublicVirtualInterfaceAccepter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/linkAggregationGroup.ts">directconnect/linkAggregationGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts">directconnect/privateVirtualInterface.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/publicVirtualInterface.ts">directconnect/publicVirtualInterface.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="BgpPeer">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L10">class BgpPeer</a>
+</h2>
+
+Provides a Direct Connect BGP peer resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L52">constructor</a>
+</h3>
+
+```typescript
+new BgpPeer(name: string, args: BgpPeerArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a BgpPeer resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L19">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BgpPeerState): BgpPeer
+```
+
+
+Get an existing BgpPeer resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L26">property addressFamily</a>
+</h3>
+
+```typescript
+public addressFamily: pulumi.Output<string>;
+```
+
+
+The address family for the BGP peer. `ipv4 ` or `ipv6`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L31">property amazonAddress</a>
+</h3>
+
+```typescript
+public amazonAddress: pulumi.Output<string>;
+```
+
+
+The IPv4 CIDR address to use to send traffic to Amazon.
+Required for IPv4 BGP peers on public virtual interfaces.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L35">property bgpAsn</a>
+</h3>
+
+```typescript
+public bgpAsn: pulumi.Output<number>;
+```
+
+
+The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L39">property bgpAuthKey</a>
+</h3>
+
+```typescript
+public bgpAuthKey: pulumi.Output<string>;
+```
+
+
+The authentication key for BGP configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L43">property bgpStatus</a>
+</h3>
+
+```typescript
+public bgpStatus: pulumi.Output<string>;
+```
+
+
+The Up/Down state of the BGP peer.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L48">property customerAddress</a>
+</h3>
+
+```typescript
+public customerAddress: pulumi.Output<string>;
+```
+
+
+The IPv4 CIDR destination address to which Amazon should send traffic.
+Required for IPv4 BGP peers on public virtual interfaces.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L52">property virtualInterfaceId</a>
+</h3>
+
+```typescript
+public virtualInterfaceId: pulumi.Output<string>;
+```
+
+
+The ID of the Direct Connect virtual interface on which to create the BGP peer.
 
 <h2 class="pdoc-module-header" id="Connection">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L12">class Connection</a>
@@ -1677,6 +1836,165 @@ getGateway(args: GetGatewayArgs, opts?: pulumi.InvokeOptions): Promise<GetGatewa
 
 
 Retrieve information about a Direct Connect Gateway.
+
+<h2 class="pdoc-module-header" id="BgpPeerArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L135">interface BgpPeerArgs</a>
+</h2>
+
+The set of arguments for constructing a BgpPeer resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L139">property addressFamily</a>
+</h3>
+
+```typescript
+addressFamily: pulumi.Input<string>;
+```
+
+
+The address family for the BGP peer. `ipv4 ` or `ipv6`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L144">property amazonAddress</a>
+</h3>
+
+```typescript
+amazonAddress?: pulumi.Input<string>;
+```
+
+
+The IPv4 CIDR address to use to send traffic to Amazon.
+Required for IPv4 BGP peers on public virtual interfaces.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L148">property bgpAsn</a>
+</h3>
+
+```typescript
+bgpAsn: pulumi.Input<number>;
+```
+
+
+The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L152">property bgpAuthKey</a>
+</h3>
+
+```typescript
+bgpAuthKey?: pulumi.Input<string>;
+```
+
+
+The authentication key for BGP configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L157">property customerAddress</a>
+</h3>
+
+```typescript
+customerAddress?: pulumi.Input<string>;
+```
+
+
+The IPv4 CIDR destination address to which Amazon should send traffic.
+Required for IPv4 BGP peers on public virtual interfaces.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L161">property virtualInterfaceId</a>
+</h3>
+
+```typescript
+virtualInterfaceId: pulumi.Input<string>;
+```
+
+
+The ID of the Direct Connect virtual interface on which to create the BGP peer.
+
+<h2 class="pdoc-module-header" id="BgpPeerState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L99">interface BgpPeerState</a>
+</h2>
+
+Input properties used for looking up and filtering BgpPeer resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L103">property addressFamily</a>
+</h3>
+
+```typescript
+addressFamily?: pulumi.Input<string>;
+```
+
+
+The address family for the BGP peer. `ipv4 ` or `ipv6`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L108">property amazonAddress</a>
+</h3>
+
+```typescript
+amazonAddress?: pulumi.Input<string>;
+```
+
+
+The IPv4 CIDR address to use to send traffic to Amazon.
+Required for IPv4 BGP peers on public virtual interfaces.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L112">property bgpAsn</a>
+</h3>
+
+```typescript
+bgpAsn?: pulumi.Input<number>;
+```
+
+
+The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L116">property bgpAuthKey</a>
+</h3>
+
+```typescript
+bgpAuthKey?: pulumi.Input<string>;
+```
+
+
+The authentication key for BGP configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L120">property bgpStatus</a>
+</h3>
+
+```typescript
+bgpStatus?: pulumi.Input<string>;
+```
+
+
+The Up/Down state of the BGP peer.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L125">property customerAddress</a>
+</h3>
+
+```typescript
+customerAddress?: pulumi.Input<string>;
+```
+
+
+The IPv4 CIDR destination address to which Amazon should send traffic.
+Required for IPv4 BGP peers on public virtual interfaces.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/bgpPeer.ts#L129">property virtualInterfaceId</a>
+</h3>
+
+```typescript
+virtualInterfaceId?: pulumi.Input<string>;
+```
+
+
+The ID of the Direct Connect virtual interface on which to create the BGP peer.
 
 <h2 class="pdoc-module-header" id="ConnectionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L110">interface ConnectionArgs</a>

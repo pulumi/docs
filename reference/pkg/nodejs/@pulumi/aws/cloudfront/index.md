@@ -8,12 +8,15 @@ title: Module cloudfront
 
 * <a href="#Distribution">class Distribution</a>
 * <a href="#OriginAccessIdentity">class OriginAccessIdentity</a>
+* <a href="#PublicKey">class PublicKey</a>
 * <a href="#DistributionArgs">interface DistributionArgs</a>
 * <a href="#DistributionState">interface DistributionState</a>
 * <a href="#OriginAccessIdentityArgs">interface OriginAccessIdentityArgs</a>
 * <a href="#OriginAccessIdentityState">interface OriginAccessIdentityState</a>
+* <a href="#PublicKeyArgs">interface PublicKeyArgs</a>
+* <a href="#PublicKeyState">interface PublicKeyState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/distribution.ts">cloudfront/distribution.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/originAccessIdentity.ts">cloudfront/originAccessIdentity.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/distribution.ts">cloudfront/distribution.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/originAccessIdentity.ts">cloudfront/originAccessIdentity.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts">cloudfront/publicKey.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Distribution">
@@ -572,6 +575,146 @@ public s3CanonicalUserId: pulumi.Output<string>;
 The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="PublicKey">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L7">class PublicKey</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L43">constructor</a>
+</h3>
+
+```typescript
+new PublicKey(name: string, args: PublicKeyArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a PublicKey resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L16">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PublicKeyState): PublicKey
+```
+
+
+Get an existing PublicKey resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L23">property callerReference</a>
+</h3>
+
+```typescript
+public callerReference: pulumi.Output<string>;
+```
+
+
+Internal value used by CloudFront to allow future updates to the public key configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L27">property comment</a>
+</h3>
+
+```typescript
+public comment: pulumi.Output<string | undefined>;
+```
+
+
+An optional comment about the public key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L31">property encodedKey</a>
+</h3>
+
+```typescript
+public encodedKey: pulumi.Output<string>;
+```
+
+
+The encoded public key that you want to add to CloudFront to use with features like field-level encryption.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L35">property etag</a>
+</h3>
+
+```typescript
+public etag: pulumi.Output<string>;
+```
+
+
+The current version of the public key. For example: `E2QWRUHAPOMQZL`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L39">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+The name for the public key. By default generated by Terraform.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L43">property namePrefix</a>
+</h3>
+
+```typescript
+public namePrefix: pulumi.Output<string>;
+```
+
+
+The name for the public key. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1237,4 +1380,126 @@ s3CanonicalUserId?: pulumi.Input<string>;
 The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
+
+<h2 class="pdoc-module-header" id="PublicKeyArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L112">interface PublicKeyArgs</a>
+</h2>
+
+The set of arguments for constructing a PublicKey resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L116">property comment</a>
+</h3>
+
+```typescript
+comment?: pulumi.Input<string>;
+```
+
+
+An optional comment about the public key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L120">property encodedKey</a>
+</h3>
+
+```typescript
+encodedKey: pulumi.Input<string>;
+```
+
+
+The encoded public key that you want to add to CloudFront to use with features like field-level encryption.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L124">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The name for the public key. By default generated by Terraform.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L128">property namePrefix</a>
+</h3>
+
+```typescript
+namePrefix?: pulumi.Input<string>;
+```
+
+
+The name for the public key. Conflicts with `name`.
+
+<h2 class="pdoc-module-header" id="PublicKeyState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L82">interface PublicKeyState</a>
+</h2>
+
+Input properties used for looking up and filtering PublicKey resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L86">property callerReference</a>
+</h3>
+
+```typescript
+callerReference?: pulumi.Input<string>;
+```
+
+
+Internal value used by CloudFront to allow future updates to the public key configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L90">property comment</a>
+</h3>
+
+```typescript
+comment?: pulumi.Input<string>;
+```
+
+
+An optional comment about the public key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L94">property encodedKey</a>
+</h3>
+
+```typescript
+encodedKey?: pulumi.Input<string>;
+```
+
+
+The encoded public key that you want to add to CloudFront to use with features like field-level encryption.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L98">property etag</a>
+</h3>
+
+```typescript
+etag?: pulumi.Input<string>;
+```
+
+
+The current version of the public key. For example: `E2QWRUHAPOMQZL`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L102">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The name for the public key. By default generated by Terraform.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudfront/publicKey.ts#L106">property namePrefix</a>
+</h3>
+
+```typescript
+namePrefix?: pulumi.Input<string>;
+```
+
+
+The name for the public key. Conflicts with `name`.
 

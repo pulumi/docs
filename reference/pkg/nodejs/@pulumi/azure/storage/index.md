@@ -41,7 +41,7 @@ title: Module storage
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L10">class Account</a>
 </h2>
 
-Create an Azure Storage Account.
+Manage an Azure Storage Account.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/account.ts#L148">constructor</a>
@@ -461,7 +461,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L10">class Blob</a>
 </h2>
 
-Create an Azure Storage Blob.
+Manage an Azure Storage Blob.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/blob.ts#L74">constructor</a>
@@ -674,7 +674,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/container.ts#L10">class Container</a>
 </h2>
 
-Create an Azure Storage Container.
+Manage an Azure Storage Container.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/container.ts#L44">constructor</a>
@@ -808,7 +808,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/queue.ts#L10">class Queue</a>
 </h2>
 
-Create an Azure Storage Queue.
+Manage an Azure Storage Queue.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/queue.ts#L36">constructor</a>
@@ -920,7 +920,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/share.ts#L10">class Share</a>
 </h2>
 
-Create an Azure Storage File Share.
+Manage an Azure Storage File Share.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/share.ts#L44">constructor</a>
@@ -1054,7 +1054,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/table.ts#L10">class Table</a>
 </h2>
 
-Create an Azure Storage Table.
+Manage an Azure Storage Table.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/table.ts#L36">constructor</a>

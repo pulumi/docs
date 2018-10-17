@@ -68,7 +68,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 
 ```typescript
-public alternativeLocationId: pulumi.Output<string | undefined>;
+public alternativeLocationId: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">

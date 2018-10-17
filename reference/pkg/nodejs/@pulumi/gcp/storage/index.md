@@ -56,7 +56,7 @@ and
 [API](https://cloud.google.com/storage/docs/json_api/v1/buckets).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L84">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L88">constructor</a>
 </h3>
 
 ```typescript
@@ -114,7 +114,18 @@ public cors: pulumi.Output<{ ... }[] | undefined>;
 The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L39">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L37">property encryption</a>
+</h3>
+
+```typescript
+public encryption: pulumi.Output<{ ... } | undefined>;
+```
+
+
+The bucket's encryption configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L43">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -139,7 +150,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L43">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L47">property labels</a>
 </h3>
 
 ```typescript
@@ -150,7 +161,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 A set of key/value label pairs to assign to the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L47">property lifecycleRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L51">property lifecycleRules</a>
 </h3>
 
 ```typescript
@@ -161,7 +172,7 @@ public lifecycleRules: pulumi.Output<{ ... }[] | undefined>;
 The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L51">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L55">property location</a>
 </h3>
 
 ```typescript
@@ -172,7 +183,7 @@ public location: pulumi.Output<string | undefined>;
 The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L55">property logging</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L59">property logging</a>
 </h3>
 
 ```typescript
@@ -183,7 +194,7 @@ public logging: pulumi.Output<{ ... } | undefined>;
 The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L59">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L63">property name</a>
 </h3>
 
 ```typescript
@@ -194,7 +205,7 @@ public name: pulumi.Output<string>;
 The name of the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L64">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L68">property project</a>
 </h3>
 
 ```typescript
@@ -206,7 +217,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L68">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L72">property selfLink</a>
 </h3>
 
 ```typescript
@@ -217,7 +228,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L72">property storageClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L76">property storageClass</a>
 </h3>
 
 ```typescript
@@ -228,7 +239,7 @@ public storageClass: pulumi.Output<string | undefined>;
 The [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of the new bucket. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L76">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L80">property url</a>
 </h3>
 
 ```typescript
@@ -251,7 +262,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L80">property versioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L84">property versioning</a>
 </h3>
 
 ```typescript
@@ -262,7 +273,7 @@ public versioning: pulumi.Output<{ ... } | undefined>;
 The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L84">property websites</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L88">property websites</a>
 </h3>
 
 ```typescript
@@ -1092,7 +1103,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Notification">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L14">class Notification</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L20">class Notification</a>
 </h2>
 
 Creates a new notification configuration on a specified bucket, establishing a flow of event notifications from GCS to a Cloud Pub/Sub topic.
@@ -1101,8 +1112,14 @@ Creates a new notification configuration on a specified bucket, establishing a f
 and
 [API](https://cloud.google.com/storage/docs/json_api/v1/notifications).
 
+In order to enable notifications, a special Google Cloud Storage service account unique to the project
+must have the IAM permission "projects.topics.publish" for a Cloud Pub/Sub topic in the project. To get the service
+account's email address, use the `google_storage_project_service_account` datasource's `email_address` value, and see below
+for an example of enabling notifications by granting the correct IAM permission. See
+[the notifications documentation](https://cloud.google.com/storage/docs/gsutil/commands/notification) for more details.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L56">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L62">constructor</a>
 </h3>
 
 ```typescript
@@ -1117,7 +1134,7 @@ Create a Notification resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L23">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L29">method get</a>
 </h3>
 
 ```typescript
@@ -1149,7 +1166,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L30">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L36">property bucket</a>
 </h3>
 
 ```typescript
@@ -1160,7 +1177,7 @@ public bucket: pulumi.Output<string>;
 The name of the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L34">property customAttributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L40">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -1171,7 +1188,7 @@ public customAttributes: pulumi.Output<{ ... } | undefined>;
 A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L38">property eventTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L44">property eventTypes</a>
 </h3>
 
 ```typescript
@@ -1194,7 +1211,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L42">property objectNamePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L48">property objectNamePrefix</a>
 </h3>
 
 ```typescript
@@ -1205,7 +1222,7 @@ public objectNamePrefix: pulumi.Output<string | undefined>;
 Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L46">property payloadFormat</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L52">property payloadFormat</a>
 </h3>
 
 ```typescript
@@ -1216,7 +1233,7 @@ public payloadFormat: pulumi.Output<string>;
 The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L50">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L56">property selfLink</a>
 </h3>
 
 ```typescript
@@ -1227,7 +1244,7 @@ public selfLink: pulumi.Output<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L56">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L62">property topic</a>
 </h3>
 
 ```typescript
@@ -1357,7 +1374,7 @@ The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control#predef
 </h3>
 
 ```typescript
-public roleEntities: pulumi.Output<string[] | undefined>;
+public roleEntities: pulumi.Output<string[]>;
 ```
 
 
@@ -1389,7 +1406,7 @@ The Google Cloud storage signed URL data source generates a signed URL for a giv
 For more info about signed URL's is available [here](https://cloud.google.com/storage/docs/access-control/signed-urls).
 
 <h2 class="pdoc-module-header" id="getProjectServiceAccount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L12">function getProjectServiceAccount</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L16">function getProjectServiceAccount</a>
 </h2>
 
 ```typescript
@@ -1397,9 +1414,13 @@ getProjectServiceAccount(args?: GetProjectServiceAccountArgs, opts?: pulumi.Invo
 ```
 
 
-Use this data source to get the email address of the project's Google Cloud Storage service account.
- For more information see
-[API](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount).
+Get the email address of a project's unique Google Cloud Storage service account.
+
+Each Google Cloud project has a unique service account for use with Google Cloud Storage. Only this
+special service account can be used to set up `google_storage_notification` resources.
+
+For more information see
+[the API reference](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount).
 
 <h2 class="pdoc-module-header" id="BucketACLArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketACL.ts#L98">interface BucketACLArgs</a>
@@ -1502,13 +1523,13 @@ roleEntities?: pulumi.Input<pulumi.Input<string>[]>;
 List of role/entity pairs in the form `ROLE:entity`. See [GCS Bucket ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls)  for more details. Must be set if `predefined_acl` is not.
 
 <h2 class="pdoc-module-header" id="BucketArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L195">interface BucketArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L205">interface BucketArgs</a>
 </h2>
 
 The set of arguments for constructing a Bucket resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L199">property cors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L209">property cors</a>
 </h3>
 
 ```typescript
@@ -1519,7 +1540,18 @@ cors?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L205">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L213">property encryption</a>
+</h3>
+
+```typescript
+encryption?: pulumi.Input<{ ... }>;
+```
+
+
+The bucket's encryption configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L219">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -1532,7 +1564,7 @@ boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, Terraform will fail that run.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L209">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L223">property labels</a>
 </h3>
 
 ```typescript
@@ -1543,7 +1575,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L213">property lifecycleRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L227">property lifecycleRules</a>
 </h3>
 
 ```typescript
@@ -1554,7 +1586,7 @@ lifecycleRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L217">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L231">property location</a>
 </h3>
 
 ```typescript
@@ -1565,7 +1597,7 @@ location?: pulumi.Input<string>;
 The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L221">property logging</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L235">property logging</a>
 </h3>
 
 ```typescript
@@ -1576,7 +1608,7 @@ logging?: pulumi.Input<{ ... }>;
 The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L225">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L239">property name</a>
 </h3>
 
 ```typescript
@@ -1587,7 +1619,7 @@ name?: pulumi.Input<string>;
 The name of the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L230">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L244">property project</a>
 </h3>
 
 ```typescript
@@ -1599,7 +1631,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L234">property storageClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L248">property storageClass</a>
 </h3>
 
 ```typescript
@@ -1610,7 +1642,7 @@ storageClass?: pulumi.Input<string>;
 The [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of the new bucket. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L238">property versioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L252">property versioning</a>
 </h3>
 
 ```typescript
@@ -1621,7 +1653,7 @@ versioning?: pulumi.Input<{ ... }>;
 The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L242">property websites</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L256">property websites</a>
 </h3>
 
 ```typescript
@@ -2143,13 +2175,13 @@ Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`. 
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 
 <h2 class="pdoc-module-header" id="BucketState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L134">interface BucketState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L140">interface BucketState</a>
 </h2>
 
 Input properties used for looking up and filtering Bucket resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L138">property cors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L144">property cors</a>
 </h3>
 
 ```typescript
@@ -2160,7 +2192,18 @@ cors?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L144">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L148">property encryption</a>
+</h3>
+
+```typescript
+encryption?: pulumi.Input<{ ... }>;
+```
+
+
+The bucket's encryption configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L154">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -2173,7 +2216,7 @@ boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, Terraform will fail that run.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L148">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L158">property labels</a>
 </h3>
 
 ```typescript
@@ -2184,7 +2227,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L152">property lifecycleRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L162">property lifecycleRules</a>
 </h3>
 
 ```typescript
@@ -2195,7 +2238,7 @@ lifecycleRules?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L156">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L166">property location</a>
 </h3>
 
 ```typescript
@@ -2206,7 +2249,7 @@ location?: pulumi.Input<string>;
 The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L160">property logging</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L170">property logging</a>
 </h3>
 
 ```typescript
@@ -2217,7 +2260,7 @@ logging?: pulumi.Input<{ ... }>;
 The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L164">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L174">property name</a>
 </h3>
 
 ```typescript
@@ -2228,7 +2271,7 @@ name?: pulumi.Input<string>;
 The name of the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L169">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L179">property project</a>
 </h3>
 
 ```typescript
@@ -2240,7 +2283,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L173">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L183">property selfLink</a>
 </h3>
 
 ```typescript
@@ -2251,7 +2294,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L177">property storageClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L187">property storageClass</a>
 </h3>
 
 ```typescript
@@ -2262,7 +2305,7 @@ storageClass?: pulumi.Input<string>;
 The [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of the new bucket. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L181">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L191">property url</a>
 </h3>
 
 ```typescript
@@ -2273,7 +2316,7 @@ url?: pulumi.Input<string>;
 The base URL of the bucket, in the format `gs://<bucket-name>`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L185">property versioning</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L195">property versioning</a>
 </h3>
 
 ```typescript
@@ -2284,7 +2327,7 @@ versioning?: pulumi.Input<{ ... }>;
 The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L189">property websites</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts#L199">property websites</a>
 </h3>
 
 ```typescript
@@ -2295,13 +2338,13 @@ websites?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Configuration if the bucket acts as a website. Structure is documented below.
 
 <h2 class="pdoc-module-header" id="DefaultObjectACLArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L81">interface DefaultObjectACLArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L78">interface DefaultObjectACLArgs</a>
 </h2>
 
 The set of arguments for constructing a DefaultObjectACL resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L85">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L82">property bucket</a>
 </h3>
 
 ```typescript
@@ -2312,24 +2355,24 @@ bucket: pulumi.Input<string>;
 The name of the bucket it applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L89">property roleEntities</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L86">property roleEntities</a>
 </h3>
 
 ```typescript
-roleEntities: pulumi.Input<pulumi.Input<string>[]>;
+roleEntities?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
 List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
 
 <h2 class="pdoc-module-header" id="DefaultObjectACLState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L67">interface DefaultObjectACLState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L64">interface DefaultObjectACLState</a>
 </h2>
 
 Input properties used for looking up and filtering DefaultObjectACL resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L71">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L68">property bucket</a>
 </h3>
 
 ```typescript
@@ -2340,7 +2383,7 @@ bucket?: pulumi.Input<string>;
 The name of the bucket it applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L75">property roleEntities</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts#L72">property roleEntities</a>
 </h3>
 
 ```typescript
@@ -2478,13 +2521,13 @@ signedUrl: string;
 The signed URL that can be used to access the storage object without authentication.
 
 <h2 class="pdoc-module-header" id="GetProjectServiceAccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L22">interface GetProjectServiceAccountArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L27">interface GetProjectServiceAccountArgs</a>
 </h2>
 
 A collection of arguments for invoking getProjectServiceAccount.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L26">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L31">property project</a>
 </h3>
 
 ```typescript
@@ -2492,16 +2535,40 @@ project?: string;
 ```
 
 
-The project in which the resource belongs. If it is not provided, the provider project is used.
+The project the unique service account was created for. If it is not provided, the provider project is used.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L36">property userProject</a>
+</h3>
+
+```typescript
+userProject?: string;
+```
+
+
+The project the lookup originates from. This field is used if you are making the request
+from a different account than the one you are finding the service account for.
 
 <h2 class="pdoc-module-header" id="GetProjectServiceAccountResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L32">interface GetProjectServiceAccountResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L42">interface GetProjectServiceAccountResult</a>
 </h2>
 
 A collection of values returned by getProjectServiceAccount.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L37">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L47">property emailAddress</a>
+</h3>
+
+```typescript
+emailAddress: string;
+```
+
+
+The email address of the service account. This value is often used to refer to the service account
+in order to grant IAM permissions.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L52">property id</a>
 </h3>
 
 ```typescript
@@ -2512,7 +2579,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L33">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts#L48">property project</a>
 </h3>
 
 ```typescript
@@ -2520,13 +2587,13 @@ project: string;
 ```
 
 <h2 class="pdoc-module-header" id="NotificationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L139">interface NotificationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L145">interface NotificationArgs</a>
 </h2>
 
 The set of arguments for constructing a Notification resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L143">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L149">property bucket</a>
 </h3>
 
 ```typescript
@@ -2537,7 +2604,7 @@ bucket: pulumi.Input<string>;
 The name of the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L147">property customAttributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L153">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -2548,7 +2615,7 @@ customAttributes?: pulumi.Input<{ ... }>;
 A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L151">property eventTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L157">property eventTypes</a>
 </h3>
 
 ```typescript
@@ -2559,7 +2626,7 @@ eventTypes?: pulumi.Input<pulumi.Input<string>[]>;
 List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L155">property objectNamePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L161">property objectNamePrefix</a>
 </h3>
 
 ```typescript
@@ -2570,7 +2637,7 @@ objectNamePrefix?: pulumi.Input<string>;
 Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L159">property payloadFormat</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L165">property payloadFormat</a>
 </h3>
 
 ```typescript
@@ -2581,7 +2648,7 @@ payloadFormat: pulumi.Input<string>;
 The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L165">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L171">property topic</a>
 </h3>
 
 ```typescript
@@ -2594,13 +2661,13 @@ topic name, assumed to belong to the default GCP provider project, or the projec
 i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`.
 
 <h2 class="pdoc-module-header" id="NotificationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L103">interface NotificationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L109">interface NotificationState</a>
 </h2>
 
 Input properties used for looking up and filtering Notification resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L107">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L113">property bucket</a>
 </h3>
 
 ```typescript
@@ -2611,7 +2678,7 @@ bucket?: pulumi.Input<string>;
 The name of the bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L111">property customAttributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L117">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -2622,7 +2689,7 @@ customAttributes?: pulumi.Input<{ ... }>;
 A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L115">property eventTypes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L121">property eventTypes</a>
 </h3>
 
 ```typescript
@@ -2633,7 +2700,7 @@ eventTypes?: pulumi.Input<pulumi.Input<string>[]>;
 List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L119">property objectNamePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L125">property objectNamePrefix</a>
 </h3>
 
 ```typescript
@@ -2644,7 +2711,7 @@ objectNamePrefix?: pulumi.Input<string>;
 Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L123">property payloadFormat</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L129">property payloadFormat</a>
 </h3>
 
 ```typescript
@@ -2655,7 +2722,7 @@ payloadFormat?: pulumi.Input<string>;
 The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L127">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L133">property selfLink</a>
 </h3>
 
 ```typescript
@@ -2666,7 +2733,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L133">property topic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts#L139">property topic</a>
 </h3>
 
 ```typescript

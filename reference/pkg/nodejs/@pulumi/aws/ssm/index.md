@@ -172,7 +172,7 @@ public name: pulumi.Output<string>;
 ```
 
 
-The default name of the registerd managed instance.
+The default name of the registered managed instance.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/activation.ts#L50">property registrationCount</a>
@@ -510,7 +510,7 @@ public documentType: pulumi.Output<string>;
 ```
 
 
-The type of the document. Valid document types include: `Command`, `Policy` and `Automation`
+The type of the document. Valid document types include: `Command`, `Policy`, `Automation` and `Session`
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L57">property hash</a>
@@ -1707,7 +1707,7 @@ name?: pulumi.Input<string>;
 ```
 
 
-The default name of the registerd managed instance.
+The default name of the registered managed instance.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/activation.ts#L155">property registrationLimit</a>
@@ -1790,7 +1790,7 @@ name?: pulumi.Input<string>;
 ```
 
 
-The default name of the registerd managed instance.
+The default name of the registered managed instance.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/activation.ts#L125">property registrationCount</a>
@@ -2047,7 +2047,7 @@ documentType: pulumi.Input<string>;
 ```
 
 
-The type of the document. Valid document types include: `Command`, `Policy` and `Automation`
+The type of the document. Valid document types include: `Command`, `Policy`, `Automation` and `Session`
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L254">property name</a>
@@ -2160,7 +2160,7 @@ documentType?: pulumi.Input<string>;
 ```
 
 
-The type of the document. Valid document types include: `Command`, `Policy` and `Automation`
+The type of the document. Valid document types include: `Command`, `Policy`, `Automation` and `Session`
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts#L192">property hash</a>

@@ -36,7 +36,7 @@ import * as aws from "@pulumi/aws";
 * <a href="#getPrefixList">function getPrefixList</a>
 * <a href="#getRegion">function getRegion</a>
 * <a href="#requireWithDefault">function requireWithDefault</a>
-* <a href="#unwrap">function unwrap</a>
+* <a href="#sha1hash">function sha1hash</a>
 * <a href="#GetAmiArgs">interface GetAmiArgs</a>
 * <a href="#GetAmiIdsArgs">interface GetAmiIdsArgs</a>
 * <a href="#GetAmiIdsResult">interface GetAmiIdsResult</a>
@@ -228,7 +228,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="getAmi">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L11">function getAmi</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L13">function getAmi</a>
 </h2>
 
 ```typescript
@@ -239,8 +239,10 @@ getAmi(args?: GetAmiArgs, opts?: pulumi.InvokeOptions): Promise<GetAmiResult>
 Use this data source to get the ID of a registered AMI for use in other
 resources.
 
+~> **NOTE:** The `owners` argument will be **required** in the next major version.
+
 <h2 class="pdoc-module-header" id="getAmiIds">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L10">function getAmiIds</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L12">function getAmiIds</a>
 </h2>
 
 ```typescript
@@ -249,6 +251,8 @@ getAmiIds(args?: GetAmiIdsArgs, opts?: pulumi.InvokeOptions): Promise<GetAmiIdsR
 
 
 Use this data source to get a list of AMI IDs matching the specified criteria.
+
+~> **NOTE:** The `owners` argument will be **required** in the next major version.
 
 <h2 class="pdoc-module-header" id="getArn">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getArn.ts#L10">function getArn</a>
@@ -446,22 +450,22 @@ configuration from its parent module.
 requireWithDefault<T>(req: { ... }, def: T | undefined): T
 ```
 
-<h2 class="pdoc-module-header" id="unwrap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/utilities.ts#L54">function unwrap</a>
+<h2 class="pdoc-module-header" id="sha1hash">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/utils.ts#L25">function sha1hash</a>
 </h2>
 
 ```typescript
-unwrap(val: pulumi.Input<any>): pulumi.Output<any>
+sha1hash(s: string): string
 ```
 
 <h2 class="pdoc-module-header" id="GetAmiArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L26">interface GetAmiArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L28">interface GetAmiArgs</a>
 </h2>
 
 A collection of arguments for invoking getAmi.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L31">property executableUsers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L33">property executableUsers</a>
 </h3>
 
 ```typescript
@@ -473,7 +477,7 @@ Limit search to users with *explicit* launch permission on
 the image. Valid items are the numeric account ID or `self`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L37">property filters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L39">property filters</a>
 </h3>
 
 ```typescript
@@ -486,7 +490,7 @@ several valid keys, for a full reference, check out
 [describe-images in the AWS CLI reference][1].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L42">property mostRecent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L44">property mostRecent</a>
 </h3>
 
 ```typescript
@@ -498,7 +502,7 @@ If more than one result is returned, use the most
 recent AMI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L50">property nameRegex</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L52">property nameRegex</a>
 </h3>
 
 ```typescript
@@ -513,7 +517,7 @@ impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L55">property owners</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L57">property owners</a>
 </h3>
 
 ```typescript
@@ -525,7 +529,7 @@ Limit search to specific AMI owners. Valid items are the numeric
 account ID, `amazon`, or `self`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L56">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L58">property tags</a>
 </h3>
 
 ```typescript
@@ -533,13 +537,13 @@ tags?: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="GetAmiIdsArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L23">interface GetAmiIdsArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L26">interface GetAmiIdsArgs</a>
 </h2>
 
 A collection of arguments for invoking getAmiIds.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L28">property executableUsers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L31">property executableUsers</a>
 </h3>
 
 ```typescript
@@ -551,7 +555,7 @@ Limit search to users with *explicit* launch
 permission on  the image. Valid items are the numeric account ID or `self`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L34">property filters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L37">property filters</a>
 </h3>
 
 ```typescript
@@ -564,7 +568,7 @@ are several valid keys, for a full reference, check out
 [describe-images in the AWS CLI reference][1].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L42">property nameRegex</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L45">property nameRegex</a>
 </h3>
 
 ```typescript
@@ -579,7 +583,7 @@ impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L47">property owners</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L50">property owners</a>
 </h3>
 
 ```typescript
@@ -590,14 +594,25 @@ owners?: string[];
 Limit search to specific AMI owners. Valid items are
 the numeric account ID, `amazon`, or `self`.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L54">property sortAscending</a>
+</h3>
+
+```typescript
+sortAscending?: boolean;
+```
+
+
+Used to sort AMIs by creation time.
+
 <h2 class="pdoc-module-header" id="GetAmiIdsResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L53">interface GetAmiIdsResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L60">interface GetAmiIdsResult</a>
 </h2>
 
 A collection of values returned by getAmiIds.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L58">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L65">property id</a>
 </h3>
 
 ```typescript
@@ -608,7 +623,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L54">property ids</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmiIds.ts#L61">property ids</a>
 </h3>
 
 ```typescript
@@ -616,13 +631,13 @@ ids: string[];
 ```
 
 <h2 class="pdoc-module-header" id="GetAmiResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L62">interface GetAmiResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L64">interface GetAmiResult</a>
 </h2>
 
 A collection of values returned by getAmi.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L66">property architecture</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L68">property architecture</a>
 </h3>
 
 ```typescript
@@ -633,7 +648,7 @@ architecture: string;
 The OS architecture of the AMI (ie: `i386` or `x86_64`).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L84">property blockDeviceMappings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L86">property blockDeviceMappings</a>
 </h3>
 
 ```typescript
@@ -658,7 +673,7 @@ included in the block device mapping of the AMI.
 instance stores).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L88">property creationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L90">property creationDate</a>
 </h3>
 
 ```typescript
@@ -669,7 +684,7 @@ creationDate: string;
 The date and time the image was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L93">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L95">property description</a>
 </h3>
 
 ```typescript
@@ -681,7 +696,7 @@ The description of the AMI that was provided during image
 creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L97">property hypervisor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L99">property hypervisor</a>
 </h3>
 
 ```typescript
@@ -692,7 +707,7 @@ hypervisor: string;
 The hypervisor type of the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L189">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L191">property id</a>
 </h3>
 
 ```typescript
@@ -703,7 +718,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L101">property imageId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L103">property imageId</a>
 </h3>
 
 ```typescript
@@ -714,7 +729,7 @@ imageId: string;
 The ID of the AMI. Should be the same as the resource `id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L105">property imageLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L107">property imageLocation</a>
 </h3>
 
 ```typescript
@@ -725,7 +740,7 @@ imageLocation: string;
 The location of the AMI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L110">property imageOwnerAlias</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L112">property imageOwnerAlias</a>
 </h3>
 
 ```typescript
@@ -737,7 +752,7 @@ The AWS account alias (for example, `amazon`, `self`) or
 the AWS account ID of the AMI owner.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L114">property imageType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L116">property imageType</a>
 </h3>
 
 ```typescript
@@ -748,7 +763,7 @@ imageType: string;
 The type of image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L119">property kernelId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L121">property kernelId</a>
 </h3>
 
 ```typescript
@@ -760,7 +775,7 @@ The kernel associated with the image, if any. Only applicable
 for machine images.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L123">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L125">property name</a>
 </h3>
 
 ```typescript
@@ -771,7 +786,7 @@ name: string;
 The name of the AMI that was provided during image creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L127">property ownerId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L129">property ownerId</a>
 </h3>
 
 ```typescript
@@ -782,7 +797,7 @@ ownerId: string;
 The AWS account ID of the image owner.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L131">property platform</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L133">property platform</a>
 </h3>
 
 ```typescript
@@ -793,7 +808,7 @@ platform: string;
 The value is Windows for `Windows` AMIs; otherwise blank.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L137">property productCodes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L139">property productCodes</a>
 </h3>
 
 ```typescript
@@ -806,7 +821,7 @@ Any product codes associated with the AMI.
 * `product_codes.#.product_code_type` - The type of product code.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L141">property public</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L143">property public</a>
 </h3>
 
 ```typescript
@@ -817,7 +832,7 @@ public: boolean;
 `true` if the image has public launch permissions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L146">property ramdiskId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L148">property ramdiskId</a>
 </h3>
 
 ```typescript
@@ -829,7 +844,7 @@ The RAM disk associated with the image, if any. Only applicable
 for machine images.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L150">property rootDeviceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L152">property rootDeviceName</a>
 </h3>
 
 ```typescript
@@ -840,7 +855,7 @@ rootDeviceName: string;
 The device name of the root device.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L154">property rootDeviceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L156">property rootDeviceType</a>
 </h3>
 
 ```typescript
@@ -851,7 +866,7 @@ rootDeviceType: string;
 The type of root device (ie: `ebs` or `instance-store`).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L159">property rootSnapshotId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L161">property rootSnapshotId</a>
 </h3>
 
 ```typescript
@@ -863,7 +878,7 @@ The snapshot id associated with the root device, if any
 (only applies to `ebs` root devices).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L163">property sriovNetSupport</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L165">property sriovNetSupport</a>
 </h3>
 
 ```typescript
@@ -874,7 +889,7 @@ sriovNetSupport: string;
 Specifies whether enhanced networking is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L168">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L170">property state</a>
 </h3>
 
 ```typescript
@@ -886,7 +901,7 @@ The current state of the AMI. If the state is `available`, the image
 is successfully registered and can be used to launch an instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L174">property stateReason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L176">property stateReason</a>
 </h3>
 
 ```typescript
@@ -899,7 +914,7 @@ Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.message` - The message for the state change.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L180">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L182">property tags</a>
 </h3>
 
 ```typescript
@@ -912,7 +927,7 @@ Any tags assigned to the image.
 * `tags.#.value` - The value of the tag.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L185">property virtualizationType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAmi.ts#L187">property virtualizationType</a>
 </h3>
 
 ```typescript
@@ -1038,7 +1053,18 @@ A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws
 A collection of values returned by getAutoscalingGroups.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAutoscalingGroups.ts#L39">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAutoscalingGroups.ts#L35">property arns</a>
+</h3>
+
+```typescript
+arns: string[];
+```
+
+
+A list of the Autoscaling Groups Arns in the current region.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAutoscalingGroups.ts#L43">property id</a>
 </h3>
 
 ```typescript
@@ -1049,7 +1075,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAutoscalingGroups.ts#L35">property names</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAutoscalingGroups.ts#L39">property names</a>
 </h3>
 
 ```typescript
@@ -1416,7 +1442,7 @@ createDate: string;
 The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L54">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L58">property id</a>
 </h3>
 
 ```typescript
@@ -1427,7 +1453,18 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L50">property syncToken</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L49">property ipv6CidrBlocks</a>
+</h3>
+
+```typescript
+ipv6CidrBlocks: string[];
+```
+
+
+The lexically ordered list of IPv6 CIDR blocks.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L54">property syncToken</a>
 </h3>
 
 ```typescript
@@ -1964,7 +2001,7 @@ type ARN = string;
 An ARN is an Amazon Resource Name, and uniquely identifies a region globally across all accounts and regions.
 
 <h2 class="pdoc-module-header" id="Overwrite">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/utils.ts#L21">type Overwrite</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/utils.ts#L22">type Overwrite</a>
 </h2>
 
 ```typescript

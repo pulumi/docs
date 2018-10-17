@@ -115,11 +115,11 @@ public certificateArn: pulumi.Output<string | undefined>;
 The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the [`aws_lb_listener_certificate` resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L36">property defaultActions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L36">property defaultAction</a>
 </h3>
 
 ```typescript
-public defaultActions: pulumi.Output<{ ... }[]>;
+public defaultAction: pulumi.Output<{ ... }>;
 ```
 
 
@@ -157,7 +157,7 @@ public port: pulumi.Output<number>;
 ```
 
 
-The port on which the load balancer is listening.
+The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L48">property protocol</a>
@@ -168,7 +168,7 @@ public protocol: pulumi.Output<string | undefined>;
 ```
 
 
-The protocol for connections from clients to the load balancer. Valid values are `TCP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L52">property sslPolicy</a>
@@ -1578,11 +1578,11 @@ certificateArn?: pulumi.Input<string>;
 The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the [`aws_lb_listener_certificate` resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L141">property defaultActions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L141">property defaultAction</a>
 </h3>
 
 ```typescript
-defaultActions: pulumi.Input<pulumi.Input<{ ... }>[]>;
+defaultAction: pulumi.Input<{ ... }>;
 ```
 
 
@@ -1608,7 +1608,7 @@ port: pulumi.Input<number>;
 ```
 
 
-The port on which the load balancer is listening.
+The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L153">property protocol</a>
@@ -1619,7 +1619,7 @@ protocol?: pulumi.Input<string>;
 ```
 
 
-The protocol for connections from clients to the load balancer. Valid values are `TCP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L157">property sslPolicy</a>
@@ -1828,11 +1828,11 @@ certificateArn?: pulumi.Input<string>;
 The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the [`aws_lb_listener_certificate` resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L111">property defaultActions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L111">property defaultAction</a>
 </h3>
 
 ```typescript
-defaultActions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+defaultAction?: pulumi.Input<{ ... }>;
 ```
 
 
@@ -1858,7 +1858,7 @@ port?: pulumi.Input<number>;
 ```
 
 
-The port on which the load balancer is listening.
+The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L123">property protocol</a>
@@ -1869,7 +1869,7 @@ protocol?: pulumi.Input<string>;
 ```
 
 
-The protocol for connections from clients to the load balancer. Valid values are `TCP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/applicationloadbalancing/listener.ts#L127">property sslPolicy</a>

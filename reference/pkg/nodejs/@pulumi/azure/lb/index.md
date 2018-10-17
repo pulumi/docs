@@ -32,7 +32,7 @@ title: Module lb
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/lb/backendAddressPool.ts#L12">class BackendAddressPool</a>
 </h2>
 
-Create a Load Balancer Backend Address Pool.
+Manage a Load Balancer Backend Address Pool.
 
 ~> **NOTE:** When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached
 
@@ -168,7 +168,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/lb/loadBalancer.ts#L10">class LoadBalancer</a>
 </h2>
 
-Create a Load Balancer Resource.
+Manage a Load Balancer Resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/lb/loadBalancer.ts#L54">constructor</a>

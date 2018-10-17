@@ -6,21 +6,153 @@ title: Module role
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#Assignment">class Assignment</a>
 * <a href="#Definition">class Definition</a>
-* <a href="#assignment">class assignment</a>
 * <a href="#getBuiltinRoleDefinition">function getBuiltinRoleDefinition</a>
 * <a href="#getRoleDefinition">function getRoleDefinition</a>
+* <a href="#AssignmentArgs">interface AssignmentArgs</a>
+* <a href="#AssignmentState">interface AssignmentState</a>
 * <a href="#DefinitionArgs">interface DefinitionArgs</a>
 * <a href="#DefinitionState">interface DefinitionState</a>
 * <a href="#GetBuiltinRoleDefinitionArgs">interface GetBuiltinRoleDefinitionArgs</a>
 * <a href="#GetBuiltinRoleDefinitionResult">interface GetBuiltinRoleDefinitionResult</a>
 * <a href="#GetRoleDefinitionArgs">interface GetRoleDefinitionArgs</a>
 * <a href="#GetRoleDefinitionResult">interface GetRoleDefinitionResult</a>
-* <a href="#assignmentArgs">interface assignmentArgs</a>
-* <a href="#assignmentState">interface assignmentState</a>
 
 <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts">role/assignment.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/definition.ts">role/definition.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/getBuiltinRoleDefinition.ts">role/getBuiltinRoleDefinition.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/getRoleDefinition.ts">role/getRoleDefinition.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="Assignment">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L10">class Assignment</a>
+</h2>
+
+Assigns a given Principal (User or Application) to a given Role.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L42">constructor</a>
+</h3>
+
+```typescript
+new Assignment(name: string, args: AssignmentArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a Assignment resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L19">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AssignmentState): Assignment
+```
+
+
+Get an existing Assignment resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L26">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L30">property principalId</a>
+</h3>
+
+```typescript
+public principalId: pulumi.Output<string>;
+```
+
+
+The ID of the Principal (User or Application) to assign the Role Definition to. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L34">property roleDefinitionId</a>
+</h3>
+
+```typescript
+public roleDefinitionId: pulumi.Output<string>;
+```
+
+
+The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with `role_definition_name`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L38">property roleDefinitionName</a>
+</h3>
+
+```typescript
+public roleDefinitionName: pulumi.Output<string | undefined>;
+```
+
+
+The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with `role_definition_id`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L42">property scope</a>
+</h3>
+
+```typescript
+public scope: pulumi.Output<string>;
+```
+
+
+The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333`, `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup`, or `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM`. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 <h2 class="pdoc-module-header" id="Definition">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/definition.ts#L10">class Definition</a>
@@ -165,138 +297,6 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
-<h2 class="pdoc-module-header" id="assignment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L10">class assignment</a>
-</h2>
-
-Assigns a given Principal (User or Application) to a given Role.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L42">constructor</a>
-</h3>
-
-```typescript
-new assignment(name: string, args: assignmentArgs, opts?: pulumi.CustomResourceOptions)
-```
-
-
-Create a assignment resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L19">method get</a>
-</h3>
-
-```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: assignmentState): assignment
-```
-
-
-Get an existing assignment resource's state with the given name, ID, and optional extra
-properties used to qualify the lookup.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
-</h3>
-
-```typescript
-getProvider(moduleMember: string): ProviderResource | undefined
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
-</h3>
-
-```typescript
-static isInstance(obj: any): boolean
-```
-
-
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
-</h3>
-
-```typescript
-id: Output<ID>;
-```
-
-
-id is the provider-assigned unique ID for this managed resource.  It is set during
-deployments and may be missing (undefined) during planning phases.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L26">property name</a>
-</h3>
-
-```typescript
-public name: pulumi.Output<string>;
-```
-
-
-A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L30">property principalId</a>
-</h3>
-
-```typescript
-public principalId: pulumi.Output<string>;
-```
-
-
-The ID of the Principal (User or Application) to assign the Role Definition to. Changing this forces a new resource to be created.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L34">property roleDefinitionId</a>
-</h3>
-
-```typescript
-public roleDefinitionId: pulumi.Output<string>;
-```
-
-
-The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with `role_definition_name`.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L38">property roleDefinitionName</a>
-</h3>
-
-```typescript
-public roleDefinitionName: pulumi.Output<string | undefined>;
-```
-
-
-The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with `role_definition_id`.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L42">property scope</a>
-</h3>
-
-```typescript
-public scope: pulumi.Output<string>;
-```
-
-
-The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333`, `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup`, or `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM`. Changing this forces a new resource to be created.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
-</h3>
-
-```typescript
-urn: Output<URN>;
-```
-
-
-urn is the stable logical URN used to distinctly address a resource, both before and after
-deployments.
-
 <h2 class="pdoc-module-header" id="getBuiltinRoleDefinition">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L10">function getBuiltinRoleDefinition</a>
 </h2>
@@ -318,6 +318,128 @@ getRoleDefinition(args: GetRoleDefinitionArgs, opts?: pulumi.InvokeOptions): Pro
 
 
 Use this data source to access the properties of a custom Role Definition. To access information about a built-in Role Definition, please see the `azurerm_builtin_role_definition` data source instead.
+
+<h2 class="pdoc-module-header" id="AssignmentArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L108">interface AssignmentArgs</a>
+</h2>
+
+The set of arguments for constructing a Assignment resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L112">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L116">property principalId</a>
+</h3>
+
+```typescript
+principalId: pulumi.Input<string>;
+```
+
+
+The ID of the Principal (User or Application) to assign the Role Definition to. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L120">property roleDefinitionId</a>
+</h3>
+
+```typescript
+roleDefinitionId?: pulumi.Input<string>;
+```
+
+
+The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with `role_definition_name`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L124">property roleDefinitionName</a>
+</h3>
+
+```typescript
+roleDefinitionName?: pulumi.Input<string>;
+```
+
+
+The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with `role_definition_id`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L128">property scope</a>
+</h3>
+
+```typescript
+scope: pulumi.Input<string>;
+```
+
+
+The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333`, `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup`, or `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM`. Changing this forces a new resource to be created.
+
+<h2 class="pdoc-module-header" id="AssignmentState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L82">interface AssignmentState</a>
+</h2>
+
+Input properties used for looking up and filtering Assignment resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L86">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L90">property principalId</a>
+</h3>
+
+```typescript
+principalId?: pulumi.Input<string>;
+```
+
+
+The ID of the Principal (User or Application) to assign the Role Definition to. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L94">property roleDefinitionId</a>
+</h3>
+
+```typescript
+roleDefinitionId?: pulumi.Input<string>;
+```
+
+
+The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with `role_definition_name`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L98">property roleDefinitionName</a>
+</h3>
+
+```typescript
+roleDefinitionName?: pulumi.Input<string>;
+```
+
+
+The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with `role_definition_id`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L102">property scope</a>
+</h3>
+
+```typescript
+scope?: pulumi.Input<string>;
+```
+
+
+The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333`, `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup`, or `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM`. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="DefinitionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/definition.ts#L121">interface DefinitionArgs</a>
@@ -637,126 +759,4 @@ type: string;
 
 
 the Type of the Role.
-
-<h2 class="pdoc-module-header" id="assignmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L108">interface assignmentArgs</a>
-</h2>
-
-The set of arguments for constructing a assignment resource.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L112">property name</a>
-</h3>
-
-```typescript
-name?: pulumi.Input<string>;
-```
-
-
-A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L116">property principalId</a>
-</h3>
-
-```typescript
-principalId: pulumi.Input<string>;
-```
-
-
-The ID of the Principal (User or Application) to assign the Role Definition to. Changing this forces a new resource to be created.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L120">property roleDefinitionId</a>
-</h3>
-
-```typescript
-roleDefinitionId?: pulumi.Input<string>;
-```
-
-
-The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with `role_definition_name`.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L124">property roleDefinitionName</a>
-</h3>
-
-```typescript
-roleDefinitionName?: pulumi.Input<string>;
-```
-
-
-The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with `role_definition_id`.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L128">property scope</a>
-</h3>
-
-```typescript
-scope: pulumi.Input<string>;
-```
-
-
-The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333`, `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup`, or `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM`. Changing this forces a new resource to be created.
-
-<h2 class="pdoc-module-header" id="assignmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L82">interface assignmentState</a>
-</h2>
-
-Input properties used for looking up and filtering assignment resources.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L86">property name</a>
-</h3>
-
-```typescript
-name?: pulumi.Input<string>;
-```
-
-
-A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L90">property principalId</a>
-</h3>
-
-```typescript
-principalId?: pulumi.Input<string>;
-```
-
-
-The ID of the Principal (User or Application) to assign the Role Definition to. Changing this forces a new resource to be created.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L94">property roleDefinitionId</a>
-</h3>
-
-```typescript
-roleDefinitionId?: pulumi.Input<string>;
-```
-
-
-The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with `role_definition_name`.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L98">property roleDefinitionName</a>
-</h3>
-
-```typescript
-roleDefinitionName?: pulumi.Input<string>;
-```
-
-
-The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with `role_definition_id`.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L102">property scope</a>
-</h3>
-
-```typescript
-scope?: pulumi.Input<string>;
-```
-
-
-The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333`, `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup`, or `/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM`. Changing this forces a new resource to be created.
 

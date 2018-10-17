@@ -9,6 +9,7 @@ title: Module sns
 * <a href="#PlatformApplication">class PlatformApplication</a>
 * <a href="#SmsPreferences">class SmsPreferences</a>
 * <a href="#Topic">class Topic</a>
+* <a href="#TopicEventSubscription">class TopicEventSubscription</a>
 * <a href="#TopicPolicy">class TopicPolicy</a>
 * <a href="#TopicSubscription">class TopicSubscription</a>
 * <a href="#getTopic">function getTopic</a>
@@ -16,16 +17,22 @@ title: Module sns
 * <a href="#GetTopicResult">interface GetTopicResult</a>
 * <a href="#PlatformApplicationArgs">interface PlatformApplicationArgs</a>
 * <a href="#PlatformApplicationState">interface PlatformApplicationState</a>
+* <a href="#SNSItem">interface SNSItem</a>
+* <a href="#SNSMessageAttribute">interface SNSMessageAttribute</a>
 * <a href="#SmsPreferencesArgs">interface SmsPreferencesArgs</a>
 * <a href="#SmsPreferencesState">interface SmsPreferencesState</a>
 * <a href="#TopicArgs">interface TopicArgs</a>
+* <a href="#TopicEvent">interface TopicEvent</a>
 * <a href="#TopicPolicyArgs">interface TopicPolicyArgs</a>
 * <a href="#TopicPolicyState">interface TopicPolicyState</a>
+* <a href="#TopicRecord">interface TopicRecord</a>
 * <a href="#TopicState">interface TopicState</a>
 * <a href="#TopicSubscriptionArgs">interface TopicSubscriptionArgs</a>
 * <a href="#TopicSubscriptionState">interface TopicSubscriptionState</a>
+* <a href="#TopicEventHandler">type TopicEventHandler</a>
+* <a href="#TopicEventSubscriptionArgs">type TopicEventSubscriptionArgs</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/getTopic.ts">sns/getTopic.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/platformApplication.ts">sns/platformApplication.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/smsPreferences.ts">sns/smsPreferences.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topic.ts">sns/topic.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topicPolicy.ts">sns/topicPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topicSubscription.ts">sns/topicSubscription.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/getTopic.ts">sns/getTopic.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/platformApplication.ts">sns/platformApplication.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/smsPreferences.ts">sns/smsPreferences.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts">sns/snsMixins.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topic.ts">sns/topic.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topicPolicy.ts">sns/topicPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topicSubscription.ts">sns/topicSubscription.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="PlatformApplication">
@@ -655,6 +662,88 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="TopicEventSubscription">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L58">class TopicEventSubscription</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L64">constructor</a>
+</h3>
+
+```typescript
+public new TopicEventSubscription(name: string, topic: topic.Topic, handler: TopicEventHandler, args: TopicEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+</h3>
+
+```typescript
+protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L218">property func</a>
+</h3>
+
+```typescript
+public func: LambdaFunction;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L217">property permission</a>
+</h3>
+
+```typescript
+public permission: permission.Permission;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L64">property subscription</a>
+</h3>
+
+```typescript
+public subscription: topicSubscription.TopicSubscription;
+```
+
+
+The underlying sns object created for the subscription.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L59">property topic</a>
+</h3>
+
+```typescript
+public topic: topic.Topic;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="TopicPolicy">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topicPolicy.ts#L12">class TopicPolicy</a>
 </h2>
@@ -1263,6 +1352,116 @@ successFeedbackSampleRate?: pulumi.Input<string>;
 
 The percentage of success to sample (0-100)
 
+<h2 class="pdoc-module-header" id="SNSItem">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L31">interface SNSItem</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L37">property Message</a>
+</h3>
+
+```typescript
+Message: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L38">property MessageAttributes</a>
+</h3>
+
+```typescript
+MessageAttributes: { ... };
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L36">property MessageId</a>
+</h3>
+
+```typescript
+MessageId: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L34">property Signature</a>
+</h3>
+
+```typescript
+Signature: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L32">property SignatureVersion</a>
+</h3>
+
+```typescript
+SignatureVersion: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L35">property SigningCertUrl</a>
+</h3>
+
+```typescript
+SigningCertUrl: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L42">property Subject</a>
+</h3>
+
+```typescript
+Subject: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L33">property Timestamp</a>
+</h3>
+
+```typescript
+Timestamp: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L41">property TopicArn</a>
+</h3>
+
+```typescript
+TopicArn: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L39">property Type</a>
+</h3>
+
+```typescript
+Type: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L40">property UnsubscribeUrl</a>
+</h3>
+
+```typescript
+UnsubscribeUrl: string;
+```
+
+<h2 class="pdoc-module-header" id="SNSMessageAttribute">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L45">interface SNSMessageAttribute</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L46">property Type</a>
+</h3>
+
+```typescript
+Type: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L47">property Value</a>
+</h3>
+
+```typescript
+Value: string;
+```
+
 <h2 class="pdoc-module-header" id="SmsPreferencesArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/smsPreferences.ts#L112">interface SmsPreferencesArgs</a>
 </h2>
@@ -1600,6 +1799,17 @@ sqsSuccessFeedbackSampleRate?: pulumi.Input<number>;
 
 Percentage of success to sample
 
+<h2 class="pdoc-module-header" id="TopicEvent">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L20">interface TopicEvent</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L21">property Records</a>
+</h3>
+
+```typescript
+Records: TopicRecord[];
+```
+
 <h2 class="pdoc-module-header" id="TopicPolicyArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topicPolicy.ts#L80">interface TopicPolicyArgs</a>
 </h2>
@@ -1655,6 +1865,41 @@ policy?: pulumi.Input<string>;
 
 
 The fully-formed AWS policy as JSON
+
+<h2 class="pdoc-module-header" id="TopicRecord">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L24">interface TopicRecord</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L27">property EventSource</a>
+</h3>
+
+```typescript
+EventSource: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L26">property EventSubscriptionArn</a>
+</h3>
+
+```typescript
+EventSubscriptionArn: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L25">property EventVersion</a>
+</h3>
+
+```typescript
+EventVersion: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L28">property Sns</a>
+</h3>
+
+```typescript
+Sns: SNSItem;
+```
 
 <h2 class="pdoc-module-header" id="TopicState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/topic.ts#L156">interface TopicState</a>
@@ -2052,4 +2297,24 @@ topic?: pulumi.Input<Topic>;
 
 
 The ARN of the SNS topic to subscribe to
+
+<h2 class="pdoc-module-header" id="TopicEventHandler">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L50">type TopicEventHandler</a>
+</h2>
+
+```typescript
+type TopicEventHandler = lambda.EventHandler<TopicEvent, void>;
+```
+
+<h2 class="pdoc-module-header" id="TopicEventSubscriptionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L56">type TopicEventSubscriptionArgs</a>
+</h2>
+
+```typescript
+type TopicEventSubscriptionArgs = { ... };
+```
+
+
+Arguments to control the topic subscription.  Currently empty, but still defined in case of
+future need.
 

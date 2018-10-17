@@ -186,7 +186,7 @@ instance creation. You should use `google_sql_user` to define a custom user with
 a restricted host and strong password.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L90">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L95">constructor</a>
 </h3>
 
 ```typescript
@@ -379,7 +379,19 @@ public serverCaCert: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L90">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L90">property serviceAccountEmailAddress</a>
+</h3>
+
+```typescript
+public serviceAccountEmailAddress: pulumi.Output<string>;
+```
+
+
+The service account email address assigned to the
+instance. This property is applicable only to Second Generation instances.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L95">property settings</a>
 </h3>
 
 ```typescript
@@ -614,13 +626,13 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h2 class="pdoc-module-header" id="DatabaseInstanceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L209">interface DatabaseInstanceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L221">interface DatabaseInstanceArgs</a>
 </h2>
 
 The set of arguments for constructing a DatabaseInstance resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L217">property databaseVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L229">property databaseVersion</a>
 </h3>
 
 ```typescript
@@ -635,7 +647,7 @@ See [Second Generation Capabilities](https://cloud.google.com/sql/docs/1st-2nd-g
 for more information. `POSTGRES_9_6` support is in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L223">property masterInstanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L235">property masterInstanceName</a>
 </h3>
 
 ```typescript
@@ -648,7 +660,7 @@ the master in the replication setup. Note, this requires the master to have
 `binary_log_enabled` set, as well as existing backups.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L230">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L242">property name</a>
 </h3>
 
 ```typescript
@@ -662,7 +674,7 @@ created. This is done because after a name is used, it cannot be reused for
 up to [one week](https://cloud.google.com/sql/docs/delete-instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L235">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L247">property project</a>
 </h3>
 
 ```typescript
@@ -674,7 +686,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L245">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L257">property region</a>
 </h3>
 
 ```typescript
@@ -691,7 +703,7 @@ instances *and* for second-generation instances if the provider region is not su
 If you choose not to provide the `region` argument for this resource, make sure you understand this.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L250">property replicaConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L262">property replicaConfiguration</a>
 </h3>
 
 ```typescript
@@ -703,7 +715,7 @@ The configuration for replication. The
 configuration is detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L255">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L267">property settings</a>
 </h3>
 
 ```typescript
@@ -715,13 +727,13 @@ The settings to use for the database. The
 configuration is detailed below.
 
 <h2 class="pdoc-module-header" id="DatabaseInstanceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L141">interface DatabaseInstanceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L148">interface DatabaseInstanceState</a>
 </h2>
 
 Input properties used for looking up and filtering DatabaseInstance resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L145">property connectionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L152">property connectionName</a>
 </h3>
 
 ```typescript
@@ -732,7 +744,7 @@ connectionName?: pulumi.Input<string>;
 The connection name of the instance to be used in connection strings.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L153">property databaseVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L160">property databaseVersion</a>
 </h3>
 
 ```typescript
@@ -747,7 +759,7 @@ See [Second Generation Capabilities](https://cloud.google.com/sql/docs/1st-2nd-g
 for more information. `POSTGRES_9_6` support is in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L159">property firstIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L166">property firstIpAddress</a>
 </h3>
 
 ```typescript
@@ -760,7 +772,7 @@ is to support accessing the [first address in the list in a terraform output](ht
 when the resource is configured with a `count`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L160">property ipAddresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L167">property ipAddresses</a>
 </h3>
 
 ```typescript
@@ -768,7 +780,7 @@ ipAddresses?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L166">property masterInstanceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L173">property masterInstanceName</a>
 </h3>
 
 ```typescript
@@ -781,7 +793,7 @@ the master in the replication setup. Note, this requires the master to have
 `binary_log_enabled` set, as well as existing backups.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L173">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L180">property name</a>
 </h3>
 
 ```typescript
@@ -795,7 +807,7 @@ created. This is done because after a name is used, it cannot be reused for
 up to [one week](https://cloud.google.com/sql/docs/delete-instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L178">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L185">property project</a>
 </h3>
 
 ```typescript
@@ -807,7 +819,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L188">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L195">property region</a>
 </h3>
 
 ```typescript
@@ -824,7 +836,7 @@ instances *and* for second-generation instances if the provider region is not su
 If you choose not to provide the `region` argument for this resource, make sure you understand this.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L193">property replicaConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L200">property replicaConfiguration</a>
 </h3>
 
 ```typescript
@@ -836,7 +848,7 @@ The configuration for replication. The
 configuration is detailed below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L197">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L204">property selfLink</a>
 </h3>
 
 ```typescript
@@ -847,7 +859,7 @@ selfLink?: pulumi.Input<string>;
 The URI of the created resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L198">property serverCaCert</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L205">property serverCaCert</a>
 </h3>
 
 ```typescript
@@ -855,7 +867,19 @@ serverCaCert?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L203">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L210">property serviceAccountEmailAddress</a>
+</h3>
+
+```typescript
+serviceAccountEmailAddress?: pulumi.Input<string>;
+```
+
+
+The service account email address assigned to the
+instance. This property is applicable only to Second Generation instances.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L215">property settings</a>
 </h3>
 
 ```typescript
