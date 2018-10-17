@@ -24,6 +24,11 @@ redirect_from: /install/changelog.html
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="#v160">0.16.0</a></th>
+            <td>2018/10/15</td>
+            <td>{% include sdk-links.html version='0.16.0' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v154">0.15.4</a></th>
             <td>2018/09/28</td>
             <td>{% include sdk-links.html version='0.15.3' %}</td>
@@ -70,6 +75,96 @@ redirect_from: /install/changelog.html
         </tr>
     </tbody>
 </table>
+
+## v0.16.0 {#v160}
+
+Released on October 15, 2018
+
+In addition to the 0.16.0 CLI release, we've released new versions of all of our packages.
+
+### Pulumi CLI
+
+Major features of this release include:
+
+#### Improvements to CLI output
+
+Default colors that fit better for both light and dark terminals.  Overall updates to rendering of previews/updates for consistency and simplicity of the display. 
+
+#### Parallelized resource deletion
+
+Parallel resource creation and updates were added in `0.15`.  In `0.16`, this has been extended to include deletions, which are now conservatively parallelized based on dependency information. [pulumi/pulumi#1963](https://github.com/pulumi/pulumi/pull/1963)
+
+#### Support for any CI system in the Pulumi GitHub App
+
+The Pulumi GitHub App previously supported just TravisCI.  With this release the `pulumi` CLI now supports configurable CI providers via environment variables.  Thanks [@jen20](https://github.com/jen20)!
+
+#### Miscellaneous Improvements
+
+In addition to the above features, we've made a handfull of day to day improvements in the CLI:
+- Support for `zsh` completions. Thanks to [@Tirke](https://github.com/Tirke)!) [pulumi/pulumi#1967](https://github.com/pulumi/pulumi/pull/1967)
+- JSON formatting support for `pulumi stack output`. [pulumi/pulumi#2000](https://github.com/pulumi/pulumi/pull/2000)
+- Added a `Dockerfile` for the Pulumi CLI and development environment for use in hosted environments. 
+
+### Pulumi Console
+
+- Added `New Project` button and wizard for easy new project creation.
+- New and improved dashboard highlighting recent activity and direct access to all recently used stacks across organizations.
+
+### @pulumi/pulumi 0.16.0
+
+- Many improvements for Go development.  Thanks to [@justone](https://github.com/justone)!. [pulumi/pulumi#1954](https://github.com/pulumi/pulumi/pull/1954) [pulumi/pulumi#1955](https://github.com/pulumi/pulumi/pull/1955) [pulumi/pulumi#1965](https://github.com/pulumi/pulumi/pull/1965)
+- Extend `pulumi.output` to deeply unwrap `Input`s.  This significantly simplifies working with `Inputs` when building Pulumi components.  [pulumi/pulumi#1915](https://github.com/pulumi/pulumi/pull/1915)
+
+### @pulumi/aws 0.16.0
+
+- Moved all `@pulumi/aws-serverless` features down into `@pulumi/aws`.  Event handlers are now available as methods like `bucket.onObjectCreated` off of instances of `aws.s3.Bucket` and all other Lambda event sources.  In addition, the `aws.apigateway.x.API` type is available for simple construction of API Gateways directly in the `@pulumi/aws` package.  
+- Added richer typing for many EC2 and Autoscaling resources.  Thanks to [@jen20](https://github.com/jen20)! [pulumi/pulumi-aws#323](https://github.com/pulumi/pulumi-aws/pull/323) [pulumi/pulumi-aws#324](https://github.com/pulumi/pulumi-aws/pull/324)
+- Adopted `v1.38.0` of the AWS Terraform Provider. [pulumi/pulumi-aws#341](https://github.com/pulumi/pulumi-aws/pull/341)
+
+### @pulumi/aws-infra 0.16.0
+
+- Updated to latest `@pulumi/pulumi` and `@pulumi/aws` dependencies.
+
+### @pulumi/aws-serverless 0.16.0
+
+- This library is now deprecated.  All features of this library are now available directly in `@pulumi/aws` (see above).  In a future update the same change will be made for `@pulumi/azure-serverless` moving similar functionality into `@pulumi/azure`.
+
+### @pulumi/azure 0.16.0
+
+- Adopted `v1.15.0` of the AzureRM Terraform Provider. [pulumi/pulumi-azure#125](https://github.com/pulumi/pulumi-azure/pull/125)
+- Many improvements to autoname generation to match Azure resource name requirements.
+- **[Breaking Change]** Fix name of `azure.role.Assignment` from previous `azure.role.assignment`. [pulumi/pulumi-azure#127](https://github.com/pulumi/pulumi-azure/pull/127)
+
+
+### @pulumi/cloud, @pulumi/cloud-aws, @pulumi/cloud-azure 0.16.0
+
+- Implementations of many `@pulumi/cloud-aws` APIs moved over to build on top of higher-level APIs in `@pulumi/aws`.  This may cause some resources, such as `aws.lambda.Function` and `aws.apigateway.RestAPI` to be recreated on updates from previous versions.
+
+### @pulumi/gcp 0.16.0
+
+- Adopted `v1.15.0` of the Google Terraform Provider. [pulumi/pulumi-gcp#51](https://github.com/pulumi/pulumi-gcp/pull/51)
+
+### @pulumi/kubernetes 0.17.2
+
+- Kubernetes resources created outside Pulumi can now be read into a Pulumi program with `CustomResource#get`. [pulumi/pulumi-kubernetes#230](https://github.com/pulumi/pulumi-kubernetes/pull/230)
+- Service can now be refreshed with `pulumi refresh` to pick up changes to the state of the service that occured outside of a Pulumi deployment. [pulumi/pulumi-kubernetes#230](https://github.com/pulumi/pulumi-kubernetes/pull/230)
+- Added ability to retrieve CRDs resources objects from a Helm chart deployment. [pulumi/pulumi-kubernetes#225](https://github.com/pulumi/pulumi-kubernetes/pull/225)
+
+### @pulumi/vsphere 0.16.0
+
+Added a new provider for VMware vSphere, enabling deployment and management of resources in vCenter Server and ESXi. Thanks [@Smithx10](https://github.com/Smithx10)!
+
+### @pulumi/eks 0.16.0
+
+Added a new package for deploying a complete AWS Elastic Kubernetes Service (EKS) cluster.  
+
+### @pulumi/openstack 0.16.0
+
+- Updated to latest `@pulumi/pulumi` dependencies.
+
+### @pulumi/docker 0.16.0
+
+- Updated to latest `@pulumi/pulumi` dependencies.
 
 ## v0.15.4 {#v154}
 
