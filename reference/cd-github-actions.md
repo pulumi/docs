@@ -174,11 +174,11 @@ this UI will become available, and you may find it more convenient to edit thing
 
 If you select the **Visual editor** tab, you'll see the resulting workflow actions, and all secrets may be edited:
 
-[!Editor Visual Edit](/images/reference/gh-actions-editor-visual.png)
+![Editor Visual Edit](/images/reference/gh-actions-editor-visual.png)
 
 To edit your secrets, scroll down and select the first Pulumi action, and click **Edit**:
 
-[!Editor Edit](/images/reference/gh-actions-editor-configure.png)
+![Editor Edit](/images/reference/gh-actions-editor-configure.png)
 
 This will open the action editor on the right-hand side, in which you'll enter your various credentials (for Pulumi and
 your cloud). After configuring these, you should see the green secrets with lock icons show up for your actions:
