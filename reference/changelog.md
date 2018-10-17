@@ -88,7 +88,7 @@ Major features of this release include:
 
 #### Improvements to CLI output
 
-Default colors that fit better for both light and dark terminals.  Overall updates to rendering of previews/updates for consistentcy and simplicity of the display. 
+Default colors that fit better for both light and dark terminals.  Overall updates to rendering of previews/updates for consistency and simplicity of the display. 
 
 #### Parallelized resource deletion
 
