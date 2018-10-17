@@ -1,6 +1,6 @@
 ---
 title: "Pulumi GitHub Actions"
-redirect_from: "/github"
+redirect_from: /github
 ---
 
 <style>
