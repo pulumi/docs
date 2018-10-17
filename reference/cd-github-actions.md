@@ -22,6 +22,11 @@ or promotions between different environments by merging or directly committing c
 
 Let's see how to get started -- it's easy!
 
+> **Note**: Remember that GitHub Actions is in private beta right now. Please
+> [register for access](https://github.com/features/actions) here. Until you've been added, the **Actions**
+> tab won't show in your repos, and the `.pulumi/main.workflow` file will do nothing. Also note that these
+> features will only work on private repos in the specific account that has been granted access.
+
 # Pre-Requisites
 
 Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/) (if you haven't already).
@@ -79,6 +84,8 @@ action "Pulumi Preview (Merged Stack)" {
     ]
 }
 ```
+
+This file is also available [here](https://github.com/pulumi/actions/blob/master/examples/main.workflow).
 
 Now you've got a workflow defined, but before you're ready to use it, you'll need to configure your secrets.
 
@@ -144,19 +151,35 @@ All of the above can be done using the visual editor if you prefer. We have list
 because not everybody will see the new UI while GitHub Actions is in preview. But after your initial setup,
 this UI will become available, and you may find it more convenient to edit things visually.
 
-1. Go to your repo on GitHub, and click on the new **Actions** tab.
+1. Go to your repo on GitHub, and click on the new **Actions** tab:
 
-2. Click the **Create a new workflow** button.
+    ![Editor Actions Tab](/images/reference/gh-actions-editor-tab.png)
 
-3. Click the **&lt;&gt; Edit new file** tab.
+2. Click the **Create a new workflow** button:
 
-4. Replace the default workflow with the suggested Pulumi workflow described above:
+    ![Editor Create Workflow](/images/reference/gh-actions-editor-create.png)
 
-If you select the **Visual editor** tab, you'll see the resulting workflow actions, and all secrets may be edited.
+3. Click the **&lt;&gt; Edit new file** tab:
 
-To edit your secrets, scroll down and select the first Pulumi action, and click **Edit**. This will open the action
-editor on the right-hand side, in which you'll enter your various credentials (for Pulumi and your cloud). After
-configuring these, you should see the green secrets with lock icons show up for your actions.
+    ![Editor New File](/images/reference/gh-actions-editor-newfile.png)
+
+4. Replace the default workflow with the suggested Pulumi workflow described above (
+   [see here](https://github.com/pulumi/actions/blob/master/examples/main.workflow)):
+
+    ![Editor Workflow Edit](/images/reference/gh-actions-editor-edit.png)
+
+If you select the **Visual editor** tab, you'll see the resulting workflow actions, and all secrets may be edited:
+
+[!Editor Visual Edit](/images/reference/gh-actions-editor-visual.png)
+
+To edit your secrets, scroll down and select the first Pulumi action, and click **Edit**:
+
+[!Editor Edit](/images/reference/gh-actions-editor-configure.png)
+
+This will open the action editor on the right-hand side, in which you'll enter your various credentials (for Pulumi and
+your cloud). After configuring these, you should see the green secrets with lock icons show up for your actions:
+
+![Editor Secrets](/images/reference/gh-actions-editor-secrets.png)
 
 # Using a Different Root Directory
 
