@@ -45,9 +45,13 @@ our standard workflow. This workflow consists of two actions
 1. **Pulumi Deploy (Current Stack)** deploys a commit to the current branch by running `pulumi up`
 2. **Pulumi Preview (Merged Stack)** shows a preview of what would happen if a PR was merged, by running `pulumi preview`
 
-Now let's get started by adding the workflow file.
+From here, there are two ways to configure actions in your repo: doing it manually by committing workflow files and
+configuring secrets, or using the visual editor. We'll start with the file-based approach -- but, if you prefer the
+interactive workflow editor, please scroll down.
 
 ## Committing the Workflow File
+
+Let's get started by adding the workflow file.
 
 To set up the workflow to run anytime you commit or modify a PR, add the following to `.github/main.workflow`:
 
