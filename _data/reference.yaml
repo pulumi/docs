@@ -89,6 +89,8 @@ toc:
   section:
   - title: Pulumi GitHub App
     path: /reference/cd-github.html
+  - title: Pulumi GitHub Actions
+    path: /reference/cd-github-actions.html
   - title: AWS Code Services
     path: /reference/cd-aws-code-services.html
   - title: Travis CI
