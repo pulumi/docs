@@ -132,7 +132,7 @@ In addition to the above features, we've made a handfull of day to day improveme
 ### @pulumi/azure 0.16.0
 
 - Adopted `v1.15.0` of the AzureRM Terraform Provider. [pulumi/pulumi-azure#125](https://github.com/pulumi/pulumi-azure/pull/125)
-- Many iprovements to autoname generation to match Azure resource name requirements.
+- Many improvements to autoname generation to match Azure resource name requirements.
 - **[Breaking Change]** Fix name of `azure.role.Assignment` from previous `azure.role.assignment`. [pulumi/pulumi-azure#127](https://github.com/pulumi/pulumi-azure/pull/127)
 
 
