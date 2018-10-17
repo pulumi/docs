@@ -32,8 +32,6 @@ toc:
       path: /reference/pkg/nodejs/@pulumi/aws/index.html
     - title: aws-infra
       path: /reference/pkg/nodejs/@pulumi/aws-infra/index.html
-    - title: aws-serverless
-      path: /reference/pkg/nodejs/@pulumi/aws-serverless/index.html
     - title: azure
       path: /reference/pkg/nodejs/@pulumi/azure/index.html
     - title: azure-serverless
@@ -48,8 +46,12 @@ toc:
       path: /reference/pkg/nodejs/@pulumi/kubernetes/index.html
     - title: openstack
       path: /reference/pkg/nodejs/@pulumi/openstack/index.html
+    - title: vsphere
+      path: /reference/pkg/nodejs/@pulumi/vsphere/index.html
     - title: docker
       path: /reference/pkg/nodejs/@pulumi/docker/index.html
+    - title: eks
+      path: /reference/pkg/nodejs/@pulumi/eks/index.html
 - title: Commands (CLI)
   path: /reference/commands
   section:

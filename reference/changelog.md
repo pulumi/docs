@@ -149,13 +149,17 @@ In addition to the above features, we've made a handfull of day to day improveme
 
 - Adopted `v1.15.0` of the Google Terraform Provider. [pulumi/pulumi-gcp#51](https://github.com/pulumi/pulumi-gcp/pull/51)
 
-### @pulumi/vsphere 0.15.0
+### @pulumi/vsphere 0.16.0
 
 Added a new provider for VMware vSphere, enabling deployment and management of resources in vCenter Server and ESXi. Thanks [@Smithx10](https://github.com/Smithx10)!
 
-### @pulumi/eks 0.15.0
+### @pulumi/eks 0.16.0
 
 Added a new package for deploying a complete AWS Elastic Kubernetes Service (EKS) cluster.  
+
+### @pulumi/openstack 0.16.0
+
+- Updated to latest `@pulumi/pulumi` dependencies.
 
 ## v0.15.4 {#v154}
 
