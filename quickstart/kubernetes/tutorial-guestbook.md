@@ -306,7 +306,9 @@ To start, we'll need to create a project and stack (a deployment target) for our
     $ pulumi stack output frontendIP
     ```
 
-    The value of the `frontendIP` variable matches exactly the `frontend`'s `CLUSTER-IP` reported by `kubectl`:
+    The value of the `frontendIP` variable matches either `frontend`'s `CLUSTER-IP` (if you're
+    deploying with `useLoadBalancer` set to `false`) or `frontend`'s `EXTERNAL-IP` (if you're
+    deploying with `useLoadBalancer` set to `true`). For example:
 
     ```
     10.102.193.86
