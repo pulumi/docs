@@ -68,7 +68,7 @@ let nginxcontainer = new k8s.core.v1.Pod("nginx", {
 });
 ```
 
-You can find additional examples Kubernetes examples in [the Pulumi examples repo](https://github.com/pulumi/examples). 
+You can find additional examples Kubernetes examples in [the Pulumi examples repo](https://github.com/pulumi/examples).
 
 ## Libraries
 
@@ -77,3 +77,7 @@ The following pacakges are available in pacakge managers:
 * JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/kubernetes
 
 Support will eventually expand to Python and Go as well.
+
+## FAQ
+
+You can find a list of frequently-asked questions [here](./faq.html).
