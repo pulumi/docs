@@ -28,30 +28,24 @@ By default, Pulumi uses the same configuration as `kubectl`, so if you're alread
 
 The easiest way to start with Kubernetes is to follow one of the tutorials:
 
-* [Run a Stateless App Deployment](./tutorial-stateless-app.html): Deploy a simple stateless Nginx web server backed
-    by a Docker container
-* [Create a Guestbook App with Redis and Nginx](./tutorial-guestbook.html): Create multi-tier web application using
-    Redis and Nginx, and powered by Docker containers
-
-There are additional examples available complete with step-by-step instructions. If you are new to Pulumi, it may be
-easiest to look at them in this order:
-
 * Getting your feet wet [deploying a container to Kubernetes and exposing it to the Internet with a
-    `Service`](https://github.com/pulumi/examples/tree/master/kubernetes-ts-exposed-deployment). This
-    example shows off several unique features of Pulumi, including diffing and incremental errors
-    when deployment fails.
-* ["Adopting" a Helm
-   Chart](https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress). This example
-   additionally demonstrates the rich status updates Pulumi offers, allowing you to reliably and
-   reproducibly deploy code, even if it isn't yours.
-* [The canonical Kubernetes Guestbook
-   example](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook). You can see the
-   original example [here](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook)
-   for comparison.
+    `Service`](./tutorial-exposed-deployment.html). This example shows off several unique features of
+    Pulumi, including diffing and incremental errors when deployment fails.
+* ["Adopting" a Helm Chart](./tutorial-wordpress-chart.html). This example additionally demonstrates
+   the rich status updates Pulumi offers, allowing you to reliably and reproducibly deploy code,
+   even if it isn't yours.
+* [The canonical Kubernetes Guestbook example](./tutorial-guestbook.html). You can see the original
+   example [here](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook) for
+   comparison.
 * [Triggering a new deployment when changing the data in a
-   `ConfigMap`](https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout).
+   `ConfigMap`](./tutorial-configmap-rollout.html).
    This example shows how Pulumi will safely allow you to update containers to use new configuration
    data in a way that is natural to the user.
+* [Staged rollout gated on Prometheus health checks](./tutorial-p8s-rollout.html). This example
+  shows how we can roll out to a small canary ring, check Prometheus metrics, and then roll out to a
+  larger prod ring only when that succeeds.
+* [Run a Stateless App Deployment](./tutorial-stateless-app.html): Deploy a simple stateless Nginx web server backed
+    by a Docker container
 
 ## Example
 
@@ -68,7 +62,7 @@ let nginxcontainer = new k8s.core.v1.Pod("nginx", {
 });
 ```
 
-You can find additional examples Kubernetes examples in [the Pulumi examples repo](https://github.com/pulumi/examples). 
+You can find additional examples Kubernetes examples in [the Pulumi examples repo](https://github.com/pulumi/examples).
 
 ## Libraries
 
@@ -77,3 +71,7 @@ The following pacakges are available in pacakge managers:
 * JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/kubernetes
 
 Support will eventually expand to Python and Go as well.
+
+## FAQ
+
+You can find a list of frequently-asked questions [here](./faq.html).
