@@ -9,6 +9,10 @@ takes care of provisioning and updating resources, very similar to Pulumi. Just 
 supports many cloud providers. In fact, thanks to integration with Terraform, Pulumi is able to support a
 superset of the cloud and service providers that Terraform currently offers.
 
+> We have a tool, [`tf2pulumi`](https://github.com/pulumi/tf2pulumi), that converts Terraform HCL to Pulumi. It is
+> open source on GitHub, and works for most projects we have come across; if you run into a snag, Issues and Pull
+> Requests are welcome! [Download and use it now.](https://github.com/pulumi/tf2pulumi)
+
 The major differences between Terraform and Pulumi are as follows:
 
 1. Terraform requires that you and your team learn a new custom language, the HCL DSL. In contrast, Pulumi lets you use
