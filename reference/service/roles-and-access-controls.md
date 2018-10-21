@@ -4,8 +4,11 @@ title: Roles and Access Controls
 
 The Pulumi Cloud Console provides fine-grained access controls for stacks.
 
-For Organization-owned stacks, the first level of access control is based on a
-user's role within that organization. (Not applicable or User-owned stacks.)
+A user's permission to access a stack is based first on their role within the containing
+organization, and then on any additional permissions granted explicitly to that user.
+
+> Note: This feature is only available on organizations using the Pulumi Team Edition.
+> For more information, see [Pulumi Editions](./editions.html).
 
 ## Organization Roles
 
@@ -15,10 +18,6 @@ Each member of a Pulumi Cloud Console organization has either the `MEMBER` or
 Pulumi organizations that have been imported from GitHub carry along each
 member's GitHub role. Members of the GitHub organization with the _Owner_
 role on GitHub will have the `ADMIN` role in the Pulumi organization.
-
-For individual user organizations (e.g. the Pulumi organization created when
-you first logged into the Pulumi Cloud Console), there is only one "member" and
-they have the `ADMIN` role implicitly.
 
 ## Stack Permission Levels
 
