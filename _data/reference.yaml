@@ -82,6 +82,8 @@ toc:
 - title: Cloud Console
   path: /reference/service/index
   section:
+  - title: Pulumi Editions
+    path: /reference/service/editions.html
   - title: Roles and Access Controls
     path: /reference/service/roles-and-access-controls.html
   - title: Collaboration
