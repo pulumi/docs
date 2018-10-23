@@ -6,7 +6,7 @@ redirect_from: /reference/kubernetes.html
 <img src="/images/quickstart/k8s-purple.png" align="right">
 
 The Kubernetes provider for Pulumi can be used to provision any of the resources specified by the
-Kubernetes API (_e.g._, [v1.10](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/). The
+Kubernetes API (_e.g._, [v1.10](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/)). The
 Kubernetes provider uses the official Kubernetes Go client under the hood, and will automatically
 configure itself if a [kubeconfig
 file](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
