@@ -99,6 +99,8 @@ toc:
     path: /reference/cd-aws-code-services.html
   - title: Travis CI
     path: /reference/cd-travis.html
+  - title: GitLab CI
+    path: /reference/cd-gitlab-ci.html
 - title: Pulumi Vs. Others
   path: /reference/vs/index
   section:
