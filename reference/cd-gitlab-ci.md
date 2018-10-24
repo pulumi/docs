@@ -12,11 +12,10 @@ altered to fit into any existing type of deployment setup.
 
 ## Prerequisites
 - An account on https://app.pulumi.com and that you have created a new project.
-  - As of this writing, we support logins only using GitHub identity.
   - This just means you will sign-in using your GitHub credentials.
   - However, pulumi can be run from anywhere and your infrastrucutre code itself can be hosted anywhere.
 - The latest CLI. Installation instructions are [here](https://pulumi.io/quickstart/install.html).
-- A bare repo and set the remote URL to be your GitLab repo.
+- A bare repo and set the remote URL to be your GitLab project.
 
 ## Stack and Branch Mappings
 The scripts below act on a hypothetical stack: `acme/product-catalog-service-stack`.
@@ -39,7 +38,8 @@ If you are running `pulumi` from any branch other than the `master` branch,
 you are likely to hit an error that the `PULUMI_ACCESS_TOKEN` 
 environment variable (introduced later in this document) cannot be accessed.
 You can fix this by specifying a wildcard regex to allow specific branches to
-be able to access the secret environment variables.
+be able to access the secret environment variables. Please refer to the GitLab
+documentation link above to learn how to do that.
 
 ## Merge Request Builds
 GitLab CI currently does not yet support creating pipelines specifically for merge requests.
@@ -48,11 +48,11 @@ You can apply some amount of control with the use of the configuration variables
 `only` and `except`. You may also consider using `only:changes`, however,
 note that there are some caveats to that. You can learn more [here](https://docs.gitlab.com/ee/ci/yaml/#only-changes).
 
-See [this](https://gitlab.com/gitlab-org/gitlab-ce/issues/23902) issue for community edition and 
-[this](https://gitlab.com/gitlab-org/gitlab-ee/issues/7380) for enterprise edition to learn more.
+> See [this](https://gitlab.com/gitlab-org/gitlab-ce/issues/23902) issue for _community edition_ and 
+[this](https://gitlab.com/gitlab-org/gitlab-ee/issues/7380) issue for _enterprise edition_ to learn more.
 
 ## Environment Variables
-To use Pulumi within Travis CI, there are a few environment variables you'll need to set for each
+To use Pulumi within GitLab CI, there are a few environment variables you'll need to set for each
 build.
 
 The first is `PULUMI_ACCESS_TOKEN`, which is required to authenticate with pulumi.com in order to
@@ -73,11 +73,6 @@ If you are using an alternate location, be sure to update the settings for your 
 by going to https://gitlab.com > (select your project) > Settings > General.
 
 The following are samples only. You may choose to structure your configuration any way you like.
-The `setup.sh` installs the `pulumi` CLI on the GitLab CI Runner, and other tools.
-It also installs `yarn` and `nodejs` since that's the runtime for this sample project.
-
-The `run-pulumi.sh` script runs the `pulumi up` command to apply any stack changes and to start
-updating your infrastructure.
 
 The `pulumi-preview.sh` script (not shown here) is similar to the `run-pulumi.sh`, except that
 it runs the `pulumi preview` command instead of the `pulumi up` command, which is sort of a dry-run
@@ -86,13 +81,12 @@ that only shows you changes (if any) in your infrastructure. Isn't that awesome?
 ### Sample `.gitlab-ci.yml`
 ```yaml
 #
-# This sample yaml configuration file contains 2 stages and 3 jobs.
+# This sample yaml configuration file contains two stages and three jobs.
 # This configuration uses GitLab's `only`, `when`, and `except` configuration
 # options to create a pipeline that will create the `pulumi-preview` job in the pipeline,
 # for all branches except the master.
 # Only for master branch merges, the main `pulumi` job is executed automatically.
-#  
-
+# 
 stages:
   - build
   - infrastructure-update
@@ -105,7 +99,6 @@ complex_build_job:
   script:
     - echo "pulumi rocks!"
 
-# The 
 pulumi:
   stage: infrastructure-update
   before_script:
@@ -146,6 +139,9 @@ pulumi-preview:
 
 ### `setup.sh`
 
+The `setup.sh` installs the `pulumi` CLI on the GitLab CI Runner, and other tools.
+It also installs `yarn` and `nodejs` since that's the runtime for this sample project.
+
 ```bash
 #!/bin/bash
 
@@ -169,6 +165,9 @@ npm i -g yarn
 
 ### `run-pulumi.sh`
 
+The `run-pulumi.sh` script runs the `pulumi up` command to apply any stack changes and to start
+updating your infrastructure.
+
 ```bash
 #!/bin/bash
 
@@ -177,7 +176,9 @@ set -e -x
 
 yarn install
 pulumi stack select product-catalog-service
-# The following are just sample config settings that
+# The following is just a sample config setting that the hypothetical pulumi
+# program needs.
+# Learn more about pulumi configuration at: https://pulumi.io/reference/config.html
 pulumi config set mysetting:myvalue
 pulumi up
 ```
